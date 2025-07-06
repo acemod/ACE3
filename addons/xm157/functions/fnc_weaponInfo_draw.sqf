@@ -28,7 +28,7 @@ private _ctrlScreenObject = _display displayCtrl IDC_SCREEN_OBJECT;
 
 // Hide everything when not in scope
 private _isUsingOptic = ctrlShown (_display displayCtrl 154);
-if (!_isUsingOptic) exitWith { 
+if (!_isUsingOptic) exitWith {
     _ctrlScopeObject ctrlShow false;
     _ctrlScreenObject ctrlShow false;
 };

@@ -51,8 +51,8 @@ if (_target isKindOf "CAManBase") then {
 // Add drop action
 _unit setVariable [QGVAR(releaseActionID), [
     _unit, "DefaultAction",
-    {!isNull ((_this select 0) getVariable [QGVAR(carriedObject), objNull])},
-    {[_this select 0, (_this select 0) getVariable [QGVAR(carriedObject), objNull], true] call FUNC(dropObject_carry)}
+    {!isNull ((_this select 1) getVariable [QGVAR(carriedObject), objNull])},
+    {[_this select 1, (_this select 1) getVariable [QGVAR(carriedObject), objNull], true] call FUNC(dropObject_carry)}
 ] call EFUNC(common,addActionEventHandler)];
 
 // Add anim changed EH
@@ -71,3 +71,6 @@ if (_UAVCrew isNotEqualTo []) then {
 
 // Check everything
 [LINKFUNC(carryObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
+
+// API
+[QGVAR(startedCarry), [_unit, _target]] call CBA_fnc_localEvent;

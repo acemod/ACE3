@@ -15,7 +15,7 @@
  * Public: No
  */
 
-(_this select 0) params ["_vehicle", "_turret", "_fireModes", "_useAltElevation", "_turretAnimBody", "_invalidGunnerMem"];
+(_this select 0) params ["_vehicle", "_turret", "_fireModes", "_useAltElevation", "_turretAnimBody", "_invalidGunnerMem", "_elevationMode"];
 
 if (shownArtilleryComputer && {GVAR(disableArtilleryComputer)}) then {
     // Still Don't like this solution, but it works
@@ -31,6 +31,16 @@ if (isNull (uiNamespace getVariable [QGVAR(display), displayNull])) then {
 
 private _ctrlGroup = (uiNamespace getVariable [QGVAR(display), displayNull]) displayCtrl 1000;
 
+if (_elevationMode == 0) then {
+    // For turrets not using an elevation mode (i.e. mouse controls elevation instead of pageUp/Down)
+    // Show the info 1 step below, so it doesn't block vanilla ranging (discreteDistance)
+    // vanilla zeroing will have a negative effect, so it's best to range as low as possible
+    private _safeZoneGrid = (((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25;
+    private _y = 3.5 * _safeZoneGrid + (profileNamespace getVariable ['IGUI_GRID_WEAPON_Y', safeZoneY + 0.5 * _safeZoneGrid]);
+    _ctrlGroup ctrlSetPositionY _y;
+    _ctrlGroup ctrlCommit 0;
+};
+
 // Need to be in gunner mode, so we can check where the optics are aiming at
 // However, if there are no optics, ignore the above
 if (!_invalidGunnerMem && {cameraView != "GUNNER"}) exitWith {
@@ -43,7 +53,7 @@ BEGIN_COUNTER(pfeh);
 private _currentFireMode = (weaponState [_vehicle, _turret]) select 2;
 private _currentChargeMode = _fireModes find _currentFireMode;
 
-private _lookVector = (AGLtoASL (positionCameraToWorld [0,0,0])) vectorFromTo (AGLtoASL (positionCameraToWorld [0,0,1]));
+private _lookVector = (AGLToASL (positionCameraToWorld [0,0,0])) vectorFromTo (AGLToASL (positionCameraToWorld [0,0,1]));
 private _weaponDir = _vehicle weaponDirection (currentWeapon _vehicle);
 
 // Calc real azimuth/elevation
@@ -51,7 +61,7 @@ private _weaponDir = _vehicle weaponDirection (currentWeapon _vehicle);
 private _display = uiNamespace getVariable ["ACE_dlgArtillery", displayNull];
 private _useRealWeaponDir = if ((isNull (_display displayCtrl 173)) || {(_vehicle ammo (currentWeapon _vehicle)) == 0}) then {
     // With no ammo, distance display will be empty, but gun will still fire at wonky angle if aimed at ground
-    private _testSeekerPosASL = AGLtoASL (positionCameraToWorld [0,0,0]);
+    private _testSeekerPosASL = AGLToASL (positionCameraToWorld [0,0,0]);
     private _testPoint = _testSeekerPosASL vectorAdd (_lookVector vectorMultiply viewDistance);
     !((terrainIntersectASL [_testSeekerPosASL, _testPoint]) || {lineIntersects [_testSeekerPosASL, _testPoint, _vehicle]});
 } else {
@@ -84,8 +94,8 @@ private _ctrlCharge = (uiNamespace getVariable [QGVAR(display), displayNull]) di
 private _ctrlAzimuth = (uiNamespace getVariable [QGVAR(display), displayNull]) displayCtrl IDC_AZIMUTH;
 private _ctrlElevation = (uiNamespace getVariable [QGVAR(display), displayNull]) displayCtrl IDC_ELEVATION;
 
-_ctrlAzimuth ctrlSetText Format ["AZ: %1", [DEGTOMILS * _realAzimuth, 4, 0] call CBA_fnc_formatNumber];
-_ctrlElevation ctrlSetText Format ["EL: %1", [DEGTOMILS * _realElevation, 4, 0] call CBA_fnc_formatNumber];
+_ctrlAzimuth ctrlSetText format ["AZ: %1", [DEGTOMILS * _realAzimuth, 4, 0] call CBA_fnc_formatNumber];
+_ctrlElevation ctrlSetText format ["EL: %1", [DEGTOMILS * _realElevation, 4, 0] call CBA_fnc_formatNumber];
 _ctrlCharge ctrlSetText format ["CH: %1", _currentChargeMode];
 
 // avalible for other addons (mk6)

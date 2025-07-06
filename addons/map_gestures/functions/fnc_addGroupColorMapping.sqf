@@ -4,7 +4,7 @@
  * Adds a group id color mapping.
  *
  * Arguments:
- * 0: Group ID or group <STRING><GROUP>
+ * 0: Group ID or group <STRING or GROUP>
  * 1: Leader color array (4 numbers including alpha) <ARRAY>
  * 2: Unit (non-leader) color array (4 numbers including alpha) <ARRAY>
  *
@@ -22,7 +22,7 @@ if (!params [["_group", "", [grpNull, ""]], ["_leadColor", [1,1,1,1], [[]], 4], 
 };
 TRACE_3("params",_group,_leadColor,_unitColor);
 
-if (_group isEqualType grpNull) then {_group = groupID _group};
+if (_group isEqualType grpNull) then {_group = groupId _group};
 
 if (_group == "") exitWith {ERROR("Group ID is blank, which is not valid.")};
 if !([_leadColor] call FUNC(isValidColorArray)) exitWith {ERROR("leadColor is not a valid color array.")};

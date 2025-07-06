@@ -38,6 +38,11 @@ private _selectionsToIgnore = _vehicle call FUNC(getSelectionsToIgnore);
 
 // get hitpoints of wheels with their selections
 ([_vehicle] call EFUNC(common,getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
+private _isGM = 1 == getNumber (configOf _vehicle >> "isgmContent");
+if (_isGM) then { // the hitpoint selection does not properly overlap
+    _hitPoints append _wheelHitPoints;
+    _hitSelections append _wheelHitSelections;
+};
 
 private _hitPointsAddedNames = [];
 private _hitPointsAddedStrings = [];
@@ -61,16 +66,20 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
     };
 
     if (_selection in _wheelHitSelections) then {
-        private _position = compile format ["_target selectionPosition ['%1', 'HitPoints', 'AveragePoint'];", _selection];
+        private _position = if (_isGM) then {
+            compile format ["_target selectionPosition ['%1', 'Memory', 'AveragePoint'];", _selection];
+        } else {
+            compile format ["_target selectionPosition ['%1', 'HitPoints', 'AveragePoint'];", _selection];
+        };
 
         TRACE_3("Adding Wheel Actions",_hitpoint,_forEachIndex,_selection);
 
         // An action to replace the wheel is required
-        _name = format ["Replace_%1_%2", _forEachIndex, _hitpoint];
-        _text = localize LSTRING(ReplaceWheel);
-        _condition = {[_this select 1, _this select 0, _this select 2 select 0, "ReplaceWheel"] call DFUNC(canRepair)};
-        _statement = {[_this select 1, _this select 0, _this select 2 select 0, "ReplaceWheel"] call DFUNC(repair)};
-        _action = [_name, _text, _icon, _statement, _condition, {}, [_hitpoint], _position, 2] call EFUNC(interact_menu,createAction);
+        private _name = format ["Replace_%1_%2", _forEachIndex, _hitpoint];
+        private _text = localize LSTRING(ReplaceWheel);
+        private _condition = {[_this select 1, _this select 0, _this select 2 select 0, "ReplaceWheel"] call DFUNC(canRepair)};
+        private _statement = {[_this select 1, _this select 0, _this select 2 select 0, "ReplaceWheel"] call DFUNC(repair)};
+        private _action = [_name, _text, _icon, _statement, _condition, {}, [_hitpoint], _position, 2] call EFUNC(interact_menu,createAction);
         [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
 
         // Create a wheel interaction
@@ -118,6 +127,7 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
         };
 
         // Find the action position
+        //IGNORE_PRIVATE_WARNING ["_target"];
         private _position = compile format ["_target selectionPosition ['%1', 'HitPoints'];", _selection];
         {
             _x params ["_hit", "_pos"];

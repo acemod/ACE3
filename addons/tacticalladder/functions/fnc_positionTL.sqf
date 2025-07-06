@@ -49,5 +49,5 @@ GVAR(currentAngle) = 0;
 _unit setVariable [QGVAR(Deploy), [
     _unit, "DefaultAction",
     {!isNull GVAR(ladder)},
-    {[_this select 0, GVAR(ladder)] call FUNC(confirmTLdeploy)}
+    {[_this select 1, GVAR(ladder)] call FUNC(confirmTLdeploy)}
 ] call EFUNC(common,addActionEventHandler)];

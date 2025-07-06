@@ -57,8 +57,8 @@ if (GVAR(currentApplicationPage) == APP_MODE_INFODISPLAY) then {
 (_display displayCtrl IDC_MAPDETAILS) ctrlShow ((GVAR(currentApplicationPage) == APP_MODE_MAP) && {GVAR(mapShowTexture)});
 
 if (GVAR(currentApplicationPage) == APP_MODE_MAP) then {
-    _theMap = if (!GVAR(mapShowTexture)) then {_display displayCtrl IDC_MAPPLAIN} else {_display displayCtrl IDC_MAPDETAILS};
-    _mapSize = (ctrlPosition _theMap) select 3;
+    private _theMap = if (GVAR(mapShowTexture)) then {_display displayCtrl IDC_MAPDETAILS} else {_display displayCtrl IDC_MAPPLAIN};
+    private _mapSize = (ctrlPosition _theMap) select 3;
     _theMap ctrlMapAnimAdd [0, (GVAR(mapZoom) / _mapSize), GVAR(mapPosition)];
     ctrlMapAnimCommit _theMap;
     if (GVAR(mapAutoTrackPosition)) then {
@@ -77,7 +77,7 @@ if (GVAR(currentApplicationPage) == APP_MODE_MARK) then {
     //not backed up for displayMode swap, not a big deal
 
 
-    if ((count GVAR(newWaypointPosition)) == 0) then {
+    if (GVAR(newWaypointPosition) isEqualTo []) then {
         (_display displayCtrl IDC_MODEMARK_HEADER) ctrlSetText (localize LSTRING(wpEnterCords));
         (_display displayCtrl IDC_MODEMARK_CORDSEDIT) ctrlSetText "";
     } else {

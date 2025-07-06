@@ -1,4 +1,4 @@
-use arma_rs::FromArma;
+use arma_rs::{FromArma, FromArmaError};
 
 use super::map::Map;
 use crate::common::Temperature;
@@ -10,12 +10,12 @@ pub enum AtmosphereModel {
 }
 
 impl FromArma for AtmosphereModel {
-    fn from_arma(s: String) -> Result<Self, String> {
+    fn from_arma(s: String) -> Result<Self, FromArmaError> {
         let s = s.trim_matches('"');
         match s.to_lowercase().as_str() {
             "icao" => Ok(Self::Icao),
             "asm" => Ok(Self::Asm),
-            _ => Err(String::from("unexpected model")),
+            _ => Err(FromArmaError::InvalidValue("unexpected model".into())),
         }
     }
 }

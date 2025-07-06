@@ -32,13 +32,13 @@ if (_seekerTargetPos isEqualTo [0, 0, 0]) exitWith {
 };
 
 private _projectilePos = getPosASLVisual _projectile;
-private _distanceToTarget2d = _projectilePos distance2d _seekerTargetPos;
+private _distanceToTarget2d = _projectilePos distance2D _seekerTargetPos;
 
 private _closingRate = vectorMagnitude velocity _projectile;
 private _timeToGo = (_projectilePos distance _seekerTargetPos) / _closingRate;
 
 // we could do stuff like desired attack angle, but I'm not going that far today
-private _los = vectorNormalized (_seekerTargetPos vectorDiff _projectilePos); 
+private _los = vectorNormalized (_seekerTargetPos vectorDiff _projectilePos);
 
 private _angleToTarget = acos ((vectorDir _projectile) vectorCos _los);
 private _atMinRotationAngle = _angleToTarget >= (0.5 * _pitchRate * _timeToGo);

@@ -42,7 +42,7 @@ for "_row" from 0 to 49 do {
         _control ctrlSetTextColor [0, 0, 0, 1];
     };
     _control ctrlCommit 0;
-    _control ctrlSetText Str(100 + _row * 50);
+    _control ctrlSetText str(100 + _row * 50);
     GVAR(controls) pushBack _control;
 };
 for "_column" from 0 to 8 do {
@@ -119,7 +119,8 @@ private _useAmmoTemperatureInfluence = (
 
 if (_barrelLength > 0 && _useBarrelLengthInfluence) then {
     _muzzleVelocity = [_barrelLength, _ammoConfig select 10, _ammoConfig select 11, 0] call EFUNC(advanced_ballistics,calculateBarrelLengthVelocityShift);
-} else {
+};
+if (_muzzleVelocity == 0) then {
     private _initSpeed     = getNumber (configFile >> "CfgMagazines" >> _magazineClass >> "initSpeed");
     private _initSpeedCoef = getNumber (configFile >> "CfgWeapons" >> _weaponClass >> "initSpeed");
     if (_initSpeedCoef < 0) then {

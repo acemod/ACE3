@@ -5,8 +5,8 @@ class CfgVehicles {
             class ACE_Equipment {
                 class GVAR(rangetable) {
                     displayName = CSTRING(rangetable_action);
-                    condition = QUOTE(_this call FUNC(rangeTableCanUse));
-                    statement = QUOTE(_this call FUNC(rangeTableOpen));
+                    condition = QUOTE(call FUNC(rangeTableCanUse));
+                    statement = QUOTE(call FUNC(rangeTableOpen));
                     icon = QPATHTOF(UI\icon_rangeTable.paa);
                     exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                 };
@@ -41,7 +41,7 @@ class CfgVehicles {
             class GVAR(toggleMils) {
                 displayName = "Toggle MILS";
                 condition = QUOTE(true);
-                statement = QUOTE(_this call FUNC(toggleMils));
+                statement = QUOTE(call FUNC(toggleMils));
                 exceptions[] = {};
             };
         };

@@ -1,65 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Vehicle_Damage">
-        <Key ID="STR_ACE_Vehicle_Damage_category_displayName">
-            <English>ACE Advanced Vehicle Damage</English>
-            <Japanese>ACE 高度な乗り物ダメージ</Japanese>
-            <French>ACE Dégâts de véhicule avancés</French>
-            <German>ACE Erweiterter Fahrzeugsschaden</German>
-            <Italian>ACE Danni Veicolo Avanzati</Italian>
-            <Polish>ACE Zaawansowany system uszkodzeń pojazdów</Polish>
-            <Chinesesimp>ACE 高级载具损坏</Chinesesimp>
-            <Korean>ACE 고급 차량 피해</Korean>
-            <Russian>ACE Продвинутое повреждение техники</Russian>
-            <Spanish>ACE Daño avanzado de vehículos</Spanish>
-            <Portuguese>ACE Dano avançãdo de veículos</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Vehicle_Damage_setting_description">
-            <English>Enable advanced vehicle damage</English>
-            <French>Active les dégâts de véhicule avancés.</French>
-            <German>Aktiviert den Erweiterten Fahrzeugsschaden</German>
-            <Italian>Abilità danni avanzati ai veicoli</Italian>
-            <Polish>Włącz zaawansowane uszkodzenia pojazdów</Polish>
-            <Russian>Включить продвинутое повреждение техники</Russian>
-            <Spanish>Habilitar el daño avanzado de vehículos</Spanish>
-            <Portuguese>Ativar dano avançado de veículo</Portuguese>
-            <Japanese>乗り物(Vehicle)に対しての高度なダメージ計算を有効化します</Japanese>
+        <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_description">
+            <English>Enable advanced car damage (Experimental)</English>
+            <French>Active les dégâts avancés sur les voitures (expérimental).</French>
+            <Spanish>Habilitar daño avanzado de coche (Experimental)</Spanish>
+            <Italian>Abilita danni avanzati ai veicoli (sperimentale)</Italian>
+            <Polish>Włącz zaawansowane uszkodzenia w samochodach (eksperymentalne)</Polish>
+            <Portuguese>Habilitar dano avançado para carros (Experimental)</Portuguese>
+            <Russian>Включить продвинутое повреждение машин (экспериментальное)</Russian>
+            <German>Aktiviert den Erweiterten Fahrzeugsschaden (Experimentell)</German>
+            <Korean>고급 자동차 피해 활성화 (실험용)</Korean>
+            <Japanese>車(Car)に対しての高度なダメージ計算を有効化します (試験的機能)</Japanese>
+            <Chinesesimp>对轻型轮式车辆启用高级车辆损坏(测试阶段)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_enable">
             <English>Enable advanced car damage</English>
             <French>Dégâts de voiture avancés</French>
-            <German>Aktiviert erweiterten Autoschaden</German>
+            <Spanish>Habilitar daño avanzado de coche</Spanish>
             <Italian>Abilita danni avanzati alle macchine</Italian>
             <Polish>Włącz zaawansowane uszkodzenia w samochodach</Polish>
-            <Spanish>Habilitar daño avanzado de coche</Spanish>
             <Portuguese>Habilitar dano avançado para carros</Portuguese>
+            <Russian>Включить продвинутое повреждение автомобиля</Russian>
+            <German>Aktiviert erweiterten Autoschaden</German>
+            <Korean>고급 자동차 피해 활성화</Korean>
             <Japanese>高度な車ダメージを有効化</Japanese>
+            <Chinesesimp>启用高级车辆损坏</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_description">
-            <English>Enable advanced car damage (Experimental)</English>
-            <French>Active les dégâts avancés sur les voitures (expérimental).</French>
-            <German>Aktiviert den Erweiterten Fahrzeugsschaden (Experimentell)</German>
-            <Italian>Abilita danni avanzati ai veicoli (sperimentale)</Italian>
-            <Polish>Włącz zaawansowane uszkodzenia w samochodach (eksperymentalne)</Polish>
-            <Russian>Включить продвинутое повреждение машин (экспериментальное)</Russian>
-            <Spanish>Habilitar daño avanzado de coche (Experimental)</Spanish>
-            <Portuguese>Habilitar dano avançado para carros (Experimental)</Portuguese>
-            <Japanese>車(Car)に対しての高度なダメージ計算を有効化します (試験的機能)</Japanese>
+        <Key ID="STR_ACE_Vehicle_Damage_category_displayName">
+            <English>ACE Advanced Vehicle Damage</English>
+            <French>ACE Dégâts de véhicule avancés</French>
+            <Spanish>ACE Daño avanzado de vehículos</Spanish>
+            <Italian>ACE Danni Veicolo Avanzati</Italian>
+            <Polish>ACE Zaawansowany system uszkodzeń pojazdów</Polish>
+            <Portuguese>ACE Dano avançãdo de veículos</Portuguese>
+            <Russian>ACE Продвинутое повреждение техники</Russian>
+            <German>ACE Erweiterter Fahrzeugsschaden</German>
+            <Korean>ACE 고급 차량 피해</Korean>
+            <Japanese>ACE 高度な乗り物ダメージ</Japanese>
+            <Chinesesimp>ACE 高级载具损坏</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_generic_turret_wreck">
             <English>Wreck (Turret)</English>
+            <Czech>Vrak (věž)</Czech>
             <French>Épave (tourelle)</French>
             <Spanish>Restos (torreta)</Spanish>
             <Italian>Rottame (Torretta)</Italian>
             <Polish>Wrak (wieżyczka)</Polish>
+            <Portuguese>Ruínas (torre)</Portuguese>
             <Russian>Обломки (башня)</Russian>
             <German>Wrack (Geschützturm)</German>
-            <Czech>Vrak (věž)</Czech>
-            <Portuguese>Ruínas (torre)</Portuguese>
             <Korean>잔해(포탑)</Korean>
             <Japanese>残骸 (砲塔)</Japanese>
             <Chinese>殘骸 (砲塔)</Chinese>
             <Chinesesimp>残骸（炮塔）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Vehicle_Damage_setting_description">
+            <English>Enable advanced vehicle damage</English>
+            <French>Active les dégâts de véhicule avancés.</French>
+            <Spanish>Habilitar el daño avanzado de vehículos</Spanish>
+            <Italian>Abilità danni avanzati ai veicoli</Italian>
+            <Polish>Włącz zaawansowane uszkodzenia pojazdów</Polish>
+            <Portuguese>Ativar dano avançado de veículo</Portuguese>
+            <Russian>Включить продвинутое повреждение техники</Russian>
+            <German>Aktiviert den Erweiterten Fahrzeugsschaden</German>
+            <Korean>고급 차량 피해 활성화</Korean>
+            <Japanese>乗り物(Vehicle)に対しての高度なダメージ計算を有効化します</Japanese>
+            <Chinesesimp>启用高级载具损坏</Chinesesimp>
         </Key>
     </Package>
 </Project>

@@ -46,7 +46,7 @@ private _fnc_onFailure = {
     _args params ["_player"];
 
     // Reset animation if needed
-    if (vehicle _player == _player && {!(_player call EFUNC(common,isSwimming))}) then {
+    if (isNull objectParent _player && {!(_player call EFUNC(common,isSwimming))}) then {
         private _previousAnim = _player getVariable [QGVAR(previousAnim), ""];
         if (_previousAnim != "") then {
             [_player, _previousAnim, 2] call EFUNC(common,doAnimation);
@@ -76,5 +76,6 @@ private _progressText = if (isNull _sourceConfig) then {
     _fnc_onSuccess,
     _fnc_onFailure,
     _progressText,
-    _fnc_condition
+    _fnc_condition,
+    ["isNotInside"]
 ] call EFUNC(common,progressBar);

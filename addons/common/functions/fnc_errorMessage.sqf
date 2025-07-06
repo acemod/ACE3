@@ -7,7 +7,7 @@
  *
  * Arguments:
  * 0: Header <STRING>
- * 1: Text <STRING|TEXT>
+ * 1: Text <STRING or TEXT>
  *
  * Return Value:
  * None
@@ -103,7 +103,6 @@ if (!hasInterface) exitWith {};
         _ctrlButtonCancel
     ];
 
-    private _ctrlRscMessageBoxPos = ctrlPosition _ctrlRscMessageBox;
     private _ctrlRscMessageBoxPosH = _bottomPosY + (_ctrlButtonOKPos select 3);
 
     _ctrlRscMessageBox ctrlSetPosition [

@@ -23,14 +23,14 @@ if (!GVAR(addBuildingActions)) exitWith {};
 //Ignore self-interaction menu:
 if (_interactionType != 0) exitWith {};
 //Ignore when mounted:
-if ((vehicle ACE_player) != ACE_player) exitWith {};
+if (!isNull objectParent ACE_player) exitWith {};
 
 [{
     params ["_args", "_pfID"];
     _args params ["_setPosition", "_addedHelpers", "_housesScanned", "_housesToScanForActions"];
 
     if (!EGVAR(interact_menu,keyDown)) then {
-        {deleteVehicle _x;} forEach _addedHelpers;
+        deleteVehicle _addedHelpers;
         [_pfID] call CBA_fnc_removePerFrameHandler;
     } else {
         // Prevent Rare Error when ending mission with interact key down:
@@ -38,7 +38,7 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
 
         //Make the common case fast (cursorTarget is looking at a door):
         if ((!isNull cursorTarget) && {cursorTarget isKindOf "Static"} && {!(cursorTarget in _housesScanned)}) then {
-            if (((count (configOf cursorTarget >> "UserActions")) > 0) || {(count (getArray (configOf cursorTarget >> "ladders"))) > 0}) then {
+            if (((count (configOf cursorTarget >> "UserActions")) > 0) || {(getArray (configOf cursorTarget >> "ladders")) isNotEqualTo []}) then {
                 _housesToScanForActions = [cursorTarget];
             } else {
                 _housesScanned pushBack cursorTarget;
@@ -56,7 +56,7 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
             private _nearBuidlings = nearestObjects [ACE_player, ["Static"], 30];
             {
                 private _configOfHouse = configOf _x;
-                if (((count (_configOfHouse >> "UserActions")) == 0) && {(count (getArray (_configOfHouse >> "ladders"))) == 0}) then {
+                if (((count (_configOfHouse >> "UserActions")) == 0) && {(getArray (_configOfHouse >> "ladders")) isEqualTo []}) then {
                     _housesScanned pushBack _x;
                 } else {
                     _housesToScanForActions pushBack _x;

@@ -99,7 +99,7 @@ private _dragAction = [
 
 private _dropAction = [
     QGVAR(drop),
-    LLSTRING(Drop),
+    LELSTRING(common,Drop),
     "",
     {
         [_player, _target] call FUNC(dropObject);

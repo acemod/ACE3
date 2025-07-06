@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Seeker <OBJECT>
  * 1: Target <OBJECT>
- * 2: Whether or not to use checkVisibility to test for LOS <BOOLEAN>
+ * 2: Whether or not to use checkVisibility to test for LOS <BOOL>
  *
  * Return Value:
  * Has LOS <BOOL>
@@ -34,12 +34,12 @@ private _targetAimPos = aimPos _target;
 private _seekerPos = getPosASL _seeker;
 private _return = true;
 
-if (!((terrainIntersectASL [_seekerPos, _targetPos]) && {terrainIntersectASL [_seekerPos, _targetAimPos]})) then {
+if ((terrainIntersectASL [_seekerPos, _targetPos]) && {terrainIntersectASL [_seekerPos, _targetAimPos]}) then {
+    _return = false;
+} else {
     if (lineIntersects [_seekerPos, _targetPos, _seeker, _target]) then {
         _return = false;
     };
-} else {
-    _return = false;
 };
 
 _return

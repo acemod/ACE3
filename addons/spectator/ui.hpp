@@ -19,22 +19,22 @@ class GVAR(display) {
     movingEnable = 0;
     closeOnMissionEnd = 1;
 
-    onLoad = QUOTE(_this call FUNC(ui_handleLoad));
-    onUnload = QUOTE(_this call FUNC(ui_handleUnload));
+    onLoad = QUOTE(call FUNC(ui_handleLoad));
+    onUnload = QUOTE(call FUNC(ui_handleUnload));
 
-    onKeyDown = QUOTE(_this call FUNC(ui_handleKeyDown));
-    onKeyUp = QUOTE(_this call FUNC(ui_handleKeyUp));
-    onMouseMoving = QUOTE(_this call FUNC(ui_handleMouseMoving));
-    onChildDestroyed = QUOTE(_this call FUNC(ui_handleChildDestroyed));
+    onKeyDown = QUOTE(call FUNC(ui_handleKeyDown));
+    onKeyUp = QUOTE(call FUNC(ui_handleKeyUp));
+    onMouseMoving = QUOTE(call FUNC(ui_handleMouseMoving));
+    onChildDestroyed = QUOTE(call FUNC(ui_handleChildDestroyed));
 
     class ControlsBackground {
         class MouseHandler: RscText {
             idc = IDC_MOUSE;
 
-            onMouseButtonDown = QUOTE(_this call FUNC(ui_handleMouseButtonDown));
+            onMouseButtonDown = QUOTE(call FUNC(ui_handleMouseButtonDown));
             onMouseButtonUp = QUOTE(if ((_this select 1) == 1) then { GVAR(holdingRMB) = false; };);
-            onMouseButtonDblClick = QUOTE(_this call FUNC(ui_handleMouseButtonDblClick));
-            onMouseZChanged = QUOTE(_this call FUNC(ui_handleMouseZChanged));
+            onMouseButtonDblClick = QUOTE(call FUNC(ui_handleMouseButtonDblClick));
+            onMouseZChanged = QUOTE(call FUNC(ui_handleMouseZChanged));
 
             text = "";
             x = "safeZoneXAbs";
@@ -77,12 +77,12 @@ class GVAR(display) {
         class Tabs: RscToolbox {
             idc = IDC_TABS;
 
-            //onToolBoxSelChanged = QUOTE(_this call FUNC(ui_handleTabSelected));
+            //onToolBoxSelChanged = QUOTE(call FUNC(ui_handleTabSelected));
             onMouseEnter = QUOTE([false] call FUNC(ui_fadeList));
             onMouseExit = QUOTE([true] call FUNC(ui_fadeList));
 
             x = "safeZoneX";
-            y = "safezoneY";
+            y = "safeZoneY";
             w = QUOTE(W_PART(13.5));
             h = QUOTE(H_PART(1.5));
 
@@ -98,7 +98,7 @@ class GVAR(display) {
         class CameraTypesGroup: RscControlsGroupNoScrollbars {
             idc = IDC_CAM_TYPES;
             x = QUOTE(X_PART(15.5));
-            y = QUOTE(safezoneY + safezoneH - H_PART(2.38));
+            y = QUOTE(safeZoneY + safeZoneH - H_PART(2.38));
             w = QUOTE(W_PART(8.6));
             h = 2.6;
             class controls {
@@ -232,8 +232,8 @@ class GVAR(display) {
         class Map: RscMapControl {
             idc = IDC_MAP;
 
-            onDraw = QUOTE(_this call FUNC(ui_handleMapDraw));
-            onMouseButtonClick = QUOTE(_this call FUNC(ui_handleMapClick));
+            onDraw = QUOTE(call FUNC(ui_handleMapDraw));
+            onMouseButtonClick = QUOTE(call FUNC(ui_handleMapClick));
 
             x = 0;
             y = 0.15;
@@ -245,8 +245,8 @@ class GVAR(display) {
         };
         class HelpBackground: RscText {
             idc = IDC_HELP_BACK;
-            x = QUOTE(safezoneX + safezoneW - W_PART(12));
-            y = QUOTE(safezoneY + safezoneH - H_PART(8));
+            x = QUOTE(safeZoneX + safeZoneW - W_PART(12));
+            y = QUOTE(safeZoneY + safeZoneH - H_PART(8));
             w = QUOTE(W_PART(12));
             h = QUOTE(H_PART(8));
             colorBackground[] = {0,0,0,0.75};
@@ -256,8 +256,8 @@ class GVAR(display) {
             disableOverflow = 0;
             rowHeight = QUOTE(H_PART(1));
             idc = IDC_HELP;
-            x = QUOTE(safezoneX + safezoneW - W_PART(12));
-            y = QUOTE(safezoneY + safezoneH - H_PART(12));
+            x = QUOTE(safeZoneX + safeZoneW - W_PART(12));
+            y = QUOTE(safeZoneY + safeZoneH - H_PART(12));
             w = QUOTE(W_PART(12));
             h = QUOTE(H_PART(12));
         };
@@ -456,6 +456,8 @@ class GVAR(display) {
                 };
             };
         };
-        class compass: EGVAR(common,CompassControl) {};
+        class compass: EGVAR(common,CompassControl) {
+            idc = IDC_COMPASS;
+        };
     };
 };

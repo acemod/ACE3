@@ -18,7 +18,7 @@ class Extended_PostInit_EventHandlers {
 
 class Extended_Killed_EventHandlers {
     class CAManBase {
-        GVAR(killedHandler) = QUOTE(_this call FUNC(onIncapacitated));
+        GVAR(killedHandler) = QUOTE(call FUNC(onIncapacitated));
     };
 };
 
@@ -36,12 +36,17 @@ class Extended_Put_EventHandlers {
 
 class Extended_DisplayLoad_EventHandlers {
     class RscDisplayMission {
-        ADDON = QUOTE(_this call COMPILE_FILE(XEH_missionDisplayLoad));
+        ADDON = QUOTE(call COMPILE_FILE(XEH_missionDisplayLoad));
     };
 };
 
 class Extended_Init_EventHandlers {
     class ACE_Explosives_Place_SLAM {
         ADDON = QUOTE(params ['_mine']; if (local _mine) then {_mine setCenterOfMass [ARR_3(0,-0.035,0.05)]; _mine setMass 5});
+    };
+    class ACE_ModuleMine_SLAMBottomMine {
+        class ADDON {
+            init = QUOTE(params ['_mine']; if (local _mine) then { [ARR_2({call CALLSTACK(BIS_fnc_setPitchBank)},[ARR_3(_mine,MINE_PITCH_UP,0)])] call CBA_fnc_execNextFrame });
+        };
     };
 };

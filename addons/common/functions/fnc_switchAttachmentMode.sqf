@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Weapon (String or CBA-Weapon-Index (not ace's getWeaponIndex)) <STRING|NUMBER>
+ * 1: Weapon (String or CBA-Weapon-Index (not ace's getWeaponIndex)) <STRING or NUMBER>
  * 2: From <STRING>
  * 3: To <STRING>
  *
@@ -63,7 +63,7 @@ switch (_weapon) do {
 };
 if (_exit) exitWith {}; // Don't notify if the unit isn't the local player or if an invalid weapon was passed
 
-private _configSwitchItem = configfile >> "CfgWeapons" >> _switchItem;
+private _configSwitchItem = configFile >> "CfgWeapons" >> _switchItem;
 private _switchItemHintText = getText (_configSwitchItem >> "MRT_SwitchItemHintText");
 private _switchItemHintImage = getText (_configSwitchItem >> "picture");
 

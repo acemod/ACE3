@@ -7,7 +7,7 @@
  * 0: Unit <OBJECT>
  * 1: Vehicle <OBJECT>
  * 2: Position ("Driver", "Pilot", "Gunner", "Commander", "Copilot", "Turret", "FFV", "Codriver", "Cargo") <STRING>
- * 3: Index (only applies to "Turret", "FFV", "Codriver", "Cargo") (default: next free index) <NUMBER>
+ * 3: Index (only applies to "Turret", "FFV", "Codriver", "Cargo") <NUMBER> (default: next free index)
  *
  * Return Value:
  * None
@@ -40,6 +40,7 @@ private _enemiesInVehicle = false;   //Possible Side Restriction
     if (side _unit getFriend side _x < 0.6) exitWith {_enemiesInVehicle = true};
 } forEach crew _vehicle;
 
+//IGNORE_PRIVATE_WARNING ["_unit", "_isInside", "_vehicle", "_turret", "_index", "_fnc_getInEH", "_position"];
 switch (_position) do {
     case "driver" : {
         if (CANGETINDRIVER) then {

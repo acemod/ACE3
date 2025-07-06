@@ -48,12 +48,12 @@ private _checkPos5end = _checkPos5beg vectorAdd (_dir vectorMultiply 1.3);
             [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
 
-        drawLine3D [ASLToATL (_args select 1), ASLToATL (_args select 2), [0,1,0,1]];
-        drawLine3D [ASLToATL (_args select 3), ASLToATL (_args select 4), [1,0,0,1]];
-        drawLine3D [ASLToATL (_args select 5), ASLToATL (_args select 6), [1,0.5,0.5,1]];
-        drawLine3D [ASLToATL (_args select 7), ASLToATL (_args select 8), [1,0.5,0.5,1]];
-        drawLine3D [ASLToATL (_args select 9), ASLToATL (_args select 10), [1,0.5,0.5,1]];
-        drawLine3D [ASLToATL (_args select 11), ASLToATL (_args select 12), [1,0.5,0.5,1]];
+        drawLine3D [ASLToAGL (_args select 1), ASLToAGL (_args select 2), [0,1,0,1]];
+        drawLine3D [ASLToAGL (_args select 3), ASLToAGL (_args select 4), [1,0,0,1]];
+        drawLine3D [ASLToAGL (_args select 5), ASLToAGL (_args select 6), [1,0.5,0.5,1]];
+        drawLine3D [ASLToAGL (_args select 7), ASLToAGL (_args select 8), [1,0.5,0.5,1]];
+        drawLine3D [ASLToAGL (_args select 9), ASLToAGL (_args select 10), [1,0.5,0.5,1]];
+        drawLine3D [ASLToAGL (_args select 11), ASLToAGL (_args select 12), [1,0.5,0.5,1]];
     }, 0, [ diag_tickTime,
             _checkPos0beg, _checkPos0end,
             _checkPos1beg, _checkPos1end,

@@ -25,6 +25,12 @@ TRACE_1("params",_this);
 _unit setVariable [QGVAR(releaseActionID), nil];
 
 private _inBuilding = _unit call FUNC(isObjectOnObject);
+private _isClone = _target isKindOf QGVAR(clone);
+
+// Drop cloned dead units
+if (_isClone) then {
+    _target = [_unit, _target, _inBuilding] call FUNC(deleteClone);
+};
 
 // Prevent collision damage
 [QEGVAR(common,fixCollision), _unit] call CBA_fnc_localEvent;
@@ -72,8 +78,9 @@ if (!isNil "_previousWeaponState") then {
 [_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 // Prevent object from flipping inside buildings
-if (_inBuilding) then {
+if (_inBuilding && {!_isClone}) then {
     _target setPosASL (getPosASL _target vectorAdd [0, 0, 0.05]);
+    TRACE_2("setPos",getPosASL _unit,getPosASL _target);
 };
 
 _unit setVariable [QGVAR(isCarrying), false, true];
@@ -122,6 +129,12 @@ if (_loadCargo) then {
             } else {
                 [_unit, _target, _cursorObject] call EFUNC(common,loadPerson);
             };
+
+            // Repurpose variable for flag used in event below
+            _loadCargo = true;
         };
     };
 };
+
+// API
+[QGVAR(stoppedCarry), [_unit, _target, _loadCargo]] call CBA_fnc_localEvent;

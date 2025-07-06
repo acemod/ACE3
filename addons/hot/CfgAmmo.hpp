@@ -1,3 +1,4 @@
+class ace_missileguidance_type_Hot;
 class CfgAmmo {
     class M_Scalpel_AT;
     class ammo_Penetrator_Base;
@@ -21,7 +22,7 @@ class CfgAmmo {
     };
 
     class GVAR(HOT1): M_Scalpel_AT {
-        aiAmmoUsageFlags = "128+512";
+        aiAmmoUsageFlags = 128+512;
         model = "\A3\Weapons_F_Tank\Launchers\Vorona\Vorona_missile_heat_fly";
         proxyShape = "\A3\Weapons_F\Ammo\Missile_AT_03_F";
         submunitionAmmo = QGVAR(ammo_Penetrator_HOT1);
@@ -55,43 +56,8 @@ class CfgAmmo {
         EGVAR(rearm,caliber) = 178;
         EGVAR(vehicle_damage,incendiary) = 1.0;
 
-        class ace_missileguidance {
+        class ace_missileguidance: ace_missileguidance_type_Hot {
             enabled = 1;
-
-            pitchRate = 45;          // Minium flap deflection for guidance
-            yawRate = 45;            // Maximum flap deflection for guidance
-
-            canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
-
-            showTrail = 1;
-
-            // Guidance type for munitions
-            defaultSeekerType = "SACLOS";
-            seekerTypes[] = { "SACLOS" };
-
-            defaultSeekerLockMode = "LOAL";
-            seekerLockModes[] = { "LOAL", "LOBL" };
-
-            defaultNavigationType = "Line";
-            navigationTypes[] = { "Line" };
-
-            lineGainP = 7;
-            lineGainD = 6;
-
-            initialPitch = 2;
-
-            seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
-            seekerAngle = 30;           // Angle from the shooter's view that can track the missile
-            seekerAccuracy = 1;         // seeker accuracy multiplier
-
-            seekerMinRange = 75;
-            seekerMaxRange = 4000;      // Range from the missile which the seeker can visually search
-
-            offsetFromCrosshair[] = { 0, 0, 0.5 }; // where the missile wants to stay in relation to the center of the crosshair.
-
-            // Attack profile type selection
-            defaultAttackProfile = "WIRE";
-            attackProfiles[] = {"WIRE"};
         };
     };
 
@@ -106,7 +72,7 @@ class CfgAmmo {
     };
 
     class GVAR(HOT2MP): GVAR(HOT2) {
-        aiAmmoUsageFlags = "64+128";
+        aiAmmoUsageFlags = 64+128;
         submunitionAmmo = "";
         warheadName = "HE";
         allowAgainstInfantry = 1;
@@ -120,7 +86,7 @@ class CfgAmmo {
         EGVAR(frag,metal) = 7100; // 1000 steel balls
         EGVAR(frag,charge) = 4100;
         EGVAR(frag,gurney_c) = 2700;
-        EGVAR(frag,gurney_k) = "3/5";
+        EGVAR(frag,gurney_k) = 3/5;
         EGVAR(frag,classes)[] = {"ACE_frag_small"};
 
         displayName = CSTRING(hot2mp);
@@ -143,6 +109,7 @@ class CfgAmmo {
         class ace_missileguidance: ace_missileguidance {
             enabled = 1;
             seekerMaxRange = 4300;
+            offsetFromCrosshair[] = { 0, 0, 0.5 }; // where the missile wants to stay in relation to the center of the crosshair.
         };
     };
 };

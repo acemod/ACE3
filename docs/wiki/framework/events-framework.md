@@ -38,13 +38,14 @@ The vehicle events will also have the following local variables available `_gunn
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|
 |`ace_unconscious` | [_unit, _state(BOOL)] | Global | Listen | Unit's unconscious state changed |
-|`ace_placedInBodyBag` | [_target, _bodyBag, _isGrave] | Global | Listen | Target placed into a bodybag Note: (Target will soon be deleted, target could be a bodybag) |
-|`ace_placedInGrave` | [_target, _grave] | Global | Listen | Target placed into a grave, _grave will be objNull if `Create Grave Markers` is disabled Note: (Target will soon be deleted) |
+|`ace_placedInBodyBag` | [_target, _bodyBag, _isGrave, _medic] | Global | Listen | Target placed into a bodybag Note: (Target will soon be deleted, target could be a bodybag) |
+|`ace_placedInGrave` | [_target, _grave, _medic] | Global | Listen | Target placed into a grave, _grave will be objNull if `Create Grave Markers` is disabled Note: (Target will soon be deleted) |
 |`ace_treatmentStarted` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem, _createLitter] | Local | Listen | Treatment action has started (local on the _caller) |
 |`ace_treatmentSucceded` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem, _createLitter] | Local | Listen | Treatment action is completed (local on the _caller) |
 |`ace_treatmentFailed` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem, _createLitter] | Local | Listen | Treatment action has been interrupted (local on the _caller) |
 |`ace_medical_handleUnitVitals` | [_unit, _deltaT] | Local | Listen | Vitals update ran for unit, _deltaT is the time elapsed since the previous vitals update (local to _unit) |
 |`ace_medical_treatment_bandaged` | [_medic, _patient, _bodyPart, _className, _itemUser, _usedItem, _createLitter, _bandageEffectiveness] | Local | Listen | _medic has bandaged _patient, the array can be modified to change treatment parameters (local to _medic) |
+|`ace_medical_overdose` | [_unit, _medication, _medicationDose, _overdoseThreshold, _incompatibleMed] | Local | Listen | _unit has overdosed on _medication by _overdoseThreshold - _medicationDose, overdoseThreshold was determined by _incompatibleMed (can be _medication itself or mixed incompatible medication) |
 
 ### 2.3 Interaction Menu (`ace_interact_menu`)
 MenuType: 0 = Interaction, 1 = Self Interaction
@@ -105,9 +106,9 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|
-|`ace_refuel_started` | [_source, _target] | Local | Listen | Refuelling has started |
-|`ace_refuel_tick` | [_source, _target, _amount] | Local | Listen | Amount of fuel transferred in a tick |
-|`ace_refuel_stopped` | [_source, _target] | Local | Listen | Refuelling has stopped |
+|`ace_refuel_started` | [_source, _target, _nozzle, _unit] | Local | Listen | Refuelling has started |
+|`ace_refuel_tick` | [_source, _target, _amount, _refuelContainer, _nozzle] | Local | Listen | Amount of fuel transferred in a tick |
+|`ace_refuel_stopped` | [_source, _target, _nozzle] | Local | Listen | Refuelling has stopped |
 
 ### 2.10 Cook Off (`ace_cookoff`)
 
@@ -167,7 +168,20 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 | `ace_headless_groupTransferPre` | [_group, _HC (OBJECT), _previousOwner, _idHC] | Target | Listen | Called just before a group is transferred from any machine to a HC. Called where group currently is local and on the HC, where group is going to be local.
 | `ace_headless_groupTransferPost` | [_group, _HC (OBJECT), _previousOwner, _idHC, _transferredSuccessfully] | Target | Listen | Called just after a group is transferred from a machine to a HC. Called where group was local and on the HC, where group is now local. `_transferredSuccessfully` is passed so mods can actually check if the locality was properly transferred, as ownership transfer is not guaranteed.
 
-### 2.18 HuntIR (`ace_huntir`)
+### 2.18 Dragging (`ace_dragging`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_dragging_cloneCreated` | [_clone, _corpse] | Local | Listen | Called when a clone used for dragging/carrying corpses is created
+| `ace_dragging_cloneDeleted` | [_clone, _corpse] | Local | Listen | Called when a clone used for dragging/carrying corpses is deleted
+| `ace_dragging_setupCarry` | [_unit, _target] | Local | Listen | Called when the unit starts the carrying animation for the target
+| `ace_dragging_startedCarry` | [_unit, _target] | Local | Listen | Called when the unit starts successfully carrying the target. This event is called after `ace_dragging_setupCarry`.
+| `ace_dragging_stoppedCarry` | [_unit, _target, _loadCargo] | Local | Listen | Called when the unit stops carrying the target. `_loadCargo` says if the target is being loaded as cargo/person or not.
+| `ace_dragging_setupDrag` | [_unit, _target] | Local | Listen | Called when the unit starts the dragging animation for the target
+| `ace_dragging_startedDrag` | [_unit, _target] | Local | Listen | Called when the unit starts successfully dragging the target. This event is called after `ace_dragging_setupDrag`.
+| `ace_dragging_stoppedDrag` | [_unit, _target] | Local | Listen | Called when the unit stops dragging the target
+
+### 2.19 HuntIR (`ace_huntir`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
@@ -179,6 +193,14 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 | `ace_huntir_monitorConnected` | [_unit, _huntir] | Local | Listen | Called when the monitor is connected
 | `ace_huntir_monitorNoGDS` | [_unit] | Local | Listen | Called when the monitor found no GDS
 
+### 2.20 Mine detector (`ace_minedetector`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_minedetector_detectorEnabled` | [_unit, _detectorType] | Local | Listen | Called when local unit turned on their mine detector
+| `ace_minedetector_detectorDisabled` | [_unit, _detectorType] | Local | Listen | Called when local unit turned off their mine detector
+| `ace_minedetector_mineDetected` | [_unit, _mine, _distance, _detectorType] | Local | Listen | Called when local unit has detected a mine
+
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.
 
@@ -188,8 +210,8 @@ Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom
 
 `CBA_fnc_addEventHandler` - Adds an event handler with the event name and returns the event handler ID.
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Event name | String | Required |
 | 1  | Code block | Code | Required |
 | **R** | Event ID | Number | Return value |
@@ -198,8 +220,8 @@ Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom
 
 `CBA_fnc_removeEventHandler` - Removes a specific event handler of the given event name, using the ID returned from `CBA_fnc_addEventHandler`.
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Event name | String | Required |
 | 1  | Event ID | Number | Required |
 | **R** | None | None | Return value |
@@ -210,8 +232,8 @@ Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom
 
 `CBA_fnc_localEvent` - Calls an event only on the local machine, useful for inter-module events.
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Event name | String | Required |
 | 1  | Arguments | Any | Required |
 | **R** | None | None | Return value |
@@ -220,8 +242,8 @@ Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom
 
 `CBA_fnc_targetEvent` - Calls an event only on the target machine or list of target machines.
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Event name | String | Required |
 | 1  | Arguments | Any | Required |
 | 2  | Target(s) | Object OR Number OR Array | Required |
@@ -231,8 +253,8 @@ Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom
 
 `CBA_fnc_serverEvent` - Calls an event only on the server machine (dedicated or self-hosted).
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Event name | String | Required |
 | 1  | Arguments | Any | Required |
 | **R** | None | None | Return value |
@@ -241,8 +263,8 @@ Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom
 
 `CBA_fnc_globalEvent` - Calls an event on all machines - the local machine, and the server machine.
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Event name | String | Required |
 | 1  | Arguments | Any | Required |
 | **R** | None | None | Return value |
@@ -256,8 +278,8 @@ Adds a globally synchronized event handler which will expire events after the pr
 
 `ace_common_fnc_addSyncedEventHandler`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Event name | String | Required |
 | 1  | Code block | Code | Required |
 | 2  | Time to live | Number OR Code | Optional (default: `0`) |
@@ -269,8 +291,8 @@ Removes a specific event handler of the given event name, using the ID returned 
 
 `ace_common_fnc_removeSyncedEventHandler`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Event name | String | Required |
 | **R** | None | None | Return value |
 
@@ -280,8 +302,8 @@ Calls a globally synchronized event, which will also be run on JIP players unles
 
 `ace_common_fnc_syncedEvent`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Event name | String | Required |
 | 1  | Arguments | Any | Required |
 | 2  | Time to live for this call | Number OR Code | Optional (default: `0`) |

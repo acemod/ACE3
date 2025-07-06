@@ -75,9 +75,9 @@ GVAR(digPFH) = [{
             _minzoffset = _minzoffset min ((getTerrainHeightASL _pos) - (_pos select 2));
             #ifdef DEBUG_MODE_FULL
                 _pos set [2, getTerrainHeightASL _pos];
-                _pos2 = +_pos;
+                private _pos2 = +_pos;
                 _pos2 set [2, getTerrainHeightASL _pos + 1];
-                drawLine3D [ASLtoAGL _pos, ASLtoAGL _pos2, [1,1,0,1]];
+                drawLine3D [ASLToAGL _pos, ASLToAGL _pos2, [1,1,0,1]];
             #endif
         };
     };
@@ -95,7 +95,7 @@ GVAR(digPFH) = [{
 _unit setVariable [QGVAR(Dig), [
     _unit, "DefaultAction",
     {GVAR(digPFH) != -1},
-    {[_this select 0] call FUNC(placeConfirm)}
+    {[_this select 1] call FUNC(placeConfirm)}
 ] call EFUNC(common,addActionEventHandler)];
 
 _unit setVariable [QGVAR(isPlacing), true, true];

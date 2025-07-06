@@ -7,7 +7,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class GVAR(place) {
                 displayName = CSTRING(DeploySandbag);
-                condition = QUOTE(_this call FUNC(canDeploy));
+                condition = QUOTE(call FUNC(canDeploy));
                 //wait a frame to handle "Do When releasing action menu key" option
                 statement = QUOTE([ARR_2({_this call FUNC(deploy)},_this)] call CBA_fnc_execNextFrame);
                 exceptions[] = {"isNotSwimming"};

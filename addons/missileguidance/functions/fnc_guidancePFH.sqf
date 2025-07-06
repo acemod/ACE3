@@ -33,7 +33,7 @@ if (!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
 };
 
 if (_showTrail) then {
-    drop ["\a3\data_f\kouleSvetlo", "", "Billboard",  100, 0.03, _projectile modelToWorld [0, 0, 0], 
+    drop ["\a3\data_f\kouleSvetlo", "", "Billboard",  100, 0.03, _projectile modelToWorld [0, 0, 0],
         [0, 0, 0], 0, 1.25, 1, 0.05, [0.5], [TRAIL_COLOUR(1)], [0], 0, 0, "", "", "", 0, false, -1, [TRAIL_COLOUR(10000)]];
 };
 
@@ -42,7 +42,7 @@ private _timestep = diag_deltaTime * accTime;
 // Run seeker function:
 private _seekerTargetPos = [[0,0,0], _args, _seekerStateParams, _lastKnownPosState, _timestep] call FUNC(doSeekerSearch);
 // Run attack profile function:
-_seekerTargetPos = AGLtoASL ASLToAGL _seekerTargetPos;
+_seekerTargetPos = AGLToASL ASLToAGL _seekerTargetPos;
 private _profileAdjustedTargetPos = [_seekerTargetPos, _args, _attackProfileStateParams, _timestep] call FUNC(doAttackProfile);
 
 private _projectilePos = getPosASLVisual _projectile;
@@ -50,11 +50,11 @@ _targetData set [1, _projectilePos vectorFromTo _profileAdjustedTargetPos];
 
 // If we have no seeker target, then do not change anything
 // If there is no deflection on the missile, this cannot change and therefore is redundant. Avoid calculations for missiles without any deflection
-if ((_pitchRate != 0 || {_yawRate != 0})) then {
+if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqualTo [0,0,0]}) then {
     private _navigationFunction = getText (configFile >> QGVAR(NavigationTypes) >> _navigationType >> "functionName");
     if (_navigationStateData isNotEqualTo []) then {
         (_navigationStateData select _currentState) params ["_transitionCondition"];
-        private _transition = (_args call (missionNamespace getVariable [_transitionCondition, { false }]));
+        private _transition = ([_args, _timestep] call (missionNamespace getVariable [_transitionCondition, { false }]));
         if (_transition) then {
             _currentState = _currentState + 1;
             _navigationStateParams set [0, _currentState];
@@ -67,7 +67,7 @@ if ((_pitchRate != 0 || {_yawRate != 0})) then {
         _stateParams set [4, _navigationParameters];
     };
     private _commandedAcceleration = [_args, _timestep, _seekerTargetPos, _profileAdjustedTargetPos, _targetData, _navigationParameters] call (missionNamespace getVariable _navigationFunction);
-    
+
     if (isNil "_commandedAcceleration") exitWith {
         systemChat format ["Error in %1 Missile Type %2 Seeker Pos %3", _navigationFunction, typeOf _projectile, _seekerTargetPos];
         ERROR_MSG_3("_commandedAcceleration is nil! Guidance cancelled [%1 %2 %3]",_navigationFunction,typeOf _projectile,_seekerTargetPos);
@@ -97,7 +97,7 @@ if ((_pitchRate != 0 || {_yawRate != 0})) then {
 
         private _clampedPitch = (_pitchChange min _pitchRate) max -_pitchRate;
         private _clampedYaw = (_yawChange min _yawRate) max -_yawRate;
-        
+
         // controls are either on or off, no proportional
         if (_isBangBangGuidance) then {
             private _pitchSign = if (_clampedPitch == 0) then {
@@ -124,7 +124,7 @@ if ((_pitchRate != 0 || {_yawRate != 0})) then {
         // bastardized version of direction stability https://en.wikipedia.org/wiki/Directional_stability#Steering_forces
         private _forceYaw = _stabilityCoefficient * _velocityAngleYaw + _clampedYaw;
         private _forcePitch = _stabilityCoefficient * _velocityAnglePitch + _clampedPitch;
-        
+
         _pitch = _pitch + _forcePitch * _timestep;
         _yaw = _yaw + _forceYaw * _timestep;
 
@@ -153,7 +153,7 @@ if ((_pitchRate != 0 || {_yawRate != 0})) then {
                 _quaternion#1,
                 _quaternion#2
             ];
-            
+
             private _vectorReturn = _vector vectorAdd ((
                 _imaginary vectorCrossProduct (
                     (_imaginary vectorCrossProduct _vector) vectorAdd (
@@ -172,7 +172,7 @@ if ((_pitchRate != 0 || {_yawRate != 0})) then {
 
         _temp = [sin (_pitch / 2), 0, 0, cos (_pitch / 2)];
         _quaternion = [_quaternion, _temp] call _multiplyQuat;
-        
+
         private _dir = [_quaternion, [0, 1, 0]] call _multiplyVector;
         private _up = [_quaternion, [0, 0, 1]] call _multiplyVector;
 
@@ -190,15 +190,16 @@ if ((_pitchRate != 0 || {_yawRate != 0})) then {
 
 if (GVAR(debug_drawGuidanceInfo)) then {
     TRACE_3("",_projectilePos,_seekerTargetPos,_profileAdjustedTargetPos);
-    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLtoAGL _projectilePos, 0.75, 0.75, 0, _ammo, 1, 0.025, "TahomaB"];
+    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLToAGL _projectilePos, 0.75, 0.75, 0, _ammo, 1, 0.025, "TahomaB"];
 
     if (!isGamePaused && accTime > 0) then {
-        private _ps = "#particlesource" createVehicleLocal (ASLtoAGL _projectilePos);
-        _PS setParticleParams [["\A3\Data_f\cl_basic", 8, 3, 1], "", "Billboard", 1, 3.0141, [0, 0, 0], [0, 0, 0], 1, 1.275, 1, 0, [1, 1], [[1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1]], [1], 1, 0, "", "", nil];
+        private _sizeScale = linearConversion [10, 1000, _projectilePos vectorDistance AGLToASL positionCameraToWorld [0,0,0], 0.08, 1, true];
+        private _ps = "#particlesource" createVehicleLocal (ASLToAGL _projectilePos);
+        _PS setParticleParams [["\A3\Data_f\cl_basic", 8, 3, 1], "", "Billboard", 1, 3.0141, [0, 0, 0], [0, 0, 0], 1, 1.275, 1, 0, [_sizeScale, _sizeScale], [[1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1]], [1], 1, 0, "", "", nil];
         _PS setDropInterval 1.0;
     };
 
-    drawLine3D [ASLtoAGL _projectilePos, (ASLtoAGL _projectilePos) vectorAdd velocity _projectile, [1, 1, 1, 1]];
+    drawLine3D [ASLToAGL _projectilePos, (ASLToAGL _projectilePos) vectorAdd velocity _projectile, [1, 1, 1, 1]];
 };
 
 _stateParams set [0, diag_tickTime];

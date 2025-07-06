@@ -6,9 +6,9 @@
  * Arguments:
  * 0: Position <ARRAY>
  * 1: Position <ARRAY>
- * 2: Force - ignoring saftey checks (optional: false) <BOOL>
- * 3: Cut Grass (optional: false) <BOOL>
- * 4: Dry Run - Just test if possible (can run on clients) <BOOL>
+ * 2: Force - ignoring safety checks <BOOL> (default: false)
+ * 3: Cut Grass <BOOL> (default: false)
+ * 4: Dry Run - Just test if possible (can run on clients) <BOOL> (default: false)
  *
  * Return Value:
  * <ARRAY>
@@ -122,7 +122,7 @@ for "_i" from 0 to _length do { // intentionally inclusive
         private _missionObjects = nearestObjects [_origin2D, ["All"], _testRadius, true];
         _missionObjects = _missionObjects select { !(_x isKindOf "Logic") };
         if (_missionObjects isNotEqualTo []) then {
-            _missionObjects = _missionObjects apply {typeOf _x}; 
+            _missionObjects = _missionObjects apply {typeOf _x};
             if (_force) then {
                 WARNING_1("blocking missionObjects %1",_missionObjects);
             } else {

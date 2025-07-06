@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "\z\ace\addons\refuel\defines.hpp"
 
 class CfgPatches {
     class SUBADDON {
@@ -14,5 +15,7 @@ class CfgPatches {
         VERSION_CONFIG;
     };
 };
+
+class CBA_Extended_EventHandlers;
 
 #include "CfgVehicles.hpp"

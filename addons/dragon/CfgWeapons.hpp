@@ -4,14 +4,13 @@ class CfgWeapons {
     class missiles_titan;
     class Binocular;
     class Default;
-    class missiles_titan_static: missiles_titan {
-        class WeaponSlotsInfo;
-    };
+    class missiles_titan_static: missiles_titan {};
     class launch_Titan_F: launch_Titan_base {
         class WeaponSlotsInfo;
     };
 
     class GVAR(super): launch_Titan_F {
+        author = ECSTRING(common,ACETeam);
         model = QPATHTOF(models\ace_m47_magazine.p3d);
         picture = QPATHTOF(data\m47_dragon_item_ca.paa);
         magazines[] = {};
@@ -19,7 +18,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(dragonDescription);
         scope = 2;
 
-        class ACE_CSW {
+        class ace_csw {
             type = "mount";
             deployTime = 2;
             pickupTime = 2;
@@ -33,9 +32,10 @@ class CfgWeapons {
     };
 
     class GVAR(superStatic): missiles_titan_static {
-        EGVAR(overpressure,angle) = 90;
-        EGVAR(overpressure,range) = 30;
+        EGVAR(overpressure,angle) = 60;
+        EGVAR(overpressure,range) = 10;
         EGVAR(overpressure,damage) = 0.85;
+        EGVAR(overpressure,offset) = 0.4;
 
         initSpeed = 120;
 
@@ -75,7 +75,7 @@ class CfgWeapons {
         opticsZoomMin = 0.055;
         opticsZoomMax = 0.055;
         scope = 2;
-        class ACE_CSW {
+        class ace_csw {
             type = "weapon";
             deployTime = 2;
             pickupTime = 1;

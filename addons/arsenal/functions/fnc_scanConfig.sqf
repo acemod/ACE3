@@ -50,7 +50,7 @@ private _isTool = false;
     _configItemInfo = _x >> "ItemInfo";
     _hasItemInfo = isClass (_configItemInfo);
     _itemInfoType = if (_hasItemInfo) then {getNumber (_configItemInfo >> "type")} else {0};
-    _isMiscItem = _className isKindOf ["CBA_MiscItem", _cfgWeapons];
+    _isMiscItem = [_className, _x, false, true] call FUNC(isMiscItem);
     _isTool = getNumber (_x >> "ACE_isTool") isEqualTo 1;
 
     switch (true) do {
@@ -127,13 +127,7 @@ private _isTool = false;
             };
         };
         // Misc. items
-        case (
-            _hasItemInfo &&
-            {_isMiscItem &&
-            {_itemInfoType in [TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_MUZZLE, TYPE_BIPOD]}} ||
-            {_itemInfoType in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
-            {_simulationType == "ItemMineDetector"}
-        ): {
+        case (_hasItemInfo && _isMiscItem): {
             (_configItems get IDX_VIRT_MISC_ITEMS) set [_className, nil];
             if (_isTool) then {_toolList set [_className, nil]};
         };
@@ -160,7 +154,11 @@ private _magazineMiscItems = createHashMap;
 
 {
     _magazineMiscItems set [configName _x, nil];
-} forEach ((toString {getNumber (_x >> "ACE_isUnique") == 1 || getNumber (_x >> "ACE_asItem") == 1}) configClasses _cfgMagazines);
+} forEach ((toString {
+    with uiNamespace do { // configClasses runs in missionNamespace even if we're in preStart apparently
+        [configName _x, _x, true, true] call FUNC(isMiscItem);
+    };
+}) configClasses _cfgMagazines);
 
 // Remove invalid/non-existent entries
 _grenadeList deleteAt "";
@@ -228,10 +226,10 @@ private _faceCategory = "";
             _faceCache set [configName _x, [getText (_x >> "displayName"), _modPicture, _faceCategory]];
         };
     } forEach ("true" configClasses _x);
-} forEach ("true" configClasses (configfile >> "CfgFaces"));
+} forEach ("true" configClasses (configFile >> "CfgFaces"));
 
 // Get all voices
-private _voiceCache = (configProperties [configFile >> "CfgVoice", "isClass _x && {getNumber (_x >> 'scope') == 2}", true]) - [configfile >> "CfgVoice" >> "NoVoice"];
+private _voiceCache = (configProperties [configFile >> "CfgVoice", "isClass _x && {getNumber (_x >> 'scope') == 2}", true]) - [configFile >> "CfgVoice" >> "NoVoice"];
 _voiceCache = _voiceCache apply {configName _x};
 
 // Get all insignia

@@ -27,7 +27,7 @@ class Extended_DisplayUnload_EventHandlers {
 class Extended_GetIn_EventHandlers {
     class All {
         class GVAR(AutoDetachCaptive) {
-            getIn = QUOTE(_this call FUNC(handleGetIn));
+            getIn = QUOTE(call FUNC(handleGetIn));
         };
     };
 };
@@ -35,7 +35,7 @@ class Extended_GetIn_EventHandlers {
 class Extended_GetOut_EventHandlers {
     class All {
         class GVAR(AutoDetachCaptive) {
-            getOut = QUOTE(_this call FUNC(handleGetOut));
+            getOut = QUOTE(call FUNC(handleGetOut));
         };
     };
 };
@@ -43,7 +43,7 @@ class Extended_GetOut_EventHandlers {
 class Extended_InitPost_EventHandlers {
     class CAManBase {
         class GVAR(InitPost) {
-            init = QUOTE(_this call FUNC(handleUnitInitPost));
+            init = QUOTE(call FUNC(handleUnitInitPost));
         };
     };
 };
@@ -51,7 +51,7 @@ class Extended_InitPost_EventHandlers {
 class Extended_Respawn_EventHandlers {
     class CAManBase {
         class ADDON {
-            respawn = QUOTE(_this call FUNC(handleRespawn));
+            respawn = QUOTE(call FUNC(handleRespawn));
         };
     };
 };
@@ -67,7 +67,7 @@ class Extended_Local_EventHandlers {
 class Extended_Killed_EventHandlers {
     class CAManBase {
         class ADDON {
-            killed = QUOTE(_this call FUNC(handleKilled));
+            killed = QUOTE(call FUNC(handleKilled));
         };
     };
 };

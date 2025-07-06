@@ -20,7 +20,7 @@ params ["_target", "_unit"];
 TRACE_2("rearm",_target,_unit);
 
 private _attachedDummy = _unit getVariable [QGVAR(dummy), objNull];
-if (isNull _attachedDummy) exitwith {ERROR_1("attachedDummy null %1",_attachedDummy);};
+if (isNull _attachedDummy) exitWith {ERROR_1("attachedDummy null %1",_attachedDummy);};
 private _magazineClass = _attachedDummy getVariable QGVAR(magazineClass);
 if (isNil "_magazineClass") exitWith {ERROR_1("magazineClass nil %1",_attachedDummy);};
 
@@ -31,7 +31,7 @@ private _needRearmMags = [_target] call FUNC(getNeedRearmMagazines);
 private _needRearmMagsOfClass = _needRearmMags select {(_x select 0) isEqualTo _magazineClass};
 
 // Exit if no magazines need rearming
-if ((count _needRearmMagsOfClass) == 0) exitWith {ERROR_2("Could not find turret for %1 in %2",_magazineClass,typeOf _target);};
+if (_needRearmMagsOfClass isEqualTo []) exitWith {ERROR_2("Could not find turret for %1 in %2",_magazineClass,typeOf _target);};
 
 private _currentRearmableMag = _needRearmMagsOfClass select 0;
 _currentRearmableMag params ["", "_turretPath", "", "_pylon", "", "_magazineCount"];
@@ -45,6 +45,7 @@ private _magazineDisplayName = _magazineClass call FUNC(getMagazineName);
     "",
     format [localize LSTRING(RearmAction), getText(configOf _target >> "displayName"), _magazineDisplayName],
     {
+        //IGNORE_PRIVATE_WARNING ["_player"];
         param [0] params ["_target", "_unit"];
         _player distance _target <= GVAR(distance);
     },

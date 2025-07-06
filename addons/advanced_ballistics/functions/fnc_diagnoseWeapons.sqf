@@ -1,4 +1,3 @@
-#define DEBUG_MODE_FULL
 #include "..\script_component.hpp"
 /*
  * Author: esteldunedain
@@ -66,6 +65,10 @@ for "_i" from 0 to (count _cfgWeapons)-1 do {
                 _WeaponCacheEntry params ["_barrelTwist", "_twistDirection", "_barrelLength"];
 
                 private _barrelVelocityShift = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, _vanillaInitialSpeed] call FUNC(calculateBarrelLengthVelocityShift);
+                if (_barrelLength > 0) then {
+                    private _shiftedMV = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, 0] call FUNC(calculateBarrelLengthVelocityShift);
+                    if (_shiftedMV == 0) then { ERROR_2("%1:%2 has length set but invalid mags",_weapon,_magazine)};
+                };
                 private _abInitialSpeed = _vanillaInitialSpeed + _barrelVelocityShift;
                 // --------------------------------------------------
 
@@ -108,17 +111,10 @@ for "_i" from 0 to (count _cfgWeapons)-1 do {
         };
         if (_weapons find _weapon == -1) then {
             _weapons pushBack _weapon;
-            _magIndex = _magazines find _magazine;
-            _magSpeed = _magazineInitSpeeds select _magIndex;
+            private _magIndex = _magazines find _magazine;
+            private _magSpeed = _magazineInitSpeeds select _magIndex;
             _weaponInitSpeeds pushBack (_abInitialSpeed / _magSpeed);
         };
-    } forEach _data;
-    {
-        _x params ["_magazineIndex", "_abInitialSpeed", "_magazine", "_weapon"];
-        _magIndex = _magazines find _magazine;
-        _magSpeed = _magazineInitSpeeds select _magIndex;
-        _wepIndex = _weapons find _weapon;
-        _wepSpeed = _weaponInitSpeeds select _wepIndex;
     } forEach _data;
     {
         diag_log text format ["AB_WeaponInitSpeed,%1,%2", _x, _weaponInitSpeeds select _forEachIndex];

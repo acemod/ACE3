@@ -22,7 +22,7 @@ params ["_medic", "_patient", "_bodyPart"];
 TRACE_3("tourniquetRemove",_medic,_patient,_bodyPart);
 
 // Remove tourniquet from body part, exit if no tourniquet applied
-private _partIndex = ALL_BODY_PARTS find tolowerANSI _bodyPart;
+private _partIndex = ALL_BODY_PARTS find toLowerANSI _bodyPart;
 private _tourniquets = GET_TOURNIQUETS(_patient);
 
 if (_tourniquets select _partIndex == 0) exitWith {
@@ -42,7 +42,9 @@ TRACE_1("clearConditionCaches: tourniquetRemove",_nearPlayers);
 
 // Add tourniquet item to medic or patient
 if (_medic call EFUNC(common,isPlayer)) then {
-    private _receiver = [_patient, _medic, _medic] select GVAR(allowSharedEquipment);
+    private _allowSharedEquipment = GVAR(allowSharedEquipment);
+    if (_allowSharedEquipment == 3) then { _allowSharedEquipment = [0, 1] select ([_medic] call FUNC(isMedic)) };
+    private _receiver = [_patient, _medic, _medic] select _allowSharedEquipment;
     [_receiver, "ACE_tourniquet"] call EFUNC(common,addToInventory);
 } else {
     // If the medic is AI, only return tourniquet if enabled

@@ -4,7 +4,7 @@
  * Compile the self action menu from config for an object's class
  *
  * Arguments:
- * 0: Object or class name <OBJECT> or <STRING>
+ * 0: Object or class name <OBJECT or STRING>
  *
  * Return Value:
  * None
@@ -109,6 +109,7 @@ if (_objectType isKindOf "CAManBase") then {
 
 TRACE_1("Building ACE_SelfActions",_objectType);
 // Create a master action to base on self action
+//IGNORE_PRIVATE_WARNING ["_target"];
 private _actions = [
         [
             [

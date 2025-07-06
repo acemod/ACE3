@@ -1,4 +1,3 @@
-#define DEBUG_MODE_FULL
 #include "..\script_component.hpp"
 /*
  * Author: esteldunedain
@@ -9,8 +8,8 @@
  * Arguments:
  * 0: Setting name <STRING>
  * 1: Value <ANY>
- * 2: Force it? (default: false) <BOOL>
- * 3: Broadcast the change to all clients (default: false) <BOOL>
+ * 2: Force it? <BOOL> (default: false)
+ * 3: Broadcast the change to all clients <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -29,8 +28,8 @@ if (!_broadcastChanges) exitWith {
     ERROR_1("Setting [%1] - SetSetting no longer supports non-global settings",_name);
 };
 
-if ([_settingName, "mission"] call CBA_settings_fnc_isForced) then {
-    WARNING_1("Setting [%1] - Already mission forced - Ignoring",_settingName);
+if ([_name, "mission"] call CBA_settings_fnc_isForced) then {
+    WARNING_1("Setting [%1] - Already mission forced - Ignoring",_name);
 };
 
 [QGVAR(setSetting), [_name, _value], (format [QGVAR(setSetting_%1), _name])] call CBA_fnc_globalEventJIP;

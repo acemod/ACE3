@@ -51,7 +51,7 @@ if (_magazine == "") exitWith {
 
 TRACE_6("mag",_magazine,_weapon,_muzzle,_ammo,_firer,_gunner);
 
-private _vehAttenuation = [GVAR(playerVehAttenuation), 1] select (isNull objectParent ACE_player || {isTurnedOut ACE_player});
+private _vehAttenuation = [EGVAR(common,playerVehAttenuation), 1] select (isNull objectParent ACE_player || {isTurnedOut ACE_player});
 private _loudness = _magazine call FUNC(getAmmoLoudness);
 
 _loudness = _loudness * _audibleFireCoef;

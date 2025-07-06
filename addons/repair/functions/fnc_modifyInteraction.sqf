@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Target <OBJECT>
  * 1: Player (not used) <OBJECT>
- * 2: Args (not used) <Any>
+ * 2: Args (not used) <ANY>
  * 3: Action Data <ARRAY>
  *
  * Return Value:

@@ -1,7 +1,8 @@
 class CfgAmmo {
 
     class BombCore;
-    class LaserBombCore: BombCore {
+    class LaserBombCore: BombCore {};
+    class ammo_Bomb_LaserGuidedBase: LaserBombCore {
         GVAR(caliber) = 250; // Default caliber for bombs
     };
     class MissileCore;
@@ -181,7 +182,6 @@ class CfgAmmo {
         GVAR(dummy) = QGVAR(Bo_Mk82);
     };
 
-    class ammo_Bomb_LaserGuidedBase: LaserBombCore {};
     class Bo_GBU12_LGB: ammo_Bomb_LaserGuidedBase {
         GVAR(caliber) = 250; // Default caliber for bombs
         GVAR(dummy) = QGVAR(Bo_GBU12_LGB);

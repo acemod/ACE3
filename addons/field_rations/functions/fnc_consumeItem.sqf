@@ -37,7 +37,7 @@ private _displayName = getText (_config >> "displayName");
 private _consumeText = getText (_config >> QXGVAR(consumeText));
 
 if (_consumeText == "") then {
-    _consumeText = if (_hungerSatiated > 0) then {
+    _consumeText = if (_hungerSatiated != 0) then {
         LLSTRING(EatingX);
     } else {
         LLSTRING(DrinkingX);
@@ -52,12 +52,12 @@ _consumeText = format [_consumeText, _displayName];
 private _stanceIndex = ["STAND", "CROUCH", "PRONE"] find stance _player;
 
 // Handle in vehicle when stance is UNDEFINED
-if (vehicle _player != _player) then {_stanceIndex = 0};
+if (!isNull objectParent _player) then {_stanceIndex = 0};
 
 private _consumeAnim = getArray (_config >> QXGVAR(consumeAnims)) param [_stanceIndex, "", [""]];
 private _consumeSound = getArray (_config >> QXGVAR(consumeSounds)) param [_stanceIndex, "", [""]];
 
-private _soundPlayed = if (_consumeAnim != "" && {vehicle _player == _player && {!(_player call EFUNC(common,isSwimming))}}) then {
+private _soundPlayed = if (_consumeAnim != "" && {isNull objectParent _player && {!(_player call EFUNC(common,isSwimming))}}) then {
     // Store current animation for resetting
     _player setVariable [QGVAR(previousAnim), animationState _player];
     [_player, _consumeAnim, 1] call EFUNC(common,doAnimation);
@@ -88,14 +88,14 @@ private _fnc_onSuccess = {
     };
 
     // Handle thirst and hunger values
-    if (_thirstQuenched > 0) then {
+    if (_thirstQuenched != 0) then {
         private _thirst = _player getVariable [QXGVAR(thirst), 0];
-        _player setVariable [QXGVAR(thirst), (_thirst - _thirstQuenched) max 0];
+        _player setVariable [QXGVAR(thirst), (_thirst - _thirstQuenched) min 100 max 0];
     };
 
-    if (_hungerSatiated > 0) then {
+    if (_hungerSatiated != 0) then {
         private _hunger = _player getVariable [QXGVAR(hunger), 0];
-        _player setVariable [QXGVAR(hunger), (_hunger - _hungerSatiated) max 0];
+        _player setVariable [QXGVAR(hunger), (_hunger - _hungerSatiated) min 100 max 0];
     };
 
     ["acex_rationConsumed", [_player, _consumeItem, _replacementItem, _thirstQuenched, _hungerSatiated, _isMagazine]] call CBA_fnc_localEvent;
@@ -109,7 +109,7 @@ private _fnc_onFailure = {
     TRACE_1("Consume item failed",_args);
 
     // Reset animation if needed
-    if (vehicle _player == _player && {!(_player call EFUNC(common,isSwimming))}) then {
+    if (isNull objectParent _player && {!(_player call EFUNC(common,isSwimming))}) then {
         private _previousAnim = _player getVariable [QGVAR(previousAnim), ""];
         if (_previousAnim != "") then {
             [_player, _previousAnim, 2] call EFUNC(common,doAnimation);
@@ -130,7 +130,7 @@ private _fnc_condition = {
     };
 
     if (_isMagazine) exitWith {
-        _consumeItem in magazines _player // return
+        _consumeItem in ([_player, 2] call EFUNC(common,uniqueItems)) // return
     };
     _consumeItem in (_player call EFUNC(common,uniqueItems)) // return
 };

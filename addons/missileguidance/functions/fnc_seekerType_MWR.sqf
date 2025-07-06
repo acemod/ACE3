@@ -60,7 +60,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
             _seekerBaseRadiusAdjusted = _seekerBaseRadiusAtGround;
         };
         // Look in front of seeker for any targets
-        private _nearestObjects = nearestObjects [ASLtoAGL _searchPos, _lockTypes, _seekerBaseRadiusAdjusted, false];
+        private _nearestObjects = nearestObjects [ASLToAGL _searchPos, _lockTypes, _seekerBaseRadiusAdjusted, false];
         _nearestObjects = _nearestObjects apply {
             // I check both Line of Sight versions to make sure that a single bush doesnt make the target lock dissapear but at the same time ensure that this can see through smoke. Should work 80% of the time
             if ([_projectile, getPosASL _x, _seekerAngle] call FUNC(checkSeekerAngle) && { ([_projectile, _x, true] call FUNC(checkLOS)) || { ([_projectile, _x, false] call FUNC(checkLOS)) } }) then {
@@ -78,8 +78,8 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
         };
         private _closestDistance = _seekerBaseRadiusAtGround;
         {
-            if ((_x distance2d _searchPos) < _closestDistance) then {
-                _closestDistance = _x distance2d _searchPos;
+            if ((_x distance2D _searchPos) < _closestDistance) then {
+                _closestDistance = _x distance2D _searchPos;
                 _target = _x;
             };
         } forEach _nearestObjects;
@@ -90,7 +90,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
     _projectile setMissileTarget _target;
 } else {
     if (GVAR(debug_drawGuidanceInfo)) then {
-        _seekerTypeName = "MWR - EXT";
+        _seekerTypeName = "MWR - EXT"; //IGNORE_PRIVATE_WARNING ["_seekerTypeName"]; // from doSeekerSearch
     };
     // External radar homing
     // if the target is in the remote targets for the side, whoever the donor is will "datalink" the target for the hellfire.
@@ -105,7 +105,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
 };
 
 if (GVAR(debug_drawGuidanceInfo)) then {
-    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLtoAGL _expectedTargetPos, 0.75, 0.75, 0, "expected target pos", 1, 0.025, "TahomaB"];
+    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLToAGL _expectedTargetPos, 0.75, 0.75, 0, "expected target pos", 1, 0.025, "TahomaB"];
 };
 
 if !(isNull _target) then {

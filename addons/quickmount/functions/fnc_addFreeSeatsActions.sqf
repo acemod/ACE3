@@ -34,14 +34,14 @@
     [ARR_5( \
         {!isNull objectParent (_this select 0)}, \
         { \
-            LOG_1("moved in after %1 frames",diag_frameno-GVAR(frame)); \
+            LOG_1("moved in after %1 frames",diag_frameNo-GVAR(frame)); \
             (_this select 0) enableSimulation true; \
         }, \
         [ARR_3(_player,_moveBackCode,_moveBackParams)], \
         TAKEN_SEAT_TIMEOUT, \
         { \
             params [ARR_3("_player","_moveBackCode","_moveBackParams")]; \
-            WARNING_1("failed move in after %1 frames",diag_frameno-GVAR(frame)); \
+            WARNING_1("failed move in after %1 frames",diag_frameNo-GVAR(frame)); \
             [ARR_2(_player,_moveBackParams)] call _moveBackCode; \
             localize "str_mis_state_failed" call EFUNC(common,displayTextStructured); \
             _player enableSimulation true; \
@@ -61,7 +61,7 @@
 
 private _fnc_move = {
     (_this select 2) params ["_moveInCode", "_moveInParams", "_currentTurret", "_moveBackCode", "_moveBackParams"];
-    TRACE_6("fnc_move params",_moveInCode,_moveInParams,_currentTurret,_moveBackCode,_moveBackParams,call {GVAR(frame)=diag_frameno});
+    TRACE_6("fnc_move params",_moveInCode,_moveInParams,_currentTurret,_moveBackCode,_moveBackParams,call {GVAR(frame)=diag_frameNo});
 
     // workaround getting damage when moveOut while vehicle is moving
     // also this helps with arma bug when unit is stuck in wrong anim when move in turret with configured enabledByAnimationSource
@@ -83,7 +83,7 @@ private _fnc_move = {
         {params ["_target", "_player", "_currentTurret"]; IS_MOVED_OUT},
         {
             params ["", "_player", "", "_moveInCode", "_moveInParams", "_moveBackCode", "_moveBackParams"];
-            LOG_2("moved out after %1 frames",diag_frameno-GVAR(frame),call {GVAR(frame)=diag_frameno; 0});
+            LOG_2("moved out after %1 frames %2",diag_frameNo-GVAR(frame),call {GVAR(frame)=diag_frameNo; 0});
             [_player, _moveInParams] call _moveInCode;
             WAIT_IN_OR_MOVE_BACK;
         },
@@ -202,15 +202,15 @@ private _cargoNumber = -1;
                 if (_vehicle lockedTurret _turretPath) then {breakTo "crewLoop"};
                 if (_role == "gunner" && {unitIsUAV _vehicle}) then {breakTo "crewLoop"};
                 private _turretConfig = [_vehicleConfig, _turretPath] call CBA_fnc_getTurret;
-                if (!_isInVehicle) then {
-                    _params = ["GetInTurret", _vehicle, _turretPath];
-                    _statement = {_player action (_this select 2)};
-                } else {
+                if (_isInVehicle) then {
                     private _gunnerCompartments = (_turretConfig >> "gunnerCompartments") call BIS_fnc_getCfgData;
                     TO_COMPARTMENT_STRING(_gunnerCompartments);
                     if (_compartment != _gunnerCompartments) then {breakTo "crewLoop"};
                     _params = [{MOVE_IN_CODE(moveInTurret)}, [_vehicle, _turretPath], _currentTurret, _moveBackCode, _moveBackParams];
                     _statement = _fnc_move;
+                } else {
+                    _params = ["GetInTurret", _vehicle, _turretPath];
+                    _statement = {_player action (_this select 2)};
                 };
                 _name = getText (_turretConfig >> "gunnerName");
                 _icon = switch true do {

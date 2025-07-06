@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit that does the repairing <OBJECT>
  * 1: Vehicle to repair <OBJECT>
- * 2: Selected hitpoint or hitpointIndex <STRING>or<NUMBER>
+ * 2: Selected hitpoint or hitpointIndex <STRING or NUMBER>
  * 3: Repair Action Classname <STRING>
  *
  * Return Value:
@@ -21,7 +21,7 @@
 params ["_caller", "_target", "_hitPoint", "_className"];
 TRACE_4("params",_caller,_target,_hitPoint,_className);
 
-private _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
+private _config = (configFile >> "ACE_Repair" >> "Actions" >> _className);
 if !(isClass _config) exitWith {false}; // or go for a default?
 
 // if(isEngineOn _target) exitWith {false}; // Ignore here so action shows, then exit and show warning when selected #3348

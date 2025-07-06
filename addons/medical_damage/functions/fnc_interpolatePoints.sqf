@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Input value <NUMBER>
  * 1: Function points, must be in descending order by X (input) value <ARRAY>
- * 2: Whether to force integer <BOOLEAN>
+ * 2: Whether to force integer <BOOL>
  *
  * ReturnValue:
  * Interpolated result <NUMBER>
@@ -28,7 +28,7 @@ if (count _points == 1) exitWith {_points select 0 select 1};
 private _output = 0;
 private _lower = _points findIf {(_x select 0) < _input};
 if (_lower == 0) exitWith {_points select 0 select 1};
-if (_lower == -1) exitWith {_points select (count _points - 1) select 1};
+if (_lower == -1) exitWith {_points select -1 select 1};
 private _upper = _points select (_lower-1);
 _lower = _points select _lower;
 _output = linearConversion [_lower select 0, _upper select 0, _input, _lower select 1, _upper select 1, true];

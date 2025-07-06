@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
-#include "..\defines.hpp"
 #include "\a3\ui_f\hpp\defineResincl.inc"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe, johnb43
  * Update arsenal's info box.
@@ -32,11 +32,11 @@ if (isClass _itemCfg) then {
     (_display displayCtrl IDC_infoName) ctrlSetText ([_control lbText _curSel, _control lnbText [_curSel, 1]] select (ctrlType _control == CT_LISTNBOX));
 
     private _itemAuthor = getText (_itemCfg >> "author");
-    (_display displayctrl IDC_infoAuthor) ctrlSetText ([localize "STR_AUTHOR_UNKNOWN", format [localize "STR_FORMAT_AUTHOR_SCRIPTED", _itemAuthor]] select (_itemAuthor != ""));
+    (_display displayCtrl IDC_infoAuthor) ctrlSetText ([localize "STR_AUTHOR_UNKNOWN", format [localize "STR_FORMAT_AUTHOR_SCRIPTED", _itemAuthor]] select (_itemAuthor != ""));
 
     // DLC / mod icon
-    private _ctrlDLC = _display displayctrl IDC_DLCIcon;
-    private _ctrlDLCBackground = _display displayctrl IDC_DLCBackground;
+    private _ctrlDLC = _display displayCtrl IDC_DLCIcon;
+    private _ctrlDLCBackground = _display displayCtrl IDC_DLCBackground;
     private _dlc = _itemCfg call EFUNC(common,getAddon);
 
     if (_dlc != "") then {
@@ -48,7 +48,7 @@ if (isClass _itemCfg) then {
         _ctrlDLC ctrlSetFade 0;
 
         // If an item is from a DLC, set it so when you press the icon on the bottom right it opens the DLC page
-        if ((getNumber (configfile >> "CfgMods" >> _dlc >> "appId")) > 0) then {
+        if ((getNumber (configFile >> "CfgMods" >> _dlc >> "appId")) > 0) then {
             _ctrlDLC ctrlSetEventHandler ["MouseExit", format ["(_this select 0) ctrlSetText '%1';", _logo]];
             _ctrlDLC ctrlSetEventHandler ["MouseEnter", format ["(_this select 0) ctrlSetText '%1';", _logoOver]];
             _ctrlDLC ctrlSetEventHandler [

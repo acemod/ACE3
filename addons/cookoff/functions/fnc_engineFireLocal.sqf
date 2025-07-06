@@ -27,7 +27,11 @@ if (hasInterface) then {
     private _hitPoints = getAllHitPointsDamage _vehicle;
 
     // Get hitpoint for engine
-    private _index = (_hitPoints select 0) findIf {_x == "hitengine"};
+    private _index = if (_hitPoints isNotEqualTo []) then {
+        (_hitPoints select 0) findIf {_x == "hitengine"}
+    } else {
+        -1
+    };
 
     // Get corresponding selection
     private _position = if (_index != -1) then {

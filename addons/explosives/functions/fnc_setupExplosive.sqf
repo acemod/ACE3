@@ -33,7 +33,7 @@ if (_p3dModel == "") exitWith {ERROR("No Model");}; //"" - will crash game!
 [_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 //Show mouse buttons:
-[localize LSTRING(PlaceAction), localize LSTRING(CancelAction), localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
+[localize LSTRING(PlaceAction), LELSTRING(common,Cancel), localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
 _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
 _unit setVariable [QGVAR(cancelActionEH), [_unit, "zoomtemp", {true}, {GVAR(placeAction) = PLACE_CANCEL;}] call EFUNC(common,AddActionEventHandler)];
 
@@ -78,7 +78,7 @@ GVAR(TweakedAngle) = 0;
         {
             private _testPos = _testBase vectorAdd [0.1 * (_x select 0) * (cos _cameraAngle), 0.1 * (_x select 0) * (sin _cameraAngle), 0.1 * (_x select 1)];
             #ifdef DEBUG_MODE_FULL
-            drawLine3d [(eyePos _unit) call EFUNC(common,ASLToPosition), (_testPos) call EFUNC(common,ASLToPosition), [1,0,0,1]];
+            drawLine3D [(eyePos _unit) call EFUNC(common,ASLToPosition), (_testPos) call EFUNC(common,ASLToPosition), [1,0,0,1]];
             #endif
             if ((lineIntersectsSurfaces [eyePos _unit, _testPos, _unit]) isNotEqualTo []) exitWith {_return = false;};
         } forEach [[0,0], [-1,-1], [1,-1], [-1,1], [1,1]];
@@ -167,7 +167,7 @@ GVAR(TweakedAngle) = 0;
 
             if (isNull _attachVehicle) then {
                 _placeAngle = _cameraAngle - GVAR(TweakedAngle) + 180;
-                _expSetupVehicle setPosAsl _virtualPosASL;
+                _expSetupVehicle setPosASL _virtualPosASL;
                 _expSetupVehicle setDir _placeAngle;
                 _placeAngle = _placeAngle + 180; //CfgAmmos seem to be 180 for some reason
             } else {

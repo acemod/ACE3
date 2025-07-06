@@ -29,7 +29,7 @@ TRACE_2("placeBodyBagInGrave",_bodybag,_medic);
         if (GVAR(graveDiggingMarker)) then {
             _graveClassname = missionNamespace getVariable [QGVAR(graveClassname), "ACE_Grave"];
         };
-        private _graveRotation = missionNameSpace getVariable [QGVAR(graveRotation), 0]; 
+        private _graveRotation = missionNamespace getVariable [QGVAR(graveRotation), 0];
 
         [[_medic, _bodybag], _graveClassname, [0,0,0], _graveRotation, true] call FUNC(placeInBodyBagOrGrave);
     },

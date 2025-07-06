@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: commy2, johnb43
+ * Author: commy2, johnb43, Timi007
  * Compares version numbers from loaded addons.
  *
  * Arguments:
@@ -21,21 +21,58 @@ if (canSuspend) exitWith {
 };
 
 params [["_whitelist", missionNamespace getVariable ["ACE_Version_Whitelist", []]]];
+TRACE_1("",_whitelist);
 
+// Skip A3, ACE, and whitelisted addons, because we have already done the check.
 private _files = CBA_common_addons select {
-    (_x select [0, 3] != "a3_") &&
-    {_x select [0, 4] != "ace_"} &&
-    {!((toLowerANSI _x) in _whitelist)}
+    private _addon = _x;
+
+    (_addon select [0, 3] != "a3_") &&
+    {_addon select [0, 4] != "ace_"} &&
+    {_addon select [0, 5] != "acex_"} &&
+    {_addon select [0, 12] != "CuratorOnly_"} &&
+    {_whitelist findIf {_addon regexMatch _x} == -1}
 };
 
 private _cfgPatches = configFile >> "CfgPatches";
 private _versions = [];
 
 {
-    (getText (_cfgPatches >> _x >> "version") splitString ".") params [["_major", "0"], ["_minor", "0"]];
-    private _version = parseNumber _major + parseNumber _minor / 100;
+    // Determine the version of the addon. Parse it into a floating point number for comparison. Only major and minor are used.
+    // If no version is found or a parsing error occurs, the version is zero.
+    private _addonCfgPatches = _cfgPatches >> _x;
+    private _versionCfg = _addonCfgPatches >> "version";
+    private _version = switch (true) do {
+        // Normal case. Version is defined as a floating point number -> MAJOR.MINOR
+        case (isNumber _versionCfg): {
+            getNumber _versionCfg
+        };
+        // Addon Builder converts the version into a string if it is an invalid float -> "MAJOR.MINOR.PATCH"
+        case (isText _versionCfg): {
+            (getText _versionCfg splitString ".") params [["_major", "0"], ["_minor", "0"]];
+
+            parseNumber _major + parseNumber _minor / 100
+        };
+        // Fallback 1 (maybe versionAr is defined)
+        case (isArray (_addonCfgPatches >> "versionAr")): {
+            (getArray (_addonCfgPatches >> "versionAr")) params [["_major", 0], ["_minor", 0]];
+
+            _major + _minor / 100
+        };
+        // Fallback 2 (maybe versionStr is defined)
+        case (isText (_addonCfgPatches >> "versionStr")): {
+            (getText (_addonCfgPatches >> "versionStr") splitString ".") params [["_major", "0"], ["_minor", "0"]];
+
+            parseNumber _major + parseNumber _minor / 100
+        };
+        // No version found
+        default { 0 };
+    };
+
     _versions pushBack _version;
 } forEach _files;
+
+TRACE_2("Filtered files and versions",_files,_versions);
 
 if (isServer) exitWith {
     ACE_Version_ServerVersions = [_files, _versions];
@@ -97,7 +134,7 @@ private _fnc_check = {
         if (_isMissingItems) then {
             // Generate error message
             private _errorLog = +_items;
-            private _header = format ["[ACE] %1: ERROR %2 addon(s): ", _client, _string];
+            private _header = format [LLSTRING(isMissingItems), _client, _string];
 
             // Don't display all missing items, as they are logged
             private _errorMsg = _header + ((_errorLog select [0, DISPLAY_NUMBER_ADDONS]) joinString ", ");
@@ -106,7 +143,7 @@ private _fnc_check = {
             private _count = count _items;
 
             if (_count > DISPLAY_NUMBER_ADDONS) then {
-                _errorMsg = _errorMsg + format [", and %1 more.", _count - DISPLAY_NUMBER_ADDONS];
+                _errorMsg = _errorMsg + format [LLSTRING(andMore), _count - DISPLAY_NUMBER_ADDONS];
             };
 
             // Wait until in briefing screen
@@ -139,10 +176,10 @@ private _fnc_check = {
 
         _clientErrors pushBack _isMissingItems;
     } forEach [
-        [_missingAddonsClient, "client missing"],
-        [_additionalAddonsClient, "client additional"],
-        [_olderVersionsClient, "older client"],
-        [_newerVersionsClient, "newer client"]
+        [_missingAddonsClient, LLSTRING(clientMissing)],
+        [_additionalAddonsClient, LLSTRING(clientAdditional)],
+        [_olderVersionsClient, LLSTRING(olderClient)],
+        [_newerVersionsClient, LLSTRING(newerClient)]
     ];
 
     TRACE_4("",_missingAddonsClient,_additionalAddonsClient,_olderVersionsClient,_newerVersionsClient);
@@ -155,7 +192,7 @@ private _fnc_check = {
 
 // Wait for server to send the servers files and version numbers
 if (isNil "ACE_Version_ServerVersions") then {
-    ACE_Version_ServerVersions addPublicVariableEventHandler _fnc_check;
+    "ACE_Version_ServerVersions" addPublicVariableEventHandler _fnc_check;
 } else {
     call _fnc_check;
 };

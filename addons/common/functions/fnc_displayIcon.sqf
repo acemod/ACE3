@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Glowbal
- * Draw progress bar and execute given function if succesful.
+ * Draw progress bar and execute given function if successful.
  * Finish/Failure/Conditional are all passed [args, elapsedTime, totalTime, errorCode]
  *
  * Arguments:
@@ -9,7 +9,7 @@
  * 1: show <BOOL>
  * 2: Icon Path <STRING>
  * 3: Icon color <ARRAY>
- * 4: timeAlive. -1 = forever (default: 6) <NUMBER>
+ * 4: timeAlive. -1 = forever <NUMBER> (default: 6)
  *
  * Return Value:
  * None
@@ -21,11 +21,11 @@
  */
 
 // positions for the icon UI
-#define RIGHT_SIDE    (safezoneW + safezoneX)
-#define LEFT_SIDE     safezoneX
+#define RIGHT_SIDE    (safeZoneW + safeZoneX)
+#define LEFT_SIDE     safeZoneX
 #define TOP_SIDE      safeZoneY
-#define BOTTOM_SIDE   (safeZoneH + safezoneY)
-#define ICON_WIDTH    (2 * (((safezoneW / safezoneH) min 1.2) / 40))
+#define BOTTOM_SIDE   (safeZoneH + safeZoneY)
+#define ICON_WIDTH    (2 * (((safeZoneW / safeZoneH) min 1.2) / 40))
 #define X_POS_ICONS   (RIGHT_SIDE - (1.5 * ICON_WIDTH))
 #define Y_POS_ICONS   (TOP_SIDE + (2.5 * ICON_WIDTH))
 #define DIFFERENCE_ICONS (1.1 * ICON_WIDTH)

@@ -41,8 +41,8 @@ class ACE_Tags {
 
 `ace_tagging_fnc_addCustomTag`
 
-|    | Arguments | Type | Optional (default value) |
-| ---| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Unique Identifier | String | Required |
 | 1  | Display Name | String | Required |
 | 2  | Required Item | String | Required |

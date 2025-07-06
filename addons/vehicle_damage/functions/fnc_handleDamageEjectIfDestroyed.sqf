@@ -22,7 +22,7 @@ if (alive _vehicle) exitWith {};
 
 TRACE_2("handleDamageEjectIfDestroyed",typeOf _vehicle,_this);
 
-if (!IS_EXPLOSIVE_AMMO(_ammo)) then {
+if (IS_INEXPLOSIVE_AMMO(_ammo)) then {
     {
         if (alive _x) then {
             moveOut _x;
@@ -30,4 +30,5 @@ if (!IS_EXPLOSIVE_AMMO(_ammo)) then {
     } forEach crew _vehicle;
 };
 
+//IGNORE_PRIVATE_WARNING ["_thisEventHandler"];
 _vehicle removeEventHandler ["HandleDamage", _thisEventHandler];

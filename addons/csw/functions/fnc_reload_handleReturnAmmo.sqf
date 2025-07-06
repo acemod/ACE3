@@ -27,11 +27,11 @@ private _bulletsRemaining = _ammo % _carryMaxAmmo;
 private _unloadToUnit = _unloadTo isKindOf "CAManBase";
 
 if (_unloadToUnit) then {
-    while {(_fullMagazines > 0) && {[_unloadTo, _carryMag] call CBA_fnc_canAddItem}} do {
+    while {(_fullMagazines > 0) && {_unloadTo canAdd [_carryMag, 1, true]}} do {
         _unloadTo addMagazine [_carryMag, _carryMaxAmmo];
         _fullMagazines = _fullMagazines - 1;
     };
-    if ((_bulletsRemaining > 0) && {[_unloadTo, _carryMag] call CBA_fnc_canAddItem}) then {
+    if ((_bulletsRemaining > 0) && {_unloadTo canAdd [_carryMag, 1, true]}) then {
         _unloadTo addMagazine [_carryMag, _bulletsRemaining];
         _bulletsRemaining = 0;
     };

@@ -329,7 +329,7 @@ class CfgVehicles {
         // T100 Black Eagle
         // Assuming T80
         GVAR(fuelCapacity) = 1100;
-        class EGVAR(interaction,anims);
+        class EGVAR(interaction,anims) {};
     };
 
     class MBT_03_base_F: Tank_F {

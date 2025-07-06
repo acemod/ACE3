@@ -4,7 +4,7 @@
  * Unloads an object from a vehicle.
  *
  * Arguments:
- * 0: Item to be unloaded <STRING> or <OBJECT> (default: "")
+ * 0: Item to be unloaded <STRING or OBJECT> (default: "")
  * 1: Holder object (vehicle) <OBJECT> (default: objNull)
  * 2: Unloader <OBJECT> (default: objNull)
  * 3: Deploy parameters <ARRAY> (default: [])
@@ -116,7 +116,7 @@ if (_object isEqualType objNull) then {
         _object setDir _direction;
     };
 
-    _object setPosASL (AGLtoASL _emptyPosAGL);
+    _object setPosASL (AGLToASL _emptyPosAGL);
 
     [QEGVAR(common,fixCollision), _object] call CBA_fnc_localEvent;
     [QEGVAR(common,fixPosition), _object] call CBA_fnc_localEvent;

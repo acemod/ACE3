@@ -1,11 +1,12 @@
 class EGVAR(arsenal,stats) {
-    class statBase;
+    class statBase {};
     class ACE_backblastAngle: statBase {
         scope = 2;
         priority = 2;
         stats[] = {QGVAR(angle)};
         displayName = CSTRING(statBackblastAngle);
         showText = 1;
+        condition = QUOTE((compatibleMagazines (configName (_this select 1))) isNotEqualTo []);
         textStatement = QUOTE(params [ARR_2('_stat','_config')]; format [ARR_2('%1°',getNumber (_config >> _stat select 0))]);
         tabs[] = {{2}, {}};
     };
@@ -16,6 +17,7 @@ class EGVAR(arsenal,stats) {
         displayName = CSTRING(statBackblastRange);
         showText = 1;
         textStatement = QUOTE(params [ARR_2('_stat','_config')]; private _blastRangeStat = getNumber (_config >> _stat select 0); format [ARR_3('%1m (%2ft)',_blastRangeStat,(_blastRangeStat / 0.3048) toFixed 1)]);
+        condition = QUOTE((compatibleMagazines (configName (_this select 1))) isNotEqualTo []);
         tabs[] = {{2}, {}};
     };
 };
