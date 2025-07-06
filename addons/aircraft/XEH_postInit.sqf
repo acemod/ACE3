@@ -26,7 +26,7 @@ if (hasInterface) then {
         private _nextStabilized = getNumber (_opticsCfg select (_currOpticsMode + 1) >> "directionStabilized");
         if (_currStabilized != 0 || {_nextStabilized != 1}) exitWith {};
 
-        _vehicle lockCameraTo [positionCameraToWorld [0, 0, 1000], _turret, true];
+        _vehicle lockCameraTo [AGLToASL positionCameraToWorld [0, 0, 1000], _turret, true];
         [{ params ["_vehicle", "_turret"]; _vehicle lockCameraTo [objNull, _turret, true]; }, [_vehicle, _turret]] call CBA_fnc_execNextFrame;
     }];
 };
