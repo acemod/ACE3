@@ -634,7 +634,7 @@
             <Chinesesimp>地面</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazines_description">
-            <English>Store extra magazines next to static weapon.</English>
+            <English>Store extra magazines next to the static weapon.</English>
             <Czech>Ukládat munici navíc vedle statické zbraně.</Czech>
             <French>Range les chargeurs en surplus auprès de l'arme statique.</French>
             <Spanish>Almacenar cargadores extra junto al arma estática.</Spanish>
