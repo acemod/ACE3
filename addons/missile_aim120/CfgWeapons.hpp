@@ -3,7 +3,7 @@ class CfgWeapons {
     class MissileLauncher;
 
     class GVAR(aim120Launcher): weapon_AMRAAMLauncher {
-        author = "Dani (TCVM)";
+        author = "tcvm";
         displayName = CSTRING(aim120);
         weaponLockDelay = 0.5;
 
@@ -67,7 +67,7 @@ class CfgWeapons {
 
     class weapon_R77Launcher;
     class GVAR(r77Launcher): weapon_R77Launcher {
-        author = "Dani (TCVM)";
+        author = "tcvm";
         displayName = CSTRING(r77);
         weaponLockDelay = 0.5;
 

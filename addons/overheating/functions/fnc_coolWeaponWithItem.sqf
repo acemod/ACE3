@@ -94,5 +94,6 @@ private _fnc_condition = {
     _fnc_onSuccess,
     {}, //_fnc_onFailure,
     _consumeText,
-    _fnc_condition
+    _fnc_condition,
+    ["isNotInside", "isNotSitting"]
 ] call EFUNC(common,progressBar);

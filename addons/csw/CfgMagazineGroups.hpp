@@ -63,6 +63,7 @@ class GVAR(groups) {
     };
     class ACE_1Rnd_82mm_Mo_Illum {
         ACE_1Rnd_82mm_Mo_Illum = 1;
+        8Rnd_82mm_Mo_Flare_white_illumination = 1;
         8Rnd_82mm_Mo_Flare_white = 1;
         rhs_mag_3vs25m_10 = 1;
     };
