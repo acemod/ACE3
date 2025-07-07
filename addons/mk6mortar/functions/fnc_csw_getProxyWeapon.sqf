@@ -42,6 +42,7 @@ if (_proxyWeaponNeeded || GVAR(useAmmoHandling)) then {
             case (_xMag == "8Rnd_82mm_Mo_shells"): {"ACE_1Rnd_82mm_Mo_HE"};
             case (_xMag == "8Rnd_82mm_Mo_Smoke_white"): {"ACE_1Rnd_82mm_Mo_Smoke"};
             case (_xMag == "8Rnd_82mm_Mo_Flare_white"): {"ACE_1Rnd_82mm_Mo_Illum"};
+            case (_xMag == "8Rnd_82mm_Mo_Flare_white_illumination"): {"ACE_1Rnd_82mm_Mo_Illum"};
             case (_xMag == "8Rnd_82mm_Mo_guided"): {"ACE_1Rnd_82mm_Mo_HE_Guided"};
             case (_xMag == "8Rnd_82mm_Mo_LG"): {"ACE_1Rnd_82mm_Mo_HE_LaserGuided"};
                 default {""};
