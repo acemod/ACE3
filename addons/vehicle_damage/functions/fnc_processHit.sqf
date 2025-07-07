@@ -60,7 +60,7 @@ private _indirectHit = getNumber (_projectileConfig >> "indirectHit");
 if (_warheadType == WARHEAD_TYPE_AP) then {
     // Change damage based on projectile speed (doesn't do this in vanilla Arma believe it or not)
     if (!isNull _source && !("penetrator" in toLowerANSI _projectile)) then {
-        private _typicalSpeed = getNumber (_projectileConfig >> "typicalSpeed");
+        private _typicalSpeed = 100 max (getNumber (_projectileConfig >> "typicalSpeed"));
         private _airFriction = getNumber (_projectileConfig >> "airFriction");
         private _distance = _source distance _vehicle;
         private _tofCoef = _airFriction * _distance / _typicalSpeed;
