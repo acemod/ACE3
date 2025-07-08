@@ -190,7 +190,12 @@ class CfgAmmo {
         ACE_MISSILE(KH29);
     };
     class rhs_ammo_kh29T: rhs_ammo_kh29_base {
-        class ace_missileguidance: ace_missileguidance { enabled = 1; };
+        class ace_missileguidance: ace_missileguidance {
+            enabled = 1;
+            defaultSeekerType = "Optic";
+            seekerTypes[] = { "Optic" };
+            seekerMaxRange = 13000;
+        };
     };
     class rhs_ammo_kh29l: rhs_ammo_kh29_base {
         class ace_missileguidance: ace_missileguidance {
