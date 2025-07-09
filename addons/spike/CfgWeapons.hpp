@@ -28,5 +28,12 @@ class CfgWeapons {
         magazines[] = {QGVAR(lr)};
         magazineWell[] = {};
     };
+
+    class GVAR(launcher_olive): GVAR(launcher) {
+        displayName = CSTRING(LR_olive);
+        displayNameShort = CSTRING(LR_Short_olive);
+        hiddenSelectionsTextures[] = {"A3\Weapons_F_Beta\Launchers\Titan\Data\Launcher_INDP_CO.paa","A3\Weapons_F_Beta\Launchers\Titan\Data\TubeM_INDP_CO.paa"};
+        picture = "\A3\Weapons_F_Beta\Launchers\Titan\Data\UI\icon_launch_I_Titan_short_F_ca.paa";
+    };
 };
 

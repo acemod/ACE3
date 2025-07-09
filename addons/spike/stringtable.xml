@@ -15,6 +15,9 @@
             <Korean>스파이크 LR</Korean>
             <Japanese>スパイク LR</Japanese>
         </Key>
+        <Key ID="STR_ACE_SPIKE_LR_olive">
+            <English>Spike LR (olive)</English>
+        </Key>
         <Key ID="STR_ACE_SPIKE_LR_Short">
             <English>LR</English>
             <French>LR</French>

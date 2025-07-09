@@ -15,7 +15,8 @@
  *
  * Public: No
  */
-if ((currentWeapon ACE_player) != QGVAR(launcher)) exitWith {};
+
+if !((currentWeapon player) in GVAR(launcherWeapons)) exitWith {};
 
 params ["_key", "_down"];
 
