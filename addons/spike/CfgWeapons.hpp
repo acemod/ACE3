@@ -4,11 +4,14 @@ class CfgWeapons {
         class Single;
     };
     class GVAR(base): launch_B_Titan_short_F {
+        EGVAR(arsenal,hide) = 1;
         class Single: Single {
             EGVAR(missileGuidance,attackProfile) = "SPIKE_TOP";
         };
     };
+
     class GVAR(launcher): GVAR(base) {
+        EGVAR(arsenal,hide) = 0;
         scope = 2;
         GVAR(enabled) = 1;
         weaponInfoType = "ACE_RscOptics_spike";
