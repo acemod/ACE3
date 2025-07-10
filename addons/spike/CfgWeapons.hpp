@@ -5,6 +5,7 @@ class CfgWeapons {
     };
     class GVAR(base): launch_B_Titan_short_F {
         EGVAR(arsenal,hide) = 1;
+        scope = 0;
         class Single: Single {
             EGVAR(missileGuidance,attackProfile) = "SPIKE_TOP";
         };
