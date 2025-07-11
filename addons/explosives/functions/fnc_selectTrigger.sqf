@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [_explosive, "SatchelCharge_Remote_Mag","Timer"] call ACE_Explosives_fnc_selectTrigger;
+ * [cursorObject, "SatchelCharge_Remote_Mag", "Timer"] call ace_explosives_fnc_selectTrigger
  *
  * Public: No
  */
@@ -23,16 +23,18 @@ TRACE_3("params",_explosive,_magazine,_trigger);
 private _config = configFile >> "ACE_Triggers" >> _trigger;
 
 // Make selected trigger the active one (for keybind) if it's the first to be connected, or the current active trigger has no connected explosives
-private _activeTrigger = GVAR(activeTrigger);
 if (
-    (_activeTrigger == "" || {([ACE_Player, getArray (configFile >> "ACE_Triggers" >> _activeTrigger >> "requires") select 0] call FUNC(getPlacedExplosives)) isEqualTo []}) && {(["Command", "MK16_Transmitter", "DeadManSwitch"] findIf {_x == _trigger}) != -1}
+    (GVAR(activeTrigger) == "" || {([ACE_Player, getArray (configFile >> "ACE_Triggers" >> GVAR(activeTrigger) >> "requires") select 0] call FUNC(getPlacedExplosives)) isEqualTo []}) 
+    && {(["Command", "MK16_Transmitter", "DeadManSwitch"] findIf {_x == _trigger}) != -1}
 ) then {
     GVAR(activeTrigger) = getArray (_config >> "requires") select 0;
 };
 
 // If the onSetup function returns true, it is handled elsewhere
-if (isText(_config >> "onSetup") && {[_explosive,_magazine] call compile getText (_config >> "onSetup")}) exitWith {
+if (isText (_config >> "onSetup") && {[_explosive, _magazine] call compile getText (_config >> "onSetup")}) exitWith {
     TRACE_2("onSetup returned true",_explosive,_trigger);
 };
 
-[ACE_player, getPosATL _explosive, _explosive getVariable [QGVAR(Direction), 0],_magazine, _trigger, [], _explosive] call FUNC(placeExplosive);
+[ACE_player, getPosATL _explosive, _explosive getVariable [QGVAR(direction), 0], _magazine, _trigger, [], _explosive] call FUNC(placeExplosive);
+
+nil
