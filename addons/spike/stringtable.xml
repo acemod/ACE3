@@ -22,6 +22,13 @@
             <Korean>LR</Korean>
             <Japanese>LR</Japanese>
         </Key>
+        <Key ID="STR_ACE_SPIKE_LR_olive">
+            <English>Spike LR (Olive)</English>
+            <French>Spike LR (Olive)</French>
+            <Russian>Spike LR (олива)</Russian>
+            <Korean>스파이크 LR (올리브)</Korean>
+            <Japanese>スパイク LR (オリーブ)</Japanese>
+        </Key>
         <Key ID="STR_ACE_SPIKE_LeaveCamera">
             <English>Leave Camera</English>
             <French>Quitter l'appareil</French>

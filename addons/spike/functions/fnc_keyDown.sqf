@@ -15,7 +15,12 @@
  *
  * Public: No
  */
-if ((currentWeapon ACE_player) != QGVAR(launcher)) exitWith {};
+
+private _currentWeapon = currentWeapon ACE_player;
+if !(GVAR(launcherWeapons) getOrDefaultCall [_currentWeapon, {
+    private _weaponConfig = configProperties [configFile >> "CfgWeapons" >> _currentWeapon, QUOTE(configName _x == QUOTE(QGVAR(enabled))), false];
+    (_weaponConfig isNotEqualTo []) && {(getNumber (_weaponConfig select 0)) == 1}
+}, true]) exitWith {};
 
 params ["_key", "_down"];
 
