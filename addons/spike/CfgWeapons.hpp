@@ -4,15 +4,13 @@ class CfgWeapons {
         class Single;
     };
     class GVAR(base): launch_B_Titan_short_F {
-        EGVAR(arsenal,hide) = 1;
-        scope = 0;
+        scope = 1;
         class Single: Single {
             EGVAR(missileGuidance,attackProfile) = "SPIKE_TOP";
         };
     };
 
     class GVAR(launcher): GVAR(base) {
-        EGVAR(arsenal,hide) = 0;
         scope = 2;
         GVAR(enabled) = 1;
         weaponInfoType = "ACE_RscOptics_spike";
@@ -31,6 +29,7 @@ class CfgWeapons {
     };
 
     class GVAR(launcher_olive): GVAR(launcher) {
+        GVAR(enabled) = 1;
         displayName = CSTRING(LR_olive);
         displayNameShort = CSTRING(LR_Short_olive);
         hiddenSelectionsTextures[] = {"A3\Weapons_F_Beta\Launchers\Titan\Data\Launcher_INDP_CO.paa","A3\Weapons_F_Beta\Launchers\Titan\Data\TubeM_INDP_CO.paa"};
