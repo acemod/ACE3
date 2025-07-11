@@ -31,7 +31,6 @@ class CfgWeapons {
     class GVAR(launcher_olive): GVAR(launcher) {
         GVAR(enabled) = 1;
         displayName = CSTRING(LR_olive);
-        displayNameShort = CSTRING(LR_Short_olive);
         hiddenSelectionsTextures[] = {"A3\Weapons_F_Beta\Launchers\Titan\Data\Launcher_INDP_CO.paa","A3\Weapons_F_Beta\Launchers\Titan\Data\TubeM_INDP_CO.paa"};
         picture = "\A3\Weapons_F_Beta\Launchers\Titan\Data\UI\icon_launch_I_Titan_short_F_ca.paa";
     };
