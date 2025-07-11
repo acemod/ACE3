@@ -53,9 +53,11 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Open the `Gun` column, check and update the `Bore (inches)`, `Bullet Weight (grains)`, `Bullet Diam (inches)`, `Rifle Twist (in/trn)` and `Done`.
 - Select `M` (Metric unit) at the top right.
 - Open the `Gun` column, check and update the `Muzzle Velocity (m/s)`, the `Zero Range (meters)` and `Done`.
-- *Muzzle Velocities (`Options` / `Muz Vel table`) may need a manual update according to the range card.*
-- *AtragMx is configured with `C1 coefficient` according to vanilla weapons and its ammunitions in `GunList`.*
-- *More information about C1: [Example with `Add New Gun` in `GunList`](#35-example-with-add-new-gun-in-gunlist).*
+  - *Muzzle Velocities (`Options` / `Muz Vel table`) may need a manual update according to the range card.*
+- Verify that the set `C1 Coefficient` (also referred to as G1) is that of the desired ammunition:
+  - *It can be viewed in the ACE Arsenal as a magazine stat, or with a Config Viewer (both may list G7, which has to be converted to G1).*
+  - *The AtragMx's `GunList` comes pre-configured with the `C1 coefficient` of vanilla weapons and their ammunitions.*
+  - *More information about C1 and how to convert it: [Example with `Add New Gun` in `GunList`](#35-example-with-add-new-gun-in-gunlist).*
 - Check `Elev` = 0 with `ZR` = `TR` *(if not, open `Gun` column and `Done`)*.
 - Optionally, `Save Gun` and `Done` in the `GunList`.
 
@@ -120,7 +122,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 ### 3.5 Example with `Add New Gun` in `GunList`
 
-- Open the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and check the ammunition: **bullet Class Name**, bullet diameter, bullet weight, rifle twist, muzzle velocities, zeroed distance and bore height.
+- Open the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and check the ammunition's: **bullet Class Name**, bullet diameter, bullet weight, rifle twist, muzzle velocities, zeroed distance and bore height.
 - Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`.
 - Select `Add New Gun` in the `GunList`.
 - Add a `New Gun Name` and `Open Gun`.
@@ -129,19 +131,21 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Select `M` (Metric unit) at the top right.
 - Open the `Gun` column, check and update the `Zero Range (meters)` and `Done`.
 - Open the `Muz Vel Table` in the `Options` menu or click on `MV` in the `Gun` column.
-- Edit manually the `Muzzle Velocity Table` according to the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and `Done`.
-- The `C1 coefficient` of the bullet can be found with the Eden Editor `Config Viewer`:
+- Manually edit the `Muzzle Velocity Table` according to the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and `Done`.
+- Input the `C1 coefficient` (also referred to as G1) of the bullet, which can be found in two different ways:
+  - in the ACE Arsenal, as a stat on a selected magazine that lists the bullet's ballistic coefficient and drag model (G1 can be used directly, while G7 requires conversion).
+  - with the Eden Editor's or Debug Console's `Config Viewer`, which lists the BC and DM respectively, under the following paths:
 
 > configfile >> "CfgAmmo" >> "**bullet Class Name**" >> "ACE_ballisticCoefficients"
 
 > configfile >> "CfgAmmo" >> "**bullet Class Name**" >> "ACE_dragModel"
 
-- *The AtragMx accepts only **G1 ballistic coefficient**.*
-- *G7 ballistic coefficient can be converted, for example, with the online [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmgf-5.1.cgi)*.
 - Check `Elev` = 0 with `ZR` = `TR` *(if not, open `Gun` column and `Done`)*.
 - Optionally, `Save Gun` and `Done` in the `GunList`.
 
-> Note: The ballistic coefficient can be calculated by using the [360 Degree Training Course mission](#5-resources) as a chronograph at different distances and [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmbcv-5.1.cgi) for example, an another ballistic software at your own convenience, or the [AtragMx Truing Tool](#33-example-with-truing-tool).
+> Note: The AtragMx accepts only **C1/G1 ballistic coefficient**. It can be calculated by using the [360 Degree Training Course mission](#5-resources) as a chronograph at different distances and [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmbcv-5.1.cgi) for example, another ballistic software at your own convenience, or the [AtragMx Truing Tool](#33-example-with-truing-tool).
+
+> If only **G7 ballistic coefficient** is listed, it must be converted to G1, for example with the online [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmgf-5.1.cgi).
 
 > Example direct conversion with .408 Cheytac 305 grains, G7 BC 0.279 at 2000 meters, ICAO conditions (15°C, 1013.25hPa, 0%):
 
