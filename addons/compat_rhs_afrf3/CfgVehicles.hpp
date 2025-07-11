@@ -6,9 +6,7 @@ class CfgVehicles {
     class Tank_F: Tank {
         class Turrets {
             class MainTurret: NewTurret {
-                class Turrets {
-                    class CommanderOptics;
-                };
+                class Turrets {};
             };
         };
     };
@@ -17,28 +15,14 @@ class CfgVehicles {
             class ACE_MainActions {};
         };
     };
-    class Car_F: Car {
-        class ViewPilot;
-        class NewTurret;
-    };
+    class Car_F: Car {};
     class Wheeled_APC_F: Car_F {
         class NewTurret;
         class Turrets {
-            class MainTurret: NewTurret {
-                class ViewOptics;
-            };
-        };
-        class CommanderOptics;
-    };
-    class Air;
-    class Helicopter: Air {
-        class Turrets;
-    };
-    class Helicopter_Base_F: Helicopter {
-        class Turrets: Turrets {
-            class MainTurret;
+            class MainTurret: NewTurret {};
         };
     };
+    class Helicopter_Base_F;
 
     class rhs_tank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 1200;
@@ -74,9 +58,7 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 3600;
     };
 
-    class Helicopter_Base_H: Helicopter_Base_F {
-        class EventHandlers;
-    };
+    class Helicopter_Base_H: Helicopter_Base_F {};
     class Heli_Light_02_base_F: Helicopter_Base_H {};
     class RHS_Mi8_base: Heli_Light_02_base_F {
         EGVAR(map,vehicleLightColor)[] = {1,0,0,0.1};

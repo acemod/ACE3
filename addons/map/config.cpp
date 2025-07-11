@@ -19,11 +19,6 @@ class RscActiveText;
 class RscPicture;
 class RscText;
 class RscObject;
-class RscButton;
-class RscButtonMenuOK;
-class RscButtonMenuCancel;
-class RscButtonMenu;
-class RscEdit;
 
 #include "ACE_Settings.hpp"
 #include "Cfg3DEN.hpp"
