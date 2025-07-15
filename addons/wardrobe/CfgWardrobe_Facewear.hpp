@@ -51,7 +51,7 @@ class G_Balaclava_lowprofile: EGVAR(wardrobe,base) {
 
 // Stealth Balaclava, black
 class G_Balaclava_TI_blk_F: EGVAR(wardrobe,base) {
-    class modifiableTo { 
+    class modifiableTo {
         class G_Balaclava_TI_G_blk_F {};
     };
     components[] = { "G_Balaclava_TI_blk_F" };
@@ -59,7 +59,7 @@ class G_Balaclava_TI_blk_F: EGVAR(wardrobe,base) {
 class G_Balaclava_TI_G_blk_F: EGVAR(wardrobe,base) {
     class modifiableTo {
         class G_Balaclava_TI_blk_F {};
-    };  
+    };
     components[] = { "G_Balaclava_TI_blk_F", "G_Combat" };
 };
 
@@ -74,7 +74,7 @@ class G_Balaclava_TI_tna_F: EGVAR(wardrobe,base) {
 class G_Balaclava_TI_G_tna_F: EGVAR(wardrobe,base) {
     class modifiableTo {
         class G_Balaclava_TI_tna_F {};
-    };  
+    };
     components[] = { "G_Balaclava_TI_tna_F", "G_Combat" };
 };
 
@@ -91,10 +91,10 @@ class G_Bandanna_blk: EGVAR(wardrobe,base) {
 
 class G_Bandanna_shades: EGVAR(wardrobe,base) {
 
-    class modifiableTo { 
+    class modifiableTo {
         class G_Bandanna_blk {};
         class G_Shades_Black {};
-    };  
+    };
     components[] = { "G_Bandanna_blk", "G_Shades_Black" };
 };
 class G_Bandanna_sport: EGVAR(wardrobe,base) {
@@ -108,7 +108,7 @@ class G_Bandanna_aviator: EGVAR(wardrobe,base) {
     class modifiableTo {
         class G_Bandanna_blk {};
         class G_Aviator {};
-    };       
+    };
     components[] = { "G_Bandanna_blk", "G_Aviator" };
 };
 
@@ -117,7 +117,7 @@ class G_Bandanna_aviator: EGVAR(wardrobe,base) {
 class G_EyeProtectors_F: EGVAR(wardrobe,base) {
     class modifiableTo {
         class G_EyeProtectors_Earpiece_F {};
-    };               
+    };
     components[] = { "G_EyeProtectors_F" };
 };
 
@@ -132,6 +132,6 @@ class G_EyeProtectors_Earpiece_F: EGVAR(wardrobe,base) {
 class G_WirelessEarpiece_F: EGVAR(wardrobe,base) {
     class modifiableTo {
         class G_EyeProtectors_Earpiece_F {};
-    };               
+    };
     components[] = { "G_WirelessEarpiece_F" };
 };

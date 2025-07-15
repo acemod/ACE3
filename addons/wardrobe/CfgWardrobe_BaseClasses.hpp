@@ -1,33 +1,38 @@
 #define CN_SOUND(base,dur) QUOTE(TRIPLES(ADDON,base,dur))
 
 class GVAR(base) {
+    // Possible variants this item can be turned into
+    class modifiableTo { };
 
-    class modifiableTo {        
-    };
-
-    // describes the components of the current item
-    // When the current wearable is being changed into something, that does not have these 
+    // Components the current variant contains within itself
     components[] = {};
 
-    // Supports Multiple Sounds, will pick one by random
-    sound[] = {CN_SOUND(fabric,06),CN_SOUND(fabric,07),CN_SOUND(fabric,16),CN_SOUND(fabric,20),CN_SOUND(fabric,25)};
-    sound_timing = 0;    // [0..1] 0 at the start of the action, 0.5 half way during the duration of the action - always, if completed or not. 1 at the end, only when completed
+    // CfgSound entries, to be chosen by random when the action is performed
+    sound[] = {CN_SOUND(fabric,06), CN_SOUND(fabric,07), CN_SOUND(fabric,16), CN_SOUND(fabric,20), CN_SOUND(fabric,25)};
+    // Defines the point in time relative to the duration when the sound is played, ranging from 0 to 1:
+    //   0 at the start of the action
+    //   0.5 half way during the duration of the action - always, if completed or not
+    //   1 at the end, only when completed
+    sound_timing = 0;
 
-    // Gesture
+    // Gesture to be played when the action is performed
     gesture = "Gear";
 
-    // These will be read from the target class, so for example, the uniformclass with the rolled up sleaves, it should say "Roll Up Sleeves"
+    // Will be used instead of target variant picture
     alternativePicture = "";
+    // Will be used instead of the target variants displayname
     alternativeActionName = "";
 
-    duration = 1; // Minimum value: 1 - Anything above will produce a progressbar
+    // Duration of action. Minimum value of 1 - anything above will produce a progressbar
+    duration = 1;
 
-    fallbackComponent = ""; // To be used as an alternative for components where the intended component is from another addon/mod in case the source addon is not loaded
+    // Fallback for components that are not present within the same mod/addon
+    fallbackComponent = "";
 };
 
 // Common base class for uniforms with sleeves up/down variants
 class GVAR(base_U_sleeves_up): GVAR(base) {
-    alternativeActionName = CSTRING(sleevesUp);  
+    alternativeActionName = CSTRING(sleevesUp);
 };
 class GVAR(base_U_sleeves_down): GVAR(base) {
     alternativeActionName = CSTRING(sleevesDown);
@@ -35,7 +40,7 @@ class GVAR(base_U_sleeves_down): GVAR(base) {
 
 // Common base class for uniforms with gloves on/off variants
 class GVAR(base_U_gloves_on): GVAR(base) {
-    alternativeActionName = CSTRING(glovesOn); 
+    alternativeActionName = CSTRING(glovesOn);
 };
 class GVAR(base_U_gloves_off): GVAR(base) {
     alternativeActionName = CSTRING(glovesOff);
@@ -43,7 +48,7 @@ class GVAR(base_U_gloves_off): GVAR(base) {
 
 // Common base class for uniforms who are open/closed in the front
 class GVAR(base_U_jacket_open): GVAR(base) {
-    alternativeActionName = CSTRING(jacketOpen); 
+    alternativeActionName = CSTRING(jacketOpen);
 };
 class GVAR(base_U_jacket_closed): GVAR(base) {
     alternativeActionName = CSTRING(jacketClose);

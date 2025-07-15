@@ -40,13 +40,13 @@ All supported Properties can be found within the `ace_wardrobe_base` baseclass.
 | Class Property |  Data Type | Description |
 | -------------- |  ----------- | ----------- |
 | `modifiableTo` | Subclasses | Possible variants this item can be turned into. |
-| `components[]` | Array of Classnames  | Components the current variant contains within itself | 
+| `components[]` | Array of Classnames  | Components the current variant contains within itself |
 | `sound[]` | Array of CfgSound Entries | To be chosen by random when the action is performed |
-| `sound_timing` | Number 0..1 | Defines the point time relative to the duration when the sound is played |
+| `sound_timing` | Number 0..1 | Defines the point in time relative to the duration when the sound is played |
 | `gesture` | String of Classname | Gesture to be played when the action is performed |
-| `alternativePicture` | String of path to icon | To be used instead of target variant picture |
+| `alternativePicture` | String of path to icon | Will be used instead of target variant picture |
 | `alternativeActionName` | String | Will be used instead of the target variants displayname |
-| `duration` | Number in seconds | Duration of action. Items are being replaced at the end. |
+| `duration` | Number in seconds (>= 1) | Duration of action. Items are being replaced at the end. |
 | `fallbackComponent` | String of Classname | Fallback for components that are not present within the same mod/addon. Example: RHS AFRF helmets use `rhs_ess_black` goggles, which are only part of USAF. `fallbackComponent` can be used to default to a vanilla alternative. |
 
 ### 2.2 Base Classes
@@ -87,7 +87,7 @@ class ace_wardrobe {
 Common base class for uniforms with Sleeves up/down variants
 ```cpp
 class ace_wardrobe_base_U_sleeves_up: ace_wardrobe_base {
-    alternativeActionName = CSTRING(sleevesUp);  
+    alternativeActionName = CSTRING(sleevesUp);
 };
 class ace_wardrobe_base_U_sleeves_down: ace_wardrobe_base {
     alternativeActionName = CSTRING(sleevesDown);
@@ -97,7 +97,7 @@ class ace_wardrobe_base_U_sleeves_down: ace_wardrobe_base {
 Common base class for uniforms with gloves on/off variants
 ```cpp
 class ace_wardrobe_base_U_gloves_on: ace_wardrobe_base {
-    alternativeActionName = CSTRING(glovesOn); 
+    alternativeActionName = CSTRING(glovesOn);
 };
 class ace_wardrobe_base_U_gloves_off: ace_wardrobe_base {
     alternativeActionName = CSTRING(glovesOff);
@@ -107,7 +107,7 @@ class ace_wardrobe_base_U_gloves_off: ace_wardrobe_base {
 Common base class for uniforms who are open/closed in the front
 ```cpp
 class ace_wardrobe_base_U_jacket_open: ace_wardrobe_base {
-    alternativeActionName = CSTRING(jacketOpen); 
+    alternativeActionName = CSTRING(jacketOpen);
 };
 class ace_wardrobe_base_U_jacket_closed: ace_wardrobe_base {
     alternativeActionName = CSTRING(jacketClose);
