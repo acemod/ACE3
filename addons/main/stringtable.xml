@@ -16,6 +16,7 @@
             <Chinese>ACE 後勤</Chinese>
             <Chinesesimp>ACE 后勤</Chinesesimp>
             <Turkish>ACE Lojistik</Turkish>
+            <Ukrainian>ACE: Логістика</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Main_URL">
             <English>https://ace3.acemod.org/</English>
@@ -33,6 +34,7 @@
             <Chinesesimp>https://ace3.acemod.org/</Chinesesimp>
             <Turkish>https://ace3.acemod.org/</Turkish>
             <Hungarian>https://ace3.acemod.org/</Hungarian>
+            <Ukrainian>https://ace3.acemod.org/</Ukrainian>
         </Key>
     </Package>
 </Project>
