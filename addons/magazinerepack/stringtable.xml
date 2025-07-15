@@ -16,6 +16,7 @@
             <Chinese>重新整理彈匣</Chinese>
             <Chinesesimp>重新整理弹匣</Chinesesimp>
             <Turkish>Şarjör Yeniden Doldurma</Turkish>
+            <Ukrainian>Перепакування магазинів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackComplete">
             <English>Repacking Finished</English>
@@ -33,6 +34,7 @@
             <Chinesesimp>整理完成</Chinesesimp>
             <Turkish>Yeniden Doldurma Bitti</Turkish>
             <Hungarian>Újratárazás befejezve</Hungarian>
+            <Ukrainian>Перепакування завершено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackInterrupted">
             <English>Repacking Interrupted</English>
@@ -50,6 +52,7 @@
             <Chinesesimp>弹匣整理被打断</Chinesesimp>
             <Turkish>Yeniden Doldurma Durduruldu</Turkish>
             <Hungarian>Újratárazás megszakítva</Hungarian>
+            <Ukrainian>Перепакування перервано</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackMagazines">
             <English>Repack Magazines</English>
@@ -67,6 +70,7 @@
             <Chinesesimp>重新整理弹匣</Chinesesimp>
             <Turkish>Şarjörleri Yeniden Doldur</Turkish>
             <Hungarian>Újratárazás</Hungarian>
+            <Ukrainian>Перепакувати магазини</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesCount">
             <English>%1 Full and %2 Partial</English>
@@ -84,6 +88,7 @@
             <Chinesesimp>%1个满的与%2个部分的</Chinesesimp>
             <Turkish>%1 Dolu ve %2 Partial</Turkish>
             <Hungarian>%1 teljes és %2 részleges</Hungarian>
+            <Ukrainian>%1 повних і %2 неповних</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesDetail">
             <English>%1 full mag(s) and %2 extra round(s)</English>
@@ -101,6 +106,7 @@
             <Chinesesimp>%1个满的弹匣与%2发额外子弹</Chinesesimp>
             <Turkish>%1 Dolu şarjör ve %2  fazladan mermi</Turkish>
             <Hungarian>%1 teljes tár és %2 extra lőszer</Hungarian>
+            <Ukrainian>%1 повних магазина(ів) і %2 набій(їв)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackingMagazine">
             <English>Repacking Magazines...</English>
@@ -118,6 +124,7 @@
             <Chinesesimp>正在整理弹匣 ...</Chinesesimp>
             <Turkish>Şarjör Yeniden Dolduruluyor...</Turkish>
             <Hungarian>Újratárazás...</Hungarian>
+            <Ukrainian>Перепакування магазинів...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_repackAnimation">
             <English>Repack Animation</English>
@@ -131,6 +138,7 @@
             <Korean>탄약 합치기 애니메이션</Korean>
             <Japanese>詰め替え時のアニメーション</Japanese>
             <Chinesesimp>整理动画</Chinesesimp>
+            <Ukrainian>Анімація перепакування</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_repackLoadedMagazines">
             <English>Repack Loaded Magazines</English>
@@ -144,6 +152,7 @@
             <Korean>장전된 탄창에 총알 채우는 중</Korean>
             <Japanese>装填済みの弾倉も詰め替える</Japanese>
             <Chinesesimp>重新整理已上膛的弹匣</Chinesesimp>
+            <Ukrainian>Перепакувати завантажені магазини</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_repackLoadedMagazinesHint">
             <English>Repacking magazines, weapon unloaded</English>
@@ -157,6 +166,7 @@
             <Korean>탄창 다시 채우는 중, 무기에서 탄창 뺌</Korean>
             <Japanese>弾倉の詰め替えのため 武器から弾薬を抜きました</Japanese>
             <Chinesesimp>重新整理弹匣，武器未上膛</Chinesesimp>
+            <Ukrainian>Перепакування магазинів, зброя розряджена</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerAmmo">
             <English>Time per round</English>
@@ -173,6 +183,7 @@
             <Chinese>每發所需時間</Chinese>
             <Chinesesimp>每发所需时间</Chinesesimp>
             <Turkish>Süre başına mermi</Turkish>
+            <Ukrainian>Час на набій</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerBeltLink">
             <English>Time per belt link</English>
@@ -188,6 +199,7 @@
             <Japanese>ベルトリンク毎の所要時間</Japanese>
             <Chinese>每彈鍊所需時間</Chinese>
             <Chinesesimp>每弹炼所需时间</Chinesesimp>
+            <Ukrainian>Час на ланку стрічки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerMagazine">
             <English>Time per magazine</English>
@@ -204,6 +216,7 @@
             <Chinese>每匣所需時間</Chinese>
             <Chinesesimp>每匣所需时间</Chinesesimp>
             <Turkish>Süre başına şarjör</Turkish>
+            <Ukrainian>Час на магазин</Ukrainian>
         </Key>
     </Package>
 </Project>

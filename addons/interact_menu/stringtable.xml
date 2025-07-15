@@ -17,6 +17,7 @@
             <Chinesesimp>当放开菜单键后就执行动作</Chinesesimp>
             <Turkish>Menü tuşunu bırakırken işlem yap</Turkish>
             <Hungarian>Cselekvés végrehajtása a menügomb elengedésekor</Hungarian>
+            <Ukrainian>Виконувати при відпусканні кнопки меню</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorInteraction">
             <English>Always display cursor for interaction</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>互动时永远显示光标</Chinesesimp>
             <Turkish>Etkileşim için her zaman imleci göster</Turkish>
             <Hungarian>Mindig legyen a cselekvés kurzorja látható</Hungarian>
+            <Ukrainian>Показувати курсор (взаємодія)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
             <English>Always display cursor for self interaction</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>自我互动时永远显示光标</Chinesesimp>
             <Turkish>Kendi kendine etkileşim için daima imleci göster</Turkish>
             <Hungarian>Mindig legyen a saját cselekvés kurzorja látható</Hungarian>
+            <Ukrainian>Показувати курсор (взаємодії із собою)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_Category_InteractionMenu">
             <English>Interaction Menu</English>
@@ -67,6 +70,7 @@
             <Chinese>互動選單</Chinese>
             <Chinesesimp>互动菜单</Chinesesimp>
             <Turkish>Etkileşim Menüsü</Turkish>
+            <Ukrainian>Меню взаємодії</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMax">
             <English>Interaction - Shadow Max</English>
@@ -84,6 +88,7 @@
             <Chinesesimp>互动—阴影最大值</Chinesesimp>
             <Turkish>Etkileşim - Maksimum Gölge</Turkish>
             <Hungarian>Cselekvés - Árnyék max.</Hungarian>
+            <Ukrainian>Взаємодія - Тінь Макс.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMin">
             <English>Interaction - Shadow Min</English>
@@ -101,6 +106,7 @@
             <Chinesesimp>互动—阴影最小值</Chinesesimp>
             <Turkish>Etkileşim - Minumum Gölge</Turkish>
             <Hungarian>Cselekvés - Árnyék min.</Hungarian>
+            <Ukrainian>Взаємодія - Тінь Мін.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMax">
             <English>Interaction - Text Max</English>
@@ -118,6 +124,7 @@
             <Chinesesimp>互动—文字颜色最大值</Chinesesimp>
             <Turkish>Etkileşim - Maksimum Metin</Turkish>
             <Hungarian>Cselekvés - Szöveg max.</Hungarian>
+            <Ukrainian>Взаємодія - Текст Макс.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMin">
             <English>Interaction - Text Min</English>
@@ -135,6 +142,7 @@
             <Chinesesimp>互动—文字颜色最小值</Chinesesimp>
             <Turkish>Etkileşim - Minumum Metin</Turkish>
             <Hungarian>Cselekvés - Szöveg min.</Hungarian>
+            <Ukrainian>Взаємодія - Текст мін.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_InteractKey">
             <English>Interact Key</English>
@@ -152,6 +160,7 @@
             <Chinesesimp>互动键</Chinesesimp>
             <Turkish>Etkileşim Tuşu</Turkish>
             <Hungarian>Cselekvő gomb</Hungarian>
+            <Ukrainian>Клавіша взаємодії</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_SelectorColor">
             <English>Selector Color</English>
@@ -168,6 +177,7 @@
             <Chinese>選單的顏色</Chinese>
             <Chinesesimp>菜单颜色</Chinesesimp>
             <Turkish>Seçici Renk</Turkish>
+            <Ukrainian>Колір селектора</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_SelfActionsRoot">
             <English>Self Actions</English>
@@ -185,6 +195,7 @@
             <Chinesesimp>自我动作</Chinesesimp>
             <Turkish>Kendi Etkileşimim</Turkish>
             <Hungarian>Saját cselekvések</Hungarian>
+            <Ukrainian>Дії з собою</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_SelfInteractKey">
             <English>Self Interaction Key</English>
@@ -202,6 +213,7 @@
             <Chinesesimp>自我互动键</Chinesesimp>
             <Turkish>Kendi Etkileşimim Tuşu</Turkish>
             <Hungarian>Saját cselekvő gomb</Hungarian>
+            <Ukrainian>Клавіша взаємодії (із собою)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_UseListMenu">
             <English>Display interaction menus as lists</English>
@@ -219,6 +231,7 @@
             <Chinesesimp>以列表方式显示互动表单</Chinesesimp>
             <Turkish>Etkileşim menülerini listeler halinde görüntüle</Turkish>
             <Hungarian>Cselekvő menük listaként való megjelenítése</Hungarian>
+            <Ukrainian>Меню взаємодій у вигляді списку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_VehicleActionsRoot">
             <English>Vehicle Actions</English>
@@ -236,6 +249,7 @@
             <Chinesesimp>载具动作</Chinesesimp>
             <Turkish>Araç Etkileşimi</Turkish>
             <Hungarian>Járműves cselekvések</Hungarian>
+            <Ukrainian>Дії на транспорті</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ZeusActionsRoot">
             <English>Zeus Actions</English>
@@ -253,6 +267,7 @@
             <Chinesesimp>宙斯操作</Chinesesimp>
             <Turkish>Zeus Etkileşimi</Turkish>
             <Hungarian>Zeus cselekvések</Hungarian>
+            <Ukrainian>Дії Зевса</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_addBuildingActions">
             <English>Show actions for buildings</English>
@@ -270,6 +285,7 @@
             <Chinesesimp>显示建筑物可用的动作</Chinesesimp>
             <Turkish>Binalar için eylemleri göster</Turkish>
             <Hungarian>Cselekvések mutatása épületeknél</Hungarian>
+            <Ukrainian>Показувати дії для будівель</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_addBuildingActionsDescription">
             <English>Adds interaction actions for opening doors and mounting ladders on buildings. (Note: There is a performance cost when opening interaction menu, especially in towns)</English>
@@ -287,6 +303,7 @@
             <Chinesesimp>增加互动菜单的功能在可开启的门与建筑物的梯子上。（注意：此功能有可能会降低系统效能，特别是在城镇区更明显）</Chinesesimp>
             <Turkish>Binalara kapıları açmak ve merdivenleri monte etmek için etkileşim eylemleri ekler. (Not: Etkileşim menüsünü açarken, özellikle şehirlerde bir performansı etkiler)</Turkish>
             <Hungarian>Cselekvéseket engedélyez ajtók kinyitására és létrák mászására. (Figyelem: ez teljesítményvesztéssel járhat a menü megnyitásakor, főleg városokban)</Hungarian>
+            <Ukrainian>Додає дії відкривання дверей і залазіння на сходи для будівель. (Примітка: можливе падіння продуктивності при відкритті меню взаємодії, особливо в містах)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_background">
             <English>Interaction menu background</English>
@@ -304,6 +321,7 @@
             <Chinesesimp>互动菜单背景</Chinesesimp>
             <Turkish>Etkileşim menüsü arka planı</Turkish>
             <Hungarian>Cselekvő menü háttere</Hungarian>
+            <Ukrainian>Фон меню взаємодії</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlack">
             <English>Black</English>
@@ -321,6 +339,7 @@
             <Chinesesimp>黑色</Chinesesimp>
             <Turkish>Siyah</Turkish>
             <Hungarian>Fekete</Hungarian>
+            <Ukrainian>Чорний</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlur">
             <English>Blur screen</English>
@@ -338,6 +357,7 @@
             <Chinesesimp>模糊画面</Chinesesimp>
             <Turkish>Bulanık Ekran</Turkish>
             <Hungarian>Kép elmosása</Hungarian>
+            <Ukrainian>Розмитий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_blurScreenDesc">
             <English>Blur the background while the interaction menu is open.</English>
@@ -355,6 +375,7 @@
             <Chinesesimp>当互动菜单开启时，模糊背景画面。</Chinesesimp>
             <Turkish>Etkileşim menüsü açıkken arka planı bulanıklaştırın.</Turkish>
             <Hungarian>A háttér elmosása a cselekvő menü használata alatt.</Hungarian>
+            <Ukrainian>Розмити фон, поки відкрито меню взаємодії.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_consolidateSingleChild">
             <English>Consolidate single child actions</English>
@@ -368,6 +389,7 @@
             <Korean>하위 동작 통합</Korean>
             <Japanese>1個のみの子アクションを統合</Japanese>
             <Chinesesimp>整合子操作</Chinesesimp>
+            <Ukrainian>Об'єднувати єд. дочірні дії</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_consolidateSingleChild_Description">
             <English>Combines parent action with only one child action together.</English>
@@ -381,6 +403,7 @@
             <Korean>대분류로 나뉜 행동을 한눈에 보여줍니다</Korean>
             <Japanese>アクションが1個のみの子アクションを親アクションと結合し表示を整理します。</Japanese>
             <Chinesesimp>主操作与子操作集成显示。</Chinesesimp>
+            <Ukrainian>Об'єднувати батьківську дію з єдиною дочірньою дією в одну.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_cursorKeepCentered">
             <English>Keep cursor centered</English>
@@ -398,6 +421,7 @@
             <Chinesesimp>保持光标在中心点</Chinesesimp>
             <Turkish>İmleci Ortada tut</Turkish>
             <Hungarian>Kurzor középen tartása</Hungarian>
+            <Ukrainian>Центрувати курсор</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_cursorKeepCenteredDescription">
             <English>Keeps cursor centered and pans the option menu around. Useful if screen size is limited.</English>
@@ -415,6 +439,7 @@
             <Chinesesimp>保持光标在中心点并平移周遭的选项菜单。这对在屏幕尺寸有限的玩家很有用！</Chinesesimp>
             <Turkish>İmleci ortalanmış halde tutar ve seçenek menüsünü kaydırır. Ekran boyutu sınırlıysa kullanışlıdır.</Turkish>
             <Hungarian>Középen tartja a kurzort, és a menüelemeket mozgatja. Hasznos lehetőség korlátozott képméretnél.</Hungarian>
+            <Ukrainian>Центрує курсор і рухає саме меню опцій. Корисно в разі обмеженого розміру екрана.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed">
             <English>Interaction Animation Speed</English>
@@ -431,6 +456,7 @@
             <Chinese>互動選單動畫速度</Chinese>
             <Chinesesimp>互动菜单动画速度</Chinesesimp>
             <Turkish>Etkileşim Animasyon Hızı</Turkish>
+            <Ukrainian>Швидкість анімації меню взаємодії</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed_Description">
             <English>Makes menu animations faster and decreases the time needed to hover to show sub actions</English>
@@ -447,6 +473,7 @@
             <Chinese>使選單的動畫速度更快，並減少子選項顯現出來的時間</Chinese>
             <Chinesesimp>使菜单的动画速度更快，并减少子选项显现出来的时间</Chinesesimp>
             <Turkish>Menü animasyonlarını daha hızlı hale getirir ve alt eylemleri göstermek için fareyle üzerine gelmek için gereken süreyi azaltır</Turkish>
+            <Ukrainian>Прискорює анімацію меню і зменшує затримку при наведенні миші для розкриття підменю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_shadowOutline">
             <English>Outline</English>
@@ -464,6 +491,7 @@
             <Chinesesimp>只显示轮廓</Chinesesimp>
             <Turkish>Dış Çizgi</Turkish>
             <Hungarian>Körvonal</Hungarian>
+            <Ukrainian>Контур</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_shadowSetting">
             <English>Interaction Text Shadow</English>
@@ -481,6 +509,7 @@
             <Chinesesimp>互动菜单文字阴影</Chinesesimp>
             <Turkish>Etkileşim Metni Gölgesi</Turkish>
             <Hungarian>Cselekvő szöveg árnyéka</Hungarian>
+            <Ukrainian>Тінь від тексту (меню взаємодії)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_shadowSettingDescription">
             <English>Allows controlling the text's shadow. Outline ignores custom shadow colors.</English>
@@ -498,6 +527,7 @@
             <Chinesesimp>允许控制文字阴影。轮廓部分则会忽略自定义的阴影颜色。</Chinesesimp>
             <Turkish>Metin gölgesinin kontrolüne izin verir. Dış çizgi, özel gölge renklerini yok sayar.</Turkish>
             <Hungarian>Hozzáférést biztosít a szöveg árnyékának kezeléséhez. A körvonal nem veszi figyelembe az egyedi árnyékszíneket.</Hungarian>
+            <Ukrainian>Дає можливість змінювати тінь, що відкидається текстом. Контур не залежить від обраного кольору тіні.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_textSize">
             <English>Interaction Text Size</English>
@@ -515,6 +545,7 @@
             <Chinesesimp>互动菜单文字大小</Chinesesimp>
             <Turkish>Etkileşim Metni Boyutu</Turkish>
             <Hungarian>Cselekvő szöveg mérete</Hungarian>
+            <Ukrainian>Розмір тексту (меню взаємодії)</Ukrainian>
         </Key>
     </Package>
 </Project>

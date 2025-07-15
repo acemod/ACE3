@@ -16,6 +16,7 @@
             <Chinese>螢光棒</Chinese>
             <Chinesesimp>荧光棒</Chinesesimp>
             <Turkish>Işık Çubukları</Turkish>
+            <Ukrainian>Хімсвітло</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_Action_Prepare">
             <English>Prepare %1</English>
@@ -32,6 +33,7 @@
             <Chinese>使用%1</Chinese>
             <Chinesesimp>使用%1</Chinesesimp>
             <Turkish>Hazırlanıyor %1</Turkish>
+            <Ukrainian>Підготувати %1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_Action_Prepare_Done">
             <English>%1&lt;br/&gt;Prepared</English>
@@ -48,6 +50,7 @@
             <Chinese>%1&lt;br/&gt;已使用</Chinese>
             <Chinesesimp>%1&lt;br/&gt;已使用</Chinesesimp>
             <Turkish>%1&lt;br/&gt; Hazırlandı</Turkish>
+            <Ukrainian>%1&lt;br/&gt;Підготовлено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_Box_DisplayName">
             <English>[ACE] Chemlights</English>
@@ -64,6 +67,7 @@
             <Chinese>[ACE] 螢光棒</Chinese>
             <Chinesesimp>[ACE] 荧光棒</Chinesesimp>
             <Turkish>[ACE] Işık Çubukları</Turkish>
+            <Ukrainian>[ACE] Хімсвітло</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiBlue_DescriptionShort">
             <English>Type: Light - Blue Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -80,6 +84,7 @@
             <Chinese>類型: 光 - 超亮藍色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
             <Chinesesimp>类型：光—高亮蓝色（30分钟）&lt;br /&gt;发数：1&lt;br /&gt;使用于：手</Chinesesimp>
             <Turkish>Type: Light - Blue Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</Turkish>
+            <Ukrainian>Тип: Світло - яскраво-синє (30 хвилин)&lt;br /&gt;1 штука&lt;br /&gt;У руках</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiBlue_DisplayName">
             <English>Chemlight (Hi Blue)</English>
@@ -96,6 +101,7 @@
             <Chinese>螢光棒（超亮藍色）</Chinese>
             <Chinesesimp>荧光棒（高亮蓝色）</Chinesesimp>
             <Turkish>Işık Çubuğu (Mavi)</Turkish>
+            <Ukrainian>Хімсвітло (яскраво-синє)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiBlue_DisplayNameShort">
             <English>Blue Hi Light</English>
@@ -112,6 +118,7 @@
             <Chinese>超亮藍色光</Chinese>
             <Chinesesimp>高亮蓝色光</Chinesesimp>
             <Turkish>Mavi Yüksek Işık</Turkish>
+            <Ukrainian>Яскраве синє світло</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiGreen_DescriptionShort">
             <English>Type: Light - Green Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -128,6 +135,7 @@
             <Chinese>類型: 光 - 超亮綠色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
             <Chinesesimp>类型：光—高亮绿色（30分钟）&lt;br /&gt;发数：1&lt;br /&gt;使用于：手</Chinesesimp>
             <Turkish>Type: Light - Green Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</Turkish>
+            <Ukrainian>Тип: Світло - яскраво-зелене (30 хвилин)&lt;br /&gt;1 штука&lt;br /&gt;У руках</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiGreen_DisplayName">
             <English>Chemlight (Hi Green)</English>
@@ -144,6 +152,7 @@
             <Chinese>螢光棒（超亮綠色）</Chinese>
             <Chinesesimp>荧光棒（高亮绿色）</Chinesesimp>
             <Turkish>Işık Çubuğu (Yeşil)</Turkish>
+            <Ukrainian>Хімсвітло (яскраво-зелене)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiGreen_DisplayNameShort">
             <English>Green Hi Light</English>
@@ -160,6 +169,7 @@
             <Chinese>超亮綠色光</Chinese>
             <Chinesesimp>高亮绿色光</Chinesesimp>
             <Turkish>Yeşil Yüksek Işık</Turkish>
+            <Ukrainian>Яскраве зелене світло</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiRed_DescriptionShort">
             <English>Type: Light - Red Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -176,6 +186,7 @@
             <Chinese>類型: 光 - 超亮紅色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
             <Chinesesimp>类型：光—高亮红色（30分钟）&lt;br /&gt;发数：1&lt;br /&gt;使用于：手</Chinesesimp>
             <Turkish>Type: Light - Red Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</Turkish>
+            <Ukrainian>Тип: Світло - яскраво-червоне (30 хвилин)&lt;br /&gt;1 штука&lt;br /&gt;У руках</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiRed_DisplayName">
             <English>Chemlight (Hi Red)</English>
@@ -192,6 +203,7 @@
             <Chinese>螢光棒 (超亮紅色)</Chinese>
             <Chinesesimp>荧光棒（高亮红色）</Chinesesimp>
             <Turkish>Işık Çubuğu (Kırmızı)</Turkish>
+            <Ukrainian>Хімсвітло (яскраво-червоне)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiRed_DisplayNameShort">
             <English>Red Hi Light</English>
@@ -208,6 +220,7 @@
             <Chinese>超亮紅色光</Chinese>
             <Chinesesimp>高亮红色光</Chinesesimp>
             <Turkish>Kırmızı Işık</Turkish>
+            <Ukrainian>Яскраве червоне світло</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiWhite_DescriptionShort">
             <English>Type: Light - White Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -224,6 +237,7 @@
             <Chinese>類型: 光 - 超亮白色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
             <Chinesesimp>类型：光—高亮白色（30分钟）&lt;br /&gt;发数：1&lt;br /&gt;使用于：手</Chinesesimp>
             <Turkish>Type: Light - White Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</Turkish>
+            <Ukrainian>Тип: Світло - яскраво-біле (30 хвилин)&lt;br /&gt;1 штука&lt;br /&gt;У руках</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiWhite_DisplayName">
             <English>Chemlight (Hi White)</English>
@@ -240,6 +254,7 @@
             <Chinese>螢光棒 (超亮白色)</Chinese>
             <Chinesesimp>荧光棒（高亮白色）</Chinesesimp>
             <Turkish>Işık Çubuğu (Beyaz)</Turkish>
+            <Ukrainian>Хімсвітло (яскраво-біле)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiWhite_DisplayNameShort">
             <English>White Hi Light</English>
@@ -256,6 +271,7 @@
             <Chinese>超亮白色光</Chinese>
             <Chinesesimp>高亮白色光</Chinesesimp>
             <Turkish>Beyaz Yüksek Işık</Turkish>
+            <Ukrainian>Яскраве біле світло</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiYellow_DescriptionShort">
             <English>Type: Light - Yellow Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -272,6 +288,7 @@
             <Chinese>類型: 光 - 超亮黃色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
             <Chinesesimp>类型：光—高亮黄色（30分钟）&lt;br /&gt;发数：1&lt;br /&gt;使用于：手</Chinesesimp>
             <Turkish>Type: Light - Yellow Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</Turkish>
+            <Ukrainian>Тип: Світло - яскраво-жовте (30 хвилин)&lt;br /&gt;1 штука&lt;br /&gt;У руках</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiYellow_DisplayName">
             <English>Chemlight (Hi Yellow)</English>
@@ -288,6 +305,7 @@
             <Chinese>螢光棒 (超亮黃色)</Chinese>
             <Chinesesimp>荧光棒（高亮黄色）</Chinesesimp>
             <Turkish>Işık Çubuğu (Sarı)</Turkish>
+            <Ukrainian>Хімсвітло (яскраво-жовте)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiYellow_DisplayNameShort">
             <English>Yellow Hi Light</English>
@@ -304,6 +322,7 @@
             <Chinese>超亮黃色光</Chinese>
             <Chinesesimp>高亮黄色光</Chinesesimp>
             <Turkish>Sarı Işık</Turkish>
+            <Ukrainian>Яскраве жовте світло</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_IR_DescriptionShort">
             <English>Type: Light - Infrared&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -320,6 +339,7 @@
             <Chinese>類型: 光 - 紅外線&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
             <Chinesesimp>类型：光—红外线&lt;br /&gt;发数：1&lt;br /&gt;使用于：手</Chinesesimp>
             <Turkish>Tip: Işık &lt;br /&gt; Mermi: 1&lt;br /&gt;Kullanılma alanı: El</Turkish>
+            <Ukrainian>Тип: Світло - інфрачервоне&lt;br /&gt;1 штука&lt;br /&gt;У руках</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_IR_DisplayName">
             <English>Chemlight (IR)</English>
@@ -336,6 +356,7 @@
             <Chinese>螢光棒 (紅外線)</Chinese>
             <Chinesesimp>荧光棒（红外线）</Chinesesimp>
             <Turkish>Işık çubuğu (IR)</Turkish>
+            <Ukrainian>Хімсвітло (інфрачервоне)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_IR_DisplayNameShort">
             <English>IR Light</English>
@@ -352,6 +373,7 @@
             <Chinese>紅外線光</Chinese>
             <Chinesesimp>红外线光</Chinesesimp>
             <Turkish>IR Işığı</Turkish>
+            <Ukrainian>Інфрачервоне світло</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_Orange_DescriptionShort">
             <English>Type: Light - Orange&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -368,6 +390,7 @@
             <Chinese>類型: 光 - 橘色&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
             <Chinesesimp>类型：光—橘色&lt;br /&gt;发数：1&lt;br /&gt;使用于：手</Chinesesimp>
             <Turkish>Type: Light - Orange&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</Turkish>
+            <Ukrainian>Тип: Світло - помаранчеве&lt;br /&gt;1 штука&lt;br /&gt;У руках</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_Orange_DisplayName">
             <English>Chemlight (Orange)</English>
@@ -384,6 +407,7 @@
             <Chinese>螢光棒 (橘色)</Chinese>
             <Chinesesimp>荧光棒（橘色）</Chinesesimp>
             <Turkish>Işık Çubuğu (Turuncu)</Turkish>
+            <Ukrainian>Хімсвітло (помаранчеве)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_Orange_DisplayNameShort">
             <English>Orange Light</English>
@@ -400,6 +424,7 @@
             <Chinese>橘色光</Chinese>
             <Chinesesimp>橘色光</Chinesesimp>
             <Turkish>Turuncu Işık</Turkish>
+            <Ukrainian>Помаранчеве світло</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Blue_DescriptionShort">
             <English>Blue reading light.</English>
@@ -416,6 +441,7 @@
             <Chinese>藍色閱讀燈</Chinese>
             <Chinesesimp>蓝色阅读灯。</Chinesesimp>
             <Turkish>Mavi okuma ışığı.</Turkish>
+            <Ukrainian>Нічник із синього хімсвітла.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Blue_DisplayName">
             <English>Chemlight Shield (Blue)</English>
@@ -432,6 +458,7 @@
             <Chinese>螢光棒保護殼 (藍色)</Chinese>
             <Chinesesimp>荧光棒保护壳（蓝色）</Chinesesimp>
             <Turkish>Işık çubuğu koruması (Mavi)</Turkish>
+            <Ukrainian>Контейнер для хімсвітла (синій)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Empty_DescriptionShort">
             <English>Shield for chemlights. Combine with chemlight to prepare reading light.</English>
@@ -448,6 +475,7 @@
             <Chinese>螢光棒的保護殼. 與螢光棒結合後可充當閱讀燈</Chinese>
             <Chinesesimp>荧光棒的保护壳。与萤光棒结合后可充当阅读灯。</Chinesesimp>
             <Turkish>Işık çubuğu için kalkan. Okuma ışığını hazırlamak için ışık çubuğu ile birleştirin.</Turkish>
+            <Ukrainian>Захисний контейнер для хімсвітла. Об'єднайте з хімсвітлом, щоб підготувати нічник.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Empty_DisplayName">
             <English>Chemlight Shield (Empty)</English>
@@ -464,6 +492,7 @@
             <Chinese>螢光棒保護殼 (空)</Chinese>
             <Chinesesimp>荧光棒保护壳（空）</Chinesesimp>
             <Turkish>Işık çubuğu koruması (Boş)</Turkish>
+            <Ukrainian>Контейнер для хімсвітла (порожній)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Green_DescriptionShort">
             <English>Green reading light.</English>
@@ -480,6 +509,7 @@
             <Chinese>綠色閱讀燈</Chinese>
             <Chinesesimp>绿色阅读灯。</Chinesesimp>
             <Turkish>Yeşil okuma ışığı.</Turkish>
+            <Ukrainian>Нічник із зеленого хімсвітла.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Green_DisplayName">
             <English>Chemlight Shield (Green)</English>
@@ -496,6 +526,7 @@
             <Chinese>螢光棒保護殼 (綠色)</Chinese>
             <Chinesesimp>荧光棒保护壳（绿色）</Chinesesimp>
             <Turkish>Işık çubuğu koruması (Yeşil)</Turkish>
+            <Ukrainian>Контейнер для хімсвітла (зелений)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Orange_DescriptionShort">
             <English>Orange reading light.</English>
@@ -512,6 +543,7 @@
             <Chinese>橘色閱讀燈</Chinese>
             <Chinesesimp>橘色阅读灯。</Chinesesimp>
             <Turkish>Turuncu okuma ışığı.</Turkish>
+            <Ukrainian>Нічник із помаранчевого хімсвітла.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Orange_DisplayName">
             <English>Chemlight Shield (Orange)</English>
@@ -528,6 +560,7 @@
             <Chinese>螢光棒保護殼 (橘色)</Chinese>
             <Chinesesimp>荧光棒保护壳（橘色）</Chinesesimp>
             <Turkish>Işık çubuğu koruması (Turuncu)</Turkish>
+            <Ukrainian>Контейнер для хімсвітла (помаранчевий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Red_DescriptionShort">
             <English>Red reading light.</English>
@@ -544,6 +577,7 @@
             <Chinese>紅色閱讀燈</Chinese>
             <Chinesesimp>红色阅读灯。</Chinesesimp>
             <Turkish>Kırmızı okuma ışığı.</Turkish>
+            <Ukrainian>Нічник із червоного хімсвітла.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Red_DisplayName">
             <English>Chemlight Shield (Red)</English>
@@ -560,6 +594,7 @@
             <Chinese>螢光棒保護殼 (紅色)</Chinese>
             <Chinesesimp>荧光棒保护壳（红色）</Chinesesimp>
             <Turkish>Işık çubuğu koruması (Kırmızıl)</Turkish>
+            <Ukrainian>Контейнер для хімсвітла (червоний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_White_DescriptionShort">
             <English>White reading light.</English>
@@ -576,6 +611,7 @@
             <Chinese>白色閱讀燈</Chinese>
             <Chinesesimp>白色阅读灯。</Chinesesimp>
             <Turkish>Beyaz okuma ışığı.</Turkish>
+            <Ukrainian>Нічник із білого хімсвітла.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_White_DisplayName">
             <English>Chemlight Shield (White)</English>
@@ -592,6 +628,7 @@
             <Chinese>螢光棒保護殼 (白色)</Chinese>
             <Chinesesimp>荧光棒保护壳（白色）</Chinesesimp>
             <Turkish>Işık çubuğu koruması (Beyazl)</Turkish>
+            <Ukrainian>Контейнер для хімсвітла (білий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Yellow_DescriptionShort">
             <English>Yellow reading light.</English>
@@ -608,6 +645,7 @@
             <Chinese>黃色閱讀燈</Chinese>
             <Chinesesimp>黄色阅读灯。</Chinesesimp>
             <Turkish>Sarı okuma ışığı.</Turkish>
+            <Ukrainian>Нічник із жовтого хімсвітла.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Yellow_DisplayName">
             <English>Chemlight Shield (Yellow)</English>
@@ -624,6 +662,7 @@
             <Chinese>螢光棒保護殼 (黃色)</Chinese>
             <Chinesesimp>荧光棒保护壳（黄色）</Chinesesimp>
             <Turkish>Işık çubuğu koruması (Sarı)</Turkish>
+            <Ukrainian>Контейнер для хімсвітла (жовтий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_UltraHiOrange_DescriptionShort">
             <English>Type: Light - Orange Ultra-Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -640,6 +679,7 @@
             <Chinese>類型: 光 - 極亮橘色 (5分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
             <Chinesesimp>类型：光—高亮橘色（5分钟）&lt;br /&gt;发数：1&lt;br /&gt;使用于：手</Chinesesimp>
             <Turkish>Type: Light - Orange Ultra-Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</Turkish>
+            <Ukrainian>Тип: Світло - ультраяскраве помаранчеве (5 хвилин)&lt;br /&gt;1 штука&lt;br /&gt;У руках</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_UltraHiOrange_DisplayName">
             <English>Chemlight (Ultra-Hi Orange)</English>
@@ -656,6 +696,7 @@
             <Chinese>螢光棒（極亮橘色）</Chinese>
             <Chinesesimp>荧光棒（高亮橘色）</Chinesesimp>
             <Turkish>Işık Çubuğu (Turuncu)</Turkish>
+            <Ukrainian>Хімсвітло (ультраяскраве помаранчеве)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_UltraHiOrange_DisplayNameShort">
             <English>Orange Ultra-Hi Light</English>
@@ -672,6 +713,7 @@
             <Chinese>極亮橘色光</Chinese>
             <Chinesesimp>高亮橘色光</Chinesesimp>
             <Turkish>Turuncu Yüksek Işık</Turkish>
+            <Ukrainian>Ультраяскраве помаранчеве світло</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_White_DescriptionShort">
             <English>Type: Light - White&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -688,6 +730,7 @@
             <Chinese>類型: 光 - 白色&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
             <Chinesesimp>类型：光—白色&lt;br /&gt;发数：1&lt;br /&gt;使用于：手</Chinesesimp>
             <Turkish>Type: Light - White&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</Turkish>
+            <Ukrainian>Тип: Світло - біле&lt;br /&gt;1 штука&lt;br /&gt;У руках</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_White_DisplayName">
             <English>Chemlight (White)</English>
@@ -704,6 +747,7 @@
             <Chinese>螢光棒 (白色)</Chinese>
             <Chinesesimp>荧光棒（白色）</Chinesesimp>
             <Turkish>Işık Çubuğu (Beyaz)</Turkish>
+            <Ukrainian>Хімсвітло (біле)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Chemlights_White_DisplayNameShort">
             <English>White Light</English>
@@ -720,6 +764,7 @@
             <Chinese>白色光</Chinese>
             <Chinesesimp>白色光</Chinesesimp>
             <Turkish>Beyaz Işık</Turkish>
+            <Ukrainian>Біле світло</Ukrainian>
         </Key>
     </Package>
 </Project>

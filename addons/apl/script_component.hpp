@@ -1,4 +1,4 @@
-#define COMPONENT APL
+#define COMPONENT apl
 #define COMPONENT_BEAUTIFIED APL
 #include "\z\ace\addons\main\script_mod.hpp"
 

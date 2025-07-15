@@ -6,9 +6,9 @@
  * Arguments:
  * 0: Position <ARRAY>
  * 1: Position <ARRAY>
- * 2: Force - ignoring saftey checks (optional: false) <BOOL>
- * 3: Cut Grass (optional: false) <BOOL>
- * 4: Dry Run - Just test if possible (can run on clients) <BOOL>
+ * 2: Force - ignoring safety checks <BOOL> (default: false)
+ * 3: Cut Grass <BOOL> (default: false)
+ * 4: Dry Run - Just test if possible (can run on clients) <BOOL> (default: false)
  *
  * Return Value:
  * <ARRAY>

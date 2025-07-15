@@ -468,7 +468,7 @@ class CfgVehicles {
         };
     };
     class APC_Wheeled_02_base_F: Wheeled_APC_F {
-        class GVAR(anims);
+        class GVAR(anims) {};
     };
     class APC_Wheeled_02_base_v2_F: APC_Wheeled_02_base_F {
         class GVAR(anims): GVAR(anims) {
@@ -582,7 +582,7 @@ class CfgVehicles {
     };
 
     class MBT_01_base_F: Tank_F {
-        class GVAR(anims);
+        class GVAR(anims) {};
     };
     class B_MBT_01_base_F: MBT_01_base_F {};
     class B_MBT_01_cannon_F: B_MBT_01_base_F {

@@ -15,6 +15,7 @@
             <Chinese>ACE 情報物品</Chinese>
             <Chinesesimp>ACE 情报物品</Chinesesimp>
             <Turkish>ACE Istihbarat Eşyaları</Turkish>
+            <Ukrainian>ACE Предмети з даними</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IntelItems_DisplayName">
             <English>Intel Items</English>
@@ -30,6 +31,7 @@
             <Chinese>情報物品</Chinese>
             <Chinesesimp>情报物品</Chinesesimp>
             <Turkish>Istihbarat Eşyaları</Turkish>
+            <Ukrainian>Предмети з даними</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IntelItems_Document_Description">
             <English>Printed Document - Can access from the map screen</English>
@@ -45,6 +47,7 @@
             <Chinese>影印文件 - 可以透過地圖界面來存取</Chinese>
             <Chinesesimp>影印文件—可以透过地图界面访问</Chinesesimp>
             <Turkish>Yazılı Döküman - Haritadan erişim sağlanabilinir</Turkish>
+            <Ukrainian>Роздрукований документ - Можна отримати доступ з екрана мапи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IntelItems_Document_DisplayName">
             <English>Document</English>
@@ -60,6 +63,32 @@
             <Chinese>文件</Chinese>
             <Chinesesimp>文件</Chinesesimp>
             <Turkish>Döküman</Turkish>
+            <Ukrainian>Документ</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_IntelItems_Header">
+            <English>Header</English>
+            <Czech>Záhlaví</Czech>
+            <French>En-tête</French>
+            <Spanish>Encabezamiento</Spanish>
+            <Italian>Intestazione</Italian>
+            <Polish>Nagłówek</Polish>
+            <Portuguese>Cabeçalho</Portuguese>
+            <Russian>Заголовок</Russian>
+            <German>Überschrift</German>
+            <Korean>헤더</Korean>
+            <Japanese>ヘッダー</Japanese>
+            <Chinese>標題</Chinese>
+            <Chinesesimp>标题</Chinesesimp>
+            <Turkish>Üstbilgi</Turkish>
+            <Ukrainian>Заголовок</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_IntelItems_Header_Tooltip">
+            <English>Defines the header for the intel item. If the value is empty (""), the object's display name is used.</English>
+            <French>Définit l'en-tête de l'élément intel. Si la valeur est vide (""),  le nom d'affichage de l'objet est utilisé.</French>
+            <Russian>Определяет заголовок для элемента данных. Если значение пустое (""), используется отображаемое имя объекта.</Russian>
+            <Korean>인텔 아이템의 헤더를 정의합니다. 값이 비어 있다면("") 오브젝트의 표시명이 사용됩니다.</Korean>
+            <Japanese>インテルアイテムのヘッダーを定義します。値が空 ("")の場合、オブジェクトの表示名が使用されます。</Japanese>
+            <Ukrainian>Визначає заголовок для елемента інформації. Якщо значення пусте (""), використовується відображуване ім'я об'єкта.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IntelItems_Notepad_Description">
             <English>Notepad - Can access from the map screen</English>
@@ -75,6 +104,7 @@
             <Chinese>筆記本 - 可以透過地圖界面來存取</Chinese>
             <Chinesesimp>笔记本—可以透过地图界面访问</Chinesesimp>
             <Turkish>Not Defteri - Haritadan erişim sağlanabilinir</Turkish>
+            <Ukrainian>Блокнот - Можна отримати доступ з екрана мапи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IntelItems_Notepad_DisplayName">
             <English>Notepad</English>
@@ -90,6 +120,7 @@
             <Chinese>筆記本</Chinese>
             <Chinesesimp>笔记本</Chinesesimp>
             <Turkish>Not Defteri</Turkish>
+            <Ukrainian>Блокнот</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IntelItems_Photo_Description">
             <English>Photo - Can access from the map screen</English>
@@ -105,6 +136,7 @@
             <Chinese>相片  - 可以透過地圖界面來存取</Chinese>
             <Chinesesimp>照片—可以透过地图界面访问</Chinesesimp>
             <Turkish>Fotoğraf - Haritadan erişim sağlanabilinir</Turkish>
+            <Ukrainian>Фотографія - Можна отримати доступ з екрана мапи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IntelItems_Photo_DisplayName">
             <English>Photo</English>
@@ -120,6 +152,7 @@
             <Chinese>相片</Chinese>
             <Chinesesimp>照片</Chinesesimp>
             <Turkish>Fotoğraf</Turkish>
+            <Ukrainian>Фотографія</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IntelItems_Photo_Filename">
             <English>Photo Filename</English>
@@ -135,6 +168,7 @@
             <Chinese>相片名稱</Chinese>
             <Chinesesimp>照片文件名</Chinesesimp>
             <Turkish>Fotoğraf Dosya Adı</Turkish>
+            <Ukrainian>Ім'я файлу фотографії</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IntelItems_Pickup">
             <English>Pick Up</English>
@@ -151,6 +185,7 @@
             <Chinese>撿起</Chinese>
             <Chinesesimp>捡起</Chinesesimp>
             <Turkish>Al</Turkish>
+            <Ukrainian>Підібрати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IntelItems_Text">
             <English>Text</English>
@@ -167,6 +202,7 @@
             <Chinese>文字</Chinese>
             <Chinesesimp>文字</Chinesesimp>
             <Turkish>Yazı</Turkish>
+            <Ukrainian>Текст</Ukrainian>
         </Key>
     </Package>
 </Project>

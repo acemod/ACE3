@@ -8,7 +8,7 @@
  * 1: Allow defusal <BOOL>
  *
  * Return Value:
- * Succes <BOOLEAN>
+ * Success <BOOL>
  *
  * Example:
  * [_mine, false] call ace_explosives_fnc_allowDefuse

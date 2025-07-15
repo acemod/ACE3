@@ -17,6 +17,7 @@
             <Chinesesimp>任何时间</Chinesesimp>
             <Turkish>Her Zaman</Turkish>
             <Hungarian>Akármikor</Hungarian>
+            <Ukrainian>У будь-який час</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Category">
             <English>ACE Medical</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>ACE 医疗</Chinesesimp>
             <Turkish>ACE Medikal</Turkish>
             <Hungarian>ACE Orvosi Rendszer</Hungarian>
+            <Ukrainian>ACE Медицина</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Category_Medical">
             <English>Medical</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>医疗设定</Chinesesimp>
             <Turkish>Medikal</Turkish>
             <Hungarian>Orvosi</Hungarian>
+            <Ukrainian>Медик</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_DistanceToFar">
             <English>Distance to %1 has become too far for treatment</English>
@@ -67,6 +70,7 @@
             <Chinese>設定當距離超過%1將不能使用治療動作</Chinese>
             <Chinesesimp>设定当距离超过%1将不能使用治疗动作</Chinesesimp>
             <Turkish>% 1'e olan mesafe tedavi için çok uzak</Turkish>
+            <Ukrainian>Відстань до %1 стала занадто великою для лікування</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_Description">
             <English>The probability of a fracture causing wound resulting in a fracture.</English>
@@ -82,6 +86,7 @@
             <Japanese>骨折の原因となる負傷が骨折に至る確率を設定します。</Japanese>
             <Chinesesimp>骨折导致的伤口再次骨折的可能性。</Chinesesimp>
             <Turkish>Yaraya neden olan bir kırığın kırılma olasılığı.</Turkish>
+            <Ukrainian>Імовірність перелому при отриманні відповідних ран.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_DisplayName">
             <English>Fracture Chance</English>
@@ -97,6 +102,7 @@
             <Japanese>骨折確率</Japanese>
             <Chinesesimp>骨折概率</Chinesesimp>
             <Turkish>Kırılma Şansı</Turkish>
+            <Ukrainian>Шанс перелому</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_Description">
             <English>Controls the effect of using splints to treat fractures.\nWhen disabled, injuries will not cause fractures.</English>
@@ -113,6 +119,7 @@
             <Chinese>控制是否讓固定版能夠治療骨折。\n當停用時，受傷時不會導致骨折發生。</Chinese>
             <Chinesesimp>控制是否让固定板能够治疗骨折。 \n当停用时，受伤时不会导致骨折发生。</Chinesesimp>
             <Turkish>Kırıkları tedavi etmek için atel kullanmanın etkisini kontrol eder. \ Devre dışı bırakıldığında, yaralanmalar kırılmaya neden olmaz.</Turkish>
+            <Ukrainian>Керує ефектом використання шин для лікування переломів.\nПри відключенні травми не спричиняють переломів.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_DisplayName">
             <English>Fractures</English>
@@ -129,6 +136,7 @@
             <Chinese>骨折</Chinese>
             <Chinesesimp>骨折</Chinesesimp>
             <Turkish>Kırıklar</Turkish>
+            <Ukrainian>Переломи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsFully">
             <English>Splints Fully Heal Fractures</English>
@@ -145,6 +153,7 @@
             <Chinese>固定板完全治癒骨折</Chinese>
             <Chinesesimp>固定板完全治愈骨折</Chinesesimp>
             <Turkish>Ateller Kırıkları Tamamen İyileştirir</Turkish>
+            <Ukrainian>Шини повністю лікують перелом</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsNoJog">
             <English>Splints Heal, but Cannot Jog</English>
@@ -159,6 +168,7 @@
             <Japanese>添え木で治癒可能、駆け足できないように</Japanese>
             <Chinesesimp>固定板能治愈骨折，但无法慢跑</Chinesesimp>
             <Turkish>Ateller İyileştirir, Ama Koşu Yapamaz</Turkish>
+            <Ukrainian>Шини виліковують, але не дають бігти підтюпцем</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsNoSprint">
             <English>Splints Heal, but Cannot Sprint</English>
@@ -175,6 +185,7 @@
             <Chinese>固定版能治癒骨折，但無法奔跑</Chinese>
             <Chinesesimp>固定板能治愈骨折，但无法奔跑</Chinesesimp>
             <Turkish>Ateller İyileştirir, ancak Koşamaz</Turkish>
+            <Ukrainian>Шини виліковують, але не дають бігати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Interface_Category">
             <English>ACE Medical Interface</English>
@@ -191,6 +202,7 @@
             <Chinese>ACE 醫療系統 介面</Chinese>
             <Chinesesimp>ACE 医疗 界面</Chinesesimp>
             <Turkish>ACE Medikal Arayüz</Turkish>
+            <Ukrainian>ACE Медицина Інтерфейс</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_Description">
             <English>Controls whether open or bandaged wounds cause a person to limp.</English>
@@ -207,6 +219,7 @@
             <Chinese>控制裂開或者已包紮傷口是否會讓人跛腳。</Chinese>
             <Chinesesimp>控制裂开或者已包扎伤口是否会让人跛脚。</Chinesesimp>
             <Turkish>Açık veya sargılı yaraların bir kişinin topallamasına neden olup olmadığını kontrol eder.</Turkish>
+            <Ukrainian>Контролює кульгавість у разі відкритих або забинтованих ран.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
@@ -223,6 +236,7 @@
             <Chinese>跛腳</Chinese>
             <Chinesesimp>跛脚</Chinesesimp>
             <Turkish>Topallama</Turkish>
+            <Ukrainian>Кульгавість</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpOnOpenWounds">
             <English>Limp on Open Wounds</English>
@@ -239,6 +253,7 @@
             <Chinese>傷口裂開時跛腳</Chinese>
             <Chinesesimp>伤口裂开时跛脚</Chinesesimp>
             <Turkish>Açık Yaralarda Topallama</Turkish>
+            <Ukrainian>Кульгавість при відкритих ранах</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpRequiresStitching">
             <English>Limp on Open or Bandaged Wounds</English>
@@ -255,6 +270,7 @@
             <Chinese>使裂開或者包紮過的傷口讓人跛腳</Chinese>
             <Chinesesimp>使裂开或者包扎过的伤口让人跛脚</Chinesesimp>
             <Turkish>Açık veya Sargılı Yaralarda Topallama</Turkish>
+            <Ukrainian>Кульгавість при відкритих або забинтованих ранах</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableFor_Description">
             <English>Select what units the advanced medical system will be enabled for</English>
@@ -272,6 +288,7 @@
             <Chinesesimp>选择进阶医疗系统影响的物体</Chinesesimp>
             <Turkish>Gelişmiş tıbbi sistemin hangi üniteler için etkinleştirileceğini seçin</Turkish>
             <Hungarian>Kiválasztható, mely egységek számára legyen engedélyezve a fejlett orvosi rendszer</Hungarian>
+            <Ukrainian>Оберіть, на кого поширюватиметься ускладнена система медицини</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableFor_DisplayName">
             <English>Enabled for</English>
@@ -289,6 +306,7 @@
             <Chinesesimp>被启用给</Chinesesimp>
             <Turkish>İçin etkinleştirildi</Turkish>
             <Hungarian>Engedélyezve</Hungarian>
+            <Ukrainian>Увімкнено для</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableVehicleCrashes_Description">
             <English>Do units take damage from a vehicle crash?</English>
@@ -306,6 +324,7 @@
             <Chinesesimp>设定人员是否会因为载具冲撞别的物体而产生伤害？</Chinesesimp>
             <Turkish>Birimler bir araç kazasından hasar alır mı?</Turkish>
             <Hungarian>Sérülnek-e az egységek autós ütközés során?</Hungarian>
+            <Ukrainian>Чи повинні юніти отримувати пошкодження від аварій на транспорті?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableVehicleCrashes_DisplayName">
             <English>Vehicle Crashes</English>
@@ -323,6 +342,7 @@
             <Chinesesimp>载具碰撞</Chinesesimp>
             <Turkish>Araç Kazaları</Turkish>
             <Hungarian>Járműbalesetek</Hungarian>
+            <Ukrainian>Аварії транспорту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_Description">
             <English>The probability that a person with stable vitals will wake up from unconsciousness (checked every 15 seconds).</English>
@@ -339,6 +359,7 @@
             <Chinese>生命跡象穩定的單位從無意識狀態中甦醒的機率（每十五秒確認一次）</Chinese>
             <Chinesesimp>生命迹象稳定的单位从无意识状态中苏醒的概率（每十五秒确认一次）</Chinesesimp>
             <Turkish>Hayati değerleri stabil olan bir kişinin bilinçsizlikten uyanma olasılığı (her 15 saniyede bir kontrol edilir).</Turkish>
+            <Ukrainian>Імовірність, що стабілізований юніт прокинеться від втрати свідомості (Перевіряється кожні 15 сек)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_DisplayName">
             <English>Unconscious Wake Up Chance</English>
@@ -355,6 +376,7 @@
             <Chinese>從無意識中甦醒機率</Chinese>
             <Chinesesimp>ACE 从无意识中苏醒概率</Chinesesimp>
             <Turkish>Bayılmış Bir Kişinin Uyanma Şansı</Turkish>
+            <Ukrainian>Шанс прийти до тями при втраті свідомості</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Stable">
             <English>Stable</English>
@@ -372,6 +394,7 @@
             <Chinesesimp>稳定状态下</Chinesesimp>
             <Turkish>Dengeli</Turkish>
             <Hungarian>Stabil</Hungarian>
+            <Ukrainian>Після стабілізації</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_closeLid">
             <English>Close lid</English>
@@ -388,6 +411,7 @@
             <Chinese>關閉蓋子</Chinese>
             <Chinesesimp>关闭盖子</Chinesesimp>
             <Turkish>Kapalı Gözkapağı</Turkish>
+            <Ukrainian>Закрити кришку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_openLid">
             <English>Open lid</English>
@@ -404,6 +428,7 @@
             <Chinese>打開蓋子</Chinese>
             <Chinesesimp>打开盖子</Chinesesimp>
             <Turkish>Açık Gözkapağı</Turkish>
+            <Ukrainian>Відкрити кришку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_playeronly">
             <English>Players only</English>
@@ -421,6 +446,7 @@
             <Chinesesimp>只限玩家</Chinesesimp>
             <Turkish>Sadece oyuncular</Turkish>
             <Hungarian>Csak játékosok</Hungarian>
+            <Ukrainian>Гравців</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_playersandai">
             <English>Players and AI</English>
@@ -438,6 +464,7 @@
             <Chinesesimp>玩家与 AI</Chinesesimp>
             <Turkish>Oyuncular ve AI</Turkish>
             <Hungarian>Játékosok és AI</Hungarian>
+            <Ukrainian>Гравців і ботів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
             <English>When an unconscious patient has Epinephrine in their system, the time between spontaneous wake up checks is divided by this value.</English>
@@ -454,6 +481,7 @@
             <Chinese>增加因病患的循環系統裡面的腎上腺素自我甦醒的機率。</Chinese>
             <Chinesesimp>增加因病患的循环系统里面的肾上腺素自我苏醒的机率。</Chinesesimp>
             <Turkish>Hastanın sisteminde Epinefrin olduğunda rasgele uyanma kontrollerinin ne sıklıkla gerçekleştiğini artırır.</Turkish>
+            <Ukrainian>Збільшує частоту перевірок на спонтанне пробудження, коли пацієнт під дією адреналіну.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_DisplayName">
             <English>Epinephrine Wake Up Chance Boost</English>
@@ -470,6 +498,7 @@
             <Chinese>腎上腺素甦醒率加成</Chinese>
             <Chinesesimp>肾上腺素苏醒概率加成</Chinesesimp>
             <Turkish>Epinefrin Uyanma Şansı Artışı</Turkish>
+            <Ukrainian>Збільшення шансу прокинутися від адреналіну</Ukrainian>
         </Key>
     </Package>
 </Project>

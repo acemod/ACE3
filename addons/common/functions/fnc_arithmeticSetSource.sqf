@@ -4,7 +4,7 @@
  * Adds or removes a source to an arithmetic set.
  *
  * Arguments:
- * 0: Namespace <OBJECT|LOCATION|NAMESPACE>
+ * 0: Namespace <OBJECT or LOCATION or NAMESPACE>
  * 1: Number Set ID <STRING>
  * 2: Source <STRING>
  * 3: Code that returns a number (can access var _namespace) [use {} to remove] <CODE>

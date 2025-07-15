@@ -1832,3 +1832,26 @@ Author:
     commy2
 ------------------------------------------- */
 #define FILE_EXISTS(FILE) (fileExists (FILE))
+
+/* -------------------------------------------
+Macro: QADDON, QQADDON
+
+Description:
+    Quoted Variant of ADDON
+
+Parameters:
+
+Examples:
+    (begin example)
+    QUOTE(configName _x isEqualTo QUOTE(QUOTE(abe_banana))) configClasses (configFile >> QADDON)
+    (end)
+
+Author:
+    OverlordZorn
+------------------------------------------- */
+#ifndef QADDON
+    #define QADDON QUOTE(ADDON)
+#endif
+#ifndef QQADDON
+    #define QQADDON QUOTE(QUOTE(ADDON))
+#endif

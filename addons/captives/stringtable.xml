@@ -13,6 +13,7 @@
             <Korean>포로 눈 가리기</Korean>
             <Japanese>目隠しをする</Japanese>
             <Chinesesimp>使用眼罩</Chinesesimp>
+            <Ukrainian>Зав'язати очі полоненому</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_CableTie">
             <English>Cable Tie</English>
@@ -30,6 +31,7 @@
             <Chinesesimp>束线带</Chinesesimp>
             <Turkish>Kelepçe</Turkish>
             <Hungarian>Gyorskötöző</Hungarian>
+            <Ukrainian>Кабельна стяжка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_CableTieDescription">
             <English>Cable ties that allow you to restrain prisoners.</English>
@@ -47,6 +49,7 @@
             <Chinesesimp>束线带可以绑住俘虏</Chinesesimp>
             <Turkish>Kişilerin ellerini bağlamanız için kablo sağlar.</Turkish>
             <Hungarian>Gyorskötöző, emberek foglyulejtéséhez használható.</Hungarian>
+            <Ukrainian>Кабельні стяжки використовуються для зв'язування рук під час арешту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_DisplayName">
             <English>Captives</English>
@@ -63,6 +66,7 @@
             <Chinese>俘虜</Chinese>
             <Chinesesimp>俘虏</Chinesesimp>
             <Turkish>Tutsaklar</Turkish>
+            <Ukrainian>Полонені</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_EscortCaptive">
             <English>Escort Prisoner</English>
@@ -80,6 +84,7 @@
             <Chinesesimp>护送俘虏</Chinesesimp>
             <Turkish>Tutsağı Taşı</Turkish>
             <Hungarian>Fogoly kísérése</Hungarian>
+            <Ukrainian>Конвоювати полоненого</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_KeyComb_Description">
             <English>Sets the unit under the cursor captive.</English>
@@ -95,6 +100,7 @@
             <Japanese>カーソル先のユニットを拘束</Japanese>
             <Chinese>設置在游標下的單位成俘虜狀態</Chinese>
             <Chinesesimp>设置在光标下的单位成俘虏状态。</Chinesesimp>
+            <Ukrainian>Заарештовує вказаний курсором юніт.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_LoadCaptive">
             <English>Load Captive</English>
@@ -112,6 +118,7 @@
             <Chinesesimp>将俘虏放入载具</Chinesesimp>
             <Turkish>Tutukluyu bindir</Turkish>
             <Hungarian>Fogoly berakása</Hungarian>
+            <Ukrainian>Завантажити полоненого</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleHandcuffed_Description">
             <English>Sync a unit to make them handcuffed.</English>
@@ -128,6 +135,7 @@
             <Chinese>使單位戴上手銬</Chinese>
             <Chinesesimp>使单位戴上手铐</Chinesesimp>
             <Turkish>Birim kelepçelendi</Turkish>
+            <Ukrainian>Синхронізуйте з юнітами, щоб зв'язати їм руки.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleHandcuffed_DisplayName">
             <English>Make Unit Handcuffed</English>
@@ -144,6 +152,7 @@
             <Chinese>使單位戴上手銬</Chinese>
             <Chinesesimp>使单位戴上手铐</Chinesesimp>
             <Turkish>Birimi Kelepçele</Turkish>
+            <Ukrainian>Зв'язати юніту руки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_Description">
             <English>Controls settings for surrender and cable ties</English>
@@ -160,6 +169,7 @@
             <Chinese>定義投降與束帶等設定</Chinese>
             <Chinesesimp>定义投降与束带等设定</Chinesesimp>
             <Hungarian>Szabályozza a kapituláció és bilincselés beállításait</Hungarian>
+            <Ukrainian>Керує налаштуваннями арешту і здачі в полон</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_DisplayName">
             <English>Captives Settings</English>
@@ -177,6 +187,7 @@
             <Chinesesimp>俘虏设定</Chinesesimp>
             <Turkish>Tutsak Ayarları</Turkish>
             <Hungarian>Fogoly-beállítások</Hungarian>
+            <Ukrainian>Налаштування полону</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_allowSurrender_description">
             <English>Players can surrender after holstering their weapon</English>
@@ -193,6 +204,7 @@
             <Chinese>玩家能在收起自己武器後投降</Chinese>
             <Chinesesimp>玩家能在收起自己武器后投降</Chinesesimp>
             <Hungarian>A játékosok megadhatják magukat a fegyverük elrakása után</Hungarian>
+            <Ukrainian>Гравці можуть здаватися після того, як приберуть зброю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_allowSurrender_name">
             <English>Allow surrendering</English>
@@ -209,6 +221,7 @@
             <Chinese>允許投降</Chinese>
             <Chinesesimp>允许投降</Chinesesimp>
             <Hungarian>Kapituláció engedélyezése</Hungarian>
+            <Ukrainian>Дозволити здаватися</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_handcuffSide_description">
             <English>Can players cabletie units on their own side</English>
@@ -225,6 +238,7 @@
             <Chinese>玩家可以使用束線帶銬住同陣營隊友</Chinese>
             <Chinesesimp>玩家可以使用束线带铐住同阵营队友</Chinesesimp>
             <Hungarian>A játékosok megkötözhetik-e a saját oldalukon lévő egységeket</Hungarian>
+            <Ukrainian>Дозволити гравцям заарештовувати юнітів своєї сторони</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_handcuffSide_name">
             <English>Can handcuff own side</English>
@@ -241,6 +255,7 @@
             <Chinese>可以銬住同陣營隊友</Chinese>
             <Chinesesimp>可以铐住同阵营队友</Chinesesimp>
             <Hungarian>Saját oldal megbilincselhető</Hungarian>
+            <Ukrainian>Можна зв'язувати руки союзникам</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_description">
             <English>Require AI to surrender before they can be arrested</English>
@@ -256,6 +271,7 @@
             <Japanese>AIを拘束する前に、投降を必要とさせます</Japanese>
             <Chinese>在逮捕AI之前該AI必須先進入投降狀態</Chinese>
             <Chinesesimp>在俘获 AI 之前该 AI 必须先进入投降状态。</Chinesesimp>
+            <Ukrainian>Вимагати для арешту, щоб ШІ спочатку здавалися</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_name">
             <English>Require AI surrendering</English>
@@ -271,6 +287,7 @@
             <Japanese>AIの投降を必要とする</Japanese>
             <Chinese>需要AI先行投降</Chinese>
             <Chinesesimp>需要 AI 先行投降</Chinesesimp>
+            <Ukrainian>Вимагати ШІ здатися для арешту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_description">
             <English>Require Players to surrender before they can be arrested</English>
@@ -286,6 +303,7 @@
             <Japanese>プレイヤーを拘束する前に、投降を必要とさせます</Japanese>
             <Chinese>玩家須先要求目標投降，才可以進行逮捕</Chinese>
             <Chinesesimp>玩家须先要求目标投降，才可以进行俘获</Chinesesimp>
+            <Ukrainian>Вимагати для арешту, щоб гравці спочатку здавалися</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_name">
             <English>Require surrendering</English>
@@ -301,6 +319,7 @@
             <Japanese>投降を必要とする</Japanese>
             <Chinese>要求目標投降</Chinese>
             <Chinesesimp>要求目标投降</Chinesesimp>
+            <Ukrainian>Вимагати здатися для арешту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSurrender_Description">
             <English>Sync a unit to make them surrender.</English>
@@ -317,6 +336,7 @@
             <Chinese>同步此模塊到一個單位，使該單位投降</Chinese>
             <Chinesesimp>同步此模块到一个单位，使该单位投降</Chinesesimp>
             <Hungarian>Egység szinkronizálása, hogy kapituláljon.</Hungarian>
+            <Ukrainian>Синхронізуйте з юнітами, щоб змусити їх здатися.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSurrender_DisplayName">
             <English>Make Unit Surrender</English>
@@ -334,6 +354,7 @@
             <Chinesesimp>使单位投降</Chinesesimp>
             <Turkish>Teslim olmaya zorla</Turkish>
             <Hungarian>Egység kapitulálása</Hungarian>
+            <Ukrainian>Змусити юніта здатися</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_NoCaptive">
             <English>You need to take him as prisoner first!</English>
@@ -351,6 +372,7 @@
             <Chinesesimp>你必须先俘获他！</Chinesesimp>
             <Turkish>Önce onu tutuklamalısın!</Turkish>
             <Hungarian>Először foglyul kell ejtened őt!</Hungarian>
+            <Ukrainian>Ви повинні спочатку заарештувати його!</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_ReleaseCaptive">
             <English>Free Prisoner</English>
@@ -368,6 +390,7 @@
             <Chinesesimp>释放俘虏</Chinesesimp>
             <Turkish>Serbest bırak</Turkish>
             <Hungarian>Fogoly szabadon engedése</Hungarian>
+            <Ukrainian>Звільнити полоненого</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_RemoveBlindfoldCaptive">
             <English>Remove blindfold</English>
@@ -381,6 +404,7 @@
             <Korean>눈가리개 풀기</Korean>
             <Japanese>目隠しを外す</Japanese>
             <Chinesesimp>移除眼罩</Chinesesimp>
+            <Ukrainian>Зняти пов'язку з очей</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_SetCaptive">
             <English>Take Prisoner</English>
@@ -398,6 +422,7 @@
             <Chinesesimp>俘获</Chinesesimp>
             <Turkish>Kelepçele</Turkish>
             <Hungarian>Foglyul ejtés</Hungarian>
+            <Ukrainian>Заарештувати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_StartSurrendering">
             <English>Surrender</English>
@@ -415,6 +440,7 @@
             <Chinesesimp>投降</Chinesesimp>
             <Turkish>Teslim ol</Turkish>
             <Hungarian>Megadás</Hungarian>
+            <Ukrainian>Здатися</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_StopEscorting">
             <English>Release Prisoner</English>
@@ -432,6 +458,7 @@
             <Chinesesimp>停止护送俘虏</Chinesesimp>
             <Turkish>Taşımayı bırak</Turkish>
             <Hungarian>Fogoly elengedése</Hungarian>
+            <Ukrainian>Припинити конвоювання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_StopSurrendering">
             <English>Stop Surrendering</English>
@@ -449,6 +476,7 @@
             <Chinesesimp>停止投降</Chinesesimp>
             <Turkish>Teslim olmayı durdur</Turkish>
             <Hungarian>Megadás abbahagyása</Hungarian>
+            <Ukrainian>Припинити здаватися</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOnly">
             <English>Surrendering only</English>
@@ -464,6 +492,7 @@
             <Japanese>投降中のみ</Japanese>
             <Chinese>只能在投降狀態</Chinese>
             <Chinesesimp>只能在投降状态</Chinesesimp>
+            <Ukrainian>Тільки полонений</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOrNoWeapon">
             <English>Surrendering or No weapon</English>
@@ -479,6 +508,7 @@
             <Japanese>投降中か非武装時</Japanese>
             <Chinese>投降或無武器狀態</Chinese>
             <Chinesesimp>投降或无武器状态</Chinesesimp>
+            <Ukrainian>Полонений або беззбройний</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Captives_UnloadCaptive">
             <English>Unload Captive</English>
@@ -496,6 +526,7 @@
             <Chinesesimp>将俘虏带出载具</Chinesesimp>
             <Turkish>Tutukluyu indir</Turkish>
             <Hungarian>Fogoly kivevése</Hungarian>
+            <Ukrainian>Вивантажити полоненого</Ukrainian>
         </Key>
     </Package>
 </Project>

@@ -16,6 +16,7 @@
             <Chinese>在畫面中顯示檢查兵籍牌</Chinese>
             <Chinesesimp>在画面中显示检查兵籍牌</Chinesesimp>
             <Turkish>Künye gösteriliyor</Turkish>
+            <Ukrainian>Екран для перевірки жетонів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dogtags_checkDogtag">
             <English>Check</English>
@@ -32,6 +33,7 @@
             <Chinese>檢查</Chinese>
             <Chinesesimp>检查</Chinesesimp>
             <Turkish>Kontrol Et</Turkish>
+            <Ukrainian>Перевірити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dogtags_checkItem">
             <English>Check Dog Tag</English>
@@ -48,6 +50,7 @@
             <Chinese>檢查兵籍牌</Chinese>
             <Chinesesimp>检查兵籍牌</Chinesesimp>
             <Turkish>Künyeyi Kontrol Et</Turkish>
+            <Ukrainian>Перевірити жетон</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dogtags_dogtagAlreadyTaken">
             <English>Somebody else has already taken the Dog Tag...</English>
@@ -64,6 +67,7 @@
             <Chinese>已經有人把他的兵籍牌拿走了...</Chinese>
             <Chinesesimp>已经有人把他的兵籍牌拿走了...</Chinesesimp>
             <Turkish>Başka biri zaten künyeyi almış</Turkish>
+            <Ukrainian>Хтось уже забрав жетон...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dogtags_itemName">
             <English>Dog Tag</English>
@@ -80,6 +84,7 @@
             <Chinese>兵籍牌</Chinese>
             <Chinesesimp>兵籍牌</Chinesesimp>
             <Turkish>Künye</Turkish>
+            <Ukrainian>Жетон</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dogtags_takeDogtag">
             <English>Take</English>
@@ -96,6 +101,7 @@
             <Chinese>拿取</Chinese>
             <Chinesesimp>拿取</Chinesesimp>
             <Turkish>Al</Turkish>
+            <Ukrainian>Взяти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dogtags_takeDogtagSuccess">
             <English>Dog Tag taken from %1...</English>
@@ -112,6 +118,7 @@
             <Chinese>從%1身上拿取兵籍牌...</Chinese>
             <Chinesesimp>从%1身上拿取兵籍牌...</Chinesesimp>
             <Turkish>Künye %1 kişisinden alındı</Turkish>
+            <Ukrainian>Жетон знятий з %1...</Ukrainian>
         </Key>
     </Package>
 </Project>

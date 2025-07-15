@@ -17,6 +17,7 @@
             <Chinesesimp>无法放置在此</Chinesesimp>
             <Turkish>Buraya inşa edilemez</Turkish>
             <Hungarian>Nem teheted ide</Hungarian>
+            <Ukrainian>Встановлення на цьому місці неможливе</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Sandbag_CARRYSB">
             <English>Carry Sandbag</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>搬运沙包</Chinesesimp>
             <Turkish>Kum torbasını taşı</Turkish>
             <Hungarian>Homokzsák cipelése</Hungarian>
+            <Ukrainian>Нести мішок із піском</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Sandbag_CancelDeployment">
             <English>Cancel Deployment</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>取消部署</Chinesesimp>
             <Turkish>Yerleştirmeyi İptal Et</Turkish>
             <Hungarian>Visszavonás</Hungarian>
+            <Ukrainian>Скасувати встановлення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Sandbag_ConfirmDeployment">
             <English>Confirm Deployment</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>确认部署</Chinesesimp>
             <Turkish>Yerleştirmeyi Onayla</Turkish>
             <Hungarian>Lerak</Hungarian>
+            <Ukrainian>Підтвердити встановлення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Sandbag_DeploySandbag">
             <English>Deploy Sandbag</English>
@@ -85,6 +89,7 @@
             <Chinesesimp>部署沙包</Chinesesimp>
             <Turkish>Kum Torbasını Yerleştir</Turkish>
             <Hungarian>Homokzsák lerakása</Hungarian>
+            <Ukrainian>Встановити мішок із піском</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Sandbag_DropSandbag">
             <English>Drop Sandbag</English>
@@ -102,6 +107,7 @@
             <Chinesesimp>放下沙包</Chinesesimp>
             <Turkish>Kum Torbasını Bırak</Turkish>
             <Hungarian>Homokzsák eldobása</Hungarian>
+            <Ukrainian>Покласти мішок</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Sandbag_ENDCARRYSB">
             <English>End Carrying</English>
@@ -119,6 +125,7 @@
             <Chinesesimp>停止搬运</Chinesesimp>
             <Turkish>Taşımayı bitir</Turkish>
             <Hungarian>Cipelés abbahagyása</Hungarian>
+            <Ukrainian>Завершити перенесення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Sandbag_NOSAND">
             <English>Here is no sand</English>
@@ -136,6 +143,7 @@
             <Chinesesimp>这里没有沙</Chinesesimp>
             <Turkish>Burada Kum Yok</Turkish>
             <Hungarian>Itt nincs homok</Hungarian>
+            <Ukrainian>Тут немає піску</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Sandbag_PICKUPSB">
             <English>Pick up Sandbag</English>
@@ -153,6 +161,7 @@
             <Chinesesimp>捡起沙包</Chinesesimp>
             <Turkish>Kum torbasını al</Turkish>
             <Hungarian>Homokzsák felvétele</Hungarian>
+            <Ukrainian>Взяти мішок із піском</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Sandbag_SANDBOX">
             <English>Sandbag Box</English>
@@ -170,6 +179,7 @@
             <Chinesesimp>沙包箱</Chinesesimp>
             <Turkish>Kum Torbası Kutusu</Turkish>
             <Hungarian>Homokzsákos láda</Hungarian>
+            <Ukrainian>Ящик мішків із піском</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Sandbag_ScrollAction">
             <English>Rotate</English>
@@ -187,6 +197,7 @@
             <Chinesesimp>旋转</Chinesesimp>
             <Turkish>Yönlendir</Turkish>
             <Hungarian>Forgatás</Hungarian>
+            <Ukrainian>Обертати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Sandbag_sandbagEmpty_displayName">
             <English>Sandbag (empty)</English>
@@ -204,6 +215,7 @@
             <Chinesesimp>沙包（空）</Chinesesimp>
             <Turkish>Kum Torbası (Boş)</Turkish>
             <Hungarian>Homokzsák (üres)</Hungarian>
+            <Ukrainian>Мішок із піском (порожній)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Sandbag_sandbag_displayName">
             <English>Sandbag</English>
@@ -221,6 +233,7 @@
             <Chinesesimp>沙包</Chinesesimp>
             <Turkish>Kum Torbası</Turkish>
             <Hungarian>Homokzsák</Hungarian>
+            <Ukrainian>Мішок із піском</Ukrainian>
         </Key>
     </Package>
 </Project>

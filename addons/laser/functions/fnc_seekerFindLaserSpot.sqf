@@ -13,7 +13,7 @@
  * 5: Seeker laser code. <NUMBER>
  * 6: Ignore 1 (e.g. Player's vehicle) <OBJECT> (default: objNull)
  * 7: Ignore 2 (e.g. Attached object) <OBJECT> (default: objNull)
- * 8: Owners to ignore (e.g. Player's vehicle) <ARRAY of OBJECT> (default: [])
+ * 8: Owners to ignore (e.g. Player's vehicle) <ARRAY of OBJECTs> (default: [])
  *
  * Return Value:
  * [Strongest compatible laser spot ASL pos, owner object] Nil array values if nothing found <ARRAY>

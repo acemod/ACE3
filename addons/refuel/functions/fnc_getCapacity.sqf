@@ -7,7 +7,7 @@
  * 0: Fuel Source <OBJECT>
  *
  * Return Value:
- * Fuel capacity <NUMBER> (-10 means infinte fuel, -1 means not a fuel source, >0 is a capacity in liters)
+ * Fuel capacity <NUMBER> (-10 means infinite fuel, -1 means not a fuel source, >0 is a capacity in liters)
  *
  * Example:
  * [fuelTruck] call ace_refuel_fnc_getCapacity

@@ -10,7 +10,7 @@ class RscTitles {
         movingEnable = 0;
         duration = 10e10;
         name = "RscACE_Goggles_BaseTitle";
-        class controls;
+        class controls {};
     };
 
     class RscACE_Goggles: RscACE_Goggles_BaseTitle {

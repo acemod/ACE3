@@ -2,7 +2,7 @@ class EGVAR(missileguidance,type_Vikhr);
 class CfgAmmo {
     class M_Scalpel_AT;
     class GVAR(9k121): M_Scalpel_AT {
-        author = "Dani (TCVM)";
+        author = "tcvm";
         maneuvrability = 0;
 
         irLock = 0;

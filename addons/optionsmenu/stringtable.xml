@@ -17,6 +17,7 @@
             <Chinesesimp>复制调试信息至剪贴板</Chinesesimp>
             <Turkish>Panoya Hata Ayıkla</Turkish>
             <Hungarian>Debug a vágólapra</Hungarian>
+            <Ukrainian>Відладка в буфер обміну</Ukrainian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebugTooltip">
             <English>Sends debug information to RPT and clipboard.</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>复制调试信息至剪贴板与 RPT 报告档中。</Chinesesimp>
             <Turkish>Hata ayıklama bilgilerini RPT ve panoya gönderir.</Turkish>
             <Hungarian>Debug információt küld az RPT-be és a vágólapra.</Hungarian>
+            <Ukrainian>Надсилає відладочну інформацію в RPT і буфер обміну.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_aceNews">
             <English>ACE News</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>ACE 新闻</Chinesesimp>
             <Turkish>ACE Haberler</Turkish>
             <Hungarian>ACE hírek</Hungarian>
+            <Ukrainian>Новини ACE</Ukrainian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFix">
             <English>Headbug Fix</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>修复动作 BUG</Chinesesimp>
             <Turkish>Animasyon Düzeltme</Turkish>
             <Hungarian>"Fejhiba" fix</Hungarian>
+            <Ukrainian>Fix Headbug</Ukrainian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFixTooltip">
             <English>Resets your animation state.</English>
@@ -85,6 +89,7 @@
             <Chinesesimp>当 ACE 发生动作 BUG 时，点此修复。</Chinesesimp>
             <Turkish>Animasyon durumunuzu sıfırlar.</Turkish>
             <Hungarian>Visszaállítja az animációs állapotodat.</Hungarian>
+            <Ukrainian>Виправляє баг із зацикленою анімацією.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_showNewsOnMainMenu_name">
             <English>Show News on Main Menu</English>
@@ -102,6 +107,7 @@
             <Chinesesimp>显示新闻消息于主菜单</Chinesesimp>
             <Turkish>Ana Menü de Haberleri Göster</Turkish>
             <Hungarian>Hírek mutatása a főmenüben</Hungarian>
+            <Ukrainian>Показувати новини в головному меню</Ukrainian>
         </Key>
     </Package>
 </Project>
