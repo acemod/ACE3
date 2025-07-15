@@ -17,6 +17,7 @@
             <Chinesesimp>弹药</Chinesesimp>
             <Turkish>Cephane</Turkish>
             <Hungarian>Lőszer</Hungarian>
+            <Ukrainian>Боєприпаси</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Reload_BeltLinked">
             <English>Belt was linked</English>
@@ -30,6 +31,7 @@
             <Korean>탄띠가 연결되었습니다</Korean>
             <Japanese>ベルトがリンクされた</Japanese>
             <Chinesesimp>弹链已连接</Chinesesimp>
+            <Ukrainian>Ремінь був пристебнутий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Reload_BeltNotLinked">
             <English>Belt could not be linked</English>
@@ -43,6 +45,7 @@
             <Korean>탄띠를 연결할 수 없습니다</Korean>
             <Japanese>ベルトはリンクされなかった</Japanese>
             <Chinesesimp>弹链无法连接</Chinesesimp>
+            <Ukrainian>Ремінь не вдалося пристебнути</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Reload_LinkBelt">
             <English>Link belt</English>
@@ -59,6 +62,7 @@
             <Chinese>連接彈鏈</Chinese>
             <Chinesesimp>连接弹链</Chinesesimp>
             <Hungarian>Töltényheveder összekötése</Hungarian>
+            <Ukrainian>Зчепити стрічки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Reload_LinkingBelt">
             <English>Linking belt...</English>
@@ -75,6 +79,7 @@
             <Chinese>連接彈鏈中...</Chinese>
             <Chinesesimp>正在连接弹链...</Chinesesimp>
             <Hungarian>Töltényheveder összekötése folyamatban...</Hungarian>
+            <Ukrainian>Зчеплення стрічок...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Reload_SettingDisplayTextDesc">
             <English>Check the ammo in your new magazine on magazine reload.</English>
@@ -91,6 +96,7 @@
             <Chinese>在重新裝填時檢查新彈匣上的彈藥.</Chinese>
             <Chinesesimp>在重新装填时检查新弹匣上的弹药。</Chinesesimp>
             <Hungarian>A lőszer ellenőrzése az új tárad behelyezésekor újratöltés közben.</Hungarian>
+            <Ukrainian>Перевіряє кількість Набоїв у новому магазині під час перезарядження.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Reload_SettingDisplayTextName">
             <English>Check ammo on weapon reload</English>
@@ -107,6 +113,7 @@
             <Chinese>在重新裝填時檢查彈藥</Chinese>
             <Chinesesimp>在重新装填时检查弹药</Chinesesimp>
             <Hungarian>Lőszer ellenőrzése a fegyver újratöltésekor</Hungarian>
+            <Ukrainian>Перевіряти боєзапас під час перезаряджання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Reload_SettingShowCheckAmmoSelf">
             <English>Always show check ammo self interaction</English>
@@ -122,6 +129,7 @@
             <Japanese>弾薬確認アクションを常に表示</Japanese>
             <Chinese>總是在自我互動中顯示檢查彈藥動作</Chinese>
             <Chinesesimp>总是在自我互动中显示检查弹药动作</Chinesesimp>
+            <Ukrainian>Завжди показувати перевірку боєприпасів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Reload_SettingShowCheckAmmoSelfDesc">
             <English>Shows check ammo self interaction even when not in static weapons.</English>
@@ -137,6 +145,7 @@
             <Japanese>設置型火器以外でもセルフ・インタラクションに弾薬確認アクションを常に表示します。</Japanese>
             <Chinese>即使不是固定式支援武器也依然在自我互動中顯示檢查彈藥動作</Chinese>
             <Chinesesimp>即使不是固定式支援武器也依然在自我互动中显示检查弹药动作</Chinesesimp>
+            <Ukrainian>Показувати перевірку боєприпасів навіть поза стаціонарної зброї</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Reload_checkAmmo">
             <English>Check Ammo</English>
@@ -154,6 +163,7 @@
             <Chinesesimp>检查弹药</Chinesesimp>
             <Turkish>Cephaneni Kontrol Et</Turkish>
             <Hungarian>Lőszerellenőrzés</Hungarian>
+            <Ukrainian>Перевірити боєприпаси</Ukrainian>
         </Key>
     </Package>
 </Project>
