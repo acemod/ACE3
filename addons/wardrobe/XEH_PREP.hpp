@@ -1,6 +1,5 @@
 PREP(addActions);
 PREP(addActionsChildren);
-PREP(addActionsCondition);
 PREP(addActionsIcon);
 PREP(addActionsName);
 PREP(canModifyTo);

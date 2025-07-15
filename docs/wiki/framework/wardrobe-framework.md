@@ -39,7 +39,7 @@ All supported Properties can be found within the `ace_wardrobe_base` baseclass.
 
 | Class Property |  Data Type | Description |
 | -------------- |  ----------- | ----------- |
-| `modifiableTo` | Subclasses | Possible variants this item can be turned into. |
+| `modifiableTo` | Subclasses | Possible variants this item can be turned into. Subclass can contain optional `directionalActionName` property to use as a display name for the action. |
 | `components[]` | Array of Classnames  | Components the current variant contains within itself |
 | `sound[]` | Array of CfgSound Entries | To be chosen by random when the action is performed |
 | `sound_timing` | Number 0..1 | Defines the point in time relative to the duration when the sound is played |

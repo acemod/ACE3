@@ -6,7 +6,7 @@ class CfgVehicles {
                 class ADDON {
                     displayName = CSTRING(action_title);
                     icon = QPATHTOF(data\wardrobe_logo.paa);
-                    condition = QUOTE(_player call FUNC(addActionsCondition));
+                    condition = QGVAR(enableAction);
                     statement = "";
                     insertChildren = QUOTE(_player call FUNC(addActions));
                     exceptions[] = {"isNotSwimming", "isNotSitting"};
