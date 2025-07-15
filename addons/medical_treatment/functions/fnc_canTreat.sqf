@@ -47,7 +47,13 @@ private _config = configFile >> QGVAR(actions) >> _classname;
     (_medic isEqualTo player && {!isNull findDisplay 312}) || {
         // Conditions that apply when not in Zeus
         (
-            _medic != _patient || {GET_NUMBER_ENTRY(_config >> "allowSelfTreatment") == 1}
+            _medic != _patient || {
+                switch (GET_NUMBER_ENTRY(_config >> "allowSelfTreatment")) do {
+                    case 0: { false };
+                    case 1: { true };
+                    case 2: { [_medic, 2] call FUNC(isMedic) };
+                };
+            }
         ) && {
             [_medic, GET_NUMBER_ENTRY(_config >> "medicRequired")] call FUNC(isMedic)
         } && {

@@ -17,6 +17,7 @@
             <Chinesesimp>关保险</Chinesesimp>
             <Turkish>Emniyete alındı</Turkish>
             <Hungarian>Biztonsági kapcsoló helyretolása</Hungarian>
+            <Ukrainian>Поставлено на запобіжник</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SafeMode_SafeMode">
             <English>Safe Mode</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>保险</Chinesesimp>
             <Turkish>Emniyet Modu</Turkish>
             <Hungarian>Biztonságos mód</Hungarian>
+            <Ukrainian>Запобіжник</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SafeMode_SafeModeToggle">
             <English>Safe Mode (Toggle)</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>保险（切换）</Chinesesimp>
             <Turkish>Emniyet Modu (Değiştir)</Turkish>
             <Hungarian>Biztonságos mód (pecek)</Hungarian>
+            <Ukrainian>Запобіжник (переключити)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SafeMode_TakeOffSafety">
             <English>Take off Safety</English>
@@ -67,6 +70,7 @@
             <Chinese>開保險</Chinese>
             <Chinesesimp>开保险</Chinesesimp>
             <Hungarian>Biztonsági kapcsoló eltolása</Hungarian>
+            <Ukrainian>Зняти з запобіжника</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SafeMode_TookOffSafety">
             <English>Took off Safety</English>
@@ -84,6 +88,7 @@
             <Chinesesimp>已开保险</Chinesesimp>
             <Turkish>Emniyetten çıkartıldı</Turkish>
             <Hungarian>Biztonságos mód megszüntetve</Hungarian>
+            <Ukrainian>Знято з запобіжника</Ukrainian>
         </Key>
     </Package>
 </Project>

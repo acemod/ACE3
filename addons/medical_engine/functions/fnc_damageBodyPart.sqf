@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Selection, can be "Head", "Body", "Arms" or "Legs" <STRING>
- * 2: Damaged <BOOLEAN>
+ * 2: Damaged <BOOL>
  *
  * Return Value:
  * None

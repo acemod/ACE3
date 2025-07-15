@@ -15,6 +15,7 @@
             <Japanese>照準器を取り付ける</Japanese>
             <Chinese>裝上瞄具</Chinese>
             <Chinesesimp>装上瞄具</Chinesesimp>
+            <Ukrainian>Прикріпити приціл</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragon_detachSight">
             <English>Detach Sight</English>
@@ -30,6 +31,7 @@
             <Japanese>照準器を外す</Japanese>
             <Chinese>拆下瞄具</Chinese>
             <Chinesesimp>卸下瞄具</Chinesesimp>
+            <Ukrainian>Відкріпити приціл</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragon_dragonDescription">
             <English>A Wire-Guided SACLOS missile with a unique flight characteristic</English>
@@ -45,6 +47,7 @@
             <Japanese>特徴的な飛行特性を持つ、ワイヤ誘導の SACLOS ミサイルです。</Japanese>
             <Chinese>一個有線制導半自動指令型飛彈並有著獨特的飛航動作</Chinese>
             <Chinesesimp>具有独特飞行特性的线导半自动指令型导弹</Chinesesimp>
+            <Ukrainian>Ракета SACLOS з дротовим наведенням з унікальною характеристикою польоту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragon_dragonName">
             <English>M47 Super-Dragon</English>
@@ -61,6 +64,7 @@
             <Chinese>M47 龍式</Chinese>
             <Chinesesimp>M47 龙式反坦克导弹</Chinesesimp>
             <Turkish>M47 Super-Dragon</Turkish>
+            <Ukrainian>M47 Super-Dragon</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragon_dragonNameCarry">
             <English>[CSW] M47 Super-Dragon</English>
@@ -77,6 +81,7 @@
             <Chinese>[CSW] M47龍式</Chinese>
             <Chinesesimp>[班组] M47 龙式反坦克导弹</Chinesesimp>
             <Turkish>[CSW] M47 Super-Dragon</Turkish>
+            <Ukrainian>[CSW] M47 Super-Dragon</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragon_sightDescription">
             <English>A light, cheap sight used for daytime operations. Contains the guidance computer for the whole system</English>
@@ -92,6 +97,7 @@
             <Japanese>昼間時に使用される軽量で、低価格の照準器。システム全体の誘導コンピュータを備えている。</Japanese>
             <Chinese>一個輕量，便宜適合日間行動使用的廉價瞄具。內含全套制導電腦系統</Chinese>
             <Chinesesimp>一种用于日间作战的轻型廉价瞄准具。包含整个系统的制导计算机</Chinesesimp>
+            <Ukrainian>Легкий дешевий приціл, який використовується для денних операцій. Містить комп'ютер для всієї системи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragon_sightName">
             <English>SU-36/P Daysight</English>
@@ -108,6 +114,7 @@
             <Chinese>SU-36/P 日間瞄具</Chinese>
             <Chinesesimp>SU-36/P 常规瞄具</Chinesesimp>
             <Turkish>SU-36/P Daysight</Turkish>
+            <Ukrainian>SU-36/P Денний</Ukrainian>
         </Key>
     </Package>
 </Project>

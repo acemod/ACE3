@@ -1,7 +1,7 @@
 class CfgWeapons {
     class weapon_rim116Launcher;
     class GVAR(rim116): weapon_rim116Launcher {
-        author = "Dani (TCVM)";
+        author = "tcvm";
         displayName = CSTRING(rim116);
         magazines[] = { QGVAR(rim116) };
         weaponLockDelay = 0.5;
@@ -9,7 +9,7 @@ class CfgWeapons {
 
     class missiles_SAAMI;
     class GVAR(FIM92): missiles_SAAMI {
-        author = "Dani (TCVM)";
+        author = "tcvm";
         displayName = CSTRING(stinger);
         magazines[] = { QGVAR(stinger) };
         weaponLockDelay = 0.5;

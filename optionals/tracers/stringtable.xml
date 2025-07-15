@@ -13,6 +13,7 @@
                 <Korean>5.8mm 100발 들이 탄창 (재장전 알림 예광탄/적색)</Korean>
                 <Japanese>5.8mm 100Rnd 装填トレーサー (赤) マガジン</Japanese>
                 <Chinesesimp>5.8 mm 100发 弹鼓（曳光，装填指示，红）</Chinesesimp>
+                <Ukrainian>Магазин 100 набоїв 5.8 мм з ост. трас. (червоні)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_tracer_red">
                 <English>5.8 mm 100Rnd Tracer (Red) Mag</English>
@@ -25,6 +26,7 @@
                 <Korean>5.8mm 100발 들이 탄창 (예광탄/적색)</Korean>
                 <Japanese>5.8mm 100Rnd トレーサー (赤) マガジン</Japanese>
                 <Chinesesimp>5.8 mm 100发 弹鼓（曳光，红）</Chinesesimp>
+                <Ukrainian>Магазин 100 набоїв 5.8 мм трасуючих (червоні)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_tracer_red_description">
                 <English>Caliber: 5.8x42 mm Tracer - Red&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: CAR-95-1</English>
@@ -38,6 +40,7 @@
                 <Korean>구경: 5.8x42mm 예광탄 - 적색&lt;br /&gt;장탄수: 100발&lt;br /&gt;사용처: CAR-95-1</Korean>
                 <Japanese>口径: 5.8x42 mm トレーサー - 赤&lt;br /&gt;弾数: 100&lt;br /&gt;使用武器: CAR-95-1</Japanese>
                 <Chinesesimp>口径：5.8x42 mm 曳光—红色&lt;br/&gt;发数：100&lt;br/&gt;使用于：CAR-95-1</Chinesesimp>
+                <Ukrainian>Калібр: 5.8x42 мм, червоний трасер&lt;br /&gt;&lt;br /&gt;Набоїв: 100&lt;br /&gt;Використовується в: CAR-95, CAR-95 GL</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_tracer_yellow">
                 <English>5.8 mm 100Rnd Tracer (Yellow) Mag</English>
@@ -51,6 +54,7 @@
                 <Korean>5.8mm 100발 들이 탄창 (예광탄/황색)</Korean>
                 <Japanese>5.8mm 100Rnd トレーサー (黄) マガジン</Japanese>
                 <Chinesesimp>5.8 mm 100发 弹鼓（曳光，黄）</Chinesesimp>
+                <Ukrainian>Магазин 100 набоїв 5.8 мм трасуючих (жовті)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_tracer_yellow_description">
                 <English>Caliber: 5.8x42 mm Tracer - Yellow&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: CAR-95-1</English>
@@ -64,6 +68,7 @@
                 <Korean>구경: 5.8x42mm 예광탄 - 황색&lt;br /&gt;장탄수: 100발&lt;br /&gt;사용처: CAR-95-1</Korean>
                 <Japanese>口径: 5.8x42 mm トレーサー - 黄&lt;br /&gt;弾数: 100&lt;br /&gt;使用武器: CAR-95-1</Japanese>
                 <Chinesesimp>口径：5.8x42 mm 曳光—黄色&lt;br/&gt;发数：100&lt;br/&gt;使用于：CAR-95-1</Chinesesimp>
+                <Ukrainian>Калібр: 5.8x42 мм, жовтий трасер&lt;br /&gt;&lt;br /&gt;Набоїв: 100&lt;br /&gt;Використовується в: CAR-95, CAR-95 GL</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_yellow">
                 <English>5.8 mm 100Rnd Reload Tracer (Yellow) Mag</English>
@@ -76,6 +81,7 @@
                 <Korean>5.8mm 100발 들이 탄창 (재장전 알림 예광탄/황색)</Korean>
                 <Japanese>5.8mm 100Rnd 装填トレーサー (黄) マガジン</Japanese>
                 <Chinesesimp>5.8 mm 100发 弹鼓（曳光，装填指示，黄）</Chinesesimp>
+                <Ukrainian>Магазин 100 набоїв 5.8 мм з ост. трас. (жовті)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_mx_green">
                 <English>6.5mm 100Rnd Mixed Mag (Green)</English>
@@ -88,6 +94,7 @@
                 <Korean>6.5mm 100발 들이 탄창 (보통, 예광혼합탄/녹색)</Korean>
                 <Japanese>6.5mm 100Rnd 混合 (緑) マガジン</Japanese>
                 <Chinesesimp>6.5 mm 100发 弹匣（曳光，每四发，绿）</Chinesesimp>
+                <Ukrainian>Магазин 100 набоїв 6.5 мм TE4 (зелені)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_mx_tracer_green">
                 <English>6.5mm 100Rnd Mag Tracer (Green)</English>
@@ -100,6 +107,7 @@
                 <Korean>6.5mm 100발들이 탄창 (예광탄/녹색)</Korean>
                 <Japanese>6.5mm 100Rndトレーサー (緑) マガジン</Japanese>
                 <Chinesesimp>6.5 mm 100发 弹匣（曳光，绿）</Chinesesimp>
+                <Ukrainian>Магазин 100 набоїв 6.5 мм трасуючих (зелені)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_mx_tracer_green_description">
                 <English>Caliber: 6.5x39 mm Tracer - Green&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX SW</English>
@@ -112,6 +120,7 @@
                 <Korean>구경: 6.5x39mm 예광탄 - 녹색&lt;br /&gt;장탄수: 100발&lt;br /&gt;사용처: MX SW</Korean>
                 <Japanese>口径: 6.5x39 mm トレーサー - 緑&lt;br /&gt;弾数: 100&lt;br /&gt;使用武器: MX SW</Japanese>
                 <Chinesesimp>口径：6.5x39 mm 曳光—绿色&lt;br/&gt;发数：100&lt;br/&gt;使用于：MX SW</Chinesesimp>
+                <Ukrainian>Калібр: 6.5x39 мм, зелений трасер&lt;br /&gt;&lt;br /&gt;Набоїв: 100&lt;br /&gt;Використовується в: MX SW</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_mx_tracer_yellow">
                 <English>6.5mm 100Rnd Mag Tracer (Yellow)</English>
@@ -124,6 +133,7 @@
                 <Korean>6.5mm 100발들이 탄창 (예광탄/황색)</Korean>
                 <Japanese>6.5mm 100Rndトレーサー (黄) マガジン</Japanese>
                 <Chinesesimp>6.5 mm 100发 弹匣（曳光，黄）</Chinesesimp>
+                <Ukrainian>Магазин 100 набоїв 6.5 мм трасуючих (жовті)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_mx_tracer_yellow_description">
                 <English>Caliber: 6.5x39 mm Tracer - Yellow&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX SW</English>
@@ -136,6 +146,7 @@
                 <Korean>구경: 6.5x39mm 예광탄 - 황색&lt;br /&gt;장탄수: 100발&lt;br /&gt;사용처: MX SW</Korean>
                 <Japanese>口径: 6.5x39 mm トレーサー - 黄&lt;br /&gt;弾数: 100&lt;br /&gt;使用武器: MX SW</Japanese>
                 <Chinesesimp>口径：6.5x39 mm 曳光—黄色&lt;br/&gt;发数：100&lt;br/&gt;使用于：MX SW</Chinesesimp>
+                <Ukrainian>Калібр: 6.5x39 мм, жовтий трасер&lt;br /&gt;&lt;br /&gt;Набоїв: 100&lt;br /&gt;Використовується в: MX SW</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_mx_yellow">
                 <English>6.5mm 100Rnd Mixed Mag (Yellow)</English>
@@ -148,6 +159,7 @@
                 <Korean>6.5mm 100발 들이 탄창 (보통, 예광혼합탄/황색)</Korean>
                 <Japanese>6.5mm 100Rnd 混合 (黄) マガジン</Japanese>
                 <Chinesesimp>6.5 mm 100发 弹匣（曳光，每四发，黄）</Chinesesimp>
+                <Ukrainian>Магазин 100 набоїв 6.5 мм TE4 (жовті)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_130Rnd_338_Mag_green">
                 <English>.338 NM 130Rnd Belt Mixed (Green)</English>
@@ -161,6 +173,7 @@
                 <Korean>.338구경 노르마 매그넘 130발 들이 탄띠 (보통, 예광혼합탄/녹색)</Korean>
                 <Japanese>.338 NM 130Rnd 混合 (緑) ベルト</Japanese>
                 <Chinesesimp>.338 NM 130发 弹链盒（曳光，每四发，绿）</Chinesesimp>
+                <Ukrainian>Стрічка 130 набоїв .338 NM TE4 (зелені)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_130Rnd_338_Mag_yellow">
                 <English>.338 NM 130Rnd Belt Mixed (Yellow)</English>
@@ -174,6 +187,7 @@
                 <Korean>.338구경 노르마 매그넘 130발 들이 탄띠 (보통, 예광혼합탄/황색)</Korean>
                 <Japanese>.338 NM 130Rnd 混合 (黄) ベルト</Japanese>
                 <Chinesesimp>.338 NM 130发 弹链盒（曳光，每四发，黄）</Chinesesimp>
+                <Ukrainian>Стрічка 130 набоїв .338 NM TE4 (жовті)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_green">
                 <English>5.56 mm 150Rnd Reload Tracer (Green) Mag</English>
@@ -186,6 +200,7 @@
                 <Korean>5.56mm 150발 들이 탄창 (재장전 알림 예광탄/녹색)</Korean>
                 <Japanese>5.56mm 150Rnd 装填トレーサー (緑) マガジン</Japanese>
                 <Chinesesimp>5.56 mm 150发 弹鼓（曳光，装填指示，绿）</Chinesesimp>
+                <Ukrainian>Магазин 150 набоїв 5.56 мм з ост. трас. (зелені)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_tracer_green">
                 <English>5.56 mm 150Rnd Tracer (Green) Mag</English>
@@ -198,6 +213,7 @@
                 <Korean>5.56mm 150발 들이 탄창 (예광탄/녹색)</Korean>
                 <Japanese>5.56mm 150Rnd トレーサー (緑) マガジン</Japanese>
                 <Chinesesimp>5.56 mm 150发 弹鼓（曳光，绿）</Chinesesimp>
+                <Ukrainian>Магазин 150 набоїв 5.56 мм трасуючих (зелені)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_tracer_green_description">
                 <English>Caliber: 5.56x45 mm Tracer - Green&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: SPAR-16S</English>
@@ -210,6 +226,7 @@
                 <Korean>구경: 5.56x45mm 예광탄 - 녹색&lt;br /&gt;장탄수: 150발&lt;br /&gt;사용처: SPAR-16S</Korean>
                 <Japanese>口径: 5.56x45 mm トレーサー - 緑&lt;br /&gt;弾数: 150&lt;br /&gt;使用武器: SPAR-16/S</Japanese>
                 <Chinesesimp>口径：5.56x45 mm 曳光—绿色&lt;br/&gt;发数：150&lt;br/&gt;使用于：SPAR-16S</Chinesesimp>
+                <Ukrainian>Калібр: 5.56x45 мм, зелений трасер&lt;br /&gt;&lt;br /&gt;Набоїв: 150&lt;br /&gt;Використовуєтся в: SPAR-16S</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_tracer_yellow">
                 <English>5.56 mm 150Rnd Tracer (Yellow) Mag</English>
@@ -222,6 +239,7 @@
                 <Korean>5.56mm 150발 들이 탄창 (예광탄/황색)</Korean>
                 <Japanese>5.56mm 150Rnd トレーサー (黄) マガジン</Japanese>
                 <Chinesesimp>5.56 mm 150发 弹鼓（曳光，黄）</Chinesesimp>
+                <Ukrainian>Магазин 150 набоїв 5.56 мм трасуючих (жовті)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_tracer_yellow_description">
                 <English>Caliber: 5.56x45 mm Tracer - Yellow&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: SPAR-16S</English>
@@ -234,6 +252,7 @@
                 <Korean>구경: 5.56x45mm 예광탄 - 황색&lt;br /&gt;장탄수: 150발&lt;br /&gt;사용처: SPAR-16S</Korean>
                 <Japanese>口径: 5.56x45 mm トレーサー - 黄&lt;br /&gt;弾数: 150&lt;br /&gt;使用武器: SPAR-16/S</Japanese>
                 <Chinesesimp>口径：5.56x45 mm 曳光—黄色&lt;br/&gt;发数：150&lt;br/&gt;使用于：SPAR-16S</Chinesesimp>
+                <Ukrainian>Калібр: 5.56x45 мм, жовтий трасер&lt;br /&gt;&lt;br /&gt;Набоїв: 150&lt;br /&gt;Використовуєтся в: SPAR-16S</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_yellow">
                 <English>5.56 mm 150Rnd Reload Tracer (Yellow) Mag</English>
@@ -246,6 +265,7 @@
                 <Korean>5.56mm 150발 들이 탄창 (재장전 알림 예광탄/황색)</Korean>
                 <Japanese>5.56mm 150Rnd 装填トレーサー (黄) マガジン</Japanese>
                 <Chinesesimp>5.56 mm 150发 弹鼓（曳光，装填指示，黄）</Chinesesimp>
+                <Ukrainian>Магазин 150 набоїв 5.56 мм з ост. трас. (жовті)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_red">
                 <English>7.62mm 150Rnd Box Tracer (Red)</English>
@@ -259,6 +279,7 @@
                 <Korean>7.62mm 150발 들이 탄상자 (예광탄/적색)</Korean>
                 <Japanese>7.62mm 150Rnd トレーサー (赤) ボックス</Japanese>
                 <Chinesesimp>7.62 mm 150发 弹链盒（曳光，红）</Chinesesimp>
+                <Ukrainian>Короб 150 набоїв 7.62 мм трасуючих (червоні)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_red_description">
                 <English>Caliber: 7.62x54 mm Tracer - Red&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Zafir</English>
@@ -272,6 +293,7 @@
                 <Korean>구경: 7.62x54mmR 예광탄 - 적색&lt;br /&gt;장탄수: 150발&lt;br /&gt;사용처: Zafir</Korean>
                 <Japanese>口径: 7.62x54 mm トレーサー - 赤&lt;br /&gt;弾数: 150&lt;br /&gt;使用武器: ザフィール</Japanese>
                 <Chinesesimp>口径：7.62x54 mm 曳光—红色&lt;br/&gt;发数：150&lt;br/&gt;使用于：Zafir</Chinesesimp>
+                <Ukrainian>Калібр: 7.62x51 mm NATO, червоний трасер&lt;br /&gt;&lt;br /&gt;Набоїв: 150&lt;br /&gt;Використовуєтся в: Zafir</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_yellow">
                 <English>7.62mm 150Rnd Box Tracer (Yellow)</English>
@@ -285,6 +307,7 @@
                 <Korean>7.62mm 150발 들이 탄상자 (예광탄/황색)</Korean>
                 <Japanese>7.62mm 150Rnd トレーサー (黄) ボックス</Japanese>
                 <Chinesesimp>7.62 mm 150发 弹链盒（曳光，黄）</Chinesesimp>
+                <Ukrainian>Короб 150 набоїв 7.62 мм трасуючих (жовті)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_yellow_description">
                 <English>Caliber: 7.62x54 mm Tracer - Yellow&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Zafir</English>
@@ -298,6 +321,7 @@
                 <Korean>구경: 7.62x54mmR 예광탄 - 황색&lt;br /&gt;장탄수: 150발&lt;br /&gt;사용처: Zafir</Korean>
                 <Japanese>口径: 7.62x54 mm トレーサー - 黄&lt;br /&gt;弾数: 150&lt;br /&gt;使用武器: ザフィール</Japanese>
                 <Chinesesimp>口径：7.62x54 mm 曳光—黄色&lt;br/&gt;发数：150&lt;br/&gt;使用于：Zafir</Chinesesimp>
+                <Ukrainian>Калібр: 7.62x51 mm NATO, жовтий трасер&lt;br /&gt;Набоїв: 150&lt;br /&gt;Використовується в: Zafir</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_red">
                 <English>7.62mm 150Rnd Box Mixed (Red)</English>
@@ -311,6 +335,7 @@
                 <Korean>7.62mm 150발 들이 탄상자 (보통, 예광혼합탄/적색)</Korean>
                 <Japanese>7.62mm 150Rnd 混合 (赤) ボックス</Japanese>
                 <Chinesesimp>7.62 mm 150发 弹链盒（曳光，每四发，红）</Chinesesimp>
+                <Ukrainian>Короб 150 набоїв 7.62 мм TE4 (червоні)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_yellow">
                 <English>7.62mm 150Rnd Box Mixed (Yellow)</English>
@@ -324,6 +349,7 @@
                 <Korean>7.62mm 150발 들이 탄상자 (보통, 예광혼합탄/황색)</Korean>
                 <Japanese>7.62mm 150Rnd 混合 (黄) ボックス</Japanese>
                 <Chinesesimp>7.62 mm 150发 弹链盒（曳光，每四发，黄）</Chinesesimp>
+                <Ukrainian>Короб 150 набоїв 7.62 мм TE4 (жовті)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_93x64_Mag_red">
                 <English>9.3mm 150Rnd Belt Mixed (Red)</English>
@@ -337,6 +363,7 @@
                 <Korean>9.3mm 150발 들이 탄띠 (보통, 예광혼합탄/적색)</Korean>
                 <Japanese>9.3mm 150Rnd 混合 (赤) ベルト</Japanese>
                 <Chinesesimp>9.3 mm 150发 弹链盒（曳光，每四发，红）</Chinesesimp>
+                <Ukrainian>Стрічка 150 набоїв 9.3 мм TE4 (червоні)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_93x64_Mag_yellow">
                 <English>9.3mm 150Rnd Belt Mixed (Yellow)</English>
@@ -350,6 +377,7 @@
                 <Korean>9.3mm 150발 들이 탄띠 (보통, 예광혼합탄/황색)</Korean>
                 <Japanese>9.3mm 150Rnd 混合 (黄) ベルト</Japanese>
                 <Chinesesimp>9.3 mm 150发 弹链盒（曳光，每四发，黄）</Chinesesimp>
+                <Ukrainian>Стрічка 150 набоїв 9.3 мм TE4 (жовті)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_556x45_Box_green">
                 <English>5.56 mm 200Rnd Reload Tracer (Green) Box</English>
@@ -362,6 +390,7 @@
                 <Korean>5.56mm 150발 들이 탄창 (예광탄/녹색)</Korean>
                 <Japanese>5.56mm 200Rnd 装填トレーサー (緑) ボックス</Japanese>
                 <Chinesesimp>5.56 mm 200发 弹链盒（曳光，装填指示，绿）</Chinesesimp>
+                <Ukrainian>Короб 200 набоїв 5.56 мм з ост. трас. (зелені)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_556x45_Box_tracer_green">
                 <English>5.56 mm 200Rnd Tracer (Green) Box</English>
@@ -374,6 +403,7 @@
                 <Korean>5.56mm 200발 들이 탄상자 (예광탄/녹색)</Korean>
                 <Japanese>5.56mm 200Rnd トレーサー (緑) ボックス</Japanese>
                 <Chinesesimp>5.56 mm 200发 弹链盒（曳光，绿）</Chinesesimp>
+                <Ukrainian>Короб 200 набоїв 5.56 мм трасуючих (зелені)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_556x45_Box_tracer_green_description">
                 <English>Caliber: 5.56x45 mm Tracer - Green&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: LIM-85</English>
@@ -386,6 +416,7 @@
                 <Korean>구경: 5.56x45mm 예광탄 - 녹색&lt;br /&gt;장탄수: 200발&lt;br /&gt;사용처: LIM-85</Korean>
                 <Japanese>口径: 5.56x45 mm トレーサー - 緑&lt;br /&gt;弾数: 200&lt;br /&gt;使用武器: LIM-85</Japanese>
                 <Chinesesimp>口径：5.56x45 mm 曳光—绿色&lt;br/&gt;发数：200&lt;br/&gt;使用于：LIM-85</Chinesesimp>
+                <Ukrainian>Калібр: 5.56x45 мм, зелений трасер&lt;br /&gt;Набоїв: 200&lt;br /&gt;Використовується в: LIM-85</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_green">
                 <English>6.5 mm 200Rnd Belt Case Mixed (Green)</English>
@@ -398,6 +429,7 @@
                 <Korean>6.5mm 200발 들이 탄상자 (보통, 예광혼합탄/녹색)</Korean>
                 <Japanese>6.5mm 200Rnd ベルト・混合 (緑)</Japanese>
                 <Chinesesimp>6.5 mm 200发 弹链盒（曳光，每四发，绿）</Chinesesimp>
+                <Ukrainian>Короб 200 набоїв 6.5 мм TE4 (зелені)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_green_description">
                 <English>Caliber: 6.5x39 mm Mixed - Green&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Mk200</English>
@@ -410,6 +442,7 @@
                 <Korean>구경: 6.5x39mm 보통, 예광혼합탄 - 녹색&lt;br /&gt;장탄수: 200발&lt;br /&gt;사용처: Mk200</Korean>
                 <Japanese>口径: 6.5x39 mm 混合 - 緑&lt;br /&gt;弾数: 200&lt;br /&gt;使用武器: Mk200</Japanese>
                 <Chinesesimp>口径：6.5x39 mm 混合曳光—绿色&lt;br/&gt;发数：200&lt;br/&gt;使用于：Mk200</Chinesesimp>
+                <Ukrainian>Калібр: 6.5x39 мм, кожен 4-ий зелений трасер&lt;br /&gt;&lt;br /&gt;Набоїв: 200&lt;br /&gt;Використовується в: Mk200</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_red">
                 <English>6.5 mm 200Rnd Belt Case Mixed (Red)</English>
@@ -422,6 +455,7 @@
                 <Korean>6.5mm 200발 들이 탄상자 (보통, 예광혼합탄/적색)</Korean>
                 <Japanese>6.5mm 200Rnd ベルト・混合 (赤)</Japanese>
                 <Chinesesimp>6.5 mm 200发 弹链盒（曳光，每四发，红）</Chinesesimp>
+                <Ukrainian>Короб 200 набоїв 6.5 мм TE4 (червоні)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_red_description">
                 <English>Caliber: 6.5x39 mm Mixed - Red&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Mk200</English>
@@ -434,6 +468,7 @@
                 <Korean>구경: 6.5x39mm 보통, 예광혼합탄 - 적색&lt;br /&gt;장탄수: 200발&lt;br /&gt;사용처: Mk200</Korean>
                 <Japanese>口径: 6.5x39 mm 混合 - 赤&lt;br /&gt;弾数: 200&lt;br /&gt;使用武器: Mk200</Japanese>
                 <Chinesesimp>口径：6.5x39 mm 混合曳光—红色&lt;br/&gt;发数：200&lt;br/&gt;使用于：Mk200</Chinesesimp>
+                <Ukrainian>Калібр: 6.5x39 мм, кожен 4-ий червоний трасер&lt;br /&gt;&lt;br /&gt;Набоїв: 200&lt;br /&gt;Використовується в: Mk200</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_tracer_green">
                 <English>6.5 mm 200Rnd Belt Case Tracer (Green)</English>
@@ -446,6 +481,7 @@
                 <Korean>6.5mm 200발 들이 탄상자 (예광탄/녹색)</Korean>
                 <Japanese>6.5mm 200Rnd ベルト・トレーサー (緑)</Japanese>
                 <Chinesesimp>6.5 mm 200发 弹链盒（曳光，绿）</Chinesesimp>
+                <Ukrainian>Короб 200 набоїв 6.5 мм трасуючих (зелені)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_tracer_green_description">
                 <English>Caliber: 6.5x39 mm Tracer - Green&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Mk200</English>
@@ -459,6 +495,7 @@
                 <Korean>구경: 6.5x39mm 예광탄 - 녹색&lt;br /&gt;장탄수: 200발&lt;br /&gt;사용처: Mk200</Korean>
                 <Japanese>口径: 6.5x39 mm トレーサー - 緑&lt;br /&gt;弾数: 200&lt;br /&gt;使用武器: Mk200</Japanese>
                 <Chinesesimp>口径：6.5x39 mm 曳光—绿色&lt;br/&gt;发数：200&lt;br/&gt;使用于：Mk200</Chinesesimp>
+                <Ukrainian>Калібр: 6.5x39 мм, зелений трасер&lt;br /&gt;&lt;br /&gt;Набоїв: 200&lt;br /&gt;Використовується в: Mk200</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_tracer_red">
                 <English>6.5 mm 200Rnd Belt Case Tracer (Red)</English>
@@ -472,6 +509,7 @@
                 <Korean>6.5mm 200발 들이 탄상자 (예광탄/적색)</Korean>
                 <Japanese>6.5mm 200Rnd ベルト・トレーサー (赤)</Japanese>
                 <Chinesesimp>6.5 mm 200发 弹链盒（曳光，红）</Chinesesimp>
+                <Ukrainian>Короб 200 набоїв 6.5 мм трасуючих (червоні)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_tracer_red_description">
                 <English>Caliber: 6.5x39 mm Tracer - Red&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Mk200</English>
@@ -485,6 +523,7 @@
                 <Korean>구경: 6.5x39mm 예광탄 - 적색&lt;br /&gt;장탄수: 200발&lt;br /&gt;사용처: Mk200</Korean>
                 <Japanese>口径: 6.5x39 mm トレーサー - 赤&lt;br /&gt;弾数: 200&lt;br /&gt;使用武器: Mk200</Japanese>
                 <Chinesesimp>口径：6.5x39 mm 曳光—红色&lt;br/&gt;发数：200&lt;br/&gt;使用于：Mk200</Chinesesimp>
+                <Ukrainian>Калібр: 6.5x39 мм, червоний трасер&lt;br /&gt;&lt;br /&gt;Набоїв: 200&lt;br /&gt;Використовуєтся в: Mk200</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_20Rnd_762x51_Mag_Tracer_green">
                 <English>7.62 mm 20Rnd Tracer (Green) Mag</English>
@@ -498,6 +537,7 @@
                 <Korean>7.62mm 20발 들이 탄창 (예광탄/녹색)</Korean>
                 <Japanese>7.62mm 20Rnd トレーサー (緑) マガジン</Japanese>
                 <Chinesesimp>7.62 mm 20发 弹匣（曳光，绿）</Chinesesimp>
+                <Ukrainian>Магазин 20 набоїв 7.62 мм трасуючих (зелені)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_20Rnd_762x51_Mag_Tracer_green_description">
                 <English>Caliber: 7.62x51 mm NATO Tracer - Green&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</English>
@@ -511,6 +551,7 @@
                 <Korean>구경: 7.62x51mm NATO 예광탄 - 녹색&lt;br /&gt;장탄수: 20발&lt;br /&gt;사용처: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Korean>
                 <Japanese>口径: 7.62x51 mm NATO トレーサー - 緑&lt;br /&gt;弾数: 20&lt;br /&gt;使用武器: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Japanese>
                 <Chinesesimp>口径：7.62x51 mm 北约曳光—绿色&lt;br/&gt;发数：20&lt;br/&gt;使用于：Mk18 ABR、Mk-I EMR、Mk14、SPAR-17</Chinesesimp>
+                <Ukrainian>Калібр: 7.62x51 mm NATO, зелений трасер&lt;br /&gt;&lt;br /&gt;Набоїв: 20&lt;br /&gt;Використовується в:  Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_20Rnd_762x51_Mag_Tracer_yellow">
                 <English>7.62 mm 20Rnd Tracer (Yellow) Mag</English>
@@ -524,6 +565,7 @@
                 <Korean>7.62mm 20발 들이 탄창 (예광탄/황색)</Korean>
                 <Japanese>7.62mm 20Rnd トレーサー (黄) マガジン</Japanese>
                 <Chinesesimp>7.62 mm 20发 弹匣（曳光，黄）</Chinesesimp>
+                <Ukrainian>Магазин 20 набоїв 7.62 мм трасуючих (жовті)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_20Rnd_762x51_Mag_Tracer_yellow_description">
                 <English>Caliber: 7.62x51 mm NATO Tracer - Yellow&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</English>
@@ -537,6 +579,7 @@
                 <Korean>구경: 7.62x51mm NATO 예광탄 - 황색&lt;br /&gt;장탄수: 20발&lt;br /&gt;사용처: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Korean>
                 <Japanese>口径: 7.62x51 mm NATO トレーサー - 黄&lt;br /&gt;弾数: 20&lt;br /&gt;使用武器: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Japanese>
                 <Chinesesimp>口径：7.62x51 mm 北约曳光—黄色&lt;br/&gt;发数：20&lt;br/&gt;使用于：Mk18 ABR、Mk-I EMR、Mk14、SPAR-17</Chinesesimp>
+                <Ukrainian>КалІбр: 7.62x51 mm NATO, жовтий трасер&lt;br /&gt;&lt;br /&gt;Набоїв: 20&lt;br /&gt;Використовується в:  Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_red">
                 <English>5.8 mm 30Rnd Reload Tracer (Red) Mag</English>
@@ -549,6 +592,7 @@
                 <Korean>5.8mm 30발 들이 탄창 (재장전 알림 예광탄/적색)</Korean>
                 <Japanese>5.8mm 30Rnd 装填トレーサー (赤) マガジン</Japanese>
                 <Chinesesimp>5.8 mm 30发 弹匣（曳光，装填指示，红）</Chinesesimp>
+                <Ukrainian>Магазин 30 набоїв 5.8 мм з ост. трас. (червоні)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_tracer_red">
                 <English>5.8 mm 30Rnd Tracer (Red) Mag</English>
@@ -561,6 +605,7 @@
                 <Korean>5.8mm 30발 들이 탄창 (예광탄/적색)</Korean>
                 <Japanese>5.8mm 30Rnd トレーサー (赤) マガジン</Japanese>
                 <Chinesesimp>5.8 mm 30发 弹匣（曳光，红）</Chinesesimp>
+                <Ukrainian>Магазин 30 набоїв 5.8 мм трасуючих (червоні)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_tracer_red_description">
                 <English>Caliber: 5.8x42 mm Tracer - Red&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: CAR-95, CAR-95 GL</English>
@@ -573,6 +618,7 @@
                 <Korean>구경: 5.8x42mm 예광탄 - 적색&lt;br /&gt;장탄수: 30발&lt;br /&gt;사용처: CAR-95, CAR-95GL</Korean>
                 <Japanese>口径: 5.8x42 mm トレーサー - 赤&lt;br /&gt;弾数: 30&lt;br /&gt;使用武器: CAR-95, CAR-95-1, CAR-95 GL</Japanese>
                 <Chinesesimp>口径：5.8x42 mm 曳光—红色&lt;br/&gt;发数：30&lt;br/&gt;使用于：CAR-95、CAR-95 GL</Chinesesimp>
+                <Ukrainian>Калібр: 5.8x42 мм, червоний трасер&lt;br /&gt;&lt;br /&gt;Набоїв: 150&lt;br /&gt;Використовується в: CAR-95, CAR-95 GL</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_tracer_yellow">
                 <English>5.8 mm 30Rnd Tracer (Yellow) Mag</English>
@@ -585,6 +631,7 @@
                 <Korean>5.8mm 30발 들이 탄창 (예광탄/황색)</Korean>
                 <Japanese>5.8mm 30Rnd トレーサー (黄) マガジン</Japanese>
                 <Chinesesimp>5.8 mm 30发 弹匣（曳光，黄）</Chinesesimp>
+                <Ukrainian>Магазин 30 набоїв 5.8 мм трасуючих (жовті)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_tracer_yellow_description">
                 <English>Caliber: 5.8x42 mm Tracer - Yellow&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: CAR-95, CAR-95 GL</English>
@@ -597,6 +644,7 @@
                 <Korean>구경: 5.8x42mm 예광탄 - 황색&lt;br /&gt;장탄수: 30발&lt;br /&gt;사용처: CAR-95, CAR-95GL</Korean>
                 <Japanese>口径: 5.8x42 mm トレーサー - 黄&lt;br /&gt;弾数: 30&lt;br /&gt;使用武器: CAR-95, CAR-95-1, CAR-95 GL</Japanese>
                 <Chinesesimp>口径：5.8x42 mm 曳光—黄色&lt;br/&gt;发数：30&lt;br/&gt;使用于：CAR-95、CAR-95 GL</Chinesesimp>
+                <Ukrainian>Калібр: 5.8x42 мм, жовтий трасер&lt;br /&gt;&lt;br /&gt;Набоїв: 30&lt;br /&gt;Використовується в: CAR-95, CAR-95 GL</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_yellow">
                 <English>5.8 mm 30Rnd Reload Tracer (Yellow) Mag</English>
@@ -609,6 +657,7 @@
                 <Korean>5.8mm 30발 들이 탄창 (재장전 알림 예광탄/황색)</Korean>
                 <Japanese>5.8mm 30Rnd 装填トレーサー (黄) マガジン</Japanese>
                 <Chinesesimp>5.8 mm 30发 弹匣（曳光，装填指示，黄）</Chinesesimp>
+                <Ukrainian>Магазин 30 набоїв 5.8 мм з ост. трас. (жовті)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_katiba_red">
                 <English>6.5mm 30Rnd Reload Tracer (Red) Mag</English>
@@ -621,6 +670,7 @@
                 <Korean>6.5mm 30발 들이 탄창 (재장전 알림 예광탄/적색)</Korean>
                 <Japanese>6.5mm 30Rnd 装填トレーサー (赤) マガジン</Japanese>
                 <Chinesesimp>6.5 mm 30发 弹匣（曳光，装填指示，红）</Chinesesimp>
+                <Ukrainian>Магазин 30 набоїв 6.5 мм з ост. трас. (червоні)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_katiba_tracer_red">
                 <English>6.5mm 30Rnd Tracer (Red) Mag</English>
@@ -633,6 +683,7 @@
                 <Korean>6.5mm 30발 들이 탄창 (예광탄/적색)</Korean>
                 <Japanese>6.5mm 30Rnd トレーサー (赤) マガジン</Japanese>
                 <Chinesesimp>6.5 mm 30发 弹匣（曳光，红）</Chinesesimp>
+                <Ukrainian>Магазин 30 набоїв 6.5 мм трасуючих (червоні)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_katiba_tracer_red_description">
                 <English>Caliber: 6.5x39 mm Tracer (Red) - Caseless&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba, Type 115</English>
@@ -645,6 +696,7 @@
                 <Korean>구경: 6.5x39mm 예광탄 - 적색&lt;br /&gt;장탄수: 30발&lt;br /&gt;사용처: Katiba, Type 115</Korean>
                 <Japanese>口径: 6.5x39 mm トレーサー (赤) - ケースレス弾&lt;br /&gt;弾数: 30&lt;br /&gt;使用武器: Katiba, Type 115</Japanese>
                 <Chinesesimp>口径：6.5x39 mm 曳光—红色&lt;br/&gt;发数：30&lt;br/&gt;使用于：Katiba，Type 115</Chinesesimp>
+                <Ukrainian>Калібр: 6.5x39 мм, червоний безгільзовий трасер&lt;br /&gt;&lt;br /&gt;Набоїв: 30&lt;br /&gt;Використовується в: Katiba, Type 115</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_katiba_tracer_yellow">
                 <English>6.5mm 30Rnd Tracer (Yellow) Mag</English>
@@ -657,6 +709,7 @@
                 <Korean>6.5mm 30발 들이 탄창 (예광탄/황색)</Korean>
                 <Japanese>6.5mm 30Rnd トレーサー (黄) マガジン</Japanese>
                 <Chinesesimp>6.5 mm 30发 弹匣（曳光，黄）</Chinesesimp>
+                <Ukrainian>Магазин 30 набоїв 6.5 мм трасуючих (жовті)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_katiba_tracer_yellow_description">
                 <English>Caliber: 6.5x39 mm Tracer (Yellow) - Caseless&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba, Type 115</English>
@@ -669,6 +722,7 @@
                 <Korean>구경: 6.5x39mm 예광탄 - 황색&lt;br /&gt;장탄수: 30발&lt;br /&gt;사용처: Katiba, Type 115</Korean>
                 <Japanese>口径: 6.5x39 mm トレーサー (黄) - ケースレス弾&lt;br /&gt;弾数: 30&lt;br /&gt;使用武器: Katiba, Type 115</Japanese>
                 <Chinesesimp>口径：6.5x39 mm 曳光—黄色&lt;br/&gt;发数：30&lt;br/&gt;使用于：Katiba，Type 115</Chinesesimp>
+                <Ukrainian>Калібр: 6.5x39 мм, жовтий безгільзовий трасер&lt;br /&gt;&lt;br /&gt;Набоїв: 30&lt;br /&gt;Використовується в: Katiba, Type 115</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_katiba_yellow">
                 <English>6.5mm 30Rnd Reload Tracer (Yellow) Mag</English>
@@ -681,6 +735,7 @@
                 <Korean>6.5mm 30발 들이 탄창 (재장전 알림 예광탄/황색)</Korean>
                 <Japanese>6.5mm 30Rnd 装填トレーサー (黄) マガジン</Japanese>
                 <Chinesesimp>6.5 mm 30发 弹匣（曳光，装填指示，黄）</Chinesesimp>
+                <Ukrainian>Магазин 30 набоїв 6.5 мм з ост. трас. (жовті)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_green">
                 <English>6.5mm 30Rnd Reload Tracer (Green) Mag</English>
@@ -693,6 +748,7 @@
                 <Korean>6.5mm 30발 들이 탄창 (재장전 알림 예광탄/녹색)</Korean>
                 <Japanese>6.5mm 30Rnd 装填トレーサー (緑) マガジン</Japanese>
                 <Chinesesimp>6.5 mm 30发 弹匣（曳光，装填指示，绿）</Chinesesimp>
+                <Ukrainian>Магазин 30 набоїв 6.5 мм з ост. трас. (зелені)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_green_description">
                 <English>Caliber: 6.5x39 mm Tracer - Green&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
@@ -705,6 +761,7 @@
                 <Korean>구경: 6.5x39mm 예광탄 - 녹색&lt;br /&gt;장탄수: 30발&lt;br /&gt;사용처: MX/C/M/SW/3GL</Korean>
                 <Japanese>口径: 6.5x39 mm トレーサー - 緑&lt;br /&gt;弾数: 30&lt;br /&gt;使用武器: MX/C/M/SW/3GL</Japanese>
                 <Chinesesimp>口径：6.5x39 mm 曳光—绿色&lt;br/&gt;发数：30&lt;br/&gt;使用于：MX/C/M/SW/3GL</Chinesesimp>
+                <Ukrainian>Калібр: 6.5x39 мм, зелений трасер&lt;br /&gt;&lt;br /&gt;Набоїв: 30&lt;br /&gt;Використовується в: MX/C/M/SW/3GL</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_tracer_green">
                 <English>6.5mm 30Rnd Tracer (Green) Mag</English>
@@ -717,6 +774,7 @@
                 <Korean>6.5mm 30발 들이 탄창 (예광탄/녹색)</Korean>
                 <Japanese>6.5mm 30Rnd トレーサー (緑) マガジン</Japanese>
                 <Chinesesimp>6.5 mm 30发 弹匣（曳光，绿）</Chinesesimp>
+                <Ukrainian>Магазин 30 набоїв 6.5 мм трасуючих (зелені)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_tracer_green_description">
                 <English>Caliber: 6.5x39 mm Tracer - Green&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
@@ -729,6 +787,7 @@
                 <Korean>구경: 6.5x39mm 예광탄 - 녹색&lt;br /&gt;장탄수: 30발&lt;br /&gt;사용처: MX/C/M/SW/3GL</Korean>
                 <Japanese>口径: 6.5x39 mm トレーサー - 緑&lt;br /&gt;弾数: 30&lt;br /&gt;使用武器: MX/C/M/SW/3GL</Japanese>
                 <Chinesesimp>口径：6.5x39 mm 曳光—绿色&lt;br/&gt;发数：30&lt;br/&gt;使用于：MX/C/M/SW/3GL</Chinesesimp>
+                <Ukrainian>Калібр: 6.5x39 мм, зелений трасер&lt;br /&gt;&lt;br /&gt;Набоїв: 30&lt;br /&gt;Використовується в: MX/C/M/SW/3GL</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_tracer_yellow">
                 <English>6.5mm 30Rnd Tracer (Yellow) Mag</English>
@@ -741,6 +800,7 @@
                 <Korean>6.5mm 30발 들이 탄창 (예광탄/황색)</Korean>
                 <Japanese>6.5mm 30Rnd トレーサー (黄) マガジン</Japanese>
                 <Chinesesimp>6.5 mm 30发 弹匣（曳光，黄）</Chinesesimp>
+                <Ukrainian>Магазин 30 набоїв 6.5 мм трасуючих (жовті)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_tracer_yellow_description">
                 <English>Caliber: 6.5x39 mm Tracer - Yellow&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
@@ -753,6 +813,7 @@
                 <Korean>구경: 6.5x39mm 예광탄 - 황색&lt;br /&gt;장탄수: 30발&lt;br /&gt;사용처: MX/C/M/SW/3GL</Korean>
                 <Japanese>口径: 6.5x39 mm トレーサー - 黄&lt;br /&gt;弾数: 30&lt;br /&gt;使用武器: MX/C/M/SW/3GL</Japanese>
                 <Chinesesimp>口径：6.5x39 mm 曳光—黄色&lt;br/&gt;发数：30&lt;br/&gt;使用于：MX/C/M/SW/3GL</Chinesesimp>
+                <Ukrainian>Калібр: 6.5x39 мм, жовтий трасер&lt;br /&gt;&lt;br /&gt;Набоїв: 30&lt;br /&gt;Використовується в: MX/C/M/SW/3GL</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_yellow">
                 <English>6.5mm 30Rnd Reload Tracer (Yellow) Mag</English>
@@ -765,6 +826,7 @@
                 <Korean>6.5mm 30발 들이 탄창 (재장전 알림 예광탄/황색)</Korean>
                 <Japanese>6.5mm 30Rnd 装填トレーサー (黄) マガジン</Japanese>
                 <Chinesesimp>6.5 mm 30发 弹匣（曳光，装填指示，黄）</Chinesesimp>
+                <Ukrainian>Магазин 30 набоїв 6.5 мм з ост. трас. (жовті)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_yellow_description">
                 <English>Caliber: 6.5x39 mm Tracer - Yellow&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
@@ -778,6 +840,7 @@
                 <Korean>구경: 6.5x39mm 예광탄 - 황색&lt;br /&gt;장탄수: 30발&lt;br /&gt;사용처: MX/C/M/SW/3GL</Korean>
                 <Japanese>口径: 6.5x39 mm トレーサー - 黄&lt;br /&gt;弾数: 30&lt;br /&gt;使用武器: MX/C/M/SW/3GL</Japanese>
                 <Chinesesimp>口径：6.5x39 mm 曳光—黄色&lt;br/&gt;发数：30&lt;br/&gt;使用于：MX/C/M/SW/3GL</Chinesesimp>
+                <Ukrainian>Калібр: 6.5x39 мм, жовтий трасер&lt;br /&gt;&lt;br /&gt;Набоїв: 30&lt;br /&gt;Використовується в: MX/C/M/SW/3GL</Ukrainian>
             </Key>
         </Container>
     </Package>

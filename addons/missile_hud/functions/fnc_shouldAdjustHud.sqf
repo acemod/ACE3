@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Player <OBJECT>
  * 1: Vehicle <OBJECT>
- * 2: Turret Path (Optional) <ARRAY>
+ * 2: Turret Path <ARRAY> (default: Driver turret)
  *
  * Return Value:
  * Whether or not to adjust hud <BOOL>

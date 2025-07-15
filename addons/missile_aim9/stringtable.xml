@@ -9,6 +9,7 @@
             <German>AIM-132 [ACE]</German>
             <Korean>AIM-132 아스람 [ACE]</Korean>
             <Japanese>AIM-132 [ACE]</Japanese>
+            <Ukrainian>AIM-132 [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM9_aim132_1x">
             <English>1x AIM-132 [ACE]</English>
@@ -18,6 +19,7 @@
             <German>1x AIM-132 [ACE]</German>
             <Korean>1x AIM-132 아스람 [ACE]</Korean>
             <Japanese>1x AIM-132 [ACE]</Japanese>
+            <Ukrainian>1x AIM-132 [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM9_aim132_2x">
             <English>2x AIM-132 [ACE]</English>
@@ -27,6 +29,7 @@
             <German>2x AIM-132 [ACE]</German>
             <Korean>2x AIM-132 아스람 [ACE]</Korean>
             <Japanese>2x AIM-132 [ACE]</Japanese>
+            <Ukrainian>2x AIM-132 [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM9_aim132_4x">
             <English>4x AIM-132 [ACE]</English>
@@ -36,6 +39,7 @@
             <German>4x AIM-132 [ACE]</German>
             <Korean>4x AIM-132 아스람 [ACE]</Korean>
             <Japanese>4x AIM-132 [ACE]</Japanese>
+            <Ukrainian>4x AIM-132 [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM9_m">
             <English>AIM-9M [ACE]</English>
@@ -45,6 +49,7 @@
             <German>AIM-9M [ACE]</German>
             <Korean>AIM-9M 사이드와인더 [ACE]</Korean>
             <Japanese>AIM-9M [ACE]</Japanese>
+            <Ukrainian>AIM-9M [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM9_m_1x">
             <English>1x AIM-9M [ACE]</English>
@@ -54,6 +59,7 @@
             <German>1x AIM-9M [ACE]</German>
             <Korean>1x AIM-9M 사이드와인더 [ACE]</Korean>
             <Japanese>1x AIM-9M [ACE]</Japanese>
+            <Ukrainian>1x AIM-9M [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM9_m_2x">
             <English>2x AIM-9M [ACE]</English>
@@ -63,6 +69,7 @@
             <German>2x AIM-9M [ACE]</German>
             <Korean>2x AIM-9M 사이드와인더 [ACE]</Korean>
             <Japanese>2x AIM-9M [ACE]</Japanese>
+            <Ukrainian>2x AIM-9M [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM9_r73">
             <English>R-73 [ACE]</English>
@@ -72,6 +79,7 @@
             <German>R-73 [ACE]</German>
             <Korean>R-73 빔펠 [ACE]</Korean>
             <Japanese>R-73 [ACE]</Japanese>
+            <Ukrainian>R-73 [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM9_r73_1x">
             <English>1x R-73 [ACE]</English>
@@ -81,6 +89,7 @@
             <German>1x R-73 [ACE]</German>
             <Korean>1x R-73 빔펠 [ACE]</Korean>
             <Japanese>1x R-73 [ACE]</Japanese>
+            <Ukrainian>1x R-73 [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM9_r74">
             <English>R-74 [ACE]</English>
@@ -90,6 +99,7 @@
             <German>R-74 [ACE]</German>
             <Korean>R-74 빔펠 [ACE]</Korean>
             <Japanese>R-74 [ACE]</Japanese>
+            <Ukrainian>R-74 [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM9_r74_1x">
             <English>1x R-74 [ACE]</English>
@@ -99,6 +109,7 @@
             <German>1x R-74 [ACE]</German>
             <Korean>1x R-74 빔펠 [ACE]</Korean>
             <Japanese>1x R-74 [ACE]</Japanese>
+            <Ukrainian>1x R-74 [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM9_r74_2x">
             <English>2x R-74 [ACE]</English>
@@ -108,6 +119,7 @@
             <German>2x R-74 [ACE]</German>
             <Korean>2x R-74 빔펠 [ACE]</Korean>
             <Japanese>2x R-74 [ACE]</Japanese>
+            <Ukrainian>2x R-74 [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM9_x">
             <English>AIM-9X [ACE]</English>
@@ -117,6 +129,7 @@
             <German>AIM-9X [ACE]</German>
             <Korean>AIM-9X 사이드와인더 [ACE]</Korean>
             <Japanese>AIM-9X [ACE]</Japanese>
+            <Ukrainian>AIM-9X [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM9_x_1x">
             <English>1x AIM-9X [ACE]</English>
@@ -126,6 +139,7 @@
             <German>1x AIM-9X [ACE]</German>
             <Korean>1x AIM-9X 사이드와인더 [ACE]</Korean>
             <Japanese>1x AIM-9X [ACE]</Japanese>
+            <Ukrainian>1x AIM-9X [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM9_x_2x">
             <English>2x AIM-9X [ACE]</English>
@@ -135,6 +149,7 @@
             <German>2x AIM-9X [ACE]</German>
             <Korean>2x AIM-9X 사이드와인더 [ACE]</Korean>
             <Japanese>2x AIM-9X [ACE]</Japanese>
+            <Ukrainian>2x AIM-9X [ACE]</Ukrainian>
         </Key>
     </Package>
 </Project>

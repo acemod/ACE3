@@ -1,8 +1,9 @@
 class CfgVehicles {
     class LandVehicle;
-    class StaticWeapon: LandVehicle    {
-        class Turrets;
-        class MainTurret;
+    class StaticWeapon: LandVehicle {
+        class Turrets {
+            class MainTurret;
+        };
         class ACE_Actions {
             class ACE_MainActions {};
         };

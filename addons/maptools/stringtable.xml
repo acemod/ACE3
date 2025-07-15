@@ -15,6 +15,7 @@
             <Japanese>向きを合わせる</Japanese>
             <Chinesesimp>对齐到</Chinesesimp>
             <Hungarian>Állítása</Hungarian>
+            <Ukrainian>Вирівняти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_Description">
             <English>The Map Tools allow you to measure distances and angles on the map.</English>
@@ -32,6 +33,7 @@
             <Chinesesimp>地图工具能够让你在地图上测量距离与角度</Chinesesimp>
             <Turkish>Harita Araçları, haritadaki mesafeleri ve açıları ölçmenize olanak tanır.</Turkish>
             <Hungarian>A térképészeti eszközökkel távolságokat és szögeket tudsz mérni a térképen.</Hungarian>
+            <Ukrainian>Картографічні інструменти дають змогу вимірювати відстані та кути на мапі.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_HidePlottingBoard">
             <English>Hide Plotting Board</English>
@@ -43,6 +45,7 @@
             <Korean>플로팅 보드 숨기기</Korean>
             <Japanese>標定盤を 隠す</Japanese>
             <Chinesesimp>隐藏绘图板</Chinesesimp>
+            <Ukrainian>Приховати міліметрову дошку.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_MapGpsHide">
             <English>Hide GPS on Map</English>
@@ -60,6 +63,7 @@
             <Chinesesimp>在地图上隐藏 GPS</Chinesesimp>
             <Turkish>Harita da GPS'i Gizle</Turkish>
             <Hungarian>GPS elrejtése a térképről</Hungarian>
+            <Ukrainian>Приховати GPS на мапі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_MapGpsShow">
             <English>Show GPS on Map</English>
@@ -77,6 +81,7 @@
             <Chinesesimp>在地图上显示 GPS</Chinesesimp>
             <Turkish>Harita da GPS Göster</Turkish>
             <Hungarian>GPS megjelenítése a térképen</Hungarian>
+            <Ukrainian>Показати GPS на мапі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsAlignCompass">
             <English>Align Map Tool to Compass</English>
@@ -94,6 +99,7 @@
             <Chinesesimp>地图工具对准指南针</Chinesesimp>
             <Turkish>Harita Aracını Pusulaya Hizala</Turkish>
             <Hungarian>Térképészeti eszköz iránytűhöz állítása</Hungarian>
+            <Ukrainian>Вирівняти інструменти за компасом</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsAlignNorth">
             <English>Align Map Tool to North</English>
@@ -111,6 +117,7 @@
             <Chinesesimp>地图工具对准北方</Chinesesimp>
             <Turkish>Harita Aracını Kuzeye Hizala</Turkish>
             <Hungarian>Térképészeti eszköz Északhoz állítása</Hungarian>
+            <Ukrainian>Вирівняти інструменти на північ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsHide">
             <English>Hide Map Tool</English>
@@ -128,6 +135,7 @@
             <Chinesesimp>隐藏地图工具</Chinesesimp>
             <Turkish>Harita Aracını gizle</Turkish>
             <Hungarian>Térképészeti eszközök elrejtése</Hungarian>
+            <Ukrainian>Приховати інструменти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsShowNormal">
             <English>Show Normal Map Tool</English>
@@ -145,6 +153,7 @@
             <Chinesesimp>显示地图工具</Chinesesimp>
             <Turkish>Normal Harita Aracını Göster</Turkish>
             <Hungarian>Térképészeti eszköz megjelenítése (normál méret)</Hungarian>
+            <Ukrainian>Показати інструменти (середній розмір)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsShowSmall">
             <English>Show Small Map Tool</English>
@@ -162,6 +171,7 @@
             <Chinesesimp>显示小的地图工具</Chinesesimp>
             <Turkish>Küçük Harita Aracını Göster</Turkish>
             <Hungarian>Térképészeti eszköz megjelenítése (kicsinyített)</Hungarian>
+            <Ukrainian>Показати інструменти (малий розмір)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_MapTools_Menu">
             <English>Map Tools</English>
@@ -179,6 +189,7 @@
             <Chinesesimp>地图工具</Chinesesimp>
             <Turkish>Harita Araçları</Turkish>
             <Hungarian>Térképészeti eszközök</Hungarian>
+            <Ukrainian>Інструменти мапи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_MarkerDirection">
             <English>Direction: %1°</English>
@@ -196,6 +207,7 @@
             <Chinesesimp>方位：%1°</Chinesesimp>
             <Turkish>Yön: %1°</Turkish>
             <Hungarian>Irány: %1</Hungarian>
+            <Ukrainian>Напрямок: %1°</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_Name">
             <English>Map Tools</English>
@@ -213,6 +225,7 @@
             <Chinesesimp>地图工具</Chinesesimp>
             <Turkish>Harita Araçları</Turkish>
             <Hungarian>Térképészeti eszközök</Hungarian>
+            <Ukrainian>Інструменти мапи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoardAcrylicLabel">
             <English>Plotting Board Acrylic</English>
@@ -224,6 +237,7 @@
             <Korean>플로팅 보드 (아크릴)</Korean>
             <Japanese>標定盤の アクリル板</Japanese>
             <Chinesesimp>亚克力绘图板</Chinesesimp>
+            <Ukrainian>Міліметрова дошка акрилова</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoardLabel">
             <English>Plotting Board</English>
@@ -235,6 +249,7 @@
             <Korean>플로팅 보드</Korean>
             <Japanese>標定盤</Japanese>
             <Chinesesimp>绘图板</Chinesesimp>
+            <Ukrainian>Міліметрова дошка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoardRulerLabel">
             <English>Plotting Board Ruler</English>
@@ -246,6 +261,7 @@
             <Korean>플로팅 보드 (자)</Korean>
             <Japanese>標定盤の 定規</Japanese>
             <Chinesesimp>绘图板尺</Chinesesimp>
+            <Ukrainian>Лінійка для міліметрової дошки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoard_Description">
             <English>The Plotting Board is a map tool designed for use in the directing of short range indirect fires.</English>
@@ -257,6 +273,7 @@
             <Korean>플로팅 보드는 단거리 간접 사격을 지시하는 데 사용하도록 설계된 독도용 도구입니다.</Korean>
             <Japanese>標定盤(プロッティング・ボード)は、短距離の間接射撃の指示に使用するために設計されたマップツールです。</Japanese>
             <Chinesesimp>绘图板是一种用于指引短程间瞄火力的地图工具</Chinesesimp>
+            <Ukrainian>Графічна дошка - це картографічний інструмент, призначений для використання під час ведення непрямого вогню з малої дистанції.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoard_Name">
             <English>Plotting Board</English>
@@ -268,6 +285,7 @@
             <Korean>플로팅 보드</Korean>
             <Japanese>標定盤</Japanese>
             <Chinesesimp>绘图板</Chinesesimp>
+            <Ukrainian>Графічна дошка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_ShowPlottingBoard">
             <English>Show Plotting Board</English>
@@ -279,6 +297,7 @@
             <Korean>플로팅 보드 보이기</Korean>
             <Japanese>標定盤を 表示</Japanese>
             <Chinesesimp>显示绘图板</Chinesesimp>
+            <Ukrainian>Показати міліметрову дошку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_ToCompassLabel">
             <English>To Compass</English>
@@ -294,6 +313,7 @@
             <Japanese>方位磁石に</Japanese>
             <Chinesesimp>指南针</Chinesesimp>
             <Hungarian>Iránytűhöz</Hungarian>
+            <Ukrainian>За компасом</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_ToMapToolLabel">
             <English>To Maptool</English>
@@ -305,6 +325,7 @@
             <Korean>독도용 도구로</Korean>
             <Japanese>マップツールに</Japanese>
             <Chinesesimp>地图工具</Chinesesimp>
+            <Ukrainian>До інструментів мапи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_ToNorthLabel">
             <English>To North</English>
@@ -320,6 +341,7 @@
             <Japanese>北に</Japanese>
             <Chinesesimp>正北</Chinesesimp>
             <Hungarian>Északhoz</Hungarian>
+            <Ukrainian>На північ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardAcrylicLabel">
             <English>To Plotting Board Acrylic</English>
@@ -331,6 +353,7 @@
             <Korean>플로팅 보드 (아크릴)에</Korean>
             <Japanese>標定盤の アクリル板に</Japanese>
             <Chinesesimp>亚克力绘图板</Chinesesimp>
+            <Ukrainian>До міліметрової дошки акрилової</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardLabel">
             <English>To Plotting Board</English>
@@ -342,6 +365,7 @@
             <Korean>플로팅 보드에</Korean>
             <Japanese>標定盤に</Japanese>
             <Chinesesimp>绘图板</Chinesesimp>
+            <Ukrainian>До міліметрової дошки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardRulerLabel">
             <English>To Plotting Board Ruler</English>
@@ -353,6 +377,7 @@
             <Korean>플로팅 보드 (자)에</Korean>
             <Japanese>標定盤の 定規に</Japanese>
             <Chinesesimp>绘图板尺</Chinesesimp>
+            <Ukrainian>До лінійки міліметрової дошки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_ToUpLabel">
             <English>Up</English>
@@ -364,6 +389,7 @@
             <Korean>위로</Korean>
             <Japanese>上に</Japanese>
             <Chinesesimp>上</Chinesesimp>
+            <Ukrainian>Вгору</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_TogglePlottingBoardRuler">
             <English>Toggle Plotting Board Ruler</English>
@@ -375,6 +401,7 @@
             <Korean>플로팅 보드 (자) 토글</Korean>
             <Japanese>標定盤の 定規を 表示切替</Japanese>
             <Chinesesimp>切换显示绘图板尺</Chinesesimp>
+            <Ukrainian>Переключити лінійку міліметрової дошки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_WipeBoard">
             <English>Wipe all markers off Plotting Board</English>
@@ -386,6 +413,7 @@
             <Korean>플로팅 보드에 있는 모든 마커 지우기</Korean>
             <Japanese>標定盤の 全マーカーを 拭き消す</Japanese>
             <Chinesesimp>移除所有绘图板标记</Chinesesimp>
+            <Ukrainian>Зітріть усі маркери з міліметрової дошки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_allowChannelDrawing_description">
             <English>Channels in which plotting board drawing is enabled.</English>
@@ -397,6 +425,7 @@
             <Korean>플로팅 보드 그리기가 활성화된 채널입니다.</Korean>
             <Japanese>どのチャンネルで標定盤の書き込みを有効化するか。</Japanese>
             <Chinesesimp>允许使用绘图板绘制的频道</Chinesesimp>
+            <Ukrainian>Канали, в яких увімкнено малювання на міліметровій дошці.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_allowChannelDrawing_displayName">
             <English>Allow Plotting Board Drawing channels</English>
@@ -408,6 +437,7 @@
             <Korean>플로팅 보드 그리기 채널 허용</Korean>
             <Japanese>標定盤への書き込みを許可するチャンネル</Japanese>
             <Chinesesimp>允许使用绘图板绘制的频道</Chinesesimp>
+            <Ukrainian>Дозволити створення каналів на міліметровій дошці</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_allowDirectCommsOnly">
             <English>Allow Direct Comms Only (Polylines Only)</English>
@@ -419,6 +449,7 @@
             <Korean>직접교신만 허용 (선 긋기만)</Korean>
             <Japanese>直接チャンネルのみ許可 (線のみ)</Japanese>
             <Chinesesimp>仅允许直接通话频道(仅允许划线)</Chinesesimp>
+            <Ukrainian>Дозволяти тільки прямий зв'язок (тільки полілінії)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_allowDirectGroupComms">
             <English>Allow Direct/Group Comms (Polylines and Group Markers)</English>
@@ -430,6 +461,7 @@
             <Korean>직접교신/그룹무전망 허용 (선 긋기와 그룹 마커)</Korean>
             <Japanese>直接/グループチャンネルを許可 (線とグループマーカー)</Japanese>
             <Chinesesimp>允许在直接和小队频道(允许划线和小队标记)</Chinesesimp>
+            <Ukrainian>Дозволити прямий/груповий зв'язок (полілінії та групові маркери)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_drawStraightLines_description">
             <English>Draw on the edge of maptools to draw straight lines. Note: Must hover at midpoint to delete.</English>
@@ -446,6 +478,7 @@
             <Chinese>使用地圖工具的邊緣來繪製直線。備註: 要刪除直線時，請把滑鼠移動到該線條的中央即可刪除該線</Chinese>
             <Chinesesimp>使用地图工具的边缘来绘制直线。备注：要删除直线时，请把鼠标移动到该线条的中央即可删除该线。</Chinesesimp>
             <Turkish>Düz çizgiler çizmek için maptools'un kenarına çizin. Not: Silmek için orta noktada fareyle üzerine gelmeniz gerekir.</Turkish>
+            <Ukrainian>Малюйте по краю інструмента мапи, щоб провести прямі лінії. Примітка: при видаленні лінії розміщуйте курсор над її серединою.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_drawStraightLines_displayName">
             <English>Draw straight lines with maptools</English>
@@ -462,6 +495,7 @@
             <Chinese>使用地圖工具來繪製直線</Chinese>
             <Chinesesimp>使用地图工具来绘制直线</Chinesesimp>
             <Turkish>Maptools ile düz çizgiler çizme</Turkish>
+            <Ukrainian>Прямі лінії з інструментами мапи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_rotateModifierKey_description">
             <English>Modifier key to allow rotating map tools</English>
@@ -478,6 +512,7 @@
             <Chinese>修改旋轉地圖工具的按鍵</Chinese>
             <Chinesesimp>修改旋转地图工具的按键</Chinesesimp>
             <Turkish>Dönen harita araçlarına izin veren değiştirici tuş</Turkish>
+            <Ukrainian>Клавіша-модифікатор, що дає змогу повертати інструменти мапи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_rotateModifierKey_displayName">
             <English>Rotate Map Tools Key</English>
@@ -494,6 +529,7 @@
             <Chinese>選轉地圖工具的按鍵</Chinese>
             <Chinesesimp>选转地图工具的按键</Chinesesimp>
             <Turkish>Harita Aracının Yönünü Değiştirme Tuşu</Turkish>
+            <Ukrainian>Клавіша повороту інструментів мапи</Ukrainian>
         </Key>
     </Package>
 </Project>

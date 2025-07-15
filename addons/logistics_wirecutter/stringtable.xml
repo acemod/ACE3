@@ -17,6 +17,7 @@
             <Chinesesimp>剪断护栏</Chinesesimp>
             <Turkish>Çiti/Teli Kes</Turkish>
             <Hungarian>Drótkerítés átvágása</Hungarian>
+            <Ukrainian>Розрізати паркан</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_CuttingFence">
             <English>Cutting Fences / Wires...</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>正在剪断护栏/刺网...</Chinesesimp>
             <Turkish>Kesiliyor Çit/Tel</Turkish>
             <Hungarian>Drótok elvágása...</Hungarian>
+            <Ukrainian>Розрізаємо паркан / дроти...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_FenceCut">
             <English>Fence cut</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>护栏已被剪断</Chinesesimp>
             <Turkish>Çit kesme</Turkish>
             <Hungarian>Drótkerítés átvágva</Hungarian>
+            <Ukrainian>Паркан розрізано</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_wirecutterDescription">
             <English>Wirecutter</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>剪铁丝网钳</Chinesesimp>
             <Turkish>Tel Makası</Turkish>
             <Hungarian>Drótok, huzalok, és kábelek vágására alkalmas olló.</Hungarian>
+            <Ukrainian>Дають змогу швидко перекушувати сіткові конструкції.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_wirecutterName">
             <English>Wirecutter</English>
@@ -85,6 +89,7 @@
             <Chinesesimp>剪铁丝网钳</Chinesesimp>
             <Turkish>Tel Makası</Turkish>
             <Hungarian>Drótvágó</Hungarian>
+            <Ukrainian>Дроторіз</Ukrainian>
         </Key>
     </Package>
 </Project>

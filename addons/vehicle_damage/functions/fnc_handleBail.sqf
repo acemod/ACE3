@@ -18,7 +18,7 @@
 params ["_vehicle"];
 TRACE_1("handleBail",_vehicle);
 
-private _isCar = _vehicle isKindOf "Car" && {!(_vehicle isKindOf "Wheeled_APC_F")};
+private _isCar = _vehicle isKindOf "Car" && {!(_vehicle isKindOf "Wheeled_APC_F" || _vehicle isKindOf "gm_wheeled_APC_base")};
 
 // canFire command is broken, hence the variable
 private _canMove = (_vehicle getVariable [QGVAR(canMove), true]) && {alive driver _vehicle};
