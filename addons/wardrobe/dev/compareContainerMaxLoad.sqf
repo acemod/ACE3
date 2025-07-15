@@ -1,7 +1,7 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * This debug script will compare the maxLoad of all modifiable Items with its modifiableTo variants and will provide an RPT output.
+ * Compare the maxLoad of all modifiable items with its modifiableTo variants and log to RPT.
  *
  * Arguments:
  * None
@@ -35,7 +35,7 @@ LOG_SYS("CompareMaxLoad","======================================================
     private _cfgOrigin = _x;
     private _originClassName = configName _cfgOrigin;
     private _originMaxLoad = getNumber (configFile >> "CfgVehicles" >> getText (_cfgOrigin >> "ItemInfo" >> "containerClass") >> "maximumLoad");
-    
+
     if (_originClassName in _established) then { continue };
     _established pushBack _originClassName;
 
