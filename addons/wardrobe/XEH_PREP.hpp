@@ -1,0 +1,17 @@
+PREP(addActions);
+PREP(addActionsChildren);
+PREP(addActionsIcon);
+PREP(addActionsName);
+PREP(canModifyTo);
+PREP(compareComponents);
+PREP(getIndexFromMagID);
+PREP(getItemsAll);
+PREP(getItemsModifiableAll);
+PREP(getItemsModifiableCurrent);
+PREP(getItemsModifiableTo);
+PREP(isModifiable);
+PREP(replace);
+PREP(replaceContainer);
+PREP(replaceOther);
+PREP(setIndexForMagID);
+PREP(spareBarrelUpdateMagIDs);
