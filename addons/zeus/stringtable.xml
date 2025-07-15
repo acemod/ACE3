@@ -15,6 +15,7 @@
             <Japanese>キュレーターにオブジェクトを追加</Japanese>
             <Chinese>增加物件給任務策劃人</Chinese>
             <Chinesesimp>增加物体给任务宙斯</Chinesesimp>
+            <Ukrainian>Додати об'єкти куратору</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator_desc">
             <English>Adds any spawned object to all curators in the mission</English>
@@ -30,6 +31,7 @@
             <Japanese>ミッション内で作成されたオブジェクトに全キュレーターを追加</Japanese>
             <Chinese>在任務中生成物件給所有的任務策劃人</Chinese>
             <Chinesesimp>在任务中生成物体给所有的任务宙斯</Chinesesimp>
+            <Ukrainian>Додає будь-який відспавнений об'єкт усім кураторам у місії</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeCargo">
             <English>Cargo:</English>
@@ -46,6 +48,7 @@
             <Chinese>貨物:</Chinese>
             <Chinesesimp>货物：</Chinesesimp>
             <Turkish>Kargo:</Turkish>
+            <Ukrainian>Вантаж:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
@@ -61,6 +64,7 @@
             <Japanese>タスク半径</Japanese>
             <Chinese>目標半徑</Chinese>
             <Chinesesimp>目标半径</Chinesesimp>
+            <Ukrainian>Радіус завдання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadiusInvalid">
             <English>Invalid radius entered</English>
@@ -76,6 +80,7 @@
             <Japanese>無効な半径が入力されました</Japanese>
             <Chinese>錯誤的半徑值</Chinese>
             <Chinesesimp>错误的半径值</Chinesesimp>
+            <Ukrainian>Введено неправильний радіус</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius_Tooltip">
             <English>Radius to perform the task within</English>
@@ -91,6 +96,7 @@
             <Japanese>タスクを実行される半径</Japanese>
             <Chinese>設定目標範圍半徑</Chinese>
             <Chinesesimp>设定目标范围半径</Chinesesimp>
+            <Ukrainian>Радіус виконання завдання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_BuildingTooFar">
             <English>Nearest building is too far away</English>
@@ -106,6 +112,7 @@
             <Japanese>一番近い建物まで遠すぎます</Japanese>
             <Chinese>最近的房子離太遠了</Chinese>
             <Chinesesimp>最近的房子离太远了</Chinesesimp>
+            <Ukrainian>Найближчі будівлі занадто далеко</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_CantRemoveFRIES">
             <English>Unable to remove FRIES, ropes are deployed.</English>
@@ -121,6 +128,7 @@
             <Japanese>既にロープが展開されているため、FRIES を削除できません。</Japanese>
             <Chinese>無法移除快速繩降系統，因為繩索已被釋放出來</Chinese>
             <Chinesesimp>无法移除快速绳降系统，因为绳索已被释放出来</Chinesesimp>
+            <Ukrainian>Неможливо видалити FRIES, троси розгорнуті.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_CreateZeus">
             <English>Create Zeus</English>
@@ -137,6 +145,7 @@
             <Chinese>新增宙斯</Chinese>
             <Chinesesimp>创建宙斯</Chinesesimp>
             <Turkish>Zeus oluştur</Turkish>
+            <Ukrainian>Створити Зевса</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_DeleteZeus">
             <English>Delete Zeus</English>
@@ -153,6 +162,7 @@
             <Chinese>刪除宙斯</Chinese>
             <Chinesesimp>删除宙斯</Chinesesimp>
             <Turkish>Zeus sil</Turkish>
+            <Ukrainian>Видалити Зевса</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_DisplayName">
             <English>Zeus</English>
@@ -169,6 +179,7 @@
             <Chinese>宙斯</Chinese>
             <Chinesesimp>宙斯</Chinesesimp>
             <Turkish>Zeus</Turkish>
+            <Ukrainian>Зевс</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_MedicalMenuDisabled">
             <English>The medical menu is disabled</English>
@@ -180,6 +191,7 @@
             <Korean>의료 메뉴가 비활성화되었습니다</Korean>
             <Japanese>医療メニューは無効になっています</Japanese>
             <Chinesesimp>医疗菜单已被关闭</Chinesesimp>
+            <Ukrainian>Медичне меню вимкнено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_MenuSetting">
             <English>"%1" menu</English>
@@ -196,6 +208,7 @@
             <Chinese>選單 %1</Chinese>
             <Chinesesimp>菜单"%1"</Chinesesimp>
             <Turkish>"%1" menü</Turkish>
+            <Ukrainian>Меню "%1"</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddFullACEArsenal_DisplayName">
             <English>Add full ACE Arsenal</English>
@@ -212,6 +225,7 @@
             <Chinese>增加完整的ACE軍火庫</Chinese>
             <Chinesesimp>添加 ACE 军火库</Chinesesimp>
             <Turkish>ACE Arsenal ekle</Turkish>
+            <Ukrainian>Додати повний ACE Арсенал</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddFullArsenal_DisplayName">
             <English>Add Full BI Arsenal</English>
@@ -228,6 +242,7 @@
             <Chinese>增加完整的虛擬軍火庫到物件上</Chinese>
             <Chinesesimp>增加完整的虚拟军火库到物体上</Chinesesimp>
             <Turkish>Arsenal Ekle</Turkish>
+            <Ukrainian>Додати увесь Арсенал</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddOrRemoveFRIES_DisplayName">
             <English>Add/Remove FRIES</English>
@@ -244,6 +259,7 @@
             <Chinese>增加/移除快速垂降進場撤離系統</Chinese>
             <Chinesesimp>增加/移除快速垂降进场撤离系统</Chinesesimp>
             <Turkish>Ekle/Kaldır FRIES</Turkish>
+            <Ukrainian>Додати/Видалити FRIES</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareTrack_DisplayName">
             <English>Add Spare Track</English>
@@ -260,6 +276,7 @@
             <Chinese>增加備用履帶</Chinese>
             <Chinesesimp>增加备用履带</Chinesesimp>
             <Turkish>Yedek Parça Ekle</Turkish>
+            <Ukrainian>Додати запасну гусеницю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_DisplayName">
             <English>Add Spare Wheel</English>
@@ -276,6 +293,7 @@
             <Chinese>增加備用輪胎</Chinese>
             <Chinesesimp>增加备用轮胎</Chinesesimp>
             <Turkish>Tekerlek Ekle</Turkish>
+            <Ukrainian>Додати запасне колесо</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleBurn_DisplayName">
             <English>Burn Unit</English>
@@ -288,6 +306,7 @@
             <Korean>유닛 불로 태우기</Korean>
             <Japanese>ユニットを燃やす</Japanese>
             <Chinesesimp>焚烧单位</Chinesesimp>
+            <Ukrainian>Підпалити юніта</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleCaptive_DisplayName">
             <English>Toggle Captive</English>
@@ -305,6 +324,7 @@
             <Chinesesimp>切换俘虏</Chinesesimp>
             <Turkish>Tutuklamayı Aç/Kapat</Turkish>
             <Hungarian>Elfogott állapot váltása</Hungarian>
+            <Ukrainian>Полонений (увім./вимк.)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleDefendArea_DisplayName">
             <English>Defend Area</English>
@@ -321,6 +341,7 @@
             <Chinese>防禦區域</Chinese>
             <Chinesesimp>防御区域</Chinesesimp>
             <Turkish>Bölgeyi Koru</Turkish>
+            <Ukrainian>Захистити зону</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AddObjects">
             <English>Add Objects</English>
@@ -337,6 +358,7 @@
             <Chinese>新增物件</Chinese>
             <Chinesesimp>新增物体</Chinesesimp>
             <Turkish>Obje Ekle</Turkish>
+            <Ukrainian>Додати об'єкти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects">
             <English>Additional Objects</English>
@@ -352,6 +374,7 @@
             <Japanese>追加のオブジェクト</Japanese>
             <Chinese>額外物件</Chinese>
             <Chinesesimp>额外物体</Chinesesimp>
+            <Ukrainian>Додаткові об'єкти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects_Tooltip">
             <English>Additional objects to include in the action regardless of Task Radius</English>
@@ -367,6 +390,7 @@
             <Japanese>タスク半径に関係なく次のオブジェクトを編集可能に追加します</Japanese>
             <Chinese>無論任務範圍何處，都在行動中包含著額外的物件</Chinese>
             <Chinesesimp>确认变更给所有宙斯</Chinesesimp>
+            <Ukrainian>Додаткові об'єкти для включення в дію, незалежно від радіуса виконання завдання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AllCurators">
             <English>All Curators</English>
@@ -382,6 +406,7 @@
             <Japanese>全キュレーター</Japanese>
             <Chinese>所有編輯者</Chinese>
             <Chinesesimp>所有宙斯</Chinesesimp>
+            <Ukrainian>Усі куратори</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AllCurators_Tooltip">
             <English>Apply changes to all curators</English>
@@ -397,6 +422,7 @@
             <Japanese>全キュレーターへ変更を適用します</Japanese>
             <Chinese>確認變更給所有編輯者</Chinese>
             <Chinesesimp>确认变更给所有宙斯</Chinesesimp>
+            <Ukrainian>Застосувати зміни до всіх кураторів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_DisplayName">
             <English>Update Editable Objects</English>
@@ -412,6 +438,7 @@
             <Japanese>編集可能オブジェクトを更新</Japanese>
             <Chinese>更新可編輯的物件</Chinese>
             <Chinesesimp>更新可编辑的物体</Chinesesimp>
+            <Ukrainian>Оновити редаговані об'єкти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode">
             <English>Editing Mode</English>
@@ -427,6 +454,7 @@
             <Japanese>編集モード</Japanese>
             <Chinese>編輯模式</Chinese>
             <Chinesesimp>编辑模式</Chinesesimp>
+            <Ukrainian>Режим редагування</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode_Tooltip">
             <English>Add or remove editable objects from Zeus</English>
@@ -442,6 +470,7 @@
             <Japanese>Zeusから編集可能オブジェクトの追加と削除をする</Japanese>
             <Chinese>新增或移除可編輯物件給宙斯</Chinese>
             <Chinesesimp>添加或删除宙斯的可编辑物体</Chinesesimp>
+            <Ukrainian>Додати або видалити редаговані об'єкти від Зевса</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_RemoveObjects">
             <English>Remove Objects</English>
@@ -458,6 +487,7 @@
             <Chinese>移除物件</Chinese>
             <Chinesesimp>移除物体</Chinesesimp>
             <Turkish>Objeyi Kaldır</Turkish>
+            <Ukrainian>Видалити об'єкти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_DisplayName">
             <English>Garrison Group</English>
@@ -473,6 +503,7 @@
             <Japanese>グループの駐屯</Japanese>
             <Chinese>佈置駐軍</Chinese>
             <Chinesesimp>布置驻军</Chinesesimp>
+            <Ukrainian>Розмістити групу в будівлі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeBuilding">
             <English>Building by building</English>
@@ -488,6 +519,7 @@
             <Japanese>建物ごとに</Japanese>
             <Chinese>一棟填滿後再換下一棟</Chinese>
             <Chinesesimp>一栋填满后再换下一栋</Chinesesimp>
+            <Ukrainian>Будівля за будівлею</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeEven">
             <English>Even filling</English>
@@ -503,6 +535,7 @@
             <Japanese>均一に占拠</Japanese>
             <Chinese>平均分配</Chinese>
             <Chinesesimp>平均分配</Chinesesimp>
+            <Ukrainian>Рівномірно</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeRandom">
             <English>Random filling</English>
@@ -518,6 +551,7 @@
             <Japanese>ランダムに占拠</Japanese>
             <Chinese>隨機分配</Chinese>
             <Chinesesimp>随机分配</Chinesesimp>
+            <Ukrainian>Випадково</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeText">
             <English>Building filling mode</English>
@@ -533,6 +567,7 @@
             <Japanese>建物占拠モード</Japanese>
             <Chinese>駐軍填充建築物模式</Chinese>
             <Chinesesimp>驻军填充建筑物模式</Chinesesimp>
+            <Ukrainian>Режим заповнення будівлі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TeleportText">
             <English>Teleport</English>
@@ -549,6 +584,7 @@
             <Chinese>傳送</Chinese>
             <Chinesesimp>传送</Chinesesimp>
             <Turkish>Işınla</Turkish>
+            <Ukrainian>Телепорт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingText">
             <English>Fill from top to bottom</English>
@@ -564,6 +600,7 @@
             <Japanese>上から下へと占拠</Japanese>
             <Chinese>由上而下進行填滿</Chinese>
             <Chinesesimp>由上而下进行填满</Chinesesimp>
+            <Ukrainian>Зайняти будівлю від верху до низу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingTooltip">
             <English>Fill buildings from the highest position first</English>
@@ -579,6 +616,7 @@
             <Japanese>建物を最も高い位置から占拠していきます</Japanese>
             <Chinese>從建築物的最高點開始布置衛哨</Chinese>
             <Chinesesimp>从建筑物的最高点开始布置卫哨</Chinesesimp>
+            <Ukrainian>Зайняти будівлю починаючи з верхніх позицій</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
@@ -595,6 +633,7 @@
             <Chinese>AI技巧設定</Chinese>
             <Chinesesimp>AI 技巧设定</Chinesesimp>
             <Turkish>Genel AI Yetenekleri</Turkish>
+            <Ukrainian>Майстерність ботів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy">
             <English>Accuracy</English>
@@ -610,6 +649,7 @@
             <Japanese>精度</Japanese>
             <Chinese>精確度</Chinese>
             <Chinesesimp>精确度</Chinesesimp>
+            <Ukrainian>Влучність</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy_desc">
             <English>Changes: aimingAccuracy</English>
@@ -625,6 +665,7 @@
             <Japanese>変更: aimingAccuracy</Japanese>
             <Chinese>改變: 瞄準精確度</Chinese>
             <Chinesesimp>改变：瞄准精确度</Chinesesimp>
+            <Ukrainian>Змінює: aimingAccuracy</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_combat">
             <English>Auto Combat</English>
@@ -640,6 +681,7 @@
             <Japanese>自動戦闘</Japanese>
             <Chinese>自動交戰</Chinese>
             <Chinesesimp>自动交战</Chinesesimp>
+            <Ukrainian>Авто режим бою</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_combat_desc">
             <English>Should AI automatically switch to combat mode</English>
@@ -655,6 +697,7 @@
             <Japanese>AIは自動的に戦闘状態へ切り替えます</Japanese>
             <Chinese>決定AI是否會自動與敵人交戰</Chinese>
             <Chinesesimp>决定 AI 是否会自动与敌人交战</Chinesesimp>
+            <Ukrainian>Чи повинні боти автоматично переходити в режим бою</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover">
             <English>Seek Cover</English>
@@ -670,6 +713,7 @@
             <Japanese>遮蔽</Japanese>
             <Chinese>尋找掩護</Chinese>
             <Chinesesimp>寻找掩护</Chinesesimp>
+            <Ukrainian>Пошук укриттів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover_desc">
             <English>Should AI seek cover</English>
@@ -685,6 +729,7 @@
             <Japanese>AIは遮蔽を取るようになります</Japanese>
             <Chinese>決定AI是否會尋找掩護</Chinese>
             <Chinesesimp>决定 AI 是否会寻找掩护</Chinesesimp>
+            <Ukrainian>Чи повинні боти шукати укриття</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general">
             <English>General Skill</English>
@@ -701,6 +746,7 @@
             <Chinese>總體技巧</Chinese>
             <Chinesesimp>总体技巧</Chinesesimp>
             <Turkish>Genel Yetenekler</Turkish>
+            <Ukrainian>Загальний рівень</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general_desc">
             <English>Changes: general, commanding, courage</English>
@@ -716,6 +762,7 @@
             <Japanese>変更: general, commanding, courage</Japanese>
             <Chinese>改變: 戰鬥技巧，指揮技巧，勇氣大小</Chinese>
             <Chinesesimp>改变：战斗技巧，指挥技巧，勇气大小</Chinesesimp>
+            <Ukrainian>Змінює: general, commanding, courage</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling">
             <English>Weapon Handling</English>
@@ -731,6 +778,7 @@
             <Japanese>武器の扱い</Japanese>
             <Chinese>武器掌握</Chinese>
             <Chinesesimp>武器掌握</Chinesesimp>
+            <Ukrainian>Володіння зброєю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling_desc">
             <English>Changes: aimingShake, aimingSpeed, reloadSpeed</English>
@@ -746,6 +794,7 @@
             <Japanese>変更: aimingShake, aimingSpeed, reloadSpeed</Japanese>
             <Chinese>改變: 手晃幅度，瞄準速度， 重新裝填速度</Chinese>
             <Chinesesimp>改变：手晃幅度，瞄准速度， 重新装填速度</Chinesesimp>
+            <Ukrainian>Змінює: aimingShake, aimingSpeed, reloadSpeed</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting">
             <English>Spotting</English>
@@ -761,6 +810,7 @@
             <Japanese>索敵</Japanese>
             <Chinese>索敵能力</Chinese>
             <Chinesesimp>索敌能力</Chinesesimp>
+            <Ukrainian>Виявлення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting_desc">
             <English>Changes: spotDistance, spotTime</English>
@@ -776,6 +826,7 @@
             <Japanese>変更: spotDistance, spotTime</Japanese>
             <Chinese>改變: 搜索距離, 發現時間</Chinese>
             <Chinesesimp>改变：搜索距离，发现时间</Chinesesimp>
+            <Ukrainian>Змінює: spotDistance, spotTime</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGroupSide_DisplayName">
             <English>Group Side</English>
@@ -792,6 +843,7 @@
             <Chinese>小隊陣營</Chinese>
             <Chinesesimp>小队阵营</Chinesesimp>
             <Turkish>Tarafı Değiştir</Turkish>
+            <Ukrainian>Сторона групи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleHeal_DisplayName">
             <English>Full Heal</English>
@@ -809,6 +861,7 @@
             <Chinesesimp>完全治愈</Chinesesimp>
             <Turkish>Full Can</Turkish>
             <Hungarian>Teljes gyógyítás</Hungarian>
+            <Ukrainian>Повне зцілення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_DisplayName">
             <English>Lay Trenchline</English>
@@ -821,6 +874,7 @@
             <Korean>참호라인 깔기</Korean>
             <Japanese>塹壕溝線を敷設</Japanese>
             <Chinesesimp>铺设战壕</Chinesesimp>
+            <Ukrainian>Прокласти траншею</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_Tooltip">
             <English>+SHIFT to force (Can only lay N/S or E/W)</English>
@@ -833,6 +887,7 @@
             <Korean>+ Shift 키로 강제하기 (동서남북 방향으로만 깔 수 있음)</Korean>
             <Japanese>+SHIFTキー で強制的に敷設 (北/南または東/西方向にのみ配置可能)</Japanese>
             <Chinesesimp>+SHIFT 来强制铺设(只能在南北和东西朝向铺设)</Chinesesimp>
+            <Ukrainian>+SHIFT на примусове (може укладатися тільки на Північ/Південь або Схід/Захід)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLoadIntoCargo_DisplayName">
             <English>Load into Cargo</English>
@@ -848,6 +903,7 @@
             <Japanese>貨物室へ積載</Japanese>
             <Chinese>裝載到貨物中</Chinese>
             <Chinesesimp>装载到货物中</Chinesesimp>
+            <Ukrainian>Завантажити у відсік</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleMedicalMenu_DisplayName">
             <English>Medical Menu</English>
@@ -864,6 +920,7 @@
             <Chinese>醫療選單</Chinese>
             <Chinesesimp>医疗菜单</Chinesesimp>
             <Turkish>Medikal Menü</Turkish>
+            <Ukrainian>Медичне меню</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModulePatrolArea_DisplayName">
             <English>Patrol Area</English>
@@ -880,6 +937,7 @@
             <Chinese>巡邏區域</Chinese>
             <Chinesesimp>巡逻区域</Chinesesimp>
             <Turkish>Devriye ayarla</Turkish>
+            <Ukrainian>Патрулювати зону</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveACEArsenal_DisplayName">
             <English>Remove ACE Arsenal</English>
@@ -896,6 +954,7 @@
             <Chinese>移除ACE軍火庫</Chinese>
             <Chinesesimp>删除 ACE 军火库</Chinesesimp>
             <Turkish>ACE Arsenali sil</Turkish>
+            <Ukrainian>Прибрати ACE Арсенал</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveArsenal_DisplayName">
             <English>Remove BI Arsenal</English>
@@ -912,6 +971,7 @@
             <Chinese>移除物件上的虛擬軍火庫</Chinese>
             <Chinesesimp>移除物体上的虚拟军火库</Chinesesimp>
             <Turkish>Arsenali Kaldır</Turkish>
+            <Ukrainian>Прибрати Арсенал</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSearchArea_DisplayName">
             <English>Search Area</English>
@@ -928,6 +988,7 @@
             <Chinese>搜索區域</Chinese>
             <Chinesesimp>搜索区域</Chinesesimp>
             <Turkish>Bölgeyi Ara</Turkish>
+            <Ukrainian>Обшукати зону</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSearchNearby_DisplayName">
             <English>Search Nearby Building</English>
@@ -943,6 +1004,7 @@
             <Japanese>至近の建物を捜索</Japanese>
             <Chinese>搜索附近的建築物</Chinese>
             <Chinesesimp>搜索附近的建筑物</Chinesesimp>
+            <Ukrainian>Обшукати найближчі будівлі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetEngineer_DisplayName">
             <English>Assign Engineer</English>
@@ -960,6 +1022,7 @@
             <Chinesesimp>指派工程师</Chinesesimp>
             <Turkish>Mühendis yap</Turkish>
             <Hungarian>Engedélyezze a mérnököt</Hungarian>
+            <Ukrainian>Призначити інженера</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetEngineer_skill">
             <English>Engineer Skill</English>
@@ -977,6 +1040,7 @@
             <Chinesesimp>工程师技能</Chinesesimp>
             <Turkish>Mühendislik yeteneği</Turkish>
             <Hungarian>Mérnöki készség</Hungarian>
+            <Ukrainian>Інженерна майстерність</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
             <English>Assign Medic</English>
@@ -992,6 +1056,7 @@
             <Japanese>衛生兵に割り当て</Japanese>
             <Chinese>指定醫療兵</Chinese>
             <Chinesesimp>指定医疗兵</Chinesesimp>
+            <Ukrainian>Призначити медиком</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalFacility_DisplayName">
             <English>Assign Medical Facility</English>
@@ -1007,6 +1072,7 @@
             <Japanese>医療施設に割り当て</Japanese>
             <Chinese>指定醫療設施</Chinese>
             <Chinesesimp>指定医疗设施</Chinesesimp>
+            <Ukrainian>Назанчити медичною спорудою</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalVehicle_DisplayName">
             <English>Assign Medical Vehicle</English>
@@ -1022,6 +1088,7 @@
             <Japanese>医療車両に割り当て</Japanese>
             <Chinese>指定醫療載具</Chinese>
             <Chinesesimp>指定医疗载具</Chinesesimp>
+            <Ukrainian>Призначити медичним транспортом</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetRepairFacility_DisplayName">
             <English>Assign Repair Facility</English>
@@ -1039,6 +1106,7 @@
             <Chinesesimp>分配修理设施</Chinesesimp>
             <Turkish>Tamir Tesisi Yap</Turkish>
             <Hungarian>Hozzárendelés javításhoz</Hungarian>
+            <Ukrainian>Призначити ремонтний комплекс</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetRepairVehicle_DisplayName">
             <English>Assign Repair Vehicle</English>
@@ -1056,6 +1124,7 @@
             <Chinesesimp>分配维修车辆</Chinesesimp>
             <Turkish>Tamir Aracı Yap</Turkish>
             <Hungarian>Hozzárendelés javítóműhöz</Hungarian>
+            <Ukrainian>Призначити ремонтний автомобіль</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSimulation_DisplayName">
             <English>Toggle Simulation</English>
@@ -1072,6 +1141,7 @@
             <Chinese>切換模擬</Chinese>
             <Chinesesimp>切换模拟</Chinesesimp>
             <Turkish>Similasyonu Aç/Kapat</Turkish>
+            <Ukrainian>Переключити симуляцію</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_BlackHot">
             <English>Black Hot</English>
@@ -1083,6 +1153,7 @@
             <Korean>흑색 열원</Korean>
             <Japanese>黒=熱源</Japanese>
             <Chinesesimp>黑热模式</Chinesesimp>
+            <Ukrainian>Чорний</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_ForceInterface_Tooltip">
             <English>Forces the spectator interface preventing the player from closing it with the Escape key</English>
@@ -1094,6 +1165,7 @@
             <Korean>플레이어가 Esc 키로 관전자 인터페이스를 닫지 못하도록 강제로 관전자 인터페이스를 설정합니다.</Korean>
             <Japanese>観戦インターフェイスを強制し、ユーザがEscキーでも閉じられないようにします。</Japanese>
             <Chinesesimp>禁止使用ESC关闭观察者界面</Chinesesimp>
+            <Ukrainian>Активує інтерфейс spectator, не дозволяючи гравцеві закрити його за допомогою клавіші Escape.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_HidePlayer">
             <English>Hide player</English>
@@ -1105,6 +1177,7 @@
             <Korean>플레이어 숨기기</Korean>
             <Japanese>プレイヤーを隠す</Japanese>
             <Chinesesimp>隐藏玩家</Chinesesimp>
+            <Ukrainian>Приховати гравця</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_HidePlayer_Tooltip">
             <English>Hides the player by making them invisible, invulnerable, muted, and removing them from their group</English>
@@ -1116,6 +1189,7 @@
             <Korean>플레이어를 투명, 무적, 음소거화하고 그룹에서 제거하여 숨깁니다.</Korean>
             <Japanese>透明化、無敵化、ミュート、グループからの除外を行いプレーヤーを隠します</Japanese>
             <Chinesesimp>将玩家隐藏, 并设为无敌 静音, 并从小队内移除</Chinesesimp>
+            <Ukrainian>Приховує гравця, роблячи його невидимим, невразливим, вимикаючи звук і видаляючи з групи.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_SpectableSides_Tooltip">
             <English>Sets the sides that are available to spectate</English>
@@ -1127,6 +1201,7 @@
             <Korean>관전 가능한 진영을 설정합니다.</Korean>
             <Japanese>指定の陣営を観戦可能に設定します</Japanese>
             <Chinesesimp>设置可以观察的阵营</Chinesesimp>
+            <Ukrainian>Встановлює сторони, доступні для режиму spectator</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_WhiteHot">
             <English>White Hot</English>
@@ -1138,6 +1213,7 @@
             <Korean>백색 열원</Korean>
             <Japanese>白=熱源</Japanese>
             <Chinesesimp>白热</Chinesesimp>
+            <Ukrainian>Білий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_ActivationRadius">
             <English>Activation Radius</English>
@@ -1155,6 +1231,7 @@
             <Chinesesimp>激活半径</Chinesesimp>
             <Turkish>Aktivasyon yarıçapı</Turkish>
             <Hungarian>Aktiválási sugár</Hungarian>
+            <Ukrainian>Радіус активації</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_ActivationSide">
             <English>Activation Side</English>
@@ -1172,6 +1249,7 @@
             <Chinesesimp>激活方</Chinesesimp>
             <Turkish>Aktivasyon tarafı</Turkish>
             <Hungarian>Aktiválási oldal</Hungarian>
+            <Ukrainian>Сторона активації</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_AlreadyBomber">
             <English>Unit is already a suicide bomber</English>
@@ -1189,6 +1267,7 @@
             <Chinesesimp>这个单位已经是自杀炸弹手了</Chinesesimp>
             <Turkish>Kişi zaten bir intihar bombacısı</Turkish>
             <Hungarian>Az egység már öngyilkos bombázó</Hungarian>
+            <Ukrainian>Одиниця вже є терористом-смертником</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_AutoSeek">
             <English>Auto Seek</English>
@@ -1206,6 +1285,7 @@
             <Chinesesimp>自动寻的</Chinesesimp>
             <Turkish>Otomatik arama</Turkish>
             <Hungarian>Automatikus keresés</Hungarian>
+            <Ukrainian>Автоматичний пошук</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_AutoSeek_tooltip">
             <English>Unit will actively try to find and move towards nearby units of the activation side. The range of Auto Seek is based on the unit's spot distance skill with a minimum of 100 meters.</English>
@@ -1222,6 +1302,7 @@
             <Chinese>單位將主動嘗試尋找並移動到附近的激活方單位。自動搜索的範圍是基於單位的距離技能，最少100米</Chinese>
             <Chinesesimp>单位将主动尝试寻找并移动到附近的激活方单位。自动搜索的范围是基于单位的距离技能，最少100米。</Chinesesimp>
             <Hungarian>Az egység aktívan megpróbálja megtalálni és elmozdulni az aktivációs oldal közeli egységei felé.Az automatikus keresési tartomány az egység helyszíni szakértelmén alapul, legalább 100 méterrel.</Hungarian>
+            <Ukrainian>Юніт активно намагатиметься знайти та наблизитися до найближчих підрозділів сторони активації. Радіус автоматичного пошуку залежить від навички виявлення цілі, але не менше ніж 100 метрів.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_DisplayName">
             <English>Suicide Bomber</English>
@@ -1239,6 +1320,7 @@
             <Chinesesimp>自杀炸弹手</Chinesesimp>
             <Turkish>Intihar Bombacısı</Turkish>
             <Hungarian>Öngyilkos merénylő</Hungarian>
+            <Ukrainian>Терорист-смертник</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_ExplosionSize">
             <English>Explosion Size</English>
@@ -1256,6 +1338,7 @@
             <Chinesesimp>爆炸大小</Chinesesimp>
             <Turkish>Patlama boyutu</Turkish>
             <Hungarian>Robbanásméret</Hungarian>
+            <Ukrainian>Розмір вибуху</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSuppressiveFire_DisplayName">
             <English>Suppressive Fire</English>
@@ -1271,6 +1354,7 @@
             <Japanese>制圧射撃</Japanese>
             <Chinese>火力壓制</Chinese>
             <Chinesesimp>火力压制</Chinesesimp>
+            <Ukrainian>Вогонь на придушення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSurrender_DisplayName">
             <English>Toggle Surrender</English>
@@ -1288,6 +1372,7 @@
             <Chinesesimp>切换投降</Chinesesimp>
             <Turkish>Teslim olmayı Aç/Kapat</Turkish>
             <Hungarian>Kapituláló állapot váltása</Hungarian>
+            <Ukrainian>Полонений (увім./вимк.)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_DisplayName">
             <English>Teleport Players</English>
@@ -1304,6 +1389,7 @@
             <Chinese>傳送玩家</Chinese>
             <Chinesesimp>传送玩家</Chinesesimp>
             <Turkish>Oyuncuları Işınla</Turkish>
+            <Ukrainian>Телепортувати гравців</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_group">
             <English>Teleport Group</English>
@@ -1320,6 +1406,7 @@
             <Chinese>傳送小隊</Chinese>
             <Chinesesimp>传送小队</Chinesesimp>
             <Turkish>Grubu ışınla</Turkish>
+            <Ukrainian>Телепортувати групу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_group_desc">
             <English>Teleports all units in group</English>
@@ -1335,6 +1422,7 @@
             <Japanese>グループ内の全ユニットを移動させます</Japanese>
             <Chinese>傳送全部小隊成員</Chinese>
             <Chinesesimp>传送全部小队成员</Chinesesimp>
+            <Ukrainian>Телепортує всіх юнітів у групі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_noneFound">
             <English>No players found</English>
@@ -1352,6 +1440,7 @@
             <Chinesesimp>没有玩家找到</Chinesesimp>
             <Turkish>Kullanıcı bulunamadı</Turkish>
             <Hungarian>Nincsenek játékosok</Hungarian>
+            <Ukrainian>Гравців не знайдено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_player">
             <English>Player</English>
@@ -1368,6 +1457,7 @@
             <Chinese>玩家</Chinese>
             <Chinesesimp>玩家</Chinesesimp>
             <Turkish>Oyuncu</Turkish>
+            <Ukrainian>Гравця</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_player_desc">
             <English>Teleport selected player to module position</English>
@@ -1383,6 +1473,7 @@
             <Japanese>選択したプレイヤーをモジュール位置へ移動します</Japanese>
             <Chinese>傳送選定的玩家至模塊位置</Chinese>
             <Chinesesimp>传送选定的玩家至模块位置</Chinesesimp>
+            <Ukrainian>Телепортує обраного гравця до місця розташування модуля</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleFlashlight_AddGear">
             <English>Add Gear</English>
@@ -1399,6 +1490,7 @@
             <Chinese>增加裝備</Chinese>
             <Chinesesimp>增加装备</Chinesesimp>
             <Turkish>Tekerlek Ekle</Turkish>
+            <Ukrainian>Додати спорядження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleFlashlight_DisplayName">
             <English>Toggle Flashlights</English>
@@ -1415,6 +1507,7 @@
             <Chinese>切換手電筒</Chinese>
             <Chinesesimp>切换手电筒</Chinesesimp>
             <Turkish>Feneriı Aç/Kapat</Turkish>
+            <Ukrainian>Переключити ліхтарі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleFlashlight_Flashlights">
             <English>Flashlights</English>
@@ -1431,6 +1524,7 @@
             <Chinese>手電筒</Chinese>
             <Chinesesimp>手电筒</Chinesesimp>
             <Turkish>Fenerler</Turkish>
+            <Ukrainian>Ліхтарі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_DisplayName">
             <English>Toggle NVGs</English>
@@ -1446,6 +1540,7 @@
             <Japanese>暗視装置の切り替え</Japanese>
             <Chinese>切換夜視鏡</Chinese>
             <Chinesesimp>切换夜视仪</Chinesesimp>
+            <Ukrainian>Переключити ПНБ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_NvgEquipment">
             <English>NVG Equipment</English>
@@ -1462,6 +1557,7 @@
             <Chinese>夜視鏡裝備</Chinese>
             <Chinesesimp>夜视仪装备</Chinesesimp>
             <Turkish>Gece Görüşü Ekipmanı</Turkish>
+            <Ukrainian>Прилади нічного бачення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_NvgEquipment_tooltip">
             <English>Add or remove NVGs from units</English>
@@ -1478,6 +1574,7 @@
             <Chinese>增加或移除單位的夜視鏡</Chinese>
             <Chinesesimp>增加或移除单位的夜视仪</Chinesesimp>
             <Turkish>Gece Görüşü ekle veya kaldır</Turkish>
+            <Ukrainian>Додати/Прибрати ПНБ у юнітів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnGarrison_DisplayName">
             <English>Un-garrison Group</English>
@@ -1493,6 +1590,7 @@
             <Japanese>グループの駐屯解除</Japanese>
             <Chinese>解除駐軍駐守狀態</Chinese>
             <Chinesesimp>解除驻军驻守状态</Chinesesimp>
+            <Ukrainian>Вивести групу з будівлі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnconscious_DisplayName">
             <English>Toggle Unconscious</English>
@@ -1510,6 +1608,7 @@
             <Chinesesimp>切换昏迷</Chinesesimp>
             <Turkish>Bayıltmayı Aç/Kapat</Turkish>
             <Hungarian>Eszméletlen állapot váltása</Hungarian>
+            <Ukrainian>Без свідомості (увім./вимк.)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnloadFromCargo_DisplayName">
             <English>Unload from cargo</English>
@@ -1521,6 +1620,7 @@
             <Korean>화물 내리기</Korean>
             <Japanese>貨物室から降ろす</Japanese>
             <Chinesesimp>从货舱卸载</Chinesesimp>
+            <Ukrainian>Вивантажити з відсіку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_None">
             <English>None</English>
@@ -1537,6 +1637,7 @@
             <Chinese>無</Chinese>
             <Chinesesimp>无</Chinesesimp>
             <Turkish>Hiçbiri</Turkish>
+            <Ukrainian>Ні</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_NotFastRopeCompatible">
             <English>%1 is not fastrope compatible.</English>
@@ -1552,6 +1653,7 @@
             <Japanese>%1 はファストロープに対応していません。</Japanese>
             <Chinese>%1無法使用快速繩降系統</Chinese>
             <Chinesesimp>%1无法使用快速绳降系统</Chinesesimp>
+            <Ukrainian>%1 несумісний зі швидким спуском</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_NothingSelected">
             <English>Place on a unit</English>
@@ -1569,6 +1671,7 @@
             <Chinesesimp>放置在一个单位上</Chinesesimp>
             <Turkish>Bir birim yerleştir</Turkish>
             <Hungarian>Semmi sincs az egér alatt</Hungarian>
+            <Ukrainian>Нічого не виділено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
             <English>Unit must be alive</English>
@@ -1586,6 +1689,7 @@
             <Chinesesimp>单位必须是活的</Chinesesimp>
             <Turkish>Birliğin yaşaması gerekiyor</Turkish>
             <Hungarian>Csak élő egységeken használni</Hungarian>
+            <Ukrainian>Застосовується тільки до живих юнітів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyEnoughCargoSpace">
             <English>Unit must have cargo space left</English>
@@ -1601,6 +1705,7 @@
             <Japanese>ユニットの貨物室に空きが必要です</Japanese>
             <Chinese>單位必須有剩餘的載貨空間</Chinese>
             <Chinesesimp>单位必须有剩余的载货空间</Chinesesimp>
+            <Ukrainian>Юніт повинен мати вільне місце у вантажному відсіку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyInfantry">
             <English>Unit must be infantry</English>
@@ -1617,6 +1722,7 @@
             <Chinese>單位必須是步兵</Chinese>
             <Chinesesimp>单位必须是步兵</Chinesesimp>
             <Hungarian>Csak járműben kívül lévő egységeken használni</Hungarian>
+            <Ukrainian>Застосовується тільки до піхоти поза технікою</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyNonCaptive">
             <English>Unit must not be captive</English>
@@ -1633,6 +1739,7 @@
             <Chinese>單位不能被俘虜</Chinese>
             <Chinesesimp>单位不能被俘虏</Chinesesimp>
             <Hungarian>Csak elfogatlan egységeken használni</Hungarian>
+            <Ukrainian>Юніт не повинен бути полоненим</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyPlayers">
             <English>Only Players</English>
@@ -1649,6 +1756,7 @@
             <Chinese>只有玩家</Chinese>
             <Chinesesimp>仅玩家</Chinesesimp>
             <Turkish>Sadece Oyuncular</Turkish>
+            <Ukrainian>Тільки гравці</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlySpecificSide">
             <English>Unit must belong to an appropriate side</English>
@@ -1664,6 +1772,7 @@
             <Japanese>ユニットは適切な陣営である必要があります</Japanese>
             <Chinese>單位必須屬於一個合適的一邊</Chinese>
             <Chinesesimp>单位必须属于一个合适的一边</Chinesesimp>
+            <Ukrainian>Юніт повинен належати відповідній стороні</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyStructures">
             <English>Unit must be a structure</English>
@@ -1679,6 +1788,7 @@
             <Japanese>ユニットは構造物である必要があります</Japanese>
             <Chinese>單位必須是建築</Chinese>
             <Chinesesimp>单位必须是建筑</Chinesesimp>
+            <Ukrainian>Юніт має бути будовою</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyVehicles">
             <English>Unit must be a vehicle</English>
@@ -1694,6 +1804,7 @@
             <Japanese>ユニットは車両である必要があります</Japanese>
             <Chinese>單位必須是載具</Chinese>
             <Chinesesimp>单位必须是载具</Chinesesimp>
+            <Ukrainian>Юніт має бути транспортом</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyVehiclesWithCargo">
             <English>Unit must be a vehicle with cargo space</English>
@@ -1709,6 +1820,7 @@
             <Japanese>ユニットは貨物室のある車両である必要があります</Japanese>
             <Chinese>單位必須是載具且有載貨空間</Chinese>
             <Chinesesimp>单位必须是载具且有载货空间</Chinesesimp>
+            <Ukrainian>Юніт має бути транспортом із вантажним відсіком</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_Players">
             <English>Players</English>
@@ -1725,6 +1837,7 @@
             <Chinese>玩家</Chinese>
             <Chinesesimp>玩家</Chinesesimp>
             <Turkish>Oyuncular</Turkish>
+            <Ukrainian>Гравці</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_PlayersAndAI">
             <English>Players and AI</English>
@@ -1741,6 +1854,7 @@
             <Chinese>玩家與AI</Chinese>
             <Chinesesimp>玩家与 AI</Chinesesimp>
             <Turkish>Oyuncular ve AI</Turkish>
+            <Ukrainian>Гравці та ШІ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_RequiresAddon">
             <English>Requires an addon that is not present</English>
@@ -1757,6 +1871,7 @@
             <Chinese>需要一個不存在的插件</Chinese>
             <Chinesesimp>需要一个不存在的插件</Chinesesimp>
             <Hungarian>Egy jelenleg hiányzó bővítményt igényel</Hungarian>
+            <Ukrainian>Потрібен аддон, який відсутній</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_SelectCargo">
             <English>Select cargo to unload</English>
@@ -1773,6 +1888,7 @@
             <Chinese>選擇要卸載的貨物</Chinese>
             <Chinesesimp>选择要卸载的货物</Chinesesimp>
             <Turkish>Seçilen kargo boşaltıldı</Turkish>
+            <Ukrainian>Виберіть вантаж для вивантаження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_SelectedGroup">
             <English>Selected Group</English>
@@ -1789,6 +1905,7 @@
             <Chinese>選擇小隊</Chinese>
             <Chinesesimp>选择小队</Chinesesimp>
             <Turkish>Seçilen Grup</Turkish>
+            <Ukrainian>Обрана група</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_Settings_Description">
             <English>Provides control over various aspects of Zeus.</English>
@@ -1805,6 +1922,7 @@
             <Chinese>提供宙斯各個方面的控制權</Chinese>
             <Chinesesimp>提供宙斯各个方面的控制权</Chinesesimp>
             <Hungarian>Különböző beállítási lehetőségeket biztosít a Zeus részeihez.</Hungarian>
+            <Ukrainian>Дозволяє контролювати різні аспекти Зевса.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_Settings_DisplayName">
             <English>Zeus Settings</English>
@@ -1822,6 +1940,7 @@
             <Chinesesimp>宙斯设定</Chinesesimp>
             <Turkish>Zeus Ayarları</Turkish>
             <Hungarian>Zeus beállítások</Hungarian>
+            <Ukrainian>Налаштування Зевса</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleAll">
             <English>Toggle All</English>
@@ -1833,6 +1952,7 @@
             <Korean>전부 토글</Korean>
             <Japanese>全てを切り替え</Japanese>
             <Chinesesimp>切换所有</Chinesesimp>
+            <Ukrainian>Вимкнути все</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget">
             <English>Toggle Target</English>
@@ -1848,6 +1968,7 @@
             <Japanese>切り替えの対象</Japanese>
             <Chinese>切換目標</Chinese>
             <Chinesesimp>切换目标</Chinesesimp>
+            <Ukrainian>Перемкнути ціль</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget_Tooltip">
             <English>Units affected by the toggle</English>
@@ -1863,6 +1984,7 @@
             <Japanese>切り替えの影響を受ける対象</Japanese>
             <Chinese>受切換所影響的單位</Chinese>
             <Chinesesimp>被菜单位受切换影响</Chinesesimp>
+            <Ukrainian>Юніти, до яких застосовується перемикання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ascension_Description">
             <English>Display global popup messages when a player is assigned as Zeus.</English>
@@ -1879,6 +2001,7 @@
             <Chinese>當一位玩家被指定為宙斯時顯示全域訊息</Chinese>
             <Chinesesimp>当一位玩家被指定为宙斯时显示全局信息</Chinesesimp>
             <Hungarian>Globális üzeneteket jelez ki, ha egy játékos Zeus-nak lesz beosztva.</Hungarian>
+            <Ukrainian>Відображає глобальне спливаюче повідомлення, коли один із гравців стає Зевсом.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ascension_DisplayName">
             <English>Ascension Messages</English>
@@ -1895,6 +2018,7 @@
             <Chinese>宙斯上任訊息</Chinese>
             <Chinesesimp>宙斯上任信息</Chinesesimp>
             <Hungarian>Felemelkedési üzenetek</Hungarian>
+            <Ukrainian>Повідомлення про вознесіння</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_bird_Description">
             <English>Spawn an eagle that follows the Zeus camera.</English>
@@ -1911,6 +2035,7 @@
             <Chinese>生成一個老鷹跟著宙斯的攝影機</Chinese>
             <Chinesesimp>生成一个老鹰跟着宙斯的摄影机</Chinesesimp>
             <Hungarian>Lerak egy sast, ami követi a Zeus kamerát.</Hungarian>
+            <Ukrainian>Спавнить орла, який слідує за камерою Зевса.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_bird_DisplayName">
             <English>Zeus Eagle</English>
@@ -1928,6 +2053,7 @@
             <Chinesesimp>宙斯鹰眼模式</Chinesesimp>
             <Turkish>Zeus Kartalı</Turkish>
             <Hungarian>Zeus sas</Hungarian>
+            <Ukrainian>Орел Зевса</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleCargoParadrop_DisplayName">
             <English>Paradrop Cargo</English>
@@ -1944,6 +2070,7 @@
             <Chinese>空投貨物</Chinese>
             <Chinesesimp>空投货物</Chinesesimp>
             <Turkish>Paraşüt Kargosu</Turkish>
+            <Ukrainian>Десантувати вантаж</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_paradrop_noCargoLoaded">
             <English>No cargo loaded</English>
@@ -1960,6 +2087,7 @@
             <Chinese>沒有貨物裝載</Chinese>
             <Chinesesimp>没有装载货物</Chinesesimp>
             <Turkish>Kargo yüklenmedi</Turkish>
+            <Ukrainian>Вантажний відсік порожній</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_radioOrdnance_Description">
             <English>Play a radio warning when Zeus uses ordnance.</English>
@@ -1976,6 +2104,7 @@
             <Chinese>當宙斯開始攻擊時使用無線電警告</Chinese>
             <Chinesesimp>当宙斯开始攻击时使用无线电警告</Chinesesimp>
             <Hungarian>Rádiós figyelmeztetés kiadása, ha a Zeus tüzérséget használ.</Hungarian>
+            <Ukrainian>Програє звук радіо щоразу, коли Зевс використовує артилерію.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_radioOrdnance_DisplayName">
             <English>Ordnance Warning</English>
@@ -1992,6 +2121,7 @@
             <Chinese>武裝警告</Chinese>
             <Chinesesimp>武装警告</Chinesesimp>
             <Hungarian>Tüzérségi figyelmeztetés</Hungarian>
+            <Ukrainian>Попередження про артобстріл</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_remoteWind_Description">
             <English>Play wind sounds when Zeus remote controls a unit.</English>
@@ -2008,6 +2138,7 @@
             <Chinese>當宙斯開始控制單位時利用風的聲音提示</Chinese>
             <Chinesesimp>当宙斯开始控制单位时利用风的声音提示</Chinesesimp>
             <Hungarian>Szélhangokat játszik le, ha a Zeus távvezérel egy egységet.</Hungarian>
+            <Ukrainian>Програє звук вітру щоразу, коли Зевс вселяється в юніта.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_remoteWind_DisplayName">
             <English>Wind Sounds</English>
@@ -2025,6 +2156,7 @@
             <Chinesesimp>风声</Chinesesimp>
             <Turkish>Rüzgar sesi</Turkish>
             <Hungarian>Szélhangok</Hungarian>
+            <Ukrainian>Звук вітру</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_Description">
             <English>Reveal mines to allies and place map markers.</English>
@@ -2041,6 +2173,7 @@
             <Chinese>地圖將標記隊友放置的地雷</Chinese>
             <Chinesesimp>地图将标记队友放置的地雷</Chinesesimp>
             <Hungarian>Feltárja az aknákat a szövetségeseknek, és jelölőket helyez el a térképen.</Hungarian>
+            <Ukrainian>Показує міни союзникам і позначає їх маркерами на мапі.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_DisplayName">
             <English>Reveal Mines</English>
@@ -2057,6 +2190,7 @@
             <Chinese>顯示地雷</Chinese>
             <Chinesesimp>显示地雷</Chinesesimp>
             <Hungarian>Aknák feltárása</Hungarian>
+            <Ukrainian>Показувати міни</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_full">
             <English>Allies + Map Markers</English>
@@ -2073,6 +2207,7 @@
             <Chinese>顯示盟軍+地圖標記</Chinese>
             <Chinesesimp>显示友军+地图标记</Chinesesimp>
             <Hungarian>Szövetségesek + térkép jelölők</Hungarian>
+            <Ukrainian>Союзники + Маркери на мапі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_partial">
             <English>Reveal to Allies</English>
@@ -2089,6 +2224,7 @@
             <Chinese>透露給盟軍</Chinese>
             <Chinesesimp>透露给友军</Chinesesimp>
             <Hungarian>Feltárás a szövetségeseknek</Hungarian>
+            <Ukrainian>Показувати союзникам</Ukrainian>
         </Key>
     </Package>
 </Project>

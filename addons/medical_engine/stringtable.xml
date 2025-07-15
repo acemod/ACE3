@@ -13,6 +13,7 @@
             <Korean>차량 충돌로 인해 탑승인원들이 피해를 받을 지 결정합니다.</Korean>
             <Japanese>車両が衝突をすると乗員がダメージを受けるかどうかを制御します。</Japanese>
             <Chinesesimp>控制乘员是否受到车辆碰撞的伤害。</Chinesesimp>
+            <Ukrainian>Контролює, чи отримує екіпаж шкоду від зіткнення транспортного засобу.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Engine_EnableVehicleCrashes_DisplayName">
             <English>Enable Vehicle Crash Damage</English>
@@ -26,6 +27,7 @@
             <Korean>차량 충돌 피해 활성화</Korean>
             <Japanese>車両衝突ダメージを有効化</Japanese>
             <Chinesesimp>启用车辆碰撞损坏</Chinesesimp>
+            <Ukrainian>Увім. шкоди при аварії в транспорті</Ukrainian>
         </Key>
     </Package>
 </Project>

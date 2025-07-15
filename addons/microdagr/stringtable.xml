@@ -16,6 +16,7 @@
             <Chinese>有多少地圖數據會顯示在微型軍用GPS接收器</Chinese>
             <Chinesesimp>有多少地图数据会显示在微型军用 GPS 接收器</Chinesesimp>
             <Hungarian>Mennyi térképadatot tartalmaz a MicroDAGR</Hungarian>
+            <Ukrainian>Скільки даних має відображатися на мапі MicroDAGR</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapDataAvailable_DisplayName">
             <English>MicroDAGR Map Fill</English>
@@ -32,6 +33,7 @@
             <Chinese>微型軍用GPS接收器地圖資料</Chinese>
             <Chinesesimp>微型军用 GPS 接收器地图资料</Chinesesimp>
             <Hungarian>MicroDAGR térképkitöltés</Hungarian>
+            <Ukrainian>Заповнення мапи MicroDAGR</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapFill_Full">
             <English>Full Satellite + Buildings</English>
@@ -48,6 +50,7 @@
             <Chinese>完整衛星畫面 + 建築物位置</Chinese>
             <Chinesesimp>完整卫星画面 + 建筑物位置</Chinesesimp>
             <Hungarian>Teljes műholdas + épületek</Hungarian>
+            <Ukrainian>Супутник + Будинки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapFill_None">
             <English>None (Cannot use map view)</English>
@@ -64,6 +67,7 @@
             <Chinese>無 (無法檢視地圖)</Chinese>
             <Chinesesimp>无（无法检视地图）</Chinesesimp>
             <Hungarian>Semmi (nem használható a térképnézet)</Hungarian>
+            <Ukrainian>Не показувати (забороняє використовувати режим мапи)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapFill_OnlyRoads">
             <English>Topographical + Roads</English>
@@ -80,6 +84,7 @@
             <Chinese>地形 + 道路</Chinese>
             <Chinesesimp>地形 + 道路</Chinesesimp>
             <Hungarian>Topográfia + utak</Hungarian>
+            <Ukrainian>Топографія + Дороги</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_Module_Description">
             <English>Controls how much data is filled on the microDAGR items.  Less data restricts the map view to show less on the minimap.</English>
@@ -96,6 +101,7 @@
             <Chinese>設定有多少數據會顯示在微型軍用GPS接收器上。這些資料的多寡會反映在迷你地圖的顯示上。</Chinese>
             <Chinesesimp>设定有多少数据会显示在微型军用 GPS 接收器上。这些资料的多寡会反映在迷你地图的显示上。</Chinesesimp>
             <Hungarian>Meghatárroza a MicroDAGR objektumok térképének tartalmát. A kevesebb adat korlátozza a térképnézeti módot az eszközön.</Hungarian>
+            <Ukrainian>Контролює, скільки даних має відображатися на мапі пристроїв MicroDAGR. Обмежує обсяг відображуваних даних на мінімапі.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_Module_DisplayName">
             <English>MicroDAGR Map Fill</English>
@@ -112,6 +118,7 @@
             <Chinese>微型軍用GPS接收器地圖資料</Chinese>
             <Chinesesimp>微型军用 GPS 接收器地图资料</Chinesesimp>
             <Hungarian>MicroDAGR térképkitöltés</Hungarian>
+            <Ukrainian>Заповнення мапи MicroDAGR</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_Description">
             <English>Controls how precise the waypointdistance can be displayed</English>
@@ -127,6 +134,7 @@
             <Japanese>ウェイポイント距離の表示精度を制御します。</Japanese>
             <Chinese>控制顯示的導航點精確度為多少</Chinese>
             <Chinesesimp>控制显示航点距离的精确程度。</Chinesesimp>
+            <Ukrainian>Керує точністю відображення відстаней маршрутних точок</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_DisplayName">
             <English>MicroDAGR - Waypoint Precision</English>
@@ -142,6 +150,7 @@
             <Japanese>MicroDAGR - ウェイポイントの精度</Japanese>
             <Chinese>微型軍用GPS接收器 - 導航精確度</Chinese>
             <Chinesesimp>微型军用 GPS 接收器—航点精度</Chinesesimp>
+            <Ukrainian>MicroDAGR - Точність маршрутних точок</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_close">
             <English>10m</English>
@@ -158,6 +167,7 @@
             <Chinese>十公尺</Chinese>
             <Chinesesimp>10米</Chinesesimp>
             <Turkish>10m</Turkish>
+            <Ukrainian>10 м</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_exact">
             <English>1m</English>
@@ -174,6 +184,7 @@
             <Chinese>一公尺</Chinese>
             <Chinesesimp>1米</Chinesesimp>
             <Turkish>1m</Turkish>
+            <Ukrainian>1 м</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_medium">
             <English>100m</English>
@@ -190,6 +201,7 @@
             <Chinese>一百公尺</Chinese>
             <Chinesesimp>100米</Chinesesimp>
             <Turkish>100m</Turkish>
+            <Ukrainian>100 м</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_closeUnit">
             <English>Close MicroDAGR</English>
@@ -206,6 +218,7 @@
             <Chinese>關閉微型軍用GPS接收器</Chinese>
             <Chinesesimp>关闭微型军用 GPS 接收器</Chinesesimp>
             <Hungarian>MicroDAGR elrejtése</Hungarian>
+            <Ukrainian>Закрити MicroDAGR</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_compasDirection">
             <English>Compass Direction</English>
@@ -222,6 +235,7 @@
             <Chinese>指北針方位</Chinese>
             <Chinesesimp>指南针方位</Chinesesimp>
             <Hungarian>Irányszög</Hungarian>
+            <Ukrainian>Азімут</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_configure">
             <English>Configure MicroDAGR</English>
@@ -238,6 +252,7 @@
             <Chinese>設定微型軍用GPS接收器</Chinese>
             <Chinesesimp>设定微型军用 GPS 接收器</Chinesesimp>
             <Hungarian>MicroDAGR konfigurálása</Hungarian>
+            <Ukrainian>Налаштувати MicroDAGR</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_controlMGRS">
             <English>MGRS-New</English>
@@ -254,6 +269,7 @@
             <Chinese>軍事網格座標系統—新型</Chinese>
             <Chinesesimp>军事网格座标系统—新型</Chinesesimp>
             <Hungarian>MGRS-új</Hungarian>
+            <Ukrainian>MGRS-Нова</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_controlRange">
             <English>Range:</English>
@@ -270,6 +286,7 @@
             <Chinese>範圍:</Chinese>
             <Chinesesimp>范围：</Chinesesimp>
             <Hungarian>Távolság:</Hungarian>
+            <Ukrainian>Дистанція:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_controlWGD">
             <English>WGD</English>
@@ -286,6 +303,7 @@
             <Chinese>世界座標</Chinese>
             <Chinesesimp>世界座标</Chinesesimp>
             <Hungarian>WGD</Hungarian>
+            <Ukrainian>WGD</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_itemDescription">
             <English>MicroDAGR advanced GPS receiver</English>
@@ -302,6 +320,7 @@
             <Chinese>微型軍用高級防禦GPS接收器</Chinese>
             <Chinesesimp>微型军用高级防御 GPS 接收器</Chinesesimp>
             <Hungarian>MicroDAGR fejlett GPS vevőegység</Hungarian>
+            <Ukrainian>Багатофункціональний GPS-приймач</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_itemName">
             <English>MicroDAGR GPS</English>
@@ -319,6 +338,7 @@
             <Chinesesimp>微型军用 GPS 接收器</Chinesesimp>
             <Turkish>MicroDAGR GPS</Turkish>
             <Hungarian>MicroDAGR GPS</Hungarian>
+            <Ukrainian>MicroDAGR GPS</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_menuConnectTo">
             <English>Connect To</English>
@@ -335,6 +355,7 @@
             <Chinese>連接到</Chinese>
             <Chinesesimp>连接到</Chinesesimp>
             <Hungarian>Csatlakozás</Hungarian>
+            <Ukrainian>Під'єднатися до</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_menuMark">
             <English>Mark</English>
@@ -351,6 +372,7 @@
             <Chinese>標記</Chinese>
             <Chinesesimp>标记</Chinesesimp>
             <Hungarian>Jelölés</Hungarian>
+            <Ukrainian>Відмітка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_menuSettings">
             <English>Settings</English>
@@ -367,6 +389,7 @@
             <Chinese>設定</Chinese>
             <Chinesesimp>设定</Chinesesimp>
             <Hungarian>Beállítások</Hungarian>
+            <Ukrainian>Налаштування</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_menuWaypoints">
             <English>Waypoints</English>
@@ -383,6 +406,7 @@
             <Chinese>路徑點</Chinese>
             <Chinesesimp>路径点</Chinesesimp>
             <Hungarian>Útvonalpontok</Hungarian>
+            <Ukrainian>Машрутні точки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_nextMode">
             <English>MicroDAGR - Next Mode</English>
@@ -396,6 +420,7 @@
             <Korean>마이크로DAGR - 다음 모드</Korean>
             <Japanese>MicroDAGR - 次のモードに</Japanese>
             <Chinesesimp>微型 GPS 接收器—下一个模式</Chinesesimp>
+            <Ukrainian>MicroDAGR - Наступний режим</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_previousMode">
             <English>MicroDAGR - Previous Mode</English>
@@ -409,6 +434,7 @@
             <Korean>마이크로DAGR - 이전 모드</Korean>
             <Japanese>MicroDAGR - 前のモードに</Japanese>
             <Chinesesimp>微型 GPS 接收器—上一个模式</Chinesesimp>
+            <Ukrainian>MicroDAGR - Попередній режим</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_settingDegrees">
             <English>Degrees</English>
@@ -425,6 +451,7 @@
             <Chinese>度</Chinese>
             <Chinesesimp>度</Chinesesimp>
             <Hungarian>Fok</Hungarian>
+            <Ukrainian>Градуси</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_settingMils">
             <English>Mils</English>
@@ -441,6 +468,7 @@
             <Chinese>密位</Chinese>
             <Chinesesimp>密位</Chinesesimp>
             <Hungarian>Mil</Hungarian>
+            <Ukrainian>Тисячні</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_settingOff">
             <English>Off</English>
@@ -458,6 +486,7 @@
             <Chinesesimp>关闭</Chinesesimp>
             <Turkish>Kapalı</Turkish>
             <Hungarian>Ki</Hungarian>
+            <Ukrainian>Вимк.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_settingOn">
             <English>On</English>
@@ -475,6 +504,7 @@
             <Chinesesimp>开启</Chinesesimp>
             <Turkish>Açık</Turkish>
             <Hungarian>Be</Hungarian>
+            <Ukrainian>Увім.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_settingShowWP">
             <English>Show Waypoints On Map:</English>
@@ -491,6 +521,7 @@
             <Chinese>顯示路徑點在地圖上:</Chinese>
             <Chinesesimp>显示路径点在地图上：</Chinesesimp>
             <Hungarian>Útvonalpontok mutatása a térképen:</Hungarian>
+            <Ukrainian>Показувати маршрутні точки на мапі:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_settingUseMils">
             <English>Angular Unit:</English>
@@ -507,6 +538,7 @@
             <Chinese>角密位:</Chinese>
             <Chinesesimp>角密位：</Chinesesimp>
             <Hungarian>Szögmértékegység:</Hungarian>
+            <Ukrainian>Кутові одиниці:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_show">
             <English>Show MicroDAGR</English>
@@ -523,6 +555,7 @@
             <Chinese>顯示微型軍用GPS接收器</Chinese>
             <Chinesesimp>显示微型军用 GPS 接收器</Chinesesimp>
             <Hungarian>MicroDAGR mutatása</Hungarian>
+            <Ukrainian>Показати MicroDAGR</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_toggleUnit">
             <English>Toggle MicroDAGR Display Mode</English>
@@ -539,6 +572,7 @@
             <Chinese>切換微型軍用GPS接收器顯示模式</Chinese>
             <Chinesesimp>切换微型军用 GPS 接收器显示模式</Chinesesimp>
             <Hungarian>MicroDAGR kijelzési mód váltása</Hungarian>
+            <Ukrainian>Змінити режим показу MicroDAGR</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_waypointsAdd">
             <English>Add</English>
@@ -555,6 +589,7 @@
             <Chinese>新增</Chinese>
             <Chinesesimp>新增</Chinesesimp>
             <Hungarian>Hozzáadás</Hungarian>
+            <Ukrainian>Додати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_waypointsDelete">
             <English>Delete</English>
@@ -571,6 +606,7 @@
             <Chinese>刪除</Chinese>
             <Chinesesimp>删除</Chinesesimp>
             <Hungarian>Törlés</Hungarian>
+            <Ukrainian>Видалити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_waypointsSet">
             <English>SetWP</English>
@@ -587,6 +623,7 @@
             <Chinese>設置路徑點</Chinese>
             <Chinesesimp>设置路径点</Chinesesimp>
             <Hungarian>UP Beállítása</Hungarian>
+            <Ukrainian>Встановити МТ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_wpEnterCords">
             <English>Enter Grid Cords:</English>
@@ -603,6 +640,7 @@
             <Chinese>輸入網格座標:</Chinese>
             <Chinesesimp>输入网格座标：</Chinesesimp>
             <Hungarian>Add meg a rácskoordinátákat:</Hungarian>
+            <Ukrainian>Введіть сіткові координати:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_wpEnterName">
             <English>Name of [%1]</English>
@@ -619,6 +657,7 @@
             <Chinese>名稱 [%1]</Chinese>
             <Chinesesimp>名称 [%1]</Chinesesimp>
             <Hungarian>[%1] neve</Hungarian>
+            <Ukrainian>Назва [%1]</Ukrainian>
         </Key>
     </Package>
 </Project>

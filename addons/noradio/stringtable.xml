@@ -13,6 +13,7 @@
             <Korean>음소거</Korean>
             <Japanese>無線無効化</Japanese>
             <Chinesesimp>去无线电</Chinesesimp>
+            <Ukrainian>Немає рації</Ukrainian>
         </Key>
         <Key ID="STR_ACE_NoRadio_setting">
             <English>Mute Player</English>
@@ -29,6 +30,7 @@
             <Chinese>玩家靜音</Chinese>
             <Chinesesimp>玩家静音</Chinesesimp>
             <Turkish>Oyuncuyu Sustur</Turkish>
+            <Ukrainian>Заглушити гравця</Ukrainian>
         </Key>
         <Key ID="STR_ACE_NoRadio_setting_tooltip">
             <English>Mutes the controlled player avatar.</English>
@@ -45,6 +47,7 @@
             <Chinese>靜音玩家所控制的角色</Chinese>
             <Chinesesimp>静音玩家所控制的角色。</Chinesesimp>
             <Turkish>Oyuncuları Susturur</Turkish>
+            <Ukrainian>Заглушити контрольованого гравця</Ukrainian>
         </Key>
     </Package>
 </Project>

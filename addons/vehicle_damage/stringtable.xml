@@ -13,6 +13,7 @@
             <Korean>고급 자동차 피해 활성화 (실험용)</Korean>
             <Japanese>車(Car)に対しての高度なダメージ計算を有効化します (試験的機能)</Japanese>
             <Chinesesimp>对轻型轮式车辆启用高级车辆损坏(测试阶段)</Chinesesimp>
+            <Ukrainian>Увімкнути розширене пошкодження машин (експериментальне)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_enable">
             <English>Enable advanced car damage</English>
@@ -26,6 +27,7 @@
             <Korean>고급 자동차 피해 활성화</Korean>
             <Japanese>高度な車ダメージを有効化</Japanese>
             <Chinesesimp>启用高级车辆损坏</Chinesesimp>
+            <Ukrainian>Увімкнути розширене пошкодження автомобіля</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_category_displayName">
             <English>ACE Advanced Vehicle Damage</English>
@@ -39,6 +41,7 @@
             <Korean>ACE 고급 차량 피해</Korean>
             <Japanese>ACE 高度な乗り物ダメージ</Japanese>
             <Chinesesimp>ACE 高级载具损坏</Chinesesimp>
+            <Ukrainian>ACE Розширене пошкодження техніки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_generic_turret_wreck">
             <English>Wreck (Turret)</English>
@@ -54,6 +57,7 @@
             <Japanese>残骸 (砲塔)</Japanese>
             <Chinese>殘骸 (砲塔)</Chinese>
             <Chinesesimp>残骸（炮塔）</Chinesesimp>
+            <Ukrainian>Уламки (башта)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_setting_description">
             <English>Enable advanced vehicle damage</English>
@@ -67,6 +71,7 @@
             <Korean>고급 차량 피해 활성화</Korean>
             <Japanese>乗り物(Vehicle)に対しての高度なダメージ計算を有効化します</Japanese>
             <Chinesesimp>启用高级载具损坏</Chinesesimp>
+            <Ukrainian>Увімкнути розширене пошкодження техніки</Ukrainian>
         </Key>
     </Package>
 </Project>

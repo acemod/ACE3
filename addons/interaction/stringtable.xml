@@ -17,6 +17,7 @@
             <Chinesesimp>左手</Chinesesimp>
             <Turkish>Sol Kol</Turkish>
             <Hungarian>Bal kar</Hungarian>
+            <Ukrainian>Ліва рука</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_ArmRight">
             <English>Right Arm</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>右手</Chinesesimp>
             <Turkish>Sağ Kol</Turkish>
             <Hungarian>Jobb kar</Hungarian>
+            <Ukrainian>Права рука</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamBlue">
             <English>Assign Blue</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>指派为蓝组</Chinesesimp>
             <Turkish>Maviye Ata</Turkish>
             <Hungarian>Hozzávonás a Kékhez</Hungarian>
+            <Ukrainian>Призначити в Синю групу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamGreen">
             <English>Assign Green</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>指派为绿组</Chinesesimp>
             <Turkish>Yeşile Ata</Turkish>
             <Hungarian>Hozzávonás a Zöldhöz</Hungarian>
+            <Ukrainian>Призначити в Зелену групу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamRed">
             <English>Assign Red</English>
@@ -85,6 +89,7 @@
             <Chinesesimp>指派为红组</Chinesesimp>
             <Turkish>Kırmızıya Ata</Turkish>
             <Hungarian>Hozzávonás a Piroshoz</Hungarian>
+            <Ukrainian>Призначити в Червону групу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamYellow">
             <English>Assign Yellow</English>
@@ -102,6 +107,7 @@
             <Chinesesimp>指派为黄组</Chinesesimp>
             <Turkish>Sarıya Ata</Turkish>
             <Hungarian>Hozzávonás a Sárgához</Hungarian>
+            <Ukrainian>Призначити в Жовту групу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_Back">
             <English>&lt;&lt; Back</English>
@@ -119,6 +125,7 @@
             <Chinesesimp>&lt;&lt;返回</Chinesesimp>
             <Turkish>&lt;&lt; Geri</Turkish>
             <Hungarian>&lt;&lt; Vissza</Hungarian>
+            <Ukrainian>&lt;&lt; Назад</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_BecomeLeader">
             <English>Become Leader</English>
@@ -136,6 +143,7 @@
             <Chinesesimp>成为队长</Chinesesimp>
             <Turkish>Lider ol</Turkish>
             <Hungarian>Vezetés átvétele</Hungarian>
+            <Ukrainian>Стати лідером</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_Dance">
             <English>DANCE!</English>
@@ -153,6 +161,7 @@
             <Chinesesimp>跳舞</Chinesesimp>
             <Turkish>DANS!</Turkish>
             <Hungarian>TÁNC!</Hungarian>
+            <Ukrainian>ТАНЦЮВАТИ!</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_DisableNegativeRating_Description">
             <English>Should players receive negative rating? When enabled players are only receiving positive ratings which prevents friendly AI fire when destroying friendly equipment or killing team members.</English>
@@ -168,6 +177,7 @@
             <Japanese>プレイヤーはネガティブな評価を受けるべきですか? これを有効化すると、プレイヤーはポジティブな評価のみ受けるようになり、仮に味方の兵器を破壊したり、友軍兵士を殺害したとしても、友軍AI兵がプレイヤーに対して発砲するのを防ぐことができます。</Japanese>
             <Chinese>玩家是否會收到負面評價? 當本功能開啟時玩家只會接收到正面評價，所以當玩家做出擊殺友軍AI、毀壞友軍裝備或殺害小隊夥伴都不會收到負面評價</Chinese>
             <Chinesesimp>玩家是否会收到负面评价？ 当本功能开启时玩家只会接收到正面评价，所以当玩家做出击杀友军 AI、毁坏友军装备或杀害小队伙伴都不会收到负面评价。</Chinesesimp>
+            <Ukrainian>Чи повинні гравці отримувати від'ємний рейтинг?\nКоли ввімкнено, гравці отримують тільки позитивний рейтинг, що запобігає дружньому вогню від ШІ під час знищення дружнього обладнання або вбивства членів команди.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_DisableNegativeRating_DisplayName">
             <English>Disable negative rating</English>
@@ -183,6 +193,7 @@
             <Japanese>ネガティブな評価を無効化</Japanese>
             <Chinese>關閉負面評價</Chinese>
             <Chinesesimp>关闭负面评价</Chinesesimp>
+            <Ukrainian>Відкл. негативний рейтинг</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_DisplayName">
             <English>Interaction</English>
@@ -199,6 +210,7 @@
             <Chinese>互動</Chinese>
             <Chinesesimp>互动菜单</Chinesesimp>
             <Turkish>Etkileşim</Turkish>
+            <Ukrainian>Взаємодія</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_EnableTeamManagement_Description">
             <English>Should players be allowed to use the Team Management Menu? Default: Yes</English>
@@ -216,6 +228,7 @@
             <Chinesesimp>允许玩家使用小队管理菜单？ 预设：是</Chinesesimp>
             <Turkish>Oyuncuların Takım Yönetimi Menüsünü kullanmalarına izin verilmeli mi? Varsayılan: Evet</Turkish>
             <Hungarian>A játékosoknak engedélyezve legyen a csapatkezelő menü? Alapértelmezett: Igen</Hungarian>
+            <Ukrainian>Чи дозволити гравцям використовувати меню керування групами? За замовчуванням: Так</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_EnableTeamManagement_DisplayName">
             <English>Enable Team Management</English>
@@ -233,6 +246,7 @@
             <Chinesesimp>启用小队管理</Chinesesimp>
             <Turkish>Takım Yönetimini Etkinleştir</Turkish>
             <Hungarian>Csapatkezelés engedélyezése</Hungarian>
+            <Ukrainian>Керування групами</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_Equipment">
             <English>Equipment</English>
@@ -250,6 +264,7 @@
             <Chinesesimp>装备</Chinesesimp>
             <Turkish>Ekipmanlar</Turkish>
             <Hungarian>Felszerelés</Hungarian>
+            <Ukrainian>Спорядження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_Flip">
             <English>Flip</English>
@@ -266,6 +281,7 @@
             <Chinese>拋</Chinese>
             <Chinesesimp>翻动</Chinesesimp>
             <Turkish>Döndür</Turkish>
+            <Ukrainian>Перевернути</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_GetDown">
             <English>Get Down!</English>
@@ -283,6 +299,7 @@
             <Chinesesimp>趴下！</Chinesesimp>
             <Turkish>Yat!</Turkish>
             <Hungarian>A földre!</Hungarian>
+            <Ukrainian>Лягай!</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_GetOut">
             <English>Get Out</English>
@@ -299,6 +316,7 @@
             <Chinese>出去</Chinese>
             <Chinesesimp>出去</Chinesesimp>
             <Turkish>Dışarı</Turkish>
+            <Ukrainian>Виходь!</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_Head">
             <English>Head</English>
@@ -316,6 +334,7 @@
             <Chinesesimp>头部</Chinesesimp>
             <Turkish>Kafa</Turkish>
             <Hungarian>Fej</Hungarian>
+            <Ukrainian>Голова</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_Interact">
             <English>Interact</English>
@@ -333,6 +352,7 @@
             <Chinesesimp>互动</Chinesesimp>
             <Turkish>Etkileşim</Turkish>
             <Hungarian>Cselekvés</Hungarian>
+            <Ukrainian>Взаємодіяти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_InteractionMenu">
             <English>Interaction Menu</English>
@@ -350,6 +370,7 @@
             <Chinesesimp>互动菜单</Chinesesimp>
             <Turkish>Etkileim Menüsü</Turkish>
             <Hungarian>Cselekvő menü</Hungarian>
+            <Ukrainian>Меню взаємодії</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_InteractionMenuSelf">
             <English>Interaction Menu (Self)</English>
@@ -367,6 +388,7 @@
             <Chinesesimp>互动菜单（自我）</Chinesesimp>
             <Turkish>Etkileşim Menüsü(Şahsi)</Turkish>
             <Hungarian>Cselekvő menü (saját)</Hungarian>
+            <Ukrainian>Меню взаємодії (із собою)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinGroup">
             <English>Join group</English>
@@ -384,6 +406,7 @@
             <Chinesesimp>加入小队</Chinesesimp>
             <Turkish>Gruba katıl</Turkish>
             <Hungarian>Csatlakozás a csoporthoz</Hungarian>
+            <Ukrainian>Вступити до групи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamBlue">
             <English>Join Blue</English>
@@ -401,6 +424,7 @@
             <Chinesesimp>加入蓝组</Chinesesimp>
             <Turkish>Maviye Katıl</Turkish>
             <Hungarian>Belépés a Kékbe</Hungarian>
+            <Ukrainian>Приєднатися до Синьої групи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamGreen">
             <English>Join Green</English>
@@ -418,6 +442,7 @@
             <Chinesesimp>加入绿组</Chinesesimp>
             <Turkish>Yeşile Katıl</Turkish>
             <Hungarian>Belépés a Zöldbe</Hungarian>
+            <Ukrainian>Приєднатися до Зеленої групи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamMain">
             <English>Join White</English>
@@ -432,6 +457,7 @@
             <Korean>백팀 참여</Korean>
             <Japanese>ホワイトに参加</Japanese>
             <Chinesesimp>加入白组</Chinesesimp>
+            <Ukrainian>Приєднатися до Білої групи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamRed">
             <English>Join Red</English>
@@ -449,6 +475,7 @@
             <Chinesesimp>加入红组</Chinesesimp>
             <Turkish>Kırmızıya Katıl</Turkish>
             <Hungarian>Belépés a Pirosba</Hungarian>
+            <Ukrainian>Приєднатися до Червоної групи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamYellow">
             <English>Join Yellow</English>
@@ -466,6 +493,7 @@
             <Chinesesimp>加入黄组</Chinesesimp>
             <Turkish>Sarıya Katıl</Turkish>
             <Hungarian>Belépés a Sárgába</Hungarian>
+            <Ukrainian>Приєднатися до Жовтої групи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinedTeam">
             <English>You joined Team %1</English>
@@ -483,6 +511,7 @@
             <Chinesesimp>你已加入%1组</Chinesesimp>
             <Turkish>Takıma katıldın %1</Turkish>
             <Hungarian>Csatlakoztál a %1 csapathoz</Hungarian>
+            <Ukrainian>Ви приєдналися до групи %1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_LeaveGroup">
             <English>Leave Group</English>
@@ -500,6 +529,7 @@
             <Chinesesimp>离开小队</Chinesesimp>
             <Turkish>Gruptan ayrıl</Turkish>
             <Hungarian>Csoport elhagyása</Hungarian>
+            <Ukrainian>Вийти з групи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_LeaveTeam">
             <English>Leave Team</English>
@@ -517,6 +547,7 @@
             <Chinesesimp>离开小队</Chinesesimp>
             <Turkish>Takımdan Ayrıl</Turkish>
             <Hungarian>Csapat elhagyása</Hungarian>
+            <Ukrainian>Залишити групу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_LeftTeam">
             <English>You left the Team</English>
@@ -534,6 +565,7 @@
             <Chinesesimp>你已离开小队</Chinesesimp>
             <Turkish>Takımdan Ayrıldın</Turkish>
             <Hungarian>Elhagytad a csapatot</Hungarian>
+            <Ukrainian>Ви залишили групу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_LegLeft">
             <English>Left Leg</English>
@@ -551,6 +583,7 @@
             <Chinesesimp>左脚</Chinesesimp>
             <Turkish>Sol Bacak</Turkish>
             <Hungarian>Bal láb</Hungarian>
+            <Ukrainian>Ліва нога</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_LegRight">
             <English>Right Leg</English>
@@ -568,6 +601,7 @@
             <Chinesesimp>右脚</Chinesesimp>
             <Turkish>Sağ Bacak</Turkish>
             <Hungarian>Jobb láb</Hungarian>
+            <Ukrainian>Права нога</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_LockDoor">
             <English>Lock Door</English>
@@ -585,6 +619,7 @@
             <Chinesesimp>锁门</Chinesesimp>
             <Turkish>Kapıyı Kilitle</Turkish>
             <Hungarian>Ajtó bezárása</Hungarian>
+            <Ukrainian>Заблокувати двері</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_LockedDoor">
             <English>Locked Door</English>
@@ -602,6 +637,7 @@
             <Chinesesimp>门已上锁</Chinesesimp>
             <Turkish>Kilitli Kapı</Turkish>
             <Hungarian>Zárt ajtó</Hungarian>
+            <Ukrainian>Двері заблоковані</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_MainAction">
             <English>Interactions</English>
@@ -619,6 +655,7 @@
             <Chinesesimp>互动</Chinesesimp>
             <Turkish>Etkileşimler</Turkish>
             <Hungarian>Cselekvések</Hungarian>
+            <Ukrainian>Взаємодії</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_MakeSelection">
             <English>Select</English>
@@ -636,6 +673,7 @@
             <Chinesesimp>选择</Chinesesimp>
             <Turkish>Seç</Turkish>
             <Hungarian>Kiválaszt</Hungarian>
+            <Ukrainian>Вибрати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_ModifierKey">
             <English>Modifier Key</English>
@@ -653,6 +691,7 @@
             <Chinesesimp>编辑按键</Chinesesimp>
             <Turkish>Modifiye Tuşu</Turkish>
             <Hungarian>Módosító billentyű</Hungarian>
+            <Ukrainian>Ключ-модифікатор</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_Description">
             <English>Team management allows color allocation for team members, taking team command and joining/leaving teams.</English>
@@ -669,6 +708,7 @@
             <Chinese>隊伍管理系統允許將指定顏色分配到隊伍成員上，接管隊長職位或加入/離開隊伍</Chinese>
             <Chinesesimp>队伍管理系统允许将指定颜色分配到队伍成员上，接管队长职位或加入/离开队伍</Chinesesimp>
             <Hungarian>A csapatkezelés engedélyezi a tagok színének meghatározását, a vezetés átvételét, és csapatoknál be-és kilépést.</Hungarian>
+            <Ukrainian>Керування групами дає змогу призначати кольори членам груп, брати командування, вступати в групи або залишати їх.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_DisplayName">
             <English>Interaction System</English>
@@ -686,6 +726,7 @@
             <Chinesesimp>互动系统</Chinesesimp>
             <Turkish>Etkileşim Sistemi</Turkish>
             <Hungarian>Interakciós rendszer</Hungarian>
+            <Ukrainian>Взаємодія</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_NotInRange">
             <English>Not in Range</English>
@@ -703,6 +744,7 @@
             <Chinesesimp>不在范围内</Chinesesimp>
             <Turkish>Menzilde Değil</Turkish>
             <Hungarian>Hatótávolságon kívül</Hungarian>
+            <Ukrainian>Занадто далеко</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_OpenBox">
             <English>Open</English>
@@ -720,6 +762,7 @@
             <Chinesesimp>打开</Chinesesimp>
             <Turkish>Aç</Turkish>
             <Hungarian>Nyitás</Hungarian>
+            <Ukrainian>Відкрити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_OpenDoor">
             <English>Open / Close Door</English>
@@ -737,6 +780,7 @@
             <Chinesesimp>打开/关上 门</Chinesesimp>
             <Turkish>Kapıyı Aç/Kapat</Turkish>
             <Hungarian>Ajtó nyitása / zárása</Hungarian>
+            <Ukrainian>Відкрити/закрити двері</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_Pardon">
             <English>Pardon</English>
@@ -754,6 +798,7 @@
             <Chinesesimp>原谅</Chinesesimp>
             <Turkish>Pardon</Turkish>
             <Hungarian>Megbocsátás</Hungarian>
+            <Ukrainian>Вибачте</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazine">
             <English>Pass magazine</English>
@@ -770,6 +815,7 @@
             <Chinese>給予彈匣</Chinese>
             <Chinesesimp>给予弹匣</Chinesesimp>
             <Turkish>Sarjörleri birleştir</Turkish>
+            <Ukrainian>Передати магазин</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineHandgun">
             <English>Pistol magazine</English>
@@ -786,6 +832,7 @@
             <Chinese>給予手槍彈匣</Chinese>
             <Chinesesimp>给予手枪弹匣</Chinesesimp>
             <Turkish>Tabanca Şarjörü</Turkish>
+            <Ukrainian>Магазин до пістолета</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineHint">
             <English>%1 passed you a %2 magazine.</English>
@@ -801,6 +848,7 @@
             <Japanese>%1 は あなたに %2 の弾倉を渡した。</Japanese>
             <Chinese>%1給你%2彈匣</Chinese>
             <Chinesesimp>%1给你%2弹匣</Chinesesimp>
+            <Ukrainian>%1 передав вам магазин %2.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazinePrimary">
             <English>Primary magazine</English>
@@ -817,6 +865,7 @@
             <Chinese>給予主武器彈匣</Chinese>
             <Chinesesimp>给予主武器弹匣</Chinesesimp>
             <Turkish>Birincil Şarjörü</Turkish>
+            <Ukrainian>Основний магазин</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineSetting">
             <English>Show "pass magazine" interaction</English>
@@ -832,6 +881,7 @@
             <Japanese>"弾倉を渡す"をインタラクションに表示</Japanese>
             <Chinese>顯示"給予彈匣"互動動作</Chinese>
             <Chinesesimp>显示"给予弹匣"互动动作</Chinesesimp>
+            <Ukrainian>Показувати дію "передати магазин"</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_PassThrowable">
             <English>Pass grenade</English>
@@ -842,6 +892,7 @@
             <Korean>수류탄 건네주기</Korean>
             <Japanese>手榴弾を渡す</Japanese>
             <Chinesesimp>给予投掷物</Chinesesimp>
+            <Ukrainian>Передати гранати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_PassThrowableHint">
             <English>%1 passed you %2.</English>
@@ -852,6 +903,7 @@
             <Korean>%1 님이 %2을(를) 건네주었습니다.</Korean>
             <Japanese>%1 は あなたに %2 を渡した。</Japanese>
             <Chinesesimp>%1给你了%2</Chinesesimp>
+            <Ukrainian>%1 передав вам %2.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_PassThrowableSetting">
             <English>Show "pass grenade" interaction</English>
@@ -862,6 +914,7 @@
             <Korean>"수류탄 건네주기" 상호작용 표시</Korean>
             <Japanese>"手榴弾を渡す"をインタラクションに表示</Japanese>
             <Chinesesimp>显示"给予投掷物"选项</Chinesesimp>
+            <Ukrainian>Показувати дію "передати гранату"</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_Passengers">
             <English>Passengers</English>
@@ -879,6 +932,7 @@
             <Chinesesimp>乘客</Chinesesimp>
             <Turkish>Yolcular</Turkish>
             <Hungarian>Utasok</Hungarian>
+            <Ukrainian>Пасажири</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_PullOutBody">
             <English>Pull out body</English>
@@ -895,6 +949,7 @@
             <Chinese>拿出屍體</Chinese>
             <Chinesesimp>拿出尸体</Chinesesimp>
             <Turkish>Vücudu dışarı çıkart</Turkish>
+            <Ukrainian>Витягнути тіло</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_Push">
             <English>Push</English>
@@ -912,6 +967,7 @@
             <Chinesesimp>推</Chinesesimp>
             <Turkish>Ittir</Turkish>
             <Hungarian>Tolás</Hungarian>
+            <Ukrainian>Штовхнути</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_RenameGroup">
             <English>Rename Group</English>
@@ -925,6 +981,7 @@
             <Korean>그룹 명칭 다시 짓기</Korean>
             <Japanese>グループ名変更</Japanese>
             <Chinesesimp>小队重命名</Chinesesimp>
+            <Ukrainian>Перейменувати групу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_RenameGroupAlreadyExists">
             <English>This group name is already in use.</English>
@@ -938,6 +995,7 @@
             <Korean>그 명칭은 이미 사용 중 입니다.</Korean>
             <Japanese>このグループ名は既に使われています。</Japanese>
             <Chinesesimp>该小队名称已被使用</Chinesesimp>
+            <Ukrainian>Це ім'я групи вже використовується.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_RenameGroupInput">
             <English>NEW GROUP NAME:</English>
@@ -951,6 +1009,7 @@
             <Korean>새 그룹 명칭:</Korean>
             <Japanese>新しいグループ名:</Japanese>
             <Chinesesimp>新的小队名：</Chinesesimp>
+            <Ukrainian>НОВЕ ІМ'Я ГРУПИ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_ScrollHint">
             <English>Scroll</English>
@@ -968,6 +1027,7 @@
             <Chinesesimp>滚动</Chinesesimp>
             <Turkish>Kaydırma</Turkish>
             <Hungarian>Görgetés</Hungarian>
+            <Ukrainian>Перегорнути</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_SendAway">
             <English>Go Away!</English>
@@ -985,6 +1045,7 @@
             <Chinesesimp>走开！</Chinesesimp>
             <Turkish>Git!</Turkish>
             <Hungarian>Tűnés!</Hungarian>
+            <Ukrainian>Забирайтеся звідси!</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_SettingAnimActionsName">
             <English>Interaction with animations</English>
@@ -996,6 +1057,7 @@
             <Korean>애니메이션 있는 상호작용</Korean>
             <Japanese>車両アニメーションベースのインタラクション</Japanese>
             <Chinesesimp>互动动作动画</Chinesesimp>
+            <Ukrainian>Взаємодія з анімаціями</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_SmashWindshield">
             <English>Smash windshield</English>
@@ -1013,6 +1075,7 @@
             <Chinesesimp>砸碎挡风玻璃</Chinesesimp>
             <Turkish>Ön camı parçala</Turkish>
             <Hungarian>Szélvédő széttörése</Hungarian>
+            <Ukrainian>Вибити лобове скло</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_Squad">
             <English>Squad</English>
@@ -1029,6 +1092,7 @@
             <Chinese>分隊</Chinese>
             <Chinesesimp>小队</Chinesesimp>
             <Turkish>Manga</Turkish>
+            <Ukrainian>Загін</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_StopDancing">
             <English>Stop Dancing</English>
@@ -1046,6 +1110,7 @@
             <Chinesesimp>停止跳舞</Chinesesimp>
             <Turkish>Dans Etmeyi Durdur</Turkish>
             <Hungarian>Tánc abbahagyása</Hungarian>
+            <Ukrainian>Припинити танцювати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_TapShoulder">
             <English>Tap Shoulder</English>
@@ -1063,6 +1128,7 @@
             <Chinesesimp>轻拍肩膀</Chinesesimp>
             <Turkish>Omuzuna Dokun</Turkish>
             <Hungarian>Vállveregetés</Hungarian>
+            <Ukrainian>Поплескати по плечу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamBLUE">
             <English>Blue</English>
@@ -1080,6 +1146,7 @@
             <Chinesesimp>蓝色</Chinesesimp>
             <Turkish>Mavi</Turkish>
             <Hungarian>Kék</Hungarian>
+            <Ukrainian>Синій</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamGREEN">
             <English>Green</English>
@@ -1097,6 +1164,7 @@
             <Chinesesimp>绿色</Chinesesimp>
             <Turkish>Yeşil</Turkish>
             <Hungarian>Zöld</Hungarian>
+            <Ukrainian>Зелений</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamManagement">
             <English>Team Management</English>
@@ -1114,6 +1182,7 @@
             <Chinesesimp>小队管理</Chinesesimp>
             <Turkish>Takım Yönetimi</Turkish>
             <Hungarian>Csapat kezelése</Hungarian>
+            <Ukrainian>Управління групою</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamRED">
             <English>Red</English>
@@ -1131,6 +1200,7 @@
             <Chinesesimp>红色</Chinesesimp>
             <Turkish>Kırmızı</Turkish>
             <Hungarian>Piros</Hungarian>
+            <Ukrainian>Червоний</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamYELLOW">
             <English>Yellow</English>
@@ -1148,6 +1218,7 @@
             <Chinesesimp>黄色</Chinesesimp>
             <Turkish>Sarı</Turkish>
             <Hungarian>Sárga</Hungarian>
+            <Ukrainian>Жовтий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_Torso">
             <English>Torso</English>
@@ -1165,6 +1236,7 @@
             <Chinesesimp>身体</Chinesesimp>
             <Turkish>Gövde</Turkish>
             <Hungarian>Testtörzs</Hungarian>
+            <Ukrainian>Тулуб</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOff">
             <English>Turn off</English>
@@ -1181,6 +1253,7 @@
             <Chinese>關閉</Chinese>
             <Chinesesimp>关闭</Chinesesimp>
             <Turkish>Kapat</Turkish>
+            <Ukrainian>Вимкнути</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOn">
             <English>Turn on</English>
@@ -1197,6 +1270,7 @@
             <Chinese>開啟</Chinese>
             <Chinesesimp>开启</Chinesesimp>
             <Turkish>Aç</Turkish>
+            <Ukrainian>Увімкнути</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_UnlockDoor">
             <English>Unlock Door</English>
@@ -1214,6 +1288,7 @@
             <Chinesesimp>解锁门</Chinesesimp>
             <Turkish>Kapının Kilidini Aç</Turkish>
             <Hungarian>Zár kinyitása</Hungarian>
+            <Ukrainian>Розблокувати двері</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_UnlockedDoor">
             <English>Unlocked Door</English>
@@ -1231,6 +1306,7 @@
             <Chinesesimp>门未上锁</Chinesesimp>
             <Turkish>Kilidi Açık Kapı</Turkish>
             <Hungarian>Nyitott ajtó</Hungarian>
+            <Ukrainian>Двері розблоковано</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_Weapon">
             <English>Weapon</English>
@@ -1248,6 +1324,7 @@
             <Chinesesimp>武器</Chinesesimp>
             <Turkish>Silah</Turkish>
             <Hungarian>Fegyver</Hungarian>
+            <Ukrainian>Зброя</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_WeaponOnBack">
             <English>Put weapon on back</English>
@@ -1265,6 +1342,7 @@
             <Chinesesimp>将武器放到背后</Chinesesimp>
             <Turkish>Silahı arkaya koy</Turkish>
             <Hungarian>Fegyvert hátra</Hungarian>
+            <Ukrainian>Повісити зброю на спину</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_YouWereTappedLeft">
             <English>You were tapped on the LEFT shoulder.</English>
@@ -1282,6 +1360,7 @@
             <Chinesesimp>你的左肩膀被轻拍了一下</Chinesesimp>
             <Turkish>Birisi Sol Omuzuna Dokundu</Turkish>
             <Hungarian>Megveregették a BAL válladat.</Hungarian>
+            <Ukrainian>Вас поплескали по ЛІВОМУ плечу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_YouWereTappedRight">
             <English>You were tapped on the RIGHT shoulder</English>
@@ -1299,6 +1378,7 @@
             <Chinesesimp>你的右肩膀被轻拍了一下</Chinesesimp>
             <Turkish>Birisi Sağ Omuzuna Dokundu</Turkish>
             <Hungarian>Megveregették a JOBB válladat.</Hungarian>
+            <Ukrainian>Вас поплескали по ПРАВОМУ плечу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_enableRenameGroup_Description">
             <English>Allows a group leader to rename their group if the name is not already taken.</English>
@@ -1312,6 +1392,7 @@
             <Korean>그룹 리더가 그룹 이름을 재설정하는 것을 허가합니다.</Korean>
             <Japanese>グループ リーダーによるグループ名の変更を許可します。</Japanese>
             <Chinesesimp>允许队长在队名未被占用的情况下重命名。</Chinesesimp>
+            <Ukrainian>Дозволити лідеру групи її перейменування, якщо ім'я не зайняте.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_enableRenameGroup_DisplayName">
             <English>Allow group rename</English>
@@ -1325,6 +1406,7 @@
             <Korean>그룹 이름 재설정 허가</Korean>
             <Japanese>グループ名変更を許可</Japanese>
             <Chinesesimp>允许小队重命名</Chinesesimp>
+            <Ukrainian>Дозволити перейменування групи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_Description">
             <English>Limit some interactions on vehicles crewed by enemy factions.</English>
@@ -1336,6 +1418,7 @@
             <Korean>적 진영이 탑승한 차량과의 일부 상호작용을 제한합니다.</Korean>
             <Japanese>敵性力の乗員が乗っている車両へのインタラクションを一部制限します。</Japanese>
             <Chinesesimp>对敌军载具或固定武器乘员使用互动</Chinesesimp>
+            <Ukrainian>Обмежте деякі взаємодії на транспортних засобах, керованих ворожою стороною.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_DisplayName">
             <English>Interact With Enemy Crew</English>
@@ -1347,6 +1430,7 @@
             <Korean>적 승무원과의 상호작용</Korean>
             <Japanese>敵乗員がいる状態でのインタラクト</Japanese>
             <Chinesesimp>敌军乘员互动</Chinesesimp>
+            <Ukrainian>Взаємодія з ворожим екіпажем</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_allowCSW">
             <English>Allow for Static Weapons</English>
@@ -1358,6 +1442,7 @@
             <Korean>고정화기 허용</Korean>
             <Japanese>固定火器での許可</Japanese>
             <Chinesesimp>允许固定式武器</Chinesesimp>
+            <Ukrainian>Дозволити використання статичної зброї</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithTerrainObjects_Description">
             <English>Warning: can cause some objects to collide with others.</English>
@@ -1371,6 +1456,7 @@
             <Korean>주의: 물체끼리 충돌하는 현상이 있을 수 있음.</Korean>
             <Japanese>警告: 一部のオブジェクトが干渉する可能性があります。</Japanese>
             <Chinesesimp>警告：会导致一些物体与其他物体发生碰撞。</Chinesesimp>
+            <Ukrainian>Увага: може викликати відштовхування деяких об'єктів один від одного.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_remoteTeamManagement_Description">
             <English>Allow dropping and changing team colors of any unit in player's squad</English>
@@ -1382,6 +1468,7 @@
             <Korean>플레이어 분대의 모든 유닛을 삭제하고 팀 색상 변경하는 것을 허용합니다.</Korean>
             <Japanese>プレイヤー分隊内の任意のユニットにチームからの脱退と色の変更を許可します</Japanese>
             <Chinesesimp>允许小队长更改队内玩家的火力组颜色</Chinesesimp>
+            <Ukrainian>Дозволяє скидати і змінювати командні кольори будь-якого підрозділу в загоні гравця</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_remoteTeamManagement_DisplayName">
             <English>Remote Squad Management</English>
@@ -1393,6 +1480,7 @@
             <Korean>분대 원격 관리</Korean>
             <Japanese>遠隔分隊管理</Japanese>
             <Chinesesimp>远程火力组颜色管理</Chinesesimp>
+            <Ukrainian>Дистанційне керування загоном</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachmentsAttach">
             <English>Attach</English>
@@ -1406,6 +1494,7 @@
             <Korean>붙이기</Korean>
             <Japanese>を取り付け</Japanese>
             <Chinesesimp>附加</Chinesesimp>
+            <Ukrainian>Встановити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachmentsDetach">
             <English>Detach</English>
@@ -1419,6 +1508,7 @@
             <Korean>떼어내기</Korean>
             <Japanese>を外す</Japanese>
             <Chinesesimp>拆卸</Chinesesimp>
+            <Ukrainian>Зняти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachments_Description">
             <English>Enables attach/detach weapon attachment actions for current weapon.</English>
@@ -1432,6 +1522,7 @@
             <Korean>현재 사용하고 있는 무기에서 부착물을 붙이거나 떼냅니다.</Korean>
             <Japanese>インタラクションから使用中の武器に対してのアタッチメント取り外しを可能にします。</Japanese>
             <Chinesesimp>启用当前武器的附加/拆卸武器配件的动作。</Chinesesimp>
+            <Ukrainian>Вмикає дії Встановити/Зняти для пристосувань поточної зброї.</Ukrainian>
         </Key>
     </Package>
 </Project>

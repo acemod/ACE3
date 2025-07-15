@@ -17,6 +17,7 @@
             <Chinesesimp>铁丝网卷</Chinesesimp>
             <Turkish>Bıçaklı Tel Rulo</Turkish>
             <Hungarian>Concertina wire coil</Hungarian>
+            <Ukrainian>Колючий дріт (моток)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Concertina_Wire_DisplayName">
             <English>Concertina Wire</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>铁丝网</Chinesesimp>
             <Turkish>Bıçaklı Tel</Turkish>
             <Hungarian>Concertina wire</Hungarian>
+            <Ukrainian>Колючий дріт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Concertina_Wire_RollWire">
             <English>Deploy Concertina Wire</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>部署铁丝网</Chinesesimp>
             <Turkish>Bıçaklı Telleri Yerleştir</Turkish>
             <Hungarian>Deploy Concertina wire</Hungarian>
+            <Ukrainian>Монтувати колючий дріт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Concertina_Wire_UnrollWire">
             <English>Dismount Concertina Wire</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>卸下铁丝网</Chinesesimp>
             <Turkish>Bıçaklı Telleri Sök</Turkish>
             <Hungarian>Dismount Concertina wire</Hungarian>
+            <Ukrainian>Демонтувати колючий дріт</Ukrainian>
         </Key>
     </Package>
 </Project>

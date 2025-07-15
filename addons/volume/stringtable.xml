@@ -14,6 +14,7 @@
             <Japanese>フェードの遅延</Japanese>
             <Chinese>淡出/入延遲</Chinese>
             <Chinesesimp>淡出/入延迟</Chinesesimp>
+            <Ukrainian>Затримка затухання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Volume_FadeDelayDescription">
             <English>Time it takes (in seconds) for the sound to fade in/out.</English>
@@ -28,6 +29,7 @@
             <Japanese>音がフェードイン/アウトするまでの時間。 (秒単位)</Japanese>
             <Chinese>設定音量淡出/入時所需的秒數。</Chinese>
             <Chinesesimp>设定音量淡出/入时所需的秒数。</Chinesesimp>
+            <Ukrainian>Час (сек.) для затухання/відновлення звуку.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Volume_KeybindDescription">
             <English>Toggle volume reduction.</English>
@@ -43,6 +45,7 @@
             <Chinese>切換降低音量。</Chinese>
             <Chinesesimp>切换降低音量。</Chinesesimp>
             <Turkish>Ses azaltmayı aç / kapat.</Turkish>
+            <Ukrainian>Перемикає зменшення гучності</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Volume_KeybindName">
             <English>Toggle Volume</English>
@@ -58,6 +61,7 @@
             <Chinese>切換音量</Chinese>
             <Chinesesimp>切换音量</Chinesesimp>
             <Turkish>Sesi Aç/Kapat</Turkish>
+            <Ukrainian>Переключити гучність</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Volume_LowerInVehicles">
             <English>Lower in vehicles</English>
@@ -73,6 +77,7 @@
             <Chinese>在載具中降低音量</Chinese>
             <Chinesesimp>在载具中降低音量</Chinesesimp>
             <Turkish>Araçlarda Daha Düşük</Turkish>
+            <Ukrainian>Зменшувати в техніці</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Volume_LowerInVehiclesDescription">
             <English>Automatically lower volume when inside vehicles.</English>
@@ -88,6 +93,7 @@
             <Chinese>當搭乘載具時自動降低音量。</Chinese>
             <Chinesesimp>当搭乘载具时自动降低音量。</Chinesesimp>
             <Turkish>Araçlara binince sesi azalt.</Turkish>
+            <Ukrainian>Автоматично зменшувати гучність у техніці</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Volume_Lowered">
             <English>Lowered volume</English>
@@ -103,6 +109,7 @@
             <Chinese>降低音量</Chinese>
             <Chinesesimp>降低音量</Chinesesimp>
             <Turkish>Azaltılmış ses</Turkish>
+            <Ukrainian>Гучність знижена</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Volume_LoweredReminder">
             <English>Volume still lowered</English>
@@ -118,6 +125,7 @@
             <Chinese>降低音量中</Chinese>
             <Chinesesimp>降低音量中</Chinesesimp>
             <Turkish>Ses hala düşük</Turkish>
+            <Ukrainian>Гучність усе ще знижена</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Volume_Name">
             <English>Volume</English>
@@ -133,6 +141,7 @@
             <Chinese>音量</Chinese>
             <Chinesesimp>音量</Chinesesimp>
             <Turkish>Ses</Turkish>
+            <Ukrainian>Гучність</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Volume_Reduction">
             <English>Reduction</English>
@@ -147,6 +156,7 @@
             <Japanese>低減</Japanese>
             <Chinese>降低</Chinese>
             <Chinesesimp>降低</Chinesesimp>
+            <Ukrainian>Зменшення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Volume_ReductionDescription">
             <English>Reduce volume by this percentage.</English>
@@ -161,6 +171,7 @@
             <Japanese>この割合で音量を低減します。</Japanese>
             <Chinese>使用此百分比來調整音量降低大小。</Chinese>
             <Chinesesimp>使用此百分比来调整音量降低大小。</Chinesesimp>
+            <Ukrainian>Зменшує гучність</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Volume_RemindIfLowered">
             <English>Reminder if lowered</English>
@@ -176,6 +187,7 @@
             <Chinese>降低音量時是否提醒</Chinese>
             <Chinesesimp>降低音量时是否提醒</Chinesesimp>
             <Turkish>Eğer Düşükse Hatırlat</Turkish>
+            <Ukrainian>Нагадувати про зниження гучності</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Volume_RemindIfLoweredDescription">
             <English>Reminds you every minute if your volume is lowered.</English>
@@ -191,6 +203,7 @@
             <Chinese>開啟後會每分鐘警告一次你的音量已被降低。</Chinese>
             <Chinesesimp>开启后会每分钟警告一次你的音量已被降低。</Chinesesimp>
             <Turkish>Eğer ses düşükse her dakika hatırlatır.</Turkish>
+            <Ukrainian>Щохвилинне нагадування про знижену гучність</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Volume_Restored">
             <English>Restored volume</English>
@@ -205,6 +218,7 @@
             <Japanese>音量を戻しました</Japanese>
             <Chinese>回復音量</Chinese>
             <Chinesesimp>恢复音量</Chinesesimp>
+            <Ukrainian>Гучність відновлено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Volume_ShowNotification">
             <English>Show notification</English>
@@ -220,6 +234,7 @@
             <Chinese>顯示提示</Chinese>
             <Chinesesimp>显示提示</Chinesesimp>
             <Turkish>Bildirim Göster</Turkish>
+            <Ukrainian>Показувати повідомлення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Volume_ShowNotificationDescription">
             <English>Show notification when lowering/restoring volume.</English>
@@ -235,6 +250,7 @@
             <Chinese>當正在降低/回復音量時顯示提示。</Chinese>
             <Chinesesimp>当正在降低/恢复音量时显示提示。</Chinesesimp>
             <Turkish>Ses azaltıldığın da bildirim göster.</Turkish>
+            <Ukrainian>Показувати повідомлення під час зменшення/відновлення гучності</Ukrainian>
         </Key>
     </Package>
 </Project>
