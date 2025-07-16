@@ -11,6 +11,7 @@
                 <German>Flaggen</German>
                 <Korean>깃발</Korean>
                 <Japanese>旗</Japanese>
+                <Ukrainian>Прапори</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Flags_AdjustHeight">
                 <English>Adjust height</English>
@@ -21,6 +22,7 @@
                 <German>Höhe anpassen</German>
                 <Korean>높이 조절</Korean>
                 <Japanese>高さを調整</Japanese>
+                <Ukrainian>Відрегулювати висоту</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Flags_Carry">
                 <English>Carry %1</English>
@@ -31,6 +33,7 @@
                 <German>%1 tragen</German>
                 <Korean>%1 옮기기</Korean>
                 <Japanese>%1 を背負う</Japanese>
+                <Ukrainian>Носити %1</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Flags_Furl">
                 <English>Furl Flag</English>
@@ -41,6 +44,7 @@
                 <German>Flagge einrollen</German>
                 <Korean>깃발 거두기</Korean>
                 <Japanese>旗 を巻く</Japanese>
+                <Ukrainian>Згорнути прапор</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Flags_Pickup">
                 <English>Pickup %1</English>
@@ -51,6 +55,7 @@
                 <German>%1 aufnehmen</German>
                 <Korean>%1 줍기</Korean>
                 <Japanese>%1 を拾う</Japanese>
+                <Ukrainian>Підняти %1</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Flags_Place">
                 <English>Place %1</English>
@@ -61,6 +66,7 @@
                 <German>%1 platzieren</German>
                 <Korean>%1 꽂기</Korean>
                 <Japanese>%1 を置く</Japanese>
+                <Ukrainian>Розмістити %1</Ukrainian>
             </Key>
         </Container>
         <Container name="displayNames">
@@ -73,6 +79,7 @@
                 <German>Flagge (Schwarz)</German>
                 <Korean>깃발 (흑색)</Korean>
                 <Japanese>旗 (黒)</Japanese>
+                <Ukrainian>Прапор (чорний)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Flags_Blue">
                 <English>Flag (Blue)</English>
@@ -83,6 +90,7 @@
                 <German>Flagge (Blau)</German>
                 <Korean>깃발 (청색)</Korean>
                 <Japanese>旗 (青)</Japanese>
+                <Ukrainian>Прапор (синій)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Flags_Description">
                 <English>Can be carried or placed. Flags are used to mark a specific point in terrain or units.</English>
@@ -93,6 +101,7 @@
                 <German>Kann getragen oder platziert werden. Flaggen werden zur Kennzeichnung von bestimmten Geländepunkte oder Einheiten eingesetzt.</German>
                 <Korean>옮기거나 꽂을 수 있습니다. 깃발은 지형이나 유닛의 특정 지점을 표시하는 데 쓰입니다.</Korean>
                 <Japanese>背負ったり設置することが可能。旗は特定のユニットや地点を示すのに使用されます。</Japanese>
+                <Ukrainian>Можна переносити або розміщувати. Прапорці використовуються для позначення певної точки на місцевості або юнітів.</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Flags_Green">
                 <English>Flag (Green)</English>
@@ -103,6 +112,7 @@
                 <German>Flagge (Grün)</German>
                 <Korean>깃발 (녹색)</Korean>
                 <Japanese>旗 (緑)</Japanese>
+                <Ukrainian>Прапор (зелений)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Flags_Orange">
                 <English>Flag (Orange)</English>
@@ -113,6 +123,7 @@
                 <German>Flagge (Orange)</German>
                 <Korean>깃발 (주황색)</Korean>
                 <Japanese>旗 (橙)</Japanese>
+                <Ukrainian>Прапор (помаранчевий)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Flags_Purple">
                 <English>Flag (Purple)</English>
@@ -123,6 +134,7 @@
                 <German>Flagge (Violett)</German>
                 <Korean>깃발 (보라색)</Korean>
                 <Japanese>旗 (紫)</Japanese>
+                <Ukrainian>Прапор (фіолетовий)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Flags_Red">
                 <English>Flag (Red)</English>
@@ -133,6 +145,7 @@
                 <German>Flagge (Rot)</German>
                 <Korean>깃발 (적색)</Korean>
                 <Japanese>旗 (赤)</Japanese>
+                <Ukrainian>Прапор (червоний)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Flags_White">
                 <English>Flag (White)</English>
@@ -143,6 +156,7 @@
                 <German>Flagge (Weiß)</German>
                 <Korean>깃발 (백색)</Korean>
                 <Japanese>旗 (白)</Japanese>
+                <Ukrainian>Прапор (білий)</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Flags_Yellow">
                 <English>Flag (Yellow)</English>
@@ -153,6 +167,7 @@
                 <German>Flagge (Gelb)</German>
                 <Korean>깃발 (황색)</Korean>
                 <Japanese>旗 (黄)</Japanese>
+                <Ukrainian>Прапор (жовтий)</Ukrainian>
             </Key>
         </Container>
         <Container name="settings">
@@ -165,6 +180,7 @@
                 <German>Erlaube das Tragen von Flaggen</German>
                 <Korean>깃발 옮기기 허용</Korean>
                 <Japanese>旗を背負うことを許可</Japanese>
+                <Ukrainian>Дозволити носіння прапорів</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Flags_AllowCarryingFlagsTooltip">
                 <English>Adds the actions to carry flags if the corresponding item is in the inventory.</English>
@@ -175,6 +191,7 @@
                 <German>Fügt Aktionen für das Tragen von Flaggen hinzu, wenn das jeweilige Item im Inventar ist.</German>
                 <Korean>해당하는 깃발 아이템이 소지품에 있을 경우 깃발을 옮기는 행동을 추가합니다.</Korean>
                 <Japanese>対応するアイテムがインベントリにある場合、旗を背負うアクションを追加します。</Japanese>
+                <Ukrainian>Додає дії для носіння прапорів, якщо відповідний предмет є в інвентарі.</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Flags_AllowPlacingFlags">
                 <English>Allow placing flags</English>
@@ -185,6 +202,7 @@
                 <German>Erlaube das Platzieren von Flaggen</German>
                 <Korean>깃발 배치 허용</Korean>
                 <Japanese>旗の設置を許可</Japanese>
+                <Ukrainian>Дозволити розміщення прапорів</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Flags_AllowPlacingFlagsTooltip">
                 <English>Adds the actions to place flags if the corresponding item is in the inventory.</English>
@@ -195,6 +213,7 @@
                 <German>Fügt Aktionen für das Platzieren von Flaggen hinzu, wenn das jeweilige Item im Inventar ist.</German>
                 <Korean>해당하는 깃발 아이템이 소지품에 있을 경우 깃발을 꽂는 행동을 추가합니다.</Korean>
                 <Japanese>対応するアイテムがインベントリにある場合、旗を設置するアクションを追加します。</Japanese>
+                <Ukrainian>Додає дії для встановлення прапорів, якщо відповідний предмет є в інвентарі.</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Flags_SettingCategory">
                 <English>Flags</English>
@@ -205,6 +224,7 @@
                 <German>Flaggen</German>
                 <Korean>깃발</Korean>
                 <Japanese>旗</Japanese>
+                <Ukrainian>Прапори</Ukrainian>
             </Key>
         </Container>
     </Package>

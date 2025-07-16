@@ -6,8 +6,8 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     _category,
     true,
     1,
-    {},
-    true
+    {[QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
@@ -18,10 +18,9 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     1,
     {
         if (!GVAR(enabled)) exitWith {};
-        TRACE_2("reseting cache",GVAR(heatCoef),count GVAR(cacheAmmoData));
+        TRACE_2("resetting cache",GVAR(heatCoef),count GVAR(cacheAmmoData));
         GVAR(cacheAmmoData) = createHashMap;
-    },
-    false
+    }
 ] call CBA_fnc_addSetting;
 
 [
@@ -29,9 +28,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     [LSTRING(coolingCoef_displayName), LSTRING(coolingCoef_description)],
     _category,
     [0, 5, 1, 2],
-    1,
-    {},
-    true
+    1
 ] call CBA_fnc_addSetting;
 
 [
@@ -42,10 +39,9 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     1,
     {
         if (!GVAR(enabled)) exitWith {};
-        TRACE_2("reseting cache",GVAR(suppressorCoef),count GVAR(cacheSilencerData));
+        TRACE_2("resetting cache",GVAR(suppressorCoef),count GVAR(cacheSilencerData));
         GVAR(cacheSilencerData) = createHashMap;
-    },
-    false
+    }
 ] call CBA_fnc_addSetting;
 
 [
@@ -62,8 +58,8 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     _category,
     false,
     0,
-    {},
-    true
+    {[QGVAR(showParticleEffectsForEveryone), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
@@ -72,8 +68,8 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     _category,
     true,
     1,
-    {},
-    true
+    {[QGVAR(overheatingDispersion), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
@@ -114,8 +110,8 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     _category,
     false,
     1,
-    {},
-    true
+    {[QGVAR(unJamOnreload), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
@@ -140,6 +136,6 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     _category,
     [0, 5, 1, 2],
     1,
-    {},
-    true
+    {[QGVAR(cookoffCoef), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;

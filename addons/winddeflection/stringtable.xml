@@ -17,6 +17,7 @@
             <Chinesesimp>天气信息</Chinesesimp>
             <Turkish>Hava Durumu Bilgisi</Turkish>
             <Hungarian>Időjárás-Információ</Hungarian>
+            <Ukrainian>Інформація про погоду</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_METER_WEATHER_HUMIDITY">
             <English>Humidity: %1%</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>湿度：%1%</Chinesesimp>
             <Turkish>Nem Oranı: %1%</Turkish>
             <Hungarian>Páratartalom: %1%</Hungarian>
+            <Ukrainian>Вологість: %1%</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_METER_WIND_CATEGORY">
             <English>Wind Information</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>风力信息</Chinesesimp>
             <Turkish>Rüzgar Bilgisi</Turkish>
             <Hungarian>Szélinformáció</Hungarian>
+            <Ukrainian>Інформація про вітер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_METER_WIND_DIRECTION">
             <English>Direction: %1</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>风向：%1</Chinesesimp>
             <Turkish>Yön: %1</Turkish>
             <Hungarian>Irány: %1</Hungarian>
+            <Ukrainian>Напрямок: %1°</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_METER_WIND_SPEED">
             <English>Speed: %1 m/s</English>
@@ -85,6 +89,7 @@
             <Chinesesimp>风速：%1 m/s</Chinesesimp>
             <Turkish>Hız: %1 m/s</Turkish>
             <Hungarian>Sebesség: %1 m/s</Hungarian>
+            <Ukrainian>Швидкість: %1 м/с</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_deflectionModule_Description">
             <English>Enables wind deflection</English>
@@ -102,6 +107,7 @@
             <Chinesesimp>开启弹道风偏效果</Chinesesimp>
             <Turkish>Rüzgar sapmasını aktif et</Turkish>
             <Hungarian>Engedélyezi a szél-hárítást</Hungarian>
+            <Ukrainian>Включає відхилення вітром</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_deflectionModule_DisplayName">
             <English>Wind Deflection</English>
@@ -119,6 +125,7 @@
             <Chinesesimp>弹道风偏</Chinesesimp>
             <Turkish>Rüzgar Sapması</Turkish>
             <Hungarian>Szél-hárítás</Hungarian>
+            <Ukrainian>Відхилення вітром</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_simulationInterval_Description">
             <English>Defines the interval between every calculation step</English>
@@ -135,6 +142,7 @@
             <Chinese>定義每個計算之間的時間間隔</Chinese>
             <Chinesesimp>定义每个计算之间的时间间隔</Chinesesimp>
             <Hungarian>Megszabja a számítási lépések közötti intervallumot</Hungarian>
+            <Ukrainian>Визначає часовий інтервал між розрахунками</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_simulationInterval_DisplayName">
             <English>Simulation Interval</English>
@@ -151,6 +159,7 @@
             <Chinese>模擬間隔</Chinese>
             <Chinesesimp>模拟间隔</Chinesesimp>
             <Hungarian>Szimulációs intervallum</Hungarian>
+            <Ukrainian>Інтервал симуляції</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_vehicleEnabled_Description">
             <English>Enables wind deflection for static/vehicle gunners</English>
@@ -168,6 +177,7 @@
             <Chinesesimp>使弹道风偏作用在固定式武器与载具炮手身上</Chinesesimp>
             <Turkish>Araç nişancıları için rüzgar sapmasını etkinleştirir.</Turkish>
             <Hungarian>Engedélyezi a szél-hárítást a statikus/jármű-lövészeknél</Hungarian>
+            <Ukrainian>Включає відхилення вітром для стрільців стаціонарних гармат і техніки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_vehicleEnabled_DisplayName">
             <English>Vehicle Enabled</English>
@@ -185,6 +195,7 @@
             <Chinesesimp>给载具启用弹道风偏</Chinesesimp>
             <Turkish>Araçlar da etkin</Turkish>
             <Hungarian>Jármű engedélyezve</Hungarian>
+            <Ukrainian>Для техніки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_windDeflection_Description">
             <English>Wind influence on projectiles trajectory</English>
@@ -201,6 +212,7 @@
             <Chinese>風力的大小會引響到彈道的軌跡</Chinese>
             <Chinesesimp>风力的大小会引响到弹道的轨迹</Chinesesimp>
             <Hungarian>Szél hatása a lövedékek röppályájára</Hungarian>
+            <Ukrainian>Вплив вітру на траєкторію снарядів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_windDeflection_DisplayName">
             <English>Wind Deflection</English>
@@ -218,6 +230,7 @@
             <Chinesesimp>弹道风偏</Chinesesimp>
             <Turkish>Rüzgar Sapması</Turkish>
             <Hungarian>Szél-hárítás</Hungarian>
+            <Ukrainian>Відхилення вітром</Ukrainian>
         </Key>
     </Package>
 </Project>

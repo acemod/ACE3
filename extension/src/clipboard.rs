@@ -41,14 +41,14 @@ pub fn loadout() -> Option<String> {
     let mut clipboard = match Clipboard::new().map_err(|e| e.to_string()) {
         Ok(clipboard) => clipboard,
         Err(e) => {
-            eprintln!("Clipboard error: {}", e);
+            eprintln!("Clipboard error: {e}");
             return None;
         }
     };
     let content = clipboard.get_text().ok()?;
     match Loadout::from_arma(content.clone()) {
         Ok(_) => return Some(content),
-        Err(e) => eprintln!("Loadout parsing error: {}", e),
+        Err(e) => eprintln!("Loadout parsing error: {e}"),
     }
     None
 }

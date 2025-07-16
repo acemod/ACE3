@@ -9,13 +9,14 @@
             <Italian>ACE Logistica</Italian>
             <Polish>ACE Logistyka</Polish>
             <Portuguese>Logísticas ACE</Portuguese>
-            <Russian>ACE: Логистика</Russian>
+            <Russian>ACE Логистика</Russian>
             <German>ACE Logistik</German>
             <Korean>ACE 병참</Korean>
             <Japanese>ACE ロジスティクス</Japanese>
             <Chinese>ACE 後勤</Chinese>
             <Chinesesimp>ACE 后勤</Chinesesimp>
             <Turkish>ACE Lojistik</Turkish>
+            <Ukrainian>ACE: Логістика</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Main_URL">
             <English>https://ace3.acemod.org/</English>
@@ -33,6 +34,7 @@
             <Chinesesimp>https://ace3.acemod.org/</Chinesesimp>
             <Turkish>https://ace3.acemod.org/</Turkish>
             <Hungarian>https://ace3.acemod.org/</Hungarian>
+            <Ukrainian>https://ace3.acemod.org/</Ukrainian>
         </Key>
     </Package>
 </Project>

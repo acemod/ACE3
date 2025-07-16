@@ -16,6 +16,7 @@
             <Chinese>指定是控制器的物件名稱，如有多個物件，請以逗號作區隔</Chinese>
             <Chinesesimp>指定是控制器的物体名称，如有多个物件，请以逗号作区隔</Chinesesimp>
             <Hungarian>Vezérlő objektum nevek, vesszővel elválasztva több darab esetén.</Hungarian>
+            <Ukrainian>Імена об'єктів-контролерів, розділені комами.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Controllers_DisplayName">
             <English>Controllers</English>
@@ -33,6 +34,7 @@
             <Chinesesimp>控制器</Chinesesimp>
             <Turkish>Kontroller</Turkish>
             <Hungarian>Vezérlők</Hungarian>
+            <Ukrainian>Контролери</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Description">
             <English>This module allows you to set up slide-shows on different objects. One module per image list. Only objects with hiddenSelection 0 are supported.</English>
@@ -49,6 +51,7 @@
             <Chinese>此模塊可讓圖片以幻燈片的形式顯示在物件上，每個模塊都能設定一串幻燈片清單，被設定的物件不能有隱藏部位(hiddenSelection)</Chinese>
             <Chinesesimp>此模块可让图片以幻灯片的形式显示在物体上，每个模块都能设定一串幻灯片清单，被设定的物件不能有隐藏部位（hiddenSelection）</Chinesesimp>
             <Hungarian>Ez a modul lehetővé teszi a különböző objektumokon való vetítést. Egy modul/képlista. Csak "hiddenSelection 0"-t tartalmazó objektumok felelnek meg.</Hungarian>
+            <Ukrainian>Цей модуль дозволяє вам влаштувати слайд-шоу на різних об'єктах. Один модуль на один список зображень. Підтримуються тільки об'єкти з hiddenSelection 0.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Slideshow_DisplayName">
             <English>Slideshow</English>
@@ -66,6 +69,7 @@
             <Chinesesimp>幻灯片</Chinesesimp>
             <Turkish>Slayt</Turkish>
             <Hungarian>Vetítés</Hungarian>
+            <Ukrainian>Слайд-шоу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_Description">
             <English>Duration of each slide. Default: 0 (Automatic Transitions Disabled)</English>
@@ -82,6 +86,7 @@
             <Chinese>每張幻燈片顯示的時間。 預設:0 (自動換圖已禁用)</Chinese>
             <Chinesesimp>每张幻灯片显示的时间。 预设：0（自动换图已禁用）</Chinesesimp>
             <Hungarian>A diák időtartama. Alapértelmezett: 0 (Automatikus váltás letiltva)</Hungarian>
+            <Ukrainian>Тривалість кожного слайда. За замовчуванням: 0 (автоматичний перехід вимкнено)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_DisplayName">
             <English>Slide Duration</English>
@@ -98,6 +103,7 @@
             <Chinese>幻燈片顯示時間</Chinese>
             <Chinesesimp>幻灯片显示时间</Chinesesimp>
             <Hungarian>Dia időtartam</Hungarian>
+            <Ukrainian>Тривалість слайда</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Images_Description">
             <English>List of images that will be used for the slide-show, separated by commas, with full path correctly formatted (eg. images\image.paa).</English>
@@ -114,6 +120,7 @@
             <Chinese>要做為幻燈片的圖片清單，每個圖片請已逗號區隔，並輸入完整路徑位址 (例如:images\image.paa)</Chinese>
             <Chinesesimp>要做为幻灯片的图片清单，每个图片请已逗号区隔，并输入完整路径位址（例如：images\image.paa）</Chinesesimp>
             <Hungarian>A képek listája amit a vetítés használni fog, vesszővel elválasztva, megfelelően formázott teljes útvonallal (pl. képek\kép.paa)</Hungarian>
+            <Ukrainian>Список зображень, які будуть використані для слайд-шоу, розділені комами, з повними шляхами в правильному форматі (наприклад, images\image.paa).</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Images_DisplayName">
             <English>Images</English>
@@ -131,6 +138,7 @@
             <Chinesesimp>图片</Chinesesimp>
             <Turkish>Resimler</Turkish>
             <Hungarian>Képek</Hungarian>
+            <Ukrainian>Зображення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Interaction">
             <English>Slides</English>
@@ -148,6 +156,7 @@
             <Chinesesimp>幻灯片</Chinesesimp>
             <Turkish>Slaytlar</Turkish>
             <Hungarian>Diák</Hungarian>
+            <Ukrainian>Слайди</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Names_Description">
             <English>List of names that will be used for interaction entries, separated by commas, in order of images.</English>
@@ -164,6 +173,7 @@
             <Chinese>設定互動鍵切換圖片時的按鈕名稱，多個按鈕請以逗號做區隔，有多少圖片就輸入多少個按鈕，以利切換圖片</Chinese>
             <Chinesesimp>设定互动键切换图片时的按钮名称，多个按钮请以逗号做区隔，有多少图片就输入多少个按钮，以利切换图片</Chinesesimp>
             <Hungarian>Olyan nevek listája, melyek interakciós célra kellenek, vesszővel elválasztva, kép szerinti sorrendben.</Hungarian>
+            <Ukrainian>Список імен, які будуть використані під час взаємодії, розділені комами, у порядку проходження зображень.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Names_DisplayName">
             <English>Interaction Names</English>
@@ -180,6 +190,7 @@
             <Chinese>互動鍵名稱</Chinese>
             <Chinesesimp>互动键名称</Chinesesimp>
             <Hungarian>Interakciós nevek</Hungarian>
+            <Ukrainian>Інтерактивні імена</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_Description">
             <English>Object names (can also be synchronized objects) slide-show will be displayed on, separated by commas if multiple.</English>
@@ -196,6 +207,7 @@
             <Chinese>物件名稱 (也可使用同步線來設定)，幻燈片將會顯示在該物件上，如有多個物件，請以逗號作區隔</Chinese>
             <Chinesesimp>物体名称（也可使用同步线来设定），幻灯片将会显示在该物件上，如有多个物件，请以逗号作区隔</Chinesesimp>
             <Hungarian>Objektum nevek (szinkronizált is lehet) amik a vetítésen megjelennek, több darab esetén vesszővel elválasztva.</Hungarian>
+            <Ukrainian>Імена об'єктів (так само можуть використовуватися синхронізовані об'єкти), на яких буде відображатися слайд-шоу, розділені комами.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_DisplayName">
             <English>Objects</English>
@@ -213,6 +225,7 @@
             <Chinesesimp>物体</Chinesesimp>
             <Turkish>Objeler</Turkish>
             <Hungarian>Objektumok</Hungarian>
+            <Ukrainian>Об'єкти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Selection_Description">
             <English>Object texture selection. Default: 0</English>
@@ -226,6 +239,7 @@
             <Korean>물체의 텍스쳐를 선택합니다. 기본: 0</Korean>
             <Japanese>オブジェクトテクスチャの選択。 デフォルト: 0</Japanese>
             <Chinesesimp>物体纹理选择（默认：0）</Chinesesimp>
+            <Ukrainian>Вибір текстури об'єкта. За замовчуванням: 0</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Selection_DisplayName">
             <English>Texture Selection</English>
@@ -239,6 +253,7 @@
             <Korean>텍스쳐 선택</Korean>
             <Japanese>テクスチャの選択</Japanese>
             <Chinesesimp>纹理选择</Chinesesimp>
+            <Ukrainian>Вибір текстури</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Slideshow_SetName_Description">
             <English>Name that will be used for main interaction entry (to distinguish multiple slideshows). Default: "Slides"</English>
@@ -254,6 +269,7 @@
             <Japanese>メイン インタラクション エントリで使われる名前を設定します。(複数のスライドショーを区別するため)。 デフォルト: "Slides"</Japanese>
             <Chinese>設定該幻燈片的標題名稱 (用來區分多個不同標題的幻燈片) 預設名稱: "幻燈片"</Chinese>
             <Chinesesimp>设定该幻灯片的标题名称（用来区分多个不同标题的幻灯片）预设名称："幻灯片"</Chinesesimp>
+            <Ukrainian>Ім'я, яке буде використовуватися для основних взаємодій (для розрізнення кількох слайдів). За замовчуванням: "Slides"</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Slideshow_SetName_DisplayName">
             <English>Set Name</English>
@@ -269,6 +285,7 @@
             <Japanese>名前設定</Japanese>
             <Chinese>設定名稱</Chinese>
             <Chinesesimp>设定名称</Chinesesimp>
+            <Ukrainian>Встановити ім'я</Ukrainian>
         </Key>
     </Package>
 </Project>

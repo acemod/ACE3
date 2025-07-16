@@ -16,6 +16,7 @@
             <Chinese>直射模式</Chinese>
             <Chinesesimp>直射模式</Chinesesimp>
             <Turkish>Doğrudan Saldırı</Turkish>
+            <Ukrainian>Пряма атака</Ukrainian>
         </Key>
         <Key ID="STR_ACE_NLAW_overflyTopAttack">
             <English>Overfly Top Attack</English>
@@ -32,6 +33,7 @@
             <Chinese>攻頂模式</Chinese>
             <Chinesesimp>飞越攻顶模式</Chinesesimp>
             <Turkish>Yüksek Uçuş Saldırı</Turkish>
+            <Ukrainian>Атака зверху</Ukrainian>
         </Key>
         <Key ID="STR_ACE_NLAW_trackTarget">
             <English>NLAW Track Target (Hold)</English>
@@ -48,6 +50,7 @@
             <Chinese>次世代輕型反坦克導彈發射器追蹤目標 (按住)</Chinese>
             <Chinesesimp>NLAW 追踪目标（按住）</Chinesesimp>
             <Turkish>NLAW Track Target (Basılı Tut)</Turkish>
+            <Ukrainian>NLAW наведення на ціль (утримувати)</Ukrainian>
         </Key>
     </Package>
 </Project>

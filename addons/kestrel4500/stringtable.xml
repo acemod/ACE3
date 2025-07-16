@@ -17,6 +17,7 @@
             <Chinesesimp>猎隼4500 掌上型天气追踪仪</Chinesesimp>
             <Turkish>Kestrel 4500 Cep Hava Durumu Izleyicisi</Turkish>
             <Hungarian>Kestrel 4500 kézi szél-és időjárásmérő</Hungarian>
+            <Ukrainian>Кишенькова метеостанція Kestrel 4500</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_DisplayKestrelKey">
             <English>Show Kestrel 4500</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>显示猎隼4500 测风仪</Chinesesimp>
             <Turkish>Göster Kestrel 4500</Turkish>
             <Hungarian>Kestrel 4500 mutatása</Hungarian>
+            <Ukrainian>Показати Kestrel 4500</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_HideKestrel">
             <English>Hide Kestrel 4500</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>隐藏猎隼4500 测风仪</Chinesesimp>
             <Turkish>Gizle Kestrel 4500</Turkish>
             <Hungarian>Kestrel 4500 elrejtése</Hungarian>
+            <Ukrainian>Прибрати Kestrel 4500</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_KestrelDialogKey">
             <English>Open Kestrel 4500</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>开启猎隼4500 测风仪</Chinesesimp>
             <Turkish>Aç Kestrel 4500</Turkish>
             <Hungarian>Kestrel 4500 elővétele</Hungarian>
+            <Ukrainian>Відкрити Kestrel 4500</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_Name">
             <English>Kestrel 4500NV</English>
@@ -85,6 +89,7 @@
             <Chinesesimp>猎隼4500 测风仪</Chinesesimp>
             <Turkish>Kestrel 4500NV</Turkish>
             <Hungarian>Kestrel 4500NV</Hungarian>
+            <Ukrainian>Kestrel 4500NV</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_OpenKestrel">
             <English>Open Kestrel 4500</English>
@@ -102,6 +107,7 @@
             <Chinesesimp>开启猎隼4500 测风仪</Chinesesimp>
             <Turkish>Aç Kestrel 4500</Turkish>
             <Hungarian>Kestrel 4500 elővétele</Hungarian>
+            <Ukrainian>Відкрити Kestrel 4500</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_ShowKestrel">
             <English>Show Kestrel 4500</English>
@@ -119,6 +125,7 @@
             <Chinesesimp>显示猎隼4500 测风仪</Chinesesimp>
             <Turkish>Göster Kestrel 4500</Turkish>
             <Hungarian>Kestrel 4500 mutatása</Hungarian>
+            <Ukrainian>Показати Kestrel 4500</Ukrainian>
         </Key>
     </Package>
 </Project>
