@@ -45,3 +45,14 @@ Screams can be disabled for an individual unit by setting the `ace_fire_enableSc
 ```sqf
 _unit setVariable ["ace_fire_enableScreams", false, _isGlobal];
 ```
+
+## 3. Custom Screaming Sounds
+Units can have screaming sounds customized by editing the `ace_fire_screams` hashmap. This hashmap has the class name as the key and an array of CfgSounds classes as the value.
+
+When on fire, the class of unit on fire will be queried from the hashmap. If the class is not listed, it will then check each parent class until an entry is found.
+
+```sqf
+ace_fire_screams set ["unitClass", ["sound1", "sound2"]];
+```
+
+Now any unit that is `unitClass` or  inherits from `unitClass` will use the custom scream sounds defined in the hashmap.
