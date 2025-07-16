@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Text <STRING>
- * 1: Icon file path or Array of icon file path and hex color <STRING|ARRAY>
+ * 1: Icon file path or Array of icon file path and hex color <STRING or ARRAY>
  * 2: 2d position <ARRAY>
  * 3: Text Settings <STRING>
  *

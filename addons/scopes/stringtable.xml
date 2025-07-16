@@ -16,6 +16,7 @@
             <Chinese>向下調整</Chinese>
             <Chinesesimp>向下调整</Chinesesimp>
             <Hungarian>Nagy állítás le</Hungarian>
+            <Ukrainian>Велика поправка ВНИЗ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustDownMinor">
             <English>Minor adjustment down</English>
@@ -32,6 +33,7 @@
             <Chinese>向下微調</Chinese>
             <Chinesesimp>向下微调</Chinesesimp>
             <Hungarian>Enyhe állítás le</Hungarian>
+            <Ukrainian>Мала поправка ВНИЗ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustLeftMajor">
             <English>Major adjustment left</English>
@@ -48,6 +50,7 @@
             <Chinese>向左調整</Chinese>
             <Chinesesimp>向左调整</Chinesesimp>
             <Hungarian>Nagy állítás balra</Hungarian>
+            <Ukrainian>Велика поправка ВЛІВО</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustLeftMinor">
             <English>Minor adjustment left</English>
@@ -64,6 +67,7 @@
             <Chinese>向左微調</Chinese>
             <Chinesesimp>向左微调</Chinesesimp>
             <Hungarian>Enyhe állítás balra</Hungarian>
+            <Ukrainian>Мала поправка ВЛІВО</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustRightMajor">
             <English>Major adjustment right</English>
@@ -80,6 +84,7 @@
             <Chinese>向右調整</Chinese>
             <Chinesesimp>向右调整</Chinesesimp>
             <Hungarian>Nagy állítás jobbra</Hungarian>
+            <Ukrainian>Велика поправка ВПРАВО</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustRightMinor">
             <English>Minor adjustment right</English>
@@ -96,6 +101,7 @@
             <Chinese>向右微調</Chinese>
             <Chinesesimp>向右微调</Chinesesimp>
             <Hungarian>Enyhe állítás jobbra</Hungarian>
+            <Ukrainian>Невелика поправка ВПРАВО</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMajor">
             <English>Major adjustment up</English>
@@ -112,6 +118,7 @@
             <Chinese>向上調整</Chinese>
             <Chinesesimp>向上调整</Chinesesimp>
             <Hungarian>Nagy állítás fel</Hungarian>
+            <Ukrainian>Велика поправка ВВЕРХ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>
@@ -128,6 +135,7 @@
             <Chinese>向上微調</Chinese>
             <Chinesesimp>向上微调</Chinesesimp>
             <Hungarian>Enyhe állítás fel</Hungarian>
+            <Ukrainian>Малая поправка ВВЕРХ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustZero">
             <English>Set zero adjustment</English>
@@ -144,6 +152,7 @@
             <Chinese>設定歸零</Chinese>
             <Chinesesimp>设定归零</Chinesesimp>
             <Hungarian>Állítások nullázása</Hungarian>
+            <Ukrainian>Встановити дальність пристрілки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_Description">
             <English>This module adds windage and elevation adjustment turrets on high power rifle scopes.</English>
@@ -159,6 +168,7 @@
             <Japanese>このモジュールは高倍率ライフル スコープにおいてウィンデージとエレベーションの調節ができます。</Japanese>
             <Chinese>此模塊可為高倍率瞄準鏡新增歸零風偏，距離用的調整紐。</Chinese>
             <Chinesesimp>此模块可为高倍率瞄准镜新增归零风偏，距离用的调整纽。</Chinesesimp>
+            <Ukrainian>Цей модуль додає барабанчики введення горизонтальних і вертикальних поправок для прицілів із високою кратністю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_DisplayAdjustmentDown">
             <English>%1D</English>
@@ -175,6 +185,7 @@
             <Chinese>%1D</Chinese>
             <Chinesesimp>%1D</Chinesesimp>
             <Turkish>%1D</Turkish>
+            <Ukrainian>%1D</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_DisplayAdjustmentLeft">
             <English>%1L</English>
@@ -191,6 +202,7 @@
             <Chinese>%1L</Chinese>
             <Chinesesimp>%1L</Chinesesimp>
             <Turkish>%1L</Turkish>
+            <Ukrainian>%1L</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_DisplayAdjustmentRight">
             <English>%1R</English>
@@ -207,6 +219,7 @@
             <Chinese>%1R</Chinese>
             <Chinesesimp>%1R</Chinesesimp>
             <Turkish>%1R</Turkish>
+            <Ukrainian>%1R</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_DisplayName">
             <English>Scopes</English>
@@ -223,6 +236,7 @@
             <Chinese>瞄準鏡</Chinese>
             <Chinesesimp>瞄准镜</Chinesesimp>
             <Turkish>Dürbünler</Turkish>
+            <Ukrainian>Приціли</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_ResetZero">
             <English>Reset zero adjustment</English>
@@ -238,6 +252,7 @@
             <Japanese>ゼロイン調節を初期化</Japanese>
             <Chinese>重設歸零</Chinese>
             <Chinesesimp>重设归零</Chinesesimp>
+            <Ukrainian>Скинути дальність пристрілки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_correctZeroing_description">
             <English>Corrects the zeroing of all small arms sights</English>
@@ -253,6 +268,7 @@
             <Japanese>全ての小火器用照準器のゼロインを規整します</Japanese>
             <Chinese>為所有小口徑武器修正歸零</Chinese>
             <Chinesesimp>为所有小口径武器修正归零</Chinesesimp>
+            <Ukrainian>Дозволяє коригувати пристрілку для всіх прицілів стрілецької зброї</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_correctZeroing_displayName">
             <English>Correct zeroing</English>
@@ -268,6 +284,7 @@
             <Japanese>ゼロイン規整</Japanese>
             <Chinese>修正歸零</Chinese>
             <Chinesesimp>修正归零</Chinesesimp>
+            <Ukrainian>Коригувати пристрілку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_deduceBarometricPressureFromTerrainAltitude_description">
             <English>Deduce the barometric pressure from the terrain altitude</English>
@@ -283,6 +300,7 @@
             <Japanese>地形高度の標高から気圧を減圧します</Japanese>
             <Chinese>在不同高度上會有不同的大氣壓力</Chinese>
             <Chinesesimp>在不同高度上会有不同的大气压力</Chinesesimp>
+            <Ukrainian>Тиск визначається за висотою</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_deduceBarometricPressureFromTerrainAltitude_displayName">
             <English>Deduce pressure from altitude</English>
@@ -298,6 +316,7 @@
             <Japanese>高度で減圧する</Japanese>
             <Chinese>高度影響大氣壓力</Chinese>
             <Chinesesimp>高度影响大气压力</Chinesesimp>
+            <Ukrainian>Прорахувати тиск з висоти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_defaultZeroRange_description">
             <English>High powered scopes will be zeroed at this distance</English>
@@ -313,6 +332,7 @@
             <Japanese>高倍率スコープのゼロイン位置はこの設定になります</Japanese>
             <Chinese>高倍率瞄準鏡將歸零在這個距離上</Chinese>
             <Chinesesimp>高倍率瞄准镜将归零在这个距离上</Chinesesimp>
+            <Ukrainian>Дальність, на яку будуть пристріляні приціли з високою кратністю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_defaultZeroRange_displayName">
             <English>Default zero distance</English>
@@ -328,6 +348,7 @@
             <Japanese>標準のゼロイン距離</Japanese>
             <Chinese>預設歸零距離</Chinese>
             <Chinesesimp>预设归零距离</Chinesesimp>
+            <Ukrainian>Дальність пристрілки за замовчуванням</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_enabled_description">
             <English>Enable adjustment turrets on high powered scopes</English>
@@ -343,6 +364,7 @@
             <Japanese>高倍率スコープでのタレット調整を有効化します</Japanese>
             <Chinese>開啟高倍率瞄準鏡歸零調節</Chinese>
             <Chinesesimp>开启高倍率瞄准镜归零调节</Chinesesimp>
+            <Ukrainian>Вмикає регулювальні барабанчики введення поправок на прицілах із високою кратністю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_enabled_displayName">
             <English>Enable ACE Scope adjustment</English>
@@ -358,6 +380,7 @@
             <Japanese>ACE スコープ調節を有効化</Japanese>
             <Chinese>開啟ACE瞄準鏡歸零調節</Chinese>
             <Chinesesimp>开启 ACE 瞄准镜归零调节</Chinesesimp>
+            <Ukrainian>Увім. налаштування прицілів ACE</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_forceUseOfAdjustmentTurrets_description">
             <English>Force usage of adjustment turrets on high powered scopes</English>
@@ -373,6 +396,7 @@
             <Japanese>高倍率スコープでタレット調整の使用を強制させます</Japanese>
             <Chinese>強制為高倍率瞄準鏡開啟歸零調節</Chinese>
             <Chinesesimp>强制为高倍率瞄准镜开启归零调节</Chinesesimp>
+            <Ukrainian>Примусово використовувати барабанчики введення поправок для неналаштованих прицілів із високою кратністю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_forceUseOfAdjustmentTurrets_displayName">
             <English>Force adjustment turrets</English>
@@ -388,6 +412,7 @@
             <Japanese>タレット調整を強制</Japanese>
             <Chinese>強制使用歸零調節</Chinese>
             <Chinesesimp>强制使用归零调节</Chinesesimp>
+            <Ukrainian>Регулювання неналаштованих прицілів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_inScopeAdjustment_displayName">
             <English>Show adjustment UI in scope</English>
@@ -399,6 +424,7 @@
             <Korean>스코프에 조절 UI 보이기</Korean>
             <Japanese>調整UIをスコープ内に表示</Japanese>
             <Chinesesimp>开镜时显示调节面板</Chinesesimp>
+            <Ukrainian>Показати інтерфейс налаштування в області видимості.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_overwriteZeroRange_Description">
             <English>Uses the 'defaultZeroRange' setting to overwrite the zero range of high power scopes</English>
@@ -414,6 +440,7 @@
             <Japanese>'標準のゼロイン距離'設定を使用して、高倍率スコープのゼロイン距離を上書きします。</Japanese>
             <Chinese>使用'defaultZeroRange'來為高倍率瞄準鏡覆寫預設歸零距離</Chinese>
             <Chinesesimp>使用'defaultZeroRange'来为高倍率瞄准镜覆写预设归零距离</Chinesesimp>
+            <Ukrainian>Використовує налаштування 'defaultZeroRange' для переналаштування дальності пристрілки прицілів із високою кратністю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_overwriteZeroRange_displayName">
             <English>Overwrite zero distance</English>
@@ -429,6 +456,7 @@
             <Japanese>ゼロイン距離を上書き</Japanese>
             <Chinese>覆寫歸零距離</Chinese>
             <Chinesesimp>覆写归零距离</Chinesesimp>
+            <Ukrainian>Перезаписати дальність пристрілки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_simplifiedZeroing_description">
             <English>Replicates the vanilla zeroing system for riflescopes.</English>
@@ -444,6 +472,7 @@
             <Japanese>バニラ(ゲーム標準)のライフルスコープ用ゼロイン調整システムを再現します。</Japanese>
             <Chinese>使用原版的歸零系統來取代ACE複雜的歸零模擬。</Chinese>
             <Chinesesimp>使用原版的归零系统来取代 ACE 复杂的归零模拟。</Chinesesimp>
+            <Ukrainian>Використовує ванільну систему прицілювання для прицілів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_simplifiedZeroing_displayName">
             <English>Simplified zeroing</English>
@@ -459,6 +488,7 @@
             <Japanese>簡素化ゼロイン</Japanese>
             <Chinese>簡單歸零</Chinese>
             <Chinesesimp>简单归零</Chinesesimp>
+            <Ukrainian>Спрощене пристрілювання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_statHorizontalLimits">
             <English>Horizontal limits</English>
@@ -474,6 +504,7 @@
             <Japanese>水平制限</Japanese>
             <Chinese>水平限制</Chinese>
             <Chinesesimp>水平限制</Chinesesimp>
+            <Ukrainian>Ліміт по горизонталі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_statVerticalLimits">
             <English>Vertical limits</English>
@@ -489,6 +520,7 @@
             <Japanese>垂直制限</Japanese>
             <Chinese>垂直限制</Chinese>
             <Chinesesimp>垂直限制</Chinesesimp>
+            <Ukrainian>Ліміт по вертикалі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_useLegacyUI_description">
             <English>Displays elevation and windage with signed numbers</English>
@@ -504,6 +536,7 @@
             <Japanese>ウィンデージとエレベーションを符号付き数字で表示します</Japanese>
             <Chinese>使用帶著標籤的數字顯示歸零遠近與風偏程度</Chinese>
             <Chinesesimp>使用带着标签的数字显示归零远近与风偏程度</Chinesesimp>
+            <Ukrainian>Відображає горизонтальні та вертикальні поправки з підписаними числами</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_useLegacyUI_displayName">
             <English>Use legacy UI</English>
@@ -519,6 +552,7 @@
             <Japanese>レガシー UI を使用</Japanese>
             <Chinese>使用舊版介面</Chinese>
             <Chinesesimp>使用旧版界面</Chinesesimp>
+            <Ukrainian>Використовувати застарілий інтерфейс</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceBarometricPressure_description">
             <English>Barometric pressure at which the scope was zeroed</English>
@@ -534,6 +568,7 @@
             <Japanese>スコープがゼロインされる気圧</Japanese>
             <Chinese>武器參考多少大氣壓力來進行歸零。</Chinese>
             <Chinesesimp>武器参考多少大气压力来进行归零。</Chinesesimp>
+            <Ukrainian>Тиск, за якого виконано пристрілювання прицілу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceBarometricPressure_displayName">
             <English>Reference barometric pressure</English>
@@ -549,6 +584,7 @@
             <Japanese>参照気圧</Japanese>
             <Chinese>參考大氣壓力</Chinese>
             <Chinesesimp>参考大气压力</Chinesesimp>
+            <Ukrainian>Референсний тиск</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceHumidity_description">
             <English>Humidity at which the scope was zeroed</English>
@@ -564,6 +600,7 @@
             <Japanese>スコープがゼロインされる湿度</Japanese>
             <Chinese>武器參考多少濕度來進行歸零。</Chinese>
             <Chinesesimp>武器参考多少湿度来进行归零。</Chinesesimp>
+            <Ukrainian>Вологість, за якої виконано пристрілку прицілу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceHumidity_displayName">
             <English>Reference humidity</English>
@@ -579,6 +616,7 @@
             <Japanese>参照湿度</Japanese>
             <Chinese>參考濕度</Chinese>
             <Chinesesimp>参考湿度</Chinesesimp>
+            <Ukrainian>Референсна вологість</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceTemperature_description">
             <English>Temperature at which the scope was zeroed</English>
@@ -594,6 +632,7 @@
             <Japanese>スコープがゼロインされる温度</Japanese>
             <Chinese>武器參考多少溫度來進行歸零.</Chinese>
             <Chinesesimp>武器参考多少温度来进行归零。</Chinesesimp>
+            <Ukrainian>Температура, за якої виконано пристрілювання прицілу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceTemperature_displayName">
             <English>Reference temperature</English>
@@ -609,6 +648,7 @@
             <Japanese>参照温度</Japanese>
             <Chinese>參考溫度</Chinese>
             <Chinesesimp>参考温度</Chinesesimp>
+            <Ukrainian>Референсна температура</Ukrainian>
         </Key>
     </Package>
 </Project>

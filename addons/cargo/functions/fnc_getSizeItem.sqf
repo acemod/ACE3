@@ -4,7 +4,7 @@
  * Gets the cargo size of an object.
  *
  * Arguments:
- * 0: Item <STRING> or <OBJECT>
+ * 0: Item <STRING or OBJECT>
  *
  * Return Value:
  * Cargo size <NUMBER> (default: -1)

@@ -12,6 +12,7 @@
             <Korean>자동운전</Korean>
             <Japanese>クルーズコントロール</Japanese>
             <Chinesesimp>巡航模式</Chinesesimp>
+            <Ukrainian>Круїз-контроль</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vehicles_DecreaseSpeedLimit">
             <English>Decrease Speed Limit</English>
@@ -28,6 +29,7 @@
             <Chinese>降低速限</Chinese>
             <Chinesesimp>降低限速</Chinesesimp>
             <Turkish>Hız Limitini Azalt</Turkish>
+            <Ukrainian>Зменшити обмеження швидкості</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectAction">
             <English>Hide Eject Action</English>
@@ -43,6 +45,7 @@
             <Japanese>脱出アクションを非表示</Japanese>
             <Chinese>隱藏逃脫動作</Chinese>
             <Chinesesimp>隐藏下车选项</Chinesesimp>
+            <Ukrainian>Прибрати дію 'Вистрибнути'</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectActionTooltip">
             <English>Hides the Eject entry from the action menu. Requires a game restart.</English>
@@ -58,6 +61,7 @@
             <Japanese>アクションメニューに"脱出"の項目を表示しないようにします。ゲームの再起動が必要です。</Japanese>
             <Chinese>隱藏在動作選單中逃脫動作的選項。要求遊戲重新啟動。</Chinese>
             <Chinesesimp>隐藏鼠标滚轮菜单中的下车选项。需要重新启动游戏。</Chinesesimp>
+            <Ukrainian>Прибирає дію 'Вистрибнути' з меню. (Вимагає перезавантаження)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vehicles_IncreaseSpeedLimit">
             <English>Increase Speed Limit</English>
@@ -74,6 +78,7 @@
             <Chinese>增加速限</Chinese>
             <Chinesesimp>提高限速</Chinesesimp>
             <Turkish>Hız Limitini Arttır</Turkish>
+            <Ukrainian>Збільшити обмеження швидкості</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vehicles_Off">
             <English>Speed Limiter off</English>
@@ -91,6 +96,7 @@
             <Chinesesimp>停用速度限制</Chinesesimp>
             <Turkish>Hız Sabitleyeci Kapalı</Turkish>
             <Hungarian>Sebességkorlátozó kikapcsolva</Hungarian>
+            <Ukrainian>Обмеження швидкості вимкнено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vehicles_OffCruise">
             <English>Cruise control off</English>
@@ -104,6 +110,7 @@
             <Korean>자동운전 꺼짐</Korean>
             <Japanese>クルーズコントロールを無効化</Japanese>
             <Chinesesimp>关闭巡航模式</Chinesesimp>
+            <Ukrainian>Круїз-контроль вимкнений</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vehicles_On">
             <English>Speed Limiter on</English>
@@ -121,6 +128,7 @@
             <Chinesesimp>启用速度限制</Chinesesimp>
             <Turkish>Hız Sabitleyeciı Açık</Turkish>
             <Hungarian>Sebességkorlátozó bekapcsolva</Hungarian>
+            <Ukrainian>Обмеження швидкості ввімкнено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vehicles_OnCruise">
             <English>Cruise control on</English>
@@ -134,6 +142,7 @@
             <Korean>자동운전 켜짐</Korean>
             <Japanese>クルーズコントロールを有効化</Japanese>
             <Chinesesimp>开启巡航模式</Chinesesimp>
+            <Ukrainian>Круїз-контроль увімкнено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningDesc">
             <English>Prevent the automatic shut-off of the engine when exiting vehicles.</English>
@@ -150,6 +159,7 @@
             <Chinese>避免離開載具時自動熄火。</Chinese>
             <Chinesesimp>避免离开载具时自动熄火。</Chinesesimp>
             <Turkish>Araçtan inerken motorun otomatik kapatılmasını engelleyin.</Turkish>
+            <Ukrainian>Забороняє автоматичне вимкнення двигуна при виході з транспорту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningName">
             <English>Disable automatic engine shut-off</English>
@@ -166,6 +176,7 @@
             <Chinese>關閉引擎自動熄火</Chinese>
             <Chinesesimp>关闭引擎自动熄火</Chinesesimp>
             <Turkish>Otomatik motor durdurmayı devre dışı bırak</Turkish>
+            <Ukrainian>Прибрати автовимкнення двигуна</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimit">
             <English>Speed Limit</English>
@@ -182,6 +193,7 @@
             <Chinese>速限</Chinese>
             <Chinesesimp>限速</Chinesesimp>
             <Turkish>Hız Limiti</Turkish>
+            <Ukrainian>Обмеження швидкості</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimiter">
             <English>Speed Limiter</English>
@@ -199,6 +211,7 @@
             <Chinesesimp>速度限制器</Chinesesimp>
             <Turkish>Hız Sabitleyici</Turkish>
             <Hungarian>Sebességkorlátozó</Hungarian>
+            <Ukrainian>Обмежувач швидкості</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimiterStep">
             <English>Speed Limiter Step</English>
@@ -212,6 +225,7 @@
             <Korean>속도 제한기 단위</Korean>
             <Japanese>制限速度の増減量</Japanese>
             <Chinesesimp>限速器步长</Chinesesimp>
+            <Ukrainian>Крок обмежувача швидкості</Ukrainian>
         </Key>
     </Package>
 </Project>

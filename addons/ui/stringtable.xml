@@ -15,6 +15,7 @@
             <Japanese>選択性UIを許可</Japanese>
             <Chinese>允許調整使用者介面</Chinese>
             <Chinesesimp>允许调整用户界面</Chinesesimp>
+            <Ukrainian>Дозволити вибірковий інтерфейс</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_AllowSelectiveUI_Description">
             <English>Allow client to modify their UI.</English>
@@ -30,6 +31,7 @@
             <Japanese>クライアントがユーザ インタフェースを編集できるようにします。</Japanese>
             <Chinese>允許客戶端自行調整使用者介面</Chinese>
             <Chinesesimp>允许客户端自行调整用户界面</Chinesesimp>
+            <Ukrainian>Дозволити клієнтам змінювати їхній користувацький інтерфейс.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_AmmoCount">
             <English>Ammo Count</English>
@@ -46,6 +48,7 @@
             <Chinese>彈藥數量</Chinese>
             <Chinesesimp>弹药数量</Chinesesimp>
             <Turkish>Mermi Sayısı</Turkish>
+            <Ukrainian>Кількість боєприпасів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_AmmoType">
             <English>Ammo Type</English>
@@ -62,6 +65,7 @@
             <Chinese>彈藥類型</Chinese>
             <Chinesesimp>弹药类型</Chinesesimp>
             <Turkish>Mermi Türü</Turkish>
+            <Ukrainian>Тип боєприпасів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_Category">
             <English>User Interface</English>
@@ -78,6 +82,7 @@
             <Chinese>使用者介面</Chinese>
             <Chinesesimp>用户界面</Chinesesimp>
             <Turkish>Kullanıcı Arayüzü</Turkish>
+            <Ukrainian>Інтерфейс</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_CommandMenu">
             <English>Command Menu</English>
@@ -94,6 +99,7 @@
             <Chinese>指揮選單</Chinese>
             <Chinesesimp>指挥菜单</Chinesesimp>
             <Turkish>Komut Menüsü</Turkish>
+            <Ukrainian>Командне меню</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_Disabled">
             <English>Cannot modify a forced User Interface element.</English>
@@ -109,6 +115,7 @@
             <Japanese>ユーザ インタフェース要素の強制はできません。</Japanese>
             <Chinese>無法編輯已被鎖定的使用者介面元件</Chinese>
             <Chinesesimp>无法编辑已被锁定的用户界面控件</Chinesesimp>
+            <Ukrainian>Неможливо змінити зафіксований елемент користувацького інтерфейсу.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_Disallowed">
             <English>Modifying User Interface is disabled.</English>
@@ -124,6 +131,7 @@
             <Japanese>ユーザ インタフェースの変更は無効化されています。</Japanese>
             <Chinese>自定使用者介面功能已關閉</Chinese>
             <Chinesesimp>自定用户界面功能已关闭</Chinesesimp>
+            <Ukrainian>Зміна користувацького інтерфейсу заборонена.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_EnableSpeedIndicator">
             <English>Enable movement speed indicator</English>
@@ -137,6 +145,7 @@
             <Korean>이동 속도 표시기 활성화</Korean>
             <Japanese>移動速度インジケータを有効化</Japanese>
             <Chinesesimp>启用移动速度指示器</Chinesesimp>
+            <Ukrainian>Увім. індикатор швидкості руху</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_EnableSpeedIndicator_Description">
             <English>Enables movement speed indicator for player character.</English>
@@ -150,6 +159,7 @@
             <Korean>플레이어 캐릭터를 위한 이동속도 표시기를 활성화합니다.</Korean>
             <Japanese>プレイヤー キャラの移動速度を表示します。</Japanese>
             <Chinesesimp>为玩家角色启用移动速度指示器。</Chinesesimp>
+            <Ukrainian>Вмикає індикатор швидкості пересування персонажа гравця.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_FiringMode">
             <English>Firing Mode</English>
@@ -166,6 +176,7 @@
             <Chinese>射擊模式</Chinese>
             <Chinesesimp>射击模式</Chinesesimp>
             <Turkish>Ateşleme Modu</Turkish>
+            <Ukrainian>Режим стрільби</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_GroupBar">
             <English>Group Bar</English>
@@ -182,6 +193,7 @@
             <Chinese>小隊狀態欄</Chinese>
             <Chinesesimp>小队状态栏</Chinesesimp>
             <Turkish>Grup Göstergesi</Turkish>
+            <Ukrainian>Панель командира</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_GunnerAmmoCount">
             <English>Gunner Ammo Count</English>
@@ -198,6 +210,7 @@
             <Chinese>砲手彈藥數量</Chinese>
             <Chinesesimp>炮手弹药数量</Chinesesimp>
             <Turkish>Nişancı Mermi Sayısı</Turkish>
+            <Ukrainian>Кількість боєприпасів навідника</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_GunnerAmmoType">
             <English>Gunner Ammo Type</English>
@@ -214,6 +227,7 @@
             <Chinese>砲手彈藥類型</Chinese>
             <Chinesesimp>炮手弹药类型</Chinesesimp>
             <Turkish>Nişancı Mermi Türü</Turkish>
+            <Ukrainian>Тип боєприпасів навідника</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_GunnerFiringMode">
             <English>Gunner Firing Mode</English>
@@ -230,6 +244,7 @@
             <Chinese>砲手射擊模式</Chinese>
             <Chinesesimp>炮手射击模式</Chinesesimp>
             <Turkish>Nişancı Ateşleme Modu</Turkish>
+            <Ukrainian>Режим стрільби навідника</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_GunnerLaunchableCount">
             <English>Gunner Launchable Count</English>
@@ -245,6 +260,7 @@
             <Japanese>射手用ランチャーの弾数</Japanese>
             <Chinese>砲手發射物數量</Chinese>
             <Chinesesimp>炮手发射物数量</Chinesesimp>
+            <Ukrainian>Кількість снарядів ПУ навідника</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_GunnerLaunchableName">
             <English>Gunner Launchable Type</English>
@@ -260,6 +276,7 @@
             <Japanese>射手用ランチャーの種類</Japanese>
             <Chinese>砲手發射物類型</Chinese>
             <Chinesesimp>炮手发射物类型</Chinesesimp>
+            <Ukrainian>Тип пускової установки навідника</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_GunnerMagCount">
             <English>Gunner Magazine Count</English>
@@ -276,6 +293,7 @@
             <Chinese>砲手彈匣數量</Chinese>
             <Chinesesimp>炮手弹匣数量</Chinesesimp>
             <Turkish>Nişancı Şarjör Sayısı</Turkish>
+            <Ukrainian>Кількість магазинів навідника</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_GunnerWeaponLowerInfoBackground">
             <English>Gunner Weapon Lower Info Background</English>
@@ -291,6 +309,7 @@
             <Japanese>射手用武器名下部の情報表示の背景</Japanese>
             <Chinese>砲手武器底部資訊欄背景</Chinese>
             <Chinesesimp>炮手武器底部信息栏背景</Chinesesimp>
+            <Ukrainian>Фон інформації про зброю навідника знизу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_GunnerWeaponName">
             <English>Gunner Weapon Name</English>
@@ -307,6 +326,7 @@
             <Chinese>砲手武器名稱</Chinese>
             <Chinesesimp>炮手武器名称</Chinesesimp>
             <Turkish>Nişancı Silah Ismi</Turkish>
+            <Ukrainian>Назва зброї навідника</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_GunnerWeaponNameBackground">
             <English>Gunner Weapon Name Background</English>
@@ -322,6 +342,7 @@
             <Japanese>射手用の武器名の背景</Japanese>
             <Chinese>砲手武器名稱背景</Chinese>
             <Chinesesimp>炮手武器名称背景</Chinesesimp>
+            <Ukrainian>Фон назви зброї навідника</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_GunnerZeroing">
             <English>Gunner Zeroing</English>
@@ -337,6 +358,7 @@
             <Japanese>射手用ゼロイン</Japanese>
             <Chinese>砲手歸零距離</Chinese>
             <Chinesesimp>炮手归零距离</Chinesesimp>
+            <Ukrainian>Дальність стрільби навідника</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_HideDefaultActionIcon">
             <English>Hide Default Action Icon</English>
@@ -350,6 +372,7 @@
             <Korean>기본 행동 아이콘 숨기기</Korean>
             <Japanese>デフォルトのアクションアイコンを非表示</Japanese>
             <Chinesesimp>隐藏默认动作标识</Chinesesimp>
+            <Ukrainian>Сховати іконку дії за замовчуванням</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_HideDefaultActionIcon_Description">
             <English>Hides the icon shown automatically when something is in front of the cursor. Requires a game restart.\nWarning: Does not remove the action itself! It is advisable to unbind 'Use default action' key to prevent unwanted interactions.</English>
@@ -363,6 +386,7 @@
             <Korean>커서 앞에 무언가가 있을 때 자동으로 표시되는 아이콘을 숨깁니다. 게임을 재시작해야 합니다\n경고: 작업 자체를 제거하지 않습니다! 원하지 않는 상호작용을 방지하려면 '기본 행동' 키를 삭제하는 것이 좋습니다.</Korean>
             <Japanese>カーソル先に何かがあるときに自動的に表示されるアイコンを非表示にします。 ゲームを再起動する必要があります。\n警告:アクション自体は削除されません! 誤って実行することを防ぐために、'標準アクション'キーのバインドを解除することをお勧めします。</Japanese>
             <Chinesesimp>隐藏屏幕面前有物体时自动显示的动作标识。需要重新启动游戏。\n警告：不会删除动作本身！建议同时取消对“使用默认动作”键的绑定，以防止不必要的互动。</Chinesesimp>
+            <Ukrainian>Ховає іконку, яка показується автоматично, коли щось знаходиться перед курсором. Потребує рестарту гри.\nУвага: не прибирає саму дію! Рекомендується прибрати комбінацію клавіш з налаштування "Виконати дію за замовчуванням" щоб застерегтися від небажаних дій.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_MagCount">
             <English>Magazine Count</English>
@@ -379,6 +403,7 @@
             <Chinese>彈匣數量</Chinese>
             <Chinesesimp>弹匣数量</Chinesesimp>
             <Turkish>Şarjör Sayısı</Turkish>
+            <Ukrainian>Кількість магазинів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_ModuleDescription">
             <English>This module allows toggling visible user interface parts.</English>
@@ -394,6 +419,7 @@
             <Japanese>このモジュールではユーザ インタフェースの表示部位の表示状態を切り替えることができます。</Japanese>
             <Chinese>此模塊允許你調整使用者介面的任何一個元件</Chinese>
             <Chinesesimp>此模块允许你调整用户界面的任何一个控件</Chinesesimp>
+            <Ukrainian>Цей модуль дає змогу перемикати видимість елементів користувацького інтерфейсу.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_ModuleName">
             <English>User Interface</English>
@@ -410,6 +436,7 @@
             <Chinese>使用者介面</Chinese>
             <Chinesesimp>用户界面</Chinesesimp>
             <Turkish>Kullanıcı Arayüzü</Turkish>
+            <Ukrainian>Користувацький інтерфейс</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_RequiresSoldierVehicleWeaponInfo">
             <English>Requires Soldier/Vehicle/Weapon Information.</English>
@@ -425,6 +452,7 @@
             <Japanese>兵士/車両/武器の情報 の表示が必要です。</Japanese>
             <Chinese>需要士兵/載具/武器的資訊.</Chinese>
             <Chinesesimp>需要士兵/载具/武器的信息。</Chinesesimp>
+            <Ukrainian>Потрібна інформація про солдата/техніку/зброю.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_SoldierVehicleWeaponInfo">
             <English>Soldier/Vehicle/Weapon Information</English>
@@ -440,6 +468,7 @@
             <Japanese>兵士/車両/武器の情報</Japanese>
             <Chinese>士兵/載具/武器資訊欄</Chinese>
             <Chinesesimp>士兵/载具/武器信息栏</Chinesesimp>
+            <Ukrainian>Інформація про солдата/техніку/зброю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_StaminaBar">
             <English>Stamina Bar</English>
@@ -456,6 +485,7 @@
             <Chinese>體力欄</Chinese>
             <Chinesesimp>体力栏</Chinesesimp>
             <Turkish>Yorulma Çubuğu</Turkish>
+            <Ukrainian>Смуга витривалості</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_Stance">
             <English>Stance</English>
@@ -472,6 +502,7 @@
             <Chinese>姿態</Chinese>
             <Chinesesimp>姿态</Chinesesimp>
             <Turkish>Duruş</Turkish>
+            <Ukrainian>Стійка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_ThrowableCount">
             <English>Throwable Count</English>
@@ -488,6 +519,7 @@
             <Chinese>投擲物數量</Chinese>
             <Chinesesimp>投掷物数量</Chinesesimp>
             <Turkish>Fırlatılabilir Sayısı</Turkish>
+            <Ukrainian>Кількість гранат</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_ThrowableName">
             <English>Throwable Type</English>
@@ -504,6 +536,7 @@
             <Chinese>投擲物類型</Chinese>
             <Chinesesimp>投掷物类型</Chinesesimp>
             <Turkish>Fırlatılabilir Türü</Turkish>
+            <Ukrainian>Тип гранати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_VehicleAltitude">
             <English>Vehicle Altitude</English>
@@ -520,6 +553,7 @@
             <Chinese>載具高度</Chinese>
             <Chinesesimp>载具高度</Chinesesimp>
             <Turkish>Araç Yüksekliği</Turkish>
+            <Ukrainian>Висота польоту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_VehicleCompass">
             <English>Vehicle Compass</English>
@@ -536,6 +570,7 @@
             <Chinese>載具指北針</Chinese>
             <Chinesesimp>载具指南针</Chinesesimp>
             <Turkish>Araç Pusulası</Turkish>
+            <Ukrainian>Компас у техніці</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_VehicleDamage">
             <English>Vehicle Damage</English>
@@ -552,6 +587,7 @@
             <Chinese>載具傷害</Chinese>
             <Chinesesimp>载具伤害</Chinesesimp>
             <Turkish>Araç Hasarı</Turkish>
+            <Ukrainian>Пошкодження техніки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_VehicleFuelBar">
             <English>Vehicle Fuel Bar</English>
@@ -568,6 +604,7 @@
             <Chinese>載具燃料欄</Chinese>
             <Chinesesimp>载具燃料栏</Chinesesimp>
             <Turkish>Araç Yakıt Göstergesi</Turkish>
+            <Ukrainian>Паливна смуга</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_VehicleInfoBackground">
             <English>Vehicle Info Background</English>
@@ -583,6 +620,7 @@
             <Japanese>車両状態の背景</Japanese>
             <Chinese>載具資訊欄背景</Chinese>
             <Chinesesimp>载具信息栏背景</Chinesesimp>
+            <Ukrainian>Фон інформації про техніку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_VehicleName">
             <English>Vehicle Name</English>
@@ -599,6 +637,7 @@
             <Chinese>載具名稱</Chinese>
             <Chinesesimp>载具名称</Chinesesimp>
             <Turkish>Araç Ismi</Turkish>
+            <Ukrainian>Назва техніки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_VehicleNameBackground">
             <English>Vehicle Name Background</English>
@@ -614,6 +653,7 @@
             <Japanese>車両名の背景</Japanese>
             <Chinese>載具名稱背景</Chinese>
             <Chinesesimp>载具名称背景</Chinesesimp>
+            <Ukrainian>Фон назви техніки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_VehicleRadar">
             <English>Vehicle Radar</English>
@@ -630,6 +670,7 @@
             <Chinese>載具雷達</Chinese>
             <Chinesesimp>载具雷达</Chinesesimp>
             <Turkish>Araç Radarı</Turkish>
+            <Ukrainian>Радар в техніці</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_VehicleSpeed">
             <English>Vehicle Speed</English>
@@ -646,6 +687,7 @@
             <Chinese>載具速度</Chinese>
             <Chinesesimp>载具速度</Chinesesimp>
             <Turkish>Araç Hızı</Turkish>
+            <Ukrainian>Швидкість техніки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_WeaponLowerInfoBackground">
             <English>Weapon Lower Info Background</English>
@@ -661,6 +703,7 @@
             <Japanese>武器名下部の情報表示の背景</Japanese>
             <Chinese>武器底部資訊欄背景</Chinese>
             <Chinesesimp>武器底部信息栏背景</Chinesesimp>
+            <Ukrainian>Фон інформації про зброю знизу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_WeaponName">
             <English>Weapon Name</English>
@@ -677,6 +720,7 @@
             <Chinese>武器名稱</Chinese>
             <Chinesesimp>武器名称</Chinesesimp>
             <Turkish>Silah Ismi</Turkish>
+            <Ukrainian>Назва зброї</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_WeaponNameBackground">
             <English>Weapon Name Background</English>
@@ -692,6 +736,7 @@
             <Japanese>武器名の背景</Japanese>
             <Chinese>武器名稱背景</Chinese>
             <Chinesesimp>武器名称背景</Chinesesimp>
+            <Ukrainian>Фон назви зброї</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_Zeroing">
             <English>Zeroing</English>
@@ -708,6 +753,15 @@
             <Chinese>歸零距離</Chinese>
             <Chinesesimp>归零距离</Chinesesimp>
             <Turkish>Sıfırlama</Turkish>
+            <Ukrainian>Дальність стрільби</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_UI_checkWeaponZeroing">
+            <English>Check Weapon Zeroing</English>
+            <French>Vérifier le zérotage de l'arme</French>
+            <Russian>Проверить пристрелку оружия</Russian>
+            <Korean>무기 영점 확인</Korean>
+            <Japanese>武器のゼロインを確認</Japanese>
+            <Ukrainian>Перевірити пристрілку зброї</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_devWatermark">
             <English>Development Build Watermark</English>
@@ -721,6 +775,7 @@
             <Korean>개발용 빌드 워터마크</Korean>
             <Japanese>開発ビルドでの透かしマーク</Japanese>
             <Chinesesimp>开发建设水印</Chinesesimp>
+            <Ukrainian>Водяний знак Development Build</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_hideHud">
             <English>Hide all UI</English>
@@ -732,6 +787,23 @@
             <Korean>모든 UI 숨기기</Korean>
             <Japanese>全てのUIを隠す</Japanese>
             <Chinesesimp>隐藏所有UI</Chinesesimp>
+            <Ukrainian>Приховати весь інтерфейс</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_UI_meters">
+            <English>Meters</English>
+            <French>Mètres</French>
+            <Russian>Метры</Russian>
+            <Korean>미터</Korean>
+            <Japanese>メートル</Japanese>
+            <Ukrainian>Метри</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_UI_weaponZeroSetTo">
+            <English>Zero is set to:</English>
+            <French>Le zérotage est fixé à :</French>
+            <Russian>Значение нуля равно:</Russian>
+            <Korean>영점 설정값:</Korean>
+            <Japanese>ゼロインの設定値:</Japanese>
+            <Ukrainian>Значення нуля дорівнює:</Ukrainian>
         </Key>
     </Package>
 </Project>

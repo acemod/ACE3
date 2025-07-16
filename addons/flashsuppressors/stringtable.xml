@@ -17,6 +17,7 @@
             <Chinesesimp>消焰器（.338）</Chinesesimp>
             <Turkish>Flash Suppressor (.338)</Turkish>
             <Hungarian>Lángrejtő (.338)</Hungarian>
+            <Ukrainian>Полум'ягасник (.338)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_93mmg">
             <English>Flash Suppressor (9.3 mm)</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>消焰器（9.3 mm）</Chinesesimp>
             <Turkish>Flash Suppressor (9.3 mm)</Turkish>
             <Hungarian>Lángrejtő (9,3 mm)</Hungarian>
+            <Ukrainian>Полум'ягасник (9,3 мм)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_B">
             <English>Flash Suppressor (7.62 mm)</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>消焰器（7.62 mm）</Chinesesimp>
             <Turkish>Flash Suppressor (7.62 mm)</Turkish>
             <Hungarian>Lángrejtő (7,62 mm)</Hungarian>
+            <Ukrainian>Полум'ягасник (7,62 мм)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_H">
             <English>Flash Suppressor (6.5 mm)</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>消焰器（6.5 mm）</Chinesesimp>
             <Turkish>Flash Suppressor (6.5 mm)</Turkish>
             <Hungarian>Lángrejtő (6,5 mm)</Hungarian>
+            <Ukrainian>Полум'ягасник (6,5 мм)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_L">
             <English>Flash Suppressor (5.56 mm)</English>
@@ -85,6 +89,7 @@
             <Chinesesimp>消焰器（5.56 mm）</Chinesesimp>
             <Turkish>Flash Suppressor (5.56 mm)</Turkish>
             <Hungarian>Lángrejtő (5,56 mm)</Hungarian>
+            <Ukrainian>Полум'ягасник (5,56 мм)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_smg_01">
             <English>Flash Suppressor (.45 ACP)</English>
@@ -102,6 +107,7 @@
             <Chinesesimp>消焰器（.45 ACP）</Chinesesimp>
             <Turkish>Flash Suppressor (.45 ACP)</Turkish>
             <Hungarian>Lángrejtő (.45 ACP)</Hungarian>
+            <Ukrainian>Полум'ягасник (.45 ACP)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_smg_02">
             <English>Flash Suppressor (9 mm)</English>
@@ -119,6 +125,7 @@
             <Chinesesimp>消焰器（9 mm）</Chinesesimp>
             <Turkish>Flash Suppressor (9 mm)</Turkish>
             <Hungarian>Lángrejtő (9 mm)</Hungarian>
+            <Ukrainian>Полум'ягасник (9 мм)</Ukrainian>
         </Key>
     </Package>
 </Project>

@@ -13,6 +13,7 @@
             <Korean>대형 참호를 팔때 필요한 시간을 설정합니다. (초 단위)</Korean>
             <Japanese>大型塹壕の造成が完了するまで掛かる時間。 (秒単位)</Japanese>
             <Chinesesimp>挖一条大型战壕所需的时间（秒）。</Chinesesimp>
+            <Ukrainian>Час у секундах, необхідний для риття великого окопу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeDigDuration_DisplayName">
             <English>Big Trench Dig Duration</English>
@@ -26,6 +27,7 @@
             <Korean>대형참호 건설 시간</Korean>
             <Japanese>大型塹壕造成の所要時間</Japanese>
             <Chinesesimp>大型战壕挖掘时间</Chinesesimp>
+            <Ukrainian>Час риття великого окопу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeRemoveDuration_Description">
             <English>Time, in seconds, required to remove a big trench.</English>
@@ -39,6 +41,7 @@
             <Korean>대형 참호를 제거할때 필요한 시간을 설정합니다. (초 단위)</Korean>
             <Japanese>大型塹壕の撤去が完了するまで掛かる時間。 (秒単位)</Japanese>
             <Chinesesimp>回填一条大型战壕所需的时间（秒）。</Chinesesimp>
+            <Ukrainian>Час у секундах, необхідний для видалення великого окопу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeRemoveDuration_DisplayName">
             <English>Big Trench Remove Duration</English>
@@ -52,6 +55,7 @@
             <Korean>대형참호 제거 시간</Korean>
             <Japanese>大型塹壕撤去の所要時間</Japanese>
             <Chinesesimp>大型战壕回填时间</Chinesesimp>
+            <Ukrainian>Час видалення великого окопу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_CamouflageTrench">
             <English>Camouflage Trench</English>
@@ -65,6 +69,7 @@
             <Korean>참호 위장시키기</Korean>
             <Japanese>塹壕を偽装</Japanese>
             <Chinesesimp>伪装掩体</Chinesesimp>
+            <Ukrainian>Камуфлювати окоп</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_CancelDig">
             <English>Cancel Dig</English>
@@ -81,6 +86,7 @@
             <Chinese>取消動作</Chinese>
             <Chinesesimp>取消动作</Chinesesimp>
             <Turkish>Kazmayı Iptal Et</Turkish>
+            <Ukrainian>Скасувати копання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_Category">
             <English>ACE Trenches</English>
@@ -94,6 +100,7 @@
             <Korean>ACE 참호</Korean>
             <Japanese>ACE 塹壕</Japanese>
             <Chinesesimp>ACE 战壕</Chinesesimp>
+            <Ukrainian>ACE Окопи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_ConfirmDig">
             <English>Confirm Dig</English>
@@ -110,6 +117,7 @@
             <Chinese>確認開工</Chinese>
             <Chinesesimp>确认开工</Chinesesimp>
             <Turkish>Kazmayı Onayla</Turkish>
+            <Ukrainian>Копати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_ContinueDiggingTrench">
             <English>Continue Digging Trench</English>
@@ -126,6 +134,7 @@
             <Chinese>繼續蓋掩體</Chinese>
             <Chinesesimp>继续挖掘掩体</Chinesesimp>
             <Turkish>Kazmaya Devam Et</Turkish>
+            <Ukrainian>Продовжити копання окопу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_DigEnvelopeBig">
             <English>Dig Big Trench</English>
@@ -142,6 +151,7 @@
             <Chinese>蓋大掩體</Chinese>
             <Chinesesimp>挖掘大掩体</Chinesesimp>
             <Turkish>Büyük Siper</Turkish>
+            <Ukrainian>Вирити великий окоп</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_DigEnvelopeSmall">
             <English>Dig Small Trench</English>
@@ -158,6 +168,7 @@
             <Chinese>蓋小掩體</Chinese>
             <Chinesesimp>挖掘小掩体</Chinesesimp>
             <Turkish>Küçük Siper</Turkish>
+            <Ukrainian>Вирити малий окоп</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_DiggingTrench">
             <English>Digging Trench</English>
@@ -174,6 +185,7 @@
             <Chinese>正在蓋掩體中</Chinese>
             <Chinesesimp>正在挖掘掩体</Chinesesimp>
             <Turkish>Siper Kazılıyor</Turkish>
+            <Ukrainian>Копання окопу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeBigDescription">
             <English>Large Personal Trench</English>
@@ -190,6 +202,7 @@
             <Chinese>大型個人掩體</Chinese>
             <Chinesesimp>大型个人掩体</Chinesesimp>
             <Turkish>Geniş Kişisel Siper</Turkish>
+            <Ukrainian>Великий персональний окоп</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeSmallDescription">
             <English>Small Personal Trench</English>
@@ -206,6 +219,7 @@
             <Chinese>小型個人掩體</Chinese>
             <Chinesesimp>小型个人掩体</Chinesesimp>
             <Turkish>Küçük Kişisel Siper</Turkish>
+            <Ukrainian>Малий персональний окоп</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_EntrenchingToolDescription">
             <English>Entrenching Tool</English>
@@ -222,6 +236,7 @@
             <Chinese>戰備鍬</Chinese>
             <Chinesesimp>战备锹</Chinesesimp>
             <Turkish>Kürek</Turkish>
+            <Ukrainian>Саперна лопата</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_EntrenchingToolName">
             <English>Entrenching Tool</English>
@@ -238,6 +253,7 @@
             <Chinese>戰備鍬</Chinese>
             <Chinesesimp>战备锹</Chinesesimp>
             <Turkish>Kürek</Turkish>
+            <Ukrainian>Саперна лопата</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeBigName">
             <English>Envelope - Big</English>
@@ -254,6 +270,7 @@
             <Chinese>掩體 - 大</Chinese>
             <Chinesesimp>掩体—大</Chinesesimp>
             <Turkish>Zarf - Büyük</Turkish>
+            <Ukrainian>Окоп - Великий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeSmallName">
             <English>Envelope - Small</English>
@@ -270,6 +287,7 @@
             <Chinese>掩體 - 小</Chinese>
             <Chinesesimp>掩体—小</Chinesesimp>
             <Turkish>Zarf - Küçük</Turkish>
+            <Ukrainian>Окоп - Малий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_RemoveEnvelope">
             <English>Remove Trench</English>
@@ -286,6 +304,7 @@
             <Chinese>移除掩體</Chinese>
             <Chinesesimp>移除掩体</Chinesesimp>
             <Turkish>Siperi Kaldır</Turkish>
+            <Ukrainian>Прибрати окоп</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_RemovingTrench">
             <English>Removing Trench</English>
@@ -302,6 +321,7 @@
             <Chinese>移除掩體中</Chinese>
             <Chinesesimp>正在移除掩体</Chinesesimp>
             <Turkish>Siper Kaldırılıyor</Turkish>
+            <Ukrainian>Прибирання окопу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_ScrollAction">
             <English>Rotate</English>
@@ -319,6 +339,7 @@
             <Chinesesimp>旋转</Chinesesimp>
             <Turkish>Yönlendir</Turkish>
             <Hungarian>Forgatás</Hungarian>
+            <Ukrainian>Обертати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeDigDuration_Description">
             <English>Time, in seconds, required to dig a small trench.</English>
@@ -332,6 +353,7 @@
             <Korean>소형 참호를 팔 때 필요한 시간을 설정합니다. (초 단위)</Korean>
             <Japanese>小型塹壕の造成が完了するまで掛かる時間。 (秒単位)</Japanese>
             <Chinesesimp>挖一条小型战壕所需的时间（秒）。</Chinesesimp>
+            <Ukrainian>Час у секундах, необхідний для риття малого окопу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeDigDuration_DisplayName">
             <English>Small Trench Dig Duration</English>
@@ -345,6 +367,7 @@
             <Korean>소형 참호 건설 시간</Korean>
             <Japanese>小型塹壕造成の所要時間</Japanese>
             <Chinesesimp>小型战壕挖掘时间</Chinesesimp>
+            <Ukrainian>Час копання малого окопу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeRemoveDuration_Description">
             <English>Time, in seconds, required to remove a small trench.</English>
@@ -358,6 +381,7 @@
             <Korean>소형 참호를 제거할때 필요한 시간을 설정합니다. (초 단위)</Korean>
             <Japanese>小型塹壕の撤去が完了するまで掛かる時間。 (秒単位)</Japanese>
             <Chinesesimp>回填一条小型战壕所需的时间（秒）。</Chinesesimp>
+            <Ukrainian>Час у секундах, необхідний для видалення малого окопу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeRemoveDuration_DisplayName">
             <English>Small Trench Remove Duration</English>
@@ -371,6 +395,7 @@
             <Korean>소형 참호 제거 시간</Korean>
             <Japanese>小型塹壕撤去の所要時間</Japanese>
             <Chinesesimp>小型战壕回填时间</Chinesesimp>
+            <Ukrainian>Час видалення малого окопу</Ukrainian>
         </Key>
     </Package>
 </Project>

@@ -12,6 +12,7 @@
             <Korean>과중압력</Korean>
             <Japanese>超過圧力</Japanese>
             <Chinesesimp>超压</Chinesesimp>
+            <Ukrainian>Перевантаження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Overpressure_backblastDistanceCoefficient_displayName">
             <English>Backblast Distance Coefficient</English>
@@ -23,6 +24,7 @@
             <Korean>후폭풍 거리 계수</Korean>
             <Japanese>後方噴射の距離係数</Japanese>
             <Chinesesimp>筒子尾焰距离系数</Chinesesimp>
+            <Ukrainian>Коефіцієнт відстані рекативного струменя</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Overpressure_backblastDistanceCoefficient_toolTip">
             <English>Scales the backblast effect</English>
@@ -34,6 +36,7 @@
             <Korean>후폭풍 효과의 스케일을 조정합니다</Korean>
             <Japanese>無反動砲による後方噴射の影響範囲の大きさ</Japanese>
             <Chinesesimp>调整筒子尾焰距离系数</Chinesesimp>
+            <Ukrainian>Масштабує ефект реактивного струменя</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Overpressure_distanceCoefficient_displayName">
             <English>Overpressure Distance Coefficient</English>
@@ -50,6 +53,7 @@
             <Chinese>高壓影響距離係數</Chinese>
             <Chinesesimp>超压影响距离系数</Chinesesimp>
             <Hungarian>Túlnyomás-távolság együtthatója</Hungarian>
+            <Ukrainian>Коеф. надлишкового тиску</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Overpressure_distanceCoefficient_toolTip">
             <English>Scales the overpressure effect</English>
@@ -66,6 +70,7 @@
             <Chinese>高壓影響的範圍</Chinese>
             <Chinesesimp>超压影响的范围</Chinesesimp>
             <Hungarian>Állítja a túlnyomás hatását</Hungarian>
+            <Ukrainian>Ступінь залежності надлишкового тиску від відстані</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Overpressure_statBackblastAngle">
             <English>Backblast angle</English>
@@ -82,6 +87,7 @@
             <Chinese>後方尾焰的角度</Chinese>
             <Chinesesimp>向后喷射的角度</Chinesesimp>
             <Hungarian>Utóhatás aránya</Hungarian>
+            <Ukrainian>Кут реактивного струменя</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Overpressure_statBackblastRange">
             <English>Backblast range</English>
@@ -98,6 +104,7 @@
             <Chinese>後方尾焰的範圍</Chinese>
             <Chinesesimp>向后喷射的范围</Chinesesimp>
             <Hungarian>Utóhatás távolsága</Hungarian>
+            <Ukrainian>Дальність реактивного струменя</Ukrainian>
         </Key>
     </Package>
 </Project>

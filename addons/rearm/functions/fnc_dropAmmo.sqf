@@ -1,12 +1,12 @@
 #include "..\script_component.hpp"
 /*
  * Author: GitHawk
- * Drops a magazine, optionally deletes it and optionally unholsters the wepaon.
+ * Drops a magazine, optionally deletes it and optionally unholsters the weapon.
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Delete dummy object <BOOL>(optional)
- * 2: Unholster Weapon <BOOL>(optional)
+ * 1: Delete dummy object <BOOL> (default: false)
+ * 2: Unholster Weapon <BOOL> (default: true)
  *
  * Return Value:
  * None

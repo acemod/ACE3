@@ -12,6 +12,7 @@
                 <Korean>AGM-65 매버릭 D</Korean>
                 <Japanese>AGM-65 マーベリック D</Japanese>
                 <Chinesesimp>AGM-65"小牛"空地D型</Chinesesimp>
+                <Ukrainian>AGM-65 Maverick D</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Maverick_d_mag_x1">
                 <English>AGM-65 Maverick D [ACE]</English>
@@ -23,6 +24,7 @@
                 <Korean>AGM-65 매버릭 D [ACE]</Korean>
                 <Japanese>AGM-65 マーベリック D [ACE]</Japanese>
                 <Chinesesimp>AGM-65"小牛"空地D型 [ACE]</Chinesesimp>
+                <Ukrainian>AGM-65 Maverick D [ACE]</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Maverick_d_mag_x3">
                 <English>3x AGM-65 Maverick D [ACE]</English>
@@ -34,6 +36,7 @@
                 <Korean>3x AGM-65 매버릭 D [ACE]</Korean>
                 <Japanese>3x AGM-65 マーベリック D [ACE]</Japanese>
                 <Chinesesimp>3x AGM-65"小牛"空地D型 [ACE]</Chinesesimp>
+                <Ukrainian>3x AGM-65 Maverick D [ACE]</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Maverick_g">
                 <English>AGM-65 Maverick G</English>
@@ -45,6 +48,7 @@
                 <Korean>AGM-65 매버릭 G</Korean>
                 <Japanese>AGM-65 マーベリック G</Japanese>
                 <Chinesesimp>AGM-65"小牛"空地G型</Chinesesimp>
+                <Ukrainian>AGM-65 Maverick G</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Maverick_g_mag_x1">
                 <English>AGM-65 Maverick G [ACE]</English>
@@ -56,6 +60,7 @@
                 <Korean>AGM-65 매버릭 G [ACE]</Korean>
                 <Japanese>AGM-65 マーベリック G [ACE]</Japanese>
                 <Chinesesimp>AGM-65"小牛"空地G型 [ACE]</Chinesesimp>
+                <Ukrainian>AGM-65 Maverick G [ACE]</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Maverick_g_mag_x2">
                 <English>2x AGM-65 Maverick G [ACE]</English>
@@ -67,6 +72,7 @@
                 <Korean>2x AGM-65 매버릭 G [ACE]</Korean>
                 <Japanese>2x AGM-65 マーベリック G [ACE]</Japanese>
                 <Chinesesimp>2x AGM-65"小牛"空地G型 [ACE]</Chinesesimp>
+                <Ukrainian>2x AGM-65 Maverick G [ACE]</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Maverick_g_mag_x3">
                 <English>3x AGM-65 Maverick G [ACE]</English>
@@ -78,6 +84,7 @@
                 <Korean>3x AGM-65 매버릭 G [ACE]</Korean>
                 <Japanese>3x AGM-65 マーベリック G [ACE]</Japanese>
                 <Chinesesimp>3x AGM-65"小牛"空地G型 [ACE]</Chinesesimp>
+                <Ukrainian>3x AGM-65 Maverick G [ACE]</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Maverick_kh25ml_mag_descr">
                 <English>Kh-25ML, Laser Guided Air-to-Ground-Missile</English>
@@ -94,6 +101,7 @@
                 <Chinese>Kh-25ML，雷射導引對地導彈</Chinese>
                 <Chinesesimp>Kh-25ML，激光制导空地导弹</Chinesesimp>
                 <Turkish>Kh-25ML, Laser Guided Air-to-Ground-Missile</Turkish>
+                <Ukrainian>Х-25МЛ, ракета Повітря-Земля з лазерним наведенням</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Maverick_kh25ml_mag_x1">
                 <English>1x Kh-25ML [ACE]</English>
@@ -110,6 +118,7 @@
                 <Chinese>1x Kh-25ML [ACE]</Chinese>
                 <Chinesesimp>1x Kh-25ML 激光空地导弹 [ACE]</Chinesesimp>
                 <Turkish>1x Kh-25ML [ACE]</Turkish>
+                <Ukrainian>1x X-25МЛ [ACE]</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Maverick_l_mag_descr">
                 <English>AGM-65 Maverick L, Laser Guided Anti-Ground-Missile</English>
@@ -126,6 +135,7 @@
                 <Chinese>AGM-65"小牛"飛彈L型，雷射導引對地導彈</Chinese>
                 <Chinesesimp>AGM-65"小牛"L型激光制导对地导弹</Chinesesimp>
                 <Turkish>AGM-65 Maverick L, Laser Guided Anti-Ground-Missile</Turkish>
+                <Ukrainian>AGM-65 Maverick L, ракета Повітря-Земля з лазерним наведенням</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Maverick_l_mag_short">
                 <English>MAVL</English>
@@ -139,6 +149,7 @@
                 <Korean>MAVL</Korean>
                 <Japanese>MAVL</Japanese>
                 <Chinesesimp>MAVL</Chinesesimp>
+                <Ukrainian>MAVL</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Maverick_l_mag_x1">
                 <English>AGM-65 Maverick L [ACE]</English>
@@ -155,6 +166,7 @@
                 <Chinese>AGM-65"小牛"飛彈L型 [ACE]</Chinese>
                 <Chinesesimp>AGM-65"小牛"空地L型 [ACE]</Chinesesimp>
                 <Turkish>AGM-65 Maverick L [ACE]</Turkish>
+                <Ukrainian>AGM-65 Maverick L [ACE]</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Maverick_l_mag_x2">
                 <English>2x AGM-65 Maverick L [ACE]</English>
@@ -171,6 +183,7 @@
                 <Chinese>2x AGM-65"小牛"飛彈L型 [ACE]</Chinese>
                 <Chinesesimp>2x AGM-65"小牛"空地L型 [ACE]</Chinesesimp>
                 <Turkish>2x AGM-65 Maverick L [ACE]</Turkish>
+                <Ukrainian>2x AGM-65 Maverick L [ACE]</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Maverick_l_mag_x3">
                 <English>3x AGM-65 Maverick L [ACE]</English>
@@ -187,6 +200,7 @@
                 <Chinese>3x AGM-65"小牛"飛彈L型 [ACE]</Chinese>
                 <Chinesesimp>3x AGM-65"小牛"空地L型 [ACE]</Chinesesimp>
                 <Turkish>3x AGM-65 Maverick L [ACE]</Turkish>
+                <Ukrainian>3x AGM-65 Maverick L [ACE]</Ukrainian>
             </Key>
         </Container>
         <Container name="weapons">
@@ -205,6 +219,7 @@
                 <Chinese>Kh-25ML</Chinese>
                 <Chinesesimp>Kh-25ML 激光空地导弹</Chinesesimp>
                 <Turkish>Kh-25ML</Turkish>
+                <Ukrainian>Х-25МЛ</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Maverick_l">
                 <English>AGM-65 Maverick L</English>
@@ -221,6 +236,7 @@
                 <Chinese>AGM-65"小牛"空地L型</Chinese>
                 <Chinesesimp>AGM-65"小牛"导弹L型</Chinesesimp>
                 <Turkish>AGM-65 Maverick L</Turkish>
+                <Ukrainian>AGM-65 Maverick L</Ukrainian>
             </Key>
         </Container>
     </Package>
