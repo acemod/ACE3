@@ -17,6 +17,7 @@
             <Chinesesimp>设定由玩家射击的炮弹是否受到空气阻力与风力的影响</Chinesesimp>
             <Turkish>Oyuncu atışları, hava direnci ve rüzgar efektleri için</Turkish>
             <Hungarian>Játékos általi lövésekhez, legyen-e számított légellenállás és szélhatás</Hungarian>
+            <Ukrainian>Для пострілів гравця. Моделює опір повітря та ефект вітру</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_advancedCorrections_displayName">
             <English>Air Resistance</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>空气阻力</Chinesesimp>
             <Turkish>Hava Direnci</Turkish>
             <Hungarian>Légellenállás</Hungarian>
+            <Ukrainian>Опір повітря</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_disableArtilleryComputer_description">
             <English>Disable the vanilla artillery computers</English>
@@ -50,6 +52,7 @@
             <Chinese>停用原本的火炮控制電腦</Chinese>
             <Chinesesimp>禁用游戏自带的弹道计算机</Chinesesimp>
             <Turkish>Topçu bilgisayarını devre dışı bırak</Turkish>
+            <Ukrainian>Вимкнути ванільний гарматний комп'ютер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_disableArtilleryComputer_displayName">
             <English>Artillery Computer Disabled</English>
@@ -66,6 +69,7 @@
             <Chinese>停用火炮電腦</Chinese>
             <Chinesesimp>停用弹道计算机</Chinesesimp>
             <Turkish>Topçu Bilgisayarı Devre Dışı</Turkish>
+            <Ukrainian>Гарматний комп'ютер вимкнено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_rangetable_description">
             <English>Universal Artillery Rangetable</English>
@@ -82,6 +86,7 @@
             <Chinese>通用的火炮射程表</Chinese>
             <Chinesesimp>通用火炮射表</Chinesesimp>
             <Turkish>Uluslar arası Topçu Menzil Tablosu</Turkish>
+            <Ukrainian>Універсальна артилерійська балістична таблиця</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_rangetable_displayName">
             <English>Artillery Rangetable</English>
@@ -98,6 +103,7 @@
             <Chinese>火炮射程表</Chinese>
             <Chinesesimp>火炮射表</Chinesesimp>
             <Turkish>Topçu Menzil Tablosu</Turkish>
+            <Ukrainian>Артилерійська балістична таблиця</Ukrainian>
         </Key>
     </Package>
 </Project>

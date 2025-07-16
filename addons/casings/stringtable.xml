@@ -13,6 +13,7 @@
             <Korean>ACE 탄피</Korean>
             <Japanese>ACE 薬莢</Japanese>
             <Chinesesimp>ACE 弹壳</Chinesesimp>
+            <Ukrainian>ACE Гільзи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Casings_description">
             <English>Enable persistent casings (POTENTIAL performance impact on old/weak systems)</English>
@@ -26,6 +27,7 @@
             <Korean>영구적으로 남는 탄피를 활성화합니다(오래되거나 저사양에 잠재적인 성능 영향을 줄 수 있음)</Korean>
             <Japanese>永続的な薬莢を有効にする (古い/弱いシステムに対する潜在的なパフォーマンスの影響)</Japanese>
             <Chinesesimp>开启生成持续存在的弹壳（可能对较老和性能不行的系统有影响）</Chinesesimp>
+            <Ukrainian>Увімкнути постійні гільзи (ПОТЕНЦІЙНО може вплинути на продуктивність на старих/слабких системах)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Casings_displayName">
             <English>Casings Enabled</English>
@@ -39,6 +41,7 @@
             <Korean>탄피 활성화</Korean>
             <Japanese>薬莢の有効化</Japanese>
             <Chinesesimp>开启弹壳生成</Chinesesimp>
+            <Ukrainian>Гільзи включені</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Casings_maxCasings_description">
             <English>Maximum amount of casings to display</English>
@@ -52,6 +55,7 @@
             <Korean>표시할 최대 탄피 갯수</Korean>
             <Japanese>表示される薬莢の最大の数</Japanese>
             <Chinesesimp>显示的最大弹壳数量</Chinesesimp>
+            <Ukrainian>Максимальна кількість гільз для відображення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Casings_maxCasings_displayName">
             <English>Maximum casings</English>
@@ -65,6 +69,7 @@
             <Korean>탄피 최대 갯수</Korean>
             <Japanese>薬莢の最大量</Japanese>
             <Chinesesimp>最大弹壳量</Chinesesimp>
+            <Ukrainian>Макс. кількість гільз</Ukrainian>
         </Key>
     </Package>
 </Project>

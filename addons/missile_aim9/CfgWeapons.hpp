@@ -4,7 +4,7 @@ class CfgWeapons {
     class GVAR(m): Missile_AA_04_Plane_CAS_01_F {
         lockAcquire = 1; // auto lock
 
-        author = "Dani (TCVM)";
+        author = "tcvm";
         displayName = CSTRING(m);
         weaponLockDelay = 0.5;
         magazines[] = {QGVAR(2Rnd_Missile_9m), QGVAR(PylonRack_1Rnd_Missile_9m), QGVAR(PylonMissile_1Rnd_Missile_9m)};
@@ -14,7 +14,7 @@ class CfgWeapons {
     class GVAR(x): weapon_BIM9xLauncher {
         lockAcquire = 1; // auto lock
 
-        author = "Dani (TCVM)";
+        author = "tcvm";
         displayName = CSTRING(x);
         weaponLockDelay = 0.5;
         magazines[] = { QGVAR(magazine_Missile_9x), QGVAR(PylonMissile_Missile_9x), QGVAR(PylonRack_Missile_9x), QGVAR(PylonRack_Missile_9x_2) };
@@ -25,7 +25,7 @@ class CfgWeapons {
     class GVAR(aim132): missiles_ASRAAM {
         lockAcquire = 1; // auto lock
 
-        author = "Dani (TCVM)";
+        author = "tcvm";
         displayName = CSTRING(aim132);
         weaponLockDelay = 0.5;
         magazines[] = {
@@ -44,7 +44,7 @@ class CfgWeapons {
     class GVAR(r73): weapon_R73Launcher {
         lockAcquire = 1; // auto lock
 
-        author = "Dani (TCVM)";
+        author = "tcvm";
         displayName = CSTRING(r73);
         weaponLockDelay = 0.5;
 
@@ -58,7 +58,7 @@ class CfgWeapons {
     class GVAR(r74): Missile_AA_03_Plane_CAS_02_F {
         lockAcquire = 1; // auto lock
 
-        author = "Dani (TCVM)";
+        author = "tcvm";
         displayName = CSTRING(r74);
         weaponLockDelay = 0.5;
 

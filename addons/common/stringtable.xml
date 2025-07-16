@@ -16,6 +16,7 @@
             <Chinese>ACE 通用按鍵</Chinese>
             <Chinesesimp>ACE 通用</Chinesesimp>
             <Turkish>ACE Common</Turkish>
+            <Ukrainian>ACE Загальне</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryEquipment">
             <English>ACE Equipment</English>
@@ -32,6 +33,7 @@
             <Chinese>ACE 裝備按鍵</Chinese>
             <Chinesesimp>ACE 装备</Chinesesimp>
             <Turkish>ACE Ekipmanlar</Turkish>
+            <Ukrainian>ACE Спорядження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryMovement">
             <English>ACE Movement</English>
@@ -48,6 +50,7 @@
             <Chinese>ACE 動作按鍵</Chinese>
             <Chinesesimp>ACE 移动</Chinesesimp>
             <Turkish>ACE Hareket</Turkish>
+            <Ukrainian>ACE Переміщення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryScopeAdjustment">
             <English>ACE Scope Adjustment</English>
@@ -63,6 +66,7 @@
             <Japanese>ACE スコープ調節</Japanese>
             <Chinese>ACE 瞄準鏡調節按鍵</Chinese>
             <Chinesesimp>ACE 瞄准镜调节</Chinesesimp>
+            <Ukrainian>ACE Приціли</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryVehicles">
             <English>ACE Vehicles</English>
@@ -79,6 +83,7 @@
             <Chinese>ACE 載具按鍵</Chinese>
             <Chinesesimp>ACE 载具</Chinesesimp>
             <Turkish>ACE Araçlar</Turkish>
+            <Ukrainian>ACE Транспорт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryWeapons">
             <English>ACE Weapons</English>
@@ -95,6 +100,7 @@
             <Chinese>ACE 武器按鍵</Chinese>
             <Chinesesimp>ACE 武器</Chinesesimp>
             <Turkish>ACE Silahlar</Turkish>
+            <Ukrainian>ACE Зброя</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_ACETeam">
             <English>ACE-Team</English>
@@ -112,6 +118,7 @@
             <Chinesesimp>ACE—制作团队</Chinesesimp>
             <Turkish>ACE-Takımı</Turkish>
             <Hungarian>ACE-Team</Hungarian>
+            <Ukrainian>Команда ACE</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_ActionAborted">
             <English>Action cancelled.</English>
@@ -129,6 +136,7 @@
             <Chinesesimp>动作已被取消</Chinesesimp>
             <Turkish>Işlem iptal edildi.</Turkish>
             <Hungarian>Művelet megszakítva.</Hungarian>
+            <Ukrainian>Дію скасовано.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Advanced">
             <English>Advanced</English>
@@ -146,6 +154,7 @@
             <Chinesesimp>进阶</Chinesesimp>
             <Turkish>Gelişmiş</Turkish>
             <Hungarian>Fejlett</Hungarian>
+            <Ukrainian>Ускладнений</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_AllowFadeMusic">
             <English>Allow turning down music</English>
@@ -162,6 +171,7 @@
             <Chinese>允許調低音樂音量</Chinese>
             <Chinesesimp>允许调低音乐音量</Chinesesimp>
             <Turkish>Müziği kısmaya izin ver</Turkish>
+            <Ukrainian>Дозволити приглушення музики</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_AllowFadeMusicTooltip">
             <English>Allow ACE scripts to turn down the music.</English>
@@ -178,6 +188,7 @@
             <Chinese>允許ACE腳本去控制音樂的音量</Chinese>
             <Chinesesimp>允许 ACE 脚本去控制音乐的音量。</Chinesesimp>
             <Turkish>ACE scripti müziği kısmana izin verir</Turkish>
+            <Ukrainian>Дозволити скриптам ACE приглушувати музику</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Always">
             <English>Always</English>
@@ -194,6 +205,7 @@
             <Chinese>一直</Chinese>
             <Chinesesimp>总是</Chinesesimp>
             <Turkish>Her Zaman</Turkish>
+            <Ukrainian>Завжди</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Anywhere">
             <English>Anywhere</English>
@@ -211,6 +223,7 @@
             <Chinesesimp>任何地方</Chinesesimp>
             <Turkish>Herhangi bir yer</Turkish>
             <Hungarian>Akárhol</Hungarian>
+            <Ukrainian>Де завгодно</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Basic">
             <English>Basic</English>
@@ -228,6 +241,7 @@
             <Chinesesimp>基础</Chinesesimp>
             <Turkish>Basit</Turkish>
             <Hungarian>Alap</Hungarian>
+            <Ukrainian>Базовий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Bottom">
             <English>Bottom</English>
@@ -245,6 +259,7 @@
             <Chinesesimp>下方</Chinesesimp>
             <Turkish>Alt</Turkish>
             <Hungarian>Alul</Hungarian>
+            <Ukrainian>Знизу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Cancel">
             <English>Cancel</English>
@@ -262,6 +277,7 @@
             <Chinesesimp>取消</Chinesesimp>
             <Turkish>Iptal</Turkish>
             <Hungarian>Mégse</Hungarian>
+            <Ukrainian>Скасування</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_Description">
             <English>What to do with people who do not have the right PBOs?</English>
@@ -278,6 +294,7 @@
             <Chinese>若玩家沒有正確的PBO檔時，將採取何種動作?</Chinese>
             <Chinesesimp>若玩家没有正确的 PBO 档时，将采取何种动作？</Chinesesimp>
             <Hungarian>Mi legyen azokkal a személyekkel, akiknek nincsenek meg a helyes PBO-k?</Hungarian>
+            <Ukrainian>Що робити з гравцями з неправильними аддонами?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_DisplayName">
             <English>Action</English>
@@ -294,6 +311,7 @@
             <Chinese>動作</Chinese>
             <Chinesesimp>动作</Chinesesimp>
             <Hungarian>Cselekvés</Hungarian>
+            <Ukrainian>Дія</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_Kick">
             <English>Kick</English>
@@ -311,6 +329,7 @@
             <Chinesesimp>踢除</Chinesesimp>
             <Turkish>AT</Turkish>
             <Hungarian>Kirúgás</Hungarian>
+            <Ukrainian>Кікнути</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_WarnOnce">
             <English>Warn once</English>
@@ -328,6 +347,7 @@
             <Chinesesimp>警告（一次）</Chinesesimp>
             <Turkish>UYAR</Turkish>
             <Hungarian>Egyszeri figyelmeztetés</Hungarian>
+            <Ukrainian>Попередити один раз</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_WarnPerm">
             <English>Warn (permanent)</English>
@@ -345,6 +365,7 @@
             <Chinesesimp>警告（持续）</Chinesesimp>
             <Turkish>UYAR (KALICI)</Turkish>
             <Hungarian>Figyelmeztetés (tartós)</Hungarian>
+            <Ukrainian>Попереджати (постійно)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_CheckAll_Description">
             <English>Check all addons instead of only those of ACE?</English>
@@ -361,6 +382,7 @@
             <Chinese>檢查包含ACE之外的其他模組?</Chinese>
             <Chinesesimp>检查包含 ACE 之外的其他模组？</Chinesesimp>
             <Hungarian>Az összes bővítmény ellenőrzése, csak az ACE helyett?</Hungarian>
+            <Ukrainian>Перевіряти всі аддони, а не тільки ACE?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_CheckAll_DisplayName">
             <English>Check all addons</English>
@@ -377,6 +399,7 @@
             <Chinese>檢查所有模組</Chinese>
             <Chinesesimp>检查所有模组</Chinesesimp>
             <Hungarian>Összes bővítmény ellenőrzése</Hungarian>
+            <Ukrainian>Перевіряти всі аддони</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Description">
             <English>Check addon integrity with server and do selected action if an addon is missing.</English>
@@ -392,6 +415,7 @@
             <Japanese>サーバーとのアドオンの整合性をチェックし、不備があった場合は選択したアクションを実行します。</Japanese>
             <Chinese>檢查客戶端與伺服器端的模組清單是否一致且完整，並提供訊息表示遺失的模組</Chinese>
             <Chinesesimp>检查客户端与服务器端的模组清单是否一致且完整，并提供信息表示遗失的模组。</Chinesesimp>
+            <Ukrainian>Виконує перевірку версій аддонів ACE у гравців, що підключаються</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_DisplayName">
             <English>Check PBOs</English>
@@ -408,6 +432,7 @@
             <Chinese>檢查PBO檔</Chinese>
             <Chinesesimp>检查 PBO</Chinesesimp>
             <Hungarian>PBO-k ellenőrzése</Hungarian>
+            <Ukrainian>Перевірка аддонів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Whitelist_Description">
             <English>What addons are allowed regardless?</English>
@@ -424,6 +449,7 @@
             <Chinese>哪些模組是可被允許/忽略的?</Chinese>
             <Chinesesimp>无论如何都允许的附加组件</Chinesesimp>
             <Hungarian>Milyen bővítmények vannak feltétlenül engedélyezve?</Hungarian>
+            <Ukrainian>Які аддони додатково дозволені?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Whitelist_DisplayName">
             <English>Whitelist</English>
@@ -441,6 +467,7 @@
             <Chinesesimp>白名单</Chinesesimp>
             <Turkish>Beyaz Liste</Turkish>
             <Hungarian>Fehérlista</Hungarian>
+            <Ukrainian>Вайтлист дод. аддонів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsAction">
             <English>Check PBO Action</English>
@@ -456,6 +483,7 @@
             <Japanese>PBO検査の挙動</Japanese>
             <Chinese>檢查PBO動作</Chinese>
             <Chinesesimp>检查 PBO 动作</Chinesesimp>
+            <Ukrainian>Дія під час перевірки PBO</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsActionDesc">
             <English>Defines the action to be taken if a player does not have the correct PBOs.</English>
@@ -471,6 +499,7 @@
             <Japanese>プレイヤーが不正規のPBOを所持している場合の動作を定義します。</Japanese>
             <Chinese>設定當玩家有錯誤的PBO檔案時要如何處置。</Chinese>
             <Chinesesimp>设定当玩家有错误的 PBO 时要如何处理。</Chinesesimp>
+            <Ukrainian>Визначає, яку дію буде зроблено, якщо гравець не має коректних PBO.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
@@ -486,6 +515,7 @@
             <Japanese>全てのPBOを検査</Japanese>
             <Chinese>檢查所有PBO</Chinese>
             <Chinesesimp>检查所有 PBO</Chinesesimp>
+            <Ukrainian>Перевіряти всі PBO</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAllDesc">
             <English>Check all addons, not only those of ACE.</English>
@@ -501,6 +531,7 @@
             <Japanese>ACE だけでなく、全てのアドオンを検査します。</Japanese>
             <Chinese>檢查全部的插件而非只有ACE。</Chinese>
             <Chinesesimp>检查全部插件而非只有 ACE。</Chinesesimp>
+            <Ukrainian>Перевіряти всі аддони, а не тільки ACE.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
@@ -516,6 +547,7 @@
             <Japanese>PBO 検査のホワイトリスト</Japanese>
             <Chinese>檢查PBO白名單</Chinese>
             <Chinesesimp>检查 PBO 白名单</Chinesesimp>
+            <Ukrainian>Білий список для перевірки PBO</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelistDesc">
             <English>Define a list of regardless allowed addons.</English>
@@ -531,6 +563,7 @@
             <Japanese>関係なく使用が許可されるアドオンのリストを定義します。</Japanese>
             <Chinese>定義哪些插件是允許使用的。</Chinese>
             <Chinesesimp>定义哪些插件是允许使用的。</Chinesesimp>
+            <Ukrainian>Задати список дозволених аддонів незалежно від обставин.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Confirm">
             <English>Confirm</English>
@@ -547,6 +580,7 @@
             <Chinese>確認</Chinese>
             <Chinesesimp>确认</Chinesesimp>
             <Turkish>Onayla</Turkish>
+            <Ukrainian>Підтвердити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Debug">
             <English>Debug</English>
@@ -558,6 +592,7 @@
             <Korean>디버그</Korean>
             <Japanese>デバッグ</Japanese>
             <Chinesesimp>开发者模式</Chinesesimp>
+            <Ukrainian>Відладка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_DeployedSwayFactor">
             <English>Deployed sway factor</English>
@@ -570,6 +605,7 @@
             <Korean>거치 시 손떨림 정도</Korean>
             <Japanese>接地展開時の手ぶれ係数</Japanese>
             <Chinesesimp>部署时的晃动系数</Chinesesimp>
+            <Ukrainian>Коеф. коливання прицілу під час розгортання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_DeployedSwayFactor_Description">
             <English>Influences the amount of weapon sway while weapon is deployed.</English>
@@ -582,6 +618,7 @@
             <Korean>무기를 거치하는 동안 무기를 흔드는 정도를 정합니다.</Korean>
             <Japanese>武器の接地展開時の武器の手ぶれの大きさに影響します。</Japanese>
             <Chinesesimp>武器部署后的晃动系数</Chinesesimp>
+            <Ukrainian>Впливає на величину коливання прицілу зброї під час його розгортання.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Disabled">
             <English>Disabled</English>
@@ -598,6 +635,7 @@
             <Chinese>停用</Chinese>
             <Chinesesimp>停用</Chinesesimp>
             <Turkish>Devre Dışı</Turkish>
+            <Ukrainian>Вимкнено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_DisplayName">
             <English>Common</English>
@@ -613,6 +651,7 @@
             <Japanese>一般</Japanese>
             <Chinese>通用</Chinese>
             <Chinesesimp>通用</Chinesesimp>
+            <Ukrainian>Загальні</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_DoNotForce">
             <English>Do Not Force</English>
@@ -629,6 +668,7 @@
             <Chinese>不要強行</Chinese>
             <Chinesesimp>不要强行</Chinesesimp>
             <Turkish>Zorlama</Turkish>
+            <Ukrainian>Не зобов'язувати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Drop">
             <English>Release</English>
@@ -646,6 +686,7 @@
             <Chinesesimp>放开</Chinesesimp>
             <Turkish>Bırak</Turkish>
             <Hungarian>Elengedés</Hungarian>
+            <Ukrainian>Відпустити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_E">
             <English>E</English>
@@ -663,6 +704,7 @@
             <Chinesesimp>东</Chinesesimp>
             <Turkish>D</Turkish>
             <Hungarian>K</Hungarian>
+            <Ukrainian>Сх</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_ENE">
             <English>ENE</English>
@@ -680,6 +722,7 @@
             <Chinesesimp>东北偏东</Chinesesimp>
             <Turkish>DKD</Turkish>
             <Hungarian>KÉK</Hungarian>
+            <Ukrainian>СхПнСх</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_ESE">
             <English>ESE</English>
@@ -697,6 +740,7 @@
             <Chinesesimp>东南偏东</Chinesesimp>
             <Turkish>DGD</Turkish>
             <Hungarian>KDK</Hungarian>
+            <Ukrainian>СхПдСх</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_EnableNumberHotkeys">
             <English>Disable Command Menu</English>
@@ -714,6 +758,7 @@
             <Chinesesimp>关闭命令菜单</Chinesesimp>
             <Turkish>Komut Menüsünü Devre Dışı Bırak</Turkish>
             <Hungarian>Parancsnoki menü kikapcsolása</Hungarian>
+            <Ukrainian>Вимк. командне меню</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_EnableSway">
             <English>Enable Weapon Sway</English>
@@ -725,6 +770,7 @@
             <Korean>무기 흔들림 추가</Korean>
             <Japanese>手ぶれを有効化</Japanese>
             <Chinesesimp>启用ACE武器晃动</Chinesesimp>
+            <Ukrainian>Увімкнути коливання зброї</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_EnableSway_Description">
             <English>Enables weapon sway influenced by sway factors, such as stance, fatigue and medical condition.\nDisabling this setting will defer sway to vanilla or other mods.</English>
@@ -736,6 +782,7 @@
             <Korean>흔들림 계수, 자세, 피로도, 건강 상태 등의 요인에 영향을 받는 무기 흔들림을 활성화합니다.\n이 설정을 비활성화하면 바닐라 또는 다른 모드의 흔들림으로 대체됩니다.</Korean>
             <Japanese>姿勢、疲労、負傷状態などの手ぶれ要因に影響を受ける武器照準の揺れを有効にします。\nこの設定を無効にすると、手ぶれの揺れはバニラまたは他のMODの処理に任されます。</Japanese>
             <Chinesesimp>启用ACE参数控制的武器晃动, 比如姿势, 体力和受伤状况\n禁用这个选项将会使用原版或其他模组控制的武器晃动</Chinesesimp>
+            <Ukrainian>Активуйте коливання зброї залежно від таких чинників, як стійка, втома і стан здоров'я.\nВідключення цього параметра призведе до перенесення розгойдування на vanilla або інші моди.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Enabled">
             <English>Enabled</English>
@@ -752,6 +799,7 @@
             <Chinese>啟用</Chinese>
             <Chinesesimp>启用</Chinesesimp>
             <Turkish>Etkin</Turkish>
+            <Ukrainian>Увімкнено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_EpilepsyFriendlyMode">
             <English>Epilepsy friendly mode</English>
@@ -765,6 +813,7 @@
             <Korean>광과민 친화적 모드</Korean>
             <Japanese>てんかん対応モード</Japanese>
             <Chinesesimp>癫痫病友好模式</Chinesesimp>
+            <Ukrainian>Режим для епілептиків</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_EpilepsyFriendlyModeTooltip">
             <English>Disables some flashing light effects to reduce seizure risk.</English>
@@ -778,6 +827,7 @@
             <Korean>반짝거리는 빛으로 인해 일어날 발작 상황을 줄여줍니다.</Korean>
             <Japanese>てんかん発作のリスクを軽減するために、一部の点滅する光の効果を無効にします。</Japanese>
             <Chinesesimp>禁用一些闪烁的灯光效果，以降低癫痫发作的风险。</Chinesesimp>
+            <Ukrainian>Вимикає деякі спалахи, щоб уникнути ризику нападу.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
@@ -794,6 +844,7 @@
             <Chinese>旗幟(ACE-黑色)</Chinese>
             <Chinesesimp>旗帜（ACE-黑色）：</Chinesesimp>
             <Turkish>Bayrak (ACE- Siyah)</Turkish>
+            <Ukrainian>Прапор (ACE - Чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_FlagWhite">
             <English>Flag (ACE - White)</English>
@@ -810,6 +861,7 @@
             <Chinese>旗幟(ACE-白色)</Chinese>
             <Chinesesimp>旗帜（ACE-白色）：</Chinesesimp>
             <Turkish>Bayrak (ACE - Beyaz)</Turkish>
+            <Ukrainian>Прапор (ACE - Білий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Hide">
             <English>Hide</English>
@@ -827,6 +879,7 @@
             <Chinesesimp>隐藏</Chinesesimp>
             <Turkish>Gizle</Turkish>
             <Hungarian>Elrejtés</Hungarian>
+            <Ukrainian>Приховати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Inventory_Full">
             <English>No inventory space</English>
@@ -844,6 +897,7 @@
             <Chinesesimp>无可用空间</Chinesesimp>
             <Turkish>Envanter de alan yok</Turkish>
             <Hungarian>Nincs több hely</Hungarian>
+            <Ukrainian>В інвентарі немає місця</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_KeybindToggle">
             <English>Toggle</English>
@@ -861,6 +915,7 @@
             <Chinesesimp>切换</Chinesesimp>
             <Turkish>Değiştir</Turkish>
             <Hungarian>pecek</Hungarian>
+            <Ukrainian>переключити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_LSDVehicles_Description">
             <English>Adds LSD effect to synchronized vehicle</English>
@@ -877,6 +932,7 @@
             <Chinese>使被同步的載具產生瘋狂的迷幻效果。(後果自負)</Chinese>
             <Chinesesimp>使被同步的载具产生疯狂的迷幻效果。（后果自负）</Chinesesimp>
             <Hungarian>LSD-effekt hozzáadása a szinkronizált járművekhez</Hungarian>
+            <Ukrainian>Додає ефект LSD (миготіння всіма кольорами веселки) синхронізованим транспортним засобам</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_LSDVehicles_DisplayName">
             <English>LSD Vehicles</English>
@@ -893,6 +949,7 @@
             <Chinese>迷幻載具</Chinese>
             <Chinesesimp>迷幻载具</Chinesesimp>
             <Hungarian>LSD járművek</Hungarian>
+            <Ukrainian>LSD Транспорт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>
@@ -909,6 +966,7 @@
             <Chinese>受所在位置影響提升醫療能力</Chinese>
             <Chinesesimp>位置提升能力</Chinesesimp>
             <Turkish>Konumlar Tedaviyi Hızlandırır</Turkish>
+            <Ukrainian>Місця прискореного навчання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_MiscItems">
             <English>[ACE] Miscellaneous Items</English>
@@ -926,6 +984,7 @@
             <Chinesesimp>[ACE] 杂项</Chinesesimp>
             <Turkish>[ACE] Çeşitli Nesneler</Turkish>
             <Hungarian>[ACE] Egyéb tárgyak</Hungarian>
+            <Ukrainian>[ACE] Різні предмети</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_N">
             <English>N</English>
@@ -943,6 +1002,7 @@
             <Chinesesimp>北</Chinesesimp>
             <Turkish>K</Turkish>
             <Hungarian>É</Hungarian>
+            <Ukrainian>Пн</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_NE">
             <English>NE</English>
@@ -960,6 +1020,7 @@
             <Chinesesimp>东北</Chinesesimp>
             <Turkish>KD</Turkish>
             <Hungarian>ÉK</Hungarian>
+            <Ukrainian>ПнСх</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_NNE">
             <English>NNE</English>
@@ -977,6 +1038,7 @@
             <Chinesesimp>东北偏北</Chinesesimp>
             <Turkish>KKD</Turkish>
             <Hungarian>ÉÉK</Hungarian>
+            <Ukrainian>ПнПнСх</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_NNW">
             <English>NNW</English>
@@ -994,6 +1056,7 @@
             <Chinesesimp>西北偏北</Chinesesimp>
             <Turkish>KKB</Turkish>
             <Hungarian>ÉÉNy</Hungarian>
+            <Ukrainian>ПнПнЗх</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_NW">
             <English>NW</English>
@@ -1011,6 +1074,7 @@
             <Chinesesimp>西北</Chinesesimp>
             <Turkish>KB</Turkish>
             <Hungarian>ÉNy</Hungarian>
+            <Ukrainian>ПнЗх</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Never">
             <English>Never</English>
@@ -1027,6 +1091,7 @@
             <Chinese>從不</Chinese>
             <Chinesesimp>从不</Chinesesimp>
             <Turkish>Hiçbir zaman</Turkish>
+            <Ukrainian>Ніколи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_No">
             <English>No</English>
@@ -1044,6 +1109,7 @@
             <Chinesesimp>否</Chinesesimp>
             <Turkish>Hayır</Turkish>
             <Hungarian>Nem</Hungarian>
+            <Ukrainian>Ні</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_NoRoomToUnload">
             <English>No Room to unload</English>
@@ -1059,6 +1125,7 @@
             <Japanese>降ろすための空間がありません</Japanese>
             <Chinese>沒有空間可卸載</Chinese>
             <Chinesesimp>没有空间可卸载</Chinesesimp>
+            <Ukrainian>Немає місця для вивантаження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_NoVoice">
             <English>No Voice</English>
@@ -1076,6 +1143,7 @@
             <Chinesesimp>无语音</Chinesesimp>
             <Turkish>Ses yok</Turkish>
             <Hungarian>Nincs hang</Hungarian>
+            <Ukrainian>Без голосу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_None">
             <English>None</English>
@@ -1092,6 +1160,7 @@
             <Chinese>無</Chinese>
             <Chinesesimp>无</Chinesesimp>
             <Turkish>Yok</Turkish>
+            <Ukrainian>Ні</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Normal">
             <English>Normal</English>
@@ -1109,6 +1178,7 @@
             <Chinesesimp>正常</Chinesesimp>
             <Turkish>Normal</Turkish>
             <Hungarian>Normális</Hungarian>
+            <Ukrainian>Нормальне</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Options">
             <English>ACE Options</English>
@@ -1126,6 +1196,7 @@
             <Chinesesimp>ACE 设定选项</Chinesesimp>
             <Turkish>ACE Ayarları</Turkish>
             <Hungarian>ACE Beállítások</Hungarian>
+            <Ukrainian>ACE Налаштування</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Rename">
             <English>Rename</English>
@@ -1142,6 +1213,7 @@
             <Chinese>重新命名</Chinese>
             <Chinesesimp>重新命名</Chinesesimp>
             <Turkish>Yeniden adlandır</Turkish>
+            <Ukrainian>Перейменувати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_RestedSwayFactor">
             <English>Rested sway factor</English>
@@ -1154,6 +1226,7 @@
             <Korean>휴식 시 손떨림 정도</Korean>
             <Japanese>静止依託時の手ぶれ係数</Japanese>
             <Chinesesimp>有依托时的晃动系数</Chinesesimp>
+            <Ukrainian>Коеф. коливання прицілу в стані спокою</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_RestedSwayFactor_Description">
             <English>Influences the amount of weapon sway while weapon is rested.</English>
@@ -1166,6 +1239,7 @@
             <Korean>무기가 아무런 행동도 하지 않는 동안 무기가 흔들리는 정도를 정합니다.</Korean>
             <Japanese>静止し壁などに依託している時の武器の手ぶれの大きさに影響します。</Japanese>
             <Chinesesimp>武器依托在物体表面时的晃动系数</Chinesesimp>
+            <Ukrainian>Впливає на величину коливання прицілу зброї в стані спокою.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_S">
             <English>S</English>
@@ -1183,6 +1257,7 @@
             <Chinesesimp>南</Chinesesimp>
             <Turkish>G</Turkish>
             <Hungarian>D</Hungarian>
+            <Ukrainian>Пд</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_SE">
             <English>SE</English>
@@ -1200,6 +1275,7 @@
             <Chinesesimp>东南</Chinesesimp>
             <Turkish>GD</Turkish>
             <Hungarian>DK</Hungarian>
+            <Ukrainian>ПдСх</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_SSE">
             <English>SSE</English>
@@ -1217,6 +1293,7 @@
             <Chinesesimp>东南偏南</Chinesesimp>
             <Turkish>GGD</Turkish>
             <Hungarian>DDK</Hungarian>
+            <Ukrainian>ПдПдСх</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_SSW">
             <English>SSW</English>
@@ -1234,6 +1311,7 @@
             <Chinesesimp>西南偏南</Chinesesimp>
             <Turkish>GGB</Turkish>
             <Hungarian>DDNy</Hungarian>
+            <Ukrainian>ПдПдЗх</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_SW">
             <English>SW</English>
@@ -1251,6 +1329,7 @@
             <Chinesesimp>西南</Chinesesimp>
             <Turkish>GB</Turkish>
             <Hungarian>DNy</Hungarian>
+            <Ukrainian>ПдЗх</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Save">
             <English>Save</English>
@@ -1268,6 +1347,7 @@
             <Chinesesimp>储存</Chinesesimp>
             <Turkish>Kaydet</Turkish>
             <Hungarian>Mentés</Hungarian>
+            <Ukrainian>Зберегти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextColorDesc">
             <English>The color of the background from the ACE hints.</English>
@@ -1284,6 +1364,7 @@
             <Chinese>設定ACE提示的背景顏色.</Chinese>
             <Chinesesimp>设定 ACE 提示的背景颜色。</Chinesesimp>
             <Hungarian>Az ACE-súgók hátterének színe.</Hungarian>
+            <Ukrainian>Колір фону спливаючих підказок АСЕ.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextColorName">
             <English>Hint Background color</English>
@@ -1300,6 +1381,7 @@
             <Chinese>提示的背景顏色</Chinese>
             <Chinesesimp>提示的背景颜色</Chinesesimp>
             <Hungarian>Súgó háttérszíne</Hungarian>
+            <Ukrainian>Колір фону спливаючих підказок</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextFontColorDesc">
             <English>The color of the text font from the ACE hints. This color is the default color for all text displayed through the ACE Hint system, if the hint text has no other color specified.</English>
@@ -1316,6 +1398,7 @@
             <Chinese>設定ACE提示文字的顏色。若提示字體並無指定其他顏色，將會自動選用ACE系統的預設顏色</Chinese>
             <Chinesesimp>设定 ACE 提示文字的颜色。若提示字体并无指定其他颜色，将会自动选用 ACE 的预设颜色。</Chinesesimp>
             <Hungarian>Az ACE-súgók betűkészletének színek. Ez a szín alapértelmezett az összes szövegre az ACE-súgórendszerben, ha a súgószöveg maga nem ad meg más színt.</Hungarian>
+            <Ukrainian>Колір шрифту тексту спливаючих підказок АСЕ. Цей колір є стандартним для всього тексту, що транслюється через систему підказок АСЕ, якщо не встановлено іншого кольору для тексту підказок.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextFontColorName">
             <English>Hint text font color</English>
@@ -1332,6 +1415,7 @@
             <Chinese>提示文字的顏色</Chinese>
             <Chinesesimp>提示文字的颜色</Chinesesimp>
             <Hungarian>Súgószöveg betűinek színe</Hungarian>
+            <Ukrainian>Колір шрифту спливаючих підказок</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsDesc">
             <English>Select the position of or disable the feedback icons on your screen. These icons will show to provide extra feedback on your character status and actions performed.</English>
@@ -1348,6 +1432,7 @@
             <Chinese>選擇位置或取消回饋圖標顯示在螢幕上。這些圖標將顯示出你角色額外的狀態與行動等資訊</Chinese>
             <Chinesesimp>选择位置或取消回馈图标显示在屏幕上。这些图标将显示出你角色额外的状态与行动等信息。</Chinesesimp>
             <Hungarian>Itt beállítható a visszajelző ikonok képernyőn lévő helyzete és jelenléte. Ezek az ikonok extra visszajelzést biztosítanak a karaktered állapotán és végrehajtott cselekvésein.</Hungarian>
+            <Ukrainian>Виберіть положення або вимкніть відображення іконок станів на Вашому екрані. Ці іконки нададуть додаткову інформацію про стан персонажа та виконувані дії.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -1364,6 +1449,7 @@
             <Chinese>回饋圖標</Chinese>
             <Chinesesimp>回馈图标</Chinesesimp>
             <Hungarian>Visszajelző ikonok</Hungarian>
+            <Ukrainian>Іконки станів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_SettingPersistentLaserDesc">
             <English>Enable gunlight after weapon switch or vehicle enter/exit if it was previously enabled.</English>
@@ -1379,6 +1465,7 @@
             <Japanese>銃のライトをつけていた場合、武器の切り替え後または車両の出入り後にライトを再度点灯します。</Japanese>
             <Chinese>保存武器雷射/手電筒的開關狀態，使玩家切換武器或進出載具時能保持之前的狀態</Chinese>
             <Chinesesimp>保持武器激光/手电筒的开关状态，使玩家切换武器或进出载具时能保持之前的状态。</Chinesesimp>
+            <Ukrainian>Вмикати ЛЦВ/тактичний ліхтар після зміни зброї або входу/виходу з машини, якщо він був до цього увімкнений.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_SettingPersistentLaserName">
             <English>Persistent weapon laserpointer/flashlight</English>
@@ -1394,6 +1481,7 @@
             <Japanese>武器のレーザー ポインター/フラッシュライトの永続性</Japanese>
             <Chinese>保持武器雷射/手電筒的狀態</Chinese>
             <Chinesesimp>保持武器激光/手电筒的状态</Chinesesimp>
+            <Ukrainian>Автоматичний ЛЦВ/тактичний ліхтар</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_SettingProgressbarLocationDesc">
             <English>Set the desired location of the progress bar on your screen.</English>
@@ -1410,6 +1498,7 @@
             <Chinese>設定進度欄在畫面中的位置</Chinese>
             <Chinesesimp>设定进度栏在画面中的位置</Chinesesimp>
             <Hungarian>Itt beállítható az állapotjelző sáv képernyődön lévő helyzete.</Hungarian>
+            <Ukrainian>Встановіть бажане положення рядка стану на екрані.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_SettingProgressbarLocationName">
             <English>Progress bar location</English>
@@ -1426,6 +1515,7 @@
             <Chinese>進度欄位置</Chinese>
             <Chinesesimp>进度栏位置</Chinesesimp>
             <Hungarian>Állapotjelző sáv helyzete</Hungarian>
+            <Ukrainian>Положення індикатора процесу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_SwayFactor">
             <English>Sway factor</English>
@@ -1441,6 +1531,7 @@
             <Japanese>手ぶれ因数</Japanese>
             <Chinese>抖動因素</Chinese>
             <Chinesesimp>抖动系数</Chinesesimp>
+            <Ukrainian>Коефіцієнт коливання прицілу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_SwayFactor_Description">
             <English>Influences the amount of weapon sway. Higher means more sway.</English>
@@ -1456,6 +1547,7 @@
             <Japanese>武器の手ぶれの大きさに影響します。値が高いほど、手ぶれが強くなります。</Japanese>
             <Chinese>影響手持武器晃動程度，數值越高抖動越厲害</Chinese>
             <Chinesesimp>影响手持武器的晃动程度，数值越高，抖动的越厉害。</Chinesesimp>
+            <Ukrainian>Впливає на коливання прицілу зброї. Що вище - то більше.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_TimeLeft">
             <English>Time left: %1s</English>
@@ -1469,6 +1561,7 @@
             <Korean>남은 시간: %1초</Korean>
             <Japanese>残り時間: %1秒</Japanese>
             <Chinesesimp>剩余时间：%1秒</Chinesesimp>
+            <Ukrainian>Час, що залишився: %1s</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Top">
             <English>Top</English>
@@ -1486,6 +1579,7 @@
             <Chinesesimp>上方</Chinesesimp>
             <Turkish>Üst</Turkish>
             <Hungarian>Fent</Hungarian>
+            <Ukrainian>Зверху</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_TopLeftDown">
             <English>Top left, downwards</English>
@@ -1503,6 +1597,7 @@
             <Chinesesimp>左上角，向下</Chinesesimp>
             <Turkish>Sol üst, aşağı</Turkish>
             <Hungarian>Bal felül, lefele</Hungarian>
+            <Ukrainian>Зліва - зверху вниз</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_TopLeftRight">
             <English>Top left, to the right</English>
@@ -1520,6 +1615,7 @@
             <Chinesesimp>左上角，向右</Chinesesimp>
             <Turkish>Sol üst, sağa</Turkish>
             <Hungarian>Bal felül, jobbra</Hungarian>
+            <Ukrainian>Зверху - зліва направо</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_TopRightDown">
             <English>Top right, downwards</English>
@@ -1537,6 +1633,7 @@
             <Chinesesimp>右上角，向下</Chinesesimp>
             <Turkish>Sağ üst, aşağı</Turkish>
             <Hungarian>Jobb felül, lefele</Hungarian>
+            <Ukrainian>Праворуч - зверху вниз</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_TopRightLeft">
             <English>Top right, to the left</English>
@@ -1554,6 +1651,7 @@
             <Chinesesimp>右上角，向左</Chinesesimp>
             <Turkish>Sağ üstte, solda</Turkish>
             <Hungarian>Jobb felül, balra</Hungarian>
+            <Ukrainian>Зверху - справа наліво</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Unknown">
             <English>Unknown</English>
@@ -1571,6 +1669,7 @@
             <Chinesesimp>未知的</Chinesesimp>
             <Turkish>Bilinmeyen</Turkish>
             <Hungarian>Ismeretlen</Hungarian>
+            <Ukrainian>Невідомо</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Vehicle">
             <English>Medical Vehicles</English>
@@ -1588,6 +1687,7 @@
             <Chinesesimp>医疗载具</Chinesesimp>
             <Turkish>Medikal Araçlar</Turkish>
             <Hungarian>Orvosi járművek</Hungarian>
+            <Ukrainian>У медичному транспорті</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>
@@ -1604,6 +1704,7 @@
             <Chinese>只有載具</Chinese>
             <Chinesesimp>只有载具</Chinesesimp>
             <Turkish>Sadece Arabalar</Turkish>
+            <Ukrainian>Тільки в транспорті</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_W">
             <English>W</English>
@@ -1621,6 +1722,7 @@
             <Chinesesimp>西</Chinesesimp>
             <Turkish>B</Turkish>
             <Hungarian>Ny</Hungarian>
+            <Ukrainian>Зх</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_WNW">
             <English>WNW</English>
@@ -1638,6 +1740,7 @@
             <Chinesesimp>西北偏西</Chinesesimp>
             <Turkish>BKB</Turkish>
             <Hungarian>NyÉNy</Hungarian>
+            <Ukrainian>ЗхПдЗх</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_WSW">
             <English>WSW</English>
@@ -1655,6 +1758,7 @@
             <Chinesesimp>西南偏西</Chinesesimp>
             <Turkish>BGB</Turkish>
             <Hungarian>NyDNy</Hungarian>
+            <Ukrainian>ЗхПдЗх</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Weight">
             <English>Weight:</English>
@@ -1672,6 +1776,7 @@
             <Chinesesimp>重量：</Chinesesimp>
             <Turkish>Ağırlık:</Turkish>
             <Hungarian>Súly:</Hungarian>
+            <Ukrainian>Вага:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Yes">
             <English>Yes</English>
@@ -1689,6 +1794,7 @@
             <Chinesesimp>是</Chinesesimp>
             <Turkish>Evet</Turkish>
             <Hungarian>Igen</Hungarian>
+            <Ukrainian>Так</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_additionalAddonClient">
             <English>Detected additional addon on client&lt;br/&gt;</English>
@@ -1697,6 +1803,7 @@
             <Korean>클라이언트에게서 추가 애드온이 감지되었습니다:&lt;br/&gt;</Korean>
             <Japanese>クライアントに追加のアドオンを検出しました&lt;br/&gt;</Japanese>
             <Chinesesimp>检测到客户端多余模组&lt;br/&gt;</Chinesesimp>
+            <Ukrainian>Виявлено додатковий аддон на клієнті&lt;br/&gt;</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_aiOnly">
             <English>AI only</English>
@@ -1710,6 +1817,7 @@
             <Korean>인공지능만</Korean>
             <Japanese>AIのみ</Japanese>
             <Chinesesimp>仅 AI</Chinesesimp>
+            <Ukrainian>Тільки ШІ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_andMore">
             <English>, and %1 more.</English>
@@ -1718,6 +1826,7 @@
             <Korean>, 그리고 %1개의 애드온.</Korean>
             <Japanese>、その他 %1 件。</Japanese>
             <Chinesesimp>, 以及另外%1个</Chinesesimp>
+            <Ukrainian>, і ще %1.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_bananaDescr">
             <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
@@ -1734,6 +1843,7 @@
             <Chinese>香蕉(學名: Musa × paradisiaca)，為芭蕉科芭蕉屬小果野蕉及野蕉的人工栽培雜交種，為多年生草本植物。果實長有棱; 果皮黃色，果肉白色，味道香甜。主要生長在熱帶、亞熱帶地區。原產於亞洲東南部熱帶、亞熱帶地區</Chinese>
             <Chinesesimp>香蕉（学名：Musa paradisiaca），为芭蕉科芭蕉属小果野蕉及野蕉的人工栽培杂交种，为多年生草本植物。果实长有棱; 果皮黄色，果肉白色，味道香甜。主要生长在热带、亚热带地区。原产于亚洲东南部热带、亚热带地区。</Chinesesimp>
             <Hungarian>A banán egy ehető gyümölcs, technikai szempontból bogyótermés, melyet több fürtvirágzatú növény termel a Musa rendszertani nemzetségben.</Hungarian>
+            <Ukrainian>Банан - це їстівний фрукт, ягода з ботанічного погляду, що росте на кількох видах трав'янистих рослин роду Банан (Musa).</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
             <English>Banana</English>
@@ -1750,6 +1860,7 @@
             <Chinese>香蕉</Chinese>
             <Chinesesimp>香蕉</Chinesesimp>
             <Hungarian>Banán</Hungarian>
+            <Ukrainian>Банан</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_both">
             <English>Both</English>
@@ -1764,6 +1875,7 @@
             <Japanese>両方</Japanese>
             <Chinesesimp>两方</Chinesesimp>
             <Turkish>İkisi de</Turkish>
+            <Ukrainian>Обидва</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_categoryUncategorized">
             <English>ACE Uncategorized</English>
@@ -1777,6 +1889,7 @@
             <Korean>ACE 무분류</Korean>
             <Japanese>ACE 未分類</Japanese>
             <Chinesesimp>ACE 未分类</Chinesesimp>
+            <Ukrainian>ACE Без категорії</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_checkExtensions_DisplayName">
             <English>Check Extensions</English>
@@ -1788,6 +1901,7 @@
             <Korean>확장 프로그램 검사</Korean>
             <Japanese>拡張(DLL)を検査</Japanese>
             <Chinesesimp>检查DLL扩展文件</Chinesesimp>
+            <Ukrainian>Перевірка розширень (бібліотек DLL)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_clientAdditional">
             <English>client additional</English>
@@ -1796,6 +1910,7 @@
             <Korean>클라이언트의 추가</Korean>
             <Japanese>クライアント追加</Japanese>
             <Chinesesimp>客户端多余</Chinesesimp>
+            <Ukrainian>додатковий клієнт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_clientMissing">
             <English>client missing</English>
@@ -1804,6 +1919,7 @@
             <Korean>클라이언트의 누락</Korean>
             <Japanese>クライアント不足</Japanese>
             <Chinesesimp>客户端缺少</Chinesesimp>
+            <Ukrainian>Клієнт відсутній</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_closeHandheldDevice">
             <English>Close Handheld Device</English>
@@ -1820,6 +1936,7 @@
             <Chinese>關閉手持裝備</Chinese>
             <Chinesesimp>关闭手持装备</Chinesesimp>
             <Hungarian>Kézi eszköz bezárása</Hungarian>
+            <Ukrainian>Закрити портативний пристрій</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_cycleHandheldDevices">
             <English>Cycle Handheld Devices</English>
@@ -1832,10 +1949,11 @@
             <Russian>Следующее портативное устройство</Russian>
             <German>Handheld wechseln</German>
             <Korean>휴대장치 순환</Korean>
-            <Japanese>表示する携帯装置をサイクル</Japanese>
+            <Japanese>表示する携帯装置を切り替え</Japanese>
             <Chinese>循環切換手持裝備</Chinese>
             <Chinesesimp>循环切换手持装备</Chinesesimp>
             <Hungarian>Kézi eszköz váltása</Hungarian>
+            <Ukrainian>Наступний портативний пристрій</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_error">
             <English>[ACE] ERROR</English>
@@ -1844,6 +1962,7 @@
             <Korean>[ACE] 오류</Korean>
             <Japanese>[ACE] エラー</Japanese>
             <Chinesesimp>[ACE] 错误</Chinesesimp>
+            <Ukrainian>[ACE] ПОМИЛКА</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_isMissingItems">
             <English>[ACE] %1: ERROR %2 addon(s):</English>
@@ -1852,6 +1971,7 @@
             <Korean>[ACE] %1: %2 애드온(들)에 오류:</Korean>
             <Japanese>[ACE] %1: エラー %2 アドオン:</Japanese>
             <Chinesesimp>[ACE] %1: 错误 %2模组:</Chinesesimp>
+            <Ukrainian>[ACE] %1: ПОМИЛКА %2 аддон(ів):</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_loadObject">
             <English>Load</English>
@@ -1868,6 +1988,7 @@
             <Chinese>裝載</Chinese>
             <Chinesesimp>装载</Chinesesimp>
             <Turkish>Yükle</Turkish>
+            <Ukrainian>Завантажити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_magneticDeclination">
             <English>Realistic Compass Declination</English>
@@ -1878,6 +1999,7 @@
             <Korean>현실적인 나침반 편각</Korean>
             <Japanese>現実的なコンパス偏角</Japanese>
             <Chinesesimp>真实的指南针偏角</Chinesesimp>
+            <Ukrainian>Реалістичне відхилення компаса</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_magneticDeclinationooltip">
             <English>Compass will point to magnetic north</English>
@@ -1888,6 +2010,7 @@
             <Korean>나침반이 자북을 가리키게 됩니다.</Korean>
             <Japanese>コンパスが磁北を指すようになります</Japanese>
             <Chinesesimp>指南针指向磁北极</Chinesesimp>
+            <Ukrainian>Компас вказуватиме на північний магнітний полюс</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_missingAddonClient">
             <English>Detected missing addon on client&lt;br/&gt;</English>
@@ -1896,6 +2019,7 @@
             <Korean>클라이언트에게서 누락된 애드온이 감지되었습니다:&lt;br/&gt;</Korean>
             <Japanese>クライアントにアドオンの不足を検出しました&lt;br/&gt;</Japanese>
             <Chinesesimp>检测到客户端缺少模组&lt;br/&gt;</Chinesesimp>
+            <Ukrainian>Виявлено відсутній аддон на клієнті &lt;br/&gt;</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_newerClient">
             <English>newer client</English>
@@ -1904,6 +2028,7 @@
             <Korean>새 버전의 클라이언트</Korean>
             <Japanese>新しいクライアント</Japanese>
             <Chinesesimp>客户端过新</Chinesesimp>
+            <Ukrainian>новий клієнт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_newerVersionClient">
             <English>Detected newer client version&lt;br/&gt;</English>
@@ -1912,6 +2037,7 @@
             <Korean>클라이언트에게서 새 버전의 애드온이 감지되었습니다:&lt;br/&gt;</Korean>
             <Japanese>クライアントに新しいバージョンを検出しました&lt;br/&gt;</Japanese>
             <Chinesesimp>检测到客户端过新模组&lt;br/&gt;</Chinesesimp>
+            <Ukrainian>Виявлена більш нова версія клієнту &lt;br/&gt;</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_olderClient">
             <English>older client</English>
@@ -1920,6 +2046,7 @@
             <Korean>구버전의 클라이언트</Korean>
             <Japanese>古いクライアント</Japanese>
             <Chinesesimp>客户端过旧</Chinesesimp>
+            <Ukrainian>старий клієнт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_olderVersionClient">
             <English>Detected older client version&lt;br/&gt;</English>
@@ -1928,6 +2055,7 @@
             <Korean>클라이언트에게서 구버전의 애드온이 감지되었습니다:&lt;br/&gt;</Korean>
             <Japanese>クライアントに古いバージョンを検出しました&lt;br/&gt;</Japanese>
             <Chinesesimp>检测到客户端过旧模组&lt;br/&gt;</Chinesesimp>
+            <Ukrainian>Виявлена більш стара версія клієнта &lt;br/&gt;</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_playerOnly">
             <English>Players only</English>
@@ -1945,6 +2073,7 @@
             <Chinesesimp>只限玩家</Chinesesimp>
             <Turkish>Sadece oyuncular</Turkish>
             <Hungarian>Csak játékosok</Hungarian>
+            <Ukrainian>Гравців</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_playersAndAI">
             <English>Players and AI</English>
@@ -1962,6 +2091,7 @@
             <Chinesesimp>玩家与 AI</Chinesesimp>
             <Turkish>Oyuncular ve AI</Turkish>
             <Hungarian>Játékosok és AI</Hungarian>
+            <Ukrainian>Гравців і ботів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoDesc">
             <English>Controls extra information shown in progress bar.</English>
@@ -1975,6 +2105,7 @@
             <Korean>진행 막대에 추가적인 정보를 보여주는걸 결정합니다.</Korean>
             <Japanese>プログレス バーへ表示される情報量を制御します。</Japanese>
             <Chinesesimp>控制进度条中显示的额外信息。</Chinesesimp>
+            <Ukrainian>Встановлює додаткову інформацію в індикаторі процесу.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoName">
             <English>Additional progress bar information</English>
@@ -1988,6 +2119,7 @@
             <Korean>추가 진행 막대 정보</Korean>
             <Japanese>プログレス バーの詳細情報</Japanese>
             <Chinesesimp>额外的进度条信息</Chinesesimp>
+            <Ukrainian>Дод. інформація індикатора процесу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoPercentage">
             <English>Percentage</English>
@@ -2001,6 +2133,7 @@
             <Korean>백분율</Korean>
             <Japanese>パーセンテージ</Japanese>
             <Chinesesimp>百分比</Chinesesimp>
+            <Ukrainian>Відсоток виконання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoTime">
             <English>Time remaining</English>
@@ -2014,6 +2147,7 @@
             <Korean>남은 시간</Korean>
             <Japanese>残り時間</Japanese>
             <Chinesesimp>剩余时间</Chinesesimp>
+            <Ukrainian>Часу залишилося</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_showActionInSelfInteraction">
             <English>Show the action in the self-interaction menu</English>
@@ -2030,6 +2164,7 @@
             <Chinese>在自我互動選單內顯示動作</Chinese>
             <Chinesesimp>在自我互动菜单内显示动作</Chinesesimp>
             <Turkish>Kendi etkileşimim menüsünde animasyonları göster</Turkish>
+            <Ukrainian>Показувати дію в меню взаємодії із собою.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_subcategory_colors">
             <English>Colors</English>
@@ -2044,6 +2179,7 @@
             <Korean>색상</Korean>
             <Japanese>色</Japanese>
             <Chinesesimp>颜色</Chinesesimp>
+            <Ukrainian>Кольори</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_subcategory_sway">
             <English>Weapon Sway</English>
@@ -2055,6 +2191,7 @@
             <Korean>무기 흔들림</Korean>
             <Japanese>手ぶれ</Japanese>
             <Chinesesimp>武器晃动</Chinesesimp>
+            <Ukrainian>Коливання зброї</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_toggleHandheldDevice">
             <English>Toggle Handheld Device</English>
@@ -2071,6 +2208,7 @@
             <Chinese>切換手持裝備</Chinese>
             <Chinesesimp>切换手持装备</Chinesesimp>
             <Hungarian>Kézi eszköz kapcsolása</Hungarian>
+            <Ukrainian>Увімкнути портативний пристрій</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_unloadWeapon">
             <English>Unload Weapon</English>
@@ -2084,6 +2222,7 @@
             <Korean>탄창 빼기</Korean>
             <Japanese>武器からマガジンを抜く</Japanese>
             <Chinesesimp>卸掉武器弹匣</Chinesesimp>
+            <Ukrainian>Розрядити зброю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_versionMismatch">
             <English>[ACE] Version mismatch:&lt;br/&gt;&lt;br/&gt;</English>
@@ -2093,6 +2232,7 @@
             <Korean>[ACE] 버전 불일치:&lt;br/&gt;&lt;br/&gt;</Korean>
             <Japanese>[ACE] バージョン不一致:&lt;br/&gt;&lt;br/&gt;</Japanese>
             <Chinesesimp>[ACE] 版本不匹配:&lt;br/&gt;&lt;br/&gt;</Chinesesimp>
+            <Ukrainian>[ACE] Невідповідність версії:&lt;br/&gt;&lt;br/&gt;</Ukrainian>
         </Key>
     </Package>
 </Project>

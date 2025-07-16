@@ -17,6 +17,7 @@
             <Chinesesimp>开启坐下功能</Chinesesimp>
             <Turkish>Oturmayı Aktik Et</Turkish>
             <Hungarian>Ülés engedélyezése</Hungarian>
+            <Ukrainian>Дозволити сидіння</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Sitting_ModuleDescription">
             <English>This module allows you to disable the ability to sit on chairs.</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>此模块可以让你开关在椅子上坐下的能力。</Chinesesimp>
             <Turkish>Bu modül, sandalyelere oturma özelliğini devre dışı bırakmanıza izin verir.</Turkish>
             <Hungarian>Ez a modul lehetővé teszi a székekre és toalettekre való leülés letiltását.</Hungarian>
+            <Ukrainian>Цей модуль дає змогу вам заборонити можливість сідати на стільці та туалети.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Sitting_ModuleDisplayName">
             <English>Sitting</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>坐下功能</Chinesesimp>
             <Turkish>Oturma</Turkish>
             <Hungarian>Ülés</Hungarian>
+            <Ukrainian>Сидіння</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Sitting_Sit">
             <English>Sit Down</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>坐下</Chinesesimp>
             <Turkish>Otur</Turkish>
             <Hungarian>Leülés</Hungarian>
+            <Ukrainian>Сісти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Sitting_Stand">
             <English>Stand Up</English>
@@ -85,6 +89,7 @@
             <Chinesesimp>站起来</Chinesesimp>
             <Turkish>Kalk</Turkish>
             <Hungarian>Felállás</Hungarian>
+            <Ukrainian>Встати</Ukrainian>
         </Key>
     </Package>
 </Project>
