@@ -209,7 +209,7 @@ if (!hasInterface) exitWith {};
 ["featureCamera", {(_this select 0) call FUNC(handleDeployInterrupt)}] call CBA_fnc_addPlayerEventHandler;
 
 // Handle falling unconscious while trying to deploy
-["ace_unconscious", {(_this select 0) call FUNC(handleDeployInterrupt)}] call CBA_fnc_addEventHandler;
+["ace_incapacitated", {(_this select 0) call FUNC(handleDeployInterrupt)}] call CBA_fnc_addEventHandler;
 
 // Handle surrendering and handcuffing
 ["ace_captiveStatusChanged", {

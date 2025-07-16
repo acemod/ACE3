@@ -25,9 +25,9 @@
 ["blockDamage", false, ["fixCollision", "ace_cargo"]] call FUNC(statusEffect_addType);
 ["blockEngine", false, ["ace_refuel"]] call FUNC(statusEffect_addType);
 ["blockThrow", false, ["ace_attach", "ace_concertina_wire", "ace_dragging", "ace_explosives", "ace_rearm", "ace_refuel", "ace_sandbag", "ace_tacticalladder", "ace_trenches", "ace_tripod"]] call FUNC(statusEffect_addType);
-["setHidden", true, ["ace_unconscious"]] call FUNC(statusEffect_addType);
-["blockRadio", false, [QEGVAR(captives,handcuffed), QEGVAR(captives,surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
-["blockSpeaking", false, ["ace_unconscious"]] call FUNC(statusEffect_addType);
+["setHidden", true, ["ace_incapacitated"]] call FUNC(statusEffect_addType);
+["blockRadio", false, [QEGVAR(captives,handcuffed), QEGVAR(captives,surrendered), "ace_incapacitated"]] call FUNC(statusEffect_addType);
+["blockSpeaking", false, ["ace_incapacitated"]] call FUNC(statusEffect_addType);
 ["disableWeaponAssembly", false, ["ace_common", QGVAR(lockVehicle), "ace_csw"]] call FUNC(statusEffect_addType);
 ["lockInventory", true, [], true] call FUNC(statusEffect_addType);
 
@@ -431,7 +431,7 @@ addMissionEventHandler ["PlayerViewChanged", {
 [QGVAR(displayTextStructured), LINKFUNC(displayTextStructured)] call CBA_fnc_addEventHandler;
 [QGVAR(displayTextPicture), LINKFUNC(displayTextPicture)] call CBA_fnc_addEventHandler;
 
-["ace_unconscious", {
+["ace_incapacitated", {
     params ["_unit", "_isUnconscious"];
 
     if (local _unit && {!_isUnconscious}) then {

@@ -32,7 +32,7 @@ if (isServer) then {
 [QGVAR(setSurrendered), LINKFUNC(setSurrendered)] call CBA_fnc_addEventHandler;
 
 //Medical Integration Events
-["ace_unconscious", LINKFUNC(handleOnUnconscious)] call CBA_fnc_addEventHandler;
+["ace_incapacitated", LINKFUNC(handleOnUnconscious)] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};
 

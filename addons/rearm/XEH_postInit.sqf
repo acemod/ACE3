@@ -30,7 +30,7 @@ GVAR(usedMagazineNames) = createHashMap;
         _x call FUNC(initSupplyVehicle);
     } forEach allMissionObjects "Static";
 
-    ["ace_unconscious", LINKFUNC(handleUnconscious)] call CBA_fnc_addEventHandler;
+    ["ace_incapacitated", LINKFUNC(handleUnconscious)] call CBA_fnc_addEventHandler;
 
     ["vehicle", {
         params ["_unit"];

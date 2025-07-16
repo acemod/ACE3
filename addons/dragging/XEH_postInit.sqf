@@ -110,7 +110,7 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
 }] call CBA_fnc_addPlayerEventHandler;
 
 // Handle waking up dragged unit and falling unconscious while dragging
-["ace_unconscious", LINKFUNC(handleUnconscious)] call CBA_fnc_addEventHandler;
+["ace_incapacitated", LINKFUNC(handleUnconscious)] call CBA_fnc_addEventHandler;
 
 // Display event handler
 ["MouseZChanged", {(_this select 1) call FUNC(handleScrollWheel)}] call CBA_fnc_addDisplayHandler;

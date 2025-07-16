@@ -14,6 +14,6 @@ GVAR(height) = 0.5;
 ["vehicle", {[ACE_player, objNull] call FUNC(handlePlayerChanged)}] call CBA_fnc_addPlayerEventHandler;
 
 // handle falling unconscious
-["ace_unconscious", LINKFUNC(handleUnconscious)] call CBA_fnc_addEventHandler;
+["ace_incapacitated", LINKFUNC(handleUnconscious)] call CBA_fnc_addEventHandler;
 
 // @todo captivity?
