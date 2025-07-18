@@ -49,6 +49,7 @@ GVAR(currentShowMode) = DISPLAY_MODE_CLOSED;
 //User Settings
 GVAR(settingUseMils) = false;
 GVAR(settingShowAllWaypointsOnMap) = true;
+GVAR(settingShowMagneticNorth) = false;
 
 GVAR(newWaypointPosition) = [];
 GVAR(currentWaypoint) = -1;
