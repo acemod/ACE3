@@ -1,26 +1,19 @@
 
 class CfgVehicles {
-    class All {
-        class Turrets;
-    };
-
+    class All;
     class AllVehicles: All {
         class NewTurret {
             GVAR(Enabled) = 0;
             GVAR(MinDistance) = 200;
             GVAR(MaxDistance) = 5500;
             GVAR(DistanceInterval) = 5;
-            class Turrets;
         };
-        class CargoTurret;
     };
 
     // LAND VEHICLES
     class Land: AllVehicles {};
 
-    class LandVehicle: Land {
-        class CommanderOptics;
-    };
+    class LandVehicle: Land {};
 
     class Car: LandVehicle {
         class ACE_SelfActions {

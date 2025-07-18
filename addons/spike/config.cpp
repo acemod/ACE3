@@ -14,10 +14,7 @@ class CfgPatches {
     };
 };
 
-class RscOpticsValue;
 class RscControlsGroupNoScrollbars;
-class RscPicture;
-class RscLine;
 class RscMapControl;
 class RscText;
 

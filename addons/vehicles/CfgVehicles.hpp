@@ -1,13 +1,8 @@
 
 class CfgVehicles {
-    class All {
-        class Turrets;
-    };
-
+    class All;
     class AllVehicles: All {
-        class NewTurret {
-            class Turrets;
-        };
+        class NewTurret {};
     };
 
     class Land: AllVehicles {};
@@ -23,9 +18,7 @@ class CfgVehicles {
     class Tank: LandVehicle {
         class Turrets {
             class MainTurret: NewTurret {
-                class Turrets {
-                    class CommanderOptics;//: NewTurret {};
-                };
+                class Turrets {};
             };
         };
     };
@@ -37,9 +30,7 @@ class CfgVehicles {
     };
 
     class Ship: AllVehicles {
-        class Turrets {
-            class MainTurret;
-        };
+        class Turrets {};
     };
 
     class Tank_F: Tank {

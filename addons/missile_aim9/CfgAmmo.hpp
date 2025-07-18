@@ -1,6 +1,5 @@
 class EGVAR(missileguidance,type_Sidewinder);
 class EGVAR(missileguidance,type_ASRAAM);
-class EGVAR(missileguidance,type_R73);
 class EGVAR(missileguidance,type_R74);
 class CfgAmmo {
     class Missile_AA_04_F;
