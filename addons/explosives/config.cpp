@@ -56,7 +56,7 @@ class CfgActions {
 class CfgMineTriggers {
     class IRTrigger;
     class ACE_MagneticTrigger: IRTrigger {
-        mineWireEnd[] = {0,0.1,0.5};
+        mineWireEnd[] = {0, 0.1, 0.5};
     };
 
     class TankTriggerMagnetic;
