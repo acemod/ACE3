@@ -85,7 +85,7 @@ format ["%1 (%2)", (localize LSTRING(SelfInteractKey)), localize ELSTRING(common
 
 
 // Listens for the falling unconscious event, just in case the menu needs to be closed
-["ace_unconscious", {
+["ace_incapacitated", {
     // If no menu is open just quit
     if (GVAR(openedMenuType) < 0) exitWith {};
 

@@ -32,7 +32,7 @@ GVAR(bloodTickCounter) = 0;
 [true] call FUNC(handleEffects);
 [LINKFUNC(handleEffects), 1, false] call CBA_fnc_addPerFrameHandler;
 
-["ace_unconscious", {
+["ace_incapacitated", {
     params ["_unit", "_unconscious"];
 
     if (_unit != ACE_player) exitWith {};
