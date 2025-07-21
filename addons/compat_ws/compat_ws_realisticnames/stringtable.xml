@@ -10,6 +10,7 @@
             <German>AA12</German>
             <Korean>AA-12</Korean>
             <Japanese>AA12</Japanese>
+            <Ukrainian>AA12</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_AA40_Snake_Name">
             <English>AA12 (Snake)</English>
@@ -20,6 +21,7 @@
             <German>AA12 (Schlange)</German>
             <Korean>AA-12 (뱀 위장)</Korean>
             <Japanese>AA12 (ヘビ柄迷彩)</Japanese>
+            <Ukrainian>AA12 (Змія)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_AA40_Tan_Name">
             <English>AA12 (Sand)</English>
@@ -30,6 +32,7 @@
             <German>AA12 (Sand)</German>
             <Korean>AA-12 (모래)</Korean>
             <Japanese>AA12 (サンド)</Japanese>
+            <Ukrainian>AA12 (Пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_EBR_Black_Name">
             <English>Mk14 Mod 1 EBR (Black)</English>
@@ -40,6 +43,7 @@
             <German>Mk14 Mod 1 EBR (Schwarz)</German>
             <Korean>Mk.14 Mod 1 EBR (검정)</Korean>
             <Japanese>Mk14 Mod 1 EBR (ブラック)</Japanese>
+            <Ukrainian>Mk14 Mod 1 EBR (Чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_EBR_Snake_Name">
             <English>Mk14 Mod 1 EBR (Snake)</English>
@@ -50,6 +54,7 @@
             <German>Mk14 Mod 1 EBR (Schlange)</German>
             <Korean>Mk.14 Mod 1 EBR (뱀 위장)</Korean>
             <Japanese>Mk14 Mod 1 EBR (ヘビ柄迷彩)</Japanese>
+            <Ukrainian>Mk14 Mod 1 EBR (Змія)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Camo_Name">
             <English>GLX 160 (Camo)</English>
@@ -60,6 +65,7 @@
             <German>GLX 160 (Tarn)</German>
             <Korean>GLX-160 (위장)</Korean>
             <Japanese>GLX 160 (AAF迷彩)</Japanese>
+            <Ukrainian>GLX 160 (Камуфляж)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_GreenHex_Name">
             <English>GLX 160 (Green Hex)</English>
@@ -70,6 +76,7 @@
             <German>GLX 160 (Grün Hex)</German>
             <Korean>GLX-160 (초록육각)</Korean>
             <Japanese>GLX 160 (緑六角形迷彩)</Japanese>
+            <Ukrainian>GLX 160 (Зелений Гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Hex_Name">
             <English>GLX 160 (Hex)</English>
@@ -80,6 +87,7 @@
             <German>GLX 160 (Hex)</German>
             <Korean>GLX-160 (육각)</Korean>
             <Japanese>GLX 160 (六角形迷彩)</Japanese>
+            <Ukrainian>GLX 160 (Гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Name">
             <English>GLX 160</English>
@@ -90,6 +98,7 @@
             <German>GLX 160</German>
             <Korean>GLX-160</Korean>
             <Japanese>GLX 160</Japanese>
+            <Ukrainian>GLX 160</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Snake_Name">
             <English>GLX 160 (Snake)</English>
@@ -100,6 +109,7 @@
             <German>GLX 160 (Schlange)</German>
             <Korean>GLX-160 (뱀 위장)</Korean>
             <Japanese>GLX 160 (ヘビ柄迷彩)</Japanese>
+            <Ukrainian>GLX 160 (Змія)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Tan_Name">
             <English>GLX 160 (Sand)</English>
@@ -110,6 +120,7 @@
             <German>GLX 160 (Sand)</German>
             <Korean>GLX-160 (모래)</Korean>
             <Japanese>GLX 160 (サンド)</Japanese>
+            <Ukrainian>GLX 160 (Пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Galat_Name">
             <English>Galil ARM</English>
@@ -120,6 +131,7 @@
             <German>Galil ARM</German>
             <Korean>갈릴 ARM</Korean>
             <Japanese>ガリル ARM</Japanese>
+            <Ukrainian>Galil ARM</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Galat_Old_Name">
             <English>Galil ARM (Old)</English>
@@ -130,6 +142,7 @@
             <German>Galil ARM (Alt)</German>
             <Korean>갈릴 ARM (낡음)</Korean>
             <Japanese>ガリル ARM (古びた)</Japanese>
+            <Ukrainian>Galil ARM (Старий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_AAF_Name">
             <English>Vektor SS-77 (Camo)</English>
@@ -140,6 +153,7 @@
             <German>Vektor SS-77 (Tarn)</German>
             <Korean>벡터 SS-77 (위장)</Korean>
             <Japanese>ヴェクター SS-77 (AAF迷彩)</Japanese>
+            <Ukrainian>Vektor SS-77 (Камуфляж)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Compact_Name">
             <English>Vektor SS-77 Compact</English>
@@ -150,6 +164,7 @@
             <German>Vektor SS-77 Kompakt</German>
             <Korean>벡터 SS-77 단축형</Korean>
             <Japanese>ヴェクター SS-77 コンパクト</Japanese>
+            <Ukrainian>Vektor SS-77 Compact</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Compact_Snake_Name">
             <English>Vektor SS-77 Compact (Snake)</English>
@@ -160,6 +175,7 @@
             <German>Vektor SS-77 Compact (Schlange)</German>
             <Korean>벡터 SS-77 단축형 (뱀 위장)</Korean>
             <Japanese>ヴェクター SS-77 コンパクト (ヘビ柄迷彩)</Japanese>
+            <Ukrainian>Vektor SS-77 Compact (змея)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Desert_Name">
             <English>Vektor SS-77 (Desert)</English>
@@ -170,6 +186,7 @@
             <German>Vektor SS-77 (Wüste)</German>
             <Korean>벡터 SS-77 (사막)</Korean>
             <Japanese>ヴェクター SS-77 (砂漠迷彩)</Japanese>
+            <Ukrainian>Vektor SS-77 (пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_GreenHex_Name">
             <English>Vektor SS-77 (Green Hex)</English>
@@ -180,6 +197,7 @@
             <German>Vektor SS-77 (Grün Hex)</German>
             <Korean>벡터 SS-77 (초록육각)</Korean>
             <Japanese>ヴェクター SS-77 (緑六角形迷彩)</Japanese>
+            <Ukrainian>Vektor SS-77 (зелений гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Hex_Name">
             <English>Vektor SS-77 (Hex)</English>
@@ -190,6 +208,7 @@
             <German>Vektor SS-77 (Hex)</German>
             <Korean>벡터 SS-77 (육각)</Korean>
             <Japanese>ヴェクター SS-77 (六角形迷彩)</Japanese>
+            <Ukrainian>Vektor SS-77 (гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Name">
             <English>Vektor SS-77</English>
@@ -200,6 +219,7 @@
             <German>Vektor SS-77</German>
             <Korean>벡터 SS-77</Korean>
             <Japanese>ヴェクター SS-77</Japanese>
+            <Ukrainian>Vektor SS-77</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Camo_Name">
             <English>FN FAL 50.00 (Jungle)</English>
@@ -210,6 +230,7 @@
             <German>FN FAL 50,00 (Dschungel)</German>
             <Korean>FN FAL 50.00 (정글)</Korean>
             <Japanese>FN FAL 50.00 (熱帯迷彩)</Japanese>
+            <Ukrainian>FN FAL 50.00 (джунглі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Desert_Name">
             <English>FN FAL 50.00 (Desert)</English>
@@ -220,6 +241,7 @@
             <German>FN FAL 50.00 (Wüstet)</German>
             <Korean>FN FAL 50.00 (사막)</Korean>
             <Japanese>FN FAL 50.00 (砂漠迷彩)</Japanese>
+            <Ukrainian>FN FAL 50.00 (пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_GL_Name">
             <English>FN FAL 50.00 GL</English>
@@ -230,6 +252,7 @@
             <German>FN FAL 50.00 GL</German>
             <Korean>FN FAL 50.00 GL</Korean>
             <Japanese>FN FAL 50.00 GL</Japanese>
+            <Ukrainian>FN FAL 50.00 GL</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_GL_Wood_Name">
             <English>FN FAL 50.00 GL (Wood)</English>
@@ -240,6 +263,7 @@
             <German>FN FAL 50.00 GL (Holz)</German>
             <Korean>FN FAL 50.00 GL (목재)</Korean>
             <Japanese>FN FAL 50.00 GL (木製)</Japanese>
+            <Ukrainian>FN FAL 50.00 GL (лесной)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Name">
             <English>FN FAL 50.00</English>
@@ -250,6 +274,7 @@
             <German>FN FAL 50.00</German>
             <Korean>FN FAL 50.00</Korean>
             <Japanese>FN FAL 50.00</Japanese>
+            <Ukrainian>FN FAL 50.00</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Para_Name">
             <English>FN FAL OSW Para</English>
@@ -259,6 +284,7 @@
             <German>FN FAL OSW Fallschirmjäger</German>
             <Korean>FN FAL OSW 파라</Korean>
             <Japanese>FN FAL OSW パラ</Japanese>
+            <Ukrainian>FN FAL OSW Para</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Para_Snake_Name">
             <English>FN FAL OSW Para (Snake)</English>
@@ -268,6 +294,7 @@
             <German>FN FAL OSW Fallschirmjäger (Schlange)</German>
             <Korean>FN FAL OSW 파라 (뱀 위장)</Korean>
             <Japanese>FN FAL OSW パラ (ヘビ柄迷彩)</Japanese>
+            <Ukrainian>FN FAL OSW Para (Змія)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Wood_Name">
             <English>FN FAL 50.00 (Wood)</English>
@@ -278,6 +305,7 @@
             <German>FN FAL 50.00 (Holz)</German>
             <Korean>FN FAL 50.00 (목재)</Korean>
             <Japanese>FN FAL 50.00 (木製)</Japanese>
+            <Ukrainian>FN FAL 50.00 (лісний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R4_Name">
             <English>Vektor R4</English>
@@ -288,6 +316,7 @@
             <German>Vektor R4</German>
             <Korean>벡터 R4</Korean>
             <Japanese>ヴェクター R4</Japanese>
+            <Ukrainian>Vektor R4</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_GL_Name">
             <English>Vektor R5 Carbine GL</English>
@@ -298,6 +327,7 @@
             <German>Vektor R5 Carbine GL</German>
             <Korean>벡터 R5 카빈 GL</Korean>
             <Japanese>ヴェクター R5 カービン GL</Japanese>
+            <Ukrainian>Vektor R5 Carbine GL</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_GL_Snake_Name">
             <English>Vektor R5 Carbine GL (Snake)</English>
@@ -308,6 +338,7 @@
             <German>Vektor R5 Carbine GL (Schlange)</German>
             <Korean>벡터 R5 카빈 GL (뱀 위장)</Korean>
             <Japanese>ヴェクター R5 カービン GL (ヘビ柄迷彩)</Japanese>
+            <Ukrainian>Vektor R5 Carbine GL (Змія)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_Name">
             <English>Vektor R5 Carbine</English>
@@ -318,6 +349,7 @@
             <German>Vektor R5 Carbine</German>
             <Korean>벡터 R5 카빈</Korean>
             <Japanese>ヴェクター R5 カービン</Japanese>
+            <Ukrainian>Vektor R5 Carbine</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_Snake_Name">
             <English>Vektor R5 Carbine (Snake)</English>
@@ -328,6 +360,7 @@
             <German>Vektor R5 Carbine (Schlange)</German>
             <Korean>벡터 R5 카빈 (뱀 위장)</Korean>
             <Japanese>ヴェクター R5 カービン (ヘビ柄迷彩)</Japanese>
+            <Ukrainian>Vektor R5 Carbine (Змія)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Camo_Name">
             <English>XMS (Stripes)</English>
@@ -336,6 +369,7 @@
             <German>XMS (Gestreift)</German>
             <Korean>XMS (줄무늬 위장)</Korean>
             <Japanese>XMS (縞模様迷彩)</Japanese>
+            <Ukrainian>XMS (Смуги)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Camo_Name">
             <English>XMS GL (Stripes)</English>
@@ -344,6 +378,7 @@
             <German>XMS GL (Gestreift)</German>
             <Korean>XMS GL (줄무늬 위장)</Korean>
             <Japanese>XMS GL (縞模様迷彩)</Japanese>
+            <Ukrainian>XMS GL (Смуги)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Gray_Name">
             <English>XMS GL (Gray)</English>
@@ -352,6 +387,7 @@
             <German>XMS GL (Grau)</German>
             <Korean>XMS GL (회색)</Korean>
             <Japanese>XMS GL (グレー)</Japanese>
+            <Ukrainian>XMS GL (Сірий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Khaki_Name">
             <English>XMS GL (Khaki)</English>
@@ -364,6 +400,7 @@
             <Korean>XMS GL (카키)</Korean>
             <Japanese>XMS GL (カーキ)</Japanese>
             <Chinesesimp>XMS GL（卡其色）</Chinesesimp>
+            <Ukrainian>XMS GL (Хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Name">
             <English>XMS GL</English>
@@ -376,6 +413,7 @@
             <Korean>XMS GL</Korean>
             <Japanese>XMS GL</Japanese>
             <Chinesesimp>XMS GL</Chinesesimp>
+            <Ukrainian>XMS GL</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Sand_Name">
             <English>XMS GL (Sand)</English>
@@ -388,6 +426,7 @@
             <Korean>XMS GL (모래)</Korean>
             <Japanese>XMS GL (サンド)</Japanese>
             <Chinesesimp>XMS GL（沙色）</Chinesesimp>
+            <Ukrainian>XMS GL (пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Gray_Name">
             <English>XMS (Gray)</English>
@@ -396,6 +435,7 @@
             <German>XMS (Grau)</German>
             <Korean>XMS (회색)</Korean>
             <Japanese>XMS (グレー)</Japanese>
+            <Ukrainian>XMS (Сірий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Khaki_Name">
             <English>XMS (Khaki)</English>
@@ -408,6 +448,7 @@
             <Korean>XMS (카키)</Korean>
             <Japanese>XMS (カーキ)</Japanese>
             <Chinesesimp>XMS（卡其色）</Chinesesimp>
+            <Ukrainian>XMS (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Name">
             <English>XMS</English>
@@ -420,6 +461,7 @@
             <Korean>XMS</Korean>
             <Japanese>XMS</Japanese>
             <Chinesesimp>XMS</Chinesesimp>
+            <Ukrainian>XMS</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Camo_Name">
             <English>XMS SG (Stripes)</English>
@@ -428,6 +470,7 @@
             <German>XMS SG (Gestreift)</German>
             <Korean>XMS SG (줄무늬 위장)</Korean>
             <Japanese>XMS SG (縞模様迷彩)</Japanese>
+            <Ukrainian>XMS SG (Смуги)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Gray_Name">
             <English>XMS SG (Gray)</English>
@@ -436,6 +479,7 @@
             <German>XMS SG (Grau)</German>
             <Korean>XMS SG (회색)</Korean>
             <Japanese>XMS SG (グレー)</Japanese>
+            <Ukrainian>XMS SG (Сірий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Khaki_Name">
             <English>XMS SG (Khaki)</English>
@@ -448,6 +492,7 @@
             <Korean>XMS SG (카키)</Korean>
             <Japanese>XMS SG (カーキ)</Japanese>
             <Chinesesimp>XMS SG（卡其色）</Chinesesimp>
+            <Ukrainian>XMS SG (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Name">
             <English>XMS SG</English>
@@ -460,6 +505,7 @@
             <Korean>XMS SG</Korean>
             <Japanese>XMS SG</Japanese>
             <Chinesesimp>XMS SG</Chinesesimp>
+            <Ukrainian>XMS SG</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Sand_Name">
             <English>XMS SG (Sand)</English>
@@ -472,6 +518,7 @@
             <Korean>XMS SG (모래)</Korean>
             <Japanese>XMS SG (サンド)</Japanese>
             <Chinesesimp>XMS SG（沙色）</Chinesesimp>
+            <Ukrainian>XMS SG (пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Camo_Name">
             <English>XMS SW (Stripes)</English>
@@ -480,6 +527,7 @@
             <German>XMS SW (Gestreift)</German>
             <Korean>XMS SW (줄무늬 위장)</Korean>
             <Japanese>XMS SW (縞模様迷彩)</Japanese>
+            <Ukrainian>XMS SW (Смуги)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Gray_Name">
             <English>XMS SW (Gray)</English>
@@ -488,6 +536,7 @@
             <German>XMS SW (Grau)</German>
             <Korean>XMS SW (회색)</Korean>
             <Japanese>XMS SW (グレー)</Japanese>
+            <Ukrainian>XMS SW (Сірий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Khaki_Name">
             <English>XMS SW (Khaki)</English>
@@ -500,6 +549,7 @@
             <Korean>XMS SW (카키)</Korean>
             <Japanese>XMS SW (カーキ)</Japanese>
             <Chinesesimp>XMS SW（卡其色）</Chinesesimp>
+            <Ukrainian>XMS SW (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Name">
             <English>XMS SW</English>
@@ -512,6 +562,7 @@
             <Korean>XMS SW</Korean>
             <Japanese>XMS SW</Japanese>
             <Chinesesimp>XMS SW</Chinesesimp>
+            <Ukrainian>XMS SW</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Sand_Name">
             <English>XMS SW (Sand)</English>
@@ -524,6 +575,7 @@
             <Korean>XMS SW (모래)</Korean>
             <Japanese>XMS SW (サンド)</Japanese>
             <Chinesesimp>XMS SW（沙色）</Chinesesimp>
+            <Ukrainian>XMS SW (пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Sand_Name">
             <English>XMS (Sand)</English>
@@ -536,6 +588,7 @@
             <Korean>XMS (모래)</Korean>
             <Japanese>XMS (サンド)</Japanese>
             <Chinesesimp>XMS（沙色）</Chinesesimp>
+            <Ukrainian>XMS (пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_aco_camo_Name">
             <English>C-More Railway (Red, Stripes)</English>
@@ -544,6 +597,7 @@
             <German>C-More Railway (Rot, Gestreift)</German>
             <Korean>씨모어 레일웨이 (빨강/줄무늬 위장)</Korean>
             <Japanese>C-More レイルウェイ (レッド、縞模様迷彩)</Japanese>
+            <Ukrainian>C-More Railway (Червоний, Смуги)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_aco_grn_camo_Name">
             <English>C-More Railway (Green, Stripes)</English>
@@ -552,6 +606,7 @@
             <German>C-More Railway (Grün, Gestreift)</German>
             <Korean>씨모어 레일웨이 (초록/줄무늬 위장)</Korean>
             <Japanese>C-More レイルウェイ (グリーン、縞模様迷彩)</Japanese>
+            <Ukrainian>C-More Railway (Зелений, Смуги)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_tracked_02_Name">
             <English>BM-2T Stalker (Bumerang-BM)</English>
@@ -561,6 +616,7 @@
             <German>BM-2T Stalker (Bumerang-BM)</German>
             <Korean>BM-2T 스토커 (부메랑-BM)</Korean>
             <Japanese>BM-2T ストーカー (ブーメランク-BM)</Japanese>
+            <Ukrainian>BM-2T "Сталкер" (Бумеранг-БМ)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_01_atgm_Name">
             <English>Badger IFV (ATGM)</English>
@@ -570,6 +626,7 @@
             <German>Badger IFV (PzAbw)</German>
             <Korean>뱃져 보병전투차 (대전차미사일)</Korean>
             <Japanese>バジャー IFV (ATGM)</Japanese>
+            <Ukrainian>Badger БМП (ПТРК)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_01_command_Name">
             <English>Badger IFV (Command)</English>
@@ -579,6 +636,7 @@
             <German>Badger IFV (Kommando)</German>
             <Korean>뱃져 보병전투차 (지휘)</Korean>
             <Japanese>バジャー IFV (指揮)</Japanese>
+            <Ukrainian>Badger БМП (Командна)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_01_mortar_Name">
             <English>Badger IFV (Mortar)</English>
@@ -588,6 +646,7 @@
             <German>Badger IFV (Mörser)</German>
             <Korean>뱃져 보병전투차 (자주박격포)</Korean>
             <Japanese>バジャー IFV (迫撃砲)</Japanese>
+            <Ukrainian>Badger БМП (Міномет)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_02_hmg_Name">
             <English>Otokar ARMA (HMG)</English>
@@ -597,6 +656,7 @@
             <German>Otokar ARMA (HMG)</German>
             <Korean>오토카 아르마 APC (중기관총)</Korean>
             <Japanese>オトカ アルマ (HMG)</Japanese>
+            <Ukrainian>Otokar ARMA (Кулемет)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_02_unarmed_Name">
             <English>Otokar ARMA (Unarmed)</English>
@@ -606,6 +666,7 @@
             <German>Otokar ARMA (Unbewaffnet)</German>
             <Korean>오토카 아르마 APC (비무장)</Korean>
             <Japanese>オトカ アルマ (非武装)</Japanese>
+            <Ukrainian>Otokar ARMA (без зброї)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_arco_hex_Name">
             <English>ELCAN SpecterOS (Hex)</English>
@@ -615,6 +676,7 @@
             <German>ELCAN SpecterOS (Hex)</German>
             <Korean>엘칸 스펙터OS (육각)</Korean>
             <Japanese>ELCAN SpecterOS (六角形迷彩)</Japanese>
+            <Ukrainian>ELCAN SpecterOS (Гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_dms_snake_Name">
             <English>Burris XTR II (Snake)</English>
@@ -624,6 +686,7 @@
             <German>Burris XTR II (Schlange)</German>
             <Korean>버리스 XTR II (뱀 위장)</Korean>
             <Japanese>Burris XTR II (ヘビ柄迷彩)</Japanese>
+            <Ukrainian>Burris XTR II (Змія)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_gm6_snake_Name">
             <English>GM6 Lynx (Snake)</English>
@@ -633,6 +696,7 @@
             <German>GM6 Lynx (Schlange)</German>
             <Korean>GM6 링스 (뱀 위장)</Korean>
             <Japanese>GM6 リンクス (ヘビ柄迷彩)</Japanese>
+            <Ukrainian>GM6 Lynx (Змія)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_hamr_arid_Name">
             <English>Leupold Mark 4 HAMR (Arid)</English>
@@ -642,6 +706,7 @@
             <German>Leupold Mark 4 HAMR (Trocken)</German>
             <Korean>류폴드 마크 4 HAMR (건조)</Korean>
             <Japanese>Leupold Mark 4 HAMR (乾燥地帯迷彩)</Japanese>
+            <Ukrainian>Leupold Mark 4 HAMR (Пустельний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_hamr_lush_Name">
             <English>Leupold Mark 4 HAMR (Lush)</English>
@@ -651,6 +716,7 @@
             <German>Leupold Mark 4 HAMR (Grün)</German>
             <Korean>류폴드 마크 4 HAMR (초목)</Korean>
             <Japanese>Leupold Mark 4 HAMR (緑地迷彩)</Japanese>
+            <Ukrainian>Leupold Mark 4 HAMR (рясна рослинність)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_hamr_sand_Name">
             <English>Leupold Mark 4 HAMR (Sand)</English>
@@ -660,6 +726,7 @@
             <German>Leupold Mark 4 HAMR (Sand)</German>
             <Korean>류폴드 마크 4 HAMR (모래)</Korean>
             <Japanese>Leupold Mark 4 HAMR (サンド)</Japanese>
+            <Ukrainian>Leupold Mark 4 HAMR (Пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_hamr_snake_Name">
             <English>Leupold Mark 4 HAMR (Snake)</English>
@@ -669,6 +736,7 @@
             <German>Leupold Mark 4 HAMR (Schlange)</German>
             <Korean>류폴드 마크 4 HAMR (뱀 위장)</Korean>
             <Japanese>Leupold Mark 4 HAMR (ヘビ柄迷彩)</Japanese>
+            <Ukrainian>Leupold Mark 4 HAMR (Змія)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_heli_light_02_armed_Name">
             <English>Ka-60 Kasatka (UP)</English>
@@ -678,6 +746,7 @@
             <German>Ka-60 Kasatka (UP)</German>
             <Korean>Ka-60 카사트카 (UP)</Korean>
             <Japanese>Ka-60 カサートカ (UP)</Japanese>
+            <Ukrainian>Ka-60 Kasatka (UP)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_heli_light_02_unarmed_Name">
             <English>Ka-60 Kasatka (UP, Unarmed)</English>
@@ -687,6 +756,7 @@
             <German>Ka-60 Kasatka (UP, Unbewaffnet)</German>
             <Korean>Ka-60 카사트카 (UP, 비무장))</Korean>
             <Japanese>Ka-60 カサートカ (UP、非武装)</Japanese>
+            <Ukrainian>Ka-60 Kasatka (UP, без зброї)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_heli_transport_02_Name">
             <English>AW101 Merlin</English>
@@ -696,6 +766,7 @@
             <German>AW101 Merlin</German>
             <Korean>AW101 멀린</Korean>
             <Japanese>AW101 マーリン</Japanese>
+            <Ukrainian>AW101 Merlin</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_holosight_snake_Name">
             <English>EOTech XPS3 (Snake)</English>
@@ -705,6 +776,7 @@
             <German>EOTech XPS3 (Schlange)</German>
             <Korean>이오텍 XPS3 (뱀 위장)</Korean>
             <Japanese>EOTech XPS3 (ヘビ柄迷彩)</Japanese>
+            <Ukrainian>EOTech XPS3 (Змія)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_holosight_snake_smg_Name">
             <English>EOTech XPS3 SMG (Snake)</English>
@@ -714,6 +786,7 @@
             <German>EOTech XPS3 SMG (Schlange)</German>
             <Korean>이오텍 XPS3 SMG (뱀 위장)</Korean>
             <Japanese>EOTech XPS3 SMG (ヘビ柄迷彩)</Japanese>
+            <Ukrainian>EOTech XPS3 SMG (Змія)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_arid_Name">
             <English>Aimpoint Micro R-1 (High, Arid)</English>
@@ -723,6 +796,7 @@
             <German>Aimpoint Micro R-1 (Hoch, Trocken)</German>
             <Korean>에임포인트 마이크로 R-1 (높음, 건조)</Korean>
             <Japanese>Aimpoint マイクロ R-1 (ハイマウント、乾燥地帯迷彩)</Japanese>
+            <Ukrainian>Aimpoint Micro R-1 (Високий, Пустельний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_black_Name">
             <English>Aimpoint Micro R-1 (High, Black)</English>
@@ -732,6 +806,7 @@
             <German>Aimpoint Micro R-1 (Hoch, Schwarz)</German>
             <Korean>에임포인트 마이크로 R-1 (높음, 검정)</Korean>
             <Japanese>Aimpoint マイクロ R-1 (ハイマウント、ブラック)</Japanese>
+            <Ukrainian>Aimpoint Micro R-1 (Високий, Чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_black_sand_Name">
             <English>Aimpoint Micro R-1 (High, Black/Sand)</English>
@@ -741,6 +816,7 @@
             <German>Aimpoint Micro R-1 (Hoch, Schwarz/Sand)</German>
             <Korean>에임포인트 마이크로 R-1 (높음, 검정/모래)</Korean>
             <Japanese>Aimpoint マイクロ R-1 (ハイマウント、ブラック/サンド)</Japanese>
+            <Ukrainian>Aimpoint Micro R-1 (Високий, Чорно/Пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_khaki_Name">
             <English>Aimpoint Micro R-1 (High, Khaki)</English>
@@ -750,6 +826,7 @@
             <German>Aimpoint Micro R-1 (Hoch, Khaki)</German>
             <Korean>에임포인트 마이크로 R-1 (높음, 카키)</Korean>
             <Japanese>Aimpoint マイクロ R-1 (ハイマウント、カーキ)</Japanese>
+            <Ukrainian>Aimpoint Micro R-1 (Високий, Хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_lush_Name">
             <English>Aimpoint Micro R-1 (High, Lush)</English>
@@ -759,6 +836,7 @@
             <German>Aimpoint Micro R-1 (Hoch, Grün)</German>
             <Korean>에임포인트 마이크로 R-1 (높음, 초목)</Korean>
             <Japanese>Aimpoint マイクロ R-1 (ハイマウント、緑地迷彩)</Japanese>
+            <Ukrainian>Aimpoint Micro R-1 (Високий, Рясна рослинність)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_sand_Name">
             <English>Aimpoint Micro R-1 (High, Sand)</English>
@@ -768,6 +846,7 @@
             <German>Aimpoint Micro R-1 (Hoch, Sand)</German>
             <Korean>에임포인트 마이크로 R-1 (높음, 모래)</Korean>
             <Japanese>Aimpoint マイクロ R-1 (ハイマウント、サンド)</Japanese>
+            <Ukrainian>Aimpoint Micro R-1 (Високий, Пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_snake_Name">
             <English>Aimpoint Micro R-1 (High, Snake)</English>
@@ -777,6 +856,7 @@
             <German>Aimpoint Micro R-1 (Hoch, Schlange)</German>
             <Korean>에임포인트 마이크로 R-1 (높음, 뱀 위장)</Korean>
             <Japanese>Aimpoint マイクロ R-1 (ハイマウント、ヘビ柄迷彩)</Japanese>
+            <Ukrainian>Aimpoint Micro R-1 (Високий, Змія)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_arid_Name">
             <English>Aimpoint Micro R-1 (Low, Arid)</English>
@@ -786,6 +866,7 @@
             <German>Aimpoint Micro R-1 (Tief, Trocken)</German>
             <Korean>에임포인트 마이크로 R-1 (낮음, 건조)</Korean>
             <Japanese>Aimpoint マイクロ R-1 (ローマウント、乾燥地帯迷彩)</Japanese>
+            <Ukrainian>Aimpoint Micro R-1 (Низький, Пустельний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_black_Name">
             <English>Aimpoint Micro R-1 (Low, Black)</English>
@@ -795,6 +876,7 @@
             <German>Aimpoint Micro R-1 (Tief, Schwarz)</German>
             <Korean>에임포인트 마이크로 R-1 (낮음, 검정)</Korean>
             <Japanese>Aimpoint マイクロ R-1 (ローマウント、ブラック)</Japanese>
+            <Ukrainian>Aimpoint Micro R-1 (Низький, Чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_khaki_Name">
             <English>Aimpoint Micro R-1 (Low, Khaki)</English>
@@ -804,6 +886,7 @@
             <German>Aimpoint Micro R-1 (Tief, Khaki)</German>
             <Korean>에임포인트 마이크로 R-1 (낮음, 카키)</Korean>
             <Japanese>Aimpoint マイクロ R-1 (ローマウント、カーキ)</Japanese>
+            <Ukrainian>Aimpoint Micro R-1 (Низький, Хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_lush_Name">
             <English>Aimpoint Micro R-1 (Low, Lush)</English>
@@ -813,6 +896,7 @@
             <German>Aimpoint Micro R-1 (Tief, Grün)</German>
             <Korean>에임포인트 마이크로 R-1 (낮음, 초목)</Korean>
             <Japanese>Aimpoint マイクロ R-1 (ローマウント、緑地迷彩)</Japanese>
+            <Ukrainian>Aimpoint Micro R-1 (Низький, Рясна рослинність)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_sand_Name">
             <English>Aimpoint Micro R-1 (Low, Sand)</English>
@@ -822,6 +906,7 @@
             <German>Aimpoint Micro R-1 (Tief, Sand)</German>
             <Korean>에임포인트 마이크로 R-1 (낮음, 모래)</Korean>
             <Japanese>Aimpoint マイクロ R-1 (ローマウント、サンド)</Japanese>
+            <Ukrainian>Aimpoint Micro R-1 (Низький, Пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_snake_Name">
             <English>Aimpoint Micro R-1 (Low, Snake)</English>
@@ -831,6 +916,7 @@
             <German>Aimpoint Micro R-1 (Tief, Schlange)</German>
             <Korean>에임포인트 마이크로 R-1 (낮음, 뱀 위장)</Korean>
             <Japanese>Aimpoint マイクロ R-1 (ローマウント、ヘビ柄迷彩)</Japanese>
+            <Ukrainian>Aimpoint Micro R-1 (Низький, Змія)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_rpg32_tan_Name">
             <English>RPG-32 (Sand)</English>
@@ -840,6 +926,7 @@
             <German>RPG-32 (Sand)</German>
             <Korean>RPG-32 (모래)</Korean>
             <Japanese>RPG-32 (サンド)</Japanese>
+            <Ukrainian>РПГ-32 (Пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_aa_Name">
             <English>KamAZ (Zu-23-2)</English>
@@ -849,6 +936,7 @@
             <German>KamAZ (Zu-23-2)</German>
             <Korean>카마즈 (ZU-23-2)</Korean>
             <Japanese>KamAZ (Zu-23-2)</Japanese>
+            <Ukrainian>KamAZ (Зу-23-2)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_ammo_Name">
             <English>KamAZ Ammo</English>
@@ -858,6 +946,7 @@
             <German>KamAZ Munition</German>
             <Korean>카마즈 탄약</Korean>
             <Japanese>KamAZ (弾薬)</Japanese>
+            <Ukrainian>KamAZ Боєприпаси</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_cargo_Name">
             <English>KamAZ Cargo</English>
@@ -867,6 +956,7 @@
             <German>KamAZ Fracht</German>
             <Korean>카마즈 화물</Korean>
             <Japanese>KamAZ (貨物)</Japanese>
+            <Ukrainian>KamAZ Вантажний</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_flatbed_Name">
             <English>KamAZ Flatbed</English>
@@ -876,6 +966,7 @@
             <German>KamAZ Flachbett</German>
             <Korean>카마즈 플랫베드</Korean>
             <Japanese>KamAZ (平台)</Japanese>
+            <Ukrainian>KamAZ Платформа</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_racing_Name">
             <English>KamAZ Racing</English>
@@ -885,6 +976,7 @@
             <German>KamAZ Rennlaster</German>
             <Korean>카마즈 경주용</Korean>
             <Japanese>KamAZ (レース仕様)</Japanese>
+            <Ukrainian>KamAZ Гоночний</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_repair_Name">
             <English>KamAZ Repair</English>
@@ -894,6 +986,7 @@
             <German>KamAZ Instandsetzung</German>
             <Korean>카마즈 정비</Korean>
             <Japanese>KamAZ (修理)</Japanese>
+            <Ukrainian>KamAZ Ремонтний</Ukrainian>
         </Key>
     </Package>
 </Project>

@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: A number <NUMBER>
- * 1: Minumum length of numbers <NUMBER> (default: 1)
+ * 1: Minimum length of numbers <NUMBER> (default: 1)
  *
  * Return Value:
  * A binary number as string <STRING>

@@ -4,7 +4,7 @@
  * Removes a cargo item from the vehicle.
  *
  * Arguments:
- * 0: Item to be removed <STRING> or <OBJECT> (default: "")
+ * 0: Item to be removed <STRING or OBJECT> (default: "")
  * 1: Holder object (vehicle) <OBJECT> (default: objNull)
  * 2: Amount <NUMBER> (default: 1)
  *

@@ -21,6 +21,9 @@ class CfgPatches {
         addonRootClass = QUOTE(ADDON);
     };
 };
- 
+
 #include "\z\ace\addons\missileguidance\script_missileBases.hpp"
 #include "CfgAmmo.hpp"
+#include "CfgMagazines.hpp"
+#include "CfgMagazineWells.hpp"
+#include "CfgVehicles.hpp"

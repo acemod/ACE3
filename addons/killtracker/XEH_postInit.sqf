@@ -67,7 +67,7 @@ DFUNC(updateArray) = {
             if ((toLower _damageType) in ["fire", "drowning"]) exitWith {};
             // cooldown to avoid spam
             if (CBA_missionTime < GVAR(nextDamage)) exitWith {};
-            GVAR(nextDamage) = CBA_missionTime + 15;
+            GVAR(nextDamage) = CBA_missionTime + 3;
             // check player setting
             private _isPlayer = (!isNull _shooter) && {isPlayer _shooter};
             if ((GVAR(showMedicalWounds) == 1) && {!_isPlayer}) exitWith {};
@@ -81,6 +81,11 @@ DFUNC(updateArray) = {
                     if (_instigatorName == "") then {
                         _instigatorName = format ["*AI* - %1", getText ((configOf _shooter) >> "displayName")];
                     };
+                };
+            } else {
+                // ACE_Frag does not set shot parent so it will always look like self
+                if ((_damageType select [0,8]) == "ace_frag") then {
+                    _instigatorName = format ["[%1]", localize "str_a3_cfgmagazines_40rnd_20mm_g_belt_dns"]; // "[HE]"
                 };
             };
 
@@ -170,8 +175,8 @@ DFUNC(updateArray) = {
                 _unitName = format ["*AI* - %1", getText ((configOf _unit) >> "displayName")];
             };
         };
-        TRACE_3("send kill event",_instigator,_unitName,_killInfo);
-        [QGVAR(kill), [_unitName, _killInfo], _instigator] call CBA_fnc_targetEvent;
+        TRACE_4("send kill event",_instigator,_unitName,_killInfo,_unit);
+        [QGVAR(kill), [_unitName, _killInfo, _unit], _instigator] call CBA_fnc_targetEvent;
 
         if (GVAR(showCrewKills) && {!(_killer isKindOf "CAManBase")}) then {
             private _crew = [driver _killer, gunner _killer, commander _killer] - [_instigator];
@@ -180,7 +185,7 @@ DFUNC(updateArray) = {
             TRACE_1("showCrewKills",_crew);
             _killInfo = format [" - [<t color='#99ff99'>%1</t>, %2", localize "str_a3_rscdisplaygarage_tab_crew", _killInfo select [4]];
             {
-                [QGVAR(kill), [_unitName, _killInfo], _x] call CBA_fnc_targetEvent;
+                [QGVAR(kill), [_unitName, _killInfo, _unit], _x] call CBA_fnc_targetEvent;
             } forEach _crew;
         };
     };

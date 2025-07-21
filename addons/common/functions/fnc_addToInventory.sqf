@@ -6,8 +6,8 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Classname <STRING>
- * 2: Container (uniform, vest, backpack) (default: "") <STRING>
- * 3: Magazine Ammo Count (default: -1) <NUMBER>
+ * 2: Container (uniform, vest, backpack) <STRING> (default: "")
+ * 3: Magazine Ammo Count <NUMBER> (default: -1)
  *
  * Return Value:
  * 0: Added to player <BOOL>

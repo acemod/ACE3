@@ -17,6 +17,7 @@
             <Chinesesimp>ARCO（2D）</Chinesesimp>
             <Turkish>ARCO (2D)</Turkish>
             <Hungarian>ARCO (2D)</Hungarian>
+            <Ukrainian>ARCO (2D)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Optics_arco_pip">
             <English>ARCO (PIP)</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>ARCO（画中画）</Chinesesimp>
             <Turkish>ARCO (PIP)</Turkish>
             <Hungarian>ARCO (PIP)</Hungarian>
+            <Ukrainian>ARCO (PIP)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Optics_hamr">
             <English>RCO (2D)</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>RCO（2D）</Chinesesimp>
             <Turkish>RCO (2D)</Turkish>
             <Hungarian>RCO (2D)</Hungarian>
+            <Ukrainian>RCO (2D)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Optics_hamr_pip">
             <English>RCO (PIP)</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>RCO（画中画）</Chinesesimp>
             <Turkish>RCO (PIP)</Turkish>
             <Hungarian>RCO (PIP)</Hungarian>
+            <Ukrainian>RCO (PIP)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Optics_lrps">
             <English>LRPS (2D)</English>
@@ -85,6 +89,7 @@
             <Chinesesimp>LRPS（2D）</Chinesesimp>
             <Turkish>LRPS (2D)</Turkish>
             <Hungarian>LRPS (2D)</Hungarian>
+            <Ukrainian>LRPS (2D)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Optics_lrps_pip">
             <English>LRPS (PIP)</English>
@@ -102,6 +107,7 @@
             <Chinesesimp>LRPS（画中画）</Chinesesimp>
             <Turkish>LRPS (PIP)</Turkish>
             <Hungarian>LRPS (PIP)</Hungarian>
+            <Ukrainian>LRPS (PIP)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Optics_mrco">
             <English>MRCO (2D)</English>
@@ -119,6 +125,7 @@
             <Chinesesimp>MRCO（2D）</Chinesesimp>
             <Turkish>MRCO (2D)</Turkish>
             <Hungarian>MRCO (2D)</Hungarian>
+            <Ukrainian>MRCO (2D)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Optics_mrco_pip">
             <English>MRCO (PIP)</English>
@@ -136,6 +143,7 @@
             <Chinesesimp>MRCO（画中画）</Chinesesimp>
             <Turkish>MRCO (PIP)</Turkish>
             <Hungarian>MRCO (PIP)</Hungarian>
+            <Ukrainian>MRCO (PIP)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Optics_sos">
             <English>MOS (2D)</English>
@@ -153,6 +161,7 @@
             <Chinesesimp>MOS（2D）</Chinesesimp>
             <Turkish>MOS (2D)</Turkish>
             <Hungarian>MOS (2D)</Hungarian>
+            <Ukrainian>MOS (2D)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Optics_sos_pip">
             <English>MOS (PIP)</English>
@@ -170,6 +179,7 @@
             <Chinesesimp>MOS（画中画）</Chinesesimp>
             <Turkish>MOS (PIP)</Turkish>
             <Hungarian>MOS (PIP)</Hungarian>
+            <Ukrainian>MOS (PIP)</Ukrainian>
         </Key>
     </Package>
 </Project>

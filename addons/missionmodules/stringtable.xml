@@ -17,6 +17,7 @@
             <Chinesesimp>循环的环境声音（在多人游戏中会同步所有玩家的播放状态）</Chinesesimp>
             <Turkish>Ambiyans sesleri döngüsü (MP üzerinden senkronize edilir)</Turkish>
             <Hungarian>Ambiens hangok folyamatossága (MP alatt szinkronizálva)</Hungarian>
+            <Ukrainian>Циклічно відтворювані звуки оточення (синх. між гравцями)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_DisplayName">
             <English>Ambiance Sounds</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>环境声音</Chinesesimp>
             <Turkish>Ortam Sesleri</Turkish>
             <Hungarian>Ambiens hangok</Hungarian>
+            <Ukrainian>Звуки оточення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_followPlayers_Description">
             <English>Follow players. If set to false, loop will play sounds only nearby logic position.</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>设定声音是否会在玩家的附近产生。假如关闭此功能，声音只会在模块的位置产生。</Chinesesimp>
             <Turkish>Eğer devde dışı bırakılırsa sesler oyuncuyu takip etmez</Turkish>
             <Hungarian>Játékosok követése. Ha le van tiltva, az ismétlés csak a legközelebbi logikai ponton játszik le hangokat.</Hungarian>
+            <Ukrainian>Слідувати за гравцями. Якщо встановити в FALSE, звуки будуть циклічно програватися тільки біля позиції Логіки.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_followPlayers_DisplayName">
             <English>Follow Players</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>跟随玩家</Chinesesimp>
             <Turkish>Oyuncuları Takip Et</Turkish>
             <Hungarian>Játékosok követése</Hungarian>
+            <Ukrainian>Слідувати за гравцями</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDelay_Description">
             <English>Maximum delay between sounds played</English>
@@ -85,6 +89,7 @@
             <Chinesesimp>设定每个声音档案中间最多间隔多久再进行播放</Chinesesimp>
             <Turkish>Çalınan sesler arasında maksimum gecikme</Turkish>
             <Hungarian>Maximum késleltetés a lejátszott hangok között</Hungarian>
+            <Ukrainian>Максимальна затримка між відтворенням звуків</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDelay_DisplayName">
             <English>Maximum Delay</English>
@@ -102,6 +107,7 @@
             <Chinesesimp>最大延迟</Chinesesimp>
             <Turkish>Maksimum Gecikme</Turkish>
             <Hungarian>Maximum késleltetés</Hungarian>
+            <Ukrainian>Максимальна затримка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDistance_Description">
             <English>Used for calculating a random position and sets the maximum distance between the players and the played sound file(s)</English>
@@ -118,6 +124,7 @@
             <Chinese>聲音將隨機產生在玩家附近，此選項定義該聲音最遠會距離玩家多少公尺</Chinese>
             <Chinesesimp>声音将随机产生在玩家附近，此选项定义该声音最远会距离玩家多少米</Chinesesimp>
             <Hungarian>Egy véletlenszerű pozíció számításához használt érték, amihez megadja a maximum távolságot a játékosok és a lejátszott hangfájl(ok) között</Hungarian>
+            <Ukrainian>Використовується для розрахунку випадкової позиції та вказує максимальну відстань між гравцями та джерелами звуку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDistance_DisplayName">
             <English>Maximum Distance</English>
@@ -135,6 +142,7 @@
             <Chinesesimp>最大距离</Chinesesimp>
             <Turkish>Maksimum Mesafe</Turkish>
             <Hungarian>Maximális távolság</Hungarian>
+            <Ukrainian>Макс. відстань</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDelay_Description">
             <English>Minimal delay between sounds played</English>
@@ -152,6 +160,7 @@
             <Chinesesimp>设定每个声音档案中间最少间隔多久再进行播放</Chinesesimp>
             <Turkish>Çalınan sesler arasında minimum gecikme</Turkish>
             <Hungarian>Minimum késleltetés a lejátszott hangok között</Hungarian>
+            <Ukrainian>Мінімальна затримка між відтворенням звуків</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDelay_DisplayName">
             <English>Minimal Delay</English>
@@ -169,6 +178,7 @@
             <Chinesesimp>最小延迟</Chinesesimp>
             <Turkish>Minimum Gecikme</Turkish>
             <Hungarian>Minimum késleltetés</Hungarian>
+            <Ukrainian>Мін. затримка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDistance_Description">
             <English>Used for calculating a random position and sets the minimal distance between the players and the played sound file(s)</English>
@@ -185,6 +195,7 @@
             <Chinese>聲音將隨機產生在玩家附近，此選項定義該聲音最近會距離玩家多少公尺</Chinese>
             <Chinesesimp>声音将随机产生在玩家附近，此选项定义该声音最近会距离玩家多少米</Chinesesimp>
             <Hungarian>Egy véletlenszerű pozíció számításához használt érték, amihez megadja a minimum távolságot a játékosok és a lejátszott hangfájl(ok) között</Hungarian>
+            <Ukrainian>Використовується для розрахунку випадкової позиції і вказує мінімальну відстань між гравцями і джерелами звуку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDistance_DisplayName">
             <English>Minimal Distance</English>
@@ -202,6 +213,7 @@
             <Chinesesimp>最小距离</Chinesesimp>
             <Turkish>Minimum Mesafe</Turkish>
             <Hungarian>Minimális távolság</Hungarian>
+            <Ukrainian>Мін. відстань</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundFiles_Description">
             <English>Class names of the ambiance sounds to be played. Seperated by ','</English>
@@ -218,6 +230,7 @@
             <Chinese>輸入想使用的環境聲音classname。每個classname用','做區隔</Chinese>
             <Chinesesimp>输入想使用的环境声音 classname。每个 classname 用'，'做区隔</Chinesesimp>
             <Turkish>Çalınacak ambiyans seslerinin sınıf isimleri.</Turkish>
+            <Ukrainian>Імена класів звуків оточення, які мають програватися. Розділені ','</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundFiles_DisplayName">
             <English>Sounds</English>
@@ -235,6 +248,7 @@
             <Chinesesimp>声音</Chinesesimp>
             <Turkish>Sesler</Turkish>
             <Hungarian>Hangok</Hungarian>
+            <Ukrainian>Звуки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundVolume_Description">
             <English>The volume of the sounds played</English>
@@ -252,6 +266,7 @@
             <Chinesesimp>调整声音的音量</Chinesesimp>
             <Turkish>Çalınan seslerin seviyesi</Turkish>
             <Hungarian>A lejátszott hangok hangereje</Hungarian>
+            <Ukrainian>Гучність відтворюваних звуків</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundVolume_DisplayName">
             <English>Volume</English>
@@ -269,6 +284,7 @@
             <Chinesesimp>音量</Chinesesimp>
             <Turkish>Ses</Turkish>
             <Hungarian>Hangerő</Hungarian>
+            <Ukrainian>Гучність</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissionModules_Category_DisplayName">
             <English>ACE Mission Modules</English>
@@ -286,6 +302,7 @@
             <Chinesesimp>ACE 任务模块</Chinesesimp>
             <Turkish>ACE Görev Modülleri</Turkish>
             <Hungarian>ACE küldetési modulok</Hungarian>
+            <Ukrainian>ACE Модулі місій</Ukrainian>
         </Key>
     </Package>
 </Project>

@@ -3,8 +3,8 @@
     "CHECKBOX",
     [LSTRING(AlternateArmorPenetration_DisplayName), LSTRING(AlternateArmorPenetration_Description)],
     ELSTRING(medical,Category),
-    false,
-    true
+    true,
+    1
 ] call CBA_fnc_addSetting;
 
 [

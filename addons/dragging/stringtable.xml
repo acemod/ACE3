@@ -17,6 +17,7 @@
             <Chinesesimp>背起</Chinesesimp>
             <Turkish>Taşı</Turkish>
             <Hungarian>Felvevés</Hungarian>
+            <Ukrainian>Нести</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragging_CarryKeybind">
             <English>Carry/Release Object</English>
@@ -31,6 +32,7 @@
             <Japanese>オブジェクトを運ぶ/離す</Japanese>
             <Chinesesimp>背负/释放物体</Chinesesimp>
             <Turkish>Objeyi Taşı/Bırak</Turkish>
+            <Ukrainian>Нести/відпустити об'єкт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragging_Drag">
             <English>Drag</English>
@@ -48,6 +50,7 @@
             <Chinesesimp>拖动</Chinesesimp>
             <Turkish>Sürükle</Turkish>
             <Hungarian>Húzás</Hungarian>
+            <Ukrainian>Тягти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragging_DragAndFire_Description">
             <English>Allow the player to fire their gun while dragging.</English>
@@ -62,6 +65,7 @@
             <Japanese>プレイヤーが引きずっている最中でも射撃できるようにします。</Japanese>
             <Chinesesimp>允许玩家在拖动时开火。</Chinesesimp>
             <Hungarian>Húzás közben a játékos elsütheti a fegyverét.</Hungarian>
+            <Ukrainian>Дозволяє гравцеві стріляти під час перетягування</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragging_DragAndFire_DisplayName">
             <English>Allow firing while dragging</English>
@@ -76,6 +80,7 @@
             <Japanese>搬送中に射撃許可</Japanese>
             <Chinesesimp>允许在拖动时开火</Chinesesimp>
             <Hungarian>Húzás közbeni tüzelés engedélyezése</Hungarian>
+            <Ukrainian>Стрільба під час перетягування</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragging_DragKeybind">
             <English>Drag/Release Object</English>
@@ -93,6 +98,7 @@
             <Chinesesimp>拖动/放开物品</Chinesesimp>
             <Turkish>Objeyi Sürükle/Bırak</Turkish>
             <Hungarian>Húzás/Elengedés Objektum</Hungarian>
+            <Ukrainian>Тягнути/відпустити об'єкт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragging_Drop">
             <English>Release</English>
@@ -110,6 +116,7 @@
             <Chinesesimp>放开</Chinesesimp>
             <Turkish>Bırak</Turkish>
             <Hungarian>Elengedés</Hungarian>
+            <Ukrainian>Відпустити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragging_RaiseLowerRotate">
             <English>Raise/Lower | (Ctrl + Scroll) Rotate</English>
@@ -125,6 +132,7 @@
             <Japanese>上げる/下げる | (Ctrl + スクロール) 回転</Japanese>
             <Chinesesimp>抬起/放低 |（Ctrl + 鼠标滚轮）旋转</Chinesesimp>
             <Turkish>Yükselt/Alçalt | (Ctrl + Tekerlek) Döndür</Turkish>
+            <Ukrainian>Підняти/опустити | (Ctrl + Скрол) Крутити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragging_SettingsName">
             <English>ACE Dragging</English>
@@ -139,6 +147,7 @@
             <Japanese>ACE ドラッグ</Japanese>
             <Chinesesimp>ACE 拖曳</Chinesesimp>
             <Hungarian>ACE Húzás</Hungarian>
+            <Ukrainian>ACE Перетягування</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item too heavy</English>
@@ -156,6 +165,7 @@
             <Chinesesimp>此物品过重</Chinesesimp>
             <Turkish>Eşya çok ağır</Turkish>
             <Hungarian>Az objektum túl nehéz</Hungarian>
+            <Ukrainian>Предмет занадто важкий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragging_allowRunWithLightweight_Description">
             <English>Allow the player to run when carrying lightweight objects.</English>
@@ -168,6 +178,7 @@
             <German>Erlauben Sie dem Spieler, zu rennen, wenn er leichte Gegenstände trägt.</German>
             <Korean>가벼운 개체를 들고 다닐 때 플레이어가 뛸 수 있도록 허용합니다.</Korean>
             <Japanese>プレイヤーが軽量オブジェクトを持ち運んでいるときに走れるようにする。</Japanese>
+            <Ukrainian>Дозвольте гравцеві бігати під час перенесення легких предметів.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragging_allowRunWithLightweight_DisplayName">
             <English>Allow Running with Lightweight Objects</English>
@@ -180,6 +191,7 @@
             <German>Erlauben das Sprinten mit leichten Gegenständen</German>
             <Korean>가벼운 개체 들고 달리기 허용</Korean>
             <Japanese>軽量物を持って走れるようにする</Japanese>
+            <Ukrainian>Дає змогу працювати з легкими об'єктами</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragging_skipContainerWeight_Description">
             <English>Determines whether object's weight is added onto weight calculations.</English>
@@ -192,6 +204,7 @@
             <German>Legt fest, ob das Gewicht des Objekts zu den Gewichtsberechnungen hinzugefügt wird.</German>
             <Korean>무게 계산에 개체의 무게를 추가할 지 여부를 결정합니다.</Korean>
             <Japanese>重量計算にオブジェクトの重量を追加するかどうかを定義します。</Japanese>
+            <Ukrainian>Визначає, чи додається вага об'єкта під час розрахунку ваги.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragging_skipContainerWeight_DisplayName">
             <English>Skip Object Weight</English>
@@ -204,6 +217,7 @@
             <German>Objektgewicht überspringen</German>
             <Korean>개체 무게 무시</Korean>
             <Japanese>オブジェクトの重量を無視</Japanese>
+            <Ukrainian>Ігнорувати вагу об'єкта</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragging_weightCoefficient_Description">
             <English>Modifies weight limit calculations. Set to 0 to ignore.</English>
@@ -215,6 +229,7 @@
             <German>Ändert die Berechnung der Gewichtsbegrenzung. Zum Ignorieren auf 0 setzen.</German>
             <Korean>무게 제한 계산을 수정합니다. 무시하려면 0으로 설정하십시오.</Korean>
             <Japanese>重量制限の計算を変更します。 無視するには 0 に設定します。</Japanese>
+            <Ukrainian>Змінює розрахунки граничної ваги. Встановіть значення 0 для ігнорування.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragging_weightCoefficient_DisplayName">
             <English>Max Weight Coefficient</English>
@@ -226,6 +241,7 @@
             <German>Maximaler Gewichtskoeffizient</German>
             <Korean>최대 무게 계수</Korean>
             <Japanese>最大重量係数</Japanese>
+            <Ukrainian>Максимальний коефіцієнт ваги</Ukrainian>
         </Key>
     </Package>
 </Project>
