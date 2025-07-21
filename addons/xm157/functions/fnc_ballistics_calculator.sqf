@@ -10,7 +10,7 @@
  * 3: Bank (deg) - Roll <NUMBER>
  *
  * Return Value:
- * Elevation and Windage in MRAD <ARRAY>
+ * Elevation and Windage in MRAD, Time Of Flight <ARRAY>
  *
  * Example:
  * [500, 90, 0, 0] call ace_xm157_fnc_ballistics_calculator
@@ -21,7 +21,7 @@
 params ["_targetRange", "_directionOfFire", "_inclinationAngle", "_bank"];
 
 private _weaponInfo = [] call FUNC(ballistics_getData);
-if (_weaponInfo isEqualTo []) exitWith { [0,0] };
+if (_weaponInfo isEqualTo []) exitWith { [0,0,0] };
 _weaponInfo params ["_scopeBaseAngle","_boreHeight","_airFriction","_muzzleVelocity","_bc",
     "_dragModel","_atmosphereModel","_barrelTwist","_twistDirection","_caliber","_bulletLength","_bulletMass"];
 
@@ -98,4 +98,4 @@ if (_useAB && {(_bulletPos select 1) > 0}) then {
     _windage = _windage + _spinDrift;
 };
 
-[17.453*_elevation, 17.453*_windage] // Convert to MRAD and return
+[17.453*_elevation, 17.453*_windage, _TOF] // Convert to MRAD and return
