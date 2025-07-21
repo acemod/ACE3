@@ -32,6 +32,6 @@ GVAR(digDirection) = 0;
 ["vehicle", {[ACE_player, objNull] call FUNC(handlePlayerChanged)}] call CBA_fnc_addPlayerEventHandler;
 
 // handle waking up dragged unit and falling unconscious while dragging
-["ace_unconscious", LINKFUNC(handleUnconscious)] call CBA_fnc_addEventHandler;
+["ace_incapacitated", LINKFUNC(handleUnconscious)] call CBA_fnc_addEventHandler;
 
 //@todo Captivity?

@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2, PabstMirror
- * Handles the "ace_unconscious" event
+ * Handles the "ace_incapacitated" event
  *
  * Arguments:
  * 0: Unit <OBJECT>

@@ -19,12 +19,12 @@ params ["_unit", "_set", ["_skipSetHidden", false]];
 TRACE_3("setStatusEffect",_unit,_set,_skipSetHidden);
 
 // Block radio on unconsciousness for compatibility with captive module
-[_unit, "blockRadio", "ace_unconscious", _set] call EFUNC(common,statusEffect_set);
+[_unit, "blockRadio", "ace_incapacitated", _set] call EFUNC(common,statusEffect_set);
 
 // Block speaking on unconsciousness
-[_unit, "blockSpeaking", "ace_unconscious", _set] call EFUNC(common,statusEffect_set);
+[_unit, "blockSpeaking", "ace_incapacitated", _set] call EFUNC(common,statusEffect_set);
 
 if (_skipSetHidden) exitWith {};
 
 // Stop AI firing at unconscious units in most situations (global effect)
-[_unit, "setHidden", "ace_unconscious", _set] call EFUNC(common,statusEffect_set);
+[_unit, "setHidden", "ace_incapacitated", _set] call EFUNC(common,statusEffect_set);

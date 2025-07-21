@@ -45,7 +45,7 @@ if (isServer) then {
         }, _explosive, _delay] call CBA_fnc_waitAndExecute;
     }] call CBA_fnc_addEventHandler;
 
-    ["ace_unconscious", {
+    ["ace_incapacitated", {
         params ["_unit", "_isUnconscious"];
         if (!_isUnconscious) exitWith {};
         TRACE_1("Knocked Out, Doing Deadman",_unit);
