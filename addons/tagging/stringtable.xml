@@ -16,6 +16,7 @@
             <Chinese>上次最後使用</Chinese>
             <Chinesesimp>上次最后使用</Chinesesimp>
             <Turkish>Son Kullanan</Turkish>
+            <Ukrainian>Повторити останній</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_ModuleDesc">
             <English>Configure how the tagging system will operate by default.</English>
@@ -31,6 +32,7 @@
             <Japanese>タグ付けシステムの標準動作を設定します。</Japanese>
             <Chinese>定義噴漆系統預設設定</Chinese>
             <Chinesesimp>定义喷漆系统预设设定</Chinesesimp>
+            <Ukrainian>Налаштування роботи системи спрей-маркерів за замовчуванням.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTag">
             <English>Spray Paint - Quick Tag</English>
@@ -47,6 +49,7 @@
             <Chinese>快速噴漆</Chinese>
             <Chinesesimp>快速喷漆</Chinesesimp>
             <Turkish>Sprey Boya- Hızlı Işaretleme</Turkish>
+            <Ukrainian>Швидкий маркер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTagDesc">
             <English>Action performed on main tag interaction point.</English>
@@ -62,6 +65,7 @@
             <Japanese>上層にある"タグ"のインタラクションを選択した際に行われるアクション。</Japanese>
             <Chinese>直接噴漆在互動選單瞄準的點上。</Chinese>
             <Chinesesimp>直接喷漆在互动菜单瞄准的点上。</Chinesesimp>
+            <Ukrainian>Дія, що виконується під час вибору головного пункту меню маркування.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_Random">
             <English>Random</English>
@@ -78,6 +82,7 @@
             <Chinese>隨機</Chinese>
             <Chinesesimp>随机</Chinesesimp>
             <Turkish>Rasgele</Turkish>
+            <Ukrainian>Випадковий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_RandomX">
             <English>Random X</English>
@@ -94,6 +99,7 @@
             <Chinese>隨機X標記</Chinese>
             <Chinesesimp>随机X标记</Chinesesimp>
             <Turkish>Rasgele X</Turkish>
+            <Ukrainian>Випадковий Х</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlack">
             <English>Spray Paint (Black)</English>
@@ -110,6 +116,7 @@
             <Chinese>黑色噴漆</Chinese>
             <Chinesesimp>黑色喷漆</Chinesesimp>
             <Turkish>Sprey Boya (Siyah)</Turkish>
+            <Ukrainian>Чорний спрей</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlue">
             <English>Spray Paint (Blue)</English>
@@ -126,6 +133,7 @@
             <Chinese>藍色噴漆</Chinese>
             <Chinesesimp>蓝色喷漆</Chinesesimp>
             <Turkish>Sprey Boya (Mavi)</Turkish>
+            <Ukrainian>Синій спрей</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintGreen">
             <English>Spray Paint (Green)</English>
@@ -142,6 +150,7 @@
             <Chinese>綠色噴漆</Chinese>
             <Chinesesimp>绿色喷漆</Chinesesimp>
             <Turkish>Sprey Boya (Yeşil)</Turkish>
+            <Ukrainian>Зелений спрей</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintRed">
             <English>Spray Paint (Red)</English>
@@ -158,6 +167,7 @@
             <Chinese>紅色噴漆</Chinese>
             <Chinesesimp>红色喷漆</Chinesesimp>
             <Turkish>Sprey Boya (Kırmızı)</Turkish>
+            <Ukrainian>Червоний спрей</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintWhite">
             <English>Spray Paint (White)</English>
@@ -174,6 +184,7 @@
             <Chinese>白色噴漆</Chinese>
             <Chinesesimp>白色喷漆</Chinesesimp>
             <Turkish>Sprey Boya (Beyaz)</Turkish>
+            <Ukrainian>Білий спрей</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintYellow">
             <English>Spray Paint (Yellow)</English>
@@ -190,6 +201,7 @@
             <Chinese>黃色噴漆</Chinese>
             <Chinesesimp>黄色喷漆</Chinesesimp>
             <Turkish>Sprey Boya (Sarı)</Turkish>
+            <Ukrainian>Жовтий спрей</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_Tag">
             <English>Tag</English>
@@ -206,6 +218,7 @@
             <Chinese>噴漆</Chinese>
             <Chinesesimp>喷漆</Chinesesimp>
             <Turkish>Işaretle</Turkish>
+            <Ukrainian>Маркер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_Tagging">
             <English>Tagging</English>
@@ -222,6 +235,7 @@
             <Chinese>噴漆</Chinese>
             <Chinesesimp>喷漆</Chinesesimp>
             <Turkish>Işaretleme</Turkish>
+            <Ukrainian>Маркування</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_down">
             <English>Down Arrow</English>
@@ -234,6 +248,7 @@
             <Korean>화살표(아래)</Korean>
             <Japanese>矢印 (下)</Japanese>
             <Chinesesimp>向下的箭头</Chinesesimp>
+            <Ukrainian>Стрілка вниз</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_left">
             <English>Left Arrow</English>
@@ -246,6 +261,7 @@
             <Korean>화살표(왼쪽)</Korean>
             <Japanese>矢印 (左)</Japanese>
             <Chinesesimp>向左的箭头</Chinesesimp>
+            <Ukrainian>Стрілка вліво</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_right">
             <English>Right Arrow</English>
@@ -258,6 +274,7 @@
             <Korean>화살표(오른쪽)</Korean>
             <Japanese>矢印 (右)</Japanese>
             <Chinesesimp>向右的箭头</Chinesesimp>
+            <Ukrainian>Стрілка вправо</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_up">
             <English>Up Arrow</English>
@@ -270,6 +287,7 @@
             <Korean>화살표(위)</Korean>
             <Japanese>矢印 (上)</Japanese>
             <Chinesesimp>向上的箭头</Chinesesimp>
+            <Ukrainian>Стрілка вгору</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_circle">
             <English>Circle</English>
@@ -282,6 +300,7 @@
             <Korean>원</Korean>
             <Japanese>丸</Japanese>
             <Chinesesimp>圆圈</Chinesesimp>
+            <Ukrainian>Коло</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_cross">
             <English>Cross</English>
@@ -294,6 +313,7 @@
             <Korean>십자</Korean>
             <Japanese>十字</Japanese>
             <Chinesesimp>十字</Chinesesimp>
+            <Ukrainian>Перехрестя</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_descSpraypaint">
             <English>A can of spray paint for tagging walls.</English>
@@ -309,6 +329,7 @@
             <Japanese>壁にタグを描くためのスプレーペイント缶。</Japanese>
             <Chinese>噴漆可噴塗在牆壁上</Chinese>
             <Chinesesimp>喷漆可喷涂在墙壁上</Chinesesimp>
+            <Ukrainian>Балончик спрею для малювання маркерів на стінах.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_diamond">
             <English>Diamond</English>
@@ -321,6 +342,7 @@
             <Korean>마름모</Korean>
             <Japanese>菱形</Japanese>
             <Chinesesimp>菱形</Chinesesimp>
+            <Ukrainian>Діамант</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_square">
             <English>Square</English>
@@ -333,6 +355,7 @@
             <Korean>사각형</Korean>
             <Japanese>四角</Japanese>
             <Chinesesimp>方形</Chinesesimp>
+            <Ukrainian>Квадрат</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_square_filled">
             <English>Filled Square</English>
@@ -345,6 +368,7 @@
             <Korean>채워진 사각형</Korean>
             <Japanese>四角 (塗りつぶし)</Japanese>
             <Chinesesimp>实心方形</Chinesesimp>
+            <Ukrainian>Заповнений Квадрат</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_stencilVehicle">
             <English>Vehicle ID Marking</English>
@@ -357,6 +381,7 @@
             <Korean>차량 ID 마킹</Korean>
             <Japanese>車両IDマーキング</Japanese>
             <Chinesesimp>载具ID标记</Chinesesimp>
+            <Ukrainian>Ідентифікаційне маркування транспортного засобу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_stencilVehicle_tooltip">
             <English>Replaces clan tag with stenciled text</English>
@@ -369,6 +394,7 @@
             <Korean>클랜 태그를 스텐실 텍스트로 바꿉니다.</Korean>
             <Japanese>部隊タグをステンシルテキストに置き換える</Japanese>
             <Chinesesimp>用模板文字代替战队徽标</Chinesesimp>
+            <Ukrainian>Замінює тег клану трафаретним текстом</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_triangle">
             <English>Triangle</English>
@@ -381,6 +407,7 @@
             <Korean>삼각형</Korean>
             <Japanese>三角</Japanese>
             <Chinesesimp>三角形</Chinesesimp>
+            <Ukrainian>Трикутник</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_triangle_inverted">
             <English>Triangle Inverted</English>
@@ -393,6 +420,7 @@
             <Korean>역삼각형</Korean>
             <Japanese>三角 (反転)</Japanese>
             <Chinesesimp>倒过来的三角形</Chinesesimp>
+            <Ukrainian>Обернений трикутник</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_x">
             <English>X</English>
@@ -409,6 +437,7 @@
             <Chinese>X標記</Chinese>
             <Chinesesimp>X标记</Chinesesimp>
             <Turkish>X</Turkish>
+            <Ukrainian>Х</Ukrainian>
         </Key>
     </Package>
 </Project>

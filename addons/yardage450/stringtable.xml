@@ -17,6 +17,7 @@
             <Chinesesimp>激光测距仪</Chinesesimp>
             <Turkish>Lazer Menzil Bulucu</Turkish>
             <Hungarian>Lézeres távolságmérő</Hungarian>
+            <Ukrainian>Лазерний далекомір</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Yardage450_DisplayName">
             <English>Yardage 450</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>Yardage 450</Chinesesimp>
             <Turkish>Yardage 450</Turkish>
             <Hungarian>Yardage 450</Hungarian>
+            <Ukrainian>Yardage 450</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Yardage450_PowerButtonKey">
             <English>Yardage 450 - Power Button</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>Yardage 450—电源按钮</Chinesesimp>
             <Turkish>Yardage 450 - Güç Tuşu</Turkish>
             <Hungarian>Yardage 450 - Főkapcsoló gomb</Hungarian>
+            <Ukrainian>Yardage 450 - кнопка живлення</Ukrainian>
         </Key>
     </Package>
 </Project>

@@ -14,6 +14,7 @@
             <Japanese>ヘッドレスブラックリスト</Japanese>
             <Chinese>無頭客戶端黑名單</Chinese>
             <Chinesesimp>Headless 客户端黑名单</Chinesesimp>
+            <Ukrainian>Чорний список Headless</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Headless_BlacklistEdenDesc">
             <English>Disables transferring of this AI unit/group to Headless Clients. No effect on player units.</English>
@@ -28,6 +29,7 @@
             <Japanese>ヘッドレスクライアントへ移行させないAIユニット/グループを指定します。プレイヤーユニットへ効果はありません。</Japanese>
             <Chinese>禁止轉換黑名單中的AI單位/群組到無頭客戶端上。此功能對玩家單位無用。</Chinese>
             <Chinesesimp>禁止转换黑名单中的 AI 单位/群组到 Headless 客户端上。此功能对玩家单位无用。</Chinesesimp>
+            <Ukrainian>Вимикає передання керування цього юніта/групи Headless клієнтам. Не впливає на юніти гравців.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Headless_Delay">
             <English>Delay</English>
@@ -42,6 +44,7 @@
             <Japanese>遅延</Japanese>
             <Chinese>延遲</Chinese>
             <Chinesesimp>延迟</Chinesesimp>
+            <Ukrainian>Затримка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Headless_DelayDesc">
             <English>Minimal delay between transfers, in seconds. (Default: 15)</English>
@@ -56,6 +59,7 @@
             <Japanese>移行する際の最低遅延を秒単位で設定します。 (デフォルト: 15)</Japanese>
             <Chinese>設定每次轉換間隔多少秒。(預設:15秒)</Chinese>
             <Chinesesimp>设定每次转换间隔多少秒。（预设：15秒）</Chinesesimp>
+            <Ukrainian>Мінімальна затримка в секундах між передачами. (За замовчуванням: 15)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Headless_Delayed">
             <English>Delayed (60s)</English>
@@ -70,6 +74,7 @@
             <Japanese>遅延 (60秒)</Japanese>
             <Chinese>延遲 (60秒)</Chinese>
             <Chinesesimp>延迟（60秒）</Chinesesimp>
+            <Ukrainian>Із затримкою (60 с)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Headless_EnabledDesc">
             <English>Enables transferring of AI to Headless Clients.</English>
@@ -84,6 +89,7 @@
             <Japanese>AI のヘッドレス クライアントへの転送を有効化します。</Japanese>
             <Chinese>開啟轉換AI控制權給無頭客戶端。</Chinese>
             <Chinesesimp>开启转换 AI 控制权给 Headless 客户端。</Chinesesimp>
+            <Ukrainian>Передає управління ШІ Headless клієнтам.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Headless_EndMission">
             <English>End Mission</English>
@@ -98,6 +104,7 @@
             <Japanese>ミッション終了</Japanese>
             <Chinese>結束任務</Chinese>
             <Chinesesimp>结束任务</Chinesesimp>
+            <Ukrainian>Завершувати місію</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Headless_EndMissionDesc">
             <English>End mission when there are no players connected (same as 'persistent = 0' in server configuration but with Headless Client support).</English>
@@ -112,6 +119,7 @@
             <Japanese>プレイヤーが接続していない場合はミッション終了します。(サーバ設定の'presistent =0'と同じですが、ヘッドレスクライアントをサポートします)</Japanese>
             <Chinese>當伺服器裡沒有任何玩家還連線時自動結束任務(效果同於伺服器設定的'persistent = 0'，但支援無頭客戶端)。</Chinese>
             <Chinesesimp>当服务器里没有任何玩家还连线时自动结束任务（效果同于伺服器设定的'persistent = 0'，但支援 Headless 客户端）。</Chinesesimp>
+            <Ukrainian>Завершує місію, якщо немає приєднаних гравців (аналогічно 'persistent = 0' у налаштуваннях сервера, але з увімкненою підтримкою Headless клієнтів).</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Headless_Instant">
             <English>Instant</English>
@@ -126,6 +134,7 @@
             <Japanese>即座</Japanese>
             <Chinese>立即</Chinese>
             <Chinesesimp>立即</Chinesesimp>
+            <Ukrainian>Миттєво</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Headless_Log">
             <English>Log</English>
@@ -140,6 +149,7 @@
             <Japanese>ログ</Japanese>
             <Chinese>日誌</Chinese>
             <Chinesesimp>日志</Chinesesimp>
+            <Ukrainian>Журнал</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Headless_LogDesc">
             <English>Log transfer statistics and Headless Client (dis)connections to RPT. (Default: No)</English>
@@ -154,6 +164,7 @@
             <Japanese>統計とヘッドレスクライアントの接続有無を PRT へ記録します。 (デフォルト: 無効)</Japanese>
             <Chinese>記錄無頭客戶端間的轉換數量與連線/斷線等記錄到RPT報告檔中。(預設:關閉)</Chinese>
             <Chinesesimp>记录 Headless 客户端间的转换数量与连线/断线等记录到 RPT 报告档中。（预设：关闭）</Chinesesimp>
+            <Ukrainian>Вести журнал передач і підключень Headless клієнтів у файл RPT. (За замовчуванням: Вимкнути)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Headless_Module">
             <English>Headless</English>
@@ -168,6 +179,7 @@
             <Japanese>ヘッドレス</Japanese>
             <Chinese>無頭客戶端</Chinese>
             <Chinesesimp>Headless 客户端</Chinesesimp>
+            <Ukrainian>Headless клієнт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Headless_ModuleDesc">
             <English>This module allows you to setup automatic transferring of AI to Headless Clients. (Default: No)</English>
@@ -182,6 +194,7 @@
             <Japanese>モジュールはAIを自動的にヘッドレスクライアントへ移行します。 (デフォルト: 無効)</Japanese>
             <Chinese>此模塊能讓你自動轉換AI的控制權給其他無頭客戶端。(預設:關閉)</Chinese>
             <Chinesesimp>此模块能让你自动转换 AI 的控制权给其他 Headless 客户端。（预设：关闭）</Chinesesimp>
+            <Ukrainian>Цей модуль дає змогу налаштувати автоматичне передавання керування ШІ Headless клієнтам. (За замовчуванням: Вимкнути)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Headless_TransferLoadout">
             <English>Transfer Loadout</English>
@@ -196,6 +209,7 @@
             <Japanese>装備の移送</Japanese>
             <Chinese>裝備傳輸</Chinese>
             <Chinesesimp>装备转移</Chinesesimp>
+            <Ukrainian>Передавати спорядження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Headless_TransferLoadoutConfig">
             <English>Config Loadout</English>
@@ -210,6 +224,7 @@
             <Japanese>コンフィグの装備</Japanese>
             <Chinese>設置裝備</Chinese>
             <Chinesesimp>设置装备</Chinesesimp>
+            <Ukrainian>Спорядження з налаштувань</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Headless_TransferLoadoutCurrent">
             <English>Current Loadout</English>
@@ -224,6 +239,7 @@
             <Japanese>現在の装備</Japanese>
             <Chinese>目前裝備</Chinese>
             <Chinesesimp>当前装备</Chinesesimp>
+            <Ukrainian>Поточне спорядження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Headless_TransferLoadoutDesc">
             <English>Transfer loadout of units attempts to work around an issue where units appear naked after transferring to a Headless Client.</English>
@@ -238,6 +254,7 @@
             <Japanese>装備の移送はヘッドレスクライアントへの移行後にユニットが裸で出現する問題の回避を試みます。</Japanese>
             <Chinese>裝備傳輸用於試著暫時應付單位透過無頭客戶端傳輸時所導致裸裝之問題。</Chinese>
             <Chinesesimp>装备转移用于试着暂时应付单位透过 Headless 客户端传输时所导致裸装之问题。</Chinesesimp>
+            <Ukrainian>Передача спорядження юнітів дає змогу оминати проблему, за якої юніти опиняються без спорядження після передання управління Headless клієнту.</Ukrainian>
         </Key>
     </Package>
 </Project>

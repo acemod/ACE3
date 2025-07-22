@@ -17,6 +17,7 @@
             <Chinesesimp>方位：%1°</Chinesesimp>
             <Turkish>Yön: %1°</Turkish>
             <Hungarian>Irány: %1°</Hungarian>
+            <Ukrainian>Напрямок: %1°</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_MarkerDirectionScaleSlider_Tooltip">
             <English>Click RMB to reset</English>
@@ -30,6 +31,7 @@
             <Korean>오른쪽 클릭으로 재설정</Korean>
             <Japanese>右クリックでリセット</Japanese>
             <Chinesesimp>点击鼠标右键重置</Chinesesimp>
+            <Ukrainian>Натисни ПКМ щоб скинути</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_MarkerScale">
             <English>Scale: %1</English>
@@ -43,6 +45,7 @@
             <Korean>크기: %1</Korean>
             <Japanese>大きさ: %1</Japanese>
             <Chinesesimp>规模：%1°</Chinesesimp>
+            <Ukrainian>Масштаб: %1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_Module_DisplayName">
             <English>Markers</English>
@@ -59,6 +62,7 @@
             <Chinese>標誌</Chinese>
             <Chinesesimp>标识</Chinesesimp>
             <Turkish>Işaretleyiciler</Turkish>
+            <Ukrainian>Маркери</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction">
             <English>Allow moving markers for</English>
@@ -74,6 +78,7 @@
             <Japanese>マーカー移動を許可する対象</Japanese>
             <Chinese>誰可以移動標誌</Chinese>
             <Chinesesimp>谁可以移动标识</Chinesesimp>
+            <Ukrainian>Дозволити переміщення маркерів для</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Admins">
             <English>Admins</English>
@@ -90,6 +95,7 @@
             <Chinese>管理員</Chinese>
             <Chinesesimp>管理员</Chinesesimp>
             <Turkish>Adminler</Turkish>
+            <Ukrainian>Адмінів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_All">
             <English>All players</English>
@@ -106,6 +112,7 @@
             <Chinese>所有玩家</Chinese>
             <Chinesesimp>所有玩家</Chinesesimp>
             <Turkish>Bütün Oyuncular</Turkish>
+            <Ukrainian>Усіх гравців</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Description">
             <English>Restricts which players are able to move markers while holding the Alt key.</English>
@@ -122,6 +129,7 @@
             <Chinese>設定誰可以透過按住Alt鍵來移動標誌</Chinese>
             <Chinesesimp>设定谁可以透过按住 Alt 键来移动标识。</Chinesesimp>
             <Turkish>Alt tuşunu basılı tutarken hangi işaretçilerin hareket edebileceğini sınırlar.</Turkish>
+            <Ukrainian>Встановлює обмеження на переміщення маркерів гравцями за допомогою клавіші Alt</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeaders">
             <English>Group leaders</English>
@@ -138,6 +146,7 @@
             <Chinese>小隊長</Chinese>
             <Chinesesimp>小队长</Chinesesimp>
             <Turkish>Grup Liderleri</Turkish>
+            <Ukrainian>Лідерів груп</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeadersAndAdmins">
             <English>Group leaders and Admins</English>
@@ -154,6 +163,7 @@
             <Chinese>小隊長與管理員</Chinese>
             <Chinesesimp>小队长与管理员</Chinesesimp>
             <Turkish>Grup Liderleri Ve Adminler</Turkish>
+            <Ukrainian>Лідерів груп і Адмінів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Nobody">
             <English>Nobody</English>
@@ -170,6 +180,7 @@
             <Chinese>沒有人</Chinese>
             <Chinesesimp>没有人</Chinesesimp>
             <Turkish>Hiçkimse</Turkish>
+            <Ukrainian>Нікого</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Owner">
             <English>Creator</English>
@@ -186,6 +197,7 @@
             <Chinese>放置者</Chinese>
             <Chinesesimp>放置者</Chinesesimp>
             <Turkish>Yaratıcı</Turkish>
+            <Ukrainian>Творця</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_Timestamp">
             <English>Timestamp</English>
@@ -199,6 +211,7 @@
             <Korean>시간 표기</Korean>
             <Japanese>タイムスタンプ</Japanese>
             <Chinesesimp>时间戳</Chinesesimp>
+            <Ukrainian>Час постановки мітки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampEnabled">
             <English>Allow Timestamps</English>
@@ -212,6 +225,7 @@
             <Korean>시간 표기 허용</Korean>
             <Japanese>タイムスタンプの許可</Japanese>
             <Chinesesimp>允许时间戳</Chinesesimp>
+            <Ukrainian>Індикація часу на маркерах</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampEnabledDescription">
             <English>Whether to allow timestamps to be automatically applied to markers</English>
@@ -225,6 +239,7 @@
             <Korean>허용 시 마커를 내려놓음과 동시에 시간이 표기됩니다</Korean>
             <Japanese>タイムスタンプをマーカーに自動的に適用することを許可するかどうか</Japanese>
             <Chinesesimp>是否允许时间戳自动应用于标记</Chinesesimp>
+            <Ukrainian>Автоматичне відображення часу, коли поставлено мітку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormat">
             <English>Timestamp Format</English>
@@ -238,6 +253,7 @@
             <Korean>시간 표기 포맷</Korean>
             <Japanese>タイムスタンプの形式</Japanese>
             <Chinesesimp>时间戳格式</Chinesesimp>
+            <Ukrainian>Формат часу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription0">
             <English>Changes the timestamp format</English>
@@ -251,6 +267,7 @@
             <Korean>시간 표기 포맷을 바꿉니다</Korean>
             <Japanese>タイムスタンプの形式を変更します</Japanese>
             <Chinesesimp>更改时间戳格式</Chinesesimp>
+            <Ukrainian>Зміна формату часу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription1">
             <English>"HH" - Hour</English>
@@ -264,6 +281,7 @@
             <Korean>"HH" - 시</Korean>
             <Japanese>"HH" - 時</Japanese>
             <Chinesesimp>"HH"—时</Chinesesimp>
+            <Ukrainian>"ГГ" - година</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription2">
             <English>"MM" - Minute</English>
@@ -277,6 +295,7 @@
             <Korean>"MM" - 분</Korean>
             <Japanese>"MM" - 分</Japanese>
             <Chinesesimp>"MM"—分</Chinesesimp>
+            <Ukrainian>"ХХ" - Хвилина</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription3">
             <English>"SS" - Seconds</English>
@@ -290,6 +309,7 @@
             <Korean>"SS" - 초</Korean>
             <Japanese>"SS" - 秒</Japanese>
             <Chinesesimp>"SS"—秒</Chinesesimp>
+            <Ukrainian>"СС" - Секунди</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription4">
             <English>"MM" - Milliseconds (from 0 to 59)</English>
@@ -302,6 +322,7 @@
             <Korean>"MS" - 밀리초 (0부터 59까지)</Korean>
             <Japanese>"MM" - ミリ秒 (0から59)</Japanese>
             <Chinesesimp>"MM" - 毫秒(0到59)</Chinesesimp>
+            <Ukrainian>"ММ" - мілісекунди (від 0 до 59)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription5">
             <English>"mmm" - Milliseconds (from 0 to 999)</English>
@@ -314,6 +335,7 @@
             <Korean>"mmm" - 밀리초 (0부터 999까지)</Korean>
             <Japanese>"mmm" - ミリ秒 (0から599)</Japanese>
             <Chinesesimp>"mmm" - 毫秒(0到999)</Chinesesimp>
+            <Ukrainian>"ммм" - мілісекунди (від 0 до 999)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat">
             <English>Timestamp Hour Format</English>
@@ -327,6 +349,7 @@
             <Korean>시간 표기 시간 포맷</Korean>
             <Japanese>タイムスタンプ時刻形式</Japanese>
             <Chinesesimp>时间戳小时格式</Chinesesimp>
+            <Ukrainian>Формат часових позначок</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat12">
             <English>12-Hour Clock</English>
@@ -340,6 +363,7 @@
             <Korean>12시간제</Korean>
             <Japanese>12時間表記</Japanese>
             <Chinesesimp>12小时制</Chinesesimp>
+            <Ukrainian>12 годинний формат</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat24">
             <English>24-Hour Clock</English>
@@ -353,6 +377,7 @@
             <Korean>24시간제</Korean>
             <Japanese>24時間表記</Japanese>
             <Chinesesimp>24小时制</Chinesesimp>
+            <Ukrainian>24 годинний формат</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormatDescription">
             <English>Changes timestamp to use either 24-hour or 12-hour clock format</English>
@@ -366,6 +391,7 @@
             <Korean>시간 표기를 24시간제 혹은 12시간제 에서 골라 표기합니다</Korean>
             <Japanese>タイムスタンプの時刻を24時間表記か12時間表記かのどちらかに変更します</Japanese>
             <Chinesesimp>改变时间戳以使用24小时或12小时的时钟格式</Chinesesimp>
+            <Ukrainian>Змінює формат часу на маркері на 24-годинний, або 12-годинний</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampTimezone">
             <English>Time Zone</English>
@@ -378,6 +404,7 @@
             <Korean>시간대</Korean>
             <Japanese>タイムゾーン</Japanese>
             <Chinesesimp>时区</Chinesesimp>
+            <Ukrainian>Часовий пояс</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampTimezoneDescription">
             <English>Changes the time zone for the timestamp</English>
@@ -390,6 +417,7 @@
             <Korean>타임스탬프의 시간대를 변경하십시오</Korean>
             <Japanese>タイムスタンプのタイムゾーンを変更します</Japanese>
             <Chinesesimp>更改时间戳的时区</Chinesesimp>
+            <Ukrainian>Змініть часовий пояс для мітки часу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampTimezoneIngameTime">
             <English>In-game Time</English>
@@ -402,6 +430,7 @@
             <Korean>게임 시간</Korean>
             <Japanese>ゲーム内時間</Japanese>
             <Chinesesimp>游戏内时间</Chinesesimp>
+            <Ukrainian>Час у грі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampTimezoneSystemTime">
             <English>System Time</English>
@@ -414,6 +443,7 @@
             <Korean>시스템 시간</Korean>
             <Japanese>システム時間</Japanese>
             <Chinesesimp>系统时间</Chinesesimp>
+            <Ukrainian>Системний час</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampTimezoneUTCTime">
             <English>UTC Time</English>
@@ -426,6 +456,7 @@
             <Korean>UTC 시간</Korean>
             <Japanese>UTC時間</Japanese>
             <Chinesesimp>UTC时间</Chinesesimp>
+            <Ukrainian>Час UTC</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampTooltipNoWatch">
             <English>Watch, GPS or UAV Terminal Required</English>
@@ -439,6 +470,7 @@
             <Korean>시계, GPS 또는 무인기 단말이 필요함</Korean>
             <Japanese>時計 か GPS または UAVターミナル が必要</Japanese>
             <Chinesesimp>需要手表</Chinesesimp>
+            <Ukrainian>Потрібен годинник, GPS або термінал БПЛА</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampUTCMinutesOffset">
             <English>UTC Minutes Offset</English>
@@ -451,6 +483,7 @@
             <Korean>UTC 분 오프셋</Korean>
             <Japanese>UTC分オフセット</Japanese>
             <Chinesesimp>UTC分钟偏移量</Chinesesimp>
+            <Ukrainian>UTC Хвилинне зміщення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampUTCMinutesOffsetDescription">
             <English>Change the minute offset for the UTC timestamp</English>
@@ -463,6 +496,7 @@
             <Korean>UTC 타임스탬프의 분 단위 오프셋을 변경합니다</Korean>
             <Japanese>UTCタイムスタンプの分オフセットを変更します</Japanese>
             <Chinesesimp>更改UTC时间戳的分钟偏移量</Chinesesimp>
+            <Ukrainian>Змінити хвилинне зміщення для часу UTC</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampUTCOffset">
             <English>UTC Offset</English>
@@ -475,6 +509,7 @@
             <Korean>UTC 오프셋</Korean>
             <Japanese>UTCオフセット</Japanese>
             <Chinesesimp>UTC偏移量</Chinesesimp>
+            <Ukrainian>Зміщення UTC</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampUTCOffsetDescription">
             <English>Changes the time offset for the UTC timestamp</English>
@@ -487,6 +522,7 @@
             <Korean>UTC 타임스탬프의 시간 단위 오프셋을 변경합니다</Korean>
             <Japanese>UTCタイムスタンプの時オフセットを変更します</Japanese>
             <Chinesesimp>更改UTC时间戳的时间偏移量</Chinesesimp>
+            <Ukrainian>Змініть зміщення часу для мітки часу UTC</Ukrainian>
         </Key>
     </Package>
 </Project>

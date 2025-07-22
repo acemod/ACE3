@@ -15,6 +15,7 @@
             <Japanese>低血液量時の画面効果を選択できます。</Japanese>
             <Chinesesimp>选择低血容量下的效果类型。</Chinesesimp>
             <Turkish>Kullanılan düşük kan hacmi efekt türünü seçer.</Turkish>
+            <Ukrainian>Обирає тип візуалізації ефекту низького об'єму крові.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_DisplayName">
             <English>Low Blood Volume Effect Type</English>
@@ -30,6 +31,7 @@
             <Japanese>低血液量時効果の種類</Japanese>
             <Chinesesimp>低血容量影响类型</Chinesesimp>
             <Turkish>Düşük Kan Efekt Türü</Turkish>
+            <Ukrainian>Візуальний ефект низького об'єму крові</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_both">
             <English>Icon + Color Fading</English>
@@ -45,6 +47,7 @@
             <Japanese>アイコンと退色</Japanese>
             <Chinesesimp>图标+褪色</Chinesesimp>
             <Turkish>Simge + Renk Soldurma</Turkish>
+            <Ukrainian>Іконка + Втрата кольоровості</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_colorCorrection">
             <English>Color Fading</English>
@@ -60,6 +63,7 @@
             <Japanese>退色</Japanese>
             <Chinesesimp>褪色</Chinesesimp>
             <Turkish>Renk Soldurma</Turkish>
+            <Ukrainian>Втрата кольоровості</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_icon">
             <English>Icon</English>
@@ -75,6 +79,7 @@
             <Japanese>アイコン</Japanese>
             <Chinesesimp>图标</Chinesesimp>
             <Turkish>Simge</Turkish>
+            <Ukrainian>Іконка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_ChromAberration">
             <English>Chromatic Aberration</English>
@@ -92,6 +97,7 @@
             <Chinesesimp>色差</Chinesesimp>
             <Turkish>Renk sapmaları</Turkish>
             <Hungarian>Kromatikus aberráció</Hungarian>
+            <Ukrainian>Хроматична аберація</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_Description">
             <English>Selects the used pain effect type.</English>
@@ -108,6 +114,7 @@
             <Chinese>選擇哪一個視覺效果用於回饋疼痛</Chinese>
             <Chinesesimp>选择反馈的疼痛效果类型。</Chinesesimp>
             <Turkish>Kullanılan ağrı efekti tipini seçer.</Turkish>
+            <Ukrainian>Вибирає тип візуалізації больового ефекту.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_DisplayName">
             <English>Pain Effect Type</English>
@@ -125,6 +132,7 @@
             <Chinesesimp>疼痛效果类型</Chinesesimp>
             <Turkish>Ağrı Etkisi Türü</Turkish>
             <Hungarian>Fájdalom-effekt típusa</Hungarian>
+            <Ukrainian>Візуальний ефект болю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_OnlyBase">
             <English>Only high pain effect</English>
@@ -141,6 +149,7 @@
             <Chinese>只有在強烈疼痛時使用</Chinese>
             <Chinesesimp>仅在剧烈疼痛下启用</Chinesesimp>
             <Turkish>Sadece yüksek ağrı etkisi</Turkish>
+            <Ukrainian>Ефект тільки сильного болю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_PulsingBlur">
             <English>Pulsing Blur</English>
@@ -157,6 +166,7 @@
             <Chinese>脈動模糊</Chinese>
             <Chinesesimp>脉冲式模糊</Chinesesimp>
             <Turkish>Titreşimli Bulanıklık</Turkish>
+            <Ukrainian>Пульсуюче розмиття</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_WhiteFlashing">
             <English>White Flashing</English>
@@ -173,6 +183,7 @@
             <Chinese>白光閃爍</Chinese>
             <Chinesesimp>白光闪烁</Chinesesimp>
             <Turkish>Beyaz Yanıp Sönüyor</Turkish>
+            <Ukrainian>Білі спалахи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_SubCategory">
             <English>Feedback</English>
@@ -189,6 +200,7 @@
             <Chinese>視覺回饋</Chinese>
             <Chinesesimp>受伤反应</Chinesesimp>
             <Turkish>Geri Bildirim</Turkish>
+            <Ukrainian>Реагування на травми</Ukrainian>
         </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_Description">
@@ -203,6 +215,7 @@
                 <Korean>자세 표시기 옆에 골절, 지혈대, 부목의 여부를 표시합니다.</Korean>
                 <Japanese>体勢インジケータに骨折や添え木、止血帯の有無を表示するかどうかを設定できます。</Japanese>
                 <Chinesesimp>在姿态指示器上启用骨折、应用止血带和夹板指示器。</Chinesesimp>
+                <Ukrainian>Вмикає індикацію переломів, накладених шин і турнікетів поверх індикатора положення тіла.</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_DisplayName">
                 <English>Enable Fracture/Tourniquet/Splint Indicators</English>
@@ -216,6 +229,7 @@
                 <Korean>골절/지혈대/부목 표시 활성화</Korean>
                 <Japanese>骨折/止血帯/添え木の表記を有効化</Japanese>
                 <Chinesesimp>启用骨折/止血带/夹板指示器</Chinesesimp>
+                <Ukrainian>Увімкнути індикатори переломів/турнікетів/шин</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_Description">
                 <English>Enable screaming by injured units</English>
@@ -233,6 +247,7 @@
                 <Chinesesimp>启用伤者的惨叫声</Chinesesimp>
                 <Turkish>Yaralı birimler tarafından çığlık atmayı etkinleştir</Turkish>
                 <Hungarian>Engedélyezi a sérült egységek kiáltásait</Hungarian>
+                <Ukrainian>Увімкнути крики поранених бійців</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">
                 <English>Enable Screams</English>
@@ -250,6 +265,7 @@
                 <Chinesesimp>启用惨叫</Chinesesimp>
                 <Turkish>Çığlıkları Etkinleştir</Turkish>
                 <Hungarian>Kiáltások engedélyezése</Hungarian>
+                <Ukrainian>Увім. крики</Ukrainian>
             </Key>
         </Container>
     </Package>

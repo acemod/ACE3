@@ -16,6 +16,7 @@
             <Chinese>允許玩家最大的可視距離</Chinese>
             <Chinesesimp>允许玩家最大的可视距离</Chinesesimp>
             <Hungarian>Lehetővé teszi a játékosok által a látótávolság maximumának korlátozását.</Hungarian>
+            <Ukrainian>Дає змогу обмежити максимальну дальність видимості, яка може бути встановлена гравцями.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_Module_DisplayName">
             <English>View Distance Limiter</English>
@@ -33,6 +34,7 @@
             <Chinesesimp>视距限制器</Chinesesimp>
             <Turkish>Görüş Uzaklığı Sınırlayıcısı</Turkish>
             <Hungarian>Látótáv-korlátozó</Hungarian>
+            <Ukrainian>Обмежувач дальності видимості</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_airVehicle_Description">
             <English>Changes in game view distance when the player is in an air vehicle.</English>
@@ -50,6 +52,7 @@
             <Chinesesimp>改变玩家于空中载具内时的视距</Chinesesimp>
             <Turkish>Oyuncular hava araçların da iken görebileceği uzaklığı değiştir.</Turkish>
             <Hungarian>Megváltoztatja a játékon belüli látótávolságot, amennyiben a játékos légi járműben van.</Hungarian>
+            <Ukrainian>Змінює дальність видимості в грі, коли гравець переміщається в повітряному транспорті.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_airVehicle_DisplayName">
             <English>Client View Distance (Air Vehicle)</English>
@@ -67,6 +70,7 @@
             <Chinesesimp>客户端视距（空中载具）</Chinesesimp>
             <Turkish>Kişilerin Görüş Uzaklığı Mesafesi (Hava Araçların da)</Turkish>
             <Hungarian>Kliens látótáv (légi jármű)</Hungarian>
+            <Ukrainian>Дальність видимості (У повітряному трансп.)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_enabled_Description">
             <English>Enables ACE viewdistance</English>
@@ -84,6 +88,7 @@
             <Chinesesimp>启用 ACE 视距</Chinesesimp>
             <Turkish>ACE Görüş Uzaklığını Aktif Et</Turkish>
             <Hungarian>Engedélyezi az ACE látótávolságot</Hungarian>
+            <Ukrainian>Вмикає обмежувач дальності видимості ACE</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_enabled_DisplayName">
             <English>Enable ACE viewdistance</English>
@@ -101,6 +106,7 @@
             <Chinesesimp>启用 ACE 视距</Chinesesimp>
             <Turkish>ACE Görüş Uzaklığını Aktif Et</Turkish>
             <Hungarian>ACE látótávolság engedélyezése</Hungarian>
+            <Ukrainian>Обмежити дальність видимості</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_infotext">
             <English>View Distance:</English>
@@ -118,6 +124,7 @@
             <Chinesesimp>视距：</Chinesesimp>
             <Turkish>Görüş Uzaklığı:</Turkish>
             <Hungarian>Látótávolság:</Hungarian>
+            <Ukrainian>Дальність видимості:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_invalid">
             <English>That option is invalid! The limit is</English>
@@ -135,6 +142,7 @@
             <Chinesesimp>该选项是无效的！ 限制是</Chinesesimp>
             <Turkish>Bu seçenek geçersiz! Limit</Turkish>
             <Hungarian>Ez a beállítás érvénytelen! A maximum mennyiség</Hungarian>
+            <Ukrainian>Налаштування не вірне! Поточна межа</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_landVehicle_Description">
             <English>Changes in game view distance when the player is in a land vehicle.</English>
@@ -152,6 +160,7 @@
             <Chinesesimp>改变玩家于地面载具内时的视距</Chinesesimp>
             <Turkish>Oyuncular kara araçlarında iken görebileceği uzaklığı değiştir.</Turkish>
             <Hungarian>Megváltoztatja a játékon belüli látótávolságot, amennyiben a játékos szárazföldi járműben van.</Hungarian>
+            <Ukrainian>Змінює дальність видимості в грі, коли гравець переміщується в наземному транспорті.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_landVehicle_DisplayName">
             <English>Client View Distance (Land Vehicle)</English>
@@ -169,6 +178,7 @@
             <Chinesesimp>客户端视距（地面载具）</Chinesesimp>
             <Turkish>Kişilerin Görüş Uzaklığı Mesafesi (Kara Araçların da)</Turkish>
             <Hungarian>Kliens látótáv (szárazföldi jármű)</Hungarian>
+            <Ukrainian>Дальність видимості (У наземному трансп.)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_limit_Description">
             <English>Sets the limit for how high clients can raise their view distance (up to 10000)</English>
@@ -186,6 +196,7 @@
             <Chinesesimp>设定客户端最高可显示的视距（最高至10000）</Chinesesimp>
             <Turkish>Kişilerin görüş mesafelerini ne kadar yükseltebileceğine ilişkin sınırı belirler (En Fazla 10000)</Turkish>
             <Hungarian>Korlátozza, mekkora látótávolságot állíthatnak be a kliensek (maximum 10000-ig)</Hungarian>
+            <Ukrainian>Встановлює межу дальності, наскільки клієнти можуть збільшити свою дальність видимості (до 10000)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_limit_DisplayName">
             <English>View Distance Limit</English>
@@ -203,6 +214,7 @@
             <Chinesesimp>视距限制</Chinesesimp>
             <Turkish>Görüş Uzaklığı Limiti</Turkish>
             <Hungarian>Látótáv-korlát</Hungarian>
+            <Ukrainian>Дальність видимості</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_limit_setting">
             <English>Limit for client's view distance set here and can overridden by module</English>
@@ -219,6 +231,7 @@
             <Chinese>玩家的視距限制可在此設定，也可透過模塊改寫</Chinese>
             <Chinesesimp>玩家的视距限制可在此设定，也可透过模块改写</Chinesesimp>
             <Hungarian>A kliens látótávolsága itt állítható be, és felülbírálható modulok által</Hungarian>
+            <Ukrainian>Межа дальності видимості клієнтів встановлюється тут і може бути перевизначена модулем</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_Description">
             <English>Sets the object view distance as a coefficient of the view distance or based on field of view. FoV Based's lowest and highest value is the value which is set when enabling the option.</English>
@@ -235,6 +248,7 @@
             <Chinese>設定物件可被觀察的距離，透過視野距離或是視野角度來決定。</Chinese>
             <Chinesesimp>设定物体可被观察的距离，透过视距或是视野角度来决定。</Chinesesimp>
             <Hungarian>Beállítja az objektum-látótávot a megadott látótáv koefficienseként.</Hungarian>
+            <Ukrainian>Встановлює дальність відтворення об'єктів як коефіцієнт від загальної дальності видимості.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_DisplayName">
             <English>Dynamic Object View Distance</English>
@@ -251,6 +265,7 @@
             <Chinese>動態物件的視野距離</Chinese>
             <Chinesesimp>动态物体的视距</Chinesesimp>
             <Hungarian>Dinamikus objektum-látótáv</Hungarian>
+            <Ukrainian>Динамічна дальність відтворення об'єктів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_fovBased">
             <English>FoV Based</English>
@@ -266,6 +281,7 @@
             <Japanese>視野角を元にする</Japanese>
             <Chinese>由視野角度決定</Chinese>
             <Chinesesimp>由视野角度决定</Chinesesimp>
+            <Ukrainian>Залежить від збільшення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_high">
             <English>High</English>
@@ -283,6 +299,7 @@
             <Chinesesimp>高</Chinesesimp>
             <Turkish>Yüksek</Turkish>
             <Hungarian>Magas</Hungarian>
+            <Ukrainian>Висока</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_low">
             <English>Low</English>
@@ -300,6 +317,7 @@
             <Chinesesimp>低</Chinesesimp>
             <Turkish>Düşük</Turkish>
             <Hungarian>Alacsony</Hungarian>
+            <Ukrainian>Низька</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_medium">
             <English>Medium</English>
@@ -317,6 +335,7 @@
             <Chinesesimp>中</Chinesesimp>
             <Turkish>Orta</Turkish>
             <Hungarian>Közepes</Hungarian>
+            <Ukrainian>Середня</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_off">
             <English>Off</English>
@@ -334,6 +353,7 @@
             <Chinesesimp>关闭</Chinesesimp>
             <Turkish>Kapalı</Turkish>
             <Hungarian>Kikapcsolva</Hungarian>
+            <Ukrainian>Вимк.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_veryhigh">
             <English>Very High</English>
@@ -351,6 +371,7 @@
             <Chinesesimp>非常高</Chinesesimp>
             <Turkish>Çok Yüksek</Turkish>
             <Hungarian>Maximális</Hungarian>
+            <Ukrainian>Дуже висока</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_verylow">
             <English>Very Low</English>
@@ -368,6 +389,7 @@
             <Chinesesimp>非常低</Chinesesimp>
             <Turkish>Çok Düşük</Turkish>
             <Hungarian>Minimális</Hungarian>
+            <Ukrainian>Дуже низька</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_objectinfotext">
             <English>Object View Distance is</English>
@@ -384,6 +406,7 @@
             <Chinese>物件視野距離為</Chinese>
             <Chinesesimp>物体视距为</Chinesesimp>
             <Hungarian>Az objektum-látótávolság:</Hungarian>
+            <Ukrainian>Дальність видимості об'єктів:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_onFoot_Description">
             <English>Changes in game view distance when the player is on foot.</English>
@@ -401,6 +424,7 @@
             <Chinesesimp>改变玩家步行时的视距。</Chinesesimp>
             <Turkish>Oyuncular ayakta iken görebileceği uzaklığı değiştir.</Turkish>
             <Hungarian>Megváltoztatja a játékon belüli látótávolságot, amennyiben a játékos gyalogosan van.</Hungarian>
+            <Ukrainian>Змінює дальність видимості в грі, коли гравець переміщується пішки.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_onFoot_DisplayName">
             <English>Client View Distance (On Foot)</English>
@@ -418,6 +442,7 @@
             <Chinesesimp>客户端视距（步行）</Chinesesimp>
             <Turkish>Kişilerin Görüş Uzaklığı Mesafesi (Yerde)</Turkish>
             <Hungarian>Kliens látótáv (gyalog)</Hungarian>
+            <Ukrainian>Дальність видимості (Пішки)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_sliderExtraDescription">
             <English>Setting to 0 will use default video settings</English>
@@ -431,6 +456,7 @@
             <Korean>0으로 설정시 기존 비디오 설정을 사용합니다.</Korean>
             <Japanese>0に設定すると、ビデオ設定のデフォルトを使用します</Japanese>
             <Chinesesimp>设置为0将使用默认的视频设置</Chinesesimp>
+            <Ukrainian>Значення 0 буде використовувати налаштування відео за замовчуванням</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_videosettings">
             <English>Video Settings</English>
@@ -448,6 +474,7 @@
             <Chinesesimp>影像设定</Chinesesimp>
             <Turkish>Grafik Ayarları</Turkish>
             <Hungarian>Videobeállítások</Hungarian>
+            <Ukrainian>Налаштування відео</Ukrainian>
         </Key>
     </Package>
 </Project>

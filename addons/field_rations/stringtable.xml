@@ -15,6 +15,7 @@
             <Chinese>是否讓飲食影響到ACE的進階疲勞。</Chinese>
             <Chinesesimp>是否让饮食影响到 ACE 的进阶疲劳。</Chinesesimp>
             <Turkish>Acıkınca veya susayınca kişinin yorulup yorulmayacağını belirler.</Turkish>
+            <Ukrainian>Визначає, чи буде спрага і голод впливати на розширену втому ACE.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_AffectAdvancedFatigue_DisplayName">
             <English>Affect Advanced Fatigue</English>
@@ -30,6 +31,7 @@
             <Chinese>與進階疲勞聯動</Chinese>
             <Chinesesimp>与进阶疲劳联动</Chinesesimp>
             <Turkish>Gelişmiş Yorgunluk</Turkish>
+            <Ukrainian>Вплив на розширену втому</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Always">
             <English>Always</English>
@@ -47,6 +49,7 @@
             <Chinesesimp>总是</Chinesesimp>
             <Turkish>Her Zaman</Turkish>
             <Hungarian>Mindig</Hungarian>
+            <Ukrainian>Завжди</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Can_Franta_Description">
             <English>Orange flavored soft drink with a tingly, fruity taste</English>
@@ -62,6 +65,7 @@
             <Chinese>有著微微的橘子水果味的汽水</Chinese>
             <Chinesesimp>橙子味汽水，有刺鼻的水果味</Chinesesimp>
             <Turkish>Gazlı Portakallı Bir Içecek</Turkish>
+            <Ukrainian>Напій з апельсиновим смаком</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Can_RedGull_Description">
             <English>Red Gull gives you wings</English>
@@ -77,6 +81,7 @@
             <Chinese>紅鷹讓你猛虎添翼</Chinese>
             <Chinesesimp>红鹰让你猛虎添翼</Chinesesimp>
             <Turkish>Red Gull kanatlandırrrrr</Turkish>
+            <Ukrainian>Ред Гулл надає крила!</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Can_Spirit_Description">
             <English>Refreshing lemon and lime flavored soft drink</English>
@@ -92,6 +97,7 @@
             <Chinese>清新檸檬以及有著酸橙味的汽水</Chinese>
             <Chinesesimp>清爽的柠檬和青柠味汽水</Chinesesimp>
             <Turkish>Limon Ve Yeşil Limondan Yapılmış Gazlı Bir Içecek</Turkish>
+            <Ukrainian>Освіжаючий напій зі смаком лимона та лайма</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_CanteenEmpty_Description">
             <English>An empty canteen</English>
@@ -109,6 +115,7 @@
             <Chinesesimp>一个空的水壶</Chinesesimp>
             <Turkish>Boş Matara</Turkish>
             <Hungarian>Egy üres kantin</Hungarian>
+            <Ukrainian>Порожня фляга</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_CanteenEmpty_DisplayName">
             <English>Canteen (Empty)</English>
@@ -126,6 +133,7 @@
             <Chinesesimp>水壶（空）</Chinesesimp>
             <Turkish>Matara (Boş)</Turkish>
             <Hungarian>Étkezde (üres)</Hungarian>
+            <Ukrainian>Фляга (порожня)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_CanteenHalf_Description">
             <English>A canteen half filled with water</English>
@@ -143,6 +151,7 @@
             <Chinesesimp>剩一半水的水壶</Chinesesimp>
             <Turkish>Yarım Dolu Matara</Turkish>
             <Hungarian>A vízzel töltött kantin</Hungarian>
+            <Ukrainian>Наполовину заповнена водою фляга</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_CanteenHalf_DisplayName">
             <English>Canteen (Half)</English>
@@ -160,6 +169,7 @@
             <Chinesesimp>水壶（半壶）</Chinesesimp>
             <Turkish>Matara (Yarım)</Turkish>
             <Hungarian>Étkezés (fél)</Hungarian>
+            <Ukrainian>Фляга (половина)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Canteen_Description">
             <English>A canteen filled with water</English>
@@ -177,6 +187,7 @@
             <Chinesesimp>一个装满水的水壶</Chinesesimp>
             <Turkish>Su Dolu Matara</Turkish>
             <Hungarian>Vízzel töltött kantin</Hungarian>
+            <Ukrainian>Фляга з водою</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Canteen_DisplayName">
             <English>Canteen</English>
@@ -194,6 +205,7 @@
             <Chinesesimp>水壶</Chinesesimp>
             <Turkish>Matara</Turkish>
             <Hungarian>Kantin</Hungarian>
+            <Ukrainian>Фляга (повна)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_CheckWater">
             <English>Check Remaining Water</English>
@@ -209,6 +221,7 @@
             <Chinese>檢查剩餘飲用水</Chinese>
             <Chinesesimp>检查剩余饮用水</Chinesesimp>
             <Turkish>Kalan Suyu Kontrol Et</Turkish>
+            <Ukrainian>Перевірити залишок води</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_CheckingWater">
             <English>Checking remaining water...</English>
@@ -224,6 +237,7 @@
             <Chinese>檢查剩下的飲用水...</Chinese>
             <Chinesesimp>检查剩余饮用水中...</Chinesesimp>
             <Turkish>Kalan Su Kontrol Ediliyor...</Turkish>
+            <Ukrainian>Перевіряється залишок води...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_ColoredIcons">
             <English>Colored Icons</English>
@@ -239,6 +253,7 @@
             <Chinese>顏色化圖示</Chinese>
             <Chinesesimp>彩色图标</Chinesesimp>
             <Turkish>Renkli Ikonlar</Turkish>
+            <Ukrainian>Кольорові іконки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_DisplayName">
             <English>ACE Field Rations</English>
@@ -256,6 +271,7 @@
             <Chinesesimp>ACE 野战军粮</Chinesesimp>
             <Turkish>ACE Gıda Ihtiyaçları</Turkish>
             <Hungarian>ACE Terepi adagok</Hungarian>
+            <Ukrainian>ACE Польові раціони</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_DrainingIcons">
             <English>Draining Icons</English>
@@ -271,6 +287,7 @@
             <Chinese>增減化圖示</Chinese>
             <Chinesesimp>渐化图标</Chinesesimp>
             <Turkish>Içi Boşalan Ikonlar</Turkish>
+            <Ukrainian>Іконки, що зникають</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_DrinkFromSource">
             <English>Drink From Source</English>
@@ -285,6 +302,7 @@
             <Japanese>水源から飲む</Japanese>
             <Chinesesimp>从水源处喝水</Chinesesimp>
             <Turkish>Mataradan Iç</Turkish>
+            <Ukrainian>Випити з джерела</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_DrinkingFromSource">
             <English>Drinking from source...</English>
@@ -299,6 +317,7 @@
             <Japanese>水源から飲んでいます・・・</Japanese>
             <Chinesesimp>从水源处喝水中...</Chinesesimp>
             <Turkish>Mataradan Içiliyor...</Turkish>
+            <Ukrainian>Випивання з джерела...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_DrinkingFromX">
             <English>Drinking from %1...</English>
@@ -314,6 +333,7 @@
             <Chinese>飲用%1的水中...</Chinese>
             <Chinesesimp>从%1饮用中...</Chinesesimp>
             <Turkish>%1 den içiliyor...</Turkish>
+            <Ukrainian>Випивання з %1...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_DrinkingX">
             <English>Drinking %1...</English>
@@ -329,6 +349,7 @@
             <Chinese>飲用自 %1...</Chinese>
             <Chinesesimp>饮用 %1...</Chinesesimp>
             <Turkish>%1 Içiliyor...</Turkish>
+            <Ukrainian>Випивання %1...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Dynamic">
             <English>Dynamic</English>
@@ -346,6 +367,7 @@
             <Chinesesimp>动态</Chinesesimp>
             <Turkish>Dinamik</Turkish>
             <Hungarian>Dinamikus</Hungarian>
+            <Ukrainian>Динамічна</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_EatDrink">
             <English>Eat/Drink</English>
@@ -360,6 +382,7 @@
             <Japanese>食べる/飲む</Japanese>
             <Chinesesimp>吃/喝</Chinesesimp>
             <Turkish>Yeme / Içme</Turkish>
+            <Ukrainian>Їсти/Пити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_EatingX">
             <English>Eating %1...</English>
@@ -375,6 +398,7 @@
             <Chinese>食用 %1...</Chinese>
             <Chinesesimp>食用 %1...</Chinesesimp>
             <Turkish>%1 Yeniyor...</Turkish>
+            <Ukrainian>Поїдання %1...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Enabled_Description">
             <English>Enable/Disable Field Rations</English>
@@ -392,6 +416,7 @@
             <Chinesesimp>启用/禁用野战军粮</Chinesesimp>
             <Turkish>Gıda Ihtiyaçlarını Etkinleştir/Devre Dışı Bırak</Turkish>
             <Hungarian>Terepi adagok engedélyezése / letiltása</Hungarian>
+            <Ukrainian>Увімкнення/вимкнення спраги та голоду</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_HudShowLevel_Description">
             <English>Automatically show the HUD when either thirst or hunger are above this level.</English>
@@ -407,6 +432,7 @@
             <Chinese>在飲食低於多少程度時顯示界面。</Chinese>
             <Chinesesimp>在饮食能量低于多少程度时显示界面。</Chinesesimp>
             <Turkish>Susuzluk veya açlık belli bir seviyenin altına inince otomatik olarak HUD u göster.</Turkish>
+            <Ukrainian>Автоматично відображає іконки при досягненні певних рівнів голоду і спраги.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_HudShowLevel_DisplayName">
             <English>HUD Show Level</English>
@@ -422,6 +448,7 @@
             <Chinese>界面顯示程度</Chinese>
             <Chinesesimp>界面显示程度</Chinesesimp>
             <Turkish>HUD Gösterilme Seviyesi</Turkish>
+            <Ukrainian>Рівень для відображення іконок</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_HudTransparency_Description">
             <English>Controls the transparency of the Colored Icons HUD. Dynamic setting makes the HUD less transparent as thirst or hunger increase.</English>
@@ -437,6 +464,7 @@
             <Chinese>控制顏色化圖示的透明度。設定為動態使其界面透明度與飲食需求一樣，越透明越需要。</Chinese>
             <Chinesesimp>控制彩色图标 HUD 的透明度。动态设置使 HUD 的透明度随着口渴或饥饿的增加而减弱。</Chinesesimp>
             <Turkish>Renkli Simgeler Gösterge Paneli'nin şeffaflığını kontrol eder. Dinamik ayar, susuzluk veya açlık arttıkça HUD'yi daha az şeffaf hale getirir.</Turkish>
+            <Ukrainian>Налаштовує прозорість кольорових іконок. "Динамічна" робить іконки менш прозорими під час збільшення спраги та голоду.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_HudTransparency_DisplayName">
             <English>Colored Icons - Transparency</English>
@@ -452,6 +480,7 @@
             <Chinese>顏色化圖示 - 透明度</Chinese>
             <Chinesesimp>彩色图标—透明度</Chinesesimp>
             <Turkish>Renkli Ikonlar -  Şeffaflaşan</Turkish>
+            <Ukrainian>Прозорість кольорових іконок</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_HudType_Description">
             <English>Selects which HUD style will be used.</English>
@@ -467,6 +496,7 @@
             <Chinese>選擇妳想使用的界面類型。</Chinese>
             <Chinesesimp>选择你想使用的界面类型。</Chinesesimp>
             <Turkish>Hangi HUD sitilini kullanılacağını seçer.</Turkish>
+            <Ukrainian>Виберіть, який стиль індикаторів буде використано.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_HudType_DisplayName">
             <English>HUD Type</English>
@@ -482,6 +512,7 @@
             <Chinese>界面類型</Chinese>
             <Chinesesimp>界面类型</Chinesesimp>
             <Turkish>HUD Tipi</Turkish>
+            <Ukrainian>Тип індикатора</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Humanitarian_Ration_Description">
             <English>A Humanitarian Ration intended to serve as a person's food supply during crises</English>
@@ -498,6 +529,7 @@
             <Chinese>人道主義口糧意圖在危機期間充當人的食物供應</Chinese>
             <Chinesesimp>用于危机期间个人食物供应的人道主义口粮。</Chinesesimp>
             <Hungarian>Humanitárius eloszlás, amelynek célja az ember élelmezési ellátottsága a válság idején</Hungarian>
+            <Ukrainian>Добовий раціон харчування для забезпечення населення районів, охоплених гуманітарною катастрофою або таких, що стоять на її межі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Humanitarian_Ration_DisplayName">
             <English>Humanitarian Ration</English>
@@ -514,6 +546,7 @@
             <Chinese>人道主義口糧</Chinese>
             <Chinesesimp>人道主义口粮</Chinesesimp>
             <Hungarian>Humanitárius értelemben</Hungarian>
+            <Ukrainian>Гуманітарний сухий пайок</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_HungerSatiated_Description">
             <English>Coefficient for the amount of hunger satiated from eating.</English>
@@ -529,6 +562,7 @@
             <Chinese>從飲食中獲取多少飽食感。</Chinese>
             <Chinesesimp>通过饮食能够补充多少能量。</Chinesesimp>
             <Turkish>Bir şey yiyince, açlığın ne kadar giderileceğini belirler.</Turkish>
+            <Ukrainian>Коефіцієнт втамування голоду від вживання їжі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_HungerSatiated_DisplayName">
             <English>Hunger Satiated</English>
@@ -544,6 +578,7 @@
             <Chinese>飽足感</Chinese>
             <Chinesesimp>饱腹感</Chinesesimp>
             <Turkish>Açlık Giderme Katsayısı</Turkish>
+            <Ukrainian>Втамування голоду</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_IGUI_Description">
             <English>Indicates current hunger and thirst status.</English>
@@ -561,6 +596,7 @@
             <Chinesesimp>显示当前的饮食需求状态。</Chinesesimp>
             <Turkish>Mevcut açlık ve susuzluk durumunu gösterir.</Turkish>
             <Hungarian>Jelzi az éhínség és a szomjúság állapotát.</Hungarian>
+            <Ukrainian>Вказують на поточний статус спраги та голоду.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_IGUI_DisplayName">
             <English>ACE Field Rations HUD</English>
@@ -576,6 +612,7 @@
             <Chinese>ACE 戰地口糧界面</Chinese>
             <Chinesesimp>ACE 野战军粮界面</Chinesesimp>
             <Turkish>ACE Gıda Göstergesi</Turkish>
+            <Ukrainian>Індикатори спраги та голоду</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_ItemRefilled">
             <English>Item Refilled</English>
@@ -593,6 +630,7 @@
             <Chinesesimp>物品已重新补充</Chinesesimp>
             <Turkish>Eşya Yeniden Dolduruldu</Turkish>
             <Hungarian>Újratöltött tétel</Hungarian>
+            <Ukrainian>Ємність наповнена</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MRE_BeefStew_Description">
             <English>An MRE containing Beef Stew. Heat for best effect</English>
@@ -608,6 +646,7 @@
             <Chinese>含有牛肉燉湯的軍用口糧。加熱以達到最佳效果</Chinese>
             <Chinesesimp>含有牛肉炖汤的军粮。加热以达到最佳效果</Chinesesimp>
             <Turkish>Sığır Yahni içeren bir MRE.</Turkish>
+            <Ukrainian>Сухий пайок, що містить тушковану яловичину. Перед вживанням рекомендується розігріти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MRE_BeefStew_DisplayName">
             <English>MRE Beef Stew</English>
@@ -623,6 +662,7 @@
             <Chinese>軍糧 牛肉燉湯</Chinese>
             <Chinesesimp>军粮炖牛肉汤</Chinesesimp>
             <Turkish>MRE Dana Yahni</Turkish>
+            <Ukrainian>ІРХ Тушкована яловичина</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MRE_ChickenHerbDumplings_Description">
             <English>An MRE containing Chicken with Herb Dumplings. Heat for best effect</English>
@@ -640,6 +680,7 @@
             <Chinesesimp>含有鸡肉和香草饺子的军粮。加热以达到最佳效果</Chinesesimp>
             <Turkish>Tavuk ve Herb Mantısı içeren bir MRE.</Turkish>
             <Hungarian>Egy MRE, amely csirkét és fűszeres gombócokat tartalmaz. Hő a legjobb hatás érdekében</Hungarian>
+            <Ukrainian>Сухий пайок, що містить курку з галушками. Перед вживанням рекомендується розігріти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MRE_ChickenHerbDumplings_DisplayName">
             <English>MRE Chicken with Herb Dumplings</English>
@@ -657,6 +698,7 @@
             <Chinesesimp>军粮鸡肉香草饺子</Chinesesimp>
             <Turkish>MRE Tavuk ve Herb Mantısı</Turkish>
             <Hungarian>MRE csirke Herb galuskával</Hungarian>
+            <Ukrainian>ІРХ Курка з галушками</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MRE_ChickenTikkaMasala_Description">
             <English>An MRE with Chicken Tikka Masala. Heat for best effect</English>
@@ -674,6 +716,7 @@
             <Chinesesimp>与鸡 Tikka 马萨拉军粮。加热以达到最佳效果</Chinesesimp>
             <Turkish>Tikka Masala Soslu Tavuk içeren bir MRE.</Turkish>
             <Hungarian>Egy MRE csirkével Tikka Masala. Hő a legjobb hatás érdekében</Hungarian>
+            <Ukrainian>Сухий пайок, що містить Курку Тікка Масала. Перед вживанням рекомендується розігріти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MRE_ChickenTikkaMasala_DisplayName">
             <English>MRE Chicken Tikka Masala</English>
@@ -691,6 +734,7 @@
             <Chinesesimp>军粮鸡蒂卡 Masala</Chinesesimp>
             <Turkish>MRE Tikka Masala Soslu Tavuk</Turkish>
             <Hungarian>MRE csirke Tikka Masala</Hungarian>
+            <Ukrainian>IPХ Курка Тикка Масала</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MRE_CreamChickenSoup_Description">
             <English>An MRE containing Chicken Soup. Mix with water and heat for best effect</English>
@@ -708,6 +752,7 @@
             <Chinesesimp>含有鸡汤的军粮。添水加热以获得最佳效果</Chinesesimp>
             <Turkish>Tavuk Çorbası içeren bir MRE.</Turkish>
             <Hungarian>A csirke leves tartalmú MRE. Keverjük össze vízzel és hővel a legjobb hatás érdekében</Hungarian>
+            <Ukrainian>Сухий пайок, що містить сублімований курячий крем-суп. Перед вживанням розчинити у воді та розігріти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MRE_CreamChickenSoup_DisplayName">
             <English>MRE Cream Chicken Soup</English>
@@ -725,6 +770,7 @@
             <Chinesesimp>军粮奶油鸡汤</Chinesesimp>
             <Turkish>MRE Kremalı Tavuk Çorbası</Turkish>
             <Hungarian>MRE krémes csirke leves</Hungarian>
+            <Ukrainian>ІРХ Курячий крем-суп</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MRE_CreamTomatoSoup_Description">
             <English>An MRE containing Cream Tomato Soup. Mix with water and heat for best effect</English>
@@ -742,6 +788,7 @@
             <Chinesesimp>含有奶油番茄汤的军粮。添水加热以获得最佳效果</Chinesesimp>
             <Turkish>Kremalı Domates Çorbası içeren bir MRE.</Turkish>
             <Hungarian>Egy krémes paradicsomleveset tartalmazó MRE. Keverjük össze vízzel és hővel a legjobb hatás érdekében</Hungarian>
+            <Ukrainian>Сухий пайок, що містить сублімований томатний крем-суп. Перед вживанням розчинити у воді та розігріти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MRE_CreamTomatoSoup_DisplayName">
             <English>MRE Cream Tomato Soup</English>
@@ -759,6 +806,7 @@
             <Chinesesimp>军粮奶油西红柿汤</Chinesesimp>
             <Turkish>MRE Kremalı Domates Çorbası</Turkish>
             <Hungarian>MRE krémes paradicsomleves</Hungarian>
+            <Ukrainian>ІРХ Томатний крем-суп</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MRE_LambCurry_Description">
             <English>An MRE containing Lamb Curry. Heat for best effect</English>
@@ -776,6 +824,7 @@
             <Chinesesimp>含有羊肉咖喱饭的军粮。加热以达到最佳效果</Chinesesimp>
             <Turkish>Kuzu Köri içeren bir MRE.</Turkish>
             <Hungarian>Egy MRE, amely Lamb Curry-t tartalmaz. Hő a legjobb hatás érdekében</Hungarian>
+            <Ukrainian>Сухий пайок, що містить ягнятину каррі. Перед вживанням рекомендується розігріти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MRE_LambCurry_DisplayName">
             <English>MRE Lamb Curry</English>
@@ -793,6 +842,7 @@
             <Chinesesimp>军粮羊肉咖喱饭</Chinesesimp>
             <Turkish>MRE Kuzu Köri</Turkish>
             <Hungarian>MRE bárány Curry</Hungarian>
+            <Ukrainian>ІРХ Ягня каррі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MRE_MeatballsPasta_Description">
             <English>An MRE containing Meatballs and Pasta. Heat for best effect</English>
@@ -810,6 +860,7 @@
             <Chinesesimp>含有肉丸和意大利面的军粮。加热以达到最佳效果</Chinesesimp>
             <Turkish>Köfte ve makarnadan oluşan bir MRE.</Turkish>
             <Hungarian>Húsgombócokat és tésztát tartalmazó MRE. Hő a legjobb hatás érdekében</Hungarian>
+            <Ukrainian>Сухий пайок, що містить макарони з фрикадельками. Перед вживанням рекомендується розігріти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MRE_MeatballsPasta_DisplayName">
             <English>MRE Meatballs and Pasta</English>
@@ -827,6 +878,7 @@
             <Chinesesimp>军粮肉丸和意大利面</Chinesesimp>
             <Turkish>MRE Köfte Ve Makarna</Turkish>
             <Hungarian>MRE húsgombóc és tészta</Hungarian>
+            <Ukrainian>ІРХ Макарони з фрикадельками</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MRE_SteakVegetables_Description">
             <English>An MRE containing Steak and Vegetables. Heat for best effect</English>
@@ -844,6 +896,7 @@
             <Chinesesimp>包含牛排和蔬菜的军粮。加热以达到最佳效果</Chinesesimp>
             <Turkish>Sebzeli Biftek içeren bir MRE.</Turkish>
             <Hungarian>Egy MRE, amely Steak és Zöldségeket tartalmaz. Hő a legjobb hatás érdekében</Hungarian>
+            <Ukrainian>Сухий пайок, що містить стейк з овочами. Перед вживанням рекомендується розігріти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MRE_SteakVegetables_DisplayName">
             <English>MRE Steak Vegetables</English>
@@ -861,6 +914,7 @@
             <Chinesesimp>军粮牛排蔬菜</Chinesesimp>
             <Turkish>MRE Sebzeli Biftek</Turkish>
             <Hungarian>MRE Steak zöldségek</Hungarian>
+            <Ukrainian>ІРХ Стейк з овочами</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MainInteractionText">
             <English>Survival</English>
@@ -878,6 +932,7 @@
             <Chinesesimp>生存</Chinesesimp>
             <Turkish>Hayatta kalma</Turkish>
             <Hungarian>Túlélés</Hungarian>
+            <Ukrainian>Виживання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_DisplayName">
             <English>Consequence of extreme thirst/hunger (over 85%)</English>
@@ -887,6 +942,7 @@
             <German>Folge von extremen Durst/Hunger (über 85%)</German>
             <Korean>극심한 허기 및 갈증으로 인한 증상 (85% 이상)</Korean>
             <Japanese>極度の渇き/空腹の結果(85%以上時)</Japanese>
+            <Ukrainian>Наслідки сильної спраги/голоду (понад 85%)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_Pain">
             <English>Pain</English>
@@ -896,6 +952,7 @@
             <German>Schmerzen</German>
             <Korean>고통</Korean>
             <Japanese>痛み</Japanese>
+            <Ukrainian>Біль</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_Unconsciousness">
             <English>Fainting</English>
@@ -905,6 +962,7 @@
             <German>Ohnmacht</German>
             <Korean>기절</Korean>
             <Japanese>気絶</Japanese>
+            <Ukrainian>Непритомність</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_NoWaterRemaining">
             <English>There is no water left.</English>
@@ -920,6 +978,7 @@
             <Chinese>水已經用完了</Chinese>
             <Chinesesimp>水已经喝完了。</Chinesesimp>
             <Turkish>Hiç su kalmadı.</Turkish>
+            <Ukrainian>Води більше не залишилося</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Refill">
             <English>Refill</English>
@@ -937,6 +996,7 @@
             <Chinesesimp>重新取水</Chinesesimp>
             <Turkish>Yeniden Doldur</Turkish>
             <Hungarian>Utántöltés</Hungarian>
+            <Ukrainian>Наповнити ємність</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_RefillOnly">
             <English>Refill Only</English>
@@ -951,6 +1011,7 @@
             <Japanese>水汲みのみ</Japanese>
             <Chinesesimp>仅限取水</Chinesesimp>
             <Turkish>Sadece içeceği iç</Turkish>
+            <Ukrainian>Тільки поповнити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Refilling">
             <English>Refilling...</English>
@@ -968,6 +1029,7 @@
             <Chinesesimp>取水中...</Chinesesimp>
             <Turkish>Yeniden Dolduruluyor...</Turkish>
             <Hungarian>Utántöltés ...</Hungarian>
+            <Ukrainian>Наповнення...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_RemainingWater">
             <English>There are %1 litres left.</English>
@@ -983,6 +1045,7 @@
             <Chinese>那還有 %1 公升</Chinese>
             <Chinesesimp>还剩下 %1 升</Chinesesimp>
             <Turkish>%1 Litre kaldı.</Turkish>
+            <Ukrainian>Залишилося %1 л води</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_SunflowerSeeds_Description">
             <English>Roasted And Salted</English>
@@ -996,6 +1059,7 @@
             <Korean>굽고 간을 했습니다</Korean>
             <Japanese>炒って塩で味付け済</Japanese>
             <Chinesesimp>焙烤盐焗</Chinesesimp>
+            <Ukrainian>Підсмажені та солоні</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_SunflowerSeeds_DisplayName">
             <English>Sunflower Seeds</English>
@@ -1009,6 +1073,7 @@
             <Korean>해바라기씨</Korean>
             <Japanese>ヒマワリの種</Japanese>
             <Chinesesimp>葵花籽</Chinesesimp>
+            <Ukrainian>Насіння соняшнику</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_TerrainObjectActions_Description">
             <English>Enables water source actions for terrain objects.</English>
@@ -1023,6 +1088,7 @@
             <Japanese>地形に存在するオブジェクトを水源として動作するよう設定できます。</Japanese>
             <Chinesesimp>为地形物体启用水源动作。</Chinesesimp>
             <Turkish>Varsayılan nesneler için animasyonu etkinleştir</Turkish>
+            <Ukrainian>Включає дії з джерелами води для об'єктів ландшафту.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_TerrainObjectActions_DisplayName">
             <English>Terrain Object Actions</English>
@@ -1037,6 +1103,7 @@
             <Japanese>地形オブジェクトでのアクション</Japanese>
             <Chinesesimp>地形物体动作</Chinesesimp>
             <Turkish>Varsayılan Nesne Animasyonu</Turkish>
+            <Ukrainian>Дії з об'єктами ландшафту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_ThirstQuenched_Description">
             <English>Coefficient for the amount of thirst quenched from drinking.</English>
@@ -1052,6 +1119,7 @@
             <Chinese>從飲用中能夠攝取多少水份。</Chinese>
             <Chinesesimp>通过喝水能够补充多少水份。</Chinesesimp>
             <Turkish>Bir şey içince, susuzluğunun ne kadar giderileceğini belirler.</Turkish>
+            <Ukrainian>Коефіцієнт втамування спраги від пиття</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_ThirstQuenched_DisplayName">
             <English>Thirst Quenched</English>
@@ -1067,6 +1135,7 @@
             <Chinese>止渴程度</Chinese>
             <Chinesesimp>解渴程度</Chinesesimp>
             <Turkish>Susuzluk Giderme Katsayısı</Turkish>
+            <Ukrainian>Втамування спраги</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_TimeWithoutFood_Description">
             <English>How long should a person be able to go without food (hours).</English>
@@ -1084,6 +1153,7 @@
             <Chinesesimp>一个单位挨饿的情况下能够支撑多久（小时）</Chinesesimp>
             <Turkish>Bir kişi aç ne kadar süre dayanabilir (saat).</Turkish>
             <Hungarian>Mennyi ideig kell egy egység élni nélkül (óra)</Hungarian>
+            <Ukrainian>Як довго персонаж може обходитися без їжі (години)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_TimeWithoutFood_DisplayName">
             <English>Time Without Food</English>
@@ -1101,6 +1171,7 @@
             <Chinesesimp>饥饿时间</Chinesesimp>
             <Turkish>Aç Kalma Süresi</Turkish>
             <Hungarian>Élelmiszer nélkül</Hungarian>
+            <Ukrainian>Час без їжі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_TimeWithoutWater_Description">
             <English>How long should a person be able to go without water (hours).</English>
@@ -1118,6 +1189,7 @@
             <Chinesesimp>一个单位在脱水的情况下能够支撑多久（小时）</Chinesesimp>
             <Turkish>Bir kişi susuz ne kadar süre dayanabilir (saat).</Turkish>
             <Hungarian>Mennyi ideig kell egy egység víz nélkül (óra)</Hungarian>
+            <Ukrainian>Як довго персонаж може обходитися без води (години)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_TimeWithoutWater_DisplayName">
             <English>Time Without Water</English>
@@ -1135,6 +1207,7 @@
             <Chinesesimp>脱水时间</Chinesesimp>
             <Turkish>Susuz Kalma Süresi</Turkish>
             <Hungarian>Víz nélküli idő</Hungarian>
+            <Ukrainian>Час без води</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterBottleEmpty_Description">
             <English>An empty water bottle</English>
@@ -1152,6 +1225,7 @@
             <Chinesesimp>一个空的矿泉水瓶</Chinesesimp>
             <Turkish>Boş Su Şişesi</Turkish>
             <Hungarian>Egy üres palack</Hungarian>
+            <Ukrainian>Порожня пляшка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterBottleEmpty_DisplayName">
             <English>Water Bottle (Empty)</English>
@@ -1169,6 +1243,7 @@
             <Chinesesimp>矿泉水（空）</Chinesesimp>
             <Turkish>Su Şişesi (Boş)</Turkish>
             <Hungarian>Vízpalack (üres)</Hungarian>
+            <Ukrainian>Пляшка води (порожня)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterBottleHalf_Description">
             <English>A half full water bottle</English>
@@ -1186,6 +1261,7 @@
             <Chinesesimp>半瓶矿泉水</Chinesesimp>
             <Turkish>Yarım dolu Su Şişesi</Turkish>
             <Hungarian>Fél-teljes vizes palack</Hungarian>
+            <Ukrainian>Половина пляшки з водою</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterBottleHalf_DisplayName">
             <English>Water Bottle (Half)</English>
@@ -1203,6 +1279,7 @@
             <Chinesesimp>矿泉水（半瓶）</Chinesesimp>
             <Turkish>Su Şişesi (Yarım)</Turkish>
             <Hungarian>Vízpalack (fél)</Hungarian>
+            <Ukrainian>Пляшка води (половина)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterBottle_Description">
             <English>A water bottle</English>
@@ -1220,6 +1297,7 @@
             <Chinesesimp>一罐装满水的矿泉水瓶</Chinesesimp>
             <Turkish>Bir Su Şişesi</Turkish>
             <Hungarian>Egy vizes palackot</Hungarian>
+            <Ukrainian>Повна пляшка з водою</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterBottle_DisplayName">
             <English>Water Bottle</English>
@@ -1237,6 +1315,7 @@
             <Chinesesimp>矿泉水</Chinesesimp>
             <Turkish>Su Şişesi</Turkish>
             <Hungarian>Vizesüveg</Hungarian>
+            <Ukrainian>Пляшка води (повна)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterSource">
             <English>Water Source</English>
@@ -1252,6 +1331,7 @@
             <Chinese>水源</Chinese>
             <Chinesesimp>水源</Chinesesimp>
             <Turkish>Matara</Turkish>
+            <Ukrainian>Джерело води</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterSourceActions_Description">
             <English>Controls what actions are available on water sources.</English>
@@ -1266,6 +1346,7 @@
             <Japanese>水源で可能なアクションを設定します。</Japanese>
             <Chinesesimp>控制对水源可用的动作。</Chinesesimp>
             <Turkish>Su içerken hangi animasyonu yapacağını belirler</Turkish>
+            <Ukrainian>Визначає які дії будуть доступні з джерелом води.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterSourceActions_DisplayName">
             <English>Water Source Actions</English>
@@ -1280,6 +1361,7 @@
             <Japanese>水源でのアクション</Japanese>
             <Chinesesimp>水源动作</Chinesesimp>
             <Turkish>Su Içme Animasyonu</Turkish>
+            <Ukrainian>Дії з джерелом води</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterSupply_3DEN_Description">
             <English>The amount of water available for ACE Field Rations water source actions (-1 disabled, -10 infinite)</English>
@@ -1294,6 +1376,7 @@
             <Japanese>ACE フィールド レーションで利用できる水源の資源量を設定できます。(-1で無効化、-10で無限)</Japanese>
             <Chinese>水源可供補充飲用水的次數（-1為關閉，-10為無限次）。</Chinese>
             <Chinesesimp>水源可供取水的次数（-1为关闭，-10为无限次）。</Chinesesimp>
+            <Ukrainian>Кількість води, доступної для використання в ACE Польові раціони. (-1 - відключено, -10 - нескінченно)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterSupply_3DEN_DisplayName">
             <English>Water Supply</English>
@@ -1308,6 +1391,7 @@
             <Japanese>水資源量</Japanese>
             <Chinese>飲用水補給</Chinese>
             <Chinesesimp>饮用水补给</Chinesesimp>
+            <Ukrainian>Водні ресурси</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_ZeusUpdates_Description">
             <English>If enabled, hunger and thirst will continue to increase while the Zeus interface is open.</English>
@@ -1317,6 +1401,7 @@
             <German>Wenn aktiviert, werden Hunger und Durst bei geöffnetem Zeus-Interface weiter zunehmen.</German>
             <Korean>활성화 시 제우스 인터페이스가 열려 있는 동안 허기와 갈증이 계속 증가합니다.</Korean>
             <Japanese>有効化すると、空腹と渇きはZeusインタフェイスを開いている間も継続して進行します。</Japanese>
+            <Ukrainian>Якщо цю функцію увімкнено, відчуття голоду і спраги й далі посилюватиметься, доки відкрито інтерфейс Zeus.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_ZeusUpdates_DisplayName">
             <English>Update Hunger and Thirst in Zeus</English>
@@ -1326,6 +1411,7 @@
             <German>Zunehmender Hunger und Durst im Zeus</German>
             <Korean>제우스의 허기와 갈증 업데이트</Korean>
             <Japanese>Zeus時に空腹と渇きを進行させる</Japanese>
+            <Ukrainian>Оновлення голоду та спраги в Zeus</Ukrainian>
         </Key>
     </Package>
 </Project>

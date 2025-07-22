@@ -16,6 +16,7 @@
             <Chinese>護目鏡</Chinese>
             <Chinesesimp>护目镜</Chinesesimp>
             <Turkish>Gözlük</Turkish>
+            <Ukrainian>Окуляри</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Goggles_SettingDrawOverlay">
             <English>Show Goggles Overlay</English>
@@ -25,6 +26,7 @@
             <German>Zeige Schutzbrillenoberfläche</German>
             <Korean>고글 오버레이 표시</Korean>
             <Japanese>ゴーグルのオーバーレイを表示する</Japanese>
+            <Ukrainian>Показати оверлей окулярів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Goggles_SettingShowClearGlasses">
             <English>Show Wipe Goggles self interaction</English>
@@ -41,6 +43,7 @@
             <Chinese>在自我互動中顯示擦拭護目鏡的動作</Chinese>
             <Chinesesimp>在自我互动中显示擦拭护目镜的动作</Chinesesimp>
             <Turkish>Kendi etkileşim menüsün de gözlük camlarını silmeyi göster</Turkish>
+            <Ukrainian>Показувати дію Протерти окуляри</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Goggles_SettingsName">
             <English>ACE Goggles</English>
@@ -57,6 +60,7 @@
             <Chinese>ACE 護目鏡</Chinese>
             <Chinesesimp>ACE 护目镜</Chinesesimp>
             <Turkish>ACE Gözlük</Turkish>
+            <Ukrainian>ACE Окуляри</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Goggles_ShowInThirdPerson">
             <English>Show Goggle Effects in Third Person</English>
@@ -74,6 +78,7 @@
             <Chinesesimp>在第三人称视角显示护目镜效果</Chinesesimp>
             <Turkish>Gözlük efektlerini 3. şahıs görünümün de göster</Turkish>
             <Hungarian>Szemüveg-effekt mutatása külső nézetből</Hungarian>
+            <Ukrainian>Увімкнути ефект окулярів від 3-ї особи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Goggles_WipeGlasses">
             <English>Wipe Goggles</English>
@@ -91,6 +96,7 @@
             <Chinesesimp>擦拭护目镜</Chinesesimp>
             <Turkish>Gözlük Camlarını Sil</Turkish>
             <Hungarian>Szemüveg letörlése</Hungarian>
+            <Ukrainian>Протерти окуляри</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Goggles_effects_displayName">
             <English>Goggle Effects</English>
@@ -107,6 +113,7 @@
             <Chinese>護目鏡效果</Chinese>
             <Chinesesimp>护目镜效果</Chinesesimp>
             <Turkish>Gözlük efektleri</Turkish>
+            <Ukrainian>Ефект окулярів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Goggles_effects_effectsOnly">
             <English>Effects</English>
@@ -123,6 +130,7 @@
             <Chinese>影響</Chinese>
             <Chinesesimp>影响</Chinesesimp>
             <Turkish>Efektler</Turkish>
+            <Ukrainian>Ефекти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Goggles_effects_tintOnly">
             <English>Tint</English>
@@ -139,6 +147,7 @@
             <Chinese>染色</Chinese>
             <Chinesesimp>着色</Chinesesimp>
             <Turkish>Ton</Turkish>
+            <Ukrainian>Тонування</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Goggles_enabled_tintAndEffects">
             <English>Tint + Effects</English>
@@ -155,6 +164,7 @@
             <Chinese>染色 + 影響</Chinese>
             <Chinesesimp>着色 + 效果</Chinesesimp>
             <Turkish>Ton + Efektler</Turkish>
+            <Ukrainian>Тонування + ефекти</Ukrainian>
         </Key>
     </Package>
 </Project>
