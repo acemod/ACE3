@@ -16,6 +16,7 @@ version:
 ## 1. Adding custom flag
 
 Adding a custom flag requires you to create an addon containing specific classes and properties in the config.
+A template can be found inside the addon's data folder.
 
 ### 1.1 Add the item
 
