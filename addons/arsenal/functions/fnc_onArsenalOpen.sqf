@@ -85,6 +85,10 @@ if (isNil {uiNamespace getVariable QGVAR(itemGroupCache)}) then {
     uiNamespace setVariable [QGVAR(itemGroupCache), createHashMap];
 };
 
+if (isNil {uiNamespace getVariable QGVAR(classGroupCache)}) then {
+    uiNamespace setVariable [QGVAR(classGroupCache), createHashMap];
+};
+
 // Update current item list
 call FUNC(updateCurrentItemsList);
 
@@ -245,9 +249,24 @@ if (GVAR(selectedWeaponType) == -1) then {
     GVAR(selectedWeaponType) = 0; // default to primary
 };
 
+//--------------- Initialize grouping controls BEFORE filling the panel
+GVAR(groupingEnabled) = profileNamespace getVariable [QGVAR(groupingEnabled), true];
+GVAR(groupingMethod) = profileNamespace getVariable [QGVAR(groupingMethod), 0]; // 0 = By Mod, 1 = By Class
+
 private _leftPanelIDC = [IDC_buttonPrimaryWeapon, IDC_buttonSecondaryWeapon, IDC_buttonHandgun, IDC_buttonBinoculars] select GVAR(selectedWeaponType);
 
 [_display, _display displayCtrl _leftPanelIDC] call FUNC(fillLeftPanel);
+
+private _groupingCheckboxCtrl = _display displayCtrl IDC_groupingCheckbox;
+private _groupingDropdownCtrl = _display displayCtrl IDC_groupingMethodDropdown;
+
+_groupingCheckboxCtrl cbSetChecked (GVAR(groupingEnabled) isEqualTo true);
+
+_groupingDropdownCtrl lbAdd "By Mod";
+_groupingDropdownCtrl lbAdd "By Class";
+_groupingDropdownCtrl lbSetCurSel GVAR(groupingMethod);
+
+_groupingDropdownCtrl ctrlEnable (GVAR(groupingEnabled) isEqualTo true);
 
 //--------------- Init camera
 if (isNil QGVAR(cameraPosition)) then {
