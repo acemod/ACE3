@@ -625,32 +625,6 @@ class GVAR(display) {
             x = QUOTE(safeZoneX + 53 * GRID_W);
             w = QUOTE(40 * GRID_W);
         };
-        class groupingCheckbox: RscCheckBox {
-            idc = IDC_groupingCheckbox;
-            x = QUOTE(safeZoneX + 13 * GRID_W);
-            y = QUOTE(safeZoneY + 15 * GRID_H);
-            w = QUOTE(6 * GRID_W);
-            h = QUOTE(6 * GRID_H);
-            onCheckedChanged = QUOTE([ARR_2(ctrlParent (_this select 0),_this select 1)] call FUNC(onGroupingToggle));
-        };
-        class groupingLabel: RscText {
-            idc = -1;
-            text = "Grouping:";
-            x = QUOTE(safeZoneX + 20 * GRID_W);
-            y = QUOTE(safeZoneY + 15 * GRID_H);
-            w = QUOTE(15 * GRID_W);
-            h = QUOTE(6 * GRID_H);
-            sizeEx = QUOTE(5 * GRID_H);
-        };
-        class groupingMethodDropdown: RscCombo {
-            idc = IDC_groupingMethodDropdown;
-            x = QUOTE(safeZoneX + 36 * GRID_W);
-            y = QUOTE(safeZoneY + 15 * GRID_H);
-            w = QUOTE(30 * GRID_W);
-            h = QUOTE(6 * GRID_H);
-            onLBSelChanged = QUOTE([ARR_2(ctrlParent (_this select 0),_this select 1)] call FUNC(onGroupingMethodChange));
-            sizeEx = QUOTE(5 * GRID_H);
-        };
         class sortRightTab: sortLeftTab {
             idc = IDC_sortRightTab;
             x = QUOTE(safeZoneX + safeZoneW - 93 * GRID_W);
