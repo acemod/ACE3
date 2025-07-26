@@ -58,7 +58,6 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 3600;
     };
 
-    class Helicopter_Base_H: Helicopter_Base_F {};
     class Heli_Light_02_base_F;
     class RHS_Mi8_base: Heli_Light_02_base_F {
         EGVAR(map,vehicleLightColor)[] = {1,0,0,0.1};
