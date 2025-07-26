@@ -4,6 +4,9 @@
  * Author: Dedmen, johnb43
  * Add a listbox row.
  *
+ * NOTE: This function contains workarounds for mixed control types in the Arsenal system.
+ * See inline TODO comments for details on technical debt that should be addressed.
+ *
  * Arguments:
  * 0: Config category, must be "CfgWeapons", "CfgVehicles", "CfgMagazines", "CfgVoice" or "CfgUnitInsignia" <STRING>
  * 1: Classname (must be in config case) <STRING>
@@ -21,6 +24,7 @@
  */
 
 params ["_configCategory", "_className", "_ctrlPanel", ["_pictureEntryName", "picture", [""]], ["_configRoot", 0, [0]]];
+
 
 private _skip = GVAR(favoritesOnly) && {!(_className in GVAR(currentItems))} && {!((toLowerANSI _className) in GVAR(favorites))};
 if (_skip) then {
@@ -88,13 +92,56 @@ private _picture = switch (GVAR(enableModIcons)) do {
     };
 };
 
-private _lbAdd = _ctrlPanel lbAdd _displayName;
-_ctrlPanel lbSetData [_lbAdd, _className];
-_ctrlPanel lbSetPicture [_lbAdd, _itemPicture];
-_ctrlPanel lbSetPictureRight [_lbAdd, _picture];
-_ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _className]];
+
+private _lbAdd = -1;
+private _controlType = ctrlType _ctrlPanel;
+
+// TODO: This control type detection is a workaround needed because the Arsenal system
+// uses different control types (listbox, listnbox, tree) for different panels but calls
+// the same addListBoxItem function for all of them. This should be refactored to either:
+// 1. Use consistent control types across all panels, OR
+// 2. Create separate functions for each control type (addTreeItem, addListBoxItem, etc.)
+// 
+// Current workaround: Detect control type at runtime and use appropriate commands
+// - Listbox (CT_LISTBOX = 5): lbAdd, lbSetData, lbSetPicture, etc.
+// - Listnbox (CT_LISTNBOX = 102): lnbAddRow, lnbSetData, lnbSetPicture, etc.  
+// - Tree (CT_TREE = 12): tvAdd, tvSetData, tvSetPicture, etc.
+switch (_controlType) do {
+    case 5: {
+        _lbAdd = _ctrlPanel lbAdd _displayName;
+        _ctrlPanel lbSetData [_lbAdd, _className];
+        _ctrlPanel lbSetPicture [_lbAdd, _itemPicture];
+        _ctrlPanel lbSetPictureRight [_lbAdd, _picture];
+        _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _className]];
+    };
+    case 102: {
+        _lbAdd = _ctrlPanel lnbAddRow ["", _displayName, "0"];
+        _ctrlPanel lnbSetData [[_lbAdd, 0], _className];
+        _ctrlPanel lnbSetPicture [[_lbAdd, 0], _itemPicture];
+        _ctrlPanel lnbSetTooltip [[_lbAdd, 0], format ["%1\n%2", _displayName, _className]];
+    };
+    case 12: {
+        _lbAdd = _ctrlPanel tvAdd [[], _displayName];
+        _ctrlPanel tvSetData [[_lbAdd], _className];
+        _ctrlPanel tvSetPicture [[_lbAdd], _itemPicture];
+        _ctrlPanel tvSetTooltip [[_lbAdd], format ["%1\n%2", _displayName, _className]];
+    };
+    default {};
+};
+
 
 if ((toLowerANSI _className) in GVAR(favorites)) then {
-    _ctrlPanel lbSetColor [_lbAdd, FAVORITES_COLOR];
-    _ctrlPanel lbSetSelectColor [_lbAdd, FAVORITES_COLOR];
+    switch (_controlType) do {
+        case 5: {
+            _ctrlPanel lbSetColor [_lbAdd, FAVORITES_COLOR];
+            _ctrlPanel lbSetSelectColor [_lbAdd, FAVORITES_COLOR];
+        };
+        case 102: {
+            _ctrlPanel lnbSetColor [[_lbAdd, 1], FAVORITES_COLOR];
+            _ctrlPanel lnbSetColorRight [[_lbAdd, 1], FAVORITES_COLOR];
+        };
+        case 12: {
+            _ctrlPanel tvSetColor [[_lbAdd], FAVORITES_COLOR];
+        };
+    };
 };
