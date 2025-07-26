@@ -257,16 +257,6 @@ private _leftPanelIDC = [IDC_buttonPrimaryWeapon, IDC_buttonSecondaryWeapon, IDC
 
 [_display, _display displayCtrl _leftPanelIDC] call FUNC(fillLeftPanel);
 
-private _groupingCheckboxCtrl = _display displayCtrl IDC_groupingCheckbox;
-private _groupingDropdownCtrl = _display displayCtrl IDC_groupingMethodDropdown;
-
-_groupingCheckboxCtrl cbSetChecked (GVAR(groupingEnabled) isEqualTo true);
-
-_groupingDropdownCtrl lbAdd "By Mod";
-_groupingDropdownCtrl lbAdd "By Class";
-_groupingDropdownCtrl lbSetCurSel GVAR(groupingMethod);
-
-_groupingDropdownCtrl ctrlEnable (GVAR(groupingEnabled) isEqualTo true);
 
 //--------------- Init camera
 if (isNil QGVAR(cameraPosition)) then {

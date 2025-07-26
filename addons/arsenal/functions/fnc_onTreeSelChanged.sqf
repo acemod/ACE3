@@ -123,7 +123,7 @@ switch (GVAR(currentLeftPanel)) do {
 
             TOGGLE_RIGHT_PANEL_WEAPON
 
-            [_display, _selectCorrectPanelWeapon, !GVAR(refreshing) && {_currentRightPanel isNotEqualTo _selectCorrectPanelWeapon}] call FUNC(fillRightPanel);
+            [_display, _selectCorrectPanelWeapon, !GVAR(refreshing)] call FUNC(fillRightPanel);
         };
 
         // Make unit switch to new item
@@ -199,7 +199,7 @@ switch (GVAR(currentLeftPanel)) do {
 
             TOGGLE_RIGHT_PANEL_WEAPON
 
-            [_display, _selectCorrectPanelWeapon, !GVAR(refreshing) && {_currentRightPanel isNotEqualTo _selectCorrectPanelWeapon}] call FUNC(fillRightPanel);
+            [_display, _selectCorrectPanelWeapon, !GVAR(refreshing)] call FUNC(fillRightPanel);
         };
 
         // Make unit switch to new item
@@ -275,7 +275,7 @@ switch (GVAR(currentLeftPanel)) do {
 
             TOGGLE_RIGHT_PANEL_WEAPON
 
-            [_display, _selectCorrectPanelWeapon, !GVAR(refreshing) && {_currentRightPanel isNotEqualTo _selectCorrectPanelWeapon}] call FUNC(fillRightPanel);
+            [_display, _selectCorrectPanelWeapon, !GVAR(refreshing)] call FUNC(fillRightPanel);
         };
 
         // Make unit switch to new item
