@@ -1,8 +1,8 @@
 #include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
- * Author: Alganthe, johnb43, LinkIsGrim
- * Fills left panel.
+ * Author: Alganthe, johnb43, LinkIsGrim (Modified for tree view only)
+ * Fills left panel with tree view.
  *
  * Arguments:
  * 0: Arsenal display <DISPLAY>
@@ -63,7 +63,7 @@ if !(_idxVirt in [IDX_VIRT_PRIMARY_WEAPONS, IDX_VIRT_SECONDARY_WEAPONS, IDX_VIRT
 };
 GVAR(currentLeftPanel) = _ctrlIDC;
 
-// Add items to the listbox
+// Add items to the tree
 private _selectedItem = if (_idxVirt != -1) then { // Items
     private _configParent = switch (_idxVirt) do {
         case IDX_VIRT_GOGGLES: {"CfgGlasses"};
@@ -77,15 +77,15 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
         keys (GVAR(virtualItems) get _idxVirt)
     };
 
-    // Use tree structure for item organization
-    [_configParent, _items, _ctrlPanel] call FUNC(fillLeftPanelWithGrouping);
+    // Use tree structure for item organization - always grouped
+    [_configParent, _items, _ctrlPanel] call FUNC(fillLeftPanelGrouped);
 
     GVAR(currentItems) select _idxVirt
 } else { // Special cases
     switch (_ctrlIDC) do {
         // Faces
         case IDC_buttonFace: {
-            // Faces have special structure, handle directly
+            // Faces need special handling - create a simple group structure
             private _rootIndex = _ctrlPanel tvAdd [[], "Faces"];
             _ctrlPanel tvSetData [[_rootIndex], "GROUP_Faces"];
             _ctrlPanel tvExpand [_rootIndex];
@@ -108,14 +108,14 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
         // Voices
         case IDC_buttonVoice: {
             private _voiceItems = keys GVAR(voiceCache);
-            ["CfgVoice", _voiceItems, _ctrlPanel, "icon"] call FUNC(fillLeftPanelWithGrouping);
+            ["CfgVoice", _voiceItems, _ctrlPanel, "icon"] call FUNC(fillLeftPanelGrouped);
 
             GVAR(currentVoice)
         };
         // Insignia
         case IDC_buttonInsignia: {
             private _insigniaItems = keys GVAR(insigniaCache);
-            ["CfgUnitInsignia", _insigniaItems, _ctrlPanel, "texture"] call FUNC(fillLeftPanelWithGrouping);
+            ["CfgUnitInsignia", _insigniaItems, _ctrlPanel, "texture"] call FUNC(fillLeftPanelGrouped);
 
             GVAR(currentInsignia)
         };
