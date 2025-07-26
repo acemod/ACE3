@@ -76,12 +76,13 @@ if (_armaIndex != -1) then {
     private _groupName = _x;
     private _groupItems = _groups get _groupName;
     
-    // Sort items within group by display name
-    _groupItems sort {
-        private _nameA = getText (configFile >> _configCategory >> _a >> "displayName");
-        private _nameB = getText (configFile >> _configCategory >> _b >> "displayName");
-        _nameA < _nameB;
+    // Sort items within group by display name - build sortable array
+    private _itemsWithNames = _groupItems apply {
+        private _displayName = getText (configFile >> _configCategory >> _x >> "displayName");
+        [_displayName, _x]
     };
+    _itemsWithNames sort true;
+    _groupItems = _itemsWithNames apply {_x select 1};
     
     // Add group node
     private _groupIndex = _treeCtrl tvAdd [[], format ["%1 (%2)", _groupName, count _groupItems]];
@@ -156,7 +157,7 @@ if (_armaIndex != -1) then {
             
             // Set favorites color
             if ((toLowerANSI _className) in GVAR(favorites)) then {
-                _treeCtrl tvSetColor [[_groupIndex, _itemIndex], FAVORITES_COLOR];
+                _treeCtrl tvSetPictureColor [[_groupIndex, _itemIndex], FAVORITES_COLOR];
             };
         };
     } forEach _groupItems;

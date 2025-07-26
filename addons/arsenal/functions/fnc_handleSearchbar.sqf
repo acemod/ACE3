@@ -144,7 +144,7 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
     private _selectedItem = "";
 
     // If something is selected, save it
-    if (count _selectedPath > 0) then {
+    if (count _selectedPath == 2) then {
         _selectedItem = _leftPanelCtrl tvData _selectedPath;
     };
 
@@ -160,8 +160,9 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
         
         // Check all items in this group
         for "_itemIndex" from (_itemCount - 1) to 0 step -1 do {
-            _currentDisplayName = _leftPanelCtrl tvText [_groupIndex, _itemIndex];
-            _currentClassname = _leftPanelCtrl tvData [_groupIndex, _itemIndex];
+            private _itemPath = [_groupIndex, _itemIndex];
+            _currentDisplayName = _leftPanelCtrl tvText _itemPath;
+            _currentClassname = _leftPanelCtrl tvData _itemPath;
             
             // Keep items that match search pattern
             if ((_currentDisplayName != "") && {(_currentDisplayName regexMatch _searchPattern) || {_currentClassname regexMatch _searchPattern}}) then {
@@ -192,8 +193,9 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
         for "_groupIndex" from 0 to (_newGroupCount - 1) do {
             private _newItemCount = _leftPanelCtrl tvCount [_groupIndex];
             for "_itemIndex" from 0 to (_newItemCount - 1) do {
-                if ((_leftPanelCtrl tvData [_groupIndex, _itemIndex]) == _selectedItem) exitWith {
-                    _leftPanelCtrl tvSetCurSel [_groupIndex, _itemIndex];
+                private _itemPath = [_groupIndex, _itemIndex];
+                if ((_leftPanelCtrl tvData _itemPath) == _selectedItem) exitWith {
+                    _leftPanelCtrl tvSetCurSel _itemPath;
                 };
             };
         };

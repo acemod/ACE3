@@ -1,15 +1,9 @@
 #include "..\script_component.hpp"
-#include "\a3\ui_f\hpp\defineResincl.inc"
 #include "..\defines.hpp"
 /*
  * Author: ACE Team
  * Handles selection changes on the left panel tree control.
  * 
- * This function replaces the original fnc_onSelChangedLeft.sqf to work with 
- * RscTree instead of RscListBox. It distinguishes between group folder 
- * selections (which are ignored) and item selections (which proceed with 
- * the normal arsenal logic).
- *
  * Arguments:
  * 0: Tree control <CONTROL>
  * 1: Tree selection path <ARRAY>
@@ -22,39 +16,62 @@
 
 params ["_control", "_selectionPath"];
 
-// Only process item selections (length 2 means [groupIndex, itemIndex])
-// Group selections (length 1) are ignored as they represent folder nodes
+// Only process item selections (groups have path length 1, items have 2)
 if (count _selectionPath != 2) exitWith {};
 
-private _itemData = _control tvData _selectionPath;
+private _item = _control tvData _selectionPath;
 
-// Safety check - ignore group data which starts with "GROUP_"
-if (_itemData find "GROUP_" == 0) exitWith {};
+// Ignore group nodes  
+if (_item find "GROUP_" == 0) exitWith {};
 
-// Create a compatible selection index for the existing selection logic
-// We simulate the listbox behavior by finding which "listbox index" this item would have
 private _display = ctrlParent _control;
+private _isEmpty = _item == "";
 
-// Get all items in the tree to create a flat index mapping
-private _itemCount = 0;
-private _selectedItemIndex = -1;
-private _groupCount = _control tvCount [];
-
-for "_groupIndex" from 0 to (_groupCount - 1) do {
-    // Add empty item for groups (groups aren't selectable items in old system)
-    private _itemCountInGroup = _control tvCount [_groupIndex];
-    for "_itemIndex" from 0 to (_itemCountInGroup - 1) do {
-        private _currentItemData = _control tvData [_groupIndex, _itemIndex];
-        if (_currentItemData == _itemData) then {
-            _selectedItemIndex = _itemCount;
-        };
-        _itemCount = _itemCount + 1;
-    };
+// Update current selection tracking
+switch (GVAR(currentLeftPanel)) do {
+    case IDC_buttonPrimaryWeapon: {GVAR(currentItems) set [IDX_CURR_PRIMARY_WEAPON, _item]};
+    case IDC_buttonSecondaryWeapon: {GVAR(currentItems) set [IDX_CURR_SECONDARY_WEAPON, _item]};
+    case IDC_buttonHandgun: {GVAR(currentItems) set [IDX_CURR_HANDGUN_WEAPON, _item]};
+    case IDC_buttonHeadgear: {GVAR(currentItems) set [IDX_CURR_HEADGEAR, _item]};
+    case IDC_buttonUniform: {GVAR(currentItems) set [IDX_CURR_UNIFORM, _item]};
+    case IDC_buttonVest: {GVAR(currentItems) set [IDX_CURR_VEST, _item]};
+    case IDC_buttonBackpack: {GVAR(currentItems) set [IDX_CURR_BACKPACK, _item]};
+    case IDC_buttonGoggles: {GVAR(currentItems) set [IDX_CURR_GOGGLES, _item]};
+    case IDC_buttonNVG: {GVAR(currentItems) set [IDX_CURR_NVG, _item]};
+    case IDC_buttonBinoculars: {GVAR(currentItems) set [IDX_CURR_BINO, _item]};
+    case IDC_buttonMap: {GVAR(currentItems) set [IDX_CURR_MAP, _item]};
+    case IDC_buttonCompass: {GVAR(currentItems) set [IDX_CURR_COMPASS, _item]};
+    case IDC_buttonRadio: {GVAR(currentItems) set [IDX_CURR_RADIO, _item]};
+    case IDC_buttonWatch: {GVAR(currentItems) set [IDX_CURR_WATCH, _item]};
+    case IDC_buttonFace: {GVAR(currentFace) = _item};
+    case IDC_buttonVoice: {GVAR(currentVoice) = _item};
+    case IDC_buttonInsignia: {GVAR(currentInsignia) = _item};
 };
 
-// If we couldn't find the item, exit
-if (_selectedItemIndex == -1) exitWith {};
+// Handle weapon selections - update right panel
+if (GVAR(currentLeftPanel) in [IDC_buttonPrimaryWeapon, IDC_buttonHandgun, IDC_buttonSecondaryWeapon, IDC_buttonBinoculars]) then {
+    private _currentRightPanel = _display displayCtrl GVAR(currentRightPanel);
+    private _selectCorrectPanel = [_display displayCtrl IDC_buttonOptic, _currentRightPanel] select (!isNil QGVAR(currentRightPanel) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ACC_IDCS, IDC_buttonCurrentMag, IDC_buttonCurrentMag2]});
+    [_display, _selectCorrectPanel] call FUNC(fillRightPanel);
+};
 
-// Call the existing selection logic with the simulated listbox selection
-// This reuses all the existing weapon/item handling logic
-[_control, _selectedItemIndex] call FUNC(onSelChangedLeft);
+// Update item visualization
+call FUNC(showItem);
+
+// Update item info display
+private _configClass = if (!_isEmpty) then {
+    private _configCategory = switch (true) do {
+        case (GVAR(currentLeftPanel) in [IDC_buttonMag, IDC_buttonThrow, IDC_buttonPut, IDC_buttonMisc]): {"CfgMagazines"};
+        case (GVAR(currentLeftPanel) == IDC_buttonBackpack): {"CfgVehicles"};
+        case (GVAR(currentLeftPanel) == IDC_buttonGoggles): {"CfgGlasses"};
+        case (GVAR(currentLeftPanel) == IDC_buttonFace): {"CfgFaces"};
+        case (GVAR(currentLeftPanel) == IDC_buttonVoice): {"CfgVoice"};
+        case (GVAR(currentLeftPanel) == IDC_buttonInsignia): {"CfgUnitInsignia"};
+        default {"CfgWeapons"};
+    };
+    configFile >> _configCategory >> _item
+} else {
+    configNull
+};
+
+[_display, _control, GVAR(currentRightPanel), _configClass] call FUNC(itemInfo);

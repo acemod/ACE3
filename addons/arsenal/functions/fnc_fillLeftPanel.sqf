@@ -85,15 +85,28 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
     switch (_ctrlIDC) do {
         // Faces
         case IDC_buttonFace: {
-            // Convert faces to items array and use tree structure
-            private _faceItems = keys GVAR(faceCache);
-            ["CfgFaces", _faceItems, _ctrlPanel, ""] call FUNC(fillLeftPanelTree);
+            // Faces have special structure, handle directly
+            private _rootIndex = _ctrlPanel tvAdd [[], "Faces"];
+            _ctrlPanel tvSetData [[_rootIndex], "GROUP_Faces"];
+            _ctrlPanel tvExpand [_rootIndex];
+            
+            {
+                _y params ["_displayName", "_modPicture"];
+                private _itemIndex = _ctrlPanel tvAdd [[_rootIndex], _displayName];
+                _ctrlPanel tvSetData [[_rootIndex, _itemIndex], _x];
+                _ctrlPanel tvSetTooltip [[_rootIndex, _itemIndex], format ["%1\n%2", _displayName, _x]];
+                if (GVAR(enableModIcons) > 0 && {_modPicture != ""}) then {
+                    _ctrlPanel tvSetPictureRight [[_rootIndex, _itemIndex], _modPicture];
+                };
+                if ((toLowerANSI _x) in GVAR(favorites)) then {
+                    _ctrlPanel tvSetPictureColor [[_rootIndex, _itemIndex], FAVORITES_COLOR];
+                };
+            } forEach GVAR(faceCache);
 
             GVAR(currentFace)
         };
         // Voices
         case IDC_buttonVoice: {
-            // Convert voices to items array and use tree structure
             private _voiceItems = keys GVAR(voiceCache);
             ["CfgVoice", _voiceItems, _ctrlPanel, "icon"] call FUNC(fillLeftPanelTree);
 
@@ -101,7 +114,6 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
         };
         // Insignia
         case IDC_buttonInsignia: {
-            // Convert insignia to items array and use tree structure
             private _insigniaItems = keys GVAR(insigniaCache);
             ["CfgUnitInsignia", _insigniaItems, _ctrlPanel, "texture"] call FUNC(fillLeftPanelTree);
 
@@ -132,8 +144,9 @@ if (_selectedItem != "") then {
         
         private _itemCount = _ctrlPanel tvCount [_groupIndex];
         for "_itemIndex" from 0 to (_itemCount - 1) do {
-            if ((_ctrlPanel tvData [_groupIndex, _itemIndex]) == _selectedItem) exitWith {
-                _ctrlPanel tvSetCurSel [_groupIndex, _itemIndex];
+            private _itemPath = [_groupIndex, _itemIndex];
+            if ((_ctrlPanel tvData _itemPath) == _selectedItem) exitWith {
+                _ctrlPanel tvSetCurSel _itemPath;
                 _found = true;
             };
         };

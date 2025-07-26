@@ -317,7 +317,7 @@ if (_right) then {
             
             // Restore favorites color if needed
             if ((toLowerANSI _itemData) in GVAR(favorites)) then {
-                _panel tvSetColor [[_groupIndex, _newItemIndex], FAVORITES_COLOR];
+                _panel tvSetPictureColor [[_groupIndex, _newItemIndex], FAVORITES_COLOR];
             };
             
             // Restore original tooltip (remove sort data)
