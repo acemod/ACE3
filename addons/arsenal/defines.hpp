@@ -75,6 +75,8 @@
 #define IDC_leftSearchbarButton 41
 #define IDC_rightSearchbar 19
 #define IDC_rightSearchbarButton 42
+#define IDC_groupingCheckbox 43
+#define IDC_groupingMethodDropdown 44
 #define IDC_tabLeft 20
 #define IDC_iconBackgroundPrimaryWeapon 2001
 #define IDC_buttonPrimaryWeapon 2002
