@@ -138,7 +138,7 @@ class RscDisplayAttributes {
     class Controls {
         class Background;
         class Title;
-        class Content: RscControlsGroup {};
+        class Content;
         class ButtonOK;
         class ButtonCancel;
     };

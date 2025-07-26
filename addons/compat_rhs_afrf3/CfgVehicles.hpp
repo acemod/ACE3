@@ -1,27 +1,13 @@
 class CfgVehicles {
+    class Tank_F;
     class LandVehicle;
-    class Tank: LandVehicle {
-        class NewTurret;
-    };
-    class Tank_F: Tank {
-        class Turrets {
-            class MainTurret: NewTurret {
-                class Turrets {};
-            };
-        };
-    };
     class Car: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions {};
         };
     };
     class Car_F: Car {};
-    class Wheeled_APC_F: Car_F {
-        class NewTurret;
-        class Turrets {
-            class MainTurret: NewTurret {};
-        };
-    };
+    class Wheeled_APC_F: Car_F {};
 
     class rhs_tank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 1200;
@@ -62,7 +48,7 @@ class CfgVehicles {
         EGVAR(map,vehicleLightColor)[] = {1,0,0,0.1};
         EGVAR(refuel,fuelCapacity) = 3700;
     };
-    class Heli_Attack_02_base_F: Helicopter_Base_F {};
+    class Heli_Attack_02_base_F;
     class RHS_Ka52_base: Heli_Attack_02_base_F {
         EGVAR(refuel,fuelCapacity) = 1870;
     };
@@ -126,12 +112,7 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 78;
     };
 
-    class APC_Tracked_02_base_F: Tank_F {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {};
-        };
-    };
-
+    class APC_Tracked_02_base_F;
     class rhs_zsutank_base: APC_Tracked_02_base_F {
         EGVAR(refuel,fuelCapacity) = 515;
         EGVAR(vehicle_damage,hullDetonationProb) = 0;
