@@ -1,7 +1,3 @@
-class Mode_SemiAuto;
-class Mode_Burst;
-class Mode_FullAuto;
-
 class CfgWeapons {
     class ItemCore;
     class InventoryOpticsItem_Base_F;
@@ -260,10 +256,7 @@ class CfgWeapons {
         ACE_IronSightBaseAngle = 0;
     };
 
-    class arifle_MX_Base_F: Rifle_Base_F {
-        class Single: Mode_SemiAuto {};
-        class FullAuto: Mode_FullAuto {};
-    };
+    class arifle_MX_Base_F: Rifle_Base_F {};
     class arifle_MX_SW_F: arifle_MX_Base_F {
         ACE_RailHeightAboveBore = 2.40874;
         ACE_IronSightBaseAngle = -0.004011;

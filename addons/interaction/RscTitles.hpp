@@ -37,8 +37,6 @@ class ACE_Interaction_Button_Base {
     soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1};
 };
 
-class IGUIBack;
-class RscListBox;
 class RscText;
 class RscPicture;
 class RscControlsGroupNoScrollbars;

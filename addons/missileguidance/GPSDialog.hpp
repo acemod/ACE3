@@ -4,9 +4,7 @@
 
 class RscText;
 class RscEdit;
-class RscPicture;
 class RscButton;
-class ctrlXSliderH;
 
 class GVAR(gpsAttackOptionsUI) {
     idd = -1;
