@@ -565,7 +565,7 @@ class GVAR(display) {
             colorSelect2[] = {1,1,1,1};
             colorPictureRightSelected[] = {1,1,1,1};
             colorTextRight[] = {0.5, 0.5, 0.5, 0};
-            onTreeSelChanged = QUOTE(call FUNC(onTreeSelChanged));
+            onTreeSelChanged = QUOTE(call FUNC(onSelChangedLeft));
             onTreeDblClick = QUOTE(call FUNC(onPanelDblClick));
             onSetFocus = QUOTE(GVAR(leftTabFocus) = true);
             onKillFocus = QUOTE(GVAR(leftTabFocus) = false);

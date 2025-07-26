@@ -64,7 +64,7 @@ PREP(onLoadoutsOpen);
 PREP(onMouseButtonDown);
 PREP(onMouseButtonUp);
 PREP(onPanelDblClick);
-PREP(onTreeSelChanged);
+PREP(onSelChangedLeft);
 PREP(onSelChangedLoadouts);
 PREP(onSelChangedRight);
 PREP(onSelChangedRightListnBox);
