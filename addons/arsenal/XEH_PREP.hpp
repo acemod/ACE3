@@ -38,6 +38,7 @@ PREP(compileActions);
 PREP(compileSorts);
 PREP(compileStats);
 PREP(fillLeftPanel);
+PREP(fillLeftPanelGrouped);
 PREP(fillLoadoutsList);
 PREP(fillRightPanel);
 PREP(fillSort);

@@ -170,14 +170,27 @@ switch (GVAR(currentLeftPanel)) do {
 };
 
 // Reset right panel content
-lbClear _ctrlPanel;
-lnbClear _listnBox;
+// TODO: This mixed control clearing is a workaround because the Arsenal uses different
+// control types for different contexts within the same function:
+// - _ctrlPanel (IDC_rightTabContent) is a tree control for weapon attachments/magazines
+// - _listnBox (IDC_rightTabContentListnBox) is a listnbox control for container items
+// This should be refactored to use consistent control types or separate functions.
+// 
+// Current workaround: Clear both control types since we don't know which will be used
+tvClear _ctrlPanel;           // Clear tree control (for weapon panels)
+lnbClear _listnBox;           // Clear listnbox control (for container panels)
 
-_ctrlPanel lbSetCurSel -1;
-_listnBox lnbSetCurSelRow -1;
+_ctrlPanel tvSetCurSel [];    // Reset tree selection
+_listnBox lnbSetCurSelRow -1; // Reset listnbox selection
 
+// TODO: This control reassignment is part of the workaround for mixed control types.
+// When dealing with containers (uniforms, vests, backpacks), the function switches
+// from using the tree control to the listnbox control. This creates complexity in
+// selection restoration and requires different command sets throughout the function.
+// 
+// Current workaround: Reassign _ctrlPanel to point to the listnbox for container mode
 if (_isContainer) then {
-    _ctrlPanel = _listnBox;
+    _ctrlPanel = _listnBox;  // Switch from tree control to listnbox control
 };
 
 // Force a "refresh" animation of the panel
@@ -415,9 +428,15 @@ if (_isContainer) then {
 // Sorting
 [_display, _control, _display displayCtrl IDC_sortRightTab, _display displayCtrl IDC_sortRightTabDirection] call FUNC(fillSort);
 
+// TODO: This dual selection restoration logic is the most complex part of the workaround.
+// Because _ctrlPanel can be either a tree control or listnbox control depending on context,
+// we need completely different logic for finding and selecting items:
+// - Tree controls use tvCount, tvData, tvSetCurSel with path arrays [index]
+// - Listnbox controls use lnbSize, lnbData, lnbSetCurSelRow with numeric indices
+// This should be unified by using consistent control types or separate functions.
 if (_selectedItem != "") then {
     if (_isContainer) then {
-        // Try to select previously selected item again, otherwise select nothing
+        // Listnbox control path: find item by row index
         private _index = -1;
 
         for "_lbIndex" from 0 to (lnbSize _ctrlPanel select 0) - 1 do {
@@ -428,21 +447,23 @@ if (_selectedItem != "") then {
 
         _ctrlPanel lnbSetCurSelRow _index;
     } else {
-        // Try to select previously selected item again, otherwise select first item ("Empty")
-        private _index = 0;
+        // Tree control path: find item by tree path array
+        private _index = [0];
 
-        for "_lbIndex" from 0 to (lbSize _ctrlPanel) - 1 do {
-            if ((_ctrlPanel lbData _lbIndex) == _selectedItem) exitWith {
-                _index = _lbIndex;
+        for "_tvIndex" from 0 to ((_ctrlPanel tvCount []) - 1) do {
+            if ((_ctrlPanel tvData [_tvIndex]) == _selectedItem) exitWith {
+                _index = [_tvIndex];
             };
         };
 
-        _ctrlPanel lbSetCurSel _index;
+        _ctrlPanel tvSetCurSel _index;
     };
 } else {
+    // No previous selection - use appropriate "empty" selection for each control type
     if (_isContainer) then {
-        _ctrlPanel lnbSetCurSelRow -1; // select nothing
+        _ctrlPanel lnbSetCurSelRow -1; // Listnbox: select nothing
     } else {
-        _ctrlPanel lbSetCurSel 0; // select "Empty"
+        _ctrlPanel tvSetCurSel [0]; // Tree: select "Empty" item
     };
 };
+
