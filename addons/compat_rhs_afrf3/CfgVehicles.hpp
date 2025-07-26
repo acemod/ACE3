@@ -22,7 +22,6 @@ class CfgVehicles {
             class MainTurret: NewTurret {};
         };
     };
-    class Helicopter_Base_F;
 
     class rhs_tank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 1200;
