@@ -2,20 +2,19 @@
 #include "..\defines.hpp"
 /*
  * Author: ACE Team
- * Fills left panel with tree structure instead of flat list.
- * 
- * This function replaces the flat listbox population with a hierarchical
- * tree structure grouped by mod/DLC. Items are organized under expandable
- * group nodes for better navigation.
+ * Populates the arsenal left panel tree with items grouped by mod/DLC.
  *
  * Arguments:
- * 0: Config category <STRING> - "CfgWeapons", "CfgVehicles", "CfgGlasses", etc.
- * 1: Items array <ARRAY> - Array of classnames to populate
+ * 0: Config category <STRING>
+ * 1: Items array <ARRAY>
  * 2: Tree control <CONTROL>
  * 3: Picture entry name <STRING> (default: "picture")
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * ["CfgWeapons", _weaponsList, _treeCtrl] call ace_arsenal_fnc_fillLeftPanelTree
  *
  * Public: No
  */

@@ -3,7 +3,7 @@
 /*
  * Author: ACE Team
  * Handles selection changes on the left panel tree control.
- * 
+ *
  * Arguments:
  * 0: Tree control <CONTROL>
  * 1: Tree selection path <ARRAY>
@@ -11,67 +11,73 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [_control, [0, 2]] call ace_arsenal_fnc_onTreeSelChanged
+ *
  * Public: No
  */
 
 params ["_control", "_selectionPath"];
 
-// Only process item selections (groups have path length 1, items have 2)
-if (count _selectionPath != 2) exitWith {};
+// Exit if no selection
+if (count _selectionPath == 0) exitWith {};
 
 private _item = _control tvData _selectionPath;
 
-// Ignore group nodes  
+// Ignore group nodes (but not empty entry)
 if (_item find "GROUP_" == 0) exitWith {};
 
-private _display = ctrlParent _control;
-private _isEmpty = _item == "";
+// Calculate what the listbox index would be for compatibility with fnc_onSelChangedLeft
+private _simulatedIndex = -1;
+private _counter = 0;
+private _found = false;
+private _groupCount = _control tvCount [];
 
-// Update current selection tracking
-switch (GVAR(currentLeftPanel)) do {
-    case IDC_buttonPrimaryWeapon: {GVAR(currentItems) set [IDX_CURR_PRIMARY_WEAPON, _item]};
-    case IDC_buttonSecondaryWeapon: {GVAR(currentItems) set [IDX_CURR_SECONDARY_WEAPON, _item]};
-    case IDC_buttonHandgun: {GVAR(currentItems) set [IDX_CURR_HANDGUN_WEAPON, _item]};
-    case IDC_buttonHeadgear: {GVAR(currentItems) set [IDX_CURR_HEADGEAR, _item]};
-    case IDC_buttonUniform: {GVAR(currentItems) set [IDX_CURR_UNIFORM, _item]};
-    case IDC_buttonVest: {GVAR(currentItems) set [IDX_CURR_VEST, _item]};
-    case IDC_buttonBackpack: {GVAR(currentItems) set [IDX_CURR_BACKPACK, _item]};
-    case IDC_buttonGoggles: {GVAR(currentItems) set [IDX_CURR_GOGGLES, _item]};
-    case IDC_buttonNVG: {GVAR(currentItems) set [IDX_CURR_NVG, _item]};
-    case IDC_buttonBinoculars: {GVAR(currentItems) set [IDX_CURR_BINO, _item]};
-    case IDC_buttonMap: {GVAR(currentItems) set [IDX_CURR_MAP, _item]};
-    case IDC_buttonCompass: {GVAR(currentItems) set [IDX_CURR_COMPASS, _item]};
-    case IDC_buttonRadio: {GVAR(currentItems) set [IDX_CURR_RADIO, _item]};
-    case IDC_buttonWatch: {GVAR(currentItems) set [IDX_CURR_WATCH, _item]};
-    case IDC_buttonFace: {GVAR(currentFace) = _item};
-    case IDC_buttonVoice: {GVAR(currentVoice) = _item};
-    case IDC_buttonInsignia: {GVAR(currentInsignia) = _item};
+// Handle empty entry (root node with empty data)
+if ((count _selectionPath == 1) && {(_control tvData _selectionPath) == ""}) then {
+    _simulatedIndex = 0;
+    _found = true;
 };
 
-// Handle weapon selections - update right panel
-if (GVAR(currentLeftPanel) in [IDC_buttonPrimaryWeapon, IDC_buttonHandgun, IDC_buttonSecondaryWeapon, IDC_buttonBinoculars]) then {
-    private _currentRightPanel = _display displayCtrl GVAR(currentRightPanel);
-    private _selectCorrectPanel = [_display displayCtrl IDC_buttonOptic, _currentRightPanel] select (!isNil QGVAR(currentRightPanel) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ACC_IDCS, IDC_buttonCurrentMag, IDC_buttonCurrentMag2]});
-    [_display, _selectCorrectPanel] call FUNC(fillRightPanel);
-};
-
-// Update item visualization
-call FUNC(showItem);
-
-// Update item info display
-private _configClass = if (!_isEmpty) then {
-    private _configCategory = switch (true) do {
-        case (GVAR(currentLeftPanel) in [IDC_buttonMag, IDC_buttonThrow, IDC_buttonPut, IDC_buttonMisc]): {"CfgMagazines"};
-        case (GVAR(currentLeftPanel) == IDC_buttonBackpack): {"CfgVehicles"};
-        case (GVAR(currentLeftPanel) == IDC_buttonGoggles): {"CfgGlasses"};
-        case (GVAR(currentLeftPanel) == IDC_buttonFace): {"CfgFaces"};
-        case (GVAR(currentLeftPanel) == IDC_buttonVoice): {"CfgVoice"};
-        case (GVAR(currentLeftPanel) == IDC_buttonInsignia): {"CfgUnitInsignia"};
-        default {"CfgWeapons"};
+// If not the empty entry, iterate through tree to find the simulated index
+if (!_found) then {
+    // Check if there's an empty entry at the start
+    if ((_groupCount > 0) && {(_control tvData [0]) == ""}) then {
+        _counter = 1; // Start counting after the empty entry
     };
-    configFile >> _configCategory >> _item
-} else {
-    configNull
+    
+    // Iterate through all groups
+    for "_groupIndex" from 0 to (_groupCount - 1) do {
+        if (_found) exitWith {};
+        
+        private _groupData = _control tvData [_groupIndex];
+        
+        // Skip the empty entry (already handled) and group nodes
+        if ((_groupData != "") && {_groupData find "GROUP_" != 0}) then {
+            // This is a regular item at root level (shouldn't happen in current implementation, but handle it)
+            if (_selectionPath isEqualTo [_groupIndex]) then {
+                _simulatedIndex = _counter;
+                _found = true;
+            };
+            _counter = _counter + 1;
+        } else {
+            // This is a group node - iterate through its items
+            if (_groupData find "GROUP_" == 0) then {
+                private _itemCount = _control tvCount [_groupIndex];
+                for "_itemIndex" from 0 to (_itemCount - 1) do {
+                    if (_selectionPath isEqualTo [_groupIndex, _itemIndex]) then {
+                        _simulatedIndex = _counter;
+                        _found = true;
+                        break;
+                    };
+                    _counter = _counter + 1;
+                };
+            };
+        };
+    };
 };
 
-[_display, _control, GVAR(currentRightPanel), _configClass] call FUNC(itemInfo);
+// If we found the item, call the original selection handler with the simulated index
+if (_simulatedIndex >= 0) then {
+    [_control, _simulatedIndex] call FUNC(onSelChangedLeft);
+};

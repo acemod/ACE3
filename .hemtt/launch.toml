@@ -55,3 +55,10 @@ extends = "cup"
 workshop = [
     "1369691841", # Community Factions Project
 ]
+
+[arsenal]
+extends = "default"
+parameters = [
+    # Launch directly to ACE Arsenal
+    "-init=playMission['','\\z\\ace\\addons\\arsenal\\missions\\Arsenal.VR']"
+]
