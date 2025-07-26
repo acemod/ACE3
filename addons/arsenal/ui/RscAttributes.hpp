@@ -555,7 +555,7 @@ class GVAR(display) {
             w = QUOTE(safeZoneW);
             h = QUOTE(safeZoneH);
         };
-        class leftTabContent: RscListBox {
+        class leftTabContent: RscTree {
             idc = IDC_leftTabContent;
             colorBackground[] = {0,0,0,0};
             colorSelectBackground[] = {1,1,1,0.5};
@@ -565,8 +565,8 @@ class GVAR(display) {
             colorSelect2[] = {1,1,1,1};
             colorPictureRightSelected[] = {1,1,1,1};
             colorTextRight[] = {0.5, 0.5, 0.5, 0};
-            onLBSelChanged = QUOTE(call FUNC(onSelChangedLeft));
-            onLBDblClick = QUOTE(call FUNC(onPanelDblClick));
+            onTreeSelChanged = QUOTE(call FUNC(onTreeSelChanged));
+            onTreeDblClick = QUOTE(call FUNC(onPanelDblClick));
             onSetFocus = QUOTE(GVAR(leftTabFocus) = true);
             onKillFocus = QUOTE(GVAR(leftTabFocus) = false);
             x = QUOTE(safeZoneX + 13 * GRID_W);

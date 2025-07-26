@@ -80,6 +80,11 @@ GVAR(statsInfo) = [true, controlNull, nil, nil];
 GVAR(currentActionPage) = 0;
 GVAR(actionsInfo) = [controlNull, nil, nil];
 
+// Initialize tree-specific caches
+if (isNil {uiNamespace getVariable QGVAR(itemGroupCache)}) then {
+    uiNamespace setVariable [QGVAR(itemGroupCache), createHashMap];
+};
+
 // Update current item list
 call FUNC(updateCurrentItemsList);
 

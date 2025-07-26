@@ -139,42 +139,66 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 
     private _leftPanelCtrl = _display displayCtrl IDC_leftTabContent;
 
-    // Get the currently selected item in panel
-    private _selectedItemIndex = lbCurSel _leftPanelCtrl;
+    // Get the currently selected item in tree
+    private _selectedPath = tvCurSel _leftPanelCtrl;
     private _selectedItem = "";
 
     // If something is selected, save it
-    if (_selectedItemIndex != -1) then {
-        _selectedItem = _leftPanelCtrl lbData _selectedItemIndex;
+    if (count _selectedPath > 0) then {
+        _selectedItem = _leftPanelCtrl tvData _selectedPath;
     };
 
     private _currentDisplayName = "";
     private _currentClassname = "";
+    private _foundMatch = false;
 
-    // Go through all items in panel and see if they need to be deleted or not
-    for "_lbIndex" from (lbSize _leftPanelCtrl) - 1 to 0 step -1 do {
-        _currentDisplayName = _leftPanelCtrl lbText _lbIndex;
-        _currentClassname = _leftPanelCtrl lbData _lbIndex;
-
-        // Remove item in panel if it doesn't match search, skip otherwise
-        if ((_currentDisplayName == "") || {!(_currentDisplayName regexMatch _searchPattern) && {!(_currentClassname regexMatch _searchPattern)}}) then {
-            _leftPanelCtrl lbDelete _lbIndex;
+    // Go through all groups and items in tree to filter by search
+    private _groupCount = _leftPanelCtrl tvCount [];
+    for "_groupIndex" from (_groupCount - 1) to 0 step -1 do {
+        private _groupHasMatches = false;
+        private _itemCount = _leftPanelCtrl tvCount [_groupIndex];
+        
+        // Check all items in this group
+        for "_itemIndex" from (_itemCount - 1) to 0 step -1 do {
+            _currentDisplayName = _leftPanelCtrl tvText [_groupIndex, _itemIndex];
+            _currentClassname = _leftPanelCtrl tvData [_groupIndex, _itemIndex];
+            
+            // Keep items that match search pattern
+            if ((_currentDisplayName != "") && {(_currentDisplayName regexMatch _searchPattern) || {_currentClassname regexMatch _searchPattern}}) then {
+                _groupHasMatches = true;
+                
+                // Track if we found the previously selected item
+                if (_currentClassname == _selectedItem) then {
+                    _foundMatch = true;
+                };
+            } else {
+                // Remove items that don't match
+                _leftPanelCtrl tvDelete [_groupIndex, _itemIndex];
+            };
+        };
+        
+        // Remove empty groups or groups with no matches
+        if (!_groupHasMatches) then {
+            _leftPanelCtrl tvDelete [_groupIndex];
+        } else {
+            // Expand groups that have matches for better visibility
+            _leftPanelCtrl tvExpand [_groupIndex];
         };
     };
 
-    // Try to select previously selected item again, otherwise select nothing
-    if (_selectedItemIndex != -1) then {
-        private _index = -1;
-
-        for "_lbIndex" from 0 to (lbSize _leftPanelCtrl) - 1 do {
-            if ((_leftPanelCtrl lbData _lbIndex) == _selectedItem) exitWith {
-                _index = _lbIndex;
+    // Try to select previously selected item again
+    if (_foundMatch) then {
+        private _newGroupCount = _leftPanelCtrl tvCount [];
+        for "_groupIndex" from 0 to (_newGroupCount - 1) do {
+            private _newItemCount = _leftPanelCtrl tvCount [_groupIndex];
+            for "_itemIndex" from 0 to (_newItemCount - 1) do {
+                if ((_leftPanelCtrl tvData [_groupIndex, _itemIndex]) == _selectedItem) exitWith {
+                    _leftPanelCtrl tvSetCurSel [_groupIndex, _itemIndex];
+                };
             };
         };
-
-        _leftPanelCtrl lbSetCurSel _index;
     } else {
-        _leftPanelCtrl lbSetCurSel -1;
+        _leftPanelCtrl tvSetCurSel [];
     };
 
     [_display, nil, nil, configNull] call FUNC(itemInfo);

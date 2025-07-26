@@ -47,14 +47,14 @@ if (_animate) then {
     _ctrlPanel ctrlCommit FADE_DELAY;
 };
 
-_ctrlPanel lbSetCurSel -1;
+_ctrlPanel tvSetCurSel [];
 // Purge old data
-lbClear _ctrlPanel;
+tvClear _ctrlPanel;
 
-// For every left tab except faces and voices, add "Empty" entry
+// For every left tab except faces and voices, add "Empty" entry as root node
 if !(_ctrlIDC in [IDC_buttonFace, IDC_buttonVoice]) then {
-    private _addEmpty = _ctrlPanel lbAdd format [" <%1>", localize "str_empty"];
-    _ctrlPanel lbSetValue [_addEmpty, -1];
+    private _emptyIndex = _ctrlPanel tvAdd [[], format [" <%1>", localize "str_empty"]];
+    _ctrlPanel tvSetData [[_emptyIndex], ""];
 };
 
 // Don't reset the current right panel for weapons, binos and containers
@@ -77,41 +77,33 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
         keys (GVAR(virtualItems) get _idxVirt)
     };
 
-    {
-        [_configParent, _x, _ctrlPanel] call FUNC(addListBoxItem);
-    } forEach _items;
+    // Use tree structure for item organization
+    [_configParent, _items, _ctrlPanel] call FUNC(fillLeftPanelTree);
 
     GVAR(currentItems) select _idxVirt
 } else { // Special cases
     switch (_ctrlIDC) do {
         // Faces
         case IDC_buttonFace: {
-            private _lbAdd = -1; // micro-optimization
-            // Faces need to be added like this because their config path is
-            // configFile >> "CfgFaces" >> face category >> className
-            {
-                _y params ["_displayName", "_modPicture"];
-                _lbAdd = _ctrlPanel lbAdd _displayName;
-                _ctrlPanel lbSetData [_lbAdd, _x];
-                _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _x]];
-                _ctrlPanel lbSetPictureRight [_lbAdd, ["", _modPicture, ""] select GVAR(enableModIcons)];
-            } forEach GVAR(faceCache); // HashMap, not array
+            // Convert faces to items array and use tree structure
+            private _faceItems = keys GVAR(faceCache);
+            ["CfgFaces", _faceItems, _ctrlPanel, ""] call FUNC(fillLeftPanelTree);
 
             GVAR(currentFace)
         };
         // Voices
         case IDC_buttonVoice: {
-            {
-                ["CfgVoice", _x, _ctrlPanel, "icon"] call FUNC(addListBoxItem);
-            } forEach (keys GVAR(voiceCache));
+            // Convert voices to items array and use tree structure
+            private _voiceItems = keys GVAR(voiceCache);
+            ["CfgVoice", _voiceItems, _ctrlPanel, "icon"] call FUNC(fillLeftPanelTree);
 
             GVAR(currentVoice)
         };
         // Insignia
         case IDC_buttonInsignia: {
-            {
-                ["CfgUnitInsignia", _x, _ctrlPanel, "texture", _y] call FUNC(addListBoxItem);
-            } forEach GVAR(insigniaCache);
+            // Convert insignia to items array and use tree structure
+            private _insigniaItems = keys GVAR(insigniaCache);
+            ["CfgUnitInsignia", _insigniaItems, _ctrlPanel, "texture"] call FUNC(fillLeftPanelTree);
 
             GVAR(currentInsignia)
         };
@@ -129,17 +121,33 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
 // Sort
 [_display, _control, _display displayCtrl IDC_sortLeftTab, _display displayCtrl IDC_sortLeftTabDirection] call FUNC(fillSort);
 
-// Try to select previously selected item again, otherwise select first item ("Empty")
+// Try to select previously selected item again, otherwise select first item
 if (_selectedItem != "") then {
-    private _index = 0;
-
-    for "_lbIndex" from 0 to (lbSize _ctrlPanel) - 1 do {
-        if ((_ctrlPanel lbData _lbIndex) == _selectedItem) exitWith {
-            _index = _lbIndex;
+    private _found = false;
+    private _groupCount = _ctrlPanel tvCount [];
+    
+    // Search through all groups and items to find the selected item
+    for "_groupIndex" from 0 to (_groupCount - 1) do {
+        if (_found) exitWith {};
+        
+        private _itemCount = _ctrlPanel tvCount [_groupIndex];
+        for "_itemIndex" from 0 to (_itemCount - 1) do {
+            if ((_ctrlPanel tvData [_groupIndex, _itemIndex]) == _selectedItem) exitWith {
+                _ctrlPanel tvSetCurSel [_groupIndex, _itemIndex];
+                _found = true;
+            };
         };
     };
-
-    _ctrlPanel lbSetCurSel _index;
+    
+    // If not found, select empty entry or first available item
+    if (!_found) then {
+        if (_groupCount > 0) then {
+            _ctrlPanel tvSetCurSel [0];
+        };
+    };
 } else {
-    _ctrlPanel lbSetCurSel 0;
+    // Select the empty entry or first group
+    if ((_ctrlPanel tvCount []) > 0) then {
+        _ctrlPanel tvSetCurSel [0];
+    };
 };

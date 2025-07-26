@@ -122,13 +122,18 @@ missionNamespace setVariable [
 private _curSel = if (_right) then {
     lnbCurSelRow _panel
 } else {
-    lbCurSel _panel
+    tvCurSel _panel  // Tree selection returns path array
 };
 
 private _selected = if (_right) then {
     _panel lnbData [_curSel, 0]
 } else {
-    _panel lbData _curSel
+    // For tree, get data from selected path
+    if (count _curSel > 0) then {
+        _panel tvData _curSel
+    } else {
+        ""
+    }
 };
 
 private _item = "";
@@ -143,10 +148,24 @@ private _sortCache = uiNamespace getVariable QGVAR(sortCache);
 private _faceCache = uiNamespace getVariable QGVAR(faceCache);
 private _insigniaCache = uiNamespace getVariable QGVAR(insigniaCache);
 
+// For left panel (tree), we need to iterate through groups and items
+// For right panel, use existing listbox logic
+private _treeItems = [];
+if (!_right) then {
+    // Collect all items from tree structure for sorting
+    private _groupCount = _panel tvCount [];
+    for "_groupIndex" from 0 to (_groupCount - 1) do {
+        private _itemCount = _panel tvCount [_groupIndex];
+        for "_itemIndex" from 0 to (_itemCount - 1) do {
+            _treeItems pushBack [_groupIndex, _itemIndex];
+        };
+    };
+};
+
 private _for = if (_right) then {
     for "_i" from 0 to (lnbSize _panel select 0) - 1
 } else {
-    for "_i" from 0 to (lbSize _panel) - 1
+    for "_i" from 0 to (count _treeItems) - 1
 };
 
 //IGNORE_PRIVATE_WARNING ["_i"];
@@ -155,14 +174,13 @@ _for do {
     _item = if (_right) then {
         _panel lnbData [_i, 0]
     } else {
-        _panel lbData _i
+        // For tree, get data from the item path
+        private _itemPath = _treeItems select _i;
+        _panel tvData _itemPath
     };
 
-    // Check if entry is "Empty"
-    if (!_right && {(_panel lbValue _i) == -1}) then {
-        // Set to lowest/highest lexicographical value, so that "Empty" is always at the top
-        _panel lbSetTextRight [_i, ["", toString [HIGHEST_VALUE_CHAR, HIGHEST_VALUE_CHAR, HIGHEST_VALUE_CHAR, HIGHEST_VALUE_CHAR, HIGHEST_VALUE_CHAR]] select (_sortDirection == ASCENDING)];
-
+    // Skip empty or group entries for tree
+    if (!_right && {_item == "" || {_item find "GROUP_" == 0}}) then {
         continue;
     };
 
@@ -230,9 +248,11 @@ _for do {
         _panel lnbSetTextRight [[_i, 1], format ["%1%2%4%3", _value, _panel lnbText [_i, 1], _item, _fillerChar]];
     } else {
         if (_item != "") then {
-            // Use value, display name and classname to sort, which means a fixed alphabetical order is guaranteed
-            // Filler char has lowest lexicographical value possible
-            _panel lbSetTextRight [_i, format ["%1%2%4%3", _value, _panel lbText _i, _item, _fillerChar]];
+            // For tree, set sort data on the item
+            private _itemPath = _treeItems select _i;
+            private _displayName = _panel tvText _itemPath;
+            // Store sort value in tooltip temporarily
+            _panel tvSetTooltip [_itemPath, format ["%1%2%4%3", _value, _displayName, _item, _fillerChar]];
         };
     };
 };
@@ -253,22 +273,66 @@ if (_right) then {
         };
     };
 } else {
-    _panel lbSortBy ["TEXT", _sortDirection == ASCENDING, false, true, true]; // do not support unicode, as it's much more performance intensive (~3x more)
-
-    _for do {
-        _item = _panel lbData _i;
-
-        // Check if valid item (problems can be caused when searching)
-        if (_item != "") then {
-            // Remove sorting text, as it blocks the item name otherwise
-            _panel lbSetTextRight [_i, ""];
+    // Custom tree sorting - sort items within each group
+    private _selectedPath = [];
+    private _groupCount = _panel tvCount [];
+    
+    for "_groupIndex" from 0 to (_groupCount - 1) do {
+        private _itemsInGroup = [];
+        private _itemCount = _panel tvCount [_groupIndex];
+        
+        // Collect items with their sort data
+        for "_itemIndex" from 0 to (_itemCount - 1) do {
+            private _itemPath = [_groupIndex, _itemIndex];
+            private _sortData = _panel tvTooltip _itemPath;
+            private _itemData = _panel tvData _itemPath;
+            private _itemText = _panel tvText _itemPath;
+            private _itemPicture = _panel tvPicture _itemPath;
+            private _itemPictureRight = _panel tvPictureRight _itemPath;
+            // Note: tvColor doesn't exist in ARMA 3, will handle colors separately
+            
+            _itemsInGroup pushBack [_sortData, _itemData, _itemText, _itemPicture, _itemPictureRight];
+            
+            // Track selected item
+            if (_itemData == _selected) then {
+                _selectedPath = [_groupIndex, count _itemsInGroup - 1]; // Will be updated after sort
+            };
         };
-
-        if (_curSel != -1 && {_item == _selected}) then {
-            _panel lbSetCurSel _i;
-
-            // To avoid unnecessary checks after previsouly selected item was found
-            _curSel = -1;
+        
+        // Sort items within group
+        _itemsInGroup sort (_sortDirection == ASCENDING);
+        
+        // Clear group and repopulate with sorted items
+        for "_itemIndex" from (_itemCount - 1) to 0 step -1 do {
+            _panel tvDelete [_groupIndex, _itemIndex];
         };
+        
+        // Add sorted items back
+        {
+            _x params ["_sortData", "_itemData", "_itemText", "_itemPicture", "_itemPictureRight"];
+            private _newItemIndex = _panel tvAdd [[_groupIndex], _itemText];
+            _panel tvSetData [[_groupIndex, _newItemIndex], _itemData];
+            _panel tvSetPicture [[_groupIndex, _newItemIndex], _itemPicture];
+            _panel tvSetPictureRight [[_groupIndex, _newItemIndex], _itemPictureRight];
+            
+            // Restore favorites color if needed
+            if ((toLowerANSI _itemData) in GVAR(favorites)) then {
+                _panel tvSetColor [[_groupIndex, _newItemIndex], FAVORITES_COLOR];
+            };
+            
+            // Restore original tooltip (remove sort data)
+            private _originalTooltip = format ["%1\n%2", _itemText, _itemData];
+            _panel tvSetTooltip [[_groupIndex, _newItemIndex], _originalTooltip];
+            
+            // Update selected path
+            if (_itemData == _selected) then {
+                _selectedPath = [_groupIndex, _newItemIndex];
+            };
+        } forEach _itemsInGroup;
+    };
+    
+    // Restore selection
+    if (count _selectedPath == 2) then {
+        _panel tvSetCurSel _selectedPath;
     };
 };
