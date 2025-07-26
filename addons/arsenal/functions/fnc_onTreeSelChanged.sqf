@@ -132,6 +132,158 @@ switch (GVAR(currentLeftPanel)) do {
         // Display new items's info on the bottom right
         [_display, _control, _selectionPath, configFile >> "CfgWeapons" >> _item] call FUNC(itemInfo);
     };
+
+    // Secondary weapon
+    case IDC_buttonSecondaryWeapon: {
+        private _currentWeapon = GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON;
+
+        // If nothing selected, remove secondary weapon and its magazines
+        if (_item == "") then {
+            call _fnc_clearCurrentWeaponMags;
+
+            GVAR(center) removeWeapon (secondaryWeapon GVAR(center));
+            GVAR(currentItems) set [IDX_CURR_SECONDARY_WEAPON_ITEMS, ["", "", "", "", "", ""]];
+            GVAR(currentItems) set [IDX_CURR_SECONDARY_WEAPON, ""];
+
+            TOGGLE_RIGHT_PANEL_HIDE
+        } else {
+            // Check if a new secondary weapon was selected
+            if (_item != _currentWeapon) then {
+                // Get magazines that are compatible with the new weapon
+                private _compatibleMags = compatibleMagazines _item;
+
+                // Remove all magazines from the current weapon that aren't compatible with the new one
+                call _fnc_clearCurrentWeaponMags;
+
+                // Add new weapon without taking a magazine from the inventory
+                [GVAR(center), _item] call EFUNC(common,addWeapon);
+
+                private _linkedItems = secondaryWeaponItems GVAR(center) - [""];
+
+                // Remove linked items if unavailable
+                if (_linkedItems isNotEqualTo []) then {
+                    {
+                        if !(_x in GVAR(virtualItemsFlat)) then {
+                            GVAR(center) removeSecondaryWeaponItem _x;
+                        };
+                    } forEach _linkedItems;
+                };
+
+                // Add old attachments and magazines back if they are compatible
+                {
+                    if (_item canAdd _x) then {
+                        GVAR(center) addWeaponItem [_item, _x, true];
+                    };
+                } forEach (GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON_ITEMS);
+
+                (getUnitLoadout GVAR(center) select IDX_LOADOUT_SECONDARY_WEAPON) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
+
+                _primaryMagazine = _primaryMagazine param [0, ""];
+
+                // Add a magazine to the primary muzzle if empty
+                if (_primaryMagazine == "") then {
+                    // Get magazines that are compatible with the new weapon's primary muzzle only
+                    private _compatibleMagsPrimaryMuzzle = compatibleMagazines [_item, "this"];
+                    private _compatibleMagIndex = _compatibleMagsPrimaryMuzzle findAny (keys (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL));
+
+                    if (_compatibleMagIndex != -1) then {
+                        _primaryMagazine = _compatibleMagsPrimaryMuzzle select _compatibleMagIndex;
+                        GVAR(center) addWeaponItem [_item, _primaryMagazine, true];
+                    };
+                };
+
+                // Update currentItems
+                GVAR(currentItems) set [IDX_CURR_SECONDARY_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine, _secondaryMagazine param [0, ""]]];
+                GVAR(currentItems) set [IDX_CURR_SECONDARY_WEAPON, _item];
+            };
+
+            TOGGLE_RIGHT_PANEL_WEAPON
+
+            [_display, _selectCorrectPanelWeapon, !GVAR(refreshing) && {_currentRightPanel isNotEqualTo _selectCorrectPanelWeapon}] call FUNC(fillRightPanel);
+        };
+
+        // Make unit switch to new item
+        call FUNC(showItem);
+
+        // Display new items's info on the bottom right
+        [_display, _control, _selectionPath, configFile >> "CfgWeapons" >> _item] call FUNC(itemInfo);
+    };
+
+    // Handgun
+    case IDC_buttonHandgun: {
+        private _currentWeapon = GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON;
+
+        // If nothing selected, remove handgun and its magazines
+        if (_item == "") then {
+            call _fnc_clearCurrentWeaponMags;
+
+            GVAR(center) removeWeapon (handgunWeapon GVAR(center));
+            GVAR(currentItems) set [IDX_CURR_HANDGUN_WEAPON_ITEMS, ["", "", "", "", "", ""]];
+            GVAR(currentItems) set [IDX_CURR_HANDGUN_WEAPON, ""];
+
+            TOGGLE_RIGHT_PANEL_HIDE
+        } else {
+            // Check if a new handgun was selected
+            if (_item != _currentWeapon) then {
+                // Get magazines that are compatible with the new weapon
+                private _compatibleMags = compatibleMagazines _item;
+
+                // Remove all magazines from the current weapon that aren't compatible with the new one
+                call _fnc_clearCurrentWeaponMags;
+
+                // Add new weapon without taking a magazine from the inventory
+                [GVAR(center), _item] call EFUNC(common,addWeapon);
+
+                private _linkedItems = handgunItems GVAR(center) - [""];
+
+                // Remove linked items if unavailable
+                if (_linkedItems isNotEqualTo []) then {
+                    {
+                        if !(_x in GVAR(virtualItemsFlat)) then {
+                            GVAR(center) removeHandgunItem _x;
+                        };
+                    } forEach _linkedItems;
+                };
+
+                // Add old attachments and magazines back if they are compatible
+                {
+                    if (_item canAdd _x) then {
+                        GVAR(center) addWeaponItem [_item, _x, true];
+                    };
+                } forEach (GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON_ITEMS);
+
+                (getUnitLoadout GVAR(center) select IDX_LOADOUT_HANDGUN_WEAPON) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
+
+                _primaryMagazine = _primaryMagazine param [0, ""];
+
+                // Add a magazine to the primary muzzle if empty
+                if (_primaryMagazine == "") then {
+                    // Get magazines that are compatible with the new weapon's primary muzzle only
+                    private _compatibleMagsPrimaryMuzzle = compatibleMagazines [_item, "this"];
+                    private _compatibleMagIndex = _compatibleMagsPrimaryMuzzle findAny (keys (GVAR(virtualItems) get IDX_VIRT_ITEMS_ALL));
+
+                    if (_compatibleMagIndex != -1) then {
+                        _primaryMagazine = _compatibleMagsPrimaryMuzzle select _compatibleMagIndex;
+                        GVAR(center) addWeaponItem [_item, _primaryMagazine, true];
+                    };
+                };
+
+                // Update currentItems
+                GVAR(currentItems) set [IDX_CURR_HANDGUN_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine, _secondaryMagazine param [0, ""]]];
+                GVAR(currentItems) set [IDX_CURR_HANDGUN_WEAPON, _item];
+            };
+
+            TOGGLE_RIGHT_PANEL_WEAPON
+
+            [_display, _selectCorrectPanelWeapon, !GVAR(refreshing) && {_currentRightPanel isNotEqualTo _selectCorrectPanelWeapon}] call FUNC(fillRightPanel);
+        };
+
+        // Make unit switch to new item
+        call FUNC(showItem);
+
+        // Display new items's info on the bottom right
+        [_display, _control, _selectionPath, configFile >> "CfgWeapons" >> _item] call FUNC(itemInfo);
+    };
     
     // Uniform
     case IDC_buttonUniform: {
