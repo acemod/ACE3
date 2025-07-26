@@ -1,7 +1,6 @@
 class ace_missileguidance_type_Maverick;
 class CfgAmmo {
-    class MissileBase: MissileCore {};
-    class Missile_AGM_02_F: MissileBase {};
+    class Missile_AGM_02_F;
 
     class GVAR(D): Missile_AGM_02_F {
         author = "tcvm";
