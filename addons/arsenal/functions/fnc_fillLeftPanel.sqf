@@ -78,7 +78,7 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
     };
 
     // Use tree structure for item organization
-    [_configParent, _items, _ctrlPanel] call FUNC(fillLeftPanelTree);
+    [_configParent, _items, _ctrlPanel] call FUNC(fillLeftPanelWithGrouping);
 
     GVAR(currentItems) select _idxVirt
 } else { // Special cases
@@ -108,14 +108,14 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
         // Voices
         case IDC_buttonVoice: {
             private _voiceItems = keys GVAR(voiceCache);
-            ["CfgVoice", _voiceItems, _ctrlPanel, "icon"] call FUNC(fillLeftPanelTree);
+            ["CfgVoice", _voiceItems, _ctrlPanel, "icon"] call FUNC(fillLeftPanelWithGrouping);
 
             GVAR(currentVoice)
         };
         // Insignia
         case IDC_buttonInsignia: {
             private _insigniaItems = keys GVAR(insigniaCache);
-            ["CfgUnitInsignia", _insigniaItems, _ctrlPanel, "texture"] call FUNC(fillLeftPanelTree);
+            ["CfgUnitInsignia", _insigniaItems, _ctrlPanel, "texture"] call FUNC(fillLeftPanelWithGrouping);
 
             GVAR(currentInsignia)
         };
