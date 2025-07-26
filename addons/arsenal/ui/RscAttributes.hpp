@@ -59,17 +59,17 @@ class GVAR(display) {
         class blockLeftFrame: RscFrame {
             idc = IDC_blockLeftFrame;
             x = QUOTE(safeZoneX + 13 * GRID_W);
-            y = QUOTE(safeZoneY + 21 * GRID_H);
+            y = QUOTE(safeZoneY + 14 * GRID_H);
             w = QUOTE(80 * GRID_W);
-            h = QUOTE(safeZoneH - 31 * GRID_H);
+            h = QUOTE(safeZoneH - 24 * GRID_H);
             colorText[] = {0,0,0,1};
         };
         class blockLeftBackground: ctrlStaticBackground {
             idc = IDC_blockLeftBackground;
             x = QUOTE(safeZoneX + 13 * GRID_W);
-            y = QUOTE(safeZoneY + 21 * GRID_H);
+            y = QUOTE(safeZoneY + 14 * GRID_H);
             w = QUOTE(80 * GRID_W);
-            h = QUOTE(safeZoneH - 31 * GRID_H);
+            h = QUOTE(safeZoneH - 24 * GRID_H);
             colorBackground[] = {0,0,0,0.5};
         };
         class blockRightFrame: blockLeftFrame {
@@ -565,14 +565,14 @@ class GVAR(display) {
             colorSelect2[] = {1,1,1,1};
             colorPictureRightSelected[] = {1,1,1,1};
             colorTextRight[] = {0.5, 0.5, 0.5, 0};
-            onTreeSelChanged = QUOTE(call FUNC(onSelChangedLeft));
+            onTreeSelChanged = QUOTE([ARR_2(_this select 0, _this select 1)] call FUNC(onSelChangedLeft));
             onTreeDblClick = QUOTE(call FUNC(onPanelDblClick));
             onSetFocus = QUOTE(GVAR(leftTabFocus) = true);
             onKillFocus = QUOTE(GVAR(leftTabFocus) = false);
             x = QUOTE(safeZoneX + 13 * GRID_W);
-            y = QUOTE(safeZoneY + 21 * GRID_H);
+            y = QUOTE(safeZoneY + 14 * GRID_H);
             w = QUOTE(80 * GRID_W);
-            h = QUOTE(safeZoneH - 31.5 * GRID_H);
+            h = QUOTE(safeZoneH - 24.5 * GRID_H);
             sizeEx = QUOTE(7 * GRID_H);
         };
         class rightTabContent: leftTabContent {
@@ -606,9 +606,9 @@ class GVAR(display) {
             onSetFocus = QUOTE(GVAR(rightTabLnBFocus) = true);
             onKillFocus = QUOTE(GVAR(rightTabLnBFocus) = false);
             x = QUOTE(safeZoneX + safeZoneW - 93 * GRID_W);
-            y = QUOTE(safeZoneY + 21 * GRID_H);
+            y = QUOTE(safeZoneY + 14 * GRID_H);
             w = QUOTE(80 * GRID_W);
-            h = QUOTE(safeZoneH - 41 * GRID_H);
+            h = QUOTE(safeZoneH - 34 * GRID_H);
             sizeEx = QUOTE(7 * GRID_H);
         };
         class sortLeftTab: RscCombo {
