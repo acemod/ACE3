@@ -15,6 +15,7 @@
  * Public: Yes
  */
 
+// Do params type check only in FUNC(getPlacedExplosives)
 params ["_unit"];
 TRACE_1("params",_unit);
 

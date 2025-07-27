@@ -31,8 +31,7 @@ _mine addEventHandler ["Explode", {
         _posASL set [2, _posASL # 2 + 200];
     };
 
-    private _flare = _flareClass createVehicle [0, 0, 0];
-    _flare setPosASL _posASL;
+    private _flare = createVehicle [_flareClass, ASLToAGL _posASL, [], 0, "CAN_COLLIDE"];
     _flare setVelocity [0, 0, -1]; // Used for air mode, does nothing if already on the ground
 
     TRACE_1("",_flare);
