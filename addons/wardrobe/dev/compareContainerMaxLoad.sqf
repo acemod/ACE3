@@ -39,7 +39,7 @@ LOG_SYS("CompareMaxLoad","======================================================
     if (_originClassName in _established) then { continue };
     _established pushBack _originClassName;
 
-    private _targets = _cfgOrigin call FUNC(getItemsModifiableTo);
+    private _targets = _cfgOrigin call FUNC(getItemVariants);
 
     {
         private _targetCfg = _x;

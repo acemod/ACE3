@@ -1,12 +1,12 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * Ace action statement. Removes the modifiableItem and replaces it with the target item.
+ * Removes the modifiable item and replaces it with the target item.
  *
  * Arguments:
  * 0: Action target <OBJECT>
  * 1: Action player <OBJECT>
- * 2: Action params <ARRAY>
+ * 2: Action params <ARRAY of CONFIGs>
  * - 0: Current variant <CONFIG>
  * - 0: Desired variant <CONFIG>
  *
@@ -22,7 +22,6 @@
 params ["", "_player", "_actionParams"];
 _actionParams params ["_cfgOrigin", "_cfgTarget"];
 
-
 private _classTarget = configName _cfgTarget;
 private _classOrigin = configName _cfgOrigin;
 private _cfgWardobeTarget = configFile >> QUOTE(ADDON) >> _classTarget;
@@ -32,7 +31,7 @@ GVAR(inProgress) = true;
 
 // duration of the "animation"
 private _duration = getNumber (_cfgWardobeTarget >> "duration");
-    
+
 // replace the main Item
 private _equipmentType = "";
 private _typeNumber = getNumber (_cfgOrigin >> "ItemInfo" >> "type");
@@ -64,7 +63,7 @@ if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2
             [_player, _x, true] call CBA_fnc_addItem;
         };
     };
-} forEach _surplus;   
+} forEach _surplus;
 
 // remove missing
 {
@@ -93,7 +92,15 @@ if (_sound isNotEqualTo "") then {
 
 // notification
 private _imgNotify = getText (_cfgTarget >> "picture");
-if !(".paa" in _imgNotify) then { _imgNotify = _imgNotify + ".paa" }; // some vanilla items dont have the .paa and cba notify will display the path as a string without the .paa
-[EFUNC(common,displayTextStructured), [["<img image='%1' size=5></img><br/>%2", _imgNotify, getText (_cfgTarget >> "displayName")], 4], _duration * 1.2] call CBA_fnc_waitAndExecute;
+if !(".paa" in _imgNotify) then {
+    // some vanilla items dont have the .paa and cba notify will display the path as a string without the .paa
+    _imgNotify = _imgNotify + ".paa"
+};
+
+[
+    EFUNC(common,displayTextStructured),
+    [["<img image='%1' size=5></img><br/>%2", _imgNotify, getText (_cfgTarget >> "displayName")], 4],
+    _duration * 1.2
+] call CBA_fnc_waitAndExecute;
 
 nil

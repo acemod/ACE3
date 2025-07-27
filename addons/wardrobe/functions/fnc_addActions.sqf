@@ -32,7 +32,7 @@ private _aceAction = [
 _actions pushBack [_aceAction, [], _player];
 
 // Actions for wardrobe items
-private _modifiableItems = _player call FUNC(getItemsModifiableCurrent);
+private _modifiableItems = [_player] call FUNC(getAvailableItemVariants);
 {
     _x params ["_cfg", "_newItems"];
 
