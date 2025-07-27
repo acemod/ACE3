@@ -15,6 +15,7 @@
             <Japanese>カメラが目標へ追随できる最大距離</Japanese>
             <Chinese>攝影機能追隨目標的最大距離</Chinese>
             <Chinesesimp>摄影机能追随目标的最大距离</Chinesesimp>
+            <Ukrainian>Максимальна дистанція від камери стеження до цілі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_MaxFollowDistance_DisplayName">
             <English>Max Follow Distance</English>
@@ -30,6 +31,7 @@
             <Japanese>最大追随距離</Japanese>
             <Chinese>最大跟隨距離</Chinese>
             <Chinesesimp>最大跟随距离</Chinesesimp>
+            <Ukrainian>Макс. відстань слідування</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_Module_DisplayName">
             <English>Spectator</English>
@@ -46,6 +48,7 @@
             <Chinese>旁觀者</Chinese>
             <Chinesesimp>旁观者</Chinesesimp>
             <Turkish>Izleyici</Turkish>
+            <Ukrainian>Глядач</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_Description">
             <English>Configure how the spectator system will operate by default.</English>
@@ -61,6 +64,7 @@
             <Japanese>観戦者システムが標準でどのように動作するか設定できます。</Japanese>
             <Chinese>設定旁觀者系統相關配置</Chinese>
             <Chinesesimp>设定旁观者系统相关配置</Chinesesimp>
+            <Ukrainian>Визначають, як система глядача функціонуватиме за замовчуванням.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>ACE Spectator</English>
@@ -77,6 +81,7 @@
             <Chinese>ACE 旁觀者</Chinese>
             <Chinesesimp>ACE 旁观者</Chinesesimp>
             <Turkish>ACE Izleyici</Turkish>
+            <Ukrainian>ACE Глядач</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_TooltipEngineer">
             <English>Engineer</English>
@@ -93,6 +98,7 @@
             <Chinese>工兵</Chinese>
             <Chinesesimp>工兵</Chinesesimp>
             <Turkish>Mühendis</Turkish>
+            <Ukrainian>Інженер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_ViewFree">
             <English>Free</English>
@@ -109,6 +115,7 @@
             <Chinese>自由模式</Chinese>
             <Chinesesimp>自由模式</Chinesesimp>
             <Turkish>Serbest</Turkish>
+            <Ukrainian>Вільна</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_VisionNight">
             <English>Night</English>
@@ -125,6 +132,7 @@
             <Chinese>夜視</Chinese>
             <Chinesesimp>夜视</Chinesesimp>
             <Turkish>Gece</Turkish>
+            <Ukrainian>Нічне</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_VisionNormal">
             <English>Normal</English>
@@ -141,6 +149,7 @@
             <Chinese>正常</Chinese>
             <Chinesesimp>正常</Chinesesimp>
             <Turkish>Normal</Turkish>
+            <Ukrainian>Нормальне</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_VisionThermal">
             <English>Thermal</English>
@@ -157,6 +166,7 @@
             <Chinese>熱成像</Chinese>
             <Chinesesimp>热成像</Chinesesimp>
             <Turkish>Termal</Turkish>
+            <Ukrainian>Тепловізор</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_ai_Description">
             <English>Make AI viewable in spectator</English>
@@ -172,6 +182,7 @@
             <Japanese>観戦者でAI視点を可能に</Japanese>
             <Chinese>開啟此功能後可在觀察者模式下觀察AI單位</Chinese>
             <Chinesesimp>开启此功能后可在观察者模式下观察 AI 单位。</Chinesesimp>
+            <Ukrainian>Зробити ШІ видимими в режимі глядача</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_ai_DisplayName">
             <English>AI Enabled</English>
@@ -188,6 +199,7 @@
             <Chinese>可觀察AI</Chinese>
             <Chinesesimp>可观察 AI</Chinesesimp>
             <Turkish>AI Etkin</Turkish>
+            <Ukrainian>Дозволити для ШІ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_camSlow">
             <English>Slow Speed</English>
@@ -204,6 +216,7 @@
             <Chinese>慢速度</Chinese>
             <Chinesesimp>慢速度</Chinesesimp>
             <Turkish>Yavaş Hız</Turkish>
+            <Ukrainian>Уповільнення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_Description">
             <English>Camera modes that can be used</English>
@@ -219,6 +232,7 @@
             <Japanese>カメラ モードを設定できます。</Japanese>
             <Chinese>設定可使用的攝影機模式</Chinese>
             <Chinesesimp>设定可使用的摄影机模式</Chinesesimp>
+            <Ukrainian>Режими камери, які можуть бути використані</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_DisplayName">
             <English>Camera modes</English>
@@ -235,6 +249,7 @@
             <Chinese>攝影機模式</Chinese>
             <Chinesesimp>摄影机模式</Chinesesimp>
             <Turkish>Kamera Modları</Turkish>
+            <Ukrainian>Режими камери</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_all">
             <English>All</English>
@@ -251,6 +266,7 @@
             <Chinese>所有</Chinese>
             <Chinesesimp>所有</Chinesesimp>
             <Turkish>Hepsi</Turkish>
+            <Ukrainian>Усе</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_unit">
             <English>1PP and 3PP</English>
@@ -267,6 +283,7 @@
             <Chinese>第一人稱與第三人稱</Chinese>
             <Chinesesimp>第一人称与第三人称</Chinesesimp>
             <Turkish>1PP ve 3PP</Turkish>
+            <Ukrainian>першого а також третього</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
             <English>Next Unit</English>
@@ -283,6 +300,7 @@
             <Chinese>下個單位</Chinese>
             <Chinesesimp>下个单位</Chinesesimp>
             <Turkish>Sonraki Takım</Turkish>
+            <Ukrainian>Наступний юніт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_nextVis">
             <English>Vision Mode</English>
@@ -299,6 +317,7 @@
             <Chinese>視覺模式</Chinese>
             <Chinesesimp>视觉模式</Chinesesimp>
             <Turkish>Görüş Modu</Turkish>
+            <Ukrainian>Режим бачення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_prevUnit">
             <English>Previous Unit</English>
@@ -315,6 +334,7 @@
             <Chinese>上個單位</Chinese>
             <Chinesesimp>上个单位</Chinesesimp>
             <Turkish>Önceki Takım</Turkish>
+            <Ukrainian>Попередній юніт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_uiIcons">
             <English>Icons</English>
@@ -331,6 +351,7 @@
             <Chinese>單位圖示</Chinese>
             <Chinesesimp>单位图示</Chinesesimp>
             <Turkish>Ikonlar</Turkish>
+            <Ukrainian>Іконки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_uiProjectiles">
             <English>Projectiles</English>
@@ -347,6 +368,7 @@
             <Chinese>顯示彈道</Chinese>
             <Chinesesimp>显示弹道</Chinesesimp>
             <Turkish>Mermiler</Turkish>
+            <Ukrainian>Уламки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_Description">
             <English>Vision modes that can be used</English>
@@ -362,6 +384,7 @@
             <Japanese>ビジョン モードを設定できます。</Japanese>
             <Chinese>設定可使用的視覺模式</Chinese>
             <Chinesesimp>设定可使用的视觉模式</Chinesesimp>
+            <Ukrainian>Режими бачення, які можуть бути використані</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_DisplayName">
             <English>Vision modes</English>
@@ -378,6 +401,7 @@
             <Chinese>視覺模式</Chinese>
             <Chinesesimp>视觉模式</Chinesesimp>
             <Turkish>Görüş Modları</Turkish>
+            <Ukrainian>Режими бачення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_nv">
             <English>Night vision</English>
@@ -394,6 +418,7 @@
             <Chinese>夜視</Chinese>
             <Chinesesimp>夜视</Chinesesimp>
             <Turkish>Geçe Görüşü</Turkish>
+            <Ukrainian>Нічне бачення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_ti">
             <English>Thermal imaging</English>
@@ -410,6 +435,7 @@
             <Chinese>熱成像</Chinese>
             <Chinesesimp>热成像</Chinesesimp>
             <Turkish>Termal Görüş</Turkish>
+            <Ukrainian>Тепловізійне</Ukrainian>
         </Key>
     </Package>
 </Project>

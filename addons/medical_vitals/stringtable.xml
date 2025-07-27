@@ -12,6 +12,7 @@
             <Korean>생명</Korean>
             <Japanese>バイタル</Japanese>
             <Chinesesimp>生命体征</Chinesesimp>
+            <Ukrainian>Життєво-важливі органи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Vitals_simulateSpO2_Description">
             <English>Enables oxygen saturation simulation, providing variable heart rate and oxygen demand based on physical activity and altitude. Required for Airway Management.</English>
@@ -24,6 +25,7 @@
             <Korean>산소포화도 시뮬레이션을 활성화하여 신체 활동과 고도에 따라 다양한 심박수와 산소 요구량을 제공합니다. 기도 관리에 필요합니다.</Korean>
             <Japanese>酸素飽和度シミュレーションを有効にし、身体活動や標高に基づいて変動する心拍数と酸素要求量の機能を提供します。 気道管理に必要です。</Japanese>
             <Chinesesimp>启用血氧饱和度模拟, 根据身体活动和海拔改变心率和氧气需求. 气道管理需要此选项启用</Chinesesimp>
+            <Ukrainian>Дозволяє імітувати насичення киснем, забезпечуючи змінну частоту серцевих скорочень і потребу в кисні залежно від фізичної активності та висоти над рівнем моря. Потрібен для управління дихальними шляхами.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Vitals_simulateSpO2_DisplayName">
             <English>Enable SpO2 Simulation</English>
@@ -36,6 +38,7 @@
             <Korean>산소포화도 시뮬레이션 활성화</Korean>
             <Japanese>SpO2シミュレーションを有効化</Japanese>
             <Chinesesimp>启用血氧模拟</Chinesesimp>
+            <Ukrainian>Увімкнути імітацію SpO2</Ukrainian>
         </Key>
     </Package>
 </Project>

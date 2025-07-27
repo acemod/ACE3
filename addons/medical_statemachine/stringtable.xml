@@ -16,6 +16,7 @@
             <Chinese>控制AI是否能進入無意識狀態而非立刻原地死亡。\n這個選項會與「AI致命傷」的選項聯動，使單位心搏停止的話必須先讓其無意識。\n然而，兩個設定分開之原因是使單位能因從非致命傷的攻擊情況下進入生命危險的狀態。\n簡單來說，你想要讓AI單位有心搏停止可能的話，該選項必須啟用。</Chinese>
             <Chinesesimp>控制 AI 是否可以进入昏迷状态而不是立即死亡。\n这个设置与"AI 致命伤"设置一起工作，因为进入心脏骤停需要单位能够昏迷。\n然而，这些设置是分开的，因为单位可能会因非致命伤害导致的关键生命体征而昏迷过去。\n从本质上讲，这意味着为了使 AI 单位的心脏骤停，必须启用此设置。</Chinesesimp>
             <Turkish>Yapay zekanın hemen ölmek yerine bilinçsiz duruma geçip geçemeyeceğini kontrol eder. \ Bu ayar, "Yapay Zeka Ölümcül Yaralanmalar" ayarı ile birlikte çalışır, çünkü kalp durması, ünitenin bilinçsiz duruma geçebilmesini gerektirir. \ Özünde, bunun anlamı şudur: AI birimleri için kalp durmasını etkinleştirirseniz, bu ayar etkinleştirilmelidir.</Turkish>
+            <Ukrainian>Керує тим, чи може ШІ знепритомніти, замість того, щоб негайно померти. Цей параметр працює разом із параметром "Смертельні рани ШІ", оскільки під час зупинки серця потрібно, щоб юніт міг знепритомніти. Проте ці параметри розділено, оскільки юніти можуть знепритомніти через критичні поранення життєво важливих органів, отримані внаслідок несмертельних травм. По суті, це означає, що для ввімкнення зупинки серця для ШІ цей параметр потрібно ввімкнути.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_AIUnconsciousness_DisplayName">
             <English>AI Unconsciousness</English>
@@ -33,6 +34,7 @@
             <Chinesesimp>AI 无意识</Chinesesimp>
             <Turkish>Yapay Zeka Bilinci</Turkish>
             <Hungarian>AI eszméletlenség</Hungarian>
+            <Ukrainian>Втрата свідомості ШІ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestBleedout_Description">
             <English>Controls whether a person can die in cardiac arrest by blood loss before the cardiac arrest time runs out.</English>
@@ -46,6 +48,7 @@
             <Korean>지정한 심정지 시간이 다 되기 전에 출혈로 인해 사망할 수 있는 지를 결정합니다.</Korean>
             <Japanese>心停止中の失血によって心停止時間よりも早く死亡するかどうかを制御します。</Japanese>
             <Chinesesimp>控制单位是否会在心脏骤停时间耗完之前因失血过多而死亡。</Chinesesimp>
+            <Ukrainian>Визначає, чи можна померти від втрати крові під час зупинки серця, навіть якщо час життя при зупинці серця ще не минув.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestBleedout_DisplayName">
             <English>Bleedout During Cardiac Arrest</English>
@@ -59,6 +62,7 @@
             <Korean>심정지 중 출혈</Korean>
             <Japanese>心停止中の失血死</Japanese>
             <Chinesesimp>心脏骤停期间失血情况</Chinesesimp>
+            <Ukrainian>Кровотеча під час зупинки серця</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestTime_Description">
             <English>Controls how long it takes to die from cardiac arrest.</English>
@@ -75,6 +79,7 @@
             <Chinese>控制心搏停止後多久死亡</Chinese>
             <Chinesesimp>控制心脏骤停后多久单位死亡</Chinesesimp>
             <Turkish>Ne kadar süre de kalbi durarak ölmesini belirleyin.</Turkish>
+            <Ukrainian>Контролює, скільки часу потрібно, щоб померти від зупинки серця.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestTime_DisplayName">
             <English>Cardiac Arrest Time</English>
@@ -91,6 +96,7 @@
             <Chinese>心搏停止時間</Chinese>
             <Chinesesimp>心脏骤停时间</Chinesesimp>
             <Turkish>Kalp Durma Süresi</Turkish>
+            <Ukrainian>Тривалість зупинки серця</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesAI_Description">
             <English>Controls when AI can receive fatal injuries. A fatal injury is caused by significant damage to the head or troso.\nWhen set to "Always", this effectively produces "AI Instant Death" behaviour as AI will immediately die from any fatal injury.\nNOTE: Any mode other than "Always" requires AI Unconsciousness to be enabled.</English>
@@ -107,6 +113,7 @@
             <Chinese>控制當AI受致命傷時是否能救起。致命傷是指對頭部或身體造成可觀傷害所造成的。\n當設置為"總是"時，這會使其與"AI 瞬間死亡"同一個效果，在AI受到致命傷時瞬間死亡。\n備註：選了"總是"以外的選項的話必須開啟「AI無意識」的選項。</Chinese>
             <Chinesesimp>控制当 AI 受致命伤时是否能救起。致命伤是指对头部或躯干遭受重大伤害。\n当设置为"总是"时，这将有效地产生"AI 即时死亡"行为，因为 AI 将立即死于任何致命伤。\n注意："总是"以外的任何模式都需要启用 AI 无意识。</Chinesesimp>
             <Turkish>AI'nın ölümcül yaralanmaları ne zaman alabileceğini kontrol eder. Ölümcül bir yaralanma, kafa veya vücudun önemli hasar görmesinden kaynaklanır. \n"Her zaman" olarak ayarlandığında, AI herhangi bir ölümcül yaralanmadan hemen öleceği için bu etkili bir şekilde "AI Anında Ölüm" davranışı üretir.\n NOT: "Her zaman" "Yapay Zeka Bilinci'nin etkinleştirilmesini gerektirir.</Turkish>
+            <Ukrainian>Визначає, чи можуть гравці отримати смертельні травми. Смертельна травма спричиняється значним ушкодженням голови або тулуба.\nКоли встановлено "Завжди", це спричиняє поведінку "Миттєвої смерті ШІ", оскільки ШІ негайно помре від будь-якої смертельної травми.\nПРИМІТКА: Будь-який режим, окрім "Завжди", вимагає ввімкнення функції "Втрата свідомості".</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesAI_DisplayName">
             <English>AI Fatal Injuries</English>
@@ -123,6 +130,7 @@
             <Chinese>AI致命傷</Chinese>
             <Chinesesimp>AI 致命伤</Chinesesimp>
             <Turkish>AI Ölümcül Yaralanmaları</Turkish>
+            <Ukrainian>Смертельні травми ШІ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesPlayer_Description">
             <English>Controls when players can receive fatal injuries. A fatal injury is caused by significant damage to the head or torso.</English>
@@ -139,6 +147,7 @@
             <Chinese>控制當玩家受致命傷時是否能救起。致命傷是指對頭部或身體造成可觀傷害所造成的。</Chinese>
             <Chinesesimp>控制当玩家受致命伤时是否能救起。致命伤是指对头部或躯干遭受重大伤害。</Chinesesimp>
             <Turkish>Oyuncuların ölümcül yaralanmaları ne zaman alabileceğini kontrol eder. Ölümcül bir yaralanma, kafaya veya vücuda önemli hasar verir.</Turkish>
+            <Ukrainian>Визначає, чи можуть гравці отримати смертельні травми. Смертельна травма спричиняється значним пошкодженням голови або тулуба.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesPlayer_DisplayName">
             <English>Player Fatal Injuries</English>
@@ -155,6 +164,7 @@
             <Chinese>玩家致命傷</Chinese>
             <Chinesesimp>玩家致命伤</Chinesesimp>
             <Turkish>Oyuncu Ölümcül Yaralanmaları</Turkish>
+            <Ukrainian>Смертельні травми гравця</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_InCardiacArrest">
             <English>In Cardiac Arrest</English>
@@ -171,6 +181,7 @@
             <Chinese>心搏停止中</Chinese>
             <Chinesesimp>心脏骤停中</Chinesesimp>
             <Turkish>Kalbi Durdu</Turkish>
+            <Ukrainian>При зупинці серця</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_SubCategory">
             <English>States</English>
@@ -187,6 +198,7 @@
             <Chinese>狀態</Chinese>
             <Chinesesimp>状态</Chinesesimp>
             <Turkish>Devletler</Turkish>
+            <Ukrainian>Стани</Ukrainian>
         </Key>
     </Package>
 </Project>

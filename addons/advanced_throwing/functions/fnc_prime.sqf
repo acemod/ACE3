@@ -57,6 +57,9 @@ private _activeThrowable = createVehicle [_throwableType, _activeThrowableOld, [
 _unit setVariable [QGVAR(activeThrowable), _activeThrowable];
 deleteVehicle _activeThrowableOld;
 
+// Set _gunner for Throw Fired XEH
+private _gunner = _unit;
+
 // Throw Fired XEH
 [QGVAR(throwFiredXEH), [
     _unit, // unit
@@ -65,7 +68,8 @@ deleteVehicle _activeThrowableOld;
     _muzzle, // mode
     _throwableType, // ammo
     _throwableMag, // magazine
-    _activeThrowable // projectile
+    _activeThrowable, // projectile
+    _gunner // gunner
 ]] call CBA_fnc_globalEvent;
 
 // Set prime instigator
