@@ -42,6 +42,12 @@ workshop = [
     "843632231", # RHS SAF  Workshop ID
 ]
 
+[3cbf]
+extends = "rhs"
+workshop = [
+    "1673456286", # 3CB Factions
+]
+
 [cup]
 extends = "default"
 workshop = [
