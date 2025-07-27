@@ -100,74 +100,7 @@ if (_groupingMethod == 0) then {
     
     // Add item nodes
     {
-        // Get item info from cache
-        private _itemKey = _configCategory + _x;
-        ((uiNamespace getVariable QGVAR(addListBoxItemCache)) getOrDefaultCall [_itemKey, {
-            private _configPath = configFile >> _configCategory >> _x;
-            [configName _configPath, getText (_configPath >> "displayName"), if (_pictureEntryName == "") then {""} else {getText (_configPath >> _pictureEntryName)}]
-        }, true]) params ["_className", "_displayName", "_itemPicture"];
-        
-        // Skip favorites-only filter if enabled
-        private _skip = GVAR(favoritesOnly) && {!(_className in GVAR(currentItems))} && {!((toLowerANSI _className) in GVAR(favorites))};
-        if (_skip) then {
-            switch (GVAR(currentLeftPanel)) do {
-                case IDC_buttonPrimaryWeapon: {
-                    _skip = !(_className in (GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON_ITEMS));
-                };
-                case IDC_buttonHandgun: {
-                    _skip = !(_className in (GVAR(currentItems) select IDX_CURR_HANDGUN_WEAPON_ITEMS));
-                };
-                case IDC_buttonSecondaryWeapon: {
-                    _skip = !(_className in (GVAR(currentItems) select IDX_CURR_PRIMARY_WEAPON_ITEMS));
-                };
-                case IDC_buttonBinoculars: {
-                    _skip = !(_className in (GVAR(currentItems) select IDX_CURR_BINO_ITEMS));
-                };
-            };
-        };
-        
-        if (!_skip) then {
-            private _itemIndex = _treeCtrl tvAdd [[_groupIndex], _displayName];
-            _treeCtrl tvSetData [[_groupIndex, _itemIndex], _className];
-            _treeCtrl tvSetPicture [[_groupIndex, _itemIndex], _itemPicture];
-            _treeCtrl tvSetTooltip [[_groupIndex, _itemIndex], format ["%1\n%2", _displayName, _className]];
-            
-            // Set mod icon if enabled
-            if (GVAR(enableModIcons) > 0) then {
-                private _modPicture = switch (GVAR(enableModIcons)) do {
-                    case 1: {
-                        (uiNamespace getVariable QGVAR(modPictureCache)) getOrDefaultCall [_itemKey, {
-                            private _configPath = configFile >> _configCategory >> _className;
-                            private _dlcName = _configPath call EFUNC(common,getAddon);
-                            if (_dlcName != "") then {
-                                (modParams [_dlcName, ["logo"]]) param [0, ""]
-                            } else {
-                                ""
-                            };
-                        }, true]
-                    };
-                    case 2: {
-                        (uiNamespace getVariable QGVAR(dlcPictureCache)) getOrDefaultCall [_itemKey, {
-                            private _configPath = configFile >> _configCategory >> _className;
-                            private _dlcClass = (_configPath call EFUNC(common,getDLC)) select 0;
-                            if (_dlcClass != "") then {
-                                getText (configFile >> "CfgMods" >> _dlcClass >> "logo")
-                            } else {
-                                ""
-                            };
-                        }, true]
-                    };
-                };
-                
-                if (_modPicture != "") then {
-                    _treeCtrl tvSetPictureRight [[_groupIndex, _itemIndex], _modPicture];
-                };
-            };
-            
-            // Set favorites color
-            if ((toLowerANSI _className) in GVAR(favorites)) then {
-                _treeCtrl tvSetPictureColor [[_groupIndex, _itemIndex], FAVORITES_COLOR];
-            };
-        };
+        // Use unified addListBoxItem function - it handles all logic including favorites filtering
+        [_configCategory, _x, _treeCtrl, _pictureEntryName, 0, [_groupIndex]] call FUNC(addListBoxItem);
     } forEach _groupItems;
 } forEach _sortedGroupNames;

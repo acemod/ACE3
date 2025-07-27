@@ -2,11 +2,11 @@
 #include "..\defines.hpp"
 /*
  * Author: Alganthe, johnb43
- * Handles selection changes on the right panel.
+ * Handles selection changes on the right panel (supports tree and listbox controls).
  *
  * Arguments:
  * 0: Right panel control <CONTROL>
- * 1: Tree selection path <ARRAY>
+ * 1: Selection data <ANY> - Tree path array for tree controls, index for listbox controls
  *
  * Return Value:
  * None
@@ -19,13 +19,7 @@ params ["_control", "_selectionPath"];
 if (count _selectionPath == 0) exitWith {};
 
 private _display = ctrlParent _control;
-
-// TODO: This function was modified to work with tree controls instead of listbox controls.
-// Originally it used: params ["_control", "_curSel"]; private _item = _control lbData _curSel;
-// Now it uses tree selection: params ["_control", "_selectionPath"]; private _item = _control tvData _selectionPath;
-// This change was necessary because the right panel control type was changed from listbox to tree.
-// The function should be renamed to reflect its tree-specific nature or made generic.
-private _item = _control tvData _selectionPath;
+private _item = ["getData", _control, [_selectionPath]] call FUNC(controlInterface);
 private _currentItemsIndex = IDX_CURR_PRIMARY_WEAPON_ITEMS + ([IDC_buttonPrimaryWeapon, IDC_buttonSecondaryWeapon, IDC_buttonHandgun, IDC_buttonBinoculars] find GVAR(currentLeftPanel));
 private _itemIndex = [IDC_buttonMuzzle, IDC_buttonItemAcc, IDC_buttonOptic, IDC_buttonBipod, IDC_buttonCurrentMag, IDC_buttonCurrentMag2] find GVAR(currentRightPanel);
 

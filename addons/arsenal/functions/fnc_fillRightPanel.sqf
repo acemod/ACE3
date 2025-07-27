@@ -169,28 +169,16 @@ switch (GVAR(currentLeftPanel)) do {
     };
 };
 
-// Reset right panel content
-// TODO: This mixed control clearing is a workaround because the Arsenal uses different
-// control types for different contexts within the same function:
-// - _ctrlPanel (IDC_rightTabContent) is a tree control for weapon attachments/magazines
-// - _listnBox (IDC_rightTabContentListnBox) is a listnbox control for container items
-// This should be refactored to use consistent control types or separate functions.
-// 
-// Current workaround: Clear both control types since we don't know which will be used
-tvClear _ctrlPanel;           // Clear tree control (for weapon panels)
-lnbClear _listnBox;           // Clear listnbox control (for container panels)
+// Reset right panel content using unified control interface
+["clear", _ctrlPanel, []] call FUNC(controlInterface);
+["clear", _listnBox, []] call FUNC(controlInterface);
 
-_ctrlPanel tvSetCurSel [];    // Reset tree selection
-_listnBox lnbSetCurSelRow -1; // Reset listnbox selection
+["setCurSel", _ctrlPanel, [[]]] call FUNC(controlInterface);
+["setCurSel", _listnBox, [-1]] call FUNC(controlInterface);
 
-// TODO: This control reassignment is part of the workaround for mixed control types.
-// When dealing with containers (uniforms, vests, backpacks), the function switches
-// from using the tree control to the listnbox control. This creates complexity in
-// selection restoration and requires different command sets throughout the function.
-// 
-// Current workaround: Reassign _ctrlPanel to point to the listnbox for container mode
+// Use appropriate control for container vs weapon panels
 if (_isContainer) then {
-    _ctrlPanel = _listnBox;  // Switch from tree control to listnbox control
+    _ctrlPanel = _listnBox;
 };
 
 // Force a "refresh" animation of the panel
@@ -428,42 +416,29 @@ if (_isContainer) then {
 // Sorting
 [_display, _control, _display displayCtrl IDC_sortRightTab, _display displayCtrl IDC_sortRightTabDirection] call FUNC(fillSort);
 
-// TODO: This dual selection restoration logic is the most complex part of the workaround.
-// Because _ctrlPanel can be either a tree control or listnbox control depending on context,
-// we need completely different logic for finding and selecting items:
-// - Tree controls use tvCount, tvData, tvSetCurSel with path arrays [index]
-// - Listnbox controls use lnbSize, lnbData, lnbSetCurSelRow with numeric indices
-// This should be unified by using consistent control types or separate functions.
+// Restore previous selection using unified control interface
 if (_selectedItem != "") then {
-    if (_isContainer) then {
-        // Listnbox control path: find item by row index
-        private _index = -1;
-
-        for "_lbIndex" from 0 to (lnbSize _ctrlPanel select 0) - 1 do {
-            if ((_ctrlPanel lnbData [_lbIndex, 0]) == _selectedItem) exitWith {
-                _index = _lbIndex;
-            };
+    private _index = -1;
+    private _count = ["count", _ctrlPanel, []] call FUNC(controlInterface);
+    
+    // Find the item in the control
+    for "_i" from 0 to (_count - 1) do {
+        private _itemData = if (_isContainer) then {
+            ["getData", _ctrlPanel, [_i]] call FUNC(controlInterface)
+        } else {
+            ["getData", _ctrlPanel, [[_i]]] call FUNC(controlInterface)
         };
-
-        _ctrlPanel lnbSetCurSelRow _index;
-    } else {
-        // Tree control path: find item by tree path array
-        private _index = [0];
-
-        for "_tvIndex" from 0 to ((_ctrlPanel tvCount []) - 1) do {
-            if ((_ctrlPanel tvData [_tvIndex]) == _selectedItem) exitWith {
-                _index = [_tvIndex];
-            };
+        
+        if (_itemData == _selectedItem) exitWith {
+            _index = if (_isContainer) then { _i } else { [_i] };
         };
-
-        _ctrlPanel tvSetCurSel _index;
     };
+    
+    // Set selection
+    ["setCurSel", _ctrlPanel, [_index]] call FUNC(controlInterface);
 } else {
-    // No previous selection - use appropriate "empty" selection for each control type
-    if (_isContainer) then {
-        _ctrlPanel lnbSetCurSelRow -1; // Listnbox: select nothing
-    } else {
-        _ctrlPanel tvSetCurSel [0]; // Tree: select "Empty" item
-    };
+    // No previous selection - set appropriate default
+    private _defaultSel = if (_isContainer) then { -1 } else { [0] };
+    ["setCurSel", _ctrlPanel, [_defaultSel]] call FUNC(controlInterface);
 };
 

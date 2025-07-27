@@ -37,6 +37,7 @@ PREP(clearSearchbar);
 PREP(compileActions);
 PREP(compileSorts);
 PREP(compileStats);
+PREP(controlInterface);
 PREP(fillLeftPanel);
 PREP(fillLeftPanelGrouped);
 PREP(fillLoadoutsList);
