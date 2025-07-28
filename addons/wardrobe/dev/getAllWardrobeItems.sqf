@@ -15,7 +15,7 @@
  * Public: No
  */
 
-params ["_readName", false, [false]];
+params [["_readName", false, [false]]];
 
 private _return = [];
 
