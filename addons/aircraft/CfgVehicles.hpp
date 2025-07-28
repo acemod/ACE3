@@ -2,7 +2,7 @@ class CfgVehicles {
     class All;
 
     class AllVehicles: All {
-        class NewTurret {};
+        class NewTurret;
     };
 
     class Air: AllVehicles {};
