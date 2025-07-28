@@ -59,3 +59,9 @@ class CfgVehicles {
     };
 };
 ```
+
+### 1.3 Template for the Carryable Flag Texture
+
+![Image of Template Flag Texture](../../img/flag_carryable_template.png)
+
+This template can also be found inside the addon's data folder.
