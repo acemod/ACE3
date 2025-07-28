@@ -1,5 +1,5 @@
 class CfgVehicles {
-    class All {};
+    class All;
 
     class AllVehicles: All {
         class NewTurret {};
