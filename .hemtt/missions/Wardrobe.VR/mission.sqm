@@ -140,7 +140,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, call compile preprocessFileLineNumbers 'z\ace\addons\wardrobe\dev\getAllWardrobeItems.sqf'] call ace_arsenal_fnc_initBox;";
+				init="[this, true call compile preprocessFileLineNumbers 'z\ace\addons\wardrobe\dev\getAllWardrobeItems.sqf'] call ace_arsenal_fnc_initBox;";
 			};
 			id=197;
 			type="ACE_Box_Ammo";
