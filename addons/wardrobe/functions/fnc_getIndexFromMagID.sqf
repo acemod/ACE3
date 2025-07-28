@@ -15,7 +15,7 @@
  * private _documents = _magazineDetails findIf { _x select 0 == "acex_intelitems_document" } > -1;
  * if (_documents) then { _documents = [player, "acex_intelitems_document"] call CBA_fnc_getMagazineIndex apply { _x call ace_wardrobe_fnc_getIndexFromMagID } };
  *
- * Public: Yes
+ * Public: No
  */
 
 params [["_magazineID", "", [""]]];
