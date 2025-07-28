@@ -17,7 +17,7 @@
 
 params ["_player"];
 
-keys uniqueUnitItems _player
+keys uniqueUnitItems [_player, 0, 1, 1, 1, true]
     apply { _x call CBA_fnc_getItemConfig }
     select { _x call FUNC(isModifiable) }
     apply {
