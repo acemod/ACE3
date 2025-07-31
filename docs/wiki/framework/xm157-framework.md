@@ -14,6 +14,7 @@ version:
 
 ## 1. Config Values
 
+### 1.1 Scope config
 
 ```cpp
 class CfgWeapons {
@@ -50,6 +51,17 @@ class CfgWeapons {
                 };
             };
         };
+    };
+};
+
+```
+### 1.2 Ammo Config
+Shells can be set to airburst based on lased distance
+
+```cpp
+class myAmmo: G_40mm_HE {
+    class Eventhandlers {
+        fired = QUOTE(call ace_xm157_fnc_airburst_ammoFired);
     };
 };
 ```
