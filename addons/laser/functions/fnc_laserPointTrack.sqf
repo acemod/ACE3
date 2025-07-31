@@ -28,8 +28,8 @@ params ["_vehicle"];
         private _laserTargetPos = getPosASL (laserTarget _vehicle);
         private _pilotCameraPos = _vehicle modelToWorldVisualWorld (getPilotCameraPosition _vehicle);
         private _pilotCameraVector = _pilotCameraPos vectorFromTo _laserTargetPos;
-        private _laserDistance = _pilotCameraPos distance _laserTargetPos;
-        private _spotDistance = _spotPos distance _laserTargetPos;
+        private _laserDistance = _pilotCameraPos vectorDistance _laserTargetPos;
+        private _spotDistance = _spotPos vectorDistance _laserTargetPos;
         if (_spotDistance > 3.5) then {
             private _vehPos = getPosASL _vehicle;
             private _vectorToLaser = _pilotCameraPos vectorFromTo _laserTargetPos;
