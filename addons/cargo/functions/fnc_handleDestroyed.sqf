@@ -33,7 +33,7 @@ if (_loaded isNotEqualTo []) then {
             if (_killed && {random 1 < GVAR(unloadOnKilled)}) then {
                 private _pos = getPos _object;
                 if (_object isKindOf "Air" && {_pos select 2 > 1}) then { // flying aircraft don't work with FUNC(unloadItem) so work around it.
-                    [QGVAR(serverUnload), [_x, getPosATL _object vectorAdd [random [-3, 0, 3], random [-3, 0, 3], random -3]]] call CBA_fnc_serverEvent;
+                    [QGVAR(serverUnload), [_x, (ASLToAGL getPosASL _object) vectorAdd [random [-3, 0, 3], random [-3, 0, 3], random -3]]] call CBA_fnc_serverEvent;
                     detach _x;
                     _x addForce [[0,0,1], [0,0,0]];
                     _delete = false;
