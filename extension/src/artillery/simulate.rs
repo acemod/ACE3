@@ -13,7 +13,7 @@ pub fn shot(
     temperature: Temperature,
     air_density: f64,
 ) -> (f64, f64, f64) {
-    let k_coefficient = -1.0 * air_density * air_friction;
+    let k_coefficient = -air_density * air_friction;
     let powder_effects = if air_friction == 0.0 {
         1.0
     } else {

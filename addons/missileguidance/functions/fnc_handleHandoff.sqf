@@ -8,7 +8,7 @@
  * 1: ARGS <ARRAY>
  *
  * Return Value:
- * Boolean <BOOLEAN>
+ * Boolean <BOOL>
  *
  * Example:
  * [bob, kevin] call ACE_missileguidance_fnc_handleHandoff

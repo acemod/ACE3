@@ -1,12 +1,12 @@
 #include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
- * Auomatically deploy a helicopter filled with AI units.
+ * Automatically deploy a helicopter filled with AI units.
  *
  * Arguments:
  * 0: The helicopter <OBJECT>
- * 1: Deploy special roles (gunners, copilot) (default: false) <BOOL>
- * 2: Create deployment group (default: true) <BOOL>
+ * 1: Deploy special roles (gunners, copilot) <BOOL> (default: false)
+ * 2: Create deployment group <BOOL> (default: true)
  *
  * Return Value:
  * None

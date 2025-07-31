@@ -10,6 +10,7 @@
             <German>Fahrzeug Munitionsdurchzündung Dauer-Multiplikator</German>
             <Korean>탄약 유폭 시간 계수</Korean>
             <Japanese>弾薬の誘爆の持続時間倍率</Japanese>
+            <Ukrainian>Збільшення тривалості детонації боєприпасів.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CookOff_ammoCookoffDuration_tooltip">
             <English>Multiplier for how long ammunition cook-off lasts, for both vehicles and ammo boxes.\nSetting to 0 will disable ammo cook-off for both vehicles and ammo boxes.</English>
@@ -20,6 +21,7 @@
             <German>Multiplikator der Munitionsdurchzündungs-Dauer, gilt für Fahrzeuge und Munitionskisten.\nIhn auf 0 zu setzen wird Durchzünden deaktivieren.</German>
             <Korean>차량과 탄약 상자 모두에 대해 탄약 유폭이 지속되는 시간에 대한 계수입니다.\n0으로 설정하면 차량과 탄약 상자 모두에 대해 탄약 유폭이 비활성화됩니다.</Korean>
             <Japanese>弾薬の誘爆の持続時間をどのくらいの長さにするかの倍率。車両弾薬と弾薬箱どちらにも影響します。\n0に設定すると弾薬の誘爆が無効化されます。</Japanese>
+            <Ukrainian>Збільшення тривалості детонації боєприпасів. Це впливає як на боєприпаси в техніці, так і на ящики з боєприпасами. \nВстановлення значення 0 вимикає детонацію боєприпасів.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CookOff_category_displayName">
             <English>ACE Cook-off</English>
@@ -35,6 +37,7 @@
             <Japanese>ACE 誘爆</Japanese>
             <Chinese>ACE 殉爆效果</Chinese>
             <Chinesesimp>ACE 殉爆效果</Chinesesimp>
+            <Ukrainian>ACE Детонація</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CookOff_cookoffDuration_name">
             <English>Vehicle cook-off fire duration multiplier</English>
@@ -45,6 +48,7 @@
             <German>Fahrzeugbrand Dauer-Multiplikator</German>
             <Korean>차량 유폭 화재 지속 시간 계수</Korean>
             <Japanese>車両の誘爆火災の持続時間倍率</Japanese>
+            <Ukrainian>Збіль. тривалості горіння техніки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CookOff_cookoffDuration_tooltip">
             <English>Multiplier for how long vehicle cook-off fire lasts.\nSetting to 0 will disable vehicle cook-off fire.</English>
@@ -55,6 +59,7 @@
             <German>Multiplikator der Fahrzeugbrand Dauer.\nIhn auf 0 zu setzen wird Munitionsbrände deaktivieren.</German>
             <Korean>차량 유폭 화재가 지속되는 시간에 대한 계수입니다.\n0으로 설정하면 차량 쿸오프 화재가 비활성화됩니다.</Korean>
             <Japanese>車両の誘爆火災の持続時間をどのくらいの長さにするかの倍率。\n0に設定すると車両の誘爆火災が無効化されます。</Japanese>
+            <Ukrainian>Збіл. тривалості горіння техніки. \nВстановлення значення на 0 вимикає загоряння техніки.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_name">
             <English>Destroy vehicles after cook-off</English>
@@ -68,6 +73,7 @@
             <Korean>유폭 후 차량 파괴</Korean>
             <Japanese>誘爆後に車両を破壊する</Japanese>
             <Chinesesimp>殉爆发生后摧毁载具</Chinesesimp>
+            <Ukrainian>Знищувати техніку після детонації</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_tooltip">
             <English>Controls whether vehicles will always be destroyed after cooking off.</English>
@@ -80,6 +86,7 @@
             <German>Steuert, ob Fahrzeuge nach dem Durchzünden immer zerstört werden.</German>
             <Korean>유폭 후 차량이 항상 파괴되는지 여부를 조정합니다.</Korean>
             <Japanese>誘爆の終了後に車両を必ず完全破壊するかどうかを設定します。</Japanese>
+            <Ukrainian>Визначає, чи завжди транспортні засоби будуть знищуватися після детонації.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_name">
             <English>Enable vehicle ammo cook-off</English>
@@ -90,6 +97,7 @@
             <German>Aktiviert Fahrzeug Munitionsdurchzündung</German>
             <Korean>차량 내 탄약 유폭 활성화</Korean>
             <Japanese>車両弾薬の誘爆を有効化</Japanese>
+            <Ukrainian>Увім. детонацію боєприпасів у техніці.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_tooltip">
             <English>Enables cooking off of vehicle ammunition. Fires ammunition projectiles while vehicle has ammunition remaining.\nThis doesn't include fire effects.</English>
@@ -100,6 +108,7 @@
             <German>Aktiviert Durchzündung von Fahrzeugmunition. Schleudert Munitionsfragmente umher wenn das Fahrzeug noch Munition an Bord hat.\nBrandeffekte sind nicht mit einbegriffen.</German>
             <Korean>차량 내 탄약 유폭을 활성화합니다. 차량에 탄약이 남아 있는 동안 탄약 발사체를 발사합니다.\n여기엔 화재 효과가 포함되지 않습니다.</Korean>
             <Japanese>車両弾薬の誘爆を有効化します。車両に積載されたままの弾薬と弾頭が発射されます。\nこれには火災エフェクトは含まれません。</Japanese>
+            <Ukrainian>Увім. детонацію боєприпасів на техніці. Боєприпаси та боєголовки, які залишаються зарядженими на транспортному засобі, будуть приведені в дію. \nЦе не включає ефекти пожежі.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CookOff_enableBoxCookoff_name">
             <English>Enable ammo box cook-off</English>
@@ -115,6 +124,7 @@
             <Japanese>弾薬箱の誘爆を有効化</Japanese>
             <Chinese>開啟彈藥箱殉爆效果</Chinese>
             <Chinesesimp>开启弹药箱殉爆效果</Chinesesimp>
+            <Ukrainian>Дозволити детонацію ящиків із боєприпасами</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CookOff_enableBoxCookoff_tooltip">
             <English>Enables cooking off of ammo boxes.\nThis doesn't include fire effects.</English>
@@ -125,6 +135,7 @@
             <German>Aktiviert Munitionskisten Durchzündung.\nBrandeffekte sind nicht mit einbegriffen.</German>
             <Korean>탄약 상자 유폭을 활성화합니다.\n여기엔 화재 효과가 포함되지 않습니다.</Korean>
             <Japanese>弾薬箱の誘爆を有効化します。\nこれには火災エフェクトは含まれません。</Japanese>
+            <Ukrainian>Увім. детонацію ящика з боєприпасами. \nЦе не включає ефекти вогню.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CookOff_enableFire_name">
             <English>Enable vehicle cook-off fire</English>
@@ -135,6 +146,7 @@
             <German>Aktiviert Fahrzeug Munitionsbrand</German>
             <Korean>차량 유폭 화재를 활성화합니다</Korean>
             <Japanese>車両の誘爆火災を有効化</Japanese>
+            <Ukrainian>Увім. загоряння техніки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CookOff_enableFire_tooltip">
             <English>Enables vehicle cook-off fire effects.\nThis doesn't include ammunition detonations.</English>
@@ -145,6 +157,41 @@
             <German>Aktiviert Fahrzeug Brandeffekte durch Durchzündung.\nExplosionseffekte sind nicht mit einbegriffen.</German>
             <Korean>차량 유폭 효과를 활성화합니다.\n여기엔 탄약 유폭이 포함되지 않습니다.</Korean>
             <Japanese>車両の誘爆火災エフェクトを有効化します。\nこれには弾薬の爆発は含まれません。</Japanese>
+            <Ukrainian>Увім. ефект горіння техніки. \nНе вмикає детонацію боєкомплекту</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableProjectiles_name">
+            <English>Enable projectile fire</English>
+            <French>Activer le tir de projectiles</French>
+            <Spanish>Habilitar la detonación de proyectiles</Spanish>
+            <Russian>Вкл. траекторного отображения снарядов</Russian>
+            <Korean>발사체 발사 활성화</Korean>
+            <Japanese>弾薬の発射の有効化</Japanese>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableProjectiles_tooltip">
+            <English>Enables projectiles firing from the vehicle</English>
+            <French>Active le tir de projectiles depuis le véhicule</French>
+            <Spanish>Habilita la detonación de proyectiles desde el interior del vehículo</Spanish>
+            <Russian>Вкл. траекторного отображения снарядов изнутри техники</Russian>
+            <Korean>차량에서 발사체가 발사되는 것을 활성화합니다.</Korean>
+            <Japanese>車両からの弾薬の発射を可能にします</Japanese>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableSound_name">
+            <English>Enable cook-off sounds</English>
+            <French>Activer les sons d'explosion</French>
+            <Spanish>Habilitar sonido de detonación</Spanish>
+            <Russian>Выкл. звук детонации</Russian>
+            <Korean>쿡오프 소리 활성화</Korean>
+            <Japanese>誘爆音を有効化</Japanese>
+            <Ukrainian>Вимк. звук детонації</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableSound_tooltip">
+            <English>Enables the sound of projectiles cooking off from inside the vehicle</English>
+            <French>Active le son des projectiles se déclenchant à l'intérieur du véhicule</French>
+            <Spanish>Habilita el sonido de los proyectiles que se detonan dentro del interior del vehículo</Spanish>
+            <Russian>Вкл. звуки взрывающихся снарядов изнутри техники</Russian>
+            <Korean>차량 내에서 쿡오프 되는 발사체의 소리를 활성화합니다.</Korean>
+            <Japanese>車内で弾薬が発火する音を有効化します</Japanese>
+            <Ukrainian>Увім. звуки снарядів, що вибухають, зсередини техніки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_name">
             <English>Vehicle cook-off fire probability multiplier</English>
@@ -155,6 +202,7 @@
             <German>Fahrzeug Munitionsbrand Wahrscheinlichkeit-Multiplikator</German>
             <Korean>차량 유폭 화재 확률 계수</Korean>
             <Japanese>車両の誘爆火災の可能性倍率</Japanese>
+            <Ukrainian>Можливість посилення пожежі під час детонації техніки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_tooltip">
             <English>Multiplier for vehicle cook-off fire probability. Higher value results in higher cook-off fire probability.\nSetting to 0 will disable vehicle cook-off fire.</English>
@@ -165,6 +213,7 @@
             <German>Multiplikator der Fahrzeugbrand Wahrscheinlichkeit.\nHöhere Werte erhöhen die Wahrscheinlichkeit.\nEin Null-Wert wird Munitionsbrände deaktivieren.</German>
             <Korean>차량 유폭 화재 확률에 대한 계수입니다. 값이 높을 수록 유폭 확률이 높아집니다.\n0으로 설정하면 차량 유폭 화재가 비활성화됩니다.</Korean>
             <Japanese>車両の誘爆火災がどのくらいの可能性で発生するかの倍率。高い数値は高い誘爆の可能性につながります。\n0に設定すると車両の誘爆火災が無効化されます。</Japanese>
+            <Ukrainian>Збіл. імовірності виникнення загоряння техніки. Велике значення вказує на високу ймовірність детонації. \nВстановлення значення 0 запобігає загорянню техніки.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CookOff_removeAmmoDuringCookoff_name">
             <English>Enable ammo removal during cook-off</English>
@@ -174,9 +223,10 @@
             <Polish>Włącz/Wyłącz usuwanie amunicji podczas samozapłonu</Polish>
             <Russian>Вкл. удаление боеприпасов из-за детонации</Russian>
             <German>Aktiviert/Deaktiviert Entfernung der Munition beim Durchzünden</German>
-            <Korean>유폭 시 탄약 제거 활성화/비활성화</Korean>
+            <Korean>유폭 시 탄약 제거 활성화</Korean>
             <Japanese>誘爆による弾薬の除去を有効化</Japanese>
             <Chinesesimp>启用/禁用殉爆过程中的弹药移除功能</Chinesesimp>
+            <Ukrainian>Увімкнути видалення боєприпасів через детонацію</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CookOff_removeAmmoDuringCookoff_tooltip">
             <English>Removes all ammo during cook-off.</English>
@@ -187,6 +237,7 @@
             <German>Entfernt Munition während dem Durchzünden der Munition eines Fahrzeuges.</German>
             <Korean>유폭 중 모든 탄약을 제거합니다.</Korean>
             <Japanese>誘爆によって全ての弾薬を除去します。</Japanese>
+            <Ukrainian>Усі боєприпаси знищуються шляхом підриву.</Ukrainian>
         </Key>
     </Package>
 </Project>

@@ -16,6 +16,7 @@
             <Chinese>背包</Chinese>
             <Chinesesimp>背包</Chinesesimp>
             <Turkish>Çantalar</Turkish>
+            <Ukrainian>Рюкзаки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Inventory_Glasses">
             <English>Glasses</English>
@@ -32,6 +33,7 @@
             <Chinese>眼鏡</Chinese>
             <Chinesesimp>眼镜</Chinesesimp>
             <Turkish>Gözlükler</Turkish>
+            <Ukrainian>Окуляри</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Inventory_Grenades">
             <English>Grenades</English>
@@ -48,6 +50,7 @@
             <Chinese>手榴彈</Chinese>
             <Chinesesimp>手榴弹</Chinesesimp>
             <Turkish>Bombalar</Turkish>
+            <Ukrainian>Гранати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Inventory_Headgear">
             <English>Headgear</English>
@@ -64,6 +67,7 @@
             <Chinese>頭盔</Chinese>
             <Chinesesimp>头盔</Chinesesimp>
             <Turkish>Kasklar</Turkish>
+            <Ukrainian>Головні убори</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Inventory_Medical">
             <English>Medical</English>
@@ -80,6 +84,7 @@
             <Chinese>醫療</Chinese>
             <Chinesesimp>医疗</Chinesesimp>
             <Turkish>Sağlık</Turkish>
+            <Ukrainian>Медицина</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Inventory_SettingDescription">
             <English>Normally inventory display is scaled by UI size. This allows scaling the Inventory UI size up, but doesn't increase font size allowing more rows displayed.</English>
@@ -97,6 +102,7 @@
             <Chinesesimp>一般来说，物品清单尺寸是由使用者界面来决定的。此选项能让你的物品显示清单更大但不会增加字体大小，此举可增加更多能被显示的描述行数！</Chinesesimp>
             <Turkish>Normalde envanter görüntüleme, kullanıcı arayüzü boyutuna göre ölçeklenir. Bu, Envanter kullanıcı arayüzü boyutunu büyütmeye izin verir, ancak daha fazla satır görüntülenmesine izin vermek için yazı tipi boyutunu büyütmez.</Turkish>
             <Hungarian>Alaphelyzetben a kezelőfelület mérete skálázza a felszerelési menüt. Ez az opció engedélyezi a menü felskálázását, de megtartja a betűméreteket, így növelve a láthatóságot.</Hungarian>
+            <Ukrainian>Зазвичай, розмір вікна інвентарю залежить від розмірів користувацького інтерфейсу. Це налаштування дає змогу збільшити розмір вікна інвентарю, не збільшуючи розміри шрифтів, так що відобразиться більша кількість рядків.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Inventory_SettingName">
             <English>Make Inventory Display Bigger</English>
@@ -114,6 +120,7 @@
             <Chinesesimp>使物品显示清单更大</Chinesesimp>
             <Turkish>Envanter Görüntüsünü Daha Büyük Yap</Turkish>
             <Hungarian>Legyen a felszerelés menüje nagyobb</Hungarian>
+            <Ukrainian>Змінити розмір вікна інвентарю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Inventory_Uniforms">
             <English>Uniforms</English>
@@ -130,6 +137,7 @@
             <Chinese>服裝</Chinese>
             <Chinesesimp>服装</Chinesesimp>
             <Turkish>Üniformalar</Turkish>
+            <Ukrainian>Уніформа</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Inventory_Vests">
             <English>Vests</English>
@@ -146,6 +154,7 @@
             <Chinese>背心</Chinese>
             <Chinesesimp>背心</Chinesesimp>
             <Turkish>Yelekler</Turkish>
+            <Ukrainian>Жилети</Ukrainian>
         </Key>
     </Package>
 </Project>

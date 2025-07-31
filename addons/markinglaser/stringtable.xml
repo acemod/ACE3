@@ -11,6 +11,7 @@
             <Korean>적외선 마크 레이저 장착</Korean>
             <Japanese>IR マーキング レーザーを装備</Japanese>
             <Chinesesimp>装备红外标记激光</Chinesesimp>
+            <Ukrainian>Оснащення ІЧ-маркувальним лазером</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markinglaser_Attribute_Enabled_Tooltip">
             <English>Equips the aircraft's main turret or pilot camera with an IR marking laser.</English>
@@ -22,6 +23,7 @@
             <Korean>항공기의 주포탑이나 조종사 카메라에 적외선 마크 레이저를 장착합니다.</Korean>
             <Japanese>航空機のメイン タレットまたはパイロット カメラに IR マーキング レーザーを装備させます。</Japanese>
             <Chinesesimp>为飞行器的主炮塔或飞行员摄像头装备红外标记激光</Chinesesimp>
+            <Ukrainian>Оснащує головну турель літака або камеру пілота інфрачервоним маркувальним лазером.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markinglaser_Flashing">
             <English>Blinking</English>
@@ -33,6 +35,7 @@
             <Korean>깜빡이기</Korean>
             <Japanese>点滅</Japanese>
             <Chinesesimp>闪烁</Chinesesimp>
+            <Ukrainian>Блимаючий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markinglaser_Name">
             <English>IR marking laser</English>
@@ -44,6 +47,7 @@
             <Korean>적외선 마크 레이저</Korean>
             <Japanese>IR マーキング レーザー</Japanese>
             <Chinesesimp>红外标记激光</Chinesesimp>
+            <Ukrainian>ІЧ-лазер для маркування</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markinglaser_Setting_Enabled_Description">
             <English>Enables the usage of IR marking lasers for aircraft.</English>
@@ -55,6 +59,7 @@
             <Korean>항공기에 적외선 마크 레이저 사용을 활성화합니다.</Korean>
             <Japanese>航空機用 IR マーキング レーザーの使用を有効化します。</Japanese>
             <Chinesesimp>允许使用飞行器的红外标记激光</Chinesesimp>
+            <Ukrainian>Дозволяє використовувати інфрачервоні маркувальні лазери для літаків.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markinglaser_Setting_Enabled_DisplayName">
             <English>Enable IR marking lasers for aircraft</English>
@@ -66,6 +71,7 @@
             <Korean>항공기에 적외선 마크 레이저 활성화</Korean>
             <Japanese>航空機用 IR マーキング レーザーを有効化</Japanese>
             <Chinesesimp>启用飞行器的红外标记激光</Chinesesimp>
+            <Ukrainian>Увімкнути ІЧ-лазерів для маркування повітряних суден</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markinglaser_ToggleLaser">
             <English>Toggle IR marking laser</English>
@@ -77,6 +83,7 @@
             <Korean>적외선 마크 레이저 전환</Korean>
             <Japanese>IR マーキング レーザーを切り替え</Japanese>
             <Chinesesimp>切换红外标记激光</Chinesesimp>
+            <Ukrainian>Перемикання ІЧ-маркувального лазера</Ukrainian>
         </Key>
     </Package>
 </Project>

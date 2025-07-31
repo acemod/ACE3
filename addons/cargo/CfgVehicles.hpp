@@ -2,9 +2,7 @@ class CBA_Extended_EventHandlers;
 
 class CfgVehicles {
     class Logic;
-    class Module_F: Logic {
-        class ModuleDescription;
-    };
+    class Module_F: Logic {};
     class ACE_Module: Module_F {};
     class ACE_moduleCargoSettings: ACE_Module {
         scope = 1;

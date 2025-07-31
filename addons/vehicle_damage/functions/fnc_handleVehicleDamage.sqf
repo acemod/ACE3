@@ -7,7 +7,7 @@
  * 0: Vehicle <OBJECT>
  * 1: Hit point <STRING>
  * 2: Hit index <NUMBER>
- * 3: Selection <STIRNG>
+ * 3: Selection <STRING>
  * 4: Added damage to part <NUMBER>
  * 5: Projectile <OBJECT>
  * 6: Source of damage <OBJECT>
@@ -63,29 +63,32 @@ if (isNil "_type") exitWith {
 // Ignore multiple hits at the same time
 private _ignoreHit = false;
 private _ignoreBailCheck = false;
-private _multHit = _vehicle getVariable [QGVAR(hitTime), nil];
+private _multHit = _vehicle getVariable [QGVAR(hitTime), createHashMap];
 
-if (isNil "_multHit") then {
-    _vehicle setVariable [QGVAR(hitTime), [CBA_missionTime, _source, [_hitPoint]]];
+private _key = format ["%1:%2", _projectile, _source];
+
+if !(_key in _multHit) then {
+    _multHit set [_key, [CBA_missionTime, [_hitPoint]]];
 } else {
-    private _hitPointInOldArray = _hitPoint in (_multHit select 2);
-    private _withinTime = (CBA_missionTime <= (_multHit select 0) + CONST_TIME) && {_source == (_multHit select 1)};
+    private _stateArray = _multHit get _key;
+    _stateArray params ["_lastHitTime", "_hitArray"];
+    private _hitPointInOldArray = _hitPoint in _hitArray;
+    private _withinTime = CBA_missionTime <= _lastHitTime + CONST_TIME;
 
     if (_hitPointInOldArray && _withinTime) then {
         _ignoreHit = true;
     } else {
         // If the hitpoint isnt in the old array then that means that the time expired and a new array should be generated
         if (_hitPointInOldArray) then {
-            _vehicle setVariable [QGVAR(hitTime), [CBA_missionTime, _source, [_hitPoint]]];
+            _multHit set [_key, [CBA_missionTime, [_hitPoint]]];
         } else {
-            private _oldHitPoints = _multHit select 2;
-            _oldHitPoints pushBack _hitPoint;
-            _vehicle setVariable [QGVAR(hitTime), [CBA_missionTime, _source, _oldHitPoints]];
-
+            _hitArray pushBack _hitPoint;
+            _multHit set [_key, [CBA_missionTime, _hitArray]];
             _ignoreBailCheck = true;
         };
     };
 };
+_vehicle setVariable [QGVAR(hitTime), _multHit];
 
 if (_ignoreHit && !_structural) exitWith {
     TRACE_3("ignoring multiple hits done to vehicle",_vehicle,_source,_hitPoint);

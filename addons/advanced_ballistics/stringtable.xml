@@ -17,6 +17,7 @@
             <Chinesesimp>该模块实现增强的弹道模拟—子弹的轨迹由空气温度、大气压力、湿度、重力、弹药类型和射击的武器等变量所影响</Chinesesimp>
             <Turkish>Bu modül gelişmiş balistik simülasyonunu etkinleştirir - yani mermilerin gidişatını hava sıcaklığı, atmosfer basıncı, nem, yerçekimi, mühimmat türü ve ateşlendiği silah gibi durumlar etkiler.</Turkish>
             <Hungarian>Ez a modul engedélyezi a fejlett ballisztikai szimulációt - a lövedékek röppályáját befolyásolni fogja a levegő hőmérséklete, légnyomás, páratartalom, gravitáció, a lövedék fajtája, valamint a fegyver, amiből kilőtték a lövedéket.</Hungarian>
+            <Ukrainian>Цей модуль охоплює симуляцію розширеної балістики - водночас на траєкторію польоту снаряда впливають різні параметри, як-от температура повітря, атмосферний тиск, вологість, гравітація, тип боєприпасу і зброї, з якої зробили постріл.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_DisplayName">
             <English>Advanced Ballistics</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>进阶弹道系统</Chinesesimp>
             <Turkish>Gelişmiş Balistik</Turkish>
             <Hungarian>Fejlett ballisztika</Hungarian>
+            <Ukrainian>Розширена балістика</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ProtractorKey">
             <English>Show Protractor</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>显示量角器</Chinesesimp>
             <Turkish>Açı Ölçeri Göster</Turkish>
             <Hungarian>Szögmérő mutatása</Hungarian>
+            <Ukrainian>Показати транспортир</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_WindInfoKey">
             <English>Show Wind Info</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>显示风况</Chinesesimp>
             <Turkish>Rüzgar bilgilerini göster</Turkish>
             <Hungarian>Széladatok mutatása</Hungarian>
+            <Ukrainian>Показати інформацію про вітер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ammoTemperatureEnabled_Description">
             <English>Muzzle velocity varies with ammo temperature</English>
@@ -85,6 +89,7 @@
             <Chinesesimp>子弹初速将随弹药温度而有所变化</Chinesesimp>
             <Turkish>Mermi çıkış hızı cephane sıcaklığına göre değişir</Turkish>
             <Hungarian>A kezdősebesség a lőszer hőmérsékletétől függően változó</Hungarian>
+            <Ukrainian>Початкова швидкість кулі залежить від температури</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ammoTemperatureEnabled_DisplayName">
             <English>Enable Ammo Temperature Simulation</English>
@@ -102,6 +107,7 @@
             <Chinesesimp>启用弹药温度模拟系统</Chinesesimp>
             <Turkish>Cephane Sıcaklık Simülasyonunu Etkinleştir</Turkish>
             <Hungarian>Lőszer-hő szimuláció engedélyezése</Hungarian>
+            <Ukrainian>Симуляція температури для боєприпасів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_barrelLengthInfluenceEnabled_Description">
             <English>Muzzle velocity varies with barrel length</English>
@@ -119,6 +125,7 @@
             <Chinesesimp>子弹初速将随枪管长度而有所变化</Chinesesimp>
             <Turkish>Mermi çıkış hızı namlu uzunluğuna göre değişir</Turkish>
             <Hungarian>A kezdősebesség a cső hosszától függően változó</Hungarian>
+            <Ukrainian>Початкова швидкість кулі залежить від довжини ствола</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_barrelLengthInfluenceEnabled_DisplayName">
             <English>Enable Barrel Length Simulation</English>
@@ -136,6 +143,7 @@
             <Chinesesimp>启用枪管长度模拟系统</Chinesesimp>
             <Turkish>Namlu Uzunluğu Simülasyonunu Etkinleştir</Turkish>
             <Hungarian>Csőhossz-szimuláció engedélyezése</Hungarian>
+            <Ukrainian>Симуляція довжини ствола</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_bulletTraceEnabled_Description">
             <English>Enables a bullet trace effect to high caliber bullets (only visible when looking through high power optics)</English>
@@ -153,6 +161,7 @@
             <Chinesesimp>给大口径子弹启用子弹尾迹效果（只有透过高倍率光学瞄镜才能看到）</Chinesesimp>
             <Turkish>Yüksek kalibreli mermilere mermi izleme efekti sağlar (yalnızca yüksek güçlü optiklerden bakıldığında görülebilir)</Turkish>
             <Hungarian>Engedélyezi a nagy kaliberű lövedékek nyomának vizuális követését (csak nagy teljesítményű optikán keresztül látható)</Hungarian>
+            <Ukrainian>Включає ефект слідів куль для великих калібрів (видно тільки через потужну оптику)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_bulletTraceEnabled_DisplayName">
             <English>Enable Bullet Trace Effect</English>
@@ -170,6 +179,7 @@
             <Chinesesimp>启用子弹尾迹效果</Chinesesimp>
             <Turkish>İzli Mermi Etkisini Etkinleştir</Turkish>
             <Hungarian>Nyomkövető-effekt engedélyezése</Hungarian>
+            <Ukrainian>Сліди куль</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_enabled_Description">
             <English>Enables advanced ballistics</English>
@@ -187,6 +197,7 @@
             <Chinesesimp>启用进阶弹道系统</Chinesesimp>
             <Turkish>Gelişmiş balistiği etkinleştir</Turkish>
             <Hungarian>Engedélyezi a fejlett ballisztikát</Hungarian>
+            <Ukrainian>Вмикає розширену балістику</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_enabled_DisplayName">
             <English>Advanced Ballistics</English>
@@ -204,6 +215,7 @@
             <Chinesesimp>进阶弹道系统</Chinesesimp>
             <Turkish>Gelişmiş Balistik</Turkish>
             <Hungarian>Fejlett ballisztika</Hungarian>
+            <Ukrainian>Розширена балістика</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_muzzleVelocityVariationEnabled_Description">
             <English>Simulates slight variations in muzzle velocity between each shot</English>
@@ -220,6 +232,7 @@
             <Chinese>模擬每發子彈的槍口初速都略有不同</Chinese>
             <Chinesesimp>模拟每发子弹的枪口初速都略有不同</Chinesesimp>
             <Turkish>Her atış arasında namlu çıkış hızındaki küçük değişiklikleri simüle eder</Turkish>
+            <Ukrainian>Імітує невеликі зміни початкової швидкості під час кожного пострілу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_muzzleVelocityVariationEnabled_DisplayName">
             <English>Enable Muzzle Velocity Variation</English>
@@ -236,6 +249,7 @@
             <Chinese>啟用槍口初速變化</Chinese>
             <Chinesesimp>启用枪口初速变化</Chinesesimp>
             <Turkish>Namlu Hızı Değişimini Etkinleştir</Turkish>
+            <Ukrainian>Увімкнути варіацію початкової швидкості</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulationInterval_Description">
             <English>Defines the interval between each calculation step</English>
@@ -252,6 +266,7 @@
             <Chinese>定義每個模擬計算之間的時間間隔</Chinese>
             <Chinesesimp>定义每个计算步骤之间的间隔</Chinesesimp>
             <Hungarian>Meghatározza a számítási lépések közötti időintervallumot</Hungarian>
+            <Ukrainian>Визначає часовий інтервал між обчисленнями</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulationInterval_DisplayName">
             <English>Simulation Interval</English>
@@ -268,6 +283,7 @@
             <Chinese>模擬間隔</Chinese>
             <Chinesesimp>模拟间隔</Chinesesimp>
             <Hungarian>Szimuláció intervalluma</Hungarian>
+            <Ukrainian>Інтервал симуляції</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulationRadius_Description">
             <English>Defines the radius around the player (in meters) at which advanced ballistics are applied to projectiles</English>
@@ -285,6 +301,7 @@
             <Chinesesimp>定义玩家周围的半径（米），在这个半径内，进阶弹道系统会被启用</Chinesesimp>
             <Turkish>Mermilere gelişmiş balistik uygulandığı oyuncunun etrafındaki yarıçapı (metre cinsinden) tanımlar</Turkish>
             <Hungarian>Meghatározza a játékos körüli hatókört (méterben), ahol a lövedékek fejlett ballisztikát használnak</Hungarian>
+            <Ukrainian>Визначає радіус навколо гравця (у метрах), у якому розширена балістика застосовується до снарядів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulationRadius_DisplayName">
             <English>Simulation Radius</English>
@@ -302,6 +319,7 @@
             <Chinesesimp>模拟半径</Chinesesimp>
             <Turkish>Similasyon Yarıçapı</Turkish>
             <Hungarian>Szimuláció hatóköre</Hungarian>
+            <Ukrainian>Радіус симуляції</Ukrainian>
         </Key>
     </Package>
 </Project>
