@@ -13,6 +13,11 @@ class CfgPatches {
     };
 };
 
+class RscText;
+class RscEdit;
+class RscButton;
+class RscPicture;
+
 #include "ACE_GuidanceConfig.hpp"
 
 #include "CfgMissileTypesNato.hpp"
