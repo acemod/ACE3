@@ -1,8 +1,8 @@
 #include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
- * Author: Alganthe, johnb43, LinkIsGrim
- * Fills left panel.
+ * Author: Alganthe, johnb43, LinkIsGrim (Modified for tree view only)
+ * Fills left panel with tree view.
  *
  * Arguments:
  * 0: Arsenal display <DISPLAY>
@@ -47,14 +47,14 @@ if (_animate) then {
     _ctrlPanel ctrlCommit FADE_DELAY;
 };
 
-_ctrlPanel lbSetCurSel -1;
+_ctrlPanel tvSetCurSel [];
 // Purge old data
-lbClear _ctrlPanel;
+tvClear _ctrlPanel;
 
-// For every left tab except faces and voices, add "Empty" entry
+// For every left tab except faces and voices, add "Empty" entry as root node
 if !(_ctrlIDC in [IDC_buttonFace, IDC_buttonVoice]) then {
-    private _addEmpty = _ctrlPanel lbAdd format [" <%1>", localize "str_empty"];
-    _ctrlPanel lbSetValue [_addEmpty, -1];
+    private _emptyIndex = _ctrlPanel tvAdd [[], format [" <%1>", localize "str_empty"]];
+    _ctrlPanel tvSetData [[_emptyIndex], ""];
 };
 
 // Don't reset the current right panel for weapons, binos and containers
@@ -63,7 +63,7 @@ if !(_idxVirt in [IDX_VIRT_PRIMARY_WEAPONS, IDX_VIRT_SECONDARY_WEAPONS, IDX_VIRT
 };
 GVAR(currentLeftPanel) = _ctrlIDC;
 
-// Add items to the listbox
+// Add items to the tree
 private _selectedItem = if (_idxVirt != -1) then { // Items
     private _configParent = switch (_idxVirt) do {
         case IDX_VIRT_GOGGLES: {"CfgGlasses"};
@@ -77,41 +77,45 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
         keys (GVAR(virtualItems) get _idxVirt)
     };
 
-    {
-        [_configParent, _x, _ctrlPanel] call FUNC(addListBoxItem);
-    } forEach _items;
+    // Use tree structure for item organization - always grouped
+    [_configParent, _items, _ctrlPanel] call FUNC(fillLeftPanelGrouped);
 
     GVAR(currentItems) select _idxVirt
 } else { // Special cases
     switch (_ctrlIDC) do {
         // Faces
         case IDC_buttonFace: {
-            private _lbAdd = -1; // micro-optimization
-            // Faces need to be added like this because their config path is
-            // configFile >> "CfgFaces" >> face category >> className
+            // Faces need special handling - create a simple group structure
+            private _rootIndex = _ctrlPanel tvAdd [[], "Faces"];
+            _ctrlPanel tvSetData [[_rootIndex], "GROUP_Faces"];
+            _ctrlPanel tvExpand [_rootIndex];
+            
             {
                 _y params ["_displayName", "_modPicture"];
-                _lbAdd = _ctrlPanel lbAdd _displayName;
-                _ctrlPanel lbSetData [_lbAdd, _x];
-                _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _x]];
-                _ctrlPanel lbSetPictureRight [_lbAdd, ["", _modPicture, ""] select GVAR(enableModIcons)];
-            } forEach GVAR(faceCache); // HashMap, not array
+                private _itemIndex = _ctrlPanel tvAdd [[_rootIndex], _displayName];
+                _ctrlPanel tvSetData [[_rootIndex, _itemIndex], _x];
+                _ctrlPanel tvSetTooltip [[_rootIndex, _itemIndex], format ["%1\n%2", _displayName, _x]];
+                if (GVAR(enableModIcons) > 0 && {_modPicture != ""}) then {
+                    _ctrlPanel tvSetPictureRight [[_rootIndex, _itemIndex], _modPicture];
+                };
+                if ((toLowerANSI _x) in GVAR(favorites)) then {
+                    _ctrlPanel tvSetPictureColor [[_rootIndex, _itemIndex], FAVORITES_COLOR];
+                };
+            } forEach GVAR(faceCache);
 
             GVAR(currentFace)
         };
         // Voices
         case IDC_buttonVoice: {
-            {
-                ["CfgVoice", _x, _ctrlPanel, "icon"] call FUNC(addListBoxItem);
-            } forEach (keys GVAR(voiceCache));
+            private _voiceItems = keys GVAR(voiceCache);
+            ["CfgVoice", _voiceItems, _ctrlPanel, "icon"] call FUNC(fillLeftPanelGrouped);
 
             GVAR(currentVoice)
         };
         // Insignia
         case IDC_buttonInsignia: {
-            {
-                ["CfgUnitInsignia", _x, _ctrlPanel, "texture", _y] call FUNC(addListBoxItem);
-            } forEach GVAR(insigniaCache);
+            private _insigniaItems = keys GVAR(insigniaCache);
+            ["CfgUnitInsignia", _insigniaItems, _ctrlPanel, "texture"] call FUNC(fillLeftPanelGrouped);
 
             GVAR(currentInsignia)
         };
@@ -129,17 +133,34 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
 // Sort
 [_display, _control, _display displayCtrl IDC_sortLeftTab, _display displayCtrl IDC_sortLeftTabDirection] call FUNC(fillSort);
 
-// Try to select previously selected item again, otherwise select first item ("Empty")
+// Try to select previously selected item again, otherwise select first item
 if (_selectedItem != "") then {
-    private _index = 0;
-
-    for "_lbIndex" from 0 to (lbSize _ctrlPanel) - 1 do {
-        if ((_ctrlPanel lbData _lbIndex) == _selectedItem) exitWith {
-            _index = _lbIndex;
+    private _found = false;
+    private _groupCount = _ctrlPanel tvCount [];
+    
+    // Search through all groups and items to find the selected item
+    for "_groupIndex" from 0 to (_groupCount - 1) do {
+        if (_found) exitWith {};
+        
+        private _itemCount = _ctrlPanel tvCount [_groupIndex];
+        for "_itemIndex" from 0 to (_itemCount - 1) do {
+            private _itemPath = [_groupIndex, _itemIndex];
+            if ((_ctrlPanel tvData _itemPath) == _selectedItem) exitWith {
+                _ctrlPanel tvSetCurSel _itemPath;
+                _found = true;
+            };
         };
     };
-
-    _ctrlPanel lbSetCurSel _index;
+    
+    // If not found, select empty entry or first available item
+    if (!_found) then {
+        if (_groupCount > 0) then {
+            _ctrlPanel tvSetCurSel [0];
+        };
+    };
 } else {
-    _ctrlPanel lbSetCurSel 0;
+    // Select the empty entry or first group
+    if ((_ctrlPanel tvCount []) > 0) then {
+        _ctrlPanel tvSetCurSel [0];
+    };
 };

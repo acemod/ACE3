@@ -80,6 +80,15 @@ GVAR(statsInfo) = [true, controlNull, nil, nil];
 GVAR(currentActionPage) = 0;
 GVAR(actionsInfo) = [controlNull, nil, nil];
 
+// Initialize tree-specific caches
+if (isNil {uiNamespace getVariable QGVAR(itemGroupCache)}) then {
+    uiNamespace setVariable [QGVAR(itemGroupCache), createHashMap];
+};
+
+if (isNil {uiNamespace getVariable QGVAR(classGroupCache)}) then {
+    uiNamespace setVariable [QGVAR(classGroupCache), createHashMap];
+};
+
 // Update current item list
 call FUNC(updateCurrentItemsList);
 
@@ -240,9 +249,14 @@ if (GVAR(selectedWeaponType) == -1) then {
     GVAR(selectedWeaponType) = 0; // default to primary
 };
 
+//--------------- Initialize grouping controls BEFORE filling the panel
+GVAR(groupingEnabled) = profileNamespace getVariable [QGVAR(groupingEnabled), true];
+GVAR(groupingMethod) = profileNamespace getVariable [QGVAR(groupingMethod), 0]; // 0 = By Mod, 1 = By Class
+
 private _leftPanelIDC = [IDC_buttonPrimaryWeapon, IDC_buttonSecondaryWeapon, IDC_buttonHandgun, IDC_buttonBinoculars] select GVAR(selectedWeaponType);
 
 [_display, _display displayCtrl _leftPanelIDC] call FUNC(fillLeftPanel);
+
 
 //--------------- Init camera
 if (isNil QGVAR(cameraPosition)) then {

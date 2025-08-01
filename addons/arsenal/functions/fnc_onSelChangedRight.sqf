@@ -2,11 +2,11 @@
 #include "..\defines.hpp"
 /*
  * Author: Alganthe, johnb43
- * Handles selection changes on the right panel.
+ * Handles selection changes on the right panel (supports tree and listbox controls).
  *
  * Arguments:
  * 0: Right panel control <CONTROL>
- * 1: Right panel selection <NUMBER>
+ * 1: Selection data <ANY> - Tree path array for tree controls, index for listbox controls
  *
  * Return Value:
  * None
@@ -14,12 +14,12 @@
  * Public: No
 */
 
-params ["_control", "_curSel"];
+params ["_control", "_selectionPath"];
 
-if (_curSel < 0) exitWith {};
+if (count _selectionPath == 0) exitWith {};
 
 private _display = ctrlParent _control;
-private _item = _control lbData _curSel;
+private _item = ["getData", _control, [_selectionPath]] call FUNC(controlInterface);
 private _currentItemsIndex = IDX_CURR_PRIMARY_WEAPON_ITEMS + ([IDC_buttonPrimaryWeapon, IDC_buttonSecondaryWeapon, IDC_buttonHandgun, IDC_buttonBinoculars] find GVAR(currentLeftPanel));
 private _itemIndex = [IDC_buttonMuzzle, IDC_buttonItemAcc, IDC_buttonOptic, IDC_buttonBipod, IDC_buttonCurrentMag, IDC_buttonCurrentMag2] find GVAR(currentRightPanel);
 
@@ -64,7 +64,7 @@ switch (_currentItemsIndex) do {
         (getUnitLoadout GVAR(center) select IDX_LOADOUT_PRIMARY_WEAPON) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
         GVAR(currentItems) set [IDX_CURR_PRIMARY_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine param [0, ""], _secondaryMagazine param [0, ""]]];
 
-        [_display, _control, _curSel, configFile >> ["CfgWeapons", "CfgMagazines"] select (_itemIndex >= 4) >> _item] call FUNC(itemInfo);
+        [_display, _control, _selectionPath, configFile >> ["CfgWeapons", "CfgMagazines"] select (_itemIndex >= 4) >> _item] call FUNC(itemInfo);
     };
     // Secondary weapon
     case IDX_CURR_SECONDARY_WEAPON_ITEMS: {
@@ -121,7 +121,7 @@ switch (_currentItemsIndex) do {
             GVAR(currentItems) set [IDX_CURR_SECONDARY_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine param [0, ""], _secondaryMagazine param [0, ""]]];
         };
 
-        [_display, _control, _curSel, configFile >> ["CfgWeapons", "CfgMagazines"] select (_itemIndex >= 4) >> _item] call FUNC(itemInfo);
+        [_display, _control, _selectionPath, configFile >> ["CfgWeapons", "CfgMagazines"] select (_itemIndex >= 4) >> _item] call FUNC(itemInfo);
     };
     // Handgun weapon
     case IDX_CURR_HANDGUN_WEAPON_ITEMS: {
@@ -161,7 +161,7 @@ switch (_currentItemsIndex) do {
         (getUnitLoadout GVAR(center) select IDX_LOADOUT_HANDGUN_WEAPON) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
         GVAR(currentItems) set [IDX_CURR_HANDGUN_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine param [0, ""], _secondaryMagazine param [0, ""]]];
 
-        [_display, _control, _curSel, configFile >> ["CfgWeapons", "CfgMagazines"] select (_itemIndex >= 4) >> _item] call FUNC(itemInfo);
+        [_display, _control, _selectionPath, configFile >> ["CfgWeapons", "CfgMagazines"] select (_itemIndex >= 4) >> _item] call FUNC(itemInfo);
     };
     // Binoculars
     case IDX_CURR_BINO_ITEMS: {
@@ -201,7 +201,7 @@ switch (_currentItemsIndex) do {
         (getUnitLoadout GVAR(center) select IDX_LOADOUT_BINO) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
         GVAR(currentItems) set [IDX_CURR_BINO_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine param [0, ""], _secondaryMagazine param [0, ""]]];
 
-        [_display, _control, _curSel, configFile >> ["CfgWeapons", "CfgMagazines"] select (_itemIndex >= 4) >> _item] call FUNC(itemInfo);
+        [_display, _control, _selectionPath, configFile >> ["CfgWeapons", "CfgMagazines"] select (_itemIndex >= 4) >> _item] call FUNC(itemInfo);
     };
 };
 
