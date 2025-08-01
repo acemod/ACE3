@@ -524,5 +524,11 @@
             <Chinesesimp>更改UTC时间戳的时间偏移量</Chinesesimp>
             <Ukrainian>Змініть зміщення часу для мітки часу UTC</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Markers_quickNumberEnabled">
+            <English>Allow quick numbering</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_quickNumberEnabledDescription">
+            <English>Allows quick numbering by holding alt when placing a marker</English>
+        </Key>
     </Package>
 </Project>
