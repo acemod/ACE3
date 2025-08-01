@@ -1,11 +1,5 @@
 class CfgVehicles {
-    class All;
-
-    class AllVehicles: All {
-        class NewTurret;
-    };
-
-    class Air: AllVehicles {};
+    class Air;
     class Helicopter: Air {
         class Turrets {
             class MainTurret;
