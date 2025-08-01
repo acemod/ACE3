@@ -74,4 +74,5 @@ if (_active) then {
 
 // This event doesn't correspond to unconscious in statemachine
 // It's for any time a unit changes consciousness (including cardiac arrest)
+["ace_incapacitated", [_unit, _active]] call CBA_fnc_globalEvent;
 ["ace_unconscious", [_unit, _active]] call CBA_fnc_globalEvent;

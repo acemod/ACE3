@@ -92,7 +92,7 @@
     };
 }] call CBA_fnc_addClassEventHandler;
 
-["ace_unconscious", {
+["ace_incapacitated", {
     params ["_unit", "_unconscious"];
     TRACE_3("unit uncon",_unit,objectParent _unit,local _unit);
     if (!isNull objectParent _unit && {local objectParent _unit}) then {
