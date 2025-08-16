@@ -17,6 +17,7 @@
             <Chinesesimp>发出可见激光</Chinesesimp>
             <Turkish>Görünür ışık yayar.</Turkish>
             <Hungarian>Látható fényt bocsát ki.</Hungarian>
+            <Ukrainian>Випускає вузький пучок видимого світла.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Laserpointer_DisplayName">
             <English>Laser Pointer</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>激光指示器</Chinesesimp>
             <Turkish>Lazer Işaretleyici</Turkish>
             <Hungarian>Lézer-pointer</Hungarian>
+            <Ukrainian>Лазерний приціл</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Laserpointer_IRLaser">
             <English>IR Laser</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>红外线激光</Chinesesimp>
             <Turkish>IR Lazer</Turkish>
             <Hungarian>Infravörös Lézer</Hungarian>
+            <Ukrainian>ІЧ-лазер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Laserpointer_Laser">
             <English>Laser</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>激光</Chinesesimp>
             <Turkish>Lazer</Turkish>
             <Hungarian>Lézer</Hungarian>
+            <Ukrainian>Лазер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Laserpointer_green">
             <English>Laser Pointer (green)</English>
@@ -85,6 +89,7 @@
             <Chinesesimp>激光指示器（绿色）</Chinesesimp>
             <Turkish>Lazer Işaretleyici (Yeşil)</Turkish>
             <Hungarian>Lézer-pointer (zöld)</Hungarian>
+            <Ukrainian>Лазерний приціл (зелений)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Laserpointer_red">
             <English>Laser Pointer (red)</English>
@@ -102,6 +107,7 @@
             <Chinesesimp>激光指示器（红色）</Chinesesimp>
             <Turkish>Lazer Işaretleyici (Kırmızı)</Turkish>
             <Hungarian>Lézer-pointer (piros)</Hungarian>
+            <Ukrainian>Лазерний приціл (червоний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Laserpointer_switchLaserLight">
             <English>Switch Laser / IR Laser</English>
@@ -119,6 +125,7 @@
             <Chinesesimp>切换激光/红外线激光</Chinesesimp>
             <Turkish>Değiştir Lazer/IR Lazer</Turkish>
             <Hungarian>Lézer / Infravörös Lézer váltása</Hungarian>
+            <Ukrainian>Змінити режим Лазер / ІЧ-лазер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Laserpointer_useLaser">
             <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF</English>
@@ -136,6 +143,7 @@
             <Chinesesimp>&lt;t color='#9cf953'&gt;使用：&lt;/t&gt;激光开启/关闭</Chinesesimp>
             <Turkish>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF</Turkish>
             <Hungarian>&lt;t color='#9cf953'&gt;Használat: &lt;/t&gt;Lézer BE/KI kapcsolása</Hungarian>
+            <Ukrainian>&lt;t color='#9cf953'&gt;Використовувати: &lt;/t&gt;УВІМ/ВИМК лазер</Ukrainian>
         </Key>
     </Package>
 </Project>

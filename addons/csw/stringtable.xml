@@ -16,6 +16,7 @@
             <Chinese>[CSW]12.7x108毫米 重機槍彈鏈</Chinese>
             <Chinesesimp>[班组] 12.7x108 mm 重机枪弹链</Chinesesimp>
             <Turkish>[CSW] 12.7x108mm HMG Belt</Turkish>
+            <Ukrainian>[CSW] 12.7x108 мм кулеметна стрічка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_displayName">
             <English>[CSW] 12.7x99mm HMG Belt</English>
@@ -32,6 +33,7 @@
             <Chinese>[CSW]12.7x99毫米 重機槍彈鏈</Chinese>
             <Chinesesimp>[班组] 12.7x99 mm 重机枪弹链</Chinesesimp>
             <Turkish>[CSW] 12.7x99mm HMG Belt</Turkish>
+            <Ukrainian>[CSW] 12.7x99 мм кулеметна стрічка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_green_displayName">
             <English>[CSW] 12.7x99mm Tracer HMG Belt (Green)</English>
@@ -48,6 +50,7 @@
             <Chinese>[CSW] 12.7x99毫米 重機槍曳光彈鏈（綠色）</Chinese>
             <Chinesesimp>[班组] 12.7x99 mm 重机枪弹链（曳光，绿）</Chinesesimp>
             <Turkish>[CSW] 12.7x99mm Tracer HMG Belt (Green)</Turkish>
+            <Ukrainian>[CSW] 12.7x99 мм трас. кулеметна стрічка (зелені)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_red_displayName">
             <English>[CSW] 12.7x99mm Tracer HMG Belt (Red)</English>
@@ -64,6 +67,7 @@
             <Chinese>[CSW] 12.7x99毫米 重機槍曳光彈鏈（紅色）</Chinese>
             <Chinesesimp>[班组] 12.7x99 mm 重机枪弹链（曳光，红）</Chinesesimp>
             <Turkish>[CSW] 12.7x99mm Tracer HMG Belt (Red)</Turkish>
+            <Ukrainian>[CSW] 12.7x99 мм трас. кулеметна стрічка (червоні)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_yellow_displayName">
             <English>[CSW] 12.7x99mm Tracer HMG Belt (Yellow)</English>
@@ -80,6 +84,7 @@
             <Chinese>[CSW] 12.7x99毫米 重機槍曳光彈鏈（黃色）</Chinese>
             <Chinesesimp>[班组] 12.7x99 mm 重机枪弹链（曳光，黄）</Chinesesimp>
             <Turkish>[CSW] 12.7x99mm Tracer HMG Belt (Yellow)</Turkish>
+            <Ukrainian>[CSW] 12.7x99 мм трас. кулеметна стрічка (жовті)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_2b14_tube">
             <English>[CSW] 2B14 Tube Bag</English>
@@ -96,6 +101,7 @@
             <Chinese>[CSW] 2B14 炮管袋</Chinese>
             <Chinesesimp>[班组] 2B14 炮管包</Chinesesimp>
             <Turkish>[CSW] 2B14 Tube Bag</Turkish>
+            <Ukrainian>[CSW] Сумка з 2Б14 трубою</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_AssembleCSW_progressBar">
             <English>Assembling Gun...</English>
@@ -111,6 +117,7 @@
             <Japanese>火器を組み立て中です・・・</Japanese>
             <Chinese>組裝武器中...</Chinese>
             <Chinesesimp>正在组装武器...</Chinesesimp>
+            <Ukrainian>Збірка зброї...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_DisassembleCSW_displayName">
             <English>Disassemble</English>
@@ -127,6 +134,7 @@
             <Chinese>拆解</Chinese>
             <Chinesesimp>拆解</Chinesesimp>
             <Turkish>Sök</Turkish>
+            <Ukrainian>Розібрати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_DisassembleCSW_progressBar">
             <English>Disassembling Gun...</English>
@@ -142,6 +150,7 @@
             <Japanese>火器を解体中です・・・</Japanese>
             <Chinese>拆裝武器中...</Chinese>
             <Chinesesimp>正在拆卸武器...</Chinesesimp>
+            <Ukrainian>Розбирання зброї...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_GMGBelt_descriptionShort">
             <English>Caliber: 20 mm&lt;br/&gt;Rounds: 20&lt;br /&gt;Used in: Grenade Launcher</English>
@@ -158,6 +167,7 @@
             <Chinese>口徑：20 mm&lt;br/&gt;個數：20&lt;br /&gt;用於：榴彈發射器</Chinese>
             <Chinesesimp>口径：20 毫米&lt;br/&gt;容弹量：20&lt;br /&gt;用于：枪榴弹发射器</Chinesesimp>
             <Turkish>Kalibre: 20 mm&lt;br/&gt;Mermi: 20&lt;br /&gt;Kullanıldığı Yer: Bombaatar</Turkish>
+            <Ukrainian>Калібр: 20 мм&lt;br/&gt;Кількість: 20&lt;br /&gt;Застосування: гранатомет</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_GMGBelt_displayName">
             <English>[CSW] 20mm Grenade GMG Belt</English>
@@ -174,6 +184,7 @@
             <Chinese>[CSW]20毫米 榴彈 榴彈機槍彈鏈</Chinese>
             <Chinesesimp>[班组] 20 mm 榴弹发射器弹链</Chinesesimp>
             <Turkish>[CSW] 20mm Grenade GMG Belt</Turkish>
+            <Ukrainian>[CSW] Стрічка 20-мм гранат для ст. гранатомета</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_GetIn_displayName">
             <English>Get In</English>
@@ -190,6 +201,7 @@
             <Chinese>進入</Chinese>
             <Chinesesimp>进入</Chinesesimp>
             <Turkish>Bin</Turkish>
+            <Ukrainian>Увійти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_MountWeapon_displayName">
             <English>Mount Weapon</English>
@@ -205,6 +217,7 @@
             <Japanese>火器を載せる</Japanese>
             <Chinese>裝載武器</Chinese>
             <Chinesesimp>装载武器</Chinesesimp>
+            <Ukrainian>Встановити зброю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_PickupTripod_progressBar">
             <English>Picking Up Tripod...</English>
@@ -220,6 +233,7 @@
             <Japanese>三脚を回収中・・・</Japanese>
             <Chinese>撿起三腳架...</Chinese>
             <Chinesesimp>捡起三脚架...</Chinesesimp>
+            <Ukrainian>Підняття триноги...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_Pickup_displayName">
             <English>Pickup Tripod</English>
@@ -235,6 +249,7 @@
             <Japanese>三脚を拾う</Japanese>
             <Chinese>撿起三腳架</Chinese>
             <Chinesesimp>捡起三脚架</Chinesesimp>
+            <Ukrainian>Підібрати триногу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_PlaceTripod_displayName">
             <English>Place Tripod</English>
@@ -251,6 +266,7 @@
             <Chinese>設置三腳架</Chinese>
             <Chinesesimp>安放三脚架</Chinesesimp>
             <Turkish>Üçayağı Yerleştir</Turkish>
+            <Ukrainian>Розкласти триногу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_PlaceTripod_progressBar">
             <English>Placing Tripod...</English>
@@ -266,6 +282,7 @@
             <Japanese>三脚を設置中です・・・</Japanese>
             <Chinese>部署三腳架...</Chinese>
             <Chinesesimp>部署三脚架...</Chinesesimp>
+            <Ukrainian>Розміщення триноги...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAABag_displayName">
             <English>[CSW] Static Mini-Spike Launcher (AA)</English>
@@ -282,6 +299,7 @@
             <Chinese>[CSW] 固定型 "迷你長釘"導彈發射器（對空）</Chinese>
             <Chinesesimp>[班组] 固定式"迷你长钉"导弹发射器（防空）</Chinesesimp>
             <Turkish>[CSW] Static Mini-Spike Launcher (AA)</Turkish>
+            <Ukrainian>[CSW] Станковий Mini-Spike (ЗРК)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_StaticATBag_displayName">
             <English>[CSW] Static Mini-Spike Launcher (AT)</English>
@@ -298,6 +316,7 @@
             <Chinese>[CSW] 固定型 "迷你長釘"導彈發射器（對地）</Chinese>
             <Chinesesimp>[班组] 固定式"迷你长钉"导弹发射器（反坦）</Chinesesimp>
             <Turkish>[CSW] Static Mini-Spike Launcher (AT)</Turkish>
+            <Ukrainian>[CSW] Станковий Mini-Spike (ПТРК)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoGMGBag_displayName">
             <English>[CSW] Static XM307 Gun (Autonomous)</English>
@@ -314,6 +333,7 @@
             <Chinese>[CSW] 固定型 XM307榴彈機槍（自主型）</Chinese>
             <Chinesesimp>[班组] 固定式 XM307 榴弹发射器（自主）</Chinesesimp>
             <Turkish>[CSW] Static XM307 Gun (Autonomous)</Turkish>
+            <Ukrainian>[CSW] Станковий XM307 гранатомет (автономний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoHMGBag_displayName">
             <English>[CSW] Static XM312 Gun (Autonomous)</English>
@@ -330,6 +350,7 @@
             <Chinese>[CSW] 固定型 XM312重機槍（自主型）</Chinese>
             <Chinesesimp>[班组] 固定式 XM312 重机枪（自主）</Chinesesimp>
             <Turkish>[CSW] Static XM312 Gun (Autonomous)</Turkish>
+            <Ukrainian>[CSW] Станковий XM312 кулемет (автономний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_StaticGMGBag_displayName">
             <English>[CSW] Static XM307 Gun</English>
@@ -346,6 +367,7 @@
             <Chinese>[CSW] 固定型XM307榴彈機槍</Chinese>
             <Chinesesimp>[班组] 固定式 XM307 榴弹发射器</Chinesesimp>
             <Turkish>[CSW] Static XM307 Gun</Turkish>
+            <Ukrainian>[CSW] Станковий XM307 гранатомет</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_StaticHMGBag_displayName">
             <English>[CSW] Static XM312 Gun</English>
@@ -362,6 +384,7 @@
             <Chinese>[CSW] 固定型 XM312重機槍</Chinese>
             <Chinesesimp>[班组] 固定式 XM312 重机枪</Chinesesimp>
             <Turkish>[CSW] Static XM312 Gun</Turkish>
+            <Ukrainian>[CSW] Станковий XM312 кулемет</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_StaticM2ShieldBag_displayName">
             <English>[CSW] Static M2 w/ Shield</English>
@@ -376,6 +399,7 @@
             <Korean>[CSW] 거치형 M2 (방패)</Korean>
             <Japanese>[CSW] 設置型 防盾付き M2</Japanese>
             <Chinesesimp>[班组] 固定式防盾型 M2 重机枪</Chinesesimp>
+            <Ukrainian>[CSW] Станковий M2 зі щитом</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_actionLink">
             <English>Link %1</English>
@@ -391,6 +415,7 @@
             <Japanese>%1 を接続</Japanese>
             <Chinese>聯結至 %1</Chinese>
             <Chinesesimp>连接 %1</Chinesesimp>
+            <Ukrainian>З'єднати %1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_ags30_gun">
             <English>[CSW] AGS-30 Gun Bag</English>
@@ -407,6 +432,7 @@
             <Chinese>[CSW] AGS-30 槍械袋</Chinese>
             <Chinesesimp>[班组] AGS-30 枪械包</Chinesesimp>
             <Turkish>[CSW] AGS-30 Gun Bag</Turkish>
+            <Ukrainian>[CSW] Сумка з АГС-30</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_ammoHandling_description">
             <English>Allow loading and unloading magazines</English>
@@ -422,6 +448,7 @@
             <Japanese>弾薬の装填と除去を許可します。</Japanese>
             <Chinese>允許裝填或卸載彈匣</Chinese>
             <Chinesesimp>允许装卸弹匣</Chinesesimp>
+            <Ukrainian>Дозволити завантаження і розвантаження магазинів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_ammoHandling_displayName">
             <English>Ammo handling</English>
@@ -437,6 +464,7 @@
             <Japanese>弾薬の処理</Japanese>
             <Chinese>彈藥處理</Chinese>
             <Chinesesimp>弹药处置</Chinesesimp>
+            <Ukrainian>Обслуговування боєприпасів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_defaultAssemblyMode_description">
             <English>Use ACE for Assemble/Disassemble of supported static weapons. Loaded ammo is reduced to a single magazine.</English>
@@ -452,6 +480,7 @@
             <Japanese>対応している設置型火器に ACE の設置と解体を使用します。装填済みの弾倉は1つの弾倉のみに減少します。</Japanese>
             <Chinese>使用ACE來組裝/拆解固定型武器。上膛的限制為單個彈匣。</Chinese>
             <Chinesesimp>使用 ACE 来组装/拆解固定式武器。限制弹药为一个弹匣。</Chinesesimp>
+            <Ukrainian>Використовувати ACE для збирання/розбирання підтримуваної статичної зброї. Заряджені боєприпаси будуть скорочені в єдиний магазин.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_defaultAssemblyMode_displayName">
             <English>Advanced Assembly</English>
@@ -467,6 +496,7 @@
             <Japanese>高度な組み立て</Japanese>
             <Chinese>進階組裝</Chinese>
             <Chinesesimp>高级组装</Chinesesimp>
+            <Ukrainian>Розширена збірка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_displayName">
             <English>Crew Served Weapons</English>
@@ -482,6 +512,7 @@
             <Japanese>共用火器 (CSW)</Japanese>
             <Chinese>班組支援武器</Chinese>
             <Chinesesimp>班组支援武器</Chinesesimp>
+            <Ukrainian>Групове озброєння (CSW)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_dragAfterDeploy_description">
             <English>After deploying a tripod, start dragging it to a precise location</English>
@@ -497,6 +528,7 @@
             <Japanese>三脚を設置後、動かせるよう三脚を引きずるようにします。</Japanese>
             <Chinese>在部署三腳架後，開始拖動它使其在你所要的精準位置</Chinese>
             <Chinesesimp>部署好三脚架后，开始拖动它到一个精确的位置</Chinesesimp>
+            <Ukrainian>Після розгортання почати тягнути триногу на інше місце</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_dragAfterDeploy_displayName">
             <English>Drag Tripods after Deploying</English>
@@ -512,6 +544,7 @@
             <Japanese>設置後に三脚を引きずる</Japanese>
             <Chinese>在佈置三腳架後拖拉</Chinese>
             <Chinesesimp>部署后拖动三脚架</Chinesesimp>
+            <Ukrainian>Тягнути триногу після розгортання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_dshk_gun">
             <English>[CSW] DSHK Gun Bag</English>
@@ -528,6 +561,7 @@
             <Chinese>[CSW]DShK 槍械袋</Chinese>
             <Chinesesimp>[班组] DShK 枪械包</Chinesesimp>
             <Turkish>[CSW] DSHK Gun Bag</Turkish>
+            <Ukrainian>[CSW] Сумка з ДШК</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_eden_enableAndEmpty">
             <English>Enabled and Leave Weapon Empty</English>
@@ -543,6 +577,7 @@
             <Japanese>有効にして火器を空のままにする</Japanese>
             <Chinese>啟用並不裝填武器</Chinese>
             <Chinesesimp>启用并不装填武器</Chinesesimp>
+            <Ukrainian>Увімкнено і залишити зброю порожньою</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_eden_enableCSW">
             <English>Enable CSW</English>
@@ -558,6 +593,7 @@
             <Japanese>CSW 有効化</Japanese>
             <Chinese>啟用CSW(班用支援武器)</Chinese>
             <Chinesesimp>启用班组支援武器</Chinesesimp>
+            <Ukrainian>Увімкнути CSW</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_eden_enableCSW_tooltip">
             <English>Enables Crew Served ability on this weapon</English>
@@ -573,6 +609,7 @@
             <Japanese>この火器で共用火器を有効化します。</Japanese>
             <Chinese>對此武器啟用班組支援能力</Chinese>
             <Chinesesimp>在该武器上启用班组支援能力</Chinesesimp>
+            <Ukrainian>Вмикає CSW на цій зброї</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_genericTripod_displayName">
             <English>Tripod</English>
@@ -589,6 +626,7 @@
             <Chinese>三腳架</Chinese>
             <Chinesesimp>三脚架</Chinesesimp>
             <Turkish>Üçayak</Turkish>
+            <Ukrainian>Тринога</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_ammoBox">
             <English>Ammo Box</English>
@@ -602,6 +640,7 @@
             <Korean>탄약 상자</Korean>
             <Japanese>弾薬箱</Japanese>
             <Chinesesimp>弹药箱</Chinesesimp>
+            <Ukrainian>Коробка з боєприпасами</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_description">
             <English>Determines whether extra magazines are stored on the ground or inside an ammo box</English>
@@ -615,6 +654,7 @@
             <Korean>여분의 탄약을 지면 또는 탄약 상자에 넣을 지 결정합니다.</Korean>
             <Japanese>追加の弾倉を地面に直接配置するか、弾薬箱内に保管するかを設定します。</Japanese>
             <Chinesesimp>设置多余的弹夹是存放在地面上还是弹药箱内</Chinesesimp>
+            <Ukrainian>Визначає чи будуть додаткові магазини лежати на землі або всередині сховища</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_displayName">
             <English>Ammo Storage</English>
@@ -628,6 +668,7 @@
             <Korean>탄약 보관</Korean>
             <Japanese>弾薬保管位置</Japanese>
             <Chinesesimp>弹药存储</Chinesesimp>
+            <Ukrainian>Сховище боєприпасів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_weaponHolder">
             <English>Ground</English>
@@ -641,6 +682,7 @@
             <Korean>지면</Korean>
             <Japanese>地面</Japanese>
             <Chinesesimp>地面</Chinesesimp>
+            <Ukrainian>Земля</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazines_description">
             <English>Store extra magazines next to static weapon</English>
@@ -656,6 +698,7 @@
             <Japanese>追加の弾倉を固定火器の横に保管します。</Japanese>
             <Chinese>在固定型武器旁存放額外彈匣</Chinese>
             <Chinesesimp>在固定式武器旁边存放额外的弹匣</Chinesesimp>
+            <Ukrainian>Зберігати додаткові магазини поруч зі статичною зброєю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazines_displayName">
             <English>Save Extra Ammo</English>
@@ -671,6 +714,7 @@
             <Japanese>追加の弾薬を保持</Japanese>
             <Chinese>保存額外彈藥</Chinese>
             <Chinesesimp>保存额外弹药</Chinesesimp>
+            <Ukrainian>Зберегти додаткові боєприпаси</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_kordTripodFoldedLow_displayName">
             <English>[CSW] 6P57 Deployable Tripod (Low)</English>
@@ -687,6 +731,7 @@
             <Chinese>[CSW] 6P57 部署型（低位）</Chinese>
             <Chinesesimp>[班组] 6P57 部署型（低）</Chinesesimp>
             <Turkish>[CSW] 6P57 Deployable Tripod (Low)</Turkish>
+            <Ukrainian>[CSW] 6P67 Розкладна тринога (низька)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_kordTripodFolded_displayName">
             <English>[CSW] 6P57 Deployable Tripod</English>
@@ -703,6 +748,7 @@
             <Chinese>[CSW] 6P57 部署型三腳架</Chinese>
             <Chinesesimp>[班组] 6P57 部署型三脚架</Chinesesimp>
             <Turkish>[CSW] 6P57 Deployable Tripod</Turkish>
+            <Ukrainian>[CSW] 6P67 Розкладна тринога</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_kordTripod_displayName">
             <English>6P57 Tripod</English>
@@ -719,6 +765,7 @@
             <Chinese>6P57 三腳架</Chinese>
             <Chinesesimp>6P57 三脚架</Chinesesimp>
             <Turkish>6P57 Tripod</Turkish>
+            <Ukrainian>6P67 Тринога</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_kord_gun">
             <English>[CSW] KORD Gun Bag</English>
@@ -735,6 +782,7 @@
             <Chinese>[CSW] KORD 槍械袋</Chinese>
             <Chinesesimp>[班组] KORD 枪械包</Chinesesimp>
             <Turkish>[CSW] KORD Gun Bag</Turkish>
+            <Ukrainian>[CSW] Сумка з Корд</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_kornet_launcher">
             <English>[CSW] 9M113 Kornet Launcher</English>
@@ -751,6 +799,7 @@
             <Chinese>[CSW] 9M113 短號發射器</Chinese>
             <Chinesesimp>[班组] 9M113 短号发射器</Chinesesimp>
             <Turkish>[CSW] 9m113 Kornet Launcher</Turkish>
+            <Ukrainian>[CSW] Сумка з 9К135 Корнет</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_loadX">
             <English>Load %1</English>
@@ -768,6 +817,7 @@
             <Chinesesimp>装填 %1</Chinesesimp>
             <Turkish>Yükle %1</Turkish>
             <Hungarian>Load %1</Hungarian>
+            <Ukrainian>Завантажити %1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_m220TripodFolded_displayName">
             <English>[CSW] M220 Deployable Tripod</English>
@@ -784,6 +834,7 @@
             <Chinese>[CSW] M220 部署型三腳架</Chinese>
             <Chinesesimp>[班组] M220 部署型三脚架</Chinesesimp>
             <Turkish>[CSW] M220 Deployable Tripod</Turkish>
+            <Ukrainian>[CSW] M220 Розкладна тринога</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_m220Tripod_displayName">
             <English>M220 Tripod</English>
@@ -800,6 +851,7 @@
             <Chinese>M220 三腳架</Chinese>
             <Chinesesimp>M220 三脚架</Chinesesimp>
             <Turkish>M220 Tripod</Turkish>
+            <Ukrainian>M220 Тринога</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_m252_tube">
             <English>[CSW] M252 Tube Bag</English>
@@ -816,6 +868,7 @@
             <Chinese>[CSW] M252 炮管袋</Chinese>
             <Chinesesimp>[班组] M252 炮管包</Chinesesimp>
             <Turkish>[CSW] M252 Tube Bag</Turkish>
+            <Ukrainian>[CSW] Сумка з M252</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_m2_gun">
             <English>[CSW] M2 Gun Bag</English>
@@ -832,6 +885,7 @@
             <Chinese>[CSW] M2槍械袋</Chinese>
             <Chinesesimp>[班组] M2 枪械包</Chinesesimp>
             <Turkish>[CSW] M2 Gun Bag</Turkish>
+            <Ukrainian>[CSW] Сумка з M2</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_m3TripodFolded_displayName">
             <English>[CSW] M3 Deployable Tripod</English>
@@ -848,6 +902,7 @@
             <Chinese>[CSW] M3 部屬型三腳架</Chinese>
             <Chinesesimp>[班组] M3 部属型三脚架</Chinesesimp>
             <Turkish>[CSW] M3 Deployable Tripod</Turkish>
+            <Ukrainian>[CSW] M3 Розкладна тринога</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_m3TripodLowFolded_displayName">
             <English>[CSW] M3 Deployable Tripod (Low)</English>
@@ -864,6 +919,7 @@
             <Chinese>[CSW] M3 部署型三腳架（低位）</Chinese>
             <Chinesesimp>[班组] M3 部署型三脚架（低）</Chinesesimp>
             <Turkish>[CSW] M3 Deployable Tripod (Low)</Turkish>
+            <Ukrainian>[CSW] M3 Розкладна тринога (низька)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_m3Tripod_displayName">
             <English>M3 Tripod</English>
@@ -880,6 +936,7 @@
             <Chinese>M3 三腳架</Chinese>
             <Chinesesimp>M3 三脚架</Chinesesimp>
             <Turkish>M3 Tripod</Turkish>
+            <Ukrainian>Тринога M3</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_metis_tube">
             <English>[CSW] 9K115 Metis Launcher Bag</English>
@@ -896,6 +953,7 @@
             <Chinese>[CSW] 9K115 麥士蒂索人發射器袋</Chinese>
             <Chinesesimp>[班组] 9K115 麦士蒂索人反坦克发射器包</Chinesesimp>
             <Turkish>[CSW] 9k115 Metis Launcher Bag</Turkish>
+            <Ukrainian>[CSW] Сумка з установкою 9K115 Metis</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_mk19_gun">
             <English>[CSW] MK19 Gun Bag</English>
@@ -912,6 +970,7 @@
             <Chinese>[CSW] Mk19槍械袋</Chinese>
             <Chinesesimp>[班组] Mk19 枪械包</Chinesesimp>
             <Turkish>[CSW] MK19 Gun Bag</Turkish>
+            <Ukrainian>[CSW] Сумка з MK19</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_mk6MortarBag_displayName">
             <English>[CSW] Mk6 Mortar Tube</English>
@@ -928,6 +987,7 @@
             <Chinese>[CSW] Mk6 迫擊炮炮管</Chinese>
             <Chinesesimp>[班组] Mk6 迫击炮管</Chinesesimp>
             <Turkish>[CSW] Mk6 Mortar Tube</Turkish>
+            <Ukrainian>[CSW] Сумка з Mk6 трубою</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_mortarBaseplateBag_displayName">
             <English>[CSW] Mortar Baseplate</English>
@@ -944,6 +1004,7 @@
             <Chinese>[CSW] 迫擊炮基座</Chinese>
             <Chinesesimp>[班组] 迫击炮底座</Chinesesimp>
             <Turkish>[CSW] Mortar Baseplate</Turkish>
+            <Ukrainian>[CSW] Мінометна плита</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_mortarBaseplate_displayName">
             <English>Mortar Baseplate</English>
@@ -960,6 +1021,7 @@
             <Chinese>迫擊炮基座</Chinese>
             <Chinesesimp>迫击炮底座</Chinesesimp>
             <Turkish>Mortar Baseplate</Turkish>
+            <Ukrainian>Мінометна плита</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_nsv_gun">
             <English>[CSW] NSV Gun Bag</English>
@@ -976,6 +1038,7 @@
             <Chinese>[CSW] NSV 槍械袋</Chinese>
             <Chinesesimp>[班组] NSV 枪械包</Chinesesimp>
             <Turkish>[CSW] NSV Gun Bag</Turkish>
+            <Ukrainian>[CSW] Сумка з NSW</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_description">
             <English>Scales time required to assemble and reload static weapons</English>
@@ -991,6 +1054,7 @@
             <Japanese>設置型火器の設置と再装填の所要時間を管理できます。</Japanese>
             <Chinese>設置組裝及裝填組裝固定型武器</Chinese>
             <Chinesesimp>衡量组装和重新装填固定式武器所需的时间</Chinesesimp>
+            <Ukrainian>Змінює час, необхідний для складання та перезаряджання статичної зброї</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_displayName">
             <English>Interaction Time Coefficent</English>
@@ -1006,6 +1070,7 @@
             <Japanese>インタラクションの所要時間係数</Japanese>
             <Chinese>互動時間係數</Chinese>
             <Chinesesimp>交互时间系数</Chinesesimp>
+            <Ukrainian>Коеф. часу взаємодії</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_regex">
             <English>^\[CSW\]</English>
@@ -1022,6 +1087,7 @@
             <Chinese>^\[CSW\]</Chinese>
             <Chinesesimp>^\[班组\]</Chinesesimp>
             <Turkish>^\[CSW\]</Turkish>
+            <Ukrainian>^\[CSW\]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_sag30TripodFolded_displayName">
             <English>[CSW] SAG-30 Deployable Tripod</English>
@@ -1038,6 +1104,7 @@
             <Chinese>[CSW] SAG-30 部署型三腳架</Chinese>
             <Chinesesimp>[班组] SAG-30 部署型三脚架</Chinesesimp>
             <Turkish>[CSW] SAG-30 Deployable Tripod</Turkish>
+            <Ukrainian>[CSW] SAG-30 Розкладна тринога</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_sag30Tripod_displayName">
             <English>SAG-30 Tripod</English>
@@ -1054,6 +1121,7 @@
             <Chinese>SAG-30 三腳架</Chinese>
             <Chinesesimp>SAG-30 三脚架</Chinesesimp>
             <Turkish>SAG-30 Tripod</Turkish>
+            <Ukrainian>SAG-30 Тринога</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_spg9_Tripod">
             <English>SPG-9 Tripod</English>
@@ -1070,6 +1138,7 @@
             <Chinese>SPG-9 三腳架</Chinese>
             <Chinesesimp>SPG-9 三脚架</Chinesesimp>
             <Turkish>SPG-9 Tripod</Turkish>
+            <Ukrainian>SPG-9 Тринога</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_spg9_TripodFolded">
             <English>[CSW] SPG-9 Deployable Tripod</English>
@@ -1086,6 +1155,7 @@
             <Chinese>[CSW] SPG-9 部署型三腳架</Chinese>
             <Chinesesimp>[班组] SPG-9 部署型三脚架</Chinesesimp>
             <Turkish>[CSW] SPG-9 Deployable Tripod</Turkish>
+            <Ukrainian>[CSW] СПГ-9 Розкладна тринога</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_spg9_tube">
             <English>[CSW] SPG-9 Launcher Bag</English>
@@ -1102,6 +1172,7 @@
             <Chinese>[CSW] SPG-9 發射器袋</Chinese>
             <Chinesesimp>[班组] SPG-9 发射器包</Chinesesimp>
             <Turkish>[CSW] SPG-9 Launcher Bag</Turkish>
+            <Ukrainian>[CSW] Сумка з СПГ-9</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_spg9m_tube">
             <English>[CSW] SPG-9M Launcher Bag</English>
@@ -1118,6 +1189,7 @@
             <Chinese>[CSW] SPG-9M 發射器袋</Chinese>
             <Chinesesimp>[班组] SPG-9M 发射器包</Chinesesimp>
             <Turkish>[CSW] SPG-9M Launcher Bag</Turkish>
+            <Ukrainian>[CSW] Сумка з СПГ-9М</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_statTripods">
             <English>Mounts on:</English>
@@ -1128,6 +1200,7 @@
             <German>Montiert auf:</German>
             <Korean>전용 장착:</Korean>
             <Japanese>載せる対象:</Japanese>
+            <Ukrainian>Кріпиться на:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_tow_tube">
             <English>[CSW] BGM-71 TOW Launcher Bag</English>
@@ -1144,6 +1217,7 @@
             <Chinese>[CSW] BGM-71 拖式飛彈發射器袋</Chinese>
             <Chinesesimp>[班组] BGM-71 陶式导弹发射器包</Chinesesimp>
             <Turkish>[CSW] BGM-71 TOW Launcher Bag</Turkish>
+            <Ukrainian>[CSW] Сумка з BGM-71 TOW установкою</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_unloadX">
             <English>Unload %1</English>
@@ -1161,6 +1235,7 @@
             <Chinesesimp>卸载 %1</Chinesesimp>
             <Turkish>Boşalt %1</Turkish>
             <Hungarian>Unload %1</Hungarian>
+            <Ukrainian>Розвантажити %1</Ukrainian>
         </Key>
     </Package>
 </Project>

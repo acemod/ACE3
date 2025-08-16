@@ -16,6 +16,7 @@
             <Chinese>斷開</Chinese>
             <Chinesesimp>断开</Chinesesimp>
             <Turkish>Bloke Edilmiş</Turkish>
+            <Ukrainian>Заблоковано</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadedItem">
             <English>%1&lt;br/&gt;loaded into&lt;br/&gt;%2</English>
@@ -32,6 +33,7 @@
             <Chinese>%1&lt;br/&gt;裝載至&lt;br/&gt;%2</Chinese>
             <Chinesesimp>%1&lt;br/&gt;装载至&lt;br/&gt;%2</Chinesesimp>
             <Hungarian>%1&lt;br/&gt;berakodva ide:&lt;br/&gt;%2</Hungarian>
+            <Ukrainian>%1&lt;br/&gt;завантажений у&lt;br/&gt;%2</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingFailed">
             <English>%1&lt;br/&gt;could not be loaded</English>
@@ -48,6 +50,7 @@
             <Chinese>%1&lt;br/&gt;無法被裝載</Chinese>
             <Chinesesimp>%1&lt;br/&gt;无法被装载</Chinesesimp>
             <Turkish>%1&lt;br/&gt; kargo yüklenemedi</Turkish>
+            <Ukrainian>%1&lt;br/&gt;не може бути завантажений</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingItem">
             <English>Loading %1 into %2...</English>
@@ -59,6 +62,7 @@
             <Korean>%1을(를) %2에 싣는 중...</Korean>
             <Japanese>%1 を %2 に積み込んでいます・・・</Japanese>
             <Chinesesimp>正在将%1装入%2</Chinesesimp>
+            <Ukrainian>Завантажуємо %1 у %2...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable">
             <English>Enable Cargo</English>
@@ -75,6 +79,7 @@
             <Chinese>啟用貨物裝載</Chinese>
             <Chinesesimp>启用货物装载</Chinesesimp>
             <Turkish>Kargoyu Etkinleştir</Turkish>
+            <Ukrainian>Увім. модуль перевезення вантажів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename">
             <English>Enable Rename Action</English>
@@ -88,6 +93,7 @@
             <Korean>새로 명칭 짓기 행동 활성화</Korean>
             <Japanese>名前変更を有効化</Japanese>
             <Chinesesimp>启用重命名动作</Chinesesimp>
+            <Ukrainian>Увімкнути можливість перейменування</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename_Description">
             <English>Enables the rename action for renamable objects.</English>
@@ -101,6 +107,7 @@
             <Korean>개체의 명칭을 새로 짓는 것을 허가합니다.</Korean>
             <Japanese>名前変更が可能なオブジェクトに対して、名前変更アクションを有効化します。</Japanese>
             <Chinesesimp>启用可重命名物体的重命名动作。</Chinesesimp>
+            <Ukrainian>Вмикає перейменування для об'єктів, що допускають перейменування.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable_Description">
             <English>Enable the load in cargo module</English>
@@ -116,6 +123,7 @@
             <Japanese>貨物積載モジュールを有効化</Japanese>
             <Chinese>啟用貨物裝載功能</Chinese>
             <Chinesesimp>启用货物装载功能</Chinesesimp>
+            <Ukrainian>Вмикає модуль завантаження і перевезення вантажів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_ScrollAction">
             <English>Raise/Lower | (Ctrl + Scroll) Rotate</English>
@@ -131,6 +139,7 @@
             <Japanese>上げる/下げる | (Ctrl + スクロール) 回転</Japanese>
             <Chinesesimp>抬起/放低 |（Ctrl + 鼠标滚轮）旋转</Chinesesimp>
             <Turkish>Yükselt/Alçalt | (Ctrl + Tekerlek) Döndür</Turkish>
+            <Ukrainian>Підняти/опустити | (Ctrl + Скрол) Крутити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_Description">
             <English>Configure the cargo module settings</English>
@@ -146,6 +155,7 @@
             <Japanese>貨物モジュールの設定を変更します</Japanese>
             <Chinese>配置貨物模塊設定</Chinese>
             <Chinesesimp>配置货物模块设定</Chinesesimp>
+            <Ukrainian>Конфігурує налаштування модуля перевезення вантажів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_DisplayName">
             <English>Cargo Settings</English>
@@ -162,6 +172,7 @@
             <Chinese>貨物設定</Chinese>
             <Chinesesimp>货物设定</Chinesesimp>
             <Turkish>Kargo Ayarları</Turkish>
+            <Ukrainian>Перевезення вантажів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_SizeMenu">
             <English>Cargo Size: %1</English>
@@ -173,6 +184,7 @@
             <Korean>화물 크기: %1</Korean>
             <Japanese>貨物の大きさ: %1</Japanese>
             <Chinesesimp>货物大小: %1</Chinesesimp>
+            <Ukrainian>Розмір вантажу: %1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadedItem">
             <English>Unloaded&lt;br/&gt;%1 from&lt;br/&gt;%2</English>
@@ -189,6 +201,7 @@
             <Chinese>從&lt;br/&gt;%2卸載&lt;br/&gt;%1</Chinese>
             <Chinesesimp>从&lt;br/&gt;%2卸载&lt;br/&gt;%1</Chinesesimp>
             <Hungarian>1%&lt;br/&gt;kirakodva ebből:&lt;br/&gt;%2</Hungarian>
+            <Ukrainian>%1&lt;br/&gt; Вивантажено з&lt;br/&gt;%2</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingFailed">
             <English>%1&lt;br/&gt;could not be unloaded</English>
@@ -205,6 +218,7 @@
             <Chinese>%1&lt;br/&gt;無法被卸載</Chinese>
             <Chinesesimp>%1&lt;br/&gt;无法被卸载</Chinesesimp>
             <Turkish>%1&lt;br/&gt; kargo boşaltılamadı</Turkish>
+            <Ukrainian>%1&lt;br/&gt;не може бути вивантажений</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingImpossible">
             <English>Can't be unloaded</English>
@@ -216,6 +230,7 @@
             <Korean>하역할 수가 없습니다</Korean>
             <Japanese>荷降ろし不可能です</Japanese>
             <Chinesesimp>无法被卸载</Chinesesimp>
+            <Ukrainian>Не може бути вивантажений</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingItem">
             <English>Unloading %1 from %2...</English>
@@ -227,6 +242,7 @@
             <Korean>%1을(를) %2(으)로부터 내리는 중...</Korean>
             <Japanese>%1 を %2 から降ろしています・・・</Japanese>
             <Chinesesimp>正在将%1从%2中卸载</Chinesesimp>
+            <Ukrainian>Вивантажуємо %1 з %2...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_cargoMenu">
             <English>Cargo Menu</English>
@@ -243,6 +259,7 @@
             <Chinese>貨物選單</Chinese>
             <Chinesesimp>货物菜单</Chinesesimp>
             <Turkish>Kargo Menüsü</Turkish>
+            <Ukrainian>Вантажний відсік</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_carryAfterUnload">
             <English>Carry After Unload</English>
@@ -255,6 +272,7 @@
             <German>Nach dem Entladen tragen</German>
             <Korean>화물 내린 후 운반</Korean>
             <Japanese>荷降ろし後に持ち運ぶ</Japanese>
+            <Ukrainian>Нести після вивантаження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_carryAfterUnload_description">
             <English>Controls whether cargo items are carried or dragged after unloading.</English>
@@ -268,6 +286,7 @@
             <Korean>화물 아이템을 내린 후 들거나 끌지 여부를 결정합니다.</Korean>
             <Japanese>荷降ろし後、貨物を運ぶか引きずるかを制御する。</Japanese>
             <Chinesesimp>货物被卸载后被拿起或是被拖拽</Chinesesimp>
+            <Ukrainian>Чи потрібно переносити або тягнути предмети після їхнього вивантаження.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_checkSize">
             <English>Check Cargo Size</English>
@@ -278,6 +297,7 @@
             <Korean>화물 크기 확인</Korean>
             <Japanese>貨物の大きさを確認</Japanese>
             <Chinesesimp>检查货物尺寸</Chinesesimp>
+            <Ukrainian>Перевірити розмір вантажу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_checkSizeInteraction">
             <English>Show Check Cargo Size Interaction</English>
@@ -288,6 +308,7 @@
             <Korean>화물 크기 확인 상호작용 표시</Korean>
             <Japanese>貨物の大きさを確認のインタラクションを表示</Japanese>
             <Chinesesimp>显示检查货物尺寸选项</Chinesesimp>
+            <Ukrainian>Увімкнути перевірку розміру вантажу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_clearedCustomName">
             <English>Custom name has been cleared.</English>
@@ -301,6 +322,7 @@
             <Korean>임의로 지은 명칭을 지웠습니다.</Korean>
             <Japanese>カスタム名が削除されました。</Japanese>
             <Chinesesimp>自定义名称已被清除。</Chinesesimp>
+            <Ukrainian>Користувацьку назву видалено.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenDesc">
             <English>Set a custom cargo name used in the cargo interface.</English>
@@ -314,6 +336,7 @@
             <Korean>화물 인터페이스에 쓰일 화물의 명칭을 설정합니다.</Korean>
             <Japanese>貨物インターフェイスで使用されるカスタム名を設定します。</Japanese>
             <Chinesesimp>设置货物界面中使用的一个自定义货物名称。</Chinesesimp>
+            <Ukrainian>Встановити користувацьке ім'я вантажу, що використовується в інтерфейсі звантаження.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenName">
             <English>Custom Name</English>
@@ -327,6 +350,7 @@
             <Korean>임의 명칭</Korean>
             <Japanese>カスタム名</Japanese>
             <Chinesesimp>自定义名称</Chinesesimp>
+            <Ukrainian>Власна назва</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_deployObject">
             <English>Deploy</English>
@@ -338,6 +362,7 @@
             <Korean>배치하기</Korean>
             <Japanese>配置する</Japanese>
             <Chinesesimp>部署</Chinesesimp>
+            <Ukrainian>Розмістити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_enableDeploy">
             <English>Enable deploy</English>
@@ -349,6 +374,7 @@
             <Korean>배치 활성화</Korean>
             <Japanese>配置機能を有効化</Japanese>
             <Chinesesimp>启用部署</Chinesesimp>
+            <Ukrainian>Включити розміщення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_enableDeploy_description">
             <English>Controls whether cargo items can be unloaded via the deploy method.</English>
@@ -360,6 +386,7 @@
             <Korean>배치 방법을 통해 화물 아이템을 내릴 수 있는지 여부를 제어합니다.</Korean>
             <Japanese>配置機能を介して貨物アイテムを降ろすことが出来るかどうかを制御します。</Japanese>
             <Chinesesimp>是否允许使用部署选项卸载货物</Chinesesimp>
+            <Ukrainian>Визначає, чи можна вивантажувати вантажі за допомогою методу розміщення.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_labelSpace">
             <English>Cargo space left: %1</English>
@@ -376,6 +403,7 @@
             <Chinese>貨物剩餘空間: %1</Chinese>
             <Chinesesimp>货物剩余空间：%1</Chinesesimp>
             <Turkish>Kargo Alanı Kaldı: %1</Turkish>
+            <Ukrainian>Залишилося місць: %1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_loadObject">
             <English>Load</English>
@@ -392,6 +420,7 @@
             <Chinese>裝載</Chinese>
             <Chinesesimp>装载</Chinesesimp>
             <Turkish>Yükle</Turkish>
+            <Ukrainian>Завантажити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient">
             <English>Load Time Coefficient</English>
@@ -407,6 +436,7 @@
             <Japanese>積載の所要時間係数</Japanese>
             <Chinese>裝載時間係數</Chinese>
             <Chinesesimp>装载时间系数</Chinesesimp>
+            <Ukrainian>Коеф. часу завантаження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient_description">
             <English>Modifies how long it takes to load/unload items.\nTime, in seconds, is the size of the item multiplied by this value.</English>
@@ -422,6 +452,7 @@
             <Japanese>貨物の積み込み/積み下ろしに掛かる時間を変更します。\n時間 (秒単位) は、貨物の大きさにこの値を掛けたものです。</Japanese>
             <Chinese>修改要花多長時間來裝載/卸載物品。\n時間，以秒為單位，而物品的大小數值與這個係數成比。</Chinese>
             <Chinesesimp>修改装载/卸载物体所需的时间。\n时间，单位：秒，物体的大小乘以该系数值。</Chinesesimp>
+            <Ukrainian>Змінює час для завантаження/вивантаження предметів. \пЧас (сек) - це розмір предмета, помножений на це значення.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_openAfterUnload">
             <English>Reopen Cargo Menu</English>
@@ -436,6 +467,7 @@
             <Japanese>貨物メニューを再度開く</Japanese>
             <Chinesesimp>重新打开货物菜单</Chinesesimp>
             <Turkish>Kargo Menüsünü Tekrar Aç</Turkish>
+            <Ukrainian>Перевідкрити меню завантаження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_openAfterUnload_description">
             <English>Reopen the Cargo Menu after successful unload.</English>
@@ -450,6 +482,7 @@
             <Japanese>貨物を降ろした後に再び貨物メニューを開きます。</Japanese>
             <Chinesesimp>成功卸货后，重新打开货物菜单。</Chinesesimp>
             <Turkish>Başarılı bir yük indirmeden sonra Kargo Menüsünü tekrar göster.</Turkish>
+            <Ukrainian>Перевідкрити меню завантаження після успішного вивантаження.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
@@ -466,6 +499,7 @@
             <Chinese>貨物</Chinese>
             <Chinesesimp>货物</Chinesesimp>
             <Turkish>Kargo</Turkish>
+            <Ukrainian>Вантажний відсік</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropButton">
             <English>Airdrop</English>
@@ -481,6 +515,7 @@
             <Japanese>空中投下</Japanese>
             <Chinese>空投</Chinese>
             <Chinesesimp>空投</Chinesesimp>
+            <Ukrainian>Десантування вантажу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent">
             <English>Paradrop Time Coefficient</English>
@@ -496,6 +531,7 @@
             <Japanese>空中投下の所要時間係数</Japanese>
             <Chinese>空投時間係數</Chinese>
             <Chinesesimp>空投时间系数</Chinesesimp>
+            <Ukrainian>Коеф. часу десантування</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent_description">
             <English>Modifier for how long it takes to paradrop a cargo item.</English>
@@ -511,6 +547,7 @@
             <Japanese>貨物の空中投下に掛かる時間を変更します。</Japanese>
             <Chinese>設定空投所需消耗的時間</Chinese>
             <Chinesesimp>设定空投所需消耗的时间。</Chinesesimp>
+            <Ukrainian>Модифікатор часу, необхідного для десантування вантажу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_renameObjectUI">
             <English>Set New Name:</English>
@@ -524,6 +561,7 @@
             <Korean>새로운 명칭 설정:</Korean>
             <Japanese>新しい名前:</Japanese>
             <Chinesesimp>设定新名称：</Chinesesimp>
+            <Ukrainian>Задати нову назву:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_renamedObject">
             <English>Renamed to:&lt;br/&gt;%1</English>
@@ -537,6 +575,7 @@
             <Korean>%1(으)로 명칭을 바꿈</Korean>
             <Japanese>名前を次に変更:&lt;br/&gt;%1</Japanese>
             <Chinesesimp>重命名为：&lt;br/&gt;%1</Chinesesimp>
+            <Ukrainian>Перейменовано в:&lt;br/&gt;%1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenDesc">
             <English>The cargo space required to hold this object (-1 for not loadable)</English>
@@ -552,6 +591,7 @@
             <Japanese>このオブジェクトの積載に必要な貨物室の容量 (-1 で積載不可に)</Japanese>
             <Chinese>此貨物會佔掉多少空間(設定-1的話此貨物就不能被裝載)</Chinese>
             <Chinesesimp>此货物会占掉多少空间（设定 -1 的话此货物就不能被装载）</Chinesesimp>
+            <Ukrainian>Вантажний простір, необхідний для розміщення цього об'єкта (-1 для незавантажуваного)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenName">
             <English>Cargo Size</English>
@@ -568,6 +608,7 @@
             <Chinese>貨物的大小</Chinese>
             <Chinesesimp>货物的大小</Chinesesimp>
             <Turkish>Kargo Boyutu</Turkish>
+            <Ukrainian>Розмір вантажу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenDesc">
             <English>The cargo space available in this vehicle/container</English>
@@ -583,6 +624,7 @@
             <Japanese>この車両/コンテナで使用可能な貨物室の容量</Japanese>
             <Chinese>設定此載具/集裝箱可裝載多少貨物</Chinese>
             <Chinesesimp>设定此载具/集装箱可装载多少货物</Chinesesimp>
+            <Ukrainian>Вантажний простір, доступний у цьому транспортному засобі / контейнері</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenName">
             <English>Cargo Space</English>
@@ -599,6 +641,7 @@
             <Chinese>貨物空間</Chinese>
             <Chinesesimp>货物空间</Chinesesimp>
             <Turkish>Kargo Alanı</Turkish>
+            <Ukrainian>Вантажний простір</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_unlevelFlightWarning">
             <English>Unlevel Flight</English>
@@ -614,6 +657,7 @@
             <Japanese>機体が水平ではありません</Japanese>
             <Chinese>此架飛機並無保持水平飛行</Chinese>
             <Chinesesimp>此架飞机并无保持水平飞行</Chinesesimp>
+            <Ukrainian>Невідповідне положення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_unloadObject">
             <English>Unload</English>
@@ -630,6 +674,13 @@
             <Chinese>卸載</Chinese>
             <Chinesesimp>卸载</Chinesesimp>
             <Turkish>Boşalt</Turkish>
+            <Ukrainian>Вивантажити</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Cargo_unloadOnKilled">
+            <English>Unload Cargo On Killed</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_unloadOnKilled_description">
+            <English>The chance for each cargo loaded into a vehicle to be unloaded if the vehicle is killed.\nApplies to objects only.</English>
         </Key>
     </Package>
 </Project>

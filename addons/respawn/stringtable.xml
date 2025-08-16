@@ -16,6 +16,7 @@
             <Chinese>屍體移除計時器</Chinese>
             <Chinesesimp>尸体移除计时器</Chinesesimp>
             <Turkish>Bedenin Silinme Süresi</Turkish>
+            <Ukrainian>Час видалення трупів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_Deploy">
             <English>Deploy in 5 seconds...</English>
@@ -32,6 +33,7 @@
             <Chinese>5秒後完成佈署...</Chinese>
             <Chinesesimp>5秒后完成部署...</Chinesesimp>
             <Hungarian>Kihelyezés 5 másodperc múlva...</Hungarian>
+            <Ukrainian>Відродження через 5 секунд...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_Deployed">
             <English>Rallypoint deployed</English>
@@ -48,6 +50,7 @@
             <Chinese>集合點佈署完成</Chinese>
             <Chinesesimp>集合点部署完成</Chinesesimp>
             <Hungarian>Gyülekezőpont elhelyezve</Hungarian>
+            <Ukrainian>Місце збору встановлено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_DisplayName">
             <English>Respawn</English>
@@ -64,6 +67,7 @@
             <Chinese>重生</Chinese>
             <Chinesesimp>重生</Chinesesimp>
             <Turkish>Yeniden Doğma</Turkish>
+            <Ukrainian>Відродження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_EditorCategory">
             <English>ACE Respawn</English>
@@ -81,6 +85,7 @@
             <Chinesesimp>ACE 重生</Chinesesimp>
             <Turkish>ACE Yeniden Doğma</Turkish>
             <Hungarian>ACE Respawn</Hungarian>
+            <Ukrainian>ACE Відродження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_FriendlyFire_Module_Description">
             <English>Using this module in your mission will make it so any friendly fire kills will be displayed in form of a message in chat.</English>
@@ -96,6 +101,7 @@
             <Japanese>ミッションでこのモジュールを使用すると、誤射による友軍キルがチャット上のメッセージとして表示されるようになります。</Japanese>
             <Chinese>擺放此模塊後，當有發生友軍誤擊致死的事件，會顯示提示訊息在聊天視窗中</Chinese>
             <Chinesesimp>摆放此模块后，当有发生友军误击致死的事件，会显示提示信息在聊天视窗中。</Chinesesimp>
+            <Ukrainian>Відображає повідомлення в чаті, у разі, коли вбивають союзних гравців. У доповіді вказується, хто стріляв, у кого. Хто кого вбив.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_FriendlyFire_Module_DisplayName">
             <English>Friendly Fire Messages</English>
@@ -112,6 +118,7 @@
             <Chinese>友軍誤擊訊息</Chinese>
             <Chinesesimp>友军误击信息</Chinesesimp>
             <Hungarian>Baráti tűz üzenetek</Hungarian>
+            <Ukrainian>Повідомлення про вогонь по своїм</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_Description">
             <English>This module enables you to configure ACE functionality specific to respawns.</English>
@@ -127,6 +134,7 @@
             <Japanese>このモジュールを使用すると、リスポーンに ACE 固有の機能を設定できます。</Japanese>
             <Chinese>該模塊使您可以設定ACE的重生功能</Chinese>
             <Chinesesimp>该模块使您可以设定 ACE 的重生功能</Chinesesimp>
+            <Ukrainian>Цей модуль дає змогу налаштувати систему відродження.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_DisplayName">
             <English>Respawn System</English>
@@ -143,6 +151,7 @@
             <Chinese>重生系統</Chinese>
             <Chinesesimp>重生系统</Chinesesimp>
             <Hungarian>Respawn-rendszer</Hungarian>
+            <Ukrainian>Відродження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointEast">
             <English>Rallypoint East</English>
@@ -159,6 +168,7 @@
             <Chinese>紅方集合點</Chinese>
             <Chinesesimp>红方集合点</Chinesesimp>
             <Hungarian>Gyülekezőpont, Kelet</Hungarian>
+            <Ukrainian>Точка збору Червоних</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointEastBase">
             <English>Rallypoint East (Base)</English>
@@ -175,6 +185,7 @@
             <Chinese>紅方集合點 (基地)</Chinese>
             <Chinesesimp>红方集合点（基地）</Chinesesimp>
             <Hungarian>Gyülekezőpont, Kelet (Bázis)</Hungarian>
+            <Ukrainian>Точка збору Червоних (База)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointIndependent">
             <English>Rallypoint Independent</English>
@@ -191,6 +202,7 @@
             <Chinese>獨立方集合點</Chinese>
             <Chinesesimp>独立方集合点</Chinesesimp>
             <Hungarian>Gyülekezőpont, Független</Hungarian>
+            <Ukrainian>Точка збору Незалежних</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointIndependentBase">
             <English>Rallypoint Independent (Base)</English>
@@ -207,6 +219,7 @@
             <Chinese>獨立方集合點 (基地)</Chinese>
             <Chinesesimp>独立方集合点（基地）</Chinesesimp>
             <Hungarian>Gyülekezőpont, Független (Bázis)</Hungarian>
+            <Ukrainian>Точка збору Незалежних (База)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointWest">
             <English>Rallypoint West</English>
@@ -223,6 +236,7 @@
             <Chinese>藍方集合點</Chinese>
             <Chinesesimp>蓝方集合点</Chinesesimp>
             <Hungarian>Gyülekezőpont, Nyugat</Hungarian>
+            <Ukrainian>Точка збору Синіх</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointWestBase">
             <English>Rallypoint West (Base)</English>
@@ -239,6 +253,7 @@
             <Chinese>藍方集合點 (基地)</Chinese>
             <Chinesesimp>蓝方集合点（基地）</Chinesesimp>
             <Hungarian>Gyülekezőpont, Nyugat (Bázis)</Hungarian>
+            <Ukrainian>Точка збору Синіх (база)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_Rallypoint_Module_Description">
             <English>This module allows you to use rally points in missions, to which you can quickly teleport from base flag. Requires placing special objects on map - base and flag. Both available in category Empty -&gt; ACE Respawn.</English>
@@ -254,6 +269,7 @@
             <Japanese>このモジュールを使用すると、ミッションでラリーポイントを使用できるようになります。ラリーポイントには、ベース旗からすばやくテレポートできます。マップ上に特別なラリー/ベース旗オブジェクトを配置する必要があります。両オブジェクトは道具カテゴリ下の看板サブカテゴリ内、旗から設置できます。 -&gt; ACE リスポーン</Japanese>
             <Chinese>擺放此模塊後，你將能在任務中佈署集合點，使你可以快速往返基地與前線。要使用本功能，請記得放上空物件-&gt;ACE 重生裡面的基地與旗幟</Chinese>
             <Chinesesimp>摆放此模块后，你将能在任务中部署集合点，使你可以快速往返基地与前线。要使用本功能，请记得放上空物体-&gt;ACE 重生里面的基地与旗帜。</Chinesesimp>
+            <Ukrainian>Цей модуль дає змогу вам вказати місце збору, куди ви можете швидко телепортуватися з "бази". Потрібна наявність відповідних об'єктів на мапі - бази і прапора. Вони можуть бути знайдені в категорії Порожньо -&gt; ACE Відродження.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_Rallypoint_Module_DisplayName">
             <English>Rallypoint System</English>
@@ -270,6 +286,7 @@
             <Chinese>集合點系統</Chinese>
             <Chinesesimp>集合点系统</Chinesesimp>
             <Hungarian>Gyülekezőpont-rendszer</Hungarian>
+            <Ukrainian>Система точок збору</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_Rallypoint_MoveRallypoint">
             <English>Move Rallypoint</English>
@@ -286,6 +303,7 @@
             <Chinese>移動集合點</Chinese>
             <Chinesesimp>移动集合点</Chinesesimp>
             <Hungarian>Gyülekezőpont mozgatása</Hungarian>
+            <Ukrainian>Перемістити точку сбору</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_Description">
             <English>Remove player bodies after disconnect?</English>
@@ -302,6 +320,7 @@
             <Chinese>要刪除已離線的玩家屍體嗎?</Chinese>
             <Chinesesimp>要删除已离线的玩家尸体吗？</Chinesesimp>
             <Hungarian>Játékosi testek eltávolítása távozás után?</Hungarian>
+            <Ukrainian>Видаляти трупи гравців після дисконекту?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_DisplayName">
             <English>Remove bodies?</English>
@@ -319,6 +338,7 @@
             <Chinesesimp>删除尸体？</Chinesesimp>
             <Turkish>Bedeni Sil ?</Turkish>
             <Hungarian>Holttestek eltávolítása?</Hungarian>
+            <Ukrainian>Видаляти трупи?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_SavePreDeathGear_Description">
             <English>Respawn with the gear a soldier had just before his death?</English>
@@ -335,6 +355,7 @@
             <Chinese>是否在重生時載入死亡前的裝備?</Chinese>
             <Chinesesimp>是否在重生时载入死亡前的装备？</Chinesesimp>
             <Hungarian>Az egység halála előtti felszerelésével való respawnolása?</Hungarian>
+            <Ukrainian>Відроджувати солдата з тим самим спорядженням, яке було на ньому при смерті?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_SavePreDeathGear_DisplayName">
             <English>Save Gear?</English>
@@ -352,6 +373,7 @@
             <Chinesesimp>储存装备？</Chinesesimp>
             <Turkish>Kıyafetleri Kaydet?</Turkish>
             <Hungarian>Felszerelés elmentése?</Hungarian>
+            <Ukrainian>Зберігати спорядження?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportToBase">
             <English>Teleport to Base</English>
@@ -369,6 +391,7 @@
             <Chinesesimp>传送至基地</Chinesesimp>
             <Turkish>Üsse Işınlan</Turkish>
             <Hungarian>Bázisra teleportálás</Hungarian>
+            <Ukrainian>Телепортуватися на базу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportToRallypoint">
             <English>Teleport to Rallypoint</English>
@@ -385,6 +408,7 @@
             <Chinese>傳送至集合點</Chinese>
             <Chinesesimp>传送至集合点</Chinesesimp>
             <Hungarian>Gyülekezőpontra teleportálás</Hungarian>
+            <Ukrainian>Телепортуватися на точку сбору</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportedToBase">
             <English>Teleported to Base</English>
@@ -402,6 +426,7 @@
             <Chinesesimp>已传送至基地</Chinesesimp>
             <Turkish>Üsse Işınlan</Turkish>
             <Hungarian>Bázisra teleportálva</Hungarian>
+            <Ukrainian>Вас було телепортовано на базу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportedToRallypoint">
             <English>Teleported to Rallypoint</English>
@@ -418,6 +443,7 @@
             <Chinese>已傳送至集合點</Chinese>
             <Chinesesimp>已传送至集合点</Chinesesimp>
             <Hungarian>Gyülekezőpontra teleportálva</Hungarian>
+            <Ukrainian>Вас було телепортовано на точку збору</Ukrainian>
         </Key>
     </Package>
 </Project>

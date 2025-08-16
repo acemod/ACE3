@@ -17,6 +17,7 @@
             <Chinesesimp>修改流血速度</Chinesesimp>
             <Turkish>Kanama hızını kontrol etme katsayısı.</Turkish>
             <Hungarian>Egy szorzó a vérzés sebességének szabályozására</Hungarian>
+            <Ukrainian>Коефіцієнт, що змінює швидкість втрати крові</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Status_BleedingCoefficient_DisplayName">
             <English>Bleeding Coefficient</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>流血系数</Chinesesimp>
             <Turkish>Kanama Katsayısı</Turkish>
             <Hungarian>Vérzési koefficiens</Hungarian>
+            <Ukrainian>Коеф. крововтрати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChance_Description">
             <English>Chance for a player to drop their weapon when going unconscious.\nHas no effect on AI.</English>
@@ -47,6 +49,7 @@
             <Korean>플레이어가 기절할 때 무기를 떨어뜨릴 확률입니다.\nAI는 영향을 받지 않습니다.</Korean>
             <Japanese>プレーヤーが意識を失ったときに武器を落とす可能性。\nAI には影響しません。</Japanese>
             <Chinesesimp>玩家在进入昏迷时把武器扔地上的概率\n对AI无效</Chinesesimp>
+            <Ukrainian>Шанс для гравця упустити свою зброю, коли він втрачає свідомість.\nНе впливає на ШІ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChance_DisplayName">
             <English>Weapon Drop Chance</English>
@@ -60,6 +63,7 @@
             <Korean>무기 떨어뜨릴 확률</Korean>
             <Japanese>武器を落とす確率</Japanese>
             <Chinesesimp>丢失武器概率</Chinesesimp>
+            <Ukrainian>Шанс випадання зброї</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Status_IvFlowRate_Description">
             <English>Controls how quickly fluid flows out of IV Bags. The IV Bag volume change is calculated as:\ntime interval (s) * iv change per second (4.1667 mL/s) * flow rate (this coefficient).</English>
@@ -76,6 +80,7 @@
             <Chinese>控制從點滴輸入人體的液體流量多快。點滴的體積更改是以\n時間間隔（單位秒）乘上點滴每秒速度（4.1667毫升/秒）乘上流量（該係數）。</Chinese>
             <Chinesesimp>控制从点滴输入人体的液体流量多快。静脉输液袋容积变化的计算方法是：\n时间间隔（秒）x点滴每秒速度（4.1667毫升/秒）x流量（该系数）。</Chinesesimp>
             <Turkish>IV Torbalardan sıvının ne kadar hızlı aktığını kontrol eder. IV Torba hacim değişikliği şu şekilde hesaplanır: zaman aralıkları iv saniye başına değişim (4.1667 mL / s) akış hızı (bu katsayı).</Turkish>
+            <Ukrainian>Визначає, наскільки швидко подіють ефекти внутрішньовенного переливання як:\часовий інтервал (s) * зміна внутрішньовенного вливання за секунду (4,1667 мл/с) * швидкість потоку (цей коефіцієнт).</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Status_IvFlowRate_DisplayName">
             <English>IV Transfusion Flow Rate</English>
@@ -92,6 +97,7 @@
             <Chinese>點滴輸血流量</Chinese>
             <Chinesesimp>点滴输血流量</Chinesesimp>
             <Turkish>IV Transfüzyon Akış Hızı</Turkish>
+            <Ukrainian>Швидкість внутрішньовенного переливання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Status_PainCoefficient_Description">
             <English>Coefficient for controlling the intensity of pain adjustments.</English>
@@ -109,6 +115,7 @@
             <Chinesesimp>修改疼痛强度的系数</Chinesesimp>
             <Turkish>Ağrı ayarlamalarının yoğunluğunu kontrol etmek için katsayı.</Turkish>
             <Hungarian>Egy szorzó a fájdalom erősségének szabályozására</Hungarian>
+            <Ukrainian>Коефіцієнт, що змінює рівень болю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Status_PainCoefficient_DisplayName">
             <English>Pain Coefficient</English>
@@ -126,6 +133,7 @@
             <Chinesesimp>疼痛系数</Chinesesimp>
             <Turkish>Ağrı Katsayısı</Turkish>
             <Hungarian>Fájdalmi koefficiens</Hungarian>
+            <Ukrainian>Коеф. болю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Status_SubCategory">
             <English>Status</English>
@@ -142,6 +150,7 @@
             <Chinese>狀態</Chinese>
             <Chinesesimp>状态</Chinesesimp>
             <Turkish>Durum</Turkish>
+            <Ukrainian>Статус</Ukrainian>
         </Key>
     </Package>
 </Project>

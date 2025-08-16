@@ -17,6 +17,7 @@
             <Chinesesimp>ACE 手势</Chinesesimp>
             <Turkish>ACE Hareketleri</Turkish>
             <Hungarian>ACE Kézjelek</Hungarian>
+            <Ukrainian>ACE Жести</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gestures_Advance">
             <English>Advance</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>前进</Chinesesimp>
             <Turkish>Ilerle</Turkish>
             <Hungarian>Előre</Hungarian>
+            <Ukrainian>Просуватися</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gestures_CeaseFire">
             <English>Cease Fire</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>停火</Chinesesimp>
             <Turkish>Ateşi durdur</Turkish>
             <Hungarian>Tüzet szüntess</Hungarian>
+            <Ukrainian>Припинити вогонь</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gestures_Cover">
             <English>Cover</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>掩护</Chinesesimp>
             <Turkish>Mevzi Al</Turkish>
             <Hungarian>Fedezékbe</Hungarian>
+            <Ukrainian>Сховатися</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gestures_Engage">
             <English>Engage</English>
@@ -84,6 +88,7 @@
             <Chinese>交戰</Chinese>
             <Chinesesimp>交战</Chinesesimp>
             <Turkish>Tut</Turkish>
+            <Ukrainian>Відкрити вогонь</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gestures_Follow">
             <English>Follow</English>
@@ -101,6 +106,7 @@
             <Chinesesimp>跟进</Chinesesimp>
             <Turkish>Takip Et</Turkish>
             <Hungarian>Utánam</Hungarian>
+            <Ukrainian>Слідувати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gestures_Forward">
             <English>Move forward</English>
@@ -117,6 +123,7 @@
             <Chinese>往前走</Chinese>
             <Chinesesimp>往前走</Chinesesimp>
             <Turkish>Ileri Git</Turkish>
+            <Ukrainian>Вперед</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gestures_Freeze">
             <English>Freeze</English>
@@ -134,6 +141,7 @@
             <Chinesesimp>不准动</Chinesesimp>
             <Turkish>Don</Turkish>
             <Hungarian>Állj</Hungarian>
+            <Ukrainian>Завмерти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gestures_Gestures">
             <English>Gestures</English>
@@ -151,6 +159,7 @@
             <Chinesesimp>手势</Chinesesimp>
             <Turkish>Hareketler</Turkish>
             <Hungarian>Kézjelek</Hungarian>
+            <Ukrainian>Жести</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gestures_Go">
             <English>Go</English>
@@ -168,6 +177,7 @@
             <Chinesesimp>出发</Chinesesimp>
             <Turkish>Git</Turkish>
             <Hungarian>Mozgás</Hungarian>
+            <Ukrainian>Іти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gestures_Hold">
             <English>Hold</English>
@@ -184,6 +194,7 @@
             <Chinese>停住</Chinese>
             <Chinesesimp>停住</Chinesesimp>
             <Turkish>Dur</Turkish>
+            <Ukrainian>Чекати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gestures_JustKeybinds">
             <English>Just Keybinds</English>
@@ -200,6 +211,7 @@
             <Chinese>只利用鍵盤</Chinese>
             <Chinesesimp>只利用键盘</Chinesesimp>
             <Turkish>Sadece Tuş Atamaları</Turkish>
+            <Ukrainian>Тільки гарячі клавіші</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gestures_KeysAndInteractionMenu">
             <English>Keybinds + Interaction Menu</English>
@@ -216,6 +228,7 @@
             <Chinese>鍵盤 + 互動選單</Chinese>
             <Chinesesimp>键盘 + 互动菜单</Chinesesimp>
             <Turkish>Tuş Atamaları + Etkileşim Menüsü</Turkish>
+            <Ukrainian>Клавіші + Меню взаємодії</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gestures_Name">
             <English>ACE Gestures</English>
@@ -233,6 +246,7 @@
             <Chinesesimp>ACE 手势</Chinesesimp>
             <Turkish>ACE Hareketleri</Turkish>
             <Hungarian>ACE Kézjelek</Hungarian>
+            <Ukrainian>ACE Жести</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gestures_Point">
             <English>Point</English>
@@ -249,6 +263,7 @@
             <Chinese>指出</Chinese>
             <Chinesesimp>指出</Chinesesimp>
             <Turkish>Nokta</Turkish>
+            <Ukrainian>Показати напрямок</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gestures_Regroup">
             <English>Rally up</English>
@@ -265,6 +280,7 @@
             <Chinese>集合</Chinese>
             <Chinesesimp>集合</Chinesesimp>
             <Turkish>Toplan</Turkish>
+            <Ukrainian>Зібратися</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gestures_ShowOnInteractionMenu_description">
             <English>Show gestures on the self interaction menu, or just use keybinds, or disable completely</English>
@@ -281,6 +297,7 @@
             <Chinese>顯示手勢選項在自己的互動選單上，或只利用鍵盤來使用手勢，或完全禁用</Chinese>
             <Chinesesimp>显示手势选项在自己的互动菜单上，或只利用键盘来使用手势，或完全禁用</Chinesesimp>
             <Turkish>Kendi kendine etkileşim menüsünde hareketleri göster veya sadece tuş atamaları kullan veya tamamen devre dışı bırak.</Turkish>
+            <Ukrainian>Показати жести в меню взаємодії з собою або тільки використовувати гарячі клавіші, або повністю відключити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gestures_ShowOnInteractionMenu_displayName">
             <English>Show Gestures On Interaction Menu</English>
@@ -297,6 +314,7 @@
             <Chinese>顯示手勢互動選單</Chinese>
             <Chinesesimp>显示手势互动菜单</Chinesesimp>
             <Turkish>Hareketleri Etkileşim Menüsünde Göster</Turkish>
+            <Ukrainian>Показати жести в меню взаємодії</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gestures_Stop">
             <English>Stop</English>
@@ -313,6 +331,7 @@
             <Chinese>停止</Chinese>
             <Chinesesimp>停止</Chinesesimp>
             <Turkish>Dur</Turkish>
+            <Ukrainian>Стоп</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gestures_Up">
             <English>Up</English>
@@ -330,6 +349,7 @@
             <Chinesesimp>起立</Chinesesimp>
             <Turkish>Yukarı</Turkish>
             <Hungarian>Fel</Hungarian>
+            <Ukrainian>Вгору</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gestures_Warning">
             <English>Warning</English>
@@ -346,6 +366,7 @@
             <Chinese>警告</Chinese>
             <Chinesesimp>警告</Chinesesimp>
             <Turkish>Uyarı</Turkish>
+            <Ukrainian>Увага</Ukrainian>
         </Key>
     </Package>
 </Project>

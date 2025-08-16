@@ -25,8 +25,8 @@ class CfgWeapons {
     class US85_Launcher_AT;
     class US85_MachinegunBase_5_56;
     class US85_MachinegunBase_7_62;
-    class US85_weaponBase;
 
+    // class US85_weaponBase;
     // class US85_M16_base: US85_weaponBase {};
 
     class US85_M249: US85_MachinegunBase_5_56 {

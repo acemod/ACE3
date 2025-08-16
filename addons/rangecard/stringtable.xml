@@ -17,6 +17,7 @@
             <Chinesesimp>复制射表</Chinesesimp>
             <Turkish>Menzil Kartını Kopyala</Turkish>
             <Hungarian>Távolsági kártya másolása</Hungarian>
+            <Ukrainian>Скопіювати таблицю поправок</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RangeCard_Description">
             <English>50 METER increments -- MRAD/MRAD (reticle/turrets)</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>50米增量 -- 毫弧度/毫弧度（瞄镜分划线/调整纽）</Chinesesimp>
             <Turkish>50 METER increments -- MRAD/MRAD (reticle/turrets)</Turkish>
             <Hungarian>50 MÉTERES lépések - MRAD/MRAD (célzó/lövegek)</Hungarian>
+            <Ukrainian>Крок 50 МЕТРІВ - MRAD/MRAD (сітка/маховички)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RangeCard_Name">
             <English>Range Card</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>射表</Chinesesimp>
             <Turkish>Menzil Kartı</Turkish>
             <Hungarian>Távolsági kártya</Hungarian>
+            <Ukrainian>Таблиця поправок</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RangeCard_OpenRangeCard">
             <English>Open Range Card</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>开启射表</Chinesesimp>
             <Turkish>Menzil Kartını Aç</Turkish>
             <Hungarian>Távolsági kártya kinyitása</Hungarian>
+            <Ukrainian>Відкрити таблицю поправок</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RangeCard_OpenRangeCardCopy">
             <English>Open Range Card Copy</English>
@@ -85,6 +89,7 @@
             <Chinesesimp>开启射表副本</Chinesesimp>
             <Turkish>Menzil Kartının Kopyasını Aç</Turkish>
             <Hungarian>Távolsági kártya-másolat kinyitása</Hungarian>
+            <Ukrainian>Відкрити копію таблиці поправок</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RangeCard_RangeCardCopyDialogKey">
             <English>Open Range Card Copy</English>
@@ -102,6 +107,7 @@
             <Chinesesimp>开启射表副本</Chinesesimp>
             <Turkish>Menzil Kartının Kopyasını Aç</Turkish>
             <Hungarian>Távolsági kártya-másolat kinyitása</Hungarian>
+            <Ukrainian>Відкрити копію таблиці поправок</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RangeCard_RangeCardDialogKey">
             <English>Open Range Card</English>
@@ -119,6 +125,7 @@
             <Chinesesimp>开启射表</Chinesesimp>
             <Turkish>Menzil Kartını Aç</Turkish>
             <Hungarian>Távolsági kártya kinyitása</Hungarian>
+            <Ukrainian>Відкрити таблицю поправок</Ukrainian>
         </Key>
     </Package>
 </Project>
