@@ -42,7 +42,7 @@ class CfgVehicles {
                     exceptions[] = {"isNotInside", "isNotSitting"};
                     statement = "true";
                     showDisabled = 0;
-                    insertChildren = QUOTE(_player call FUNC(getConsumableChildren));
+                    insertChildren = QUOTE([ARR_2(_player,_target)] call FUNC(getConsumableChildren));
                     icon = QPATHTOF(UI\pour_water_ca.paa);
                 };
             };
@@ -70,7 +70,7 @@ class CfgVehicles {
                     exceptions[] = {"isNotInside", "isNotSitting"};
                     statement = "true";
                     showDisabled = 0;
-                    insertChildren = QUOTE(_player call FUNC(getConsumableChildren));
+                    insertChildren = QUOTE([ARR_2(_player,_target)] call FUNC(getConsumableChildren));
                     icon = QPATHTOF(UI\pour_water_ca.paa);
                 };
             };

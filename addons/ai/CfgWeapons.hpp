@@ -69,7 +69,6 @@ class CfgWeapons {
             midRangeProbab = 0.3; // 0.5;
         };
 
-        class FullAuto;
         class fullauto_medium: fullauto_medium {
             minRange = 20;       // 2;
             burst = "3 + round random 5"; //3;
@@ -684,10 +683,6 @@ class CfgWeapons {
     class MMG_01_base_F: Rifle_Long_Base_F {
         modes[] += {"ACE_Burst_far"};
 
-        class manual;
-        class burst;
-        class close;
-        class short;
         class medium;
         class ACE_Burst_far: medium {
             aiRateOfFire = 6.0;
@@ -700,17 +695,11 @@ class CfgWeapons {
             maxRangeProbab = 0.2;
             burst = "3 + round random 5";
         };
-
-        class far_optic1;
-        class far_optic2;
     };
 
     class MMG_02_base_F: Rifle_Long_Base_F {
         modes[] += {"ACE_Burst_far"};
 
-        class manual;
-        class close;
-        class short;
         class medium;
         class ACE_Burst_far: medium {
             aiRateOfFire = 6.0;
@@ -723,8 +712,5 @@ class CfgWeapons {
             maxRangeProbab = 0.2;
             burst = "3 + round random 5";
         };
-
-        class far_optic1;
-        class far_optic2;
     };
 };
