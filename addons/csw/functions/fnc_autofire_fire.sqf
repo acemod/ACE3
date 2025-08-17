@@ -32,7 +32,7 @@ if (_fireMode isEqualTo "") then {
             _needsPropogate = true;
             private _defaultModes = getArray (configFile >> "CfgWeapons" >> _muzzle >> "modes");
             TRACE_3("setting default mode",_csw,_muzzle,_defaultModes);
-            if (_defaultMode isEqualTo []) exitWith { "" };
+            if (_defaultModes isEqualTo []) exitWith { "" };
             _defaultModes select 0
         },
         true
