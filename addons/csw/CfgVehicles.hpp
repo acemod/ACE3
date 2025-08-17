@@ -1,7 +1,7 @@
 class CfgVehicles {
     class Man;
     class CAManBase: Man {
-        class ACE_SelfActions: ACE_SelfActions {
+        class ACE_SelfActions {
             class ADDON {
                 displayName = CSTRING(AddonName_Short);
                 condition = QUOTE(call FUNC(isModEnabled));
@@ -32,7 +32,7 @@ class CfgVehicles {
         EGVAR(dragging,canCarry) = 1;
         EGVAR(dragging,carryPosition)[] = {0, 2, 0};
 
-        class ACE_Actions: ACE_Actions {
+        class ACE_Actions {
             class ADDON {
                 displayName = CSTRING(AddonName_Short);
                 condition = QUOTE(call FUNC(isModEnabled));
@@ -133,8 +133,8 @@ class CfgVehicles {
     // Static Weapons:
     class LandVehicle;
     class StaticWeapon: LandVehicle {
-        class ACE_Actions: ACE_Actions {
-            class ACE_MainActions: ACE_MainActions {
+        class ACE_Actions {
+            class ACE_MainActions {
                 class ADDON {
                     displayName = CSTRING(AddonName_Short);
                     condition = QUOTE(call FUNC(isModEnabled));
