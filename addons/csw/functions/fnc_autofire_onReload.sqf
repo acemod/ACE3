@@ -20,6 +20,10 @@ params ["_csw", "_reloadedWeapon", "_reloadedMuzzle"];
 private _autofire = _csw getVariable [QGVAR(autofire), false];
 TRACE_5("csw reloaded",_csw,_reloadedWeapon,_autofire,gunner _csw,local gunner _csw);
 
+private _init = _csw getVariable [QGVAR(initialising), false];
+TRACE_1("init check",_init);
+if (_init) exitWith {};
+
 if !(_autofire) exitWith {};
 TRACE_1("autofiring",_csw);
 
