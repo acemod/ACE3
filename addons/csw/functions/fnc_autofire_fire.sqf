@@ -52,6 +52,14 @@ private _fireEventHandler = _csw addEventHandler [
     {
         params ["_csw", "_weapon", "", "", "", "", "_projectile", "_gunner"];
 
+        private _isGunnerAgent = _gunner isEqualTo (_csw getVariable [QGVAR(autofire_agent), objNull]);
+        if (_isGunnerAgent) then {
+            private _reloader = _csw getVariable [QGVAR(reloader), objNull];
+            _projectile setShotParents [_csw, _reloader];
+        } else {
+            _projectile setShotParents [_csw, _gunner];
+        };
+
         // disable for non-proxy and players, this is already done for us
         if ([_gunner] call EFUNC(common,isPlayer) || { !(_gunner getVariable [QGVAR(isProxy), false ])}) exitWith {};
 
