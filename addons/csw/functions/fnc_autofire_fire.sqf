@@ -50,7 +50,7 @@ _gunner setVariable [QGVAR(autofire_isProxy), true];
 private _fireEventHandler = _csw addEventHandler [
     "Fired",
     {
-        params ["_csw", "_weapon", "", "", "", "", "_projectile", "_gunner"];
+        params ["_csw", "_weapon", "", "_mode", "", "", "_projectile", "_gunner"];
 
         private _isGunnerAgent = _gunner isEqualTo (_csw getVariable [QGVAR(autofire_agent), objNull]);
         if (_isGunnerAgent) then {
@@ -61,7 +61,7 @@ private _fireEventHandler = _csw addEventHandler [
         };
 
         // disable for non-proxy and players, this is already done for us
-        if (_gunner call EFUNC(common,isPlayer) || { !(_gunner getVariable [QGVAR(isProxy), false ])}) exitWith {};
+        if (_gunner call EFUNC(common,isPlayer) || { !(_gunner getVariable [QGVAR(autofire_isProxy), false ])}) exitWith {};
 
         (_csw getVariable [QGVAR(autofire_animations), ["", ""]]) params ["_body", "_gun"];
 
@@ -76,8 +76,14 @@ private _fireEventHandler = _csw addEventHandler [
         private _lookDirection = _csw vectorModelToWorldVisual ([1, -deg _traverse, deg _elev] call CBA_fnc_polar2vect);
         private _azimuth = (_lookDirection select 0) atan2 (_lookDirection select 1);
 
+        private _options = _csw getVariable [QGVAR(autofire_dispersion), createHashMap] getOrDefault [_mode, [0.001, 0]];
+        _options params ["_dispersion", "_modifier"];
+
+        ([0, _dispersion * _modifier] call EFUNC(common,normalRandom)) params ["_azimuthOffset", "_elevationOffset"];
+        systemChat str [_azimuthOffset, _elevationOffset];
+
         private _projectileSpeed = vectorMagnitude velocity _projectile;
-        private _barrelDirection = [1, _azimuth, _elevation] call CBA_fnc_polar2vect;
+        private _barrelDirection = [1, _azimuth + _azimuthOffset, _elevation + _elevationOffset] call CBA_fnc_polar2vect;
 
         TRACE_4("adjusting projectile",velocity _projectile,_barrelDirection vectorMultiply _projectileSpeed,_azimuth,_elevation);
         _projectile setVelocity (_barrelDirection vectorMultiply _projectileSpeed);

@@ -72,6 +72,19 @@ if (_hasAutofireEnabled || _forceAutofireEnabled ) then {
     TRACE_3("hasAutofireEnabled",_vehicle,_hasAutofireEnabled,_forceAutofireEnabled);
 
     private _mainTurret = configFile >> "CfgVehicles" >> _typeOf >> "turrets" >> "MainTurret";
+    private _weapon = (getArray (_mainTurret >> "weapons")) select 0;
+    private _weaponConfig = configFile >> "CfgWeapons" >> _weapon;
+
+    private _dispersionInModes = createHashMap;
+    private _modes = getArray (_weaponConfig >> "modes");
+    {
+        private _mode = _weaponConfig >> _x;
+        private _name = configName _mode;
+        private _dispersion = getNumber (_mode >> "artilleryDispersion");
+        private _modifier = getNumber (_mode >> "dispersion");
+
+        _dispersionInModes set [_name, [_dispersion, deg _modifier]];
+    } forEach _modes;
 
     private _animationSources = [
         getText (_mainTurret >> "animationSourceBody"),
@@ -79,6 +92,7 @@ if (_hasAutofireEnabled || _forceAutofireEnabled ) then {
     ];
 
     _vehicle setVariable [QGVAR(autofire_animations), _animationSources];
+    _vehicle setVariable [QGVAR(autofire_dispersion), _dispersionInModes];
     _vehicle setVariable [QGVAR(autofire_defaultModes), createHashMap];
     _vehicle setVariable [QGVAR(autofire), _forceAutofireEnabled];
     _vehicle setVariable [QGVAR(autofire_force), _forceAutofireEnabled];
