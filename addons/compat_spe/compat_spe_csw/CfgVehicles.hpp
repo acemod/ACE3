@@ -253,6 +253,8 @@ class CfgVehicles {
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
             desiredAmmo = 1;
+            allowFireOnLoad = 1;
+            forceFireOnLoad = 1;
         };
     };
 
@@ -274,6 +276,8 @@ class CfgVehicles {
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
             desiredAmmo = 1;
+            allowFireOnLoad = 1;
+            forceFireOnLoad = 1;
         };
     };
 
@@ -287,6 +291,8 @@ class CfgVehicles {
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
             desiredAmmo = 1;
+            allowFireOnLoad = 1;
+            forceFireOnLoad = 1;
         };
     };
 

@@ -222,6 +222,8 @@ class CfgVehicles {
             desiredAmmo = 1;
             ammoLoadTime = 1;
             ammoUnloadTime = 3;
+            allowFireOnLoad = 1;
+            forceFireOnLoad = 1;
         };
     };
     class gm_2b11_base: gm_staticMortar_base {

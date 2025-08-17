@@ -282,7 +282,7 @@ class CfgVehicles {
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
             allowFireOnLoad = 1;
-            forceFireOnLoad = 1;
+            forceFireOnLoad = 0;
         };
     };
     // Ammo holder for returning ammo

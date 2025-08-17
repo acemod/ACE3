@@ -23,6 +23,8 @@ class CfgVehicles {
             desiredAmmo = 1;
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
+            allowFireOnLoad = 1;
+            forceFireOnLoad = 1;
         };
     };
 
@@ -30,6 +32,8 @@ class CfgVehicles {
         class ace_csw: ace_csw {
             disassembleWeapon = "CUP_m252_carry";
             disassembleTurret = QEGVAR(csw,mortarBaseplate);
+            allowFireOnLoad = 1;
+            forceFireOnLoad = 1;
         };
     };
 
