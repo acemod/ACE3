@@ -198,7 +198,7 @@ There are some additional config parameters available to extend functionality.
 
 ### 3.1. `allowFireOnLoad`
 
-This option will make is so that whenever the weapon is reloaded, it will fire automatically. The intended use case of this is for mortars, where
+This option will make it so that whenever the weapon is reloaded, it will fire automatically. The intended use case of this is for mortars, where
 when the shell hits the fixed firing pin it shoots immediately.
 
 ```cpp
