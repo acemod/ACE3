@@ -68,7 +68,7 @@ if (_vehicle turretLocal [0]) then {
     };
 };
 
-if (_hasAutofireEnabled || _forceAutofireEnabled ) then {
+if (_hasAutofireEnabled || _forceAutofireEnabled) then {
     TRACE_3("hasAutofireEnabled",_vehicle,_hasAutofireEnabled,_forceAutofireEnabled);
 
     private _mainTurret = configFile >> "CfgVehicles" >> _typeOf >> "turrets" >> "MainTurret";
