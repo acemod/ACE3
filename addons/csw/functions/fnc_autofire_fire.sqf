@@ -43,7 +43,7 @@ if (_fireMode isEqualTo "") then {
     };
 };
 
-_gunner setVariable [QGVAR(isProxy), true];
+_gunner setVariable [QGVAR(autofire_isProxy), true];
 
 // we have to adjust fire if we aren't a player shooting
 // because the engine does some fuckery with players, AI shoot down the barrel, but players shoot with some offset
@@ -93,6 +93,13 @@ if (_fireMode isEqualTo "this") then {
         _agent moveOut _csw;
         deleteVehicle _agent;
         _csw setVariable [QGVAR(autofire_agent), objNull, true];
+    };
+
+    // if we are an AI, we don't want them to fire rapidly on their own reload, so we mark them as a proxy
+    // they arent deleted after, so we want to reset their variable
+    private _gunner = gunner _csw;
+    if !(isNull _gunner) then {
+        _gunner setVariable [QGVAR(autofire_isProxy), false];
     };
 
     private _fireEh = _csw getVariable [QGVAR(autofire_eh), -1];

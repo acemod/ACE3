@@ -15,4 +15,4 @@
  * Public: No
  */
 params ["_csw"];
-!(_csw call FUNC(autofire_canEnable))
+(_csw getVariable [QGVAR(autofire), true]) && { !(_csw getVariable [QGVAR(autofire_force), false]) }

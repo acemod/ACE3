@@ -26,7 +26,10 @@ private _configOf = configOf _vehicle;
 private _configEnabled = (getNumber (_configOf >> QUOTE(ADDON) >> "enabled")) == 1;
 private _assemblyConfig = _configEnabled && {(getText (_configOf >> QUOTE(ADDON) >> "disassembleWeapon")) != ""};
 private _hasAutofireEnabled = (getNumber (_configOf >> QUOTE(ADDON) >> "allowFireOnLoad")) == 1;
-TRACE_4("initVehicle",_vehicle,_typeOf,_configEnabled,_assemblyConfig);
+private _forceAutofireEnabled = (getNumber (_configOf >> QUOTE(ADDON) >> "forceFireOnLoad")) == 1;
+_hasAutofireEnabled = (_hasAutofireEnabled || _forceAutofireEnabled) && GVAR(ammoHandling) >= 1;
+_forceAutofireEnabled = _forceAutofireEnabled && GVAR(ammoHandling) >= 1;
+TRACE_6("initVehicle",_vehicle,_typeOf,_configEnabled,_assemblyConfig,_hasAutofireEnabled,_forceAutofireEnabled);
 
 if (_configEnabled && {GVAR(ammoHandling) == 2}) then {
     TRACE_1("adding AI fired handler",_vehicle);
@@ -64,8 +67,8 @@ if (_vehicle turretLocal [0]) then {
     };
 };
 
-if (_hasAutofireEnabled) then {
-    TRACE_1("hasAutofireEnabled",_vehicle);
+if (_hasAutofireEnabled || _forceAutofireEnabled ) then {
+    TRACE_3("hasAutofireEnabled",_vehicle,_hasAutofireEnabled,_forceAutofireEnabled);
 
     private _mainTurret = configFile >> "CfgVehicles" >> _typeOf >> "turrets" >> "MainTurret";
 
@@ -76,7 +79,8 @@ if (_hasAutofireEnabled) then {
 
     _vehicle setVariable [QGVAR(autofire_animations), _animationSources];
     _vehicle setVariable [QGVAR(autofire_defaultModes), createHashMap];
-    _vehicle setVariable [QGVAR(autofire), false];
+    _vehicle setVariable [QGVAR(autofire), _forceAutofireEnabled];
+    _vehicle setVariable [QGVAR(autofire_force), _forceAutofireEnabled];
     _vehicle addEventHandler ["Reloaded", LINKFUNC(autofire_onReload)];
     [QGVAR(autofire_fire), LINKFUNC(autofire_fire)] call CBA_fnc_addEventHandler;
 };
