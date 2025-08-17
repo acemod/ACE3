@@ -21,10 +21,10 @@ private _autofire = _csw getVariable [QGVAR(autofire), false];
 TRACE_5("csw reloaded",_csw,_reloadedWeapon,_autofire,gunner _csw,local gunner _csw);
 
 private _init = _csw getVariable [QGVAR(initialising), false];
-TRACE_1("init check",_init);
-if (_init) exitWith {};
 
-if !(_autofire) exitWith {};
+TRACE_1("init check",_init);
+if (_init || !_autofire) exitWith {};
+
 TRACE_1("autofiring",_csw);
 
 private _agent = objNull;
@@ -43,15 +43,7 @@ _csw setVariable [QGVAR(autofire_agent), _agent, true];
     {
         params ["_csw", "_reloadedWeapon", "_reloadedMuzzle", "_enterTime"];
         private _turret = [gunner _csw] call CBA_fnc_turretPath;
-        (weaponState [_csw, _turret, _reloadedWeapon, _reloadedMuzzle]) params [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "_reloadPhase"
-        ];
+        private _reloadPhase = (weaponState [_csw, _turret, _reloadedWeapon, _reloadedMuzzle]) select 6;
         TRACE_4("reload phase",_csw,gunner _csw,_reloadedMuzzle,_reloadPhase);
         _reloadPhase <= 0
     },

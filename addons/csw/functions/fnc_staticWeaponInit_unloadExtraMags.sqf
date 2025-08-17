@@ -112,7 +112,4 @@ if (_storeExtraMagazines) then {
     } forEach _containerMagazineClassnames;
 };
 
-[{
-    params ["_vehicle"];
-    _vehicle setVariable [QGVAR(initialising), false];
-}, [_vehicle]] call CBA_fnc_execNextFrame;
+[{ _this setVariable [QGVAR(initialising), false]; }, _vehicle] call CBA_fnc_execNextFrame;

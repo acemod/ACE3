@@ -61,7 +61,7 @@ private _fireEventHandler = _csw addEventHandler [
         };
 
         // disable for non-proxy and players, this is already done for us
-        if ([_gunner] call EFUNC(common,isPlayer) || { !(_gunner getVariable [QGVAR(isProxy), false ])}) exitWith {};
+        if (_gunner call EFUNC(common,isPlayer) || { !(_gunner getVariable [QGVAR(isProxy), false ])}) exitWith {};
 
         (_csw getVariable [QGVAR(autofire_animations), ["", ""]]) params ["_body", "_gun"];
 
