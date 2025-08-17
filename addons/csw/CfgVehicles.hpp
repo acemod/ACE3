@@ -2,7 +2,7 @@ class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {
-            class GVAR(deploy) {
+            class ADDON {
                 displayName = CSTRING(PlaceTripod_displayName);
                 condition = QUOTE(call FUNC(canDeployTripod));
                 statement = QUOTE(call FUNC(assemble_deployTripod));
@@ -29,21 +29,26 @@ class CfgVehicles {
         EGVAR(dragging,carryPosition)[] = {0, 2, 0};
 
         class ACE_Actions {
-            class ACE_MainActions {
-                displayName = CSTRING(genericTripod_displayName);
+            class ADDON {
+                displayName = CSTRING(AddonName_Short);
+                condition = QUOTE(call FUNC(isModEnabled));
                 selection = "";
-                distance = 2.5;
-                condition = "true";
-                class GVAR(pickUp) {
-                    displayName = CSTRING(Pickup_displayName);
-                    condition = QUOTE(call FUNC(canPickupTripod));
-                    statement = QUOTE(call FUNC(assemble_pickupTripod));
-                };
-                class GVAR(mountWeapon) {
-                    displayName = CSTRING(MountWeapon_displayName);
-                    condition = QUOTE(call FUNC(assemble_canDeployWeapon));
-                    statement = QUOTE(call FUNC(assemble_deployWeapon));
-                    modifierFunction = QUOTE(call FUNC(assemble_deployWeaponModifier));
+                class GVAR(tripod) {
+                    displayName = CSTRING(genericTripod_displayName);
+                    selection = "";
+                    distance = 2.5;
+                    condition = "true";
+                    class GVAR(pickUp) {
+                        displayName = CSTRING(Pickup_displayName);
+                        condition = QUOTE(call FUNC(canPickupTripod));
+                        statement = QUOTE(call FUNC(assemble_pickupTripod));
+                    };
+                    class GVAR(mountWeapon) {
+                        displayName = CSTRING(MountWeapon_displayName);
+                        condition = QUOTE(call FUNC(assemble_canDeployWeapon));
+                        statement = QUOTE(call FUNC(assemble_deployWeapon));
+                        modifierFunction = QUOTE(call FUNC(assemble_deployWeaponModifier));
+                    };
                 };
             };
         };
@@ -123,8 +128,13 @@ class CfgVehicles {
     // Static Weapons:
     class LandVehicle;
     class StaticWeapon: LandVehicle {
-        class ACE_Actions {
-            class ACE_MainActions {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class ADDON {
+                    displayName = CSTRING(AddonName_Short);
+                    condition = QUOTE(call FUNC(isModEnabled));
+                    selection = "";
+                };
                 // Workaround for static weapons' Get In memory point being at the front of the gun
                 class GVAR(getIn) {
                     displayName = CSTRING(GetIn_displayName);
@@ -266,6 +276,7 @@ class CfgVehicles {
             desiredAmmo = 1;
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
+            allowFireOnLoad = 1;
         };
     };
     // Ammo holder for returning ammo

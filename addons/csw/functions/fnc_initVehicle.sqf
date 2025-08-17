@@ -25,6 +25,7 @@ private _typeOf = typeOf _vehicle;
 private _configOf = configOf _vehicle;
 private _configEnabled = (getNumber (_configOf >> QUOTE(ADDON) >> "enabled")) == 1;
 private _assemblyConfig = _configEnabled && {(getText (_configOf >> QUOTE(ADDON) >> "disassembleWeapon")) != ""};
+private _hasAutofireEnabled = (getNumber (_configOf >> QUOTE(ADDON) >> "allowFireOnLoad")) == 1;
 TRACE_4("initVehicle",_vehicle,_typeOf,_configEnabled,_assemblyConfig);
 
 if (_configEnabled && {GVAR(ammoHandling) == 2}) then {
@@ -63,6 +64,23 @@ if (_vehicle turretLocal [0]) then {
     };
 };
 
+if (_hasAutofireEnabled) then {
+    TRACE_1("hasAutofireEnabled",_vehicle);
+
+    private _mainTurret = configFile >> "CfgVehicles" >> _typeOf >> "turrets" >> "MainTurret";
+
+    private _animationSources = [
+        getText (_mainTurret >> "animationSourceBody"),
+        getText (_mainTurret >> "animationSourceGun")
+    ];
+
+    _vehicle setVariable [QGVAR(autofire_animations), _animationSources];
+    _vehicle setVariable [QGVAR(autofire_defaultModes), createHashMap];
+    _vehicle setVariable [QGVAR(autofire), false];
+    _vehicle addEventHandler ["Reloaded", LINKFUNC(autofire_onReload)];
+    [QGVAR(autofire_fire), LINKFUNC(autofire_fire)] call CBA_fnc_addEventHandler;
+};
+
 // Add interactions for players
 if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
     GVAR(initializedStaticTypes) pushBack _typeOf;
@@ -70,7 +88,7 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
 
     if (_assemblyConfig) then {
         private _disassembleAction = [QGVAR(disassemble), LLSTRING(DisassembleCSW_displayName), "", LINKFUNC(assemble_pickupWeapon), LINKFUNC(assemble_canPickupWeapon)] call EFUNC(interact_menu,createAction);
-        [_typeOf, 0, ["ACE_MainActions"], _disassembleAction] call EFUNC(interact_menu,addActionToClass);
+        [_typeOf, 0, ["ACE_MainActions", QUOTE(ADDON)], _disassembleAction] call EFUNC(interact_menu,addActionToClass);
     };
 
 
@@ -93,7 +111,7 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
         _ammoActionPath = [_typeOf, 0, [], _ammoAction] call EFUNC(interact_menu,addActionToClass);
     } else {
         private _ammoAction = [QGVAR(magazine), LLSTRING(AmmoHandling_displayName), "", {}, _condition, _childrenCode] call EFUNC(interact_menu,createAction);
-        _ammoActionPath = [_typeOf, 0, ["ACE_MainActions"], _ammoAction] call EFUNC(interact_menu,addActionToClass);
+        _ammoActionPath = [_typeOf, 0, ["ACE_MainActions", QUOTE(ADDON)], _ammoAction] call EFUNC(interact_menu,addActionToClass);
     };
 
     if (["ace_reload"] call EFUNC(common,isModLoaded)) then {
@@ -104,10 +122,17 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
             if !((GVAR(ammoHandling) == 0) && {!([false, true, true, GVAR(defaultAssemblyMode)] select (_target getVariable [QGVAR(assemblyMode), 3]))}) exitWith { false };
             call EFUNC(reload,canCheckAmmo)
         }] call EFUNC(interact_menu,createAction);
-        [_typeOf, 0, ["ACE_MainActions"], _checkAmmoAction] call EFUNC(interact_menu,addActionToClass);
+        [_typeOf, 0, ["ACE_MainActions", QUOTE(ADDON)], _checkAmmoAction] call EFUNC(interact_menu,addActionToClass);
 
         // Add another check ammo action to the ammo handling point
         _checkAmmoAction = [QGVAR(checkAmmo), LELSTRING(reload,checkAmmo), "", EFUNC(reload,checkAmmo), EFUNC(reload,canCheckAmmo)] call EFUNC(interact_menu,createAction);
         [_typeOf, 0, _ammoActionPath, _checkAmmoAction] call EFUNC(interact_menu,addActionToClass);
     };
+
+    if (_hasAutofireEnabled) then {
+        private _enableAction = [QGVAR(enableAutofire), LLSTRING(EnableAutoFire_displayName), "", LINKFUNC(autofire_enable), LINKFUNC(autofire_canEnable)] call EFUNC(interact_menu,createAction);
+        private _disableAction = [QGVAR(disableAutofire), LLSTRING(DisableAutoFire_displayName), "", LINKFUNC(autofire_disable), LINKFUNC(autofire_canDisable)] call EFUNC(interact_menu,createAction);
+        [_typeOf, 0, ["ACE_MainActions", QUOTE(ADDON)], _enableAction] call EFUNC(interact_menu,addActionToClass);
+        [_typeOf, 0, ["ACE_MainActions", QUOTE(ADDON)], _disableAction] call EFUNC(interact_menu,addActionToClass);
+    }
 };
