@@ -60,8 +60,7 @@ class CfgVehicles {
             desiredAmmo = 1;
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
-            allowFireOnLoad = 1;
-            forceFireOnLoad = 1;
+            allowFireOnLoad = 2;
         };
     };
 

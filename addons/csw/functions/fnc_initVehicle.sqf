@@ -26,7 +26,7 @@ private _configOf = configOf _vehicle;
 private _configEnabled = (getNumber (_configOf >> QUOTE(ADDON) >> "enabled")) == 1;
 private _assemblyConfig = _configEnabled && {(getText (_configOf >> QUOTE(ADDON) >> "disassembleWeapon")) != ""};
 private _hasAutofireEnabled = (getNumber (_configOf >> QUOTE(ADDON) >> "allowFireOnLoad")) == 1;
-private _forceAutofireEnabled = (getNumber (_configOf >> QUOTE(ADDON) >> "forceFireOnLoad")) == 1;
+private _forceAutofireEnabled = (getNumber (_configOf >> QUOTE(ADDON) >> "allowFireOnLoad")) == 2;
 _hasAutofireEnabled = (_hasAutofireEnabled || _forceAutofireEnabled) && GVAR(ammoHandling) >= 1;
 _forceAutofireEnabled = _forceAutofireEnabled && GVAR(ammoHandling) >= 1;
 TRACE_6("initVehicle",_vehicle,_typeOf,_configEnabled,_assemblyConfig,_hasAutofireEnabled,_forceAutofireEnabled);

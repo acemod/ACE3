@@ -387,8 +387,7 @@ class vn_static_mortar_m29_base: Mortar_01_base_F {
         ammoLoadTime = 3;
         ammoUnloadTime = 3;
         desiredAmmo = 1;
-        allowFireOnLoad = 1;
-        forceFireOnLoad = 1;
+        allowFireOnLoad = 2;
     };
 };
 
@@ -403,8 +402,7 @@ class vn_static_mortar_m2_base: vn_static_mortar_m29_base {
         ammoLoadTime = 3;
         ammoUnloadTime = 3;
         desiredAmmo = 1;
-        allowFireOnLoad = 1;
-        forceFireOnLoad = 1;
+        allowFireOnLoad = 2;
     };
 };
 
@@ -419,8 +417,7 @@ class vn_static_mortar_type53_base: vn_static_mortar_m29_base {
         ammoLoadTime = 3;
         ammoUnloadTime = 3;
         desiredAmmo = 1;
-        allowFireOnLoad = 1;
-        forceFireOnLoad = 1;
+        allowFireOnLoad = 2;
     };
 };
 
