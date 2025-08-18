@@ -80,6 +80,7 @@ private _fireEventHandler = _csw addEventHandler [
         _options params ["_dispersion", "_modifier"];
 
         ([0, _dispersion * _modifier] call EFUNC(common,normalRandom)) params ["_azimuthOffset", "_elevationOffset"];
+        systemChat str [_azimuthOffset, _elevationOffset];
 
         private _projectileSpeed = vectorMagnitude velocity _projectile;
         private _barrelDirection = [1, _azimuth + _azimuthOffset, _elevation + _elevationOffset] call CBA_fnc_polar2vect;
