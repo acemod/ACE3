@@ -31,11 +31,13 @@ _mine addEventHandler ["Explode", {
         _posASL set [2, _posASL # 2 + 200];
     };
 
-    private _flare = createVehicle [_flareClass, ASLToAGL _posASL, [], 0, "CAN_COLLIDE"];
+    private _pos = ASLToAGL _posASL;
+
+    private _flare = createVehicle [_flareClass, _pos, [], 0, "CAN_COLLIDE"];
     _flare setVelocity [0, 0, -1]; // Used for air mode, does nothing if already on the ground
 
     TRACE_1("",_flare);
-    ["ace_tripflareTriggered", [_flare, ASLToAGL _posASL]] call CBA_fnc_globalEvent;
+    ["ace_tripflareTriggered", [_flare, _pos]] call CBA_fnc_globalEvent;
 }];
 
 nil

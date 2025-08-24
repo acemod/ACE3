@@ -192,7 +192,7 @@ GVAR(TweakedAngle) = 0;
 
         if (GVAR(placeAction) == PLACE_APPROVE) then {
             private _placeAngle = 0;
-            private _expSetupVehicle = _setupObjectClass createVehicle [0, 0, 0];//(_virtualPosASL call EFUNC(common,ASLToPosition));
+            private _expSetupVehicle = _setupObjectClass createVehicle [0, 0, 0]; //(_virtualPosASL call EFUNC(common,ASLToPosition));
 
             TRACE_1("Planting Mass",getMass _expSetupVehicle);
 

@@ -23,8 +23,25 @@ TRACE_3("params",_receiver,_giver,_item);
 if !(ACE_player in [_receiver, _giver]) exitWith {};
 if !(_item in GVAR(detonators)) exitWith {};
 
+// Transfer ownership if receiver is taking out of backpack
+if (getNumber (configOf _receiver >> "isBackpack") == 1) then {
+    _receiver = objectParent _receiver;
+};
+
+if (isNull _receiver) exitWith {};
+
+// Transfer ownership if giver is giving out of backpack
+if (getNumber (configOf _giver >> "isBackpack") == 1) then {
+    _giver = objectParent _giver;
+};
+
+if (isNull _giver) exitWith {};
+
+// Don't give code if giver still has an identical trigger
+if ([_giver, _item] call EFUNC(common,hasItem)) exitWith {};
+
 // Update giver's valid explosives and get valid explosives for detonator
-private _explosivesList = [_giver, _item] call FUNC(getPlacedExplosives);
+private _explosivesList = [_giver, getText (configFile >> "CfgWeapons" >> _item >> QGVAR(triggerType))] call FUNC(getPlacedExplosives);
 
 TRACE_1("explosives changing hands",_explosivesList);
 
