@@ -10,6 +10,7 @@
  * 3: Deploy parameters <ARRAY> (default: [])
  * - 0: Position AGL <ARRAY>
  * - 1: Direction <NUMBER>
+ * 4: Unload only if stable <BOOL> (default: true) (Applies only if argument 3 is [])
  *
  * Return Value:
  * Object unloaded <BOOL>
@@ -20,10 +21,16 @@
  * Public: Yes
  */
 
-params [["_item", "", [objNull, ""]], ["_vehicle", objNull, [objNull]], ["_unloader", objNull, [objNull]], ["_deploy", []]];
+params [
+    ["_item", "", [objNull, ""]],
+    ["_vehicle", objNull, [objNull]],
+    ["_unloader", objNull, [objNull]],
+    ["_deploy", []],
+    ["_checkVehicleIsStable", true, [true]]
+];
 _deploy params ["_emptyPosAGL", "_direction"];
 
-TRACE_4("params",_item,_vehicle,_unloader,_deploy);
+TRACE_5("params",_item,_vehicle,_unloader,_deploy,_checkVehicleIsStable);
 
 // Get config sensitive case name
 if (_item isEqualType "") then {
@@ -51,7 +58,7 @@ private _deployed = _deploy isNotEqualTo [];
 if (!_deployed) then {
     // This covers testing vehicle stability and finding a safe position
     for "_i" from 1 to 3 do {
-        _emptyPosAGL = [_vehicle, _item, _unloader] call EFUNC(common,findUnloadPosition);
+        _emptyPosAGL = [_vehicle, _item, _unloader, nil, _checkVehicleIsStable] call EFUNC(common,findUnloadPosition);
 
         if (_emptyPosAGL isNotEqualTo []) exitWith {};
     };
