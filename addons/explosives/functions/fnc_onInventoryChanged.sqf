@@ -37,8 +37,11 @@ if (_giver isKindOf "ContainerSupply" || {getNumber (configOf _giver >> "isBackp
 
 if (isNull _giver) exitWith {};
 
+// Skip if moving within player's inventory
+if (_giver == _receiver) exitWith {};
+
 // Don't give code if giver still has an identical trigger
-if ([_giver, _item] call EFUNC(common,hasItem)) exitWith {};
+if (_item in items _giver) exitWith {}; // EFUNC(common,hasItem) isn't reliable in this context
 
 // Update giver's valid explosives and get valid explosives for detonator
 private _explosivesList = [_giver, getText (configFile >> "CfgWeapons" >> _item >> QGVAR(triggerType))] call FUNC(getPlacedExplosives);
