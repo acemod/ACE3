@@ -23,15 +23,15 @@ TRACE_3("params",_receiver,_giver,_item);
 if !(ACE_player in [_receiver, _giver]) exitWith {};
 if !(_item in GVAR(detonators)) exitWith {};
 
-// Transfer ownership if receiver is taking out of backpack
-if (getNumber (configOf _receiver >> "isBackpack") == 1) then {
+// Transfer ownership if receiver is taking out of uniform, vest or backpack
+if (_receiver isKindOf "ContainerSupply" || {getNumber (configOf _receiver >> "isBackpack") == 1}) then {
     _receiver = objectParent _receiver;
 };
 
 if (isNull _receiver) exitWith {};
 
-// Transfer ownership if giver is giving out of backpack
-if (getNumber (configOf _giver >> "isBackpack") == 1) then {
+// Transfer ownership if giver is giving out of uniform, vest or backpack
+if (_giver isKindOf "ContainerSupply" || {getNumber (configOf _giver >> "isBackpack") == 1}) then {
     _giver = objectParent _giver;
 };
 
