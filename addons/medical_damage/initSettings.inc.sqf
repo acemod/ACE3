@@ -21,7 +21,7 @@
     "SLIDER",
     [LSTRING(PlayerDamageThreshold_DisplayName), LSTRING(PlayerDamageThreshold_Description)],
     ELSTRING(medical,Category),
-    [0, 25, 1, 2],
+    [0.01, 25, 1, 2],
     true
 ] call CBA_fnc_addSetting;
 
@@ -30,7 +30,7 @@
     "SLIDER",
     [LSTRING(AIDamageThreshold_DisplayName), LSTRING(AIDamageThreshold_Description)],
     ELSTRING(medical,Category),
-    [0, 25, 1, 2],
+    [0.01, 25, 1, 2],
     true
 ] call CBA_fnc_addSetting;
 
