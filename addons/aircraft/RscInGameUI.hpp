@@ -1,10 +1,6 @@
-class RscControlsGroup;
 class RscText;
 class RangeText: RscText {};
 class RscPicture;
-class RscOpticsText;
-class RscIGProgress;
-class RscOpticsValue;
 class RscLadderPicture;
 class RscControlsGroupNoScrollbars;
 
