@@ -192,7 +192,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={750, 790, 825, 855, 885, 915, 940, 960, 975, 990, 960, 1010};
         ACE_barrelLengths[]={210.82, 238.76, 269.24, 299.72, 330.2, 360.68, 391.16, 419.1, 449.58, 480.06, 508.0, 609.6};
     };
-    class ACE_556x45_Ball_M301: B_556x45_Ball_Tracer_Red {
+    class ACE_556x45_Ball_M856A1IR: B_556x45_Ball_Tracer_Red {
         airFriction=-0.00130094;
         caliber=1.3;
         ACE_caliber=5.69;
