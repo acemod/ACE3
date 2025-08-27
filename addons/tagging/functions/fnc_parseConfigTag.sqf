@@ -65,7 +65,7 @@ if (_tagModel == "") then {
 
 private _condition = getText (_cfg >> "condition");
 if (_condition isEqualTo "") then {
-    {true}
+    _condition = {true}
 } else {
     _condition = _condition call CBA_fnc_convertStringCode;
     if !([objNull, objNull] call _condition isEqualType true) then {
