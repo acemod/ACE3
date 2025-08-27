@@ -3866,5 +3866,14 @@
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_M856A1_mag_NameShort">
             <English>5.56 mm M856A1</English>
         </Key>
+        <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_M856A1IR_mag_Description">
+            <English>Caliber: 5.56x45 mm NATO (M856A1 IR-DIM)&lt;br /&gt;Rounds: 30</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_M856A1IR_mag_Name">
+            <English>5.56 mm 30Rnd Mag (M856A1 IR-DIM)</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_M856A1IR_mag_NameShort">
+            <English>5.56 mm M856A1 IR-DIM</English>
+        </Key>
     </Package>
 </Project>
