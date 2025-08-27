@@ -61,7 +61,11 @@ class CfgMagazineWells {
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
             "ACE_30Rnd_556x45_Stanag_Mk262_mag",
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
-            "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
+            "ACE_30Rnd_556x45_Stanag_Tracer_Dim",
+            "ACE_30Rnd_556x45_Stanag_M855_mag",
+            "ACE_30Rnd_556x45_Stanag_M856_mag",
+            "ACE_30Rnd_556x45_Stanag_M855A1_mag",
+            "ACE_30Rnd_556x45_Stanag_M856A1_mag"
         };
     };
 
@@ -70,7 +74,11 @@ class CfgMagazineWells {
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
             "ACE_30Rnd_556x45_Stanag_Mk262_mag",
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
-            "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
+            "ACE_30Rnd_556x45_Stanag_Tracer_Dim",
+            "ACE_30Rnd_556x45_Stanag_M855_mag",
+            "ACE_30Rnd_556x45_Stanag_M856_mag",
+            "ACE_30Rnd_556x45_Stanag_M855A1_mag",
+            "ACE_30Rnd_556x45_Stanag_M856A1_mag"
         };
     };
 
@@ -79,7 +87,11 @@ class CfgMagazineWells {
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
             "ACE_30Rnd_556x45_Stanag_Mk262_mag",
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
-            "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
+            "ACE_30Rnd_556x45_Stanag_Tracer_Dim",
+            "ACE_30Rnd_556x45_Stanag_M855_mag",
+            "ACE_30Rnd_556x45_Stanag_M856_mag",
+            "ACE_30Rnd_556x45_Stanag_M855A1_mag",
+            "ACE_30Rnd_556x45_Stanag_M856A1_mag"
         };
     };
 
