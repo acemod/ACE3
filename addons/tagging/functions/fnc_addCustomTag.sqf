@@ -53,7 +53,7 @@ if (_textures isEqualTo []) exitWith {
     ERROR_1("Failed adding custom tag: %1 - missing textures",_identifier); false
 };
 
-if !(([objNull,objNull] call _condition)  isEqualType true) exitWith {
+if !(([objNull,objNull] call _condition) isEqualType true) exitWith {
     ERROR_1("Failed adding custom tag: %1 - custom Condition does not return boolean",_identifier); false
 };
 
