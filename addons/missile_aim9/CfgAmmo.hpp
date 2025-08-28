@@ -4,7 +4,7 @@ class EGVAR(missileguidance,type_R74);
 class CfgAmmo {
     class Missile_AA_04_F;
     class GVAR(m): Missile_AA_04_F {
-        missileLockCone = 3; // caged lock
+        missileLockCone = 30; // caged lock
         missileKeepLockedCone = 45;
         missileLockMaxDistance = 5000;
         missileLockMinDistance = 250;
@@ -19,7 +19,7 @@ class CfgAmmo {
 
     class ammo_Missile_BIM9X;
     class GVAR(x): ammo_Missile_BIM9X {
-        missileLockCone = 3; // caged lock
+        missileLockCone = 90; // caged lock
         missileKeepLockedCone = 120;
         missileLockMaxDistance = 5000;
         missileLockMinDistance = 250;
@@ -43,7 +43,7 @@ class CfgAmmo {
     // AIM-132
     class M_Air_AA;
     class GVAR(aim132): M_Air_AA {
-        missileLockCone = 3; // caged lock
+        missileLockCone = 60; // caged lock
         missileKeepLockedCone = 120;
         missileLockMaxDistance = 8000;
         missileLockMinDistance = 250;
@@ -59,8 +59,8 @@ class CfgAmmo {
     // R-73
     class ammo_Missile_AA_R73;
     class GVAR(r73): ammo_Missile_AA_R73 {
-        missileLockCone = 3; // caged lock
-        missileKeepLockedCone = 40;
+        missileLockCone = 45; // caged lock
+        missileKeepLockedCone = 75;
         missileLockMaxDistance = 5000;
         missileLockMinDistance = 250;
 
@@ -74,7 +74,7 @@ class CfgAmmo {
 
     class Missile_AA_03_F;
     class GVAR(r74): Missile_AA_03_F {
-        missileLockCone = 3; // caged lock
+        missileLockCone = 60; // caged lock
         missileKeepLockedCone = 75;
         missileLockMaxDistance = 8000;
         missileLockMinDistance = 250;
