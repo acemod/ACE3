@@ -4,7 +4,7 @@ class EGVAR(missileguidance,SeekerTypes) {
         visualName = "";
         description = "";
 
-        onFired = QFUNC(seeker_onFired)
+        onFired = QFUNC(seeker_onFired);
         functionName = QFUNC(seeker);
     };
 };

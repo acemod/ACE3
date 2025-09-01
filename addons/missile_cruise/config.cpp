@@ -15,4 +15,5 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgAmmo.hpp"
 #include "ACE_GuidanceConfig.hpp"
