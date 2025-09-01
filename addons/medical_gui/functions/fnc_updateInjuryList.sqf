@@ -77,35 +77,20 @@ if (GVAR(showBloodlossEntry)) then {
 };
 // Show receiving IV volume remaining
 private _totalIvVolume = 0;
-private _saline = 0;
-private _blood = 0;
-private _plasma = 0;
+private _fluidVolumes = createHashMap;
+
 {
     _x params ["_volumeRemaining", "_type"];
-    switch (_type) do {
-        case "Saline": {
-            _saline = _saline + _volumeRemaining;
-        };
-        case "Blood": {
-            _blood = _blood + _volumeRemaining;
-        };
-        case "Plasma": {
-            _plasma = _plasma + _volumeRemaining;
-        };
-    };
+    private _currentVolume = _fluidVolumes getOrDefault [_type, 0];
+    _fluidVolumes set [_type, _currentVolume + _volumeRemaining];
     _totalIvVolume = _totalIvVolume + _volumeRemaining;
 } forEach (_target getVariable [QEGVAR(medical,ivBags), []]);
 
 if (_totalIvVolume > 0) then {
-    if (_saline > 0) then {
-        _entries pushBack [format [localize ELSTRING(medical_treatment,receivingSalineIvVolume), floor _saline], [1, 1, 1, 1]];
-    };
-    if (_blood > 0) then {
-        _entries pushBack [format [localize ELSTRING(medical_treatment,receivingBloodIvVolume), floor _blood], [1, 1, 1, 1]];
-    };
-    if (_plasma > 0) then {
-        _entries pushBack [format [localize ELSTRING(medical_treatment,receivingPlasmaIvVolume), floor _plasma], [1, 1, 1, 1]];
-    };
+    {
+        private _keyName = format [ELSTRING(medical_treatment,receiving%1IvVolume), _x];
+        _entries pushBack [format [localize _keyName, floor _y], [1, 1, 1, 1]];
+    } forEach _fluidVolumes;
 } else {
     _entries pushBack [localize ELSTRING(medical_treatment,Status_NoIv), _nonissueColor];
 };
