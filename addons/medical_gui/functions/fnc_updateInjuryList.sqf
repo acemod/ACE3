@@ -76,17 +76,15 @@ if (GVAR(showBloodlossEntry)) then {
     };
 };
 // Show receiving IV volume remaining
-private _totalIvVolume = 0;
 private _fluidVolumes = createHashMap;
 
 {
     _x params ["_volumeRemaining", "_type"];
     private _currentVolume = _fluidVolumes getOrDefault [_type, 0];
     _fluidVolumes set [_type, _currentVolume + _volumeRemaining];
-    _totalIvVolume = _totalIvVolume + _volumeRemaining;
 } forEach (_target getVariable [QEGVAR(medical,ivBags), []]);
 
-if (_totalIvVolume > 0) then {
+if (_fluidVolumes isNotEqualTo createHashMap) then {
     {
         private _keyName = format [ELSTRING(medical_treatment,receiving%1IvVolume), _x];
         _entries pushBack [format [localize _keyName, floor _y], [1, 1, 1, 1]];
