@@ -20,8 +20,9 @@ params [["_class", "", [""]]];
 GVAR(flashlights) getOrDefaultCall [_class, {
     private _items = [_class];
     if (isClass (configFile >> "CfgWeapons" >> _class)) then {
-        _items append (_class call CBA_fnc_switchableAttachments);
+        _items append (_class call CBA_fnc_switchableAttachments); // Contains _class in the return
     };
+    _items = _items arrayIntersect _items; // Prevent duplicate config lookups
 
     // if this item or any of the switchable items is a flashlight
     _items findIf {
