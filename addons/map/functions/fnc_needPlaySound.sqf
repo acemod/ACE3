@@ -33,7 +33,7 @@ if (
     false
 };
 
-private _config = _flashlightType call CBA_fnc_getItemConfig;
+private _config = _flashlight call CBA_fnc_getItemConfig;
 if (isClass (_config >> "ItemInfo")) then {
     _config = _config >> "ItemInfo";
 };
