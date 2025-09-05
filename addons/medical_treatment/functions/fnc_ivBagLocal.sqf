@@ -47,19 +47,15 @@ private _ivBags = _patient getVariable [QEGVAR(medical,ivBags), []];
 
 // Simulate mixed fluid bags by using multiple smaller ivs. rateCoef is lowered to compensate
 if (count _ratio > 2) then {
-    // Convert from flat array to nested arrays, ["Blood", 0.5, "Plasma", 0.5] -> [["Blood", 0.5], ["Plasma", 0.5]]
-    _ratio = _ratio apply {
-        if (_x isEqualType 1) then { continue };
-        [_x, _ratio select (_forEachIndex + 1)];
-    } select { !isNil "_x" };
-
     private _totalRatio = 0;
 
     // Add an iv bag for each item in _ratio
     {
-        _x params ["_fluidType", "_ratioCoef"];
+        if (_x isEqualType 1) then { continue }; // Skip over the numbers directly
+
+        private _ratioCoef = _ratio select (_forEachIndex + 1);
         _totalRatio = _totalRatio + _ratioCoef;
-        _ivBags pushBack [_volume * _ratioCoef, _fluidType, _partIndex, _treatment, _rateCoef * _ratioCoef, _item, _ratio];
+        _ivBags pushBack [_volume * _ratioCoef, _x, _partIndex, _treatment, _rateCoef * _ratioCoef, _item, _ratio];
     } forEach _ratio;
 
     if (_totalRatio != 1) then {
