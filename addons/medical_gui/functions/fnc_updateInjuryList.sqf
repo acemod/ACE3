@@ -79,15 +79,17 @@ if (GVAR(showBloodlossEntry)) then {
 private _fluidVolumes = createHashMap;
 
 {
-    _x params ["_volumeRemaining", "_type"];
-    private _currentVolume = _fluidVolumes getOrDefault [_type, 0];
-    _fluidVolumes set [_type, _currentVolume + _volumeRemaining];
+    _x params ["_volumeRemaining", "", "", "", "", "", "_guiMessage"];
+    if (isLocalized _guiMessage) then {
+        _guiMessage = localize _guiMessage;
+    };
+    private _currentVolume = _fluidVolumes getOrDefault [_guiMessage, 0];
+    _fluidVolumes set [_guiMessage, _currentVolume + _volumeRemaining];
 } forEach (_target getVariable [QEGVAR(medical,ivBags), []]);
 
 if (_fluidVolumes isNotEqualTo createHashMap) then {
     {
-        private _keyName = format [ELSTRING(medical_treatment,receiving%1IvVolume), _x];
-        _entries pushBack [format [localize _keyName, floor _y], [1, 1, 1, 1]];
+        _entries pushBack [format [_x, floor _y], [1, 1, 1, 1]];
     } forEach _fluidVolumes;
 } else {
     _entries pushBack [localize ELSTRING(medical_treatment,Status_NoIv), _nonissueColor];

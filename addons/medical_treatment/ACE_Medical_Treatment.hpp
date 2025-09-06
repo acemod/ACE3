@@ -631,10 +631,12 @@ class ADDON {
         ratio[] = {}; // Default is empty, uses type defined in treatment if empty in treatment class
         rateCoef = 1; // multiplier for IV flow rate, for other methods of giving fluids
         type = "Blood";
+        gui_message = CSTRING(receivingBloodIvVolume); // Displayed in the medical gui
         class BloodIV {
             volume = 1000;
             ratio[] = {"Blood", 1};
             rateCoef = 1;
+            gui_message = CSTRING(receivingBloodIvVolume);
         };
         class BloodIV_500: BloodIV {
             volume = 500;
@@ -646,6 +648,7 @@ class ADDON {
             volume = 1000;
             type = "Plasma";
             ratio[] = {"Plasma", 1};
+            gui_message = CSTRING(receivingPlasmaIvVolume);
         };
         class PlasmaIV_500: PlasmaIV {
             volume = 500;
@@ -657,6 +660,7 @@ class ADDON {
             volume = 1000;
             type = "Saline";
             ratio[] = {"Saline", 1};
+            gui_message = CSTRING(receivingSalineIvVolume);
         };
         class SalineIV_500: SalineIV {
             volume = 500;
