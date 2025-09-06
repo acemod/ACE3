@@ -11,6 +11,7 @@
  * 4: Icon Path <STRING> (default: "")
  * 5: Material Paths <ARRAY> (default: [])
  * 6: Tag Model <STRING> (default: "UserTexture1m_F")
+ * 7: Condition for the spraytag <CODE> (default: {true})
  *
  * Return Value:
  * Successfully Added Tag <BOOL>
@@ -28,7 +29,8 @@ params [
     ["_textures", [], [[]]],
     ["_icon", "", [""]],
     ["_materials", [], [[]]],
-    ["_tagModel", "UserTexture1m_F", [""]]
+    ["_tagModel", "UserTexture1m_F", [""]],
+    ["_condition", {true}, [{}]]
 ];
 
 // Verify
@@ -51,9 +53,13 @@ if (_textures isEqualTo []) exitWith {
     ERROR_1("Failed adding custom tag: %1 - missing textures",_identifier); false
 };
 
+if !(([objNull,objNull] call _condition) isEqualType true) exitWith {
+    ERROR_1("Failed adding custom tag: %1 - custom Condition does not return boolean",_identifier); false
+};
+
 _identifier = [_identifier] call CBA_fnc_removeWhitespace;
 
 // Add
-[QGVAR(applyCustomTag), [_identifier, _displayName, _requiredItem, _textures, _icon, _materials, _tagModel]] call CBA_fnc_globalEventJIP;
+[QGVAR(applyCustomTag), [_identifier, _displayName, _requiredItem, _textures, _icon, _materials, _tagModel, _condition]] call CBA_fnc_globalEventJIP;
 
 true

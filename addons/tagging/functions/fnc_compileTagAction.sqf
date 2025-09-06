@@ -15,7 +15,7 @@
  * Public: No
  */
 
-params ["_class", "_displayName", "_requiredItem", "_textures", "_icon", "_materials", "_tagModel"];
+params ["_class", "_displayName", "_requiredItem", "_textures", "_icon", "_materials", "_tagModel", ["_condition", {true}]];
 
 private _actions = GVAR(itemActions) getOrDefault [_requiredItem, []];
 
@@ -38,7 +38,7 @@ _actions pushBack ([
         [_player, _randomTexture, _randomMaterial, _tagModel] call FUNC(tag);
         _player setVariable [QGVAR(lastUsedTag), _class];
     },
-    {true}, // required item is checked at an upper level
+    _condition, // required item is checked at an upper level
     {},
     [_class, _textures, _materials, _tagModel]
 ] call EFUNC(interact_menu,createAction));

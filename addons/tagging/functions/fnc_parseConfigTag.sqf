@@ -63,6 +63,16 @@ if (_tagModel == "") then {
     _tagModel = "UserTexture1m_F";
 };
 
+private _condition = getText (_cfg >> "condition");
+if (_condition isEqualTo "") then {
+    _condition = {true}
+} else {
+    _condition = _condition call CBA_fnc_convertStringCode;
+    if !([objNull, objNull] call _condition isEqualType true) then {
+        _failure = true;
+    };
+};
+
 // Need to parse mission vs mod path for mission config
 if (_isMission) then {
     _materials = _materials apply {
@@ -85,7 +95,7 @@ if (_failure) then {
     []
 } else {
     [
-        [_class, _displayName, _requiredItem, _textures, _icon, _materials, _tagModel],
+        [_class, _displayName, _requiredItem, _textures, _icon, _materials, _tagModel, _condition],
         _requiredItem
     ]
 }
