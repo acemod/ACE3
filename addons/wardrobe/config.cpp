@@ -21,4 +21,6 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"
+
 #include "CfgWardrobe.hpp"
+#include "CfgWardrobe_Exceptions.hpp"

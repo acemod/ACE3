@@ -15,15 +15,6 @@ class EGVAR(wardrobe,base_U_jacket_open);\
 class EGVAR(wardrobe,base_U_jacket_closed)
 
 
-// REPLACE
-#define INTEL_PRE(varName,className)\
-private varName = _magazineDetails findIf { _x select 0 == QUOTE(className) } > -1;\
-if (varName) then { varName = [_player, QUOTE(className)] call CBA_fnc_getMagazineIndex apply { _x call FUNC(getIndexFromMagID) } }
-
-#define INTEL_POST(varName,className)\
-if (varName isEqualType []) then { { [_x, varName select _forEachIndex] call FUNC(setIndexForMagID); } forEach ( [_player, QUOTE(className)] call CBA_fnc_getMagazineIndex ); }
-
-
 // Config
 // Adjust Weight of CfgWeapons Wearables
 #define MASS(var)\

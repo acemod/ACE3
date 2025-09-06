@@ -20,41 +20,46 @@
 
 params ["_player", "_classTarget", "_equipmentType"];
 
-toFixed 0;
-private _magazineDetails = (magazinesAmmoFull _player) apply { [_x#0, _x#-2, _x#6] };
+private _allMags = (magazinesAmmoFull _player) apply { _x#0 };
+
+// Identify Exceptions
+private _exceptions = []; // nested Array of [Classname, Array of old ID's, Array of new id's]
+{
+    private _className = _x;
+    if (_className in _allMags) then {
+        _exceptions pushBack [
+            _className,
+            [_player, _className] call CBA_fnc_getMagazineIndex,
+            []
+        ];
+    };
+} forEach keys GVAR(exceptions);
+
 private _loadout = _player call CBA_fnc_getLoadout;
 
-// handle special cases - pre replace
-// ace intel items
-INTEL_PRE(_document,acex_intelitems_document);
-INTEL_PRE(_notepad,acex_intelitems_notepad);
-INTEL_PRE(_photo,acex_intelitems_photo);
-
-// ace overheating
-private _spareBarrel = _magazineDetails findIf { _x#0 == "ACE_SpareBarrel" } > -1;
-if (_spareBarrel) then { _spareBarrel = [_player, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIndex };
-
-// replace wearable
+// Replace Wearable Container
 switch (_equipmentType) do {
     case "UNIFORM":  { _loadout # 0 # 3 set [0, _classTarget]; };
     case "VEST":     { _loadout # 0 # 4 set [0, _classTarget]; };
     case "BACKPACK": { _loadout # 0 # 5 set [0, _classTarget]; };
 };
 
-// apply new loadout
+// Apply new loadout
 [_player, _loadout] call CBA_fnc_setLoadout;
 
-// handle special cases - post replace
-// ace intel items
-INTEL_POST(_document,acex_intelitems_document);
-INTEL_POST(_notepad,acex_intelitems_notepad);
-INTEL_POST(_photo,acex_intelitems_photo);
+// Update Exceptions with new magID's
+{ _x set [ 2, [_player, _x#0] call CBA_fnc_getMagazineIndex ]; } forEach _exceptions;
 
-// ace overheating
-if (_spareBarrel isEqualType []) then {
-    private _newMagIDsSpareBarrel = [_player, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIndex;
-    [QGVAR(updateMagIDs), [_spareBarrel, _newMagIDsSpareBarrel]] call CBA_fnc_serverEvent;
-};
+
+// Resolve Exceptions
+{
+    // ["_className", "_oldMagIDs", "_newMagIDs"];
+    switch (GVAR(exceptions) get (_x#0) select 0) do {
+        case "local": { [QGVAR(exceptions), _x] call CBA_fnc_localEvent; };
+        case "server": { [QGVAR(exceptions), _x] call CBA_fnc_serverEvent; };
+    };
+} forEach _exceptions;
+
 
 GVAR(inProgress) = false; // re-enable action
 
