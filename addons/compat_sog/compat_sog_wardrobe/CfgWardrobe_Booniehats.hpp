@@ -17,44 +17,44 @@
 
 class CN(02,CAMO_BASE): EGVAR(wardrobe,base) {
     class modifiableTo {
-        class CN(01,CAMO_BASE);
-        class CN(03,CAMO_BASE);
-        class CN(04,CAMO_BASE);
-        class CN(05,CAMO_BASE);
+        class CN(01,CAMO_BASE) {};
+        class CN(03,CAMO_BASE) {};
+        class CN(04,CAMO_BASE) {};
+        class CN(05,CAMO_BASE) {};
     };
 };
 
 class CN(01,CAMO_BASE): EGVAR(wardrobe,base) {
     class modifiableTo { 
-        class CN(02,CAMO_BASE);
-        class CN(03,CAMO_BASE);
-        class CN(04,CAMO_BASE);
-        class CN(05,CAMO_BASE);
+        class CN(02,CAMO_BASE) {};
+        class CN(03,CAMO_BASE) {};
+        class CN(04,CAMO_BASE) {};
+        class CN(05,CAMO_BASE) {};
     };
 };
 
 class CN(03,CAMO_BASE): EGVAR(wardrobe,base) {
     class modifiableTo {
-        class CN(01,CAMO_BASE);
-        class CN(02,CAMO_BASE);
-        class CN(04,CAMO_BASE);
-        class CN(05,CAMO_BASE);
+        class CN(01,CAMO_BASE) {};
+        class CN(02,CAMO_BASE) {};
+        class CN(04,CAMO_BASE) {};
+        class CN(05,CAMO_BASE) {};
     };
 };
 class CN(04,CAMO_BASE): EGVAR(wardrobe,base) {
     class modifiableTo {
-        class CN(01,CAMO_BASE);
-        class CN(02,CAMO_BASE);
-        class CN(03,CAMO_BASE);
-        class CN(05,CAMO_BASE);
+        class CN(01,CAMO_BASE) {};
+        class CN(02,CAMO_BASE) {};
+        class CN(03,CAMO_BASE) {};
+        class CN(05,CAMO_BASE) {};
     };
 };
 class CN(05,CAMO_BASE): EGVAR(wardrobe,base) {
     class modifiableTo {
-        class CN(01,CAMO_BASE);
-        class CN(02,CAMO_BASE);
-        class CN(03,CAMO_BASE);
-        class CN(04,CAMO_BASE);
+        class CN(01,CAMO_BASE) {};
+        class CN(02,CAMO_BASE) {};
+        class CN(03,CAMO_BASE) {};
+        class CN(04,CAMO_BASE) {};
     };
 };
 
@@ -63,42 +63,42 @@ class CN(05,CAMO_BASE): EGVAR(wardrobe,base) {
 #define CN_COLORS(CAMO)\
 class CN(02,CAMO): EGVAR(wardrobe,base) {\
     class modifiableTo {\
-        class CN(01,CAMO);\
-        class CN(03,CAMO);\
-        class CN(04,CAMO);\
-        class CN(05,CAMO);\
+        class CN(01,CAMO) {};\
+        class CN(03,CAMO) {};\
+        class CN(04,CAMO) {};\
+        class CN(05,CAMO) {};\
     };\
 };\
 class CN(01,CAMO): EGVAR(wardrobe,base) {\
     class modifiableTo {\
-        class CN(02,CAMO);\
-        class CN(03,CAMO);\
-        class CN(04,CAMO);\
-        class CN(05,CAMO);\
+        class CN(02,CAMO) {};\
+        class CN(03,CAMO) {};\
+        class CN(04,CAMO) {};\
+        class CN(05,CAMO) {};\
     };\
 };\
 class CN(03,CAMO): EGVAR(wardrobe,base) {\
     class modifiableTo {\
-        class CN(01,CAMO);\
-        class CN(02,CAMO);\
-        class CN(04,CAMO);\
-        class CN(05,CAMO);\
+        class CN(01,CAMO) {};\
+        class CN(02,CAMO) {};\
+        class CN(04,CAMO) {};\
+        class CN(05,CAMO) {};\
     };\
 };\
 class CN(04,CAMO): EGVAR(wardrobe,base) {\
     class modifiableTo {\
-        class CN(01,CAMO);\
-        class CN(02,CAMO);\
-        class CN(03,CAMO);\
-        class CN(05,CAMO);\
+        class CN(01,CAMO) {};\
+        class CN(02,CAMO) {};\
+        class CN(03,CAMO) {};\
+        class CN(05,CAMO) {};\
     };\
 };\
 class CN(05,CAMO): EGVAR(wardrobe,base) {\
     class modifiableTo {\
-        class CN(01,CAMO);\
-        class CN(02,CAMO);\
-        class CN(03,CAMO);\
-        class CN(04,CAMO);\
+        class CN(01,CAMO) {};\
+        class CN(02,CAMO) {};\
+        class CN(03,CAMO) {};\
+        class CN(04,CAMO) {};\
     };\
 }
 
@@ -114,38 +114,38 @@ CN_COLORS(05);
 
 class CN(06,01): EGVAR(wardrobe,base) {
     class modifiableTo {
-        class CN(07,01);
-        class CN(08,01);
+        class CN(07,01) {};
+        class CN(08,01) {};
     };
 };
 class CN(07,01): EGVAR(wardrobe,base) {
     class modifiableTo {
-        class CN(06,VAR);
-        class CN(08,01);
+        class CN(06,VAR) {};
+        class CN(08,01) {};
     };
 };
 class CN(08,01): EGVAR(wardrobe,base) {
     class modifiableTo {
-        class CN(06,01);
-        class CN(07,01);
+        class CN(06,01) {};
+        class CN(07,01) {};
     };
 };
 
 class CN(06,02): EGVAR(wardrobe,base) {
     class modifiableTo {
-        class CN(07,02);
-        class CN(08,02);
+        class CN(07,02) {};
+        class CN(08,02) {};
     };
 };
 class CN(07,02): EGVAR(wardrobe,base) {
     class modifiableTo {
-        class CN(06,02);
-        class CN(08,02);
+        class CN(06,02) {};
+        class CN(08,02) {};
     };
 };
 class CN(08,02): EGVAR(wardrobe,base) {
     class modifiableTo {
-        class CN(06,02);
-        class CN(07,02);
+        class CN(06,02) {};
+        class CN(07,02) {};
     };
 };

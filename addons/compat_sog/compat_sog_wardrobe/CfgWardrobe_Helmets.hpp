@@ -9,12 +9,12 @@
 #define HELMET_VARIANT(side,var1,var2)\
 class CN01(side,var1,var2): EGVAR(wardrobe,base_H_visor_up) {\
     class modifiableTo {\
-        class CN02(side,var1,var2);\
+        class CN02(side,var1,var2) {};\
     };\
 };\
 class CN02(side,var1,var2): EGVAR(wardrobe,base_H_visor_down) {\
     class modifiableTo {\
-        class CN01(side,var1,var2);\
+        class CN01(side,var1,var2) {};\
     };\
 }
 
