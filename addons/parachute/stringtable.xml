@@ -17,6 +17,7 @@
             <Chinesesimp>用于显示高度，下降率和时间。</Chinesesimp>
             <Turkish>Yüksekliği, alçalma hızını ve zamanı göstermek için kullanılır.</Turkish>
             <Hungarian>Mutatja a magasságot, a zuhanási sebességet, és az időt.</Hungarian>
+            <Ukrainian>Використовується для визначення висоти, швидкості зниження і часу.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Parachute_AltimeterDisplayName">
             <English>Altimeter Watch</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>高度计手表</Chinesesimp>
             <Turkish>Altimetre Saati</Turkish>
             <Hungarian>Magasságmérős karóra</Hungarian>
+            <Ukrainian>Годинник із висотоміром</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Parachute_CutParachute">
             <English>Cut Parachute</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>剪断降落伞</Chinesesimp>
             <Turkish>Paraşütü Kes</Turkish>
             <Hungarian>Ejtőernyő elvágása</Hungarian>
+            <Ukrainian>Обрізати стропи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Parachute_FailureChance">
             <English>Parachute Failure Chance</English>
@@ -64,6 +67,7 @@
             <Korean>낙하산 펼치기 실패 확률</Korean>
             <Japanese>開傘失敗率</Japanese>
             <Chinesesimp>开伞失败率</Chinesesimp>
+            <Ukrainian>Імовірність відмови парашута</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Parachute_HideAltimeter">
             <English>Hide Freefall Altimeter</English>
@@ -80,6 +84,7 @@
             <Chinese>隱藏自由落體高度計</Chinese>
             <Chinesesimp>隐藏自由落体高度计</Chinesesimp>
             <Turkish>Serbest Düşüş Altimetresini Gizle</Turkish>
+            <Ukrainian>Прибрати висотомір під час падіння</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Parachute_HideAltimeter_tooltip">
             <English>Hides the altitude and speed shown while free falling or parachuting.</English>
@@ -96,6 +101,7 @@
             <Chinese>在自由落體時或開傘下隱藏自由落體高度計</Chinese>
             <Chinesesimp>在自由落体时或开伞下隐藏自由落体高度计。</Chinesesimp>
             <Turkish>Serbest düşme veya paraşütle atlama sırasında gösterilen yüksekliği ve hızı gizler.</Turkish>
+            <Ukrainian>Приховує показання висоти і швидкості під час вільного падіння або стрибків із парашутом.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Parachute_NonSteerableParachute">
             <English>Non-Steerable Parachute</English>
@@ -113,6 +119,7 @@
             <Chinesesimp>非可操控降落伞</Chinesesimp>
             <Turkish>Yönlendirilemez Paraşüt</Turkish>
             <Hungarian>Irányíthatatlan ejtőernyő</Hungarian>
+            <Ukrainian>Некерований парашут</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Parachute_ReserveParachute">
             <English>Reserve Parachute</English>
@@ -130,6 +137,7 @@
             <Chinesesimp>备用降落伞</Chinesesimp>
             <Turkish>Yedek Paraşüt</Turkish>
             <Hungarian>Tartalék ejtőernyő</Hungarian>
+            <Ukrainian>Запасний парашут</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Parachute_showAltimeter">
             <English>Altimeter</English>
@@ -147,6 +155,7 @@
             <Chinesesimp>高度计</Chinesesimp>
             <Turkish>Altimetre</Turkish>
             <Hungarian>Magasságmérő</Hungarian>
+            <Ukrainian>Висотомір</Ukrainian>
         </Key>
     </Package>
 </Project>

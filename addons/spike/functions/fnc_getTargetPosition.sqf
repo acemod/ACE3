@@ -115,10 +115,6 @@ if (_nearObjects isNotEqualTo []) then {
     } forEach [_utl, _utr, _ubr, _ubl, _dtl, _dtr, _dbr, _dbl];
 
     _seekerTargetPos = _averagePosition vectorMultiply (1 / _averagePositionCounter);
-} else {
-    if (_designateInput == 1) then {
-        _seekerTargetPos = [0, 0, 0];
-    };
 };
 
 _seekerTargetPos

@@ -16,6 +16,7 @@
             <Chinese>切換單位</Chinese>
             <Chinesesimp>单位切换</Chinesesimp>
             <Turkish>Birlik Değiştir</Turkish>
+            <Ukrainian>Перемикання юнітів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_EnableSafeZone_Description">
             <English>Enable a safe zone around enemy units? Players can't switch to units inside of the safe zone.</English>
@@ -32,6 +33,7 @@
             <Chinese>啟用敵方周圍安全地帶? 玩家不能切換到安全區內的單位</Chinese>
             <Chinesesimp>启用敌方周围安全地带？ 玩家不能切换到安全区内的单位</Chinesesimp>
             <Hungarian>Engedélyezve legyen-e egy biztonságos zóna az ellenségek körül? A játékosok nem tudnak a biztonságos zónán belüli egységekre váltani.</Hungarian>
+            <Ukrainian>Увімкнути безпечну зону навколо ворожих юнітів? Гравці не можуть перемикатися на юнітів, які перебувають у безпечній зоні.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_EnableSafeZone_DisplayName">
             <English>Enable Safe Zone?</English>
@@ -48,6 +50,7 @@
             <Chinese>啟用安全區?</Chinese>
             <Chinesesimp>启用安全区？</Chinesesimp>
             <Hungarian>Biztonságos zóna engedélyezése?</Hungarian>
+            <Ukrainian>Безпечна зона</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_EnableSwitchUnits_DisplayName">
             <English>Enable switch side</English>
@@ -63,6 +66,7 @@
             <Japanese>陣営切り替えを有効化</Japanese>
             <Chinese>啟用陣營切換</Chinese>
             <Chinesesimp>启用阵营切换</Chinesesimp>
+            <Ukrainian>Увімкнути зміну сторони</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_Module_Description">
             <English>Module allows you to switch side during the game.</English>
@@ -78,6 +82,7 @@
             <Japanese>モジュールを使用すると、ゲーム中に陣営を切り替えることが出来るようになります。</Japanese>
             <Chinese>此模塊允許你在遊戲中切換至另一方</Chinese>
             <Chinesesimp>此模块允许你在游戏中切换至另一方</Chinesesimp>
+            <Ukrainian>Цей модуль дає змогу гравцям перемикатися між доступними юнітами.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SafeZoneRadius_Description">
             <English>The safe zone around players from a different team. Default: 100</English>
@@ -94,6 +99,7 @@
             <Chinese>安全區的範圍。預設值：100</Chinese>
             <Chinesesimp>安全区的范围。预设值：100</Chinesesimp>
             <Hungarian>A biztonságos zóna más csapatból lévő játékosok körül. Alapértelmezett: 100</Hungarian>
+            <Ukrainian>Радіус безпечної зони навколо гравців із протилежної команди. За замовчуванням: 100</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SafeZoneRadius_DisplayName">
             <English>Safe Zone Radius</English>
@@ -110,6 +116,7 @@
             <Chinese>安全區半徑</Chinese>
             <Chinesesimp>安全区半径</Chinesesimp>
             <Hungarian>Biztonságos zóna hatóköre</Hungarian>
+            <Ukrainian>Радіус безпечної зони</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToCivilian_Description">
             <English>Allow switching to civilian units?</English>
@@ -126,6 +133,7 @@
             <Chinese>允許切換至平民方?</Chinese>
             <Chinesesimp>允许切换至平民方？</Chinesesimp>
             <Hungarian>Civil egységekre való váltás engedélyezése?</Hungarian>
+            <Ukrainian>Дозволити перемикатися на цивільних юнітів?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToCivilian_DisplayName">
             <English>Switch to Civilian?</English>
@@ -143,6 +151,7 @@
             <Chinesesimp>切换至平民方？</Chinesesimp>
             <Turkish>Sivillere Geç?</Turkish>
             <Hungarian>Átváltás civilre?</Hungarian>
+            <Ukrainian>На цивільних?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToEast_Description">
             <English>Allow switching to east units?</English>
@@ -159,6 +168,7 @@
             <Chinese>允許切換至紅方?</Chinese>
             <Chinesesimp>允许切换至红方？</Chinesesimp>
             <Hungarian>Kelet-fakciós egységekre való váltás engedélyezése?</Hungarian>
+            <Ukrainian>Дозволити перемикатися на червоних юнітів?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToEast_DisplayName">
             <English>Switch to East?</English>
@@ -176,6 +186,7 @@
             <Chinesesimp>切换至红方？</Chinesesimp>
             <Turkish>Doğuya Geç ?</Turkish>
             <Hungarian>Átváltás OPFOR-ra?</Hungarian>
+            <Ukrainian>На червоних?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToIndependent_Description">
             <English>Allow switching to independent units?</English>
@@ -192,6 +203,7 @@
             <Chinese>允許切換至獨立方?</Chinese>
             <Chinesesimp>允许切换至独立方？</Chinesesimp>
             <Hungarian>Független egységekre való váltás engedélyezése?</Hungarian>
+            <Ukrainian>Дозволити перемикатися на незалежних юнітів?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToIndependent_DisplayName">
             <English>Switch to Independent?</English>
@@ -209,6 +221,7 @@
             <Chinesesimp>切换至独立方？</Chinesesimp>
             <Turkish>Bağımsıza Geç?</Turkish>
             <Hungarian>Átváltás INDFOR-ra?</Hungarian>
+            <Ukrainian>На незалежних?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_Description">
             <English>Allow switching to west units?</English>
@@ -225,6 +238,7 @@
             <Chinese>允許切換至藍方?</Chinese>
             <Chinesesimp>允许切换至蓝方？</Chinesesimp>
             <Hungarian>Nyugat-fakciós egységekre való váltás engedélyezése?</Hungarian>
+            <Ukrainian>Дозволити перемикатися на синіх юнітів?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_DisplayName">
             <English>Switch to West?</English>
@@ -242,6 +256,7 @@
             <Chinesesimp>切换至蓝方？</Chinesesimp>
             <Turkish>Batıya Geç?</Turkish>
             <Hungarian>Átváltás BLUFOR-ra?</Hungarian>
+            <Ukrainian>На синіх?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
             <English>Switched unit</English>
@@ -259,6 +274,7 @@
             <Chinesesimp>切换单位</Chinesesimp>
             <Turkish>Birlik Değiştirildi</Turkish>
             <Hungarian>Egység átváltva</Hungarian>
+            <Ukrainian>Юніт переключено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_TooCloseToEnemy">
             <English>This unit is too close to the enemy.</English>
@@ -275,6 +291,7 @@
             <Chinese>這單位太接近敵人了</Chinese>
             <Chinesesimp>这单位太接近敌人了</Chinesesimp>
             <Hungarian>Ez az egység túl közel van az ellenséghez.</Hungarian>
+            <Ukrainian>Юніт занадто близький до противника.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_TryingToSwitch">
             <English>Trying to switch</English>
@@ -291,6 +308,7 @@
             <Chinese>嘗試切換中</Chinese>
             <Chinesesimp>正在尝试切换</Chinesesimp>
             <Turkish>Birlik değiştirilme deneniyor</Turkish>
+            <Ukrainian>Спроба перемикання</Ukrainian>
         </Key>
     </Package>
 </Project>

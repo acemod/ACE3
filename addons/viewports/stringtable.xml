@@ -13,6 +13,7 @@
             <Korean>뷰포트</Korean>
             <Japanese>ビューポート</Japanese>
             <Chinesesimp>观察口</Chinesesimp>
+            <Ukrainian>Триплекси</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Viewports_setting_enabled_description">
             <English>Allows crew to look through periscopes</English>
@@ -26,6 +27,7 @@
             <Korean>승무원이 잠망경을 통해 볼 수 있도록 허용합니다</Korean>
             <Japanese>乗組員がペリスコープを通して外を見ることができるようにします</Japanese>
             <Chinesesimp>允许乘员通过观察口观察</Chinesesimp>
+            <Ukrainian>Дозволити екіпажу дивитися крізь перископ</Ukrainian>
         </Key>
     </Package>
 </Project>

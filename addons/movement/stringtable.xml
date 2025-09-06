@@ -17,6 +17,7 @@
             <Chinesesimp>这里无法攀爬</Chinesesimp>
             <Turkish>Buraya tırmanamazsın</Turkish>
             <Hungarian>Itt nem tudsz mászni</Hungarian>
+            <Ukrainian>Тут неможливо піднятися</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Movement_Climb">
             <English>Climb</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>攀爬</Chinesesimp>
             <Turkish>Tırman</Turkish>
             <Hungarian>Mászás</Hungarian>
+            <Ukrainian>Піднятися</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Movement_UseImperial">
             <English>Show weight in lb</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>使用磅来显示重量</Chinesesimp>
             <Turkish>Ağırlığı lb olarak göster</Turkish>
             <Hungarian>Súly megjelenítése fontban.</Hungarian>
+            <Ukrainian>Показувати вагу в фунтах</Ukrainian>
         </Key>
     </Package>
 </Project>

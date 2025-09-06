@@ -20,4 +20,5 @@ if (hasInterface) then {
 
     GVAR(activeCamera) = objNull;
     GVAR(projectileHashMap) = createHashMap; // used in the seeker to get the namespace for the associated projectile
+    GVAR(launcherWeapons) = createHashMap; // Used to quickly determine whether the current weapon is a Spike launcher
 };

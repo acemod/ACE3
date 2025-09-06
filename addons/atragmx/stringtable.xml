@@ -17,6 +17,7 @@
             <Chinesesimp>开启 ATragMX</Chinesesimp>
             <Turkish>ATragMX'i aç</Turkish>
             <Hungarian>ATragMX elővétele</Hungarian>
+            <Ukrainian>Відкрити ATragMX</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ATragMX_Description">
             <English>Rugged PDA with ATragMX</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>装有 ATragMX 的军用 PDA</Chinesesimp>
             <Turkish>Rugged PDA with ATragMX</Turkish>
             <Hungarian>Megerősített PDA, ATragMX-el</Hungarian>
+            <Ukrainian>Захищений КПК з ATragMX</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ATragMX_Name">
             <English>ATragMX</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>ATragMX</Chinesesimp>
             <Turkish>ATragMX</Turkish>
             <Hungarian>ATragMX</Hungarian>
+            <Ukrainian>ATragMX</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ATragMX_OpenATragMXDialog">
             <English>Open ATragMX</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>开启 ATragMX</Chinesesimp>
             <Turkish>ATragMX'i aç</Turkish>
             <Hungarian>ATragMX elővétele</Hungarian>
+            <Ukrainian>Відкрити ATragMX</Ukrainian>
         </Key>
     </Package>
 </Project>

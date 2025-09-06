@@ -9,6 +9,7 @@
             <German>.30-06 100 Patronen Gurt (M2/Leuchtspur)</German>
             <Korean>.30-06구경 스프링필드 100발 들이 벨트 (M2 훈련용/예광탄)</Korean>
             <Japanese>.30-06 100Rnd Belt (M2/Tracer)</Japanese>
+            <Ukrainian>.30-06 стрічка на 100 набоїв (M2/трасери)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SPE_CSW_100Rnd_792x57_Tracer">
             <English>7.92x57 100Rnd Belt (L.S./Tracer)</English>
@@ -18,6 +19,7 @@
             <German>7.92x57 mm 100 Patronen Gurt (L.S./Leuchtspur)</German>
             <Korean>7.92x57mm 100발 들이 벨트 (L.S. 훈련용/예광탄)</Korean>
             <Japanese>7.92x57 100Rnd Belt (L.S./Tracer)</Japanese>
+            <Ukrainian>7.92x57 стрічка на 100 набоїв (L.S./трасери)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SPE_CSW_50Rnd_762x63_Tracer">
             <English>.30-06 50Rnd Belt (M2/Tracer)</English>
@@ -27,6 +29,7 @@
             <German>.30-06 50 Patronen Gurt (M2/Leuchtspur)</German>
             <Korean>.30-06구경 스프링필드 50발 들이 벨트 (M2 훈련용/예광탄)</Korean>
             <Japanese>.30-06 50Rnd Belt (M2/Tracer)</Japanese>
+            <Ukrainian>.30-06 стрічка на 50 набоїв (M2/трасери)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SPE_CSW_50Rnd_792x57_Tracer">
             <English>7.92x57 50Rnd Gurttrommel (L.S./Tracer)</English>
@@ -36,6 +39,7 @@
             <German>7.92x57 mm 50 Patronen Gurt (L.S./Leuchtspur)</German>
             <Korean>7.92x57mm 50발 들이 벨트 (L.S. 훈련용/예광탄)</Korean>
             <Japanese>7.92x57 50Rnd Gurttrommel (L.S./Tracer)</Japanese>
+            <Ukrainian>7.92x57 Gurttrommel на 50 набоїв (L.S./трасери)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SPE_CSW_alteringHeight">
             <English>Altering Height...</English>
@@ -45,6 +49,7 @@
             <German>Verstelle Höhe...</German>
             <Korean>높이 변경 중...</Korean>
             <Japanese>高さを変更・・・</Japanese>
+            <Ukrainian>Зміна висоти...</Ukrainian>
         </Key>
     </Package>
 </Project>

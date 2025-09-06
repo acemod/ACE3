@@ -16,6 +16,7 @@
             <Chinese>檢查氣溫</Chinese>
             <Chinesesimp>检查气温</Chinesesimp>
             <Turkish>Hava Sıcaklığını Kontrol Et</Turkish>
+            <Ukrainian>Перевірити температуру повітря</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Weather_Module_Description">
             <English>Multiplayer synchronized ACE weather module</English>
@@ -33,6 +34,7 @@
             <Chinesesimp>使用 ACE 天气模块来同步所有客户端的天气状态（多人游戏）</Chinesesimp>
             <Turkish>Çok oyunculu ACE</Turkish>
             <Hungarian>Többjátékos szinkronizált ACE időjárás modul</Hungarian>
+            <Ukrainian>ACE Модуль для синхронізації погоди в мультиплеєрі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Weather_Module_DisplayName">
             <English>Weather</English>
@@ -50,6 +52,7 @@
             <Chinesesimp>天气</Chinesesimp>
             <Turkish>Hava Durumu</Turkish>
             <Hungarian>Időjárás</Hungarian>
+            <Ukrainian>Погода</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Weather_WindInfoKeyHold">
             <English>Show Wind Info</English>
@@ -67,6 +70,7 @@
             <Chinesesimp>显示风力信息</Chinesesimp>
             <Turkish>Rüzgar Bilgilerini Göster</Turkish>
             <Hungarian>Széladatok mutatása</Hungarian>
+            <Ukrainian>Показати інформацію про вітер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Weather_WindInfoKeyToggle">
             <English>Show Wind Info (Toggle)</English>
@@ -84,6 +88,7 @@
             <Chinesesimp>显示风力信息（切换）</Chinesesimp>
             <Turkish>Rüzgar Bilgilerini Göster (Değiştir)</Turkish>
             <Hungarian>Széladatok mutatása (pecek)</Hungarian>
+            <Ukrainian>Показати інформацію про вітер (перем.)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Weather_enabled_Description">
             <English>Expands the existing weather by temperature, humidity and air pressure.</English>
@@ -100,6 +105,7 @@
             <Chinese>透過增加濕度、溫度與氣壓來增強天氣模擬的表現。</Chinese>
             <Chinesesimp>透过增加湿度、温度与气压来增强天气模拟的表现。</Chinesesimp>
             <Turkish>Mevcut havayı sıcaklık, nem ve hava basıncı ile genişletir.</Turkish>
+            <Ukrainian>Розширює поточні можливості погоди з урахуванням температури, вологості та тиску</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Weather_enabled_DisplayName">
             <English>ACE Weather</English>
@@ -117,6 +123,7 @@
             <Chinesesimp>ACE 天气</Chinesesimp>
             <Turkish>ACE Hava Durumu</Turkish>
             <Hungarian>ACE Időjárás</Hungarian>
+            <Ukrainian>Погода ACE</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Weather_showCheckAirTemperature_DisplayName">
             <English>Show Check Air Temperature Action</English>
@@ -133,6 +140,7 @@
             <Chinese>顯示檢查氣溫動作</Chinese>
             <Chinesesimp>显示检查气温选项</Chinesesimp>
             <Turkish>Hava Sıcaklığını Kontrol Etme Eylemini Göster</Turkish>
+            <Ukrainian>Показувати дію перевірки температури</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Weather_updateInterval_Description">
             <English>Defines the interval (seconds) between weather updates</English>
@@ -150,6 +158,7 @@
             <Chinesesimp>设定天气更新的时间间隔（秒）</Chinesesimp>
             <Turkish>Hava durumu güncellemeleri arasındaki aralığı (saniye) tanımlar</Turkish>
             <Hungarian>Megadja az intervallumot (másodpercben) az időjárás-frissítések között</Hungarian>
+            <Ukrainian>Визначає інтервал (у секундах) між оновленнями погоди</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Weather_updateInterval_DisplayName">
             <English>Update Interval</English>
@@ -167,6 +176,7 @@
             <Chinesesimp>更新间隔</Chinesesimp>
             <Turkish>Güncelleştirme Aralığı</Turkish>
             <Hungarian>Frissítési intervallum</Hungarian>
+            <Ukrainian>Інтервал оновлення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Weather_windSimulation_Description">
             <English>Enables the map based wind simulation (overwrites vanilla wind)</English>
@@ -183,6 +193,7 @@
             <Chinese>啟用後將遵照地圖特色進行風力模擬(覆蓋掉官方原版的風力模擬)</Chinese>
             <Chinesesimp>启用后将遵照地图特色进行风力模拟（覆盖掉官方原版的风力模拟）</Chinesesimp>
             <Turkish>Harita tabanlı rüzgar simülasyonunu etkinleştirir (Normal rüzgarının üzerine yazar)</Turkish>
+            <Ukrainian>Вмикає симуляцію вітру на основі поточної місцевості (переписує ванільний вітер)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Weather_windSimulation_DisplayName">
             <English>Wind Simulation (map based)</English>
@@ -199,6 +210,7 @@
             <Chinese>風力模擬(基於地圖)</Chinese>
             <Chinesesimp>风力模拟（基于地图）</Chinesesimp>
             <Turkish>Rüzgar Simülasyonu (harita tabanlı)</Turkish>
+            <Ukrainian>Симуляція вітру (на основі місцевості)</Ukrainian>
         </Key>
     </Package>
 </Project>
