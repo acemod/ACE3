@@ -106,9 +106,10 @@ if (
     {
         private _ammoCfg = configFile >> "CfgAmmo" >> _ammo;
         GET_NUMBER(_ammoCfg >> "explosive",0) > 0 ||
-        {GET_NUMBER(_ammoCfg >> "indirectHit",0) > 0}
+        {GET_NUMBER(_ammoCfg >> "indirectHit",0) > 0} || (_newDamage > 0.25)
     }
 ) exitWith {
+    private _newDamage = _newDamage * 3;
     TRACE_5("Vehicle hit",_unit,_shooter,_instigator,_damage,_newDamage);
 
     _unit setVariable [QEGVAR(medical,lastDamageSource), _shooter];
