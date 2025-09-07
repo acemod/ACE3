@@ -601,7 +601,7 @@
             <Korean>피를 잃지 않음</Korean>
             <Japanese>失血なし</Japanese>
             <Chinesesimp>没有失血</Chinesesimp>
-            <Ukrainian>Кровотечі немає</Ukrainian>
+            <Ukrainian>Крововтрати немає</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood1">
             <English>Lost some blood</English>
@@ -1551,7 +1551,7 @@
             <Chinese>身體</Chinese>
             <Chinesesimp>躯干</Chinesesimp>
             <Turkish>Gövde</Turkish>
-            <Ukrainian>Тулуб</Ukrainian>
+            <Ukrainian>Торс</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TourniquetWarning">
             <English>No effect until tourniquet removed</English>
