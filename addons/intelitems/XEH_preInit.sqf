@@ -39,7 +39,7 @@ if (hasInterface) then {
         private _exceptions = [];
         // get previous MagID's of any intel items
         {
-            private _className = toLower _x;
+            private _className = toLowerANSI _x;
             if (_className in _allMags) then {
                 _exceptions pushBack [
                     _className,
