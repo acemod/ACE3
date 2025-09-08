@@ -35,7 +35,7 @@ if (hasInterface) then {
     QEGVAR(arsenal,displayOpened),
     {
         private _unit = EGVAR(arsenal,center);
-        private _allMags = (magazinesAmmoFull _unit) apply { toLower (_x#0) };
+        private _allMags = (magazinesAmmoFull _unit) apply { toLowerANSI (_x#0) };
         private _exceptions = [];
         // get previous MagID's of any intel items
         {
