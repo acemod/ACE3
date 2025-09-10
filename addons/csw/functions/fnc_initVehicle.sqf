@@ -97,7 +97,6 @@ if (_hasAutofireEnabled || _forceAutofireEnabled) then {
     _vehicle setVariable [QGVAR(autofire), _forceAutofireEnabled];
     _vehicle setVariable [QGVAR(autofire_force), _forceAutofireEnabled];
     _vehicle addEventHandler ["Reloaded", LINKFUNC(autofire_onReload)];
-    [QGVAR(autofire_fire), LINKFUNC(autofire_fire)] call CBA_fnc_addEventHandler;
 };
 
 // Add interactions for players

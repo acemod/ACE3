@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [cursorObject] call ace_csw_fnc_autofire_enable
+ * [cursorObject] call ace_csw_fnc_autofire_disable
  *
  * Public: No
  */
