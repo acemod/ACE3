@@ -25,11 +25,9 @@ if (!local _gunner || !local _csw) exitWith {};
 private _fireMode = currentWeaponMode _gunner;
 if (_fireMode isEqualTo "") then {
     private _cswHashmap = _csw getVariable [QGVAR(autofire_defaultModes), createHashMap];
-    private _needsPropogate = false;
     _fireMode = _cswHashmap getOrDefaultCall [
         _muzzle,
         {
-            _needsPropogate = true;
             private _defaultModes = getArray (configFile >> "CfgWeapons" >> _muzzle >> "modes");
             TRACE_3("setting default mode",_csw,_muzzle,_defaultModes);
             if (_defaultModes isEqualTo []) exitWith { "" };
@@ -37,10 +35,6 @@ if (_fireMode isEqualTo "") then {
         },
         true
     ];
-
-    if (_needsPropogate) then {
-        _csw setVariable [QGVAR(autofire_defaultModes), _cswHashmap, true];
-    };
 };
 
 _gunner setVariable [QGVAR(autofire_isProxy), true];
@@ -53,12 +47,11 @@ private _fireEventHandler = _csw addEventHandler [
         params ["_csw", "_weapon", "", "_mode", "", "", "_projectile", "_gunner"];
 
         private _isGunnerAgent = _gunner isEqualTo (_csw getVariable [QGVAR(autofire_agent), objNull]);
+        private _parent = _gunner;
         if (_isGunnerAgent) then {
-            private _reloader = _csw getVariable [QGVAR(reloader), objNull];
-            _projectile setShotParents [_csw, _reloader];
-        } else {
-            _projectile setShotParents [_csw, _gunner];
+            _parent = _csw getVariable [QGVAR(reloader), objNull];
         };
+        [QEGVAR(common,setShotParents), [_projectile, _csw, _parent]] call CBA_fnc_serverEvent;
 
         // disable for non-proxy and players, this is already done for us
         if (_gunner call EFUNC(common,isPlayer) || { !(_gunner getVariable [QGVAR(autofire_isProxy), false ])}) exitWith {};

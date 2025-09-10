@@ -153,5 +153,8 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
         private _disableAction = [QGVAR(disableAutofire), LLSTRING(DisableAutoFire_displayName), "", LINKFUNC(autofire_disable), LINKFUNC(autofire_canDisable)] call EFUNC(interact_menu,createAction);
         [_typeOf, 0, ["ACE_MainActions", QUOTE(ADDON)], _enableAction] call EFUNC(interact_menu,addActionToClass);
         [_typeOf, 0, ["ACE_MainActions", QUOTE(ADDON)], _disableAction] call EFUNC(interact_menu,addActionToClass);
+
+        [_typeOf, 1, ["ACE_SelfActions"], _enableAction] call EFUNC(interact_menu,addActionToClass);
+        [_typeOf, 1, ["ACE_SelfActions"], _disableAction] call EFUNC(interact_menu,addActionToClass);
     }
 };

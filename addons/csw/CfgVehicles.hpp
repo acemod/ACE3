@@ -33,29 +33,34 @@ class CfgVehicles {
         EGVAR(dragging,carryPosition)[] = {0, 2, 0};
 
         class ACE_Actions {
-            class ADDON {
-                displayName = CSTRING(AddonName_Short);
-                condition = QUOTE(call FUNC(isModEnabled));
+            class ACE_MainActions {
                 selection = "";
-                distance = 5;
-                class GVAR(tripod) {
-                    displayName = CSTRING(genericTripod_displayName);
+                distance = 2.5;
+                condition = "true";
+                class ADDON {
+                    displayName = CSTRING(AddonName_Short);
+                    condition = QUOTE(call FUNC(isModEnabled));
                     selection = "";
-                    distance = 2.5;
-                    condition = "true";
-                    class GVAR(pickUp) {
-                        displayName = CSTRING(Pickup_displayName);
-                        condition = QUOTE(call FUNC(canPickupTripod));
-                        statement = QUOTE(call FUNC(assemble_pickupTripod));
-                    };
-                    class GVAR(mountWeapon) {
-                        displayName = CSTRING(MountWeapon_displayName);
-                        condition = QUOTE(call FUNC(assemble_canDeployWeapon));
-                        statement = QUOTE(call FUNC(assemble_deployWeapon));
-                        modifierFunction = QUOTE(call FUNC(assemble_deployWeaponModifier));
+                    distance = 5;
+                    class GVAR(tripod) {
+                        displayName = CSTRING(genericTripod_displayName);
+                        selection = "";
+                        distance = 2.5;
+                        condition = "true";
+                        class GVAR(pickUp) {
+                            displayName = CSTRING(Pickup_displayName);
+                            condition = QUOTE(call FUNC(canPickupTripod));
+                            statement = QUOTE(call FUNC(assemble_pickupTripod));
+                        };
+                        class GVAR(mountWeapon) {
+                            displayName = CSTRING(MountWeapon_displayName);
+                            condition = QUOTE(call FUNC(assemble_canDeployWeapon));
+                            statement = QUOTE(call FUNC(assemble_deployWeapon));
+                            modifierFunction = QUOTE(call FUNC(assemble_deployWeaponModifier));
+                        };
                     };
                 };
-            };
+            }
         };
     };
     class GVAR(m3Tripod): GVAR(baseTripod) {
