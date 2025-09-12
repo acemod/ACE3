@@ -60,7 +60,7 @@ class CfgVehicles {
                         };
                     };
                 };
-            }
+            };
         };
     };
     class GVAR(m3Tripod): GVAR(baseTripod) {
