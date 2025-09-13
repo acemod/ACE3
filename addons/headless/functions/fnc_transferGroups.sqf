@@ -202,7 +202,7 @@ private _numTransferredHC3 = 0;
             [QGVAR(groupTransferPre), [_x, _HC3, _previousOwner, _idHC3], _previousOwner] call CBA_fnc_ownerEvent; // API
             [QGVAR(groupTransferPre), [_x, _HC3, _previousOwner, _idHC3], _idHC3] call CBA_fnc_ownerEvent; // API
 
-            private _transferred = _x setGroupOwner _idHC2;
+            private _transferred = _x setGroupOwner _idHC3;
 
             [QGVAR(groupTransferPost), [_x, _HC3, _previousOwner, _idHC3, _transferred], _previousOwner] call CBA_fnc_ownerEvent; // API
             [QGVAR(groupTransferPost), [_x, _HC3, _previousOwner, _idHC3, _transferred], _idHC3] call CBA_fnc_ownerEvent; // API

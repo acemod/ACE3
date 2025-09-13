@@ -1561,7 +1561,7 @@
             <Korean>남은 시간: %1초</Korean>
             <Japanese>残り時間: %1秒</Japanese>
             <Chinesesimp>剩余时间：%1秒</Chinesesimp>
-            <Ukrainian>Час, що залишився: %1s</Ukrainian>
+            <Ukrainian>Залишилось часу: %1с</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Top">
             <English>Top</English>

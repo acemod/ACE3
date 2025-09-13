@@ -113,7 +113,7 @@
             <Chinese>控制當AI受致命傷時是否能救起。致命傷是指對頭部或身體造成可觀傷害所造成的。\n當設置為"總是"時，這會使其與"AI 瞬間死亡"同一個效果，在AI受到致命傷時瞬間死亡。\n備註：選了"總是"以外的選項的話必須開啟「AI無意識」的選項。</Chinese>
             <Chinesesimp>控制当 AI 受致命伤时是否能救起。致命伤是指对头部或躯干遭受重大伤害。\n当设置为"总是"时，这将有效地产生"AI 即时死亡"行为，因为 AI 将立即死于任何致命伤。\n注意："总是"以外的任何模式都需要启用 AI 无意识。</Chinesesimp>
             <Turkish>AI'nın ölümcül yaralanmaları ne zaman alabileceğini kontrol eder. Ölümcül bir yaralanma, kafa veya vücudun önemli hasar görmesinden kaynaklanır. \n"Her zaman" olarak ayarlandığında, AI herhangi bir ölümcül yaralanmadan hemen öleceği için bu etkili bir şekilde "AI Anında Ölüm" davranışı üretir.\n NOT: "Her zaman" "Yapay Zeka Bilinci'nin etkinleştirilmesini gerektirir.</Turkish>
-            <Ukrainian>Визначає, чи можуть гравці отримати смертельні травми. Смертельна травма спричиняється значним ушкодженням голови або тулуба.\nКоли встановлено "Завжди", це спричиняє поведінку "Миттєвої смерті ШІ", оскільки ШІ негайно помре від будь-якої смертельної травми.\nПРИМІТКА: Будь-який режим, окрім "Завжди", вимагає ввімкнення функції "Втрата свідомості".</Ukrainian>
+            <Ukrainian>Визначає, чи можуть гравці отримати смертельні травми. Смертельна травма спричиняється значним ушкодженням голови або торсу.\nКоли встановлено "Завжди", це спричиняє поведінку "Миттєвої смерті ШІ", оскільки ШІ негайно помре від будь-якої смертельної травми.\nПРИМІТКА: Будь-який режим, окрім "Завжди", вимагає ввімкнення функції "Втрата свідомості".</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesAI_DisplayName">
             <English>AI Fatal Injuries</English>
@@ -147,7 +147,7 @@
             <Chinese>控制當玩家受致命傷時是否能救起。致命傷是指對頭部或身體造成可觀傷害所造成的。</Chinese>
             <Chinesesimp>控制当玩家受致命伤时是否能救起。致命伤是指对头部或躯干遭受重大伤害。</Chinesesimp>
             <Turkish>Oyuncuların ölümcül yaralanmaları ne zaman alabileceğini kontrol eder. Ölümcül bir yaralanma, kafaya veya vücuda önemli hasar verir.</Turkish>
-            <Ukrainian>Визначає, чи можуть гравці отримати смертельні травми. Смертельна травма спричиняється значним пошкодженням голови або тулуба.</Ukrainian>
+            <Ukrainian>Визначає, чи можуть гравці отримати смертельні травми. Смертельна травма спричиняється значним пошкодженням голови або торсу.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesPlayer_DisplayName">
             <English>Player Fatal Injuries</English>
