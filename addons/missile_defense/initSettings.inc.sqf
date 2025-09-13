@@ -4,8 +4,7 @@
     LSTRING(category),
     [1, 60, 20, 0, false],
     true, // isGlobal
-    {[QGVAR(launchAcceptableAngle), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
+    {[QGVAR(launchAcceptableAngle), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -14,8 +13,7 @@
     LSTRING(category),
     [-90, 90, 5, 0, false],
     true, // isGlobal
-    {[QGVAR(launchAcceptableElevation), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
+    {[QGVAR(launchAcceptableElevation), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -24,8 +22,7 @@
     LSTRING(category),
     [0, 60, 1, 0, false],
     true, // isGlobal
-    {[QGVAR(timeBetweenLaunches), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
+    {[QGVAR(timeBetweenLaunches), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -34,8 +31,7 @@
     LSTRING(category),
     [1, 50, 15, 0, false],
     true, // isGlobal
-    {[QGVAR(timeBetweenLaunches), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
+    {[QGVAR(timeBetweenLaunches), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -44,6 +40,5 @@
     LSTRING(category),
     [0, 1, 0, 2, true],
     true, // isGlobal
-    {[QGVAR(proximityFuseFailureChance), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
+    {[QGVAR(proximityFuseFailureChance), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;

@@ -137,6 +137,7 @@ if (!isNil "_tracked" && {!isNull _tracked}) then {
             private _target = _launcher getVariable [QEGVAR(missileguidance,target), objNull];
             _launcher lookAt getPosVisual _target;
             if (isNull _target) then {
+                TRACE_1("Lost target, returning to idle",_launcher);
                 _launcher setVariable [QGVAR(state), LAUNCH_STATE_IDLE];
             } else {
                 private _directionToTarget = (getPosASLVisual _launcher) vectorFromTo (getPosASLVisual _target);
@@ -153,7 +154,14 @@ if (!isNil "_tracked" && {!isNull _tracked}) then {
                     [_launcher, _launcher currentWeaponTurret _turret] call BIS_fnc_fire;
                     [QGVAR(launcherFired), [_id, _launcher, _target]] call CBA_fnc_globalEvent;
                     TRACE_2("Launcher fired at target",_launcher,_target);
-                };
+                } else {
+                    if (_angle > GVAR(launchAcceptableAngle)) then {
+                        TRACE_2("Tracking target, angle too wide",_launcher,_angle);
+                    };
+                    if (_elevation < GVAR(launchAcceptableElevation)) then {
+                        TRACE_2("Tracking target, elevation too low",_launcher,_elevation);
+                    };
+                }
             };
         };
         case LAUNCH_STATE_COOLDOWN: {
