@@ -79,12 +79,36 @@ if (!isNil "_tracked" && {!isNull _tracked}) then {
         _system getOrDefault ["targets_tracking", []] pushBack _tracked;
     };
     private _launcher = if (count _launchers > 1) then {
-        private _bestDistance = 1e10;
-        private _bestLauncher = -1;
+        TRACE_1("Scoring launchers for tracked target",_tracked);
+        private _bestScore = -1;
+        private _bestLauncher = objNull;
         {
+            if (lineIntersects [getPosASLVisual _x, getPosASLVisual _tracked, _x, _tracked]) then {
+                TRACE_2("Launcher cannot see target, skipping",_x,_tracked);
+                continue;
+            };
+
             private _distance = _x distance _tracked;
-            if (_distance < _bestDistance) then {
-                _bestDistance = _distance;
+            private _distanceFactor = (_distance / 5000) min 1;
+
+            private _trackedDir = getDir _tracked;
+            private _trackedToLauncher = _tracked getRelDir _x;
+
+            private _angleDiff = abs(_trackedDir - _trackedToLauncher);
+            if (_angleDiff > 180) then {
+                _angleDiff = 360 - _angleDiff;
+            };
+
+            private _interceptAngle = 180 - _angleDiff;
+            if (_interceptAngle > 90) then {
+                _interceptAngle = 180 - _interceptAngle;
+            };
+            private _angleFactor = _interceptAngle / 90;
+
+            private _score = (_angleFactor * 0.7) + (_distanceFactor * 0.3);
+            TRACE_4("Launcher scoring",_x,_distance,_interceptAngle,_score);
+            if (_bestScore < 0 || _score < _bestScore) then {
+                _bestScore = _score;
                 _bestLauncher = _x;
             };
         } forEach _launchers;
