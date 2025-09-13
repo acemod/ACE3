@@ -83,7 +83,9 @@ if (!isNil "_tracked" && {!isNull _tracked}) then {
         private _bestScore = -1;
         private _bestLauncher = objNull;
         {
-            if (lineIntersects [getPosASLVisual _x, getPosASLVisual _tracked, _x, _tracked]) then {
+            private _launcherPos = getPosASLVisual _x;
+            _launcherPos set [2, (_launcherPos#2) + 2.5];
+            if (lineIntersects [_launcherPos, getPosASLVisual _tracked, _x, _tracked]) then {
                 TRACE_2("Launcher cannot see target, skipping",_x,_tracked);
                 continue;
             };
@@ -116,9 +118,14 @@ if (!isNil "_tracked" && {!isNull _tracked}) then {
     } else {
         _launchers select 0
     };
-    TRACE_2("Launcher selected for tracked target",_launcher,_tracked);
-    _launcher setVariable [QEGVAR(missileguidance,target), _tracked];
-    _launcher setVariable [QGVAR(state), LAUNCH_STATE_TRACKING];
+    if (isNull _launcher) then {
+        TRACE_1("No launchers could see tracked target",_tracked);
+        _system getOrDefault ["targets_tracking", []] pushBack _tracked;
+    } else {
+        TRACE_2("Launcher selected for tracked target",_launcher,_tracked);
+        _launcher setVariable [QEGVAR(missileguidance,target), _tracked];
+        _launcher setVariable [QGVAR(state), LAUNCH_STATE_TRACKING];
+    };
 };
 
 // Handle firing and cooldown
