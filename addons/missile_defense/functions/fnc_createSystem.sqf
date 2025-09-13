@@ -49,4 +49,6 @@ if (isNil QGVAR(systemIndex)) then {
 
 TRACE_1("Registered missile defense system",_id);
 
+[QGVAR(startTracking)] call CBA_fnc_globalEventJIP;
+
 _id

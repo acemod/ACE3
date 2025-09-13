@@ -30,6 +30,7 @@
         };
         if (isNull _target) then {
             // TODO pick a different target?
+            TRACE_1("Interceptor target no longer exists, stopping management",_projectile);
             _interceptors deleteAt _forEachIndex;
             continue;
         };
@@ -44,7 +45,7 @@
             private _d = (_targetPosition vectorDiff _lastPosition) vectorDotProduct (_currentPosition vectorDiff _lastPosition);
             private _t = 0 max (1 min (_d / _lengthSqr));
             private _projection = _lastPosition vectorAdd ((_currentPosition vectorDiff _lastPosition) vectorMultiply _t);
-            _projection vectorDistance _targetPosition;
+            _projection vectorDistance _targetPosition
         };
 
         _x set [2, _currentPosition];
@@ -57,6 +58,7 @@
             if (_minDistance <= _lastDistance && { GVAR(proximityFuseFailureChance) <= random 1 }) then {
                 private _explosion = createVehicle ["SmallSecondary", _target, [], 0, "CAN_COLLIDE"];
                 [QGVAR(destroyProjectile), [_target]] call CBA_fnc_globalEvent;
+                TRACE_2("Interceptor detonated on target",_projectile,_target);
             } else {
                 (_y getOrDefault ["targets_tracking", []]) pushBack _target;
                 TRACE_2("Interceptor failed to intercept target",_projectile,_target);

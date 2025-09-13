@@ -120,8 +120,8 @@ if (!isNil "_tracked" && {!isNull _tracked}) then {
                     _launcher setVariable [QGVAR(lastLaunchTime), CBA_missionTime];
                     private _turret = [_launcher, (crew _launcher) select 0] call CBA_fnc_turretPath;
                     [_launcher, _launcher currentWeaponTurret _turret] call BIS_fnc_fire;
-                    private _target = _launcher getVariable QEGVAR(missileguidance,target);
-                    private _engagedTargets = _x getVariable QGVAR(engagedTargets);
+                    [QGVAR(launcherFired), [_id, _launcher, _target]] call CBA_fnc_globalEvent;
+                    TRACE_2("Launcher fired at target",_launcher,_target);
                 };
             };
         };

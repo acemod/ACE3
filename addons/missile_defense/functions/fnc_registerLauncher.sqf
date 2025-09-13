@@ -38,6 +38,6 @@ _launcher setVariable [QGVAR(lastLaunchTime), 0];
 
 _launchers pushBackUnique _launcher;
 
-[QGVAR(registerLauncher), [_id, _launcher], _launcher] call CBA_fnc_targetEvent;
+[QGVAR(registerLauncher), [_id, _launcher]] call CBA_fnc_globalEvent;
 
 TRACE_2("Registered missile defense launcher",_launcher,_id);

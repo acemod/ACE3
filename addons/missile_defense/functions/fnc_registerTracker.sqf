@@ -38,4 +38,6 @@ _tracker setVariable [QGVAR(range), _range];
 
 _trackers pushBackUnique _tracker;
 
+[QGVAR(registerTracker), [_id, _tracker]] call CBA_fnc_globalEvent;
+
 TRACE_2("Registered missile defense tracker",_tracker,_id);
