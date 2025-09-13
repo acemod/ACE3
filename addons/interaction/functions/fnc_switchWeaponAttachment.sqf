@@ -71,7 +71,11 @@ if (!_addNew) exitWith {};
 
     if (_unit != ACE_player) exitWith {};
 
-    [[getText (configFile >> "CfgWeapons" >> _newAttachment >> "picture"), 4], true] call CBA_fnc_notify;
+    private _itemPicture = getText (configFile >> "CfgWeapons" >> _newAttachment >> "picture");
+    if (!fileExists _itemPicture) then { _itemPicture = _itemPicture + ".paa"; }; // notify needs full path to exist, try adding .paa
+    if (fileExists _itemPicture) then {
+        [[_itemPicture, 4], true] call CBA_fnc_notify;
+    };
 
     playSound "click";
 }, [_unit, _weapon, _newAttachment], 1] call CBA_fnc_waitAndExecute;

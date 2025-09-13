@@ -15,6 +15,7 @@
             <Japanese>クイック マウント</Japanese>
             <Chinese>快速搭乘</Chinese>
             <Chinesesimp>快速搭乘</Chinesesimp>
+            <Ukrainian>Швидка посадка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_QuickMount_ChangeSeat">
             <English>Change seat</English>
@@ -31,6 +32,7 @@
             <Chinese>換座位</Chinese>
             <Chinesesimp>换座位</Chinesesimp>
             <Turkish>Koltuk Değiştir</Turkish>
+            <Ukrainian>Пересісти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_QuickMount_Distance">
             <English>Distance</English>
@@ -47,6 +49,7 @@
             <Chinese>距離</Chinese>
             <Chinesesimp>距离</Chinesesimp>
             <Turkish>Mesafe</Turkish>
+            <Ukrainian>Дистанція</Ukrainian>
         </Key>
         <Key ID="STR_ACE_QuickMount_DistanceDescription">
             <English>Maximum distance to check for vehicles.</English>
@@ -63,6 +66,7 @@
             <Chinese>最大可檢查載具的距離</Chinese>
             <Chinesesimp>最大可检查载具的距离。</Chinesesimp>
             <Turkish>Araçların kontrol edilmesi için maksimum mesafe.</Turkish>
+            <Ukrainian>Максимальна дистанція для техніки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_QuickMount_EnabledDescription">
             <English>This option allows quick entry into the vehicle you are directly looking at.</English>
@@ -79,6 +83,7 @@
             <Chinese>這個選項允許你能快速進入你直視的載具</Chinese>
             <Chinesesimp>这个选项允许你能快速进入你直视的载具</Chinesesimp>
             <Turkish>Bu seçenek, doğrudan bakmakta olduğunuz araca hızlı giriş sağlar.</Turkish>
+            <Ukrainian>Ця опція дозволяє швидко залізти в транспорт, на який ви дивитеся.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_QuickMount_KeybindDescription">
             <English>Quickly enter the vehicle you are directly looking at.</English>
@@ -95,6 +100,7 @@
             <Chinese>快速進入你正在看的載具之中</Chinese>
             <Chinesesimp>快速进入你正在看的载具之中</Chinesesimp>
             <Turkish>Doğrudan bakmakta olduğunuz araca hızla girin.</Turkish>
+            <Ukrainian>Дозволяє швидко сісти в техніку, на яку ви дивитеся</Ukrainian>
         </Key>
         <Key ID="STR_ACE_QuickMount_KeybindName">
             <English>Vehicle quick mount</English>
@@ -110,6 +116,7 @@
             <Japanese>車両クイック マウント</Japanese>
             <Chinese>快速搭乘載具</Chinese>
             <Chinesesimp>快速搭乘载具</Chinesesimp>
+            <Ukrainian>Швидка посадка в техніку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_QuickMount_Priority">
             <English>Prioritize Seat</English>
@@ -126,6 +133,7 @@
             <Chinese>優先座位</Chinese>
             <Chinesesimp>优先位置</Chinesesimp>
             <Turkish>Koltuğa Öncelik Ver</Turkish>
+            <Ukrainian>Пріоритет місць</Ukrainian>
         </Key>
         <Key ID="STR_ACE_QuickMount_PriorityDescription">
             <English>Seat priority on entry</English>
@@ -142,6 +150,7 @@
             <Chinese>優先想進入哪個座位</Chinese>
             <Chinesesimp>优先想进入哪个位置。</Chinesesimp>
             <Turkish>Araça binerken koltuk önceliği</Turkish>
+            <Ukrainian>Пріоритетність посадки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_QuickMount_Speed">
             <English>Maximum Speed (km/h)</English>
@@ -158,6 +167,7 @@
             <Chinese>最高速度 (公里/小時)</Chinese>
             <Chinesesimp>最高速度（km/h）</Chinesesimp>
             <Turkish>Yüksek Hız (km/h)</Turkish>
+            <Ukrainian>Макс. швидкість (км/год)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_QuickMount_SpeedDescription">
             <English>Maximum vehicle speed (km/h) allowed for player entry</English>
@@ -174,6 +184,7 @@
             <Chinese>設置玩家能在最高多少的速度之下進入載具</Chinese>
             <Chinesesimp>设置玩家能在最高速度是多少的情况之下进入载具。</Chinesesimp>
             <Turkish>Oyuncu binmesi için izin verilen maksimum araç hızı (km / s)</Turkish>
+            <Ukrainian>Макс. швидкість техніки для посадки гравця (км/год)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_QuickMount_VehicleFull">
             <English>Vehicle Full</English>
@@ -190,6 +201,7 @@
             <Chinese>載具已滿</Chinese>
             <Chinesesimp>载具已满</Chinesesimp>
             <Turkish>Araç Dolu</Turkish>
+            <Ukrainian>Місць немає</Ukrainian>
         </Key>
         <Key ID="STR_ACE_QuickMount_VehicleLocked">
             <English>Vehicle Locked</English>
@@ -206,6 +218,7 @@
             <Chinese>載具已上鎖</Chinese>
             <Chinesesimp>载具已上锁</Chinesesimp>
             <Turkish>Araç Kilitli</Turkish>
+            <Ukrainian>Техніка закрита</Ukrainian>
         </Key>
     </Package>
 </Project>

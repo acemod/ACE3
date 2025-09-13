@@ -48,6 +48,7 @@ if (GVAR(fogScaling) > 0) then {
             0 setFog GVAR(priorFog);
             GVAR(priorFog) = nil;
         } else {
+            if (currentVisionMode _unit > 1) exitWith {}; // Don't error if switching directly to thermal
             ERROR("no fog backed up");
         };
 

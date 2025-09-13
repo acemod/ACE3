@@ -13,6 +13,7 @@
             <Korean>큐레이터가 지도 신호를 볼 수 있습니다</Korean>
             <Japanese>キュレーターからマップ ジェスチャを表示できるようにします。</Japanese>
             <Chinesesimp>允许宙斯查看地图指示</Chinesesimp>
+            <Ukrainian>Дозволяє куратору бачити жести на мапі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowCurator_displayName">
             <English>Allow Curator</English>
@@ -26,6 +27,7 @@
             <Korean>큐레이터 허용</Korean>
             <Japanese>キュレーターに許可</Japanese>
             <Chinesesimp>允许宙斯</Chinesesimp>
+            <Ukrainian>Дозволити куратору</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowSpectator_description">
             <English>Allows Spectator to See Map Gestures</English>
@@ -39,6 +41,7 @@
             <Korean>관전자가 지도 신호를 볼 수 있습니다</Korean>
             <Japanese>観戦者からマップ ジェスチャを表示できるようにします。</Japanese>
             <Chinesesimp>允许旁观者查看地图指示</Chinesesimp>
+            <Ukrainian>Дозволяє спостерігачеві бачити жести на мапі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowSpectator_displayName">
             <English>Allow Spectator</English>
@@ -52,6 +55,7 @@
             <Korean>관전자 허용</Korean>
             <Japanese>観戦者に許可</Japanese>
             <Chinesesimp>允许旁观者</Chinesesimp>
+            <Ukrainian>Дозволити бачити у спостерігачі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_All">
             <English>All</English>
@@ -66,6 +70,7 @@
             <Korean>모두</Korean>
             <Japanese>全て</Japanese>
             <Chinesesimp>全部</Chinesesimp>
+            <Ukrainian>Усе</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_Disabled">
             <English>Disabled</English>
@@ -79,6 +84,7 @@
             <Korean>비활성화</Korean>
             <Japanese>無効化</Japanese>
             <Chinesesimp>禁用</Chinesesimp>
+            <Ukrainian>Вимкнути</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_Group">
             <English>Group</English>
@@ -93,6 +99,7 @@
             <Korean>그룹</Korean>
             <Japanese>グループ</Japanese>
             <Chinesesimp>小队</Chinesesimp>
+            <Ukrainian>Група</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_Proximity">
             <English>Proximity</English>
@@ -106,6 +113,7 @@
             <Korean>근처</Korean>
             <Japanese>付近のみ</Japanese>
             <Chinesesimp>附近</Chinesesimp>
+            <Ukrainian>Усі, хто поруч</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_Side">
             <English>Side</English>
@@ -120,6 +128,7 @@
             <Korean>진영</Korean>
             <Japanese>陣営</Japanese>
             <Chinesesimp>阵营</Chinesesimp>
+            <Ukrainian>Сторона</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_description">
             <English>What player can see what</English>
@@ -133,6 +142,7 @@
             <Korean>어떤 플레이어가 볼 수 있는지 정합니다</Korean>
             <Japanese>プレイヤーが見ることができる対象</Japanese>
             <Chinesesimp>什么玩家能看到什么</Chinesesimp>
+            <Ukrainian>Визначає, яка група гравців може бачити жести на мапі під час брифінгу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_displayName">
             <English>Briefing Mode</English>
@@ -146,6 +156,7 @@
             <Korean>브리핑 모드</Korean>
             <Japanese>ブリーフィング モード</Japanese>
             <Chinesesimp>简报模式</Chinesesimp>
+            <Ukrainian>Режим брифінгу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_color_description">
             <English>Color value for group members of groups synced with this module.</English>
@@ -161,6 +172,7 @@
             <Japanese>モジュールで同期されたグループの隊員に設定される色の値。</Japanese>
             <Chinese>改變與此同步小隊隊員的指示器顏色</Chinese>
             <Chinesesimp>改变与此同步小队队员的指示颜色</Chinesesimp>
+            <Ukrainian>Значення кольору для членів груп, які [групи] синхронізовані з цим модулем.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_color_displayName">
             <English>Color</English>
@@ -177,6 +189,7 @@
             <Chinese>顏色</Chinese>
             <Chinesesimp>颜色</Chinesesimp>
             <Turkish>Renk</Turkish>
+            <Ukrainian>Колір</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_defaultColor_description">
             <English>Fallback Color value when there is no group setting. [Module: leave blank to not force on clients]</English>
@@ -192,6 +205,7 @@
             <Japanese>グループ設定がない場合に設定される色の値を設定します。[モジュール:空の場合はクライアントへ強制しません]</Japanese>
             <Chinese>當沒有設定小隊顏色時，此功能會定義玩家的指示器顏色。[模塊: 此欄留空來保持預設顏色]</Chinese>
             <Chinesesimp>当没有设定小队颜色时，此功能会定义玩家的指示颜色。[模块：此栏留空来保持预设颜色]</Chinesesimp>
+            <Ukrainian>Резервне значення кольору, коли немає групового налаштування. [Модуль: залиште порожнім, щоб не нав'язувати його клієнтам]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_defaultColor_displayName">
             <English>Default Color</English>
@@ -208,6 +222,7 @@
             <Chinese>預設顏色</Chinese>
             <Chinesesimp>预设颜色</Chinesesimp>
             <Turkish>Varsayılan Renk</Turkish>
+            <Ukrainian>Колір за замовчуванням</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_defaultLeadColor_description">
             <English>Fallback Color value for group leaders when there is no group setting. [Module: leave blank to not force on clients]</English>
@@ -223,6 +238,7 @@
             <Japanese>グループ設定がない場合に部隊長へ設定される色の値を設定します。[モジュール:空の場合はクライアントへ強制しません]</Japanese>
             <Chinese>當沒有設定小隊顏色時，此功能會定義隊長的指示器顏色。[模塊: 此欄留空來保持預設顏色]</Chinese>
             <Chinesesimp>当没有设定小队颜色时，此功能会定义队长的指示颜色。[模块：此栏留空来保持预设颜色]</Chinesesimp>
+            <Ukrainian>Значення кольору для лідерів груп.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_defaultLeadColor_displayName">
             <English>Lead Default Color</English>
@@ -238,6 +254,7 @@
             <Japanese>部隊長用の標準色</Japanese>
             <Chinese>隊長預設顏色</Chinese>
             <Chinesesimp>队长预设颜色</Chinesesimp>
+            <Ukrainian>Колір за замовчуванням</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_enabled_description">
             <English>Enables the Map Gestures.</English>
@@ -254,6 +271,7 @@
             <Chinese>啟用地圖指示器</Chinese>
             <Chinesesimp>启用地图指示</Chinesesimp>
             <Turkish>Harita hareketlerini etkinleştir.</Turkish>
+            <Ukrainian>Вмикає вказівки на мапі.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_enabled_displayName">
             <English>Enabled</English>
@@ -270,6 +288,7 @@
             <Chinese>啟用</Chinese>
             <Chinesesimp>启用</Chinesesimp>
             <Turkish>Etkin</Turkish>
+            <Ukrainian>Увімкнено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_interval_description">
             <English>Time between data updates.</English>
@@ -286,6 +305,7 @@
             <Chinese>定義每次更新數據的時間</Chinese>
             <Chinesesimp>定义每次更新数据的时间。</Chinesesimp>
             <Turkish>Veri güncellemeleri arasındaki zaman.</Turkish>
+            <Ukrainian>Час між оновленнями даних.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_interval_displayName">
             <English>Update Interval</English>
@@ -302,6 +322,7 @@
             <Chinese>更新間隔</Chinese>
             <Chinesesimp>更新间隔</Chinesesimp>
             <Turkish>Güncelleme aralığı</Turkish>
+            <Ukrainian>Інтервал оновлення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_leadColor_description">
             <English>Color value for group leaders of groups synced with this module.</English>
@@ -317,6 +338,7 @@
             <Japanese>モジュールで同期されたグループの隊長に設定される色の値。</Japanese>
             <Chinese>改變與此同步小隊隊長的指示器顏色</Chinese>
             <Chinesesimp>改变与此同步小队队长的指示颜色。</Chinesesimp>
+            <Ukrainian>Значення кольору для лідерів груп, які [групи] синхронізовані з цим модулем.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_leadColor_displayName">
             <English>Lead Color</English>
@@ -332,6 +354,7 @@
             <Japanese>部隊長用の色</Japanese>
             <Chinese>隊長顏色</Chinese>
             <Chinesesimp>队长颜色</Chinesesimp>
+            <Ukrainian>Лід. колір</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_mapGestures_category">
             <English>ACE Map Gestures</English>
@@ -348,6 +371,7 @@
             <Chinese>ACE 地圖指示器</Chinese>
             <Chinesesimp>ACE 地图指示</Chinesesimp>
             <Turkish>ACE Harita Hareketleri</Turkish>
+            <Ukrainian>ACE Жести на мапі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_maxRangeCamera_description">
             <English>Max range between a Camera and players to show the map gesture indicator</English>
@@ -361,6 +385,7 @@
             <Korean>카메라와 플레이어간 지도 신호를 볼 수 있는 최대 거리를 정합니다</Korean>
             <Japanese>観戦カメラから確認可能なマップ ジェスチャのインジケータを表示するカメラとプレーヤー間の最大距離</Japanese>
             <Chinesesimp>摄像机和玩家之间的最大范围显示地图指示</Chinesesimp>
+            <Ukrainian>Встановлює макс. дальність між гравцем і камерою для відображення жестів на мапі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_maxRangeCamera_displayName">
             <English>Max range Camera</English>
@@ -374,6 +399,7 @@
             <Korean>카메라와 지도 신호의 최대 거리</Korean>
             <Japanese>カメラの最大範囲</Japanese>
             <Chinesesimp>摄像机最大范围</Chinesesimp>
+            <Ukrainian>Макс. дальність дії камери</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_maxRange_description">
             <English>Max range between players to show the map gesture indicator</English>
@@ -389,6 +415,7 @@
             <Japanese>マップ ジェスチャのインジケータを表示可能なプレーヤー間の最大範囲距離</Japanese>
             <Chinese>設定地圖指示器顯示的最大範圍距離</Chinese>
             <Chinesesimp>设定地图指示显示的最大范围距离</Chinesesimp>
+            <Ukrainian>Макс. дистанція між гравцями для відображення жестів на мапі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_maxRange_displayName">
             <English>Map Gesture Max Range</English>
@@ -405,6 +432,7 @@
             <Chinese>地圖指示器最大範圍</Chinese>
             <Chinesesimp>地图指示最大范围</Chinesesimp>
             <Turkish>Harita Hareketi Max Uzaklık</Turkish>
+            <Ukrainian>Максимальна відстань жестів на мапі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_moduleGroupSettings_displayName">
             <English>Map Gestures - Group Settings</English>
@@ -420,6 +448,7 @@
             <Japanese>マップ ジェスチャ - グループ設定</Japanese>
             <Chinese>地圖指示器 - 隊伍設定</Chinese>
             <Chinesesimp>地图指示—队伍设定</Chinesesimp>
+            <Ukrainian>Жести на мапі - налаштування груп</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_moduleSettings_displayName">
             <English>Map Gestures</English>
@@ -436,6 +465,7 @@
             <Chinese>地圖指示器</Chinese>
             <Chinesesimp>地图指示</Chinesesimp>
             <Turkish>Harita Hareketleri</Turkish>
+            <Ukrainian>Жести на мапі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_nameTextColor_description">
             <English>Color of the name tag text besides the map gestures mark.</English>
@@ -451,6 +481,7 @@
             <Japanese>マップ ジェスチャに添えて表示される名前の文字色。</Japanese>
             <Chinese>定義名稱文字顏色。使其與地圖指示器顏色有所區別</Chinese>
             <Chinesesimp>定义名称文字颜色。使其与地图指示颜色有所区别。</Chinesesimp>
+            <Ukrainian>Колір імені гравця поруч із маркером жестів.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_nameTextColor_displayName">
             <English>Name Text Color</English>
@@ -467,6 +498,7 @@
             <Chinese>名稱文字顏色</Chinese>
             <Chinesesimp>名称文字颜色</Chinesesimp>
             <Turkish>Isim Metin Rengi</Turkish>
+            <Ukrainian>Колір тексту назви</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_onlyShowFriendlys_description">
             <English>Shows only Gestures from Units that are from the same side or a Friendly side.</English>
@@ -480,6 +512,7 @@
             <Korean>같은 진영 혹은 아군 진영 인원들만 보이게 합니다.</Korean>
             <Japanese>同じ陣営または味方陣営のユニットからのジェスチャのみを表示します。</Japanese>
             <Chinesesimp>仅显示来自同一阵营或友军的单位的指示。</Chinesesimp>
+            <Ukrainian>Показувати жести тільки від гравців союзної сторони.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_onlyShowFriendlys_displayName">
             <English>Only Show Friendly Gestures</English>
@@ -493,6 +526,7 @@
             <Korean>아군 신호만 보기</Korean>
             <Japanese>友軍のジェスチャのみ表示</Japanese>
             <Chinesesimp>仅显示友军指示</Chinesesimp>
+            <Ukrainian>Показувати тільки союзні жести</Ukrainian>
         </Key>
     </Package>
 </Project>

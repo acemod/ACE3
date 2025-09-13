@@ -1,7 +1,5 @@
 class CfgVehicles {
-    class All {
-        class EventHandlers;
-    };
+    class All;
     class AllVehicles: All {};
     class Land: AllVehicles {};
     class LandVehicle: Land {};

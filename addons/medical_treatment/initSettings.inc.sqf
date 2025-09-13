@@ -277,7 +277,7 @@
     "LIST",
     [LSTRING(AllowSelfPAK_DisplayName), LSTRING(AllowSelfPAK_Description)],
     LSTRING(Category),
-    [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 0],
+    [[0, 1, 2], [ELSTRING(common,No), ELSTRING(common,Yes), LSTRING(Doctors)], 0],
     true
 ] call CBA_fnc_addSetting;
 
@@ -322,7 +322,7 @@
     "LIST",
     [LSTRING(AllowSelfStitch_DisplayName), LSTRING(AllowSelfStitch_Description)],
     LSTRING(Category),
-    [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 0],
+    [[0, 1, 2], [ELSTRING(common,No), ELSTRING(common,Yes), LSTRING(Doctors)], 0],
     true
 ] call CBA_fnc_addSetting;
 
@@ -358,7 +358,7 @@
     "LIST",
     [LSTRING(AllowSelfIV_DisplayName), LSTRING(AllowSelfIV_Description)],
     LSTRING(Category),
-    [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 1],
+    [[0, 1, 2], [ELSTRING(common,No), ELSTRING(common,Yes), LSTRING(Doctors)], 1],
     true
 ] call CBA_fnc_addSetting;
 

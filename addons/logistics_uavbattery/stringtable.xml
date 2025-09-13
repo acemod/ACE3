@@ -17,6 +17,7 @@
             <Chinesesimp>对可携式无人机进行充电</Chinesesimp>
             <Turkish>Used to refuel Carried UAV's</Turkish>
             <Hungarian>Hordozható UAV-k feltöltéséhez való akkumulátor</Hungarian>
+            <Ukrainian>Використовується для зарядки переносних БПЛА</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Name">
             <English>UAV Battery</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>无人机电池</Chinesesimp>
             <Turkish>UAV Batarya</Turkish>
             <Hungarian>UAV akkumulátor</Hungarian>
+            <Ukrainian>Аккумулятор БПЛА</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Recharge">
             <English>Recharging...</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>正在充电...</Chinesesimp>
             <Turkish>Şarj Oluyor</Turkish>
             <Hungarian>Akku feltöltése...</Hungarian>
+            <Ukrainian>Заряджається...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Full">
             <English>Drone is full</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>无人机电池已充满</Chinesesimp>
             <Turkish>IHA Dolu</Turkish>
             <Hungarian>A drón fel van töltve</Hungarian>
+            <Ukrainian>БПЛА повністю заряджений</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_NoBattery">
             <English>You need a UAV Battery</English>
@@ -85,6 +89,7 @@
             <Chinesesimp>你需要一个无人机电池</Chinesesimp>
             <Turkish>UAV Bataryaya ihtiyacın var</Turkish>
             <Hungarian>Szükséged van egy UAV akkumulátorra</Hungarian>
+            <Ukrainian>Потрібен акумулятор для БПЛА</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Recharge">
             <English>Recharge</English>
@@ -102,6 +107,7 @@
             <Chinesesimp>充电</Chinesesimp>
             <Turkish>Şarj</Turkish>
             <Hungarian>Feltöltés</Hungarian>
+            <Ukrainian>Зарядити</Ukrainian>
         </Key>
     </Package>
 </Project>

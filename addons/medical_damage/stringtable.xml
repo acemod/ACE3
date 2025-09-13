@@ -15,6 +15,7 @@
             <Japanese>AIが無意識状態に陥るまでに受けられるダメージ量を設定します。\n("外傷の合計"が有効な場合は死亡するまでに受けられるダメージ量)</Japanese>
             <Chinese>設定AI在無意識之前能承受多少傷害</Chinese>
             <Chinesesimp>设置 AI 在昏迷前可以承受的伤害量（如果启用了“创伤总和”，则会死亡）。</Chinesesimp>
+            <Ukrainian>Встановлює кількість шкоди, яку може отримати ШІ, перш ніж знепритомніє (або помирає, коли ввімкнена функція "Сума травм")...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_DisplayName">
             <English>AI Critical Damage Threshold</English>
@@ -30,6 +31,7 @@
             <Japanese>AIのクリティカルダメージしきい値</Japanese>
             <Chinese>AI重擊承受量</Chinese>
             <Chinesesimp>AI 临界伤害阈值</Chinesesimp>
+            <Ukrainian>Поріг критичної шкоди ШІ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Abrasion">
             <English>Scrape</English>
@@ -47,6 +49,7 @@
             <Chinesesimp>擦伤</Chinesesimp>
             <Turkish>Sıyrık</Turkish>
             <Hungarian>Horzsolás</Hungarian>
+            <Ukrainian>Садна</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Abrasion_Large">
             <English>Large Scrape</English>
@@ -64,6 +67,7 @@
             <Chinesesimp>重度擦伤</Chinesesimp>
             <Turkish>Büyük Sıyrık</Turkish>
             <Hungarian>Nagy horzsolás</Hungarian>
+            <Ukrainian>Велика садна</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Abrasion_Medium">
             <English>Medium Scrape</English>
@@ -81,6 +85,7 @@
             <Chinesesimp>中度擦伤</Chinesesimp>
             <Turkish>Orta Sıyrık</Turkish>
             <Hungarian>Közepes horzsolás</Hungarian>
+            <Ukrainian>Середня садна</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Abrasion_Minor">
             <English>Minor Scrape</English>
@@ -98,6 +103,23 @@
             <Chinesesimp>轻度擦伤</Chinesesimp>
             <Turkish>Küçük Sıyrık</Turkish>
             <Hungarian>Kis horzsolás</Hungarian>
+            <Ukrainian>Мала садна</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_AlternateArmorPenetration_Description">
+            <English>Controls whether ammo material penetration is taken into account for damage handling.</English>
+            <French>Contrôle si la pénétration du matériau des munitions est prise en compte pour le traitement des dommages.</French>
+            <Russian>Контролирует, учитывается ли проникновение боеприпасов в материал при обработке повреждений.</Russian>
+            <Korean>대미지 계산 시 탄약 재질의 관통력을 고려할 지 여부를 제어합니다.</Korean>
+            <Japanese>ダメージ処理において弾薬の貫通力を考慮するかどうかを制御します。</Japanese>
+            <Ukrainian>Контролює, чи враховується проникнення боєприпасів у матеріал при обробці пошкоджень.</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_AlternateArmorPenetration_DisplayName">
+            <English>Use Custom Armor Penetration</English>
+            <French>Utiliser la pénétration d'armure personnalisée</French>
+            <Russian>Использовать спец. бронепробиваемость</Russian>
+            <Korean>커스텀 철갑 사용</Korean>
+            <Japanese>特別なアーマー貫通計算を使用</Japanese>
+            <Ukrainian>Використовувати спец. бронепробивність</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Avulsion">
             <English>Avulsion</English>
@@ -115,6 +137,7 @@
             <Chinesesimp>撕脱伤</Chinesesimp>
             <Turkish>Kopma</Turkish>
             <Hungarian>Leszakadás</Hungarian>
+            <Ukrainian>Авульсія</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Avulsion_Large">
             <English>Large Avulsion</English>
@@ -132,6 +155,7 @@
             <Chinesesimp>重度撕脱伤</Chinesesimp>
             <Turkish>Büyük Kopuk</Turkish>
             <Hungarian>Nagy leszakadás</Hungarian>
+            <Ukrainian>Велика Авульсія</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Avulsion_Medium">
             <English>Medium Avulsion</English>
@@ -149,6 +173,7 @@
             <Chinesesimp>中度撕脱伤</Chinesesimp>
             <Turkish>Orta Kopuk</Turkish>
             <Hungarian>Közepes leszakadás</Hungarian>
+            <Ukrainian>Середня Авульсія</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Avulsion_Minor">
             <English>Minor Avulsion</English>
@@ -166,6 +191,7 @@
             <Chinesesimp>轻度撕脱伤</Chinesesimp>
             <Turkish>Küçük Kopuk</Turkish>
             <Hungarian>Kis leszakadás</Hungarian>
+            <Ukrainian>Мала Авульсія</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Contusion">
             <English>Bruise</English>
@@ -183,6 +209,7 @@
             <Chinesesimp>挫伤</Chinesesimp>
             <Turkish>Yara</Turkish>
             <Hungarian>Zúzódás</Hungarian>
+            <Ukrainian>Забій</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Contusion_Large">
             <English>Large Bruise</English>
@@ -200,6 +227,7 @@
             <Chinesesimp>重度挫伤</Chinesesimp>
             <Turkish>Büyük Yara</Turkish>
             <Hungarian>Nagy zúzódás</Hungarian>
+            <Ukrainian>Сильний забій</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Contusion_Medium">
             <English>Medium Bruise</English>
@@ -217,6 +245,7 @@
             <Chinesesimp>中度挫伤</Chinesesimp>
             <Turkish>Orta Yara</Turkish>
             <Hungarian>Közepes zúzódás</Hungarian>
+            <Ukrainian>Середній забій</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Contusion_Minor">
             <English>Minor Bruise</English>
@@ -234,6 +263,7 @@
             <Chinesesimp>轻度挫伤</Chinesesimp>
             <Turkish>Küçük Yara</Turkish>
             <Hungarian>Kis zúzódás</Hungarian>
+            <Ukrainian>Слабкий забій</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Crush">
             <English>Crushed Tissue</English>
@@ -251,6 +281,7 @@
             <Chinesesimp>挤压伤</Chinesesimp>
             <Turkish>Ezilmiş Doku</Turkish>
             <Hungarian>Zúzott szövet</Hungarian>
+            <Ukrainian>Компресійна травма</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Crush_Large">
             <English>Large Crushed Tissue</English>
@@ -268,6 +299,7 @@
             <Chinesesimp>重度挤压伤</Chinesesimp>
             <Turkish>Büyük Ezilmiş Doku</Turkish>
             <Hungarian>Nagy zúzött szövet</Hungarian>
+            <Ukrainian>Сильна компресійна травма</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Crush_Medium">
             <English>Medium Crushed Tissue</English>
@@ -285,6 +317,7 @@
             <Chinesesimp>中度挤压伤</Chinesesimp>
             <Turkish>Orta Ezilmiş Doku</Turkish>
             <Hungarian>Közepes zúzott szövet</Hungarian>
+            <Ukrainian>Помірна компресійна травма</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Crush_Minor">
             <English>Minor Crushed Tissue</English>
@@ -302,6 +335,7 @@
             <Chinesesimp>轻度挤压伤</Chinesesimp>
             <Turkish>Küçük Ezilmiş Doku</Turkish>
             <Hungarian>Kis zúzott szövet</Hungarian>
+            <Ukrainian>Слабка компресійна травма</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Cut">
             <English>Cut</English>
@@ -319,6 +353,7 @@
             <Chinesesimp>割伤</Chinesesimp>
             <Turkish>Kesik</Turkish>
             <Hungarian>Vágás</Hungarian>
+            <Ukrainian>Поріз</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Cut_Large">
             <English>Large Cut</English>
@@ -336,6 +371,7 @@
             <Chinesesimp>重度割伤</Chinesesimp>
             <Turkish>Büyük Kesik</Turkish>
             <Hungarian>Nagy vágás</Hungarian>
+            <Ukrainian>Сильний поріз</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Cut_Medium">
             <English>Medium Cut</English>
@@ -353,6 +389,7 @@
             <Chinesesimp>中度割伤</Chinesesimp>
             <Turkish>Orta Kesik</Turkish>
             <Hungarian>Közepes vágás</Hungarian>
+            <Ukrainian>Середній поріз</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Cut_Minor">
             <English>Small Cut</English>
@@ -370,6 +407,7 @@
             <Chinesesimp>轻度割伤</Chinesesimp>
             <Turkish>Küçük Kesik</Turkish>
             <Hungarian>Kis vágás</Hungarian>
+            <Ukrainian>Дрібний поріз</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_Description">
             <English>The chance of dying to a fatal injury.</English>
@@ -383,6 +421,7 @@
             <Korean>치명상으로 인해 사망할 확률을 정합니다.</Korean>
             <Japanese>致命傷による死亡確率を設定します。</Japanese>
             <Chinesesimp>死于致命伤的概率。</Chinesesimp>
+            <Ukrainian>Шанс померти від смертельної травми.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_DisplayName">
             <English>Fatal Injury Death Chance</English>
@@ -396,6 +435,7 @@
             <Korean>치명상 사망 확률</Korean>
             <Japanese>致命傷による死亡確率</Japanese>
             <Chinesesimp>致命伤死亡概率</Chinesesimp>
+            <Ukrainian>Імовірність смерті від смертельної травми</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Eden_threshold_Description">
             <English>Sets the amount of damage a unit can receive before going unconscious. (0 for mission default)</English>
@@ -411,6 +451,7 @@
             <Japanese>このユニットが無意識状態に陥るまでに受けられるダメージ量を設定します。 (ミッション標準は0)</Japanese>
             <Chinesesimp>设定一个单位在昏迷前所能承受的伤害量。（任务默认为0）</Chinesesimp>
             <Turkish>Bilinçsiz duruma geçmeden önce bir birimin alabileceği hasar miktarını ayarlar. (Görev varsayılanı için 0)</Turkish>
+            <Ukrainian>Встановлює кількість шкоди, яку може отримати юніт перед тим, як знепритомніти. (0 для значення місії)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Eden_threshold_DisplayName">
             <English>Unit Damage Threshold</English>
@@ -426,6 +467,7 @@
             <Japanese>ユニットのダメージしきい値</Japanese>
             <Chinesesimp>单位伤害阈值</Chinesesimp>
             <Turkish>Birim Hasar Katsayısı</Turkish>
+            <Ukrainian>Поріг ушкоджень</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Laceration">
             <English>Tear</English>
@@ -443,6 +485,7 @@
             <Chinesesimp>撕裂伤</Chinesesimp>
             <Turkish>Yırtık</Turkish>
             <Hungarian>Szakadás</Hungarian>
+            <Ukrainian>Рвана рана</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Laceration_Large">
             <English>Large Tear</English>
@@ -460,6 +503,7 @@
             <Chinesesimp>重度撕裂伤</Chinesesimp>
             <Turkish>Büyük Yırtık</Turkish>
             <Hungarian>Nagy szakadás</Hungarian>
+            <Ukrainian>Велика рвана рана</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Laceration_Medium">
             <English>Medium Tear</English>
@@ -477,6 +521,7 @@
             <Chinesesimp>中度撕裂伤</Chinesesimp>
             <Turkish>Orta Yırtık</Turkish>
             <Hungarian>Közepes szakadás</Hungarian>
+            <Ukrainian>Середня рвана рана</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Laceration_Minor">
             <English>Small Tear</English>
@@ -494,6 +539,7 @@
             <Chinesesimp>轻度撕裂伤</Chinesesimp>
             <Turkish>Küçük Yırtık</Turkish>
             <Hungarian>Kis szakadás</Hungarian>
+            <Ukrainian>Мала рвана рана</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousChance_Description">
             <English>The probability of a person falling unconscious when their pain is above the tolerance threshold upon receiving damage.</English>
@@ -507,6 +553,7 @@
             <Korean>고통 한계점을 넘을 시 기절하는 확률을 정합니다.</Korean>
             <Japanese>ユニットがダメージを受けた時の痛みが許容しきい値を超えていた場合に無意識状態に陥る確率を設定します。</Japanese>
             <Chinesesimp>当一个人的疼痛超过承受能力的极限时，他陷入昏迷的概率。</Chinesesimp>
+            <Ukrainian>Шанс, що людина знепритомніє, коли її біль вищий за допустимий поріг під час отримання травми.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousChance_DisplayName">
             <English>Pain Unconscious Chance</English>
@@ -520,6 +567,7 @@
             <Korean>고통으로 인한 기절 확률</Korean>
             <Japanese>痛みによる無意識化確率</Japanese>
             <Chinesesimp>疼痛昏厥概率</Chinesesimp>
+            <Ukrainian>Шанс втратити свідомість від болю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousThreshold_Description">
             <English>Sets the threshold for severe pain, above which a person can fall unconscious upon receiving damage.</English>
@@ -533,6 +581,7 @@
             <Korean>사람이 데미지를 입었을 때 의식불명 상태가 될 수 있는 심각한 고통의 한계점을 설정합니다.</Korean>
             <Japanese>激しい痛みのしきい値を設定します。このしきい値を超えた状態でダメージを受けると意識を失う可能性があります。</Japanese>
             <Chinesesimp>设定重度疼痛的阈值, 疼痛超过这个值时再次受到伤害可能会导致昏迷</Chinesesimp>
+            <Ukrainian>Встановлює кількість болю від отриманої травми, за якої юніт може втратити свідомість.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousThreshold_DisplayName">
             <English>Pain Unconscious Threshold</English>
@@ -546,6 +595,7 @@
             <Korean>고통 기절 한계점</Korean>
             <Japanese>無意識状態に陥る痛みのしきい値</Japanese>
             <Chinesesimp>疼痛昏迷阈值</Chinesesimp>
+            <Ukrainian>Поріг болю для втрати свідомості</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_Description">
             <English>Sets the amount of damage a player can receive before going unconscious (and dying if "Sum of Trauma" is enabled).</English>
@@ -562,6 +612,7 @@
             <Chinese>設定玩家在無意識前能承受多少傷害。</Chinese>
             <Chinesesimp>设置玩家在昏迷前可以承受的伤害量（如果启用了“创伤总和”，则会死亡）。</Chinesesimp>
             <Turkish>Bir oyuncunun bayılmadan önce alabileceği hasar miktarını belirler.</Turkish>
+            <Ukrainian>Встановлює кількість шкоди, яку може отримати гравець, перш ніж знепритомніє (і вмирає, якщо ввімкнено функцію "Сума травм").</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_DisplayName">
             <English>Player Critical Damage Threshold</English>
@@ -577,6 +628,7 @@
             <Japanese>プレイヤーのクリティカルダメージしきい値</Japanese>
             <Chinese>玩家重擊承受量</Chinese>
             <Chinesesimp>玩家临界伤害阈值</Chinesesimp>
+            <Ukrainian>Поріг критичної шкоди гравця</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PunctureWound">
             <English>Puncture Wound</English>
@@ -594,6 +646,7 @@
             <Chinesesimp>刺伤</Chinesesimp>
             <Turkish>Delinme Yarası</Turkish>
             <Hungarian>Szúrt seb</Hungarian>
+            <Ukrainian>Колота рана</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PunctureWound_Large">
             <English>Large Puncture Wound</English>
@@ -611,6 +664,7 @@
             <Chinesesimp>重度刺伤</Chinesesimp>
             <Turkish>Büyük Delinme Yarası</Turkish>
             <Hungarian>Nagy szúrt seb</Hungarian>
+            <Ukrainian>Велика колота рана</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PunctureWound_Medium">
             <English>Medium Puncture Wound</English>
@@ -628,6 +682,7 @@
             <Chinesesimp>中度刺伤</Chinesesimp>
             <Turkish>Orta Delinme Yarası</Turkish>
             <Hungarian>Közepes szúrt seb</Hungarian>
+            <Ukrainian>Середня колота рана</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PunctureWound_Minor">
             <English>Minor Puncture Wound</English>
@@ -645,6 +700,7 @@
             <Chinesesimp>轻度刺伤</Chinesesimp>
             <Turkish>Küçük Delinme Yarası</Turkish>
             <Hungarian>Kis szúrt seb</Hungarian>
+            <Ukrainian>Мала колота рана</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn">
             <English>Thermal Burn</English>
@@ -658,6 +714,7 @@
             <Korean>화상</Korean>
             <Japanese>熱傷</Japanese>
             <Chinesesimp>热灼伤</Chinesesimp>
+            <Ukrainian>Термічний опік</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Large">
             <English>Major Thermal Burn</English>
@@ -671,6 +728,7 @@
             <Korean>심각한 화상</Korean>
             <Japanese>重度の熱傷</Japanese>
             <Chinesesimp>重度热灼伤</Chinesesimp>
+            <Ukrainian>Сильний термічний опік</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Medium">
             <English>Medium Thermal Burn</English>
@@ -684,6 +742,7 @@
             <Korean>꽤 큰 화상</Korean>
             <Japanese>中度の熱傷</Japanese>
             <Chinesesimp>中度热灼伤</Chinesesimp>
+            <Ukrainian>Середній термічний опік</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Minor">
             <English>Minor Thermal Burn</English>
@@ -697,6 +756,7 @@
             <Korean>작은 화상</Korean>
             <Japanese>軽度の熱傷</Japanese>
             <Chinesesimp>轻微热灼伤</Chinesesimp>
+            <Ukrainian>Незначний термічний опік</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_VelocityWound">
             <English>Velocity Wound</English>
@@ -714,6 +774,7 @@
             <Chinesesimp>穿透伤</Chinesesimp>
             <Turkish>Hız Yarası</Turkish>
             <Hungarian>Lőtt seb</Hungarian>
+            <Ukrainian>Вогнепальна рана</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_VelocityWound_Large">
             <English>Large Velocity Wound</English>
@@ -731,6 +792,7 @@
             <Chinesesimp>重度穿透伤</Chinesesimp>
             <Turkish>Büyük Hız Yarası</Turkish>
             <Hungarian>Nagy lőtt seb</Hungarian>
+            <Ukrainian>Велика вогнепальна рана</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_VelocityWound_Medium">
             <English>Medium Velocity Wound</English>
@@ -748,6 +810,7 @@
             <Chinesesimp>中度穿透伤</Chinesesimp>
             <Turkish>Orta Hız Yarası</Turkish>
             <Hungarian>Közepes lőtt seb</Hungarian>
+            <Ukrainian>Середня вогнепальна рана</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_VelocityWound_Minor">
             <English>Small Velocity Wound</English>
@@ -765,6 +828,7 @@
             <Chinesesimp>轻度穿透伤</Chinesesimp>
             <Turkish>Küçük Hız Yarası</Turkish>
             <Hungarian>Kis lőtt seb</Hungarian>
+            <Ukrainian>Мала вогнепальна рана</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_Description">
             <English>Determines what damage can be fatal</English>
@@ -781,6 +845,7 @@
             <Chinese>決定何種傷害為致命</Chinese>
             <Chinesesimp>确定哪些伤害可能是致命的</Chinesesimp>
             <Turkish>Hangi hasarın ölümcül olabileceğini belirler</Turkish>
+            <Ukrainian>Визначає, яка шкода буде смертельною</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_DisplayName">
             <English>Fatal Damage Source</English>
@@ -797,6 +862,7 @@
             <Chinese>致命傷來源</Chinese>
             <Chinesesimp>致命伤来源</Chinesesimp>
             <Turkish>Ölümcül Hasar Kaynağı</Turkish>
+            <Ukrainian>Причина смертельної шкоди</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_both">
             <English>Either</English>
@@ -813,6 +879,7 @@
             <Chinese>兩者都是</Chinese>
             <Chinesesimp>二者之一</Chinesesimp>
             <Turkish>Ikisinden biri</Turkish>
+            <Ukrainian>Обидва</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_trauma">
             <English>Sum of trauma</English>
@@ -828,6 +895,7 @@
             <Japanese>外傷の合計</Japanese>
             <Chinese>外部創傷累計</Chinese>
             <Chinesesimp>创伤总和</Chinesesimp>
+            <Ukrainian>Сукупність травми</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_vitalShotsOnly">
             <English>Only large hits to vital organs</English>
@@ -844,6 +912,7 @@
             <Chinese>只有重要器官之重傷</Chinese>
             <Chinesesimp>只有重要器官受到重创</Chinesesimp>
             <Turkish>Sadece hayati organlara büyük vuruşlar</Turkish>
+            <Ukrainian>Лише серйозні потрапляння в життєво важливі органи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_limbDamageThreshold_Description">
             <English>Sets the amount of damage limbs can receive before going critical, leading to death. Must be over 0 for any effect.\nRequires the "Use Limb Damage" setting to be enabled and "Fatal Damage Source" to be set to "Sum of Trauma" or "Either".\nStacks multiplicatively with the overall unit Damage Threshold. Doesn't interact with fractures/limping at all.</English>
@@ -854,6 +923,7 @@
             <Korean>치명적인 상태가 되어 죽음에 이르기 전까지 사지에 받는 피해량을 설정합니다. 효과가 생기려면 값이 0보다 커야 합니다.\n"사지 피해 사용" 설정을 활성화하고 "치명상의 원인"을 "외상 중첩" 또는 "둘 다"로 설정해야 합니다.\n전체 유닛 피해량 임계값과 곱해져서 누적됩니다. 골절/절뚝거림과는 전혀 상관 없습니다.</Korean>
             <Japanese>致命的状態となり死亡する前に手足が受けられるダメージの量を設定します。\n効果の発動には0より大きい数字に設定する必要があります。\n"手足のダメージを使用" 設定を有効化した上で "致命ダメージの原因" を "外傷の合計" または "どちらか" に設定する必要があります。\nユニット全体のダメージしきい値に対して乗算的に上乗せされます。 骨折や足の引きずり(跛行)とは無関係です。</Japanese>
             <Chinesesimp>设置四肢可以承受的伤害, 超过时将导致致命伤. 必须大于0才能产生效果\n需要启用"四肢伤害计入创伤总和", 并且"致命伤来源"设置为"创伤总和"或"二者之一"\n与临界伤害阈值乘法叠加. 和骨折/跛脚无关</Chinesesimp>
+            <Ukrainian>Встановлює величину шкоди, яку можуть отримати кінцівки, перш ніж шкода стане критичною, що призведе до смерті. Для будь-якого ефекту має бути більше 0. Потрібно, щоб налаштування "Використовувати шкоду кінцівкам" було ввімкнене, а "Причина смертельної шкоди" була встановлена на "Сукупність травми" або "Обидва".\nПомножується із загальним порогом ушкодження. Ніяк не взаємодіє з переломами або кульгавістю.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_limbDamageThreshold_DisplayName">
             <English>Limb Damage Threshold</English>
@@ -864,6 +934,7 @@
             <Korean>사지 피해량 임계값</Korean>
             <Japanese>手足のダメージしきい値</Japanese>
             <Chinesesimp>四肢伤害阈值</Chinesesimp>
+            <Ukrainian>Поріг пошкодження кінцівок</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_uselimbDamage_Description">
             <English>Controls whether limb damage is taken into account for sum of trauma calculations.</English>
@@ -874,6 +945,7 @@
             <Korean>외상 중첩을 계산할 때 사지 피해량을 고려할지 여부를 제어합니다.</Korean>
             <Japanese>"外傷の合計" の計算に手足のダメージを考慮するかどうかを制御します。</Japanese>
             <Chinesesimp>控制四肢伤害是否计入创伤总和计算</Chinesesimp>
+            <Ukrainian>Визначає, чи враховується пошкодження кінцівок під час розрахунку сукупності травм.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_uselimbDamage_DisplayName">
             <English>Use Limb Damage</English>
@@ -884,6 +956,7 @@
             <Korean>사지 피해 사용</Korean>
             <Japanese>手足のダメージを使用</Japanese>
             <Chinesesimp>四肢伤害计入创伤总和</Chinesesimp>
+            <Ukrainian>Використовувати шкоду кінцівкам</Ukrainian>
         </Key>
     </Package>
 </Project>

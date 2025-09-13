@@ -16,6 +16,7 @@
             <Chinese>切換碰撞燈</Chinese>
             <Chinesesimp>切换碰撞灯</Chinesesimp>
             <Turkish>Çarpışma Işıklarını Aç/Kapat</Turkish>
+            <Ukrainian>Переключити бортові вогні</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_EngineOff">
             <English>Engine off</English>
@@ -33,6 +34,7 @@
             <Chinesesimp>引擎熄火</Chinesesimp>
             <Turkish>Motor Kapalı</Turkish>
             <Hungarian>Motor leállítása</Hungarian>
+            <Ukrainian>Вимкнути двигун</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_EngineOn">
             <English>Engine on</English>
@@ -50,6 +52,7 @@
             <Chinesesimp>引擎发动</Chinesesimp>
             <Turkish>Motor Açık</Turkish>
             <Hungarian>Motor indítása</Hungarian>
+            <Ukrainian>Увімкнути двигун</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_FireSmokeLauncher">
             <English>Fire Smoke Launcher</English>
@@ -67,6 +70,7 @@
             <Chinesesimp>发射烟雾发射器</Chinesesimp>
             <Turkish>Ateşli Sis Fırlatıcısı</Turkish>
             <Hungarian>Füstvető eltüzelése</Hungarian>
+            <Ukrainian>Пустити димову завісу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_HolsterWeapon">
             <English>Holster Weapon</English>
@@ -84,6 +88,7 @@
             <Chinesesimp>武器套</Chinesesimp>
             <Turkish>Silahını Kılıfına Koy</Turkish>
             <Hungarian>Fegyvert tokba</Hungarian>
+            <Ukrainian>Прибрати зброю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_LoadGrenade">
             <English>Grenade %1</English>
@@ -101,6 +106,7 @@
             <Chinesesimp>手榴弹 %1</Chinesesimp>
             <Turkish>El Bombası %1</Turkish>
             <Hungarian>Gránát: %1</Hungarian>
+            <Ukrainian>Граната %1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_NoFragsLeft">
             <English>No frags left</English>
@@ -117,6 +123,7 @@
             <Chinese>已無破片手榴彈</Chinese>
             <Chinesesimp>已无破片手榴弹</Chinesesimp>
             <Hungarian>Nincs több repeszgránát</Hungarian>
+            <Ukrainian>Осколкових гранат немає</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_NoGrenadeSelected">
             <English>No grenade selected</English>
@@ -134,6 +141,7 @@
             <Chinesesimp>未选择手榴弹</Chinesesimp>
             <Turkish>Bomba Seçilmedi</Turkish>
             <Hungarian>Nincs semmilyen gránát kiválasztva</Hungarian>
+            <Ukrainian>Немає обраної гранати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_NoGrenadesLeft">
             <English>No grenades left</English>
@@ -151,6 +159,7 @@
             <Chinesesimp>已无手榴弹</Chinesesimp>
             <Turkish>El Bombası Kalmadı</Turkish>
             <Hungarian>Nincs több gránát</Hungarian>
+            <Ukrainian>Гранат не залишилося</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_NoMiscGrenadeLeft">
             <English>No misc. grenades left</English>
@@ -167,6 +176,7 @@
             <Chinese>已無其他手榴彈</Chinese>
             <Chinesesimp>已无其他手榴弹</Chinesesimp>
             <Hungarian>Nincs több egyéb gránát</Hungarian>
+            <Ukrainian>Нелетальні гранати закінчилися</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_ReadyGrenade">
             <English>Ready Grenade</English>
@@ -184,6 +194,7 @@
             <Chinesesimp>准备手榴弹</Chinesesimp>
             <Turkish>El Bombası Hazır</Turkish>
             <Hungarian>Gránát előkészítése</Hungarian>
+            <Ukrainian>Підготувати гранату</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectBinocular">
             <English>Select Binoculars</English>
@@ -201,6 +212,7 @@
             <Chinesesimp>选择望远镜</Chinesesimp>
             <Turkish>Dürbünü Seç</Turkish>
             <Hungarian>Távcső Kiválasztása</Hungarian>
+            <Ukrainian>Вибрати бінокль</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectGrenadeFrag">
             <English>Select Frag Grenade</English>
@@ -218,6 +230,7 @@
             <Chinesesimp>选择破片手榴弹</Chinesesimp>
             <Turkish>El Bombasını Seç</Turkish>
             <Hungarian>Repeszgránát Kiválasztása</Hungarian>
+            <Ukrainian>Вибрати осколкову гранату</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectGrenadeOther">
             <English>Select Non-Frag Grenade</English>
@@ -235,6 +248,7 @@
             <Chinesesimp>选择非破片手榴弹</Chinesesimp>
             <Turkish>El Bombası Dışındakileri Seç</Turkish>
             <Hungarian>Nem-robbanó Gránát Kiválasztása</Hungarian>
+            <Ukrainian>Вибрати гранату</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectLauncher">
             <English>Select Launcher</English>
@@ -252,6 +266,7 @@
             <Chinesesimp>选择发射器</Chinesesimp>
             <Turkish>Fırlatılabiliri Seç</Turkish>
             <Hungarian>Rakétavető Kiválasztása</Hungarian>
+            <Ukrainian>Вибрати гранатомет</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectMachineGun">
             <English>Select Machine Gun</English>
@@ -269,6 +284,7 @@
             <Chinesesimp>选择机枪</Chinesesimp>
             <Turkish>Makineli Silahı Seç</Turkish>
             <Hungarian>Géppuska Kiválasztása</Hungarian>
+            <Ukrainian>Вибрати кулемет</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectMainGun">
             <English>Select Main Gun</English>
@@ -286,6 +302,7 @@
             <Chinesesimp>选择主武器</Chinesesimp>
             <Turkish>Ana Silahı Seç</Turkish>
             <Hungarian>Elsődleges Fegyver Kiválasztása</Hungarian>
+            <Ukrainian>Вибрати основну зброю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectMissiles">
             <English>Select Missiles</English>
@@ -303,6 +320,7 @@
             <Chinesesimp>选择导弹</Chinesesimp>
             <Turkish>Füzeleri Seç</Turkish>
             <Hungarian>Rakéták Kiválasztása</Hungarian>
+            <Ukrainian>Вибрати ракети</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectPistol">
             <English>Select Pistol</English>
@@ -320,6 +338,7 @@
             <Chinesesimp>选择手枪</Chinesesimp>
             <Turkish>Tabancayı Seç</Turkish>
             <Hungarian>Pisztoly Kiválasztása</Hungarian>
+            <Ukrainian>Вибрати пістолет</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectRifle">
             <English>Select Rifle</English>
@@ -337,6 +356,7 @@
             <Chinesesimp>选择步枪</Chinesesimp>
             <Turkish>Tüfeği Seç</Turkish>
             <Hungarian>Puska Kiválasztása</Hungarian>
+            <Ukrainian>Вибрати гвинтівку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectRifleMuzzle">
             <English>Select Grenade Launcher</English>
@@ -354,6 +374,7 @@
             <Chinesesimp>选择榴弹发射器</Chinesesimp>
             <Turkish>Bombaatarı Seç</Turkish>
             <Hungarian>Gránátvető Kiválasztása</Hungarian>
+            <Ukrainian>Вибрати підствольний гранатомет</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SettingDisplayTextDesc">
             <English>Display a hint or text on grenade throw.</English>
@@ -370,6 +391,7 @@
             <Chinese>投擲手榴彈時顯示提示訊息</Chinese>
             <Chinesesimp>投掷手榴弹时显示提示信息。</Chinesesimp>
             <Hungarian>Jelez egy súgót vagy szöveget a gránát eldobásakor.</Hungarian>
+            <Ukrainian>Показувати текст або підказку під час кидка гранати.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SettingDisplayTextName">
             <English>Display text on grenade throw</English>
@@ -386,6 +408,7 @@
             <Chinese>投擲手榴彈時顯示提示訊息</Chinese>
             <Chinesesimp>投掷手榴弹时显示提示信息</Chinesesimp>
             <Hungarian>Szöveg mutatása gránát eldobásakor</Hungarian>
+            <Ukrainian>Показувати текст під час кидка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_ThrowGrenade">
             <English>Throw Selected Grenade</English>
@@ -403,6 +426,7 @@
             <Chinesesimp>投掷选择的手榴弹</Chinesesimp>
             <Turkish>Seçilen Bombayı Fırlat</Turkish>
             <Hungarian>Kiválasztott Gránát Eldobása</Hungarian>
+            <Ukrainian>Кинути обрану гранату</Ukrainian>
         </Key>
     </Package>
 </Project>

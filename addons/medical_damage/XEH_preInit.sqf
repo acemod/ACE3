@@ -10,6 +10,9 @@ PREP_RECOMPILE_END;
 
 call FUNC(parseConfigForInjuries);
 
+// Used for armor penetration calculation
+GVAR(ammoCache) = createHashMap;
+
 /*
 addMissionEventHandler ["Loaded",{
     INFO("Mission Loaded - Reloading medical configs for extension");

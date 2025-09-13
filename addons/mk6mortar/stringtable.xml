@@ -16,6 +16,7 @@
             <Chinese>[ACE] 82毫米預設彈藥箱</Chinese>
             <Chinesesimp>[ACE] 82 mm 预设弹药箱</Chinesesimp>
             <Turkish>[ACE] 82mm Varsayılan Teçhizat Kutusu</Turkish>
+            <Ukrainian>[ACE] Ящик снарядів 82мм (стандартний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_DisplayName">
             <English>Mk6 Mortar</English>
@@ -32,6 +33,7 @@
             <Chinese>MK6迫擊炮</Chinese>
             <Chinesesimp>MK6 迫击炮</Chinesesimp>
             <Turkish>Mk6 Havan</Turkish>
+            <Ukrainian>Міномет Mk6</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_HEBox_DisplayName">
             <English>[ACE] 82mm HE Rounds Box</English>
@@ -48,6 +50,7 @@
             <Chinese>[ACE] 82毫米高爆彈藥箱</Chinese>
             <Chinesesimp>[ACE] 82 mm 高爆弹药箱</Chinesesimp>
             <Turkish>[ACE] 82mm HE Mermisi Kutusu</Turkish>
+            <Ukrainian>[ACE] Ящик фугасних снарядів 82мм</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_IllumBox_DisplayName">
             <English>[ACE] 82mm Illumination Rounds Box</English>
@@ -64,6 +67,7 @@
             <Chinese>[ACE] 82毫米照明彈藥箱</Chinese>
             <Chinesesimp>[ACE] 82 mm 照明弹药箱</Chinesesimp>
             <Turkish>[ACE] 82mm Işık Mermisi Kutusu</Turkish>
+            <Ukrainian>[ACE] Ящик освітлювальних снарядів 82мм</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_Description">
             <English>This module allows you to setup Mk6 mortar settings.</English>
@@ -79,6 +83,7 @@
             <Japanese>このモジュールでは、Mk6 迫撃砲の設定をセットアップできます。</Japanese>
             <Chinese>這個模塊允許你設定MK6迫擊砲的相關功能</Chinese>
             <Chinesesimp>这个模块允许你设定 MK6 迫击炮的相关功能</Chinesesimp>
+            <Ukrainian>Модуль налаштування міномета Mk6.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_DisplayName">
             <English>Mk6 Settings</English>
@@ -96,6 +101,7 @@
             <Chinesesimp>MK6 设定</Chinesesimp>
             <Turkish>Mk6 Ayarları</Turkish>
             <Hungarian>Mk6 beállítások</Hungarian>
+            <Ukrainian>Налаштування Mk6</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_SmokeBox_DisplayName">
             <English>[ACE] 82mm Smoke Rounds Box</English>
@@ -112,6 +118,7 @@
             <Chinese>[ACE] 82毫米煙霧彈藥箱</Chinese>
             <Chinesesimp>[ACE] 82 mm 烟雾弹药箱</Chinesesimp>
             <Turkish>[ACE] 82mm Sis Mermisi Kutusu</Turkish>
+            <Ukrainian>[ACE] Ящик димових снарядів 82мм</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_airResistanceEnabled_Description">
             <English>Simulates air resistance and wind effects for player shots.</English>
@@ -128,6 +135,7 @@
             <Chinese>設定由玩家射擊的迫擊砲，將會受到空氣阻力與風力的影響</Chinese>
             <Chinesesimp>设定由玩家射击的迫击炮，将会受到空气阻力与风力的影响</Chinesesimp>
             <Hungarian>Játékos általi lövésekhez, legyen-e számított légellenállás és szélhatás</Hungarian>
+            <Ukrainian>Для пострілів гравця. Моделює опір повітря та ефект вітру</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_airResistanceEnabled_DisplayName">
             <English>Air Resistance</English>
@@ -145,6 +153,7 @@
             <Chinesesimp>空气阻力</Chinesesimp>
             <Turkish>Hava Direnci</Turkish>
             <Hungarian>Légellenállás</Hungarian>
+            <Ukrainian>Опір повітря</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowCompass_Description">
             <English>Show the Mk6 Digital Compass</English>
@@ -162,6 +171,7 @@
             <Chinesesimp>显示 MK6 的电子指南针</Chinesesimp>
             <Turkish>Mk6 Dijital Pusulasını göster</Turkish>
             <Hungarian>Az Mk6 digitális iránytű megjelenítése</Hungarian>
+            <Ukrainian>Показує цифровий компас Mk6</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowCompass_DisplayName">
             <English>Allow Mk6 Compass</English>
@@ -179,6 +189,7 @@
             <Chinesesimp>允许使用 MK6 指南针</Chinesesimp>
             <Turkish>Mk6 pusulasına izin ver</Turkish>
             <Hungarian>Mk6 iránytű engedélyezése</Hungarian>
+            <Ukrainian>Дозволити компас Mk6</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowComputerRangefinder_Description">
             <English>Show the Computer and Rangefinder (these NEED to be removed if you enable air resistance)</English>
@@ -195,6 +206,7 @@
             <Chinese>顯示射控電腦和測距儀 (如果有啟用空氣阻力功能時，須停用此項功能)</Chinese>
             <Chinesesimp>显示弹道计算机和测距仪（如果有启用空气阻力功能时，须停用此项功能）</Chinesesimp>
             <Hungarian>A távmérő és számítógép megjelenítése (ezeket el KELL távolítani ha a légellenállás engedélyezve van)</Hungarian>
+            <Ukrainian>Показує комп'ютер і далекомір (це ПОТРІБНО відключити, якщо ви вмикаєте опір повітря)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowComputerRangefinder_DisplayName">
             <English>Allow Mk6 Computer</English>
@@ -212,6 +224,7 @@
             <Chinesesimp>允许使用 MK6 弹道计算机</Chinesesimp>
             <Turkish>Mk6 bilgisayarına izin ver</Turkish>
             <Hungarian>Mk6 számítógép engedélyezése</Hungarian>
+            <Ukrainian>Дозволити комп'ютер Mk6</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE">
             <English>Load HE</English>
@@ -228,6 +241,7 @@
             <Chinese>裝載高爆彈</Chinese>
             <Chinesesimp>装载高爆弹</Chinesesimp>
             <Turkish>HE Yükle</Turkish>
+            <Ukrainian>Зарядити фугасний</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_Guided">
             <English>Load Guided HE</English>
@@ -244,6 +258,7 @@
             <Chinese>裝載導引高爆彈</Chinese>
             <Chinesesimp>装载制导高爆弹</Chinesesimp>
             <Turkish>Güdümlü HE Yükle</Turkish>
+            <Ukrainian>Зарядити фугасний керований</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_LaserGuided">
             <English>Load Laser Guided HE</English>
@@ -260,6 +275,7 @@
             <Chinese>裝載雷射導引高爆彈</Chinese>
             <Chinesesimp>装填激光制导高爆弹</Chinesesimp>
             <Turkish>Lazer Güdümlü HE Yükle</Turkish>
+            <Ukrainian>Зарядити фугасний керований за ЛЦВ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Illum">
             <English>Load Illumination</English>
@@ -276,6 +292,7 @@
             <Chinese>裝載照明彈</Chinese>
             <Chinesesimp>装载照明弹</Chinesesimp>
             <Turkish>Aydınlatma Yükle</Turkish>
+            <Ukrainian>Зарядити освітлювальний</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Smoke">
             <English>Load Smoke</English>
@@ -292,6 +309,7 @@
             <Chinese>裝載煙霧彈</Chinese>
             <Chinesesimp>装载烟雾弹</Chinesesimp>
             <Turkish>Sis Yükle</Turkish>
+            <Ukrainian>Зарядити димову</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMortar">
             <English>Load Mortar</English>
@@ -308,6 +326,7 @@
             <Chinese>裝載彈頭</Chinese>
             <Chinesesimp>装载弹头</Chinesesimp>
             <Turkish>Havanı Yükle</Turkish>
+            <Ukrainian>Зарядити міномет</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadingMortar">
             <English>Preparing Round</English>
@@ -324,6 +343,7 @@
             <Chinese>準備彈頭中</Chinese>
             <Chinesesimp>正在准备弹头</Chinesesimp>
             <Turkish>Mermi Hazırlanıyor</Turkish>
+            <Ukrainian>Підготовка снаряда</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_displayName">
             <English>[CSW] 82mm Guided HE Round</English>
@@ -340,6 +360,7 @@
             <Chinese>[CSW] 82毫米導引高爆彈</Chinese>
             <Chinesesimp>[班组] 82 mm 制导高爆弹</Chinesesimp>
             <Turkish>[CSW] 82mm Güdümlü HE Mermisi</Turkish>
+            <Ukrainian>[CSW] Фугасний снаряд керований 82мм</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_displayName">
             <English>[CSW] 82mm Laser Guided HE Round</English>
@@ -356,6 +377,7 @@
             <Chinese>[CSW] 82毫米雷射導引高爆彈</Chinese>
             <Chinesesimp>[班组] 82 mm 激光制导高爆弹</Chinesesimp>
             <Turkish>[CSW] 82mm Lazer Güdümlü HE Mermisi</Turkish>
+            <Ukrainian>[CSW] Фугасний снаряд керований за ЛЦВ 82мм</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_displayName">
             <English>[CSW] 82mm HE Round</English>
@@ -372,6 +394,7 @@
             <Chinese>[CSW] 82毫米高爆彈</Chinese>
             <Chinesesimp>[班组] 82 mm 高爆弹</Chinesesimp>
             <Turkish>[CSW] 82mm HE Mermisi</Turkish>
+            <Ukrainian>[CSW] Фугасний снаряд 82мм</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_displayName">
             <English>[CSW] 82mm Illumination Round</English>
@@ -388,6 +411,7 @@
             <Chinese>[CSW] 82毫米照明彈</Chinese>
             <Chinesesimp>[班组] 82 mm 照明弹</Chinesesimp>
             <Turkish>[CSW] 82mm Işık Mermisi</Turkish>
+            <Ukrainian>[CSW] Освітлювальний снаряд 82мм</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_displayName">
             <English>[CSW] 82mm Smoke Round</English>
@@ -404,6 +428,7 @@
             <Chinese>[CSW] 82毫米煙霧彈</Chinese>
             <Chinesesimp>[班组] 82 mm 烟雾弹</Chinesesimp>
             <Turkish>[CSW] 82mm Sis Mermisi</Turkish>
+            <Ukrainian>[CSW] Димовий снаряд 82мм</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_descriptionShort">
             <English>Used in Mk6 Mortar</English>
@@ -419,6 +444,7 @@
             <Japanese>Mk6 迫撃砲 で使用</Japanese>
             <Chinese>用於Mk6迫擊砲</Chinese>
             <Chinesesimp>用于 Mk6 迫击炮</Chinesesimp>
+            <Ukrainian>Використовувався в мінометі Mk6</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_action">
             <English>Open 82mm Rangetable</English>
@@ -436,6 +462,7 @@
             <Chinesesimp>开启82 mm 迫击炮射表</Chinesesimp>
             <Turkish>82mm Menzil Tablosunu Aç</Turkish>
             <Hungarian>82mm hatótáv-tábla megnyitása</Hungarian>
+            <Ukrainian>Відкрити 82 мм Таблицю дальностей і прицілів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_charge">
             <English>Charge</English>
@@ -453,6 +480,7 @@
             <Chinesesimp>装药</Chinesesimp>
             <Turkish>Yükle</Turkish>
             <Hungarian>Töltés</Hungarian>
+            <Ukrainian>Зарядити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_description">
             <English>Range Table for the Mk6 82mm Mortar</English>
@@ -470,6 +498,7 @@
             <Chinesesimp>MK6 82 mm 迫击炮射表</Chinesesimp>
             <Turkish>Mk6 82mm için Menzil Tablosu</Turkish>
             <Hungarian>Hatótáv-tábla a Mk6 82mm-es mozsárhoz</Hungarian>
+            <Ukrainian>Таблиця дальностей і прицілів для Mk6 82 мм мортири</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_name">
             <English>82mm Rangetable</English>
@@ -487,6 +516,7 @@
             <Chinesesimp>82 mm 迫击炮射表</Chinesesimp>
             <Turkish>82mm Menzil Tablosu</Turkish>
             <Hungarian>82mm hatótáv-tábla</Hungarian>
+            <Ukrainian>82 мм Таблиця дальностей і прицілів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadMortar">
             <English>Remove Round</English>
@@ -503,6 +533,7 @@
             <Chinese>卸除彈頭</Chinese>
             <Chinesesimp>卸除弹头</Chinesesimp>
             <Turkish>Mermiyi Boşalt</Turkish>
+            <Ukrainian>Витягти снаряд</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadingMortar">
             <English>Unloading Round</English>
@@ -519,6 +550,7 @@
             <Chinese>卸除彈頭中</Chinese>
             <Chinesesimp>正在卸除弹头</Chinesesimp>
             <Turkish>Mermi Boşaltılıyor</Turkish>
+            <Ukrainian>Виймання снаряда</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_Description">
             <English>Removes mortar magazines, requiring individual rounds to be loaded by the gunner or loader.</English>
@@ -534,6 +566,7 @@
             <Japanese>迫撃砲から弾倉を除去します。一発ずつ射手か装填手によって装填される必要があります。</Japanese>
             <Chinese>開啟此功能時。迫擊砲的彈藥需由砲手與裝填手共同合作來進行裝填</Chinese>
             <Chinesesimp>开启此功能时。迫击炮的弹药需由炮手与装填手共同合作来进行装填</Chinesesimp>
+            <Ukrainian>Видаляє артилерійські магазини, вимагає завантаження окремих снарядів стрільцем або заряджаючим.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_DisplayName">
             <English>Use Ammunition handling</English>
@@ -549,6 +582,7 @@
             <Japanese>弾薬の取り扱い</Japanese>
             <Chinese>使用手動彈藥裝卸</Chinese>
             <Chinesesimp>使用手动弹药装卸</Chinesesimp>
+            <Ukrainian>Маніпуляції з боєприпасами</Ukrainian>
         </Key>
     </Package>
 </Project>
