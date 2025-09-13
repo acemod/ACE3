@@ -22,7 +22,7 @@
  */
 
 params [["_unit", objNull, [objNull]], ["_range", 0, [0]], ["_item", [], [[]]], ["_triggerClassname", "#unknown", [""]]];
-_item params [["_explosive", objNull, [objNull]], ["_fuseTime", 0, []]];
+_item params [["_explosive", objNull, [objNull]], ["_fuseTime", 0, [0]]];
 TRACE_4("detonateExplosive",_unit,_range,_item,_triggerClassname);
 
 if (isNull _explosive) exitWith {
