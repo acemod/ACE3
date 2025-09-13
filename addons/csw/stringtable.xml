@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="CSW">
+        <Key ID="STR_ACE_CSW_AddonName_Short">
+            <English>CSW</English>
+        </Key>
         <Key ID="STR_ACE_CSW_127x108_displayName">
             <English>[CSW] 12.7x108mm HMG Belt</English>
             <Czech>[CSW] Pás 12.7×108mm pro těžký kulomet</Czech>
@@ -1236,6 +1239,12 @@
             <Turkish>Boşalt %1</Turkish>
             <Hungarian>Unload %1</Hungarian>
             <Ukrainian>Розвантажити %1</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_CSW_EnableAutoFire_displayName">
+            <English>Enable fire on load</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_DisableAutoFire_displayName">
+            <English>Disable fire on load</English>
         </Key>
     </Package>
 </Project>
