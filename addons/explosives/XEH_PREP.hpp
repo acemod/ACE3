@@ -15,7 +15,6 @@ PREP(connectExplosive);
 PREP(cycleActiveTrigger);
 PREP(defuseExplosive);
 PREP(detonateExplosive);
-PREP(dialingPhone);
 PREP(dialPhone);
 PREP(getDetonators);
 PREP(getPlacedExplosives);

@@ -26,11 +26,12 @@ if (_unit getVariable [QGVAR(dialing), false]) exitWith {};
 _unit setVariable [QGVAR(dialing), true, true];
 
 private _explosive = _code call FUNC(getSpeedDialExplosive);
+private _explosiveObject = _explosive param [0, objNull];
 private _explosiveConfig = configNull;
 private _arr = [];
 
-(if (_explosive isNotEqualTo []) then {
-    _explosiveConfig = configOf (_explosive select 0);
+(if (!isNull _explosiveObject) then {
+    _explosiveConfig = configOf _explosiveObject;
     (getArray (_explosiveConfig >> QGVAR(callConnectTime))) params ["_callConnectTimeMin", "_callConnectTimeMax"];
 
     private _random = ((ceil (random _callConnectTimeMax)) + _callConnectTimeMin) max 2;
@@ -54,8 +55,9 @@ private _arr = [];
 }) params ["_ringtonePath", "_ringtoneLength", ["_volume", 3.15], ["_soundPitch", 1], ["_distance", 75]];
 
 // Calculate the ringtone duration before detonation with slight randomness
-private _ringtoneDuration = if (_explosive isNotEqualTo []) then {
+private _ringtoneDuration = if (!isNull _explosiveObject) then {
     private _detonationTimingOffset = getNumber (_explosiveConfig >> QGVAR(detonationTimingOffset));
+
     round (count _arr - (_ringtoneLength + (random (_detonationTimingOffset * 2)) - _detonationTimingOffset) / 0.25) max 4
 } else {
     4
@@ -68,6 +70,47 @@ if (_unit == ACE_player) then {
     ctrlSetText [1400, "Calling"];
 };
 
-[LINKFUNC(dialingPhone), 0.25, [_unit, 4, _arr, _explosive, _ringtoneDuration, _ringtonePath, _volume, _soundPitch, _distance]] call CALLSTACK(CBA_fnc_addPerFrameHandler);
+// Handle UI and sounds
+[{
+    params ["_args", "_pfhID"];
+    _args params ["_unit", "_dialStep", "_arr", "_explosive", "_explosiveObject", "_ringtoneDuration", "_ringtonePath", "_volume", "_soundPitch", "_distance"];
+
+    if (_dialStep % 4 == 0) then {
+        private _pos = _unit modelToWorldVisualWorld (_unit selectionPosition "RightHand");
+
+        playSound3D [QPATHTO_R(Data\Audio\DialTone.wss), objNull, false, _pos, 5, 1, 5];
+    };
+
+    // UI is only open for player
+    if (_unit == ACE_player) then {
+        ctrlSetText [1400, format ["Calling%1", _arr select (_dialStep - 4)]];
+    };
+
+    // End call and detonate explosive
+    if (_dialStep >= (count _arr + 2)) exitWith {
+        _pfhID call CALLSTACK(CBA_fnc_removePerFrameHandler);
+
+        if (!isNull _explosiveObject) then {
+            [_unit, -1, [_explosive select 0, _explosive select 2], "ACE_Cellphone"] call FUNC(detonateExplosive);
+        };
+
+        _unit setVariable [QGVAR(dialing), nil, true];
+
+        // UI is only open for player
+        if (_unit == ACE_player) then {
+            ctrlSetText [1400, "Call Ended!"];
+        };
+    };
+
+    if (
+        _dialStep == _ringtoneDuration &&
+        {!isNull _explosiveObject} &&
+        {[_unit, -1, _explosiveObject, _explosive select 2, "ACE_Cellphone"] call FUNC(checkDetonateHandlers)}
+    ) then {
+        playSound3D [_ringtonePath, objNull, false, getPosASL _explosiveObject, _volume, _soundPitch, _distance];
+    };
+
+    _args set [1, _dialStep + 1];
+}, 0.25, [_unit, 4, _arr, _explosive, _explosiveObject, _ringtoneDuration, _ringtonePath, _volume, _soundPitch, _distance]] call CALLSTACK(CBA_fnc_addPerFrameHandler);
 
 nil
