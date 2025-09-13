@@ -555,7 +555,7 @@ class GVAR(display) {
             w = QUOTE(safeZoneW);
             h = QUOTE(safeZoneH);
         };
-        class leftTabContent: RscListBox {
+        class leftTabContent: RscTree {
             idc = IDC_leftTabContent;
             colorBackground[] = {0,0,0,0};
             colorSelectBackground[] = {1,1,1,0.5};
@@ -565,8 +565,8 @@ class GVAR(display) {
             colorSelect2[] = {1,1,1,1};
             colorPictureRightSelected[] = {1,1,1,1};
             colorTextRight[] = {0.5, 0.5, 0.5, 0};
-            onLBSelChanged = QUOTE(call FUNC(onSelChangedLeft));
-            onLBDblClick = QUOTE(call FUNC(onPanelDblClick));
+            onTreeSelChanged = QUOTE([ARR_2(_this select 0, _this select 1)] call FUNC(onSelChangedLeft));
+            onTreeDblClick = QUOTE(call FUNC(onPanelDblClick));
             onSetFocus = QUOTE(GVAR(leftTabFocus) = true);
             onKillFocus = QUOTE(GVAR(leftTabFocus) = false);
             x = QUOTE(safeZoneX + 13 * GRID_W);
@@ -579,8 +579,14 @@ class GVAR(display) {
             idc = IDC_rightTabContent;
             drawSideArrows = 1;
             disableOverflow = 1;
-            onLBSelChanged = QUOTE(call FUNC(onSelChangedRight));
-            onLBDblClick = QUOTE(call FUNC(onPanelDblClick));
+            // TODO: These event handlers were changed from listbox to tree control events as a workaround.
+            // Originally: onLBSelChanged and onLBDblClick (for listbox controls)
+            // Now: onTreeSelChanged and onTreeDblClick (for tree controls)
+            // This change was necessary because the control type was changed from listbox to tree,
+            // but the event handlers weren't updated accordingly. This should be part of a broader
+            // refactoring to use consistent control types throughout the Arsenal system.
+            onTreeSelChanged = QUOTE([ARR_2(_this select 0, _this select 1)] call FUNC(onSelChangedRight));
+            onTreeDblClick = QUOTE([ARR_2(_this select 0, _this select 1)] call FUNC(onPanelDblClick));
             onSetFocus = QUOTE(GVAR(rightTabFocus) = true);
             onKillFocus = QUOTE(GVAR(rightTabFocus) = false);
             x = QUOTE(safeZoneX + safeZoneW - 93 * GRID_W);
