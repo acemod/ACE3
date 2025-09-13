@@ -26,15 +26,16 @@ GVAR(trackingHandle) = -1;
         _projectile setVariable [QGVAR(side), side _unit];
         private _toIntercept = uiNamespace getVariable QGVAR(projectilesToIntercept);
         if (local _projectile && { (typeOf _projectile) in _toIntercept }) then {
-            [QGVAR(track), [_projectile]] call CBA_fnc_serverEvent;
+            [QGVAR(track), [_projectile, side _unit]] call CBA_fnc_serverEvent;
         };
         _projectile addEventHandler ["SubmunitionCreated", {
             params ["_projectile", "_submunitionProjectile"];
             if ((getPosATL _submunitionProjectile) select 2 < 500) exitWith {};
-            _submunitionProjectile setVariable [QGVAR(side), _projectile getVariable [QGVAR(side), side _projectile]];
+            private _side = _projectile getVariable [QGVAR(side), side _projectile];
+            _submunitionProjectile setVariable [QGVAR(side), _side];
             TRACE_1("Submunition created",_submunitionProjectile);
             if (local _submunitionProjectile && { (typeOf _submunitionProjectile) in _toIntercept }) then {
-                [QGVAR(track), [_submunitionProjectile]] call CBA_fnc_serverEvent;
+                [QGVAR(track), [_submunitionProjectile, _side]] call CBA_fnc_serverEvent;
             };
         }];
     }] call CBA_fnc_addClassEventHandler;

@@ -40,7 +40,7 @@ if (_system isEqualTo -1) exitWith {
 private _target = (_system getOrDefault ["targets_possible", []]) deleteAt 0;
 if (!isNil "_target" && {!isNull _target}) then {
     private _sides = _system getOrDefault ["sides", []];
-    private _side = _target getVariable [QGVAR(side), sideUnknown];
+    private _side = _target getVariable [QGVAR(side), side _target];
     if (_side in _sides) then {
         TRACE_1("Moved pending target",_target);
         (_system getOrDefault ["targets_pending", []]) pushBack _target;

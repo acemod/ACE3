@@ -9,7 +9,8 @@ PREP_RECOMPILE_END;
 GVAR(systems) = createHashMap;
 
 [QGVAR(track), {
-    params ["_projectile"];
+    params ["_projectile", "_side"];
+    _projectile setVariable [QGVAR(side), _side];
     TRACE_1("Tracking projectile",_projectile);
     {
         (_y getOrDefault ["targets_possible", []]) pushBackUnique _projectile;
