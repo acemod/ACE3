@@ -41,12 +41,11 @@ GVAR(trackingHandle) = -1;
     }] call CBA_fnc_addClassEventHandler;
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(destroyProjectile), {
+[QGVAR(hideProjectile), {
     params ["_projectile"];
-    TRACE_1("Destroying projectile",_projectile);
+    TRACE_1("Hiding projectile",_projectile);
     _projectile enableSimulation false;
     _projectile hideObject true;
-    deleteVehicle _projectile;
 }] call CBA_fnc_addEventHandler;
 
 ADDON = true;
