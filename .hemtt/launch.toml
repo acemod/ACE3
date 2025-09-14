@@ -65,3 +65,9 @@ workshop = [
 [missile_defense]
 extends = "default"
 mission = "missileDefense.Stratis"
+
+[adt]
+extends = "default"
+workshop = [
+    "3499977893", # ADT
+]
