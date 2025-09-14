@@ -251,14 +251,21 @@ class CfgVehicles {
                 statement = QUOTE([ARR_3(_player,_target,1)] call DFUNC(tapShoulder));
                 exceptions[] = {"isNotSwimming"};
             };
-            class ACE_OpenBackpack {
-                displayName = "$STR_ACTION_OPEN_BAG";
+            class ACE_Backpack {
+                displayName = "$STR_BACKPACK_CONTAINER_NAME";
+                condition = "backpack _target != ''";
+                statement = "";
                 position = QUOTE(call DFUNC(getBackpackPos));
                 distance = 3.0;
-                condition = QUOTE(call DFUNC(canOpenBackpack));
-                statement = QUOTE(_player action [ARR_2('OpenBag',_target)]);
-                modifierFunction = QUOTE(call FUNC(modifyOpenBackpackAction));
                 exceptions[] = {"isNotSwimming"};
+
+                class ACE_OpenBackpack {
+                    displayName = "$STR_ACTION_OPEN_BAG";
+                    condition = QUOTE(call DFUNC(canOpenBackpack));
+                    statement = QUOTE(_player action [ARR_2('OpenBag',_target)]);
+                    modifierFunction = QUOTE(call FUNC(modifyOpenBackpackAction));
+                    exceptions[] = {"isNotSwimming"};
+                };
             };
         };
 
