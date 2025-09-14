@@ -57,12 +57,8 @@
             // if we overshot target, dont take out target
             if (_minDistance <= _lastDistance && { GVAR(proximityFuseFailureChance) <= random 1 }) then {
                 private _explosion = createVehicle ["SmallSecondary", _target, [], 0, "CAN_COLLIDE"];
-                _target enableSimulationGlobal false;
-                _target hideObjectGlobal true;
-                [QGVAR(hideProjectile), [_target]] call CBA_fnc_globalEvent;
-                [{
-                    deleteVehicle _this;
-                }, _target] call CBA_fnc_execNextFrame;
+                [QGVAR(destroyProjectile), [_target, typeOf _target, getPos _target]] call CBA_fnc_globalEvent;
+                deleteVehicle _target;
                 TRACE_2("Interceptor detonated on target",_projectile,_target);
             } else {
                 (_y getOrDefault ["targets_tracking", []]) pushBack _target;

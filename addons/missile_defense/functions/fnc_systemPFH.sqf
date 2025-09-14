@@ -152,7 +152,7 @@ if (!isNil "_tracked" && {!isNull _tracked}) then {
                     _launcher setVariable [QGVAR(lastLaunchTime), CBA_missionTime];
                     private _turret = [_launcher, (crew _launcher) select 0] call CBA_fnc_turretPath;
                     [_launcher, _launcher currentWeaponTurret _turret] call BIS_fnc_fire;
-                    [QGVAR(launcherFired), [_id, _launcher, _target]] call CBA_fnc_globalEvent;
+                    [QGVAR(launcherFired), [_launcher, _target, typeOf _target, getPos _target]] call CBA_fnc_globalEvent;
                     TRACE_2("Launcher fired at target",_launcher,_target);
                 } else {
                     if (_angle > GVAR(launchAcceptableAngle)) then {

@@ -1,7 +1,5 @@
 #include "script_component.hpp"
 
-ADDON = false;
-
 PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
@@ -27,4 +25,3 @@ GVAR(systems) = createHashMap;
     TRACE_2("Registered interceptor",_interceptor,_target);
 }] call CBA_fnc_addEventHandler;
 
-ADDON = true;
