@@ -59,8 +59,10 @@
                 private _explosion = createVehicle ["SmallSecondary", _target, [], 0, "CAN_COLLIDE"];
                 _target enableSimulationGlobal false;
                 _target hideObjectGlobal true;
-                deleteVehicle _target;
-                [QGVAR(destroyProjectile), [_target]] call CBA_fnc_globalEvent;
+                [QGVAR(hideProjectile), [_target]] call CBA_fnc_globalEvent;
+                [{
+                    deleteVehicle _this;
+                }, _target] call CBA_fnc_execNextFrame;
                 TRACE_2("Interceptor detonated on target",_projectile,_target);
             } else {
                 (_y getOrDefault ["targets_tracking", []]) pushBack _target;
