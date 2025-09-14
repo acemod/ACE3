@@ -4,10 +4,9 @@ GVAR(destroyRadius) = 20;
 
 [QGVAR(destroyProjectile), {
     params ["_target", "_type", "_position"];
-    if !(isNull _target) then {
+    if !(isNull _target) exitWith {
         deleteVehicle _target;
         TRACE_1("Destroyed projectile using object",_target);
-        exitWith {};
     };
     private _near = nearestObjects [_position, [_type], GVAR(destroyRadius)];
     if (count _near > 0) then {
