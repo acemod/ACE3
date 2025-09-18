@@ -48,7 +48,7 @@ if (isNil QGVAR(cacheMaxAmmoLoudness)) then {
 private _maxLoudness = GVAR(cacheMaxAmmoLoudness) getOrDefaultCall [_weapon, {
     // Get the weapon's compatible magazines, so that all magazines are cached
     // From all the loudness factors, take the max
-    private _maxLoudness = selectMax ((compatibleMagazines _weapon) apply {_x call FUNC(getAmmoLoudness)});
+    private _maxLoudness = selectMax ((compatibleMagazines _weapon) apply {[_x, _weapon] call FUNC(getAmmoLoudness)});
 
     // ace_gunbag_fnc_isMachineGun
     private _config = _weapon call CBA_fnc_getItemConfig;
