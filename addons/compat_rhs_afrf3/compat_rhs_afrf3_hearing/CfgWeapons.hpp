@@ -25,4 +25,10 @@ class CfgWeapons {
     class rhs_6b48: rhs_6b47_bare {
         HEARING_PROTECTION_VICCREW;
     };
+
+    // Reduce loudness of high-ROF weapons
+    class gatling_30mm;
+    class rhs_weap_gsh30: gatling_30mm {
+        EGVAR(hearing,maxWeaponLoudness) = 0.7;
+    };
 };

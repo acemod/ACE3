@@ -171,4 +171,20 @@ class CfgWeapons {
     class RHS_jetpilot_usaf: H_HelmetB {
         HEARING_PROTECTION_VICCREW;
     };
+
+    // Reduce loudness of high-ROF weapons
+    class Gatling_30mm_Plane_CAS_01_F;
+    class RHS_weap_gau8: Gatling_30mm_Plane_CAS_01_F {
+        EGVAR(hearing,maxWeaponLoudness) = 0.8;
+    };
+
+    class HMG_127;
+    class RHS_weap_gau19: HMG_127 {
+        EGVAR(hearing,maxWeaponLoudness) = 0.25;
+    };
+
+    class MGunCore;
+    class M134_minigun: MGunCore {
+        EGVAR(hearing,maxWeaponLoudness) = 0.13;
+    };
 };
