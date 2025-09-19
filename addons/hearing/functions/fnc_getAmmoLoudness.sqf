@@ -42,7 +42,7 @@ GVAR(cacheAmmoLoudness) getOrDefaultCall [_magazine, {
     
     // Limit to max magazine loudness, if explicitly defined
     private _cfgMaxMagazineLoudness = _magazineConfig >> QGVAR(maxLoudness);
-    if (_weapon isNotEqualTo "" && {isNumber _cfgMaxMagazineLoudness}) then {
+    if (isNumber _cfgMaxMagazineLoudness) then {
         _loudness = _loudness min (getNumber _cfgMaxMagazineLoudness);
     };
 
