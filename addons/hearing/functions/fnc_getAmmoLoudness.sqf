@@ -6,7 +6,6 @@
  *
  * Arguments:
  * 0: Magazine <STRING>
- * 1: Weapon <STRING> (optional)
  *
  * Return Value:
  * None
@@ -17,7 +16,7 @@
  * Public: No
  */
 
-params ["_magazine", ["_weapon", ""]];
+params ["_magazine"];
 
 GVAR(cacheAmmoLoudness) getOrDefaultCall [_magazine, {
     private _magazineConfig = configFile >> "CfgMagazines" >> _magazine;
@@ -41,10 +40,10 @@ GVAR(cacheAmmoLoudness) getOrDefaultCall [_magazine, {
     private _hearingDamageFactor = [_ammoConfig >> QGVAR(hearingDamageFactor), "NUMBER", 1] call CBA_fnc_getConfigEntry;
     private _loudness = _hearingDamageFactor * (_caliber ^ 1.25 / 10) * (_initSpeed / 1000) / 5;
     
-    // Limit to max weapon loudness, if explicitly defined
-    private _cfgMaxWeaponLoudness = configFile >> "CfgWeapons" >> _weapon >> QGVAR(maxWeaponLoudness);
-    if (_weapon isNotEqualTo "" && {isNumber _cfgMaxWeaponLoudness}) then {
-        _loudness = _loudness min getNumber _cfgMaxWeaponLoudness;
+    // Limit to max magazine loudness, if explicitly defined
+    private _cfgMaxMagazineLoudness = _magazineConfig >> QGVAR(maxLoudness);
+    if (_weapon isNotEqualTo "" && {isNumber _cfgMaxMagazineLoudness}) then {
+        _loudness = _loudness min (getNumber _cfgMaxMagazineLoudness);
     };
 
     TRACE_6("building cache",_ammo,_magazine,_initSpeed,_caliber,_hearingDamageFactor,_loudness);
