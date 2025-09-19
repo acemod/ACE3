@@ -173,6 +173,7 @@
 #define VAR_PAIN_SUPP         QEGVAR(medical,painSuppress)
 #define VAR_PERIPH_RES        QEGVAR(medical,peripheralResistance)
 #define VAR_UNCON             "ACE_isUnconscious"
+#define VAR_DAZED             "ACE_isDazed"
 #define VAR_OPEN_WOUNDS       QEGVAR(medical,openWounds)
 #define VAR_BANDAGED_WOUNDS   QEGVAR(medical,bandagedWounds)
 #define VAR_STITCHED_WOUNDS   QEGVAR(medical,stitchedWounds)
@@ -202,6 +203,7 @@
 #define IS_BLEEDING(unit)           (GET_WOUND_BLEEDING(unit) > 0)
 #define IS_IN_PAIN(unit)            (unit getVariable [VAR_IN_PAIN, false])
 #define IS_UNCONSCIOUS(unit)        (unit getVariable [VAR_UNCON, false])
+#define IS_DAZED(unit)              (unit getVariable [VAR_DAZED, false])
 #define GET_OPEN_WOUNDS(unit)       (unit getVariable [VAR_OPEN_WOUNDS, createHashMap])
 #define GET_BANDAGED_WOUNDS(unit)   (unit getVariable [VAR_BANDAGED_WOUNDS, createHashMap])
 #define GET_STITCHED_WOUNDS(unit)   (unit getVariable [VAR_STITCHED_WOUNDS, createHashMap])
