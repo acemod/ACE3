@@ -42,8 +42,9 @@ GVAR(cacheAmmoLoudness) getOrDefaultCall [_magazine, {
     private _loudness = _hearingDamageFactor * (_caliber ^ 1.25 / 10) * (_initSpeed / 1000) / 5;
     
     // Limit to max weapon loudness, if explicitly defined
-    if (_weapon != "" && {isNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(maxWeaponLoudness))}) then {
-        _loudness = _loudness min (getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(maxWeaponLoudness)));
+    private _cfgMaxWeaponLoudness = configFile >> "CfgWeapons" >> _weapon >> QGVAR(maxWeaponLoudness);
+    if (_weapon isNotEqualTo "" && {isNumber _cfgMaxWeaponLoudness}) then {
+        _loudness = _loudness min getNumber _cfgMaxWeaponLoudness;
     };
 
     TRACE_6("building cache",_ammo,_magazine,_initSpeed,_caliber,_hearingDamageFactor,_loudness);
