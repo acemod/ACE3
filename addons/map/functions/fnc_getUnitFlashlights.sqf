@@ -17,4 +17,5 @@
 
 params ["_unit"];
 
-([_unit, true] call CBA_fnc_uniqueUnitItems) select {_x call FUNC(isFlashlight)} // return
+// uniqueUnitItems doesn't include facewear
+(([_unit, true] call CBA_fnc_uniqueUnitItems) + [goggles _unit]) select {_x call FUNC(isFlashlight)} // return
