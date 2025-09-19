@@ -1,0 +1,13 @@
+PREP(addActions);
+PREP(addActionsChildren);
+PREP(addActionsIcon);
+PREP(addActionsName);
+PREP(canModifyTo);
+PREP(compareComponents);
+PREP(exceptionsAceItems);
+PREP(getAvailableItemVariants);
+PREP(getItemVariants);
+PREP(isModifiable);
+PREP(replace);
+PREP(replaceContainer);
+PREP(replaceOther);
