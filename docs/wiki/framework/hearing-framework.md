@@ -34,3 +34,13 @@ class CfgAmmo {
     };
 };
 ```
+
+You can define an upper limit on a magazine's loudness regardless of ammo used, which can be useful for large caliber guns with high rates of fire.
+
+```cpp
+class CfgMagazines {
+    class MyLoudCannonMagazine {
+        ace_hearing_maxLoudness = 2;
+    };
+};
+```
