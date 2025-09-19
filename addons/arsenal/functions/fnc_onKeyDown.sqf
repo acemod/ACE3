@@ -189,8 +189,31 @@ if (!isNull _loadoutsDisplay) then {
                     _return = false;
                 };
             };
-            // Right panel lnb + and - buttons
+            // Expand/Collapse Tree View
             case (_keyPressed in [DIK_LEFT, DIK_RIGHT]): {
+                if (GVAR(leftTabFocus)) then {
+                    private _tree = _display displayCtrl IDC_leftTabContent;
+                    private _selectionPath = tvCurSel _tree;
+                    private _isGroup = count _selectionPath == 1;
+
+                    if (_keyPressed == DIK_RIGHT) then {
+                        // On RIGHT arrow, expand the selected group if it's collapsed
+                        if (_isGroup) then {
+                            _tree tvExpand _selectionPath;
+                        };
+                    } else {
+                        // On LEFT arrow...
+                        if (_isGroup) then {
+                            // ...if it's a group, collapse it.
+                            _tree tvCollapse _selectionPath;
+                        } else {
+                            // ...if it's an item, collapse its parent and select the parent.
+                            private _parentPath = [_selectionPath select 0];
+                            _tree tvCollapse _parentPath;
+                            _tree tvSetCurSel _parentPath;
+                        };
+                    };
+                };
                 if (GVAR(rightTabLnBFocus)) then {
                     [_display, parseNumber (_keyPressed != DIK_LEFT)] call FUNC(buttonCargo);
                 };
