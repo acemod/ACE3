@@ -225,7 +225,42 @@ class CfgWeapons {
     class optic_LRPS: ItemCore {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
-                class Snip;
+                class Snip {
+                    modelOptics[] = {"\z\ace\addons\optics\models\ld3k_reticle_lrps_F", "\z\ace\addons\optics\models\ld3k_reticle_lrps_z_F"};
+                };
+            };
+        };
+    };
+
+    // AMS
+    class optic_AMS_base: ItemCore {
+        class ItemInfo: InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class AMS {
+                    modelOptics[] = {"\z\ace\addons\optics\models\ld3k_reticle_acco_ams_F", "\z\ace\addons\optics\models\ld3k_reticle_acco_ams_z_F"};
+                };
+            };
+        };
+    };
+
+    // Kahlia
+    class optic_KHS_base: ItemCore {
+        class ItemInfo: InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class KHS {
+                    modelOptics[] = {"\z\ace\addons\optics\models\ld3k_reticle_acco_khs_F", "\z\ace\addons\optics\models\ld3k_reticle_acco_khs_z_F"};
+                };
+            };
+        };
+    };
+
+    // Kahlia (Old)
+    class optic_KHS_old: ItemCore {
+        class ItemInfo: InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class KHS {
+                    modelOptics[] = {"\z\ace\addons\optics\models\ld3k_reticle_acco_khs_F", "\z\ace\addons\optics\models\ld3k_reticle_acco_khs_z_F"};
+                };
             };
         };
     };
