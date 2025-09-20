@@ -68,6 +68,14 @@ class CfgVehicles {
                     };
                 };
 
+                class ACE_TakeLauncher {
+                    displayName = CSTRING(takeLauncher);
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeLauncher));
+                    statement = QUOTE([ARR_3(_player,_target,(secondaryWeapon _target))] call FUNC(takeLauncher));
+                    exceptions[] = {"isNotSwimming"};
+                    showDisabled = 0;
+                };
+
                 class ACE_PassThrowable {
                     displayName = CSTRING(PassThrowable);
                     condition = QUOTE([ARR_3(_player,_target,(currentThrowable _player) param [ARR_2(0,'')])] call FUNC(canPassThrowable));
