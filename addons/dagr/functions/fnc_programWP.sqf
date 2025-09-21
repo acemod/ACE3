@@ -26,7 +26,7 @@ if (_index isEqualTo -1) then { _index = GVAR(numWaypoints); };
 _index = 0 max _index min 4;
 GVAR(numWaypoints) = _index + 1;
 
-private _arr = [_pos] call EGVAR(common,getMapGridFromPos) apply { _x select [0,4] } apply { parseNumber _x };
+private _arr = [_pos] call EFUNC(common,getMapGridFromPos) apply { _x select [0,4] } apply { parseNumber _x };
 private _posNum = _arr#0 * 10000 + _arr#1;
 
 missionNamespace setVariable [ format ["%1%2", QGVAR(wpString), _index], _displayName ];
