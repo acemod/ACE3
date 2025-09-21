@@ -30,4 +30,4 @@ private _arr = [_pos] call EGVAR(common,getMapGridFromPos) apply { _x select [0,
 private _posNum = _arr#0 * 10000 + _arr#1;
 
 missionNamespace setVariable [ format ["%1%2", QGVAR(wpString), _index], _displayName ];
-missionNamespace setVariable [ format ["ace_dagr_wp%1",_index], _posNum ];
+missionNamespace setVariable [ format ["%1%2", QGVAR(wp), _index], _posNum ];
