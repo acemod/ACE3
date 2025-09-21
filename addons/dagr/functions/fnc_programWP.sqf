@@ -22,7 +22,7 @@ params [
     ["_index", -1, [0]]
 ];
 
-if (_index isEqualTo -1) then { _index = ace_dagr_numWaypoints; };
+if (_index isEqualTo -1) then { _index = GVAR(numWaypoints); };
 _index = 0 max _index min 4;
 GVAR(numWaypoints) = _index + 1;
 
