@@ -5,7 +5,7 @@
 	};
 	class Land_SPE_BarbedWire_02: SPE_fortifications_base
 	{
-        GVAR(isFence) = 1;
+        EGVAR(logistics_wirecutter,isFence) = 1;
 	};
 	class Land_SPE_BarbedWire_03: SPE_fortifications_base
 	{
