@@ -77,12 +77,10 @@ if (GVAR(showBloodlossEntry)) then {
 };
 // Show receiving IV volume remaining
 private _fluidVolumes = createHashMap;
-
+private _ivCfg = configFile >> "ace_medical_treatment" >> "IV";
 {
-    _x params ["_volumeRemaining", "", "", "", "", "", "_guiMessage"];
-    if (isLocalized _guiMessage) then {
-        _guiMessage = localize _guiMessage;
-    };
+    _x params ["_volumeRemaining", "_type"];
+    private _guiMessage = GET_STRING(_ivCfg >> (_type + "IV") >> "gui_message",getText (_ivCfg >> "gui_message"));
     private _currentVolume = _fluidVolumes getOrDefault [_guiMessage, 0];
     _fluidVolumes set [_guiMessage, _currentVolume + _volumeRemaining];
 } forEach (_target getVariable [QEGVAR(medical,ivBags), []]);

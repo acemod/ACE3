@@ -40,7 +40,6 @@ private _ivConfig = _defaultConfig >> _treatment;
 private _volume     = GET_NUMBER(_ivConfig >> "volume",getNumber (_defaultConfig >> "volume"));
 private _type       = GET_STRING(_ivConfig >> "type",getText (_defaultConfig >> "type"));
 private _rateCoef   = GET_NUMBER(_ivConfig >> "rateCoef",getNumber (_defaultConfig >> "rateCoef"));
-private _guiMessage = GET_STRING(_ivConfig >> "gui_message",getText (_defaultConfig >> "gui_message"));
 private _ratio      = GET_ARRAY(_ivConfig >> "ratio",getArray (_defaultConfig >> "ratio"));
 
 // Add IV bag to patient's ivBags array
@@ -56,14 +55,14 @@ if (count _ratio > 2) then {
 
         private _ratioCoef = _ratio select (_forEachIndex + 1);
         _totalRatio = _totalRatio + _ratioCoef;
-        _ivBags pushBack [_volume * _ratioCoef, _x, _partIndex, _treatment, _rateCoef * _ratioCoef, _item, _guiMessage];
+        _ivBags pushBack [_volume * _ratioCoef, _x, _partIndex, _treatment, _rateCoef * _ratioCoef, _item];
     } forEach _ratio;
 
-    if (_totalRatio != 1) then {
+    if (abs (_totalRatio - 1) > 0.001) then {
         WARNING_2("Total fluid ratio for '%1' treatment does not equal 1 (%2)",_treatment,_totalRatio);
     };
 } else {
-    _ivBags pushBack [_volume, _type, _partIndex, _treatment, _rateCoef, _item, _guiMessage];
+    _ivBags pushBack [_volume, _type, _partIndex, _treatment, _rateCoef, _item];
 };
 
 _patient setVariable [QEGVAR(medical,ivBags), _ivBags, true];
