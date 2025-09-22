@@ -226,7 +226,7 @@ class CfgWeapons {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Snip {
-                    modelOptics[] = {"\z\ace\addons\optics\models\ld3k_reticle_lrps_F", "\z\ace\addons\optics\models\ld3k_reticle_lrps_z_F"};
+                    modelOptics[] = {QPATHTOF(models\ld3k_reticle_lrps_F), QPATHTOF(models\ld3k_reticle_lrps_z_F)};
                 };
             };
         };
@@ -237,7 +237,7 @@ class CfgWeapons {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class AMS {
-                    modelOptics[] = {"\z\ace\addons\optics\models\ld3k_reticle_acco_ams_F", "\z\ace\addons\optics\models\ld3k_reticle_acco_ams_z_F"};
+                    modelOptics[] = {QPATHTOF(models\ld3k_reticle_acco_ams_F), QPATHTOF(models\ld3k_reticle_acco_ams_z_F)};
                 };
             };
         };
@@ -248,7 +248,7 @@ class CfgWeapons {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class KHS {
-                    modelOptics[] = {"\z\ace\addons\optics\models\ld3k_reticle_acco_khs_F", "\z\ace\addons\optics\models\ld3k_reticle_acco_khs_z_F"};
+                    modelOptics[] = {QPATHTOF(models\ld3k_reticle_acco_khs_F), QPATHTOF(models\ld3k_reticle_acco_khs_z_F)};
                 };
             };
         };
@@ -259,7 +259,7 @@ class CfgWeapons {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class KHS {
-                    modelOptics[] = {"\z\ace\addons\optics\models\ld3k_reticle_acco_khs_F", "\z\ace\addons\optics\models\ld3k_reticle_acco_khs_z_F"};
+                    modelOptics[] = {QPATHTOF(models\ld3k_reticle_acco_khs_F), QPATHTOF(models\ld3k_reticle_acco_khs_z_F)};
                 };
             };
         };
