@@ -15,4 +15,14 @@ class CfgWeapons {
             mass = 0;
         };
     };
+    class ACE_FortifyToken: ACE_ItemCore {
+        author = ECSTRING(common,ACETeam);
+        displayName = CSTRING(FortifyToken_name);
+        descriptionShort = "$5";
+        picture = QPATHTOF(UI\token_ca.paa);
+        scope = 1;
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 0;
+        };
+    };
 };
