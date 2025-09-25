@@ -28,4 +28,3 @@ private _map = EGVAR(overheating,storedSpareBarrels);
     if !(_oldID in _map) then { continue };
     _map set [_newMagIDs # _forEachIndex , _map deleteAt _oldID];
 } forEach _oldMagIDs;
-c
