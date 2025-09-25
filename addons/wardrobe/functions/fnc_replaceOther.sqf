@@ -1,7 +1,7 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * Function to replace a person's goggles/facewear.
+ * Function to replace a unit's goggles/facewear.
  *
  * Arguments:
  * 0: Unit <OBJECT>
