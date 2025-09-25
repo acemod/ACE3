@@ -53,7 +53,6 @@ switch (_equipmentType) do {
 
 // Resolve Exceptions
 {
-    // ["_className", "_oldMagIDs", "_newMagIDs"];
     switch (GVAR(exceptions) get (_x#0) select 0) do {
         case "local": { [QGVAR(exceptions), _x] call CBA_fnc_localEvent; };
         case "server": { [QGVAR(exceptions), _x] call CBA_fnc_serverEvent; };
