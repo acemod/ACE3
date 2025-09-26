@@ -7,7 +7,7 @@
  * 0: Return config name instead of config <BOOL> (default: false)
  *
  * Return Value:
- * Wardobe items, either as classname or config <ARRAY>
+ * Wardrobe items, either as classname or config <ARRAY>
  *
  * Example:
  * call compile preprocessFileLineNumbers "z\ace\addons\wardrobe\dev\getAllWardrobeItems.sqf";
