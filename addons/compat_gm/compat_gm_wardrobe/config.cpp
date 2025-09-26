@@ -23,4 +23,5 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 
 // ACE Wardrobe
-#include "CfgWardrobe.hpp"
+#include "ACE_Wardrobe.hpp"
+

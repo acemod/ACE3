@@ -22,5 +22,5 @@ class CfgPatches {
 #include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"
 
-#include "CfgWardrobe.hpp"
-#include "CfgWardrobe_Exceptions.hpp"
+#include "ACE_Wardrobe.hpp"
+#include "ACE_Wardrobe_Exceptions.hpp"
