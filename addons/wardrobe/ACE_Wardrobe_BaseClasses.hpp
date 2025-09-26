@@ -2,10 +2,10 @@
 
 class GVAR(base) {
     // Possible variants this item can be turned into
+    // Subclasses can contain optional directionalActionName property to use as display name for the action.
     class modifiableTo { };
 
     // Components the current variant contains within itself
-    // Subclasses can contain optional directionalActionName property to use as display name for the action.
     components[] = {};
 
     // CfgSound entries, to be chosen by random when the action is performed
