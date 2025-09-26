@@ -1,0 +1,24 @@
+#include "script_component.hpp"
+
+class CfgPatches {
+    class ADDON {
+        name = COMPONENT_NAME;
+        units[] = {};
+        weapons[] = {};
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {
+            "ace_interact_menu",
+            "ace_goggles"
+        };
+        skipWhenMissingDependencies = 1;
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"OverlordZorn [CVO]"};
+        url = ECSTRING(main,URL);
+        VERSION_CONFIG;
+    };
+};
+
+#include "CfgEventHandlers.hpp"
+#include "CfgSounds.hpp"
+#include "CfgVehicles.hpp"
+#include "CfgWardrobe.hpp"
