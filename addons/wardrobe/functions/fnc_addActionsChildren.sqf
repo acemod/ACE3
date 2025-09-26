@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Target <OBJECT>
- * 1: Player <OBJECT>
+ * 1: Player (not used) <OBJECT>
  * 2: Child action parameters <ARRAY>
  * - 0: Current variant <CONFIG>
  * - 1: Array of configs possible variants <ARRAY>

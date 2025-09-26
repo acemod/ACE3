@@ -1,13 +1,12 @@
 #include "../script_component.hpp"
-
 /*
  * Author: OverlordZorn
  * Wardrobe ExceptionHandling Function for ACE Sparebarrels.
  *
  * Arguments:
  * 0: Magazine Classname <STRING>
- * 1: old Magazine IDs as Strings <ARRAY>
- * 2: new Magazine IDs as Strings <ARRAY>
+ * 1: Old Magazine IDs as Strings <ARRAY>
+ * 2: New Magazine IDs as Strings <ARRAY>
  *
  * Return Value:
  * None

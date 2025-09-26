@@ -4,17 +4,17 @@
  * Removes the modifiable item and replaces it with the target item.
  *
  * Arguments:
- * 0: Action target <OBJECT>
- * 1: Action player <OBJECT>
+ * 0: Target (not used) <OBJECT>
+ * 1: Player <OBJECT>
  * 2: Action params <ARRAY of CONFIGs>
  * - 0: Current variant <CONFIG>
- * - 0: Desired variant <CONFIG>
+ * - 1: Desired variant <CONFIG>
  *
  * Return Value:
  * None
  *
  * Example:
- * [nil, player, [configFile >> "CfgWeapons" >> "U_B_CTRG_1", configFile >> "CfgWeapons" >> "U_B_CTRG_1"]] call ace_wardrobe_fnc_replace
+ * [nil, player, [configFile >> "CfgWeapons" >> "U_B_CTRG_1", configFile >> "CfgWeapons" >> "U_B_CTRG_3"]] call ace_wardrobe_fnc_replace
  *
  * Public: No
  */
