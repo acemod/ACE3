@@ -25,7 +25,7 @@ private _aceAction = [
     QGVAR(inProgress),
     LLSTRING(action_inProgress),
     "\A3\ui_f\data\igui\cfg\simpleTasks\types\wait_ca.paa",
-    { "" },
+    {},
     { GVAR(inProgress) },
     { }
 ] call EFUNC(interact_menu,createAction);
