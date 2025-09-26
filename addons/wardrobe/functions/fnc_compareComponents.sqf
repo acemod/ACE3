@@ -9,8 +9,8 @@
  *
  * Return Value:
  * Nested array <ARRAY>
- * - Configs of missing components <ARRAY>
- * - Configs of surplus components <ARRAY>
+ * - 0: Configs of missing components <ARRAY>
+ * - 1: Configs of surplus components <ARRAY>
  *
  * Example:
  * [G_Balaclava_blk, G_Balaclava_combat] call ace_wardrobe_fnc_compareComponents
