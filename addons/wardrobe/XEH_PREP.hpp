@@ -2,7 +2,7 @@ PREP(addActions);
 PREP(addActionsChildren);
 PREP(addActionsIcon);
 PREP(addActionsName);
-PREP(canModifyTo);
+PREP(checkMissingComponents);
 PREP(compareComponents);
 PREP(exceptionAceIntel);
 PREP(exceptionAceSparebarrel);

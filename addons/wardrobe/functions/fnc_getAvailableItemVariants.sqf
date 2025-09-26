@@ -24,7 +24,7 @@ keys uniqueUnitItems [_player, 0, 1, 1, 1, true]
         private _cfg = _x;
         [
             _cfg,
-            (_cfg call FUNC(getItemVariants)) select { [_player, _cfg, _x] call FUNC(canModifyTo) }
+            (_cfg call FUNC(getItemVariants)) select { [_player, _cfg, _x] call FUNC(checkMissingComponents) }
         ]
     }
     select { _x#1 isNotEqualTo [] }
