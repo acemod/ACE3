@@ -36,7 +36,7 @@ if (_isTextEditing) then {
 if (
     _isTextEditing ||
     {(isNull curatorCamera) && {
-        !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotHandcuffed", "isNotSitting", "isNotOnLadder", "isNotRefueling"]] call EFUNC(common,canInteractWith))
+        !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotHandcuffed", "isNotSitting", "isNotOnLadder", "isNotRefueling", "isNotDazed"]] call EFUNC(common,canInteractWith))
     }
 }) exitWith {false};
 
