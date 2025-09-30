@@ -55,3 +55,19 @@ extends = "cup"
 workshop = [
     "1369691841", # Community Factions Project
 ]
+
+[zen]
+extends = "default"
+workshop = [
+    "1779063631", # Zeus Enhanced
+]
+
+[missile_defense]
+extends = "default"
+mission = "missileDefense.Stratis"
+
+[adt]
+extends = "default"
+workshop = [
+    "3499977893", # ADT
+]
