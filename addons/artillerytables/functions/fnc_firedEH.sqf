@@ -25,7 +25,7 @@
 params ["_vehicle", "", "", "", "", "_magazine", "_projectile", "_gunner"];
 TRACE_4("firedEH",_vehicle,_magazine,_projectile,_gunner);
 
-if !([_gunner] call EFUNC(common,isPlayer)) exitWith {}; // AI don't know how to use (this does give them more range than a player)
+if !(_gunner call EFUNC(common,isPlayer) && { !(_gunner getVariable [QEGVAR(csw,isProxy), false]) }) exitWith {}; // AI don't know how to use (this does give them more range than a player)
 if ((gunner _vehicle) != _gunner) exitWith {}; // check if primaryGunner
 
 
