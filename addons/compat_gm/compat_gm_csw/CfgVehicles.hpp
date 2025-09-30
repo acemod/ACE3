@@ -116,7 +116,7 @@ class CfgVehicles {
         };
         class ACE_CSW {
             enabled = 1; // Enables ACE CSW for this weaponmmo handling interaction point location (custom pos)
-            ammoLoadTime = 10;   // How long it takes in
+            ammoLoadTime = 10;   // How long it takes in seconds
             proxyWeapon = ""; // The proxy weapon created above. This can also be a function name that returns a proxy weapon - passed [_vehicle, _turret, _currentWeapon, _needed, _emptyWeapon]
             disassembleWeapon = "";  // Carryable weapon created above
             disassembleTurret = ""; // Which static tripod will appear when weapon is disassembled
