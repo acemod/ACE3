@@ -16,6 +16,8 @@
 
 params ["_display", "_addOrRemove"];
 
+if !(GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) exitWith {};
+
 private _add = _addOrRemove > 0;
 
 private _ctrlList = _display displayCtrl IDC_rightTabContentListnBox;
