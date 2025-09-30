@@ -93,3 +93,10 @@ private _formatDescription = [
         1
     ]
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(quickNumberEnabled), "CHECKBOX",
+    [LSTRING(quickNumberEnabled), LSTRING(quickNumberEnabledDescription)],
+    [_categoryName, LLSTRING(Module_DisplayName)],
+    true
+] call CBA_fnc_addSetting;
