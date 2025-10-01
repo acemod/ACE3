@@ -6,6 +6,7 @@
 // #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 // #define ENABLE_QUICK_TESTING
+// #define CREATE_MOCK_PLATFORMS
 
 #include "\z\ace\addons\main\script_macros.hpp"
 

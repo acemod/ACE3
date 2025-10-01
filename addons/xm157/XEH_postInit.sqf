@@ -40,6 +40,9 @@ GVAR(data) set ["latitude", EGVAR(common,mapLatitude)];
 
 
 #ifdef ENABLE_QUICK_TESTING
+#ifdef CREATE_MOCK_PLATFORMS
+[player, "ace_xm157_mock_gl", 5] call bis_fnc_addWeapon;
+#endif
 player addPrimaryWeaponItem "ace_xm157_prototype";
 [player] call CBA_fnc_addUnitTrackProjectiles;
 player addItem "ACE_ATragMX";
