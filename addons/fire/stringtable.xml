@@ -13,6 +13,7 @@
             <Korean>불 끄기</Korean>
             <Japanese>火を叩き消す</Japanese>
             <Chinesesimp>灭火</Chinesesimp>
+            <Ukrainian>Загасити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fire_Actions_PerformingPatDown">
             <English>Patting down fire...</English>
@@ -26,6 +27,7 @@
             <Korean>불 끄는 중...</Korean>
             <Japanese>火を叩き消しています・・・</Japanese>
             <Chinesesimp>正在灭火...</Chinesesimp>
+            <Ukrainian>Гасіння...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fire_Category_DisplayName">
             <English>ACE Fire</English>
@@ -39,6 +41,7 @@
             <Korean>ACE 불</Korean>
             <Japanese>ACE 火災</Japanese>
             <Chinesesimp>ACE 火</Chinesesimp>
+            <Ukrainian>ACE Загоряння</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_Description">
             <English>Allow units to catch fire</English>
@@ -52,6 +55,7 @@
             <Korean>유닛에 불이 붙게합니다</Korean>
             <Japanese>ユニットへ着火を許可</Japanese>
             <Chinesesimp>允许单位着火</Chinesesimp>
+            <Ukrainian>Вмикає загоряння</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_DropWeapon">
             <English>Drop Weapons When on Fire</English>
@@ -65,6 +69,7 @@
             <Korean>불 붙을 경우 무기 내려놓음</Korean>
             <Japanese>炎上時に武器を落とす</Japanese>
             <Chinesesimp>着火时扔掉武器</Chinesesimp>
+            <Ukrainian>Кидати зброю через горіння</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_DropWeapon_Description">
             <English>Controls whether units drop their weapons when on fire.</English>
@@ -78,6 +83,7 @@
             <Korean>유닛이 불에 붙이면 무기를 떨굴지를 결정합니다.</Korean>
             <Japanese>ユニットが炎上時に武器を落とすかどうかを定義します。</Japanese>
             <Chinesesimp>控制单位在着火时是否丢掉武器。</Chinesesimp>
+            <Ukrainian>Чи повинні юніти викидати зброю, коли загоряються.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_EnableScreams">
             <English>Enable screams by units on fire</English>
@@ -91,6 +97,7 @@
             <Korean>불 붙은 유닛 비명</Korean>
             <Japanese>炎上中の悲鳴を有効</Japanese>
             <Chinesesimp>启用着火单位发出惨叫声</Chinesesimp>
+            <Ukrainian>Увім. крики від горіння</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_EnableScreams_Description">
             <English>Enables if units on fire will play the screaming sound</English>
@@ -104,6 +111,7 @@
             <Korean>불이 붙은 유닛이 소리를 지르게 합니다</Korean>
             <Japanese>有効化すると炎上しているユニットが悲鳴を上げます</Japanese>
             <Chinesesimp>启用着火的单位是否会发出惨叫声。</Chinesesimp>
+            <Ukrainian>Вмикає відтворення криків коли юніт загоряється</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_FlareDescription">
             <English>Uses a flare effect to increase fire intensity at night</English>
@@ -117,6 +125,7 @@
             <Korean>야간에 불로 인한 조명을 극대화 시킵니다</Korean>
             <Japanese>夜間に火災の強さを上昇させるフレア効果を有効化します。</Japanese>
             <Chinesesimp>启用耀斑效果，增加夜间火焰的强度。</Chinesesimp>
+            <Ukrainian>Вмикає ореол полум'я для більшої інтенсивності вночі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_FlareEnable">
             <English>Enable fire-flare at night</English>
@@ -130,6 +139,7 @@
             <Korean>밤에 불로 인한 조명 활성화</Korean>
             <Japanese>夜間にフレア効果を有効化</Japanese>
             <Chinesesimp>在夜间启用耀斑效果</Chinesesimp>
+            <Ukrainian>Вмикає блиск полум'я</Ukrainian>
         </Key>
     </Package>
 </Project>

@@ -13,6 +13,7 @@
             <Korean>헌터 킬러</Korean>
             <Japanese>ハンターキラー</Japanese>
             <Chinesesimp>猎歼系统</Chinesesimp>
+            <Ukrainian>Hunter Killer</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HunterKiller_observe">
             <English>Observe</English>
@@ -26,6 +27,7 @@
             <Korean>관측</Korean>
             <Japanese>オブザーブ</Japanese>
             <Chinesesimp>观察</Chinesesimp>
+            <Ukrainian>Спостерігати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HunterKiller_observe_description">
             <English>Slew your turret onto other turret's viewpoint</English>
@@ -39,6 +41,7 @@
             <Korean>포탑을 다른 포탑의 시야에 놓습니다.</Korean>
             <Japanese>自分のタレットを相手のタレットの視点に旋回させる。</Japanese>
             <Chinesesimp>将你的炮塔转向至另一个炮塔正在观察的位置</Chinesesimp>
+            <Ukrainian>Повернути свою турель туди, куди дивиться інша</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HunterKiller_override">
             <English>Override</English>
@@ -52,6 +55,7 @@
             <Korean>오버라이드</Korean>
             <Japanese>オーバーライド</Japanese>
             <Chinesesimp>超越控制</Chinesesimp>
+            <Ukrainian>Перевизначити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HunterKiller_override_description">
             <English>Force other turret to slew onto your viewpoint</English>
@@ -65,6 +69,7 @@
             <Korean>다른 포탑이 시야에 오도록 강제합니다.</Korean>
             <Japanese>他のタレットを強制的に自分の視点に旋回させる</Japanese>
             <Chinesesimp>强制另一个炮塔转向你正在观察的位置</Chinesesimp>
+            <Ukrainian>Повернути іншу турель туди, куди дивиться твоя</Ukrainian>
         </Key>
     </Package>
 </Project>

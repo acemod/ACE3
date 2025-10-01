@@ -17,6 +17,7 @@
             <Chinesesimp>载具上锁</Chinesesimp>
             <Turkish>Aracı Kilitle</Turkish>
             <Hungarian>Jármű zárása</Hungarian>
+            <Ukrainian>Закрити машину</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Action_Lockpick">
             <English>Lockpick Vehicle</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>解锁载具</Chinesesimp>
             <Turkish>Aracı Maymuncukla</Turkish>
             <Hungarian>Jármű feltörése</Hungarian>
+            <Ukrainian>Зламати замок</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Action_LockpickInUse">
             <English>Picking Lock...</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>正在开锁...</Chinesesimp>
             <Turkish>Maymuncuklanıyor...</Turkish>
             <Hungarian>Zár feltörése...</Hungarian>
+            <Ukrainian>Зламуємо замок...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Action_UnLock">
             <English>Unlock Vehicle</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>载具解锁</Chinesesimp>
             <Turkish>Araç Kilidini Aç</Turkish>
             <Hungarian>Jármű nyitása</Hungarian>
+            <Ukrainian>Відкрити машину</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_DefaultLockpickStrength_Description">
             <English>Default Time to lockpick (in seconds). Default: 10</English>
@@ -84,6 +88,7 @@
             <Chinese>開鎖時間(秒)。預設:10</Chinese>
             <Chinesesimp>开锁时间（秒）。预设：10</Chinesesimp>
             <Hungarian>Alapértelmezett idő a zárfeltöréshez (másodpercben). Alapértelmezett: 10</Hungarian>
+            <Ukrainian>Час для злому замка відмичкою (у секундах). За замовчуванням: 10</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_DefaultLockpickStrength_DisplayName">
             <English>Default Lockpick Strength</English>
@@ -101,6 +106,7 @@
             <Chinesesimp>预设开锁能力</Chinesesimp>
             <Turkish>Varsayılan Maymuncuk Gücü</Turkish>
             <Hungarian>Alapértelmezett zártörő-erősség</Hungarian>
+            <Ukrainian>Сила відмички за замовчуванням</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_DisplayName">
             <English>ACE Vehicle Lock</English>
@@ -117,6 +123,7 @@
             <Chinese>ACE 載具上鎖</Chinese>
             <Chinesesimp>ACE 载具上锁</Chinesesimp>
             <Turkish>ACE Araç Kilidi</Turkish>
+            <Ukrainian>ACE Блокування транспорту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Item_Civ_Description">
             <English>A key that should open most CIV vehicle.</English>
@@ -133,6 +140,7 @@
             <Chinese>一組解鎖鑰匙 (可解鎖大部份平民載具)</Chinese>
             <Chinesesimp>一组解锁钥匙（可解锁大部份平民载具）</Chinesesimp>
             <Hungarian>Egy kulcs, ami a CIVIL járművek többségét ki tudja nyitni.</Hungarian>
+            <Ukrainian>Ключ для відкриття більшості машин Цивільних.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Item_Custom_Description">
             <English>A custom key that will open a specific vehicle.</English>
@@ -149,6 +157,7 @@
             <Chinese>使用指定的鑰匙來開啟特定的載具</Chinese>
             <Chinesesimp>使用指定的钥匙来开启特定的载具</Chinesesimp>
             <Hungarian>Egy egyedi kulcs, ami egy meghatározott járművet nyit ki.</Hungarian>
+            <Ukrainian>Ключ від конкретної машини.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Item_East_Description">
             <English>A key that should open most EAST vehicle.</English>
@@ -165,6 +174,7 @@
             <Chinese>一組解鎖鑰匙 (可解鎖大部份紅方載具)</Chinese>
             <Chinesesimp>一组解锁钥匙（可解锁大部份红方载具）</Chinesesimp>
             <Hungarian>Egy kulcs, ami a KELET egységeinek legtöbb járművét ki tudja nyitni.</Hungarian>
+            <Ukrainian>Ключ для відкриття більшості машин Синіх.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Item_Indp_Description">
             <English>A key that should open most INDEP vehicle.</English>
@@ -181,6 +191,7 @@
             <Chinese>一組解鎖鑰匙 (可解鎖大部份獨立方載具)</Chinese>
             <Chinesesimp>一组解锁钥匙（可解锁大部份独立方载具）</Chinesesimp>
             <Hungarian>Egy kulcs, ami a FÜGGETLEN egységek legtöbb járművét ki tudja nyitni.</Hungarian>
+            <Ukrainian>Ключ для відкриття більшості машин Незалежних.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Item_Lockpick_Description">
             <English>A lockpick set that can pick the locks of most vehicles.</English>
@@ -197,6 +208,7 @@
             <Chinese>一組解鎖鑰匙 (可解鎖大部份載具)</Chinese>
             <Chinesesimp>一组解锁钥匙（可解锁大部份载具）</Chinesesimp>
             <Hungarian>Egy tolvajkulcs-készlet, mely a legtöbb jármű zárjait fel tudja törni.</Hungarian>
+            <Ukrainian>Набір відмичок, яким можна зламати майже будь-яку машину.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Item_Master_Description">
             <English>A Master Key will open any lock, no matter what!</English>
@@ -213,6 +225,7 @@
             <Chinese>萬用解鎖鑰匙，能解鎖任何載具</Chinese>
             <Chinesesimp>万用解锁钥匙，能解锁任何载具</Chinesesimp>
             <Hungarian>Egy főkulcs, ami minden zárat kinyit, helyzettől függetlenül!</Hungarian>
+            <Ukrainian>Універсальний ключ, що відкриває будь-який замок.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Item_West_Description">
             <English>A key that should open most WEST vehicles.</English>
@@ -229,6 +242,7 @@
             <Chinese>一組解鎖鑰匙 (可解鎖大部份藍方載具)</Chinese>
             <Chinesesimp>一组解锁钥匙（可解锁大部份蓝方载具）</Chinesesimp>
             <Hungarian>Egy kulcs, ami a NYUGAT egységeinek legtöbb járművét ki tudja nyitni.</Hungarian>
+            <Ukrainian>Ключ для відкриття більшості машин Червоних.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_LockVehicleInventory_Description">
             <English>Locks the inventory of locked vehicles</English>
@@ -245,6 +259,7 @@
             <Chinese>上鎖載具的車箱，使玩家不能拿取/查看載具內的裝備</Chinese>
             <Chinesesimp>上锁载具的车箱，使玩家不能拿取/查看载具内的装备</Chinesesimp>
             <Hungarian>Bezárja a zárt járművek rakterét is</Hungarian>
+            <Ukrainian>Закривати інвентар транспорту, якщо транспорт закритий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_LockVehicleInventory_DisplayName">
             <English>Lock Vehicle Inventory</English>
@@ -261,6 +276,7 @@
             <Chinese>上鎖載具的車箱</Chinese>
             <Chinesesimp>上锁载具的车箱</Chinesesimp>
             <Hungarian>Jármű rakodótér zárás</Hungarian>
+            <Ukrainian>Закривати інвентар транспорту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Module_Description">
             <English>Settings for lockpick strength and initial vehicle lock state. Removes ambiguous lock states.</English>
@@ -277,6 +293,7 @@
             <Chinese>設定開鎖能力和初始載具上鎖狀態。移除不明確的鎖定狀態</Chinese>
             <Chinesesimp>设定开锁能力和初始载具上锁状态。移除不明确的锁定状态</Chinesesimp>
             <Hungarian>Beállítások a zártörő erősségére és alapértelmezett zár-állapotra a járműveken. Eltávolítja az azonosíthatatlan zár-állapotokat.</Hungarian>
+            <Ukrainian>Налаштування сили відмичок і початковий стан замків транспорту. Усуває неоднозначні стани замків.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Module_DisplayName">
             <English>Vehicle Lock Setup</English>
@@ -293,6 +310,7 @@
             <Chinese>載具上鎖設置</Chinese>
             <Chinesesimp>载具上锁设置</Chinesesimp>
             <Hungarian>Jármű-zár beállítás</Hungarian>
+            <Ukrainian>Замикання транспорту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleKeyAssign_Module_Description">
             <English>Sync with vehicles and players. Will handout custom keys to players for every synced vehicle. Only valid for objects present at mission start.</English>
@@ -309,6 +327,7 @@
             <Chinese>可同步在載具與玩家身上。將使被同步的玩家掌握其他被同步載具的鑰匙。此模塊只會在任務剛開始時觸發</Chinese>
             <Chinesesimp>可同步在载具与玩家身上。将使被同步的玩家掌握其他被同步载具的钥匙。此模块只会在任务刚开始时触发。</Chinesesimp>
             <Hungarian>Szinkronizál a járművekkel és játékosokkal. Egyedi kulcsokat oszt ki a játékosoknak minden szinkronizált járműhöz. Csak a küldetés indításakor jelenlévő járművekhez érvényes.</Hungarian>
+            <Ukrainian>Синхронізуйте з транспортом і гравцем. Це видасть гравцеві ключі від усіх синхронізованих транспортних засобів. Працює тільки для об'єктів, присутніх на старті місії</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleKeyAssign_Module_DisplayName">
             <English>Vehicle Key Assign</English>
@@ -325,6 +344,7 @@
             <Chinese>指定載具鑰匙</Chinese>
             <Chinesesimp>指定载具钥匙</Chinesesimp>
             <Hungarian>Járműkulcs-osztás</Hungarian>
+            <Ukrainian>Призначення ключів від транспорту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_AsIs">
             <English>As Is</English>
@@ -341,6 +361,7 @@
             <Chinese>無變化</Chinese>
             <Chinesesimp>无变化</Chinesesimp>
             <Hungarian>Úgy-ahogy</Hungarian>
+            <Ukrainian>Як є</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_Description">
             <English>Set lock state for all vehicles (removes ambiguous lock states)</English>
@@ -357,6 +378,7 @@
             <Chinese>設定所有載具的初始上鎖狀態 (移除不明確的鎖定狀態)</Chinese>
             <Chinesesimp>设定所有载具的初始上锁状态（移除不明确的锁定状态）</Chinesesimp>
             <Hungarian>Beállítja a zár-állapotot az összes járműhöz (eltávolítja az azonosíthatatlan zárállapotokat)</Hungarian>
+            <Ukrainian>Встановлює початковий стан замків усіх транспортних засобів (усуває неоднозначні стани)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_DisplayName">
             <English>Vehicle Starting Lock State</English>
@@ -373,6 +395,7 @@
             <Chinese>載具初始上鎖狀態</Chinese>
             <Chinesesimp>载具初始上锁状态</Chinesesimp>
             <Hungarian>Jármű kezdő zár-állapot</Hungarian>
+            <Ukrainian>Початковий стан замків</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_Locked">
             <English>Locked</English>
@@ -389,6 +412,7 @@
             <Chinese>上鎖</Chinese>
             <Chinesesimp>上锁</Chinesesimp>
             <Hungarian>Zárva</Hungarian>
+            <Ukrainian>Закрито</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_RemoveAmbiguousLockState">
             <English>Remove Ambiguous Lock State</English>
@@ -402,6 +426,7 @@
             <Korean>불분명한 잠금상태 제거</Korean>
             <Japanese>あいまいな鍵の状態を削除</Japanese>
             <Chinesesimp>移除不明确的上锁状态</Chinesesimp>
+            <Ukrainian>Усунути неоднозначні стани замків</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_Unlocked">
             <English>Unlocked</English>
@@ -418,6 +443,7 @@
             <Chinese>解鎖</Chinese>
             <Chinesesimp>解锁</Chinesesimp>
             <Hungarian>Nyitva</Hungarian>
+            <Ukrainian>Відкрито</Ukrainian>
         </Key>
     </Package>
 </Project>

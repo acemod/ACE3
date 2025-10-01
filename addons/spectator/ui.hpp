@@ -1,5 +1,4 @@
 class RscButton;
-class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
 class RscListNBox {
     class ScrollBar;

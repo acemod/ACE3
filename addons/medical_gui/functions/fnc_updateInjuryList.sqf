@@ -189,7 +189,7 @@ if (GVAR(showDamageEntry)) then {
             };
         };
         // _bodyPartDamage here should indicate how close unit is to guaranteed death via sum of trauma, so use the same multipliers used in medical_damage/functions/fnc_determineIfFatal.sqf
-        _bodyPartDamage = (_bodyPartDamage / _damageThreshold) min 1;
+        _bodyPartDamage = (_bodyPartDamage / (_damageThreshold max 0.01)) min 1;
         switch (true) do {
             case (_bodyPartDamage isEqualTo 1): {
                 _entries pushBack [localize LSTRING(traumaSustained4), [_bodyPartDamage] call FUNC(damageToRGBA)];

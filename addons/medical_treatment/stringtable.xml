@@ -17,6 +17,7 @@
             <Chinesesimp>静脉输血（1000毫升）</Chinesesimp>
             <Turkish>Kan IV (1000ml) Ver</Turkish>
             <Hungarian>Vér adása intravénásan (1000ml)</Hungarian>
+            <Ukrainian>Перелити пакет крові (1000 мл)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Blood4_250">
             <English>Give Blood IV (250ml)</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>静脉输血（250毫升）</Chinesesimp>
             <Turkish>Kan IV (250ml) Ver</Turkish>
             <Hungarian>Vér adása intravénásan (250ml)</Hungarian>
+            <Ukrainian>Перелити пакет крові (250 мл)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Blood4_500">
             <English>Give Blood IV (500ml)</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>静脉输血（500毫升）</Chinesesimp>
             <Turkish>Kan IV (500ml) Ver</Turkish>
             <Hungarian>Vér adása intravénásan (500ml)</Hungarian>
+            <Ukrainian>Перелити пакет крові (500 мл)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_CPR">
             <English>CPR</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>心肺复苏（CPR）</Chinesesimp>
             <Turkish>CPR</Turkish>
             <Hungarian>Újraélesztés</Hungarian>
+            <Ukrainian>Серцево-легенева реанімація</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_CheckBloodPressure">
             <English>Check Blood Pressure</English>
@@ -85,6 +89,7 @@
             <Chinesesimp>检查血压</Chinesesimp>
             <Turkish>Kan Basıncını Kontrol Et</Turkish>
             <Hungarian>Vérnyomás megmérése</Hungarian>
+            <Ukrainian>Перевірити тиск</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_CheckPulse">
             <English>Check Pulse</English>
@@ -102,6 +107,7 @@
             <Chinesesimp>检查脉搏</Chinesesimp>
             <Turkish>Nabzı Kontrol Et</Turkish>
             <Hungarian>Pulzus ellenőrzése</Hungarian>
+            <Ukrainian>Перевірити пульс</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Diagnose">
             <English>Diagnose</English>
@@ -119,6 +125,7 @@
             <Chinesesimp>诊断</Chinesesimp>
             <Turkish>Teşhis et</Turkish>
             <Hungarian>Diagnosztizálás</Hungarian>
+            <Ukrainian>Діагностика</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Diagnosing">
             <English>Diagnosing...</English>
@@ -136,6 +143,7 @@
             <Chinesesimp>正在诊断...</Chinesesimp>
             <Turkish>Teşhis ediliyor...</Turkish>
             <Hungarian>Diagnózis folyamatban...</Hungarian>
+            <Ukrainian>Діагностика...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_ElasticBandage">
             <English>Elastic Bandage</English>
@@ -153,6 +161,7 @@
             <Chinesesimp>绷带（弹性型）</Chinesesimp>
             <Turkish>Elastik Bandaj</Turkish>
             <Hungarian>Rögzitő kötszer</Hungarian>
+            <Ukrainian>Давляча пов'язка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_FieldDressing">
             <English>Field Dressing</English>
@@ -169,6 +178,7 @@
             <Chinese>基礎繃帶</Chinese>
             <Chinesesimp>绷带（基础型）</Chinesesimp>
             <Hungarian>Zárókötszer</Hungarian>
+            <Ukrainian>Бинтова пов'язка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_PackingBandage">
             <English>Packing Bandage</English>
@@ -186,6 +196,7 @@
             <Chinesesimp>绷带（包扎型）</Chinesesimp>
             <Turkish>Paket Bandaj</Turkish>
             <Hungarian>Nyomókötszer</Hungarian>
+            <Ukrainian>Компресійний пакет</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_PerformingCPR">
             <English>Performing CPR...</English>
@@ -203,6 +214,7 @@
             <Chinesesimp>正在进行心肺复苏...</Chinesesimp>
             <Turkish>CPR Yapılıyor...</Turkish>
             <Hungarian>Újraélesztés folyamatban...</Hungarian>
+            <Ukrainian>Серцево-легенева реанімація...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Plasma4_1000">
             <English>Give Plasma IV (1000ml)</English>
@@ -220,6 +232,7 @@
             <Chinesesimp>静脉注射血浆（1000毫升）</Chinesesimp>
             <Turkish>Plasma IV (1000ml) Ver</Turkish>
             <Hungarian>Vérplazma adása intravénásan (1000ml)</Hungarian>
+            <Ukrainian>Перелити пакет плазми (1000 мл)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Plasma4_250">
             <English>Give Plasma IV (250ml)</English>
@@ -237,6 +250,7 @@
             <Chinesesimp>静脉注射血浆（250毫升）</Chinesesimp>
             <Turkish>Plasma IV (250ml) Ver</Turkish>
             <Hungarian>Vérplazma adása intravénásan (250ml)</Hungarian>
+            <Ukrainian>Перелити пакет плазми (250 мл)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Plasma4_500">
             <English>Give Plasma IV (500ml)</English>
@@ -254,6 +268,7 @@
             <Chinesesimp>静脉注射血浆（500毫升）</Chinesesimp>
             <Turkish>Plasma IV (500ml) Ver</Turkish>
             <Hungarian>Vérplazma adása intravénásan (500ml)</Hungarian>
+            <Ukrainian>Перелити пакет плазми (500 мл)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_QuikClot">
             <English>QuikClot</English>
@@ -270,6 +285,7 @@
             <Chinese>止血粉</Chinese>
             <Chinesesimp>绷带（止血型）</Chinesesimp>
             <Hungarian>QuikClot</Hungarian>
+            <Ukrainian>Бинт гемостатичний QuikClot</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_RemoveTourniquet">
             <English>Remove Tourniquet</English>
@@ -287,6 +303,7 @@
             <Chinesesimp>移除止血带</Chinesesimp>
             <Turkish>Turnikeyi Çıkar</Turkish>
             <Hungarian>Érszorító leszedése</Hungarian>
+            <Ukrainian>Зняти турнікет</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Saline4_1000">
             <English>Give Saline IV (1000ml)</English>
@@ -304,6 +321,7 @@
             <Chinesesimp>静脉注射生理盐水（1000毫升）</Chinesesimp>
             <Turkish>Serum IV (1000ml) Ver</Turkish>
             <Hungarian>Sós víz adása intravénásan (1000ml)</Hungarian>
+            <Ukrainian>Перелити пакет фізрозчину (1000 мл)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Saline4_250">
             <English>Give Saline IV (250ml)</English>
@@ -321,6 +339,7 @@
             <Chinesesimp>静脉注射生理盐水（250毫升）</Chinesesimp>
             <Turkish>Serum IV (250ml) Ver</Turkish>
             <Hungarian>Sós víz adása intravénásan (250ml)</Hungarian>
+            <Ukrainian>Перелити пакет фізрозчину (250 мл)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Saline4_500">
             <English>Give Saline IV (500ml)</English>
@@ -338,6 +357,7 @@
             <Chinesesimp>静脉注射生理盐水（500毫升）</Chinesesimp>
             <Turkish>Serum IV (500ml) Ver</Turkish>
             <Hungarian>Sós víz adása intravénásan (500ml)</Hungarian>
+            <Ukrainian>Перелити пакет фізрозчину (500 мл)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Tourniquet">
             <English>Tourniquet</English>
@@ -355,6 +375,7 @@
             <Chinesesimp>止血带</Chinesesimp>
             <Turkish>Turnike</Turkish>
             <Hungarian>Érszorító</Hungarian>
+            <Ukrainian>Турнікет</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_CPR">
             <English>%1 performed CPR</English>
@@ -370,6 +391,7 @@
             <Japanese>%1 が心肺蘇生(CPR)を実施</Japanese>
             <Chinese>%1 已執行心肺復甦術</Chinese>
             <Chinesesimp>%1 已进行心肺复苏</Chinesesimp>
+            <Ukrainian>%1 провів серцево-легеневу реанімацію</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_appliedSplint">
             <English>%1 applied a splint</English>
@@ -386,6 +408,7 @@
             <Chinese>%1 已套用固定板</Chinese>
             <Chinesesimp>%1 已安装夹板</Chinesesimp>
             <Turkish>% 1 splint uyguladı</Turkish>
+            <Ukrainian>%1 наклав Шину</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_appliedTourniquet">
             <English>%1 applied a tourniquet</English>
@@ -403,6 +426,7 @@
             <Chinesesimp>%1 已使用止血带</Chinesesimp>
             <Turkish>% 1 turnike uyguladı</Turkish>
             <Hungarian>%1 felhelyezett egy érszorítót</Hungarian>
+            <Ukrainian>%1 наклав турнікет</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_bandagedPatient">
             <English>%1 has bandaged patient</English>
@@ -419,6 +443,7 @@
             <Chinese>%1 已包紮傷者</Chinese>
             <Chinesesimp>%1 已包扎伤员</Chinesesimp>
             <Hungarian>%1 bekötözte a pácienst</Hungarian>
+            <Ukrainian>%1 перев'язав пацієнта</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>
@@ -435,6 +460,7 @@
             <Chinese>%1 已使用了個人急救包</Chinese>
             <Chinesesimp>%1 已使用个人急救包</Chinesesimp>
             <Turkish>% 1 Kişisel Yardım Seti kullanıldı</Turkish>
+            <Ukrainian>%1 використав аптечку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_gaveIV">
             <English>%1 has given an IV</English>
@@ -452,6 +478,7 @@
             <Chinesesimp>%1 已进行静脉注射</Chinesesimp>
             <Turkish>% 1 IV verildi</Turkish>
             <Hungarian>%1 infúziót adott</Hungarian>
+            <Ukrainian>%1 провів переливання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_usedItem">
             <English>%1 used %2</English>
@@ -469,6 +496,7 @@
             <Chinesesimp>%1 已使用 %2</Chinesesimp>
             <Turkish>%1 kullanıldı %2</Turkish>
             <Hungarian>%1 használta a %2-t</Hungarian>
+            <Ukrainian>%1 використав %2</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Adenosine_Desc_Short">
             <English>Used to counter effects of Epinephrine</English>
@@ -484,6 +512,7 @@
             <Japanese>アドレナリンの作用に対抗するために使用される</Japanese>
             <Chinese>用來對付腎上腺素的影響</Chinese>
             <Chinesesimp>用于中和肾上腺素的影响</Chinesesimp>
+            <Ukrainian>Використовується для усунення ефектів адреналіну</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Adenosine_Desc_Use">
             <English>A drug used to counter the effects of Epinephrine</English>
@@ -499,6 +528,7 @@
             <Japanese>アドレナリンの作用に対抗するために使用される薬品。</Japanese>
             <Chinese>一種藥物用於減低腎上腺素的效果</Chinese>
             <Chinesesimp>一种用于中和肾上腺素效果的药物</Chinesesimp>
+            <Ukrainian>Препарат використовується для усунення ефектів адреналіну</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Adenosine_Display">
             <English>Adenosine Autoinjector</English>
@@ -515,6 +545,7 @@
             <Chinese>腺苷自動注射器</Chinese>
             <Chinesesimp>腺苷自动注射器</Chinesesimp>
             <Turkish>Adenosin otomatik enjektörü</Turkish>
+            <Ukrainian>Аденозин у пневмошприці</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Administer_Painkillers">
             <English>Administer Painkillers</English>
@@ -526,6 +557,7 @@
             <Korean>진통제 투여</Korean>
             <Japanese>鎮痛剤を投与</Japanese>
             <Chinesesimp>嗑片止疼药</Chinesesimp>
+            <Ukrainian>Ввести знеболювальні</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Administering_Painkillers">
             <English>Administering Painkillers...</English>
@@ -537,6 +569,7 @@
             <Korean>진통제 투여 중...</Korean>
             <Japanese>鎮痛剤を投与しています・・・</Japanese>
             <Chinesesimp>正在服用止痛药</Chinesesimp>
+            <Ukrainian>Використання знеболювального...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_Description">
             <English>Enables treatment actions for different bandage types instead of the generic Bandage action.\nAdditionally, the reopening of bandaged wounds can also be enabled.</English>
@@ -553,6 +586,7 @@
             <Chinese>啟用不同繃帶的可用行為而非一般包紮動作。</Chinese>
             <Chinesesimp>启用不同绷带类型的治疗操作，而不是通用的绷带操作。\n此外，也可以启用包扎伤口开裂。</Chinesesimp>
             <Turkish>Genel Bandaj eylemi yerine farklı bandaj türleri için tedavi eylemlerini etkinleştirir. \ Ek olarak, bandajlı yaraların yeniden açılması da etkinleştirilebilir.</Turkish>
+            <Ukrainian>Включає дії для різних типів пов'язок, замість загальної дії "Перев'язка".</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_DisplayName">
             <English>Advanced Bandages</English>
@@ -569,6 +603,7 @@
             <Chinese>進階包紮</Chinese>
             <Chinesesimp>进阶包扎</Chinesesimp>
             <Turkish>Gelişmiş Bandajlar</Turkish>
+            <Ukrainian>Розширена Перев'язка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_EnabledCanReopen">
             <English>Enabled &amp; Can Reopen</English>
@@ -584,6 +619,7 @@
             <Japanese>有効 &amp; 再開放</Japanese>
             <Chinesesimp>已启用 &amp; 可以伤口开裂</Chinesesimp>
             <Turkish>Etkinleştirildi ve Yeniden Açılabilir</Turkish>
+            <Ukrainian>Увімкнено і може відкритися заново</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_Description">
             <English>Enables the Check Pulse, Check Blood Pressure, and Check Response treatment actions instead of the generic Diagnose action.\nWhen disabled, the CPR action will only be shown when performing CPR is appropriate.\nThe actions this setting enables are needed to determine whether a person is unconscious or in cardiac arrest.</English>
@@ -600,6 +636,7 @@
             <Chinese>啟用檢查脈搏、血壓以及病患反應的動作而非一般的診斷動作。\n當停用時，CPR只會在需要時出現。\n當這個選項啟用時必須診斷病患是否無意識或者心搏停止。</Chinese>
             <Chinesesimp>启用后，可以检查脉搏、血压和反应治疗，而不是通用诊断。\n禁用时，心肺复苏操作将仅在适当时显示。\n此设置操作启用后必须需要先确定一个人是失去知觉还是心脏骤停。</Chinesesimp>
             <Turkish>Genel Teşhis eylemi yerine Nabzı Kontrol Et, Kan Basıncını Kontrol Et ve Yanıtı Kontrol Et tedavi eylemlerini etkinleştirir. \ Devre dışı bırakıldığında, CPR eylemi yalnızca CPR gerçekleştirilmesi uygun olduğunda gösterilecektir.</Turkish>
+            <Ukrainian>Включає дії "Перевірити пульс", "Перевірити тиск" і "Перевірити реакцію" замість загальної дії "Діагностика".</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DiagnoseCardiacArrest">
             <English>Enabled &amp; Can Diagnose Death/Cardiac Arrest</English>
@@ -613,6 +650,7 @@
             <Korean>활성화 및 사망/심정지 진찰 가능</Korean>
             <Japanese>有効 &amp; 死亡/心停止状態を診断可能</Japanese>
             <Chinesesimp>已启用 &amp; 可以诊断死亡/心搏骤停</Chinesesimp>
+            <Ukrainian>Увімкнено і може діагностувати смерть/зупинку серця</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DiagnoseCardiacArrestDirect">
             <English>Enabled &amp; Can Diagnose Death/Cardiac Arrest [Directly]</English>
@@ -624,6 +662,7 @@
             <Korean>활성화 및 사망/심정지 진찰 가능 [직접]</Korean>
             <Japanese>有効 &amp; 死亡/心停止状態を診断可能 [直接的に]</Japanese>
             <Chinesesimp>已启用 &amp; 可以诊断死亡/心搏骤停(直接显示结果)</Chinesesimp>
+            <Ukrainian>Увімкнено і може діагностувати смерть/зупинку серця [Напряму]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DisplayName">
             <English>Advanced Diagnose</English>
@@ -640,6 +679,7 @@
             <Chinese>進階診斷</Chinese>
             <Chinesesimp>进阶诊断</Chinesesimp>
             <Turkish>Gelişmiş Teşhis</Turkish>
+            <Ukrainian>Розширена Діагностика</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_Description">
             <English>Enables extended, more in-depth medication handling. Also, enables the use of Adenosine.</English>
@@ -655,6 +695,7 @@
             <Japanese>有効化するともっと多くの多様な機能を持つ医薬品を使えます。また、アデノシンが利用可能になります。</Japanese>
             <Chinese>是否擴展藥物管控使其更深度化。並且，啟用腺苷以及阿托品的使用次數</Chinese>
             <Chinesesimp>可以扩展、更深入地使用药物。同时，能够使用腺苷以及阿托品。</Chinesesimp>
+            <Ukrainian>Встановлює розширене використання ліків</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
@@ -671,6 +712,7 @@
             <Chinese>進階醫療用品</Chinese>
             <Chinesesimp>进阶医疗用品</Chinesesimp>
             <Turkish>Gelişmiş Ilaç</Turkish>
+            <Ukrainian>Розширені Ліки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Aid_Kit_Desc_Short">
             <English>Includes various treatment kit needed for stitching or advanced treatment</English>
@@ -688,6 +730,7 @@
             <Chinesesimp>包含各种医疗套件，以及进阶伤口系统需要的缝合用品</Chinesesimp>
             <Turkish>Dikiş veya gelişmiş tedavi için gerekli çeşitli tedavi malzemelerini içerir</Turkish>
             <Hungarian>Változatos segédfelszereléseket tartalmaz sebvarráshoz és haladó elsősegélynyújtáshoz</Hungarian>
+            <Ukrainian>Містить різні матеріали та інструменти для зашивання ран і надання спеціальної медичної допомоги.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Aid_Kit_Desc_Use">
             <English>Personal Aid Kit for in field stitching or advanced treatment</English>
@@ -705,6 +748,7 @@
             <Chinesesimp>个人急救包可用于战地缝合手术或进阶伤口系统使用</Chinesesimp>
             <Turkish>Alan dikişi veya gelişmiş tedavi için Kişisel Yardım Kiti</Turkish>
             <Hungarian>Elsősegélycsomag, terepen való sebvarráshoz és haladó ellátáshoz</Hungarian>
+            <Ukrainian>Польова аптчека для розширеного лікування і зашивання ран</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Aid_Kit_Display">
             <English>Personal Aid Kit</English>
@@ -722,6 +766,7 @@
             <Chinesesimp>个人急救包</Chinesesimp>
             <Turkish>Kişisel Yardım Seti</Turkish>
             <Hungarian>Elsősegélycsomag</Hungarian>
+            <Ukrainian>Аптечка першої допомоги</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Airway">
             <English>Airway</English>
@@ -739,6 +784,7 @@
             <Chinesesimp>呼吸道</Chinesesimp>
             <Turkish>Hava yolu</Turkish>
             <Hungarian>Légút</Hungarian>
+            <Ukrainian>Дихальні шляхи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBagUnconscious_Description">
             <English>Enables placing an unconscious patient in a body bag.</English>
@@ -752,6 +798,7 @@
             <Korean>기절 상태의 인원을 시체 운반용 부대에 옮겨 담을 수 있는 지를 정합니다.</Korean>
             <Japanese>無意識状態のプレイヤーを遺体袋へ入れることが出来る様にします。</Japanese>
             <Chinesesimp>能够将昏迷的伤员装入尸袋中。</Chinesesimp>
+            <Ukrainian>Дозволяє упаковувати пацієнтів без свідомості в мішки для трупів.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBagUnconscious_DisplayName">
             <English>Allow Unconscious Body Bag</English>
@@ -765,6 +812,7 @@
             <Korean>기절 인원 시체 운반용 부대에 옮기기</Korean>
             <Japanese>無意識者の遺体袋への収容許可</Japanese>
             <Chinesesimp>允许昏迷者装入尸袋</Chinesesimp>
+            <Ukrainian>Пакування без свідомості в мішки для трупів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBalling_Description">
             <English>Enables get-well wishes for people that aren't feeling too well.</English>
@@ -778,6 +826,7 @@
             <Korean>몸 상태가 좋지 않은 사람들에게 쾌유를 바라는 인사를 활성화합니다.</Korean>
             <Japanese>体調があまり良くない人に対して、回復を祈ることができます。</Japanese>
             <Chinesesimp>为身体不适的人提供康复祝福</Chinesesimp>
+            <Ukrainian>Дозволяє побажати одужання людям, які почуваються не дуже добре.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBalling_DisplayName">
             <English>Disable Get-Well Wishes</English>
@@ -791,6 +840,7 @@
             <Korean>쾌유 인사말 비활성화</Korean>
             <Japanese>快気の祈りを無効化</Japanese>
             <Chinesesimp>关闭健康问候语</Chinesesimp>
+            <Ukrainian>Вимкнути побажання одужання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowGraveDigging_Description">
             <English>Enables digging graves to dispose of corpses.</English>
@@ -804,6 +854,7 @@
             <Korean>시체를 처리하기 위해 무덤을 파는 것을 허용합니다.</Korean>
             <Japanese>墓を掘って死体を処理できるようになります。</Japanese>
             <Chinesesimp>允许挖掘一个坟墓来处理尸体</Chinesesimp>
+            <Ukrainian>Дозволяє рити могили для поховання трупів.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowGraveDigging_DisplayName">
             <English>Allow Grave Digging</English>
@@ -817,6 +868,7 @@
             <Korean>무덤 파기 허용</Korean>
             <Japanese>墓掘りを許可</Japanese>
             <Chinesesimp>允许挖坟</Chinesesimp>
+            <Ukrainian>Риття могил</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowGraveDigging_graveOnlyDead">
             <English>Only if dead</English>
@@ -830,6 +882,7 @@
             <Korean>죽었을 때에만</Korean>
             <Japanese>死体のみ</Japanese>
             <Chinesesimp>仅允许对尸体使用</Chinesesimp>
+            <Ukrainian>Тільки якщо мертвий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowLitterCreation_Description">
             <English>Enables the creation of litter upon treatment.</English>
@@ -845,6 +898,7 @@
             <Japanese>治療後に廃棄物の生成を有効化します。</Japanese>
             <Chinese>啟用醫療後剩下的醫療用廢棄物。</Chinese>
             <Chinesesimp>启用在治疗后能够产生医疗垃圾。</Chinesesimp>
+            <Ukrainian>Дозволяє створення медичного сміття під час лікування.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowLitterCreation_DisplayName">
             <English>Enable Litter</English>
@@ -862,6 +916,7 @@
             <Chinesesimp>启用医疗废弃物</Chinesesimp>
             <Turkish>Çöpleri Etkinleştir</Turkish>
             <Hungarian>Szemét engedélyezése</Hungarian>
+            <Ukrainian>Увім. сміття</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_Description">
             <English>Enables the use of IV transfusions on oneself.</English>
@@ -877,6 +932,7 @@
             <Japanese>自らに対しての輸液IV(静脈注射)を可能にします。</Japanese>
             <Chinese>啟用是否能對自己注射點滴</Chinese>
             <Chinesesimp>启用是否能够自我静脉输液</Chinesesimp>
+            <Ukrainian>Дозволяє використовувати внутрішньовенні переливання на собі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
             <English>Self IV Transfusion</English>
@@ -892,6 +948,7 @@
             <Japanese>輸液の自己投与</Japanese>
             <Chinese>自我注射點滴</Chinese>
             <Chinesesimp>自我静脉输液</Chinesesimp>
+            <Ukrainian>Внутрішньовенне переливання на собі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_Description">
             <English>Enables the use of PAKs to heal oneself.</English>
@@ -908,6 +965,7 @@
             <Chinese>啟用個人急救包能對自己使用。</Chinese>
             <Chinesesimp>启用自身能使用个人急救包。</Chinesesimp>
             <Turkish>Kendini iyileştirmek için PAK'ların kullanılmasını sağlar.</Turkish>
+            <Ukrainian>Дають змогу використовувати аптечку на собі поодинці.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_DisplayName">
             <English>Self PAK Usage</English>
@@ -924,6 +982,7 @@
             <Chinese>自我使用急救包</Chinese>
             <Chinesesimp>自我使用急救包</Chinesesimp>
             <Turkish>Kendi PAK Kullanımı</Turkish>
+            <Ukrainian>Використання аптечки на собі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfStitch_Description">
             <English>Enables the use of surgical kits to stitch oneself.</English>
@@ -939,6 +998,7 @@
             <Japanese>手術キットを使い自らを縫合できるようにします。</Japanese>
             <Chinese>啟用是否能自己使用手術包來縫合自己的傷口。</Chinese>
             <Chinesesimp>启用是否能够使用手术包进行自我缝合。</Chinesesimp>
+            <Ukrainian>Включає використання хірургічного набору на собі.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfStitch_DisplayName">
             <English>Self Stitching</English>
@@ -954,6 +1014,7 @@
             <Japanese>自己縫合</Japanese>
             <Chinese>自我縫合</Chinese>
             <Chinesesimp>自我缝合</Chinesesimp>
+            <Ukrainian>Зашивання своєї рани</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_Description">
             <English>Controls whether medical equipment can be shared between the patient and the medic.</English>
@@ -970,6 +1031,7 @@
             <Chinese>控制是否病患與醫療兵之間能否共享醫療物資</Chinese>
             <Chinesesimp>控制伤员和医疗兵之间是否可以共享医疗装备。</Chinesesimp>
             <Turkish>Tıbbi ekipmanın hasta ve sağlık görevlisi arasında paylaşılıp paylaşılamayacağını kontrol eder.</Turkish>
+            <Ukrainian>Контролює, чи можна розділити медикаменти між пацієнтом і лікарем.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_DisplayName">
             <English>Allow Shared Equipment</English>
@@ -986,6 +1048,7 @@
             <Chinese>允許共享設備</Chinese>
             <Chinesesimp>允许共享装备</Chinesesimp>
             <Turkish>Paylaşılan Ekipmana İzin Ver</Turkish>
+            <Ukrainian>Дозволити спільні медикаменти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityMedic">
             <English>Medic's Equipment First</English>
@@ -1002,6 +1065,7 @@
             <Chinese>優先使用醫療兵的醫療物資</Chinese>
             <Chinesesimp>优先消耗医疗兵装备</Chinesesimp>
             <Turkish>İlk Sıhhiyenin Ekipmanı</Turkish>
+            <Ukrainian>Спочатку медикаменти лікаря</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityMedicIfMedic">
             <English>Medic's Equipment First [If medic role]</English>
@@ -1012,6 +1076,7 @@
             <Korean>치료자의 의료물자 먼저 사용 [의무병일 경우]</Korean>
             <Japanese>救護者装備を優先 [衛生兵の場合]</Japanese>
             <Chinesesimp>提供医疗者的装备优先(如果是医疗兵)</Chinesesimp>
+            <Ukrainian>Спочатку медикаменти лікаря [Якщо медик]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityPatient">
             <English>Patient's Equipment First</English>
@@ -1028,6 +1093,7 @@
             <Chinese>優先使用患者的醫療物資</Chinese>
             <Chinesesimp>优先消耗伤员装备</Chinesesimp>
             <Turkish>Önce Hastanın Ekipmanı</Turkish>
+            <Ukrainian>Спочатку медикаменти пацієнта</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Almost_No_Breathing">
             <English>Almost no breathing</English>
@@ -1045,6 +1111,7 @@
             <Chinesesimp>呼吸微弱</Chinesesimp>
             <Turkish>Neredeyse nefes almıyor</Turkish>
             <Hungarian>Alig van légzés</Hungarian>
+            <Ukrainian>Дихання дуже слабке</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Anyone">
             <English>Anyone</English>
@@ -1062,6 +1129,7 @@
             <Chinesesimp>任何人</Chinesesimp>
             <Turkish>Hiçbiri</Turkish>
             <Hungarian>Akárki</Hungarian>
+            <Ukrainian>Ким завгодно</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Apply_Bandage">
             <English>You bandage %1 (%2)</English>
@@ -1078,6 +1146,7 @@
             <Chinese>你正在對 %1 (%2) 包紮繃帶中</Chinese>
             <Chinesesimp>你正在使用 %2 包扎 %1</Chinesesimp>
             <Hungarian>Bekötözöd %1-t (%2)</Hungarian>
+            <Ukrainian>Ви перев'язали пораненого %1 (%2)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Apply_Splint">
             <English>Apply Splint</English>
@@ -1094,6 +1163,7 @@
             <Chinese>套上固定板</Chinese>
             <Chinesesimp>安装夹板</Chinesesimp>
             <Turkish>Atel Uygula</Turkish>
+            <Ukrainian>Накласти Шину</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Apply_Tourniquet">
             <English>Apply Tourniquet</English>
@@ -1111,6 +1181,7 @@
             <Chinesesimp>使用止血带</Chinesesimp>
             <Turkish>Turnike Uygula</Turkish>
             <Hungarian>Érszorító alkalmazása</Hungarian>
+            <Ukrainian>Накласти турнікет</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Applying_Splint">
             <English>Applying Splint...</English>
@@ -1127,6 +1198,7 @@
             <Chinese>套用固定板中...</Chinese>
             <Chinesesimp>正在安装夹板...</Chinesesimp>
             <Turkish>Atel Uygulanıyor...</Turkish>
+            <Ukrainian>Накладається Шина...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Applying_Tourniquet">
             <English>Applying Tourniquet...</English>
@@ -1144,6 +1216,7 @@
             <Chinesesimp>正在使用止血带...</Chinesesimp>
             <Turkish>Turnike Uygulanıyor...</Turkish>
             <Hungarian>Érszorító felhelyezése...</Hungarian>
+            <Ukrainian>Накладення турнікету...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AssignMedicRoles_role_Description">
             <English>This module allows you to assign the medic class to selected units.</English>
@@ -1161,6 +1234,7 @@
             <Chinesesimp>本模块可让被同步的单位成为医疗兵</Chinesesimp>
             <Turkish>Bu modül, Medic sınıfını seçilen birimlere atamanıza izin verir.</Turkish>
             <Hungarian>Ez a modul engedélyezi az orvosi jelző hozzárendelését kiválasztott egységekhez.</Hungarian>
+            <Ukrainian>Цей модуль дає змогу призначити клас медика обраним юнітам.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AssignMedicRoles_role_DisplayName">
             <English>Is Medic</English>
@@ -1178,6 +1252,7 @@
             <Chinesesimp>是医疗兵</Chinesesimp>
             <Turkish>Sıhhiye</Turkish>
             <Hungarian>Orvos-e</Hungarian>
+            <Ukrainian>Є медиком</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AssignMedicRoles_role_doctor">
             <English>Doctor (Only Advanced Medics)</English>
@@ -1194,6 +1269,7 @@
             <Chinese>軍醫 (只限進階醫療系統)</Chinese>
             <Chinesesimp>军医（只限进阶医疗系统）</Chinesesimp>
             <Hungarian>Doktor (csak fejlett orvosok)</Hungarian>
+            <Ukrainian>Лікар (тільки усклад.)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AssignMedicRoles_role_doctorShort">
             <English>Doctor</English>
@@ -1211,6 +1287,7 @@
             <Chinesesimp>军医</Chinesesimp>
             <Turkish>Doktor</Turkish>
             <Hungarian>Doktor</Hungarian>
+            <Ukrainian>Лікар</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AssignMedicRoles_role_medic">
             <English>Regular Medic</English>
@@ -1228,6 +1305,7 @@
             <Chinesesimp>普通医疗兵</Chinesesimp>
             <Turkish>Normal Sıhhıye</Turkish>
             <Hungarian>Hagyományos orvos</Hungarian>
+            <Ukrainian>Звичайний медик</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AssignMedicRoles_role_none">
             <English>None</English>
@@ -1245,6 +1323,7 @@
             <Chinesesimp>无</Chinesesimp>
             <Turkish>Hiçbiri</Turkish>
             <Hungarian>Nincs</Hungarian>
+            <Ukrainian>Ні</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AssignMedicVehicle_enabled_DisplayName">
             <English>Is Medical Vehicle</English>
@@ -1262,6 +1341,7 @@
             <Chinesesimp>是医疗载具</Chinesesimp>
             <Turkish>Tıbbi Araç</Turkish>
             <Hungarian>Orvosi jármű-e</Hungarian>
+            <Ukrainian>Є медичним транспортом</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AssignMedicalFacility_enabled_Description">
             <English>Registers an object as a medical facility</English>
@@ -1278,6 +1358,7 @@
             <Chinese>指定一個物件作為醫療設施</Chinese>
             <Chinesesimp>指定一个物体作为医疗设施</Chinesesimp>
             <Hungarian>Egy objektum orvosi létesítményként való regisztrálása</Hungarian>
+            <Ukrainian>Визначає об'єкт як госпіталь</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AssignMedicalFacility_enabled_DisplayName">
             <English>Is Medical Facility</English>
@@ -1295,6 +1376,7 @@
             <Chinesesimp>是医疗设施</Chinesesimp>
             <Turkish>Tıbbi Tesis</Turkish>
             <Hungarian>Orvosi létesítmény-e</Hungarian>
+            <Ukrainian>Є госпіталем</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Atropine_Desc_Short">
             <English>Used in NBC scenarios</English>
@@ -1311,6 +1393,7 @@
             <Chinese>使用於核生化汙染的情況</Chinese>
             <Chinesesimp>使用于核生化污染的情况</Chinesesimp>
             <Hungarian>NBK helyzetek esetén használandó</Hungarian>
+            <Ukrainian>Застосовується для захисту від ЗМУ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Atropine_Desc_Use">
             <English>A drug used by the Military in NBC scenarios.</English>
@@ -1327,6 +1410,7 @@
             <Chinese>軍用神經解毒針, 用來應付核生化汙染的情況.</Chinese>
             <Chinesesimp>军用神经解毒针，用来应付核生化污染的情况。</Chinesesimp>
             <Hungarian>Egy instabil alkaloid, NBK helyzetek esetén a katonai szervezetek veszik használatba.</Hungarian>
+            <Ukrainian>Препарат, який використовується у військах для захисту від зброї масового ураження.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Atropine_Display">
             <English>Atropine Autoinjector</English>
@@ -1344,6 +1428,7 @@
             <Chinesesimp>阿托品自动注射器</Chinesesimp>
             <Turkish>Atropin otomatik enjektör</Turkish>
             <Hungarian>Atropin autoinjektor</Hungarian>
+            <Ukrainian>Атропін у пневмошприці</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Attributes_isMedic_Description">
             <English>Medical training</English>
@@ -1360,6 +1445,7 @@
             <Chinese>醫療訓練</Chinese>
             <Chinesesimp>医疗训练</Chinesesimp>
             <Turkish>Tıbbi eğitim</Turkish>
+            <Ukrainian>Медична підготовка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Attributes_isMedicalVehicle_Description">
             <English>Whether or not the object will be a medical vehicle.</English>
@@ -1375,6 +1461,7 @@
             <Japanese>車両をを医療車両として割り当てます</Japanese>
             <Chinese>是否使該載具為醫療載具?</Chinese>
             <Chinesesimp>是否使该载具为医疗载具？</Chinesesimp>
+            <Ukrainian>Чи буде об'єкт вважатися медичним транспортом.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandage">
             <English>Bandage</English>
@@ -1392,6 +1479,7 @@
             <Chinesesimp>包扎</Chinesesimp>
             <Turkish>Bandaj</Turkish>
             <Hungarian>Kötözés</Hungarian>
+            <Ukrainian>Перев'язати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandage_Basic_Desc_Short">
             <English>Used to cover a wound</English>
@@ -1409,6 +1497,7 @@
             <Chinesesimp>用于覆盖伤口</Chinesesimp>
             <Turkish>Bir yarayı kapatmak için kullanılır</Turkish>
             <Hungarian>Sebesülések befedésére alkalmas</Hungarian>
+            <Ukrainian>Для перев'язки ран</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandage_Basic_Desc_Use">
             <English>A dressing, that is a particular material used to cover a wound, which is applied over the wound once bleeding has been stemmed.</English>
@@ -1426,6 +1515,7 @@
             <Chinesesimp>用于覆盖伤口以防止出血，透过敷料的止血剂来让出血慢慢停止</Chinesesimp>
             <Turkish>Bir yarayı örtmek için kullanılan ve kanama başladıktan sonra yaranın üzerine uygulanan özel bir malzeme olan bir pansuman.</Turkish>
             <Hungarian>Egy különleges anyagú kötszer sebek betakarására, amelyet a vérzés elállítása után helyeznek fel.</Hungarian>
+            <Ukrainian>Пов'язка, що накладається поверх рани після зупинки кровотечі.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandage_Basic_Display">
             <English>Bandage (Basic)</English>
@@ -1443,6 +1533,7 @@
             <Chinesesimp>绷带（基础型）</Chinesesimp>
             <Turkish>Bandaj (Basit)</Turkish>
             <Hungarian>Kötszer (Általános)</Hungarian>
+            <Ukrainian>Пов'язка (звичайна)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandage_Elastic_Desc_Short">
             <English>Bandage kit, Elastic</English>
@@ -1460,6 +1551,7 @@
             <Chinesesimp>绷带（弹性型）</Chinesesimp>
             <Turkish>Bandaj kiti, Elastik</Turkish>
             <Hungarian>Rugalmas kötszercsomag, "rögzítő"</Hungarian>
+            <Ukrainian>Давляча пов'язка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandage_Elastic_Desc_Use">
             <English>Allows an even compression and extra support to the injured area.</English>
@@ -1477,6 +1569,7 @@
             <Chinesesimp>可对伤口持续压迫并固定以防止伤口情况变严重</Chinesesimp>
             <Turkish>Yaralı bölgeye eşit bir sıkıştırma ve ekstra destek sağlar.</Turkish>
             <Hungarian>Egyenletes nyomást és támogatást biztosít a sebesült felületnek.</Hungarian>
+            <Ukrainian>Пов'язка, що давить, забезпечує рівномірне стиснення і додаткову підтримку пошкодженої ділянки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandage_Elastic_Display">
             <English>Bandage (Elastic)</English>
@@ -1494,6 +1587,7 @@
             <Chinesesimp>绷带（弹性型）</Chinesesimp>
             <Turkish>Bandaj (Elastik)</Turkish>
             <Hungarian>Rögzító kötszer</Hungarian>
+            <Ukrainian>Пов'язка (давить)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandage_HitBody">
             <English>Bandage Torso</English>
@@ -1511,6 +1605,7 @@
             <Chinesesimp>包扎躯干</Chinesesimp>
             <Turkish>Gövdeyi Bandajla</Turkish>
             <Hungarian>Testtörzs kötözése</Hungarian>
+            <Ukrainian>Перев'язати торс</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandage_HitHead">
             <English>Bandage Head</English>
@@ -1528,6 +1623,7 @@
             <Chinesesimp>包扎头部</Chinesesimp>
             <Turkish>Kafayı Bandajla</Turkish>
             <Hungarian>Fej kötözése</Hungarian>
+            <Ukrainian>Перев'язати голову</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandage_HitLeftArm">
             <English>Bandage Left Arm</English>
@@ -1545,6 +1641,7 @@
             <Chinesesimp>包扎左臂</Chinesesimp>
             <Turkish>Sol Kolu Bandajla</Turkish>
             <Hungarian>Bal kar kötözése</Hungarian>
+            <Ukrainian>Перев'язати ліву руку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandage_HitLeftLeg">
             <English>Bandage Left Leg</English>
@@ -1562,6 +1659,7 @@
             <Chinesesimp>包扎左腿</Chinesesimp>
             <Turkish>Sol Bacağı Bandajla</Turkish>
             <Hungarian>Bal láb kötözése</Hungarian>
+            <Ukrainian>Перев'язати ліву ногу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandage_HitRightArm">
             <English>Bandage Right Arm</English>
@@ -1579,6 +1677,7 @@
             <Chinesesimp>包扎右臂</Chinesesimp>
             <Turkish>Sağ Kolu Bandajla</Turkish>
             <Hungarian>Jobb kar kötözése</Hungarian>
+            <Ukrainian>Перев'язати праву руку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandage_HitRightLeg">
             <English>Bandage Right Leg</English>
@@ -1596,6 +1695,7 @@
             <Chinesesimp>包扎右腿</Chinesesimp>
             <Turkish>Sağ Bacağı Bandajla</Turkish>
             <Hungarian>Jobb láb kötözése</Hungarian>
+            <Ukrainian>Перев'язати праву ногу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandaged">
             <English>Bandaged</English>
@@ -1613,6 +1713,7 @@
             <Chinesesimp>包扎</Chinesesimp>
             <Turkish>Bandajlı</Turkish>
             <Hungarian>Bekötözve</Hungarian>
+            <Ukrainian>Пов'язка накладена</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandaging">
             <English>Bandaging...</English>
@@ -1630,6 +1731,7 @@
             <Chinesesimp>正在包扎...</Chinesesimp>
             <Turkish>Bandajlanıyor...</Turkish>
             <Hungarian>Bekötözés...</Hungarian>
+            <Ukrainian>Перев'язування...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Blood_IV">
             <English>Blood IV (1000ml)</English>
@@ -1647,6 +1749,7 @@
             <Chinesesimp>血液（1000毫升）</Chinesesimp>
             <Turkish>Kan IV (1000ml)</Turkish>
             <Hungarian>Vér-infúzió (1000ml)</Hungarian>
+            <Ukrainian>Кров для переливання (1000 мл)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Blood_IV_250">
             <English>Blood IV (250ml)</English>
@@ -1664,6 +1767,7 @@
             <Chinesesimp>血液（250毫升）</Chinesesimp>
             <Turkish>Kan IV (250ml)</Turkish>
             <Hungarian>Vér-infúzió (250ml)</Hungarian>
+            <Ukrainian>Кров для переливання (250 мл)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Blood_IV_500">
             <English>Blood IV (500ml)</English>
@@ -1681,6 +1785,7 @@
             <Chinesesimp>血液（500毫升）</Chinesesimp>
             <Turkish>Kan IV (500ml)</Turkish>
             <Hungarian>Vér-infúzió (500ml)</Hungarian>
+            <Ukrainian>Кров для переливання (500 мл)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Blood_IV_Desc_Short">
             <English>Blood IV, for restoring a patients blood</English>
@@ -1698,6 +1803,7 @@
             <Chinesesimp>血液，用于补充伤者流失的血液</Chinesesimp>
             <Turkish>Kan IV, bir hastanın kanını geri enjekte etmek için</Turkish>
             <Hungarian>Vér-infúzió, intravénás bejuttatásra egy páciensnek</Hungarian>
+            <Ukrainian>Пакет крові для відшкодування обсягу втраченої крові</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Blood_IV_Desc_Use">
             <English>O Negative infusion blood used in strict and rare events to replenish blood supply usually conducted in the transport phase of medical care.</English>
@@ -1714,6 +1820,7 @@
             <Chinese>O型陰性注射用血液, 在緊急情況時使用, 用於補充傷者流失的血液</Chinese>
             <Chinesesimp>O型负值注射用血液，在紧急情况时使用, 用于补充伤者流失的血液</Chinesesimp>
             <Hungarian>Nullás vércsoportú, Rh-negatív vér-infúzió, melyet kritikus és ritka helyzetekben vérutánpótlásra használnak, jellemzően az orvosi ellátás szállítási fázisa közben.</Hungarian>
+            <Ukrainian>Кров I групи, резус-негативна, застосовується за життєвими показаннями для відшкодування обсягу втраченої крові на догоспітальному етапі надання медичної допомоги.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bodybag_Desc_Short">
             <English>A bodybag for dead bodies</English>
@@ -1731,6 +1838,7 @@
             <Chinesesimp>用于装尸体</Chinesesimp>
             <Turkish>Ölü bedenler için bir ceset torbası</Turkish>
             <Hungarian>Egy hullazsák a holttestek számára</Hungarian>
+            <Ukrainian>Мішок для пакування трупів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bodybag_Desc_Use">
             <English>A bodybag for dead bodies</English>
@@ -1748,6 +1856,7 @@
             <Chinesesimp>用于装尸体</Chinesesimp>
             <Turkish>Ölü bedenler için bir ceset torbası</Turkish>
             <Hungarian>Egy hullazsák a holttestek számára</Hungarian>
+            <Ukrainian>Мішок для пакування трупів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bodybag_Display">
             <English>Bodybag</English>
@@ -1765,6 +1874,7 @@
             <Chinesesimp>尸袋</Chinesesimp>
             <Turkish>Ceset torbası</Turkish>
             <Hungarian>Hullazsák</Hungarian>
+            <Ukrainian>Мішок для трупів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMax_Description">
             <English>Maximum probability that performing CPR will restore heart rhythm.\nThis maximum value is used when the patient has at most "Lost some blood".\nAn interpolated probability is used when the patient's blood volume is between the minimum and maximum thresholds.</English>
@@ -1778,6 +1888,7 @@
             <Korean>심폐소생술 시 제일 높은 성공 가능성을 결정합니다.\n이 가능성은 환자가 최소 "혈액을 조금 잃음"일 때 사용됩니다.</Korean>
             <Japanese>心肺蘇生(CPR)を行うことで脈拍が回復する最高成功確率を設定します。\nこの値は患者が"いくらか失血している"時以上の場合に使用されます。\n患者の血液量が最低値と最大値の間だった場合は、補完確率が適用されます。</Japanese>
             <Chinesesimp>实施心肺复苏恢复心律的最大可能性。\n当伤员最多“失血一些”时，就取该最大值。\n当伤员的血量介于最小和最大阈值之间时，将使用插值概率。</Chinesesimp>
+            <Ukrainian>Максимальна ймовірність того, що виконання штучного дихання відновить серцевий ритм.\nЦе максимальне значення використовується, коли пацієнт принаймні отримав статус "Фатальна крововтрата".\n Інтерпольована ймовірність використовується, коли об'єм крові пацієнта перебуває між мінімальним і максимальним порогами.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMax_DisplayName">
             <English>CPR Success Chance Maximum</English>
@@ -1791,6 +1902,7 @@
             <Korean>최대 심폐소생술 성공 가능성</Korean>
             <Japanese>心肺蘇生(CPR)の最高成功確率</Japanese>
             <Chinesesimp>心肺复苏的最高成功率</Chinesesimp>
+            <Ukrainian>Макс. шанси успіху СЛР</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMin_Description">
             <English>Minimum probability that performing CPR will restore heart rhythm.\nThis minimum value is used when the patient has at least "Lost a fatal amount of blood".\nAn interpolated probability is used when the patient's blood volume is between the minimum and maximum thresholds.</English>
@@ -1804,6 +1916,7 @@
             <Korean>심폐소생술 시 제일 낮은 성공 가능성을 결정합니다.\n이 가능성은 환자가 최소 "심각한 양의 혈액을 잃음"일 때 사용됩니다.</Korean>
             <Japanese>心肺蘇生(CPR)を行うことで脈拍が回復する最低成功確率を設定します。\nこの値は患者が"致命的な程失血している"時に使用されます。\n患者の血液量が最低値と最大値の間だった場合は、補完確率が適用されます。</Japanese>
             <Chinesesimp>实施心肺复苏恢复心律的最小可能性。\n当伤员至少有"致命失血量"时，就取该最小值。\n当伤员的血量介于最小和最大阈值之间时，将使用插值概率。</Chinesesimp>
+            <Ukrainian>Мінімальна вірогідність того, що виконання штучного дихання відновить серцевий ритм.\nЦе мінімальне значення використовується, коли пацієнт принаймні отримав статус "Фатальна крововтрата".\n Інтерпольована вірогідність використовується, коли об'єм крові пацієнта перебуває між мінімальним і максимальним порогами.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMin_DisplayName">
             <English>CPR Success Chance Minimum</English>
@@ -1817,6 +1930,7 @@
             <Korean>최소 심폐소생술 성공 가능성</Korean>
             <Japanese>心肺蘇生(CPR)の最低成功確率</Japanese>
             <Chinesesimp>心肺复苏的最低成功率</Chinesesimp>
+            <Ukrainian>Мін. шанси успіху СЛР</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CanNotLoad">
             <English>This person (%1) is awake and cannot be loaded</English>
@@ -1833,6 +1947,7 @@
             <Chinese>此人(%1)是清醒且不能被裝載</Chinese>
             <Chinesesimp>此人（%1）处于清醒状态，因此无法被装载</Chinesesimp>
             <Turkish>Bu kişi (% 1) uyanık ve yüklenemiyor</Turkish>
+            <Ukrainian>Боєць (%1) у свідомості і не може бути завантажений</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Carry">
             <English>Carry</English>
@@ -1850,6 +1965,7 @@
             <Chinesesimp>背起</Chinesesimp>
             <Turkish>Taşı</Turkish>
             <Hungarian>Cipelés</Hungarian>
+            <Ukrainian>Нести</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Category">
             <English>ACE Medical Treatment</English>
@@ -1867,6 +1983,7 @@
             <Chinesesimp>ACE 医疗 治疗</Chinesesimp>
             <Turkish>ACE Medikal Tedavi</Turkish>
             <Hungarian>ACE Orvosi Rendszer</Hungarian>
+            <Ukrainian>ACE Медицина Лікування</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure">
             <English>Blood Pressure</English>
@@ -1884,6 +2001,7 @@
             <Chinesesimp>血压</Chinesesimp>
             <Turkish>Kan Basıncı</Turkish>
             <Hungarian>Vérnyomás</Hungarian>
+            <Ukrainian>Артеріальний тиск</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Checked_Medic">
             <English>You checked %1</English>
@@ -1901,6 +2019,7 @@
             <Chinesesimp>你已检查 %1</Chinesesimp>
             <Turkish>Kontrol ettin %1</Turkish>
             <Hungarian>A %1 ellenőrizve</Hungarian>
+            <Ukrainian>Ви оглянули пораненого %1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Content">
             <English>Checking Blood Pressure..</English>
@@ -1918,6 +2037,7 @@
             <Chinesesimp>正在测量血压...</Chinesesimp>
             <Turkish>Kan basıncı kontrol ediliyor...</Turkish>
             <Hungarian>Vérnyomás megmérése...</Hungarian>
+            <Ukrainian>Перевірка артеріального тиску...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_High">
             <English>High</English>
@@ -1935,6 +2055,7 @@
             <Chinesesimp>高</Chinesesimp>
             <Turkish>Yüksek</Turkish>
             <Hungarian>Magas</Hungarian>
+            <Ukrainian>Високе</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Log">
             <English>%1 checked Blood Pressure: %2</English>
@@ -1951,6 +2072,7 @@
             <Chinese>已由%1確認血壓: %2</Chinese>
             <Chinesesimp>%1 测得血压为 %2</Chinesesimp>
             <Hungarian>%1 ellenőrizte a vérnyomást: %2</Hungarian>
+            <Ukrainian>%1 перевірив артеріальний тиск: %2</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Low">
             <English>Low</English>
@@ -1968,6 +2090,7 @@
             <Chinesesimp>低</Chinesesimp>
             <Turkish>Düşük</Turkish>
             <Hungarian>Alacsony</Hungarian>
+            <Ukrainian>Низьке</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_NoBloodpressure">
             <English>No Blood Pressure</English>
@@ -1985,6 +2108,7 @@
             <Chinesesimp>血压为零</Chinesesimp>
             <Turkish>Kan Basıncı Yok</Turkish>
             <Hungarian>Nincs vérnyomás</Hungarian>
+            <Ukrainian>Артеріальний тиск відсутній</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Normal">
             <English>Normal</English>
@@ -2002,6 +2126,7 @@
             <Chinesesimp>正常</Chinesesimp>
             <Turkish>Normal</Turkish>
             <Hungarian>Normális</Hungarian>
+            <Ukrainian>Нормальне</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Output_1">
             <English>You find a blood pressure of %2/%3</English>
@@ -2019,6 +2144,7 @@
             <Chinesesimp>血压为 %2/%3</Chinesesimp>
             <Turkish>Kan basıncı buldun %2/%3</Turkish>
             <Hungarian>A vérnyomás %2/%3</Hungarian>
+            <Ukrainian>Артеріальний тиск %2/%3</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Output_2">
             <English>You find a low blood pressure</English>
@@ -2036,6 +2162,7 @@
             <Chinesesimp>血压低</Chinesesimp>
             <Turkish>Düşük kan basıncı buldun</Turkish>
             <Hungarian>A vérnyomás alacsony</Hungarian>
+            <Ukrainian>Тиск низький</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Output_3">
             <English>You find a normal blood pressure</English>
@@ -2053,6 +2180,7 @@
             <Chinesesimp>血压正常</Chinesesimp>
             <Turkish>Normal kan basıncı buldun</Turkish>
             <Hungarian>A vérnyomás normális</Hungarian>
+            <Ukrainian>Тиск нормальний</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Output_4">
             <English>You find a high blood pressure</English>
@@ -2070,6 +2198,7 @@
             <Chinesesimp>血压高</Chinesesimp>
             <Turkish>Yüksek kan basıncı buldun</Turkish>
             <Hungarian>A vérnyomás magas</Hungarian>
+            <Ukrainian>Тиск високий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Output_5">
             <English>You find no blood pressure</English>
@@ -2087,6 +2216,7 @@
             <Chinesesimp>血压为零</Chinesesimp>
             <Turkish>Kan basıncı yok</Turkish>
             <Hungarian>Nem észlelhető vérnyomás</Hungarian>
+            <Ukrainian>Тиску немає</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Output_6">
             <English>You fail to find a blood pressure</English>
@@ -2104,6 +2234,7 @@
             <Chinesesimp>无法测得血压</Chinesesimp>
             <Turkish>Kan basıncını bulamıyorsun</Turkish>
             <Hungarian>Nem sikerült a vérnyomás megmérése</Hungarian>
+            <Ukrainian>Артеріальний тиск не визначається</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse">
             <English>Pulse</English>
@@ -2121,6 +2252,7 @@
             <Chinesesimp>脉搏</Chinesesimp>
             <Turkish>Nabız</Turkish>
             <Hungarian>Pulzus</Hungarian>
+            <Ukrainian>Пульс</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Checked_Medic">
             <English>You checked %1</English>
@@ -2137,6 +2269,7 @@
             <Chinese>你已經檢查 %1</Chinese>
             <Chinesesimp>你已检查 %1</Chinesesimp>
             <Hungarian>A %1 ellenőrizve</Hungarian>
+            <Ukrainian>Ви оглянули пораненого %1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Content">
             <English>Checking Pulse...</English>
@@ -2154,6 +2287,7 @@
             <Chinesesimp>正在测量脉搏...</Chinesesimp>
             <Turkish>Nabız Kontrol Ediliyor ...</Turkish>
             <Hungarian>Szívverés-szám mérése...</Hungarian>
+            <Ukrainian>Перевірка пульса...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Log">
             <English>%1 checked Heart Rate: %2</English>
@@ -2170,6 +2304,7 @@
             <Chinese>已由%1確認心跳: %2</Chinese>
             <Chinesesimp>%1 测得心率为 %2</Chinesesimp>
             <Hungarian>%1 ellenőrizte a szívverés-számot: %2</Hungarian>
+            <Ukrainian>%1 перевірив пульс: %2</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_None">
             <English>None</English>
@@ -2187,6 +2322,7 @@
             <Chinesesimp>无</Chinesesimp>
             <Turkish>Yok</Turkish>
             <Hungarian>Nincs</Hungarian>
+            <Ukrainian>Ні</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Normal">
             <English>Normal</English>
@@ -2204,6 +2340,7 @@
             <Chinesesimp>正常</Chinesesimp>
             <Turkish>Normal</Turkish>
             <Hungarian>Normális</Hungarian>
+            <Ukrainian>Нормальний</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Output_1">
             <English>You find a Heart Rate of %2</English>
@@ -2220,6 +2357,7 @@
             <Chinese>心跳為%2</Chinese>
             <Chinesesimp>心率为 %2</Chinesesimp>
             <Hungarian>A szívverés-szám %2</Hungarian>
+            <Ukrainian>Пульс %2 уд./хв.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Output_2">
             <English>You find a weak Heart Rate</English>
@@ -2237,6 +2375,7 @@
             <Chinesesimp>心率微弱</Chinesesimp>
             <Turkish>Düşük nabız ölçtün</Turkish>
             <Hungarian>A szívverés-szám alacsony</Hungarian>
+            <Ukrainian>Пульс слабкий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Output_3">
             <English>You find a strong Heart Rate</English>
@@ -2254,6 +2393,7 @@
             <Chinesesimp>心率过快</Chinesesimp>
             <Turkish>Yüksek nabız ölçtün</Turkish>
             <Hungarian>A szívverés-szám magas</Hungarian>
+            <Ukrainian>Пульс прискорений</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Output_4">
             <English>You find a normal Heart Rate</English>
@@ -2271,6 +2411,7 @@
             <Chinesesimp>心率正常</Chinesesimp>
             <Turkish>Normal nabız ölçtün</Turkish>
             <Hungarian>A szívverés-szám normális</Hungarian>
+            <Ukrainian>Пульс у нормі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Output_5">
             <English>You find no Heart Rate</English>
@@ -2288,6 +2429,7 @@
             <Chinesesimp>无法测得心率</Chinesesimp>
             <Turkish>Nabız bulamadın</Turkish>
             <Hungarian>Nem észlelhető szívverés</Hungarian>
+            <Ukrainian>Пульсу немає</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Strong">
             <English>Strong</English>
@@ -2305,6 +2447,7 @@
             <Chinesesimp>过快</Chinesesimp>
             <Turkish>Güçlü</Turkish>
             <Hungarian>Erős</Hungarian>
+            <Ukrainian>Сильний</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Weak">
             <English>Weak</English>
@@ -2322,6 +2465,7 @@
             <Chinesesimp>微弱</Chinesesimp>
             <Turkish>Zayıf</Turkish>
             <Hungarian>Gyenge</Hungarian>
+            <Ukrainian>Слабкий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response">
             <English>Response</English>
@@ -2338,6 +2482,7 @@
             <Chinese>反應</Chinese>
             <Chinesesimp>反应</Chinesesimp>
             <Hungarian>Reagálóképesség</Hungarian>
+            <Ukrainian>Реакція</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_CardiacArrest">
             <English>%1 is not responsive, taking shallow gasps and convulsing</English>
@@ -2351,6 +2496,7 @@
             <Korean>%1 은 반응이 없고, 얕은 헐떡임과 경련증세를 보입니다</Korean>
             <Japanese>%1 は反応していない、 浅く呻きながら痙攣している</Japanese>
             <Chinesesimp>%1没有反应，微软的喘着气和抽搐</Chinesesimp>
+            <Ukrainian>%1 не реагує на подразники, поверхнево дихає, у конвульсіях</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_CardiacArrestDirect">
             <English>%1 is in cardiac arrest</English>
@@ -2362,6 +2508,7 @@
             <Korean>%1은(는) 심정지 상태입니다</Korean>
             <Japanese>%1 は心停止している</Japanese>
             <Chinesesimp>%1的心脏没在跳动</Chinesesimp>
+            <Ukrainian>У %1 сталася зупинка серця</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Content">
             <English>You check response of patient</English>
@@ -2378,6 +2525,7 @@
             <Chinese>檢查傷者的反應</Chinese>
             <Chinesesimp>检查伤员的反应</Chinesesimp>
             <Hungarian>Ellenőrzöd a páciens reagálóképességét</Hungarian>
+            <Ukrainian>Ви перевіряєте реакцію пораненого</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Dead">
             <English>%1 is not responsive, motionless and cold</English>
@@ -2391,6 +2539,7 @@
             <Korean>%1 은 반응이 없고, 움직임이 없으며 차갑습니다</Korean>
             <Japanese>%1 は反応していない、 動かず冷たくなっている</Japanese>
             <Chinesesimp>%1没有反应，一动不动，身体冰凉</Chinesesimp>
+            <Ukrainian>%1 не реагує на подразники, не ворушиться і холодний</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_DeadDirect">
             <English>%1 is dead</English>
@@ -2402,6 +2551,7 @@
             <Korean>%1은(는) 사망했습니다</Korean>
             <Japanese>%1 は死亡している</Japanese>
             <Chinesesimp>%1已经似了</Chinesesimp>
+            <Ukrainian>%1 мертвий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Responsive">
             <English>%1 is responsive</English>
@@ -2419,6 +2569,7 @@
             <Chinesesimp>%1 有反应</Chinesesimp>
             <Turkish>%1 tepki veriyor</Turkish>
             <Hungarian>%1 reakcióképes</Hungarian>
+            <Ukrainian>%1 реагує на подразники</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Unresponsive">
             <English>%1 is not responsive</English>
@@ -2436,6 +2587,7 @@
             <Chinesesimp>%1 没有反应</Chinesesimp>
             <Turkish>%1 tepki vermiyor</Turkish>
             <Hungarian>%1 nem reagál</Hungarian>
+            <Ukrainian>%1 не реагує на подразники</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_UnresponsiveDirect">
             <English>%1 is unconscious</English>
@@ -2447,6 +2599,7 @@
             <Korean>%1은(는) 의식불명입니다</Korean>
             <Japanese>%1 は意識がない</Japanese>
             <Chinesesimp>%1没有意识</Chinesesimp>
+            <Ukrainian>%1 перебуває без свідомості</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_You_Checked">
             <English>You checked %1</English>
@@ -2464,6 +2617,7 @@
             <Chinesesimp>你已检查 %1</Chinesesimp>
             <Turkish>%1 i kontrol ettiniz</Turkish>
             <Hungarian>Megnézted %1-t</Hungarian>
+            <Ukrainian>Ви оглянули пораненого %1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_AfterBandage">
             <English>After Bandage</English>
@@ -2477,6 +2631,7 @@
             <Korean>붕대 묶은 후</Korean>
             <Japanese>包帯を巻いた後</Japanese>
             <Chinesesimp>包扎后</Chinesesimp>
+            <Ukrainian>Після перев'язки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_AfterStitch">
             <English>After Stitch</English>
@@ -2490,6 +2645,7 @@
             <Korean>상처 봉합 후</Korean>
             <Japanese>縫合した後</Japanese>
             <Chinesesimp>缝合后</Chinesesimp>
+            <Ukrainian>Після накладання швів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_Description">
             <English>Controls when hitpoint damage from wounds is healed.</English>
@@ -2503,6 +2659,7 @@
             <Korean>상처가 언제 제거되는 지를 결정합니다.</Korean>
             <Japanese>治療後に負傷箇所にある外傷の状態を制御できます。</Japanese>
             <Chinesesimp>控制伤口治疗后确定受伤部位的受伤情况。</Chinesesimp>
+            <Ukrainian>Визначає, коли зцілюється шкода від ран.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_DisplayName">
             <English>Clear Trauma</English>
@@ -2516,6 +2673,7 @@
             <Korean>상처 제거</Korean>
             <Japanese>外傷を取り除く</Japanese>
             <Chinesesimp>清理创伤</Chinesesimp>
+            <Ukrainian>Очистити рану</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_Description">
             <English>Controls whether a PAK should be consumed after use.</English>
@@ -2532,6 +2690,7 @@
             <Chinese>設定個人急救包是否為消耗品</Chinese>
             <Chinesesimp>设置个人急救包是否会被消耗</Chinesesimp>
             <Turkish>Kullanımdan sonra bir PAK tüketilip tüketilmeyeceğini kontrol eder.</Turkish>
+            <Ukrainian>Контролює, чи слід витратити Аптечку після використання.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_DisplayName">
             <English>Consume PAK</English>
@@ -2548,6 +2707,7 @@
             <Chinese>個人急救包為消耗品</Chinese>
             <Chinesesimp>个人急救包会被消耗</Chinesesimp>
             <Turkish>PAK Tüketimi</Turkish>
+            <Ukrainian>Витратити Аптечку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_Description">
             <English>What should be consumed after use.</English>
@@ -2560,6 +2720,7 @@
             <Korean>봉합 키트를 1회성 소모품으로 설정할 지 여부를 결정합니다.</Korean>
             <Japanese>使用後に何を消費するか設定します。</Japanese>
             <Chinesesimp>在使用后什么会被消耗</Chinesesimp>
+            <Ukrainian>Контролює, чи слід витратити Хірургічний набір або нитку після використання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_DisplayName">
             <English>Consume Surgical Kit</English>
@@ -2575,6 +2736,7 @@
             <Japanese>手術キットの消費</Japanese>
             <Chinese>手術包為消耗品</Chinese>
             <Chinesesimp>手术包是否被消耗</Chinesesimp>
+            <Ukrainian>Витратити Хірургічний набір</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_Description">
             <English>Controls whether vanilla medical items are converted to ACE Medical items, removed only, or ignored.</English>
@@ -2590,6 +2752,7 @@
             <Japanese>ゲーム標準の医療アイテムをACE医療アイテムへ変換するか、削除するか、そのままにするかを制御します。</Japanese>
             <Chinese>控制是否轉換原版的醫療物資成ACE的醫療物資，或者單純移除或無視。</Chinese>
             <Chinesesimp>控制是否转换原版的医疗物品成 ACE 的医疗物品，或者单纯移除/无视。</Chinesesimp>
+            <Ukrainian>Визначає, що робити з ванільними медикаментами: перетворити на медикаменти ACE, видалити або проігнорувати.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
@@ -2605,6 +2768,7 @@
             <Japanese>バニラアイテムの変換</Japanese>
             <Chinese>轉換原版物品</Chinese>
             <Chinesesimp>转换原版物品</Chinesesimp>
+            <Ukrainian>Перетворювати ванільні медикаменти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_RemoveOnly">
             <English>Remove Only</English>
@@ -2620,6 +2784,7 @@
             <Japanese>削除のみ</Japanese>
             <Chinese>單純移除</Chinese>
             <Chinesesimp>仅移除</Chinesesimp>
+            <Ukrainian>Видаляти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Difficult_Breathing">
             <English>Difficult breathing</English>
@@ -2637,6 +2802,7 @@
             <Chinesesimp>呼吸困难</Chinesesimp>
             <Turkish>Nefes almakta zorlanıyor</Turkish>
             <Hungarian>Nehéz légzés</Hungarian>
+            <Ukrainian>Дихання ускладнене</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_DigGrave">
             <English>Dig grave for body</English>
@@ -2650,6 +2816,7 @@
             <Korean>시체를 위해 무덤 파기</Korean>
             <Japanese>墓を掘る</Japanese>
             <Chinesesimp>将此单位埋入土中</Chinesesimp>
+            <Ukrainian>Викопати могилу для тіла</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_DiggingGrave">
             <English>Digging grave for body...</English>
@@ -2663,6 +2830,7 @@
             <Korean>시체를 위한 무덤 파는 중...</Korean>
             <Japanese>墓を掘っています</Japanese>
             <Chinesesimp>正在挖坟</Chinesesimp>
+            <Ukrainian>Риття могили для тіла...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Doctors">
             <English>Doctors</English>
@@ -2679,6 +2847,7 @@
             <Chinese>軍醫</Chinese>
             <Chinesesimp>军医</Chinesesimp>
             <Turkish>Doktor</Turkish>
+            <Ukrainian>Лікарі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Drag">
             <English>Drag</English>
@@ -2696,6 +2865,7 @@
             <Chinesesimp>拖拽</Chinesesimp>
             <Turkish>Sürükle</Turkish>
             <Hungarian>Húzás</Hungarian>
+            <Ukrainian>Тягти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Epinephrine_Desc_Short">
             <English>Increase heart rate and counter effects given by allergic reactions</English>
@@ -2712,6 +2882,7 @@
             <Chinese>增加心跳速率的一種藥物</Chinese>
             <Chinesesimp>用于提升心率的一种药物</Chinesesimp>
             <Hungarian>Növeli a szívverést és ellenzi az allergiás reakciók hatásait</Hungarian>
+            <Ukrainian>Стимулює роботу серця і купірує алергічні реакції</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Epinephrine_Desc_Use">
             <English>A drug that works on a sympathetic response to dilate the bronchi, increase heart rate and counter such effects given by allergic reactions (anaphylaxis). Used in sudden cardiac arrest scenarios with decreasing positive outcomes.</English>
@@ -2728,6 +2899,7 @@
             <Chinese>俗稱強心針, 為一種支氣管擴張藥物, 會增加心跳速率並減緩過敏反應(過敏性休克), 在心跳驟停時有恢復心跳的效果!</Chinese>
             <Chinesesimp>俗称强心针，为一种支气管扩张药物, 会增加心跳速率并减缓过敏反应（过敏性休克）, 在心跳骤停时有恢复心跳的效果！</Chinesesimp>
             <Hungarian>Egy hormon, mely a szimpatikus idegrendszer által kitágítja a hörgőket, valamint megnöveli a szívverést, ezzel ellensúlyozva ilyen jellegű allergiás reakciókat (anafilaxiás sokk). Hirtelen szívmegállás esetén is használt, idő alatt csökkenő hatásfokkal.</Hungarian>
+            <Ukrainian>Препарат, що викликає симпатичну реакцію, яка призводить до розширення бронхів, збільшення частоти серцевих скорочень і купірування алергічних реакцій (анафілактичного шоку). Застосовується при зупинці серця зі зменшеною ймовірністю сприятливого результату.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Epinephrine_Display">
             <English>Epinephrine Autoinjector</English>
@@ -2745,6 +2917,7 @@
             <Chinesesimp>肾上腺素自动注射器</Chinesesimp>
             <Turkish>Epinefrin otomatik enjektör</Turkish>
             <Hungarian>Epinefrin autoinjektor</Hungarian>
+            <Ukrainian>Адреналін у пневмошприці</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_GraveDiggingMarker_Description">
             <English>Enables the creation of grave markers when digging graves.</English>
@@ -2758,6 +2931,7 @@
             <Korean>무덤을 파낼 때 무덤 마커를 표시할 수 있습니다.</Korean>
             <Japanese>墓を掘った際、墓標を作成できるようにします。</Japanese>
             <Chinesesimp>挖坟时创建坟墓位置的地图标记</Chinesesimp>
+            <Ukrainian>Дає змогу створювати надгробні знаки під час риття могил.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_GraveDiggingMarker_DisplayName">
             <English>Create Grave Markers</English>
@@ -2771,6 +2945,7 @@
             <Korean>무덤 마커 생성</Korean>
             <Japanese>墓標を作成</Japanese>
             <Chinesesimp>创建坟墓地图标记</Chinesesimp>
+            <Ukrainian>Надгробні знаки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HeavilyWounded">
             <English>Heavily wounded</English>
@@ -2788,6 +2963,7 @@
             <Chinesesimp>重伤</Chinesesimp>
             <Turkish>Ağır yaralı</Turkish>
             <Hungarian>Erősen sérült</Hungarian>
+            <Ukrainian>Важкі поранення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Description">
             <English>Controls whether weapons must be holstered / lowered in order to perform medical actions.\nExcept Exam options allow examination actions (checking pulse, blood pressure, response) at all times regardless of this setting.</English>
@@ -2803,6 +2979,7 @@
             <Japanese>何らかの治療をするには武器を下げるか収める必要があるかを設定します。\nなお次の診断行動は設定で例外できます: 脈拍の確認、血圧の確認、反応の確認</Japanese>
             <Chinese>控制是否要先放下或把武器放入武器套才能做出醫療行為。\n除了診斷 - 允許未放下或未放入的情況下進行一連串的診斷（檢查脈搏，血壓，反應）。</Chinese>
             <Chinesesimp>控制是否要先放下或把武器放起才能做出医疗行为。\n除了诊断—允许未放下或未收起的情况下进行一连串的诊断（检查脉搏，血压，反应）。</Chinesesimp>
+            <Ukrainian>Чи потрібно прибирати зброю для проведення медичних дій.\nОпція "Перевірка дозволена" дозволяє перевіряти пульс, кров'яний тиск або реакцію незалежно від цього параметра.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_DisplayName">
             <English>Holster Required</English>
@@ -2818,6 +2995,7 @@
             <Japanese>武器の扱い</Japanese>
             <Chinese>需要收起武器</Chinese>
             <Chinesesimp>需要收起武器</Chinesesimp>
+            <Ukrainian>Необхідність прибирати зброю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Holstered">
             <English>Holstered Only</English>
@@ -2833,6 +3011,7 @@
             <Japanese>収めた時のみ</Japanese>
             <Chinese>只能收起</Chinese>
             <Chinesesimp>只能收起</Chinesesimp>
+            <Ukrainian>Тільки прибрано</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_HolsteredExam">
             <English>Holstered Only (Except Exam)</English>
@@ -2848,6 +3027,7 @@
             <Japanese>収めた時のみ (診断行動は除外)</Japanese>
             <Chinese>只能收起（除了診斷）</Chinese>
             <Chinesesimp>只能收起（除了诊断）</Chinesesimp>
+            <Ukrainian>Тільки прибрано (Перевірка дозволена)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Lowered">
             <English>Lowered or Holstered</English>
@@ -2863,6 +3043,7 @@
             <Japanese>下げるか収める</Japanese>
             <Chinese>放低或者收起</Chinese>
             <Chinesesimp>放低或者收起</Chinesesimp>
+            <Ukrainian>Опущено або прибрано</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_LoweredExam">
             <English>Lowered or Holstered (Except Exam)</English>
@@ -2878,6 +3059,7 @@
             <Japanese>下げるか収める (診断行動は除外)</Japanese>
             <Chinese>放低或者收起（除了診斷）</Chinese>
             <Chinesesimp>放低或者收起（除了诊断）</Chinesesimp>
+            <Ukrainian>Опущено або прибрано (Перевірка дозволена)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Inject_Adenosine">
             <English>Inject Adenosine</English>
@@ -2894,6 +3076,7 @@
             <Chinese>注射腺苷</Chinese>
             <Chinesesimp>注射腺苷</Chinesesimp>
             <Turkish>Adenosin Enjekte Et</Turkish>
+            <Ukrainian>Ввести аденозин</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Inject_Atropine">
             <English>Inject Atropine</English>
@@ -2911,6 +3094,7 @@
             <Chinesesimp>注射阿托品</Chinesesimp>
             <Turkish>Atropin Enjekte Et</Turkish>
             <Hungarian>Atropin beadása</Hungarian>
+            <Ukrainian>Ввести атропін</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Inject_Epinephrine">
             <English>Inject Epinephrine</English>
@@ -2928,6 +3112,7 @@
             <Chinesesimp>注射肾上腺素</Chinesesimp>
             <Turkish>Epinefrin Enjekte Et</Turkish>
             <Hungarian>Epinefrin beadása</Hungarian>
+            <Ukrainian>Ввести адреналін</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Inject_Morphine">
             <English>Inject Morphine</English>
@@ -2945,6 +3130,7 @@
             <Chinesesimp>注射吗啡</Chinesesimp>
             <Turkish>Morfin Enjekte Et</Turkish>
             <Hungarian>Morfium beadása</Hungarian>
+            <Ukrainian>Ввести морфін</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Injecting_Adenosine">
             <English>Injecting Adenosine...</English>
@@ -2961,6 +3147,7 @@
             <Chinese>腺苷注射中...</Chinese>
             <Chinesesimp>正在注射腺苷...</Chinesesimp>
             <Turkish>Adenosin Enjekte Ediliyor...</Turkish>
+            <Ukrainian>Введення аденозину...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Injecting_Atropine">
             <English>Injecting Atropine...</English>
@@ -2978,6 +3165,7 @@
             <Chinesesimp>正在注射阿托品...</Chinesesimp>
             <Turkish>Atropin Enjekte Ediliyor...</Turkish>
             <Hungarian>Atropin beadása...</Hungarian>
+            <Ukrainian>Введення атропіну...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Injecting_Epinephrine">
             <English>Injecting Epinephrine...</English>
@@ -2995,6 +3183,7 @@
             <Chinesesimp>正在注射肾上腺素...</Chinesesimp>
             <Turkish>Epinefrin Enjekte Ediliyor...</Turkish>
             <Hungarian>Epinefrin beadása...</Hungarian>
+            <Ukrainian>Введення адреналіну...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Injecting_Morphine">
             <English>Injecting Morphine...</English>
@@ -3012,6 +3201,7 @@
             <Chinesesimp>正在注射吗啡...</Chinesesimp>
             <Turkish>Morfin Enjekte Ediliyor ...</Turkish>
             <Hungarian>Morfium beadása...</Hungarian>
+            <Ukrainian>Введення морфіну...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Is_Bandaging_You">
             <English>%1 is bandaging you</English>
@@ -3029,6 +3219,7 @@
             <Chinesesimp>你正在被 %1 包扎</Chinesesimp>
             <Turkish>%1 seni bandajlıyor</Turkish>
             <Hungarian>%1 bekötöz téged</Hungarian>
+            <Ukrainian>%1 перев'язує вас</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Is_Treating_Your_Airway">
             <English>%1 is treating your airway</English>
@@ -3046,6 +3237,7 @@
             <Chinesesimp>%1 正在治疗你的呼吸道</Chinesesimp>
             <Turkish>% 1 hava yolu tedavi ediyor</Turkish>
             <Hungarian>%1 kezeli a légútadat</Hungarian>
+            <Ukrainian>%1 проводить вам інтубацію</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LightlyWounded">
             <English>Lightly wounded</English>
@@ -3063,6 +3255,7 @@
             <Chinesesimp>轻伤</Chinesesimp>
             <Turkish>Hafif yaralı</Turkish>
             <Hungarian>Enyhén sérült</Hungarian>
+            <Ukrainian>Легкі поранення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_Description">
             <English>Controls the lifetime of litter objects, in seconds. -1 is forever.</English>
@@ -3078,6 +3271,7 @@
             <Japanese>廃棄物の寿命を秒単位で制御します。-1 にすると恒久的になります。</Japanese>
             <Chinese>控制醫療用廢棄物的時長，以秒為單位。設定為-1則是永不刪除。</Chinese>
             <Chinesesimp>控制医疗垃圾物体的生命周期，以秒为单位。-1则是永不删除。</Chinesesimp>
+            <Ukrainian>Керує часом життя об'єктів сміття в секундах. -1 означає Назавжди.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_DisplayName">
             <English>Litter Lifetime</English>
@@ -3094,6 +3288,7 @@
             <Chinese>醫療用廢棄物時長</Chinese>
             <Chinesesimp>医疗垃圾寿命</Chinesesimp>
             <Turkish>Cöp Silinme Süresi</Turkish>
+            <Ukrainian>Час життя сміття</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Load">
             <English>Load Patient Into</English>
@@ -3111,6 +3306,7 @@
             <Chinesesimp>将伤者装入</Chinesesimp>
             <Turkish>Hastayı Bindir</Turkish>
             <Hungarian>Sebesült berakása</Hungarian>
+            <Ukrainian>Завантажити пацієнта в</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LoadedInto">
             <English>%1&lt;br/&gt;loaded into&lt;br/&gt;%2</English>
@@ -3127,6 +3323,7 @@
             <Chinese>%1&lt;br/&gt;裝載至&lt;br/&gt;%2</Chinese>
             <Chinesesimp>%1&lt;br/&gt;装载至&lt;br/&gt;%2</Chinesesimp>
             <Hungarian>%1&lt;br/&gt;berakodva ide:&lt;br/&gt;%2</Hungarian>
+            <Ukrainian>%1&lt;br/&gt;завантажений у&lt;br/&gt;%2</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_Description">
             <English>Controls where Adenosine can be used.</English>
@@ -3137,6 +3334,7 @@
             <Korean>아데노신을 사용할 수 있는 장소를 정합니다.</Korean>
             <Japanese>アデノシンが使える場所を制御します。</Japanese>
             <Chinesesimp>控制何地能使用腺苷</Chinesesimp>
+            <Ukrainian>Контролює, де можна використовувати Аденозин.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_DisplayName">
             <English>Locations Adenosine</English>
@@ -3147,6 +3345,7 @@
             <Korean>아데노신 사용 장소</Korean>
             <Japanese>アデノシンの使用可能な場所</Japanese>
             <Chinesesimp>腺苷使用地点</Chinesesimp>
+            <Ukrainian>Місця використання Аденозину</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_Description">
             <English>Controls where epinephrine can be used.</English>
@@ -3163,6 +3362,7 @@
             <Chinese>控制何處能使用腎上腺素</Chinese>
             <Chinesesimp>控制何地能使用肾上腺素。</Chinesesimp>
             <Turkish>Epinefrinin nerelerde kullanılabileceğini kontrol eder</Turkish>
+            <Ukrainian>Контролює, де можна використовувати Адреналін.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_DisplayName">
             <English>Locations Epinephrine</English>
@@ -3179,6 +3379,7 @@
             <Chinese>腎上腺素使用地點</Chinese>
             <Chinesesimp>肾上腺素使用地点</Chinesesimp>
             <Turkish>Epinefrinin kullanılabileceği yerler</Turkish>
+            <Ukrainian>Місця використання Адреналіну</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationIV_Description">
             <English>Controls where IV transfusions can be performed.</English>
@@ -3192,6 +3393,7 @@
             <Korean>수액용기를 사용할 수 있는 장소를 정합니다.</Korean>
             <Japanese>輸液IV(静脈注射)を行える場所を制御します。</Japanese>
             <Chinesesimp>控制何地可以静脉输液</Chinesesimp>
+            <Ukrainian>Контролює, де можна використовувати внутрішньовенне переливання.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationIV_DisplayName">
             <English>Locations IV Transfusion</English>
@@ -3205,6 +3407,7 @@
             <Korean>수액용기 사용 장소</Korean>
             <Japanese>輸液IV(静脈注射)の可能な場所</Japanese>
             <Chinesesimp>静脉输液地点</Chinesesimp>
+            <Ukrainian>Місця внутрішньовенного переливання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_Description">
             <English>Controls where Morphine can be used.</English>
@@ -3215,6 +3418,7 @@
             <Korean>모르핀을 사용할 수 있는 장소를 정합니다.</Korean>
             <Japanese>モルヒネが使える場所を制御します。</Japanese>
             <Chinesesimp>控制何地能使用吗啡</Chinesesimp>
+            <Ukrainian>Контролює, де можна використовувати Морфін.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_DisplayName">
             <English>Locations Morphine</English>
@@ -3225,6 +3429,7 @@
             <Korean>모르핀 사용 장소</Korean>
             <Japanese>モルヒネの使用可能な場所</Japanese>
             <Chinesesimp>吗啡使用地点</Chinesesimp>
+            <Ukrainian>Місця використання Морфіну</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_Description">
             <English>Controls where a PAK can be used.</English>
@@ -3241,6 +3446,7 @@
             <Chinese>控制何處能使用個人急救包</Chinese>
             <Chinesesimp>控制何地能使用个人急救包。</Chinesesimp>
             <Turkish>PAK'ın nerelerde kullanılabileceğini kontrol eder</Turkish>
+            <Ukrainian>Контролює, де можна використовувати Аптечку.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_DisplayName">
             <English>Locations PAK</English>
@@ -3258,6 +3464,7 @@
             <Chinesesimp>个人急救包使用地点</Chinesesimp>
             <Turkish>PAK kullanılabileceği yerler</Turkish>
             <Hungarian>Elsősegélycsomag helyek</Hungarian>
+            <Ukrainian>Місця використання Аптечки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSplint_Description">
             <English>Controls where Splints can be used.</English>
@@ -3268,6 +3475,7 @@
             <Korean>부목을 사용할 수 있는 장소를 정합니다.</Korean>
             <Japanese>添え木が使える場所を制御します。</Japanese>
             <Chinesesimp>控制何地能使用骨折夹板</Chinesesimp>
+            <Ukrainian>Контролює, де можна використовувати шини.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSplint_DisplayName">
             <English>Locations Splint</English>
@@ -3278,6 +3486,7 @@
             <Korean>부목 사용 장소</Korean>
             <Japanese>添え木の使用可能な場所</Japanese>
             <Chinesesimp>骨折夹板使用地点</Chinesesimp>
+            <Ukrainian>Місця накладення шини</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_Description">
             <English>Controls where a surgical kit can be used.</English>
@@ -3294,6 +3503,7 @@
             <Chinese>控制何處能使用手術包</Chinese>
             <Chinesesimp>控制何地能使用手术包</Chinesesimp>
             <Turkish>Cerrahi Kitin nerelerde kullanılabileceğini kontrol eder</Turkish>
+            <Ukrainian>Контролює, де можна використовувати Хірургічний набір</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_DisplayName">
             <English>Locations Surgical Kit</English>
@@ -3310,6 +3520,7 @@
             <Chinese>手術包使用地點</Chinese>
             <Chinesesimp>手术包使用地点</Chinesesimp>
             <Turkish>Cerrahi Kitin kullanılabileceği yerler</Turkish>
+            <Ukrainian>Місця використання Хірургічного набору</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_Description">
             <English>Boost medical training when in medical vehicles or facilities. Untrained becomes medic, medic becomes doctor.</English>
@@ -3326,6 +3537,7 @@
             <Chinese>在醫療設施或者載具旁時增加醫療能力。未受訓練的將會成為醫療兵，醫療兵將會成為軍醫。</Chinese>
             <Chinesesimp>在医疗设施或载具旁时提升医疗训练。未受训练者将会成为医疗兵，医疗兵将会晋升为军医。</Chinesesimp>
             <Turkish>Tıbbi araçlar veya tesislerdeyken tıbbi müdaheleyi artırın. Eğitimsizler sıhhiye olur, sıhhiyeler doktor olur.</Turkish>
+            <Ukrainian>Збільшує рівень медпідготовки при знаходженні в медичній техніці або госпіталі. Непідготовлений стає Медиком, Медик стає Лікарем.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MaxLitterObjects_Description">
             <English>Sets the maximum number of litter objects which can be spawned, excessive amounts can cause FPS lag.</English>
@@ -3341,6 +3553,7 @@
             <Japanese>生成される廃棄物の最大数を設定できます。極端に増やすと FPS ラグを引き起こします。</Japanese>
             <Chinese>設定最大可以產生的醫療用廢棄物數量，極端的數量的話可能導致幀數下降。</Chinese>
             <Chinesesimp>设置可以生成的最大垃圾数量，数量过多会导致 FPS 延迟。</Chinesesimp>
+            <Ukrainian>Встановлює максимальну кількість створюваних об'єктів сміття. Надмірне значення може спричинити затримку FPS.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MaxLitterObjects_DisplayName">
             <English>Max Litter Objects</English>
@@ -3357,6 +3570,7 @@
             <Chinese>最大醫療用廢棄物數量</Chinese>
             <Chinesesimp>最大医疗垃圾数量</Chinesesimp>
             <Turkish>Maks. Çöp Objesi</Turkish>
+            <Ukrainian>Макс. кількість сміття</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_Description">
             <English>Training level required to use Adenosine.</English>
@@ -3367,6 +3581,7 @@
             <Korean>아데노신을 사용하는데 필요한 등급을 정합니다.</Korean>
             <Japanese>アデノシンの使用に必要な医療スキルのレベルを設定します。</Japanese>
             <Chinesesimp>使用腺苷所需的医疗水平。</Chinesesimp>
+            <Ukrainian>Рівень підготовки, необхідний для використання Аденозину</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_DisplayName">
             <English>Allow Adenosine</English>
@@ -3377,6 +3592,7 @@
             <Korean>아데노신 사용 허가</Korean>
             <Japanese>アデノシンの許可</Japanese>
             <Chinesesimp>允许使用腺苷</Chinesesimp>
+            <Ukrainian>Доступ до Аденозину</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_Description">
             <English>Training level required to use epinephrine.</English>
@@ -3393,6 +3609,7 @@
             <Chinese>要受過何種程度的醫療訓練才可以使用腎上腺素</Chinese>
             <Chinesesimp>使用肾上腺素所需的医疗水平。</Chinesesimp>
             <Turkish>Epinefrin kullanmak için gerekli eğitim seviyesi.</Turkish>
+            <Ukrainian>Рівень підготовки, необхідний для використання Адреналіну.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
             <English>Allow Epinephrine</English>
@@ -3409,6 +3626,7 @@
             <Chinese>允許使用腎上腺素</Chinese>
             <Chinesesimp>允许使用肾上腺素</Chinesesimp>
             <Turkish>Epinefrine izin ver</Turkish>
+            <Ukrainian>Доступ до Адреналіну</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_Description">
             <English>Training level required to transfuse IVs.</English>
@@ -3424,6 +3642,7 @@
             <Japanese>輸液IV(静脈注射)を行うのに必要な医療スキルのレベルを設定します。</Japanese>
             <Chinese>要有何種醫療水準才可注射點滴。</Chinese>
             <Chinesesimp>静脉输液所需的医疗水平。</Chinesesimp>
+            <Ukrainian>Рівень навички, необхідний для здійснення внутрішньовенного переливання.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_DisplayName">
             <English>Allow IV Transfusion</English>
@@ -3439,6 +3658,7 @@
             <Japanese>輸液IV(静脈注射)の制限</Japanese>
             <Chinese>允許操作點滴</Chinese>
             <Chinesesimp>允许静脉输液</Chinesesimp>
+            <Ukrainian>Доступ до внутрішньовенного переливання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_Description">
             <English>Training level required to use Morphine.</English>
@@ -3449,6 +3669,7 @@
             <Korean>모르핀을 사용하는데 필요한 등급을 정합니다.</Korean>
             <Japanese>モルヒネの使用に必要な医療スキルのレベルを設定します。</Japanese>
             <Chinesesimp>使用吗啡所需的医疗水平。</Chinesesimp>
+            <Ukrainian>Рівень підготовки, необхідний для використання Морфіну.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_DisplayName">
             <English>Allow Morphine</English>
@@ -3459,6 +3680,7 @@
             <Korean>모르핀 사용 허가</Korean>
             <Japanese>モルヒネの許可</Japanese>
             <Chinesesimp>允许使用吗啡</Chinesesimp>
+            <Ukrainian>Доступ до Морфіну</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_Description">
             <English>Training level required to use a PAK.</English>
@@ -3475,6 +3697,7 @@
             <Chinese>要受過何種程度的醫療訓練才可以使用個人急救包</Chinese>
             <Chinesesimp>使用个人急救包所需的医疗水平。</Chinesesimp>
             <Turkish>PAK kullanmak için gerekli eğitim seviyesi.</Turkish>
+            <Ukrainian>Рівень підготовки, необхідний для використання Аптечки.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_DisplayName">
             <English>Allow PAK</English>
@@ -3492,6 +3715,7 @@
             <Chinesesimp>允许使用个人急救包</Chinesesimp>
             <Turkish>PAK'a izin ver</Turkish>
             <Hungarian>Elsősegélycsomag engedélyezése</Hungarian>
+            <Ukrainian>Доступ до Аптечки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSplint_Description">
             <English>Training level required to use Splint.</English>
@@ -3502,6 +3726,7 @@
             <Korean>부목을 사용하는데 필요한 등급을 정합니다.</Korean>
             <Japanese>添え木の使用に必要な医療スキルのレベルを設定します。</Japanese>
             <Chinesesimp>使用骨折夹板所需的医疗水平。</Chinesesimp>
+            <Ukrainian>Рівень підготовки, необхідний для використання шини.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSplint_DisplayName">
             <English>Allow Splint</English>
@@ -3512,6 +3737,7 @@
             <Korean>부목 사용 허가</Korean>
             <Japanese>添え木の許可</Japanese>
             <Chinesesimp>允许使用骨折夹板</Chinesesimp>
+            <Ukrainian>Доступ до накладання шини</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
             <English>Training level required to use a surgical kit.</English>
@@ -3528,6 +3754,7 @@
             <Chinese>要受過多少程度的醫療訓練才能使用手術包。</Chinese>
             <Chinesesimp>使用手术包所需的医疗水平。</Chinesesimp>
             <Turkish>Cerrahi kit kullanmak için gerekli eğitim seviyesi.</Turkish>
+            <Ukrainian>Рівень медичної підготовки, необхідний для використання Хірургічного набору.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_DisplayName">
             <English>Allow Surgical Kit</English>
@@ -3544,6 +3771,7 @@
             <Chinese>允許使用手術包</Chinese>
             <Chinesesimp>允许使用手术包</Chinesesimp>
             <Turkish>Cerrahi Kitine İzin Ver</Turkish>
+            <Ukrainian>Доступ до Хірургічного набору</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicalFacilities">
             <English>Medical Facilities</English>
@@ -3560,6 +3788,7 @@
             <Chinese>醫療設施</Chinese>
             <Chinesesimp>医疗设施</Chinesesimp>
             <Turkish>Tıbbi tesisler</Turkish>
+            <Ukrainian>Госпіталі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Medics">
             <English>Medics</English>
@@ -3576,6 +3805,7 @@
             <Chinese>醫療兵</Chinese>
             <Chinesesimp>医疗兵</Chinesesimp>
             <Turkish>Sıhhiye</Turkish>
+            <Ukrainian>Медики</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Morphine_Desc_Short">
             <English>Used to combat moderate to severe pain experiences</English>
@@ -3592,6 +3822,7 @@
             <Chinese>減低中度至重度的疼痛感</Chinese>
             <Chinesesimp>用于削减中度至重度疼痛</Chinesesimp>
             <Hungarian>Mérsékelttől erős fájdalomig, ellene alkalmazandó termék</Hungarian>
+            <Ukrainian>Для зняття середніх і сильних больових відчуттів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Morphine_Desc_Use">
             <English>An analgesic used to combat moderate to severe pain experiences.</English>
@@ -3608,6 +3839,7 @@
             <Chinese>止痛藥的一種, 用於減低中度至重度的疼痛感</Chinese>
             <Chinesesimp>一种用于削减中度至重度疼痛的止痛药</Chinesesimp>
             <Hungarian>Egy fájdalomcsillapító anyag, jellemzően mérsékelt vagy erős fájdalom esetén alkalmazandó.</Hungarian>
+            <Ukrainian>Знеболювальне для зняття середніх і сильних больових відчуттів.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Morphine_Display">
             <English>Morphine Autoinjector</English>
@@ -3625,6 +3857,7 @@
             <Chinesesimp>吗啡自动注射器</Chinesesimp>
             <Turkish>Morfin otomatik enjektör</Turkish>
             <Hungarian>Morfium autoinjektor</Hungarian>
+            <Ukrainian>Морфін у пневмошприці</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_NoInjuriesBodypart">
             <English>No injuries on this bodypart...</English>
@@ -3642,6 +3875,7 @@
             <Chinesesimp>该部位没有受伤</Chinesesimp>
             <Turkish>Bu vücut parçasında yaralanma yok ...</Turkish>
             <Hungarian>Ezen a testrészen nincs sérülés...</Hungarian>
+            <Ukrainian>Ця частина тіла не пошкоджена...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_No_Breathing">
             <English>No breathing</English>
@@ -3659,6 +3893,7 @@
             <Chinesesimp>没有呼吸</Chinesesimp>
             <Turkish>Nefes alamıyor</Turkish>
             <Hungarian>Nincs légzés</Hungarian>
+            <Ukrainian>Дихання відсутнє</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Normal_Breathing">
             <English>Normal breathing</English>
@@ -3676,6 +3911,7 @@
             <Chinesesimp>呼吸正常</Chinesesimp>
             <Turkish>Normal nefes alıyor</Turkish>
             <Hungarian>Normális légzés</Hungarian>
+            <Ukrainian>Дихання в нормі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_Description">
             <English>Makes Check Pulse action give a numerical value based on setting</English>
@@ -3686,6 +3922,7 @@
             <Korean>설정에 따라 맥박 확인 행동을 통해 숫자로 표시된 값을 제공합니다.</Korean>
             <Japanese>脈拍の確認アクションから得られる情報が数値化されるようになる医療レベルを設定します</Japanese>
             <Chinesesimp>检查心率后会显示心率数值</Chinesesimp>
+            <Ukrainian>Змушує дію "Перевірити пульс" видавати числове значення, засноване на налаштуванні</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_DisplayName">
             <English>Numerical Pulse</English>
@@ -3696,6 +3933,7 @@
             <Korean>맥박 수치</Korean>
             <Japanese>脈拍の数値化</Japanese>
             <Chinesesimp>显示心率数值</Chinesesimp>
+            <Ukrainian>Числове значення пульсу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Packing_Bandage_Desc_Short">
             <English>Used to pack medium to large wounds and stem the bleeding</English>
@@ -3713,6 +3951,7 @@
             <Chinesesimp>用于包扎中到大型伤口，并防止出血</Chinesesimp>
             <Turkish>Orta ila büyük yaraları sarmak ve kanamayı durdurmak için kullanılır</Turkish>
             <Hungarian>Közepestől nagyig terjedő sebek betakarására és vérzés elállítására használt kötszer</Hungarian>
+            <Ukrainian>Для тампонування ран середнього і великого розміру та зупинки кровотечі.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Packing_Bandage_Desc_Use">
             <English>A bandage used to pack the wound to stem bleeding and facilitate wound healing. Packing a wound is an option in large polytrauma injuries.</English>
@@ -3730,6 +3969,7 @@
             <Chinesesimp>用于包扎中到大型伤口，并防止出血, 为在大型多处性伤口的选项之一！</Chinesesimp>
             <Turkish>Kanamayı durdurmak ve yara iyileşmesini kolaylaştırmak için yarayı sarmak için kullanılan bir bandaj.</Turkish>
             <Hungarian>Egy kötszerfajta, melyet a sebek nyomására használnak a vérzés elállítása és sebgyógyulás érdekében. A nyomókötés egy lehetőség nagyobb polytraumatikus sérülések esetén.</Hungarian>
+            <Ukrainian>Пов'язка для тампонування рани, зупинки кровотечі та кращого загоєння. У разі важких поєднаних поранень можливе тампонування рани.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Packing_Bandage_Display">
             <English>Bandage (Packing)</English>
@@ -3747,6 +3987,7 @@
             <Chinesesimp>绷带（包扎型）</Chinesesimp>
             <Turkish>Bandaj (Paket)</Turkish>
             <Hungarian>Nyomókötszer</Hungarian>
+            <Ukrainian>Тампонувальна пов'язка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlaceInBodyBagBlack">
             <English>Place body in black bodybag</English>
@@ -3761,6 +4002,7 @@
             <Japanese>遺体袋 (黒) に入れる</Japanese>
             <Chinesesimp>将单位装入黑色尸袋</Chinesesimp>
             <Turkish>Vücudu siyah ceset torbasına yerleştir</Turkish>
+            <Ukrainian>Покласти тіло в чорний мішок для тіла</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlaceInBodyBagBlue">
             <English>Place body in blue bodybag</English>
@@ -3775,6 +4017,7 @@
             <Japanese>遺体袋 (青) に入れる</Japanese>
             <Chinesesimp>将单位装入蓝色尸袋</Chinesesimp>
             <Turkish>Vücudu mavi ceset torbasına yerleştir</Turkish>
+            <Ukrainian>Покласти тіло в синій мішок для тіла</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlaceInBodyBagWhite">
             <English>Place body in white bodybag</English>
@@ -3789,6 +4032,7 @@
             <Japanese>遺体袋 (白) に入れる</Japanese>
             <Chinesesimp>将单位装入白色尸袋</Chinesesimp>
             <Turkish>Vücudu beyaz ceset torbasına yerleştir</Turkish>
+            <Ukrainian>Покласти тіло в білий мішок для тіла</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlacingInBodyBag">
             <English>Placing body in bodybag...</English>
@@ -3806,6 +4050,7 @@
             <Chinesesimp>正在将尸体装入尸袋...</Chinesesimp>
             <Turkish>Vücut, ceset torbasına yerleştiriliyor...</Turkish>
             <Hungarian>Test hullazsákba helyezése...</Hungarian>
+            <Ukrainian>Пакування тіла...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Plasma_IV">
             <English>Plasma IV (1000ml)</English>
@@ -3822,6 +4067,7 @@
             <Chinese>血漿 (1000毫升)</Chinese>
             <Chinesesimp>血浆（1000毫升）</Chinesesimp>
             <Hungarian>Vérplazma-infúzió (1000ml)</Hungarian>
+            <Ukrainian>Плазма для в/в вливання (1000 мл)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Plasma_IV_250">
             <English>Plasma IV (250ml)</English>
@@ -3839,6 +4085,7 @@
             <Chinesesimp>血浆（250毫升）</Chinesesimp>
             <Turkish>Plasma IV (250ml)</Turkish>
             <Hungarian>Vérplazma-infúzió (250ml)</Hungarian>
+            <Ukrainian>Плазма для в/в вливання (250 мл)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Plasma_IV_500">
             <English>Plasma IV (500ml)</English>
@@ -3856,6 +4103,7 @@
             <Chinesesimp>血浆（500毫升）</Chinesesimp>
             <Turkish>Plasma IV (500ml)</Turkish>
             <Hungarian>Vérplazma-infúzió (500ml)</Hungarian>
+            <Ukrainian>Плазма для в/в вливання (500 мл)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Plasma_IV_Desc_Short">
             <English>A volume-expanding blood supplement.</English>
@@ -3872,6 +4120,7 @@
             <Chinese>可快速得到血液補充</Chinese>
             <Chinesesimp>可快速得到血液补充</Chinesesimp>
             <Hungarian>Egy térfogatnövelő vérkiegészítmény.</Hungarian>
+            <Ukrainian>Додатковий препарат, що застосовується при відшкодуванні об'єму крові.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Plasma_IV_Desc_Use">
             <English>A volume-expanding blood supplement.</English>
@@ -3888,6 +4137,7 @@
             <Chinese>可快速得到血液補充</Chinese>
             <Chinesesimp>可快速得到血液补充</Chinesesimp>
             <Hungarian>Egy térfogatnövelő vérkiegészítmény.</Hungarian>
+            <Ukrainian>Додатковий препарат, що застосовується при відшкодуванні об'єму крові.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_QuikClot_Desc_Short">
             <English>QuikClot bandage</English>
@@ -3905,6 +4155,7 @@
             <Chinesesimp>绷带（止血型）</Chinesesimp>
             <Turkish>QuikClot bandaj</Turkish>
             <Hungarian>QuikClot kötszer</Hungarian>
+            <Ukrainian>Гемостатичний пакет QuikClot</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_QuikClot_Desc_Use">
             <English>Hemostatic bandage with coagulant that stops bleeding.</English>
@@ -3921,6 +4172,7 @@
             <Chinese>包含止血粉成分的止血繃帶, 可用於止血</Chinese>
             <Chinesesimp>包含止血粉成分的止血绷带，可用于止血</Chinesesimp>
             <Hungarian>Hemostatikus kötszer egy vérzésgátló anyaggal.</Hungarian>
+            <Ukrainian>Медичний коагулянт для екстреної зупинки кровотечі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_QuikClot_Display">
             <English>Bandage (QuikClot)</English>
@@ -3937,6 +4189,7 @@
             <Chinese>繃帶 (止血粉)</Chinese>
             <Chinesesimp>绷带（止血型）</Chinesesimp>
             <Hungarian>Általános zárókötszer (QuikClot)</Hungarian>
+            <Ukrainian>Первинний перев'язувальний пакет (QuikClot)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Release">
             <English>Release</English>
@@ -3954,6 +4207,7 @@
             <Chinesesimp>放下</Chinesesimp>
             <Turkish>Bırak</Turkish>
             <Hungarian>Elengedés</Hungarian>
+            <Ukrainian>Відпустити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_RemovingTourniquet">
             <English>Removing Tourniquet...</English>
@@ -3971,6 +4225,7 @@
             <Chinesesimp>正在移除止血带...</Chinesesimp>
             <Turkish>Turnike Çıkarılıyor ...</Turkish>
             <Hungarian>Érszorító eltávolítása...</Hungarian>
+            <Ukrainian>Зняття турнікету...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Saline_IV">
             <English>Saline IV (1000ml)</English>
@@ -3988,6 +4243,7 @@
             <Chinesesimp>生理盐水（1000毫升）</Chinesesimp>
             <Turkish>Serum IV (1000ml)</Turkish>
             <Hungarian>0,9%-os sósvíz-infúzió (1000ml)</Hungarian>
+            <Ukrainian>Фізрозчин для в/в вливання (1000 мл)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Saline_IV_250">
             <English>Saline IV (250ml)</English>
@@ -4005,6 +4261,7 @@
             <Chinesesimp>生理盐水（250毫升）</Chinesesimp>
             <Turkish>Serum IV (250ml)</Turkish>
             <Hungarian>0,9%-os sósvíz-infúzió (250ml)</Hungarian>
+            <Ukrainian>Фізрозчин для в/в вливання (250 мл)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Saline_IV_500">
             <English>Saline IV (500ml)</English>
@@ -4022,6 +4279,7 @@
             <Chinesesimp>生理盐水（500毫升）</Chinesesimp>
             <Turkish>Serum IV (500ml)</Turkish>
             <Hungarian>0,9%-os sósvíz-infúzió (500ml)</Hungarian>
+            <Ukrainian>Фізрозчин для в/в вливання (500 мл)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Saline_IV_Desc_Short">
             <English>Saline IV, for restoring a patients blood</English>
@@ -4038,6 +4296,7 @@
             <Chinese>生理食鹽水, 用於恢復傷者血液</Chinese>
             <Chinesesimp>生理盐水，用于恢复伤者血液</Chinesesimp>
             <Hungarian>0,9%-os sósvíz-infúzió, a páciens vérmennyiségének helyreállítására</Hungarian>
+            <Ukrainian>Пакет фізрозчину для відшкодування обсягу втраченої крові</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Saline_IV_Desc_Use">
             <English>A medical volume-replenishing agent introduced into the blood system through an IV infusion.</English>
@@ -4054,6 +4313,7 @@
             <Chinese>利用靜脈注射進入人體血液系統, 幫助傷者血液恢復</Chinese>
             <Chinesesimp>利用静脉注射进入人体血液系统，帮助伤者血液恢复</Chinesesimp>
             <Hungarian>Egy orvosi térfogat-helyreállító készítmény, melyet intravénás módon lehet a szervezetbe juttatni.</Hungarian>
+            <Ukrainian>Пакет фізіологічного розчину для відшкодування обсягу втраченої крові шляхом внутрішньовенного вливання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Start_Stitching_Injuries">
             <English>You start stitching injuries from %1 (%2)</English>
@@ -4070,6 +4330,7 @@
             <Chinese>你正開始對 %1 (%2) 縫合傷口中</Chinese>
             <Chinesesimp>你正在使用 %2 缝合 %1 的伤口</Chinesesimp>
             <Hungarian>Elkezded összevarni %1 sérüléseit (%2)</Hungarian>
+            <Ukrainian>Ви зашиваєте поранення від %1 (%2)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_MildPain">
             <English>In mild pain</English>
@@ -4085,6 +4346,7 @@
             <Japanese>軽い痛みがある</Japanese>
             <Chinese>中度疼痛中</Chinese>
             <Chinesesimp>轻度疼痛</Chinesesimp>
+            <Ukrainian>Невеликий біль</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_NoIv">
             <English>No IV</English>
@@ -4097,6 +4359,7 @@
             <Korean>수혈 없음</Korean>
             <Japanese>IV(静脈注射) なし</Japanese>
             <Chinesesimp>没有静脉注射</Chinesesimp>
+            <Ukrainian>Немає крапельниці</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_NoPain">
             <English>No pain</English>
@@ -4109,6 +4372,7 @@
             <Korean>고통 없음</Korean>
             <Japanese>痛みはない</Japanese>
             <Chinesesimp>没有疼痛</Chinesesimp>
+            <Ukrainian>Немає болю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_Pain">
             <English>In pain</English>
@@ -4125,6 +4389,7 @@
             <Chinese>疼痛中</Chinese>
             <Chinesesimp>疼痛</Chinesesimp>
             <Hungarian>Fájdalom alatt</Hungarian>
+            <Ukrainian>Відчуває біль</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_SeverePain">
             <English>In severe pain</English>
@@ -4140,6 +4405,7 @@
             <Japanese>酷い痛みがある</Japanese>
             <Chinese>嚴重疼痛中</Chinese>
             <Chinesesimp>重度疼痛</Chinesesimp>
+            <Ukrainian>Сильний біль</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_Tourniquet_Applied">
             <English>Tourniquet [CAT]</English>
@@ -4157,6 +4423,7 @@
             <Chinesesimp>止血带（军用型）</Chinesesimp>
             <Turkish>Turnike [CAT]</Turkish>
             <Hungarian>Érszorító [CAT]</Hungarian>
+            <Ukrainian>Турнікет</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Stitching">
             <English>Stitching...</English>
@@ -4174,6 +4441,7 @@
             <Chinesesimp>正在缝合...</Chinesesimp>
             <Turkish>Dikiş...</Turkish>
             <Hungarian>Összevarrás...</Hungarian>
+            <Ukrainian>Накладання швів...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_SubCategory_Litter">
             <English>Litter</English>
@@ -4190,6 +4458,7 @@
             <Chinese>醫療用廢棄物</Chinese>
             <Chinesesimp>医疗废弃物</Chinesesimp>
             <Turkish>Cöp</Turkish>
+            <Ukrainian>Медичне сміття</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_SubCategory_Treatment">
             <English>Treatment</English>
@@ -4206,6 +4475,7 @@
             <Chinese>治療</Chinese>
             <Chinesesimp>治疗</Chinesesimp>
             <Turkish>Tedavi</Turkish>
+            <Ukrainian>Лікування</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_SurgicalKit_Desc_Short">
             <English>Surgical Kit for in field advanced medical treatment</English>
@@ -4223,6 +4493,7 @@
             <Chinesesimp>用于在战场上为伤口进行缝合（需要开启进阶伤口系统）</Chinesesimp>
             <Turkish>Sahada gelişmiş tıbbi tedavi için Cerrahi Kit</Turkish>
             <Hungarian>Sebészeti készlet komplex orvosi feladatok terepen való ellátására</Hungarian>
+            <Ukrainian>Набір для хірургічної допомоги в польових умовах</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_SurgicalKit_Desc_Use">
             <English>Surgical Kit for in field advanced medical treatment</English>
@@ -4240,6 +4511,7 @@
             <Chinesesimp>用于在战场上为伤口进行缝合（需要开启进阶伤口系统）</Chinesesimp>
             <Turkish>Sahada gelişmiş tıbbi tedavi için Cerrahi Kit</Turkish>
             <Hungarian>Sebészeti készlet komplex orvosi feladatok terepen való ellátására</Hungarian>
+            <Ukrainian>Набір для хірургічної допомоги в польових умовах</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_SurgicalKit_Display">
             <English>Surgical Kit</English>
@@ -4257,6 +4529,7 @@
             <Chinesesimp>手术包</Chinesesimp>
             <Turkish>Cerrahi Kit</Turkish>
             <Hungarian>Sebészeti készlet</Hungarian>
+            <Ukrainian>Хірургічний набір</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Suture_Desc_Short">
             <English>Surgical Suture for stitching injuries.</English>
@@ -4270,6 +4543,7 @@
             <Korean>상처를 꿰메는 수술용 봉합술.</Korean>
             <Japanese>傷害縫合用の外科糸付縫合針。</Japanese>
             <Chinesesimp>用于缝合伤口的手术缝合线</Chinesesimp>
+            <Ukrainian>Хірургічна нитка для зашивання травм.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Suture_Desc_Use">
             <English>Surgical Suture for stitching injuries.</English>
@@ -4283,6 +4557,7 @@
             <Korean>상처를 꿰메는 수술용 봉합술.</Korean>
             <Japanese>傷害縫合用の外科糸付縫合針。</Japanese>
             <Chinesesimp>用于缝合伤口的手术缝合线</Chinesesimp>
+            <Ukrainian>Хірургічна нитка для зашивання травм.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Suture_Display">
             <English>Suture</English>
@@ -4296,6 +4571,7 @@
             <Korean>봉합술</Korean>
             <Japanese>糸付縫合針</Japanese>
             <Chinesesimp>缝合线</Chinesesimp>
+            <Ukrainian>Нитка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_Description">
             <English>Modifies how long a PAK takes to apply.\nThe treatment time is based on the total body part damage multiplied by this coefficient, with a minimum of 10 seconds.</English>
@@ -4312,6 +4588,7 @@
             <Chinese>修改個人急救包要使用多久才能完成。\n醫療時間是依照全身的肢體狀況並乘上該係數而決定的，至少十秒。</Chinese>
             <Chinesesimp>修改个人急救包应用时间。 \n治疗时间=全身的总伤害x该系数，至少十秒。</Chinesesimp>
             <Turkish>Bir PAK'ın uygulanmasının ne kadar süreceğini değiştirir. \ Tedavi süresi, toplam vücut parçası hasarının bu katsayı ile en az 10 saniye çarpımına dayanır.</Turkish>
+            <Ukrainian>Змінює швидкість застосування Аптечки.\nЧас лікування залежить від загального пошкодження частин тіла, помноженого на цей коефіцієнт (мінімум 10 сек.).</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_DisplayName">
             <English>Time Coefficient PAK</English>
@@ -4328,6 +4605,7 @@
             <Chinese>個人急救包的時間係數</Chinese>
             <Chinesesimp>个人急救包时间系数</Chinesesimp>
             <Turkish>PAK Zaman Katsayısı</Turkish>
+            <Ukrainian>Коеф. часу використання аптечки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Tourniquet_Desc_Short">
             <English>Slows down blood loss when bleeding</English>
@@ -4345,6 +4623,7 @@
             <Chinesesimp>减缓失血速度</Chinesesimp>
             <Turkish>Kanama sırasında kan kaybını yavaşlatır</Turkish>
             <Hungarian>Lelassítja a vérvesztést vérzés esetén</Hungarian>
+            <Ukrainian>Уповільнює крововтрату при кровотечі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Tourniquet_Desc_Use">
             <English>A constricting device used to compress venous and arterial circulation in effect inhibiting or slowing blood flow and therefore decreasing loss of blood.</English>
@@ -4362,6 +4641,7 @@
             <Chinesesimp>用于压迫静脉与动脉的血液流动，以达到减缓失血速度的目的</Chinesesimp>
             <Turkish>Kan akışını engelleyen veya yavaşlatan ve dolayısıyla kan kaybını azaltan venöz ve arteriyel dolaşımı sıkıştırmak için kullanılan bir daraltıcı cihaz.</Turkish>
             <Hungarian>Egy szűkítőeszköz, mely a vénás és artériás nyomás keringés helyi összenyomására szolgál, ezzel lelassítva vagy megállítva az adott területen a vérkeringést. Ez csökkenti a vérvesztés mértékét.</Hungarian>
+            <Ukrainian>Стискуючий пристрій використовується для притиснення судин до кісткових виступів, що призводить до зупинки або значного зменшення кровотечі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Tourniquet_Display">
             <English>Tourniquet (CAT)</English>
@@ -4379,6 +4659,7 @@
             <Chinesesimp>止血带（军用型）</Chinesesimp>
             <Turkish>Turnike (CAT)</Turkish>
             <Hungarian>Érszorító (CAT)</Hungarian>
+            <Ukrainian>Турнікет</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Transfuse_Blood">
             <English>Transfuse Blood</English>
@@ -4396,6 +4677,7 @@
             <Chinesesimp>输入血液</Chinesesimp>
             <Turkish>Kan Ver</Turkish>
             <Hungarian>Infúzió (vér)</Hungarian>
+            <Ukrainian>Перелити кров</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Transfuse_Plasma">
             <English>Transfuse Plasma</English>
@@ -4413,6 +4695,7 @@
             <Chinesesimp>输入血浆</Chinesesimp>
             <Turkish>Plasma Ver</Turkish>
             <Hungarian>Infúzió (vérplazma)</Hungarian>
+            <Ukrainian>Перелити плазму</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Transfuse_Saline">
             <English>Transfuse Saline</English>
@@ -4430,6 +4713,7 @@
             <Chinesesimp>输入生理盐水</Chinesesimp>
             <Turkish>Serum Ver</Turkish>
             <Hungarian>Infúzió (sós víz)</Hungarian>
+            <Ukrainian>Перелити фізрозчин</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Transfusing_Blood">
             <English>Transfusing Blood...</English>
@@ -4447,6 +4731,7 @@
             <Chinesesimp>正在输入血液...</Chinesesimp>
             <Turkish>Kan Veriliyor...</Turkish>
             <Hungarian>Infúzió vérrel...</Hungarian>
+            <Ukrainian>Переливання крові...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Transfusing_Plasma">
             <English>Transfusing Plasma...</English>
@@ -4464,6 +4749,7 @@
             <Chinesesimp>正在输入血浆...</Chinesesimp>
             <Turkish>Plasma Veriliyor...</Turkish>
             <Hungarian>Infúzió vérplazmával...</Hungarian>
+            <Ukrainian>Переливання плазми...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Transfusing_Saline">
             <English>Transfusing Saline...</English>
@@ -4481,6 +4767,7 @@
             <Chinesesimp>正在输入生理盐水...</Chinesesimp>
             <Turkish>Serum Veriliyor...</Turkish>
             <Hungarian>Infúzió sós vizzel...</Hungarian>
+            <Ukrainian>Переливання фізрозчину...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentAction">
             <English>Treating...</English>
@@ -4498,6 +4785,7 @@
             <Chinesesimp>正在治疗...</Chinesesimp>
             <Turkish>Tedavi ediliyor ...</Turkish>
             <Hungarian>Ellátás...</Hungarian>
+            <Ukrainian>Лікування...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjector_Description">
             <English>Time, in seconds, required to administer medication using an autoinjector.</English>
@@ -4511,6 +4799,7 @@
             <Korean>초 단위로 주사기를 사용하는데 걸리는 시간을 정합니다.</Korean>
             <Japanese>自動注射器の使用に掛かる時間。 (秒単位)</Japanese>
             <Chinesesimp>使用自动注射器给药所需的时间（秒）</Chinesesimp>
+            <Ukrainian>Час, необхідний для введення медикаментів автоін'єктором (у секундах).</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjector_DisplayName">
             <English>Autoinjector Treatment Time</English>
@@ -4524,6 +4813,7 @@
             <Korean>주사기 사용 시간</Korean>
             <Japanese>自動注射器の所要時間</Japanese>
             <Chinesesimp>自动注射器治疗时间</Chinesesimp>
+            <Ukrainian>Час введення автоін'єктора</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_Description">
             <English>Time, in seconds, required to put a patient in a body bag.</English>
@@ -4537,6 +4827,7 @@
             <Korean>초 단위로 시체 운반용 부대를 사용하는데 걸리는 시간을 정합니다.</Korean>
             <Japanese>遺体袋の使用に掛かる時間。 (秒単位)</Japanese>
             <Chinesesimp>装入裹尸袋时间</Chinesesimp>
+            <Ukrainian>Час, необхідний для того щоб упакувати труп у мішок (у секундах).</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_DisplayName">
             <English>Body Bag Use Time</English>
@@ -4550,6 +4841,7 @@
             <Korean>시체 운반용 부대 사용 시간</Korean>
             <Japanese>遺体袋の所要時間</Japanese>
             <Chinesesimp>尸袋使用时间</Chinesesimp>
+            <Ukrainian>Час використання мішка для трупів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_Description">
             <English>Time, in seconds, required to perform CPR on a patient.</English>
@@ -4563,6 +4855,7 @@
             <Korean>초 단위로, 심폐소생술을 진행하는 시간을 결정합니다.</Korean>
             <Japanese>心肺蘇生(CPR)に掛かる時間。 (秒単位)</Japanese>
             <Chinesesimp>对伤员实施心肺复苏所需的时间（秒）</Chinesesimp>
+            <Ukrainian>Час, необхідний для проведення серцево-легеневої реанімації (СЛР) (у секундах).</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_DisplayName">
             <English>CPR Treatment Time</English>
@@ -4576,6 +4869,7 @@
             <Korean>심폐소생술 시행 시간</Korean>
             <Japanese>心肺蘇生(CPR)の所要時間</Japanese>
             <Chinesesimp>心肺复苏时间</Chinesesimp>
+            <Ukrainian>Час проведення СЛР</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCoeffZeus_Description">
             <English>Multiply all treatment times with this coefficient when in Zeus.</English>
@@ -4587,6 +4881,7 @@
             <Korean>제우스일 때 모든 치료 시간에 이 계수를 곱합니다.</Korean>
             <Japanese>Zeus操作中は、すべての治療時間にこの係数を掛けます。</Japanese>
             <Chinesesimp>宙斯的医疗时间乘数</Chinesesimp>
+            <Ukrainian>Помножте весь час лікування на цей коефіцієнт, коли ви перебуваєте в Zeus.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCoeffZeus_DisplayName">
             <English>Zeus Treatment Time Coefficient</English>
@@ -4598,6 +4893,7 @@
             <Korean>제우스 치료 시간 계수</Korean>
             <Japanese>Zeus治療時間係数</Japanese>
             <Chinesesimp>宙斯医疗时间系数</Chinesesimp>
+            <Ukrainian>Коеф. часу обробки Zeus</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeGrave_Description">
             <English>Time, in seconds, required to dig a grave for a body.</English>
@@ -4611,6 +4907,7 @@
             <Korean>시신의 무덤을 파는 데 필요한 시간(초 단위).</Korean>
             <Japanese>遺体の墓を掘るのに掛かる時間。 (秒単位)</Japanese>
             <Chinesesimp>挖掘坟墓所需时间(秒)</Chinesesimp>
+            <Ukrainian>Час у секундах, необхідний для того, щоб викопати могилу для тіла.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeGrave_DisplayName">
             <English>Grave Digging Time</English>
@@ -4624,6 +4921,7 @@
             <Korean>무덤 파는 시간</Korean>
             <Japanese>墓掘りの所要時間</Japanese>
             <Chinesesimp>挖坟时间</Chinesesimp>
+            <Ukrainian>Час риття могили</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_Description">
             <English>Time, in seconds, required to administer an IV bag.</English>
@@ -4637,6 +4935,7 @@
             <Korean>초 단위로 수액용기를 사용하는 데 걸리는 시간을 정합니다.</Korean>
             <Japanese>点滴の投与に掛かる時間。 (秒単位)</Japanese>
             <Chinesesimp>使用静脉输液所需的时间（秒）</Chinesesimp>
+            <Ukrainian>Час, необхідний для застосування пакета внутрішньовенного переливання (у секундах).</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_DisplayName">
             <English>IV Bag Treatment Time</English>
@@ -4650,6 +4949,7 @@
             <Korean>수액용기 사용 시간</Korean>
             <Japanese>点滴の所要時間</Japanese>
             <Chinesesimp>静脉输液袋治疗时间</Chinesesimp>
+            <Ukrainian>Час внутрішньовенного переливання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_Description">
             <English>Time, in seconds, required to apply a splint.</English>
@@ -4663,6 +4963,7 @@
             <Korean>초 단위로 부목을 사용하는데 걸리는 시간을 정합니다.</Korean>
             <Japanese>添え木の使用に掛かる時間。 (秒単位)</Japanese>
             <Chinesesimp>使用夹板所需的时间（秒）</Chinesesimp>
+            <Ukrainian>Час, необхідний для накладення шини (у секундах).</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_DisplayName">
             <English>Splint Treatment Time</English>
@@ -4676,6 +4977,7 @@
             <Korean>부목 사용 시간</Korean>
             <Japanese>添え木の所要時間</Japanese>
             <Chinesesimp>夹板治疗时间</Chinesesimp>
+            <Ukrainian>Час накладення шини</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_Description">
             <English>Time, in seconds, required to apply/remove a tourniquet.</English>
@@ -4689,6 +4991,7 @@
             <Korean>초 단위로 지혈대를 사용/제거하는 데 걸리는 시간을 정합니다.</Korean>
             <Japanese>止血帯の使用/取り外しに掛かる時間。 (秒単位)</Japanese>
             <Chinesesimp>使用/移除止血带所需的时间（秒）</Chinesesimp>
+            <Ukrainian>Час, необхідний для накладення/зняття турнікету (у секундах).</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_DisplayName">
             <English>Tourniquet Treatment Time</English>
@@ -4702,6 +5005,7 @@
             <Korean>지혈대 사용 시간</Korean>
             <Japanese>止血帯の所要時間</Japanese>
             <Chinesesimp>止血带治疗时间</Chinesesimp>
+            <Ukrainian>Час накладення/зняття турнікету</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedAutoinjector_Description">
             <English>Time, in seconds, required for a unit exceeding required training level to administer medication using an autoinjector.</English>
@@ -4712,6 +5016,7 @@
             <German>Zeit in Sekunden, die eine Einheit, mit einem höheren 'Fähigkeiten-Level' als benötigt, braucht, um Medikamente mit einem Autoinjektor zu verabreichen.</German>
             <Korean>필요한 의료 레벨 이상인 유닛이 자동주사기로 약물을 투여하는 데 걸리는 시간(초)입니다.</Korean>
             <Japanese>使用に必要な医療スキルのレベルを超えたユニットが自動注射器の使用に掛かる時間。 (秒単位)</Japanese>
+            <Ukrainian>Час у секундах, необхідний фахівцеві, який перевищує необхідний рівень підготовки, для використання автоін'єкторів.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedAutoinjector_DisplayName">
             <English>Skilled Autoinjector Treatment Time</English>
@@ -4722,6 +5027,7 @@
             <German>Autoinjektor-Behandlungszeit für Überqualifizierte</German>
             <Korean>숙련도에 따른 자동주사기 투여 시간</Korean>
             <Japanese>熟練者の自動注射器の所要時間</Japanese>
+            <Ukrainian>Кваліфікований час обробки автоін'єктора</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedIV_Description">
             <English>Time, in seconds, required for a unit exceeding required training level to administer an IV bag.</English>
@@ -4732,6 +5038,7 @@
             <German>Zeit in Sekunden, die eine Einheit, mit einem höheren 'Fähigkeiten-Level' als benötigt, braucht, um einen Infusionsbeutel zu verabreichen.</German>
             <Korean>필요한 의료 레벨 이상인 유닛이 수액용기로 수액을 투여하는 데 걸리는 시간(초)입니다.</Korean>
             <Japanese>使用に必要な医療スキルのレベルを超えたユニットが点滴の投与に掛かる時間。 (秒単位)</Japanese>
+            <Ukrainian>Час у секундах, необхідний фахівцеві, який перевищує необхідний рівень підготовки, для внутрішньовенного вливання.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedIV_DisplayName">
             <English>Skilled IV Bag Treatment Time</English>
@@ -4742,6 +5049,7 @@
             <German>Infusion-Behandlungszeit für Überqualifizierte</German>
             <Korean>숙련도에 따른 수액용기 투여 시간</Korean>
             <Japanese>熟練者の点滴の所要時間</Japanese>
+            <Ukrainian>Кваліфікований час обробки пакета для внутрішньовенного вливання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedSplint_Description">
             <English>Time, in seconds, required for a unit exceeding required training level to apply a splint.</English>
@@ -4752,6 +5060,7 @@
             <German>Zeit in Sekunden, die eine Einheit, mit einem höheren 'Fähigkeiten-Level' als benötigt, braucht, um eine Schiene anzulegen.</German>
             <Korean>필요한 의료 레벨 이상인 유닛이 부목을 적용하는 데 걸리는 시간(초)입니다.</Korean>
             <Japanese>使用に必要な医療スキルのレベルを超えたユニットが添え木の使用に掛かる時間。 (秒単位)</Japanese>
+            <Ukrainian>Час у секундах, необхідний фахівцеві, який перевищує необхідний рівень підготовки, для накладання шини.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedSplint_DisplayName">
             <English>Skilled Splint Treatment Time</English>
@@ -4762,6 +5071,7 @@
             <German>Schienenbehandlungszeit für Überqualifizierte</German>
             <Korean>숙련도에 따른 부목 적용 시간</Korean>
             <Japanese>熟練者の添え木の所要時間</Japanese>
+            <Ukrainian>Кваліфікований час накладення шини</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedTourniquet_Description">
             <English>Time, in seconds, required for a unit exceeding required training level to apply or remove a tourniquet.</English>
@@ -4772,6 +5082,7 @@
             <German>Zeit in Sekunden, die eine Einheit, mit einem höheren 'Fähigkeiten-Level' als benötigt, braucht, um ein Tourniquet anzulegen.</German>
             <Korean>필요한 의료 레벨 이상인 유닛이 지혈대를 묶거나 제거하는 데 걸리는 시간(초)입니다.</Korean>
             <Japanese>使用に必要な医療スキルのレベルを超えたユニットが止血帯の使用/取り外しに掛かる時間。 (秒単位)</Japanese>
+            <Ukrainian>Час у секундах, необхідний фахівцеві, який перевищує необхідний рівень підготовки, для накладення або зняття турнікета.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedTourniquet_DisplayName">
             <English>Skilled Tourniquet Treatment Time</English>
@@ -4782,6 +5093,7 @@
             <German>Tourniquet-Behandlungszeit für Überqualifizierte</German>
             <Korean>숙련도에 따른 지혈대 적용 시간</Korean>
             <Japanese>熟練者の止血帯の所要時間</Japanese>
+            <Ukrainian>Кваліфікований час накладення турнікета</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TriageCard_NoEntry">
             <English>No entries on this triage card.</English>
@@ -4799,6 +5111,7 @@
             <Chinesesimp>此分诊卡上没有信息。</Chinesesimp>
             <Turkish>Bu triyaj kartında kayıt yok.</Turkish>
             <Hungarian>Ez az orvosi lap nem tartalmaz bejegyzést.</Hungarian>
+            <Ukrainian>Немає записів.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Triage_Status_Deceased">
             <English>Deceased</English>
@@ -4816,6 +5129,7 @@
             <Chinesesimp>死亡</Chinesesimp>
             <Turkish>Ölü</Turkish>
             <Hungarian>Elhalálozott</Hungarian>
+            <Ukrainian>Труп</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Triage_Status_Delayed">
             <English>Delayed</English>
@@ -4833,6 +5147,7 @@
             <Chinesesimp>延后</Chinesesimp>
             <Turkish>Ertelenmiş</Turkish>
             <Hungarian>Késleltetett</Hungarian>
+            <Ukrainian>Термінова допомога</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Triage_Status_Immediate">
             <English>Immediate</English>
@@ -4850,6 +5165,7 @@
             <Chinesesimp>紧急</Chinesesimp>
             <Turkish>Acil</Turkish>
             <Hungarian>Azonnali</Hungarian>
+            <Ukrainian>Невідкладна допомога</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Triage_Status_Minimal">
             <English>Minimal</English>
@@ -4866,6 +5182,7 @@
             <Chinese>輕微</Chinese>
             <Chinesesimp>轻微</Chinesesimp>
             <Turkish>Düşük</Turkish>
+            <Ukrainian>Мінімально</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Triage_Status_None">
             <English>None</English>
@@ -4883,6 +5200,7 @@
             <Chinesesimp>未分类</Chinesesimp>
             <Turkish>Yok</Turkish>
             <Hungarian>Semmi</Hungarian>
+            <Ukrainian>Відсутня</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Unload">
             <English>Unload Patient</English>
@@ -4900,6 +5218,7 @@
             <Chinesesimp>将伤者背出</Chinesesimp>
             <Turkish>Hastayı İndir</Turkish>
             <Hungarian>Sebesült kihúzása</Hungarian>
+            <Ukrainian>Вивантажити пацієнта</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_UnloadedFrom">
             <English>Unloaded&lt;br/&gt;%1 from&lt;br/&gt;%2</English>
@@ -4916,6 +5235,7 @@
             <Chinese>從&lt;br/&gt;%2卸載&lt;br/&gt;%1</Chinese>
             <Chinesesimp>从&lt;br/&gt;%2卸载&lt;br/&gt;%1</Chinesesimp>
             <Hungarian>1%&lt;br/&gt;kirakodva ebből:&lt;br/&gt;%2</Hungarian>
+            <Ukrainian>%1&lt;br/&gt; Вивантажено з&lt;br/&gt;%2</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Use_Aid_Kit">
             <English>Use Personal Aid Kit</English>
@@ -4933,6 +5253,7 @@
             <Chinesesimp>使用个人急救包</Chinesesimp>
             <Turkish>Kişisel Yardım Kitini Kullan</Turkish>
             <Hungarian>Elsősegélycsomag használata</Hungarian>
+            <Ukrainian>Використати аптечку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Use_SurgicalKit">
             <English>Use Surgical Kit</English>
@@ -4950,6 +5271,7 @@
             <Chinesesimp>使用手术包</Chinesesimp>
             <Turkish>Cerrahi Kit Kullan</Turkish>
             <Hungarian>Sebészeti készlet használata</Hungarian>
+            <Ukrainian>Використати хірургічний набір</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_VehiclesAndFacilities">
             <English>Vehicles &amp; Facilities</English>
@@ -4966,6 +5288,7 @@
             <Chinese>車輛與設施</Chinese>
             <Chinesesimp>载具&amp;设施</Chinesesimp>
             <Turkish>Araçlar ve Tesisler</Turkish>
+            <Ukrainian>Техніка і госпіталі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_VeryLightlyWounded">
             <English>Very lightly wounded</English>
@@ -4983,6 +5306,7 @@
             <Chinesesimp>小伤</Chinesesimp>
             <Turkish>Çok hafif yaralı</Turkish>
             <Hungarian>Nagyon enyhén sérült</Hungarian>
+            <Ukrainian>Подряпини</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopenChance_Description">
             <English>Coefficient for controlling the wound reopening chance. The final reopening chance is determined by multiplying this value with the specific reopening chance for the wound type and bandage used.</English>
@@ -4998,6 +5322,7 @@
             <Japanese>創傷が再開放する確率の係数を設定できます。再開放は、この数値と傷の種類、そして使用した包帯に応じて左右されます。</Japanese>
             <Chinesesimp>用于控制伤口开裂概率的系数。最终的重开放概率=该值x伤口类型x所使用的绷带的具体开裂概率。</Chinesesimp>
             <Turkish>Yaranın yeniden açılma şansını kontrol etme katsayısı. Son yeniden açılma şansı, bu değerin kullanılan yara tipi ve bandaj için spesifik yeniden açılma şansı ile çarpılmasıyla belirlenir.</Turkish>
+            <Ukrainian>Коефіцієнт контролю ймовірності повторного відкриття рани. Остаточний шанс повторного відкриття визначається шляхом множення цього значення на певний шанс повторного відкриття для використовуваного типу рани і пов'язки.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopenChance_DisplayName">
             <English>Wound Reopening Coefficient</English>
@@ -5013,6 +5338,7 @@
             <Japanese>創傷再開放係数</Japanese>
             <Chinesesimp>伤口开裂系数</Chinesesimp>
             <Turkish>Yara Yeniden Açılma Katsayısı</Turkish>
+            <Ukrainian>Коеф. повторного відкриття рани</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundStitchTime_Description">
             <English>Time, in seconds, required to stitch a single wound.</English>
@@ -5026,6 +5352,7 @@
             <Korean>초 단위로, 한 상처를 봉합하는데 걸리는 시간을 설정합니다.</Korean>
             <Japanese>縫合に掛かる時間。 (秒単位)</Japanese>
             <Chinesesimp>缝合一个伤口所需的时间（秒）</Chinesesimp>
+            <Ukrainian>Час, необхідний для зашивання однієї рани (у секундах).</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundStitchTime_DisplayName">
             <English>Wound Stitch Time</English>
@@ -5039,6 +5366,7 @@
             <Korean>상처 봉합 시간</Korean>
             <Japanese>縫合の所要時間</Japanese>
             <Chinesesimp>伤口缝合时间</Chinesesimp>
+            <Ukrainian>Час зашивання ран</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_You_Treat_Airway">
             <English>You treat the airway of %1</English>
@@ -5056,6 +5384,7 @@
             <Chinesesimp>你正在治疗 %1 的呼吸道</Chinesesimp>
             <Turkish>% 1 hava yolunu tedavi ediyorsunuz</Turkish>
             <Hungarian>Kezeled %1 légútját</Hungarian>
+            <Ukrainian>Ви інтубуєте пораненого %1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageEffectiveness_Description">
             <English>Determines how effective bandages are at closing wounds.</English>
@@ -5069,6 +5398,7 @@
             <Korean>붕대가 상처를 치료하는 데 얼마나 효과적으로 지속되는지 결정합니다.</Korean>
             <Japanese>包帯が傷をふさぐのにどれだけ効果的かを定義します。</Japanese>
             <Chinesesimp>绷带在包扎伤口时会多有效</Chinesesimp>
+            <Ukrainian>Визначає, наскільки ефективні бинти при закритті ран.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageEffectiveness_DisplayName">
             <English>Bandage Effectiveness Coefficient</English>
@@ -5082,6 +5412,7 @@
             <Korean>붕대 효과 계수</Korean>
             <Japanese>包帯有効性係数</Japanese>
             <Chinesesimp>绷带有效值系数</Chinesesimp>
+            <Ukrainian>Коеф. ефективності пов'язки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageRollover_Description">
             <English>If enabled, bandages can close different types of wounds on the same body part.\nBandaging multiple injuries will scale bandaging time accordingly.</English>
@@ -5095,6 +5426,7 @@
             <Korean>활성화된 경우 붕대로 동일한 신체 부위에 있는 다른 유형의 상처를 막을 수 있습니다.\n여러 부상을 붕대로 감으면 붕대 감는 시간이 그만큼 늘어납니다.</Korean>
             <Japanese>有効にすると、体の同じ部分にある別の種類の傷を一つの包帯で閉じることができます。\n複数の傷に包帯を巻くと、それに応じて包帯時間が変動します。</Japanese>
             <Chinesesimp>如果启用, 一次包扎动作可以包扎同一身体部位的多个不同类型的伤口\n包扎时间也会相应改变</Chinesesimp>
+            <Ukrainian>Якщо цю функцію увімкнено, бинти можуть закривати різні типи ран на одній і тій самій частині тіла.\nПри перев'язці кількох ушкоджень час перев'язування буде збільшено відповідним чином.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageRollover_DisplayName">
             <English>Bandage Rollover</English>
@@ -5108,6 +5440,7 @@
             <Korean>붕대 모두 감기</Korean>
             <Japanese>包帯の繰り越し</Japanese>
             <Chinesesimp>包扎多个伤口</Chinesesimp>
+            <Ukrainian>Перев'язка множинних ран</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bodybagWhileStillAlive">
             <English>The body twitched and may not be dead!</English>
@@ -5121,6 +5454,7 @@
             <Korean>꿈틀대는걸 보니 죽은 것 같지는 않습니다!</Korean>
             <Japanese>身体が痙攣している、まだ死んでないようだ!</Japanese>
             <Chinesesimp>身体抽搐了一下，可能还没死！</Chinesesimp>
+            <Ukrainian>Тіло сіпнулося і, можливо, пацієнт живий!</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_checkHeadstoneName">
             <English>Check name on headstone</English>
@@ -5134,6 +5468,7 @@
             <Korean>묘비 이름 확인</Korean>
             <Japanese>墓石の名前を確認</Japanese>
             <Chinesesimp>检查墓碑上的名字</Chinesesimp>
+            <Ukrainian>Перевірте ім'я на надгробку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_diagnoseAlive">
             <English>alive</English>
@@ -5151,6 +5486,7 @@
             <Chinesesimp>存活</Chinesesimp>
             <Turkish>Hayatta</Turkish>
             <Hungarian>élő</Hungarian>
+            <Ukrainian>живий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_diagnoseDead">
             <English>dead</English>
@@ -5168,6 +5504,7 @@
             <Chinesesimp>死亡</Chinesesimp>
             <Turkish>Olü</Turkish>
             <Hungarian>halott</Hungarian>
+            <Ukrainian>мертвий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_diagnoseMessage">
             <English>Patient %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</English>
@@ -5184,6 +5521,7 @@
             <Chinese>傷者 %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Chinese>
             <Chinesesimp>伤员 %1 &lt;br/&gt; %2 &lt;br/&gt; %3 &lt;br/&gt; %4</Chinesesimp>
             <Hungarian>A páciens, %1,&lt;br/&gt;%2.&lt;br/&gt;%3.&lt;br/&gt;%4</Hungarian>
+            <Ukrainian>Пацієнт %1&lt;br/&gt;%2.&lt;br/&gt;%3.&lt;br/&gt;%4</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_healHitPointAfterAdvBandage">
             <English>Heal fully bandaged hitpoints</English>
@@ -5199,6 +5537,7 @@
             <Japanese>包帯は体力を完全に回復させます</Japanese>
             <Chinese>完全醫療包紮的部位至痊癒</Chinese>
             <Chinesesimp>完全医疗包扎的部位至痊愈</Chinesesimp>
+            <Ukrainian>Зцілити повністю перебинтовані частини тіла</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_inPain">
             <English>He is in pain</English>
@@ -5216,6 +5555,7 @@
             <Chinesesimp>他感到疼痛</Chinesesimp>
             <Turkish>Onun ağrısı var</Turkish>
             <Hungarian>Fájdalmai vannak</Hungarian>
+            <Ukrainian>Відчуває біль</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_lostBlood">
             <English>He's lost some blood</English>
@@ -5233,6 +5573,7 @@
             <Chinesesimp>他轻微失血</Chinesesimp>
             <Turkish>O biraz kan kaybetmiş</Turkish>
             <Hungarian>Valamennyi vért vesztett</Hungarian>
+            <Ukrainian>Є крововтрата</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_lostBloodALot">
             <English>He's lost a lot of blood</English>
@@ -5250,6 +5591,7 @@
             <Chinesesimp>他大量失血</Chinesesimp>
             <Turkish>O çok kan kaybetmiş</Turkish>
             <Hungarian>Sok vért vesztett</Hungarian>
+            <Ukrainian>Велика крововтрата</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_medicalSupplyCrate">
             <English>[ACE] Medical Supply Crate (Basic)</English>
@@ -5267,6 +5609,7 @@
             <Chinesesimp>[ACE] 医疗补给箱（基础）</Chinesesimp>
             <Turkish>[ACE] Tıbbi Malzeme Kutusu (Temel)</Turkish>
             <Hungarian>[ACE] Orvosi láda (Alap)</Hungarian>
+            <Ukrainian>[ACE] Ящик із медикаментами (базова медицина)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_medicalSupplyCrate_advanced">
             <English>[ACE] Medical Supply Crate (Advanced)</English>
@@ -5284,6 +5627,7 @@
             <Chinesesimp>[ACE] 医疗补给箱（高级）</Chinesesimp>
             <Turkish>[ACE] Tıbbi Malzeme Kutusu (Gelişmiş)</Turkish>
             <Hungarian>[ACE] Orvosi láda (Fejlett)</Hungarian>
+            <Ukrainian>[ACE] Ящик із медикаментами (ускладнена медицина)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_medicalTab">
             <English>Medical Items</English>
@@ -5300,6 +5644,7 @@
             <Chinesesimp>医疗物品</Chinesesimp>
             <Turkish>Tıbbi Ürünler</Turkish>
             <Hungarian>Orvosi felszerelés</Hungarian>
+            <Ukrainian>Медичні предмети</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_noBloodloss">
             <English>He hasn't lost blood</English>
@@ -5317,6 +5662,7 @@
             <Chinesesimp>他没有失血</Chinesesimp>
             <Turkish>O hiç kan kaybetmemiş</Turkish>
             <Hungarian>Nem vesztett vért</Hungarian>
+            <Ukrainian>Немає крововтрати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_noPain">
             <English>He is not in pain</English>
@@ -5334,6 +5680,7 @@
             <Chinesesimp>他没有感到疼痛</Chinesesimp>
             <Turkish>Onun ağrısı yok</Turkish>
             <Hungarian>Nincsenek fájdalmai</Hungarian>
+            <Ukrainian>Не відчуває болю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_noTourniquetOnBodyPart">
             <English>There is no tourniquet on this body part!</English>
@@ -5350,6 +5697,7 @@
             <Chinese>這部位沒有止血帶!</Chinese>
             <Chinesesimp>该部位没有使用止血带！</Chinesesimp>
             <Turkish>Bu vücut kısmında turnike yok!</Turkish>
+            <Ukrainian>Немає турнікета на цій частині тіла!</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Short">
             <English>Over-the-counter analgesic used to combat light to moderate pain experiences.</English>
@@ -5361,6 +5709,7 @@
             <Korean>가벼운 통증부터 중간 정도의 통증을 퇴치하는 데 사용되는 일반의약품 진통제입니다.</Korean>
             <Japanese>軽度から中程度の痛みに対処するために使用される市販の鎮痛薬。</Japanese>
             <Chinesesimp>非处方止疼药, 用于缓解轻至中度疼痛</Chinesesimp>
+            <Ukrainian>Безрецептурний анальгетик, що використовується для боротьби з легкими та помірними больовими відчуттями.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Use">
             <English>Over-the-counter analgesic used to combat light to moderate pain experiences.</English>
@@ -5372,6 +5721,7 @@
             <Korean>가벼운 통증부터 중간 정도의 통증을 퇴치하는 데 사용되는 일반의약품 진통제입니다.</Korean>
             <Japanese>軽度から中程度の痛みに対処するために使用される市販の鎮痛薬。</Japanese>
             <Chinesesimp>非处方止疼药, 用于缓解轻至中度疼痛</Chinesesimp>
+            <Ukrainian>Безрецептурний анальгетик, що використовується для боротьби з легкими та помірними больовими відчуттями.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Display">
             <English>Painkillers</English>
@@ -5388,6 +5738,7 @@
             <Chinese>止痛藥</Chinese>
             <Chinesesimp>止痛药</Chinesesimp>
             <Turkish>Ağrı kesici</Turkish>
+            <Ukrainian>Болезаспокійливе</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_receivingBloodIvVolume">
             <English>Receiving Blood IV [%1ml]</English>
@@ -5404,6 +5755,7 @@
             <Chinese>接收血液靜脈注射液中 [%1毫升]</Chinese>
             <Chinesesimp>正在接受血液静脉注射 [%1毫升]</Chinesesimp>
             <Hungarian>Vér Infúzióra kötve [%1ml]</Hungarian>
+            <Ukrainian>Приймається кров [%1 мл]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_receivingPlasmaIvVolume">
             <English>Receiving Plasma IV [%1ml]</English>
@@ -5420,6 +5772,7 @@
             <Chinese>接收血漿靜脈注射液中 [%1毫升]</Chinese>
             <Chinesesimp>正在接受血浆静脉注射 [%1毫升]</Chinesesimp>
             <Hungarian>Plazma Infúzióra kötve [%1ml]</Hungarian>
+            <Ukrainian>Приймається плазма [%1 мл]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_receivingSalineIvVolume">
             <English>Receiving Saline IV [%1ml]</English>
@@ -5436,6 +5789,7 @@
             <Chinese>接收生理鹽水靜脈注射液中 [%1毫升]</Chinese>
             <Chinesesimp>正在接受生理盐水静脉注射 [%1毫升]</Chinesesimp>
             <Hungarian>Saline Infúzióra kötve [%1ml]</Hungarian>
+            <Ukrainian>Приймається фізрозчин [%1 мл]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_splint_Desc_Short">
             <English>Stabilizes a fractured limb</English>
@@ -5452,6 +5806,7 @@
             <Chinese>固定骨折的部位</Chinese>
             <Chinesesimp>用于固定骨折的肢体</Chinesesimp>
             <Turkish>Kırık bir uzvu stabilize eder</Turkish>
+            <Ukrainian>Стабілізує перелом кінцівки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_splint_Display">
             <English>Splint</English>
@@ -5468,6 +5823,7 @@
             <Chinese>固定板</Chinese>
             <Chinesesimp>夹板</Chinesesimp>
             <Turkish>Atel</Turkish>
+            <Ukrainian>Шина</Ukrainian>
         </Key>
     </Package>
 </Project>

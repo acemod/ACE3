@@ -13,6 +13,7 @@
             <Korean>차량에서 클랜 로고 제거</Korean>
             <Japanese>乗り物から部隊ロゴを削除</Japanese>
             <Chinesesimp>在载具上移除战队徽标</Chinesesimp>
+            <Ukrainian>Прибрати логотип загонів з техніки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Novehicleclanlogo_Enabled_Tooltip">
             <English>Prevents clan logo from being displayed on vehicles controlled by players.</English>
@@ -26,6 +27,7 @@
             <Korean>플레이어가 조종하는 차량에 클랜 로고가 표시되지 않도록 합니다.</Korean>
             <Japanese>プレイヤーが操作する乗り物に部隊ロゴが表示されないようにする。</Japanese>
             <Chinesesimp>在玩家控制的载具上移除其所处的战队的徽标</Chinesesimp>
+            <Ukrainian>Не відображати логотипи загонів на техніці, що контролюється гравцями.</Ukrainian>
         </Key>
     </Package>
 </Project>
