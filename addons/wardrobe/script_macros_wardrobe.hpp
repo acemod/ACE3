@@ -1,20 +1,3 @@
-// IMPORT BASE CLASSES
-#define IMPORT_BASE_CLASSES\
-class EGVAR(wardrobe,base);\
-class EGVAR(wardrobe,base_H_visor_up);\
-class EGVAR(wardrobe,base_H_visor_down);\
-class EGVAR(wardrobe,base_H_goggles_on);\
-class EGVAR(wardrobe,base_H_goggles_off);\
-class EGVAR(wardrobe,base_H_mask_on);\
-class EGVAR(wardrobe,base_H_mask_off);\
-class EGVAR(wardrobe,base_U_sleeves_up);\
-class EGVAR(wardrobe,base_U_sleeves_down);\
-class EGVAR(wardrobe,base_U_gloves_on);\
-class EGVAR(wardrobe,base_U_gloves_off);\
-class EGVAR(wardrobe,base_U_jacket_open);\
-class EGVAR(wardrobe,base_U_jacket_closed)
-
-
 // Config
 // Adjust Weight of CfgWeapons Wearables
 #define MASS(var)\
@@ -23,8 +6,9 @@ class ItemInfo: ItemInfo {\
 }
 
 
-// CfgWardrobe Base Uniform Macro
-// Uniform Sleeves Up/Down
+// CfgWardrobe Macros
+#define ACEWARDROBE(var) TRIPLES(ace,wardrobe,var)
+
 #define BASIC(variant1,variant2,base1,base2)\
 class variant1: base1 {\
     class modifiableTo {\
@@ -74,27 +58,27 @@ class Variant2: Variant2Base {\
 
 // Basic Setups without the use of Components
 #define BASE_PAIR(variant1,variant2)\
-BASIC(variant1,variant2,EGVAR(wardrobe,base),EGVAR(wardrobe,base))
+BASIC(variant1,variant2,ACEWARDROBE(base),ACEWARDROBE(base))
 
 #define UNIFORM_SLEEVES(variantSleevesDown,variantSleevesUp)\
-BASIC(variantSleevesDown,variantSleevesUp,EGVAR(wardrobe,base_U_sleeves_down),EGVAR(wardrobe,base_U_sleeves_up))
+BASIC(variantSleevesDown,variantSleevesUp,ACEWARDROBE(base_U_sleeves_down),ACEWARDROBE(base_U_sleeves_up))
 
 #define UNIFORM_GLOVES(variantGlovesOn,variantGlovesOff)\
-BASIC(variantGlovesOn,variantGlovesOff,EGVAR(wardrobe,base_U_gloves_on),EGVAR(wardrobe,base_U_gloves_off))
+BASIC(variantGlovesOn,variantGlovesOff,ACEWARDROBE(base_U_gloves_on),ACEWARDROBE(base_U_gloves_off))
 
 #define UNIFORM_JACKET(variantJacketOpen,variantJacketClosed)\
-BASIC(variantJacketOpen,variantJacketClosed,EGVAR(wardrobe,base_U_jacket_open),EGVAR(wardrobe,base_U_jacket_closed))
+BASIC(variantJacketOpen,variantJacketClosed,ACEWARDROBE(base_U_jacket_open),ACEWARDROBE(base_U_jacket_closed))
 
 #define HELMET_VISOR(variantVisorUp,variantVisorDown)\
-BASIC(variantVisorUp,variantVisorDown,EGVAR(wardrobe,base_H_visor_up),EGVAR(wardrobe,base_H_visor_down))
+BASIC(variantVisorUp,variantVisorDown,ACEWARDROBE(base_H_visor_up),ACEWARDROBE(base_H_visor_down))
 
 #define HELMET_MASK(variantMaskOn,variantMaskOff)\
-BASIC(variantMaskOn,variantMaskOff,EGVAR(wardrobe,base_H_mask_on),EGVAR(wardrobe,base_H_mask_off))
+BASIC(variantMaskOn,variantMaskOff,ACEWARDROBE(base_H_mask_on),ACEWARDROBE(base_H_mask_off))
 
 // Basic Setups with the use of Component
 #define HELMET_GOGGLES(variantGogglesOn,variantGogglesOff,component)\
-BASIC_COMPONENT(variantGogglesOn,variantGogglesOff,EGVAR(wardrobe,base_H_goggles_on),EGVAR(wardrobe,base_H_goggles_off),component)
+BASIC_COMPONENT(variantGogglesOn,variantGogglesOff,ACEWARDROBE(base_H_goggles_on),ACEWARDROBE(base_H_goggles_off),component)
 
 // Basic Combo
 #define HELMET_CAP_COMBO(Combo,Helmet,Cap)\
-BASIC_COMBO(Combo,EGVAR(wardrobe,base),Helmet,EGVAR(wardrobe,base),Cap,EGVAR(wardrobe,base))
+BASIC_COMBO(Combo,ACEWARDROBE(base),Helmet,ACEWARDROBE(base),Cap,ACEWARDROBE(base))
