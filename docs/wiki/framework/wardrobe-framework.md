@@ -17,7 +17,7 @@ version:
 
 The Wardrobe addon gives the player the opportunity to change/modify their current wearables into different variants.
 
-For example, if a uniform has a normal variant and a "rolled-Up sleeves" variant, the player will be able to use ether an ACE Self Interaction.
+For example, if a uniform has a normal variant and a "rolled-Up sleeves" variant, the player will be able to use ACE Self Interaction to switch from one variant to another.
 
 Since there is no reliable, common patterns in terms of class inheritance, not even within the same DLC, each possible variant has to be defined individually within `configFile >> "ace_wardrobe"`.
 
@@ -50,6 +50,7 @@ All supported Properties can be found within the `ace_wardrobe_base` baseclass.
 | `fallbackComponent` | String of Classname | Fallback for components that are not present within the same mod/addon. Example: RHS AFRF helmets use `rhs_ess_black` goggles, which are only part of USAF. `fallbackComponent` can be used to default to a vanilla alternative. |
 
 ### 2.2 Base Classes
+
 
 All base classes can be found in `addons\wardrobe\BaseClasses.hpp`
 
@@ -163,7 +164,20 @@ All pre-configured base classes can be imported by simply using the `IMPORT_BASE
 ```cpp
 #include "\z\ace\addons\wardrobe\script_macros_wardrobe.hpp"
 class ace_wardrobe {
-    IMPORT_BASE_CLASSES;
+    // Remove unused imported base classes once done
+    class ace_wardrobe_base;
+    class ace_wardrobe_base_H_visor_up;
+    class ace_wardrobe_base_H_visor_down;
+    class ace_wardrobe_base_H_goggles_on;
+    class ace_wardrobe_base_H_goggles_off;
+    class ace_wardrobe_base_H_mask_on;
+    class ace_wardrobe_base_H_mask_off;
+    class ace_wardrobe_base_U_sleeves_up;
+    class ace_wardrobe_base_U_sleeves_down;
+    class ace_wardrobe_base_U_gloves_on;
+    class ace_wardrobe_base_U_gloves_off;
+    class ace_wardrobe_base_U_jacket_open;
+    class ace_wardrobe_base_U_jacket_closed;
 
     // Begin to define your configs ...
 };
@@ -172,7 +186,8 @@ class ace_wardrobe {
 ### 4.1 Simple Example - Uniform sleeves - No requirement for components
 ```cpp
 class ace_wardrobe {
-    IMPORT_BASE_CLASSES;
+    class ace_wardrobe_base_U_sleeves_down;
+    class ace_wardrobe_base_U_sleeves_up;
 
     class U_B_CTRG_1: ace_wardrobe_base_U_sleeves_down {
         components[] = {};
@@ -193,7 +208,7 @@ class ace_wardrobe {
 ### 4.2 Advanced example - Balaclava with combat glasses - Partial use of components
 ```cpp
 class ace_wardrobe {
-    IMPORT_BASE_CLASSES;
+    class ace_wardrobe_base;
 
     class G_Balaclava: ace_wardrobe_base {
         class modifiableTo {
@@ -217,7 +232,7 @@ class ace_wardrobe {
 ### 4.3 Complex example - Bandana with aviators - Complex use of multiple components
 ```cpp
 class ace_wardrobe {
-    IMPORT_BASE_CLASSES;
+    class ace_wardrobe_base;
 
     class G_Bandanna_blk: ace_wardrobe_base {
         class modifiableTo {
@@ -262,11 +277,40 @@ The number at the end of the classnames indicates the length of the file in 1/10
 ## 6. Compatibility
 
 ## 6.1 MagzineID
-Currently, `ace_intelitems` and `ace_overheating` (spare barrels) are being directly supported.
+If an addon/mod utilizes a magazine's `magazineID` to handle additional data on items, then the process of modifying a wearable container (uniform, vest, backpack) to another variant will result in new `magazineID`s for all magazines on the player.
+Therefore additional handling of exceptions is required.
 
-If an addon or mod utilizes a magazine's `magazineID` to handle additional data about items carried by the player, then the process of modifying a wearable container (uniform, vest, backpack) to another variant will result in new `magazineID`s for all magazines on the player and therefore, require special handling within `ace_wardrobe` functions.
+These exceptions can be defined via config.
+
+```hpp
+class ace_wardrobe_exceptions {
+    class ACE_SpareBarrel {
+        mode = "server";
+        code = "ace_wardrobe_fnc_exceptionAceSparebarrel";
+    };
+
+    class acex_intelitems_document {
+        code = "ace_wardrobe_fnc_exceptionAceIntel";
+        mode = "local";
+    };
+
+    class acex_intelitems_notepad: acex_intelitems_document {};
+    class acex_intelitems_photo: acex_intelitems_document {};
+
+};
+```
+Per magazine classname that needs to be handled exceptionally, a configclass inside `class ace_wardrobe_exceptsions` is needed where the classname is identical to the items classname.
+
+| Class Property | Data Type | Description                                                                    |
+| -------------- | --------- | ------------------------------------------------------------------------------ |
+| code           | string    | Functionname - provided parameters: ["_className", "_oldMagIDs", "_newMagIDs"] |
+| mode           | string    | "server" or "local" - defines where code shall be executed                     |
+
+
+Currently, `ace_intelitems` and `ace_overheating` (spare barrels) are already supported and can be referenced as an example.
 
 ## 6.2 Container Size - Uniform, Vest, Backpack
+
 When the player changes from one container item to another through the wardrobe action and the container's `maximumLoad` is smaller then previously, the player risks the loss of items carried inside said container.
 
 Therefore, the debug script found at `addons\wardrobe\dev\compareContainerMaxLoad.sqf` can be used to compare the item's `maximumLoad`. The result will be dumped into the .rpt.
