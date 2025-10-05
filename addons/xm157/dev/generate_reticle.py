@@ -66,13 +66,6 @@ if (image_center - 15 * pixels_per_mrad > 0):
         (image_center + 20 * pixels_per_mrad, image_center - 2 * pixels_per_mrad),
         (image_size, image_center - 2 * pixels_per_mrad),
     ], fill=(0, 0, 0))
-    # d.polygon([
-    #     (image_center - 2 * pixels_per_mrad, image_size),
-    #     (image_center - 2 * pixels_per_mrad, image_center + 20 * pixels_per_mrad),
-    #     (image_center, image_center + 15 * pixels_per_mrad),
-    #     (image_center + 2 * pixels_per_mrad, image_center + 20 * pixels_per_mrad),
-    #     (image_center + 2 * pixels_per_mrad, image_size),
-    # ], fill=(0, 0, 0))
 
 
 # draw windage hash marks and text
