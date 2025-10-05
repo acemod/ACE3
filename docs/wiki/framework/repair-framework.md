@@ -50,7 +50,7 @@ class CfgVehicles {
 
 ## 2.1 Make A Vehicle Into A Repair Truck
 
-A vehicle can be turned into a repair truck by setting the variable `ace_repair_canRepair` to `1` to enable, `0` to disable.
+A vehicle can be turned into a repair truck by setting the variable `ACE_isRepairVehicle` to `1` to enable, `0` to disable.
 - Setting `fullRepairLocation` needs to be enabled and is by *disabled* default.
 - Can be set via 3den attribute.
 
