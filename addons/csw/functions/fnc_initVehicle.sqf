@@ -95,7 +95,7 @@ if (_hasAutofireEnabled || _forceAutofireEnabled) then {
     _vehicle setVariable [QGVAR(autofire_dispersion), _dispersionInModes];
     _vehicle setVariable [QGVAR(autofire_defaultModes), createHashMap];
     _vehicle setVariable [QGVAR(autofire), _forceAutofireEnabled];
-    _vehicle setVariable [QGVAR(autofire_force), _forceAutofireEnabled];
+    if (_vehicle isNil QGVAR(autofire_force)) then { _vehicle setVariable [QGVAR(autofire_force), _forceAutofireEnabled]; };
     _vehicle addEventHandler ["Reloaded", LINKFUNC(autofire_onReload)];
 };
 
