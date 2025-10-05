@@ -47,12 +47,8 @@ d.line([
 ], fill=(0, 0, 0), width=line_thick)
 d.line([
     (image_center, image_center + 0.5 * pixels_per_mrad),
-    (image_center, image_center + 11 * pixels_per_mrad)
-], fill=(0, 0, 0), width=line_thin)
-d.line([
-    (image_center, image_center + 11.5 * pixels_per_mrad),
     (image_center, image_size)
-], fill=(0, 0, 0), width=line_thick)
+], fill=(0, 0, 0), width=line_thin)
 
 # draw big triangle bar things
 if (image_center - 15 * pixels_per_mrad > 0):
@@ -69,13 +65,6 @@ if (image_center - 15 * pixels_per_mrad > 0):
         (image_center + 15 * pixels_per_mrad, image_center),
         (image_center + 20 * pixels_per_mrad, image_center - 2 * pixels_per_mrad),
         (image_size, image_center - 2 * pixels_per_mrad),
-    ], fill=(0, 0, 0))
-    d.polygon([
-        (image_center - 2 * pixels_per_mrad, image_size),
-        (image_center - 2 * pixels_per_mrad, image_center + 20 * pixels_per_mrad),
-        (image_center, image_center + 15 * pixels_per_mrad),
-        (image_center + 2 * pixels_per_mrad, image_center + 20 * pixels_per_mrad),
-        (image_center + 2 * pixels_per_mrad, image_size),
     ], fill=(0, 0, 0))
 
 
@@ -137,7 +126,7 @@ d.line([
     (image_center - 10 * pixels_per_mrad, image_center + 0.5 * pixels_per_mrad)
 ], fill=(0, 0, 0), width=line_thick)
 
-for y in range(1, 12):
+for y in range(1, 17):
     line_y = image_center + y * pixels_per_mrad
     # elev hash marks
     d.line([

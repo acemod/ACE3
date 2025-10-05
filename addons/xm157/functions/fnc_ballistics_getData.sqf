@@ -58,7 +58,11 @@ if ((_weaponInfo isEqualTo []) && {_magazineClass != ""}) then {
     };
 
     // Scope Base Angle
-    private _scopeBaseAngle = parseNumber (("ace" callExtension ["ballistics:zero_vanilla", [_zeroRange, _muzzleVelocity, _airFriction, _boreHeight]]) select 0);
+    private _scopeBaseAngle = if ((getText (configFile >> "CfgAmmo" >> _ammoClass >> "simulation")) != "shotshell") then {
+        parseNumber (("ace" callExtension ["ballistics:zero_vanilla", [_zeroRange, _muzzleVelocity, _airFriction, _boreHeight]]) select 0)
+    } else {
+        0 // shotshell will not have any vanilla zeroing applied, 0 is a reasonable default for now
+    };
 
     _weaponInfo = [_scopeBaseAngle,_boreHeight,_airFriction,_muzzleVelocity,_bc,_dragModel,_atmosphereModel,_barrelTwist,_twistDirection,_caliber,_bulletLength,_bulletMass];
     GVAR(data) set [_key, _weaponInfo];
