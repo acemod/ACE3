@@ -55,7 +55,7 @@ A vehicle can be turned into a repair truck by setting the variable `ace_repair_
 - Can be set via 3den attribute.
 
 ```cpp
-VEHICLE setVariable ["ace_repair_canRepair", 1, true];
+VEHICLE setVariable ["ACE_isRepairVehicle", 1, true];
 ```
 
 ## 2.2 Make An Object Into A Repair Facility
