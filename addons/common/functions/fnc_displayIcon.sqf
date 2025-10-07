@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Glowbal
- * Displays an icon at a CBA settings defined position and ensures multiple icons are shown after each other
+ * Displays an icon at a CBA settings-defined position and ensures multiple icons are shown after each other
  *
  * Arguments:
  * 0: icon ID <STRING>
