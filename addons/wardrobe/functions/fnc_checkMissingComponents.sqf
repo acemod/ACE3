@@ -12,7 +12,7 @@
  * True, if origin can be modified to target <BOOL>
  *
  * Example:
- * [player, configFile >> "CfgWeapons" >> "U_B_CTRG_1", configFile >> "CfgWeapons" >> "U_B_CTRG_3"] call ace_wardrobe_fnc_canModifyTo
+ * [player, configFile >> "CfgWeapons" >> "U_B_CTRG_1", configFile >> "CfgWeapons" >> "U_B_CTRG_3"] call ace_wardrobe_fnc_checkMissingComponents
  *
  * Public: No
  */
