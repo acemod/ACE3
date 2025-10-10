@@ -29,7 +29,13 @@ if (isClass _itemCfg) then {
     [QGVAR(displayActions), [_display, _control, _curSel, _itemCfg]] call CBA_fnc_localEvent;
 
     // Name + author
-    (_display displayCtrl IDC_infoName) ctrlSetText ([_control lbText _curSel, _control lnbText [_curSel, 1]] select (ctrlType _control == CT_LISTNBOX));
+    private _itemName = "";
+    if (ctrlType _control == CT_TREE) then {
+        _itemName = _control tvText _curSel;
+    } else {
+        _itemName = [_control lbText _curSel, _control lnbText [_curSel, 1]] select (ctrlType _control == CT_LISTNBOX);
+    };
+    (_display displayCtrl IDC_infoName) ctrlSetText _itemName;
 
     private _itemAuthor = getText (_itemCfg >> "author");
     (_display displayCtrl IDC_infoAuthor) ctrlSetText ([localize "STR_AUTHOR_UNKNOWN", format [localize "STR_FORMAT_AUTHOR_SCRIPTED", _itemAuthor]] select (_itemAuthor != ""));

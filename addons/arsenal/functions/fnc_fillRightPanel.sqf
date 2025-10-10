@@ -169,13 +169,14 @@ switch (GVAR(currentLeftPanel)) do {
     };
 };
 
-// Reset right panel content
-lbClear _ctrlPanel;
-lnbClear _listnBox;
+// Reset right panel content using unified control interface
+["clear", _ctrlPanel, []] call FUNC(controlInterface);
+["clear", _listnBox, []] call FUNC(controlInterface);
 
-_ctrlPanel lbSetCurSel -1;
-_listnBox lnbSetCurSelRow -1;
+["setCurSel", _ctrlPanel, [[]]] call FUNC(controlInterface);
+["setCurSel", _listnBox, [-1]] call FUNC(controlInterface);
 
+// Use appropriate control for container vs weapon panels
 if (_isContainer) then {
     _ctrlPanel = _listnBox;
 };
@@ -415,34 +416,29 @@ if (_isContainer) then {
 // Sorting
 [_display, _control, _display displayCtrl IDC_sortRightTab, _display displayCtrl IDC_sortRightTabDirection] call FUNC(fillSort);
 
+// Restore previous selection using unified control interface
 if (_selectedItem != "") then {
-    if (_isContainer) then {
-        // Try to select previously selected item again, otherwise select nothing
-        private _index = -1;
-
-        for "_lbIndex" from 0 to (lnbSize _ctrlPanel select 0) - 1 do {
-            if ((_ctrlPanel lnbData [_lbIndex, 0]) == _selectedItem) exitWith {
-                _index = _lbIndex;
-            };
+    private _index = -1;
+    private _count = ["count", _ctrlPanel, []] call FUNC(controlInterface);
+    
+    // Find the item in the control
+    for "_i" from 0 to (_count - 1) do {
+        private _itemData = if (_isContainer) then {
+            ["getData", _ctrlPanel, [_i]] call FUNC(controlInterface)
+        } else {
+            ["getData", _ctrlPanel, [[_i]]] call FUNC(controlInterface)
         };
-
-        _ctrlPanel lnbSetCurSelRow _index;
-    } else {
-        // Try to select previously selected item again, otherwise select first item ("Empty")
-        private _index = 0;
-
-        for "_lbIndex" from 0 to (lbSize _ctrlPanel) - 1 do {
-            if ((_ctrlPanel lbData _lbIndex) == _selectedItem) exitWith {
-                _index = _lbIndex;
-            };
+        
+        if (_itemData == _selectedItem) exitWith {
+            _index = if (_isContainer) then { _i } else { [_i] };
         };
-
-        _ctrlPanel lbSetCurSel _index;
     };
+    
+    // Set selection
+    ["setCurSel", _ctrlPanel, [_index]] call FUNC(controlInterface);
 } else {
-    if (_isContainer) then {
-        _ctrlPanel lnbSetCurSelRow -1; // select nothing
-    } else {
-        _ctrlPanel lbSetCurSel 0; // select "Empty"
-    };
+    // No previous selection - set appropriate default
+    private _defaultSel = if (_isContainer) then { -1 } else { [0] };
+    ["setCurSel", _ctrlPanel, [_defaultSel]] call FUNC(controlInterface);
 };
+
