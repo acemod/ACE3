@@ -36,7 +36,7 @@ private _fnc_processNode = {
     private _conditionFullString = format ["%1 && {%2}", _parentConditionString, _condition call EFUNC(common,codeToString)];
 
     // don't add already added setting
-    if (isNil {missionNamespace getVariable _varName}) then {
+    if ((missionNamespace isNil _varName)) then {
         [_varName, "CHECKBOX", _titleFull, [_settingCategory, _rootActionTitle], false, 2, {}, true] call CBA_fnc_addSetting;
     };
 
