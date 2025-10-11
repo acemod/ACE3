@@ -44,10 +44,12 @@ case (APP_MODE_INFODISPLAY): {
         (_display displayCtrl IDC_MODEDISPLAY_ELEVATIONNUM) ctrlSetText _aboveSeaLevelText;
 
         //Heading:
+        private _headDir = ([ACE_player] call CBA_fnc_headDir) select 0;
+        if (GVAR(settingShowMagneticNorth)) then { _headDir = _headDir call EFUNC(common,getMagneticBearing); };
         private _compassAngleText = if (GVAR(settingUseMils)) then {
-            [(floor ((6400 / 360) * (([ACE_player] call CBA_fnc_headDir) select 0))), 4, 0] call CBA_fnc_formatNumber;
+            [(floor ((6400 / 360) * _headDir)), 4, 0] call CBA_fnc_formatNumber;
         } else {
-            ([([ACE_player] call CBA_fnc_headDir) select 0, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
+            ([_headDir, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
         };
         (_display displayCtrl IDC_MODEDISPLAY_HEADINGNUM) ctrlSetText _compassAngleText;
 
@@ -103,10 +105,12 @@ case (APP_MODE_INFODISPLAY): {
     };
 case (APP_MODE_COMPASS): {
         //Heading:
+        private _headDir = ([ACE_player] call CBA_fnc_headDir) select 0;
+        if (GVAR(settingShowMagneticNorth)) then { _headDir = _headDir call EFUNC(common,getMagneticBearing); };
         private _compassAngleText = if (GVAR(settingUseMils)) then {
-            [(floor ((6400 / 360) * (([ACE_player] call CBA_fnc_headDir) select 0))), 4, 0] call CBA_fnc_formatNumber;
+            [(floor ((6400 / 360) * _headDir)), 4, 0] call CBA_fnc_formatNumber;
         } else {
-            ([([ACE_player] call CBA_fnc_headDir) select 0, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
+            ([_headDir, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
         };
         (_display displayCtrl IDC_MODECOMPASS_HEADING) ctrlSetText _compassAngleText;
 
@@ -198,6 +202,13 @@ case (APP_MODE_SETUP): {
             _settingListBox lbSetTextRight [1, (localize LSTRING(settingOn))];
         } else {
             _settingListBox lbSetTextRight [1, (localize LSTRING(settingOff))];
+        };
+
+        _settingListBox lbAdd (localize LSTRING(settingShowMagneticNorth));
+        if (GVAR(settingShowMagneticNorth)) then {
+            _settingListBox lbSetTextRight [2, (localize LSTRING(settingOn))];
+        } else {
+            _settingListBox lbSetTextRight [2, (localize LSTRING(settingOff))];
         };
 
         //Reset focus to a dummy ctrl (top button), otherwise HOME/POS1 key goes to top of listBox and has keybind blocked
