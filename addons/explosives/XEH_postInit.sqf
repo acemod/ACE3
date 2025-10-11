@@ -130,4 +130,9 @@ if (!hasInterface) exitWith {};
     [_player, QGVAR(explosiveActions)] call EFUNC(common,eraseCache);
 }] call CBA_fnc_addPlayerEventHandler;
 
+// Remove explosives from respawned unit, because respawn module copies them without our consent
+[QGVAR(removeExplosivesOnRespawn), "Respawn", {
+    (_this select 0) setVariable [QGVAR(clackers), nil, true];
+}] call CBA_fnc_addBISPlayerEventHandler;
+
 ["ace_allowDefuse", LINKFUNC(allowDefuse)] call CBA_fnc_addEventHandler;

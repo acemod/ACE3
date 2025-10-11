@@ -41,4 +41,5 @@ if (_target isKindOf "ACE_DefuseObject") then {
 
 (!GVAR(requireSpecialist) || {_unit call EFUNC(common,isEOD)}) &&
 {mineActive _target || {!(_target isKindOf "UnderwaterMine_Range_Ammo")}} && // Handle naval mines (which don't get turned into items when defused)
-{isNull objectParent _unit && {GVAR(defusalKits) findAny (_unit call EFUNC(common,uniqueItems)) != -1}} // return
+{isNull objectParent _unit} &&
+{GVAR(defusalKits) findAny (_unit call EFUNC(common,uniqueItems)) != -1} // return
