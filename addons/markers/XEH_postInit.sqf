@@ -40,19 +40,9 @@ GVAR(userPlacedMarkers) = [];
     };
 }] call CBA_fnc_addEventHandler;
 
-if (isServer) then {
-    GVAR(markerNumbers) = createHashMap;
-    [QGVAR(numberMarker), {
-        params ["_marker", "_side"];
-        TRACE_2("numberMarker", _marker, _side);
-        private _number = (GVAR(markerNumbers) getOrDefault [_side, 0]) + 1;
-        _marker setMarkerText str _number;
-        GVAR(markerNumbers) set [_side, _number];
-    }] call CBA_fnc_addEventHandler;
-};
 if (hasInterface) then {
     GVAR(numberNextMarker) = false;
-    ["ace_markers_editingMarker", {
+    [QGVAR(editingMarker), {
         params ["_marker", "_display"];
         TRACE_2("editingMarker",_marker,_display);
 
@@ -61,15 +51,16 @@ if (hasInterface) then {
         if (_marker != "") exitWith {}; // editing an existing marker
 
         GVAR(numberNextMarker) = true;
-        _display closeDisplay 1;
+        _display closeDisplay 1; // push ok button
     }] call CBA_fnc_addEventHandler;
 
-    ["ace_markers_markerPlaced", {
+    [QGVAR(markerPlaced), {
         if (!GVAR(numberNextMarker)) exitWith {};
         GVAR(numberNextMarker) = false;
+
         params ["_newestMarker"];
         TRACE_1("markerPlaced",_newestMarker);
+
         GVAR(currentMarkerConfigName) = QGVAR(textOnly);
-        [QGVAR(numberMarker), [_newestMarker, side group ace_player]] call CBA_fnc_serverEvent;
     }] call CBA_fnc_addEventHandler;
 };
