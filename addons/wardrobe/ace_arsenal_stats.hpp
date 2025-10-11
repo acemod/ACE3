@@ -2,7 +2,7 @@ class EGVAR(arsenal,stats) {
     class statBase {};
     class ADDON: statBase {
         scope = 2;
-        priority = 3;
+        priority = 0;
         stats[] = {};
         displayName = CSTRING(wardrobeModifiable);
         showBar = 0;
