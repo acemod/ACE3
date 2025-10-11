@@ -158,8 +158,6 @@ class ace_wardrobe_base_H_goggles_off: ace_wardrobe_base {
 ### 3.1 Macros
 To streamline the configuration of compatible items a set of macro's can be found here `addons\wardrobe\script_macros_wardrobe.hpp`
 
-### 3.2 BaseClasses
-All pre-configured base classes can be imported by simply using the `IMPORT_BASE_CLASSES;` macro.
 ### 3.3 Example
 ```cpp
 #include "\z\ace\addons\wardrobe\script_macros_wardrobe.hpp"
