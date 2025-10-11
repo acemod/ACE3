@@ -1,14 +1,8 @@
 
-class RscPicture;
 class RscText;
 class RscStructuredText;
-class RscButtonMenuOK;
-class RscButtonMenuCancel;
-class RscButtonMenu;
 class RscCheckBox;
-class RscEdit;
 class RscCombo;
-class RscSlider;
 class RscXSliderH;
 
 class RscDisplayInsertMarker {

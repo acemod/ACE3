@@ -14,8 +14,6 @@ class RscDisplayMain: RscStandardDisplay {
                 class Background;
                 class BackgroundIcon;
                 class Icon;
-                class News;
-                class Notification;
                 class Button;
             };
         };
