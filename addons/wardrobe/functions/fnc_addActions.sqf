@@ -20,20 +20,22 @@ params ["_player"];
 
 private _actions = [];
 
-// create "a in Progress" placeholder while an previous wardrobe action is not done
+// Create a "in progress" placeholder until a previous wardrobe action is not done
 private _aceAction = [
     QGVAR(inProgress),
     LLSTRING(action_inProgress),
     "\A3\ui_f\data\igui\cfg\simpleTasks\types\wait_ca.paa",
-    { "" },
+    {},
     { GVAR(inProgress) },
     { }
 ] call EFUNC(interact_menu,createAction);
 _actions pushBack [_aceAction, [], _player];
 
-private _modifiableItems = _player call FUNC(getItemsModifiableCurrent);
+// Actions for wardrobe items
+private _modifiableItems = [_player] call FUNC(getAvailableItemVariants);
 {
-    private _cfg = _x#0;
+    _x params ["_cfg", "_newItems"];
+
     private _aceAction = [
         configName _cfg,
         getText (_cfg >> "displayName"),
@@ -41,8 +43,9 @@ private _modifiableItems = _player call FUNC(getItemsModifiableCurrent);
         {},
         { ! GVAR(inProgress) },
         FUNC(addActionsChildren),
-        [_cfg, _x#1]
+        [_cfg, _newItems]
     ] call EFUNC(interact_menu,createAction);
+
     _actions pushBack [_aceAction, [], _player];
 } forEach _modifiableItems;
 

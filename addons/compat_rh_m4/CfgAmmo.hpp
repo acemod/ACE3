@@ -1,9 +1,6 @@
 class CfgAmmo {
 
-    class Default;
-    class BulletCore;
     class BulletBase;
-    class B_9x21_Ball;
     class B_556x45_Ball;
     class B_65x39_Caseless;
     class B_762x51_Ball;

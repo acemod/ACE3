@@ -16,6 +16,7 @@
             <Chinese>指向指示器</Chinese>
             <Chinesesimp>指向标记</Chinesesimp>
             <Turkish>Işaretleme</Turkish>
+            <Ukrainian>Вказівка пальцем</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Finger_enabled_description">
             <English>Points, and shows a virtual marker of where you are looking to nearby units. Can be held down.</English>
@@ -33,6 +34,7 @@
             <Chinesesimp>当按下此按键后，你附近的单位即可看见一个虚拟图示，标明你正在指向的位置。此按键可以被按住来持续显示。</Chinesesimp>
             <Turkish>Işaretleyince nereye baktığınıza dair sanal bir daire gösterir. Basılı da tutulabilir.</Turkish>
             <Hungarian>Mutat, és elhelyez egy virtuális jelölőt a nézett területhez közeli egységekhez. Lenyomva tartható.</Hungarian>
+            <Ukrainian>Показує пальцем і малює віртуальний маркер у напрямку погляду найближчим гравцям. Можна утримувати.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Finger_enabled_displayName">
             <English>Pointing Enabled</English>
@@ -50,6 +52,7 @@
             <Chinesesimp>启用指向系统</Chinesesimp>
             <Turkish>Işaretleme Etkin</Turkish>
             <Hungarian>Mutatás engedélyezése</Hungarian>
+            <Ukrainian>Вказівку пальцем увімкнено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Finger_indicatorColor_description">
             <English>Color of the pointing indicator circle</English>
@@ -67,6 +70,7 @@
             <Chinesesimp>指向标记颜色</Chinesesimp>
             <Turkish>Sanal dairenin rengini belirleyin</Turkish>
             <Hungarian>Mutatási indikátor körének színe</Hungarian>
+            <Ukrainian>Колір індикатора вказівки пальцем</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Finger_indicatorColor_name">
             <English>Pointing indicator</English>
@@ -84,6 +88,7 @@
             <Chinesesimp>指向标记</Chinesesimp>
             <Turkish>Daire Rengi</Turkish>
             <Hungarian>Ujj-indikátor</Hungarian>
+            <Ukrainian>Індикатор вказівки пальцем</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Finger_indicatorForSelf_description">
             <English>Render the indicator for the pointing player. This option doesn't affect whether the other players would see the indicator</English>
@@ -101,6 +106,7 @@
             <Chinesesimp>显示指向标记给玩家自己。此选项设定并不影响其他玩家能否看到指示标记</Chinesesimp>
             <Turkish>İşaret eden oyuncu için göstergeyi oluşturun. Bu seçenek, diğer oyuncuların göstergeyi görüp görmeyeceğini etkilemez</Turkish>
             <Hungarian>Az indikátor megjelenítése a mutató játékosnak. Ez a beállítás nem változtat azon, hogy más játékosok látják-e az indikátort.</Hungarian>
+            <Ukrainian>Відображати індикатор вказівки пальцем для гравця, який показує. Це налаштування не впливає на те, чи будуть інші гравці бачити індикатор</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Finger_indicatorForSelf_name">
             <English>Show pointing indicator to self</English>
@@ -118,6 +124,7 @@
             <Chinesesimp>在自己身边显示指向标记</Chinesesimp>
             <Turkish>Sanal daireyi işaretleyen kişiye göster</Turkish>
             <Hungarian>Saját mutatási indikátor megjelenítése</Hungarian>
+            <Ukrainian>Індикатор пальця для показуючого</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Finger_keyComb">
             <English>Action "point a finger at"</English>
@@ -135,6 +142,7 @@
             <Chinesesimp>使"手指指向在"</Chinesesimp>
             <Turkish>Animasyon "Parmakla Gösterme"</Turkish>
             <Hungarian>Cselekvés "ujj rámutatása"</Hungarian>
+            <Ukrainian>Дія "показати пальцем на"</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Finger_keyComb_description">
             <English>Points, and shows a virtual marker of where you are looking to nearby units. Can be held down.</English>
@@ -152,6 +160,7 @@
             <Chinesesimp>当按下此按键后，你附近的单位即可看见一个虚拟图示，标明你正在指向的位置。此按键可以被按住来持续显示。</Chinesesimp>
             <Turkish>Işaretleyince nereye baktığınıza dair sanal bir daire gösterir. Basılı da tutulabilir.</Turkish>
             <Hungarian>Mutat, és elhelyez egy virtuális jelölőt a nézett területhez közeli egységekhez. Lenyomva tartható.</Hungarian>
+            <Ukrainian>Показує пальцем і малює віртуальний маркер у напрямку погляду найближчим гравцям. Можна утримувати.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Finger_maxRange_description">
             <English>Max range between players to show the pointing indicator [default: 4 meters]</English>
@@ -169,6 +178,7 @@
             <Chinesesimp>设定指向标记最大显示距离。[预设：4米]</Chinesesimp>
             <Turkish>Hangi uzaklıktakilerin sanal daireyi görmesini seçin. [Varsayılan : 4 metre]</Turkish>
             <Hungarian>A maximális távolság, amelyben a közeli játékosoknak megjelenik az indikátor. [alapértelmezett: 4 méter]</Hungarian>
+            <Ukrainian>Максимальна дальність між гравцями для відображення індикатора вказівки пальцем [за замовчуванням: 4 метри]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Finger_maxRange_displayName">
             <English>Pointing Max Range</English>
@@ -186,6 +196,7 @@
             <Chinesesimp>指向标记最大显示距离</Chinesesimp>
             <Turkish>Işaretleme maksimum uzaklığı</Turkish>
             <Hungarian>Ujj maximum hatótávja</Hungarian>
+            <Ukrainian>Макс. дальність</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Finger_moduleSettings_displayName">
             <English>Pointing Settings</English>
@@ -203,6 +214,7 @@
             <Chinesesimp>指向设定</Chinesesimp>
             <Turkish>Işaretleme Ayarları</Turkish>
             <Hungarian>Ujj beállításai</Hungarian>
+            <Ukrainian>Налаштування вказівки пальцем</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Finger_proximityScaling_description">
             <English>Scales the size of the visual marker based on the distance between the player observing and the player pointing.</English>
@@ -216,6 +228,7 @@
             <Korean>관찰하는 플레이어와 가리키는 플레이어 사이의 거리에 따라 보이는 마커의 크기를 조정합니다.</Korean>
             <Japanese>見ているプレーヤーと指差ししたプレーヤーの距離に基づいて、指差しマーカーの大きさを調整します。</Japanese>
             <Chinesesimp>根据观察的玩家和在指出方向的的玩家之间的距离调整视觉标记的大小。</Chinesesimp>
+            <Ukrainian>Масштабує розмір візуального маркера залежно від дальності від гравця до точки вказівки.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Finger_proximityScaling_displayName">
             <English>Proximity Scaling</English>
@@ -229,6 +242,7 @@
             <Korean>근접 스케일링</Korean>
             <Japanese>近接性スケーリング</Japanese>
             <Chinesesimp>根据距离缩放</Chinesesimp>
+            <Ukrainian>Масштабування від дальності</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Finger_sizeCoef_description">
             <English>Adjusts the size of the visual marker.</English>
@@ -242,6 +256,7 @@
             <Korean>눈에 보이는 마커의 크기를 조정합니다.</Korean>
             <Japanese>指差しマーカーの大きさを調整します。</Japanese>
             <Chinesesimp>调整屏幕上显示的标记大小</Chinesesimp>
+            <Ukrainian>Налаштовує розмір візуального маркера</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Finger_sizeCoef_displayName">
             <English>Visual Marker Size Coefficient</English>
@@ -255,6 +270,7 @@
             <Korean>보이는 마커 크기 계수</Korean>
             <Japanese>指差しマーカーの大きさ係数</Japanese>
             <Chinesesimp>屏幕标记大小系数</Chinesesimp>
+            <Ukrainian>Коеф. розміру маркера</Ukrainian>
         </Key>
     </Package>
 </Project>

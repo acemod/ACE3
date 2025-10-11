@@ -1,7 +1,6 @@
 class CfgWeapons {
     // Base Classes
     class gm_ge_headgear_m92_base;
-    class gm_ge_headgear_m92_cover_base;
     class gm_ge_headgear_m92_glasses_base: gm_ge_headgear_m92_base {
         class ItemInfo;
     };
@@ -26,7 +25,6 @@ class CfgWeapons {
 
     // Base Classes
     class gm_headgear_armored_base;
-    class gm_ge_headgear_m38_72_base;
     class gm_ge_headgear_m38_72_goggles_base: gm_headgear_armored_base {
         class ItemInfo;
     };

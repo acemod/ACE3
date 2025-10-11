@@ -15,6 +15,7 @@
             <Japanese>選択された予備部品の数量を選択します。</Japanese>
             <Chinese>選擇的備件數量</Chinese>
             <Chinesesimp>选择的备件数量</Chinesesimp>
+            <Ukrainian>Число обраних запасних частин.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Amount_DisplayName">
             <English>Amount</English>
@@ -30,6 +31,7 @@
             <Japanese>数量</Japanese>
             <Chinese>數量</Chinese>
             <Chinesesimp>数量</Chinesesimp>
+            <Ukrainian>Кількість</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_List_Description">
             <English>List of objects that will get spare parts added, separated by commas.</English>
@@ -45,6 +47,7 @@
             <Japanese>予備部品が追加されるオブジェクトのリスト。カンマで区切ります。</Japanese>
             <Chinese>添加備件到名單的載具上。每個載具使用逗號以做區隔。</Chinese>
             <Chinesesimp>添加备件到名单的载具上。每个载具使用逗号以做区隔。</Chinesesimp>
+            <Ukrainian>Список транспортних засобів, до яких додаватимуться запчастини, розділений комами.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_List_DisplayName">
             <English>List</English>
@@ -61,6 +64,7 @@
             <Chinese>名單</Chinese>
             <Chinesesimp>名单</Chinesesimp>
             <Turkish>Liste</Turkish>
+            <Ukrainian>Список</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Module_Description">
             <English>Add spare parts to one or multiple objects</English>
@@ -76,6 +80,7 @@
             <Japanese>単体、または複数のオブジェクトに予備部品の追加を割り当てます</Japanese>
             <Chinese>添加備件到一個或多個對象上</Chinese>
             <Chinesesimp>添加备件到一个或多个物体上</Chinesesimp>
+            <Ukrainian>Додати запасні частини в один або кілька транспортних засобів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Module_DisplayName">
             <English>Add Spare Parts</English>
@@ -91,6 +96,7 @@
             <Japanese>予備部品を追加</Japanese>
             <Chinese>添加備件</Chinese>
             <Chinesesimp>添加备件</Chinesesimp>
+            <Ukrainian>Додати запчастини</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Part_Description">
             <English>Spare part.</English>
@@ -106,6 +112,7 @@
             <Japanese>予備部品</Japanese>
             <Chinese>備用零件</Chinese>
             <Chinesesimp>备用零件</Chinesesimp>
+            <Ukrainian>Запасна частина.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Part_DisplayName">
             <English>Part</English>
@@ -121,6 +128,7 @@
             <Japanese>部品</Japanese>
             <Chinese>零件</Chinese>
             <Chinesesimp>零件</Chinesesimp>
+            <Ukrainian>Запчастина</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_EnableList_Description">
             <English>List of unit names that will be classified as engineer, separated by commas.</English>
@@ -136,6 +144,7 @@
             <Japanese>工兵に指定されるユニットのリスト。カンマで区切ります。</Japanese>
             <Chinese>工兵名單，把單位名稱輸入在這邊即可定義其為工兵。每個單位使用逗號以做區隔。</Chinese>
             <Chinesesimp>工兵名单，把单位名称输入在这边即可定义其为工兵。每个单位使用逗号以做区隔。</Chinesesimp>
+            <Ukrainian>Список імен юнітів, які будуть класифіковані як інженери, розділений комами.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_Description">
             <English>Assign one or multiple units as an engineer</English>
@@ -151,6 +160,7 @@
             <Japanese>単体、または複数のユニットを工兵として割り当てます</Japanese>
             <Chinese>指定一個或多個單位為工兵</Chinese>
             <Chinesesimp>指定一个或多个单位为工兵</Chinesesimp>
+            <Ukrainian>Призначити одного або декількох юнітів інженерами</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_DisplayName">
             <English>Assign Engineer</English>
@@ -166,6 +176,7 @@
             <Japanese>工兵にする</Japanese>
             <Chinese>指派工兵</Chinese>
             <Chinesesimp>指派工兵</Chinesesimp>
+            <Ukrainian>Призначити інженером</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_Description">
             <English>Select the engineering skill level of the unit</English>
@@ -181,6 +192,7 @@
             <Japanese>ユニットの工兵スキルのレベルを定義します。</Japanese>
             <Chinese>選擇工兵的技術水平</Chinese>
             <Chinesesimp>选择工兵的技术水平</Chinesesimp>
+            <Ukrainian>Вкажіть рівень інженерної майстерності для юніта</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_DisplayName">
             <English>Is Engineer</English>
@@ -196,6 +208,7 @@
             <Japanese>工兵にする</Japanese>
             <Chinese>是工兵</Chinese>
             <Chinesesimp>是工兵</Chinesesimp>
+            <Ukrainian>Це інженер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_advanced">
             <English>Adv. Engineer</English>
@@ -212,6 +225,7 @@
             <Chinese>專精</Chinese>
             <Chinesesimp>高级工兵</Chinesesimp>
             <Turkish>Gelişmiş Mühendis</Turkish>
+            <Ukrainian>Досвідчений Інженер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_engineer">
             <English>Engineer</English>
@@ -228,6 +242,7 @@
             <Chinese>工兵</Chinese>
             <Chinesesimp>工兵</Chinesesimp>
             <Turkish>Mühendis</Turkish>
+            <Ukrainian>Інженер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_none">
             <English>None</English>
@@ -244,6 +259,7 @@
             <Chinese>無</Chinese>
             <Chinesesimp>无</Chinesesimp>
             <Turkish>Hiçbiri</Turkish>
+            <Ukrainian>Ні</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_EnableList_Description">
             <English>List of objects that will be classified as repair Facility, separated by commas.</English>
@@ -259,6 +275,7 @@
             <Japanese>修理施設に割り当てるオブジェクトのリスト。カンマで区切ります。</Japanese>
             <Chinese>設施名單，把設施名稱輸入在這邊即可定義其為維修設施。每個設施使用逗號以做區隔。</Chinese>
             <Chinesesimp>设施名单，把设施名称输入在这边即可定义其为维修设施。每个设施使用逗号以做区隔。</Chinesesimp>
+            <Ukrainian>Список об'єктів, які будуть класифіковані як ремонтні, розділений комами.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_EnableList_DisplayName">
             <English>List</English>
@@ -274,6 +291,7 @@
             <Japanese>一覧</Japanese>
             <Chinese>名單</Chinese>
             <Chinesesimp>名单</Chinesesimp>
+            <Ukrainian>Список</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_Module_Description">
             <English>Assign one or multiple objects as a repair Facility</English>
@@ -289,6 +307,7 @@
             <Japanese>単体、または複数のオブジェクトを修理施設として割り当てます</Japanese>
             <Chinese>指定一個或多個對象作為維修設施</Chinese>
             <Chinesesimp>指定一个或多个物体作为维修设施</Chinesesimp>
+            <Ukrainian>Призначити один або кілька об'єктів ремонтними спорудами</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_Module_DisplayName">
             <English>Assign Repair Facility</English>
@@ -304,6 +323,7 @@
             <Japanese>修理施設に割り当て</Japanese>
             <Chinese>指定維修設施</Chinese>
             <Chinesesimp>指定维修设施</Chinesesimp>
+            <Ukrainian>Призначити ремонтну споруду</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_role_Description">
             <English>Is the object classified as a repair Facility?</English>
@@ -319,6 +339,7 @@
             <Japanese>オブジェクトを修理施設として割り当てます</Japanese>
             <Chinese>此設施是維修設施嗎?</Chinese>
             <Chinesesimp>此设施是维修设施吗？</Chinesesimp>
+            <Ukrainian>Чи класифікується цей об'єкт як ремонтна споруда?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_role_DisplayName">
             <English>Is Repair Facility</English>
@@ -334,6 +355,7 @@
             <Japanese>修理施設とする</Japanese>
             <Chinese>是維修設施</Chinese>
             <Chinesesimp>是维修设施</Chinesesimp>
+            <Ukrainian>Це ремонтна споруда</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_EnableList_Description">
             <English>List of vehicles that will be classified as repair vehicle, separated by commas.</English>
@@ -349,6 +371,7 @@
             <Japanese>修理車両に割り当てる車両のリスト。カンマで区切ります。</Japanese>
             <Chinese>載具名單，把載具名稱輸入在這邊即可定義其為維修載具。每個載具使用逗號以做區隔。</Chinese>
             <Chinesesimp>载具名单，把载具名称输入在这边即可定义其为维修载具。每个载具使用逗号以做区隔。</Chinesesimp>
+            <Ukrainian>Список транспортних засобів, які будуть класифіковані як ремонтні, розділений комами.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_EnableList_DisplayName">
             <English>List</English>
@@ -364,6 +387,7 @@
             <Japanese>一覧</Japanese>
             <Chinese>名單</Chinese>
             <Chinesesimp>名单</Chinesesimp>
+            <Ukrainian>Список</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_Module_Description">
             <English>Assign one or multiple vehicles as a repair vehicle</English>
@@ -379,6 +403,7 @@
             <Japanese>単体、または複数の車両を修理車両として割り当てます</Japanese>
             <Chinese>指定一個或多個載具作為維修載具</Chinese>
             <Chinesesimp>指定一个或多个载具作为维修载具</Chinesesimp>
+            <Ukrainian>Призначити один або кілька транспортних засобів ремонтними</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_Module_DisplayName">
             <English>Assign Repair Vehicle</English>
@@ -394,6 +419,7 @@
             <Japanese>修理車両に割り当て</Japanese>
             <Chinese>指定維修載具</Chinese>
             <Chinesesimp>指定维修载具</Chinesesimp>
+            <Ukrainian>Призначити ремонтний транспорт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_role_Description">
             <English>Is the vehicle classified as a repair vehicle?</English>
@@ -409,6 +435,7 @@
             <Japanese>車両を修理車両として割り当てます</Japanese>
             <Chinese>此載具是維修載具嗎?</Chinese>
             <Chinesesimp>此载具是维修载具吗？</Chinesesimp>
+            <Ukrainian>Чи класифікується цей транспорт як ремонтний?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_role_DisplayName">
             <English>Is Repair Vehicle</English>
@@ -424,6 +451,7 @@
             <Japanese>修理車両とする</Japanese>
             <Chinese>是維修載具</Chinese>
             <Chinesesimp>是维修载具</Chinesesimp>
+            <Ukrainian>Це ремонтний транспорт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_EnableList_DisplayName">
             <English>List</English>
@@ -439,6 +467,7 @@
             <Japanese>一覧</Japanese>
             <Chinese>名單</Chinese>
             <Chinesesimp>名单</Chinesesimp>
+            <Ukrainian>Список</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_Description">
             <English>Items required to perform a full vehicle repair.</English>
@@ -454,6 +483,7 @@
             <Japanese>車両の完全修理にアイテムを必要とします。</Japanese>
             <Chinese>是否需要物品來完整修復載具</Chinese>
             <Chinesesimp>进行全面车辆维修所需的物品。</Chinesesimp>
+            <Ukrainian>Предмети, необхідні для повного ремонту техніки.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_DisplayName">
             <English>Full Repair Requirements</English>
@@ -469,14 +499,23 @@
             <Japanese>完全修理の条件</Japanese>
             <Chinese>完整修復條件</Chinese>
             <Chinesesimp>全面维修条件</Chinesesimp>
+            <Ukrainian>Вимоги до повного ремонту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitAASight">
             <English>AA Sight</English>
+            <French>Viseur AA</French>
+            <Russian>Прицел ПВО</Russian>
+            <Korean>대공 조준기</Korean>
             <Japanese>対空照準器</Japanese>
+            <Ukrainian>Приціл ППО</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitATGMSight">
             <English>ATGM Sight</English>
+            <French>Viseur ATGM</French>
+            <Russian>Прицел ПТУРа</Russian>
+            <Korean>대전차미사일 조준기</Korean>
             <Japanese>ATGM照準器</Japanese>
+            <Ukrainian>Приціл ПТУРа</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitAmmo">
             <English>Ammo</English>
@@ -493,6 +532,7 @@
             <Chinese>彈藥</Chinese>
             <Chinesesimp>弹药</Chinesesimp>
             <Turkish>Cephane</Turkish>
+            <Ukrainian>Боєприпаси</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitAvionics">
             <English>Avionics</English>
@@ -509,6 +549,7 @@
             <Chinese>航電系統</Chinese>
             <Chinesesimp>航电系统</Chinesesimp>
             <Hungarian>Avionika</Hungarian>
+            <Ukrainian>Авіоніку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitBody">
             <English>Body</English>
@@ -526,6 +567,7 @@
             <Chinesesimp>车身</Chinesesimp>
             <Turkish>Vücut</Turkish>
             <Hungarian>Test</Hungarian>
+            <Ukrainian>Кузов</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitComGun">
             <English>Commander Gun</English>
@@ -543,6 +585,7 @@
             <Chinesesimp>指挥官 枪</Chinesesimp>
             <Turkish>Komutan Silahı</Turkish>
             <Hungarian>Parancsnok Ágyú</Hungarian>
+            <Ukrainian>Командирський пістолет</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitComTurret">
             <English>Commander Turret</English>
@@ -560,6 +603,7 @@
             <Chinesesimp>指挥官 炮塔</Chinesesimp>
             <Turkish>Komutan Tareti</Turkish>
             <Hungarian>Parancsnok Lövegtorony</Hungarian>
+            <Ukrainian>Башта командира</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitEngine">
             <English>Engine</English>
@@ -577,6 +621,7 @@
             <Chinesesimp>引擎</Chinesesimp>
             <Turkish>Motor</Turkish>
             <Hungarian>Motor</Hungarian>
+            <Ukrainian>Двигун</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitFuel">
             <English>Fuel Tank</English>
@@ -594,6 +639,7 @@
             <Chinesesimp>油箱</Chinesesimp>
             <Turkish>Yakıt Tankeri</Turkish>
             <Hungarian>Üzemanyagtank</Hungarian>
+            <Ukrainian>Паливний бак</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitGear">
             <English>Gear</English>
@@ -610,6 +656,7 @@
             <Chinese>齒輪</Chinese>
             <Chinesesimp>齿轮</Chinesesimp>
             <Turkish>Vites</Turkish>
+            <Ukrainian>Коробка передач</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitGlass">
             <English>Glass</English>
@@ -627,6 +674,7 @@
             <Chinesesimp>玻璃</Chinesesimp>
             <Turkish>Cam</Turkish>
             <Hungarian>Üveg</Hungarian>
+            <Ukrainian>Скло</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitGun">
             <English>Gun</English>
@@ -644,6 +692,7 @@
             <Chinesesimp>炮</Chinesesimp>
             <Turkish>Silah</Turkish>
             <Hungarian>Ágyú</Hungarian>
+            <Ukrainian>Гармату</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitHRotor">
             <English>Main Rotor</English>
@@ -661,6 +710,7 @@
             <Chinesesimp>主旋翼</Chinesesimp>
             <Turkish>Ana Rotor</Turkish>
             <Hungarian>Főrotor</Hungarian>
+            <Ukrainian>Несучий гвинт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitHStabilizerL1">
             <English>Left Horizontal Stabilizer</English>
@@ -677,6 +727,7 @@
             <Chinese>左側懸掛穩定</Chinese>
             <Chinesesimp>左侧悬挂稳定</Chinesesimp>
             <Turkish>Sol Yatay Sabitleyici</Turkish>
+            <Ukrainian>Лівий горизонтальний стабілізатор</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitHStabilizerR1">
             <English>Right Horizontal Stabilizer</English>
@@ -693,6 +744,7 @@
             <Chinese>右側懸掛穩定</Chinese>
             <Chinesesimp>右侧悬挂稳定</Chinesesimp>
             <Turkish>Sağ Yatay Sabitleyici</Turkish>
+            <Ukrainian>Правий горизонтальний стабілізатор</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitHull">
             <English>Hull</English>
@@ -710,6 +762,7 @@
             <Chinesesimp>车壳</Chinesesimp>
             <Turkish>Gövde</Turkish>
             <Hungarian>Test</Hungarian>
+            <Ukrainian>Корпус</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitLAileron">
             <English>Left Aileron</English>
@@ -727,6 +780,7 @@
             <Chinesesimp>左副翼</Chinesesimp>
             <Turkish>Sol Kanatçık</Turkish>
             <Hungarian>Bal csűrőlap</Hungarian>
+            <Ukrainian>Лівий елерон</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitLBWheel">
             <English>Left Rear Wheel</English>
@@ -743,6 +797,7 @@
             <Chinese>左後輪</Chinese>
             <Chinesesimp>左后轮</Chinesesimp>
             <Hungarian>Bal hátsó kerék</Hungarian>
+            <Ukrainian>Ліве заднє колесо</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitLF2Wheel">
             <English>Second Left Front Wheel</English>
@@ -759,6 +814,7 @@
             <Chinese>第二左前輪</Chinese>
             <Chinesesimp>第二左前轮</Chinesesimp>
             <Hungarian>Második bal első kerék</Hungarian>
+            <Ukrainian>Друге переднє ліве колесо</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitLFWheel">
             <English>Left Front Wheel</English>
@@ -775,6 +831,7 @@
             <Chinese>左前輪</Chinese>
             <Chinesesimp>左前轮</Chinesesimp>
             <Hungarian>Bal első kerék</Hungarian>
+            <Ukrainian>Ліве переднє колесо</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitLGlass">
             <English>Glass (left)</English>
@@ -792,6 +849,7 @@
             <Chinesesimp>玻璃（左）</Chinesesimp>
             <Turkish>Cam (sol)</Turkish>
             <Hungarian>Bal szélvédő</Hungarian>
+            <Ukrainian>Скло (зліва)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitLMWheel">
             <English>Left Middle Wheel</English>
@@ -808,6 +866,7 @@
             <Chinese>左中輪</Chinese>
             <Chinesesimp>左中轮</Chinesesimp>
             <Hungarian>Bal középső kerék</Hungarian>
+            <Ukrainian>Ліве середнє колесо</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitLTrack">
             <English>Left Track</English>
@@ -824,6 +883,7 @@
             <Chinese>左履帶</Chinese>
             <Chinesesimp>左履带</Chinesesimp>
             <Hungarian>Bal lánctalp</Hungarian>
+            <Ukrainian>Ліву гусеницю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitLight">
             <English>Light</English>
@@ -840,10 +900,15 @@
             <Chinese>輕</Chinese>
             <Chinesesimp>轻型</Chinesesimp>
             <Turkish>Işık</Turkish>
+            <Ukrainian>Світло</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitMainSight">
             <English>Main Sight</English>
+            <French>Visée principal</French>
+            <Russian>Основной прицел</Russian>
+            <Korean>주 조준기</Korean>
             <Japanese>主照準器</Japanese>
+            <Ukrainian>Основний приціл</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitMissiles">
             <English>Missiles</English>
@@ -860,6 +925,7 @@
             <Chinese>導彈</Chinese>
             <Chinesesimp>导弹</Chinesesimp>
             <Turkish>Füzeler</Turkish>
+            <Ukrainian>Ракети</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitPeriscope">
             <English>Periscope</English>
@@ -877,6 +943,7 @@
             <Chinesesimp>潜望镜</Chinesesimp>
             <Turkish>Periskop</Turkish>
             <Hungarian>Periszkóp</Hungarian>
+            <Ukrainian>Перископ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitPitotTube">
             <English>Pitot Tube</English>
@@ -893,6 +960,7 @@
             <Chinese>空速管</Chinese>
             <Chinesesimp>空速管</Chinesesimp>
             <Turkish>Pilot Tüpü</Turkish>
+            <Ukrainian>Кабіна пілота</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitRAileron">
             <English>Right Aileron</English>
@@ -910,6 +978,7 @@
             <Chinesesimp>右副翼</Chinesesimp>
             <Turkish>Sağ Kanatçık</Turkish>
             <Hungarian>Jobb csűrőlap</Hungarian>
+            <Ukrainian>Правий елерон</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitRBWheel">
             <English>Right Rear Wheel</English>
@@ -926,6 +995,7 @@
             <Chinese>右後輪</Chinese>
             <Chinesesimp>右后轮</Chinesesimp>
             <Hungarian>Jobb hátsó kerék</Hungarian>
+            <Ukrainian>Праве заднє колесо</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitRF2Wheel">
             <English>Second Right Front Wheel</English>
@@ -942,6 +1012,7 @@
             <Chinese>第二右前輪</Chinese>
             <Chinesesimp>第二右前轮</Chinesesimp>
             <Hungarian>Második jobb hátsó kerék</Hungarian>
+            <Ukrainian>Друге праве переднє колесо</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitRFWheel">
             <English>Right Front Wheel</English>
@@ -958,6 +1029,7 @@
             <Chinese>右前輪</Chinese>
             <Chinesesimp>右前轮</Chinesesimp>
             <Hungarian>Jobb első kerék</Hungarian>
+            <Ukrainian>Праве переднє колесо</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitRGlass">
             <English>Glass (right)</English>
@@ -975,6 +1047,7 @@
             <Chinesesimp>玻璃（右）</Chinesesimp>
             <Turkish>Cam(Sağ)</Turkish>
             <Hungarian>Jobb szélvédő</Hungarian>
+            <Ukrainian>Скло (праворуч)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitRMWheel">
             <English>Right Middle Wheel</English>
@@ -991,6 +1064,7 @@
             <Chinese>右中輪</Chinese>
             <Chinesesimp>右中轮</Chinesesimp>
             <Hungarian>Jobb középső kerék</Hungarian>
+            <Ukrainian>Праве середнє колесо</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitRTrack">
             <English>Right Track</English>
@@ -1007,6 +1081,7 @@
             <Chinese>右履帶</Chinese>
             <Chinesesimp>右履带</Chinesesimp>
             <Hungarian>Jobb lánctalp</Hungarian>
+            <Ukrainian>Праву гусеницю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitStarter">
             <English>Starter</English>
@@ -1023,6 +1098,7 @@
             <Chinese>發動機</Chinese>
             <Chinesesimp>发动机</Chinesesimp>
             <Turkish>Marş</Turkish>
+            <Ukrainian>Стартер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitStaticPort">
             <English>Static Port</English>
@@ -1038,6 +1114,7 @@
             <Japanese>静圧管</Japanese>
             <Chinese>靜態端口</Chinese>
             <Chinesesimp>静态端口</Chinesesimp>
+            <Ukrainian>Статичний ілюмінатор</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitTail">
             <English>Tail</English>
@@ -1054,6 +1131,7 @@
             <Chinese>尾翼</Chinese>
             <Chinesesimp>尾翼</Chinesesimp>
             <Turkish>Kuyruk</Turkish>
+            <Ukrainian>Хвіст</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitTransmission">
             <English>Transmission</English>
@@ -1070,6 +1148,7 @@
             <Chinese>變速箱</Chinese>
             <Chinesesimp>变速箱</Chinesesimp>
             <Turkish>Vites</Turkish>
+            <Ukrainian>Трансмісія</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitTurret">
             <English>Turret</English>
@@ -1087,6 +1166,7 @@
             <Chinesesimp>炮塔</Chinesesimp>
             <Turkish>Taret</Turkish>
             <Hungarian>Lövegtorony</Hungarian>
+            <Ukrainian>Башту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitVRotor">
             <English>Tail Rotor</English>
@@ -1104,6 +1184,7 @@
             <Chinesesimp>尾桨</Chinesesimp>
             <Turkish>Arka Rotor</Turkish>
             <Hungarian>Farokrotor</Hungarian>
+            <Ukrainian>Рульовий гвинт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitVStabilizer1">
             <English>Vertical Stabilizer</English>
@@ -1120,6 +1201,7 @@
             <Chinese>垂直穩定</Chinese>
             <Chinesesimp>垂直稳定</Chinesesimp>
             <Turkish>Dikey Sabitleyici</Turkish>
+            <Ukrainian>Вертикальний стабілізатор</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_HitWinch">
             <English>Winch</English>
@@ -1136,6 +1218,7 @@
             <Chinese>絞盤</Chinese>
             <Chinesesimp>绞盘</Chinesesimp>
             <Turkish>Vinç</Turkish>
+            <Ukrainian>Лебідка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_Hitera_1_hitpoint">
             <English>ERA</English>
@@ -1151,6 +1234,7 @@
             <Japanese>ERA</Japanese>
             <Chinese>爆炸式反應裝甲</Chinese>
             <Chinesesimp>爆炸式反应装甲</Chinesesimp>
+            <Ukrainian>ДЗ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_LocationsBoostTraining_Description">
             <English>Boost engineer training when in repair vehicles or facilities. Untrained becomes engineer, engineer becomes advanced engineer.</English>
@@ -1163,6 +1247,7 @@
             <Korean>수리 차량이나 시설 주위에 있으면 수리 수준을 높입니다. 정비병이 아닌 사람은 정비병이 되고, 정비병은 정비사가 됩니다.</Korean>
             <Japanese>修理車両か施設内では工兵能力を上昇させます。兵士は工兵になり、工兵は上級工兵になります。</Japanese>
             <Chinesesimp>在修理车辆或设施时，提升工程师训练。未受过训练的变成工程师，工程师晋升为高级工程师。</Chinesesimp>
+            <Ukrainian>Підвищіть підготовку інженерів під час ремонту транспортних засобів або об'єктів. Нетренований стає інженером, інженер стає провідним інженером.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_Description">
             <English>Items required to repair a specific vehicle component or remove/replace tracks.</English>
@@ -1178,6 +1263,7 @@
             <Japanese>車両の特定コンポーネントの修理や履帯の除去/交換にアイテムを必要とします。</Japanese>
             <Chinese>是否需要物品來修復一些特別載具部位或者移除/替換履帶</Chinese>
             <Chinesesimp>维修特定车辆部件或拆除/更换轨道所需的物品。</Chinesesimp>
+            <Ukrainian>Предмети, необхідні для ремонту окремих компонентів або зняття/заміни гусениці.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_DisplayName">
             <English>Misc Repair Requirements</English>
@@ -1193,6 +1279,7 @@
             <Japanese>部分修理の条件</Japanese>
             <Chinese>額外修理條件</Chinese>
             <Chinesesimp>部分全面维修条件</Chinesesimp>
+            <Ukrainian>Вимоги до різного ремонту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_PatchWheel">
             <English>Patch Wheel</English>
@@ -1205,6 +1292,7 @@
             <Korean>바퀴 수리</Korean>
             <Japanese>タイヤを補修する</Japanese>
             <Chinesesimp>补胎</Chinesesimp>
+            <Ukrainian>Ремонтувати колесо</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_PatchingWheel">
             <English>Patching Wheel...</English>
@@ -1217,6 +1305,7 @@
             <Korean>바퀴 수리 중...</Korean>
             <Japanese>タイヤを補修しています・・・</Japanese>
             <Chinesesimp>正在补胎...</Chinesesimp>
+            <Ukrainian>Ремонт колеса...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_RemoveTrack">
             <English>Remove Track</English>
@@ -1233,6 +1322,7 @@
             <Chinese>卸下履帶</Chinese>
             <Chinesesimp>卸下履带</Chinesesimp>
             <Turkish>Parçayı Sök</Turkish>
+            <Ukrainian>Зняти гусеницю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_RemoveWheel">
             <English>Remove Wheel</English>
@@ -1250,6 +1340,7 @@
             <Chinesesimp>卸下轮胎</Chinesesimp>
             <Turkish>Tekerleği Sök</Turkish>
             <Hungarian>Kerék leszerelése</Hungarian>
+            <Ukrainian>Зняти колесо</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_RemovedTrack">
             <English>Track removed</English>
@@ -1266,6 +1357,7 @@
             <Chinese>履帶卸下完畢</Chinese>
             <Chinesesimp>履带卸下完毕</Chinesesimp>
             <Turkish>Parça Söküldü</Turkish>
+            <Ukrainian>Гусениця знята</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_RemovedWheel">
             <English>Wheel removed</English>
@@ -1282,6 +1374,7 @@
             <Chinese>輪胎卸下完畢</Chinese>
             <Chinesesimp>轮胎卸下完毕</Chinesesimp>
             <Turkish>Tekerlek Söküldü</Turkish>
+            <Ukrainian>Колесо знято</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_RemovingTrack">
             <English>Removing Track...</English>
@@ -1298,6 +1391,7 @@
             <Chinese>卸下履帶中...</Chinese>
             <Chinesesimp>正在卸下履带...</Chinesesimp>
             <Turkish>Parça Sökülüyor...</Turkish>
+            <Ukrainian>Зняття гусениці...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_RemovingWheel">
             <English>Removing Wheel...</English>
@@ -1314,6 +1408,7 @@
             <Chinese>卸下輪胎中...</Chinese>
             <Chinesesimp>正在卸下轮胎...</Chinesesimp>
             <Turkish>Tekerlek Sökülüyor</Turkish>
+            <Ukrainian>Знімаємо колесо...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_Repair">
             <English>Repair</English>
@@ -1331,6 +1426,7 @@
             <Chinesesimp>维修</Chinesesimp>
             <Turkish>Tamir</Turkish>
             <Hungarian>Szerelés</Hungarian>
+            <Ukrainian>Ремонт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_Repaired">
             <English>Repaired %1</English>
@@ -1348,6 +1444,7 @@
             <Chinesesimp>已维修%1</Chinesesimp>
             <Turkish>Tamir Edildi %1</Turkish>
             <Hungarian>%1 megjavítva</Hungarian>
+            <Ukrainian>%1 відремонтовано</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_RepairedFully">
             <English>Fully repaired part</English>
@@ -1363,6 +1460,7 @@
             <Japanese>完全に修理された部品</Japanese>
             <Chinese>完整維修部分</Chinese>
             <Chinesesimp>完整维修部分</Chinesesimp>
+            <Ukrainian>Повністю відремонтована частина</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_RepairedHitPointFully">
             <English>Fully repaired %1</English>
@@ -1378,6 +1476,7 @@
             <Japanese>%1 を完全に修理しました</Japanese>
             <Chinese>%1已完整維修</Chinese>
             <Chinesesimp>%1已完整维修</Chinesesimp>
+            <Ukrainian>Повністю відремонтовано: %1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_RepairedHitPointPartially">
             <English>Partially repaired %1</English>
@@ -1393,6 +1492,7 @@
             <Japanese>%1 を部分的に修理しました</Japanese>
             <Chinese>%1已完成部分維修</Chinese>
             <Chinesesimp>%1已完成部分维修</Chinesesimp>
+            <Ukrainian>Частково відремонтовано: %1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_RepairedPartially">
             <English>Partially repaired part</English>
@@ -1408,6 +1508,7 @@
             <Japanese>部品 を部分的に修理しました</Japanese>
             <Chinese>零件已完成部分維修</Chinese>
             <Chinesesimp>零件已完成部分维修</Chinesesimp>
+            <Ukrainian>Частково відремонтовано частину</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_Repairing">
             <English>Repairing...</English>
@@ -1425,6 +1526,7 @@
             <Chinesesimp>正在维修...</Chinesesimp>
             <Turkish>Tamir Ediliyor...</Turkish>
             <Hungarian>javítása...</Hungarian>
+            <Ukrainian>Ремонтуємо...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_RepairingHitPoint">
             <English>Repairing %1...</English>
@@ -1442,6 +1544,7 @@
             <Chinesesimp>正在维修%1...</Chinesesimp>
             <Turkish>Tamir Ediliyor %1...</Turkish>
             <Hungarian>%1 javítása...</Hungarian>
+            <Ukrainian>Ремонтуємо %1...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_ReplaceTrack">
             <English>Change Track</English>
@@ -1458,6 +1561,7 @@
             <Chinese>更換履帶</Chinese>
             <Chinesesimp>更换履带</Chinesesimp>
             <Turkish>Parçayı Değiştir</Turkish>
+            <Ukrainian>Замінити гусеницю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_ReplaceWheel">
             <English>Change Wheel</English>
@@ -1475,6 +1579,7 @@
             <Chinesesimp>更换轮胎</Chinesesimp>
             <Turkish>Tekerleği Değiştir</Turkish>
             <Hungarian>Kerék cseréje</Hungarian>
+            <Ukrainian>Поміняти колесо</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacedTrack">
             <English>Track replaced</English>
@@ -1491,6 +1596,7 @@
             <Chinese>履帶更換完畢</Chinese>
             <Chinesesimp>履带更换完毕</Chinesesimp>
             <Turkish>Parça Değişti</Turkish>
+            <Ukrainian>Заміна гусениці</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacedWheel">
             <English>Wheel replaced</English>
@@ -1507,6 +1613,7 @@
             <Chinese>輪胎更換完畢</Chinese>
             <Chinesesimp>轮胎更换完毕</Chinesesimp>
             <Turkish>Tekerlek Takıldı</Turkish>
+            <Ukrainian>Колесо замінено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacingTrack">
             <English>Replacing Track...</English>
@@ -1523,6 +1630,7 @@
             <Chinese>更換履帶中...</Chinese>
             <Chinesesimp>正在更换履带...</Chinesesimp>
             <Turkish>Parça Değişiyor...</Turkish>
+            <Ukrainian>Заміна гусениці...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacingWheel">
             <English>Replacing Wheel...</English>
@@ -1539,6 +1647,7 @@
             <Chinese>更換輪胎中...</Chinese>
             <Chinesesimp>正在更换轮胎...</Chinesesimp>
             <Turkish>Tekerlek Takılıyor</Turkish>
+            <Ukrainian>Заміна колеса...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_SettingDisplayTextDesc">
             <English>Display a notification whenever you repair a vehicle</English>
@@ -1554,6 +1663,7 @@
             <Japanese>車両の修理を始めると、画面に通知を出します</Japanese>
             <Chinese>每當維修載具時顯示通知</Chinese>
             <Chinesesimp>每当维修载具时显示通知</Chinesesimp>
+            <Ukrainian>Відображати сповіщення щоразу, коли ви ремонтуєте транспорт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_SettingDisplayTextName">
             <English>Display text on repair</English>
@@ -1569,6 +1679,7 @@
             <Japanese>修理時に文章で通知する</Japanese>
             <Chinese>顯示維修文本</Chinese>
             <Chinesesimp>显示维修文本</Chinesesimp>
+            <Ukrainian>Відображати текст під час ремонту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_SpareTrack">
             <English>Spare Track</English>
@@ -1586,6 +1697,7 @@
             <Chinesesimp>备用履带</Chinesesimp>
             <Turkish>Yedek Parça</Turkish>
             <Hungarian>Pót lánctalp</Hungarian>
+            <Ukrainian>Запасна гусениця</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_SpareWheel">
             <English>Spare Wheel</English>
@@ -1603,6 +1715,7 @@
             <Chinesesimp>备用轮胎</Chinesesimp>
             <Turkish>Yedek Tekerlek</Turkish>
             <Hungarian>Pótkerék</Hungarian>
+            <Ukrainian>Запасне колесо</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_Wheel">
             <English>Wheel</English>
@@ -1615,6 +1728,7 @@
             <Korean>바퀴</Korean>
             <Japanese>タイヤ</Japanese>
             <Chinesesimp>轮胎</Chinesesimp>
+            <Ukrainian>Колесо</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_WheelRepairRequiredItems_Description">
             <English>Items required to remove/replace wheels.</English>
@@ -1630,6 +1744,7 @@
             <Japanese>タイヤの除去と交換にアイテムを必要とします。</Japanese>
             <Chinese>需要特定物品來移除/更換車輪</Chinese>
             <Chinesesimp>需要特定物品来移除/更换车轮</Chinesesimp>
+            <Ukrainian>Предмети, які потрібні для зняття/заміни коліс</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_WheelRepairRequiredItems_DisplayName">
             <English>Wheel Change Requirements</English>
@@ -1645,6 +1760,7 @@
             <Japanese>タイヤ修理の要求</Japanese>
             <Chinese>維修輪胎限制</Chinese>
             <Chinesesimp>维修轮胎限制</Chinesesimp>
+            <Ukrainian>Для ремонту коліс потрібно</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_addSpareParts_description">
             <English>Add spare parts to vehicles (requires Cargo component)?</English>
@@ -1660,6 +1776,7 @@
             <Japanese>車両へ予備部品を追加しますか? (貨物室が必要)</Japanese>
             <Chinese>添加載具備件 (需相關貨物組件)?</Chinese>
             <Chinesesimp>添加载具备件（需相关货物组件）？</Chinesesimp>
+            <Ukrainian>Додавати запасні частини в техніку (потрібен модуль Вантажоперевезень)?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_addSpareParts_name">
             <English>Add Spare Parts</English>
@@ -1676,6 +1793,7 @@
             <Chinese>添加備件</Chinese>
             <Chinesesimp>添加备件</Chinesesimp>
             <Turkish>Yedek Parça Ekle</Turkish>
+            <Ukrainian>Додавати запчастини</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_description">
             <English>Automatically shut off the engine when doing repairs.</English>
@@ -1691,6 +1809,7 @@
             <Japanese>修理時は自動的にエンジンを停止します。</Japanese>
             <Chinese>維修時自動關閉引擎</Chinese>
             <Chinesesimp>修理时自动关闭发动机。</Chinesesimp>
+            <Ukrainian>Автоматично відключати двигун під час виконання ремонту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_name">
             <English>Auto shut off engine on repair</English>
@@ -1706,6 +1825,7 @@
             <Japanese>修理時にエンジンを自動停止</Japanese>
             <Chinese>維修時自動關閉引擎</Chinese>
             <Chinesesimp>维修时自动关闭发动机</Chinesesimp>
+            <Ukrainian>Автовідключення двигуна під час ремонту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_consumeItem_ToolKit_description">
             <English>Should the toolkit be removed on usage?</English>
@@ -1721,6 +1841,7 @@
             <Japanese>ツールキットを使用時に消費しますか?</Japanese>
             <Chinese>要在使用後刪除工具包嗎?</Chinese>
             <Chinesesimp>要在使用后删除工具包吗？</Chinesesimp>
+            <Ukrainian>Чи слід видаляти ремкомплект після використання?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_consumeItem_ToolKit_name">
             <English>Remove toolkit on use</English>
@@ -1736,6 +1857,7 @@
             <Japanese>ツールキットを使用後に削除</Japanese>
             <Chinese>使用後刪除工具包</Chinese>
             <Chinesesimp>使用后删除工具包</Chinesesimp>
+            <Ukrainian>Видаляти ремкомплект після використання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedTracks">
             <English>Spare Tracks</English>
@@ -1751,6 +1873,7 @@
             <Japanese>予備履帯</Japanese>
             <Chinese>備用履帶</Chinese>
             <Chinesesimp>备用履带</Chinesesimp>
+            <Ukrainian>Запасні гусениці</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedTracks_tooltip">
             <English>Number of spare tracks in cargo.</English>
@@ -1766,6 +1889,7 @@
             <Japanese>貨物室内の予備履帯の数を指定</Japanese>
             <Chinese>設定載具在貨艙內攜帶的備用履帶數量</Chinese>
             <Chinesesimp>设定载具在货舱内携带的备用履带数量。</Chinesesimp>
+            <Ukrainian>Кількість запасних гусениць у вантажному відсіку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedWheels">
             <English>Spare Wheels</English>
@@ -1781,6 +1905,7 @@
             <Japanese>予備タイヤ</Japanese>
             <Chinese>備用輪胎</Chinese>
             <Chinesesimp>备用轮胎</Chinesesimp>
+            <Ukrainian>Запасні колеса</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedWheels_tooltip">
             <English>Number of spare wheels in cargo.</English>
@@ -1796,6 +1921,7 @@
             <Japanese>貨物室内の予備タイヤの数を指定</Japanese>
             <Chinese>設定載具在貨艙內攜帶的備用輪胎數量</Chinese>
             <Chinesesimp>设定载具在货舱内携带的备用轮胎数量。</Chinesesimp>
+            <Ukrainian>Кількість запасних коліс у вантажному відсіку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_AdvancedOnly">
             <English>Advanced Engineer only</English>
@@ -1812,6 +1938,7 @@
             <Chinese>只有維修專精兵</Chinese>
             <Chinesesimp>只有维修专业兵</Chinesesimp>
             <Turkish>Sadece Gelişmiş Mühendis</Turkish>
+            <Ukrainian>Тільки провідні інженери</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_EngineerOnly">
             <English>Engineer only</English>
@@ -1828,6 +1955,7 @@
             <Chinese>只有工兵</Chinese>
             <Chinesesimp>只有工兵</Chinesesimp>
             <Turkish>Sadece Mühendis</Turkish>
+            <Ukrainian>Тільки інженери</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Repair_description">
             <English>Who can perform repair actions?</English>
@@ -1843,6 +1971,7 @@
             <Japanese>誰が修理を出来るようににしますか?</Japanese>
             <Chinese>誰可以進行維修操作?</Chinese>
             <Chinesesimp>谁可以进行维修操作？</Chinesesimp>
+            <Ukrainian>Хто може виконувати ремонт?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Repair_name">
             <English>Allow Repair</English>
@@ -1858,6 +1987,7 @@
             <Japanese>修理を許可</Japanese>
             <Chinese>允許維修</Chinese>
             <Chinesesimp>允许维修</Chinesesimp>
+            <Ukrainian>Дозволити ремонт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Wheel_description">
             <English>Who can remove and replace wheels?</English>
@@ -1873,6 +2003,7 @@
             <Japanese>誰がタイヤの除去と交換を出来るようにしますか?</Japanese>
             <Chinese>誰可維修輪胎?</Chinese>
             <Chinesesimp>谁可维修轮胎？</Chinesesimp>
+            <Ukrainian>Хто може знімати і замінювати колеса?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Wheel_name">
             <English>Allow Wheel Replacement</English>
@@ -1885,6 +2016,7 @@
             <Korean>바퀴 교체 허용</Korean>
             <Japanese>タイヤ交換の許可</Japanese>
             <Chinesesimp>允许更换轮胎</Chinesesimp>
+            <Ukrainian>Дозволити заміну коліс</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_anyone">
             <English>Anyone</English>
@@ -1901,6 +2033,7 @@
             <Chinese>任何人</Chinese>
             <Chinesesimp>任何人</Chinesesimp>
             <Turkish>Herkes</Turkish>
+            <Ukrainian>Хто завгодно</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_fullRepair_description">
             <English>Who can perform a full repair on a vehicle?</English>
@@ -1917,6 +2050,7 @@
             <Chinese>誰可以完整維修載具?</Chinese>
             <Chinesesimp>谁可以完整维修载具？</Chinesesimp>
             <Turkish>Kimler araçta tam onarım yapabilir?</Turkish>
+            <Ukrainian>Хто може виконувати повний ремонт?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_fullRepair_name">
             <English>Allow Full Repair</English>
@@ -1933,6 +2067,7 @@
             <Chinese>允許完整維修</Chinese>
             <Chinesesimp>允许完整维修</Chinesesimp>
             <Turkish>Tam Onarıma Izin Ver</Turkish>
+            <Ukrainian>Повний ремонт виконують</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepair">
             <English>Full Repair</English>
@@ -1949,6 +2084,7 @@
             <Chinese>完整維修</Chinese>
             <Chinesesimp>完整维修</Chinesesimp>
             <Turkish>Tam Onarım</Turkish>
+            <Ukrainian>Повний ремонт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepairLocation">
             <English>Full Repair Locations</English>
@@ -1965,6 +2101,7 @@
             <Chinese>完整維修地點</Chinese>
             <Chinesesimp>完整维修地点</Chinesesimp>
             <Turkish>Tam Onarım Konumu</Turkish>
+            <Ukrainian>Місця повного ремонту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepairLocation_description">
             <English>At what locations can a vehicle be fully repaired?</English>
@@ -1980,6 +2117,7 @@
             <Japanese>どのような場所で車両の完全な修理を出来るようにしますか?</Japanese>
             <Chinese>什麼位置可以完整維修載具?</Chinese>
             <Chinesesimp>什么位置可以完整维修载具？</Chinesesimp>
+            <Ukrainian>У яких місцях транспорт може бути повністю відремонтований?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_fullyRepairing">
             <English>Repairing Vehicle...</English>
@@ -1996,6 +2134,7 @@
             <Chinese>維修載具中...</Chinese>
             <Chinesesimp>正在维修载具...</Chinesesimp>
             <Turkish>Tamir Ediliyor...</Turkish>
+            <Ukrainian>Ремонт транспорту...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_miscRepairTime_description">
             <English>Time in seconds to complete a repair.</English>
@@ -2008,6 +2147,7 @@
             <Korean>수리를 완료하는 시간(초 단위)</Korean>
             <Japanese>修理完了までの所要時間 (秒単位)</Japanese>
             <Chinesesimp>完成维修所需的时间(秒)</Chinesesimp>
+            <Ukrainian>Час завершення ремонту в секундах.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_miscRepairTime_name">
             <English>Part Repair Time</English>
@@ -2020,6 +2160,7 @@
             <Korean>부품 수리 시간</Korean>
             <Japanese>部分修理所要時間</Japanese>
             <Chinesesimp>部分维修所需时间</Chinesesimp>
+            <Ukrainian>Час ремонту деталі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_moduleDescription">
             <English>Provides a repair system for all types of vehicles.</English>
@@ -2035,6 +2176,7 @@
             <Japanese>あらゆる車種に対応した修理システムを提供します。</Japanese>
             <Chinese>提供修復系統給所有載具</Chinese>
             <Chinesesimp>提供修复系统给所有载具</Chinesesimp>
+            <Ukrainian>Надає систему ремонту для всіх типів транспортних засобів.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_moduleName">
             <English>Repair Settings</English>
@@ -2050,6 +2192,7 @@
             <Japanese>修理設定</Japanese>
             <Chinese>修復設定</Chinese>
             <Chinesesimp>修复设定</Chinesesimp>
+            <Ukrainian>Ремонт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelEnabled_description">
             <English>Who can patch wheels?</English>
@@ -2062,6 +2205,7 @@
             <Korean>누가 바퀴를 수리할 수 있습니까?</Korean>
             <Japanese>誰がタイヤの補修を出来るようにしますか?</Japanese>
             <Chinesesimp>谁可以补胎</Chinesesimp>
+            <Ukrainian>Хто може ремонтувати колеса?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelEnabled_name">
             <English>Allow Wheel Patching</English>
@@ -2074,6 +2218,7 @@
             <Korean>바퀴 수리 허용</Korean>
             <Japanese>タイヤ補修を許可</Japanese>
             <Chinesesimp>允许补胎</Chinesesimp>
+            <Ukrainian>Дозволити ремонтувати колесо</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelLocation_Description">
             <English>Where the wheel can be patched.</English>
@@ -2086,6 +2231,7 @@
             <Korean>바퀴를 수리할 수 있는 곳입니다.</Korean>
             <Japanese>タイヤを補修することが出来る場所。</Japanese>
             <Chinesesimp>允许补胎的地点</Chinesesimp>
+            <Ukrainian>Де колесо можна ремонтувати.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelLocation_DisplayName">
             <English>Wheel Patch Location</English>
@@ -2098,6 +2244,7 @@
             <Korean>바퀴 수리 장소</Korean>
             <Japanese>タイヤ補修可能な場所</Japanese>
             <Chinesesimp>补胎地点</Chinesesimp>
+            <Ukrainian>Місце ремонту коліс</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelMaximumRepair_Description">
             <English>Maximum damage to which a wheel can be patched.\n0% means all damage can be repaired.</English>
@@ -2110,6 +2257,7 @@
             <Korean>바퀴를 수리할 수 있는 최대 레벨입니다.</Korean>
             <Japanese>タイヤのダメージを補修できる最大の度合い。\n 0%は、すべてのダメージが修復可能であることを意味します。</Japanese>
             <Chinesesimp>允许补胎时轮胎所能承受的最大损伤\n0%意味着所有损伤都能补</Chinesesimp>
+            <Ukrainian>Максимальний рівень, до якого колесо може бути відремонтовано.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelMaximumRepair_DisplayName">
             <English>Patch Wheel Threshold</English>
@@ -2122,6 +2270,7 @@
             <Korean>바퀴 수리 한계점</Korean>
             <Japanese>タイヤ補修しきい値</Japanese>
             <Chinesesimp>补胎伤害阈值</Chinesesimp>
+            <Ukrainian>Поріг ремонту колеса</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelOnGround">
             <English>On the ground</English>
@@ -2134,6 +2283,7 @@
             <Korean>지면 위</Korean>
             <Japanese>地上</Japanese>
             <Chinesesimp>在地上</Chinesesimp>
+            <Ukrainian>На землі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelOnVehicle">
             <English>On a vehicle</English>
@@ -2146,6 +2296,7 @@
             <Korean>차량</Korean>
             <Japanese>車両上</Japanese>
             <Chinesesimp>在车里</Chinesesimp>
+            <Ukrainian>На транспорті</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelRequiredItems_Description">
             <English>Items required to patch a wheel.</English>
@@ -2158,6 +2309,7 @@
             <Korean>바퀴를 수리하기 위해 아이템이 필요합니다.</Korean>
             <Japanese>タイヤ補修にアイテムを必要とします。</Japanese>
             <Chinesesimp>补胎所需的工具</Chinesesimp>
+            <Ukrainian>Предмети, необхідні для ремонту колеса.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelRequiredItems_DisplayName">
             <English>Wheel Patch Requirements</English>
@@ -2170,6 +2322,7 @@
             <Korean>바퀴 수리 아이템 필요</Korean>
             <Japanese>タイヤ補修の要求</Japanese>
             <Chinesesimp>补胎工具需求</Chinesesimp>
+            <Ukrainian>Вимоги для ремонту колеса</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelTime_Description">
             <English>Time it takes to patch a wheel by 5%.</English>
@@ -2182,6 +2335,7 @@
             <Korean>바퀴를 5% 수리하는 데 걸리는 시간(초 단위)</Korean>
             <Japanese>タイヤを5%補修するのに掛かる時間。</Japanese>
             <Chinesesimp>补胎5%所需的时间</Chinesesimp>
+            <Ukrainian>Час, необхідний для ремотну колеса, скорочується на 5%.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelTime_DisplayName">
             <English>Wheel Patch Time</English>
@@ -2194,6 +2348,7 @@
             <Korean>바퀴 수리 시간</Korean>
             <Japanese>タイヤ補修所要時間</Japanese>
             <Chinesesimp>补胎时间</Chinesesimp>
+            <Ukrainian>Час ремонту колеса</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_description">
             <English>Maximum damage to which a part can be repaired by an engineer above the minimum level required for the repair.\n0% means all damage can be repaired.</English>
@@ -2209,6 +2364,7 @@
             <Japanese>修理に必要な最小レベルを超える工兵が修復できるパーツの最大ダメージ。\n0% は、すべてのダメージを修復できることを意味します。</Japanese>
             <Chinese>工兵可以修復的最大損壞值?</Chinese>
             <Chinesesimp>工兵可以修复的最大损坏值？</Chinesesimp>
+            <Ukrainian>Яке максимальне пошкодження може полагодити інженер?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_name">
             <English>Repair Threshold (Engineer)</English>
@@ -2224,6 +2380,7 @@
             <Japanese>修理のしきい値 (工兵)</Japanese>
             <Chinese>維修門檻 (工兵)</Chinese>
             <Chinesesimp>维修门槛（工兵）</Chinesesimp>
+            <Ukrainian>Ліміт інженера</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_description">
             <English>Maximum damage to which a part can be repaired with a toolkit.\n0% means all damage can be repaired.</English>
@@ -2239,6 +2396,7 @@
             <Japanese>ツールキットを使用して修復できるパーツの最大ダメージ。\n0% はすべてのダメージを修復できることを意味します。</Japanese>
             <Chinese>工具包可以修復的最大損壞值?</Chinese>
             <Chinesesimp>工具包可以修复的最大损坏值？</Chinesesimp>
+            <Ukrainian>Яке максимальне пошкодження можна полагодити за допомогою ремкомплекту?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_name">
             <English>Repair Threshold</English>
@@ -2254,6 +2412,7 @@
             <Japanese>修理のしきい値</Japanese>
             <Chinese>維修門檻</Chinese>
             <Chinesesimp>维修门槛</Chinesesimp>
+            <Ukrainian>Ліміт ремкомплекту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_repairFacilityOnly">
             <English>Repair Facility only</English>
@@ -2269,6 +2428,7 @@
             <Japanese>修理施設のみ</Japanese>
             <Chinese>維修設施旁</Chinese>
             <Chinesesimp>维修设施旁</Chinesesimp>
+            <Ukrainian>Тільки біля ремонтних споруд</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_repairVehicleOnly">
             <English>Repair Vehicle only</English>
@@ -2284,6 +2444,7 @@
             <Japanese>修理車両のみ</Japanese>
             <Chinese>維修載具旁</Chinese>
             <Chinesesimp>维修载具旁</Chinesesimp>
+            <Ukrainian>Тільки біля ремонтного транспорта</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_shutOffEngineWarning">
             <English>Engine must be off to repair</English>
@@ -2299,6 +2460,7 @@
             <Japanese>修理するにはエンジンを停止する必要があります</Japanese>
             <Chinese>引擎必須先關閉才能開始進行維修</Chinese>
             <Chinesesimp>引擎必须先关闭才能开始进行维修</Chinesesimp>
+            <Ukrainian>Двигун має бути вимкнений для ремонту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_timeCoefficientFullRepair_description">
             <English>Modifies how long it takes to perform a Full Repair.\nThe repair time is based on the amount of repairs needed for each part, including those normally inaccessible.</English>
@@ -2311,6 +2473,7 @@
             <Korean>전체적인 수리를 수행하는 데 걸리는 시간을 수정합니다.\n수리 시간은 일반적으로 접근할 수 없는 부품을 포함하여 각 부품에 필요한 수리 시간을 기준으로 합니다.</Korean>
             <Japanese>完全修復に掛かる時間を変更します。\n修理所要時間は、通常アクセスできない部品も含め、各部品に必要な修理量に基づいて決定されます。</Japanese>
             <Chinesesimp>更改完全维修所需时间\n取决于各零件所需的维修时间总和, 包括一些平常无法维修到的地方</Chinesesimp>
+            <Ukrainian>Змінює час, необхідний для виконання повного ремонту.\nЧас ремонту залежить від обсягу ремонтних робіт, необхідних для кожної деталі, включно з тими, які зазвичай недоступні.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_timeCoefficientFullRepair_name">
             <English>Full Repair Time Coefficient</English>
@@ -2323,6 +2486,7 @@
             <Korean>전체 수리 시간 계수</Korean>
             <Japanese>完全修理所要時間係数</Japanese>
             <Chinesesimp>完全维修时间系数</Chinesesimp>
+            <Ukrainian>Коеф. часу повного ремонту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_useAnywhere">
             <English>Anywhere</English>
@@ -2338,6 +2502,7 @@
             <Japanese>どこでも</Japanese>
             <Chinese>任何地點</Chinese>
             <Chinesesimp>任何地点</Chinesesimp>
+            <Ukrainian>Де завгодно</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_vehicleAndFacility">
             <English>Repair Facility or Vehicle</English>
@@ -2353,6 +2518,7 @@
             <Japanese>修理施設または車両のみ</Japanese>
             <Chinese>維修設施或載具旁</Chinese>
             <Chinesesimp>维修设施或载具旁</Chinesesimp>
+            <Ukrainian>Тільки у ремонтного транспорту або ремонтних споруд</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_wheelChangeTime_description">
             <English>Time in seconds to remove or change a wheel.</English>
@@ -2365,6 +2531,7 @@
             <Korean>바퀴를 제거하거나 교체하는 데 걸리는 시간(초 단위)</Korean>
             <Japanese>タイヤの取り外しまたは交換に掛かる時間。 (秒単位)</Japanese>
             <Chinesesimp>移除或更换轮胎所需的时间</Chinesesimp>
+            <Ukrainian>Час у секундах на зняття або заміну колеса.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Repair_wheelChangeTime_name">
             <English>Wheel Change Time</English>
@@ -2377,6 +2544,7 @@
             <Korean>바퀴 교체 시간</Korean>
             <Japanese>タイヤ交換所要時間</Japanese>
             <Chinesesimp>换胎时间</Chinesesimp>
+            <Ukrainian>Час заміни колеса</Ukrainian>
         </Key>
     </Package>
 </Project>

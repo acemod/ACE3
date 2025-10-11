@@ -10,6 +10,7 @@
             <German>M712 Geschoss konfigurieren</German>
             <Korean>M712 포탄 설정</Korean>
             <Japanese>M712砲弾調整</Japanese>
+            <Ukrainian>Налаштування снаряда M712</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_CLGP_copperhead_dial_FlightProfile">
             <English>Flight Profile</English>
@@ -20,6 +21,7 @@
             <German>Flugprofil</German>
             <Korean>비행 방식</Korean>
             <Japanese>飛行プロファイル</Japanese>
+            <Ukrainian>Профіль польоту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_CLGP_copperhead_dial_GuidanceDelay">
             <English>Guidance Delay</English>
@@ -30,6 +32,7 @@
             <German>Lenkverzögerung</German>
             <Korean>유도 지연 시간</Korean>
             <Japanese>誘導遅延</Japanese>
+            <Ukrainian>Затримка наведення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_descriptionShort">
             <English>Semi-Active Laser Guided 40mm Grenade</English>
@@ -41,6 +44,7 @@
             <Korean>반능동 레이저 유도 40mm 유탄</Korean>
             <Japanese>セミアクティブレーザー誘導40mmグレネード</Japanese>
             <Chinesesimp>半主动激光制导40mm榴弹</Chinesesimp>
+            <Ukrainian>Напівактивна 40-мм граната з лазерним наведенням</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_displayName">
             <English>40mm Pike</English>
@@ -52,6 +56,7 @@
             <Korean>40mm 파이크</Korean>
             <Japanese>40mm パイク</Japanese>
             <Chinesesimp>40mm Pike</Chinesesimp>
+            <Ukrainian>40мм Pike</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_displayNameShort">
             <English>Pike SALH</English>
@@ -63,6 +68,7 @@
             <Korean>파이크 반능동 레이저 유도 유탄</Korean>
             <Japanese>パイク SALH</Japanese>
             <Chinesesimp>Pike SALH</Chinesesimp>
+            <Ukrainian>Pike SALH</Ukrainian>
         </Key>
     </Package>
 </Project>

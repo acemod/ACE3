@@ -13,6 +13,7 @@
             <Korean>높이 조정</Korean>
             <Japanese>高さを調整する</Japanese>
             <Chinesesimp>调整高度</Chinesesimp>
+            <Ukrainian>Регулювати висоту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionPickUp">
             <English>Pick Up</English>
@@ -29,6 +30,7 @@
             <Chinese>提取點</Chinese>
             <Chinesesimp>提取点</Chinesesimp>
             <Turkish>Al</Turkish>
+            <Ukrainian>Підібрати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionPlace">
             <English>Place Marker Flag</English>
@@ -42,6 +44,7 @@
             <Korean>마킹용 깃발 꽂기</Korean>
             <Japanese>マーカー旗 を置く</Japanese>
             <Chinesesimp>放置标记旗帜</Chinesesimp>
+            <Ukrainian>Поставити прапорець</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_DisplayName_Settings">
             <English>Marker Flags</English>
@@ -55,6 +58,7 @@
             <Korean>마킹용 깃발</Korean>
             <Japanese>マーカー旗</Japanese>
             <Chinesesimp>标记旗</Chinesesimp>
+            <Ukrainian>Прапорці</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_PlaceAnywhere_Description">
             <English>Place marker flag anywhere regardless of surface.</English>
@@ -68,6 +72,7 @@
             <Korean>지면에 상관없이 아무 곳에서나 마킹용 깃발을 배치합니다.</Korean>
             <Japanese>どのような地表でも旗を設置できるようにします</Japanese>
             <Chinesesimp>不管地形表面是什么都可以放标记旗</Chinesesimp>
+            <Ukrainian>Розміщувати прапорці де завгодно незалежно від поверхні.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_PlaceAnywhere_DisplayName">
             <English>Place Anywhere</English>
@@ -81,6 +86,7 @@
             <Korean>아무 곳에나 배치</Korean>
             <Japanese>どこでも設置可能</Japanese>
             <Chinesesimp>随意放置</Chinesesimp>
+            <Ukrainian>Розміщувати де завгодно</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_black">
             <English>Marker Flag (Black)</English>
@@ -94,6 +100,7 @@
             <Korean>마킹용 깃발(검정)</Korean>
             <Japanese>マーカー旗 (黒)</Japanese>
             <Chinesesimp>标记旗（黑）</Chinesesimp>
+            <Ukrainian>Прапорець (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_blue">
             <English>Marker Flag (Blue)</English>
@@ -107,6 +114,7 @@
             <Korean>마킹용 깃발(파랑)</Korean>
             <Japanese>マーカー旗 (青)</Japanese>
             <Chinesesimp>标记旗（蓝）</Chinesesimp>
+            <Ukrainian>Прапорець (синій)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_green">
             <English>Marker Flag (Green)</English>
@@ -120,6 +128,7 @@
             <Korean>마킹용 깃발(초록)</Korean>
             <Japanese>マーカー旗 (緑)</Japanese>
             <Chinesesimp>标记旗（绿）</Chinesesimp>
+            <Ukrainian>Прапорець (зелений)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_orange">
             <English>Marker Flag (Orange)</English>
@@ -133,6 +142,7 @@
             <Korean>마킹용 깃발(주황)</Korean>
             <Japanese>マーカー旗 (橙)</Japanese>
             <Chinesesimp>标记旗（橙）</Chinesesimp>
+            <Ukrainian>Прапорець (помаранчевий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_purple">
             <English>Marker Flag (Purple)</English>
@@ -146,6 +156,7 @@
             <Korean>마킹용 깃발(보라)</Korean>
             <Japanese>マーカー旗 (紫)</Japanese>
             <Chinesesimp>标记旗（紫）</Chinesesimp>
+            <Ukrainian>Прапорець (фіолетовий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_red">
             <English>Marker Flag (Red)</English>
@@ -159,6 +170,7 @@
             <Korean>마킹용 깃발(빨강)</Korean>
             <Japanese>マーカー旗 (赤)</Japanese>
             <Chinesesimp>标记旗（红）</Chinesesimp>
+            <Ukrainian>Прапорець (червоний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_white">
             <English>Marker Flag (White)</English>
@@ -172,6 +184,7 @@
             <Korean>마킹용 깃발(하양)</Korean>
             <Japanese>マーカー旗 (白)</Japanese>
             <Chinesesimp>标记旗（白）</Chinesesimp>
+            <Ukrainian>Прапорець (білий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_yellow">
             <English>Marker Flag (Yellow)</English>
@@ -185,6 +198,7 @@
             <Korean>마킹용 깃발(노랑)</Korean>
             <Japanese>マーカー旗 (黄)</Japanese>
             <Chinesesimp>标记旗（黄）</Chinesesimp>
+            <Ukrainian>Прапорець (жовтий)</Ukrainian>
         </Key>
     </Package>
 </Project>

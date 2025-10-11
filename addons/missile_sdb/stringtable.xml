@@ -10,6 +10,7 @@
             <German>GBU-39 [ACE]</German>
             <Korean>GBU-39 SDB [ACE]</Korean>
             <Japanese>GBU-39 [ACE]</Japanese>
+            <Ukrainian>GBU-39 [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_SDB_39_1x">
             <English>1x GBU-39 SDB [ACE]</English>
@@ -20,6 +21,7 @@
             <German>1x GBU-39 SDB [ACE]</German>
             <Korean>1x GBU-39 SDB [ACE]</Korean>
             <Japanese>1x GBU-39 SDB [ACE]</Japanese>
+            <Ukrainian>1x GBU-39 SDB [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_SDB_39_4x">
             <English>4x GBU-39 SDB [ACE]</English>
@@ -30,6 +32,7 @@
             <German>4x GBU-39 SDB [ACE]</German>
             <Korean>4x GBU-39 SDB [ACE]</Korean>
             <Japanese>4x GBU-39 SDB [ACE]</Japanese>
+            <Ukrainian>4x GBU-39 SDB [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_SDB_pylonDescription">
             <English>250 pound GPS guided glide bomb</English>
@@ -40,6 +43,7 @@
             <German>GPS-gelenkte 250-Pfund-Gleitbombe</German>
             <Korean>250 파운드급 GPS 유도 활강 항공 폭탄</Korean>
             <Japanese>250ポンド GPS誘導滑空爆弾</Japanese>
+            <Ukrainian>250-фунтова плануюча бомба з GPS-наведенням</Ukrainian>
         </Key>
     </Package>
 </Project>

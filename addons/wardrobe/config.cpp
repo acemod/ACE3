@@ -18,7 +18,10 @@ class CfgPatches {
     };
 };
 
+#include "ace_arsenal_stats.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"
-#include "CfgWardrobe.hpp"
+
+#include "ACE_Wardrobe.hpp"
+#include "ACE_Wardrobe_Exceptions.hpp"

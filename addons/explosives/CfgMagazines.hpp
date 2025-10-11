@@ -37,7 +37,7 @@ class CfgMagazines {
         GVAR(setupObject) = "ACE_Explosives_Place_APERSTripwireMine";
         class ACE_Triggers {
             SupportedTriggers[] = {"Tripwire"};
-            class Tripwire;
+            class Tripwire {};
         };
     };
     class ACE_FlareTripMine_Mag: APERSTripMine_Wire_Mag {
@@ -49,8 +49,8 @@ class CfgMagazines {
         class Library {libTextDesc = CSTRING(TripFlare_Description);};
         class ACE_Triggers {
             SupportedTriggers[] = {"Tripwire", "Tripwire_Airburst"};
-            class Tripwire;
-            class Tripwire_Airburst;
+            class Tripwire {};
+            class Tripwire_Airburst {};
         };
     };
     class ACE_FlareTripMine_Mag_Red: ACE_FlareTripMine_Mag {

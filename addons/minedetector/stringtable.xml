@@ -16,6 +16,7 @@
             <Chinese>啟用探測器</Chinese>
             <Chinesesimp>启用探测器</Chinesesimp>
             <Turkish>Aktif</Turkish>
+            <Ukrainian>Увімкнути</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MineDetector_ConnectHeadphones">
             <English>Connect Headphones</English>
@@ -32,6 +33,7 @@
             <Chinese>連接耳機</Chinese>
             <Chinesesimp>连接耳机</Chinesesimp>
             <Turkish>Kulaklığını Bağla</Turkish>
+            <Ukrainian>Підключити навушники</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MineDetector_DeactivateDetector">
             <English>Deactivate</English>
@@ -48,6 +50,7 @@
             <Chinese>停用探測器</Chinese>
             <Chinesesimp>停用探测器</Chinesesimp>
             <Turkish>Aktif Değil</Turkish>
+            <Ukrainian>Вимкнути</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MineDetector_DisconnectHeadphones">
             <English>Disconnect Headphones</English>
@@ -64,6 +67,7 @@
             <Chinese>斷開耳機</Chinese>
             <Chinesesimp>断开耳机</Chinesesimp>
             <Turkish>Kulaklığının Bağlantısını Kes</Turkish>
+            <Ukrainian>Вимкнути навушники</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesConnected">
             <English>Headphones Connected</English>
@@ -80,6 +84,7 @@
             <Chinese>已連接耳機</Chinese>
             <Chinesesimp>已连接耳机</Chinesesimp>
             <Turkish>Kulaklık Bağlandı</Turkish>
+            <Ukrainian>Навушники під'єднані</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesDisconnected">
             <English>Headphones Disconnected</English>
@@ -96,6 +101,7 @@
             <Chinese>已斷開耳機</Chinese>
             <Chinesesimp>已断开耳机</Chinesesimp>
             <Turkish>Kulaklık Çıkartıldı</Turkish>
+            <Ukrainian>Навушники від'єднані</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MineDetector_MetalDetector">
             <English>Metal detector</English>
@@ -112,6 +118,7 @@
             <Chinese>金屬探測器</Chinese>
             <Chinesesimp>金属探测器</Chinesesimp>
             <Turkish>Metal Dedektör</Turkish>
+            <Ukrainian>Детектор металу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MineDetector_VMM3_Description">
             <English>Metal detector</English>
@@ -128,6 +135,7 @@
             <Chinese>金屬探測器</Chinese>
             <Chinesesimp>金属探测器</Chinesesimp>
             <Turkish>Metal Dedektör</Turkish>
+            <Ukrainian>Детектор металу</Ukrainian>
         </Key>
     </Package>
 </Project>

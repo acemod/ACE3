@@ -1,13 +1,13 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * Debug - Script to retrieve all existing Wardrobe items.
+ * Retrieves all existing wardrobe items.
  *
  * Arguments:
- * _asConfig <BOOL> (Default: false)
+ * 0: Return config name instead of config <BOOL> (default: false)
  *
  * Return Value:
- * Wardobe items, either as classname or config <ARRAY>
+ * Wardrobe items, either as classname or config <ARRAY>
  *
  * Example:
  * call compile preprocessFileLineNumbers "z\ace\addons\wardrobe\dev\getAllWardrobeItems.sqf";
@@ -15,7 +15,7 @@
  * Public: No
  */
 
-params ["_asConfig", false, [false]];
+params [["_readName", false, [false]]];
 
 private _return = [];
 
@@ -23,7 +23,7 @@ private _return = [];
     _return append (QUOTE(_x call FUNC(isModifiable)) configClasses (configFile >> _x));
 } forEach ["CfgWeapons", "CfgGlasses"];
 
-if (_asConfig) then {
+if (_readName) then {
     _return apply { configName _x } // return
 } else {
     _return

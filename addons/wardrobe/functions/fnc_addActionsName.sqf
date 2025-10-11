@@ -1,17 +1,17 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * This function checks if the target item has an directional or alternative action name for the action, if not, it returns the displayName property.
+ * Selects the display name for the action from the alternativeActionName property or the item itself.
  *
  * Arguments:
  * 0: Current variant <CONFIG>
- * 0: Desired variant <CONFIG>
+ * 1: Desired variant <CONFIG>
  *
  * Return Value:
- * The return value <BOOL>
+ * Display name of the action <BOOL>
  *
  * Example:
- * [(configFile >> "CfgWeapons" >> "U_B_CTRG_3"), (configFile >> "CfgWeapons" >> "U_B_CTRG_1")] call ace_wardrobe_fnc_getActionsName
+ * [(configFile >> "CfgWeapons" >> "U_B_CTRG_3"), (configFile >> "CfgWeapons" >> "U_B_CTRG_1")] call ace_wardrobe_fnc_addActionsName
  *
  * Public: No
  */
@@ -21,7 +21,8 @@ params ["_cfgOrigin", "_cfgTarget"];
 private _classOrigin = configName _cfgOrigin;
 private _classTarget = configName _cfgTarget;
 
-// Check if there is a "directional Display Name", meaning if there is a specific string when changing from a certain class to a certain class
+// Check if there is a "directional Display Name", meaning if there is a
+// specific display name for changing from one class to the other
 private _directional = getText (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "directionalActionName");
 if (_directional isNotEqualTo "") exitWith { _directional };
 

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MissileGuidance">
+        <Key ID="STR_ACE_MissileGuidance_Category">
+            <English>ACE Advanced Missile Guidance</English>
+            <French>ACE Guidage avancé des missiles</French>
+            <Russian>ACE Продвинутое наведение ракет</Russian>
+            <Korean>ACE 고급 미사일 유도</Korean>
+            <Japanese>ACE 高度なミサイル誘導</Japanese>
+            <Ukrainian>ACE Розширене наведення ракет</Ukrainian>
+        </Key>
         <Key ID="STR_ACE_MissileGuidance_CycleFireMode">
             <English>Missile - Cycle Fire Mode</English>
             <Czech>Střela - Přepínání režimů palby</Czech>
@@ -12,11 +20,12 @@
             <Russian>Ракета - Переключение режимов огня</Russian>
             <German>Rakete - Wechsle Feuermodus</German>
             <Korean>미사일 - 발사 방식 순환</Korean>
-            <Japanese>ミサイル - 発射モードサイクル</Japanese>
+            <Japanese>ミサイル - 発射モード切り替え</Japanese>
             <Chinese>飛彈 - 循環切換開火模式</Chinese>
             <Chinesesimp>导弹 - 循环切换开火模式</Chinesesimp>
             <Turkish>Füze - Ateşleme Modunu Değiştir</Turkish>
             <Hungarian>Rakéta - Tüzelési mód váltása</Hungarian>
+            <Ukrainian>Ракета - Перемикання режимів вогню</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Desc">
             <English>Advanced missile guidance, or AMG, provides multiple enhancements to missile locking and firing. It is also a framework required for missile weapon types.</English>
@@ -34,6 +43,7 @@
             <Chinesesimp>进阶导弹制导增强了多种导弹锁定和射击的能力。此系统适用于所有导弹类型的武器。</Chinesesimp>
             <Turkish>Gelişmiş füze rehberliği veya AMG, füze kilitleme ve ateşleme için çoklu geliştirmeler sağlar.</Turkish>
             <Hungarian>A fejlett rakétairányító (vagy AMG) többféle módosítást tartalmaz a rakéták célkövetéséhez és tüzeléséhez. Ez egy szükséges keresztrendszer a rakéta-alapú fegyverekhez.</Hungarian>
+            <Ukrainian>Розширене наведення ракет, або РНР, забезпечує безліч удосконалень для наведення і стрільби ракет. Також, це система, необхідна для всіх ракетних типів зброї.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_altitude">
             <English>Altitude</English>
@@ -44,6 +54,7 @@
             <German>Höhe</German>
             <Korean>고도</Korean>
             <Japanese>高度</Japanese>
+            <Ukrainian>Висота</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_attack_heading">
             <English>Attack Heading</English>
@@ -54,6 +65,7 @@
             <German>Angriffsrichtung</German>
             <Korean>공격 방향</Korean>
             <Japanese>攻撃方位</Japanese>
+            <Ukrainian>Напрямок атаки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_easting">
             <English>Easting</English>
@@ -64,6 +76,7 @@
             <German>Ostwert</German>
             <Korean>동향</Korean>
             <Japanese>東距</Japanese>
+            <Ukrainian>Горизонталі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_header">
             <English>GPS Weapon Setup</English>
@@ -74,6 +87,7 @@
             <German>GPS-Waffeneinstellung</German>
             <Korean>GPS 병기 설정</Korean>
             <Japanese>GPS武装設定</Japanese>
+            <Ukrainian>Налаштування зброї за допомогою GPS</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_impact_angle">
             <English>Impact Angle</English>
@@ -84,6 +98,7 @@
             <German>Einschlagswinkel</German>
             <Korean>충돌 각도</Korean>
             <Japanese>弾着角</Japanese>
+            <Ukrainian>Кут удару</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_northing">
             <English>Northing</English>
@@ -94,6 +109,7 @@
             <German>Nordwert</German>
             <Korean>북향</Korean>
             <Japanese>北距</Japanese>
+            <Ukrainian>Вертикалі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp">
             <English>PRE-PLANNED</English>
@@ -104,6 +120,7 @@
             <German>PRE-PLANNED</German>
             <Korean>사전 설정됨</Korean>
             <Japanese>計画目標 (PP)</Japanese>
+            <Ukrainian>ЗАЗДАЛЕГІДЬ СПЛАНОВАНИЙ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp_short">
             <English>PP</English>
@@ -114,6 +131,7 @@
             <German>PP</German>
             <Korean>PP</Korean>
             <Japanese>PP</Japanese>
+            <Ukrainian>PP</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_too">
             <English>TARGET OF OPPORTUNITY</English>
@@ -124,6 +142,7 @@
             <German>TARGET OF OPPORTUNITY</German>
             <Korean>기회 표적</Korean>
             <Japanese>臨機目標 (TOO)</Japanese>
+            <Ukrainian>ЦІЛЬ ЩО ПІДВЕРНУЛАСЯ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K">
             <English>Hellfire II AGM-114K Missile</English>
@@ -141,6 +160,7 @@
             <Chinesesimp>AGM-114K 地狱火二型导弹</Chinesesimp>
             <Turkish>Hellfire II AGM-114K Füze</Turkish>
             <Hungarian>Hellfire II AGM-114K rakéta</Hungarian>
+            <Ukrainian>Hellfire II AGM-114K</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K_Short">
             <English>AGM-114K</English>
@@ -158,6 +178,7 @@
             <Chinesesimp>AGM-114K</Chinesesimp>
             <Turkish>AGM-114K</Turkish>
             <Hungarian>AGM-114K</Hungarian>
+            <Ukrainian>AGM-114K</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K_desc">
             <English>Hellfire II AGM-114K Laser Guided Missile</English>
@@ -175,6 +196,7 @@
             <Chinesesimp>AGM-114K 地狱火二型激光制导导弹</Chinesesimp>
             <Turkish>Hellfire II AGM-114K Lazer Güdümlü Füze</Turkish>
             <Hungarian>Hellfire II AGM-114K lézer-irányított rakéta</Hungarian>
+            <Ukrainian>Керована ракета лазерного наведення Hellfire II AGM-114K</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR">
             <English>Hydra-70 DAGR Missile</English>
@@ -192,6 +214,7 @@
             <Chinesesimp>Hydra-70 DAGR 制导火箭</Chinesesimp>
             <Turkish>Hydra-70 DAGR Füze</Turkish>
             <Hungarian>Hydra-70 DAGR rakéta</Hungarian>
+            <Ukrainian>Hydra-70 DAGR</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_12x">
             <English>12x DAGR [ACE]</English>
@@ -202,6 +225,7 @@
             <German>12x DAGR [ACE]</German>
             <Korean>12x DAGR [ACE]</Korean>
             <Japanese>12x DAGR [ACE]</Japanese>
+            <Ukrainian>12x DAGR [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_24x">
             <English>24x DAGR [ACE]</English>
@@ -212,6 +236,7 @@
             <German>24x DAGR [ACE]</German>
             <Korean>24x DAGR [ACE]</Korean>
             <Japanese>24x DAGR [ACE]</Japanese>
+            <Ukrainian>24x DAGR [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_6x">
             <English>6x DAGR [ACE]</English>
@@ -222,6 +247,7 @@
             <German>6x DAGR [ACE]</German>
             <Korean>6x DAGR [ACE]</Korean>
             <Japanese>6x DAGR [ACE]</Japanese>
+            <Ukrainian>6x DAGR [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_Desc">
             <English>Hydra-70 DAGR Laser Guided Missile</English>
@@ -239,6 +265,7 @@
             <Chinesesimp>Hydra-70 激光制导直接攻击火箭（DAGR）</Chinesesimp>
             <Turkish>Hydra-70 DAGR Lazer Güdümlü Füze</Turkish>
             <Hungarian>Hydra-70 DAGR lézer-irányított rakéta</Hungarian>
+            <Ukrainian>Керована ракета лазерного наведення Hydra-70 DAGR</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_Short">
             <English>DAGR</English>
@@ -256,6 +283,7 @@
             <Chinesesimp>DAGR</Chinesesimp>
             <Turkish>DAGR</Turkish>
             <Hungarian>DAGR</Hungarian>
+            <Ukrainian>DAGR</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Off">
             <English>Off</English>
@@ -273,6 +301,7 @@
             <Chinesesimp>关闭</Chinesesimp>
             <Turkish>Kapalı</Turkish>
             <Hungarian>Ki</Hungarian>
+            <Ukrainian>Вимк.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_PlayerAndAi">
             <English>Player and AI</English>
@@ -290,6 +319,7 @@
             <Chinesesimp>玩家和 AI</Chinesesimp>
             <Turkish>Oyuncular ve AI</Turkish>
             <Hungarian>Játékosok és AI</Hungarian>
+            <Ukrainian>Гравець і боти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_PlayerOnly">
             <English>Player Only</English>
@@ -307,6 +337,7 @@
             <Chinesesimp>只有玩家</Chinesesimp>
             <Turkish>Sadece Oyuncular</Turkish>
             <Hungarian>Csak játékosok</Hungarian>
+            <Ukrainian>Тільки гравець</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Title">
             <English>Advanced Missile Guidance</English>
@@ -324,6 +355,55 @@
             <Chinesesimp>进阶导弹制导</Chinesesimp>
             <Turkish>Gelişmiş Füze Güdüm Sistemi</Turkish>
             <Hungarian>Fejlett rakétairányító</Hungarian>
+            <Ukrainian>Розширене наведення ракет</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_chaffEffectivenessCoef_Description">
+            <English>Adjusts the chance that chaff defeats a radar guided missile. Higher gives more effective chaff.</English>
+            <French>Ajuste la probabilité que les paillettes éliminent un missile guidé par radar. Plus la valeur est élevée, plus les paillettes sont efficaces.</French>
+            <Russian>Регулирует вероятность преодоления радиолокационной ракеты пассивной помехой. Чем выше значение — тем эффективнее дипольные отражатели.</Russian>
+            <Korean>채프가 레이더 유도 미사일을 무력화할 확률을 조정합니다. 값이 클수록 채프의 효과가 더 커집니다.</Korean>
+            <Japanese>チャフがレーダー誘導ミサイルを欺瞞する確率を調整します。値が高いほど、チャフの効果が高まります。</Japanese>
+            <Ukrainian>Регулює можливість подолання радіолокаційної ракети пасивною перешкодою. Чим вище значення - тим ефективніші дипольні відбивачі.</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_chaffEffectivenessCoef_DisplayName">
+            <English>Chaff Effectiveness Coefficient</English>
+            <French>Coefficient d'efficacité des paillettes</French>
+            <Russian>Коэф. эффективности ДО</Russian>
+            <Korean>채프 효과 계수</Korean>
+            <Japanese>チャフの効果係数</Japanese>
+            <Ukrainian>Коеф. ефективності ДВ</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_flareAngleCoef_Description">
+            <English>Adjusts the relative angle filtering between IR missile and flare. Higher gives more effective flares.</English>
+            <French>Règle l'angle relatif de filtrage entre le missile IR et la fusée éclairante. Plus l'angle est élevé, plus les fusées sont efficaces.</French>
+            <Russian>Регулирует угловую селекцию цели (тепловой ловушки) ГСН ИК-ракеты. Чем выше значение — тем эффективнее тепловые помехи.</Russian>
+            <Korean>적외선 유도 미사일과 플레어 사이의 상대적 각도 필터링을 조정합니다. 값이 클수록 플레어의 효과가 커집니다.</Korean>
+            <Japanese>赤外線ミサイルとフレアの相対角度フィルタリングを調整します。値が高いほどフレアの効果が高まります。</Japanese>
+            <Ukrainian>Регулює кутову селекцію цілі (теплової пастки) ГСН ІЧ-ракети. Чим вище значення - тим ефективніші теплові перешкоди.</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_flareAngleCoef_DisplayName">
+            <English>Flare Angle Coefficient</English>
+            <French>Coefficient d'angle de la fusée</French>
+            <Russian>Коэф. угловой селекции ЛТЦ</Russian>
+            <Korean>플레어 각도 계수</Korean>
+            <Japanese>フレアの角度係数</Japanese>
+            <Ukrainian>Коеф. кутової селекції ЛТЦ</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_flareEffectivenessCoef_Description">
+            <English>Adjute the chance that a flare defeats an IR missile. Higher gives more effective flares.</English>
+            <French>Ajuste la probabilité qu'une fusée éclairante neutralise un missile IR. Plus la valeur est élevée, plus les fusées sont efficaces.</French>
+            <Russian>Регулирует вероятность преодоления ИК-ракеты средствами тепловых помех. Чем выше значение — тем выше эффективность ложных тепловых целей (ловушек).</Russian>
+            <Korean>플레어가 적외선 유도 미사일을 무력화할 확률을 조정합니다. 값이 클수록 플레어의 효과가 커집니다.</Korean>
+            <Japanese>フレアが赤外線ミサイルを欺瞞する確率を調整します。値が高いほど、フレアの効果が高まります。</Japanese>
+            <Ukrainian>Регулює можливість подолання ІЧ-ракети засобами теплових перешкод. Чим вище значення - тим вище ефективність хибних теплових цілей (пасток).</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_flareEffectivenessCoef_DisplayName">
+            <English>Flare Effectiveness Coefficient</English>
+            <French>Coefficient d'efficacité de la fusée</French>
+            <Russian>Коэф. эффективности ЛТЦ</Russian>
+            <Korean>플레어 효과 계수</Korean>
+            <Japanese>フレアの効果係数</Japanese>
+            <Ukrainian>Коеф. ефективності ЛТЦ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_keybind_down">
             <English>Missile - Down</English>
@@ -334,6 +414,7 @@
             <German>Rakete - Runter</German>
             <Korean>미사일 - 아래</Korean>
             <Japanese>ミサイル - 下</Japanese>
+            <Ukrainian>Ракета - Вниз</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_keybind_left">
             <English>Missile - Left</English>
@@ -344,6 +425,7 @@
             <German>Rakete - Links</German>
             <Korean>미사일 - 왼쪽</Korean>
             <Japanese>ミサイル - 左</Japanese>
+            <Ukrainian>Ракета - Вліво</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_keybind_lock">
             <English>Missile - Lock (Hold)</English>
@@ -354,6 +436,7 @@
             <German>Rakete - Sperren (Halten)</German>
             <Korean>미사일 - 잠금 (누르고 있기)</Korean>
             <Japanese>ミサイル - ロック (長押し)</Japanese>
+            <Ukrainian>Ракета - Захоплення цілі (Утримувати)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_keybind_right">
             <English>Missile - Right</English>
@@ -364,6 +447,7 @@
             <German>Rakete - Rechts</German>
             <Korean>미사일 - 오른쪽</Korean>
             <Japanese>ミサイル - 右</Japanese>
+            <Ukrainian>Ракета - Вправо</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_keybind_up">
             <English>Missile - Up</English>
@@ -374,6 +458,7 @@
             <German>Rakete - Hoch</German>
             <Korean>미사일 - 위</Korean>
             <Japanese>ミサイル - 上</Japanese>
+            <Ukrainian>Ракета - Вгору</Ukrainian>
         </Key>
     </Package>
 </Project>

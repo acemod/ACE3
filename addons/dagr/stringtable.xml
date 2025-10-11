@@ -16,6 +16,7 @@
             <Chinese>設定軍用GPS接收器</Chinese>
             <Chinesesimp>设定军用 GPS 接收器</Chinesesimp>
             <Turkish>DAGR'ı yapılandır</Turkish>
+            <Ukrainian>Налаштувати DAGR</Ukrainian>
         </Key>
         <Key ID="STR_ACE_DAGR_Description">
             <English>Defense Advanced GPS Receiver</English>
@@ -32,6 +33,7 @@
             <Chinese>軍用高級防禦GPS接收器</Chinese>
             <Chinesesimp>军用高级防御 GPS 接收器</Chinesesimp>
             <Turkish>Gelişmiş Savunma GPS Alıcısı</Turkish>
+            <Ukrainian>Військовий багатофункціональний GPS-приймач</Ukrainian>
         </Key>
         <Key ID="STR_ACE_DAGR_Name">
             <English>DAGR</English>
@@ -48,6 +50,7 @@
             <Chinese>軍用GPS接收器</Chinese>
             <Chinesesimp>军用 GPS 接收器</Chinesesimp>
             <Turkish>DAGR</Turkish>
+            <Ukrainian>DAGR</Ukrainian>
         </Key>
         <Key ID="STR_ACE_DAGR_ToggleDAGR">
             <English>Toggle DAGR</English>
@@ -64,6 +67,7 @@
             <Chinese>切換軍用GPS接收器</Chinese>
             <Chinesesimp>切换军用 GPS 接收器</Chinesesimp>
             <Turkish>DAGR'yi aç / kapat</Turkish>
+            <Ukrainian>Переключити DAGR</Ukrainian>
         </Key>
     </Package>
 </Project>

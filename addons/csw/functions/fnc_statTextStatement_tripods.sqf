@@ -7,7 +7,7 @@
  * 0: Item config path <CONFIG>
  *
  * Return Value:
- * Stat Text <ARRAY of STRINGS>
+ * Stat Text <ARRAY of STRINGs>
  *
  * Public: No
 */

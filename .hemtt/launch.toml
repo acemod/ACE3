@@ -1,6 +1,6 @@
 [default]
 workshop = [
-#    "450814997", # CBA_A3
+    "450814997", # CBA_A3
 ]
 
 [spe]
@@ -57,45 +57,10 @@ workshop = [
 ]
 
 [wardrobe]
-parameters = ["-mod=x\\cba;"]
 extends = "default"
 mission = "Wardrobe.VR"
 workshop = [
-    "2369477168", # Advanced Developer Tools
+    "3499977893", # Advanced Developer Tools
     "1779063631", # ZEN
 #    "623475643",  # eden enhanced
-]
-
-[wardrobe_gm]
-extends = "wardrobe"
-dlc = ["gm"]
-
-[wardrobe_ws]
-extends = "wardrobe"
-dlc = ["Western Sahara"]
-
-[wardrobe_rf]
-extends = "wardrobe"
-dlc = ["Reaction Forces"]
-
-[wardrobe_sog]
-extends = "wardrobe"
-dlc = ["S.O.G. Prairie Fire"]
-
-[wardrobe_rhs]
-extends = "wardrobe"
-workshop = [
-    "843425103", # RHS AFRF Workshop ID
-#    "843577117", # RHS USAF Workshop ID
-#    "843593391", # RHS GREF Workshop ID
-#    "843632231", # RHS SAF  Workshop ID
-]
-
-[wardrobe_cdlc]
-extends = "wardrobe"
-dlc = [
-    "vn",
-    "gm",
-    "rf",
-    "ws",
 ]

@@ -1,12 +1,12 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * Function to create the ace action children, one for each possible variant of the current item.
+ * Function to create the action children, one for each possible variant of the current item.
  *
  * Arguments:
  * 0: Target <OBJECT>
- * 1: Player <OBJECT>
- * 2: Multiple input types <STRING|ARRAY|CODE>
+ * 1: Player (not used) <OBJECT>
+ * 2: Child action parameters <ARRAY>
  * - 0: Current variant <CONFIG>
  * - 1: Array of configs possible variants <ARRAY>
  *
@@ -26,6 +26,12 @@ private _actions = [];
 
 {
     private _cfgTarget = _x;
+
+    // Skip missing items
+    if (isNull _cfgTarget) then {
+        continue;
+    };
+
     private _aceAction = [
         configName _cfgTarget,
         [_cfgOrigin, _cfgTarget] call FUNC(addActionsName),

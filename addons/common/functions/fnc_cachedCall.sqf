@@ -9,7 +9,7 @@
  * 2: Namespace to store the cache on <NAMESPACE>
  * 3: Cache uid <STRING>
  * 4: Max duration of the cache <NUMBER>
- * 5: Events that clear the cache (default: nil) <STRING or ARRAY of STRING>
+ * 5: Events that clear the cache <STRING or ARRAY of STRINGs> (default: nil)
  *
  * Return Value:
  * Result of the function <ANY>

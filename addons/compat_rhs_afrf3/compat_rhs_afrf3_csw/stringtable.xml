@@ -14,6 +14,7 @@
             <Korean>[CSW] 9M131F 대전차미사일</Korean>
             <Japanese>[CSW] ATGM 9M131F</Japanese>
             <Chinesesimp>[班组] 9M131F 反坦克导弹</Chinesesimp>
+            <Ukrainian>[CSW] ПТРК 9М131Ф</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_9M131M_displayName">
             <English>[CSW] ATGM 9M131M</English>
@@ -28,6 +29,7 @@
             <Korean>[CSW] 9M131M 대전차미사일</Korean>
             <Japanese>[CSW] ATGM 9M131M</Japanese>
             <Chinesesimp>[班组] 9M131M 反坦克导弹</Chinesesimp>
+            <Ukrainian>[CSW] ПТРК 9М131М</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_9M1331_displayName">
             <English>[CSW] ATGM 9M133-1</English>
@@ -42,6 +44,7 @@
             <Korean>[CSW] 9M133-1 대전차미사일</Korean>
             <Japanese>[CSW] ATGM 9M133-1</Japanese>
             <Chinesesimp>[班组] 9M133-1 反坦克导弹</Chinesesimp>
+            <Ukrainian>[CSW] ПТРК 9М133-1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_9M133F_displayName">
             <English>[CSW] ATGM 9M133F</English>
@@ -56,6 +59,7 @@
             <Korean>[CSW] 9M133F 대전차미사일</Korean>
             <Japanese>[CSW] ATGM 9M133F</Japanese>
             <Chinesesimp>[班组] 9M133F 反坦克导弹</Chinesesimp>
+            <Ukrainian>[CSW] ПТРК 9М133Ф</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_9M133M2_displayName">
             <English>[CSW] ATGM 9M133M2</English>
@@ -70,6 +74,7 @@
             <Korean>[CSW] 9M133M2 대전차미사일</Korean>
             <Japanese>[CSW] ATGM 9M133M2</Japanese>
             <Chinesesimp>[班组] 9M133M2 反坦克导弹</Chinesesimp>
+            <Ukrainian>[CSW] ПТРК 9М133M2</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_9M133_displayName">
             <English>[CSW] ATGM 9M133</English>
@@ -84,6 +89,7 @@
             <Korean>[CSW] 9M133 대전차미사일</Korean>
             <Japanese>[CSW] ATGM 9M133</Japanese>
             <Chinesesimp>[班组] 9M133 反坦克导弹</Chinesesimp>
+            <Ukrainian>[CSW] ПТРК 9М133</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_GPD30_30_displayName">
             <English>[CSW] GPD-30</English>
@@ -98,6 +104,7 @@
             <Korean>[CSW] GPD-30</Korean>
             <Japanese>[CSW] GPD-30</Japanese>
             <Chinesesimp>[班组] GPD-30</Chinesesimp>
+            <Ukrainian>[CSW] ГПД-30</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_OG9VM_displayName">
             <English>[CSW] HE-FRAG OG-9VM</English>
@@ -112,6 +119,7 @@
             <Korean>[CSW] OG-9VM 고폭파편탄</Korean>
             <Japanese>[CSW] HE-FRAG OG-9VM</Japanese>
             <Chinesesimp>[班组] OG-9VM 高爆破片弹</Chinesesimp>
+            <Ukrainian>[CSW] ОГ-9ВМ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_OG9V_displayName">
             <English>[CSW] HE-FRAG OG-9V</English>
@@ -126,6 +134,7 @@
             <Korean>[CSW] OG-9V 고폭파편탄</Korean>
             <Japanese>[CSW] HE-FRAG OG-9V</Japanese>
             <Chinesesimp>[班组] OG-9V 高爆破片弹</Chinesesimp>
+            <Ukrainian>[CSW] ОГ-9В</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_PG9N_displayName">
             <English>[CSW] HEAT PG-9N</English>
@@ -140,6 +149,7 @@
             <Korean>[CSW] PG-9N 대전차고폭탄</Korean>
             <Japanese>[CSW] HEAT PG-9N</Japanese>
             <Chinesesimp>[班组] PG-9N 破甲弹</Chinesesimp>
+            <Ukrainian>[CSW] ПГ-9Н</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_PG9VNT_displayName">
             <English>[CSW] HEAT PG-9VNT</English>
@@ -154,6 +164,7 @@
             <Korean>[CSW] PG-9VNT 대전차고폭탄</Korean>
             <Japanese>[CSW] HEAT PG-9VNT</Japanese>
             <Chinesesimp>[班组] PG-9VN 破甲弹</Chinesesimp>
+            <Ukrainian>[CSW] ПГ-9ВНТ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_PG9V_displayName">
             <English>[CSW] HEAT PG-9V</English>
@@ -168,6 +179,7 @@
             <Korean>[CSW] PG-9V 대전차고폭탄</Korean>
             <Japanese>[CSW] HEAT PG-9V</Japanese>
             <Chinesesimp>[班组] PG-9V 破甲弹</Chinesesimp>
+            <Ukrainian>[CSW] ПГ-9В</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_VOG17m_30_displayName">
             <English>[CSW] VOG-17M</English>
@@ -182,6 +194,7 @@
             <Korean>[CSW] VOG-17M</Korean>
             <Japanese>[CSW] VOG-17M</Japanese>
             <Chinesesimp>[班组] VOG-17M</Chinesesimp>
+            <Ukrainian>[CSW] ВОГ-17М</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RHS_AFRF3_CSW_mag_VOG30_30_displayName">
             <English>[CSW] VOG-30</English>
@@ -196,6 +209,7 @@
             <Korean>[CSW] VOG-30</Korean>
             <Japanese>[CSW] VOG-30</Japanese>
             <Chinesesimp>[班组] VOG-30</Chinesesimp>
+            <Ukrainian>[CSW] ВОГ-30</Ukrainian>
         </Key>
     </Package>
 </Project>

@@ -9,8 +9,8 @@
  *
  * Return Value:
  * Nested array <ARRAY>
- * - Configs of missing components <ARRAY>
- * - Configs of surplus components <ARRAY>
+ * - 0: Configs of missing components <ARRAY>
+ * - 1: Configs of surplus components <ARRAY>
  *
  * Example:
  * [G_Balaclava_blk, G_Balaclava_combat] call ace_wardrobe_fnc_compareComponents
@@ -31,10 +31,14 @@ private _checkfallbackComponent = {
     };
 };
 
-private _current = getArray (configFile >> QUOTE(ADDON) >> _classOrigin >> "components") apply _checkfallbackComponent select { _x isNotEqualTo "" };
-private _needed  = getArray (configFile >> QUOTE(ADDON) >> _classTarget >> "components") apply _checkfallbackComponent select { _x isNotEqualTo "" };
+private _current = getArray (configFile >> QUOTE(ADDON) >> _classOrigin >> "components")
+    apply _checkfallbackComponent
+    select { _x isNotEqualTo "" };
+private _needed  = getArray (configFile >> QUOTE(ADDON) >> _classTarget >> "components")
+    apply _checkfallbackComponent
+    select { _x isNotEqualTo "" };
 
-private _missing = []; 
+private _missing = [];
 
 {
     if (_x in _current) then {
