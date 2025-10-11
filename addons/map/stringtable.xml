@@ -16,6 +16,7 @@
             <Chinese>手電筒</Chinese>
             <Chinesesimp>手电筒</Chinesesimp>
             <Turkish>Fenerler</Turkish>
+            <Ukrainian>Ліхтарики</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVG">
             <English>NVG</English>
@@ -32,6 +33,7 @@
             <Chinese>夜視鏡</Chinese>
             <Chinesesimp>夜视仪</Chinesesimp>
             <Turkish>NVG</Turkish>
+            <Ukrainian>ПНБ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGDown">
             <English>Decrease Brightness</English>
@@ -47,6 +49,7 @@
             <Japanese>明度を下げる</Japanese>
             <Chinese>降低亮度</Chinese>
             <Chinesesimp>降低亮度</Chinesesimp>
+            <Ukrainian>Зменшити яскравість</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGOff">
             <English>Off</English>
@@ -63,6 +66,7 @@
             <Chinese>關閉</Chinese>
             <Chinesesimp>关闭</Chinesesimp>
             <Turkish>Kapali</Turkish>
+            <Ukrainian>Вимк.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGOn">
             <English>On</English>
@@ -79,6 +83,7 @@
             <Chinese>開啟</Chinese>
             <Chinesesimp>开启</Chinesesimp>
             <Turkish>Açık</Turkish>
+            <Ukrainian>Увім.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGUp">
             <English>Increase Brightness</English>
@@ -94,6 +99,7 @@
             <Japanese>明度を上げる</Japanese>
             <Chinese>增加亮度</Chinese>
             <Chinesesimp>增加亮度</Chinesesimp>
+            <Ukrainian>Збільшити яскравість</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Enabled_Description">
             <English>Enable Blue Force Tracking. Default: No</English>
@@ -110,6 +116,7 @@
             <Chinese>啟用顯示藍方蹤跡. 預設: 否</Chinese>
             <Chinesesimp>启用显示蓝方追踪。预设：否</Chinesesimp>
             <Hungarian>Blue Force követés engedélyezése. Alapértelmezett: Nem</Hungarian>
+            <Ukrainian>Вмикає систему відстеження BFT. За замовчуванням: Ні</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Enabled_DisplayName">
             <English>BFT Enable</English>
@@ -126,6 +133,7 @@
             <Chinese>藍方蹤跡啟用</Chinese>
             <Chinesesimp>蓝方追踪启用</Chinesesimp>
             <Hungarian>BFT engedélyezése</Hungarian>
+            <Ukrainian>Увімкнути BFT</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_BFT_HideAiGroups_Description">
             <English>Hide markers for 'AI only' groups?</English>
@@ -142,6 +150,7 @@
             <Chinese>隱藏'AI小隊'的蹤跡?</Chinese>
             <Chinesesimp>隐藏'AI 小队'的追踪？</Chinesesimp>
             <Hungarian>Jelölők elrejtése "csak AI" csoportoknál?</Hungarian>
+            <Ukrainian>Приховати маркери груп, які складаються повністю з ботів?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_BFT_HideAiGroups_DisplayName">
             <English>Hide AI groups</English>
@@ -158,6 +167,7 @@
             <Chinese>隱藏AI小隊</Chinese>
             <Chinesesimp>隐藏 AI 小队</Chinesesimp>
             <Hungarian>AI csoportok elrejtése</Hungarian>
+            <Ukrainian>Приховати групи ботів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Interval_Description">
             <English>How often the markers should be refreshed (in seconds)</English>
@@ -174,6 +184,7 @@
             <Chinese>設定每多少時間重新標示出單位位置 (秒)</Chinese>
             <Chinesesimp>设定每多少时间重新标示出单位位置（秒）</Chinesesimp>
             <Hungarian>Milyen gyakran frissüljenek a jelölők (másodpercben)</Hungarian>
+            <Ukrainian>Як часто мають оновлюватися маркери (у секундах)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Interval_DisplayName">
             <English>Interval</English>
@@ -190,6 +201,7 @@
             <Chinese>間隔</Chinese>
             <Chinesesimp>间隔</Chinesesimp>
             <Hungarian>Intervallum</Hungarian>
+            <Ukrainian>Інтервал</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Module_Description">
             <English>This module allows the tracking of allied units with BFT map markers.</English>
@@ -206,6 +218,7 @@
             <Chinese>此模塊將使你能在地圖上看見友方單位的蹤跡</Chinese>
             <Chinesesimp>此模块将使你能在地图上看见友方单位的追踪</Chinesesimp>
             <Hungarian>Ez a modul lehetővé teszi a szövetséges egységek követését BFT térképjelzőjkkel.</Hungarian>
+            <Ukrainian>Цей модуль дає змогу відстежувати переміщення союзних військ по мапі за допомогою маркерів BFT.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Module_DisplayName">
             <English>Blue Force Tracking</English>
@@ -222,6 +235,7 @@
             <Chinese>顯示藍方蹤跡</Chinese>
             <Chinesesimp>显示蓝方追踪</Chinesesimp>
             <Hungarian>Blue Force követés</Hungarian>
+            <Ukrainian>Система відстеження Blue Force Tracking</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_BFT_ShowPlayerNames_Description">
             <English>Show individual player names?</English>
@@ -238,6 +252,7 @@
             <Chinese>顯示玩家的個別名稱?</Chinese>
             <Chinesesimp>显示玩家的个别名称？</Chinesesimp>
             <Hungarian>Itt található az adott játékos neveket?</Hungarian>
+            <Ukrainian>Показати окремі імена гравців?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_BFT_ShowPlayerNames_DisplayName">
             <English>Show player names</English>
@@ -254,6 +269,7 @@
             <Chinese>顯示玩家名稱</Chinese>
             <Chinesesimp>显示玩家名称</Chinesesimp>
             <Hungarian>Itt található az a játékos nevét</Hungarian>
+            <Ukrainian>Показати імена гравців</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_DefaultChannel_Description">
             <English>Change the starting marker channel at mission start</English>
@@ -269,6 +285,7 @@
             <Japanese>ミッション開始時に使用されるマーカーチャンネルの指定を変更します</Japanese>
             <Chinese>更改任務啟動時的聊天頻道</Chinese>
             <Chinesesimp>更改任务启动时的聊天频道</Chinesesimp>
+            <Ukrainian>Змінити початковий канал для встановлення маркерів під час запуску місії</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_DefaultChannel_DisplayName">
             <English>Set Channel At Start</English>
@@ -284,6 +301,7 @@
             <Japanese>開始時のチャンネルを指定</Japanese>
             <Chinese>設定遊戲開始時的聊天頻道</Chinese>
             <Chinesesimp>设定游戏开始时的聊天频道</Chinesesimp>
+            <Ukrainian>Встановити канал на старті</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_Description">
             <English>Add external glow to players who use flashlight on map?</English>
@@ -299,6 +317,7 @@
             <Japanese>マップ上で懐中電灯を使用しているプレイヤーから辺りへの光放射を追加しますか?</Japanese>
             <Chinese>當玩家擁有手電筒時，增加地圖亮度?</Chinese>
             <Chinesesimp>当玩家打开手电筒时，增加地图亮度。</Chinesesimp>
+            <Ukrainian>Додати світло під час використання ліхтаря на мапі?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_DisplayName">
             <English>Map flashlight glow</English>
@@ -314,6 +333,7 @@
             <Japanese>地図用ライトの光放射</Japanese>
             <Chinese>增加地圖亮度</Chinese>
             <Chinesesimp>增加地图亮度</Chinesesimp>
+            <Ukrainian>Світло ліхтаря на мапі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_Description">
             <English>Simulate map lighting based on ambient lighting and player's items?</English>
@@ -329,6 +349,7 @@
             <Japanese>環境光やプレイヤーのアイテムに基づいた地図の照明をシミュレートしますか?</Japanese>
             <Chinese>透過環境光與玩家的物品來決定地圖亮度?</Chinese>
             <Chinesesimp>透过环境光与玩家的手电筒来决定地图亮度。</Chinesesimp>
+            <Ukrainian>Симулювати освітлення мапи на основі навколишнього світла і приладів гравця?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_DisplayName">
             <English>Map illumination</English>
@@ -346,6 +367,7 @@
             <Chinesesimp>地图照明</Chinesesimp>
             <Turkish>Harita aydınlatması</Turkish>
             <Hungarian>Térkép megvilágítása</Hungarian>
+            <Ukrainian>Освітлення мапи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_MapLimitZoom_Description">
             <English>Limit the amount of zoom available for the map?</English>
@@ -362,6 +384,7 @@
             <Chinese>限制地圖上可允許縮放的倍率?</Chinese>
             <Chinesesimp>限制地图上可允许缩放的倍率？</Chinesesimp>
             <Hungarian>Korlátozva legyen-e a nagyítás mennyisége a térképnél?</Hungarian>
+            <Ukrainian>Обмежити максимальне наближення, доступне на мапі?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_MapLimitZoom_DisplayName">
             <English>Limit map zoom</English>
@@ -378,6 +401,7 @@
             <Chinese>限制地圖縮放倍率</Chinese>
             <Chinesesimp>限制地图缩放倍率</Chinesesimp>
             <Hungarian>Térkép-nagyítás korlátozása</Hungarian>
+            <Ukrainian>Обмежити наближення мапи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_Description">
             <English>Make map shake when walking?</English>
@@ -394,6 +418,7 @@
             <Chinese>走路時讓地圖有震動的感覺?</Chinese>
             <Chinesesimp>走路时打开地图会产生晃动。</Chinesesimp>
             <Hungarian>Rázkódjon-e a térkép mozgáskor?</Hungarian>
+            <Ukrainian>Змушувати мапу хитатись під час руху?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_DisplayName">
             <English>Map shake</English>
@@ -411,6 +436,7 @@
             <Chinesesimp>地图震动</Chinesesimp>
             <Turkish>Harita sarsıntısı</Turkish>
             <Hungarian>Térkép-rázkódás</Hungarian>
+            <Ukrainian>Хитання мапи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_MapShowCursorCoordinates_Description">
             <English>Show the grid coordinates on the mouse pointer?</English>
@@ -427,6 +453,7 @@
             <Chinese>顯示滑鼠游標所在的網格座標?</Chinese>
             <Chinesesimp>显示鼠标光标所在的网格座标？</Chinesesimp>
             <Hungarian>Mutatva legyen-e a kurzornál található rész rácskoordinátája?</Hungarian>
+            <Ukrainian>Показувати координати біля курсору миші?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_MapShowCursorCoordinates_DisplayName">
             <English>Show cursor coordinates</English>
@@ -443,6 +470,7 @@
             <Chinese>顯示游標的座標</Chinese>
             <Chinesesimp>显示光标的座标</Chinesesimp>
             <Hungarian>Kurzor-koordináták mutatása</Hungarian>
+            <Ukrainian>Показувати координати курсору</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Module_Description">
             <English>This module allows you to customize the map screen.</English>
@@ -459,6 +487,7 @@
             <Chinese>此模塊允許自定地圖的相關效果.</Chinese>
             <Chinesesimp>此模块允许自定地图的相关效果。</Chinesesimp>
             <Hungarian>Ez a modul lehetővé teszi a térképnézet testreszabását.</Hungarian>
+            <Ukrainian>Цей модуль дає змогу налаштувати відображення мапи.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Module_DisplayName">
             <English>Map</English>
@@ -476,6 +505,7 @@
             <Chinesesimp>地图</Chinesesimp>
             <Turkish>Harita</Turkish>
             <Hungarian>Térkép</Hungarian>
+            <Ukrainian>Мапа</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_disableBFT">
             <English>Disable BFT</English>
@@ -491,6 +521,7 @@
             <Japanese>BFTを無効化</Japanese>
             <Chinese>關閉友軍蹤跡</Chinese>
             <Chinesesimp>关闭友军追踪</Chinesesimp>
+            <Ukrainian>Вимкнути BFT</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_disableBFT_description">
             <English>Always disable Blue Force Tracking for this group.</English>
@@ -506,6 +537,7 @@
             <Japanese>このグループへのブルー フォース トラッキングを常に無効化します。</Japanese>
             <Chinese>對此小隊永遠關閉友軍蹤跡顯示</Chinese>
             <Chinesesimp>对此小队永远关闭友军追踪显示</Chinesesimp>
+            <Ukrainian>Завжди вимикати Blue Force Tracking для цієї групи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_turnLightOff">
             <English>Turn Off %1</English>
@@ -523,6 +555,7 @@
             <Chinesesimp>关闭%1</Chinesesimp>
             <Turkish>%1 'i Kapat</Turkish>
             <Hungarian>%1 Kikapcsolása</Hungarian>
+            <Ukrainian>Деактивувати %1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_turnLightOn">
             <English>Turn On %1</English>
@@ -540,6 +573,7 @@
             <Chinesesimp>开启%1</Chinesesimp>
             <Turkish>%1 'i aç</Turkish>
             <Hungarian>%1 Bekapcsolása</Hungarian>
+            <Ukrainian>Активувати %1</Ukrainian>
         </Key>
     </Package>
 </Project>

@@ -13,6 +13,7 @@
             <Korean>차량 소지품에 견인줄 추가</Korean>
             <Japanese>車両のインベントリに牽引ロープを追加する</Japanese>
             <Chinesesimp>将牵引绳加入到载具库存</Chinesesimp>
+            <Ukrainian>Додати буксирувальний трос до інвентаря техніки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Towing_attach">
             <English>Attach Tow Rope</English>
@@ -26,6 +27,7 @@
             <Korean>견인줄 부착</Korean>
             <Japanese>けん引ロープを取り付け</Japanese>
             <Chinesesimp>系上牵引绳</Chinesesimp>
+            <Ukrainian>Прикріпити буксирувальний трос</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Towing_canceled">
             <English>Attaching Cancelled</English>
@@ -39,6 +41,7 @@
             <Korean>견인 취소됨</Korean>
             <Japanese>取り付けを中止しました</Japanese>
             <Chinesesimp>取消系上绳索</Chinesesimp>
+            <Ukrainian>Прикріплення скасовано</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Towing_detach">
             <English>Detach Tow Rope</English>
@@ -52,6 +55,7 @@
             <Korean>견인줄 분리</Korean>
             <Japanese>けん引ロープを外す</Japanese>
             <Chinesesimp>解开牵引绳</Chinesesimp>
+            <Ukrainian>Відчепити буксирувальний трос</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Towing_displayName">
             <English>Towing</English>
@@ -65,6 +69,7 @@
             <Korean>견인</Korean>
             <Japanese>けん引</Japanese>
             <Chinesesimp>牵引</Chinesesimp>
+            <Ukrainian>Буксирування</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Towing_start12">
             <English>Attach Tow Rope (12.2m)</English>
@@ -78,6 +83,7 @@
             <Korean>견인줄 부착(12.2M)</Korean>
             <Japanese>けん引ロープ (12.2m) を取り付け</Japanese>
             <Chinesesimp>系上牵引绳（12.2米）</Chinesesimp>
+            <Ukrainian>Прикріпити буксирувальний трос (12.2м)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Towing_start15">
             <English>Attach Tow Rope (15.2m)</English>
@@ -91,6 +97,7 @@
             <Korean>견인줄 부착(15.2M)</Korean>
             <Japanese>けん引ロープ (15.2m) を取り付け</Japanese>
             <Chinesesimp>系上牵引绳（15.2米）</Chinesesimp>
+            <Ukrainian>Прикріпити буксирувальний трос (15.2м)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Towing_start18">
             <English>Attach Tow Rope (18.3m)</English>
@@ -104,6 +111,7 @@
             <Korean>견인줄 부착(18.2M)</Korean>
             <Japanese>けん引ロープ (18.3m) を取り付け</Japanese>
             <Chinesesimp>系上牵引绳（18.3米）</Chinesesimp>
+            <Ukrainian>Прикріпити буксирувальний трос (18.3м)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Towing_start27">
             <English>Attach Tow Rope (27.4m)</English>
@@ -117,6 +125,7 @@
             <Korean>견인줄 부착(27.4M)</Korean>
             <Japanese>けん引ロープ (27.4m) を取り付け</Japanese>
             <Chinesesimp>系上牵引绳（27.4米）</Chinesesimp>
+            <Ukrainian>Прикріпити буксирувальний трос (27.4м)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Towing_start3">
             <English>Attach Tow Rope (3.2m)</English>
@@ -130,6 +139,7 @@
             <Korean>견인줄 부착(3.2M)</Korean>
             <Japanese>けん引ロープ (3.2m) を取り付け</Japanese>
             <Chinesesimp>系上牵引绳（3.2米）</Chinesesimp>
+            <Ukrainian>Прикріпити буксирувальний трос (3.2м)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Towing_start36">
             <English>Attach Tow Rope (36.6m)</English>
@@ -143,6 +153,7 @@
             <Korean>견인줄 부착(36.6M)</Korean>
             <Japanese>けん引ロープ (36.6m) を取り付け</Japanese>
             <Chinesesimp>系上牵引绳（36.6米）</Chinesesimp>
+            <Ukrainian>Прикріпити буксирувальний трос (36.6м)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Towing_start6">
             <English>Attach Tow Rope (6.2m)</English>
@@ -156,6 +167,7 @@
             <Korean>견인줄 부착(6.2M)</Korean>
             <Japanese>けん引ロープ (6.2m) を取り付け</Japanese>
             <Chinesesimp>系上牵引绳（6.2米）</Chinesesimp>
+            <Ukrainian>Прикріпити буксирувальний трос (6.2м)</Ukrainian>
         </Key>
     </Package>
 </Project>

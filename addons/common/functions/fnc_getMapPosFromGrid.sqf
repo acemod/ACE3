@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Grid Cords <STRING>
- * 1: Grid center (true), Grid Bottom Right (false) (default: true) <BOOL>
+ * 1: Grid center (true), Grid Bottom Right (false) <BOOL> (default: true)
  *
  * Return Value:
  * Position <ARRAY>

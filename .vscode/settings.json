@@ -1,53 +1,8 @@
 {
-	"files.exclude": {
-		"**/.hemttout": true,
-		"**/include": true,
-		"**/extras": true
+    "files.exclude": {
+        "**/.hemttout": true,
+        "**/include": true,
+        "**/extras": true
     },
-    "favorites.resources": [
-        {
-            "filePath": "addons\\compat_rf\\compat_rf_wardrobe",
-            "group": "Default"
-        },
-        {
-            "filePath": "addons\\wardrobe",
-            "group": "Default"
-        },
-        {
-            "filePath": "addons\\compat_gm\\compat_gm_wardrobe",
-            "group": "Default"
-        },
-        {
-            "filePath": "addons\\compat_sog\\compat_sog_wardrobe",
-            "group": "Default"
-        },
-        {
-            "filePath": "addons\\compat_ws\\compat_ws_wardrobe",
-            "group": "Default"
-        },
-        {
-            "filePath": "addons\\compat_rhs_gref3\\compat_rhs_gref3_wardrobe",
-            "group": "Default"
-        },
-        {
-            "filePath": "addons\\compat_rhs_afrf3\\compat_rhs_afrf3_wardrobe",
-            "group": "Default"
-        },
-        {
-            "filePath": "addons\\compat_rhs_saf3\\compat_rhs_saf3_wardrobe",
-            "group": "Default"
-        },
-        {
-            "filePath": "addons\\compat_rhs_usf3\\compat_rhs_usf3_wardrobe",
-            "group": "Default"
-        },
-        {
-            "filePath": ".hemtt\\launch.toml",
-            "group": "Default"
-        },
-        {
-            "filePath": "addons\\compat_rhs_afrf3_usf3",
-            "group": "Default"
-        }
-    ]
+    "files.insertFinalNewline": true
 }

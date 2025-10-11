@@ -17,6 +17,7 @@
             <Chinesesimp>高度：</Chinesesimp>
             <Turkish>Yükseklik:</Turkish>
             <Hungarian>Magasság:</Hungarian>
+            <Ukrainian>Висота:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HuntIR_CAM">
             <English>Camera:</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>摄像头：</Chinesesimp>
             <Turkish>Kamera:</Turkish>
             <Hungarian>Kamera:</Hungarian>
+            <Ukrainian>Камера:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HuntIR_ESC">
             <English>Press ESC to quit camera</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>按下 ESC 退出摄像头</Chinesesimp>
             <Turkish>ESC'ye basarak çıkış yap</Turkish>
             <Hungarian>Nyomj ESC-ket a kamerából való kilépéshez</Hungarian>
+            <Ukrainian>Натисніть ESC щоб вийти з режиму камери</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HuntIR_HELP">
             <English>Help</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>帮助</Chinesesimp>
             <Turkish>Yardım</Turkish>
             <Hungarian>Súgó</Hungarian>
+            <Ukrainian>Допомога</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HuntIR_HELP_CAM">
             <English>W/S - Select camera</English>
@@ -85,6 +89,7 @@
             <Chinesesimp>W/S—切换摄像头</Chinesesimp>
             <Turkish>W/S- Kamerayı seç</Turkish>
             <Hungarian>W/S - Kamera váltás</Hungarian>
+            <Ukrainian>W/S - Вибрати камеру</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HuntIR_HELP_ELV">
             <English>Up/Down - Elevate/lower camera</English>
@@ -102,6 +107,7 @@
             <Chinesesimp>上/下—上升/下降摄像头</Chinesesimp>
             <Turkish>Yukarı/Asağı- Kamerayı yukarı aşağı oynat</Turkish>
             <Hungarian>Fel/Le - Kamera döntése/süllyesztése</Hungarian>
+            <Ukrainian>Вгору/Вниз - Підняти/опустити камеру</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HuntIR_HELP_EXIT">
             <English>Esc - Exit help</English>
@@ -119,6 +125,7 @@
             <Chinesesimp>Esc—离开帮助</Chinesesimp>
             <Turkish>Esc- Çıkış Yardım</Turkish>
             <Hungarian>Exit - Kilépés a súgóból</Hungarian>
+            <Ukrainian>Esc - Вийти з допомоги</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HuntIR_HELP_MOD">
             <English>N - Cycle IT modes</English>
@@ -131,11 +138,12 @@
             <Russian>N - Режимы камеры</Russian>
             <German>N - Sichtmodi</German>
             <Korean>N - IT모드 순환</Korean>
-            <Japanese>N - IT モードを変更</Japanese>
+            <Japanese>N - IT モードを切り替え</Japanese>
             <Chinese>N - 切換熱顯模式</Chinese>
             <Chinesesimp>N—切换热显模式</Chinesesimp>
             <Turkish>N- IT modülünü değiştir</Turkish>
             <Hungarian>N - Hőkép módok</Hungarian>
+            <Ukrainian>N - Режими камери</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HuntIR_HELP_RES">
             <English>R - Reset camera</English>
@@ -153,6 +161,7 @@
             <Chinesesimp>R—重置摄像头</Chinesesimp>
             <Turkish>R- Kamerayı sıfırla</Turkish>
             <Hungarian>R - Kamera visszaállítása</Hungarian>
+            <Ukrainian>R - Скинути налаштування камери</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HuntIR_HELP_ROT">
             <English>Left/Right - Rotate camera</English>
@@ -170,6 +179,7 @@
             <Chinesesimp>左/右—旋转摄像头</Chinesesimp>
             <Turkish>Sol/Sağ Kamerayı döndür</Turkish>
             <Hungarian>Jobb/Bal - Kamera forgatás</Hungarian>
+            <Ukrainian>Ліворуч/Праворуч - Обертати камеру</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HuntIR_HELP_ZOOM">
             <English>A/D - Cycle zoom</English>
@@ -182,11 +192,12 @@
             <Russian>A/D - Приближение</Russian>
             <German>A/D - Zoom</German>
             <Korean>A/D - 줌 전환</Korean>
-            <Japanese>A/D - 倍率の変更</Japanese>
+            <Japanese>A/D - 倍率の切り替え</Japanese>
             <Chinese>A/D - 切換放大倍率</Chinese>
             <Chinesesimp>A/D—切换放大倍率</Chinesesimp>
             <Turkish>A/D Uzaklığı değiştir</Turkish>
             <Hungarian>A/D - Nagyítás</Hungarian>
+            <Ukrainian>A/D - Збільшення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HuntIR_TIME">
             <English>Recording Time:</English>
@@ -204,6 +215,7 @@
             <Chinesesimp>记录时间：</Chinesesimp>
             <Turkish>Kayıt süresi:</Turkish>
             <Hungarian>Felvételi idő:</Hungarian>
+            <Ukrainian>Час запису:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HuntIR_TransportBox_DisplayName">
             <English>HuntIR Transport Box</English>
@@ -221,6 +233,7 @@
             <Chinesesimp>高空战术摄像头运输箱</Chinesesimp>
             <Turkish>HuntIR Taşıma Kutusu</Turkish>
             <Hungarian>HuntIR Transport Box</Hungarian>
+            <Ukrainian>Ящик з HuntIR</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HuntIR_activateMonitor">
             <English>Activate HuntIR monitor</English>
@@ -238,6 +251,7 @@
             <Chinesesimp>开启高空战术摄像头显示面板</Chinesesimp>
             <Turkish>HuntIR Ekranı Aktif</Turkish>
             <Hungarian>HuntIR monitor aktiválása</Hungarian>
+            <Ukrainian>Увімкнути HuntIR монітор</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HuntIR_magazine_displayName">
             <English>HuntIR Round</English>
@@ -255,6 +269,7 @@
             <Chinesesimp>高空战术摄像头弹药</Chinesesimp>
             <Turkish>HuntIR Mermisi</Turkish>
             <Hungarian>HuntIR lövedék</Hungarian>
+            <Ukrainian>HuntIR снаряд</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HuntIR_monitor_displayName">
             <English>HuntIR Monitor</English>
@@ -272,6 +287,7 @@
             <Chinesesimp>高空战术摄像头显示面板</Chinesesimp>
             <Turkish>HuntIR Ekranı</Turkish>
             <Hungarian>HuntIR Monitor</Hungarian>
+            <Ukrainian>HuntIR монітор</Ukrainian>
         </Key>
     </Package>
 </Project>

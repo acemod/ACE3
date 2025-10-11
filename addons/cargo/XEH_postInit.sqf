@@ -36,6 +36,25 @@
     };
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(unloadedCargoOnKilled), {
+    params ["_item", "_vehicle", ["_flying", false]];
+
+    // Get direction from vehicle to item, so that item is thrown away from vehicle
+    private _vectorDir = (getPosWorld _vehicle) vectorFromTo (getPosWorld _item);
+
+    // Give some z
+    _vectorDir set [2, random [0.5, 0.75, 1]];
+
+    // Add some randomness to resulting velocity, but only if on the ground, tends to shoot the cargo too far away when airbourne
+    if (!_flying) then {
+        _vectorDir = (_vectorDir vectorMultiply random CARGO_TUMBLE_RANDOM_MUL);
+    };
+    _vectorDir = _vectorDir vectorAdd (velocity _vehicle);
+
+    _item setVelocity _vectorDir;
+    _item addTorque [random CARGO_TUMBLE_TORQUE, random CARGO_TUMBLE_TORQUE, random CARGO_TUMBLE_TORQUE];
+}] call CBA_fnc_addEventHandler;
+
 // Direction must be set before setting position according to wiki
 [QGVAR(setDirAndUnload), {
     params ["_item", "_emptyPosAGL", "_direction"];

@@ -1,5 +1,4 @@
 class RscPicture;
-class RscText;
 
 class RscTitles {
     class GVAR(title) {

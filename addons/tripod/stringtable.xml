@@ -17,6 +17,7 @@
             <Chinesesimp>调整狙击手专用三脚架</Chinesesimp>
             <Turkish>Ayarla SSWT Kit</Turkish>
             <Hungarian>SSWT készlet állítása</Hungarian>
+            <Ukrainian>Вирівняти снайперський штатив</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tripod_DisplayName">
             <English>SSWT Kit</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>狙击手专用三脚架</Chinesesimp>
             <Turkish>SSWT Kiti</Turkish>
             <Hungarian>SSWT Készlet</Hungarian>
+            <Ukrainian>Снайперский штатив</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tripod_Done">
             <English>Done</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>完成</Chinesesimp>
             <Turkish>Bitti</Turkish>
             <Hungarian>Kész</Hungarian>
+            <Ukrainian>Готово</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tripod_PickUp">
             <English>Pick up SSWT Kit</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>捡起狙击手专用三脚架</Chinesesimp>
             <Turkish>Al SSWT Kit</Turkish>
             <Hungarian>SSWT készlet felvétele</Hungarian>
+            <Ukrainian>Підібрати снайперський штатив</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tripod_PlaceDown">
             <English>Place SSWT Kit</English>
@@ -85,6 +89,7 @@
             <Chinesesimp>放置狙击手专用三脚架</Chinesesimp>
             <Turkish>Yerleştir SSWT Kit</Turkish>
             <Hungarian>SSWT készlet elhelyezése</Hungarian>
+            <Ukrainian>Встановити снайперський штатив</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tripod_ScrollAction">
             <English>adjust</English>
@@ -102,6 +107,7 @@
             <Chinesesimp>调整</Chinesesimp>
             <Turkish>Ayarlamak</Turkish>
             <Hungarian>szabályzás</Hungarian>
+            <Ukrainian>підстроювання</Ukrainian>
         </Key>
     </Package>
 </Project>

@@ -22,4 +22,4 @@ class CfgPatches {
 // For Consistency: Adjust Mass/containerSize
 
 // ACE Wardrobe
-#include "CfgWardrobe.hpp"
+#include "ACE_Wardrobe.hpp"

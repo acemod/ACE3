@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Holder object (vehicle) <OBJECT>
- * 1: Item to be unloaded <STRING> or <OBJECT>
+ * 1: Item to be unloaded <STRING or OBJECT>
  * 2: Unit doing the unloading <OBJECT> (default: objNull)
  * 3: Max distance (meters) <NUMBER> (default: 10)
  * 4: Check if holder object is stable <BOOL> (default: true)

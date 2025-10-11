@@ -1,13 +1,9 @@
 class ace_missileguidance_type_Maverick;
 class CfgAmmo {
-    class MissileCore;
-    class MissileBase: MissileCore {
-        class Components;
-    };
-    class Missile_AGM_02_F: MissileBase {};
+    class Missile_AGM_02_F;
 
     class GVAR(D): Missile_AGM_02_F {
-        author = "Dani (TCVM)";
+        author = "tcvm";
         missileLockMaxDistance = 14000;
         maneuvrability = 0;
         class ace_missileguidance: ace_missileguidance_type_Maverick {

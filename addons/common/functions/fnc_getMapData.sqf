@@ -3,7 +3,7 @@
  * Gets the current latitude and altitude offset for the map.
  *
  * Arguments:
- * 0: Map name (default: worldName) <STRING>
+ * 0: Map name <STRING> (default: worldName)
  *
  * Return Value:
  * 0: Latitude <NUMBER>

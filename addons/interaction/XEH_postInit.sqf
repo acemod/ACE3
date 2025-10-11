@@ -3,7 +3,10 @@
 
 ACE_Modifier = 0;
 
-[QGVAR(pardon), {(_this select 0) addRating -rating (_this select 0)}] call CBA_fnc_addEventHandler;
+[QGVAR(pardon), {
+    params ["_unit"];
+    _unit addRating -rating _unit
+}] call CBA_fnc_addEventHandler;
 
 [QGVAR(getDown), {
     params ["_target"];

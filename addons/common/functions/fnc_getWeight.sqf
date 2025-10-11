@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: The Unit (usually the player) <OBJECT>
- * 1: Return imperial units <NUMBER, BOOLEAN>
+ * 1: Return imperial units <NUMBER or BOOL>
  *
  * Return Value:
  * Weight string <STRING>

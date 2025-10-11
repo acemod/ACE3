@@ -4,12 +4,12 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Equipment {
                 class ADDON {
-                    displayName = CSTRING(action_title); // Text shown to user
+                    displayName = CSTRING(action_title);
                     icon = QPATHTOF(data\wardrobe_logo.paa);
-                    condition = QUOTE(_player call FUNC(addActionsCondition));
+                    condition = QGVAR(enableAction);
                     statement = "";
                     insertChildren = QUOTE(_player call FUNC(addActions));
-                    exceptions[] = {"isNotSwimming","isNotSitting"};
+                    exceptions[] = {"isNotSwimming", "isNotSitting"};
                 };
             };
         };

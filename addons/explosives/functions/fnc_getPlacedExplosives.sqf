@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Trigger classname - filter (optional) <STRING>
+ * 1: Trigger classname - filter <STRING> (default: Not filtered)
  *
  * Return Value:
  * Explosives <ARRAY>

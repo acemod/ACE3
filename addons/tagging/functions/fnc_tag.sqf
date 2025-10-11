@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: The colour of the tag (valid colours are black, red, green and blue or full path to custom texture) <STRING>
+ * 1: The color of the tag (valid colors are black, red, green and blue or full path to custom texture) <STRING>
  * 2: Material of the tag <STRING> (default: "")
  * 3: Tag Model <STRING> (default: "UserTexture1m_F")
  *

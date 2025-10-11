@@ -175,8 +175,8 @@ DFUNC(updateArray) = {
                 _unitName = format ["*AI* - %1", getText ((configOf _unit) >> "displayName")];
             };
         };
-        TRACE_3("send kill event",_instigator,_unitName,_killInfo);
-        [QGVAR(kill), [_unitName, _killInfo], _instigator] call CBA_fnc_targetEvent;
+        TRACE_4("send kill event",_instigator,_unitName,_killInfo,_unit);
+        [QGVAR(kill), [_unitName, _killInfo, _unit], _instigator] call CBA_fnc_targetEvent;
 
         if (GVAR(showCrewKills) && {!(_killer isKindOf "CAManBase")}) then {
             private _crew = [driver _killer, gunner _killer, commander _killer] - [_instigator];
@@ -185,7 +185,7 @@ DFUNC(updateArray) = {
             TRACE_1("showCrewKills",_crew);
             _killInfo = format [" - [<t color='#99ff99'>%1</t>, %2", localize "str_a3_rscdisplaygarage_tab_crew", _killInfo select [4]];
             {
-                [QGVAR(kill), [_unitName, _killInfo], _x] call CBA_fnc_targetEvent;
+                [QGVAR(kill), [_unitName, _killInfo, _unit], _x] call CBA_fnc_targetEvent;
             } forEach _crew;
         };
     };
