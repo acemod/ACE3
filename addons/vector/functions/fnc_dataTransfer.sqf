@@ -20,4 +20,4 @@ private _direction = call FUNC(getDirection);
 _direction params ["_azimuth", "_inclination"];
 
 //Send Data to connected GPS
-[QGVAR(rangefinderData), [_distance, _azimuth, _inclination]] call CBA_fnc_localEvent;
+[QGVAR(rangefinderData), [_distance, _azimuth, _inclination, true]] call CBA_fnc_localEvent;

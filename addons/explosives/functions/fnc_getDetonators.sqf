@@ -18,4 +18,4 @@
 params [["_unit", objNull, [objNull]]];
 TRACE_1("getting detonators",_unit);
 
-GVAR(detonators) arrayIntersect (_unit call EFUNC(common,uniqueItems)) // return
+GVAR(detonators) arrayIntersect (_unit call EFUNC(common,uniqueItems) + weapons _unit) // return

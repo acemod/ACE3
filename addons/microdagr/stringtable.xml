@@ -506,6 +506,22 @@
             <Hungarian>Be</Hungarian>
             <Ukrainian>Увім.</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_MicroDAGR_settingShowMagneticNorth">
+            <English>Show Magnetic North:</English>
+            <Czech>Ukázat magnetický sever:</Czech>
+            <French>Montrer le nord magnétique :</French>
+            <Spanish>Mostrar el norte magnético:</Spanish>
+            <Italian>Mostra il nord magnetico:</Italian>
+            <Polish>Pokaż północ magnetyczną:</Polish>
+            <Portuguese>Mostrar o Norte Magnético:</Portuguese>
+            <Russian>Показывать магнитный север:</Russian>
+            <German>Zeige magnetischen Norden:</German>
+            <Korean>자기 북쪽 표시:</Korean>
+            <Japanese>地図に磁北を表示:</Japanese>
+            <Chinese>顯示磁北:</Chinese>
+            <Chinesesimp>显示磁北:</Chinesesimp>
+            <Hungarian>Magnetikus északi irány mutatása:</Hungarian>
+        </Key>
         <Key ID="STR_ACE_MicroDAGR_settingShowWP">
             <English>Show Waypoints On Map:</English>
             <Czech>Ukázat waypointy na mapě:</Czech>
