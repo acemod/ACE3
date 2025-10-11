@@ -4,47 +4,49 @@
  * Gets all placed explosives by unit, optionally filtered by specific trigger type.
  *
  * Arguments:
- * 0: Unit <OBJECT>
- * 1: Trigger classname - filter <STRING> (default: Not filtered)
+ * 0: Unit <OBJECT> (default: objNull)
+ * 1: Trigger classname to filter by <STRING> (default: "")
  *
  * Return Value:
  * Explosives <ARRAY>
  *
  * Example:
- * _allExplosives = [player] call ACE_Explosives_fnc_getPlacedExplosives;
- * _deadmanExplosives = [player, "DeadManSwitch"] call ACE_Explosives_fnc_getPlacedExplosives;
+ * _allExplosives = player call ace_explosives_fnc_getPlacedExplosives
+ * _deadmanExplosives = [player, "DeadManSwitch"] call ace_explosives_fnc_getPlacedExplosives
  *
  * Public: Yes
  */
 
-params ["_unit"];
+params [["_unit", objNull, [objNull]], ["_filter", "", [""]]];
 TRACE_1("params",_unit);
 
-private _filter = nil;
-if (count _this > 1) then {
-    _filter = configFile >> "ACE_Triggers" >> (_this select 1);
+if (isNull _unit) exitWith {
+    [] // return
 };
-private _clackerList = [];
-private _adjustedList = false;
-_clackerList = _unit getVariable [QGVAR(Clackers), []];
+
+private _clackerList = _unit getVariable [QGVAR(clackers), []];
 private _list = [];
+private _adjustedList = false;
+private _cfgAceTriggers = configFile >> "ACE_Triggers";
+
+// Filter out any invalid explosives (this is the garbage collector)
+// forEachReversed can't be used, as _list's order should be maintained
 {
     if (isNull (_x select 0)) then {
         _clackerList set [_forEachIndex, "X"];
+
         _adjustedList = true;
     } else {
-        if (isNil "_filter" || {(configFile >> "ACE_Triggers" >> (_x select 4)) == _filter}) then {
+        if (_filter == "" || {configName (_cfgAceTriggers >> _x select 4) == _filter}) then {
             _list pushBack _x;
         };
     };
 } forEach _clackerList;
+
 if (_adjustedList) then {
     _clackerList = _clackerList - ["X"];
-    if (count _clackerList == 0) then {
-        _unit setVariable [QGVAR(Clackers), nil, true];
-    } else {
-        _unit setVariable [QGVAR(Clackers), _clackerList, true];
-    };
+
+    _unit setVariable [QGVAR(clackers), _clackerList, true];
 };
 
-_list
+_list // return
