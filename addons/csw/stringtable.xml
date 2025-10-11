@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="CSW">
-        <Key ID="STR_ACE_CSW_AddonName_Short">
-            <English>CSW</English>
-        </Key>
         <Key ID="STR_ACE_CSW_127x108_displayName">
             <English>[CSW] 12.7x108mm HMG Belt</English>
             <Czech>[CSW] Pás 12.7×108mm pro těžký kulomet</Czech>
@@ -106,6 +103,9 @@
             <Turkish>[CSW] 2B14 Tube Bag</Turkish>
             <Ukrainian>[CSW] Сумка з 2Б14 трубою</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_CSW_AddonName_Short">
+            <English>CSW</English>
+        </Key>
         <Key ID="STR_ACE_CSW_AssembleCSW_progressBar">
             <English>Assembling Gun...</English>
             <Czech>Skládám zbraň...</Czech>
@@ -121,6 +121,9 @@
             <Chinese>組裝武器中...</Chinese>
             <Chinesesimp>正在组装武器...</Chinesesimp>
             <Ukrainian>Збірка зброї...</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_CSW_DisableAutoFire_displayName">
+            <English>Disable fire on load</English>
         </Key>
         <Key ID="STR_ACE_CSW_DisassembleCSW_displayName">
             <English>Disassemble</English>
@@ -154,6 +157,9 @@
             <Chinese>拆裝武器中...</Chinese>
             <Chinesesimp>正在拆卸武器...</Chinesesimp>
             <Ukrainian>Розбирання зброї...</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_CSW_EnableAutoFire_displayName">
+            <English>Enable fire on load</English>
         </Key>
         <Key ID="STR_ACE_CSW_GMGBelt_descriptionShort">
             <English>Caliber: 20 mm&lt;br/&gt;Rounds: 20&lt;br /&gt;Used in: Grenade Launcher</English>
@@ -1239,12 +1245,6 @@
             <Turkish>Boşalt %1</Turkish>
             <Hungarian>Unload %1</Hungarian>
             <Ukrainian>Розвантажити %1</Ukrainian>
-        </Key>
-        <Key ID="STR_ACE_CSW_EnableAutoFire_displayName">
-            <English>Enable fire on load</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_DisableAutoFire_displayName">
-            <English>Disable fire on load</English>
         </Key>
     </Package>
 </Project>
