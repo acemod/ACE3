@@ -43,7 +43,6 @@ class HelmetEssBare : EGVAR(wardrobe,base_H_goggles_on) {\
 class HelmetOnly : EGVAR(wardrobe,base) {\
     class modifiableTo {\
         class HelmetEss {};\
-        class HelmetVeil {};\
     };\
     components[] = {};\
 };\
