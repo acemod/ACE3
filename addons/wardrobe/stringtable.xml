@@ -55,5 +55,8 @@
         <Key ID="STR_ACE_Wardrobe_visorUp">
             <English>Visor up</English>
         </Key>
+        <Key ID="STR_ACE_Wardrobe_wardrobeModifiable">
+            <English>Wardrobe Modifiable</English>
+        </Key>
     </Package>
 </Project>
