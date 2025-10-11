@@ -95,8 +95,8 @@ private _formatDescription = [
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(quickNumberEnabled), "CHECKBOX",
-    [LSTRING(quickNumberEnabled), LSTRING(quickNumberEnabledDescription)],
+    QGVAR(quickNumberMarks), "LIST",
+    [LSTRING(quickNumberMarks), LSTRING(quickNumberMarksDescription)],
     [_categoryName, LLSTRING(Module_DisplayName)],
-    true
+    [[0,1,2], [disabled, "STR_cba_settings_ButtonLocal", LSTRING(quickNumberMarksSideSync)], 2]
 ] call CBA_fnc_addSetting;
