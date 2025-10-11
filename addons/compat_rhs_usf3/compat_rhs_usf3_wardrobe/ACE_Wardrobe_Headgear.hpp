@@ -12,7 +12,7 @@ HELMET_VISOR(rhsusf_hgu56p_mask_skull,rhsusf_hgu56p_visor_mask_skull);
 
 HELMET_VISOR(rhsusf_hgu56p_black,rhsusf_hgu56p_visor_black);
 HELMET_VISOR(rhsusf_hgu56p_mask_black,rhsusf_hgu56p_visor_mask_black);
-HELMET_VISOR(rhsusf_hgu56p_mask_Empire_black,rhsusf_hgu56p_visor_mask_Empire_black);
+// HELMET_VISOR(rhsusf_hgu56p_mask_Empire_black,rhsusf_hgu56p_visor_mask_Empire_black);
 HELMET_VISOR(rhsusf_hgu56p_mask_black_skull,rhsusf_hgu56p_visor_mask_black_skull);
 
 HELMET_VISOR(rhsusf_hgu56p_green,rhsusf_hgu56p_visor_green);
