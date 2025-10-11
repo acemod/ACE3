@@ -13,5 +13,5 @@ class ace_wardrobe {
     class ace_wardrobe_base_U_jacket_open;
     class ace_wardrobe_base_U_jacket_closed;
     
-    #include "CfgWardrobe_Headgear.hpp"
+    #include "ACE_Wardrobe_Headgear.hpp"
 };
