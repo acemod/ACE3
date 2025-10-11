@@ -7,7 +7,7 @@ class EGVAR(arsenal,stats) {
         displayName = CSTRING(statHorizontalLimits);
         showText = 1;
         textStatement = QUOTE(params[ARR_2('_stat','_config')]; private _limits = getArray (_config >> _stat select 0); format [ARR_4('%1 / %2 MIL (∆ %3 MIL)',_limits select 0,_limits select 1,getNumber (_config >> _stat select 1))]);
-        condition = QUOTE(params[ARR_2('_stat','_config')]; (getArray (_config >> _stat select 0)) isNotEqualTo []);
+        condition = QUOTE(params[ARR_2('_stat','_config')]; private _limits = getArray (_config >> _stat select 0); _limits isNotEqualTo [] && {(_limits isNotEqualTo [ARR_2(0,0)])});
         tabs[] = {{}, {0}};
     };
     class ACE_scopeVerticalLimits: ACE_scopeHorizontalLimits {
