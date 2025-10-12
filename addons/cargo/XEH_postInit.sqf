@@ -146,6 +146,7 @@ GVAR(objectActions) = [
         {
             GVAR(enable) &&
             {alive _target} &&
+            {isNull isVehicleCargo _target} &&
             {locked _target < 2} &&
             {_target getVariable [QGVAR(canLoad), getNumber (configOf _target >> QGVAR(canLoad)) == 1]} &&
             {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
