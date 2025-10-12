@@ -120,6 +120,7 @@ GVAR(objectActions) = [
             GVAR(enable) &&
             {GVAR(enableRename)} &&
             {alive _target} &&
+            {isNull isVehicleCargo _target} &&
             {_target getVariable [QGVAR(canLoad), getNumber (configOf _target >> QGVAR(canLoad)) == 1]} &&
             {!(_target getVariable [QGVAR(noRename), getNumber (configOf _target >> QGVAR(noRename)) == 1])} &&
             {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
