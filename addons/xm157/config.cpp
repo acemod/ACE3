@@ -14,7 +14,9 @@ class CfgPatches {
     };
 };
 
+#include "CfgAmmo.hpp"
 #include "CfgEventHandlers.hpp"
+#include "CfgMagazines.hpp"
 #include "CfgSounds.hpp"
 #include "CfgWeapons.hpp"
 #include "RscInGameUI.hpp"
