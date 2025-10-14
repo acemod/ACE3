@@ -83,7 +83,7 @@ if (["ace_trenches"] call EFUNC(common,isModLoaded)) then {
                     true
                 ] call CBA_fnc_notify;
             },
-            {!(_target isNil QGVAR(headstoneData))}
+            {!isNil {_target getVariable QGVAR(headstoneData)}}
         ] call EFUNC(interact_menu,createAction);
 
         [missionNamespace getVariable [QGVAR(graveClassname), "ACE_Grave"], 0, [], _checkHeadstoneAction] call EFUNC(interact_menu,addActionToClass);
