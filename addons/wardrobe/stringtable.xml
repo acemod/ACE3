@@ -7,13 +7,13 @@
         </Key>
         <Key ID="STR_ACE_Wardrobe_action_title">
             <English>Wardrobe</English>
-            <German>Garderobe</German>
             <Russian>Гардероб</Russian>
+            <German>Garderobe</German>
         </Key>
         <Key ID="STR_ACE_Wardrobe_enable_action">
             <English>ACE Interaction</English>
-            <German>Aktivieren ACE Interaction</German>
             <Russian>ACE взаимодействие</Russian>
+            <German>Aktivieren ACE Interaction</German>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glovesOff">
             <English>Take gloves off</English>
@@ -53,8 +53,8 @@
         </Key>
         <Key ID="STR_ACE_Wardrobe_setting_category_main">
             <English>ACE Wardrobe</English>
-            <German>ACE Garderobe</German>
             <Russian>ACE Гардероб</Russian>
+            <German>ACE Garderobe</German>
         </Key>
         <Key ID="STR_ACE_Wardrobe_sleevesDown">
             <English>Roll sleeves down</English>
