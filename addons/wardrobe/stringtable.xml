@@ -4,77 +4,95 @@
         <Key ID="STR_ACE_Wardrobe_action_inProgress">
             <English>Busy...</English>
             <Russian>Занято...</Russian>
+            <French>Occupé...</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_action_title">
             <English>Wardrobe</English>
             <Russian>Гардероб</Russian>
             <German>Garderobe</German>
+            <French>Garde-robe</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_enable_action">
             <English>ACE Interaction</English>
             <Russian>ACE взаимодействие</Russian>
             <German>Aktivieren ACE Interaction</German>
+            <French>Interaction ACE</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glovesOff">
             <English>Take gloves off</English>
             <Russian>Снять перчатки</Russian>
+            <French>Enlever ses gants</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glovesOn">
             <English>Wear gloves</English>
             <Russian>Надеть перчатки</Russian>
+            <French>Portez des gants</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_gogglesOff">
             <English>Take goggles off</English>
             <Russian>Снять очки</Russian>
+            <French>Enlevez vos lunettes de protection.</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_gogglesOn">
             <English>Put goggles on</English>
             <Russian>Надеть очки</Russian>
+            <French>Mettre des lunettes</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_jacketClose">
             <English>Close Jacket</English>
             <Russian>Застегнуть куртку</Russian>
+            <French>Fermer la veste</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_jacketOpen">
             <English>Open Jacket</English>
             <Russian>Растегнуть куртку</Russian>
+            <French>Veste ouverte</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_maskOff">
             <English>Take mask off</English>
             <Russian>Снять маску</Russian>
+            <French>Enlevez votre masque</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_maskOn">
             <English>Put mask on</English>
             <Russian>Надеть маску</Russian>
+            <French>Mettez votre masque</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_missingComponents">
             <English>Cannot switch to&lt;br/&gt;%1&lt;br/&gt;due to missing components</English>
             <Russian>Не удается переключиться на&lt;br/&gt;%1&lt;br/&gt;из-за отсутствия компонентов</Russian>
+            <French>Impossible de passer à&lt;br/&gt;%1&lt;br/&gt;en raison de composants manquants</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_setting_category_main">
             <English>ACE Wardrobe</English>
             <Russian>ACE Гардероб</Russian>
             <German>ACE Garderobe</German>
+            <French>ACE Armoire</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_sleevesDown">
             <English>Roll sleeves down</English>
             <Russian>Раскатать рукава</Russian>
+            <French>Descendre ses manches</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_sleevesUp">
             <English>Roll sleeves up</English>
             <Russian>Закатать рукава</Russian>
+            <French>Relever ses manches</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_visorDown">
             <English>Visor down</English>
             <Russian>Опустить визор</Russian>
+            <French>Visière baissée</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_visorUp">
             <English>Visor up</English>
             <Russian>Поднять визор</Russian>
+            <French>Visière relevée</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_wardrobeModifiable">
             <English>Wardrobe Modifiable</English>
             <Russian>Гардероб может быть изменен</Russian>
+            <French>Garde-robe modifiable</French>
         </Key>
     </Package>
 </Project>

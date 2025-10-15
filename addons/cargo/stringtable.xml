@@ -680,11 +680,13 @@
             <English>Unload Cargo On Killed</English>
             <Russian>Выгрузить груз из уничтоженной машины</Russian>
             <Japanese>車両破壊時に貨物を降ろす</Japanese>
+            <French>Décharger la cargaison du véhicule détruit</French>
         </Key>
         <Key ID="STR_ACE_Cargo_unloadOnKilled_description">
             <English>The chance for each cargo loaded into a vehicle to be unloaded if the vehicle is killed.\nApplies to objects only.</English>
             <Russian>Вероятность того, что каждый загруженный в транспортное средство груз будет выгружен, если транспортное средство будет уничтожено.\nПрименяется только к предметам.</Russian>
             <Japanese>車両が破壊された際、積載されている貨物が降ろされる確率。\nオブジェクトにのみ適用されます。</Japanese>
+            <French>Probabilité que chaque chargement chargé dans un véhicule soit déchargé si le véhicule est détruit. S'applique uniquement aux objets.</French>
         </Key>
     </Package>
 </Project>
