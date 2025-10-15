@@ -106,6 +106,7 @@
         <Key ID="STR_ACE_CSW_AddonName_Short">
             <English>CSW</English>
             <Russian>CSW</Russian>
+            <Japanese>CSW</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_AssembleCSW_progressBar">
             <English>Assembling Gun...</English>
@@ -126,6 +127,7 @@
         <Key ID="STR_ACE_CSW_DisableAutoFire_displayName">
             <English>Disable fire on load</English>
             <Russian>Выключить огонь при загрузке</Russian>
+            <Japanese>装填時に発射を無効化</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_DisassembleCSW_displayName">
             <English>Disassemble</English>
@@ -163,6 +165,7 @@
         <Key ID="STR_ACE_CSW_EnableAutoFire_displayName">
             <English>Enable fire on load</English>
             <Russian>Включить огонь при загрузке</Russian>
+            <Japanese>装填時に発射を有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_GMGBelt_descriptionShort">
             <English>Caliber: 20 mm&lt;br/&gt;Rounds: 20&lt;br /&gt;Used in: Grenade Launcher</English>
