@@ -4,35 +4,34 @@
  * Sets the speed dial for the UI.
  *
  * Arguments:
- * 0: Name of speed dial <STRING>
- * 1: Code to add to speed dial <STRING>
+ * 0: Name of speed dial <STRING> (default: "")
+ * 1: Code to add to speed dial <STRING> (default: "")
  *
  * Return Value:
  * None
  *
  * Example:
- * ["My Speed Dial","2131"] call ACE_explosives_fnc_addToSpeedDial;
+ * ["My Speed Dial", "2131"] call ace_explosives_fnc_addToSpeedDial
  *
  * Public: Yes
  */
 
-params ["_name", "_code"];
+params [["_name", "", [""]], ["_code", "", [""]]];
 TRACE_2("params",_name,_code);
 
-private _speedDial = ace_player getVariable [QGVAR(SpeedDial), []];
-private _found = false;
+if (_name == "") exitWith {};
 
-if ((_code) == "") exitWith {
-    [_name] call FUNC(removeFromSpeedDial);
+if (_code == "") exitWith {
+    _name call FUNC(removeFromSpeedDial);
 };
-{
-    if ((_x select 0) == _name) exitWith {
-        _speedDial set [_forEachIndex, _this];
-        _found = true;
-    };
-} forEach _speedDial;
-if (!_found) then {
+
+private _speedDial = ACE_player getVariable [QGVAR(speedDial), []];
+private _index = _speedDial findIf {(_x select 0) == _name};
+
+if (_index == -1) then {
     _speedDial pushBack _this;
+} else {
+    _speedDial set [_index, _this];
 };
 
-ace_player setVariable [QGVAR(SpeedDial), _speedDial];
+ACE_player setVariable [QGVAR(speedDial), _speedDial];
