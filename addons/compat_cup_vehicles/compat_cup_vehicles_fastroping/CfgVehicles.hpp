@@ -38,7 +38,7 @@ class CfgVehicles {
         EGVAR(fastroping,ropeOrigins)[] = {"ropeOriginLeft", "ropeOriginRight"};
 
         class UserActions {
-            class RampClose {
+            class Ramp_Close {
                 condition = QUOTE(this animationPhase 'ramp_bottom' >= 0.56 && player == driver this && !(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)]));
             };
         };

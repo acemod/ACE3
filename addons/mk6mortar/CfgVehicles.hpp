@@ -16,6 +16,7 @@ class CfgVehicles {
 
     class LandVehicle;
     class StaticWeapon: LandVehicle {
+        class ACE_SelfActions;
         class Turrets {
             class MainTurret;
         };
@@ -37,7 +38,7 @@ class CfgVehicles {
                 discreteDistanceInitIndex = 0;
             };
         };
-        class ACE_SelfActions {
+        class ACE_SelfActions: ACE_SelfActions {
             class GVAR(toggleMils) {
                 displayName = "Toggle MILS";
                 condition = QUOTE(true);

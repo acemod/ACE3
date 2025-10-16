@@ -28,9 +28,12 @@ private _config = configFile >> "CfgMagazines" >> _throwableMag;
 (_unit getVariable [QGVAR(activeMuzzle), ["", -1]]) params ["_muzzle", "_ammoCount"];
 
 // If there is 1 "round" left in the grenade, remove it from the player's inventory
-if (_ammoCount == 1) then {
+if (_ammoCount == 1 || {getNumber (_config >> "count") == 1}) then {
     // Grenade has ammo set to 0, so remove that one specifically
-    [_unit, _throwableMag, 0] call EFUNC(common,removeSpecificMagazine);
+    private _ret = [_unit, _throwableMag, 0] call EFUNC(common,removeSpecificMagazine);
+    if (!_ret) then {
+        [_unit, _throwableMag] call CBA_fnc_removeMagazine;
+    };
 
     // Get ammo count of new magazine
     _unit setVariable [QGVAR(activeMuzzle), [_muzzle, _unit ammo _muzzle]];
