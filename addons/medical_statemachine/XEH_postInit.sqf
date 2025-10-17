@@ -12,3 +12,16 @@
         [{_this enableSimulation true}, _unit, 2] call CBA_fnc_waitAndExecute;
     };
 }] call CBA_fnc_addEventHandler;
+
+DFUNC(activateMedical) = {
+    params ["_unit"];
+    if (!IS_MEDICAL_ACTIVITY(_unit)) then {
+        TRACE_2("activating medical for unit",_unit,typeOf _unit);
+        _unit setVariable [VAR_MEDICAL_ACTIVITY, true, true];
+    };
+};
+[QEGVAR(medical,woundReceived), LINKFUNC(activateMedical)] call CBA_fnc_addEventHandler;
+["ace_treatmentStarted", {
+    params ["", "_patient"];
+    _patient call FUNC(activateMedical);
+}] call CBA_fnc_addEventHandler;
