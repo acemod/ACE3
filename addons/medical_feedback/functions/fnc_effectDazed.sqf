@@ -17,8 +17,4 @@
 
 params ["_enable"];
 
-if (!_enable) exitWith {
-    GVAR(ppDazedDOF) ppEffectEnable false;
-};
-
-GVAR(ppDazedDOF) ppEffectEnable true;
+GVAR(ppDazedDOF) ppEffectEnable _enable;
