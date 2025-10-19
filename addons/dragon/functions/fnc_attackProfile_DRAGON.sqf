@@ -20,7 +20,7 @@
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
 _args params ["_firedEH", "", "", "", "_stateParams"];
 _firedEH params ["_shooter","_weapon","","","","","_projectile"];
-_attackProfileStateParams params ["_maxCorrectableDistance", "_wireCut", "_seekerMaxRangeSqr", "_seekerMinRangeSqr", "_wireCutSource", "_lastTime", "_serviceInterval", "_serviceChargeCount", "_serviceChargeAcceleration", "_dragonSpeed"];
+_attackProfileStateParams params ["_maxCorrectableDistance", "_wireCut", "_seekerMaxRangeSqr", "_seekerMinRangeSqr", "_wireCutSource", "_lastTime", "_serviceInterval", "_serviceChargeCount", "_serviceChargeAcceleration"];
 
 private _projectilePos = getPosASL _projectile;
 private _distanceToProjectile = (getPosASL _shooter) vectorDistanceSqr _projectilePos;

@@ -128,7 +128,7 @@ class GVAR(type_Dragon) {
     serviceInterval = 0.33; // how many seconds between pops
     serviceCharges = 32; // how many charges are in this missile
     serviceChargeAcceleration = 6;
-    dragonSpeed = 100; // meters per second
+    dragonSpeed = 100; // deprecated - meters per second
 
     defaultAttackProfile = "DRAGON";
     attackProfiles[] = {"DRAGON"};

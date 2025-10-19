@@ -30,7 +30,6 @@ private _config = configOf _projectile >> "ace_missileguidance";
 private _serviceInterval = [_config >> "serviceInterval", "NUMBER", 0.33] call CBA_fnc_getConfigEntry;
 private _serviceChargeCount = [_config >> "serviceCharges", "NUMBER", 60] call CBA_fnc_getConfigEntry;
 private _serviceChargeAcceleration = [_config >> "serviceChargeAcceleration", "NUMBER", 6.5] call CBA_fnc_getConfigEntry;
-private _dragonSpeed = [_config >> "dragonSpeed", "NUMBER", 100] call CBA_fnc_getConfigEntry;
 private _maxCorrectableDistance = [_config >> "correctionDistance", "NUMBER", DEFAULT_CORRECTION_DISTANCE] call CBA_fnc_getConfigEntry;
 private _maxDistanceSqr = _seekerMaxRange * _seekerMaxRange;
 private _minDistanceSqr = _seekerMinRange * _seekerMinRange;
@@ -49,7 +48,6 @@ _attackProfileStateParams append [
     CBA_missionTime,
     _serviceInterval,
     _serviceChargeCount,
-    _serviceChargeAcceleration,
-    _dragonSpeed
+    _serviceChargeAcceleration
 ];
 

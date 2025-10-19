@@ -8,6 +8,14 @@ class CfgAmmo {
         warheadName = "HEAT";
         hit = 460;
     };
+    class GVAR(penetrator_dragon_2): GVAR(penetrator_super) {
+        caliber = 40;
+        hit = 400;
+    };
+    class GVAR(penetrator_dragon_1): GVAR(penetrator_super) {
+        caliber = 22;
+        hit = 300;
+    };
 
     class GVAR(dragonBase): Rocket_03_AP_F {
         EGVAR(frag,skip) = 1;
@@ -52,6 +60,26 @@ class CfgAmmo {
             seekerMaxRange = 1500;
             serviceChargeAcceleration = 13.5;
             serviceCharges = 60; // how many charges are in this missile
+        };
+    };
+
+    class GVAR(2_M): GVAR(dragonBase) {
+        submunitionAmmo = QGVAR(penetrator_dragon_2);
+        submunitionDirectionType = "SubmunitionModelDirection";
+        submunitionInitSpeed = 1000;
+        submunitionParentSpeedCoef = 0;
+        submunitionInitialOffset[] = { 0, 0, -0.2 };
+
+        class ace_missileguidance: ace_missileguidance {
+            enabled = 1;
+        };
+    };
+
+    class GVAR(1_M): GVAR(2_M) {
+        submunitionAmmo = QGVAR(penetrator_dragon_1);
+
+        class ace_missileguidance: ace_missileguidance {
+            enabled = 1;
         };
     };
 
