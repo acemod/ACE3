@@ -127,7 +127,7 @@ class GVAR(type_Dragon) {
 
     serviceInterval = 0.33; // how many seconds between pops
     serviceCharges = 32; // how many charges are in this missile
-    serviceChargeAcceleration = 6.5;
+    serviceChargeAcceleration = 6;
     dragonSpeed = 100; // meters per second
 
     defaultAttackProfile = "DRAGON";
@@ -277,7 +277,7 @@ class GVAR(type_Javelin) {
     seekerAccuracy = 1;         // seeker accuracy multiplier
 
     seekerMinRange = 0;
-    seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
+    seekerMaxRange = 4500;      // Range from the missile which the seeker can visually search
 
     seekLastTargetPos = 1;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
 

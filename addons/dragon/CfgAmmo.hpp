@@ -7,7 +7,6 @@ class CfgAmmo {
         caliber = 60;
         warheadName = "HEAT";
         hit = 460;
-        fuseDistance = 75;
     };
 
     class GVAR(dragonBase): Rocket_03_AP_F {
@@ -22,8 +21,8 @@ class CfgAmmo {
         sideAirFriction = 0.05;
         effectsMissile = "missile2";
         effectFlare = "";
-        airFriction = 0.5;
-        fuseDistance = 75;
+        airFriction = 0.3;
+        fuseDistance = 65; // manual says 65m
         whistleDist = 2;
 
         hit = 100;
@@ -51,6 +50,7 @@ class CfgAmmo {
             enabled = 1;
             seekerMinRange = 30;
             seekerMaxRange = 1500;
+            serviceChargeAcceleration = 13.5;
             serviceCharges = 60; // how many charges are in this missile
         };
     };
