@@ -76,7 +76,6 @@ private _dropMode = _unit getVariable [QGVAR(dropMode), false];
     _unit,
     _unit getVariable [QGVAR(activeThrowable), objNull],
     getPosASLVisual (_unit getVariable [QGVAR(activeThrowable), objNull]),
-    _unit getVariable [QGVAR(throwMod), THROW_MODIFER_DEFAULT],
     [ACE_player getVariable [QGVAR(throwMod), THROW_MODIFER_DEFAULT], THROW_MODIFER_MIN] select _dropMode,
     _unit getVariable [QGVAR(throwSpeed), THROW_SPEED_DEFAULT],
     _dropMode
