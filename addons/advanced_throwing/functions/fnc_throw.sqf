@@ -75,7 +75,7 @@ if !(_unit getVariable [QGVAR(primed), false]) then {
     _unit,
     _unit getVariable [QGVAR(activeThrowable), objNull],
     getPosASLVisual (_unit getVariable [QGVAR(activeThrowable), objNull]),
-    _unit getVariable [QGVAR(throwMod), THROW_TYPE_DEFAULT],
+    _unit getVariable [QGVAR(throwMod), THROW_MODIFER_DEFAULT],
     _unit getVariable [QGVAR(throwSpeed), THROW_SPEED_DEFAULT],
     _unit getVariable [QGVAR(dropMode), false]
 ], 0.3] call CBA_fnc_waitAndExecute;
