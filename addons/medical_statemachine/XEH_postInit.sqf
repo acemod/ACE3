@@ -18,6 +18,9 @@ DFUNC(activateMedical) = {
     if (!IS_MEDICAL_ACTIVITY(_unit)) then {
         TRACE_2("activating medical for unit",_unit,typeOf _unit);
         _unit setVariable [VAR_MEDICAL_ACTIVITY, true, true];
+        if (_unit isNil QEGVAR(medical_vitals,lastTimeUpdated)) then {
+            _unit setVariable [QEGVAR(medical_vitals,lastTimeUpdated), CBA_missionTime - 1];
+        };
     };
 };
 [QEGVAR(medical,woundReceived), LINKFUNC(activateMedical)] call CBA_fnc_addEventHandler;
