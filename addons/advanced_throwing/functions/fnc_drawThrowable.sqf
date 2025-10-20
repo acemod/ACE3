@@ -62,7 +62,7 @@ _cameraDir = (_cameraDir select 0) atan2 (_cameraDir select 1);
 private _phi = abs (_cameraDir - _unitDirVisual) % 360;
 _phi = [_phi, 360 - _phi] select (_phi > 180);
 
-private _power = linearConversion [0, 180, (ACE_player getVariable [QGVAR(throwModified), THROW_MODIFER_DEFAULT]) * (_phi - 30), 1, 0.3, true];
+private _power = linearConversion [0, 180, (ACE_player getVariable [QGVAR(throwMod), THROW_MODIFER_DEFAULT]) * (_phi - 30), 1, 0.3, true];
 ACE_player setVariable [QGVAR(throwSpeed), _throwSpeed * _power];
 
 TRACE_5("",_phi,_power,_throwSpeed * _power,_throwableMag,ACE_player getVariable ARR_2([QGVAR(activeMuzzle),ARR_2(["",-1])]));

@@ -26,7 +26,7 @@ private _activeThrowable = ACE_player getVariable [QGVAR(activeThrowable), objNu
 if (isNull _activeThrowable) exitWith {};
 
 private _dropMode = ACE_player getVariable [QGVAR(dropMode), false];
-private _throwMod = ACE_player getVariable [QGVAR(throwMod), THROW_MODIFER_DEFAULT];
+private _throwMod = [ACE_player getVariable [QGVAR(throwMod), THROW_MODIFER_DEFAULT], THROW_MODIFER_MIN] select _dropMode;
 private _throwSpeed = ACE_player getVariable [QGVAR(throwSpeed), THROW_SPEED_DEFAULT];
 
 private _direction = vectorLinearConversion [THROW_MODIFER_MIN, THROW_MODIFER_MAX, _throwMod, THROWSTYLE_HIGH_DIR, THROWSTYLE_NORMAL_DIR, true];

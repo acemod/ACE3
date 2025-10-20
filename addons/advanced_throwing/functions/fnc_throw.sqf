@@ -27,6 +27,7 @@ if !(_unit getVariable [QGVAR(primed), false]) then {
 [_unit, "ThrowGrenade"] call EFUNC(common,doGesture);
 
 // Pass position to reset later because animation may change it in certain stances
+private _dropMode = _unit getVariable [QGVAR(dropMode), false];
 [{
     params ["_unit", "_activeThrowable", "_posThrown", "_throwMod", "_throwSpeed", "_dropMode"];
     TRACE_6("delayParams",_unit,_activeThrowable,_posThrown,_throwMod,_throwSpeed,_dropMode);
@@ -34,7 +35,7 @@ if !(_unit getVariable [QGVAR(primed), false]) then {
     // Reset position in case animation changed it
     _activeThrowable setPosASL _posThrown;
 
-    // Launch actual throwable /-------------------------- _throwType
+    // Launch actual throwable
     private _direction = vectorLinearConversion [THROW_MODIFER_MIN, THROW_MODIFER_MAX, _throwMod, THROWSTYLE_HIGH_DIR, THROWSTYLE_NORMAL_DIR, true];
     private _velocity = linearConversion [THROW_MODIFER_MIN, THROW_MODIFER_MAX, _throwMod, _throwSpeed / THROWSTYLE_HIGH_VEL_COEF / 1.2, _throwSpeed, true];
     _velocity = [_velocity, THROWSTYLE_DROP_VEL] select _dropMode;
@@ -76,8 +77,9 @@ if !(_unit getVariable [QGVAR(primed), false]) then {
     _unit getVariable [QGVAR(activeThrowable), objNull],
     getPosASLVisual (_unit getVariable [QGVAR(activeThrowable), objNull]),
     _unit getVariable [QGVAR(throwMod), THROW_MODIFER_DEFAULT],
+    [ACE_player getVariable [QGVAR(throwMod), THROW_MODIFER_DEFAULT], THROW_MODIFER_MIN] select _dropMode,
     _unit getVariable [QGVAR(throwSpeed), THROW_SPEED_DEFAULT],
-    _unit getVariable [QGVAR(dropMode), false]
+    _dropMode
 ], 0.3] call CBA_fnc_waitAndExecute;
 
 
