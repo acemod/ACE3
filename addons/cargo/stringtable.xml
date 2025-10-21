@@ -683,7 +683,7 @@
             <Russian>Выгрузить груз из уничтоженной машины</Russian>
             <Japanese>車両破壊時に貨物を降ろす</Japanese>
             <French>Décharger la cargaison du véhicule détruit</French>
-            <Spanish>Descargar Carga Si Destruido</Spanish>
+            <Spanish>Descargar Carga si el vehículo es destruído</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_unloadOnKilled_description">
             <English>The chance for each cargo loaded into a vehicle to be unloaded if the vehicle is killed.\nApplies to objects only.</English>
