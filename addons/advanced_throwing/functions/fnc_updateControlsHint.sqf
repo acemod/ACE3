@@ -19,7 +19,7 @@ if (!GVAR(showMouseControls)) exitWith {};
 
 private _primed = ACE_player getVariable [QGVAR(primed), false];
 
-private _mmb = [LLSTRING(ChangeMode), LLSTRING(Extend)] select (ACE_player getVariable [QGVAR(dropMode), false]);
+private _mmb = [format [LLSTRING(ChangeMode), localize "STR_dik_shift"], LLSTRING(Extend)] select (ACE_player getVariable [QGVAR(dropMode), false]);
 
 if (!_primed) then {
     _mmb = [_mmb, LLSTRING(Cook)] joinString " / ";

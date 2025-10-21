@@ -19,7 +19,7 @@
             <Ukrainian>Покращений кидок гранат</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ChangeMode">
-            <English>(Scroll) Change Mode</English>
+            <English>(Scroll) Change Mode (+ %1 to Snap)</English>
             <Czech>(Scrollovat) Změnit mód</Czech>
             <French>(Défilement) Changer de mode</French>
             <Spanish>(Scroll) Cambiar Modo</Spanish>
