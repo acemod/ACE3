@@ -8,6 +8,7 @@
             <Korean>카메라 시야 모드 순환</Korean>
             <Japanese>カメラの映像モードを切り替え</Japanese>
             <Ukrainian>Циклічний режим огляду камери</Ukrainian>
+            <Spanish>Cambiar Modo de Visión de Cámara</Spanish>
         </Key>
         <Key ID="STR_ACE_SPIKE_LR">
             <English>Spike LR</English>
@@ -16,6 +17,7 @@
             <Korean>스파이크 LR</Korean>
             <Japanese>スパイク LR</Japanese>
             <Ukrainian>Spike LR</Ukrainian>
+            <Spanish>Spike LR</Spanish>
         </Key>
         <Key ID="STR_ACE_SPIKE_LR_Short">
             <English>LR</English>
@@ -24,6 +26,7 @@
             <Korean>LR</Korean>
             <Japanese>LR</Japanese>
             <Ukrainian>LR</Ukrainian>
+            <Spanish>LR</Spanish>
         </Key>
         <Key ID="STR_ACE_SPIKE_LR_olive">
             <English>Spike LR (Olive)</English>
@@ -32,6 +35,7 @@
             <Korean>스파이크 LR (올리브)</Korean>
             <Japanese>スパイク LR (オリーブ)</Japanese>
             <Ukrainian>Spike LR (олива)</Ukrainian>
+            <Spanish>Spike LR (Oliva)</Spanish>
         </Key>
         <Key ID="STR_ACE_SPIKE_LeaveCamera">
             <English>Leave Camera</English>
@@ -40,6 +44,7 @@
             <Korean>카메라 보는 걸 그만두기</Korean>
             <Japanese>カメラから離れる</Japanese>
             <Ukrainian>Залишити камеру</Ukrainian>
+            <Spanish>Dejar Cámara</Spanish>
         </Key>
         <Key ID="STR_ACE_SPIKE_Manual">
             <English>MANUAL</English>
@@ -48,6 +53,7 @@
             <Korean>메뉴얼</Korean>
             <Japanese>マニュアル</Japanese>
             <Ukrainian>ІНСТРУКЦІЯ</Ukrainian>
+            <Spanish>MANUAL</Spanish>
         </Key>
         <Key ID="STR_ACE_SPIKE_PanDown">
             <English>Pan Camera Down</English>
@@ -56,6 +62,7 @@
             <Korean>카메라를 아래로 향하기</Korean>
             <Japanese>カメラを下に向ける</Japanese>
             <Ukrainian>Панорамування камери Вниз</Ukrainian>
+            <Spanish>Mover Cámara Abajo</Spanish>
         </Key>
         <Key ID="STR_ACE_SPIKE_PanLeft">
             <English>Pan Camera Left</English>
@@ -64,6 +71,7 @@
             <Korean>카메라를 왼쪽으로 향하기</Korean>
             <Japanese>カメラを左に向ける</Japanese>
             <Ukrainian>Панорамування камери Ліворуч</Ukrainian>
+            <Spanish>Mover Cámara Izquierda</Spanish>
         </Key>
         <Key ID="STR_ACE_SPIKE_PanRight">
             <English>Pan Camera Right</English>
@@ -72,6 +80,7 @@
             <Korean>카메라를 오른쪽으로 향하기</Korean>
             <Japanese>カメラを右に向ける</Japanese>
             <Ukrainian>Панорамування камери Праворуч</Ukrainian>
+            <Spanish>Mover Cámara Derecha</Spanish>
         </Key>
         <Key ID="STR_ACE_SPIKE_PanUp">
             <English>Pan Camera Up</English>
@@ -80,6 +89,7 @@
             <Korean>카메라를 위로 향하기</Korean>
             <Japanese>カメラを上に向ける</Japanese>
             <Ukrainian>Панорамування камери Нагору</Ukrainian>
+            <Spanish>Mover Cámara Arriba</Spanish>
         </Key>
         <Key ID="STR_ACE_SPIKE_ZoomIn">
             <English>Zoom Camera In</English>
@@ -88,6 +98,7 @@
             <Korean>카메라 줌 인</Korean>
             <Japanese>カメラをズームイン</Japanese>
             <Ukrainian>Збільшити масштаб камери</Ukrainian>
+            <Spanish>Aumentar Zoom de Cámara</Spanish>
         </Key>
         <Key ID="STR_ACE_SPIKE_ZoomOut">
             <English>Zoom Camera Out</English>
@@ -96,6 +107,7 @@
             <Korean>카메라 줌 아웃</Korean>
             <Japanese>カメラをズームアウト</Japanese>
             <Ukrainian>Зменшити масштаб камери</Ukrainian>
+            <Spanish>Disminuir Zoom de Cámara</Spanish>
         </Key>
         <Key ID="STR_ACE_SPIKE_designate">
             <English>Designate</English>
@@ -104,6 +116,7 @@
             <Korean>목표 지정</Korean>
             <Japanese>目標を指定</Japanese>
             <Ukrainian>Призначити</Ukrainian>
+            <Spanish>Designar</Spanish>
         </Key>
     </Package>
 </Project>

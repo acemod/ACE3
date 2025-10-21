@@ -370,6 +370,7 @@
             <Korean>XMS (줄무늬 위장)</Korean>
             <Japanese>XMS (縞模様迷彩)</Japanese>
             <Ukrainian>XMS (Смуги)</Ukrainian>
+            <Spanish>XMS (Franjas)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Camo_Name">
             <English>XMS GL (Stripes)</English>
@@ -379,6 +380,7 @@
             <Korean>XMS GL (줄무늬 위장)</Korean>
             <Japanese>XMS GL (縞模様迷彩)</Japanese>
             <Ukrainian>XMS GL (Смуги)</Ukrainian>
+            <Spanish>XMS GL (Franjas)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Gray_Name">
             <English>XMS GL (Gray)</English>
@@ -388,6 +390,7 @@
             <Korean>XMS GL (회색)</Korean>
             <Japanese>XMS GL (グレー)</Japanese>
             <Ukrainian>XMS GL (Сірий)</Ukrainian>
+            <Spanish>XMS GL (Gris)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Khaki_Name">
             <English>XMS GL (Khaki)</English>
@@ -436,6 +439,7 @@
             <Korean>XMS (회색)</Korean>
             <Japanese>XMS (グレー)</Japanese>
             <Ukrainian>XMS (Сірий)</Ukrainian>
+            <Spanish>XMS (Gris)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Khaki_Name">
             <English>XMS (Khaki)</English>
@@ -471,6 +475,7 @@
             <Korean>XMS SG (줄무늬 위장)</Korean>
             <Japanese>XMS SG (縞模様迷彩)</Japanese>
             <Ukrainian>XMS SG (Смуги)</Ukrainian>
+            <Spanish>XMS SG (Franjas)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Gray_Name">
             <English>XMS SG (Gray)</English>
@@ -480,6 +485,7 @@
             <Korean>XMS SG (회색)</Korean>
             <Japanese>XMS SG (グレー)</Japanese>
             <Ukrainian>XMS SG (Сірий)</Ukrainian>
+            <Spanish>XMS SG (Gris)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Khaki_Name">
             <English>XMS SG (Khaki)</English>
@@ -528,6 +534,7 @@
             <Korean>XMS SW (줄무늬 위장)</Korean>
             <Japanese>XMS SW (縞模様迷彩)</Japanese>
             <Ukrainian>XMS SW (Смуги)</Ukrainian>
+            <Spanish>XMS SW (Stripes)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Gray_Name">
             <English>XMS SW (Gray)</English>
@@ -537,6 +544,7 @@
             <Korean>XMS SW (회색)</Korean>
             <Japanese>XMS SW (グレー)</Japanese>
             <Ukrainian>XMS SW (Сірий)</Ukrainian>
+            <Spanish>XMS SW (Gris)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Khaki_Name">
             <English>XMS SW (Khaki)</English>
@@ -598,6 +606,7 @@
             <Korean>씨모어 레일웨이 (빨강/줄무늬 위장)</Korean>
             <Japanese>C-More レイルウェイ (レッド、縞模様迷彩)</Japanese>
             <Ukrainian>C-More Railway (Червоний, Смуги)</Ukrainian>
+            <Spanish>C-More Railway (Rojo, Franjas)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_aco_grn_camo_Name">
             <English>C-More Railway (Green, Stripes)</English>
@@ -607,6 +616,7 @@
             <Korean>씨모어 레일웨이 (초록/줄무늬 위장)</Korean>
             <Japanese>C-More レイルウェイ (グリーン、縞模様迷彩)</Japanese>
             <Ukrainian>C-More Railway (Зелений, Смуги)</Ukrainian>
+            <Spanish>C-More Railway (Verde, Franjas)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_tracked_02_Name">
             <English>BM-2T Stalker (Bumerang-BM)</English>

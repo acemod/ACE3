@@ -10,6 +10,7 @@
             <Korean>유닛이 도보로 이동하는 동안 이 설정 값보다 많은 대미지를 입으면 넘어집니다.\n-1로 설정하면 이 기능은 꺼집니다.</Korean>
             <Japanese>徒歩で移動中のユニットが設定値を超えるダメージを受けると転倒します。\n-1に設定することでこの機能を無効化できます。</Japanese>
             <Ukrainian>Якщо під час пересування пішки юніт отримає більше шкоди, ніж зазначено в цьому налаштуванні, то він упаде.\nЯкщо встановлене значення -1, механіка відключається.</Ukrainian>
+            <Spanish>Si una unidad recibe un daño superior al valor de esta opción mientras se desplaza a pie, se caerá al suelo.\nSi se pone -1 esta mecánica queda deshabilitada.</Spanish>
         </Key>
         <Key ID="STR_ACE_HitReactions_minDamageToTrigger_displayName">
             <English>Min Damage to trigger falling</English>

@@ -1804,6 +1804,7 @@
             <Japanese>クライアントに追加のアドオンを検出しました&lt;br/&gt;</Japanese>
             <Chinesesimp>检测到客户端多余模组&lt;br/&gt;</Chinesesimp>
             <Ukrainian>Виявлено додатковий аддон на клієнті&lt;br/&gt;</Ukrainian>
+            <Spanish>Detectar addons adicionales en el cliente&lt;br/&gt;</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_aiOnly">
             <English>AI only</English>
@@ -1827,6 +1828,7 @@
             <Japanese>、その他 %1 件。</Japanese>
             <Chinesesimp>, 以及另外%1个</Chinesesimp>
             <Ukrainian>, і ще %1.</Ukrainian>
+            <Spanish>, y %1 más.</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_bananaDescr">
             <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
@@ -1911,6 +1913,7 @@
             <Japanese>クライアント追加</Japanese>
             <Chinesesimp>客户端多余</Chinesesimp>
             <Ukrainian>додатковий клієнт</Ukrainian>
+            <Spanish>cliente adicional</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_clientMissing">
             <English>client missing</English>
@@ -1920,6 +1923,7 @@
             <Japanese>クライアント不足</Japanese>
             <Chinesesimp>客户端缺少</Chinesesimp>
             <Ukrainian>Клієнт відсутній</Ukrainian>
+            <Spanish>cliente ausente</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_closeHandheldDevice">
             <English>Close Handheld Device</English>
@@ -1963,6 +1967,7 @@
             <Japanese>[ACE] エラー</Japanese>
             <Chinesesimp>[ACE] 错误</Chinesesimp>
             <Ukrainian>[ACE] ПОМИЛКА</Ukrainian>
+            <Spanish>[ACE] ERROR</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_isMissingItems">
             <English>[ACE] %1: ERROR %2 addon(s):</English>
@@ -1972,6 +1977,7 @@
             <Japanese>[ACE] %1: エラー %2 アドオン:</Japanese>
             <Chinesesimp>[ACE] %1: 错误 %2模组:</Chinesesimp>
             <Ukrainian>[ACE] %1: ПОМИЛКА %2 аддон(ів):</Ukrainian>
+            <Spanish>[ACE] %1: ERROR %2 addon(s):</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_loadObject">
             <English>Load</English>
@@ -2000,6 +2006,7 @@
             <Japanese>現実的なコンパス偏角</Japanese>
             <Chinesesimp>真实的指南针偏角</Chinesesimp>
             <Ukrainian>Реалістичне відхилення компаса</Ukrainian>
+            <Spanish>Declinación Realista de Brújula</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_magneticDeclinationooltip">
             <English>Compass will point to magnetic north</English>
@@ -2011,6 +2018,7 @@
             <Japanese>コンパスが磁北を指すようになります</Japanese>
             <Chinesesimp>指南针指向磁北极</Chinesesimp>
             <Ukrainian>Компас вказуватиме на північний магнітний полюс</Ukrainian>
+            <Spanish>La Brújula apunta al norte magnético</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_missingAddonClient">
             <English>Detected missing addon on client&lt;br/&gt;</English>
@@ -2020,6 +2028,7 @@
             <Japanese>クライアントにアドオンの不足を検出しました&lt;br/&gt;</Japanese>
             <Chinesesimp>检测到客户端缺少模组&lt;br/&gt;</Chinesesimp>
             <Ukrainian>Виявлено відсутній аддон на клієнті &lt;br/&gt;</Ukrainian>
+            <Spanish>Detectado un addon que falta en cliente&lt;br/&gt;</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_newerClient">
             <English>newer client</English>
@@ -2029,6 +2038,7 @@
             <Japanese>新しいクライアント</Japanese>
             <Chinesesimp>客户端过新</Chinesesimp>
             <Ukrainian>новий клієнт</Ukrainian>
+            <Spanish>cliente más moderno</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_newerVersionClient">
             <English>Detected newer client version&lt;br/&gt;</English>
@@ -2038,6 +2048,7 @@
             <Japanese>クライアントに新しいバージョンを検出しました&lt;br/&gt;</Japanese>
             <Chinesesimp>检测到客户端过新模组&lt;br/&gt;</Chinesesimp>
             <Ukrainian>Виявлена більш нова версія клієнту &lt;br/&gt;</Ukrainian>
+            <Spanish>Detectada versión de cliente más moderna&lt;br/&gt;</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_olderClient">
             <English>older client</English>
@@ -2047,6 +2058,7 @@
             <Japanese>古いクライアント</Japanese>
             <Chinesesimp>客户端过旧</Chinesesimp>
             <Ukrainian>старий клієнт</Ukrainian>
+            <Spanish>cliente obsoleto</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_olderVersionClient">
             <English>Detected older client version&lt;br/&gt;</English>
@@ -2056,6 +2068,7 @@
             <Japanese>クライアントに古いバージョンを検出しました&lt;br/&gt;</Japanese>
             <Chinesesimp>检测到客户端过旧模组&lt;br/&gt;</Chinesesimp>
             <Ukrainian>Виявлена більш стара версія клієнта &lt;br/&gt;</Ukrainian>
+            <Spanish>Detectada versión de cliente obsoleto&lt;br/&gt;</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_playerOnly">
             <English>Players only</English>
@@ -2233,6 +2246,7 @@
             <Japanese>[ACE] バージョン不一致:&lt;br/&gt;&lt;br/&gt;</Japanese>
             <Chinesesimp>[ACE] 版本不匹配:&lt;br/&gt;&lt;br/&gt;</Chinesesimp>
             <Ukrainian>[ACE] Невідповідність версії:&lt;br/&gt;&lt;br/&gt;</Ukrainian>
+            <Spanish>[ACE] Versión no coincide:&lt;br/&gt;&lt;br/&gt;</Spanish>
         </Key>
     </Package>
 </Project>

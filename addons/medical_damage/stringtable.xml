@@ -112,6 +112,7 @@
             <Korean>대미지 계산 시 탄약 재질의 관통력을 고려할 지 여부를 제어합니다.</Korean>
             <Japanese>ダメージ処理において弾薬の貫通力を考慮するかどうかを制御します。</Japanese>
             <Ukrainian>Контролює, чи враховується проникнення боєприпасів у матеріал при обробці пошкоджень.</Ukrainian>
+            <Spanish>Controla si la penetración de materiales por la munición es tomada en cuenta para el manejo de daño.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AlternateArmorPenetration_DisplayName">
             <English>Use Custom Armor Penetration</English>
@@ -120,6 +121,7 @@
             <Korean>커스텀 철갑 사용</Korean>
             <Japanese>特別なアーマー貫通計算を使用</Japanese>
             <Ukrainian>Використовувати спец. бронепробивність</Ukrainian>
+            <Spanish>Utilizar la Penetración de Armadura Personalizada</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Avulsion">
             <English>Avulsion</English>
@@ -924,6 +926,7 @@
             <Japanese>致命的状態となり死亡する前に手足が受けられるダメージの量を設定します。\n効果の発動には0より大きい数字に設定する必要があります。\n"手足のダメージを使用" 設定を有効化した上で "致命ダメージの原因" を "外傷の合計" または "どちらか" に設定する必要があります。\nユニット全体のダメージしきい値に対して乗算的に上乗せされます。 骨折や足の引きずり(跛行)とは無関係です。</Japanese>
             <Chinesesimp>设置四肢可以承受的伤害, 超过时将导致致命伤. 必须大于0才能产生效果\n需要启用"四肢伤害计入创伤总和", 并且"致命伤来源"设置为"创伤总和"或"二者之一"\n与临界伤害阈值乘法叠加. 和骨折/跛脚无关</Chinesesimp>
             <Ukrainian>Встановлює величину шкоди, яку можуть отримати кінцівки, перш ніж шкода стане критичною, що призведе до смерті. Для будь-якого ефекту має бути більше 0. Потрібно, щоб налаштування "Використовувати шкоду кінцівкам" було ввімкнене, а "Причина смертельної шкоди" була встановлена на "Сукупність травми" або "Обидва".\nПомножується із загальним порогом ушкодження. Ніяк не взаємодіє з переломами або кульгавістю.</Ukrainian>
+            <Spanish>Establece la cantidad de daño que los miembros pueden recibir antes de volverse crítico, terminando en muerte. Debe ser mayor que 0 para que tenga efecto.\nRequiere habilitar la opción "Usar daño en los miembros" y establecer la opción "Origen de daño fatal" como "Suma de traumatismos" o "Ambos".\nSe apila multiplicativamente con el Umbral de Daño general. No interactúa con fracturas/cojera en absoluto.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_limbDamageThreshold_DisplayName">
             <English>Limb Damage Threshold</English>
@@ -935,6 +938,7 @@
             <Japanese>手足のダメージしきい値</Japanese>
             <Chinesesimp>四肢伤害阈值</Chinesesimp>
             <Ukrainian>Поріг пошкодження кінцівок</Ukrainian>
+            <Spanish>Umbral de Daño en Miembros</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_uselimbDamage_Description">
             <English>Controls whether limb damage is taken into account for sum of trauma calculations.</English>
@@ -946,6 +950,7 @@
             <Japanese>"外傷の合計" の計算に手足のダメージを考慮するかどうかを制御します。</Japanese>
             <Chinesesimp>控制四肢伤害是否计入创伤总和计算</Chinesesimp>
             <Ukrainian>Визначає, чи враховується пошкодження кінцівок під час розрахунку сукупності травм.</Ukrainian>
+            <Spanish>Controla si el daño en miembros es tomado en cuenta para los cálculos de suma de traumas.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_uselimbDamage_DisplayName">
             <English>Use Limb Damage</English>
@@ -957,6 +962,7 @@
             <Japanese>手足のダメージを使用</Japanese>
             <Chinesesimp>四肢伤害计入创伤总和</Chinesesimp>
             <Ukrainian>Використовувати шкоду кінцівкам</Ukrainian>
+            <Spanish>Usar daño de miembros</Spanish>
         </Key>
     </Package>
 </Project>
