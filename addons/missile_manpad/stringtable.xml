@@ -10,6 +10,7 @@
             <Korean>RIM-116 RAM [ACE]</Korean>
             <Japanese>RIM-116 [ACE]</Japanese>
             <Ukrainian>RIM-116 [ACE]</Ukrainian>
+            <Spanish>RIM-116 [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_MISSILE_MANPAD_rim116_21x">
             <English>21x RIM-116 [ACE]</English>
@@ -20,6 +21,7 @@
             <Korean>21x RIM-116 RAM [ACE]</Korean>
             <Japanese>21x RIM-116 [ACE]</Japanese>
             <Ukrainian>21x RIM-116 [ACE]</Ukrainian>
+            <Spanish>21x RIM-116 [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_MISSILE_MANPAD_stinger">
             <English>FIM-92 Stinger [ACE]</English>
@@ -30,6 +32,7 @@
             <Korean>FIM-92 스팅어 [ACE]</Korean>
             <Japanese>FIM-92 スティンガー [ACE]</Japanese>
             <Ukrainian>FIM-92 Stinger [ACE]</Ukrainian>
+            <Spanish>FIM-92 Stinger [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_MISSILE_MANPAD_stinger_4x">
             <English>4x FIM-92 Stinger [ACE]</English>
@@ -40,6 +43,7 @@
             <Korean>4x FIM-92 스팅어 [ACE]</Korean>
             <Japanese>4x FIM-92 スティンガー [ACE]</Japanese>
             <Ukrainian>4x FIM-92 Stinger [ACE]</Ukrainian>
+            <Spanish>4x FIM-92 Stinger [ACE]</Spanish>
         </Key>
     </Package>
 </Project>

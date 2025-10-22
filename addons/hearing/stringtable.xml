@@ -74,7 +74,7 @@
             <English>Protective Earplugs allow the wearer to be near loud weaponry without damage to his hearing.</English>
             <Czech>Ochranné špunty umožňují uživateli, aby neutrpěl zranění jeho sluchu v blízkosti hlasitých zbraní.</Czech>
             <French>Les bouchons d'oreilles anti bruit permettent au porteur d'être près d'armes bruyantes, sans risque d'endommager son ouïe.</French>
-            <Spanish>Los tapones para los oídos permiten al usuario operar armamento ruidoso sin sufrir pérdida de audición.</Spanish>
+            <Spanish>Los Tapones para los oídos permiten al usuario operar armamento ruidoso sin sufrir pérdida de audición.</Spanish>
             <Italian>Proteggono l'apparato uditivo, permettendo a chi li indossa di resistere ai suoni particolarmente forti senza alcun danno.</Italian>
             <Polish>Stopery do uszu umożliwiają użytkownikowi przebywać w pobliżu głośnej broni bez poniesienia konsekwencji jaką jest utrata słuchu.</Polish>
             <Portuguese>Protetor para ouvidos permitem que o usuário esteja próximo a ruídos sem danificar sua audição.</Portuguese>
@@ -151,6 +151,7 @@
             <Japanese>電子聴覚保護具を外しました</Japanese>
             <Chinesesimp>降噪耳机已摘下</Chinesesimp>
             <Ukrainian>Електронний захист слуху знято</Ukrainian>
+            <Spanish>Quitada Protección Auditiva Electrónica</Spanish>
         </Key>
         <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Are_On">
             <English>Electronic Hearing Protection put on</English>
@@ -162,6 +163,7 @@
             <Japanese>電子聴覚保護具を装着しました</Japanese>
             <Chinesesimp>降噪耳机已佩戴</Chinesesimp>
             <Ukrainian>Електронний захист слуху надітий</Ukrainian>
+            <Spanish>Puesta Protección Auditiva Electrónica</Spanish>
         </Key>
         <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Description">
             <English>Electronic Hearing Protection protects the wearer from hearing damage without reducing situational awareness.</English>
@@ -173,6 +175,7 @@
             <Japanese>電子聴覚保護具は状況認識力を低下させることなく、装着者の聴覚障害を防ぐことができる。</Japanese>
             <Chinesesimp>降噪耳机可保护佩戴者免受听力损害，同时又不会降低态势感知能力。</Chinesesimp>
             <Ukrainian>Електронний захист органів слуху захищає користувача від пошкодження слуху, не знижуючи при цьому його обізнаності про ситуацію.</Ukrainian>
+            <Spanish>La Protección Auditiva Electrónica protege a quien la lleva de daño auditivo sin reducir la conciencia situacional.</Spanish>
         </Key>
         <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Name">
             <English>Electronic Hearing Protection</English>
@@ -184,6 +187,7 @@
             <Japanese>電子聴覚保護具</Japanese>
             <Chinesesimp>降噪耳机</Chinesesimp>
             <Ukrainian>Електронний захист слуху</Ukrainian>
+            <Spanish>Protección Auditiva Electrónica</Spanish>
         </Key>
         <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Off">
             <English>Take off Electronic Hearing Protection</English>
@@ -195,6 +199,7 @@
             <Japanese>電子聴覚保護具を外す</Japanese>
             <Chinesesimp>摘下降噪耳机</Chinesesimp>
             <Ukrainian>Зняти електронний захист слуху</Ukrainian>
+            <Spanish>Quitar Protección Auditiva Electrónica</Spanish>
         </Key>
         <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_On">
             <English>Put on Electronic Hearing Protection</English>
@@ -206,6 +211,7 @@
             <Japanese>電子聴覚保護具を装着</Japanese>
             <Chinesesimp>戴上降噪耳机</Chinesesimp>
             <Ukrainian>Одягти електронний захист слуху</Ukrainian>
+            <Spanish>Poner Protección Auditiva Electrónica</Spanish>
         </Key>
         <Key ID="STR_ACE_Hearing_EnableCombatDeafness_Description">
             <English>Reduces the hearing ability as the player takes hearing damage</English>
@@ -324,6 +330,7 @@
             <Japanese>電子聴覚保護具の着脱</Japanese>
             <Chinesesimp>戴上/摘下降噪耳机</Chinesesimp>
             <Ukrainian>Одягнути/зняти електронний захист слуху</Ukrainian>
+            <Spanish>Poner/quitar Protección Auditiva Electrónica</Spanish>
         </Key>
         <Key ID="STR_ACE_Hearing_PutOrRemoveEarplugs">
             <English>Put/take out earplugs</English>
@@ -444,6 +451,7 @@
             <Japanese>爆発による聴力低下の程度を変更します。\n0に設定することで爆発による聴力低下を無効化できます。</Japanese>
             <Chinesesimp>爆炸会导致多大程度的听力损伤.\n设置为0时爆炸将不会导致听力损伤</Chinesesimp>
             <Ukrainian>Змінює ступінь глухоти, спричиненої вибухами.\nВстановлення значення 0 відключає пошкодження слуху під час вибуху.</Ukrainian>
+            <Spanish>Cambia cuanta sordera generan las explosiones.\nPoner a 0 deshabilita el daño por explosión.</Spanish>
         </Key>
         <Key ID="STR_ACE_Hearing_explosionDeafnessCoefficient_DisplayName">
             <English>Explosion Deafness Coefficient</English>
@@ -455,6 +463,7 @@
             <Japanese>爆発による難聴発生係数</Japanese>
             <Chinesesimp>爆炸听力损伤系数</Chinesesimp>
             <Ukrainian>Коефіцієнт оглушення під час вибуху</Ukrainian>
+            <Spanish>Coeficiente de Sordera por Explosión</Spanish>
         </Key>
         <Key ID="STR_ACE_Hearing_heavyWeaponUnits">
             <English>Only units with heavy weapons</English>
@@ -479,6 +488,7 @@
             <Japanese>電子聴覚保護</Japanese>
             <Chinesesimp>降噪耳机</Chinesesimp>
             <Ukrainian>ЕЛЕКТРОННИЙ</Ukrainian>
+            <Spanish>ELECTRÓNICA</Spanish>
         </Key>
         <Key ID="STR_ACE_Hearing_statHearingLowerVolume">
             <English>Volume muffling</English>

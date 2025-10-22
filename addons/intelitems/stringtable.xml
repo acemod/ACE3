@@ -89,6 +89,7 @@
             <Korean>인텔 아이템의 헤더를 정의합니다. 값이 비어 있다면("") 오브젝트의 표시명이 사용됩니다.</Korean>
             <Japanese>インテルアイテムのヘッダーを定義します。値が空 ("")の場合、オブジェクトの表示名が使用されます。</Japanese>
             <Ukrainian>Визначає заголовок для елемента інформації. Якщо значення пусте (""), використовується відображуване ім'я об'єкта.</Ukrainian>
+            <Spanish>Define la cabecera para el Objeto de Inteligencia. Si el valor está vacío (""), se usa el nombre mostrado del objeto.</Spanish>
         </Key>
         <Key ID="STR_ACE_IntelItems_Notepad_Description">
             <English>Notepad - Can access from the map screen</English>
