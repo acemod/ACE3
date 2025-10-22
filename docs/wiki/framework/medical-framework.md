@@ -254,3 +254,9 @@ ACE will lock the seat of an unconscious or dead unit to prevent automatic unloa
 ace_medical_engine_disableSeatLocking = true;     // disable on everything
 ace_medical_engine_disableSeatLocking = ["ship"]; // disable just on boats
 ```
+### 5.2 Running vitals loop on untouched AI
+For performance ACE will skip running vitals loop on AI that have never been wounded or treated. This can be disabled by setting:
+```sqf
+ace_medical_const_medicalActivity = true;               // globally on ALL AI
+unit setVariable ["ace_medical_medicalActivity", true]  // specfic AI
+```

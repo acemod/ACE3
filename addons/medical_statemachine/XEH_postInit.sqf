@@ -13,18 +13,25 @@
     };
 }] call CBA_fnc_addEventHandler;
 
-DFUNC(activateMedical) = {
+
+[QGVAR(activateMedical), {
+    params ["_unit"];
+    _unit setVariable [VAR_MEDICAL_ACTIVITY, true, true];
+    TRACE_2("activating medical",_unit,typeOf _unit);
+    // Because vitals loop has never run, set to 1 second ago to avoid large time delta (would hit max of 10 seconds)
+    if (_unit isNil QEGVAR(medical_vitals,lastTimeUpdated)) then {
+        _unit setVariable [QEGVAR(medical_vitals,lastTimeUpdated), CBA_missionTime - 1];
+    };
+}] call CBA_fnc_addEventHandler;
+[QEGVAR(medical,woundReceived), {
     params ["_unit"];
     if (!IS_MEDICAL_ACTIVITY(_unit)) then {
-        TRACE_2("activating medical for unit",_unit,typeOf _unit);
-        _unit setVariable [VAR_MEDICAL_ACTIVITY, true, true];
-        if (_unit isNil QEGVAR(medical_vitals,lastTimeUpdated)) then {
-            _unit setVariable [QEGVAR(medical_vitals,lastTimeUpdated), CBA_missionTime - 1];
-        };
+        [QGVAR(activateMedical), _unit] call CBA_fnc_localEvent;
     };
-};
-[QEGVAR(medical,woundReceived), LINKFUNC(activateMedical)] call CBA_fnc_addEventHandler;
+}] call CBA_fnc_addEventHandler;
 ["ace_treatmentStarted", {
     params ["", "_patient"];
-    _patient call FUNC(activateMedical);
+    if (!IS_MEDICAL_ACTIVITY(_patient)) then {
+        [QGVAR(activateMedical), _patient, _patient] call CBA_fnc_targetEvent;
+    };
 }] call CBA_fnc_addEventHandler;
