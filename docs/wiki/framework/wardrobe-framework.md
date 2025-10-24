@@ -188,6 +188,8 @@ class ace_wardrobe {
     class ace_wardrobe_base_U_gloves_off;
     class ace_wardrobe_base_U_jacket_open;
     class ace_wardrobe_base_U_jacket_closed;
+    class ace_wardrobe_base_U_hood_raised;
+    class ace_wardrobe_base_U_hood_lowered;    
 
     // Begin to define your configs ...
 };
