@@ -18,22 +18,11 @@
             <Turkish>Gelişmiş Fırlatma</Turkish>
             <Ukrainian>Покращений кидок гранат</Ukrainian>
         </Key>
-        <Key ID="STR_ACE_Advanced_Throwing_ChangeMode">
-            <English>(Scroll) Change Mode (+ %1 to Snap)</English>
-            <Czech>(Scrollovat) Změnit mód</Czech>
-            <French>(Défilement) Changer de mode</French>
-            <Spanish>(Scroll) Cambiar Modo</Spanish>
-            <Italian>(Scorri) Cambia Modalità</Italian>
-            <Polish>(Kółko m.) zmień tryb</Polish>
-            <Portuguese>(Roda do Mouse) Alternar modo</Portuguese>
-            <Russian>(Скролл) Изменить режим</Russian>
-            <German>(Scrollen) Modus wechseln</German>
-            <Korean>(마우스 휠) 모드 변경</Korean>
-            <Japanese>(スクロール) モード変更</Japanese>
-            <Chinese>(滾輪) 變更模式</Chinese>
-            <Chinesesimp>（滚轮）变更模式</Chinesesimp>
-            <Turkish>(Tekerlek) Modu Değiştir</Turkish>
-            <Ukrainian>(Скрол) Змінити режим</Ukrainian>
+        <Key ID="STR_ACE_Advanced_Throwing_ChangePower">
+            <English>(Scroll) Change Power</English>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_SnapPower">
+            <English>(Scroll) Snap Power</English>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Cook">
             <English>(Click) Cook</English>
