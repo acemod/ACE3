@@ -893,6 +893,7 @@
             <Japanese>手榴弾を渡す</Japanese>
             <Chinesesimp>给予投掷物</Chinesesimp>
             <Ukrainian>Передати гранати</Ukrainian>
+            <Spanish>Entregar granada</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_PassThrowableHint">
             <English>%1 passed you %2.</English>
@@ -904,6 +905,7 @@
             <Japanese>%1 は あなたに %2 を渡した。</Japanese>
             <Chinesesimp>%1给你了%2</Chinesesimp>
             <Ukrainian>%1 передав вам %2.</Ukrainian>
+            <Spanish>%1 te ha entregado %2.</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_PassThrowableSetting">
             <English>Show "pass grenade" interaction</English>
@@ -915,6 +917,7 @@
             <Japanese>"手榴弾を渡す"をインタラクションに表示</Japanese>
             <Chinesesimp>显示"给予投掷物"选项</Chinesesimp>
             <Ukrainian>Показувати дію "передати гранату"</Ukrainian>
+            <Spanish>Mostrar interacción "entregar granada"</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_Passengers">
             <English>Passengers</English>

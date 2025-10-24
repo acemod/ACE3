@@ -943,6 +943,7 @@
             <Korean>극심한 허기 및 갈증으로 인한 증상 (85% 이상)</Korean>
             <Japanese>極度の渇き/空腹の結果(85%以上時)</Japanese>
             <Ukrainian>Наслідки сильної спраги/голоду (понад 85%)</Ukrainian>
+            <Spanish>Consecuencia de la sed y hambre extremos (por encima de 85%)</Spanish>
         </Key>
         <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_Pain">
             <English>Pain</English>
@@ -953,6 +954,7 @@
             <Korean>고통</Korean>
             <Japanese>痛み</Japanese>
             <Ukrainian>Біль</Ukrainian>
+            <Spanish>Dolor</Spanish>
         </Key>
         <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_Unconsciousness">
             <English>Fainting</English>
@@ -963,6 +965,7 @@
             <Korean>기절</Korean>
             <Japanese>気絶</Japanese>
             <Ukrainian>Непритомність</Ukrainian>
+            <Spanish>Desmayo</Spanish>
         </Key>
         <Key ID="STR_ACE_Field_Rations_NoWaterRemaining">
             <English>There is no water left.</English>
@@ -1402,6 +1405,7 @@
             <Korean>활성화 시 제우스 인터페이스가 열려 있는 동안 허기와 갈증이 계속 증가합니다.</Korean>
             <Japanese>有効化すると、空腹と渇きはZeusインタフェイスを開いている間も継続して進行します。</Japanese>
             <Ukrainian>Якщо цю функцію увімкнено, відчуття голоду і спраги й далі посилюватиметься, доки відкрито інтерфейс Zeus.</Ukrainian>
+            <Spanish>Si se habilita, el hambre y la sed siguen aumentando mientras la interfaz de Zeus está abierta.</Spanish>
         </Key>
         <Key ID="STR_ACE_Field_Rations_ZeusUpdates_DisplayName">
             <English>Update Hunger and Thirst in Zeus</English>
@@ -1412,6 +1416,7 @@
             <Korean>제우스의 허기와 갈증 업데이트</Korean>
             <Japanese>Zeus時に空腹と渇きを進行させる</Japanese>
             <Ukrainian>Оновлення голоду та спраги в Zeus</Ukrainian>
+            <Spanish>Actualiza el Hambre y la Sed en Zeus</Spanish>
         </Key>
     </Package>
 </Project>

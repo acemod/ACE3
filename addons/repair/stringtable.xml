@@ -508,6 +508,7 @@
             <Korean>대공 조준기</Korean>
             <Japanese>対空照準器</Japanese>
             <Ukrainian>Приціл ППО</Ukrainian>
+            <Spanish>Visor AA</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_HitATGMSight">
             <English>ATGM Sight</English>
@@ -516,6 +517,7 @@
             <Korean>대전차미사일 조준기</Korean>
             <Japanese>ATGM照準器</Japanese>
             <Ukrainian>Приціл ПТУРа</Ukrainian>
+            <Spanish>Visor ATGM</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_HitAmmo">
             <English>Ammo</English>
@@ -909,6 +911,7 @@
             <Korean>주 조준기</Korean>
             <Japanese>主照準器</Japanese>
             <Ukrainian>Основний приціл</Ukrainian>
+            <Spanish>Visor Principal</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_HitMissiles">
             <English>Missiles</English>

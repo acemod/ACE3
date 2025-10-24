@@ -10,6 +10,7 @@
             <Korean>AIM-120A 암람 [ACE]</Korean>
             <Japanese>AIM-120A [ACE]</Japanese>
             <Ukrainian>AIM-120A [ACE]</Ukrainian>
+            <Spanish>AIM-120A [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_a_1x">
             <English>1x AIM-120A [ACE]</English>
@@ -20,6 +21,7 @@
             <Korean>1x AIM-120A 암람 [ACE]</Korean>
             <Japanese>1x AIM-120A [ACE]</Japanese>
             <Ukrainian>1x AIM-120A [ACE]</Ukrainian>
+            <Spanish>1x AIM-120A [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_aim120">
             <English>AIM-120 [ACE]</English>
@@ -30,6 +32,7 @@
             <Korean>AIM-120 암람 [ACE]</Korean>
             <Japanese>AIM-120 [ACE]</Japanese>
             <Ukrainian>AIM-120 [ACE]</Ukrainian>
+            <Spanish>AIM-120 [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_c">
             <English>AIM-120C [ACE]</English>
@@ -40,6 +43,7 @@
             <Korean>AIM-120C 암람 [ACE]</Korean>
             <Japanese>AIM-120C [ACE]</Japanese>
             <Ukrainian>AIM-120C [ACE]</Ukrainian>
+            <Spanish>AIM-120C [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_c_1x">
             <English>1x AIM-120C [ACE]</English>
@@ -50,6 +54,7 @@
             <Korean>1x AIM-120C 암람 [ACE]</Korean>
             <Japanese>1x AIM-120C [ACE]</Japanese>
             <Ukrainian>1x AIM-120C [ACE]</Ukrainian>
+            <Spanish>1x AIM-120C [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_c_2x">
             <English>2x AIM-120C [ACE]</English>
@@ -60,6 +65,7 @@
             <Korean>2x AIM-120C 암람 [ACE]</Korean>
             <Japanese>2x AIM-120C [ACE]</Japanese>
             <Ukrainian>2x AIM-120C [ACE]</Ukrainian>
+            <Spanish>2x AIM-120C [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_d">
             <English>AIM-120D [ACE]</English>
@@ -70,6 +76,7 @@
             <Korean>AIM-120D 암람 [ACE]</Korean>
             <Japanese>AIM-120D [ACE]</Japanese>
             <Ukrainian>AIM-120D [ACE]</Ukrainian>
+            <Spanish>AIM-120D [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_d_1x">
             <English>1x AIM-120D [ACE]</English>
@@ -80,6 +87,7 @@
             <Korean>1x AIM-120D 암람 [ACE]</Korean>
             <Japanese>1x AIM-120D [ACE]</Japanese>
             <Ukrainian>1x AIM-120D [ACE]</Ukrainian>
+            <Spanish>1x AIM-120D [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_d_2x">
             <English>2x AIM-120D [ACE]</English>
@@ -90,6 +98,7 @@
             <Korean>2x AIM-120D 암람 [ACE]</Korean>
             <Japanese>2x AIM-120D [ACE]</Japanese>
             <Ukrainian>2x AIM-120D [ACE]</Ukrainian>
+            <Spanish>2x AIM-120D [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_direct">
             <English>Direct</English>
@@ -100,6 +109,7 @@
             <Korean>다이렉트</Korean>
             <Japanese>ダイレクト</Japanese>
             <Ukrainian>Прямий</Ukrainian>
+            <Spanish>Directa</Spanish>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_loft">
             <English>Loft</English>
@@ -110,6 +120,7 @@
             <Korean>로프트</Korean>
             <Japanese>ロフト</Japanese>
             <Ukrainian>Зверху</Ukrainian>
+            <Spanish>Elevada</Spanish>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_r77">
             <English>R-77 [ACE]</English>
@@ -120,6 +131,7 @@
             <Korean>R-77 빔펠 [ACE]</Korean>
             <Japanese>R-77 [ACE]</Japanese>
             <Ukrainian>R-77 [ACE]</Ukrainian>
+            <Spanish>R-77 [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_r77_1x">
             <English>1x R-77 [ACE]</English>
@@ -130,6 +142,7 @@
             <Korean>1x R-77 빔펠 [ACE]</Korean>
             <Japanese>1x R-77 [ACE]</Japanese>
             <Ukrainian>1x R-77 [ACE]</Ukrainian>
+            <Spanish>1x R-77 [ACE]</Spanish>
         </Key>
     </Package>
 </Project>

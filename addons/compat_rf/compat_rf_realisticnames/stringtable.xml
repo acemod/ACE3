@@ -159,6 +159,7 @@
             <Korean>데저트 이글 마크 XIX L5 (위장)</Korean>
             <Japanese>デザートイーグル Mark XIX L5 (迷彩)</Japanese>
             <Ukrainian>Desert Eagle Mark XIX L5 (Камуфляж)</Ukrainian>
+            <Spanish>Desert Eagle Mark XIX L5 (Camo)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_classic_Name">
             <English>Desert Eagle Mark XIX L5 (Classic)</English>
@@ -618,6 +619,7 @@
             <Korean>램 1500 (미니건)</Korean>
             <Japanese>ラム 1500 (ミニガン)</Japanese>
             <Ukrainian>Ram 1500 (Мініган)</Ukrainian>
+            <Spanish>Ram 1500 (Minigun)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_mmg_Name">
             <English>Ram 1500 (MMG)</English>
@@ -647,6 +649,7 @@
             <Korean>램 1500 (무인포탑)</Korean>
             <Japanese>ラム 1500 (RCWS)</Japanese>
             <Ukrainian>Ram 1500 (RCWS)</Ukrainian>
+            <Spanish>Ram 1500 (RCWS)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_repair_Name">
             <English>Ram 1500 (Repair)</English>
@@ -666,6 +669,7 @@
             <Korean>램 1500 (로켓)</Korean>
             <Japanese>ラム 1500 (ロケット)</Japanese>
             <Ukrainian>Ram 1500 (Ракета)</Ukrainian>
+            <Spanish>Ram 1500 (Rocket)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_service_Name">
             <English>Ram 1500 (Services)</English>
@@ -799,6 +803,7 @@
             <Korean>타이푼 화물</Korean>
             <Japanese>タイフーン (貨物)</Japanese>
             <Ukrainian>Typhoon вантажний</Ukrainian>
+            <Spanish>Typhoon Cargo</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_03_water_Name">
             <English>Typhoon Water</English>

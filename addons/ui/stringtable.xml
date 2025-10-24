@@ -762,6 +762,7 @@
             <Korean>무기 영점 확인</Korean>
             <Japanese>武器のゼロインを確認</Japanese>
             <Ukrainian>Перевірити пристрілку зброї</Ukrainian>
+            <Spanish>Comprobar la puesta a cero del arma</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_devWatermark">
             <English>Development Build Watermark</English>
@@ -796,6 +797,7 @@
             <Korean>미터</Korean>
             <Japanese>メートル</Japanese>
             <Ukrainian>Метри</Ukrainian>
+            <Spanish>Metros</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_weaponZeroSetTo">
             <English>Zero is set to:</English>
@@ -804,6 +806,7 @@
             <Korean>영점 설정값:</Korean>
             <Japanese>ゼロインの設定値:</Japanese>
             <Ukrainian>Значення нуля дорівнює:</Ukrainian>
+            <Spanish>La puesta a cero está en:</Spanish>
         </Key>
     </Package>
 </Project>

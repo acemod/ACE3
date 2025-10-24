@@ -1077,6 +1077,7 @@
             <Japanese>救護者装備を優先 [衛生兵の場合]</Japanese>
             <Chinesesimp>提供医疗者的装备优先(如果是医疗兵)</Chinesesimp>
             <Ukrainian>Спочатку медикаменти лікаря [Якщо медик]</Ukrainian>
+            <Spanish>Primero Equipamiento del Médico [Si tiene el rol de médico]</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityPatient">
             <English>Patient's Equipment First</English>
@@ -3335,6 +3336,7 @@
             <Japanese>アデノシンが使える場所を制御します。</Japanese>
             <Chinesesimp>控制何地能使用腺苷</Chinesesimp>
             <Ukrainian>Контролює, де можна використовувати Аденозин.</Ukrainian>
+            <Spanish>Controla dónde puede ser usada la Adenosina.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_DisplayName">
             <English>Locations Adenosine</English>
@@ -3346,6 +3348,7 @@
             <Japanese>アデノシンの使用可能な場所</Japanese>
             <Chinesesimp>腺苷使用地点</Chinesesimp>
             <Ukrainian>Місця використання Аденозину</Ukrainian>
+            <Spanish>Ubicaciones de Adenosina</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_Description">
             <English>Controls where epinephrine can be used.</English>
@@ -3419,6 +3422,7 @@
             <Japanese>モルヒネが使える場所を制御します。</Japanese>
             <Chinesesimp>控制何地能使用吗啡</Chinesesimp>
             <Ukrainian>Контролює, де можна використовувати Морфін.</Ukrainian>
+            <Spanish>Controla dónde puede ser usada la Morfina</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_DisplayName">
             <English>Locations Morphine</English>
@@ -3430,6 +3434,7 @@
             <Japanese>モルヒネの使用可能な場所</Japanese>
             <Chinesesimp>吗啡使用地点</Chinesesimp>
             <Ukrainian>Місця використання Морфіну</Ukrainian>
+            <Spanish>Ubicación de Morfina</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_Description">
             <English>Controls where a PAK can be used.</English>
@@ -3476,6 +3481,7 @@
             <Japanese>添え木が使える場所を制御します。</Japanese>
             <Chinesesimp>控制何地能使用骨折夹板</Chinesesimp>
             <Ukrainian>Контролює, де можна використовувати шини.</Ukrainian>
+            <Spanish>Controla dónde pueden ser usadas la Férula</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSplint_DisplayName">
             <English>Locations Splint</English>
@@ -3487,6 +3493,7 @@
             <Japanese>添え木の使用可能な場所</Japanese>
             <Chinesesimp>骨折夹板使用地点</Chinesesimp>
             <Ukrainian>Місця накладення шини</Ukrainian>
+            <Spanish>Ubicación de Férula</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_Description">
             <English>Controls where a surgical kit can be used.</English>
@@ -3582,6 +3589,7 @@
             <Japanese>アデノシンの使用に必要な医療スキルのレベルを設定します。</Japanese>
             <Chinesesimp>使用腺苷所需的医疗水平。</Chinesesimp>
             <Ukrainian>Рівень підготовки, необхідний для використання Аденозину</Ukrainian>
+            <Spanish>Nivel de capacitación requerido para usar Adenosina.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_DisplayName">
             <English>Allow Adenosine</English>
@@ -3593,6 +3601,7 @@
             <Japanese>アデノシンの許可</Japanese>
             <Chinesesimp>允许使用腺苷</Chinesesimp>
             <Ukrainian>Доступ до Аденозину</Ukrainian>
+            <Spanish>Permitir Adenosina</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_Description">
             <English>Training level required to use epinephrine.</English>
@@ -3670,6 +3679,7 @@
             <Japanese>モルヒネの使用に必要な医療スキルのレベルを設定します。</Japanese>
             <Chinesesimp>使用吗啡所需的医疗水平。</Chinesesimp>
             <Ukrainian>Рівень підготовки, необхідний для використання Морфіну.</Ukrainian>
+            <Spanish>Nivel de capacitación requerido para usar Morfina.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_DisplayName">
             <English>Allow Morphine</English>
@@ -3681,6 +3691,7 @@
             <Japanese>モルヒネの許可</Japanese>
             <Chinesesimp>允许使用吗啡</Chinesesimp>
             <Ukrainian>Доступ до Морфіну</Ukrainian>
+            <Spanish>Permitir Morfina</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_Description">
             <English>Training level required to use a PAK.</English>
@@ -3727,6 +3738,7 @@
             <Japanese>添え木の使用に必要な医療スキルのレベルを設定します。</Japanese>
             <Chinesesimp>使用骨折夹板所需的医疗水平。</Chinesesimp>
             <Ukrainian>Рівень підготовки, необхідний для використання шини.</Ukrainian>
+            <Spanish>Nivel de capacitación requerido para usar Férula</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSplint_DisplayName">
             <English>Allow Splint</English>
@@ -3738,6 +3750,7 @@
             <Japanese>添え木の許可</Japanese>
             <Chinesesimp>允许使用骨折夹板</Chinesesimp>
             <Ukrainian>Доступ до накладання шини</Ukrainian>
+            <Spanish>Permitir Férula</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
             <English>Training level required to use a surgical kit.</English>
@@ -3923,6 +3936,7 @@
             <Japanese>脈拍の確認アクションから得られる情報が数値化されるようになる医療レベルを設定します</Japanese>
             <Chinesesimp>检查心率后会显示心率数值</Chinesesimp>
             <Ukrainian>Змушує дію "Перевірити пульс" видавати числове значення, засноване на налаштуванні</Ukrainian>
+            <Spanish>Hace que la acción Comprobar Pulso de un valor numérico dependiendo de esta opción</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_DisplayName">
             <English>Numerical Pulse</English>
@@ -3934,6 +3948,7 @@
             <Japanese>脈拍の数値化</Japanese>
             <Chinesesimp>显示心率数值</Chinesesimp>
             <Ukrainian>Числове значення пульсу</Ukrainian>
+            <Spanish>Pulso Numérico</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Packing_Bandage_Desc_Short">
             <English>Used to pack medium to large wounds and stem the bleeding</English>
