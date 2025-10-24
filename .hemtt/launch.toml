@@ -3,36 +3,6 @@ workshop = [
     "450814997", # CBA_A3
 ]
 
-[spe]
-extends = "default"
-dlc = [
-    "Spearhead 1944"
-]
-
-[vn]
-extends = "default"
-dlc = [
-    "S.O.G. Prairie Fire",
-]
-
-[ws]
-extends = "default"
-dlc = [
-    "Western Sahara",
-]
-
-[rf]
-extends = "default"
-dlc = [
-    "Reaction Forces"
-]
-
-[gm]
-extends = "default"
-dlc = [
-    "Global Mobilization - Cold War Germany"
-]
-
 [rhs]
 extends = "default"
 workshop = [
