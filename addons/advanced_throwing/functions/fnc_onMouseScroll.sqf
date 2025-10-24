@@ -37,15 +37,15 @@ if (ACE_player getVariable [QGVAR(dropMode), false]) then {
     private _throwProduct = ACE_player getVariable [QGVAR(throwMod), THROW_MODIFER_DEFAULT];
     if (_amount < 0) then {
         if (CBA_events_shift) then {
-            ACE_player setVariable [QGVAR(throwMod), THROW_MODIFER_MIN];
-        } else {
-            ACE_player setVariable [QGVAR(throwMod), (_throwProduct - THROW_MODIFER_STEP) max THROW_MODIFER_MIN];
-        };
-    } else {
-        if (CBA_events_shift) then {
             ACE_player setVariable [QGVAR(throwMod), THROW_MODIFER_MAX];
         } else {
             ACE_player setVariable [QGVAR(throwMod), (_throwProduct + THROW_MODIFER_STEP) min THROW_MODIFER_MAX];
+        };
+    } else {
+        if (CBA_events_shift) then {
+            ACE_player setVariable [QGVAR(throwMod), THROW_MODIFER_MIN];
+        } else {
+            ACE_player setVariable [QGVAR(throwMod), (_throwProduct - THROW_MODIFER_STEP) max THROW_MODIFER_MIN];
         };
     };
     TRACE_2("Change Throw Type",_amount,ACE_player getVariable QGVAR(throwMod));
