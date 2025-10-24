@@ -45,6 +45,14 @@
             <Japanese>ゴーグルを外す</Japanese>
             <Spanish>Quitarse gafas</Spanish>
         </Key>
+        <Key ID="STR_ACE_Wardrobe_hoodRaise">
+            <English>Raise Hood</English>
+            <German>Kapuze aufsetzen</German>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_hoodLower">
+            <English>Lower Hood</English>
+            <German>Kapuze absetzen</German>
+        </Key>
         <Key ID="STR_ACE_Wardrobe_gogglesOn">
             <English>Put goggles on</English>
             <Russian>Надеть очки</Russian>

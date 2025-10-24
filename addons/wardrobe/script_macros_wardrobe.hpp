@@ -69,6 +69,9 @@ BASIC(variantGlovesOn,variantGlovesOff,ACEWARDROBE(base_U_gloves_on),ACEWARDROBE
 #define UNIFORM_JACKET(variantJacketOpen,variantJacketClosed)\
 BASIC(variantJacketOpen,variantJacketClosed,ACEWARDROBE(base_U_jacket_open),ACEWARDROBE(base_U_jacket_closed))
 
+#define UNIFORM_HOOD(variantHoodRaised,variantHoodLowered)\
+BASIC(variantHoodRaised,variantHoodLowered,ACEWARDROBE(base_U_hood_raised),ACEWARDROBE(base_U_hood_lowered))
+
 #define HELMET_VISOR(variantVisorUp,variantVisorDown)\
 BASIC(variantVisorUp,variantVisorDown,ACEWARDROBE(base_H_visor_up),ACEWARDROBE(base_H_visor_down))
 
