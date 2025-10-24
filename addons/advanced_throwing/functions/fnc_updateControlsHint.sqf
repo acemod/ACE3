@@ -19,7 +19,7 @@ if (!GVAR(showMouseControls)) exitWith {};
 
 private _primed = ACE_player getVariable [QGVAR(primed), false];
 
-private _mmb = [format [LLSTRING(ChangeMode), localize "STR_dik_shift"], LLSTRING(Extend)] select (ACE_player getVariable [QGVAR(dropMode), false]);
+private _mmb = [format [LLSTRING(ChangePower), localize "STR_dik_shift"], LLSTRING(Extend)] select (ACE_player getVariable [QGVAR(dropMode), false]);
 
 if (!_primed) then {
     _mmb = [_mmb, LLSTRING(Cook)] joinString " / ";
@@ -28,5 +28,6 @@ if (!_primed) then {
 [
     LLSTRING(Throw),
     [LELSTRING(common,Cancel), ""] select _primed,
-    _mmb
+    _mmb,
+    [["-", LLSTRING(SnapPower), [toUpper localize "STR_dik_shift", "+", image QPATHTOEF(interaction,UI\mouse_scroll_ca.paa)]]]
 ] call EFUNC(interaction,showMouseHint);
