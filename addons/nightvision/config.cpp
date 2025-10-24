@@ -20,7 +20,13 @@ class CfgPatches {
             "ACE_NVG_Gen4_Green_WP",
             "ACE_NVG_Wide_Black",
             "ACE_NVG_Wide",
-            "ACE_NVG_Wide_Green"
+            "ACE_NVG_Wide_Green",
+            "ACE_NVGoggles_WP",
+            "ACE_NVGoggles_OPFOR_WP",
+            "ACE_NVGoggles_INDEP_WP",
+            "ACE_NVG_Wide_Black_WP",
+            "ACE_NVG_Wide_WP",
+            "ACE_NVG_Wide_Green_WP"
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
