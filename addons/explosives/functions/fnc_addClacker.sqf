@@ -4,47 +4,55 @@
  * Adds an explosive as a clacker item to the passed unit if the unit has the required item.
  *
  * Arguments:
- * 0: Unit <OBJECT>
- * 1: Explosive <OBJECT>
- * 2: Magazine classname <STRING>
- * 3: Extra variables <ARRAY>
+ * 0: Unit <OBJECT> (default: objNull)
+ * 1: Explosive <OBJECT> (default: objNull)
+ * 2: Magazine classname <STRING> (default: "")
+ * 3: Extra variables <ARRAY> (default: [])
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, _explosive, "SatchelCharge_Remote_Mag", [ConfigFile >> "ACE_Triggers" >> "Command"]] call ACE_Explosives_fnc_addClacker;
+ * [player, cursorObject, "SatchelCharge_Remote_Mag", [configFile >> "ACE_Triggers" >> "Command"]] call ace_explosives_fnc_addClacker
  *
  * Public: Yes
  */
 
-params ["_unit", "_explosive", "_magazineClass"];
-TRACE_3("params",_unit,_explosive,_magazineClass);
+params [["_unit", objNull, [objNull]], ["_explosive", objNull, [objNull]], ["_magazineClass", "", [""]], ["_extra", [], [[]]]];
+TRACE_4("params",_unit,_explosive,_magazineClass,_extra);
 
-// Config is the last item in the list of passed in items.
-private _config = (_this select 3) select -1;
+if (isNull _unit || {isNull _explosive} || {_magazineClass == ""} || {_extra isEqualTo []}) exitWith {};
 
-private _requiredItems = getArray(_config >> "requires");
-private _hasRequired = true;
-private _detonators = [_unit] call FUNC(getDetonators);
-{
-    if !(_x in _detonators) exitWith{
-        _hasRequired = false;
-    };
-} forEach _requiredItems;
+// Config is the last param in extra
+private _triggerConfig = _extra select -1;
 
-if !(_hasRequired) exitWith {};
-private _config = configFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> configName _config;
+if (isNil "_triggerConfig" || {!(_triggerConfig isEqualType configNull)} || {isNull _triggerConfig}) exitWith {};
 
-private _clacker = _unit getVariable [QGVAR(Clackers), []];
-GVAR(PlacedCount) = GVAR(PlacedCount) + 1;
+// Check if unit has all required detonators for specific trigger
+private _detonators = _unit call FUNC(getDetonators);
 
-_clacker pushBack [_explosive, getNumber(_config >> "FuseTime"), format [localize LSTRING(DetonateCode),
-    GVAR(PlacedCount)], _magazineClass, configName ((_this select 3) select -1)];
+if ((getArray (_triggerConfig >> "requires")) findIf {!((_x call EFUNC(common,getConfigName)) in _detonators)} != -1) exitWith {};
 
-_unit setVariable [QGVAR(Clackers), _clacker, true];
+GVAR(placedCount) = GVAR(placedCount) + 1;
 
-//display clacker code message:
-[format [localize LSTRING(DetonateCode), GVAR(PlacedCount)]] call EFUNC(common,displayTextStructured);
+private _triggerConfigName = configName _triggerConfig;
+private _clackerList = _unit getVariable [QGVAR(clackers), []];
 
-[QGVAR(clackerAdded), [_unit, _explosive, GVAR(PlacedCount)]] call CBA_fnc_localEvent;
+_clackerList pushBack [
+    _explosive,
+    getNumber (configFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> _triggerConfigName >> "FuseTime"),
+    format [
+        LLSTRING(DetonateCode),
+        GVAR(placedCount)
+    ],
+    _magazineClass,
+    _triggerConfigName
+];
+
+_unit setVariable [QGVAR(clackers), _clackerList, true];
+
+// Display clacker code message
+[format [LLSTRING(DetonateCode), GVAR(placedCount)]] call EFUNC(common,displayTextStructured);
+
+// API
+[QGVAR(clackerAdded), [_unit, _explosive, GVAR(placedCount)]] call CBA_fnc_localEvent;

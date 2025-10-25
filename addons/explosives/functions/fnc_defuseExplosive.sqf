@@ -4,26 +4,33 @@
  * Causes the unit to defuse the passed explosive.
  *
  * Arguments:
- * 0: Unit <OBJECT>
- * 1: Explosive <OBJECT>
+ * 0: Unit <OBJECT> (default: objNull)
+ * 1: Explosive <OBJECT> (default: objNull)
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, ACE_Interaction_Target] call ACE_Explosives_fnc_defuseExplosive;
+ * [player, cursorObject] call ace_explosives_fnc_defuseExplosive
  *
  * Public: Yes
  */
 
-params ["_unit", "_explosive"];
+params [["_unit", objNull, [objNull]], ["_explosive", objNull, [objNull]]];
 TRACE_2("params",_unit,_explosive);
 
-if (GVAR(ExplodeOnDefuse) && {(random 1.0) < (getNumber (configFile >> "CfgAmmo" >> typeOf _explosive >> QGVAR(explodeOnDefuseChance)))}) exitWith {
+if (!alive _unit || {isNull _explosive}) exitWith {};
+
+if (GVAR(explodeOnDefuse) && {random 1 < getNumber (configOf _explosive >> QGVAR(explodeOnDefuseChance))}) exitWith {
     TRACE_1("exploding on defuse",_explosive);
+
     [_unit, -1, [_explosive, 1], "#ExplodeOnDefuse"] call FUNC(detonateExplosive);
+
+    // API
     [QGVAR(explodeOnDefuse), [_explosive, _unit]] call CBA_fnc_globalEvent;
 };
 
 _unit action ["Deactivate", _unit, _explosive];
+
+// API
 [QGVAR(defuse), [_explosive, _unit]] call CBA_fnc_globalEvent;
