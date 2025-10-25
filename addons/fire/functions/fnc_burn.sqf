@@ -46,7 +46,7 @@ if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), t
 };
 
 private _protection = getNumber (configFile >> "CfgWeapons" >> uniform _unit >> QGVAR(protection));
-if (_protection == 0) exitWith {
+if (_protection == 1) exitWith {
     TRACE_2("unit's uniform is immune to fire",_unit,uniform _unit);
 };
 _intensity = _intensity * (1 - _protection);
