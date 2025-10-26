@@ -45,3 +45,17 @@ Screams can be disabled for an individual unit by setting the `ace_fire_enableSc
 ```sqf
 _unit setVariable ["ace_fire_enableScreams", false, _isGlobal];
 ```
+
+## 3. Config Values
+### 3.1 Adding fire protection to a uniform
+
+{% raw %}
+```cpp
+class CfgWeapons {
+    class yourUniformClass {
+        ace_fire_protection = 1; // 0-1 value for protection, intensity and incoming damage are scaled by (1 - _protection)
+                                 // 0 provides no protection, 1 provides full immunity to fire
+    };
+};
+```
+{% endraw %}
