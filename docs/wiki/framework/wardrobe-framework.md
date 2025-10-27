@@ -280,7 +280,7 @@ Therefore additional handling of exceptions is required.
 
 These exceptions can be defined via config.
 
-```hpp
+```cpp
 class ace_wardrobe_exceptions {
     class ACE_SpareBarrel {
         mode = "server";
