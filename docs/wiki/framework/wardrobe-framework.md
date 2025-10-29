@@ -17,7 +17,7 @@ version:
 
 The Wardrobe addon gives the player the opportunity to change/modify their current wearables into different variants.
 
-For example, if a uniform has a normal variant and a "rolled-Up sleeves" variant, the player will be able to use ACE Self Interaction to switch from one variant to another.
+For example, if a uniform has a normal variant and a "rolled-up sleeves" variant, the player will be able to use ACE Self Interaction to switch from one variant to another.
 
 Since there is no reliable, common patterns in terms of class inheritance, not even within the same DLC, each possible variant has to be defined individually within `configFile >> "ace_wardrobe"`.
 
@@ -117,7 +117,7 @@ class ace_wardrobe_base_U_jacket_closed: ace_wardrobe_base {
 
 #### 2.2.5 Base Helmet Visor Up / Down
 Common base class for helmets with a visor that can be flipped up or down.
-Here, the duration is carefully timed to be aligned with the "click" of the soun.
+Here, the duration is carefully timed to be aligned with the "click" of the sound.
 
 ```cpp
 class ace_wardrobe_base_H_visor_up: ace_wardrobe_base {
@@ -156,7 +156,7 @@ class ace_wardrobe_base_H_goggles_off: ace_wardrobe_base {
 
 ## 3. Porting - Ease of Use
 ### 3.1 Macros
-To streamline the configuration of compatible items a set of macro's can be found here `addons\wardrobe\script_macros_wardrobe.hpp`
+To streamline the configuration of compatible items a set of macros can be found here `addons\wardrobe\script_macros_wardrobe.hpp`
 
 ### 3.2 Example
 ```cpp
@@ -274,7 +274,7 @@ The number at the end of the classnames indicates the length of the file in 1/10
 
 ## 6. Compatibility
 
-## 6.1 MagzineID
+## 6.1 MagazineID
 If an addon/mod utilizes a magazine's `magazineID` to handle additional data on items, then the process of modifying a wearable container (uniform, vest, backpack) to another variant will result in new `magazineID`s for all magazines on the player.
 Therefore additional handling of exceptions is required.
 
@@ -297,7 +297,7 @@ class ace_wardrobe_exceptions {
 
 };
 ```
-Per magazine classname that needs to be handled exceptionally, a configclass inside `class ace_wardrobe_exceptsions` is needed where the classname is identical to the items classname.
+Per magazine classname that needs to be handled exceptionally, a configclass inside `class ace_wardrobe_exceptions` is needed where the classname is identical to the items classname.
 
 | Class Property | Data Type | Description                                                                    |
 | -------------- | --------- | ------------------------------------------------------------------------------ |
@@ -309,6 +309,6 @@ Currently, `ace_intelitems` and `ace_overheating` (spare barrels) are already su
 
 ## 6.2 Container Size - Uniform, Vest, Backpack
 
-When the player changes from one container item to another through the wardrobe action and the container's `maximumLoad` is smaller then previously, the player risks the loss of items carried inside said container.
+When the player changes from one container item to another through the wardrobe action and the container's `maximumLoad` is smaller than previously, the player risks the loss of items carried inside said container.
 
 Therefore, the debug script found at `addons\wardrobe\dev\compareContainerMaxLoad.sqf` can be used to compare the item's `maximumLoad`. The result will be dumped into the .rpt.
