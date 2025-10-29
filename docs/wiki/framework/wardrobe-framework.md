@@ -117,7 +117,7 @@ class ace_wardrobe_base_U_jacket_closed: ace_wardrobe_base {
 
 #### 2.2.5 Base Helmet Visor Up / Down
 Common base class for helmets with a visor that can be flipped up or down.
-Here, the duration is carefully timed to be aligned with the "click" of the soun.
+Here, the duration is carefully timed to be aligned with the "click" of the sound.
 
 ```cpp
 class ace_wardrobe_base_H_visor_up: ace_wardrobe_base {
