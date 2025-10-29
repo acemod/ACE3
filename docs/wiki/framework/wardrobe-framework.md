@@ -156,7 +156,7 @@ class ace_wardrobe_base_H_goggles_off: ace_wardrobe_base {
 
 ## 3. Porting - Ease of Use
 ### 3.1 Macros
-To streamline the configuration of compatible items a set of macro's can be found here `addons\wardrobe\script_macros_wardrobe.hpp`
+To streamline the configuration of compatible items a set of macros can be found here `addons\wardrobe\script_macros_wardrobe.hpp`
 
 ### 3.2 Example
 ```cpp
