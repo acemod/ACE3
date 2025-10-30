@@ -71,7 +71,7 @@ if (hasInterface) then {
         params ["_newestMarker"];
         TRACE_1("markerPlaced",_newestMarker);
         if (missionNamespace getVariable [QGVAR(numberNextMarker), false]) then {
-            // set marker type to text only (temporarly for this marker)
+            // set marker type to text only (temporarily for this marker)
             GVAR(numberNextMarker) = false;
             GVAR(currentMarkerConfigName) = QGVAR(textOnly);
         } else {
