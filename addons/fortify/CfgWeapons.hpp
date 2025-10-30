@@ -20,7 +20,8 @@ class CfgWeapons {
         displayName = CSTRING(FortifyToken_name);
         descriptionShort = "$5";
         picture = QPATHTOF(UI\token_ca.paa);
-        scope = 1;
+        scope = 2;
+        scopeArsenal = 0;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0;
         };
