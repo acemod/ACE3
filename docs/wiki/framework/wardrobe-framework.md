@@ -84,7 +84,7 @@ class ace_wardrobe {
 
 ```
 
-#### 2.2.2 Base Uniform Sleeves Up / Down
+#### 2.2.2.1 Base Uniform Sleeves Up / Down
 Common base class for uniforms with Sleeves up/down variants
 ```cpp
 class ace_wardrobe_base_U_sleeves_up: ace_wardrobe_base {
@@ -94,7 +94,7 @@ class ace_wardrobe_base_U_sleeves_down: ace_wardrobe_base {
     alternativeActionName = CSTRING(sleevesDown);
 };
 ```
-#### 2.2.3 Base Uniform Gloves On / Off
+#### 2.2.2.2 Base Uniform Gloves On / Off
 Common base class for uniforms with gloves on/off variants
 ```cpp
 class ace_wardrobe_base_U_gloves_on: ace_wardrobe_base {
@@ -104,7 +104,7 @@ class ace_wardrobe_base_U_gloves_off: ace_wardrobe_base {
     alternativeActionName = CSTRING(glovesOff);
 };
 ```
-#### 2.2.4  Base Uniform Jacket Open / Closed
+#### 2.2.2.3  Base Uniform Jacket Open / Closed
 Common base class for uniforms who are open/closed in the front
 ```cpp
 class ace_wardrobe_base_U_jacket_open: ace_wardrobe_base {
@@ -114,8 +114,20 @@ class ace_wardrobe_base_U_jacket_closed: ace_wardrobe_base {
     alternativeActionName = CSTRING(jacketClose);
 };
 ```
+#### 2.2.2.4 Base Uniform Hood On / Off
+Common base class for uniforms with an raised or lowered hood
+```cpp
+class ace_wardrobe_base_U_hood_raised: ace_wardrobe_base {
+    gesture = "GestureWipeFace";
+    alternativeActionName = CSTRING(hoodRaise);
+};
+class ace_wardrobe_base_U_hood_lowered: ace_wardrobe_base {
+    gesture = "GestureWipeFace";
+    alternativeActionName = CSTRING(hoodLower);
+};
+```
 
-#### 2.2.5 Base Helmet Visor Up / Down
+#### 2.2.3.1 Base Helmet Visor Up / Down
 Common base class for helmets with a visor that can be flipped up or down.
 Here, the duration is carefully timed to be aligned with the "click" of the sound.
 
@@ -140,7 +152,7 @@ class ace_wardrobe_base_H_visor_down: ace_wardrobe_base {
     alternativeActionName = CSTRING(visorDown);
 };
 ```
-#### 2.2.6 Base Headgear with Goggles on / off
+#### 2.2.3.2 Base Headgear with Goggles on / off
 Common base class for headgear with goggles that can be used as a facewear item.
 ```cpp
 class ace_wardrobe_base_H_goggles_on: ace_wardrobe_base {
@@ -176,6 +188,8 @@ class ace_wardrobe {
     class ace_wardrobe_base_U_gloves_off;
     class ace_wardrobe_base_U_jacket_open;
     class ace_wardrobe_base_U_jacket_closed;
+    class ace_wardrobe_base_U_hood_raised;
+    class ace_wardrobe_base_U_hood_lowered;    
 
     // Begin to define your configs ...
 };
