@@ -30,7 +30,7 @@ class CfgVehicles {
         EGVAR(vehicle_damage,engineFireProb) = 0.7;
         EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
 
-        class EGVAR(interaction,anims);
+        class EGVAR(interaction,anims) {};
     };
 
     class rhs_infantry_msv_base;
@@ -993,7 +993,7 @@ class CfgVehicles {
     // Not a fan of this style of inheritance but it's less of a headache in this case
     class StaticWeapon: LandVehicle {
         class ACE_Actions {
-            class ACE_MainActions;
+            class ACE_MainActions {};
         };
     };
     class StaticMGWeapon: StaticWeapon {};
