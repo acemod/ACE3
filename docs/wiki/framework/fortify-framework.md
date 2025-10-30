@@ -112,7 +112,7 @@ The Fortify budget can be updated for any side using the function.
 
 Fortify can be limited to on specific areas.
 Push locations to `ace_fortify_locations`.
-Can be any of the area types supported by [inArea](hhttps://community.bistudio.com/wiki/inArea) (either syntax)
+Can be any of the area types supported by [inArea](https://community.bistudio.com/wiki/inArea) (either syntax)
 ```sqf
 ace_fortify_locations pushBack "myMarker"; // a marker string name
 ace_fortify_locations pushBack [myVehicle, 50, 50, 0, false]; // 50m radius around a moveable vehicle
