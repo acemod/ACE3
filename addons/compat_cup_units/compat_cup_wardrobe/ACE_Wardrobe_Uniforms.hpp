@@ -208,7 +208,7 @@ CUP_BaseGloveRolledHighRolled_6(CUP_U_B_BDUv2_##CAMO##_US,CUP_U_B_BDUv2_gloves_#
 
 #define CUP_BDUv2_6_dirty(CAMO)\
 CUP_BDUv2_6(CAMO);\
-CUP_BDUv2_6(dirty_##CAMO##)
+CUP_BDUv2_6(dirty_##CAMO)
 
 
 
