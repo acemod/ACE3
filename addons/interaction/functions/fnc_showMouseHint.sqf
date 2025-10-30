@@ -66,12 +66,13 @@ if (_textMMB == "") then {
 
 // Create extra icon sets
 {
-    _x params [["_keyName", "", [""]], ["_keyText", "", [""]]];
+    _x params [["_keyName", "", [""]], ["_keyText", "", [""]], ["_keyNameText", [], [[]]]];
 
     // Only create extra key if both name and text are valid
     if (_keyName != "" && {_keyText != ""}) then {
+        private _keyNameIsText = _keyNameText isNotEqualTo [];
         // Localize Ctrl, Shift, or Alt keys
-        switch (toLowerANSI _keyName) do {
+        switch (toLowerANSI ([_keyName, ""] select _keyNameIsText)) do {
             case "ctrl";
             case "control": {_keyName = format ["<%1>", toUpper localize "STR_dik_control"]};
             case "shift": {_keyName = format ["<%1>", toUpper localize "STR_dik_shift"]};
@@ -85,7 +86,11 @@ if (_textMMB == "") then {
 
         // Set name and text
         private _ctrlName = _ctrlGroup controlsGroupCtrl IDC_MOUSEHINT_EXTRA_NAME;
-        _ctrlName ctrlSetText _keyName;
+        if (_keyNameIsText) then {
+            _ctrlName ctrlSetStructuredText composeText _keyNameText;
+        } else {
+            _ctrlName ctrlSetText _keyName;
+        };
 
         private _ctrlText = _ctrlGroup controlsGroupCtrl IDC_MOUSEHINT_EXTRA_TEXT;
         _ctrlText ctrlSetText _keyText;
