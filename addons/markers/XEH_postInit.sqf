@@ -60,7 +60,7 @@ if (hasInterface) then {
             private _next = (_hash getOrDefault [_side, 0]) + 1;
             _hash set [_side, _next];
             missionNamespace setVariable [QGVAR(numberSideLast), _hash, true];
-            _next // side synchronized numbering
+            _next // side-synchronized numbering
         };
         _description ctrlSetText str _number;
         GVAR(numberNextMarker) = true;
