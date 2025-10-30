@@ -203,12 +203,14 @@ class uniformHighRolledGloves: EGVAR(wardrobe,base) {\
     };\
 }
 
+#define SCORE_2(a,b) a##_##b
 #define CUP_BDUv2_6(CAMO)\
-CUP_BaseGloveRolledHighRolled_6(CUP_U_B_BDUv2_##CAMO##_US,CUP_U_B_BDUv2_gloves_##CAMO##_US,CUP_U_B_BDUv2_roll_##CAMO##_US,CUP_U_B_BDUv2_roll_gloves_##CAMO##_US,CUP_U_B_BDUv2_roll2_##CAMO##_US,CUP_U_B_BDUv2_roll2_gloves_##CAMO##_US)
+CUP_BaseGloveRolledHighRolled_6(SCORE_2(CUP_U_B_BDUv2,CAMO),SCORE_2(CUP_U_B_BDUv2_gloves,CAMO),SCORE_2(CUP_U_B_BDUv2_roll,CAMO),SCORE_2(CUP_U_B_BDUv2_roll_gloves,CAMO),SCORE_2(CUP_U_B_BDUv2_roll2,CAMO),SCORE_2(CUP_U_B_BDUv2_roll2_gloves,CAMO))
 
 #define CUP_BDUv2_6_dirty(CAMO)\
 CUP_BDUv2_6(CAMO);\
-CUP_BDUv2_6(dirty_##CAMO)
+CUP_BDUv2_6(SCORE_2(dirty,CAMO))
+
 
 
 
@@ -319,13 +321,13 @@ CUP_BaseGloveRolledHighRolled_6(CUP_U_B_USMC_MCCUU_des_pads,CUP_U_B_USMC_MCCUU_d
 // BDUv2's
 CUP_BDUv2_6_dirty(Alpenflage);
 CUP_BDUv2_6_dirty(CEU);
-CUP_BDUv2_6_dirty(DCU);
+CUP_BDUv2_6_dirty(DCU_US);
 CUP_BDUv2_6_dirty(DDPM);
 CUP_BDUv2_6_dirty(DPM);
 CUP_BDUv2_6_dirty(DPM_OD);
-CUP_BDUv2_6_dirty(desert);
-CUP_BDUv2_6_dirty(OD);
-CUP_BDUv2_6_dirty(M81);
+CUP_BDUv2_6_dirty(desert_US);
+CUP_BDUv2_6_dirty(OD_US);
+CUP_BDUv2_6_dirty(M81_US);
 CUP_BDUv2_6_dirty(Urban);
 CUP_BDUv2_6_dirty(Tigerstripe);
 CUP_BDUv2_6_dirty(ERDL_highland);
