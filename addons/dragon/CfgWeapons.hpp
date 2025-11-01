@@ -40,7 +40,7 @@ class CfgWeapons {
 
         displayName = CSTRING(dragonName);
         descriptionShort = CSTRING(dragonDescription);
-        magazines[] = { QGVAR(super) };
+        magazines[] = { QGVAR(super), QGVAR(2), QGVAR(1) };
     };
 
     // need a weapon in order to rotate turret
