@@ -3,8 +3,8 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {};
-        weapons[] = {};
+        units[] = {"ACE_VehicleLock_ModuleSyncedAssign"};
+        weapons[] = {"ACE_key_master", "ACE_key_lockpick", "ACE_key_west", "ACE_key_east", "ace_key_indp", "ace_key_civ"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
         author = ECSTRING(common,ACETeam);
