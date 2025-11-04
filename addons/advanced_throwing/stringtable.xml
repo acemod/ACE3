@@ -21,9 +21,6 @@
         <Key ID="STR_ACE_Advanced_Throwing_ChangePower">
             <English>(Scroll) Change Power</English>
         </Key>
-        <Key ID="STR_ACE_Advanced_Throwing_SnapPower">
-            <English>(Scroll) Snap Power</English>
-        </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Cook">
             <English>(Click) Cook</English>
             <Czech>(Klik) Odjistit</Czech>
@@ -326,6 +323,9 @@
             <Turkish>Atış Yayını Göster</Turkish>
             <Ukrainian>Показати траєкторію кидка</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_SnapPower">
+            <English>(Scroll) Snap Power</English>
+        </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Throw">
             <English>Throw</English>
             <Czech>Hodit</Czech>
@@ -358,6 +358,12 @@
             <Chinese>投擲模式 (按住)</Chinese>
             <Chinesesimp>投掷模式（按住）</Chinesesimp>
             <Ukrainian>Режим кидка гранати (утримувати)</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_throwStepSetting_Description">
+            <English>Adjust the granularity of different throwing modes by using the mouse wheel</English>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_throwStepSetting_DisplayName">
+            <English>Granular Throw Steps</English>
         </Key>
     </Package>
 </Project>
