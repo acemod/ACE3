@@ -886,6 +886,7 @@
         <Key ID="STR_ACE_Interaction_PassThrowable">
             <English>Pass grenade</English>
             <French>Donner une grenade</French>
+            <Spanish>Entregar granada</Spanish>
             <Italian>Passa granata</Italian>
             <Russian>Передать гранаты</Russian>
             <German>Granate geben</German>
@@ -893,11 +894,11 @@
             <Japanese>手榴弾を渡す</Japanese>
             <Chinesesimp>给予投掷物</Chinesesimp>
             <Ukrainian>Передати гранати</Ukrainian>
-            <Spanish>Entregar granada</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_PassThrowableHint">
             <English>%1 passed you %2.</English>
             <French>%1 vous a donné %2</French>
+            <Spanish>%1 te ha entregado %2.</Spanish>
             <Italian>%1 ti ha passato una granata %2.</Italian>
             <Russian>%1 передал вам %2.</Russian>
             <German>%1 hat dir %2 gegeben.</German>
@@ -905,11 +906,11 @@
             <Japanese>%1 は あなたに %2 を渡した。</Japanese>
             <Chinesesimp>%1给你了%2</Chinesesimp>
             <Ukrainian>%1 передав вам %2.</Ukrainian>
-            <Spanish>%1 te ha entregado %2.</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_PassThrowableSetting">
             <English>Show "pass grenade" interaction</English>
             <French>Afficher l'interaction « Donner une grenade »</French>
+            <Spanish>Mostrar interacción "entregar granada"</Spanish>
             <Italian>Mostra l'interazione "passa granata"</Italian>
             <Russian>Показывать действие "передать гранату"</Russian>
             <German>Zeige "Granate geben" Interaktion</German>
@@ -917,7 +918,6 @@
             <Japanese>"手榴弾を渡す"をインタラクションに表示</Japanese>
             <Chinesesimp>显示"给予投掷物"选项</Chinesesimp>
             <Ukrainian>Показувати дію "передати гранату"</Ukrainian>
-            <Spanish>Mostrar interacción "entregar granada"</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_Passengers">
             <English>Passengers</English>

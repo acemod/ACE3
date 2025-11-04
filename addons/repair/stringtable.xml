@@ -504,20 +504,20 @@
         <Key ID="STR_ACE_Repair_HitAASight">
             <English>AA Sight</English>
             <French>Viseur AA</French>
+            <Spanish>Visor AA</Spanish>
             <Russian>Прицел ПВО</Russian>
             <Korean>대공 조준기</Korean>
             <Japanese>対空照準器</Japanese>
             <Ukrainian>Приціл ППО</Ukrainian>
-            <Spanish>Visor AA</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_HitATGMSight">
             <English>ATGM Sight</English>
             <French>Viseur ATGM</French>
+            <Spanish>Visor ATGM</Spanish>
             <Russian>Прицел ПТУРа</Russian>
             <Korean>대전차미사일 조준기</Korean>
             <Japanese>ATGM照準器</Japanese>
             <Ukrainian>Приціл ПТУРа</Ukrainian>
-            <Spanish>Visor ATGM</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_HitAmmo">
             <English>Ammo</English>
@@ -907,11 +907,11 @@
         <Key ID="STR_ACE_Repair_HitMainSight">
             <English>Main Sight</English>
             <French>Visée principal</French>
+            <Spanish>Visor Principal</Spanish>
             <Russian>Основной прицел</Russian>
             <Korean>주 조준기</Korean>
             <Japanese>主照準器</Japanese>
             <Ukrainian>Основний приціл</Ukrainian>
-            <Spanish>Visor Principal</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_HitMissiles">
             <English>Missiles</English>
