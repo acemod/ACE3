@@ -25,7 +25,7 @@ private _mmb = [format [LLSTRING(ChangePower), localize "STR_dik_shift"], LLSTRI
 if (!_primed) then {
     _mmb = [_mmb, LLSTRING(Cook)] joinString " / ";
 };
-private _modifier = if (_dropMode) then {
+private _modifier = if (_dropMode || {GVAR(throwStepSetting) == 1}) then {
     []
 } else {
     [["-", LLSTRING(SnapPower), [toUpper localize "STR_dik_shift", "+", image QPATHTOEF(interaction,UI\mouse_scroll_ca.paa)]]]
