@@ -14,7 +14,7 @@
 }] call CBA_fnc_addEventHandler;
 
 
-[QGVAR(activateMedical), {
+[QGVAR(activateMedical), { // should be called where unit is local
     params ["_unit"];
     _unit setVariable [VAR_MEDICAL_ACTIVITY, true, true];
     TRACE_2("activating medical",_unit,typeOf _unit);
