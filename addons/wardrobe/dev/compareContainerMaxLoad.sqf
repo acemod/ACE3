@@ -19,7 +19,7 @@ private _allWardrobeItems = [true] call compile preprocessFileLineNumbers "z\ace
     switch (getNumber (_x >> "ItemInfo" >> "type")) do {
         case TYPE_GOGGLE: { false; };
         case TYPE_HEADGEAR: { false; };
-        case default { true };
+        default { true };
     };
 };
 
