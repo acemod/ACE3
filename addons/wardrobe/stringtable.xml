@@ -56,11 +56,13 @@
             <English>Lower Hood</English>
             <Russian>Снять капюшон</Russian>
             <German>Kapuze absetzen</German>
+            <Japanese>フードを下ろす</Japanese>
         </Key>
         <Key ID="STR_ACE_Wardrobe_hoodRaise">
             <English>Raise Hood</English>
             <Russian>Надеть капюшон</Russian>
             <German>Kapuze aufsetzen</German>
+            <Japanese>フードを上げる</Japanese>
         </Key>
         <Key ID="STR_ACE_Wardrobe_jacketClose">
             <English>Close jacket</English>
