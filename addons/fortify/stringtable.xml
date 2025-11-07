@@ -77,6 +77,7 @@
             <Russian>Токен строителя</Russian>
             <German>Token des Bauwerkzeugs</German>
             <Korean>요새화 토큰</Korean>
+            <Japanese>築城トークン</Japanese>
         </Key>
         <Key ID="STR_ACE_Fortify_addToolItem">
             <English>Auto add fortify item</English>
