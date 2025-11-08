@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"EF_hunter", "EF_ah99", "ace_realisticnames"};
+        requiredAddons[] = {"EF_Hunter", "EF_AH99", "ace_realisticnames"};
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         url = ECSTRING(main,URL);
