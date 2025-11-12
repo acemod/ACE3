@@ -38,7 +38,7 @@ if (_newPrimary isNotEqualTo []) then {
     ACE_player addWeapon _weapon;
 
     // Readd lost magazines
-    if (count _oldPrimaryMagazine != 0) then {
+    if (_oldPrimaryMagazine isEqualTo []) then {
         {
             private _container = _x;
             private _before = _containerMags#_forEachIndex;
