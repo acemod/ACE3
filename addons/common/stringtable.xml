@@ -1561,7 +1561,7 @@
             <Korean>남은 시간: %1초</Korean>
             <Japanese>残り時間: %1秒</Japanese>
             <Chinesesimp>剩余时间：%1秒</Chinesesimp>
-            <Ukrainian>Час, що залишився: %1s</Ukrainian>
+            <Ukrainian>Залишилось часу: %1с</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Top">
             <English>Top</English>
@@ -1799,6 +1799,7 @@
         <Key ID="STR_ACE_Common_additionalAddonClient">
             <English>Detected additional addon on client&lt;br/&gt;</English>
             <French>Détection d'un addon supplémentaire sur le client&lt;br/&gt;.</French>
+            <Spanish>Detectar addons adicionales en el cliente&lt;br/&gt;</Spanish>
             <Russian>Обнаружен дополнительный аддон на клиенте&lt;br/&gt;</Russian>
             <Korean>클라이언트에게서 추가 애드온이 감지되었습니다:&lt;br/&gt;</Korean>
             <Japanese>クライアントに追加のアドオンを検出しました&lt;br/&gt;</Japanese>
@@ -1822,6 +1823,7 @@
         <Key ID="STR_ACE_Common_andMore">
             <English>, and %1 more.</English>
             <French>et %1 de plus.</French>
+            <Spanish>, y %1 más.</Spanish>
             <Russian>, и ещё %1.</Russian>
             <Korean>, 그리고 %1개의 애드온.</Korean>
             <Japanese>、その他 %1 件。</Japanese>
@@ -1906,6 +1908,7 @@
         <Key ID="STR_ACE_Common_clientAdditional">
             <English>client additional</English>
             <French>client additionnel</French>
+            <Spanish>cliente adicional</Spanish>
             <Russian>дополнительный клиент</Russian>
             <Korean>클라이언트의 추가</Korean>
             <Japanese>クライアント追加</Japanese>
@@ -1915,6 +1918,7 @@
         <Key ID="STR_ACE_Common_clientMissing">
             <English>client missing</English>
             <French>client absent</French>
+            <Spanish>cliente ausente</Spanish>
             <Russian>потерян клиент</Russian>
             <Korean>클라이언트의 누락</Korean>
             <Japanese>クライアント不足</Japanese>
@@ -1958,6 +1962,7 @@
         <Key ID="STR_ACE_Common_error">
             <English>[ACE] ERROR</English>
             <French>[ACE] Erreur</French>
+            <Spanish>[ACE] ERROR</Spanish>
             <Russian>[ACE] ОШИБКА</Russian>
             <Korean>[ACE] 오류</Korean>
             <Japanese>[ACE] エラー</Japanese>
@@ -1967,6 +1972,7 @@
         <Key ID="STR_ACE_Common_isMissingItems">
             <English>[ACE] %1: ERROR %2 addon(s):</English>
             <French>[ACE] %1: ERROR %2 addon(s):</French>
+            <Spanish>[ACE] %1: ERROR %2 addon(s):</Spanish>
             <Russian>[ACE] %1: ОШИБКА %2 аддон(ов):</Russian>
             <Korean>[ACE] %1: %2 애드온(들)에 오류:</Korean>
             <Japanese>[ACE] %1: エラー %2 アドオン:</Japanese>
@@ -1993,6 +1999,7 @@
         <Key ID="STR_ACE_Common_magneticDeclination">
             <English>Realistic Compass Declination</English>
             <French>Déclinaison réaliste de la boussole</French>
+            <Spanish>Declinación Realista de Brújula</Spanish>
             <Italian>Declinazione magnetica realistica</Italian>
             <Russian>Реалистичный компасса</Russian>
             <German>Realistische Missweisung des Kompasses</German>
@@ -2004,6 +2011,7 @@
         <Key ID="STR_ACE_Common_magneticDeclinationooltip">
             <English>Compass will point to magnetic north</English>
             <French>La boussole indique le nord magnétique</French>
+            <Spanish>La Brújula apunta al norte magnético</Spanish>
             <Italian>La bussola indicherà il nord magnetico</Italian>
             <Russian>Компас будет указывать на северный магнитный полюс</Russian>
             <German>Der Kompass zeigt nach missweisend Nord</German>
@@ -2015,6 +2023,7 @@
         <Key ID="STR_ACE_Common_missingAddonClient">
             <English>Detected missing addon on client&lt;br/&gt;</English>
             <French>Détection d'un addon manquant sur le client&lt;br/&gt;.</French>
+            <Spanish>Detectado un addon que falta en cliente&lt;br/&gt;</Spanish>
             <Russian>Обнаружен отсутствующий аддон на клиенте &lt;br/&gt;</Russian>
             <Korean>클라이언트에게서 누락된 애드온이 감지되었습니다:&lt;br/&gt;</Korean>
             <Japanese>クライアントにアドオンの不足を検出しました&lt;br/&gt;</Japanese>
@@ -2024,6 +2033,7 @@
         <Key ID="STR_ACE_Common_newerClient">
             <English>newer client</English>
             <French>client plus récent</French>
+            <Spanish>cliente más moderno</Spanish>
             <Russian>новый клиент</Russian>
             <Korean>새 버전의 클라이언트</Korean>
             <Japanese>新しいクライアント</Japanese>
@@ -2033,6 +2043,7 @@
         <Key ID="STR_ACE_Common_newerVersionClient">
             <English>Detected newer client version&lt;br/&gt;</English>
             <French>Détection d'une version plus récente du client&lt;br/&gt;.</French>
+            <Spanish>Detectada versión de cliente más moderna&lt;br/&gt;</Spanish>
             <Russian>Обнаружена более новая версия клиента &lt;br/&gt;</Russian>
             <Korean>클라이언트에게서 새 버전의 애드온이 감지되었습니다:&lt;br/&gt;</Korean>
             <Japanese>クライアントに新しいバージョンを検出しました&lt;br/&gt;</Japanese>
@@ -2042,6 +2053,7 @@
         <Key ID="STR_ACE_Common_olderClient">
             <English>older client</English>
             <French>ancien client</French>
+            <Spanish>cliente obsoleto</Spanish>
             <Russian>старый клиент</Russian>
             <Korean>구버전의 클라이언트</Korean>
             <Japanese>古いクライアント</Japanese>
@@ -2051,6 +2063,7 @@
         <Key ID="STR_ACE_Common_olderVersionClient">
             <English>Detected older client version&lt;br/&gt;</English>
             <French>Détection d'une version plus ancienne du client&lt;br/&gt;.</French>
+            <Spanish>Detectada versión de cliente obsoleto&lt;br/&gt;</Spanish>
             <Russian>Обнаружена более старая версия клиента &lt;br/&gt;</Russian>
             <Korean>클라이언트에게서 구버전의 애드온이 감지되었습니다:&lt;br/&gt;</Korean>
             <Japanese>クライアントに古いバージョンを検出しました&lt;br/&gt;</Japanese>
@@ -2227,6 +2240,7 @@
         <Key ID="STR_ACE_Common_versionMismatch">
             <English>[ACE] Version mismatch:&lt;br/&gt;&lt;br/&gt;</English>
             <French>[ACE] Erreur de version : &lt;br/&gt;&lt;br/&gt;</French>
+            <Spanish>[ACE] Versión no coincide:&lt;br/&gt;&lt;br/&gt;</Spanish>
             <Russian>[ACE] Несоответствие версии:&lt;br/&gt;&lt;br/&gt;</Russian>
             <German>[ACE] Erreur de version : &lt;br/&gt;&lt;br/&gt;</German>
             <Korean>[ACE] 버전 불일치:&lt;br/&gt;&lt;br/&gt;</Korean>

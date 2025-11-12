@@ -108,6 +108,7 @@
         <Key ID="STR_ACE_Medical_Damage_AlternateArmorPenetration_Description">
             <English>Controls whether ammo material penetration is taken into account for damage handling.</English>
             <French>Contrôle si la pénétration du matériau des munitions est prise en compte pour le traitement des dommages.</French>
+            <Spanish>Controla si la penetración de materiales por la munición es tomada en cuenta para el manejo de daño.</Spanish>
             <Russian>Контролирует, учитывается ли проникновение боеприпасов в материал при обработке повреждений.</Russian>
             <Korean>대미지 계산 시 탄약 재질의 관통력을 고려할 지 여부를 제어합니다.</Korean>
             <Japanese>ダメージ処理において弾薬の貫通力を考慮するかどうかを制御します。</Japanese>
@@ -116,6 +117,7 @@
         <Key ID="STR_ACE_Medical_Damage_AlternateArmorPenetration_DisplayName">
             <English>Use Custom Armor Penetration</English>
             <French>Utiliser la pénétration d'armure personnalisée</French>
+            <Spanish>Utilizar la Penetración de Armadura Personalizada</Spanish>
             <Russian>Использовать спец. бронепробиваемость</Russian>
             <Korean>커스텀 철갑 사용</Korean>
             <Japanese>特別なアーマー貫通計算を使用</Japanese>
@@ -917,6 +919,7 @@
         <Key ID="STR_ACE_Medical_Damage_limbDamageThreshold_Description">
             <English>Sets the amount of damage limbs can receive before going critical, leading to death. Must be over 0 for any effect.\nRequires the "Use Limb Damage" setting to be enabled and "Fatal Damage Source" to be set to "Sum of Trauma" or "Either".\nStacks multiplicatively with the overall unit Damage Threshold. Doesn't interact with fractures/limping at all.</English>
             <French>Définit la quantité de dégâts que les membres peuvent recevoir avant de devenir critiques et d'entraîner la mort. Doit être supérieur à 0 pour avoir un effet.\nIl faut que le paramètre « Utiliser les dommages aux membres » soit activé et que « Cause de blessure mortelle » soit réglé sur « Somme des traumatismes » ou « Les deux ».\nS'empile de façon multiplicative avec le seuil de dégâts de l'unité globale. N'interagit pas du tout avec les fractures et le boitement.</French>
+            <Spanish>Establece la cantidad de daño que los miembros pueden recibir antes de volverse crítico, terminando en muerte. Debe ser mayor que 0 para que tenga efecto.\nRequiere habilitar la opción "Usar daño en los miembros" y establecer la opción "Origen de daño fatal" como "Suma de traumatismos" o "Ambos".\nSe apila multiplicativamente con el Umbral de Daño general. No interactúa con fracturas/cojera en absoluto.</Spanish>
             <Italian>Imposta la quantità di danni che possono ricevere gli arti prima di causare la morte.\nDeve essere superiore a 0 per avere effetto.\nRichiede l'abilitazione di "Usa danni agli arti" e l'impostazione di "Fonte di danni letali" su "Somma dei traumi" o "Entrambi".\nL'effetto si cumula con la rispettiva soglia di danni critici. Non interagisce con fratture/zoppicamento in alcun modo.</Italian>
             <Russian>Устанавливает величину урона, который могут получить конечности, прежде чем урон станет критическим, что приведет к смерти. Для любого эффекта должно быть больше 0.\nТребуется, чтобы настройка "Использовать урон конечностям" была включена, а "Причина смертельного урона" была установлена на "Совокупность травмы" или "Оба".\nУмножается с общим порогом повреждения. Никак не взаимодействует с переломами или хроманием.</Russian>
             <German>Legt die Menge an Gliedmaßenschaden fest, bevor sie kritisch werden und zum Tod führen. Muss über 0 liegen, um einen Effekt zu bewirken.\nDie Einstellung "Verwende Gliedmaßenschaden" muss aktiviert und "Quelle für tödlichen Schaden" muss auf "Summe aller Traumata" oder "Beide" eingestellt sein.\nStapelt sich multiplikativ mit der Gesamtschadensschwelle der Einheit. Interagiert nicht mit Brüchen/Humpeln.</German>
@@ -928,6 +931,7 @@
         <Key ID="STR_ACE_Medical_Damage_limbDamageThreshold_DisplayName">
             <English>Limb Damage Threshold</English>
             <French>Seuil de dommages aux membres</French>
+            <Spanish>Umbral de Daño en Miembros</Spanish>
             <Italian>Soglia dei danni critici agli arti</Italian>
             <Russian>Порог повреждения конечностей</Russian>
             <German>Schwelle für Gliedmaßenschaden</German>
@@ -939,6 +943,7 @@
         <Key ID="STR_ACE_Medical_Damage_uselimbDamage_Description">
             <English>Controls whether limb damage is taken into account for sum of trauma calculations.</English>
             <French>Contrôle si les dommages aux membres sont pris en compte dans les calculs de la somme des traumatismes.</French>
+            <Spanish>Controla si el daño en miembros es tomado en cuenta para los cálculos de suma de traumas.</Spanish>
             <Italian>Determina se danni agli arti vengono presi in considerazione per il calcolo della somma dei traumi.</Italian>
             <Russian>Определяет, учитывается ли повреждение конечностей при расчете совокупности травм.</Russian>
             <German>Legt fest, ob Gliedmaßenschäden bei der Berechnung der Summe aller Traumata berücksichtigt werden.</German>
@@ -950,6 +955,7 @@
         <Key ID="STR_ACE_Medical_Damage_uselimbDamage_DisplayName">
             <English>Use Limb Damage</English>
             <French>Utiliser les dommages aux membres</French>
+            <Spanish>Usar daño de miembros</Spanish>
             <Italian>Usa danni agli arti</Italian>
             <Russian>Использовать урон конечностям</Russian>
             <German>Verwende Gliedmaßenschaden</German>

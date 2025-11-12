@@ -19,4 +19,4 @@ params ["_unit"];
 TRACE_1("Getting detonators",_unit);
 
 private _cfgWeapons = configFile >> "CfgWeapons";
-(_unit call EFUNC(common,uniqueItems)) select {getNumber (_cfgWeapons >> _x >> QGVAR(Detonator)) == 1};
+((_unit call EFUNC(common,uniqueItems)) + weapons _unit) select {getNumber (_cfgWeapons >> _x >> QGVAR(detonator)) == 1};

@@ -9,6 +9,7 @@
             <German>ASh-12 (Schwarz)</German>
             <Korean>ASh-12 (검정)</Korean>
             <Japanese>ASh-12 (ブラック)</Japanese>
+            <Ukrainian>ASh-12 (Чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_desert_Name">
             <English>ASh-12 (Desert)</English>
@@ -18,6 +19,7 @@
             <German>ASh-12 (Wüste)</German>
             <Korean>ASh-12 (사막)</Korean>
             <Japanese>ASh-12 (砂漠迷彩)</Japanese>
+            <Ukrainian>ASh-12 (Пустельний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_gl_blk_Name">
             <English>ASh-12 GL (Black)</English>
@@ -27,6 +29,7 @@
             <German>ASh-12 GL (Schwarz)</German>
             <Korean>ASh-12 GL (검정)</Korean>
             <Japanese>ASh-12 GL (ブラック)</Japanese>
+            <Ukrainian>ASh-12 GL (Чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_gl_desert_Name">
             <English>ASh-12 GL (Desert)</English>
@@ -36,6 +39,7 @@
             <German>ASh-12 GL (Wüste)</German>
             <Korean>ASh-12 GL (사막)</Korean>
             <Japanese>ASh-12 GL (砂漠迷彩)</Japanese>
+            <Ukrainian>ASh-12 GL (Пустельний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_gl_urban_Name">
             <English>ASh-12 GL (Urban)</English>
@@ -45,6 +49,7 @@
             <German>ASh-12 GL (Urban)</German>
             <Korean>ASh-12 GL (도심)</Korean>
             <Japanese>ASh-12 GL (市街地迷彩)</Japanese>
+            <Ukrainian>ASh-12 GL (Міський)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_gl_wood_Name">
             <English>ASh-12 GL (Woodland)</English>
@@ -54,6 +59,7 @@
             <German>ASh-12 GL (Grünes Tarnmuster)</German>
             <Korean>ASh-12 GL (수풀)</Korean>
             <Japanese>ASh-12 GL (森林迷彩)</Japanese>
+            <Ukrainian>ASh-12 GL (Лісовий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_lr_blk_Name">
             <English>ASh-12 LR (Black)</English>
@@ -63,6 +69,7 @@
             <German>ASh-12 LR (Schwarz)</German>
             <Korean>ASh-12 LR (검정)</Korean>
             <Japanese>ASh-12 LR (ブラック)</Japanese>
+            <Ukrainian>ASh-12 LR (Чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_lr_desert_Name">
             <English>ASh-12 LR (Desert)</English>
@@ -72,6 +79,7 @@
             <German>ASh-12 LR (Wüste)</German>
             <Korean>ASh-12 LR (사막)</Korean>
             <Japanese>ASh-12 LR (砂漠迷彩)</Japanese>
+            <Ukrainian>ASh-12 LR (Пустельний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_lr_urban_Name">
             <English>ASh-12 LR (Urban)</English>
@@ -81,6 +89,7 @@
             <German>ASh-12 LR (Urban)</German>
             <Korean>ASh-12 LR (도심)</Korean>
             <Japanese>ASh-12 LR (市街地迷彩)</Japanese>
+            <Ukrainian>ASh-12 LR (Міський)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_lr_wood_Name">
             <English>ASh-12 LR (Woodland)</English>
@@ -90,6 +99,7 @@
             <German>ASh-12 LR (Grünes Tarnmuster)</German>
             <Korean>ASh-12 LR (수풀)</Korean>
             <Japanese>ASh-12 LR (森林迷彩)</Japanese>
+            <Ukrainian>ASh-12 LR (Лісовий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_urban_Name">
             <English>ASh-12 (Urban)</English>
@@ -99,6 +109,7 @@
             <German>ASh-12 (Urban)</German>
             <Korean>ASh-12 (도심)</Korean>
             <Japanese>ASh-12 (市街地迷彩)</Japanese>
+            <Ukrainian>ASh-12 (Міський)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_wood_Name">
             <English>ASh-12 (Woodland)</English>
@@ -108,6 +119,7 @@
             <German>ASh-12 (Grünes Tarnmuster)</German>
             <Korean>ASh-12 (수풀)</Korean>
             <Japanese>ASh-12 (森林迷彩)</Japanese>
+            <Ukrainian>ASh-12 (Лісовий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_commando_Name">
             <English>RSG60</English>
@@ -117,6 +129,7 @@
             <German>RSG60</German>
             <Korean>RSG60</Korean>
             <Japanese>RSG60</Japanese>
+            <Ukrainian>RSG60</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_Name">
             <English>Desert Eagle Mark XIX L5</English>
@@ -126,6 +139,7 @@
             <German>Desert Eagle Mark XIX L5</German>
             <Korean>데저트 이글 마크 XIX L5</Korean>
             <Japanese>デザートイーグル Mark XIX L5</Japanese>
+            <Ukrainian>Desert Eagle Mark XIX L5</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_bronze_Name">
             <English>Desert Eagle Mark XIX L5 (Bronze)</English>
@@ -135,14 +149,17 @@
             <German>Desert Eagle Mark XIX L5 (Bronze)</German>
             <Korean>데저트 이글 마크 XIX L5 (브론즈)</Korean>
             <Japanese>デザートイーグル Mark XIX L5 (ブロンズ)</Japanese>
+            <Ukrainian>Desert Eagle Mark XIX L5 (Бронзовий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_camo_Name">
             <English>Desert Eagle Mark XIX L5 (Camo)</English>
             <French>Desert Eagle Mark XIX L5 (Camo)</French>
+            <Spanish>Desert Eagle Mark XIX L5 (Camo)</Spanish>
             <Italian>Desert Eagle Mark XIX L5 (Mimetica)</Italian>
             <German>Desert Eagle Mark XIX L5 (Tarn)</German>
             <Korean>데저트 이글 마크 XIX L5 (위장)</Korean>
             <Japanese>デザートイーグル Mark XIX L5 (迷彩)</Japanese>
+            <Ukrainian>Desert Eagle Mark XIX L5 (Камуфляж)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_classic_Name">
             <English>Desert Eagle Mark XIX L5 (Classic)</English>
@@ -152,6 +169,7 @@
             <German>Desert Eagle Mark XIX L5 (Klassisch)</German>
             <Korean>데저트 이글 마크 XIX L5 (클래식)</Korean>
             <Japanese>デザートイーグル Mark XIX L5 (クラシック)</Japanese>
+            <Ukrainian>Desert Eagle Mark XIX L5 (Класичний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_copper_Name">
             <English>Desert Eagle Mark XIX L5 (Copper)</English>
@@ -161,6 +179,7 @@
             <German>Desert Eagle Mark XIX L5 (Kupfer)</German>
             <Korean>데저트 이글 마크 XIX L5 (구리)</Korean>
             <Japanese>デザートイーグル Mark XIX L5 (カッパー)</Japanese>
+            <Ukrainian>Desert Eagle Mark XIX L5 (Мідний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_gold_Name">
             <English>Desert Eagle Mark XIX L5 (Gold)</English>
@@ -170,6 +189,7 @@
             <German>Desert Eagle Mark XIX L5 (Gold)</German>
             <Korean>데저트 이글 마크 XIX L5 (금색)</Korean>
             <Japanese>デザートイーグル Mark XIX L5 (ゴールド)</Japanese>
+            <Ukrainian>Desert Eagle Mark XIX L5 (Золотий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_dmr_01_black_Name">
             <English>VS-121 (Black)</English>
@@ -179,6 +199,7 @@
             <German>VS-121 (Schwarz)</German>
             <Korean>VS-121 (검정)</Korean>
             <Japanese>VS-121 (ブラック)</Japanese>
+            <Ukrainian>VS-121 (Чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_dmr_01_tan_Name">
             <English>VS-121 (Tan)</English>
@@ -188,6 +209,7 @@
             <German>VS-121 (Hellbraun)</German>
             <Korean>VS-121 (황갈)</Korean>
             <Japanese>VS-121 (タン)</Japanese>
+            <Ukrainian>VS-121 (Жовтувато-коричневий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_base_Name">
             <English>H225 Super Puma (Transport)</English>
@@ -197,6 +219,7 @@
             <German>H225 Super Puma (Transport)</German>
             <Korean>H225 슈퍼 퓨마 (수송)</Korean>
             <Japanese>H225 シュペル ピューマ (輸送型)</Japanese>
+            <Ukrainian>H225 Super Puma (Транспортний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_civ_base_Name">
             <English>H225 Super Puma (Civilian)</English>
@@ -206,6 +229,7 @@
             <German>H225 Super Puma (Zivil)</German>
             <Korean>H225 슈퍼 퓨마 (민간)</Korean>
             <Japanese>H225 シュペル ピューマ (民生型)</Japanese>
+            <Ukrainian>H225 Super Puma (Цивільний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_base_Name">
             <English>H215 Super Puma (Transport)</English>
@@ -215,6 +239,7 @@
             <German>H215 Super Puma (Transport)</German>
             <Korean>H215 슈퍼 퓨마 (수송)</Korean>
             <Japanese>H215 シュペル ピューマ (輸送型)</Japanese>
+            <Ukrainian>H215 Super Puma (Транспортний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_civ_base_Name">
             <English>H215 Super Puma (Civilian)</English>
@@ -224,6 +249,7 @@
             <German>H215 Super Puma (Zivil)</German>
             <Korean>H215 슈퍼 퓨마 (민간)</Korean>
             <Japanese>H215 シュペル ピューマ (民生型)</Japanese>
+            <Ukrainian>H215 Super Puma (Цивільний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_military_base_Name">
             <English>H215 Super Puma (Unarmed)</English>
@@ -233,6 +259,7 @@
             <German>H215 Super Puma (Unbewaffnet)</German>
             <Korean>H215 슈퍼 퓨마 (비무장)</Korean>
             <Japanese>H215 シュペル ピューマ (非武装)</Japanese>
+            <Ukrainian>H215 Super Puma (Без зброї)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_02_base_Name">
             <English>H225M Super Cougar SOCAT</English>
@@ -242,6 +269,7 @@
             <German>H225M Super Cougar SOCAT</German>
             <Korean>H225M 슈퍼 쿠거 SOCAT</Korean>
             <Japanese>H225M シュペル クーガー SOCAT</Japanese>
+            <Ukrainian>H225M Super Cougar SOCAT</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_02_nato_Name">
             <English>H225M Super Cougar SOCAT</English>
@@ -251,6 +279,7 @@
             <German>H225M Super Cougar SOCAT</German>
             <Korean>H225M 슈퍼 쿠거 SOCAT</Korean>
             <Japanese>H225M シュペル クーガー SOCAT</Japanese>
+            <Ukrainian>H225M Super Cougar SOCAT</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_03_base_Name">
             <English>H225M Super Cougar</English>
@@ -260,6 +289,7 @@
             <German>H225M Super Cougar</German>
             <Korean>H225M 슈퍼 쿠거</Korean>
             <Japanese>H225M シュペル クーガー</Japanese>
+            <Ukrainian>H225M Super Cougar</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_04_base_Name">
             <English>H225 Super Puma SAR</English>
@@ -269,6 +299,7 @@
             <German>H225 Super Puma SAR</German>
             <Korean>H225 슈퍼 퓨마 SAR</Korean>
             <Japanese>H225 シュペル ピューマ 捜索救難型</Japanese>
+            <Ukrainian>H225 Super Puma SAR</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_04_military_base_Name">
             <English>H225M Super Cougar (Unarmed)</English>
@@ -278,6 +309,7 @@
             <German>H225M Super Cougar (Unbewaffnet)</German>
             <Korean>H225M 슈퍼 쿠거 (비무장)</Korean>
             <Japanese>H225M シュペル クーガー (非武装)</Japanese>
+            <Ukrainian>H225M Super Cougar (Без зброї)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_Name">
             <English>Glock 19X</English>
@@ -287,6 +319,7 @@
             <German>Glock 19X</German>
             <Korean>글록 19X</Korean>
             <Japanese>グロック 19X</Japanese>
+            <Ukrainian>Glock 19X</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_auto_Name">
             <English>Glock 19X Auto</English>
@@ -296,6 +329,7 @@
             <German>Glock 19X Auto</German>
             <Korean>글록 19X 기관권총</Korean>
             <Japanese>グロック 19X オート</Japanese>
+            <Ukrainian>Glock 19X Auto</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_auto_khk_Name">
             <English>Glock 19X Auto (Khaki)</English>
@@ -305,6 +339,7 @@
             <German>Glock 19X Auto (Khaki)</German>
             <Korean>글록 19X 기관권총 (카키)</Korean>
             <Japanese>グロック 19X オート (カーキ)</Japanese>
+            <Ukrainian>Glock 19X Auto (Хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_auto_tan_Name">
             <English>Glock 19X Auto (Tan)</English>
@@ -314,6 +349,7 @@
             <German>Glock 19X Auto (Hellbraun)</German>
             <Korean>글록 19X 기관권총 (황갈)</Korean>
             <Japanese>グロック 19X オート (タン)</Japanese>
+            <Ukrainian>Glock 19X Auto (Жовтувато-коричневий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_khk_Name">
             <English>Glock 19X (Khaki)</English>
@@ -323,6 +359,7 @@
             <German>Glock 19X (Khaki)</German>
             <Korean>글록 19X (카키)</Korean>
             <Japanese>グロック 19X (カーキ)</Japanese>
+            <Ukrainian>Glock 19X (Хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_tan_Name">
             <English>Glock 19X (Tan)</English>
@@ -332,6 +369,7 @@
             <German>Glock 19X (Hellbraun)</German>
             <Korean>글록 19X (황갈)</Korean>
             <Japanese>グロック 19X (タン)</Japanese>
+            <Ukrainian>Glock 19X (Жовтувато-коричневий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_blk_Name">
             <English>HERA H6 (Black)</English>
@@ -341,6 +379,7 @@
             <German>HERA H6 (Schwarz)</German>
             <Korean>헤라 H6 (검정)</Korean>
             <Japanese>HERA H6 (ブラック)</Japanese>
+            <Ukrainian>HERA H6 (Чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_digi_Name">
             <English>HERA H6 (Digital)</English>
@@ -350,6 +389,7 @@
             <German>HERA H6 (Digital)</German>
             <Korean>헤라 H6 (AAF 디지털)</Korean>
             <Japanese>HERA H6 (AAF迷彩)</Japanese>
+            <Ukrainian>HERA H6 (Цифровий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_gold_Name">
             <English>HERA H6 (Gold)</English>
@@ -359,6 +399,7 @@
             <German>HERA H6 (Gold)</German>
             <Korean>헤라 H6 (금색)</Korean>
             <Japanese>HERA H6 (ゴールド)</Japanese>
+            <Ukrainian>HERA H6 (Золотий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_oli_Name">
             <English>HERA H6 (Olive)</English>
@@ -368,6 +409,7 @@
             <German>HERA H6 (Olivgrün)</German>
             <Korean>헤라 H6 (올리브)</Korean>
             <Japanese>HERA H6 (オリーブ)</Japanese>
+            <Ukrainian>HERA H6 (Оливковий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_tan_Name">
             <English>HERA H6 (Tan)</English>
@@ -377,6 +419,7 @@
             <German>HERA H6 (Hellbraun)</German>
             <Korean>헤라 H6 (황갈)</Korean>
             <Japanese>HERA H6 (タン)</Japanese>
+            <Ukrainian>HERA H6 (Жовтувато-коричневий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_heli_light_03_Name">
             <English>AW159 Wildcat ASW</English>
@@ -386,6 +429,7 @@
             <German>AW159 Wildcat ASW</German>
             <Korean>AW159 와일드캣 ASW</Korean>
             <Japanese>AW159 ワイルドキャット ASW</Japanese>
+            <Ukrainian>AW159 Wildcat ASW</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_heli_light_03_unarmed_Name">
             <English>AW159 Wildcat ASW (Unarmed)</English>
@@ -395,6 +439,7 @@
             <German>AW159 Wildcat ASW (Unbewaffnet)</German>
             <Korean>AW159 와일드캣 ASW (비무장)</Korean>
             <Japanese>AW159 ワイルドキャット ASW (非武装)</Japanese>
+            <Ukrainian>AW159 Wildcat ASW (Без зброї)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_desert_Name">
             <English>C-More Railway (Red, Desert)</English>
@@ -404,6 +449,7 @@
             <German>C-More Railway (Rot, Wüste)</German>
             <Korean>씨모어 레일웨이 (빨강, 사막 위장)</Korean>
             <Japanese>C-More レイルウェイ (レッド、砂漠迷彩)</Japanese>
+            <Ukrainian>C-More Railway (Червоний, Пустельний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_grn_desert_Name">
             <English>C-More Railway (Green, Desert)</English>
@@ -413,6 +459,7 @@
             <German>C-More Railway (Grün, Wüste)</German>
             <Korean>씨모어 레일웨이 (녹색, 사막 위장)</Korean>
             <Japanese>C-More レイルウェイ (グリーン、砂漠迷彩)</Japanese>
+            <Ukrainian>C-More Railway (Зелений, Пустельний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_grn_wood_Name">
             <English>C-More Railway (Green, Woodland)</English>
@@ -422,6 +469,7 @@
             <German>C-More Railway (Grün, Grünes Tarnmuster)</German>
             <Korean>씨모어 레일웨이 (녹색, 수풀 위장)</Korean>
             <Japanese>C-More レイルウェイ (グリーン、森林迷彩)</Japanese>
+            <Ukrainian>C-More Railway (Зелений, Лісовий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_wood_Name">
             <English>C-More Railway (Red, Woodland)</English>
@@ -431,6 +479,7 @@
             <German>C-More Railway (Rot, Grünes Tarnmuster)</German>
             <Korean>씨모어 레일웨이 (빨강, 수풀 위장)</Korean>
             <Japanese>C-More レイルウェイ (レッド、森林迷彩)</Japanese>
+            <Ukrainian>C-More Railway (Червоний, Лісовий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_mrd_khk_Name">
             <English>EOTech MRDS (Khaki)</English>
@@ -440,6 +489,7 @@
             <German>EOTech MRDS (Khaki)</German>
             <Korean>이오텍 MRDS (카키)</Korean>
             <Japanese>EOTech MRDS (カーキ)</Japanese>
+            <Ukrainian>EOTech MRDS (Хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_mrd_tan_Name">
             <English>EOTech MRDS (Tan)</English>
@@ -449,6 +499,7 @@
             <German>EOTech MRDS (Hellbraun)</German>
             <Korean>이오텍 MRDS (황갈)</Korean>
             <Japanese>EOTech MRDS (タン)</Japanese>
+            <Ukrainian>EOTech MRDS (Жовтувато-коричневий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_rds_Name">
             <English>Aimpoint Micro R-1</English>
@@ -458,6 +509,7 @@
             <German>Aimpoint Micro R-1</German>
             <Korean>에임포인트 마이크로 R-1</Korean>
             <Japanese>Aimpoint マイクロ R-1</Japanese>
+            <Ukrainian>Aimpoint Micro R-1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_vrco_Name">
             <English>Vortex Spitfire Prism</English>
@@ -467,6 +519,7 @@
             <German>Vortex Spitfire Prism</German>
             <Korean>버텍스 스핏파이어 프리즘</Korean>
             <Japanese>Vortex スピットファイア プリズム</Japanese>
+            <Ukrainian>Vortex Spitfire Prism</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_vrco_khk_Name">
             <English>Vortex Spitfire Prism (Khaki)</English>
@@ -476,6 +529,7 @@
             <German>Vortex Spitfire Prism (Khaki)</German>
             <Korean>버텍스 스핏파이어 프리즘 (카키)</Korean>
             <Japanese>Vortex スピットファイア プリズム (カーキ)</Japanese>
+            <Ukrainian>Vortex Spitfire Prism (Хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_vrco_pistol_Name">
             <English>Vortex Spitfire Prism (Pistol)</English>
@@ -485,6 +539,7 @@
             <German>Vortex Spitfire Prism (Pistole)</German>
             <Korean>버텍스 스핏파이어 프리즘 (권총용)</Korean>
             <Japanese>Vortex スピットファイア プリズム (ピストル用)</Japanese>
+            <Ukrainian>Vortex Spitfire Prism (Пістолет)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_vrco_tan_Name">
             <English>Vortex Spitfire Prism (Tan)</English>
@@ -494,6 +549,7 @@
             <German>Vortex Spitfire Prism (Hellbraun)</German>
             <Korean>버텍스 스핏파이어 프리즘 (황갈)</Korean>
             <Japanese>Vortex スピットファイア プリズム (タン)</Japanese>
+            <Ukrainian>Vortex Spitfire Prism (Жовтувато-коричневий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_Fuel_Name">
             <English>Ram 1500 (Fuel)</English>
@@ -503,6 +559,7 @@
             <German>Ram 1500 (Treibstoff)</German>
             <Korean>램 1500 (연료)</Korean>
             <Japanese>ラム 1500 (燃料)</Japanese>
+            <Ukrainian>Ram 1500 (Паливо)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_Name">
             <English>Ram 1500</English>
@@ -512,6 +569,7 @@
             <German>Ram 1500</German>
             <Korean>램 1500</Korean>
             <Japanese>ラム 1500</Japanese>
+            <Ukrainian>Ram 1500</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_aa_Name">
             <English>Ram 1500 (AA)</English>
@@ -521,6 +579,7 @@
             <German>Ram 1500 (AA)</German>
             <Korean>램 1500 (대공)</Korean>
             <Japanese>ラム 1500 (対空)</Japanese>
+            <Ukrainian>Ram 1500 (ППО)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_comms_Name">
             <English>Ram 1500 (Comms)</English>
@@ -530,6 +589,7 @@
             <German>Ram 1500 (Kommunikation)</German>
             <Korean>램 1500 (통신)</Korean>
             <Japanese>ラム 1500 (通信)</Japanese>
+            <Ukrainian>Ram 1500 (Зв'язок)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_covered_Name">
             <English>Ram 1500 (Covered)</English>
@@ -539,6 +599,7 @@
             <German>Ram 1500 (Abgedeckt)</German>
             <Korean>램 1500 (커버)</Korean>
             <Japanese>ラム 1500 (カバー)</Japanese>
+            <Ukrainian>Ram 1500 (Вкритий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_hmg_Name">
             <English>Ram 1500 (HMG)</English>
@@ -548,14 +609,17 @@
             <German>Ram 1500 (HMG)</German>
             <Korean>램 1500 (중기관총)</Korean>
             <Japanese>ラム 1500 (HMG)</Japanese>
+            <Ukrainian>Ram 1500 (Важкий кулемет)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_minigun_Name">
             <English>Ram 1500 (Minigun)</English>
             <French>Ram 1500 (Minigun)</French>
+            <Spanish>Ram 1500 (Minigun)</Spanish>
             <Italian>Ram 1500 (Minigun)</Italian>
             <German>Ram 1500 (Minigun)</German>
             <Korean>램 1500 (미니건)</Korean>
             <Japanese>ラム 1500 (ミニガン)</Japanese>
+            <Ukrainian>Ram 1500 (Мініган)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_mmg_Name">
             <English>Ram 1500 (MMG)</English>
@@ -565,6 +629,7 @@
             <German>Ram 1500 (MMG)</German>
             <Korean>램 1500 (중형기관총)</Korean>
             <Japanese>ラム 1500 (MMG)</Japanese>
+            <Ukrainian>Ram 1500 (Кулемет)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_mrl_Name">
             <English>Ram 1500 (MRL)</English>
@@ -574,14 +639,17 @@
             <German>Ram 1500 (MRL)</German>
             <Korean>램 1500 (다연장로켓)</Korean>
             <Japanese>ラム 1500 (MRL)</Japanese>
+            <Ukrainian>Ram 1500 (РСЗВ)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_rcws_Name">
             <English>Ram 1500 (RCWS)</English>
             <French>Ram 1500 (RCWS)</French>
+            <Spanish>Ram 1500 (RCWS)</Spanish>
             <Italian>Ram 1500 (RCWS)</Italian>
             <German>Ram 1500 (RCWS)</German>
             <Korean>램 1500 (무인포탑)</Korean>
             <Japanese>ラム 1500 (RCWS)</Japanese>
+            <Ukrainian>Ram 1500 (RCWS)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_repair_Name">
             <English>Ram 1500 (Repair)</English>
@@ -591,14 +659,17 @@
             <German>Ram 1500 (Instandsetzung)</German>
             <Korean>램 1500 (정비)</Korean>
             <Japanese>ラム 1500 (修理)</Japanese>
+            <Ukrainian>Ram 1500 (Ремонтний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_rocket_Name">
             <English>Ram 1500 (Rocket)</English>
             <French>Ram 1500 (Rocket)</French>
+            <Spanish>Ram 1500 (Rocket)</Spanish>
             <Italian>Ram 1500 (Razzi)</Italian>
             <German>Ram 1500 (Rakete)</German>
             <Korean>램 1500 (로켓)</Korean>
             <Japanese>ラム 1500 (ロケット)</Japanese>
+            <Ukrainian>Ram 1500 (Ракета)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_service_Name">
             <English>Ram 1500 (Services)</English>
@@ -608,6 +679,7 @@
             <German>Ram 1500 (Pannenhilfe)</German>
             <Korean>램 1500 (서비스)</Korean>
             <Japanese>ラム 1500 (サービス)</Japanese>
+            <Ukrainian>Ram 1500 (Обслуговуючий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_water_Name">
             <English>Ram 1500 (Water)</English>
@@ -617,6 +689,7 @@
             <German>Ram 1500 (Wasser)</German>
             <Korean>램 1500 (급수)</Korean>
             <Japanese>ラム 1500 (給水)</Japanese>
+            <Ukrainian>Ram 1500 (Вода)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_Name">
             <English>Drone40 Scout</English>
@@ -626,6 +699,7 @@
             <German>Drone40 Scout</German>
             <Korean>드론40 정찰</Korean>
             <Japanese>ドローン40 偵察型</Japanese>
+            <Ukrainian>Drone40 Scout</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_base_Name">
             <English>Drone40</English>
@@ -635,6 +709,7 @@
             <German>Drone40</German>
             <Korean>드론40</Korean>
             <Japanese>ドローン40</Japanese>
+            <Ukrainian>Drone40</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_blue_Name">
             <English>Drone40 Smoke (Blue)</English>
@@ -644,6 +719,7 @@
             <German>Drone40 Rauch (Blau)</German>
             <Korean>드론40 연막 (청색)</Korean>
             <Japanese>ドローン40 発煙弾 (青)</Japanese>
+            <Ukrainian>Drone40 Smoke (Синій)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_green_Name">
             <English>Drone40 Smoke (Green)</English>
@@ -653,6 +729,7 @@
             <German>Drone40 Rauch (Grün)</German>
             <Korean>드론40 연막 (녹색)</Korean>
             <Japanese>ドローン40 発煙弾 (緑)</Japanese>
+            <Ukrainian>Drone40 Smoke (Зелений)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_he_Name">
             <English>Drone40 HE</English>
@@ -662,6 +739,7 @@
             <German>Drone40 HE</German>
             <Korean>드론40 고폭</Korean>
             <Japanese>ドローン40 榴弾</Japanese>
+            <Ukrainian>Drone40 ОФ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_orange_Name">
             <English>Drone40 Smoke (Orange)</English>
@@ -671,6 +749,7 @@
             <German>Drone40 Rauch (Orange)</German>
             <Korean>드론40 연막 (주황색)</Korean>
             <Japanese>ドローン40 発煙弾 (橙)</Japanese>
+            <Ukrainian>Drone40 Дим (Помаранчевий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_red_Name">
             <English>Drone40 Smoke (Red)</English>
@@ -680,6 +759,7 @@
             <German>Drone40 Rauch (Rot)</German>
             <Korean>드론40 연막 (적색)</Korean>
             <Japanese>ドローン40 発煙弾 (赤)</Japanese>
+            <Ukrainian>Drone40 Дим (Червоний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_white_Name">
             <English>Drone40 Smoke (White)</English>
@@ -689,6 +769,7 @@
             <German>Drone40 Rauch (Weiß)</German>
             <Korean>드론40 연막 (백색)</Korean>
             <Japanese>ドローン40 発煙弾 (白)</Japanese>
+            <Ukrainian>Drone40 Дим (Білий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_smg_01_black_Name">
             <English>Vector SMG (Black)</English>
@@ -698,6 +779,7 @@
             <German>Vector SMG (Schwarz)</German>
             <Korean>벡터 SMG (검정)</Korean>
             <Japanese>ベクター SMG (ブラック)</Japanese>
+            <Ukrainian>Vector SMG (Чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_01_water_Name">
             <English>HEMTT Fire Truck</English>
@@ -711,14 +793,17 @@
             <Korean>HEMTT 소방트럭</Korean>
             <Japanese>HEMTT (消防車)</Japanese>
             <Chinesesimp>HEMTT 消防卡车</Chinesesimp>
+            <Ukrainian>Пожежна машина HEMTT</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_03_cargo_Name">
             <English>Typhoon Cargo</English>
             <French>Typhoon Cargo</French>
+            <Spanish>Typhoon Cargo</Spanish>
             <Italian>Typhoon Carico</Italian>
             <German>Typhoon Fracht</German>
             <Korean>타이푼 화물</Korean>
             <Japanese>タイフーン (貨物)</Japanese>
+            <Ukrainian>Typhoon вантажний</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_03_water_Name">
             <English>Typhoon Water</English>
@@ -728,6 +813,7 @@
             <German>Typhoon Wasser</German>
             <Korean>타이푼 급수</Korean>
             <Japanese>タイフーン (給水車)</Japanese>
+            <Ukrainian>Typhoon Автоцистерна</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_twinmortar_Name">
             <English>AMOS Container</English>
@@ -737,6 +823,7 @@
             <German>AMOS Container</German>
             <Korean>AMOS 컨테이너</Korean>
             <Japanese>AMOS コンテナ</Japanese>
+            <Ukrainian>AMOS Контейнер</Ukrainian>
         </Key>
     </Package>
 </Project>

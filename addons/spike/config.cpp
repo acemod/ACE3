@@ -4,7 +4,7 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {};
-        weapons[] = {};
+        weapons[] = {QGVAR(launcher), QGVAR(launcher_olive)};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
         author = ECSTRING(common,ACETeam);
@@ -14,10 +14,7 @@ class CfgPatches {
     };
 };
 
-class RscOpticsValue;
 class RscControlsGroupNoScrollbars;
-class RscPicture;
-class RscLine;
 class RscMapControl;
 class RscText;
 

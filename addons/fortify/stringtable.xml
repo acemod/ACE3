@@ -67,6 +67,18 @@
             <Turkish>Inşa Etme Aleti</Turkish>
             <Ukrainian>Інструмент будівельника</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Fortify_FortifyToken_name">
+            <English>Fortify Token</English>
+            <French>Jeton de fortification</French>
+            <Spanish>Token de Fortificar</Spanish>
+            <Italian>Token di Fortificazione</Italian>
+            <Polish>Token do fortyfikowania</Polish>
+            <Portuguese>Token de Fortificação</Portuguese>
+            <Russian>Токен строителя</Russian>
+            <German>Token des Bauwerkzeugs</German>
+            <Korean>요새화 토큰</Korean>
+            <Japanese>築城トークン</Japanese>
+        </Key>
         <Key ID="STR_ACE_Fortify_addToolItem">
             <English>Auto add fortify item</English>
             <French>Ajout automatique de l'outil de fortification</French>

@@ -2,6 +2,15 @@ TRACE_1("",QUOTE(ADDON));
 
 PREP(aceRearmGetCarryMagazines);
 
+PREP(isModEnabled);
+
+PREP(autofire_enable);
+PREP(autofire_disable);
+PREP(autofire_canEnable);
+PREP(autofire_canDisable);
+PREP(autofire_fire);
+PREP(autofire_onReload);
+
 PREP(ai_handleFired);
 PREP(ai_handleGetIn);
 PREP(ai_reload);

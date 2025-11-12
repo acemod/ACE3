@@ -55,3 +55,12 @@ extends = "cup"
 workshop = [
     "1369691841", # Community Factions Project
 ]
+
+[wardrobe]
+extends = "default"
+mission = "Wardrobe.VR"
+workshop = [
+    "3499977893", # Advanced Developer Tools
+    "1779063631", # ZEN
+#    "623475643",  # eden enhanced
+]
