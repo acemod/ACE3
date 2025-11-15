@@ -33,4 +33,6 @@ switch (_equipmentType) do {
 
 GVAR(inProgress) = false; // re-enable action
 
+[QGVAR(otherChanged), [_classOrigin, _classTarget], _player] call CBA_fnc_targetEvent;
+
 nil

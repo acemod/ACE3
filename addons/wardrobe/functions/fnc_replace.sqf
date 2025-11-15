@@ -104,4 +104,6 @@ if !(".paa" in _imgNotify) then {
     _duration * 1.2
 ] call CBA_fnc_waitAndExecute;
 
+[QGVAR(itemChanged), [_classOrigin, _classTarget], _player] call CBA_fnc_targetEvent;
+
 nil
