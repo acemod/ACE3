@@ -326,3 +326,14 @@ Currently, `ace_intelitems` and `ace_overheating` (spare barrels) are already su
 When the player changes from one container item to another through the wardrobe action and the container's `maximumLoad` is smaller than previously, the player risks the loss of items carried inside said container.
 
 Therefore, the debug script found at `addons\wardrobe\dev\compareContainerMaxLoad.sqf` can be used to compare the item's `maximumLoad`. The result will be dumped into the .rpt.
+
+## 6.2 Events
+
+### 6.2.1 Listenable
+
+| Event Name | Description | Passed Parameter(s) | Locality |
+| ---------- | ----------- | ------------------- | -------- |
+| `ace_wardrobe_uniformChanged` | Player changed their uniform through the wardrobe system | `[_oldItem, _newItem]` | Target |
+| `ace_wardrobe_otherChanged` | Player changed their headgear or goggles through the wardrobe system | `[_oldItem, _newItem]` | Target |
+| `ace_wardrobe_itemChanged` | Player changed anything else through the wardrobe system| `[_oldItem, _newItem]` | Target |
+
