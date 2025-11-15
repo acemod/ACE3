@@ -43,7 +43,7 @@ _unit setVariable [QGVAR(inHand), false];
 _unit setVariable [QGVAR(primed), false];
 _unit setVariable [QGVAR(activeThrowable), objNull];
 _unit setVariable [QGVAR(activeMuzzle), ["", -1]];
-_unit setVariable [QGVAR(throwType), THROW_TYPE_DEFAULT];
+_unit setVariable [QGVAR(throwMod), THROW_MODIFER_DEFAULT];
 _unit setVariable [QGVAR(throwSpeed), THROW_SPEED_DEFAULT];
 _unit setVariable [QGVAR(dropMode), false];
 _unit setVariable [QGVAR(dropDistance), DROP_DISTANCE_DEFAULT];

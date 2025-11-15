@@ -3,7 +3,7 @@
 class CfgPatches {
     class SUBADDON {
         name = COMPONENT_NAME;
-        units[] = {};
+        units[] = {QGVAR(m3Tripod), QGVAR(m2Tripod), QGVAR(LafetteTripodLow), QGVAR(LafetteTripod), QGVAR(m1Baseplate), QGVAR(MLE_27_31_baseplate), QGVAR(GrW278_baseplate)};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
