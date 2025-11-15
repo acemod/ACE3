@@ -333,7 +333,5 @@ Therefore, the debug script found at `addons\wardrobe\dev\compareContainerMaxLoa
 
 | Event Name | Description | Passed Parameter(s) | Locality |
 | ---------- | ----------- | ------------------- | -------- |
-| `ace_wardrobe_uniformChanged` | Player changed their uniform through the wardrobe system | `[_oldItem, _newItem]` | Target |
-| `ace_wardrobe_otherChanged` | Player changed their headgear or goggles through the wardrobe system | `[_oldItem, _newItem]` | Target |
-| `ace_wardrobe_itemChanged` | Player changed anything else through the wardrobe system| `[_oldItem, _newItem]` | Target |
+| `ace_wardrobe_itemChanged` | Player changed an item through the wardrobe system | `[_oldItem, _newItem]` | Target |
 
