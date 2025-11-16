@@ -31,8 +31,6 @@ switch (_equipmentType) do {
     };
 };
 
-[QGVAR(itemChangedAfter), [_player, _classOrigin, _classTarget, _equipmentType]] call CBA_fnc_localEvent;
-
 GVAR(inProgress) = false; // re-enable action
 
 nil
