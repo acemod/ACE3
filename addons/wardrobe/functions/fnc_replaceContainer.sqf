@@ -37,11 +37,37 @@ private _exceptions = []; // nested Array of [Classname, Array of old ID's, Arra
 
 private _loadout = _player call CBA_fnc_getLoadout;
 
+private _variables = [];
+
 // Replace Wearable Container
 switch (_equipmentType) do {
-    case "UNIFORM":  { _loadout # 0 # 3 set [0, _classTarget]; };
-    case "VEST":     { _loadout # 0 # 4 set [0, _classTarget]; };
-    case "BACKPACK": { _loadout # 0 # 5 set [0, _classTarget]; };
+    case "UNIFORM":  {
+        private _uniform = uniformContainer _player;
+        if !(isNull _uniform) then {
+            {
+                _variables pushBack [_x, _uniform getVariable _x];
+            } forEach allVariables _uniform;
+        };
+        _loadout # 0 # 3 set [0, _classTarget];
+    };
+    case "VEST":     {
+        private _vest = vestContainer _player;
+        if !(isNull _vest) then {
+            {
+                _variables pushBack [_x, _vest getVariable _x];
+            } forEach allVariables _vest;
+        };
+        _loadout # 0 # 4 set [0, _classTarget];
+    };
+    case "BACKPACK": {
+        private _backpack = backpackContainer _player;
+        if !(isNull _backpack) then {
+            {
+                _variables pushBack [_x, _backpack getVariable _x];
+            } forEach allVariables _backpack;
+        };
+        _loadout # 0 # 5 set [0, _classTarget];
+    };
 };
 
 // Apply new loadout
@@ -59,6 +85,33 @@ switch (_equipmentType) do {
     };
 } forEach _exceptions;
 
+// Apply variables from the old container to the new one
+switch (_equipmentType) do {
+    case "UNIFORM":  {
+        private _uniform = uniformContainer _player;
+        if !(isNull _uniform) then {
+            {
+                _uniform setVariable _x;
+            } forEach _variables;
+        };
+    };
+    case "VEST":     {
+        private _vest = vestContainer _player;
+        if !(isNull _vest) then {
+            {
+                _vest setVariable _x;
+            } forEach _variables;
+        };
+    };
+    case "BACKPACK": {
+        private _backpack = backpackContainer _player;
+        if !(isNull _backpack) then {
+            {
+                _backpack setVariable _x;
+            } forEach _variables;
+        };
+    };
+};
 
 GVAR(inProgress) = false; // re-enable action
 
