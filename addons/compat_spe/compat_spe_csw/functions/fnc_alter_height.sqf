@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * cursorObject call SPE_Weapons_Static_fnc_alter_height
+ * [cursorObject, getText (configOf cursorObject >> "SPE_AltHeight_Tripod_Name")] call SPE_Weapons_Static_fnc_alter_height
  *
  * Public: No
  */
