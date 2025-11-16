@@ -52,7 +52,13 @@ if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2
 // temp action disabled
 GVAR(inProgress) = true;
 
-[_replaceCode, [_player, _classTarget, _equipmentType], _duration] call CBA_fnc_waitAndExecute;
+[{
+    params ["_player", "_classOrigin", "_classTarget", "_equipmentType", "_replaceCode"];
+
+    [_player, _classTarget, _equipmentType] call _replaceCode;
+
+    [QGVAR(itemChangedAfter), [_player, _classOrigin, _classTarget, _equipmentType]] call CBA_fnc_localEvent;
+}, [_player, _classOrigin, _classTarget, _equipmentType, _replaceCode], _duration] call CBA_fnc_waitAndExecute;
 
 // handle components
 [_classOrigin, _classTarget] call FUNC(compareComponents) params ["_missing", "_surplus"];
