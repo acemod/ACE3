@@ -47,6 +47,8 @@ private _replaceCode = switch (_typeNumber) do {
 };
 if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,_classOrigin); };
 
+[QGVAR(itemChangedBefore), [_player, _classOrigin, _classTarget, _equipmentType]] call CBA_fnc_localEvent;
+
 // temp action disabled
 GVAR(inProgress) = true;
 
@@ -103,7 +105,5 @@ if !(".paa" in _imgNotify) then {
     [["<img image='%1' size=5></img><br/>%2", _imgNotify, getText (_cfgTarget >> "displayName")], 4],
     _duration * 1.2
 ] call CBA_fnc_waitAndExecute;
-
-[QGVAR(itemChanged), [_player, _classOrigin, _classTarget, _equipmentType]] call CBA_fnc_localEvent;
 
 nil
