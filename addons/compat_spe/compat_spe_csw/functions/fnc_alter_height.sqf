@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * cursorObject call SPE_Weapons_Static_fnc_can_alter_height
+ * cursorObject call SPE_Weapons_Static_fnc_alter_height
  *
  * Public: No
  */
