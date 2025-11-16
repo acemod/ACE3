@@ -333,5 +333,5 @@ Therefore, the debug script found at `addons\wardrobe\dev\compareContainerMaxLoa
 
 | Event Name | Description | Passed Parameter(s) | Locality |
 | ---------- | ----------- | ------------------- | -------- |
-| `ace_wardrobe_itemChanged` | Player changed an item through the wardrobe system | `[_oldItem, _newItem]` | Target |
+| `ace_wardrobe_itemChanged` | Player changed an item through the wardrobe system | `[_player, _oldItem, _newItem]` | Target |
 
