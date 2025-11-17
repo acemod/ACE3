@@ -112,6 +112,4 @@ if !(".paa" in _imgNotify) then {
     _duration * 1.2
 ] call CBA_fnc_waitAndExecute;
 
-[QGVAR(itemChangedAfter), [_player, _classOrigin, _classTarget, _equipmentType]] call CBA_fnc_localEvent;
-
 nil
