@@ -1,5 +1,4 @@
 class CfgMovesBasic {
-      class DefaultDie;
       class ManActions {
           ACE_FastRoping = "ACE_FastRoping";
       };

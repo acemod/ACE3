@@ -291,6 +291,7 @@
         <Key ID="STR_ACE_Cargo_checkSize">
             <English>Check Cargo Size</English>
             <French>Vérifier la taille de la cargaison</French>
+            <Spanish>Comprobar Espacio de Carga</Spanish>
             <Italian>Controlla spazio del carico</Italian>
             <Russian>Проверить размер груза</Russian>
             <German>Prüfe Frachtgröße</German>
@@ -302,6 +303,7 @@
         <Key ID="STR_ACE_Cargo_checkSizeInteraction">
             <English>Show Check Cargo Size Interaction</English>
             <French>Afficher la confirmation de la taille de la cargaison</French>
+            <Spanish>Mostrar Interacción de Comprobación de Espacio de Carga</Spanish>
             <Italian>Mostra interazione di controllo dello spazio del carico</Italian>
             <Russian>Вкл. проверку размера груза</Russian>
             <German>Zeige Interaktion zum Prüfen der Frachtgröße</German>
@@ -675,6 +677,20 @@
             <Chinesesimp>卸载</Chinesesimp>
             <Turkish>Boşalt</Turkish>
             <Ukrainian>Вивантажити</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Cargo_unloadOnKilled">
+            <English>Unload Cargo On Killed</English>
+            <French>Décharger la cargaison du véhicule détruit</French>
+            <Spanish>Descargar Carga si el vehículo es destruído</Spanish>
+            <Russian>Выгрузить груз из уничтоженной машины</Russian>
+            <Japanese>車両破壊時に貨物を降ろす</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Cargo_unloadOnKilled_description">
+            <English>The chance for each cargo loaded into a vehicle to be unloaded if the vehicle is killed.\nApplies to objects only.</English>
+            <French>Probabilité que chaque chargement chargé dans un véhicule soit déchargé si le véhicule est détruit. S'applique uniquement aux objets.</French>
+            <Spanish>La probabilidad de que la carga de un vehiculo sea descargada si el vehículo es destruido.\nAplica sólo a objetos.</Spanish>
+            <Russian>Вероятность того, что каждый загруженный в транспортное средство груз будет выгружен, если транспортное средство будет уничтожено.\nПрименяется только к предметам.</Russian>
+            <Japanese>車両が破壊された際、積載されている貨物が降ろされる確率。\nオブジェクトにのみ適用されます。</Japanese>
         </Key>
     </Package>
 </Project>

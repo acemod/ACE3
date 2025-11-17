@@ -51,8 +51,9 @@ if (EGVAR(medical,fatalDamageSource) in [1, 2]) then {
     if ([false, !isPlayer _unit, true] select EGVAR(medical,useLimbDamage)) then {
         private _limbThreshold = EGVAR(medical,limbDamageThreshold) * _damageThreshold;
         {
+            if (_x > _limbThreshold) exitWith {true breakOut "main"}; // WOG Tweak. Limb damage is fatal if it is over threshold
             _vitalDamage = _vitalDamage + ((_x - _limbThreshold) max 0);
-        } forEach _bodyPartDamage select [2];
+        } forEach (_bodyPartDamage select [2]);
     };
 
     private _chanceFatal = 1 - exp -((_vitalDamage/FATAL_SUM_DAMAGE_WEIBULL_L)^FATAL_SUM_DAMAGE_WEIBULL_K);
@@ -60,11 +61,6 @@ if (EGVAR(medical,fatalDamageSource) in [1, 2]) then {
 
     if (_chanceFatal > random 1) exitWith {
         TRACE_1("determineIfFatal: lethal trauma",_woundDamage);
-        true breakOut "main";
-    };
-
-    if (_leftArmDamage > _limbThreshold || _rightArmDamage > _limbThreshold || _leftLegDamage > _limbThreshold || _rightLegDamage > _limbThreshold) exitWith {
-        TRACE_5("determineIfFatal: lethal limb trauma",_limbsSumDamage,_leftArmDamage,_rightArmDamage,_leftLegDamage,_rightLegDamage);
         true breakOut "main";
     };
 };

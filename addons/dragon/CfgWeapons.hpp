@@ -1,6 +1,5 @@
 class CfgWeapons {
     class launch_Titan_base;
-    class Launcher_Base_F;
     class missiles_titan;
     class Binocular;
     class Default;

@@ -56,7 +56,7 @@ if (hasInterface) then {
     };
 
     // Spawn smoke
-    _smoke = createVehicleLocal ["#particlesource", ASLToAGL getPosASL _vehicle, [], 0, "CAN_COLLIDE"];;
+    _smoke = createVehicleLocal ["#particlesource", ASLToAGL getPosASL _vehicle, [], 0, "CAN_COLLIDE"];
     _smoke setParticleClass "ObjectDestructionSmoke1_2Smallx";
     _smoke attachTo [_vehicle, _position];
 };

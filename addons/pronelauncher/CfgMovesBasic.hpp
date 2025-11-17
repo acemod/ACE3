@@ -1,5 +1,4 @@
 class CfgMovesBasic {
-    class Default;
     class NoActions;
     class Actions {
         class CivilStandActions;

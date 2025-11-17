@@ -1,7 +1,6 @@
 class ace_missileguidance_type_Dragon;
 class CfgAmmo {
     class ammo_Penetrator_Base;
-    class M_Scalpel_AT;
     class Rocket_03_AP_F;
 
     class GVAR(penetrator_super): ammo_Penetrator_Base {

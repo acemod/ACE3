@@ -3,85 +3,102 @@
     <Package name="Compat_GM_CSW">
         <Key ID="STR_ACE_Compat_GM_CSW_9K111Weapon_displayName">
             <English>[CSW] 9K111 Fagot</English>
+            <Spanish>[CSW] 9K111 Fagot</Spanish>
             <Korean>[CSW] 9K111 파곳</Korean>
             <Japanese>[CSW] 9K111 ファゴット</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_GM_CSW_9K111Weapon_displayNameShort">
             <English>9K111 Fagot</English>
+            <Spanish>9K111 Fagot</Spanish>
             <Korean>9K111 파곳</Korean>
             <Japanese>9K111 ファゴット</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_GM_CSW_9M111_displayName">
             <English>[CSW] 9M111 Fagot (GM)</English>
+            <Spanish>[CSW] 9M111 Fagot (GM)</Spanish>
             <Korean>[CSW] 9M111 파곳 (GM CDLC)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_GM_CSW_MG3Tripod_displayName">
             <English>[CSW] MG3 AA Tripod (GM)</English>
+            <Spanish>[CSW] Trípode MG3 AA (GM)</Spanish>
             <Korean>[CSW] MG3 대공형 삼각대 (GM CDLC)</Korean>
             <Japanese>[CSW] 9M111 ファゴット (GM)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_GM_CSW_MG3Weapon_displayName">
             <English>[CSW] MG3 AA Tripod</English>
+            <Spanish>[CSW] Trípode MG3 AA</Spanish>
             <Korean>[CSW] MG3 대공형 삼각대</Korean>
             <Japanese>[CSW] MG3 AA 三脚 (GM)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_GM_CSW_MilanWeapon_displayName">
             <English>[CSW] MILAN</English>
+            <Spanish>[CSW] MILAN</Spanish>
             <Korean>[CSW] 밀란 대전차미사일</Korean>
             <Japanese>[CSW] ミラン</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_GM_CSW_MilanWeapon_displayNameShort">
             <English>MILAN</English>
+            <Spanish>MILAN</Spanish>
             <Korean>밀란</Korean>
             <Japanese>ミラン</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_GM_CSW_Milan_displayName">
             <English>[CSW] MILAN (GM)</English>
+            <Spanish>[CSW] MILAN (GM)</Spanish>
             <Korean>[CSW] 밀란 대전차미사일 (GM CDLC)</Korean>
             <Japanese>[CSW] ミラン (GM)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_GM_CSW_mag_9M111_displayName">
             <English>[CSW] HEAT 9M111 (Fagot)</English>
+            <Spanish>[CSW] HEAT 9M111 (Fagot)</Spanish>
             <Korean>[CSW] 대전차고폭탄 9M111 (파곳)</Korean>
             <Japanese>[CSW] HEAT 9M111 (ファゴット)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_GM_CSW_mag_Milan1_dm82_displayName">
             <English>[CSW] HEAT DM82 (MILAN 1)</English>
+            <Spanish>[CSW] HEAT DM82 (MILAN 1)</Spanish>
             <Korean>[CSW] 대전차고폭탄 DM82 (밀란 1)</Korean>
             <Japanese>[CSW] HEAT DM82 (ミラン 1)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_GM_CSW_mag_Milan2_dm92_displayName">
             <English>[CSW] HEAT DM92 (MILAN 2)</English>
+            <Spanish>[CSW] HEAT DM92 (MILAN 2)</Spanish>
             <Korean>[CSW] 대전차고폭탄 DM92 (밀란 1)</Korean>
             <Japanese>[CSW] HEAT DM92 (ミラン 2)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_GM_CSW_mag_d843_displayName">
             <English>[CSW] 120mm D843 (Smoke)</English>
+            <Spanish>[CSW] 120mm D843 (Humo)</Spanish>
             <Korean>[CSW] 120mm D843 (연막탄)</Korean>
             <Japanese>[CSW] 120mm D843 (発煙弾)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_GM_CSW_mag_dm25_displayName">
             <English>[CSW] 120mm DM25 (Smoke)</English>
+            <Spanish>[CSW] 120mm DM25 (Humo)</Spanish>
             <Korean>[CSW] 120mm DM25 (연막탄)</Korean>
             <Japanese>[CSW] 120mm DM25 (発煙弾)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_GM_CSW_mag_dm26_displayName">
             <English>[CSW] 120mm DM26 (Illum)</English>
+            <Spanish>[CSW] 120mm DM26 (Illum)</Spanish>
             <Korean>[CSW] 120mm DM26 (조명탄)</Korean>
             <Japanese>[CSW] 120mm DM26 (照明弾)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_GM_CSW_mag_dm51_displayName">
             <English>[CSW] 120mm DM51 (HE)</English>
+            <Spanish>[CSW] 120mm DM51 (HE)</Spanish>
             <Korean>[CSW] 120mm DM51 (고폭탄)</Korean>
             <Japanese>[CSW] 120mm DM51 (榴弾)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_GM_CSW_mag_of843_displayName">
             <English>[CSW] 120mm OF843 (HE)</English>
+            <Spanish>[CSW] 120mm OF843 (HE)</Spanish>
             <Korean>[CSW] 120mm OF843 (고폭탄)</Korean>
             <Japanese>[CSW] 120mm OF843 (榴弾)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_GM_CSW_mag_s843_displayName">
             <English>[CSW] 120mm S843 (Illum)</English>
+            <Spanish>[CSW] 120mm S843 (Illum)</Spanish>
             <Korean>[CSW] 120mm S843 (조명탄)</Korean>
             <Japanese>[CSW] 120mm S843 (照明弾)</Japanese>
         </Key>

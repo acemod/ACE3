@@ -886,6 +886,7 @@
         <Key ID="STR_ACE_Interaction_PassThrowable">
             <English>Pass grenade</English>
             <French>Donner une grenade</French>
+            <Spanish>Entregar granada</Spanish>
             <Italian>Passa granata</Italian>
             <Russian>Передать гранаты</Russian>
             <German>Granate geben</German>
@@ -897,6 +898,7 @@
         <Key ID="STR_ACE_Interaction_PassThrowableHint">
             <English>%1 passed you %2.</English>
             <French>%1 vous a donné %2</French>
+            <Spanish>%1 te ha entregado %2.</Spanish>
             <Italian>%1 ti ha passato una granata %2.</Italian>
             <Russian>%1 передал вам %2.</Russian>
             <German>%1 hat dir %2 gegeben.</German>
@@ -908,6 +910,7 @@
         <Key ID="STR_ACE_Interaction_PassThrowableSetting">
             <English>Show "pass grenade" interaction</English>
             <French>Afficher l'interaction « Donner une grenade »</French>
+            <Spanish>Mostrar interacción "entregar granada"</Spanish>
             <Italian>Mostra l'interazione "passa granata"</Italian>
             <Russian>Показывать действие "передать гранату"</Russian>
             <German>Zeige "Granate geben" Interaktion</German>
@@ -1236,7 +1239,7 @@
             <Chinesesimp>身体</Chinesesimp>
             <Turkish>Gövde</Turkish>
             <Hungarian>Testtörzs</Hungarian>
-            <Ukrainian>Тулуб</Ukrainian>
+            <Ukrainian>Торс</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOff">
             <English>Turn off</English>
