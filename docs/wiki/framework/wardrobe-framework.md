@@ -333,5 +333,6 @@ Therefore, the debug script found at `addons\wardrobe\dev\compareContainerMaxLoa
 
 | Event Name | Description | Passed Parameter(s) | Locality |
 | ---------- | ----------- | ------------------- | -------- |
-| `ace_wardrobe_itemChangedBefore` | Raised when the action to change an item is taken, but before any changes. | `[_player, _oldItem, _newItem, _itemType]` | Local |
-| `ace_wardrobe_itemChangedAfter` | Raised after the item has been changed. | `[_player, _oldItem, _newItem, _itemType]` | Local |
+| `ace_wardrobe_itemChangedStart` | Raised when the action to change an item is taken, but before any changes. | `[_player, _oldItem, _newItem, _itemType]` | Local |
+| `ace_wardrobe_itemChangedBegin` | Raised just before the item is changed. | `[_player, _oldItem, _newItem, _itemType]` | Local |
+| `ace_wardrobe_itemChangedEnd` | Raised just after the item has been changed. | `[_player, _oldItem, _newItem, _itemType]` | Local |
