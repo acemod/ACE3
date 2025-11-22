@@ -59,7 +59,6 @@ switch (_equipmentType) do {
     };
 } forEach _exceptions;
 
-
 GVAR(inProgress) = false; // re-enable action
 
 nil
