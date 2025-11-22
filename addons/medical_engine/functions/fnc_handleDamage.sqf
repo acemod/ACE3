@@ -9,7 +9,7 @@
  * Handle damage EH
  *
  * Return Value:
- * Damage to be inflicted <NUMBER>
+ * Damage to be inflicted <NUMBER> (or <NIL> if not local)
  *
  * Public: No
  */

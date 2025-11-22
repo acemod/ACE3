@@ -8,7 +8,7 @@
  * 1: Color of sphere <STRING> (default: "blue")
  *
  * Return Value:
- * The created sphere object <OBJECT>
+ * The created sphere object <OBJECT><NIL>
  *
  * Example:
  * [getPosASL player, "red"] call ace_frag_fnc_dev_sphereDraw

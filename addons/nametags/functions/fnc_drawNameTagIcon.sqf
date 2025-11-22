@@ -9,8 +9,8 @@
  * 2: Alpha <NUMBER>
  * 4: Height offset <NUMBER>
  * 5: Draw name <BOOL>
- * 5: Draw rank <BOOL>
- * 6: Draw soundwave <BOOL>
+ * 6: Draw rank <BOOL>
+ * 7: Draw soundwave <BOOL>
  *
  * Return Value:
  * None

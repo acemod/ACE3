@@ -7,7 +7,7 @@
  * 0: Hitpoint <STRING>
  * 1: Localized Text <STRING>
  * 2: Default Text <STRING>
- * 3: Track Added Hitpoints <BOOL> (default: false)
+ * 3: Track Added Hitpoints <ARRAY>
  *
  * Return Value:
  * 0: Text <STRING>

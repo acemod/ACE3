@@ -8,7 +8,7 @@
  * 1: Hit point <STRING>
  * 2: Hit index <NUMBER>
  * 3: Added damage to part <NUMBER>
- * 4: Projectile <OBJECT>
+ * 4: Projectile <STRING>
  * 5: Source of damage <OBJECT>
  * 6: Person who caused damage <OBJECT>
  *

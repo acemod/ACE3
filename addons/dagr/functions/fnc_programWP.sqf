@@ -4,7 +4,7 @@
  * API to program Waypoints into the DAGR
  *
  * Arguments:
- * 0: Position (2D,3D) <NUMBER>
+ * 0: Position (2D,3D) <ARRAY>
  * 1: Waypoint Name <STRING>
  * 2: Index (Optional) <NUMBER>
  * Return Value:

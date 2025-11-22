@@ -4,7 +4,7 @@
  * converts rangefinder distance into array of textures for the vectors scripted info control
  *
  * Arguments:
- * 0: Number <NUMBER>
+ * 0: Array <ARRAY>
  * 1: Number <NUMBER>
  *
  * Return Value:
