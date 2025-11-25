@@ -4,7 +4,7 @@
  *
  *
  * Arguments:
- * 0: Number <NUMBER>
+ * 0: Illuminate <BOOL>
  *
  * Return Value:
  * None

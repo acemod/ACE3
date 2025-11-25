@@ -4,9 +4,9 @@
  * Convert an array of booleans into a number.
  *
  * Arguments:
- * 0: Boolean <BOOL>
- * 1: Boolean <BOOL>
- * 2: Boolean <BOOL>
+ * 0: Boolean <BOOL> (Optional)
+ * 1: Boolean <BOOL> (Optional)
+ * 2: Boolean <BOOL> (Optional)
  * ...
  *
  * Return Value:

@@ -7,11 +7,11 @@
  * 0: Hitpoint <STRING>
  * 1: Localized Text <STRING>
  * 2: Default Text <STRING>
- * 3: Track Added Hitpoints <ARRAY>
+ * 3: Track Added Hitpoints <ARRAY> (default: [])
  *
  * Return Value:
  * 0: Text <STRING>
- * 1: Added Hitpoint <NUMBER> (default: [])
+ * 1: Added Hitpoint <NUMBER>
  *
  * Example:
  * ["HitFuel", "Repairing %1 ...", "Repairing HitFuel"] call ace_repair_fnc_getHitPointString

@@ -4,8 +4,8 @@
  * Blurs screen.
  *
  * Arguments:
- * 0: ID <NUMBER>
- * 1: Show? <BOOL or NUMBER>
+ * 0: ID <NUMBER><STRING>
+ * 1: Show? <BOOL><NUMBER>
  *
  * Return Value:
  * None
