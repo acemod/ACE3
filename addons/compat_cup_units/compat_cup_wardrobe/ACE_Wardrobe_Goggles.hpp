@@ -1,0 +1,19 @@
+BASE_PAIR(CUP_G_RUS_Ratnik_Balaclava_Sage_1,CUP_G_RUS_Ratnik_Balaclava_Sage_2);
+
+BASE_PAIR(CUP_G_RUS_Ratnik_Balaclava_Olive_1,CUP_G_RUS_Ratnik_Balaclava_Olive_2);
+
+BASE_PAIR(CUP_G_RUS_Ratnik_Balaclava_Green_1,CUP_G_RUS_Ratnik_Balaclava_Green_2);
+BASE_PAIR(CUP_G_RUS_Ratnik_Balaclava_Green_3,CUP_G_RUS_Ratnik_Balaclava_Green_4);
+
+BASE_PAIR(CUP_G_RUS_Ratnik_Balaclava_EMR_Autumn_1,CUP_G_RUS_Ratnik_Balaclava_EMR_Autumn_2);
+
+BASE_PAIR(CUP_G_RUS_Ratnik_Balaclava_EMR_Summer_1,CUP_G_RUS_Ratnik_Balaclava_EMR_Summer_2);
+
+BASE_PAIR(CUP_G_RUS_Ratnik_Balaclava_Desert_1,CUP_G_RUS_Ratnik_Balaclava_Desert_2);
+BASE_PAIR(CUP_G_RUS_Ratnik_Balaclava_Desert_3,CUP_G_RUS_Ratnik_Balaclava_Desert_4);
+
+BASE_PAIR(CUP_G_RUS_Ratnik_Balaclava_A_Tacs_3,CUP_G_RUS_Ratnik_Balaclava_A_Tacs_4);
+BASE_PAIR(CUP_G_RUS_Ratnik_Balaclava_A_Tacs_1,CUP_G_RUS_Ratnik_Balaclava_A_Tacs_2);
+
+// ToDO
+// Scarf + ESS Combos

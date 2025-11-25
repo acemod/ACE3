@@ -26,9 +26,6 @@ private _classTarget = configName _cfgTarget;
 private _classOrigin = configName _cfgOrigin;
 private _cfgWardobeTarget = configFile >> QUOTE(ADDON) >> _classTarget;
 
-// temp action disabled
-GVAR(inProgress) = true;
-
 // duration of the "animation"
 private _duration = getNumber (_cfgWardobeTarget >> "duration");
 
@@ -49,6 +46,10 @@ private _replaceCode = switch (_typeNumber) do {
     };
 };
 if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,_classOrigin); };
+
+// temp action disabled
+GVAR(inProgress) = true;
+
 [_replaceCode, [_player, _classTarget, _equipmentType], _duration] call CBA_fnc_waitAndExecute;
 
 // handle components

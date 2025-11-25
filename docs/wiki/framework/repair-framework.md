@@ -82,3 +82,13 @@ To set a units engineer trait level set the variable `ace_isEngineer` to:
 ```cpp
 UNIT setVariable ["ace_isEngineer", 1, true];
 ```
+
+## 2.3 Blacklist a Vehicle for Repairs
+Prevents a vehicle from being repaired by players by setting the `ace_repair_disabled` variable to `true`.
+```sqf
+// vehicles Init field in the 
+this setVariable ["ace_repair_disabled", true];
+
+// executed by a serverside script during a cutscene
+_truck setVariable ["ace_repair_disabled", true, true];
+```

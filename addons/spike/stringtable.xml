@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_SPIKE_Camera_ViewModeCycle">
             <English>Cycle Camera Vision Mode</English>
             <French>Mode de vision de la caméra</French>
+            <Spanish>Cambiar Modo de Visión de Cámara</Spanish>
             <Russian>Циклический режим обзора камеры</Russian>
             <Korean>카메라 시야 모드 순환</Korean>
             <Japanese>カメラの映像モードを切り替え</Japanese>
@@ -12,6 +13,7 @@
         <Key ID="STR_ACE_SPIKE_LR">
             <English>Spike LR</English>
             <French>Spike LR</French>
+            <Spanish>Spike LR</Spanish>
             <Russian>Spike LR</Russian>
             <Korean>스파이크 LR</Korean>
             <Japanese>スパイク LR</Japanese>
@@ -20,6 +22,7 @@
         <Key ID="STR_ACE_SPIKE_LR_Short">
             <English>LR</English>
             <French>LR</French>
+            <Spanish>LR</Spanish>
             <Russian>LR</Russian>
             <Korean>LR</Korean>
             <Japanese>LR</Japanese>
@@ -28,6 +31,7 @@
         <Key ID="STR_ACE_SPIKE_LR_olive">
             <English>Spike LR (Olive)</English>
             <French>Spike LR (Olive)</French>
+            <Spanish>Spike LR (Oliva)</Spanish>
             <Russian>Spike LR (олива)</Russian>
             <Korean>스파이크 LR (올리브)</Korean>
             <Japanese>スパイク LR (オリーブ)</Japanese>
@@ -36,6 +40,7 @@
         <Key ID="STR_ACE_SPIKE_LeaveCamera">
             <English>Leave Camera</English>
             <French>Quitter l'appareil</French>
+            <Spanish>Dejar Cámara</Spanish>
             <Russian>Оставить камеру</Russian>
             <Korean>카메라 보는 걸 그만두기</Korean>
             <Japanese>カメラから離れる</Japanese>
@@ -44,6 +49,7 @@
         <Key ID="STR_ACE_SPIKE_Manual">
             <English>MANUAL</English>
             <French>MANUEL</French>
+            <Spanish>MANUAL</Spanish>
             <Russian>ИНСТРУКЦИЯ</Russian>
             <Korean>메뉴얼</Korean>
             <Japanese>マニュアル</Japanese>
@@ -52,6 +58,7 @@
         <Key ID="STR_ACE_SPIKE_PanDown">
             <English>Pan Camera Down</English>
             <French>Caméra panoramique vers le bas</French>
+            <Spanish>Mover Cámara Abajo</Spanish>
             <Russian>Панорамирование камеры Вниз</Russian>
             <Korean>카메라를 아래로 향하기</Korean>
             <Japanese>カメラを下に向ける</Japanese>
@@ -60,6 +67,7 @@
         <Key ID="STR_ACE_SPIKE_PanLeft">
             <English>Pan Camera Left</English>
             <French>Caméra panoramique à gauche</French>
+            <Spanish>Mover Cámara Izquierda</Spanish>
             <Russian>Панорамирование камеры Влево</Russian>
             <Korean>카메라를 왼쪽으로 향하기</Korean>
             <Japanese>カメラを左に向ける</Japanese>
@@ -68,6 +76,7 @@
         <Key ID="STR_ACE_SPIKE_PanRight">
             <English>Pan Camera Right</English>
             <French>Caméra panoramique à droite</French>
+            <Spanish>Mover Cámara Derecha</Spanish>
             <Russian>Панорамирование камеры Вправо</Russian>
             <Korean>카메라를 오른쪽으로 향하기</Korean>
             <Japanese>カメラを右に向ける</Japanese>
@@ -76,6 +85,7 @@
         <Key ID="STR_ACE_SPIKE_PanUp">
             <English>Pan Camera Up</English>
             <French>Caméra panoramique vers le haut</French>
+            <Spanish>Mover Cámara Arriba</Spanish>
             <Russian>Панорамирование камеры Вверх</Russian>
             <Korean>카메라를 위로 향하기</Korean>
             <Japanese>カメラを上に向ける</Japanese>
@@ -84,6 +94,7 @@
         <Key ID="STR_ACE_SPIKE_ZoomIn">
             <English>Zoom Camera In</English>
             <French>Zoom avant</French>
+            <Spanish>Aumentar Zoom de Cámara</Spanish>
             <Russian>Увеличить масштаб камеры</Russian>
             <Korean>카메라 줌 인</Korean>
             <Japanese>カメラをズームイン</Japanese>
@@ -92,6 +103,7 @@
         <Key ID="STR_ACE_SPIKE_ZoomOut">
             <English>Zoom Camera Out</English>
             <French>Zoom arrière</French>
+            <Spanish>Disminuir Zoom de Cámara</Spanish>
             <Russian>Уменьшить масштаб камеры</Russian>
             <Korean>카메라 줌 아웃</Korean>
             <Japanese>カメラをズームアウト</Japanese>
@@ -100,6 +112,7 @@
         <Key ID="STR_ACE_SPIKE_designate">
             <English>Designate</English>
             <French>Désignation</French>
+            <Spanish>Designar</Spanish>
             <Russian>Назначить</Russian>
             <Korean>목표 지정</Korean>
             <Japanese>目標を指定</Japanese>

@@ -48,3 +48,11 @@ private _category = format ["ACE %1", LLSTRING(Category)];
     true,
     0
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(throwStepSetting), "SLIDER",
+    [LSTRING(throwStepSetting_DisplayName), LSTRING(throwStepSetting_Description)],
+    _category,
+    [1, 12, 8, -1, false],
+    0
+] call CBA_fnc_addSetting;

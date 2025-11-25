@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_HitReactions_minDamageToTrigger_Description">
             <English>If a unit takes more damage than this setting's value whilst moving on foot, they will fall over.\nIf set to -1 the mechanic is turned off.</English>
             <French>Si une unité subit plus de dégâts que la valeur de ce paramètre alors qu'elle se déplace à pied, elle tombera à la renverse.\nSi le paramètre est réglé sur -1 le mécanisme est désactivé.</French>
+            <Spanish>Si una unidad recibe un daño superior al valor de esta opción mientras se desplaza a pie, se caerá al suelo.\nSi se pone -1 esta mecánica queda deshabilitada.</Spanish>
             <Italian>Un'unità in movimento appiedato cadrà se riceve danni maggiori di questo settaggio.\nSe impostato su -1, la meccanica sarà disabilitata.</Italian>
             <Russian>Если при передвижении пешком юнит получит больше урона, чем указано в этой настройке,то он упадет.\nЕсли установлено значение -1, механика отключается.</Russian>
             <German>Wenn eine Einheit zu Fuß mehr Schaden als diesen Wert erleidet, stürzt sie.\nBei einem Wert von -1, ist diese Mechanik ausgeschaltet.</German>
