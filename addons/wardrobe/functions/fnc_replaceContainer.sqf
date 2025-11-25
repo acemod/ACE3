@@ -35,17 +35,18 @@ private _exceptions = []; // nested Array of [Classname, Array of old ID's, Arra
     };
 } forEach keys GVAR(exceptions);
 
-private _loadout = _player call CBA_fnc_getLoadout;
+// Use command instead of cba fnc to maintain acre radios
+private _loadout = getUnitLoadout _player;
 
 // Replace Wearable Container
 switch (_equipmentType) do {
-    case "UNIFORM":  { _loadout # 0 # 3 set [0, _classTarget]; };
-    case "VEST":     { _loadout # 0 # 4 set [0, _classTarget]; };
-    case "BACKPACK": { _loadout # 0 # 5 set [0, _classTarget]; };
+    case "UNIFORM":  { _loadout # 3 set [0, _classTarget]; };
+    case "VEST":     { _loadout # 4 set [0, _classTarget]; };
+    case "BACKPACK": { _loadout # 5 set [0, _classTarget]; };
 };
 
 // Apply new loadout
-[_player, _loadout] call CBA_fnc_setLoadout;
+_player setUnitLoadout _loadout;
 
 // Update Exceptions with new magID's
 { _x set [ 2, [_player, _x#0] call CBA_fnc_getMagazineIndex ]; } forEach _exceptions;
