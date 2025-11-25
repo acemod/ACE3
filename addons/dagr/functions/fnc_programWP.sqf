@@ -7,6 +7,7 @@
  * 0: Position (2D,3D) <ARRAY>
  * 1: Waypoint Name <STRING>
  * 2: Index (Optional) <NUMBER>
+ *
  * Return Value:
  * None
  *

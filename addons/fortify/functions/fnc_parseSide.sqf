@@ -4,7 +4,7 @@
  * Parses the given text and returns a side.
  *
  * Arguments:
- * 0: Text <STRING><SIDE>
+ * 0: Text <STRING or SIDE>
  *
  * Return Value:
  * Side <SIDE>
