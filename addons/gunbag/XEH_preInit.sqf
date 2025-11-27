@@ -73,20 +73,4 @@ PREP_RECOMPILE_END;
     };
 }] call CBA_fnc_addEventHandler;
 
-[QEGVAR(wardrobe,itemChangedEnd), {
-    params ["_unit", "", "", "", "_extendedInfo"];
-    private _gunbagWeapon = _extendedInfo getOrDefault [QGVAR(gunbagWeapon), []];
-    if (_gunbagWeapon isNotEqualTo []) then {
-        (backpackContainer _unit) setVariable [QGVAR(gunbagWeapon), _gunbagWeapon, true];
-    };
-}] call CBA_fnc_addEventHandler;
-
-[QEGVAR(wardrobe,itemChangedBegin), {
-    params ["_unit", "", "", "", "_extendedInfo"];
-    private _gunbagWeapon = (backpackContainer _unit) getVariable [QGVAR(gunbagWeapon), []];
-    if (_gunbagWeapon isNotEqualTo []) then {
-        _extendedInfo set [QGVAR(gunbagWeapon), _gunbagWeapon];
-    };
-}] call CBA_fnc_addEventHandler;
-
 ADDON = true;
