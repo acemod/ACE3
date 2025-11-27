@@ -28,5 +28,10 @@ GVAR(exceptions) = _map;
     { _this call (GVAR(exceptions) get (_this#0) select 1) }
 ] call CBA_fnc_addEventHandler;
 
+GVAR(containerVarsToTransfer) = createHashMapFromArray [
+    [toLower QEGVAR(gunbag,gunbagWeapon), true],
+    [toLower QEGVAR(movement,vload), true],
+    [toLower "radio_settings", true] // From TFAR
+];
 
 ADDON = true;

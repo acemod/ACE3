@@ -38,37 +38,23 @@ private _exceptions = []; // nested Array of [Classname, Array of old ID's, Arra
 // Use command instead of cba fnc to maintain acre radios
 private _loadout = getUnitLoadout _player;
 
-private _variables = [];
+// Backup all vars stored on current containers
+private _containerVars = [];
+{
+    private _item = _x;
+    private _itemVars = [];
+    _containerVars pushBack _itemVars;
+    if (isNull _item) then { continue };
+    {
+        _itemVars pushBack [_x, _item getVariable _x];
+    } forEach allVariables _item;
+} forEach [uniformContainer _player, vestContainer _player, backpackContainer _player];
 
 // Replace Wearable Container
 switch (_equipmentType) do {
-    case "UNIFORM":  {
-        private _uniform = uniformContainer _player;
-        if !(isNull _uniform) then {
-            {
-                _variables pushBack [_x, _uniform getVariable _x];
-            } forEach allVariables _uniform;
-        };
-        _loadout # 3 set [0, _classTarget];
-    };
-    case "VEST":     {
-        private _vest = vestContainer _player;
-        if !(isNull _vest) then {
-            {
-                _variables pushBack [_x, _vest getVariable _x];
-            } forEach allVariables _vest;
-        };
-        _loadout # 4 set [0, _classTarget];
-    };
-    case "BACKPACK": {
-        private _backpack = backpackContainer _player;
-        if !(isNull _backpack) then {
-            {
-                _variables pushBack [_x, _backpack getVariable _x];
-            } forEach allVariables _backpack;
-        };
-        _loadout # 5 set [0, _classTarget];
-    };
+    case "UNIFORM":  { _loadout # 3 set [0, _classTarget]; };
+    case "VEST":     { _loadout # 4 set [0, _classTarget]; };
+    case "BACKPACK": { _loadout # 5 set [0, _classTarget]; };
 };
 
 // Apply new loadout
@@ -87,32 +73,18 @@ _player setUnitLoadout _loadout;
 } forEach _exceptions;
 
 // Apply variables from the old container to the new one
-switch (_equipmentType) do {
-    case "UNIFORM":  {
-        private _uniform = uniformContainer _player;
-        if !(isNull _uniform) then {
-            {
-                _uniform setVariable _x;
-            } forEach _variables;
-        };
-    };
-    case "VEST":     {
-        private _vest = vestContainer _player;
-        if !(isNull _vest) then {
-            {
-                _vest setVariable _x;
-            } forEach _variables;
-        };
-    };
-    case "BACKPACK": {
-        private _backpack = backpackContainer _player;
-        if !(isNull _backpack) then {
-            {
-                _backpack setVariable _x;
-            } forEach _variables;
-        };
-    };
-};
+{
+    private _item = _x;
+    private _itemVars = _containerVars select _forEachIndex;
+    if (isNull _item) then { continue };
+    {
+        _x params ["_varName", "_varValue"];
+        private _sync = GVAR(containerVarsToTransfer) get toLower _varName;
+        TRACE_3("restore",_varName,_varValue,_sync);
+        if (isNil "_sync") then { continue; };
+        _item setVariable [_varName, _varValue, _sync];
+    } forEach _itemVars;
+} forEach [uniformContainer _player, vestContainer _player, backpackContainer _player];
 
 GVAR(inProgress) = false; // re-enable action
 
