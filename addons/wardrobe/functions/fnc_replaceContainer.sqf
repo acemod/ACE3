@@ -35,7 +35,8 @@ private _exceptions = []; // nested Array of [Classname, Array of old ID's, Arra
     };
 } forEach keys GVAR(exceptions);
 
-private _loadout = _player call CBA_fnc_getLoadout;
+// Use command instead of cba fnc to maintain acre radios
+private _loadout = getUnitLoadout _player;
 
 private _variables = [];
 
@@ -48,7 +49,7 @@ switch (_equipmentType) do {
                 _variables pushBack [_x, _uniform getVariable _x];
             } forEach allVariables _uniform;
         };
-        _loadout # 0 # 3 set [0, _classTarget];
+        _loadout # 3 set [0, _classTarget];
     };
     case "VEST":     {
         private _vest = vestContainer _player;
@@ -57,7 +58,7 @@ switch (_equipmentType) do {
                 _variables pushBack [_x, _vest getVariable _x];
             } forEach allVariables _vest;
         };
-        _loadout # 0 # 4 set [0, _classTarget];
+        _loadout # 4 set [0, _classTarget];
     };
     case "BACKPACK": {
         private _backpack = backpackContainer _player;
@@ -66,12 +67,12 @@ switch (_equipmentType) do {
                 _variables pushBack [_x, _backpack getVariable _x];
             } forEach allVariables _backpack;
         };
-        _loadout # 0 # 5 set [0, _classTarget];
+        _loadout # 5 set [0, _classTarget];
     };
 };
 
 // Apply new loadout
-[_player, _loadout] call CBA_fnc_setLoadout;
+_player setUnitLoadout _loadout;
 
 // Update Exceptions with new magID's
 { _x set [ 2, [_player, _x#0] call CBA_fnc_getMagazineIndex ]; } forEach _exceptions;

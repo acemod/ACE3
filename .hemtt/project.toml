@@ -17,13 +17,3 @@ include = [
 
 [version]
 git_hash = 0
-
-# Unused in HEMTT v1.11 or higher, kept for backwards compatibility
-[asc]
-enabled = true
-exclude = [
-    ".inc.sqf",
-    "/dev/",
-    "common/functions/fnc_dummy.sqf",
-    "zeus/functions/fnc_zeusAttributes.sqf",
-]
