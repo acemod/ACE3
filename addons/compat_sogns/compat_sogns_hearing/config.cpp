@@ -8,9 +8,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "loadorder_f_vietnam",
             "ace_hearing",
-            "characters_f_vietnam_05_c"
+            "loadorder_f_vietnam", // S.O.G. Prairie Fire
+            "data_f_vietnam_03" // S.O.G. Nickel Steel
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
