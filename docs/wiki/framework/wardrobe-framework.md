@@ -331,8 +331,11 @@ Therefore, the debug script found at `addons\wardrobe\dev\compareContainerMaxLoa
 
 ### 6.2.1 Listenable
 
+`_itemType` is STRING ["UNIFORM", "VEST", "BACKPACK", "HEADGEAR", "FACEWEAR"]
+`_extendedInfo` is HASHMAP will be passed between events (works similar to `CBA_loadoutSet` events)
+
 | Event Name | Description | Passed Parameter(s) | Locality |
 | ---------- | ----------- | ------------------- | -------- |
-| `ace_wardrobe_itemChangedStart` | Raised when the action to change an item is taken, but before any changes. | `[_player, _oldItem, _newItem, _itemType]` | Local |
-| `ace_wardrobe_itemChangedBegin` | Raised just before the item is changed. | `[_player, _oldItem, _newItem, _itemType]` | Local |
-| `ace_wardrobe_itemChangedEnd` | Raised just after the item has been changed. | `[_player, _oldItem, _newItem, _itemType]` | Local |
+| `ace_wardrobe_itemChangedStart` | Raised when the action to change an item is taken, but before any changes. | `[_player, _oldItem, _newItem, _itemType, _extendedInfo]` | Local |
+| `ace_wardrobe_itemChangedBegin` | Raised just before the item is changed. | `[_player, _oldItem, _newItem, _itemType, _extendedInfo]` | Local |
+| `ace_wardrobe_itemChangedEnd` | Raised just after the item has been changed. | `[_player, _oldItem, _newItem, _itemType, _extendedInfo]` | Local |
