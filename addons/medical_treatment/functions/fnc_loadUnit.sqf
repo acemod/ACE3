@@ -32,7 +32,7 @@ if (_patient call EFUNC(common,isBeingDragged)) then {
     [_medic, _patient] call EFUNC(dragging,dropObject);
 };
 
-if (!alive _patient) exitWith{
+if (!alive _patient) exitWith {
     [[LSTRING(CanNotLoadDead), _patient call EFUNC(common,getName)]] call EFUNC(common,displayTextStructured);
 };
 
