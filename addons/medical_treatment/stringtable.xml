@@ -1950,6 +1950,23 @@
             <Turkish>Bu kişi (% 1) uyanık ve yüklenemiyor</Turkish>
             <Ukrainian>Боєць (%1) у свідомості і не може бути завантажений</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_CanNotLoadDead">
+            <English>This person (%1) is dead and cannot be loaded</English>
+            <Czech>Tato osoba (%1) je mrtvá a nemůže být naložena</Czech>
+            <French>%1 est mort et ne peut être embarqué.</French>
+            <Spanish>Esta persona (%1) está muerta y no puede ser cargado</Spanish>
+            <Italian>Questa persona (%1) è morta e non può essere caricata.</Italian>
+            <Polish>Ta osoba (%1) jest martwa i nie może zostać załadowana</Polish>
+            <Portuguese>Esta pessoa (%1) está morta e não pode ser carregada</Portuguese>
+            <Russian>Боец (%1) мертв и не может быть погружен</Russian>
+            <German>Diese Person (%1) ist tot und kann nicht verladen werden</German>
+            <Korean>이 사람 (%1) 은(는) 사망하여 태우지 못합니다</Korean>
+            <Japanese>患者 (%1) は死亡しており、積み込めない</Japanese>
+            <Chinese>此人(%1)已死亡，无法被装载</Chinese>
+            <Chinesesimp>此人（%1）已死亡，无法被装载</Chinesesimp>
+            <Turkish>Bu kişi (%1) ölü ve yüklenemiyor</Turkish>
+            <Ukrainian>Боєць (%1) мертвий і не може бути завантажений</Ukrainian>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_Carry">
             <English>Carry</English>
             <Czech>Nést</Czech>
