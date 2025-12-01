@@ -38,6 +38,18 @@ private _exceptions = []; // nested Array of [Classname, Array of old ID's, Arra
 // Use command instead of cba fnc to maintain acre radios
 private _loadout = getUnitLoadout _player;
 
+// Backup all vars stored on current containers
+private _containerVars = [];
+{
+    private _item = _x;
+    private _itemVars = [];
+    _containerVars pushBack _itemVars;
+    if (isNull _item) then { continue };
+    {
+        _itemVars pushBack [_x, _item getVariable _x];
+    } forEach allVariables _item;
+} forEach [uniformContainer _player, vestContainer _player, backpackContainer _player];
+
 // Replace Wearable Container
 switch (_equipmentType) do {
     case "UNIFORM":  { _loadout # 3 set [0, _classTarget]; };
@@ -59,6 +71,20 @@ _player setUnitLoadout _loadout;
         case "server": { [QGVAR(exceptions), _x] call CBA_fnc_serverEvent; };
     };
 } forEach _exceptions;
+
+// Apply variables from the old container to the new one
+{
+    private _item = _x;
+    private _itemVars = _containerVars select _forEachIndex;
+    if (isNull _item) then { continue };
+    {
+        _x params ["_varName", "_varValue"];
+        private _sync = GVAR(containerVarsToTransfer) get toLower _varName;
+        TRACE_3("restore",_varName,_varValue,_sync);
+        if (isNil "_sync") then { continue; };
+        _item setVariable [_varName, _varValue, _sync];
+    } forEach _itemVars;
+} forEach [uniformContainer _player, vestContainer _player, backpackContainer _player];
 
 GVAR(inProgress) = false; // re-enable action
 
