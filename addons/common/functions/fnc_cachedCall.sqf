@@ -4,7 +4,7 @@
  * Returns the result of the function and caches it up to a given time or event
  *
  * Arguments:
- * 0: Parameters <ARRAY>
+ * 0: Parameters <ANY>
  * 1: Function <CODE>
  * 2: Namespace to store the cache on <NAMESPACE><OBJECT>
  * 3: Cache uid <STRING>

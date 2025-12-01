@@ -4,10 +4,10 @@
  *
  *
  * Arguments:
- * None
+ * 
  *
  * Return Value:
- * None
+ * <ARRAY>
  *
  * Example:
  * call ace_laser_fnc_rotateVectLineGetMap

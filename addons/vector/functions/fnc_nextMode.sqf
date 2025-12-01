@@ -7,7 +7,7 @@
  * 0: Name of mode ("settings", "config") <STRING>
  *
  * Return Value:
- * Array <ARRAY>
+ * None
  *
  * Example:
  * ["settings"] call ace_vector_fnc_nextMode
