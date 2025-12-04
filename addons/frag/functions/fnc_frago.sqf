@@ -48,6 +48,11 @@ if (_targets isEqualTo []) exitWith {
 };
 TRACE_3("",_fragRange,count _targets,_targets);
 
+// sort by distance
+private _targetsSort = _targets apply { [_x distanceSqr _fragPosAGL, _x] };
+_targetsSort sort true;
+_targets = _targetsSort apply {_x#1};
+
 private _fragCount = 0;
 private _fragArcs = [];
 _fragArcs set [360, 0];
