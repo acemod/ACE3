@@ -8,7 +8,7 @@
  * 1: Detector type <STRING> (default: currentWeapon Unit)
  *
  * Return Value:
- * <BOOL>
+ * Is Enabled <BOOL>
  *
  * Example:
  * [player, currentWeapon player] call ace_minedetector_fnc_isDetectorEnabled
