@@ -4,12 +4,14 @@
  * Performs the dial tones and detonation of explosive.
  *
  * Arguments:
- * 0: Unit to do dialing <OBJECT>
- * 1: Index <NUMBER>
- * 2: Dialing points <ARRAY>
- * 3: Explosive data <ARRAY>
- * 4: Path to ringtone sound file <STRING>
- * 5: Duration before the explosive rings <NUMBER>
+ * 0: Args <ARRAY>
+ *   0: Unit to do dialing <OBJECT>
+ *   1: Index <NUMBER>
+ *   2: Dialing points <ARRAY>
+ *   3: Explosive data <ARRAY>
+ *   4: Path to ringtone sound file <STRING>
+ *   5: Duration before the explosive rings <NUMBER>
+ * 1: PFID <NUMBER>
  *
  * Return Value:
  * None

@@ -4,8 +4,7 @@
  * Updates camera to be on a fixed point
  *
  * Arguments:
- * 0: Guidance Arg Array <ARRAY>
- * 1: PFID <NUMBER>
+ * 0: Camera Array <ARRAY>
  *
  * Return Value:
  * None

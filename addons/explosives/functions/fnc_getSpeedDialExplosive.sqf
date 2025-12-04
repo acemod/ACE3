@@ -7,7 +7,7 @@
  * 0: Speed dial entry <STRING>
  *
  * Return Value:
- * Associated explosive (or ObjNull) <OBJECT>
+ * Associated explosive <OBJECT> (or <ARRAY> if not found) 
  *
  * Example:
  * ["2113"] call ace_explosives_fnc_getSpeedDialExplosive;

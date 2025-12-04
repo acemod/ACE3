@@ -4,7 +4,7 @@
  * Updates the triage status control for the given target.
  *
  * Arguments:
- * 0: Display <CONTROL>
+ * 0: Display <DISPLAY>
  * 1: Target <OBJECT>
  *
  * Return Value:

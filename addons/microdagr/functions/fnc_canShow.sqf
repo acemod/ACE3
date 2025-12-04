@@ -7,7 +7,7 @@
  * The display mode to test showing <NUMBER>
  *
  * Return Value:
- * None
+ * <BOOL>
  *
  * Example:
  * [1] call ace_microdagr_fnc_canShow

@@ -8,7 +8,7 @@
  * 1: Desired variant <CONFIG>
  *
  * Return Value:
- * Display name of the action <BOOL>
+ * Display name of the action <STRING>
  *
  * Example:
  * [(configFile >> "CfgWeapons" >> "U_B_CTRG_3"), (configFile >> "CfgWeapons" >> "U_B_CTRG_1")] call ace_wardrobe_fnc_addActionsName

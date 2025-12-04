@@ -8,7 +8,7 @@
  * 1: PFH Handle <NUMBER>
  *
  * Return Value:
- * PFH Handle <NUMBER>
+ * None
  *
  * Example:
  * [] call ace_viewdistance_fnc_setFovBasedOvdPFH

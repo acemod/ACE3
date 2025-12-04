@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Weapon <STRING>
- * 2: Barrel Temperature <STRING>
+ * 2: Barrel Temperature <NUMBER>
  *
  * Return Value:
  * New temperature <NUMBER>

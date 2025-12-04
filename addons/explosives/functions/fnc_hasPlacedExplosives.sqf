@@ -7,7 +7,7 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Configs of all detonators <ARRAY>
+ * Has Placed Explosives <BOOL>
  *
  * Example:
  * _hasPlacedExplosives = [player] call ACE_Explosives_fnc_hasPlacedExplosives;

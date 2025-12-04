@@ -9,7 +9,7 @@
  * 1: Added amount of pain (can be negative) <NUMBER>
  *
  * Return Value:
- * The new pain level <NUMBER>
+ * None
  *
  * Example:
  * [guy, 0.5] call ace_medical_fnc_adjustPainLevel

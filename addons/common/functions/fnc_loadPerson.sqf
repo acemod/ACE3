@@ -7,8 +7,8 @@
  * 0: Unit that will load <OBJECT>
  * 1: Unit to be loaded <OBJECT>
  * 2: Vehicle that the unit will be loaded in <OBJECT> (default: objNull)
- * 3: Preferred seats <ARRAY>
- * 4: Reverse fill <BOOL>
+ * 3: Preferred seats <ARRAY> (default: [])
+ * 4: Reverse fill <BOOL> (default: false)
  *
  * Return Value:
  * Vehicle that the unitToBeloaded has been loaded in. Returns objNull if function failed <OBJECT>

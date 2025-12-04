@@ -7,8 +7,8 @@
  * 0: Unit (Player) <OBJECT>
  * 1: Target <OBJECT>
  * 2: Alpha <NUMBER>
- * 4: Height offset <NUMBER>
- * 5: Draw name <BOOL>
+ * 3: Height offset <NUMBER>
+ * 4: Draw name <BOOL>
  * 5: Draw rank <BOOL>
  * 6: Draw soundwave <BOOL>
  *

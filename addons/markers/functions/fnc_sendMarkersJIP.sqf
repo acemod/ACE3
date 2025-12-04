@@ -4,13 +4,13 @@
  * Server: Recives a dummy logic, sends marker data back to the owner.
  *
  * Arguments:
- * 0: Logic <OBJECT>
+ * 0: Client ID <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [onUnloadEvent] call ace_markers_fnc_sendMarkersJIP;
+ * [6] call ace_markers_fnc_sendMarkersJIP;
  *
  * Public: No
  */
