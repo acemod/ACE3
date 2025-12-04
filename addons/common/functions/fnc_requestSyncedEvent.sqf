@@ -21,4 +21,3 @@ params ["_eventName"];
 if (isServer) exitWith {false};
 
 ["ACEs", [_eventName, ACE_player]] call CBA_fnc_serverEvent;
-true

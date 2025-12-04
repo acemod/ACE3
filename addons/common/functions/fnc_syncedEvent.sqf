@@ -27,4 +27,3 @@ if !(_name in GVAR(syncedEvents)) exitWith {
 private _eventData = [_name, _args, _ttl];
 
 ["ACEe", _eventData] call CBA_fnc_globalEvent;
-true
