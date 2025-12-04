@@ -38,8 +38,6 @@ if !(_unit getVariable [QGVAR(initialized), false]) exitWith {
     }, _this] call CBA_fnc_addEventHandlerArgs;
 };
 
-if (!IS_MEDICAL_ACTIVITY(_unit)) then { [QGVAR(activateMedical), _unit] call CBA_fnc_localEvent; };
-
 private _state = [_json] call CBA_fnc_parseJSON;
 
 // Migration from old array wounding storage serialized in old versions (<= 3.16.0)
