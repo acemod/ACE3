@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [player] call ace_medical_statemachine_fnc_checkForMedicalActivity
+ * [player] call ace_medical_engine_fnc_checkForMedicalActivity
  *
  * Public: No
  */
@@ -43,5 +43,6 @@ if (_unit getVariable [QEGVAR(medical,medicalActivity), false]) exitWith {};
     [VAR_MEDICATIONS, []],
     [QEGVAR(medical,occludedMedications), []],
     [QEGVAR(medical,ivBags), []],
-    [VAR_BODYPART_DAMAGE, DEFAULT_BODYPART_DAMAGE_VALUES],
+    [VAR_BODYPART_DAMAGE, DEFAULT_BODYPART_DAMAGE_VALUES]
 ];
+

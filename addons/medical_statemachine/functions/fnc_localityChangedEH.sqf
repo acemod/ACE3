@@ -23,8 +23,6 @@ TRACE_2("localityChangedEH",_unit,_isLocal);
 if (!alive _unit) exitWith {};
 
 if (_isLocal) then {
-    [LINKFUNC(checkForMedicalActivity), _unit, 1] call CBA_fnc_waitAndExecute;
-    
     private _currentState = [_unit, EGVAR(medical,STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
     TRACE_1("local",_currentState);
 
