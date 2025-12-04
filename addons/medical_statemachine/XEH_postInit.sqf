@@ -14,7 +14,7 @@
 }] call CBA_fnc_addEventHandler;
 
 
-[QGVAR(activateMedical), { // should be called where unit is local
+[QEGVAR(medical,activateMedical), { // should be called where unit is local
     params ["_unit"];
     _unit setVariable [VAR_MEDICAL_ACTIVITY, true, true];
     TRACE_2("activating medical",_unit,typeOf _unit);
@@ -26,12 +26,12 @@
 [QEGVAR(medical,woundReceived), {
     params ["_unit"];
     if (!IS_MEDICAL_ACTIVITY(_unit)) then {
-        [QGVAR(activateMedical), _unit] call CBA_fnc_localEvent;
+        [QEGVAR(medical,activateMedical), _unit] call CBA_fnc_localEvent;
     };
 }] call CBA_fnc_addEventHandler;
 ["ace_treatmentStarted", {
     params ["", "_patient"];
     if (!IS_MEDICAL_ACTIVITY(_patient)) then {
-        [QGVAR(activateMedical), _patient, _patient] call CBA_fnc_targetEvent;
+        [QEGVAR(medical,activateMedical), _patient, _patient] call CBA_fnc_targetEvent;
     };
 }] call CBA_fnc_addEventHandler;

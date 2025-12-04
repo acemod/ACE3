@@ -127,4 +127,7 @@ if (_currentState in ["Unconscious", "CardiacArrest"] && {_targetState in ["Defa
     [_unit, false] call EFUNC(medical_status,setUnconsciousState);
 };
 
+// Manually activate if non-defaults are present
+[_unit] call EFUNC(medical_statemachine,checkForMedicalActivity);
+
 _state call CBA_fnc_deleteNamespace;

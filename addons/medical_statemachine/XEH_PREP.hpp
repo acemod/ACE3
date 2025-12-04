@@ -1,3 +1,4 @@
+PREP(checkForMedicalActivity);
 PREP(conditionCardiacArrestTimer);
 PREP(conditionExecutionDeath);
 PREP(conditionSecondChance);
