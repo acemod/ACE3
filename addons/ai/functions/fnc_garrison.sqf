@@ -31,11 +31,13 @@ private _currentUnitMoveList = missionNamespace getVariable [QGVAR(garrison_unit
 if (_startingPos isEqualTo [0,0,0]) exitWith {
     TRACE_1("fnc_garrison: StartingPos error",_startingPos);
     [LSTRING(GarrisonInvalidPosition)] call EFUNC(common,displayTextStructured);
+    _unitsArray
 };
 
 if (_unitsArray isEqualTo [] || {isNull (_unitsArray select 0)}) exitWith {
     TRACE_1("fnc_garrison: Units error",_unitsArray);
     [LSTRING(GarrisonNoUnits)] call EFUNC(common,displayTextStructured);
+    _unitsArray
 };
 
 private _buildings = nearestObjects [_startingPos, _buildingTypes, ([_fillingRadius, 50] select (_fillingRadius < 50))];
@@ -46,6 +48,7 @@ if (_fillingRadius >= 50) then {
 if (_buildings isEqualTo []) exitWith {
     TRACE_1("fnc_garrison: Building error",_buildings);
     [LSTRING(GarrisonNoBuilding)] call EFUNC(common,displayTextStructured);
+    _unitsArray
 };
 
 private _buildingsIndex = [];

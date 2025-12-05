@@ -25,5 +25,5 @@ if !(_name in GVAR(syncedEvents)) exitWith {
 private _data = GVAR(syncedEvents) get _name;
 _data params ["", "", "", "_eventId"];
 
-[_eventId] call CBA_fnc_removeEventHandler;
+[_name, _eventId] call CBA_fnc_removeEventHandler;
 GVAR(syncedEvents) deleteAt _name;

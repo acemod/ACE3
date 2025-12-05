@@ -36,6 +36,7 @@ if (_isVehicleTag) exitWith {
     _object setVariable [QGVAR(hasTag), true, true];
     // if (_material != "") then { _object setObjectMaterialGlobal ["clan", _material] }; // ??
     ["ace_tagCreated", [objNull, _texture, _object, _unit]] call CBA_fnc_globalEvent;
+    true
 };
 
 private _tag = createSimpleObject [_tagModel, _tagPosASL];

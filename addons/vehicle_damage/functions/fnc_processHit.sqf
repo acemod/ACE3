@@ -307,7 +307,7 @@ switch (_hitArea) do {
     case "track": {
         private _damage = (0.1 max (0.1 * _addedDamage / _minDamage)) min 1;
 
-        [_vehicle, _hitPoint, _hitIndex, (_currentPartDamage + _damage) * _penChance] call FUNC(setDamage);
+        [_vehicle, _hitPoint, _hitIndex, (_currentPartDamage + _damage) * _penChance, _source, _instigator] call FUNC(setDamage);
 
         TRACE_3("damaged track",_damage,_addedDamage,_minDamage);
 

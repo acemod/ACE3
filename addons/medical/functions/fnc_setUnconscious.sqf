@@ -10,7 +10,7 @@
  * 3: Force wakeup at given time if vitals are stable <BOOL> (default: false)
  *
  * Return Value:
- * Success? <BOOL>
+ * Success? <BOOL> or <NIL> if called before settings are initialized
  *
  * Example:
  * [bob, true] call ace_medical_fnc_setUnconscious;
@@ -22,6 +22,7 @@
 // only run this after the settings are initialized
 if !(EGVAR(common,settingsInitFinished)) exitWith {
     EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(setUnconscious), _this];
+    nil
 };
 
 params [["_unit", objNull, [objNull]], ["_knockOut", true, [false]], ["_minWaitingTime", 0, [0]], ["_forcedWakup", false, [false]]];
