@@ -148,11 +148,9 @@ if (_spots isNotEqualTo []) then {
             private _testIntersections = lineIntersectsSurfaces [_posASL, _testPos, _ignoreObj1, _ignoreObj2];
 
             // Ignore intersections near the spot to avoid false LOS blocks from vehicle surfaces
-            if (_testIntersections isNotEqualTo [] ) then {
-                _testIntersections = _testIntersections select { 
-                    _x params ["_intersectPosASL"];
-                    (_intersectPosASL vectorDistanceSqr _testPos) > 0.01;
-                };
+            _testIntersections = _testIntersections select { 
+                _x params ["_intersectPosASL"];
+                (_intersectPosASL vectorDistanceSqr _testPos) > 0.01;
             };
 
             if ([] isEqualTo _testIntersections) then {
