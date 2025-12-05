@@ -35,3 +35,13 @@ workshop = [
 #   "751965892",  # ACRE
 #   "623475643",  # eden enhanced
 ]
+
+[sogns]
+extends = "default"
+dlc = ["vn"]
+workshop = [
+    "623475643",  # 3den Enhanced
+    "3499977893", # Advanced Developer Tools
+    "3083451905", # S.O.G. Nickel Steel
+    "1779063631", # Zeus Enhanced
+]
