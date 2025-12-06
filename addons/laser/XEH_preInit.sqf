@@ -9,7 +9,7 @@ PREP_RECOMPILE_END;
 // Laser default variables
 ACE_DEFAULT_LASER_CODE = 1111;
 ACE_DEFAULT_LASER_WAVELENGTH = 1550;
-ACE_DEFAULT_LASER_BEAMSPREAD = 1;
+ACE_DEFAULT_LASER_BEAMSPREAD = 0.15; // Not 0.15 mrad — this corresponds to ~0.3 mrad divergence
 
 GVAR(laserEmitters) = createHashMap;
 GVAR(trackedLaserTargets) = [];
