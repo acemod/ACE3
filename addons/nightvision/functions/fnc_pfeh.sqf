@@ -18,7 +18,7 @@
 
 private _unit = ACE_player;
 
-if (currentVisionMode _unit != 1) exitWith {
+if (currentVisionMode _unit <= 0) exitWith {
     GVAR(running) = false;
     [false] call FUNC(setupDisplayEffects);
     [GVAR(PFID)] call CBA_fnc_removePerFrameHandler;
@@ -56,6 +56,9 @@ if (GVAR(defaultPositionBorder) isNotEqualTo []) then {
     ((uiNamespace getVariable QGVAR(titleDisplay)) displayCtrl 1000) ctrlSetFade (linearConversion [4, 6, _scale, 0.2, 1, true]);
 };
 END_COUNTER(borderScaling);
+
+// Skip all other effects if just in thermal
+if (currentVisionMode _unit > 1) exitWith {};
 
 if (IS_MAGNIFIED isNotEqualTo GVAR(isUsingMagnification)) then {
     GVAR(isUsingMagnification) = IS_MAGNIFIED;

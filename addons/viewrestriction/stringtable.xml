@@ -16,6 +16,7 @@
             <Chinesesimp>关闭</Chinesesimp>
             <Turkish>Devre Dışı</Turkish>
             <Hungarian>Kikapcsolva</Hungarian>
+            <Ukrainian>Вимкнено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_FirstPerson">
             <English>Forced 1st Person</English>
@@ -31,6 +32,7 @@
             <Chinese>強制使用第一人稱</Chinese>
             <Chinesesimp>强制使用第一人称</Chinesesimp>
             <Turkish>1. Kişi Görüşüne Zorla</Turkish>
+            <Ukrainian>Від 1-ї особи (примусово)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_Mode">
             <English>Mode</English>
@@ -47,6 +49,7 @@
             <Chinesesimp>模式</Chinesesimp>
             <Turkish>Mod</Turkish>
             <Hungarian>Mód</Hungarian>
+            <Ukrainian>Режим налаштувань</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeDesc">
             <English>Sets global mode. Default: Disabled</English>
@@ -63,6 +66,7 @@
             <Chinesesimp>设定全局的人称模式。预设：关闭</Chinesesimp>
             <Turkish>Global modu ayarlar. Varsayılan: Devre Dışı</Turkish>
             <Hungarian>Globális mód beállítása. Alapértelmeyett: Kikapcsolva</Hungarian>
+            <Ukrainian>Загальні налаштування для всіх. За замовчуванням: Вимкнено.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveAir">
             <English>(Selective) Air Vehicles</English>
@@ -79,6 +83,7 @@
             <Chinesesimp>（可选）空中载具</Chinesesimp>
             <Turkish>(Seçilebilir) Hava Araçları</Turkish>
             <Hungarian>(Szelektív) Légijárművek</Hungarian>
+            <Ukrainian>(Вибіркові) Авіатехніка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveAirDesc">
             <English>Selective mode in Air Vehicles. Default: Disabled (Requires Mode: Selective)</English>
@@ -95,6 +100,7 @@
             <Chinesesimp>设定在搭乘空中载具的状况下能使用的人称模式。预设：关闭（需在全局设定中先选择'使用可选设定'）</Chinesesimp>
             <Turkish>Hava araçlarında iken seçilen görüş modu. Varsayılan: Etkin Değil</Turkish>
             <Hungarian>Szelektív mód a Légijárművekben. Alapértelmezett: Kikapcsolva (Mód: Szelektív szükséges)</Hungarian>
+            <Ukrainian>Вибірковий режим для авіатехніки. За замовчуванням: Вимкнено (потрібен режим: Вибіркові)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveFoot">
             <English>(Selective) Foot</English>
@@ -111,6 +117,7 @@
             <Chinesesimp>（可选）步行</Chinesesimp>
             <Turkish>(Seçilebilir) Ayakta</Turkish>
             <Hungarian>(Szelektív) Gyalogos</Hungarian>
+            <Ukrainian>(Вибіркові) Пішки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveFootDesc">
             <English>Selective mode on Foot. Default: Disabled (Requires Mode: Selective)</English>
@@ -127,6 +134,7 @@
             <Chinesesimp>设定在步行的状况下能使用的人称模式。预设：关闭（需在全局设定中先选择'使用可选设定'）</Chinesesimp>
             <Turkish>Ayakta iken seçilen görüş modu. Varsayılan: Etkin Değil</Turkish>
             <Hungarian>Szelektív mód Gyalogosan. Alapértelmezett: Kikapcsolva (Mód: Szelektív szükséges)</Hungarian>
+            <Ukrainian>Вибірковий режим пішки. За замовчуванням: Вимкнено (потрібен режим: Вибіркові)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveLand">
             <English>(Selective) Land Vehicles</English>
@@ -143,6 +151,7 @@
             <Chinesesimp>（可选）陆上载具</Chinesesimp>
             <Turkish>(Seçilebilir) Kara Araçları</Turkish>
             <Hungarian>(Szelektív) Szárazföldi Járművek</Hungarian>
+            <Ukrainian>(Вибіркові) Наземна техніка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveLandDesc">
             <English>Selective mode in Land Vehicles. Default: Disabled (Requires Mode: Selective)</English>
@@ -159,6 +168,7 @@
             <Chinesesimp>设定在搭乘陆上载具的状况下能使用的人称模式。预设：关闭（需在全局设定中先选择'使用可选设定'）</Chinesesimp>
             <Turkish>Kara araçlarında iken seçilen görüş modu. Varsayılan: Etkin Değil</Turkish>
             <Hungarian>Szelektív mód a Szárazföldi Járművekben. Alapértelmezett: Kikapcsolva (Mód: Szelektív szükséges)</Hungarian>
+            <Ukrainian>Вибірковий режим для наземної техніки. За замовчуванням: Вимкнено (потрібен режим: Вибіркові)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveSea">
             <English>(Selective) Sea Vehicles</English>
@@ -175,6 +185,7 @@
             <Chinesesimp>（可选）水上载具</Chinesesimp>
             <Turkish>(Seçilebilir) Deniz Araçları</Turkish>
             <Hungarian>(Szelektív) Vízi Járművek</Hungarian>
+            <Ukrainian>(Вибіркові) Водний транспорт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveSeaDesc">
             <English>Selective mode in Sea Vehicles. Default: Disabled (Requires Mode: Selective)</English>
@@ -191,6 +202,7 @@
             <Chinesesimp>设定在搭乘水上载具的状况下能使用的人称模式。预设：关闭（需在全局设定中先选择'使用可选设定'）</Chinesesimp>
             <Turkish>Deniz araçlarında iken seçilen görüş modu. Varsayılan: Etkin Değil</Turkish>
             <Hungarian>Szelektív mód a Vízi Járművekben. Alapértelmezett: Kikapcsolva (Mód: Szelektív szükséges)</Hungarian>
+            <Ukrainian>Вибірковий режим для водного транспорту. За замовчуванням: Вимкнено (потрібен режим: Вибіркові)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveUAV">
             <English>(Selective) UAVs</English>
@@ -207,6 +219,7 @@
             <Chinesesimp>（可选）无人机</Chinesesimp>
             <Turkish>(Seçilebilir) IHA'lar</Turkish>
             <Hungarian>(Szelektív) Pilóta Nélüli Légijárművek</Hungarian>
+            <Ukrainian>(Вибіркові) Безпілотники</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveUAVDesc">
             <English>Selective mode in UAVs. Default: Disabled (Requires Mode: Selective)</English>
@@ -223,6 +236,7 @@
             <Chinesesimp>设定在搭乘无人载具的状况下能使用的人称模式。预设：关闭（需在全局设定中先选择'使用可选设定'）</Chinesesimp>
             <Turkish>IHA araçlarında iken seçilen görüş modu. Varsayılan: Etkin Değil</Turkish>
             <Hungarian>Szelektív mód a Pilóta Nélküli Légijárművekben. Alapértelmezett: Kikapcsolva (Mód: Szelektív szükséges)</Hungarian>
+            <Ukrainian>Вибірковий режим для безпілотників. За замовчуванням: Вимкнено (потрібен режим: Вибіркові)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModuleDescription">
             <English>View restriction settings to limit the usage of 1st or 3rd person views globally or per vehicle type.</English>
@@ -238,6 +252,7 @@
             <Chinese>視野限制可以設定在全局或是局部狀況下能用的視野模式。</Chinese>
             <Chinesesimp>人称限制可以设定在全局或是局部状况下能用的人称模式。</Chinesesimp>
             <Turkish>1. veya 3. kişi görünümlerinin kullanımını genel olarak veya araç türüne göre sınırlamak için kısıtlama ayarlarını görüntüleyin.</Turkish>
+            <Ukrainian>Налаштування обмеження огляду під час огляду від 1-ї або 3-ї особи. Загальні для всіх, або Вибіркові, залежно від техніки.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModuleDisplayName">
             <English>View Restriction</English>
@@ -254,6 +269,7 @@
             <Chinesesimp>人称限制</Chinesesimp>
             <Turkish>Görüntüyü Kısıtla</Turkish>
             <Hungarian>Korlátozások</Hungarian>
+            <Ukrainian>Обмеження огляду</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_Selective">
             <English>Selective</English>
@@ -270,6 +286,7 @@
             <Chinesesimp>使用可选设定</Chinesesimp>
             <Turkish>Seçilebilinir</Turkish>
             <Hungarian>Szelektív</Hungarian>
+            <Ukrainian>Вибірковий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_SettingPreserveViewDesc">
             <English>Switch view on vehicle change to last used in this vehicle type (Requires Mode: Disabled)</English>
@@ -285,6 +302,7 @@
             <Chinese>切換到載具時自動切換到上次最後使用的視野模式(需求模式:關閉)</Chinese>
             <Chinesesimp>切换到载具时自动切换到上次最后使用的人称模式（需求模式：关闭）</Chinesesimp>
             <Turkish>Araçlar için en son kullanılan bakış  türünü kaydet.</Turkish>
+            <Ukrainian>Перемикати вид під час зміни техніки на останній використаний у цьому типі техніки (потрібен режим: Вимкнено)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_SettingPreserveViewName">
             <English>Preserve view for vehicle types</English>
@@ -300,6 +318,7 @@
             <Chinese>保留載具的視野模式</Chinese>
             <Chinesesimp>保留载具的人称模式</Chinesesimp>
             <Turkish>Araç türleri için görünümü koru</Turkish>
+            <Ukrainian>Запам'ятовувати вид для типів техніки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ThirdPerson">
             <English>Forced 3rd Person</English>
@@ -315,6 +334,7 @@
             <Chinese>強制使用第三人稱</Chinese>
             <Chinesesimp>强制使用第三人称</Chinesesimp>
             <Turkish>3. Kişi Görüşüne Zorla</Turkish>
+            <Ukrainian>Від 3-ї особи (примусово)</Ukrainian>
         </Key>
     </Package>
 </Project>

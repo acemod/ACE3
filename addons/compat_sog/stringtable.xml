@@ -13,6 +13,7 @@
             <Korean>땅파기</Korean>
             <Japanese>掘る</Japanese>
             <Chinesesimp>挖掘</Chinesesimp>
+            <Ukrainian>Закопати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Action_DigSpiderhole">
             <English>Dig Spiderhole</English>
@@ -26,6 +27,7 @@
             <Korean>개인호 파기</Korean>
             <Japanese>蛸壺壕を掘る</Japanese>
             <Chinesesimp>挖掘散兵坑</Chinesesimp>
+            <Ukrainian>Викопати павучу яму</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Action_DigSpiderholeAngled">
             <English>Dig Spiderhole (Angled Cover)</English>
@@ -39,6 +41,7 @@
             <Korean>개인호 파기 (각진 엄폐)</Korean>
             <Japanese>蛸壺壕 (屋根) を掘る</Japanese>
             <Chinesesimp>挖掘带斜盖散兵坑</Chinesesimp>
+            <Ukrainian>Викопати криту павучу яму</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Action_DigSpiderholeDual">
             <English>Dig Spiderhole (Dual)</English>
@@ -52,6 +55,7 @@
             <Korean>개인호 파기 (2인용)</Korean>
             <Japanese>蛸壺壕 (2人用) を掘る</Japanese>
             <Chinesesimp>挖掘双人散兵坑</Chinesesimp>
+            <Ukrainian>Викопати подвійну павучу яму</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_60mm_HE">
             <English>[ACE] M49A2 60mm HE Box</English>
@@ -65,6 +69,7 @@
             <Korean>[ACE] M49A2 60mm 고폭 상자</Korean>
             <Japanese>[ACE] M49A2 60mm 榴弾入り弾薬箱</Japanese>
             <Chinesesimp>[ACE] M49A2 60 mm 高爆弹弹药箱</Chinesesimp>
+            <Ukrainian>[ACE] Коробка M49A2 60 мм ОФ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_60mm_Lume">
             <English>[ACE] M83 60mm Lume Box</English>
@@ -78,6 +83,7 @@
             <Korean>[ACE] M83 60mm 조명 상자</Korean>
             <Japanese>[ACE] M83 60mm 照明弾弾入り弾薬箱</Japanese>
             <Chinesesimp>[ACE] M83 60 mm 照明弹弹药箱</Chinesesimp>
+            <Ukrainian>[ACE] Коробка M83 60 мм Освітлювальних</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_60mm_WP">
             <English>[ACE] M302 60mm WP Box</English>
@@ -91,6 +97,7 @@
             <Korean>[ACE] M302 60mm 백린 상자</Korean>
             <Japanese>[ACE] M302 60mm 白リン弾入り弾薬箱</Japanese>
             <Chinesesimp>[ACE] M302 60 mm 白磷弹弹药箱</Chinesesimp>
+            <Ukrainian>[ACE] Коробка M302 60 мм Фосфорних</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_81mm_HE">
             <English>[ACE] M374 81mm HE Box</English>
@@ -104,6 +111,7 @@
             <Korean>[ACE] M374 81mm 고폭 상자</Korean>
             <Japanese>[ACE] M374 81mm 榴弾入り弾薬箱</Japanese>
             <Chinesesimp>[ACE] M374 81 mm 高爆弹弹药箱</Chinesesimp>
+            <Ukrainian>[ACE] Коробка M374 81 мм ОФ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_81mm_Lume">
             <English>[ACE] M301A3 81mm Lume Box</English>
@@ -117,6 +125,7 @@
             <Korean>[ACE] M301A3 81mm 조명 상자</Korean>
             <Japanese>[ACE] M301A1 81mm 照明弾入り弾薬箱</Japanese>
             <Chinesesimp>[ACE] M301A3 81 mm 照明弹弹药箱</Chinesesimp>
+            <Ukrainian>[ACE] Коробка M301A3 81 мм Освітлювальних</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_81mm_Smoke">
             <English>[ACE] M57 81mm Smoke Box</English>
@@ -130,6 +139,7 @@
             <Korean>[ACE] M57 81mm 연막 상자</Korean>
             <Japanese>[ACE] M57 81mm 煙幕弾入り弾薬箱</Japanese>
             <Chinesesimp>[ACE] M57 81 mm 烟雾弹弹药箱</Chinesesimp>
+            <Ukrainian>[ACE] Коробка M57 81 мм Димових</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_81mm_WP">
             <English>[ACE] M375 81mm WP Box</English>
@@ -143,6 +153,7 @@
             <Korean>[ACE] M375 81mm 백린 상자</Korean>
             <Japanese>[ACE] M375 81mm 白リン弾入り弾薬箱</Japanese>
             <Chinesesimp>[ACE] M375 81 mm 白磷弹弹药箱</Chinesesimp>
+            <Ukrainian>[ACE] Коробка M375 81 мм Фосфорних</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_82mm_HE">
             <English>[ACE] O-832D 82mm HE Box</English>
@@ -156,6 +167,7 @@
             <Korean>[ACE] O-832D 82mm 고폭 상자</Korean>
             <Japanese>[ACE] O-832D 82mm 榴弾入り弾薬箱</Japanese>
             <Chinesesimp>[ACE] O-832D 82 mm 高爆弹弹药箱</Chinesesimp>
+            <Ukrainian>[ACE] Коробка О-832Д 82 мм ОФ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_82mm_Lume">
             <English>[ACE] S-832S 82mm Lume Box</English>
@@ -169,6 +181,7 @@
             <Korean>[ACE] S-832S 82mm 조명 상자</Korean>
             <Japanese>[ACE] S-832S 82mm 照明弾入り弾薬箱</Japanese>
             <Chinesesimp>[ACE] S-832S 82 mm 照明弹弹药箱</Chinesesimp>
+            <Ukrainian>[ACE] Коробка С-832С 82 мм Освітлювальних</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Box_82mm_WP">
             <English>[ACE] D-832 82mm WP Box</English>
@@ -182,6 +195,7 @@
             <Korean>[ACE] D-832 82mm 백린 상자</Korean>
             <Japanese>[ACE] D-832 82mm 白リン弾入り弾薬箱</Japanese>
             <Chinesesimp>[ACE] D-832 82 mm 白磷弹弹药箱</Chinesesimp>
+            <Ukrainian>[ACE] Коробка Д-832 82 мм Фосфорних</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_DSHKM_AA">
             <English>[CSW] DShK (AA) Gun Bag</English>
@@ -195,6 +209,7 @@
             <Korean>[CSW] DShK (대공) 총가방</Korean>
             <Japanese>[CSW] DShK (対空) ガン バッグ</Japanese>
             <Chinesesimp>[班组] DShK（高）枪袋</Chinesesimp>
+            <Ukrainian>[CSW] Сумка з ДШК (зенітний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_DSHKM_Shield">
             <English>[CSW] DShK (Shield) Gun Bag</English>
@@ -208,6 +223,7 @@
             <Korean>[CSW] DShK (방패) 총가방</Korean>
             <Japanese>[CSW] DShK (防盾) ガン バッグ</Japanese>
             <Chinesesimp>[班组] DShK（防盾）枪袋</Chinesesimp>
+            <Ukrainian>[CSW] Сумка з ДШК (зі щитом)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_M1919A4">
             <English>[CSW] M1919A4 Gun Bag</English>
@@ -221,6 +237,7 @@
             <Korean>[CSW] M1919A4 총가방</Korean>
             <Japanese>[CSW] M1919A4 ガン バッグ</Japanese>
             <Chinesesimp>[班组] M1919A4 枪袋</Chinesesimp>
+            <Ukrainian>[CSW] Сумка з M1919A4</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_M1919A6">
             <English>[CSW] M1919A6 Gun Bag</English>
@@ -234,6 +251,7 @@
             <Korean>[CSW] M1919A6 총가방</Korean>
             <Japanese>[CSW] M1919A6 ガン バッグ</Japanese>
             <Chinesesimp>[班组] M1919A6 枪袋</Chinesesimp>
+            <Ukrainian>[CSW] Сумка з M1919A6</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_M2">
             <English>[CSW] M2 Mortar Tube</English>
@@ -247,6 +265,7 @@
             <Korean>[CSW] M2 박격포 포신</Korean>
             <Japanese>[CSW] M2 底盤</Japanese>
             <Chinesesimp>[班组] M2 迫击炮炮管</Chinesesimp>
+            <Ukrainian>[CSW] Сумка з мінометом M2</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_M29">
             <English>[CSW] M29 Mortar Tube</English>
@@ -260,6 +279,7 @@
             <Korean>[CSW] M29 박격포 포신</Korean>
             <Japanese>[CSW] M29 発射筒</Japanese>
             <Chinesesimp>[班组] M29 迫击炮炮管</Chinesesimp>
+            <Ukrainian>[CSW] Сумка з мінометом M29</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_M60">
             <English>[CSW] M60 Gun Bag</English>
@@ -273,6 +293,7 @@
             <Korean>[CSW] M60 총가방</Korean>
             <Japanese>[CSW] M60 ガン バッグ</Japanese>
             <Chinesesimp>[班组] M60 枪袋</Chinesesimp>
+            <Ukrainian>[CSW] Сумка M60</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_MG42">
             <English>[CSW] MG42 Gun Bag</English>
@@ -286,6 +307,7 @@
             <Korean>[CSW] MG42 총가방</Korean>
             <Japanese>[CSW] MG42 ガン バッグ</Japanese>
             <Chinesesimp>[班组] MG42 枪袋</Chinesesimp>
+            <Ukrainian>[CSW] Сумка MG42</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_Mk18">
             <English>[CSW] Mk18 Gun Bag</English>
@@ -299,6 +321,7 @@
             <Korean>[CSW] Mk18 총가방</Korean>
             <Japanese>[CSW] Mk18 ガン バッグ</Japanese>
             <Chinesesimp>[班组] Mk18 枪袋</Chinesesimp>
+            <Ukrainian>[CSW] Сумка з Mk18</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_PK">
             <English>[CSW] PK Gun Bag</English>
@@ -312,6 +335,7 @@
             <Korean>[CSW] PK 총가방</Korean>
             <Japanese>[CSW] PK ガン バッグ</Japanese>
             <Chinesesimp>[班组] PK 枪袋</Chinesesimp>
+            <Ukrainian>[CSW] Сумка з ПK</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_RPD">
             <English>[CSW] RPD Gun Bag</English>
@@ -325,6 +349,7 @@
             <Korean>[CSW] RPD 총가방</Korean>
             <Japanese>[CSW] RPD ガン バッグ</Japanese>
             <Chinesesimp>[班组] RPD 枪袋</Chinesesimp>
+            <Ukrainian>[CSW] Сумка з RPD</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_SGM">
             <English>[CSW] SGM Gun Bag</English>
@@ -338,6 +363,7 @@
             <Korean>[CSW] SGM 총가방</Korean>
             <Japanese>[CSW] SGM ガン バッグ</Japanese>
             <Chinesesimp>[班组] SGM 枪袋</Chinesesimp>
+            <Ukrainian>[CSW] Сумка з SGM</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_SGM_Shield">
             <English>[CSW] SGM (Shield) Gun Bag</English>
@@ -351,6 +377,7 @@
             <Korean>[CSW] SGM (방패) 총가방</Korean>
             <Japanese>[CSW] SGM (防盾) ガン バッグ</Japanese>
             <Chinesesimp>[班组] SGM（防盾）枪袋</Chinesesimp>
+            <Ukrainian>[CSW] Сумка з SGM (зі щитком)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_Type53">
             <English>[CSW] Type 53 Mortar Tube</English>
@@ -364,6 +391,7 @@
             <Korean>[CSW] 53식 박격포 포신</Korean>
             <Japanese>[CSW] 53 式 発射筒</Japanese>
             <Chinesesimp>[班组] 53式迫击炮炮管</Chinesesimp>
+            <Ukrainian>[CSW] Сумка з мінометом Type 53</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_60mm_HE">
             <English>M49A2 60mm HE</English>
@@ -377,6 +405,7 @@
             <Korean>M49A2 60mm 고폭</Korean>
             <Japanese>M49A2 60mm 榴弾</Japanese>
             <Chinesesimp>M49A2 60 mm 高爆弹</Chinesesimp>
+            <Ukrainian>M49A2 60 мм ОФ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_60mm_Lume">
             <English>M83 60mm Lume</English>
@@ -390,6 +419,7 @@
             <Korean>M83 60mm 조명</Korean>
             <Japanese>M83 60mm 照明弾</Japanese>
             <Chinesesimp>M83 60 mm 照明弹</Chinesesimp>
+            <Ukrainian>M83 60 мм Освітлювальна</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_60mm_WP">
             <English>M302 60mm WP</English>
@@ -403,6 +433,7 @@
             <Korean>M302 60mm 백린</Korean>
             <Japanese>M302 60mm 白リン弾</Japanese>
             <Chinesesimp>M302 60 mm 白磷弹</Chinesesimp>
+            <Ukrainian>M302 60 мм Фосфорна</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_HE">
             <English>M374 81mm HE</English>
@@ -416,6 +447,7 @@
             <Korean>M374 81mm 고폭</Korean>
             <Japanese>M374 81mm 榴弾</Japanese>
             <Chinesesimp>M374 81 mm 高爆弹</Chinesesimp>
+            <Ukrainian>M374 81 мм ОФ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_Lume">
             <English>M301A3 81mm Lume</English>
@@ -429,6 +461,7 @@
             <Korean>M301A3 81mm 조명</Korean>
             <Japanese>M301A3 81mm 照明弾</Japanese>
             <Chinesesimp>M301A3 81 mm 照明弹</Chinesesimp>
+            <Ukrainian>M301A3 81 мм Освітлювальна</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_Smoke">
             <English>M57 81mm Smoke</English>
@@ -442,6 +475,7 @@
             <Korean>M57 81mm 연막</Korean>
             <Japanese>M57 81mm 発煙弾</Japanese>
             <Chinesesimp>M57 81 mm 烟雾弹</Chinesesimp>
+            <Ukrainian>M57 81 мм Димова</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_WP">
             <English>M375 81mm WP</English>
@@ -455,6 +489,7 @@
             <Korean>M375 81mm 백린</Korean>
             <Japanese>M375 81mm 白リン弾</Japanese>
             <Chinesesimp>M375 81 mm 白磷弹</Chinesesimp>
+            <Ukrainian>M375 81 мм Фосфорна</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_HE">
             <English>O-832D 82mm HE</English>
@@ -468,6 +503,7 @@
             <Korean>O-832D 82mm 고폭</Korean>
             <Japanese>O-832D 82mm 榴弾</Japanese>
             <Chinesesimp>O-832D 82 mm 高爆弹</Chinesesimp>
+            <Ukrainian>О-832Д 82 мм ОФ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_Lume">
             <English>S-832S 82mm Lume</English>
@@ -481,6 +517,7 @@
             <Korean>S-832S 82mm 조명</Korean>
             <Japanese>S-832S 82mm 照明弾</Japanese>
             <Chinesesimp>S-832S 82 mm 照明弹</Chinesesimp>
+            <Ukrainian>С-832С 82 мм Освітлювальна</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_WP">
             <English>D-832 82mm WP</English>
@@ -494,6 +531,7 @@
             <Korean>D-832 82mm 백린</Korean>
             <Japanese>D-832 82mm 白リン弾</Japanese>
             <Chinesesimp>D-832 82 mm 白磷弹</Chinesesimp>
+            <Ukrainian>Д-832 82 мм Фосфорна</Ukrainian>
         </Key>
     </Package>
 </Project>

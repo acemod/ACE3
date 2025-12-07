@@ -1,16 +1,13 @@
 class CfgWeapons {
-
-    class CSLA_LauncherBase;
     class CSLA_Launcher_AT;
+    class CSLA_Launcher_AA;
     class CSLA_MachinegunBase_7_62;
 
     class CSLA_RPG7: CSLA_Launcher_AT {
         EGVAR(reloadlaunchers,enabled) = 1;
     };
 
-    // class CSLA_RPG75: CSLA_Launcher_AT {};
-
-    class CSLA_Strela: CSLA_LauncherBase {
+    class CSLA_9K32: CSLA_Launcher_AA {
         EGVAR(overpressure,angle) = 30;
         EGVAR(overpressure,damage) = 0.5;
         EGVAR(overpressure,range) = 2;
@@ -25,9 +22,6 @@ class CfgWeapons {
     class US85_Launcher_AT;
     class US85_MachinegunBase_5_56;
     class US85_MachinegunBase_7_62;
-    class US85_weaponBase;
-
-    // class US85_M16_base: US85_weaponBase {};
 
     class US85_M249: US85_MachinegunBase_5_56 {
         EGVAR(overheating,allowSwapBarrel) = 1;

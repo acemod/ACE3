@@ -55,7 +55,7 @@ class SPE_FM_24_M29: SPE_LMG {
     EGVAR(overheating,dispersion) = 0.25;
 };
 
-// SELF LOADING RIFLES
+// RIFLES
 class SPE_RIFLE;
 class SPE_G43: SPE_RIFLE {
     EGVAR(overheating,JamChance) = 0.0003;
@@ -89,7 +89,7 @@ class SPE_STG44: SPE_RIFLE {
     ACE_barrelLength = 420;
 };
 
-// BOLT ACTION RIFLES
+// SCOPED RIFLES
 class SPE_SRIFLE;
 class SPE_K98ZF39: SPE_SRIFLE {
     ACE_barrelTwist = 240;
@@ -103,6 +103,7 @@ class SPE_K98ZF39: SPE_SRIFLE {
     discreteDistanceInitIndex = 0;
     ACE_railHeightAboveBore = 1.8;  // Distance between center of bore and rail in centimeters
     ACE_scopeHeightAboveRail = 3.8;  // Distance between center of scope and rail in centimeters
+    EGVAR(overheating,closedBolt) = 1;
 };
 class SPE_M1903A4_Springfield: SPE_SRIFLE {
     ACE_barrelTwist = 254;
@@ -116,6 +117,7 @@ class SPE_M1903A4_Springfield: SPE_SRIFLE {
     discreteDistanceInitIndex = 0;
     ACE_railHeightAboveBore = 1.8;
     ACE_scopeHeightAboveRail = 3.8;
+    EGVAR(overheating,closedBolt) = 1;
 };
 
 // SUB MACHINE GUNS

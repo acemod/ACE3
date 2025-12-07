@@ -13,7 +13,6 @@ class RscText;
 class RscPicture;
 class RscListBox;
 class RscProgress;
-class RscStructuredText;
 class RscActiveText;
 class RscCombo;
 

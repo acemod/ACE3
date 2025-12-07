@@ -7,7 +7,6 @@ class RscEdit;
 class RscXSliderH;
 class RscCheckBox;
 class RscActivePicture;
-class RscMapControl;
 class RscPicture;
 class ctrlToolbox;
 class RscButton;

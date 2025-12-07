@@ -15,6 +15,7 @@
             <Japanese>.45 ACP 15Rnd マガジン</Japanese>
             <Chinesesimp>.45 ACP 15发 弹匣</Chinesesimp>
             <Turkish>.45 ACP 15 Merm. Şarjör</Turkish>
+            <Ukrainian>Магазин, 15 набоїв .45 ACP</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SmallArms_17Rnd_9x19_Name">
             <English>9 mm 17Rnd Mag</English>
@@ -31,54 +32,58 @@
             <Chinese>9 mm 17 發彈匣</Chinese>
             <Chinesesimp>9 mm 17发 弹匣</Chinesesimp>
             <Turkish>9 mm 17 Merm. Şarjör</Turkish>
-        </Key>
-        <Key ID="STR_ACE_SmallArms_17Rnd_9x19_yellow_Name">
-            <English>9 mm 17Rnd Reload Tracer (Yellow) Mag</English>
-            <Chinese>9 mm 17 發重新裝填曳光彈（黃）彈匣</Chinese>
-            <French>Mag. 17 traçantes recharge jaunes 9 mm</French>
-            <Spanish>Cargador de 17 balas con trazadoras prerrecarga  (amarillo) de 9 mm</Spanish>
-            <Italian>Caricatore 17 colpi 9 mm con traccianti intervallati (gialli)</Italian>
-            <Polish>17-nab. mag. przeł. 9 mm (żółty smugacz)</Polish>
-            <Russian>Магазин, 17 патр. с послед. трас. 9 мм (желтые)</Russian>
-            <German>17-Schuss-9mm-Magazin (Nachlade-Leuchtspur Gelb)</German>
-            <Czech>9 mm, 17ks zásobník nabíjecí stopovky (žluté)</Czech>
-            <Portuguese>Carregador 17Mun. Traçante Recarga (Amarelo) 9 mm</Portuguese>
-            <Korean>9mm 17발 재장전 예광탄 (황색) 탄창</Korean>
-            <Chinesesimp>9 毫米 17 发装弹指示（黄色）弹匣</Chinesesimp>
-            <Japanese>9mm 17Rnd 装填トレーサー（黄）マガジン</Japanese>
-            <Turkish>9 mm 17 Merm. Tekrar Doldurulabilir İzli (Sarı) Şarjör</Turkish>
-        </Key>
-        <Key ID="STR_ACE_SmallArms_17Rnd_9x19_red_Name">
-            <English>9 mm 17Rnd Reload Tracer (Red) Mag</English>
-            <Chinese>9 mm 17 發重新裝填曳光彈（紅）彈匣</Chinese>
-            <French>Mag. 17 traçantes recharge rouges 9 mm</French>
-            <Spanish>Cargador de 17 balas con trazadoras prerrecarga  (rojo) de 9 mm</Spanish>
-            <Italian>Caricatore 17 colpi 9 mm con traccianti intervallati (rossi)</Italian>
-            <Polish>17-nab. mag. przeł. 9 mm (czerwony smugacz)</Polish>
-            <Russian>Магазин, 17 патр. с послед. трас. 9 мм (красные)</Russian>
-            <German>17-Schuss-9mm-Magazin (Nachlade-Leuchtspur Rot)</German>
-            <Czech>9 mm, 17ks zásobník nabíjecí stopovky (červené)</Czech>
-            <Portuguese>Carregador 17Mun. Traçante Recarga (Vermelho) 9 mm</Portuguese>
-            <Korean>9mm 17발 재장전 예광탄 (적색) 탄창</Korean>
-            <Chinesesimp>9 毫米 17 发装弹指示（红色）弹匣</Chinesesimp>
-            <Japanese>9mm 17Rnd 装填トレーサー（赤）マガジン</Japanese>
-            <Turkish>9 mm 17 Merm. Tekrar Doldurulabilir İzli (Kırmızı) Şarjör</Turkish>
+            <Ukrainian>Магазин, 17 набоїв 9 мм</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SmallArms_17Rnd_9x19_green_Name">
             <English>9 mm 17Rnd Reload Tracer (Green) Mag</English>
-            <Chinese>9 mm 17 發重新裝填曳光彈（綠）彈匣</Chinese>
+            <Czech>9 mm, 17ks zásobník nabíjecí stopovky (zelené)</Czech>
             <French>Mag. 17 traçantes recharge vertes 9 mm</French>
             <Spanish>Cargador de 17 balas con trazadoras prerrecarga  (verde) de 9 mm</Spanish>
             <Italian>Caricatore 17 colpi 9 mm con traccianti intervallati (verdi)</Italian>
             <Polish>17-nab. mag. przeł. 9 mm (zielony smugacz)</Polish>
+            <Portuguese>Carregador 17Mun. Traçante Recarga (Verde) 9 mm</Portuguese>
             <Russian>Магазин, 17 патр. с послед. трас. 9 мм (зеленые)</Russian>
             <German>17-Schuss-9mm-Magazin (Nachlade-Leuchtspur Grün)</German>
-            <Czech>9 mm, 17ks zásobník nabíjecí stopovky (zelené)</Czech>
-            <Portuguese>Carregador 17Mun. Traçante Recarga (Verde) 9 mm</Portuguese>
             <Korean>9mm 17발 재장전 예광탄 (녹색) 탄창</Korean>
-            <Chinesesimp>9 毫米 17 发装弹指示（绿色）弹匣</Chinesesimp>
             <Japanese>9mm 17Rnd 装填トレーサー（緑）マガジン</Japanese>
+            <Chinese>9 mm 17 發重新裝填曳光彈（綠）彈匣</Chinese>
+            <Chinesesimp>9 毫米 17 发装弹指示（绿色）弹匣</Chinesesimp>
             <Turkish>9 mm 17 Merm. Tekrar Doldurulabilir İzli (Yeşil) Şarjör</Turkish>
+            <Ukrainian>Магазин, 17 набоїв з ост. трас. 9 мм (зелені)</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_17Rnd_9x19_red_Name">
+            <English>9 mm 17Rnd Reload Tracer (Red) Mag</English>
+            <Czech>9 mm, 17ks zásobník nabíjecí stopovky (červené)</Czech>
+            <French>Mag. 17 traçantes recharge rouges 9 mm</French>
+            <Spanish>Cargador de 17 balas con trazadoras prerrecarga  (rojo) de 9 mm</Spanish>
+            <Italian>Caricatore 17 colpi 9 mm con traccianti intervallati (rossi)</Italian>
+            <Polish>17-nab. mag. przeł. 9 mm (czerwony smugacz)</Polish>
+            <Portuguese>Carregador 17Mun. Traçante Recarga (Vermelho) 9 mm</Portuguese>
+            <Russian>Магазин, 17 патр. с послед. трас. 9 мм (красные)</Russian>
+            <German>17-Schuss-9mm-Magazin (Nachlade-Leuchtspur Rot)</German>
+            <Korean>9mm 17발 재장전 예광탄 (적색) 탄창</Korean>
+            <Japanese>9mm 17Rnd 装填トレーサー（赤）マガジン</Japanese>
+            <Chinese>9 mm 17 發重新裝填曳光彈（紅）彈匣</Chinese>
+            <Chinesesimp>9 毫米 17 发装弹指示（红色）弹匣</Chinesesimp>
+            <Turkish>9 mm 17 Merm. Tekrar Doldurulabilir İzli (Kırmızı) Şarjör</Turkish>
+            <Ukrainian>Магазин, 17 набоїв з ост. трас. 9 мм (червоні)</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_17Rnd_9x19_yellow_Name">
+            <English>9 mm 17Rnd Reload Tracer (Yellow) Mag</English>
+            <Czech>9 mm, 17ks zásobník nabíjecí stopovky (žluté)</Czech>
+            <French>Mag. 17 traçantes recharge jaunes 9 mm</French>
+            <Spanish>Cargador de 17 balas con trazadoras prerrecarga  (amarillo) de 9 mm</Spanish>
+            <Italian>Caricatore 17 colpi 9 mm con traccianti intervallati (gialli)</Italian>
+            <Polish>17-nab. mag. przeł. 9 mm (żółty smugacz)</Polish>
+            <Portuguese>Carregador 17Mun. Traçante Recarga (Amarelo) 9 mm</Portuguese>
+            <Russian>Магазин, 17 патр. с послед. трас. 9 мм (желтые)</Russian>
+            <German>17-Schuss-9mm-Magazin (Nachlade-Leuchtspur Gelb)</German>
+            <Korean>9mm 17발 재장전 예광탄 (황색) 탄창</Korean>
+            <Japanese>9mm 17Rnd 装填トレーサー（黄）マガジン</Japanese>
+            <Chinese>9 mm 17 發重新裝填曳光彈（黃）彈匣</Chinese>
+            <Chinesesimp>9 毫米 17 发装弹指示（黄色）弹匣</Chinesesimp>
+            <Turkish>9 mm 17 Merm. Tekrar Doldurulabilir İzli (Sarı) Şarjör</Turkish>
+            <Ukrainian>Магазин, 17 набоїв з ост. трас. 9 мм (жовті)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Name">
             <English>.45 ACP 25Rnd Mag</English>
@@ -94,6 +99,7 @@
             <Japanese>.45 ACP 25Rnd マガジン</Japanese>
             <Chinesesimp>.45 ACP 25发 弹匣</Chinesesimp>
             <Turkish>.45 ACP 25 Merm. Şarjör</Turkish>
+            <Ukrainian>Магазин, 25 набоїв .45 ACP</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Green_Name">
             <English>.45 ACP 25Rnd Tracers (Green) Mag</English>
@@ -109,6 +115,7 @@
             <Japanese>.45 ACP 25Rnd トレーサー (緑) マガジン</Japanese>
             <Chinesesimp>.45 ACP 25发 弹匣（曳光，绿）</Chinesesimp>
             <Turkish>.45 ACP 25 Merm. İzli (Yeşil) Şarjör</Turkish>
+            <Ukrainian>Магазин, 25 набоїв .45 ACP (зелені трассери)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Red_Name">
             <English>.45 ACP 25Rnd Tracers (Red) Mag</English>
@@ -124,6 +131,7 @@
             <Japanese>.45 ACP 25Rnd トレーサー (赤) マガジン</Japanese>
             <Chinesesimp>.45 ACP 25发 弹匣（曳光，红）</Chinesesimp>
             <Turkish>.45 ACP 25 Merm. İzli (Kırmızı) Şarjör</Turkish>
+            <Ukrainian>Магазин, 25 набоїв .45 ACP (червоні трассери)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Yellow_Name">
             <English>.45 ACP 25Rnd Tracers (Yellow) Mag</English>
@@ -139,6 +147,7 @@
             <Japanese>.45 ACP 25Rnd トレーサー (黄) マガジン</Japanese>
             <Chinesesimp>.45 ACP 25发 弹匣（曳光，黄）</Chinesesimp>
             <Turkish>.45 ACP 25 Merm. İzli (Sarı) Şarjör</Turkish>
+            <Ukrainian>Магазин, 25 набоїв .45 ACP (жовті трасери)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SmallArms_8Rnd_45_Name">
             <English>.45 ACP 8Rnd Mag</English>
@@ -154,6 +163,7 @@
             <Japanese>.45 ACP 8Rnd マガジン</Japanese>
             <Chinesesimp>.45 ACP 8发 弹匣</Chinesesimp>
             <Turkish>.45 ACP 8 Merm. Şarjör</Turkish>
+            <Ukrainian>Магазин, 8 набоїв .45 ACP</Ukrainian>
         </Key>
     </Package>
 </Project>

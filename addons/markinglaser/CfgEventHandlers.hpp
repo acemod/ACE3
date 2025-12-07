@@ -20,6 +20,7 @@ class Extended_InitPost_EventHandlers {
     class Air {
         class ADDON {
             init = QUOTE(call FUNC(onAircraftInit));
+            exclude[] = {"ParachuteBase", QEGVAR(fastroping,helper), "ACE_friesBase", QEGVAR(refuel,helper)};
         };
     };
 };

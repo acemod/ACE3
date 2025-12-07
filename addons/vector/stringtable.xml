@@ -17,6 +17,7 @@
             <Chinesesimp>Vector—方位按键</Chinesesimp>
             <Turkish>Vector - Azimuth Tuşu</Turkish>
             <Hungarian>Vector - Irányszög gomb</Hungarian>
+            <Ukrainian>Vector – Азимут</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vector_DistanceKey">
             <English>Vector - Distance Key</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>Vector—距离按键</Chinesesimp>
             <Turkish>Vector - Mesafe Tuşu</Turkish>
             <Hungarian>Vector - Távolság gomb</Hungarian>
+            <Ukrainian>Vector - Відстань</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vector_VectorDayName">
             <English>Vector 21</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>Vector 21</Chinesesimp>
             <Turkish>Vector 21</Turkish>
             <Hungarian>Vector 21</Hungarian>
+            <Ukrainian>Vector 21</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vector_VectorDescription">
             <English>Rangefinder</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>测距仪</Chinesesimp>
             <Turkish>Menzil Bulucu</Turkish>
             <Hungarian>Távolságmérő</Hungarian>
+            <Ukrainian>Далекомір</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vector_VectorName">
             <English>Vector 21 Nite</English>
@@ -85,6 +89,7 @@
             <Chinesesimp>Vector 21 Nite</Chinesesimp>
             <Turkish>Vector 21 Nite</Turkish>
             <Hungarian>Vector 21 Nite</Hungarian>
+            <Ukrainian>Vector 21 Nite</Ukrainian>
         </Key>
     </Package>
 </Project>

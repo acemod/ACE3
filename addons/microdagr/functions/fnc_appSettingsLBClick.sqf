@@ -22,6 +22,7 @@ params ["", "_itemClicked"];
 switch (_itemClicked) do {
     case (0): { GVAR(settingUseMils) = ! GVAR(settingUseMils)};
     case (1): { GVAR(settingShowAllWaypointsOnMap) = ! GVAR(settingShowAllWaypointsOnMap)};
+    case (2): { GVAR(settingShowMagneticNorth) = ! GVAR(settingShowMagneticNorth)};
 };
 
 [] call FUNC(updateDisplay);

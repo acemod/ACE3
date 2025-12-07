@@ -22,7 +22,7 @@ params ["_unit", "_explosive", "_magazineClass", "_extra"];
 TRACE_4("params",_unit,_explosive,_magazineClass,_extra);
 
 // Config is the last item in the list of passed in items.
-private _config = (_this select 3) select (count (_this select 3) - 1);
+private _config = (_this select 3) select -1;
 
 private _requiredItems = getArray (_config >> "requires");
 private _hasRequired = true;

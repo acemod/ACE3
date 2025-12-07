@@ -10,6 +10,7 @@
             <German>1x 9k121 Vikhr [ACE]</German>
             <Korean>1x 9K121 베프리 [ACE]</Korean>
             <Japanese>1x 9k121 ヴィーフリ [ACE]</Japanese>
+            <Ukrainian>1x 9k121 Вихор [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_VIKHR_2x">
             <English>2x 9k121 Vikhr [ACE]</English>
@@ -20,6 +21,7 @@
             <German>2x 9k121 Vikhr [ACE]</German>
             <Korean>2x 9K121 베프리 [ACE]</Korean>
             <Japanese>2x 9k121 ヴィーフリ [ACE]</Japanese>
+            <Ukrainian>2x 9k121 Вихор [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_VIKHR_3x">
             <English>3x 9k121 Vikhr [ACE]</English>
@@ -30,6 +32,7 @@
             <German>3x 9k121 Vikhr [ACE]</German>
             <Korean>3x 9K121 베프리 [ACE]</Korean>
             <Japanese>3x 9k121 ヴィーフリ [ACE]</Japanese>
+            <Ukrainian>3x 9k121 Вихор [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_VIKHR_4x">
             <English>4x 9k121 Vikhr [ACE]</English>
@@ -40,6 +43,7 @@
             <German>4x 9k121 Vikhr [ACE]</German>
             <Korean>4x 9K121 베프리 [ACE]</Korean>
             <Japanese>4x 9k121 ヴィーフリ [ACE]</Japanese>
+            <Ukrainian>4x 9k121 Вихор [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_VIKHR_6x">
             <English>6x 9k121 Vikhr [ACE]</English>
@@ -50,6 +54,7 @@
             <German>6x 9k121 Vikhr [ACE]</German>
             <Korean>6x 9K121 베프리 [ACE]</Korean>
             <Japanese>6x 9k121 ヴィーフリ [ACE]</Japanese>
+            <Ukrainian>6x 9k121 Вихор [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_VIKHR_8x">
             <English>8x 9k121 Vikhr [ACE]</English>
@@ -60,6 +65,7 @@
             <German>8x 9k121 Vikhr [ACE]</German>
             <Korean>8x 9K121 베프리 [ACE]</Korean>
             <Japanese>8x 9k121 ヴィーフリ [ACE]</Japanese>
+            <Ukrainian>8x 9k121 Вихор [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_VIKHR_9k121">
             <English>9k121 Vikhr [ACE]</English>
@@ -70,6 +76,7 @@
             <German>9k121 Vikhr [ACE]</German>
             <Korean>9K121 베프리 [ACE]</Korean>
             <Japanese>9k121 ヴィーフリ [ACE]</Japanese>
+            <Ukrainian>9k121 Вихор [ACE]</Ukrainian>
         </Key>
     </Package>
 </Project>

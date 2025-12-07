@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: switch <BOOLEAN>
+ * 1: switch <BOOL>
  * 2: id <STRING>
  * 3: side <SIDE>
  *

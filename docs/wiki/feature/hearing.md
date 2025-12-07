@@ -23,7 +23,7 @@ Adds earplugs to mitigate that effect. Soldiers with high caliber weapons or mis
 Their drawback is that they reduce the general hearing volume.
 
 ### 1.3 Electronic hearing protection
-Some types of helmets/hats with PELTOR-like earmuffs or 2-ear headsets can mitigate hearing damage by dropping the volume only when loid noises occour, without attenuating general hearing volume.
+Some types of helmets/hats with PELTOR-like earmuffs or 2-ear headsets can mitigate hearing damage by dropping the volume only when loud noises occur, without attenuating general hearing volume.
 The `Electronic Hearing Protection` item provides the same effect, with usage similar to earplugs.
 
 ### 1.4 Crew hearing protection

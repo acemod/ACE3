@@ -5,7 +5,7 @@
  * Objects loaded via classname remain virtual until unloaded.
  *
  * Arguments:
- * 0: Item to be loaded <STRING> or <OBJECT> (default: "")
+ * 0: Item to be loaded <STRING or OBJECT> (default: "")
  * 1: Holder object (vehicle) <OBJECT> (default: objNull)
  * 2: Ignore interaction distance and stability checks <BOOL> (default: false)
  *
