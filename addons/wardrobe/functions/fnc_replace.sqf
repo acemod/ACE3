@@ -47,10 +47,22 @@ private _replaceCode = switch (_typeNumber) do {
 };
 if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,_classOrigin); };
 
+private _extendedInfo = createHashMap;
+[QGVAR(itemChangedStart), [_player, _classOrigin, _classTarget, _equipmentType, _extendedInfo]] call CBA_fnc_localEvent;
+
 // temp action disabled
 GVAR(inProgress) = true;
 
-[_replaceCode, [_player, _classTarget, _equipmentType], _duration] call CBA_fnc_waitAndExecute;
+[{
+    params ["_player", "_classOrigin", "_classTarget", "_equipmentType", "_replaceCode", "_extendedInfo"];
+
+    [QGVAR(itemChangedBegin), [_player, _classOrigin, _classTarget, _equipmentType, _extendedInfo]] call CBA_fnc_localEvent;
+
+    [_player, _classTarget, _equipmentType] call _replaceCode;
+
+    [QGVAR(itemChangedEnd), [_player, _classOrigin, _classTarget, _equipmentType, _extendedInfo]] call CBA_fnc_localEvent;
+
+}, [_player, _classOrigin, _classTarget, _equipmentType, _replaceCode, _extendedInfo], _duration] call CBA_fnc_waitAndExecute;
 
 // handle components
 [_classOrigin, _classTarget] call FUNC(compareComponents) params ["_missing", "_surplus"];
