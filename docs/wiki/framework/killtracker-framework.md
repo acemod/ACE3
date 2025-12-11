@@ -40,3 +40,15 @@ The killtracker addon still uses some ACEX prefixes from its original implementa
 - CfgDebriefingSections classname: `acex_killTracker`
 
 These prefixes are maintained for backwards compatibility.
+
+## 4. Setting kill array on player objects
+
+It's possible to have ace set the out as a setVariable on every player's object.
+This may be useful for things like a spectator system. Note both vars use `ace_` prefix.
+
+```sqf
+// ideally set this at preInit
+missionNamespace setVariable ["ace_killtracker_globalSync", true];
+
+ // access on any unit
+_unit getVariable ["ace_killtracker_output", ""];
