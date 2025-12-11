@@ -40,6 +40,12 @@ if (_isLocal) then {
             TRACE_1("manually changing state to Unconscious",_currentState);
             [_unit, EGVAR(medical,STATE_MACHINE), _currentState, "Unconscious", {}, "LocalityChange"] call CBA_statemachine_fnc_manualTransition;
         };
+        case (IS_DAZED(_unit)): {
+            // Simplify and just go straight to unconscious (this is for locality change, so it should not be a real player)
+            _unit setVariable [VAR_DAZED, nil, true];
+            TRACE_1("manually changing state to Unconscious",_currentState);
+            [_unit, EGVAR(medical,STATE_MACHINE), _currentState, "Unconscious", {}, "LocalityChange"] call CBA_statemachine_fnc_manualTransition;
+        };
         case (IS_BLEEDING(_unit) || {IS_IN_PAIN(_unit)}): {
             if (_currentState == "Injured") exitWith {};
             TRACE_1("manually changing state to Injured",_currentState);
