@@ -47,7 +47,7 @@ if (GVAR(quickTag) == 3) then {
 };
 
 // Filter by Condition
-_possibleTags = _possibleTags select { [_unit, _unit] call (_x select 8) isEqualTo true };
+_possibleTags = _possibleTags select { [_unit, _unit] call (_x select 7) isEqualTo true };
 
 // Tag
 if (_possibleTags isNotEqualTo []) then {
