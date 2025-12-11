@@ -86,7 +86,7 @@ private _fnc_onSelection = {
     SETVAR(_display,newSide,(ctrlIDC _activeCtrl) - 31200);
 };
 
-// Initalize buttons with colour and scale
+// Initialize buttons with colour and scale
 {
     private _ctrl = _display displayCtrl _x;
     private _color = [_forEachIndex] call BIS_fnc_sideColor;
