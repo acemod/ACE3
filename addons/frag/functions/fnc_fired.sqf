@@ -20,7 +20,7 @@
 TRACE_10("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_vehicle,_gunner,_turret);
 
 if (_ammo isEqualTo "" || {isNull _projectile} ||
-    !(if (isNil "_gunner") then {local _unit} else {local _gunner}) ||
+    !(if ((isNil "_gunner") || {isNull _gunner}) then {local _unit} else {local _gunner}) ||
     {_projectile getVariable [QGVAR(blacklisted), false]}) exitWith {
     TRACE_2("bad ammo or projectile, or blackList",_ammo,_projectile);
 };

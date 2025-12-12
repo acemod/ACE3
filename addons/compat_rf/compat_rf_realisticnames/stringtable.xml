@@ -154,6 +154,7 @@
         <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_camo_Name">
             <English>Desert Eagle Mark XIX L5 (Camo)</English>
             <French>Desert Eagle Mark XIX L5 (Camo)</French>
+            <Spanish>Desert Eagle Mark XIX L5 (Camo)</Spanish>
             <Italian>Desert Eagle Mark XIX L5 (Mimetica)</Italian>
             <German>Desert Eagle Mark XIX L5 (Tarn)</German>
             <Korean>데저트 이글 마크 XIX L5 (위장)</Korean>
@@ -613,6 +614,7 @@
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_minigun_Name">
             <English>Ram 1500 (Minigun)</English>
             <French>Ram 1500 (Minigun)</French>
+            <Spanish>Ram 1500 (Minigun)</Spanish>
             <Italian>Ram 1500 (Minigun)</Italian>
             <German>Ram 1500 (Minigun)</German>
             <Korean>램 1500 (미니건)</Korean>
@@ -642,6 +644,7 @@
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_rcws_Name">
             <English>Ram 1500 (RCWS)</English>
             <French>Ram 1500 (RCWS)</French>
+            <Spanish>Ram 1500 (RCWS)</Spanish>
             <Italian>Ram 1500 (RCWS)</Italian>
             <German>Ram 1500 (RCWS)</German>
             <Korean>램 1500 (무인포탑)</Korean>
@@ -661,6 +664,7 @@
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_rocket_Name">
             <English>Ram 1500 (Rocket)</English>
             <French>Ram 1500 (Rocket)</French>
+            <Spanish>Ram 1500 (Rocket)</Spanish>
             <Italian>Ram 1500 (Razzi)</Italian>
             <German>Ram 1500 (Rakete)</German>
             <Korean>램 1500 (로켓)</Korean>
@@ -794,6 +798,7 @@
         <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_03_cargo_Name">
             <English>Typhoon Cargo</English>
             <French>Typhoon Cargo</French>
+            <Spanish>Typhoon Cargo</Spanish>
             <Italian>Typhoon Carico</Italian>
             <German>Typhoon Fracht</German>
             <Korean>타이푼 화물</Korean>

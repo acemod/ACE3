@@ -105,8 +105,9 @@
         </Key>
         <Key ID="STR_ACE_CSW_AddonName_Short">
             <English>CSW</English>
-            <Russian>CSW</Russian>
             <French>CSW</French>
+            <Spanish>CSW</Spanish>
+            <Russian>CSW</Russian>
             <Japanese>CSW</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_AssembleCSW_progressBar">
@@ -127,8 +128,9 @@
         </Key>
         <Key ID="STR_ACE_CSW_DisableAutoFire_displayName">
             <English>Disable fire on load</English>
-            <Russian>Выключить огонь при загрузке</Russian>
             <French>Désactiver le tir à l'armement</French>
+            <Spanish>Deshabilitar disparo en carga</Spanish>
+            <Russian>Выключить огонь при загрузке</Russian>
             <Japanese>装填時に発射を無効化</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_DisassembleCSW_displayName">
@@ -166,8 +168,9 @@
         </Key>
         <Key ID="STR_ACE_CSW_EnableAutoFire_displayName">
             <English>Enable fire on load</English>
-            <Russian>Включить огонь при загрузке</Russian>
             <French>Activer le tir au chargement</French>
+            <Spanish>Habilitar disparo en carga</Spanish>
+            <Russian>Включить огонь при загрузке</Russian>
             <Japanese>装填時に発射を有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_GMGBelt_descriptionShort">

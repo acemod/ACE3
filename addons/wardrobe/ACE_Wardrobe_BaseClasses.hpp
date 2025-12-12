@@ -54,6 +54,15 @@ class GVAR(base_U_jacket_open): GVAR(base) {
 class GVAR(base_U_jacket_closed): GVAR(base) {
     alternativeActionName = CSTRING(jacketClose);
 };
+// Common base class for uniforms with an raised or lowered hood
+class GVAR(base_U_hood_raised): GVAR(base) {
+    gesture = "GestureWipeFace";
+    alternativeActionName = CSTRING(hoodRaise);
+};
+class GVAR(base_U_hood_lowered): GVAR(base) {
+    gesture = "GestureWipeFace";
+    alternativeActionName = CSTRING(hoodLower);
+};
 
 // Common base class for helmets with a visor that can be flipped up or down
 class GVAR(base_H_visor_up): GVAR(base) {
