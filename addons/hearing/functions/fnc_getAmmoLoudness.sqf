@@ -8,7 +8,7 @@
  * 0: Magazine <STRING>
  *
  * Return Value:
- * None
+ * <NUMBER>
  *
  * Example:
  * "30Rnd_65x39_caseless_mag" call ace_hearing_fnc_getAmmoLoudness

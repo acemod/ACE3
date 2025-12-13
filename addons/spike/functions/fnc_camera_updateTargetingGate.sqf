@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Camera <OBJECT>
- * 0: Camera Array <ARRAY>
+ * 1: Camera Array <ARRAY>
  *
  * Return Value:
  * None

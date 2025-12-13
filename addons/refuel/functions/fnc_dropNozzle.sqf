@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit <OBJECT> (default: objNull)
  * 1: Nozzle <OBJECT>
- * 2: Disconnect Only <BOOL>
+ * 2: Disconnect Only <BOOL> (default: false)
  *
  * Return Value:
  * None

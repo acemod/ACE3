@@ -5,10 +5,11 @@
  *
  * Arguments:
  * 0: Last run frame <NUMBER>
- * 0: Current target (what we locked last run) <OBJECT>
- * 0: Lock start time (cba mission time) <NUMBER>
- * 0: Next sound play time (ticktime) <NUMBER>
- * 0: Next target scan (ticktime) <NUMBER>
+ * 1: Current target (what we locked last run) <OBJECT>
+ * 2: Lock start time (cba mission time) <NUMBER>
+ * 3: Next sound play time (ticktime) <NUMBER>
+ * 4: Fire disabled event handler ID <NUMBER>
+ * 5: Next target scan (ticktime) <NUMBER>
  *
  * Return Value:
  * None

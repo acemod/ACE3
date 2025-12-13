@@ -5,14 +5,13 @@
  *
  * Arguments:
  * 0: Who accessed your inventory? <OBJECT>
- * 1: Unit that wields the backpack <OBJECT>
- * 2: The backpack object <OBJECT>
+ * 1: The backpack object <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [bob, kevin, backpack] call ace_backpacks_fnc_backpackOpened
+ * [bob, backpack] call ace_backpacks_fnc_backpackOpened
  *
  * Public: No
  */

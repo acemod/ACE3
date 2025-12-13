@@ -9,7 +9,7 @@
  * 2: Position z <NUMBER>
  *
  * Return Value:
- * None
+ * PosASL <ARRAY>
  *
  * Example:
  * [1, 1, 1] call ace_common_fnc_positionToASL

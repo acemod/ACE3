@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * Classname of selected item or selected object <STRING or OBJECT> (default: nil)
+ * Classname of selected item or selected object <STRING or OBJECT or NIL> (default: nil)
  *
  * Example:
  * call ace_cargo_fnc_getSelectedItem
