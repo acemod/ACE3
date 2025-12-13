@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: mharis001
- * Updates the action buttons based currently avaiable treatments.
+ * Updates the action buttons based currently available treatments.
  *
  * Arguments:
  * 0: Medical Menu display <DISPLAY>

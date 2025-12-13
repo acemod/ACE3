@@ -30,7 +30,7 @@ If the Fortify module is present in the mission, server admins can use chat comm
 
 ### 1.2 Adding custom presets
 
-There are three ways of adding custom presets to your mission, either via code, through desciption.ext or through config.
+There are three ways of adding custom presets to your mission, either via code, through description.ext or through config.
 
 To add a preset via code you use the function `call ace_fortify_fnc_registerObjects`. Also enables Fortify.
 
