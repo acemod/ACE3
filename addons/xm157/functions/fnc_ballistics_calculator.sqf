@@ -72,8 +72,8 @@ while {(_TOF < 5) && {(_bulletPos # 1) < _targetRange}} do {
     _TOF = _TOF + _deltaT;
 };
 
-private _tx = (_lastBulletPos select 0) + (_targetRange - (_lastBulletPos select 1)) * ((_bulletPos select 0) - (_lastBulletPos select 0)) / ((_bulletPos select 1) - (_lastBulletPos select 1));
-private _tz = (_lastBulletPos select 2) + (_targetRange - (_lastBulletPos select 1)) * ((_bulletPos select 2) - (_lastBulletPos select 2)) / ((_bulletPos select 1) - (_lastBulletPos select 1));
+private _tx = linearConversion [_lastBulletPos select 1, _bulletPos select 1, _targetRange, _lastBulletPos select 0, _bulletPos select 0];
+private _tz = linearConversion [_lastBulletPos select 1, _bulletPos select 1, _targetRange, _lastBulletPos select 2, _bulletPos select 2];
 private _elevation = - atan(_tz / _targetRange);
 private _windage = - atan(_tx / _targetRange);
 
