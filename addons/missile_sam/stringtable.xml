@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_MISSILE_SAM_essm">
             <English>Mk-29 ESSM</English>
             <French>Mk-29 ESSM</French>
+            <Spanish>Mk-29 ESSM</Spanish>
             <Italian>Mk-29 ESSM</Italian>
             <Russian>Mk-29 ESSM</Russian>
             <German>Mk-29 ESSM</German>
@@ -14,6 +15,7 @@
         <Key ID="STR_ACE_MISSILE_SAM_essm_missile">
             <English>RIM-162 ESSM</English>
             <French>RIM-162 ESSM</French>
+            <Spanish>RIM-162 ESSM</Spanish>
             <Italian>RIM-162 ESSM</Italian>
             <Russian>RIM-162 ESSM</Russian>
             <German>RIM-162 ESSM</German>
@@ -24,6 +26,7 @@
         <Key ID="STR_ACE_MISSILE_SAM_essm_operator">
             <English>Mk-29 Operator</English>
             <French>Mk-29 Operator</French>
+            <Spanish>Mk-29 Operator</Spanish>
             <Italian>Operatore Mk-29</Italian>
             <Russian>Mk-29 Operator</Russian>
             <German>Mk-29 Bediener</German>
@@ -34,6 +37,7 @@
         <Key ID="STR_ACE_MISSILE_SAM_patriot">
             <English>MIM-104 Patriot</English>
             <French>MIM-104 Patriot</French>
+            <Spanish>MIM-104 Patriot</Spanish>
             <Italian>MIM-104 Patriot</Italian>
             <Russian>MIM-104 Patriot</Russian>
             <German>MIM-104 Patriot</German>
@@ -44,6 +48,7 @@
         <Key ID="STR_ACE_MISSILE_SAM_patriot_missile">
             <English>Patriot Missile</English>
             <French>Patriot Missile</French>
+            <Spanish>Misíl Patriot</Spanish>
             <Italian>Missile Patriot</Italian>
             <Russian>Patriot Missile</Russian>
             <German>Patriot Rakete</German>
@@ -54,6 +59,7 @@
         <Key ID="STR_ACE_MISSILE_SAM_patriot_operator">
             <English>MIM-104 Operator</English>
             <French>MIM-104 Operator</French>
+            <Spanish>Operador MIM-104</Spanish>
             <Italian>Operatore MIM-104</Italian>
             <Russian>MIM-104 Operator</Russian>
             <German>MIM-104 Bediener</German>
@@ -64,6 +70,7 @@
         <Key ID="STR_ACE_MISSILE_SAM_s400">
             <English>S-400</English>
             <French>S-400</French>
+            <Spanish>S-400</Spanish>
             <Italian>S-400</Italian>
             <Russian>S-400</Russian>
             <German>S-400</German>
@@ -74,6 +81,7 @@
         <Key ID="STR_ACE_MISSILE_SAM_s400_missile">
             <English>S-400 Missile</English>
             <French>S-400 Missile</French>
+            <Spanish>Misíl S-400</Spanish>
             <Italian>Missile S-400</Italian>
             <Russian>S-400 Missile</Russian>
             <German>S-400 Rakete</German>
@@ -84,6 +92,7 @@
         <Key ID="STR_ACE_MISSILE_SAM_s400_operator">
             <English>S-400 Operator</English>
             <French>S-400 Operator</French>
+            <Spanish>Operador S-400</Spanish>
             <Italian>Operatore S-400</Italian>
             <Russian>S-400 Operator</Russian>
             <German>S-400 Bediener</German>

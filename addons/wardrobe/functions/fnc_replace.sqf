@@ -26,9 +26,6 @@ private _classTarget = configName _cfgTarget;
 private _classOrigin = configName _cfgOrigin;
 private _cfgWardobeTarget = configFile >> QUOTE(ADDON) >> _classTarget;
 
-// temp action disabled
-GVAR(inProgress) = true;
-
 // duration of the "animation"
 private _duration = getNumber (_cfgWardobeTarget >> "duration");
 
@@ -49,7 +46,23 @@ private _replaceCode = switch (_typeNumber) do {
     };
 };
 if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,_classOrigin); };
-[_replaceCode, [_player, _classTarget, _equipmentType], _duration] call CBA_fnc_waitAndExecute;
+
+private _extendedInfo = createHashMap;
+[QGVAR(itemChangedStart), [_player, _classOrigin, _classTarget, _equipmentType, _extendedInfo]] call CBA_fnc_localEvent;
+
+// temp action disabled
+GVAR(inProgress) = true;
+
+[{
+    params ["_player", "_classOrigin", "_classTarget", "_equipmentType", "_replaceCode", "_extendedInfo"];
+
+    [QGVAR(itemChangedBegin), [_player, _classOrigin, _classTarget, _equipmentType, _extendedInfo]] call CBA_fnc_localEvent;
+
+    [_player, _classTarget, _equipmentType] call _replaceCode;
+
+    [QGVAR(itemChangedEnd), [_player, _classOrigin, _classTarget, _equipmentType, _extendedInfo]] call CBA_fnc_localEvent;
+
+}, [_player, _classOrigin, _classTarget, _equipmentType, _replaceCode, _extendedInfo], _duration] call CBA_fnc_waitAndExecute;
 
 // handle components
 [_classOrigin, _classTarget] call FUNC(compareComponents) params ["_missing", "_surplus"];

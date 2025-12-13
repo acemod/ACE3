@@ -32,7 +32,7 @@ private _statement = {
         TIME_PROGRESSBAR(_timeToUnload),
         [_target, _turretPath, _player, _carryMag, _vehMag],
         {
-            (_this select 0) params ["_target", "_turretPath", "", "_carryMag", "_vehMag"];
+            (_this select 0) params ["_target", "_turretPath", "_player", "_carryMag", "_vehMag"];
             TRACE_5("unload progressBar finish",_target,_turretPath,_carryMag,_vehMag,_player);
             [QGVAR(removeTurretMag), [_target, _turretPath, _carryMag, _vehMag, _player]] call CBA_fnc_globalEvent;
         },

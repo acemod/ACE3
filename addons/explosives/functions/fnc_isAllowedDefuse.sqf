@@ -7,10 +7,10 @@
  * 0: Mine <OBJECT>
  *
  * Return Value:
- * Allowed <BOOL>
+ * Allowed to defuse <BOOL>
  *
  * Example:
- * [_mine] call ace_explosives_fnc_isAllowedDefuse
+ * cursorObject call ace_explosives_fnc_isAllowedDefuse
  *
  * Public: Yes
  */
@@ -18,4 +18,4 @@
 params [["_mine", objNull, [objNull]]];
 TRACE_1("params",_mine);
 
-!(_mine in GVAR(excludedMines))
+!(_mine in GVAR(excludedMines)) // return
