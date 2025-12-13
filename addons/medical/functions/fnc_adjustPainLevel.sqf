@@ -21,6 +21,8 @@ params ["_unit", "_addedPain"];
 
 if (!local _unit) exitWith { ERROR_1("unit [%1] is not local",_unit); };
 
+if (!IS_MEDICAL_ACTIVITY(_unit)) then { [QGVAR(activateMedical), _unit] call CBA_fnc_localEvent; };
+
 private _pain = GET_PAIN(_unit);
 
 _pain = 0 max (_pain + _addedPain) min 1;
