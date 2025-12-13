@@ -7,10 +7,11 @@
  * 0: Unique Identifier <STRING>
  * 1: Display Name <STRING>
  * 2: Required Item <STRING>
- * 3: Textures Paths <ARRAY>
+ * 3: Textures Paths <ARRAY of STRINGs>
  * 4: Icon Path <STRING> (default: "")
  * 5: Material Paths <ARRAY>
- * 6: Tag Model <STRING> (optional)
+ * 6: Tag Model <STRING>
+ * 7: Condition <CODE> (default: {true})
  *
  * Return Value:
  * None

@@ -4,7 +4,7 @@
  * Deletes a cached result
  *
  * Arguments:
- * 0: Namespace to store the cache on <NAMESPACE><OBJECT><LOCATION>
+ * 0: Namespace to store the cache on <NAMESPACE or OBJECT or LOCATION>
  * 1: Cache uid <STRING>
  *
  * Return Value:

@@ -7,7 +7,7 @@
  * 0: Number <NUMBER>
  *
  * Return Value:
- * Textures <ARRAY>
+ * Textures <ARRAY of STRINGs>
  *
  * Example:
  * [5] call ace_vector_fnc_convertToTexturesDegree

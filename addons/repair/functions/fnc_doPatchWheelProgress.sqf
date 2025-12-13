@@ -5,9 +5,9 @@
  *
  * Arguments:
  * 0: Arguments <ARRAY>
- *    0:Unit that does the patching <OBJECT>
- *    1:Vehicle to patch <OBJECT>
- *    2:Selected wheel hitpoint <STRING>
+ *    0: Unit that does the patching <OBJECT>
+ *    1: Vehicle to patch <OBJECT>
+ *    2: Selected wheel hitpoint <STRING>
  * 1: Elapsed Time <NUMBER>
  * 2: Total Time <NUMBER>
  *

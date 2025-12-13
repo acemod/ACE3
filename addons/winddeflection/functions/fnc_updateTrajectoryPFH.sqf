@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [bullet, 2] call ace_winddeflection_fnc_updateTrajectoryPFH
+ * [] call ace_winddeflection_fnc_updateTrajectoryPFH
  *
  * Public: No
  */

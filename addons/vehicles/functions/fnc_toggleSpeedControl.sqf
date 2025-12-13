@@ -5,7 +5,7 @@
  * Should run as key handler.
  *
  * Arguments:
- * 0: Cruise Control <BOOL>
+ * 0: Cruise Control <BOOL> (default: false)
  * 1: Preserve Speed Limit <BOOL> (default: false)
  *
  * Return Value:

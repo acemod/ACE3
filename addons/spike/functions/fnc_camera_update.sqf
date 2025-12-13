@@ -5,6 +5,9 @@
  *
  * Arguments:
  * 0: Camera Array <ARRAY>
+ * 1: Projectile <OBJECT>
+ * 2: Delta time <NUMBER>
+ * 3: Camera Namespace <OBJECT>
  *
  * Return Value:
  * None

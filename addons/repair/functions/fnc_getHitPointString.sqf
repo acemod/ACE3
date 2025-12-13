@@ -11,7 +11,7 @@
  *
  * Return Value:
  * 0: Text <STRING>
- * 1: Added Hitpoint <NUMBER>
+ * 1: Added Hitpoint Info <ARRAY>
  *
  * Example:
  * ["HitFuel", "Repairing %1 ...", "Repairing HitFuel"] call ace_repair_fnc_getHitPointString
