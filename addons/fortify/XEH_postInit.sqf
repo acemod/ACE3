@@ -34,7 +34,7 @@ GVAR(objectRotationZ) = 0;
 [QGVAR(sideBudgetHint), {
     params ["_side"];
     if (_side isEqualTo side group ACE_player && {XGVAR(settingHint) isEqualTo 2 || {XGVAR(settingHint) isEqualTo 1 && {"ACE_Fortify" in (ACE_player call EFUNC(common,uniqueItems))}}}) then {
-        private _budget = [_side] call FUNC(getBudget);
+        private _budget = [_side, "side"] call FUNC(getBudget);
         TRACE_2("sideBudgetHint",_side,_budget);
         [format ["%1 $%2", LLSTRING(Budget), _budget]] call EFUNC(common,displayTextStructured);
     };
@@ -56,11 +56,12 @@ GVAR(objectRotationZ) = 0;
             "",
             {
                 params ["_target", "_player", "_params"];
-                _params params ["_side"];
+                _params params ["_side", "_cost"];
                 TRACE_2("deleting placed object",_target,_params);
                 [QXGVAR(objectDeleted), [_player, _side, _target]] call CBA_fnc_globalEvent;
+                private _tokensUsed = _target getVariable [QGVAR(tokensUsed), 0];
                 deleteVehicle _target;
-                _params call FUNC(updateBudget);
+                [_side, _cost, nil, _tokensUsed] call FUNC(updateBudget);
             },
             {(missionNamespace getVariable [QGVAR(fortifyAllowed), true]) && {"ACE_Fortify" in (_player call EFUNC(common,uniqueItems))}},
             {},
@@ -76,9 +77,10 @@ GVAR(objectRotationZ) = 0;
 // Place object event handler
 [QGVAR(deployFinished), {
     params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];
-    _args params ["_unit", "_side", "_typeOf", "_posASL", "_vectorDir", "_vectorUp", "_cost"];
+    _args params ["_unit", "_side", "_typeOf", "_posASL", "_vectorDir", "_vectorUp", "_cost", "_tokensUsed"];
 
     private _newObject = _typeOf createVehicle _posASL;
+    _newObject setVariable [QGVAR(tokensUsed), _tokensUsed, true];
     _newObject setPosASL _posASL;
     _newObject setVectorDirAndUp [_vectorDir, _vectorUp];
 
@@ -96,10 +98,10 @@ GVAR(objectRotationZ) = 0;
 
 [QGVAR(deployCanceled), {
     params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];
-    _args params ["_unit", "_side", "_typeOf", "_posASL", "_vectorDir", "_vectorUp", "_cost"];
+    _args params ["_unit", "_side", "_typeOf", "_posASL", "_vectorDir", "_vectorUp", "_cost", "_tokensUsed"];
 
     // Refund if deploy was canceled
-    [_side, _cost] call FUNC(updateBudget);
+    [_side, _cost, nil, _tokensUsed] call FUNC(updateBudget);
 
     // Reset animation
     [_unit, "", 1] call EFUNC(common,doAnimation);

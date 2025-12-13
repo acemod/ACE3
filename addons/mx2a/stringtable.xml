@@ -17,6 +17,7 @@
             <Chinesesimp>热成像装置</Chinesesimp>
             <Turkish>Termal Görüntüleme Aracı</Turkish>
             <Hungarian>Hőleképező készülék</Hungarian>
+            <Ukrainian>Тепловізійний прилад</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MX2A_DisplayName">
             <English>MX-2A</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>MX-2A（热成像）</Chinesesimp>
             <Turkish>MX-2A</Turkish>
             <Hungarian>MX-2A</Hungarian>
+            <Ukrainian>MX-2A</Ukrainian>
         </Key>
     </Package>
 </Project>

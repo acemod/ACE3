@@ -13,6 +13,7 @@
             <Korean>이중 빔 조준 레이저</Korean>
             <Japanese>複合ビーム照準レーザー</Japanese>
             <Chinesesimp>双光束瞄准激光</Chinesesimp>
+            <Ukrainian>Двопроменевий прицільний лазер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IRLight_DBAL_A3_DescriptionUse">
             <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF&lt;br&gt;Double click to switch mode</English>
@@ -26,6 +27,7 @@
             <Korean>&lt;t color='#9cf953'&gt;사용: &lt;/t&gt;레이저 켜기/끄기&lt;br&gt;터블 클릭으로 모드 전환</Korean>
             <Japanese>&lt;t color='#9cf953'&gt;使用方法: &lt;/t&gt;レーザーのオン/オフ切り替え&lt;br&gt;ダブルクリックでモード切り替え</Japanese>
             <Chinesesimp>&lt;t color='#9cf953'&gt;使用按键 &lt;/t&gt;打开/关闭镭射&lt;br&gt;双击切换模式</Chinesesimp>
+            <Ukrainian>&lt;t color='#9cf953'&gt;Використання: &lt;/t&gt;Ввімкнення / вимкнення лазера &lt;br&gt;Подвійне клацання для перемикання режиму</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IRLight_DBAL_A3_Green">
             <English>DBAL-A3 (Green)</English>
@@ -39,6 +41,7 @@
             <Korean>DBAL-A3 (녹색)</Korean>
             <Japanese>DBAL-A3 (緑)</Japanese>
             <Chinesesimp>DBAL-A3 (绿色)</Chinesesimp>
+            <Ukrainian>DBAL-A3 (зелений)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IRLight_DBAL_A3_Red">
             <English>DBAL-A3 (Red)</English>
@@ -52,6 +55,7 @@
             <Korean>DBAL-A3 (빨강)</Korean>
             <Japanese>DBAL-A3 (赤)</Japanese>
             <Chinesesimp>DBAL-A3 (红色)</Chinesesimp>
+            <Ukrainian>DBAL-A3 (червоний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_IRDual">
             <English>IR Laser and Illuminator</English>
@@ -65,6 +69,7 @@
             <Korean>적외선 레이저와 조명</Korean>
             <Japanese>IRレーザーとイルミネーター</Japanese>
             <Chinesesimp>红外激光和照明</Chinesesimp>
+            <Ukrainian>ІЧ-лазер і освітлювач</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_IRIlluminator">
             <English>IR Illuminator</English>
@@ -78,6 +83,7 @@
             <Korean>적외선 조명</Korean>
             <Japanese>IRイルミネーター</Japanese>
             <Chinesesimp>红外照明</Chinesesimp>
+            <Ukrainian>ІЧ-освітлювач</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_IRPointer">
             <English>IR Laser</English>
@@ -91,6 +97,7 @@
             <Korean>적외선 레이저</Korean>
             <Japanese>IRレーザー</Japanese>
             <Chinesesimp>红外激光</Chinesesimp>
+            <Ukrainian>ІЧ-лазер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_Medium">
             <English>Medium Beam</English>
@@ -104,6 +111,7 @@
             <Korean>중간 빔</Korean>
             <Japanese>標準ビーム</Japanese>
             <Chinesesimp>中等光束</Chinesesimp>
+            <Ukrainian>Середній промінь</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_Narrow">
             <English>Narrow Beam</English>
@@ -117,6 +125,7 @@
             <Korean>좁은 빔</Korean>
             <Japanese>狭角ビーム</Japanese>
             <Chinesesimp>窄光束</Chinesesimp>
+            <Ukrainian>Вузький промінь</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_VisiblePointer">
             <English>Visible Laser</English>
@@ -130,6 +139,7 @@
             <Korean>가시 레이저</Korean>
             <Japanese>可視光レーザー</Japanese>
             <Chinesesimp>可见激光</Chinesesimp>
+            <Ukrainian>Видимий лазер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IRLight_Mode_Wide">
             <English>Wide Beam</English>
@@ -143,6 +153,7 @@
             <Korean>넓은 빔</Korean>
             <Japanese>広角ビーム</Japanese>
             <Chinesesimp>宽光束</Chinesesimp>
+            <Ukrainian>Широкий промінь</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IRLight_MomentarySwitch">
             <English>Illuminator / Laser Momentary Switch</English>
@@ -156,6 +167,7 @@
             <Korean>조명/레이저 빠르게 스위치</Korean>
             <Japanese>イルミネーター/レーザーモーメンタリースイッチ</Japanese>
             <Chinesesimp>照明/激光按住开关</Chinesesimp>
+            <Ukrainian>Миттєвий перемикач освітлювача/лазера</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IRLight_SPIR_DescriptionShort">
             <English>Special Purpose IR LED Illuminator</English>
@@ -169,6 +181,7 @@
             <Korean>특수목적 적외선 LED 조명</Korean>
             <Japanese>特殊用途のIR LEDイルミネーター</Japanese>
             <Chinesesimp>特殊用途红外LED照明器</Chinesesimp>
+            <Ukrainian>ІЧ-світлодіодний освітлювач спеціального призначення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_IRLight_SPIR_DescriptionUse">
             <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Light ON/OFF&lt;br&gt;Double click to switch mode</English>
@@ -182,6 +195,7 @@
             <Korean>&lt;t color='#9cf953'&gt;사용: &lt;/t&gt;조명 켜기/끄기&lt;br&gt;더블 클릭으로 모드 전환</Korean>
             <Japanese>&lt;t color='#9cf953'&gt;使用方法: &lt;/t&gt;ライトのオン/オフ&lt;br&gt;ダブルクリックでモード切り替え</Japanese>
             <Chinesesimp>&lt;t color='#9cf953'&gt;使用按键 &lt;/t&gt;打开/关闭灯光&lt;br&gt;双击切换模式</Chinesesimp>
+            <Ukrainian>&lt;t color='#9cf953'&gt;Використання: &lt;/t&gt;Увімкнення / вимкнення освітлення &lt;br&gt;Подвійне клацання для перемикання режиму</Ukrainian>
         </Key>
     </Package>
 </Project>

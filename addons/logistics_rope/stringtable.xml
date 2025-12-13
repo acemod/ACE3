@@ -16,6 +16,7 @@
             <Chinese>繩索（12.2公尺長）</Chinese>
             <Chinesesimp>绳索（12.2米）</Chinesesimp>
             <Turkish>12.2 metre halat</Turkish>
+            <Ukrainian>Трос 12,2 метра</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Logistics_Rope_Rope_15_Display">
             <English>Rope 15.2 meters</English>
@@ -32,6 +33,7 @@
             <Chinese>繩索（15.2公尺長）</Chinese>
             <Chinesesimp>绳索（15.2米）</Chinesesimp>
             <Turkish>15.2 metre halat</Turkish>
+            <Ukrainian>Трос 15,2 метра</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Logistics_Rope_Rope_18_Display">
             <English>Rope 18.3 meters</English>
@@ -48,6 +50,7 @@
             <Chinese>繩索（18.3公尺長）</Chinese>
             <Chinesesimp>绳索（18.3米）</Chinesesimp>
             <Turkish>18.3 metre halat</Turkish>
+            <Ukrainian>Трос 18,3 метра</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Logistics_Rope_Rope_27_Display">
             <English>Rope 27.4 meters</English>
@@ -64,6 +67,7 @@
             <Chinese>繩索（27.4公尺長）</Chinese>
             <Chinesesimp>绳索（27.4米）</Chinesesimp>
             <Turkish>27.4 metre halat</Turkish>
+            <Ukrainian>Трос 27,4 метра</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Logistics_Rope_Rope_36_Display">
             <English>Rope 36.6 meters</English>
@@ -80,6 +84,7 @@
             <Chinese>繩索（36.6公尺長）</Chinese>
             <Chinesesimp>绳索（36.6米）</Chinesesimp>
             <Turkish>36.6 metre halat</Turkish>
+            <Ukrainian>Трос 36,6 метрів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Logistics_Rope_Rope_3_Display">
             <English>Rope 3.2 meters</English>
@@ -95,6 +100,7 @@
             <Japanese>ロープ (3.2 メートル)</Japanese>
             <Chinesesimp>绳索（3.2米）</Chinesesimp>
             <Turkish>3.2 metre halat</Turkish>
+            <Ukrainian>Трос 3,2 метра</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Logistics_Rope_Rope_6_Display">
             <English>Rope 6.2 meters</English>
@@ -110,6 +116,7 @@
             <Japanese>ロープ (6.2 メートル)</Japanese>
             <Chinesesimp>绳索（6.2米）</Chinesesimp>
             <Turkish>6.2 metre halat</Turkish>
+            <Ukrainian>Трос 6,2 метра</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Logistics_Rope_descriptionShort">
             <English>A twisted braid of fibers. Usually used for rappelling or towing.</English>
@@ -123,6 +130,7 @@
             <Korean>꼬아진 섬유 끈입니다. 주로 레펠이나 견인에 사용됩니다.</Korean>
             <Japanese>組み紐されたロープ。ラペリングやけん引に使用されます。</Japanese>
             <Chinesesimp>编织绳。通常用于索降和牵引拖曳。</Chinesesimp>
+            <Ukrainian>Кручений трос. Зазвичай використовується для спуску або буксирування.</Ukrainian>
         </Key>
     </Package>
 </Project>

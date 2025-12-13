@@ -37,9 +37,8 @@ class ACE_Interaction_Button_Base {
     soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1};
 };
 
-class IGUIBack;
-class RscListBox;
 class RscText;
+class RscStructuredText;
 class RscPicture;
 class RscControlsGroupNoScrollbars;
 
@@ -98,7 +97,7 @@ class GVAR(RscExtraKey): RscControlsGroupNoScrollbars {
     w = QUOTE(40 * GUI_GRID_W);
     h = QUOTE(GUI_GRID_H);
     class controls {
-        class Name: RscText {
+        class Name: RscStructuredText {
             idc = IDC_MOUSEHINT_EXTRA_NAME;
             style = 1;
             x = 0;
@@ -106,7 +105,16 @@ class GVAR(RscExtraKey): RscControlsGroupNoScrollbars {
             w = QUOTE(21.5 * GUI_GRID_W + GUI_GRID_CENTER_X);
             h = QUOTE(GUI_GRID_H);
             sizeEx = QUOTE(GUI_GRID_H);
-            font = "EtelkaMonospaceProBold";
+            size = QUOTE(GUI_GRID_H);
+            class Attributes {
+                font = "EtelkaMonospaceProBold";
+                color = "#ffffff";
+                align = "right";
+                valign = "middle";
+                shadow = 1;
+                shadowColor = "#000000";
+                size = 1;
+            };
         };
         class Text: RscText {
             idc = IDC_MOUSEHINT_EXTRA_TEXT;

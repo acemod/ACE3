@@ -17,6 +17,7 @@
             <Chinesesimp>观测镜</Chinesesimp>
             <Turkish>Gözcü Dürbünü</Turkish>
             <Hungarian>Megfigyelő távcső</Hungarian>
+            <Ukrainian>Підзорна труба</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SpottingScope_PickUp">
             <English>Pick up Spotting Scope</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>捡起观测镜</Chinesesimp>
             <Turkish>Gözcü Dürbününü al</Turkish>
             <Hungarian>Mefgigy. távcső felvétele</Hungarian>
+            <Ukrainian>Підняти підзорну трубу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SpottingScope_PlaceDown">
             <English>Place Spotting Scope</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>放置观测镜</Chinesesimp>
             <Turkish>Gözcü Dürbününü Yerleştir</Turkish>
             <Hungarian>Megfigy. távcső elhelyezése</Hungarian>
+            <Ukrainian>Встановити підзорну трубу</Ukrainian>
         </Key>
     </Package>
 </Project>

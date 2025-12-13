@@ -32,8 +32,8 @@ private _colorArray = switch (toLowerANSI _color) do {
     case "orange": {[0.8, 0.518, 0, 1]};
     case "yellow": {[0.8, 0.8, 0, 1]};
     case "red": {[0.8, 0, 0, 1]};
-    case "black": {[1, 1, 1, 1]};
-    case "white": {[0, 0, 0, 1]};
+    case "white": {[1, 1, 1, 1]};
+    case "black": {[0, 0, 0, 1]};
     default {[0, 0.8, 0.8, 1]};
 };
 GVAR(dev_trackLines) set [getObjectID _object, [[getPosATL _object], _colorArray]];
