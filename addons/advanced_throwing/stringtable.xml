@@ -20,6 +20,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ChangePower">
             <English>(Scroll) Change Power</English>
+            <Russian>(Прокрутка) Изменение мощности</Russian>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Cook">
             <English>(Click) Cook</English>
@@ -325,6 +326,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_SnapPower">
             <English>(Scroll) Snap Power</English>
+            <Russian>(Прокрутка) Мгновенная мощность</Russian>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Throw">
             <English>Throw</English>
@@ -361,9 +363,11 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_throwStepSetting_Description">
             <English>Adjust the granularity of different throwing modes by using the mouse wheel</English>
+            <Russian>Отрегулируйте степень детализации различных режимов метания с помощью колесика мыши</Russian>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_throwStepSetting_DisplayName">
             <English>Granular Throw Steps</English>
+            <Russian>Этапы гранулирвоанного броска</Russian>
         </Key>
     </Package>
 </Project>
