@@ -10,47 +10,54 @@
  * None
  *
  * Example:
- * Handled by CBA
+ * player call ace_explosives_fnc_onIncapacitated
  *
  * Public: No
  */
 
-//NOTE: Extended_Killed_EventHandlers runs only where _unit is local
+// NOTE: Extended_Killed_EventHandlers runs only where _unit is local
 params ["_unit"];
 TRACE_1("params",_unit);
 
-if (_unit == ace_player) then {
-    // close cellphone if open
+// Close cellphone if open
+if (_unit == ACE_player) then {
     findDisplay 8855 closeDisplay 0;
 };
 
 // Exit if no item
-if !("ACE_DeadManSwitch" in (_unit call EFUNC(common,uniqueItems))) exitWith {};
+if !([_unit, "ACE_DeadManSwitch"] call EFUNC(common,hasItem)) exitWith {};
 
 private _range = getNumber (configFile >> "CfgWeapons" >> "ACE_DeadManSwitch" >> QGVAR(range));
-private _deadman = [_unit, "DeadManSwitch"] call FUNC(getPlacedExplosives);
-TRACE_2("placed",_deadman,_range);
+private _deadmanExplosives = [_unit, "DeadManSwitch"] call FUNC(getPlacedExplosives);
+TRACE_2("placed",_deadmanExplosives,_range);
+
 {
     [_unit, _range, _x, "ACE_DeadManSwitch"] call FUNC(detonateExplosive);
-} forEach _deadman;
+} forEach _deadmanExplosives;
 
-//Handle deadman connected to explosive in inventory
+// Handle deadman connected to explosive in inventory
 private _connectedInventoryExplosive = _unit getVariable [QGVAR(deadmanInvExplosive), ""];
-if (_connectedInventoryExplosive != "") then {
-    if !(_connectedInventoryExplosive in (magazines _unit)) exitWith {};
 
-    //Remove mag and reset variable
-    _unit removeMagazine _connectedInventoryExplosive;
-    _unit setVariable [QGVAR(deadmanInvExplosive), "", true];
+if !([_unit, _connectedInventoryExplosive] call EFUNC(common,hasMagazine)) exitWith {};
 
-    private _ammo = getText (configFile >> "CfgMagazines" >> _connectedInventoryExplosive >> "ammo");
-    TRACE_2("deadman inventory",_connectedInventoryExplosive,_ammo);
-    private _magazineTrigger = configFile >> "CfgMagazines" >> _connectedInventoryExplosive >> "ACE_Triggers" >> "DeadmanSwitch";
-    if (isText (_magazineTrigger >> "ammo")) then {
-        _ammo = getText (_magazineTrigger >> "ammo");
-    };
+// Remove 1 ammo and reset variable
+[_unit, _connectedInventoryExplosive] call EFUNC(common,adjustMagazineAmmo);
+_unit setVariable [QGVAR(deadmanInvExplosive), nil, true];
 
-    private _explosive = createVehicle [_ammo, (getPos _unit), [], 0, "NONE"];
-    _explosive setPosASL (getPosASL _unit);
-    [_unit, -1, [_explosive, 0.5], "ACE_DeadManSwitch"] call FUNC(detonateExplosive); //Explode, ignoring range, with a 0.5 second delay
+private _magazineConfig = configFile >> "CfgMagazines" >> _connectedInventoryExplosive;
+private _ammo = getText (_magazineConfig >> "ammo");
+TRACE_2("deadman inventory",_connectedInventoryExplosive,_ammo);
+
+private _magazineTrigger = _magazineConfig >> "ACE_Triggers" >> "DeadmanSwitch";
+
+if (isText (_magazineTrigger >> "ammo")) then {
+    _ammo = getText (_magazineTrigger >> "ammo");
 };
+
+private _explosive = _ammo createVehicle [0, 0, 0];
+_explosive setPosASL (getPosASL _unit);
+
+// Explode, ignoring range, with a 0.5 second delay
+[_unit, -1, [_explosive, 0.5], "ACE_DeadManSwitch"] call FUNC(detonateExplosive);
+
+nil
