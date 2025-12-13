@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: mharis001
- * Initalizes the "Set Engineer" Zeus module display.
+ * Initializes the "Set Engineer" Zeus module display.
  *
  * Arguments:
  * 0: setEngineer controls group <CONTROL>

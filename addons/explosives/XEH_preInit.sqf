@@ -10,11 +10,21 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
+GVAR(defusalKits) = keys (uiNamespace getVariable QGVAR(defusalKits));
+GVAR(detonators) = keys (uiNamespace getVariable QGVAR(detonators));
+
 GVAR(activeTrigger) = "";
 
 GVAR(detonationHandlers) = [];
 GVAR(excludedMines) = [];
 
-GVAR(defusalKits) = keys (uiNamespace getVariable QGVAR(defusalKits));
+GVAR(placedCount) = 0;
+GVAR(cellphoneIEDs) = createHashMap;
+
+if (hasInterface) then {
+    GVAR(setup) = objNull;
+    GVAR(pfeh_running) = false;
+    GVAR(currentSpeedDial) = 0;
+};
 
 ADDON = true;

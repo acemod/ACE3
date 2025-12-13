@@ -41,7 +41,7 @@ if (isNil QEFUNC(captives,setSurrendered)) then {
                     [LSTRING(OnlyNonCaptive)] call FUNC(showMessage);
                 } else {
                     private _surrendering = GETVAR(_unit,EGVAR(captives,isSurrendering),false);
-                    // Event initalized by ACE_Captives
+                    // Event initialized by ACE_Captives
                     [QEGVAR(captives,setSurrendered), [_unit, !_surrendering], _unit] call CBA_fnc_targetEvent;
                 };
             };
