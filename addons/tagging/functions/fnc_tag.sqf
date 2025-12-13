@@ -27,6 +27,7 @@ params [
 
 if (isNull _unit || {_texture == ""}) exitWith {
     ERROR_2("Tag parameters invalid. Unit: %1, Texture: %2",_unit,_texture);
+    false
 };
 
 private _isVehicleTag = false;
