@@ -9,7 +9,7 @@
  * 2: Door name <STRING>
  *
  * Return Value:
- * 0: Door Name <STRING><NIL>
+ * 0: Door Name <STRING or NIL>
  *
  * Example:
  * [player, target] call ace_interaction_fnc_getGlassDoor
