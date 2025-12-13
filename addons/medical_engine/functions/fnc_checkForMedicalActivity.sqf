@@ -18,7 +18,7 @@ params ["_unit"];
 TRACE_1("checkForMedicalActivity",_unit);
 
 if (!alive _unit || {!local _unit}) exitWith {};
-if (_unit getVariable [QEGVAR(medical,medicalActivity), false]) exitWith {};
+if (IS_MEDICAL_ACTIVITY(_unit)) exitWith {};
 
 {
     _x params ["_var", "_default"];
