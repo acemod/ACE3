@@ -4,7 +4,7 @@
  * Returns the arithmetic result of performing the given operation on a set.
  *
  * Arguments:
- * 0: Namespace <OBJECT|LOCATION|NAMESPACE>
+ * 0: Namespace <OBJECT or LOCATION or NAMESPACE>
  * 1: Number Set ID <STRING>
  * 2: Operation (max, min, sum, product, avg) (Case Sensitive) <STRING>
  *

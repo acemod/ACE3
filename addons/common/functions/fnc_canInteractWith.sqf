@@ -6,7 +6,7 @@
  * Arguments:
  * 0: The player. <OBJECT>
  * 1: The interaction target. objNull to ignore. <OBJECT>
- * 2: Exceptions. What general conditions are to skip? (works like a permission system, if there is an exception, it will return true)(default: []) <ARRAY>
+ * 2: Exceptions. What general conditions are to skip? (works like a permission system, if there is an exception, it will return true) <ARRAY> (default: [])
  *
  * Return Value:
  * Unit can interact? <BOOL>

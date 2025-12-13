@@ -16,6 +16,7 @@
             <Chinese>BM-2T"潛行者"步兵戰車（醫療用）</Chinese>
             <Chinesesimp>BM-2T "潜行者"（医疗）</Chinesesimp>
             <Turkish>BM-2T Stalker (Sıhhiye)</Turkish>
+            <Ukrainian>БМ-2Т Сталкер (медичний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_APC_Wheeled_01_medical_Name">
             <English>Badger IFV (Medical)</English>
@@ -32,6 +33,7 @@
             <Chinese>"蜜獾"步兵戰車（醫療用）</Chinese>
             <Chinesesimp>"蜜獾"（医疗）</Chinesesimp>
             <Turkish>Badger IFV (Sıhhiye)</Turkish>
+            <Ukrainian>БМП Badger (медичний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_Aegis_arifle_CTARS_tan_f">
             <English>QBZ-95-1 LSW (Sand)</English>
@@ -49,6 +51,7 @@
             <Chinesesimp>95-1式班用机枪（沙色）</Chinesesimp>
             <Turkish>QBZ-95-1 LSW (Kum)</Turkish>
             <Hungarian>QBZ-95-1 LSW (Homok)</Hungarian>
+            <Ukrainian>QBZ-95-1 LSW (Пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_Aegis_arifle_CTAR_GL_tan_f">
             <English>QBZ-95-1 GL (Sand)</English>
@@ -66,6 +69,7 @@
             <Chinesesimp>95-1榴弹发射器（沙色）</Chinesesimp>
             <Turkish>QBZ-95-1 GL (Kum)</Turkish>
             <Hungarian>QBZ-95-1 GL (Homok)</Hungarian>
+            <Ukrainian>QBZ-95-1 GL (Пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_Aegis_arifle_CTAR_tan_f">
             <English>QBZ-95-1 (Sand)</English>
@@ -83,6 +87,7 @@
             <Chinesesimp>95-1式自动步枪（沙色）</Chinesesimp>
             <Turkish>QBZ-95-1 (Kum)</Turkish>
             <Hungarian>QBZ-95-1 (Homok)</Hungarian>
+            <Ukrainian>QBZ-95-1 (Пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_LMG_03_khk_F">
             <English>FN Minimi SPW (Khaki)</English>
@@ -100,6 +105,7 @@
             <Chinesesimp>FN Minimi 班用自动机枪（卡其色）</Chinesesimp>
             <Turkish>FN Minimi SPW (Haki)</Turkish>
             <Hungarian>FN Minimi SPW (Khaki)</Hungarian>
+            <Ukrainian>FN Minimi SPW (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_LMG_03_snd_F">
             <English>FN Minimi SPW (Sand)</English>
@@ -117,6 +123,7 @@
             <Chinesesimp>FN Minimi 班用自动机枪（沙色）</Chinesesimp>
             <Turkish>FN Minimi SPW (Kum)</Turkish>
             <Hungarian>FN Minimi SPW (Homok)</Hungarian>
+            <Ukrainian>FN Minimi SPW (Пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_LMG_Mk200_khk_F">
             <English>Stoner 99 LMG (Khaki)</English>
@@ -134,6 +141,7 @@
             <Chinesesimp>斯通纳99轻机枪（卡其色）</Chinesesimp>
             <Turkish>Stoner 99 LMG (Haki)</Turkish>
             <Hungarian>Stoner 99 Könnyűgéppuska (Khaki)</Hungarian>
+            <Ukrainian>Stoner 99 LMG (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_LMG_Mk200_plain_F">
             <English>Stoner 99 LMG (Sand)</English>
@@ -151,6 +159,7 @@
             <Chinesesimp>斯通纳99轻机枪（沙色）</Chinesesimp>
             <Turkish>Stoner 99 LMG (Kum)</Turkish>
             <Hungarian>Stoner 99 Könnyűgéppuska (Homok)</Hungarian>
+            <Ukrainian>Stoner 99 LMG (Пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_LMG_Zafir_black_F">
             <English>Negev NG7 (Black)</English>
@@ -168,6 +177,7 @@
             <Chinesesimp>内格夫 NG7（黑色）</Chinesesimp>
             <Turkish>Negev NG7 (Siyah)</Turkish>
             <Hungarian>Negev NG7 (Fekete)</Hungarian>
+            <Ukrainian>Negev NG7 (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_LMG_Zafir_ghex_F">
             <English>Negev NG7 (Green Hex)</English>
@@ -184,6 +194,7 @@
             <Chinese>內蓋夫NG7機槍 (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>内格夫 NG7（绿色蜂巢迷彩）</Chinesesimp>
             <Turkish>Negev NG7 (Yeşil Hex)</Turkish>
+            <Ukrainian>Negev NG7 (зелений гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_MMG_01_black_F">
             <English>HK121 (Black)</English>
@@ -201,6 +212,7 @@
             <Chinesesimp>HK121（黑色）</Chinesesimp>
             <Turkish>HK121 (Siyah)</Turkish>
             <Hungarian>HK121 (Fekete)</Hungarian>
+            <Ukrainian>HK121 (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_MMG_01_ghex_F">
             <English>HK121 (Green Hex)</English>
@@ -217,6 +229,7 @@
             <Chinese>HK121中型機槍 (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>HK121（绿色蜂巢迷彩）</Chinesesimp>
             <Turkish>HK121 (Yeşil Hex)</Turkish>
+            <Ukrainian>HK121 (зелений гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_MMG_02_khaki_F">
             <English>LWMMG (Khaki)</English>
@@ -234,6 +247,7 @@
             <Chinesesimp>LWMMG（卡其色）</Chinesesimp>
             <Turkish>LWMMG (Haki)</Turkish>
             <Hungarian>LWMMG (Khaki)</Hungarian>
+            <Ukrainian>LWMMG (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_SMG_01_black_F">
             <English>Vector SMG (Black)</English>
@@ -251,6 +265,7 @@
             <Chinesesimp>Vector 冲锋枪（黑色）</Chinesesimp>
             <Turkish>Vector SMG (Siyah)</Turkish>
             <Hungarian>Vector SMG (Fekete)</Hungarian>
+            <Ukrainian>Vector SMG (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_SMG_01_khk_F">
             <English>Vector SMG (Khaki)</English>
@@ -268,6 +283,7 @@
             <Chinesesimp>Vector 冲锋枪（卡其色）</Chinesesimp>
             <Turkish>Vector SMG (Haki)</Turkish>
             <Hungarian>Vector SMG (Khaki)</Hungarian>
+            <Ukrainian>Vector SMG (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_arifle_Mk20C_black_F">
             <English>F2000 Tactical (Black)</English>
@@ -285,6 +301,7 @@
             <Chinesesimp>F2000 战术型（黑色）</Chinesesimp>
             <Turkish>F2000 Tactical (Siyah)</Turkish>
             <Hungarian>F2000 Tactical (Fekete)</Hungarian>
+            <Ukrainian>F2000 Tactical (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_arifle_Mk20C_hex_F">
             <English>F2000 Tactical (Hex)</English>
@@ -302,6 +319,7 @@
             <Chinesesimp>F2000 战术型（蜂巢迷彩）</Chinesesimp>
             <Turkish>F2000 Tactical (Hex)</Turkish>
             <Hungarian>F2000 Tactical (Hex)</Hungarian>
+            <Ukrainian>F2000 Tactical (гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_arifle_Mk20_GL_black_F">
             <English>F2000 EGLM (Black)</English>
@@ -319,6 +337,7 @@
             <Chinesesimp>F2000 EGLM（黑色）</Chinesesimp>
             <Turkish>F2000 EGLM (Siyah)</Turkish>
             <Hungarian>F2000 EGLM (Fekete)</Hungarian>
+            <Ukrainian>F2000 EGLM (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_arifle_Mk20_GL_hex_F">
             <English>F2000 EGLM (Hex)</English>
@@ -336,6 +355,7 @@
             <Chinesesimp>F2000 EGLM（蜂巢迷彩）</Chinesesimp>
             <Turkish>F2000 EGLM (Hex)</Turkish>
             <Hungarian>F2000 EGLM (Hex)</Hungarian>
+            <Ukrainian>F2000 EGLM (гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_arifle_Mk20_black_F">
             <English>F2000 (Black)</English>
@@ -353,6 +373,7 @@
             <Chinesesimp>F2000（黑色）</Chinesesimp>
             <Turkish>F2000 (Siyah)</Turkish>
             <Hungarian>F2000 (Fekete)</Hungarian>
+            <Ukrainian>F2000 (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_arifle_Mk20_hex_F">
             <English>F2000 (Hex)</English>
@@ -370,6 +391,7 @@
             <Chinesesimp>F2000（蜂巢迷彩）</Chinesesimp>
             <Turkish>F2000 (Hex)</Turkish>
             <Hungarian>F2000 (Hex)</Hungarian>
+            <Ukrainian>F2000 (гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_arifle_TRG20_black_F">
             <English>CTAR-21 (Black)</English>
@@ -387,6 +409,7 @@
             <Chinesesimp>CTAR-21（黑色）</Chinesesimp>
             <Turkish>CTAR-21 (Siyah)</Turkish>
             <Hungarian>CTAR-21 (Fekete)</Hungarian>
+            <Ukrainian>CTAR-21 (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_arifle_TRG21_GL_black_F">
             <English>GTAR-21 EGLM (Black)</English>
@@ -404,6 +427,7 @@
             <Chinesesimp>GTAR-21 EGLM（黑色）</Chinesesimp>
             <Turkish>GTAR-21 EGLM (Siyah)</Turkish>
             <Hungarian>GTAR-21 EGLM (Fekete)</Hungarian>
+            <Ukrainian>GTAR-21 EGLM (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_arifle_TRG21_black_F">
             <English>TAR-21 (Black)</English>
@@ -421,6 +445,7 @@
             <Chinesesimp>TAR-21（黑色）</Chinesesimp>
             <Turkish>TAR-21 (Siyah)</Turkish>
             <Hungarian>TAR-21 (Fekete)</Hungarian>
+            <Ukrainian>TAR-21 (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_srifle_DMR_01_black_F">
             <English>VS-121 (Black)</English>
@@ -438,6 +463,7 @@
             <Chinesesimp>VS-121（黑色）</Chinesesimp>
             <Turkish>VS-121 (Siyah)</Turkish>
             <Hungarian>VS-121 (Fekete)</Hungarian>
+            <Ukrainian>VS-121 (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_srifle_DMR_02_tna_F">
             <English>Noreen "Bad News" ULR (Tropic)</English>
@@ -455,6 +481,7 @@
             <Chinesesimp>诺琳 "坏消息" 极距狙击步枪（热带迷彩）</Chinesesimp>
             <Turkish>Noreen "Bad News" ULR (Tropic)</Turkish>
             <Hungarian>Noreen "Bad News" ULR (Tropikus)</Hungarian>
+            <Ukrainian>Noreen "Bad News" ULR (тропік)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_srifle_DMR_05_ghex_F">
             <English>Cyrus (Green Hex)</English>
@@ -472,6 +499,7 @@
             <Chinesesimp>"居鲁士"（绿色蜂巢迷彩）</Chinesesimp>
             <Turkish>Cyrus (Yeşil Hex)</Turkish>
             <Hungarian>Cyrus (Zöld Hex)</Hungarian>
+            <Ukrainian>Cyrus (зелений гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_srifle_DMR_06_black_F">
             <English>M14 (Black)</English>
@@ -489,6 +517,7 @@
             <Chinesesimp>M14（黑色）</Chinesesimp>
             <Turkish>M14 (Siyah)</Turkish>
             <Hungarian>M14 (Fekete)</Hungarian>
+            <Ukrainian>M14 (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_srifle_EBR_blk_F">
             <English>Mk14 Mod 1 EBR (Black)</English>
@@ -506,6 +535,7 @@
             <Chinesesimp>Mk14 Mod 1 EBR（黑色）</Chinesesimp>
             <Turkish>Mk14 Mod 1 EBR (Siyah)</Turkish>
             <Hungarian>Mk14 Mod 1 EBR (Fekete)</Hungarian>
+            <Ukrainian>Mk14 Mod 1 EBR (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_srifle_EBR_khk_F">
             <English>Mk14 Mod 1 EBR (Khaki)</English>
@@ -523,6 +553,7 @@
             <Chinesesimp>Mk14 Mod 1 EBR（卡其色）</Chinesesimp>
             <Turkish>Mk14 Mod 1 EBR (Haki)</Turkish>
             <Hungarian>Mk14 Mod 1 EBR (Khaki)</Hungarian>
+            <Ukrainian>Mk14 Mod 1 EBR (хакі)</Ukrainian>
         </Key>
     </Package>
 </Project>

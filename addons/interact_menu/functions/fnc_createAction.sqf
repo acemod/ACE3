@@ -7,12 +7,12 @@
  * Arguments:
  * 0: Action name <STRING>
  * 1: Name of the action shown in the menu <STRING>
- * 2: Icon file path or Array of icon file path and hex color ("" for default icon) <STRING|ARRAY>
+ * 2: Icon file path or Array of icon file path and hex color ("" for default icon) <STRING or ARRAY>
  * 3: Statement <CODE>
  * 4: Condition <CODE>
  * 5: Insert children code <CODE> (default: {})
  * 6: Action parameters <ANY> (default: [])
- * 7: Position (Position array, Position code or Selection Name) <ARRAY>, <CODE> or <STRING> (default: {[0, 0, 0]})
+ * 7: Position (Position array, Position code or Selection Name) <ARRAY or CODE or STRING> (default: {[0, 0, 0]})
  * 8: Distance <NUMBER> (default: 2)
  * 9: Other parameters [showDisabled,enableInside,canCollapse,runOnHover,doNotCheckLOS] <ARRAY> (default: all false)
  * 10: Modifier function <CODE> (default: {})

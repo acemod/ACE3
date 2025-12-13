@@ -17,6 +17,7 @@
             <Chinesesimp>"布莱德斯"</Chinesesimp>
             <Turkish>Bardelas</Turkish>
             <Hungarian>Bardelas</Hungarian>
+            <Ukrainian>Bardelas</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Tracked_01_CRV_Name">
             <English>Nemmera</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>"雌豹"</Chinesesimp>
             <Turkish>Nemmera</Turkish>
             <Hungarian>Nemmera</Hungarian>
+            <Ukrainian>Nemmera</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Tracked_01_rcws_Name">
             <English>Namer</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>"花豹"</Chinesesimp>
             <Turkish>Namer</Turkish>
             <Hungarian>Namer</Hungarian>
+            <Ukrainian>Намер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Tracked_02_AA_Name">
             <English>ZSU-35 Tigris</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>ZSU-35 "底格里斯"</Chinesesimp>
             <Turkish>ZSU-35 Tigris</Turkish>
             <Hungarian>ZSU-35 Tigris</Hungarian>
+            <Ukrainian>ЗСУ-35 Tigris</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Tracked_02_cannon_Name">
             <English>BM-2T Stalker</English>
@@ -85,6 +89,7 @@
             <Chinesesimp>BM-2T "潜行者"</Chinesesimp>
             <Turkish>BM-2T Stalker</Turkish>
             <Hungarian>BM-2T Stalker</Hungarian>
+            <Ukrainian>БМ-2Т Сталкер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Wheeled_01_cannon_Name">
             <English>Badger IFV</English>
@@ -102,6 +107,7 @@
             <Chinesesimp>"蜜獾"</Chinesesimp>
             <Turkish>Badger IFV</Turkish>
             <Hungarian>Badger IFV</Hungarian>
+            <Ukrainian>БМП Badger</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Wheeled_02_rcws_Name">
             <English>Otokar ARMA</English>
@@ -119,6 +125,7 @@
             <Chinesesimp>奥托卡尔 "阿玛"</Chinesesimp>
             <Turkish>Otokar ARMA</Turkish>
             <Hungarian>Otokar ARMA</Hungarian>
+            <Ukrainian>Otokar ARMA</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Wheeled_03_cannon_Name">
             <English>Pandur II</English>
@@ -136,6 +143,7 @@
             <Chinesesimp>"潘德"二型</Chinesesimp>
             <Turkish>Pandur II</Turkish>
             <Hungarian>Pandur II</Hungarian>
+            <Ukrainian>Pandur II</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_tracked_03_cannon_Name">
             <English>FV510 Warrior</English>
@@ -153,6 +161,7 @@
             <Chinesesimp>FV510 "战士"</Chinesesimp>
             <Turkish>FV510 Warrior</Turkish>
             <Hungarian>FV510 Warrior</Hungarian>
+            <Ukrainian>FV510 Warrior</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APERSBoundingMine_Name">
             <English>M26 Anti-Personnel Bounding Mine</English>
@@ -170,6 +179,7 @@
             <Chinesesimp>M26 反人员跳雷</Chinesesimp>
             <Turkish>M26 Anti Personel Mayını</Turkish>
             <Hungarian>M26 gyalogsági ugróakna</Hungarian>
+            <Ukrainian>M26 протипіхотна міна</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APERSMine_Name">
             <English>VS-50 Anti-Personnel Mine</English>
@@ -187,6 +197,7 @@
             <Chinesesimp>VS-50 反人员地雷</Chinesesimp>
             <Turkish>VS-50 Anti-Personel Mayını</Turkish>
             <Hungarian>VS-50 gyalogsági taposóakna</Hungarian>
+            <Ukrainian>VS-50 протипіхотна міна</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APERSMine_ToePopper_Name">
             <English>VS-50 Anti-Personnel Mine (Toe-Popper)</English>
@@ -198,6 +209,7 @@
             <Korean>VS-50 대인지뢰 (발목지뢰형)</Korean>
             <Japanese>VS-50 対人地雷 (トウポッパー)</Japanese>
             <Chinesesimp>VS-50 反人员地雷 (脚尖毁灭者)</Chinesesimp>
+            <Ukrainian>VS-50 протипіхотна міна (Toe-Popper)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APERSTripwireMine_Name">
             <English>PMR-3 Anti-Personnel Tripwire Mine</English>
@@ -215,6 +227,7 @@
             <Chinesesimp>PMR-3 反人员绊雷</Chinesesimp>
             <Turkish>PMR-3 Telli Anti Personel Mayını</Turkish>
             <Hungarian>PMR-3 botlódrótos gyalogsági akna</Hungarian>
+            <Ukrainian>PMR-3 протипіхотна міна</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_ATMine_Name">
             <English>M15 Anti-Tank Mine</English>
@@ -232,6 +245,7 @@
             <Chinesesimp>M15 反坦克地雷</Chinesesimp>
             <Turkish>M15 Anti-Tank Mayını</Turkish>
             <Hungarian>M15 harckocsiakna</Hungarian>
+            <Ukrainian>M15 протитанкова міна</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_at">
             <English>Jeep Wrangler (SPG-9)</English>
@@ -248,6 +262,7 @@
             <Chinese>"牧馬人"吉普車 (SPG-9火箭筒)</Chinese>
             <Chinesesimp>"牧马人"吉普车（SPG-9火箭筒）</Chinesesimp>
             <Turkish>Jeep Wrangler (SPG-9)</Turkish>
+            <Ukrainian>Jeep Wrangler (СПГ-9)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_lmg">
             <English>Jeep Wrangler (LMG)</English>
@@ -264,6 +279,7 @@
             <Chinese>"牧馬人"吉普車 (輕機槍)</Chinese>
             <Chinesesimp>"牧马人"吉普车（轻机枪）</Chinesesimp>
             <Turkish>Jeep Wrangler (LMG)</Turkish>
+            <Ukrainian>Jeep Wrangler (з кулеметом)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_unarmed">
             <English>Jeep Wrangler</English>
@@ -281,6 +297,7 @@
             <Chinesesimp>"牧马人"吉普车</Chinesesimp>
             <Turkish>Jeep Wrangler</Turkish>
             <Hungarian>Jeep Wrangler</Hungarian>
+            <Ukrainian>Jeep Wrangler</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Plane_Civil_01">
             <English>Cessna TTx</English>
@@ -298,6 +315,7 @@
             <Chinesesimp>"赛斯纳"TTx 单引擎飞机</Chinesesimp>
             <Turkish>Cessna TTx</Turkish>
             <Hungarian>Cessna TTx</Hungarian>
+            <Ukrainian>Cessna TTx</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Plane_Civil_01_racing">
             <English>Cessna TTx (Racing)</English>
@@ -315,6 +333,7 @@
             <Chinesesimp>"赛斯纳"TTx 单引擎飞机（竞速）</Chinesesimp>
             <Turkish>Cessna TTx (Racing)</Turkish>
             <Hungarian>Cessna TTx (Racing)</Hungarian>
+            <Ukrainian>Cessna TTx (Racing)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Claymore_Name">
             <English>M18A1 Claymore</English>
@@ -332,6 +351,7 @@
             <Chinesesimp>M18A1 "阔剑"</Chinesesimp>
             <Turkish>M18A1 Claymore</Turkish>
             <Hungarian>M18A1 Claymore akna</Hungarian>
+            <Ukrainian>M18A1 Клеймор</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_02">
             <English>Noreen "Bad News" ULR</English>
@@ -349,6 +369,7 @@
             <Chinesesimp>诺琳 "坏消息" 极距狙击步枪</Chinesesimp>
             <Turkish>Noreen "Bad News" ULR</Turkish>
             <Hungarian>Noreen "Bad News"ULR</Hungarian>
+            <Ukrainian>Noreen "Bad News" ULR</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_03">
             <English>SIG 556</English>
@@ -366,6 +387,7 @@
             <Chinesesimp>SIG 556</Chinesesimp>
             <Turkish>SIG 556</Turkish>
             <Hungarian>SIG 556</Hungarian>
+            <Ukrainian>SIG 556</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_04">
             <English>ASP-1 Kir</English>
@@ -383,6 +405,7 @@
             <Chinesesimp>ASP-1 "基尔"</Chinesesimp>
             <Turkish>ASP-1 Kir</Turkish>
             <Hungarian>ASP-1 Kir</Hungarian>
+            <Ukrainian>ASP-1 Kir</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_05">
             <English>Cyrus</English>
@@ -400,6 +423,7 @@
             <Chinesesimp>"居鲁士"</Chinesesimp>
             <Turkish>Cyrus</Turkish>
             <Hungarian>Cyrus</Hungarian>
+            <Ukrainian>Cyrus</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_06">
             <English>M14</English>
@@ -417,6 +441,7 @@
             <Chinesesimp>M14</Chinesesimp>
             <Turkish>M14</Turkish>
             <Hungarian>M14</Hungarian>
+            <Ukrainian>M14</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DemoChargeThrowable_Name">
             <English>M112 Demolition Charge (Throwable)</English>
@@ -431,6 +456,7 @@
             <Japanese>M112 爆薬ブロック (投擲仕様)</Japanese>
             <Chinesesimp>M112 塑性炸药（可投掷）</Chinesesimp>
             <Turkish>M112 Demolition Charge (Throwable)</Turkish>
+            <Ukrainian>M112 підривний заряд (кидається)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DemoCharge_Name">
             <English>M112 Demolition Block</English>
@@ -448,6 +474,7 @@
             <Chinesesimp>M112 塑性炸药</Chinesesimp>
             <Turkish>M112 Demolition Block</Turkish>
             <Hungarian>M112 romboló tömb</Hungarian>
+            <Ukrainian>M112 підривний заряд</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_GMG_01_A_Name">
             <English>XM307A</English>
@@ -465,6 +492,7 @@
             <Chinesesimp>XM307A</Chinesesimp>
             <Turkish>XM307A</Turkish>
             <Hungarian>XM307A</Hungarian>
+            <Ukrainian>XM307A</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_GMG_01_Name">
             <English>XM307</English>
@@ -482,6 +510,7 @@
             <Chinesesimp>XM307</Chinesesimp>
             <Turkish>XM307</Turkish>
             <Hungarian>XM307</Hungarian>
+            <Ukrainian>XM307</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_GMG_01_high_Name">
             <English>XM307 (High)</English>
@@ -499,6 +528,7 @@
             <Chinesesimp>XM307（高）</Chinesesimp>
             <Turkish>XM307 (Yüksek)</Turkish>
             <Hungarian>XM307 (Magasított)</Hungarian>
+            <Ukrainian>XM307 (Високий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HMG_01_A_Name">
             <English>XM312A</English>
@@ -516,6 +546,7 @@
             <Chinesesimp>XM312A</Chinesesimp>
             <Turkish>XM312A</Turkish>
             <Hungarian>XM312A</Hungarian>
+            <Ukrainian>XM312A</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HMG_01_Name">
             <English>XM312</English>
@@ -533,6 +564,7 @@
             <Chinesesimp>XM312</Chinesesimp>
             <Turkish>XM312</Turkish>
             <Hungarian>XM312</Hungarian>
+            <Ukrainian>XM312</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HMG_01_high_Name">
             <English>XM312 (High)</English>
@@ -550,6 +582,7 @@
             <Chinesesimp>XM312（高）</Chinesesimp>
             <Turkish>XM312 (Yüksek)</Turkish>
             <Hungarian>XM312 (Magasított)</Hungarian>
+            <Ukrainian>XM312 (Високий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HandGrenade_Name">
             <English>M67 Fragmentation Grenade</English>
@@ -567,6 +600,7 @@
             <Chinesesimp>M67 破片手榴弹</Chinesesimp>
             <Turkish>M67 El Bombası</Turkish>
             <Hungarian>M67 repeszgránát</Hungarian>
+            <Ukrainian>M67 ручна осколкова граната</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Attack_01_Name">
             <English>RAH-66 Comanche</English>
@@ -584,6 +618,25 @@
             <Chinesesimp>RAH-66 "科曼奇"</Chinesesimp>
             <Turkish>RAH-66 Comanche</Turkish>
             <Hungarian>RAH-66 Comanche</Hungarian>
+            <Ukrainian>RAH-66 Comanche</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_Heli_Attack_01_pylons_Name">
+            <English>RAH-66 Comanche (Stub Wings)</English>
+            <Czech>RAH-66 Comanche (křídla nízké štíhlosti)</Czech>
+            <French>RAH-66 Comanche (ailettes)</French>
+            <Spanish>RAH-66 Comanche (semialas)</Spanish>
+            <Italian>RAH-66 Comanche (semiali)</Italian>
+            <Polish>RAH-66 Comanche(skrzydełka)</Polish>
+            <Portuguese>RAH-66 Comanche (Asas auxiliares)</Portuguese>
+            <Russian>RAH-66 Comanche (короткие крылья)</Russian>
+            <German>RAH-66 Comanche (Stummelflügel)</German>
+            <Korean>RAH-66 코만치 (스터브 윙)</Korean>
+            <Japanese>RAH-66 コマンチ (スタブウイング)</Japanese>
+            <Chinese>RAH-66 "卡曼契"攻擊直升機（短翼）</Chinese>
+            <Chinesesimp>RAH-66 "科曼奇"（短翼）</Chinesesimp>
+            <Turkish>RAH-66 Comanche (Yarım Kanatlar)</Turkish>
+            <Hungarian>RAH-66 Comanche (csonk szárny)</Hungarian>
+            <Ukrainian>RAH-66 Comanche (короткі крила)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_01_Name">
             <English>MH-6 Little Bird</English>
@@ -601,6 +654,7 @@
             <Chinesesimp>MH-6 "小鸟"</Chinesesimp>
             <Turkish>MH-6 Little Bird</Turkish>
             <Hungarian>MH-6 Little Bird</Hungarian>
+            <Ukrainian>MH-6 Little Bird</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_01_armed_Name">
             <English>AH-6 Little Bird</English>
@@ -618,6 +672,7 @@
             <Chinesesimp>AH-6 "小鸟"</Chinesesimp>
             <Turkish>AH-6 Little Bird</Turkish>
             <Hungarian>AH-6 Little Bird</Hungarian>
+            <Ukrainian>AH-6 Little Bird</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_01_civil_Name">
             <English>MD 500</English>
@@ -635,6 +690,7 @@
             <Chinesesimp>MD 500 "防卫者"</Chinesesimp>
             <Turkish>MD 500</Turkish>
             <Hungarian>MD 500</Hungarian>
+            <Ukrainian>MD 500</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_02_Name">
             <English>Ka-60 Kasatka</English>
@@ -652,6 +708,7 @@
             <Chinesesimp>Ka-60 "虎鲸"</Chinesesimp>
             <Turkish>Ka-60 Kasatka</Turkish>
             <Hungarian>Ka-60 Kasatka</Hungarian>
+            <Ukrainian>Ка-60 Касатка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_02_unarmed_Name">
             <English>Ka-60 Kasatka (unarmed)</English>
@@ -669,6 +726,7 @@
             <Chinesesimp>Ka-60 "虎鲸"（无武装）</Chinesesimp>
             <Turkish>Ka-60 Kasatka (Silahsız)</Turkish>
             <Hungarian>Ka-60 Kasatka (fegyvertelen)</Hungarian>
+            <Ukrainian>Ka-60 Касатка (неозброєний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_02_v2_Name">
             <English>Ka-60 Kasatka (Black &amp; White)</English>
@@ -685,6 +743,7 @@
             <Chinese>Ka-60 "逆戟鯨"直升機 (黑&amp;白)</Chinese>
             <Chinesesimp>Ka-60 "虎鲸"（黑白）</Chinesesimp>
             <Turkish>Ka-60 Kasatka (Siyah &amp; Beyaz)</Turkish>
+            <Ukrainian>Ka-60 Касатка (чорно-білий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Transport_02_Name">
             <English>AW101 Merlin</English>
@@ -702,6 +761,7 @@
             <Chinesesimp>AW101 "灰背隼"</Chinesesimp>
             <Turkish>AW101 Merlin</Turkish>
             <Hungarian>AW101 Merlin</Hungarian>
+            <Ukrainian>AW101 Merlin</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Transport_03_Name">
             <English>CH-47I Chinook</English>
@@ -719,6 +779,7 @@
             <Chinesesimp>CH-47I "支努干"</Chinesesimp>
             <Turkish>CH-47I Chinook</Turkish>
             <Hungarian>CH-47I Chinook</Hungarian>
+            <Ukrainian>CH-47I Chinook</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Transport_03_unarmed_Name">
             <English>CH-47I Chinook (unarmed)</English>
@@ -736,6 +797,7 @@
             <Chinesesimp>CH-47I "支努干"（无武装）</Chinesesimp>
             <Turkish>CH-47I Chinook (silahsız)</Turkish>
             <Hungarian>CH-47I Chinook (fegyvertelen)</Hungarian>
+            <Ukrainian>CH-47I Chinook (неозброєний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_light_03_Name">
             <English>AW159 Wildcat</English>
@@ -753,6 +815,7 @@
             <Chinesesimp>AW159 "野猫"</Chinesesimp>
             <Turkish>AW159 Wildcat</Turkish>
             <Hungarian>AW159 Wildcat</Hungarian>
+            <Ukrainian>AW159 Wildcat</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_light_03_unarmed_Name">
             <English>AW159 Wildcat (unarmed)</English>
@@ -770,6 +833,7 @@
             <Chinesesimp>AW159 "野猫"（无武装）</Chinesesimp>
             <Turkish>AW159 Wildcat (silahsız)</Turkish>
             <Hungarian>AW159 Wildcat (fegyvertelen)</Hungarian>
+            <Ukrainian>AW159 Wildcat (неозброєний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_03">
             <English>FN Minimi SPW</English>
@@ -787,6 +851,7 @@
             <Chinesesimp>FN Minimi 班用自动机枪</Chinesesimp>
             <Turkish>FN Minimi SPW</Turkish>
             <Hungarian>FN Minimi SPW</Hungarian>
+            <Ukrainian>FN Minimi SPW</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_Mk200_Name">
             <English>Stoner 99 LMG</English>
@@ -804,6 +869,7 @@
             <Chinesesimp>斯通纳 99</Chinesesimp>
             <Turkish>Stoner 99 LMG</Turkish>
             <Hungarian>Stoner 99 Könnyűgéppuska</Hungarian>
+            <Ukrainian>Stoner 99 LMG</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_Mk200_black">
             <English>Stoner 99 LMG (Black)</English>
@@ -821,6 +887,7 @@
             <Chinesesimp>斯通纳 99（黑色）</Chinesesimp>
             <Turkish>Stoner 99 LMG (Siyah)</Turkish>
             <Hungarian>Stoner 99 Könnyűgéppuska (Fekete)</Hungarian>
+            <Ukrainian>Stoner 99 LMG (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_Zafir_Name">
             <English>Negev NG7</English>
@@ -838,6 +905,7 @@
             <Chinesesimp>内格夫 NG7</Chinesesimp>
             <Turkish>Negev NG7</Turkish>
             <Hungarian>Negev NG7</Hungarian>
+            <Ukrainian>Negev NG7</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_AA">
             <English>Wiesel 2 Ozelot (AA)</English>
@@ -854,6 +922,7 @@
             <Chinese>"鼬鼠"2裝甲車 (防空)</Chinese>
             <Chinesesimp>"鼬鼠"2（防空）</Chinesesimp>
             <Turkish>Wiesel 2 Ozelot (AA)</Turkish>
+            <Ukrainian>Wiesel 2 Ozelot (ЗРК)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_AT">
             <English>Wiesel 2 (ATGM)</English>
@@ -870,6 +939,7 @@
             <Chinese>"鼬鼠"2裝甲車 (反坦導彈)</Chinese>
             <Chinesesimp>"鼬鼠"2（反坦）</Chinesesimp>
             <Turkish>Wiesel 2 (ATGM)</Turkish>
+            <Ukrainian>Wiesel 2 (ПТРК)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_cannon">
             <English>Wiesel 2 (MK20)</English>
@@ -886,6 +956,7 @@
             <Chinese>"鼬鼠"2裝甲車 (MK20機炮)</Chinese>
             <Chinesesimp>"鼬鼠"2（MK20）</Chinesesimp>
             <Turkish>Wiesel 2 (MK20)</Turkish>
+            <Ukrainian>Wiesel 2 (MK20)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_scout">
             <English>Wiesel 2 RFCV (Radar)</English>
@@ -902,6 +973,7 @@
             <Chinese>"鼬鼠"2裝甲車 (雷達)</Chinese>
             <Chinesesimp>"鼬鼠"2（雷达）</Chinesesimp>
             <Turkish>Wiesel 2 RFCV (Radar)</Turkish>
+            <Ukrainian>Wiesel 2 RFCV (радар)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_01_TUSK_Name">
             <English>Merkava Mk IV LIC</English>
@@ -919,6 +991,7 @@
             <Chinesesimp>"梅卡瓦"4M 城市版</Chinesesimp>
             <Turkish>Merkava Mk IV LIC</Turkish>
             <Hungarian>Merkava Mk IV LIC</Hungarian>
+            <Ukrainian>Merkava Mk IV LIC</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_01_arty_Name">
             <English>Sholef</English>
@@ -936,6 +1009,7 @@
             <Chinesesimp>"神枪"</Chinesesimp>
             <Turkish>Sholef</Turkish>
             <Hungarian>Sholef</Hungarian>
+            <Ukrainian>Шолеф</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_01_cannon_Name">
             <English>Merkava Mk IV M</English>
@@ -953,6 +1027,7 @@
             <Chinesesimp>"梅卡瓦"4M</Chinesesimp>
             <Turkish>Merkava Mk IV M</Turkish>
             <Hungarian>Merkava Mk IV M</Hungarian>
+            <Ukrainian>Merkava Mk IV M</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_01_mlrs_Name">
             <English>Seara</English>
@@ -970,6 +1045,7 @@
             <Chinesesimp>"希拉"</Chinesesimp>
             <Turkish>Seara</Turkish>
             <Hungarian>Seara</Hungarian>
+            <Ukrainian>Seara</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_02_arty_Name">
             <English>2S9 Sochor</English>
@@ -987,6 +1063,7 @@
             <Chinesesimp>2S9 "索科尔"</Chinesesimp>
             <Turkish>2S9 Sochor</Turkish>
             <Hungarian>2S9 Sochor</Hungarian>
+            <Ukrainian>2S9 Сокор</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_02_cannon_Name">
             <English>T100 Black Eagle</English>
@@ -1004,6 +1081,7 @@
             <Chinesesimp>T-100 "黑鹰"</Chinesesimp>
             <Turkish>T100 Black Eagle</Turkish>
             <Hungarian>T100 Fekete Sas</Hungarian>
+            <Ukrainian>T100 Чорний Орел</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_03_cannon_Name">
             <English>Leopard 2SG</English>
@@ -1021,6 +1099,7 @@
             <Chinesesimp>"豹"2 新加坡版</Chinesesimp>
             <Turkish>Leopard 2SG</Turkish>
             <Hungarian>Leopard 2SG</Hungarian>
+            <Ukrainian>Leopard 2SG</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_04_cannon">
             <English>T-14 Armata</English>
@@ -1037,6 +1116,7 @@
             <Chinese>T-14 "阿瑪塔"主戰坦克</Chinese>
             <Chinesesimp>T-14 "阿玛塔"</Chinesesimp>
             <Turkish>T-14 Armata</Turkish>
+            <Ukrainian>Т-14 Армата</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_04_command">
             <English>T-14K Armata</English>
@@ -1053,6 +1133,7 @@
             <Chinese>T-14K"阿瑪塔"主戰坦克</Chinese>
             <Chinesesimp>T-14K "阿玛塔"</Chinesesimp>
             <Turkish>T-14K Armata</Turkish>
+            <Ukrainian>Т-14К Армата</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01">
             <English>HK121</English>
@@ -1070,6 +1151,7 @@
             <Chinesesimp>HK121</Chinesesimp>
             <Turkish>HK121</Turkish>
             <Hungarian>HK121</Hungarian>
+            <Ukrainian>HK121</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_hex">
             <English>HK121 (Hex)</English>
@@ -1087,6 +1169,7 @@
             <Chinesesimp>HK121（蜂巢迷彩）</Chinesesimp>
             <Turkish>HK121 (Hex)</Turkish>
             <Hungarian>HK121 (Hex)</Hungarian>
+            <Ukrainian>HK121 (гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_tan">
             <English>HK121 (Tan)</English>
@@ -1104,6 +1187,7 @@
             <Chinesesimp>HK121（沙色）</Chinesesimp>
             <Turkish>HK121 (Tan)</Turkish>
             <Hungarian>HK121 (Cserszín)</Hungarian>
+            <Ukrainian>HK121 (пустельний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02">
             <English>LWMMG</English>
@@ -1121,6 +1205,7 @@
             <Chinesesimp>LWMMG</Chinesesimp>
             <Turkish>LWMMG</Turkish>
             <Hungarian>LWMMG</Hungarian>
+            <Ukrainian>LWMMG</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_black">
             <English>LWMMG (Black)</English>
@@ -1138,6 +1223,7 @@
             <Chinesesimp>LWMMG（黑色）</Chinesesimp>
             <Turkish>LWMMG (Siyah)</Turkish>
             <Hungarian>LWMMG (Fekete)</Hungarian>
+            <Ukrainian>LWMMG (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_camo">
             <English>LWMMG (MTP)</English>
@@ -1155,6 +1241,7 @@
             <Chinesesimp>LWMMG（多地形迷彩）</Chinesesimp>
             <Turkish>LWMMG (MTP)</Turkish>
             <Hungarian>LWMMG (MTP)</Hungarian>
+            <Ukrainian>LWMMG (MTP)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_sand">
             <English>LWMMG (Sand)</English>
@@ -1172,6 +1259,7 @@
             <Chinesesimp>LWMMG（沙色）</Chinesesimp>
             <Turkish>LWMMG (Kum)</Turkish>
             <Hungarian>LWMMG (Homok)</Hungarian>
+            <Ukrainian>LWMMG (пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_01_Name">
             <English>M-ATV</English>
@@ -1189,6 +1277,7 @@
             <Chinesesimp>M-ATV</Chinesesimp>
             <Turkish>M-ATV</Turkish>
             <Hungarian>M-ATV</Hungarian>
+            <Ukrainian>M-ATV</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_01_gmg_Name">
             <English>M-ATV (GMG)</English>
@@ -1206,6 +1295,7 @@
             <Chinesesimp>M-ATV（榴弹发射器）</Chinesesimp>
             <Turkish>M-ATV (GMG)</Turkish>
             <Hungarian>M-ATV (gránátgéppuska)</Hungarian>
+            <Ukrainian>M-ATV (з гранатометом)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_01_hmg_Name">
             <English>M-ATV (HMG)</English>
@@ -1223,6 +1313,7 @@
             <Chinesesimp>M-ATV（重机枪）</Chinesesimp>
             <Turkish>M-ATV (HMG)</Turkish>
             <Hungarian>M-ATV (nehézgéppuska)</Hungarian>
+            <Ukrainian>M-ATV (з кулеметом)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_Name">
             <English>Karatel</English>
@@ -1240,6 +1331,7 @@
             <Chinesesimp>"宪兵"</Chinesesimp>
             <Turkish>Karatel</Turkish>
             <Hungarian>Karatel</Hungarian>
+            <Ukrainian>Каратель</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_gmg_Name">
             <English>Karatel (GMG)</English>
@@ -1257,6 +1349,7 @@
             <Chinesesimp>"宪兵"（榴弹发射器）</Chinesesimp>
             <Turkish>Karatel (GMG)</Turkish>
             <Hungarian>Karatel (gránátgéppuska)</Hungarian>
+            <Ukrainian>Каратель (з гранатометом)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_hmg_Name">
             <English>Karatel (HMG)</English>
@@ -1274,6 +1367,7 @@
             <Chinesesimp>"宪兵"（重机枪）</Chinesesimp>
             <Turkish>Karatel (HMG)</Turkish>
             <Hungarian>Karatel (nehézgéppuska)</Hungarian>
+            <Ukrainian>Каратель (з кулеметом)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_03_Name">
             <English>Fennek</English>
@@ -1291,6 +1385,7 @@
             <Chinesesimp>"非洲小狐"</Chinesesimp>
             <Turkish>Fennek</Turkish>
             <Hungarian>Fennek</Hungarian>
+            <Ukrainian>Fennek</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_03_gmg_Name">
             <English>Fennek (GMG)</English>
@@ -1308,6 +1403,7 @@
             <Chinesesimp>"非洲小狐"（榴弹发射器）</Chinesesimp>
             <Turkish>Fennek (GMG)</Turkish>
             <Hungarian>Fennek (gránátgéppuska)</Hungarian>
+            <Ukrainian>Fennek (з гранатометом)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_03_hmg_Name">
             <English>Fennek (HMG)</English>
@@ -1325,6 +1421,7 @@
             <Chinesesimp>"非洲小狐"（重机枪）</Chinesesimp>
             <Turkish>Fennek (HMG)</Turkish>
             <Hungarian>Fennek (nehézgéppuska)</Hungarian>
+            <Ukrainian>Fennek (з кулеметом)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MiniGrenade_Name">
             <English>V40 Mini-Grenade</English>
@@ -1341,6 +1438,7 @@
             <Chinese>V40迷你手榴彈</Chinese>
             <Chinesesimp>V40 迷你手榴弹</Chinesesimp>
             <Turkish>V40 Mini-El Bombası</Turkish>
+            <Ukrainian>Міні-граната V40</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_O_T_UAV_04_CAS">
             <English>Burraq UCAV</English>
@@ -1358,6 +1456,7 @@
             <Chinesesimp>"柏拉格" 战斗无人机</Chinesesimp>
             <Turkish>Burraq UCAV</Turkish>
             <Hungarian>Burraq UCAV</Hungarian>
+            <Ukrainian>Burraq UCAV</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_Black_Name">
             <English>P90 (Black)</English>
@@ -1375,6 +1474,7 @@
             <Chinesesimp>P90（黑色）</Chinesesimp>
             <Turkish>P90 (Siyah)</Turkish>
             <Hungarian>P90 (Fekete)</Hungarian>
+            <Ukrainian>P90 (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_Camo_Name">
             <English>P90 (Camo)</English>
@@ -1392,6 +1492,7 @@
             <Chinesesimp>P90（迷彩）</Chinesesimp>
             <Turkish>P90 (Kamufulaj)</Turkish>
             <Hungarian>P90 (Terepmintás)</Hungarian>
+            <Ukrainian>P90 (камуфляжний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_Hex_Name">
             <English>P90 (Hex)</English>
@@ -1409,6 +1510,7 @@
             <Chinesesimp>P90（蜂巢迷彩）</Chinesesimp>
             <Turkish>P90 (Hex)</Turkish>
             <Hungarian>P90 (Hex)</Hungarian>
+            <Ukrainian>P90 (гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_Khaki_Name">
             <English>P90 (Khaki)</English>
@@ -1426,6 +1528,7 @@
             <Chinesesimp>P90（沙色）</Chinesesimp>
             <Turkish>P90 (Haki)</Turkish>
             <Hungarian>P90 (Khaki)</Hungarian>
+            <Ukrainian>P90 (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_Mag_DescriptionShort">
             <English>Caliber: 5.7mm&lt;br /&gt;Rounds: 50&lt;br /&gt;Used in: P90</English>
@@ -1443,6 +1546,7 @@
             <Chinesesimp>口径：5.7 mm&lt;br /&gt;发数：50&lt;br /&gt;使用于：P90</Chinesesimp>
             <Turkish>Kalibre: 5.7mm&lt;br /&gt;Mermi: 50&lt;br /&gt;Kullanıyor: P90</Turkish>
             <Hungarian>Kaliber: 5,7mm&lt;br /&gt;Lövedékek: 50&lt;br /&gt;Használható: P90</Hungarian>
+            <Ukrainian>Калібр: 5,7 мм&lt;br /&gt;Набоїв: 50&lt;br /&gt;Використовуються з: P90</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_Mag_Name">
             <English>5.7mm 50Rnd Mag</English>
@@ -1460,6 +1564,7 @@
             <Chinesesimp>5.7 mm 50发 弹匣</Chinesesimp>
             <Turkish>5.7mm 50Rnd Şarjör</Turkish>
             <Hungarian>5,7mm 50-as Tár</Hungarian>
+            <Ukrainian>Магазин з 50-ти 5,7 мм</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_TR_Black_Name">
             <English>P90 TR (Black)</English>
@@ -1477,6 +1582,7 @@
             <Chinesesimp>P90 TR（黑色）</Chinesesimp>
             <Turkish>P90 TR (Siyah)</Turkish>
             <Hungarian>P90 TR (Fekete)</Hungarian>
+            <Ukrainian>P90 TR (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_TR_Camo_Name">
             <English>P90 TR (Camo)</English>
@@ -1494,6 +1600,7 @@
             <Chinesesimp>P90 TR（迷彩）</Chinesesimp>
             <Turkish>P90 TR (Kamufulaj)</Turkish>
             <Hungarian>P90 TR (Terepmintás)</Hungarian>
+            <Ukrainian>P90 TR (камуфляжний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_TR_Hex_Name">
             <English>P90 TR (Hex)</English>
@@ -1511,6 +1618,7 @@
             <Chinesesimp>P90 TR（蜂巢迷彩）</Chinesesimp>
             <Turkish>P90 TR (Hex)</Turkish>
             <Hungarian>P90 TR (Hex)</Hungarian>
+            <Ukrainian>P90 TR (гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_TR_Khaki_Name">
             <English>P90 TR (Khaki)</English>
@@ -1528,6 +1636,7 @@
             <Chinesesimp>P90 TR（沙色）</Chinesesimp>
             <Turkish>P90 TR (Haki)</Turkish>
             <Hungarian>P90 TR (Khaki)</Hungarian>
+            <Ukrainian>P90 TR (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_PS90_Black_Name">
             <English>PS90 (Black)</English>
@@ -1545,6 +1654,7 @@
             <Chinesesimp>PS90（黑色）</Chinesesimp>
             <Turkish>PS90 (Siyah)</Turkish>
             <Hungarian>PS90 (Fekete)</Hungarian>
+            <Ukrainian>PS90 (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_PS90_Camo_Name">
             <English>PS90 (Camo)</English>
@@ -1562,6 +1672,7 @@
             <Chinesesimp>PS90（迷彩）</Chinesesimp>
             <Turkish>PS90 (Kamufulaj)</Turkish>
             <Hungarian>PS90 (Terepmintás)</Hungarian>
+            <Ukrainian>PS90 (камуфляжний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_PS90_Hex_Name">
             <English>PS90 (Hex)</English>
@@ -1579,6 +1690,7 @@
             <Chinesesimp>PS90（蜂巢迷彩）</Chinesesimp>
             <Turkish>PS90 (Hex)</Turkish>
             <Hungarian>PS90 (Hex)</Hungarian>
+            <Ukrainian>PS90 (гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_PS90_Khaki_Name">
             <English>PS90 (Khaki)</English>
@@ -1596,6 +1708,7 @@
             <Chinesesimp>PS90（沙色）</Chinesesimp>
             <Turkish>PS90 (Haki)</Turkish>
             <Hungarian>PS90 (Khaki)</Hungarian>
+            <Ukrainian>PS90 (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_PS90_TR_Black_Name">
             <English>PS90 TR (Black)</English>
@@ -1613,6 +1726,7 @@
             <Chinesesimp>PS90 TR（黑色）</Chinesesimp>
             <Turkish>PS90 TR (Siyah)</Turkish>
             <Hungarian>PS90 TR (Fekete)</Hungarian>
+            <Ukrainian>PS90 TR (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_PS90_TR_Camo_Name">
             <English>PS90 TR (Camo)</English>
@@ -1630,6 +1744,7 @@
             <Chinesesimp>PS90 TR（迷彩）</Chinesesimp>
             <Turkish>PS90 TR (Kamufulaj)</Turkish>
             <Hungarian>PS90 TR (Terepmintás)</Hungarian>
+            <Ukrainian>PS90 TR (камуфляжний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_PS90_TR_Hex_Name">
             <English>PS90 TR (Hex)</English>
@@ -1647,6 +1762,7 @@
             <Chinesesimp>PS90 TR（蜂巢迷彩）</Chinesesimp>
             <Turkish>PS90 TR (Hex)</Turkish>
             <Hungarian>PS90 TR (Hex)</Hungarian>
+            <Ukrainian>PS90 TR (гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_PS90_TR_Khaki_Name">
             <English>PS90 TR (Khaki)</English>
@@ -1664,6 +1780,7 @@
             <Chinesesimp>PS90 TR（沙色）</Chinesesimp>
             <Turkish>PS90 TR (Haki)</Turkish>
             <Hungarian>PS90 TR (Khaki)</Hungarian>
+            <Ukrainian>PS90 TR (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_CAS_01_Name">
             <English>A-10D Thunderbolt II</English>
@@ -1681,6 +1798,7 @@
             <Chinesesimp>A-10D "雷霆"二式</Chinesesimp>
             <Turkish>A-10D Thunderbolt II</Turkish>
             <Hungarian>A-10D Thunderbolt II</Hungarian>
+            <Ukrainian>A-10D Thunderbolt II</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_CAS_02_Name">
             <English>Yak-130</English>
@@ -1698,6 +1816,7 @@
             <Chinesesimp>Yak-130</Chinesesimp>
             <Turkish>Yak-130</Turkish>
             <Hungarian>Jak-130</Hungarian>
+            <Ukrainian>Як-130</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_Fighter_03_AA_Name">
             <English>L-159 ALCA (AA)</English>
@@ -1715,6 +1834,7 @@
             <Chinesesimp>L-159 ALCA（空对空）</Chinesesimp>
             <Turkish>L-159 ALCA (AA)</Turkish>
             <Hungarian>L-159 ALCA (Repülő-elhárító)</Hungarian>
+            <Ukrainian>L-159 ALCA (ВВ)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_Fighter_03_CAS_Name">
             <English>L-159 ALCA (CAS)</English>
@@ -1732,6 +1852,7 @@
             <Chinesesimp>L-159 ALCA（近空支援）</Chinesesimp>
             <Turkish>L-159 ALCA (CAS)</Turkish>
             <Hungarian>L-159 ALCA (Légitámogató)</Hungarian>
+            <Ukrainian>L-159 ALCA (підтримка)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_Fighter_03_Name">
             <English>L-159 ALCA</English>
@@ -1749,6 +1870,7 @@
             <Chinesesimp>L-159 ALCA</Chinesesimp>
             <Turkish>L-159 ALCA</Turkish>
             <Hungarian>L-159 ALCA</Hungarian>
+            <Ukrainian>L-159 ALCA</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_Fighter_04_Name">
             <English>JAS 39 Gripen</English>
@@ -1765,6 +1887,7 @@
             <Chinese>JAS 39 獅鷲戰鬥機</Chinese>
             <Chinesesimp>JAS 39 "狮鹫"</Chinesesimp>
             <Turkish>JAS 39 Gripen</Turkish>
+            <Ukrainian>JAS 39 Gripen</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SLAM_Name">
             <English>M4A1 SLAM</English>
@@ -1782,6 +1905,7 @@
             <Chinesesimp>M4A1 指向性反装甲地雷</Chinesesimp>
             <Turkish>M4A1 SLAM</Turkish>
             <Hungarian>M4A1 SLAM</Hungarian>
+            <Ukrainian>M4A1 SLAM</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SMG_01_Name">
             <English>Vector SMG</English>
@@ -1799,6 +1923,7 @@
             <Chinesesimp>Vector 冲锋枪</Chinesesimp>
             <Turkish>Vector SMG</Turkish>
             <Hungarian>Vector SMG</Hungarian>
+            <Ukrainian>Vector SMG</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SMG_02_Name">
             <English>Scorpion Evo 3 A1</English>
@@ -1816,6 +1941,7 @@
             <Chinesesimp>Evo 3 A1 "蝎"</Chinesesimp>
             <Turkish>Scorpion Evo 3 A1</Turkish>
             <Hungarian>Scorpion Evo 3 A1</Hungarian>
+            <Ukrainian>Scorpion Evo 3 A1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SMG_05">
             <English>MP5K</English>
@@ -1833,6 +1959,7 @@
             <Chinesesimp>MP5K</Chinesesimp>
             <Turkish>MP5K</Turkish>
             <Hungarian>MP5K</Hungarian>
+            <Ukrainian>MP5K</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SatchelChargeThrowable_Name">
             <English>M183 Demolition Charge (Throwable)</English>
@@ -1847,6 +1974,7 @@
             <Japanese>M183 梱包爆薬 (投擲仕様)</Japanese>
             <Chinesesimp>M183 炸药包（可投掷）</Chinesesimp>
             <Turkish>M183 Demolition Charge (Throwable)</Turkish>
+            <Ukrainian>M183 комплектний підривний заряд (кидається)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SatchelCharge_Name">
             <English>M183 Demolition Charge Assembly</English>
@@ -1864,6 +1992,7 @@
             <Chinesesimp>M183 炸药包</Chinesesimp>
             <Turkish>M183 Demolition Charge Assembly</Turkish>
             <Hungarian>M183 romboló töltet</Hungarian>
+            <Ukrainian>M183 комплектний підривний заряд</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShellBlue_Name">
             <English>M18 Smoke Grenade (Blue)</English>
@@ -1881,6 +2010,7 @@
             <Chinesesimp>M18 烟雾弹（蓝色）</Chinesesimp>
             <Turkish>M83 Sis Bombası (Mavi)</Turkish>
             <Hungarian>M18 füstgránát (Kék)</Hungarian>
+            <Ukrainian>M18 димова граната (синій)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShellGreen_Name">
             <English>M18 Smoke Grenade (Green)</English>
@@ -1898,6 +2028,7 @@
             <Chinesesimp>M18 烟雾弹（绿色）</Chinesesimp>
             <Turkish>M83 Sis Bombası (Yeşil)</Turkish>
             <Hungarian>M18 füstgránát (Zöld)</Hungarian>
+            <Ukrainian>M18 димова граната (зелений)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShellOrange_Name">
             <English>M18 Smoke Grenade (Orange)</English>
@@ -1915,6 +2046,7 @@
             <Chinesesimp>M18 烟雾弹（橘色）</Chinesesimp>
             <Turkish>M83 Sis Bombası (Turuncu)</Turkish>
             <Hungarian>M18 füstgránát (Narancssárga)</Hungarian>
+            <Ukrainian>M18 димова граната (помаранчевий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShellPurple_Name">
             <English>M18 Smoke Grenade (Purple)</English>
@@ -1932,6 +2064,7 @@
             <Chinesesimp>M18 烟雾弹（紫色）</Chinesesimp>
             <Turkish>M83 Sis Bombası (Mor)</Turkish>
             <Hungarian>M18 füstgránát (Lila)</Hungarian>
+            <Ukrainian>M18 димова граната (пурпуровий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShellRed_Name">
             <English>M18 Smoke Grenade (Red)</English>
@@ -1949,6 +2082,7 @@
             <Chinesesimp>M18 烟雾弹（红色）</Chinesesimp>
             <Turkish>M83 Sis Bombası (Kırmızı)</Turkish>
             <Hungarian>M18 füstgránát (Piros)</Hungarian>
+            <Ukrainian>M18 димова граната (червоний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShellYellow_Name">
             <English>M18 Smoke Grenade (Yellow)</English>
@@ -1966,6 +2100,7 @@
             <Chinesesimp>M18 烟雾弹（黄色）</Chinesesimp>
             <Turkish>M83 Sis Bombası (Sarı)</Turkish>
             <Hungarian>M18 füstgránát (Sárga)</Hungarian>
+            <Ukrainian>M18 димова граната (жовтий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShell_Name">
             <English>M83 Smoke Grenade (White)</English>
@@ -1983,6 +2118,7 @@
             <Chinesesimp>M83 烟雾弹（白色）</Chinesesimp>
             <Turkish>M83 Sis Bombası (Beyaz)</Turkish>
             <Hungarian>M83 füstgránát (Fehér)</Hungarian>
+            <Ukrainian>M83 димова граната (білий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_Repair_Name">
             <English>HEMTT Repair</English>
@@ -2000,6 +2136,7 @@
             <Chinesesimp>HEMTT（维修）</Chinesesimp>
             <Turkish>HEMTT Tamir</Turkish>
             <Hungarian>HEMTT (szerelő-jármű)</Hungarian>
+            <Ukrainian>HEMTT (ремонтний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_ammo_Name">
             <English>HEMTT Ammo</English>
@@ -2017,6 +2154,7 @@
             <Chinesesimp>HEMTT（弹药）</Chinesesimp>
             <Turkish>HEMTT Cephane</Turkish>
             <Hungarian>HEMTT (lőszerszállító)</Hungarian>
+            <Ukrainian>HEMTT (боєприпаси)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_box_Name">
             <English>HEMTT Container</English>
@@ -2034,6 +2172,7 @@
             <Chinesesimp>HEMTT（货柜）</Chinesesimp>
             <Turkish>HEMTT Konteynır</Turkish>
             <Hungarian>HEMTT (konténer)</Hungarian>
+            <Ukrainian>HEMTT (контейнер)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_covered_Name">
             <English>HEMTT Transport (covered)</English>
@@ -2051,6 +2190,7 @@
             <Chinesesimp>HEMTT（运输，棚布）</Chinesesimp>
             <Turkish>HEMTT Nakil (Kapalı)</Turkish>
             <Hungarian>HEMTT szállítójármű (ponyvás)</Hungarian>
+            <Ukrainian>HEMTT (транспортний, критий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_fuel_Name">
             <English>HEMTT Fuel</English>
@@ -2068,6 +2208,7 @@
             <Chinesesimp>HEMTT（燃油）</Chinesesimp>
             <Turkish>HEMTT Yakıt</Turkish>
             <Hungarian>HEMTT (üzemanyag-szállító)</Hungarian>
+            <Ukrainian>HEMTT (паливозаправник)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_medical_Name">
             <English>HEMTT Medical</English>
@@ -2085,6 +2226,7 @@
             <Chinesesimp>HEMTT（医疗）</Chinesesimp>
             <Turkish>HEMTT  Medikal</Turkish>
             <Hungarian>HEMTT (egészségügyi)</Hungarian>
+            <Ukrainian>HEMTT (медичний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_mover_Name">
             <English>HEMTT</English>
@@ -2102,6 +2244,7 @@
             <Chinesesimp>HEMTT</Chinesesimp>
             <Turkish>HEMTT</Turkish>
             <Hungarian>HEMTT</Hungarian>
+            <Ukrainian>HEMTT</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_transport_Name">
             <English>HEMTT Transport</English>
@@ -2119,6 +2262,7 @@
             <Chinesesimp>HEMTT（运输）</Chinesesimp>
             <Turkish>HEMTT Nakil</Turkish>
             <Hungarian>HEMTT szállítójármű</Hungarian>
+            <Ukrainian>HEMTT (транспортний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_MRL_Name">
             <English>KamAZ MRL</English>
@@ -2135,6 +2279,7 @@
             <Chinese>"卡瑪斯"卡車 (多管火箭)</Chinese>
             <Chinesesimp>"卡玛兹"（多管火箭）</Chinesesimp>
             <Turkish>KamAZ</Turkish>
+            <Ukrainian>КамАЗ РСЗВ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_ammo_Name">
             <English>KamAZ Ammo</English>
@@ -2152,6 +2297,7 @@
             <Chinesesimp>"卡玛兹"（弹药）</Chinesesimp>
             <Turkish>KamAZ Cephane</Turkish>
             <Hungarian>KamAZ (lőszerszállító)</Hungarian>
+            <Ukrainian>КамАЗ (боєприпаси)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_box_Name">
             <English>KamAZ Repair</English>
@@ -2169,6 +2315,7 @@
             <Chinesesimp>"卡玛兹"（维修）</Chinesesimp>
             <Turkish>KamAZ Tamir</Turkish>
             <Hungarian>KamAZ (szerelő-jármű)</Hungarian>
+            <Ukrainian>КамАЗ (ремонтний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_covered_Name">
             <English>KamAZ Transport (covered)</English>
@@ -2186,6 +2333,7 @@
             <Chinesesimp>"卡玛兹"（运输，棚布）</Chinesesimp>
             <Turkish>KamAZ Nakil (Kapalı)</Turkish>
             <Hungarian>KamAZ szállítójármű (ponyvás)</Hungarian>
+            <Ukrainian>КамАЗ (транспортний, критий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_fuel_Name">
             <English>KamAZ Fuel</English>
@@ -2203,6 +2351,7 @@
             <Chinesesimp>"卡玛兹"（燃油）</Chinesesimp>
             <Turkish>KamAZ Yakıt</Turkish>
             <Hungarian>KamAZ (üzemanyag-szállító)</Hungarian>
+            <Ukrainian>КамАЗ (паливозаправник)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_medical_Name">
             <English>KamAZ Medical</English>
@@ -2220,6 +2369,7 @@
             <Chinesesimp>"卡玛兹"（医疗）</Chinesesimp>
             <Turkish>KamAZ Medikal</Turkish>
             <Hungarian>KamAZ (egészségügyi)</Hungarian>
+            <Ukrainian>КамАЗ (медичний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_transport_Name">
             <English>KamAZ Transport</English>
@@ -2237,6 +2387,7 @@
             <Chinesesimp>"卡玛兹"（运输）</Chinesesimp>
             <Turkish>KamAZ Nakil</Turkish>
             <Hungarian>KamAZ szállítójármű</Hungarian>
+            <Ukrainian>КамАЗ (транспортний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_water_Name">
             <English>KamAZ Water</English>
@@ -2249,6 +2400,7 @@
             <Korean>카마즈 급수</Korean>
             <Japanese>KamAZ (給水車)</Japanese>
             <Chinesesimp>"卡玛兹"（水箱）</Chinesesimp>
+            <Ukrainian>КамАЗ (водоносій)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_ammo_Name">
             <English>Typhoon Ammo</English>
@@ -2266,6 +2418,7 @@
             <Chinesesimp>"台风"（弹药）</Chinesesimp>
             <Turkish>Typhoon Cephane</Turkish>
             <Hungarian>Typhoon (lőszerszállító)</Hungarian>
+            <Ukrainian>Тайфун (боєприпаси)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_covered_Name">
             <English>Typhoon Transport (covered)</English>
@@ -2283,6 +2436,7 @@
             <Chinesesimp>"台风"（运输，棚布）</Chinesesimp>
             <Turkish>Typhoon Nakil (Kapalı)</Turkish>
             <Hungarian>Typhoon szállítójármű (ponyvás)</Hungarian>
+            <Ukrainian>Тайфун (критий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_device_Name">
             <English>Typhoon Device</English>
@@ -2300,6 +2454,7 @@
             <Chinesesimp>"台风"（装置）</Chinesesimp>
             <Turkish>Typhoon Cihaz</Turkish>
             <Hungarian>Typhoon (eszköz)</Hungarian>
+            <Ukrainian>Тайфун (пристрій)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_fuel_Name">
             <English>Typhoon Fuel</English>
@@ -2317,6 +2472,7 @@
             <Chinesesimp>"台风"（燃油）</Chinesesimp>
             <Turkish>Typhoon Yakıt</Turkish>
             <Hungarian>Typhoon (üzemanyag-szállító)</Hungarian>
+            <Ukrainian>Тайфун (паливозаправник)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_medical_Name">
             <English>Typhoon Medical</English>
@@ -2334,6 +2490,7 @@
             <Chinesesimp>"台风"（医疗）</Chinesesimp>
             <Turkish>Typhoon Medikal</Turkish>
             <Hungarian>Typhoon (egészségügyi)</Hungarian>
+            <Ukrainian>Тайфун (медичний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_repair_Name">
             <English>Typhoon Repair</English>
@@ -2351,6 +2508,7 @@
             <Chinesesimp>"台风"（维修）</Chinesesimp>
             <Turkish>Typhoon Tamir</Turkish>
             <Hungarian>Typhoon (szerelő-jármű)</Hungarian>
+            <Ukrainian>Тайфун (ремонтний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_transport_Name">
             <English>Typhoon Transport</English>
@@ -2368,6 +2526,7 @@
             <Chinesesimp>"台风"（运输）</Chinesesimp>
             <Turkish>Typhoon Nakil</Turkish>
             <Hungarian>Typhoon szállítójármű</Hungarian>
+            <Ukrainian>Тайфун (транспортний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_UAV_02_CAS_Name">
             <English>YABHON-R3 (CAS)</English>
@@ -2385,6 +2544,7 @@
             <Chinesesimp>"联合"-R3（近空支援）</Chinesesimp>
             <Turkish>YABHON-R3 (CAS)</Turkish>
             <Hungarian>YABHON-R3 (Légitámogató)</Hungarian>
+            <Ukrainian>YABHON-R3 (штурмовик)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_UAV_02_Name">
             <English>YABHON-R3</English>
@@ -2402,6 +2562,7 @@
             <Chinesesimp>"联合"-R3</Chinesesimp>
             <Turkish>YABHON-R3</Turkish>
             <Hungarian>YABHON-R3</Hungarian>
+            <Ukrainian>YABHON-R3</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_afv_wheeled_01">
             <English>Rooikat 120</English>
@@ -2418,6 +2579,7 @@
             <Chinese>"獰貓"120主炮輪式裝甲車</Chinese>
             <Chinesesimp>"狞猫" 120</Chinesesimp>
             <Turkish>Rooikat 120</Turkish>
+            <Ukrainian>Rooikat 120</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_afv_wheeled_01_up">
             <English>Rooikat 120 UP</English>
@@ -2434,6 +2596,7 @@
             <Chinese>"獰貓"120主炮輪式裝甲車 (城市版)</Chinese>
             <Chinesesimp>"狞猫" 120 城市版</Chinesesimp>
             <Turkish>Rooikat 120 UP</Turkish>
+            <Ukrainian>Rooikat 120 UP</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AK12">
             <English>AK-15</English>
@@ -2451,6 +2614,7 @@
             <Chinesesimp>AK-15</Chinesesimp>
             <Turkish>AK-15</Turkish>
             <Hungarian>AK-15</Hungarian>
+            <Ukrainian>АК-15</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AK12U">
             <English>AK-15K</English>
@@ -2468,6 +2632,7 @@
             <Chinesesimp>AK-15K</Chinesesimp>
             <Turkish>AK-15K</Turkish>
             <Hungarian>AK-15K</Hungarian>
+            <Ukrainian>АК-15К</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AK12U_arid">
             <English>AK-15K (Arid)</English>
@@ -2485,6 +2650,7 @@
             <Chinesesimp>AK-15K（干旱）</Chinesesimp>
             <Turkish>AK-15K (Kurak)</Turkish>
             <Hungarian>AK-15K (sivatag)</Hungarian>
+            <Ukrainian>AK-15K (суха місцевість)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AK12U_lush">
             <English>AK-15K (Lush)</English>
@@ -2502,6 +2668,7 @@
             <Chinesesimp>AK-15K（繁茂）</Chinesesimp>
             <Turkish>AK-15K (Gür)</Turkish>
             <Hungarian>AK-15K (esőerdő)</Hungarian>
+            <Ukrainian>AK-15K (рясна рослинність)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AK12_GL">
             <English>AK-15 GL</English>
@@ -2519,6 +2686,7 @@
             <Chinesesimp>AK-15 GP-34</Chinesesimp>
             <Turkish>AK-15 GL</Turkish>
             <Hungarian>AK-15 GL</Hungarian>
+            <Ukrainian>AK-15 GL</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AK12_GL_arid">
             <English>AK-15 GL (Arid)</English>
@@ -2536,6 +2704,7 @@
             <Chinesesimp>AK-15 GP-34（干旱）</Chinesesimp>
             <Turkish>AK-15AK-15 GL (Kurak)</Turkish>
             <Hungarian>AK-15 GL (sivatag)</Hungarian>
+            <Ukrainian>AK-15 GL (суха місцевість)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AK12_GL_lush">
             <English>AK-15 GL (Lush)</English>
@@ -2553,6 +2722,7 @@
             <Chinesesimp>AK-15 GP-34（繁茂）</Chinesesimp>
             <Turkish>AK-15 GL (Gür)</Turkish>
             <Hungarian>AK-15 GL (esőerdő)</Hungarian>
+            <Ukrainian>AK-15 GL (рясна рослинність)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AK12_arid">
             <English>AK-15 (Arid)</English>
@@ -2570,6 +2740,7 @@
             <Chinesesimp>AK-15（干旱）</Chinesesimp>
             <Turkish>AK-15 (Kurak)</Turkish>
             <Hungarian>AK-15 (sivatag)</Hungarian>
+            <Ukrainian>AK-15 (суха місцевість)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AK12_lush">
             <English>AK-15 (Lush)</English>
@@ -2587,6 +2758,7 @@
             <Chinesesimp>AK-15（繁茂）</Chinesesimp>
             <Turkish>AK-15 (Gür)</Turkish>
             <Hungarian>AK-15 (esőerdő)</Hungarian>
+            <Ukrainian>AK-15 (рясна рослинність)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AKM">
             <English>AKM</English>
@@ -2604,6 +2776,7 @@
             <Chinesesimp>AKM</Chinesesimp>
             <Turkish>AKM</Turkish>
             <Hungarian>AKM</Hungarian>
+            <Ukrainian>AKM</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AKS">
             <English>AKS-74U</English>
@@ -2621,6 +2794,7 @@
             <Chinesesimp>AKS-74U</Chinesesimp>
             <Turkish>AKS-74U</Turkish>
             <Hungarian>AKS-74U</Hungarian>
+            <Ukrainian>АКС-74У</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTARS_blk">
             <English>QBZ-95-1 LSW (Black)</English>
@@ -2638,6 +2812,7 @@
             <Chinesesimp>95-1式班用机枪（黑色）</Chinesesimp>
             <Turkish>QBZ-95-1 LSW (Siyah)</Turkish>
             <Hungarian>QBZ-95-1 LSW (Fekete)</Hungarian>
+            <Ukrainian>QBZ-95-1 LSW (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTARS_ghex">
             <English>QBZ-95-1 LSW (Green Hex)</English>
@@ -2655,6 +2830,7 @@
             <Chinesesimp>95-1式班用机枪（绿色蜂巢迷彩）</Chinesesimp>
             <Turkish>QBZ-95-1 LSW (Yeşil Hex)</Turkish>
             <Hungarian>QBZ-95-1 LSW (Zöld Hex)</Hungarian>
+            <Ukrainian>QBZ-95-1 LSW (зелений гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTARS_hex">
             <English>QBZ-95-1 LSW (Hex)</English>
@@ -2672,6 +2848,7 @@
             <Chinesesimp>95-1式班用机枪（蜂巢迷彩）</Chinesesimp>
             <Turkish>QBZ-95-1 LSW (Hex)</Turkish>
             <Hungarian>QBZ-95-1 LSW (Hex)</Hungarian>
+            <Ukrainian>QBZ-95-1 LSW (гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_GL_blk">
             <English>QBZ-95-1 GL (Black)</English>
@@ -2689,6 +2866,7 @@
             <Chinesesimp>95-1式自动步枪 10A式榴弹（黑色）</Chinesesimp>
             <Turkish>QBZ-95-1 GL (Siyah)</Turkish>
             <Hungarian>QBZ-95-1 GL (Fekete)</Hungarian>
+            <Ukrainian>QBZ-95-1 GL (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_GL_ghex">
             <English>QBZ-95-1 GL (Green Hex)</English>
@@ -2706,6 +2884,7 @@
             <Chinesesimp>95-1式自动步枪 10A式榴弹（绿色蜂巢迷彩）</Chinesesimp>
             <Turkish>QBZ-95-1 GL (Yeşil Hex)</Turkish>
             <Hungarian>QBZ-95-1 GL (Zöld Hex)</Hungarian>
+            <Ukrainian>QBZ-95-1 GL (зелений гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_GL_hex">
             <English>QBZ-95-1 GL (Hex)</English>
@@ -2723,6 +2902,7 @@
             <Chinesesimp>95-1式自动步枪 10A式榴弹（蜂巢迷彩）</Chinesesimp>
             <Turkish>QBZ-95-1 GL (Hex)</Turkish>
             <Hungarian>QBZ-95-1 GL (Hex)</Hungarian>
+            <Ukrainian>QBZ-95-1 GL (гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_blk">
             <English>QBZ-95-1 (Black)</English>
@@ -2740,6 +2920,7 @@
             <Chinesesimp>95-1式自动步枪（黑色）</Chinesesimp>
             <Turkish>QBZ-95-1 (Siyah)</Turkish>
             <Hungarian>QBZ-95-1 (Fekete)</Hungarian>
+            <Ukrainian>QBZ-95-1 (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_ghex">
             <English>QBZ-95-1 (Green Hex)</English>
@@ -2757,6 +2938,7 @@
             <Chinesesimp>95-1式自动步枪（绿色蜂巢迷彩）</Chinesesimp>
             <Turkish>QBZ-95-1 (Yeşil Hex)</Turkish>
             <Hungarian>QBZ-95-1 (Zöld Hex)</Hungarian>
+            <Ukrainian>QBZ-95-1 (зелений гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_hex">
             <English>QBZ-95-1 (Hex)</English>
@@ -2774,6 +2956,7 @@
             <Chinesesimp>95-1式自动步枪（蜂巢迷彩）</Chinesesimp>
             <Turkish>QBZ-95-1 (Hex)</Turkish>
             <Hungarian>QBZ-95-1 (Hex)</Hungarian>
+            <Ukrainian>QBZ-95-1 (гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_C_Name">
             <English>KH2002C Sama</English>
@@ -2791,6 +2974,7 @@
             <Chinesesimp>KH2002C Sama</Chinesesimp>
             <Turkish>KH2002C Sama</Turkish>
             <Hungarian>KH2002C Sama</Hungarian>
+            <Ukrainian>KH2002C Sama</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_GL_Name">
             <English>KH2002 Sama KGL</English>
@@ -2808,6 +2992,7 @@
             <Chinesesimp>KH2002 Sama KGL</Chinesesimp>
             <Turkish>KH2002 Sama KGL</Turkish>
             <Hungarian>KH2002 Sama KGL</Hungarian>
+            <Ukrainian>KH2002 Sama KGL</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_Name">
             <English>KH2002 Sama</English>
@@ -2825,6 +3010,7 @@
             <Chinesesimp>KH2002 Sama</Chinesesimp>
             <Turkish>KH2002 Sama</Turkish>
             <Hungarian>KH2002 Sama</Hungarian>
+            <Ukrainian>KH2002 Sama</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65">
             <English>MSBS Grot</English>
@@ -2842,6 +3028,7 @@
             <Chinesesimp>MSBS Grot</Chinesesimp>
             <Turkish>MSBS Grot</Turkish>
             <Hungarian>MSBS Grot</Hungarian>
+            <Ukrainian>MSBS Grot</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL">
             <English>MSBS Grot GL</English>
@@ -2859,6 +3046,7 @@
             <Chinesesimp>MSBS Grot GPBO-40</Chinesesimp>
             <Turkish>MSBS Grot GL</Turkish>
             <Hungarian>MSBS Grot GL</Hungarian>
+            <Ukrainian>MSBS Grot GL</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL_black">
             <English>MSBS Grot GL (Black)</English>
@@ -2876,6 +3064,7 @@
             <Chinesesimp>MSBS Grot GPBO-40（黑色）</Chinesesimp>
             <Turkish>MSBS Grot GL (Siyah)</Turkish>
             <Hungarian>MSBS Grot GL (Fekete)</Hungarian>
+            <Ukrainian>MSBS Grot GL (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL_camo">
             <English>MSBS Grot GL (Camo)</English>
@@ -2893,6 +3082,7 @@
             <Chinesesimp>MSBS Grot GPBO-40（迷彩）</Chinesesimp>
             <Turkish>MSBS Grot GL (Kamuflaj)</Turkish>
             <Hungarian>MSBS Grot GL (Terepmintás)</Hungarian>
+            <Ukrainian>MSBS Grot GL (камуфляжний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL_sand">
             <English>MSBS Grot GL (Sand)</English>
@@ -2910,6 +3100,7 @@
             <Chinesesimp>MSBS Grot GPBO-40（沙色）</Chinesesimp>
             <Turkish>MSBS Grot GL (Kum)</Turkish>
             <Hungarian>MSBS Grot GL (Homok)</Hungarian>
+            <Ukrainian>MSBS Grot GL (пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_Mark">
             <English>MSBS Grot MR</English>
@@ -2927,6 +3118,7 @@
             <Chinesesimp>MSBS Grot MR</Chinesesimp>
             <Turkish>MSBS Grot MR</Turkish>
             <Hungarian>MSBS Grot MR</Hungarian>
+            <Ukrainian>MSBS Grot MR</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_Mark_black">
             <English>MSBS Grot MR (Black)</English>
@@ -2944,6 +3136,7 @@
             <Chinesesimp>MSBS Grot MR（黑色）</Chinesesimp>
             <Turkish>MSBS Grot MR (Siyah)</Turkish>
             <Hungarian>MSBS Grot MR (Fekete)</Hungarian>
+            <Ukrainian>MSBS Grot MR (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_Mark_camo">
             <English>MSBS Grot MR (Camo)</English>
@@ -2961,6 +3154,7 @@
             <Chinesesimp>MSBS Grot MR（迷彩）</Chinesesimp>
             <Turkish>MSBS Grot MR (Kamuflaj)</Turkish>
             <Hungarian>MSBS Grot MR (Terepmintás)</Hungarian>
+            <Ukrainian>MSBS Grot MR (камуфляжний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_Mark_sand">
             <English>MSBS Grot MR (Sand)</English>
@@ -2978,6 +3172,7 @@
             <Chinesesimp>MSBS Grot MR（沙色）</Chinesesimp>
             <Turkish>MSBS Grot MR (Kum)</Turkish>
             <Hungarian>MSBS Grot MR (Homok)</Hungarian>
+            <Ukrainian>MSBS Grot MR (пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS">
             <English>MSBS Grot SG</English>
@@ -2995,6 +3190,7 @@
             <Chinesesimp>MSBS Grot SG</Chinesesimp>
             <Turkish>MSBS Grot SG</Turkish>
             <Hungarian>MSBS Grot SG</Hungarian>
+            <Ukrainian>MSBS Grot SG</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS_black">
             <English>MSBS Grot SG (Black)</English>
@@ -3012,6 +3208,7 @@
             <Chinesesimp>MSBS Grot SG（黑色）</Chinesesimp>
             <Turkish>MSBS Grot SG (Siyah)</Turkish>
             <Hungarian>MSBS Grot SG (Fekete)</Hungarian>
+            <Ukrainian>MSBS Grot SG (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS_camo">
             <English>MSBS Grot SG (Camo)</English>
@@ -3029,6 +3226,7 @@
             <Chinesesimp>MSBS Grot SG（迷彩）</Chinesesimp>
             <Turkish>MSBS Grot SG (Kamuflaj)</Turkish>
             <Hungarian>MSBS Grot SG (Terepmintás)</Hungarian>
+            <Ukrainian>MSBS Grot SG (камуфляжний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS_sand">
             <English>MSBS Grot SG (Sand)</English>
@@ -3046,6 +3244,7 @@
             <Chinesesimp>MSBS Grot SG（沙色）</Chinesesimp>
             <Turkish>MSBS Grot SG (Kum)</Turkish>
             <Hungarian>MSBS Grot SG (Homok)</Hungarian>
+            <Ukrainian>MSBS Grot SG (пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_black">
             <English>MSBS Grot (Black)</English>
@@ -3063,6 +3262,7 @@
             <Chinesesimp>MSBS Grot（黑色）</Chinesesimp>
             <Turkish>MSBS Grot (Siyah)</Turkish>
             <Hungarian>MSBS Grot (Fekete)</Hungarian>
+            <Ukrainian>MSBS Grot (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_camo">
             <English>MSBS Grot (Camo)</English>
@@ -3080,6 +3280,7 @@
             <Chinesesimp>MSBS Grot（迷彩）</Chinesesimp>
             <Turkish>MSBS Grot (Kamuflaj)</Turkish>
             <Hungarian>MSBS Grot (Terepmintás)</Hungarian>
+            <Ukrainian>MSBS Grot (камуфляжний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_sand">
             <English>MSBS Grot (Sand)</English>
@@ -3097,6 +3298,7 @@
             <Chinesesimp>MSBS Grot（沙色）</Chinesesimp>
             <Turkish>MSBS Grot (Kum)</Turkish>
             <Hungarian>MSBS Grot (Homok)</Hungarian>
+            <Ukrainian>MSBS Grot (пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Black_Name">
             <English>MXC (Black)</English>
@@ -3114,6 +3316,7 @@
             <Chinesesimp>MXC（黑色）</Chinesesimp>
             <Turkish>MXC (Siyah)</Turkish>
             <Hungarian>MXC (Fekete)</Hungarian>
+            <Ukrainian>MXC (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Khaki_Name">
             <English>MXC (Khaki)</English>
@@ -3130,6 +3333,7 @@
             <Chinese>MXC（卡其）</Chinese>
             <Chinesesimp>MXC（卡其色）</Chinesesimp>
             <Turkish>MXC (Haki)</Turkish>
+            <Ukrainian>MXC (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Name">
             <English>MXC</English>
@@ -3147,6 +3351,7 @@
             <Chinesesimp>MXC</Chinesesimp>
             <Turkish>MXC</Turkish>
             <Hungarian>MXC</Hungarian>
+            <Ukrainian>MXC</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXM_Black_Name">
             <English>MXM (Black)</English>
@@ -3164,6 +3369,7 @@
             <Chinesesimp>MXM（黑色）</Chinesesimp>
             <Turkish>MXM (Siyah)</Turkish>
             <Hungarian>MXM (Fekete)</Hungarian>
+            <Ukrainian>MXM (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXM_Khaki_Name">
             <English>MXM (Khaki)</English>
@@ -3180,6 +3386,7 @@
             <Chinese>MXM（卡其）</Chinese>
             <Chinesesimp>MXM（卡其色）</Chinesesimp>
             <Turkish>MXM (Haki)</Turkish>
+            <Ukrainian>MXM (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXM_Name">
             <English>MXM</English>
@@ -3197,6 +3404,7 @@
             <Chinesesimp>MXM</Chinesesimp>
             <Turkish>MXM</Turkish>
             <Hungarian>MXM</Hungarian>
+            <Ukrainian>MXM</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Black_Name">
             <English>MX (Black)</English>
@@ -3214,6 +3422,7 @@
             <Chinesesimp>MX（黑色）</Chinesesimp>
             <Turkish>MX (Siyah)</Turkish>
             <Hungarian>MX (Fekete)</Hungarian>
+            <Ukrainian>MX (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Black_Name">
             <English>MX 3GL (Black)</English>
@@ -3231,6 +3440,7 @@
             <Chinesesimp>MX 3GL（黑色）</Chinesesimp>
             <Turkish>MX 3GL (Siyah)</Turkish>
             <Hungarian>MX 3GL (Fekete)</Hungarian>
+            <Ukrainian>MX 3GL (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Khaki_Name">
             <English>MX 3GL (Khaki)</English>
@@ -3247,6 +3457,7 @@
             <Chinese>MX 3GL（卡其）</Chinese>
             <Chinesesimp>MX 3GL（卡其色）</Chinesesimp>
             <Turkish>MX 3GL (Haki)</Turkish>
+            <Ukrainian>MX 3GL (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Name">
             <English>MX 3GL</English>
@@ -3264,6 +3475,7 @@
             <Chinesesimp>MX 3GL</Chinesesimp>
             <Turkish>MX 3GL</Turkish>
             <Hungarian>MX 3GL</Hungarian>
+            <Ukrainian>MX 3GL</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Khaki_Name">
             <English>MX (Khaki)</English>
@@ -3280,6 +3492,7 @@
             <Chinese>MX（卡其）</Chinese>
             <Chinesesimp>MX（卡其色）</Chinesesimp>
             <Turkish>MX (Haki)</Turkish>
+            <Ukrainian>MX (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Name">
             <English>MX</English>
@@ -3297,6 +3510,7 @@
             <Chinesesimp>MX</Chinesesimp>
             <Turkish>MX</Turkish>
             <Hungarian>MX</Hungarian>
+            <Ukrainian>MX</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Black_Name">
             <English>MX LSW (Black)</English>
@@ -3314,6 +3528,7 @@
             <Chinesesimp>MX LSW（黑色）</Chinesesimp>
             <Turkish>MX LSW (Siyah)</Turkish>
             <Hungarian>MX LSW (Fekete)</Hungarian>
+            <Ukrainian>MX LSW (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Khaki_Name">
             <English>MX LSW (Khaki)</English>
@@ -3330,6 +3545,7 @@
             <Chinese>MX LSW（卡其）</Chinese>
             <Chinesesimp>MX LSW（卡其色）</Chinesesimp>
             <Turkish>MX LSW (Haki)</Turkish>
+            <Ukrainian>MX LSW (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Name">
             <English>MX LSW</English>
@@ -3347,6 +3563,7 @@
             <Chinesesimp>MX LSW</Chinesesimp>
             <Turkish>MX LSW</Turkish>
             <Hungarian>MX LSW</Hungarian>
+            <Ukrainian>MX LSW</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20C_Name">
             <English>F2000 Tactical (Camo)</English>
@@ -3364,6 +3581,7 @@
             <Chinesesimp>F2000 战术型（迷彩）</Chinesesimp>
             <Turkish>F2000 Tactical (Kamuflaj)</Turkish>
             <Hungarian>F2000 Tactical (Terepmintás)</Hungarian>
+            <Ukrainian>F2000 Tactical (камуфляжний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20C_plain_Name">
             <English>F2000 Tactical</English>
@@ -3381,6 +3599,7 @@
             <Chinesesimp>F2000 战术型</Chinesesimp>
             <Turkish>F2000 Tactical</Turkish>
             <Hungarian>F2000 Tactical</Hungarian>
+            <Ukrainian>F2000 Tactical</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_GL_Name">
             <English>F2000 EGLM (Camo)</English>
@@ -3398,6 +3617,7 @@
             <Chinesesimp>F2000 ELGM（迷彩）</Chinesesimp>
             <Turkish>F2000 EGLM (Kamuflaj)</Turkish>
             <Hungarian>F2000 EGLM (Terepmintás)</Hungarian>
+            <Ukrainian>F2000 EGLM (камуфляжний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_GL_plain_Name">
             <English>F2000 EGLM</English>
@@ -3415,6 +3635,7 @@
             <Chinesesimp>F2000 ELGM</Chinesesimp>
             <Turkish>F2000 EGLM</Turkish>
             <Hungarian>F2000 EGLM</Hungarian>
+            <Ukrainian>F2000 EGLM</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_Name">
             <English>F2000 (Camo)</English>
@@ -3432,6 +3653,7 @@
             <Chinesesimp>F2000（迷彩）</Chinesesimp>
             <Turkish>F2000 (Kamuflaj)</Turkish>
             <Hungarian>F2000 (Terepmintás)</Hungarian>
+            <Ukrainian>F2000 (камуфляжний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_plain_Name">
             <English>F2000</English>
@@ -3449,6 +3671,7 @@
             <Chinesesimp>F2000</Chinesesimp>
             <Turkish>F2000</Turkish>
             <Hungarian>F2000</Hungarian>
+            <Ukrainian>F2000</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_RPK12">
             <English>RPK</English>
@@ -3466,6 +3689,7 @@
             <Chinesesimp>RPK</Chinesesimp>
             <Turkish>RPK</Turkish>
             <Hungarian>RPK</Hungarian>
+            <Ukrainian>RPK</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_RPK12_arid">
             <English>RPK (Arid)</English>
@@ -3483,6 +3707,7 @@
             <Chinesesimp>RPK（干旱）</Chinesesimp>
             <Turkish>RPK (Kurak)</Turkish>
             <Hungarian>RPK (sivatag)</Hungarian>
+            <Ukrainian>RPK (суха місцевість)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_RPK12_lush">
             <English>RPK (Lush)</English>
@@ -3500,6 +3725,7 @@
             <Chinesesimp>RPK（繁茂）</Chinesesimp>
             <Turkish>RPK (Gür)</Turkish>
             <Hungarian>RPK (esőerdő)</Hungarian>
+            <Ukrainian>RPK (рясна рослинність)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SDAR_Name">
             <English>RFB SDAR</English>
@@ -3517,6 +3743,7 @@
             <Chinesesimp>RFB SDAR</Chinesesimp>
             <Turkish>RFB SDAR</Turkish>
             <Hungarian>RFB SDAR</Hungarian>
+            <Ukrainian>RFB SDAR</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_GL_blk">
             <English>HK416A5 11 " GL (Black)</English>
@@ -3534,6 +3761,7 @@
             <Chinesesimp>HK416A5 11英寸 GLM（黑色）</Chinesesimp>
             <Turkish>HK416A5 11 " GL (Siyah)</Turkish>
             <Hungarian>HK416A5 11 " GL (Fekete)</Hungarian>
+            <Ukrainian>HK416A5 11" GL (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_GL_khk">
             <English>HK416A5 11 " GL (Khaki)</English>
@@ -3551,6 +3779,7 @@
             <Chinesesimp>HK416A5 11英寸 GLM（卡其色）</Chinesesimp>
             <Turkish>HK416A5 11 " GL (Hakii)</Turkish>
             <Hungarian>HK416A5 11 " GL (Khaki)</Hungarian>
+            <Ukrainian>HK416A5 11" GL (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_GL_snd">
             <English>HK416A5 11 " GL (Sand)</English>
@@ -3568,6 +3797,7 @@
             <Chinesesimp>HK416A5 11英寸 GLM（沙色）</Chinesesimp>
             <Turkish>HK416A5 11 " GL (Çöl)</Turkish>
             <Hungarian>HK416A5 11 " GL (Homok)</Hungarian>
+            <Ukrainian>HK416A5 11" GL (пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_blk">
             <English>HK416A5 11 " (Black)</English>
@@ -3585,6 +3815,7 @@
             <Chinesesimp>HK416A5 11英寸（黑色）</Chinesesimp>
             <Turkish>HK416A5 11 " (Siyah)</Turkish>
             <Hungarian>HK416A5 11 " (Fekete)</Hungarian>
+            <Ukrainian>HK416A5 11" (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_khk">
             <English>HK416A5 11 " (Khaki)</English>
@@ -3602,6 +3833,7 @@
             <Chinesesimp>HK416A5 11英寸（卡其色）</Chinesesimp>
             <Turkish>HK416A5 11 " (Haki)</Turkish>
             <Hungarian>HK416A5 11 " (Khaki)</Hungarian>
+            <Ukrainian>HK416A5 11" (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_snd">
             <English>HK416A5 11 " (Sand)</English>
@@ -3619,6 +3851,7 @@
             <Chinesesimp>HK416A5 11英寸（沙色）</Chinesesimp>
             <Turkish>HK416A5 11 " (Kum)</Turkish>
             <Hungarian>HK416A5 11 " (Homok)</Hungarian>
+            <Ukrainian>HK416A5 11" (пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_02_blk">
             <English>HK416A5 14.5 " (Black)</English>
@@ -3636,6 +3869,7 @@
             <Chinesesimp>HK416A5 14.5英寸（黑色）</Chinesesimp>
             <Turkish>HK416A5 14.5 " (Siyah)</Turkish>
             <Hungarian>HK416A5 14.5 " (Fekete)</Hungarian>
+            <Ukrainian>HK416A5 14.5" (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_02_khk">
             <English>HK416A5 14.5 " (Khaki)</English>
@@ -3653,6 +3887,7 @@
             <Chinesesimp>HK416A5 14.5英寸（卡其色）</Chinesesimp>
             <Turkish>HK416A5 14.5 " (Haki)</Turkish>
             <Hungarian>HK416A5 14.5 " (Khaki)</Hungarian>
+            <Ukrainian>HK416A5 14.5 " (хаки)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_02_snd">
             <English>HK416A5 14.5 " (Sand)</English>
@@ -3670,6 +3905,7 @@
             <Chinesesimp>HK416A5 14.5英寸（沙色）</Chinesesimp>
             <Turkish>HK416A5 14.5 " (Kum)</Turkish>
             <Hungarian>HK416A5 14.5 " (Homok)</Hungarian>
+            <Ukrainian>HK416A5 14.5" (пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_03_blk">
             <English>HK417A2 20 " (Black)</English>
@@ -3687,6 +3923,7 @@
             <Chinesesimp>HK417A2 20英寸（黑色）</Chinesesimp>
             <Turkish>HK417A2 20 " (Siyah)</Turkish>
             <Hungarian>HK417A2 20 " (Fekete)</Hungarian>
+            <Ukrainian>HK417A2 20" (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_03_khk">
             <English>HK417A2 20 " (Khaki)</English>
@@ -3704,6 +3941,7 @@
             <Chinesesimp>HK417A2 20英寸（卡其色）</Chinesesimp>
             <Turkish>HK417A2 20 " (Haki)</Turkish>
             <Hungarian>HK417A2 20 " (Khaki)</Hungarian>
+            <Ukrainian>HK417A2 20" (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_03_snd">
             <English>HK417A2 20 " (Sand)</English>
@@ -3721,6 +3959,7 @@
             <Chinesesimp>HK417A2 20英寸（沙色）</Chinesesimp>
             <Turkish>HK417A2 20 " (Kum)</Turkish>
             <Hungarian>HK417A2 20 " (Homok)</Hungarian>
+            <Ukrainian>HK417A2 20" (пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_TRG20_Name">
             <English>CTAR-21</English>
@@ -3738,6 +3977,7 @@
             <Chinesesimp>CTAR-21</Chinesesimp>
             <Turkish>CTAR-21</Turkish>
             <Hungarian>CTAR-21</Hungarian>
+            <Ukrainian>CTAR-21</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_TRG21_GL_Name">
             <English>GTAR-21 EGLM</English>
@@ -3755,6 +3995,7 @@
             <Chinesesimp>GTAR-21 EGLM</Chinesesimp>
             <Turkish>GTAR-21 EGLM</Turkish>
             <Hungarian>GTAR-21 EGLM</Hungarian>
+            <Ukrainian>GTAR-21 EGLM</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_TRG21_Name">
             <English>TAR-21</English>
@@ -3772,6 +4013,7 @@
             <Chinesesimp>TAR-21</Chinesesimp>
             <Turkish>TAR-21</Turkish>
             <Hungarian>TAR-21</Hungarian>
+            <Ukrainian>TAR-21</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_arx_blk_Name">
             <English>Type 115 (Black)</English>
@@ -3784,6 +4026,7 @@
             <Korean>115식 보총 (검정)</Korean>
             <Japanese>Type 115 (ブラック)</Japanese>
             <Chinesesimp>Type 115 (黑色)</Chinesesimp>
+            <Ukrainian>Type 115 (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_arx_ghex_Name">
             <English>Type 115 (Green Hex)</English>
@@ -3796,6 +4039,7 @@
             <Korean>115식 보총 (초록육각)</Korean>
             <Japanese>Type 115 (緑六角形迷彩)</Japanese>
             <Chinesesimp>Type 115 (绿色蜂巢迷彩)</Chinesesimp>
+            <Ukrainian>Type 115 (зелений гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_arx_hex_Name">
             <English>Type 115 (Hex)</English>
@@ -3808,6 +4052,7 @@
             <Korean>115식 보총 (육각)</Korean>
             <Japanese>Type 115 (六角形迷彩)</Japanese>
             <Chinesesimp>Type 115 (蜂巢迷彩)</Chinesesimp>
+            <Ukrainian>Type 115 (гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_flashlight_Name">
             <English>UTG Defender 126</English>
@@ -3820,6 +4065,7 @@
             <Korean>UTG 디펜더 126</Korean>
             <Japanese>UTG ディフェンダー 126</Japanese>
             <Chinesesimp>UTG防御者126</Chinesesimp>
+            <Ukrainian>UTG Defender 126</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_ACPC2_Name">
             <English>Custom Covert II</English>
@@ -3837,6 +4083,7 @@
             <Chinesesimp>金柏特特装隐蔽二型</Chinesesimp>
             <Turkish>Custom Covert II</Turkish>
             <Hungarian>Custom Covert II</Hungarian>
+            <Ukrainian>Custom Covert II</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_P07_Name">
             <English>P99</English>
@@ -3854,6 +4101,7 @@
             <Chinesesimp>P99</Chinesesimp>
             <Turkish>P99</Turkish>
             <Hungarian>P99</Hungarian>
+            <Ukrainian>P99</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_P07_blk">
             <English>P99 (Black)</English>
@@ -3871,6 +4119,7 @@
             <Chinesesimp>P99（黑色）</Chinesesimp>
             <Turkish>P99 (Siyah)</Turkish>
             <Hungarian>P99 (Fekete)</Hungarian>
+            <Ukrainian>P99 (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_P07_khk">
             <English>P99 (Khaki)</English>
@@ -3888,6 +4137,7 @@
             <Chinesesimp>P99（卡其色）</Chinesesimp>
             <Turkish>P99 (Haki)</Turkish>
             <Hungarian>P99 (Khaki)</Hungarian>
+            <Ukrainian>P99 (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_PDW2000_Name">
             <English>CPW</English>
@@ -3905,6 +4155,7 @@
             <Chinesesimp>CPW</Chinesesimp>
             <Turkish>CPW</Turkish>
             <Hungarian>CPW</Hungarian>
+            <Ukrainian>CPW</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_01">
             <English>Makarov PM</English>
@@ -3922,6 +4173,7 @@
             <Chinesesimp>"马卡洛夫"</Chinesesimp>
             <Turkish>Makarov PM</Turkish>
             <Hungarian>Makarov PM</Hungarian>
+            <Ukrainian>ПМ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_Signal_Name">
             <English>Taurus Judge</English>
@@ -3939,6 +4191,7 @@
             <Chinesesimp>金牛座"法官"</Chinesesimp>
             <Turkish>Taurus Judge</Turkish>
             <Hungarian>Taurus Judge</Hungarian>
+            <Ukrainian>Taurus Judge</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_01_Name">
             <English>FNX-45 Tactical</English>
@@ -3956,6 +4209,7 @@
             <Chinesesimp>FNX-45 战术型</Chinesesimp>
             <Turkish>FNX-45 Tactical</Turkish>
             <Hungarian>FNX-45 Tactical</Hungarian>
+            <Ukrainian>FNX-45 Tactical</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_01_green_Name">
             <English>FNX-45 Tactical (Green)</English>
@@ -3973,6 +4227,7 @@
             <Chinesesimp>FNX-45 战术型（绿色）</Chinesesimp>
             <Turkish>FNX-45 Tactical (Yeşil)</Turkish>
             <Hungarian>FNX-45 Tactical (Zöld)</Hungarian>
+            <Ukrainian>FNX-45 Tactical (зелений)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_02_Name">
             <English>Chiappa Rhino 60DS</English>
@@ -3990,6 +4245,7 @@
             <Chinesesimp>齐亚帕"犀牛" 60DS</Chinesesimp>
             <Turkish>Chiappa Rhino 60DS</Turkish>
             <Hungarian>Chiappa Rhino 6DS</Hungarian>
+            <Ukrainian>Chiappa Rhino 60DS</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Rook40_Name">
             <English>MP-443 Grach</English>
@@ -4007,6 +4263,7 @@
             <Chinesesimp>MP-443 "乌鸦"</Chinesesimp>
             <Turkish>MP-443 Grach</Turkish>
             <Hungarian>MP-443 Grach</Hungarian>
+            <Ukrainian>МР-443 Грач</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_NLAW_Name">
             <English>NLAW</English>
@@ -4024,6 +4281,7 @@
             <Chinesesimp>NLAW</Chinesesimp>
             <Turkish>NLAW</Turkish>
             <Hungarian>NLAW</Hungarian>
+            <Ukrainian>NLAW</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_RPG32_Name">
             <English>RPG-32</English>
@@ -4041,6 +4299,7 @@
             <Chinesesimp>RPG-32</Chinesesimp>
             <Turkish>RPG-32</Turkish>
             <Hungarian>RPG-32</Hungarian>
+            <Ukrainian>РПГ-32</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_RPG32_ghex">
             <English>RPG-32 (Green Hex)</English>
@@ -4058,6 +4317,7 @@
             <Chinesesimp>RPG-32（绿色蜂巢迷彩）</Chinesesimp>
             <Turkish>RPG-32 (Yeşil Hex)</Turkish>
             <Hungarian>RPG-32 (Zöld Hex)</Hungarian>
+            <Ukrainian>РПГ-32 (зелений гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_RPG32_green_Name">
             <English>RPG-32 (Green)</English>
@@ -4075,6 +4335,7 @@
             <Chinesesimp>RPG-32（绿色）</Chinesesimp>
             <Turkish>RPG-32 (Yeşil)</Turkish>
             <Hungarian>RPG-32 (Zöld)</Hungarian>
+            <Ukrainian>РПГ-32 (зелений)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Titan_Name">
             <English>Mini-Spike (AA)</English>
@@ -4092,6 +4353,7 @@
             <Chinesesimp>"迷你长钉"（防空）</Chinesesimp>
             <Turkish>Mini-Spike (AA)</Turkish>
             <Hungarian>Mini-Spike (Repülő-elhárító)</Hungarian>
+            <Ukrainian>Mini-Spike (SAM)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Titan_short_Name">
             <English>Mini-Spike (AT)</English>
@@ -4109,6 +4371,7 @@
             <Chinesesimp>"迷你长钉"（反坦）</Chinesesimp>
             <Turkish>Mini-Spike (AT)</Turkish>
             <Hungarian>Mini-Spike (Tankelhárító)</Hungarian>
+            <Ukrainian>Mini-Spike (ПТРК)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Vorona_brown">
             <English>Metis-M (Brown)</English>
@@ -4125,6 +4388,7 @@
             <Chinese>"麥士蒂索人"-M型反坦克導彈(棕色)</Chinese>
             <Chinesesimp>"麦士蒂索"-M（棕色）</Chinesesimp>
             <Turkish>Metis-M (Kahverengi)</Turkish>
+            <Ukrainian>Метис-М (коричневий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Vorona_green">
             <English>Metis-M (Green)</English>
@@ -4141,6 +4405,7 @@
             <Chinese>"麥士蒂索人"-M型反坦克導彈(綠色)</Chinese>
             <Chinesesimp>"麦士蒂索"-M（绿色）</Chinesesimp>
             <Turkish>Metis-M (Yeşil)</Turkish>
+            <Ukrainian>Метис-М (зелений)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_armed">
             <English>Polaris DAGOR (XM312)</English>
@@ -4157,6 +4422,7 @@
             <Chinese>"北極星"先進佈署越野車 (XM312重機槍)</Chinese>
             <Chinesesimp>"北极星"（XM312）</Chinesesimp>
             <Turkish>Polaris DAGOR (XM312)</Turkish>
+            <Ukrainian>Polaris DAGOR (XM312)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_at">
             <English>Polaris DAGOR (Mini-Spike AT)</English>
@@ -4173,6 +4439,7 @@
             <Chinese>"北極星"先進佈署越野車("迷你長釘"反坦克導彈發射器)</Chinese>
             <Chinesesimp>"北极星"（"迷你长钉"反坦）</Chinesesimp>
             <Turkish>Polaris DAGOR (Mini-Spike AT)</Turkish>
+            <Ukrainian>Polaris DAGOR (ПТ Mini-Spike)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_light">
             <English>Polaris DAGOR (light)</English>
@@ -4189,6 +4456,7 @@
             <Chinese>"北極星"先進佈署越野車 (輕型)</Chinese>
             <Chinesesimp>"北极星"（轻型）</Chinesesimp>
             <Turkish>Polaris DAGOR (light)</Turkish>
+            <Ukrainian>Polaris DAGOR (легкий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_unarmed">
             <English>Polaris DAGOR</English>
@@ -4205,6 +4473,7 @@
             <Chinese>"北極星"先進佈署越野車</Chinese>
             <Chinesesimp>"北极星"</Chinesesimp>
             <Turkish>Polaris DAGOR</Turkish>
+            <Ukrainian>Polaris DAGOR</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_armed">
             <English>LSV Mk. II (M134)</English>
@@ -4221,6 +4490,7 @@
             <Chinese>輕型突擊車2式 (M134迷你機炮)</Chinese>
             <Chinesesimp>轻型突击车二型（M134）</Chinesesimp>
             <Turkish>LSV Mk. II (M134)</Turkish>
+            <Ukrainian>LSV Mk. II (M134)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_at">
             <English>LSV Mk. II (Metis-M)</English>
@@ -4237,6 +4507,7 @@
             <Chinese>輕型突擊車2式 ("麥士蒂索人"-M型反坦克導彈)</Chinese>
             <Chinesesimp>轻型突击车二型（"麦士蒂索"-M）</Chinesesimp>
             <Turkish>LSV Mk. II (Metis-M)</Turkish>
+            <Ukrainian>LSV Mk. II (Метис-M)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_unarmed">
             <English>LSV Mk. II</English>
@@ -4253,6 +4524,7 @@
             <Chinese>輕型突擊車2式</Chinese>
             <Chinesesimp>轻型突击车二型</Chinesesimp>
             <Turkish>LSV Mk. II</Turkish>
+            <Ukrainian>LSV Mk. II</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_missiles_vorona">
             <English>Metis-M</English>
@@ -4269,6 +4541,7 @@
             <Chinese>"麥士蒂索人"-M型反坦克導彈</Chinese>
             <Chinesesimp>"麦士蒂索"-M</Chinesesimp>
             <Turkish>Metis-M</Turkish>
+            <Ukrainian>Метис-М</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO">
             <English>C-More Railway (Red)</English>
@@ -4285,6 +4558,7 @@
             <Chinese>C-More Railway (紅色)</Chinese>
             <Chinesesimp>C-More Railway（红色）</Chinesesimp>
             <Turkish>C-More Railway (Kırmızı)</Turkish>
+            <Ukrainian>C-More Railway (червоний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO_grn">
             <English>C-More Railway (Green)</English>
@@ -4301,6 +4575,7 @@
             <Chinese>C-More Railway (綠色)</Chinese>
             <Chinesesimp>C-More Railway（绿色）</Chinesesimp>
             <Turkish>C-More Railway (Yeşil)</Turkish>
+            <Ukrainian>C-More Railway (зелений)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO_grn_smg">
             <English>C-More Railway SMG (Green)</English>
@@ -4317,6 +4592,7 @@
             <Chinese>C-More Railway SMG (綠色)</Chinese>
             <Chinesesimp>C-More Railway（冲锋枪用，绿色）</Chinesesimp>
             <Turkish>C-More Railway SMG (Yeşil)</Turkish>
+            <Ukrainian>C-More Railway SMG (зелений)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO_smg">
             <English>C-More Railway SMG (Red)</English>
@@ -4333,6 +4609,7 @@
             <Chinese>C-More Railway SMG (紅色)</Chinese>
             <Chinesesimp>C-More Railway（冲锋枪用，红色）</Chinesesimp>
             <Turkish>C-More Railway SMG (Kırmızı)</Turkish>
+            <Ukrainian>C-More Railway SMG (червоний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_Yorris">
             <English>Burris FastFire 2</English>
@@ -4349,6 +4626,7 @@
             <Chinese>Burris FastFire 2</Chinese>
             <Chinesesimp>Burris FastFire 2</Chinesesimp>
             <Turkish>Burris FastFire 2</Turkish>
+            <Ukrainian>Burris FastFire 2</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams">
             <English>US Optics MR-10 (Black)</English>
@@ -4365,6 +4643,7 @@
             <Chinese>US Optics MR-10 (Black)</Chinese>
             <Chinesesimp>US Optics MR-10（黑色）</Chinesesimp>
             <Turkish>US Optics MR-10 (Siyah)</Turkish>
+            <Ukrainian>US Optics MR-10 (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_khk">
             <English>US Optics MR-10 (Khaki)</English>
@@ -4381,6 +4660,7 @@
             <Chinese>US Optics MR-10 (Khaki)</Chinese>
             <Chinesesimp>US Optics MR-10（卡其色）</Chinesesimp>
             <Turkish>US Optics MR-10 (Haki)</Turkish>
+            <Ukrainian>US Optics MR-10 (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_snd">
             <English>US Optics MR-10 (Sand)</English>
@@ -4397,6 +4677,7 @@
             <Chinese>US Optics MR-10 (Sand)</Chinese>
             <Chinesesimp>US Optics MR-10（沙色）</Chinesesimp>
             <Turkish>US Optics MR-10 (Kum)</Turkish>
+            <Ukrainian>US Optics MR-10 (пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco">
             <English>ELCAN SpecterOS (Tan)</English>
@@ -4413,6 +4694,7 @@
             <Chinese>ELCAN SpecterOS (黃褐色)</Chinese>
             <Chinesesimp>ELCAN SpecterOS（沙色）</Chinesesimp>
             <Turkish>ELCAN SpecterOS (Tan)</Turkish>
+            <Ukrainian>ELCAN SpecterOS (пустельний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_2d">
             <English>ELCAN SpecterOS (2D)</English>
@@ -4429,6 +4711,7 @@
             <Chinese>ELCAN SpecterOS (2D)</Chinese>
             <Chinesesimp>ELCAN SpecterOS（2D）</Chinesesimp>
             <Turkish>ELCAN SpecterOS (2D)</Turkish>
+            <Ukrainian>ELCAN SpecterOS (2D)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_arid">
             <English>ELCAN SpecterOS 7.62 (Arid)</English>
@@ -4442,6 +4725,7 @@
             <Korean>엘칸 스펙터OS 7.62 (건조)</Korean>
             <Japanese>ELCAN SpecterOS 7.62 (乾燥地帯迷彩)</Japanese>
             <Chinesesimp>ELCAN SpecterOS 7.62（干旱）</Chinesesimp>
+            <Ukrainian>ELCAN SpecterOS 7.62 (суха місцевість)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_blk">
             <English>ELCAN SpecterOS 7.62 (Black)</English>
@@ -4455,6 +4739,7 @@
             <Korean>엘칸 스펙터OS 7.62 (검정)</Korean>
             <Japanese>ELCAN SpecterOS 7.62 (ブラック)</Japanese>
             <Chinesesimp>ELCAN SpecterOS 7.62（黑色）</Chinesesimp>
+            <Ukrainian>ELCAN SpecterOS 7.62 (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_lush">
             <English>ELCAN SpecterOS 7.62 (Lush)</English>
@@ -4468,6 +4753,7 @@
             <Korean>엘칸 스펙터OS 7.62 (초목)</Korean>
             <Japanese>ELCAN SpecterOS 7.62 (緑地迷彩)</Japanese>
             <Chinesesimp>ELCAN SpecterOS 7.62（繁茂）</Chinesesimp>
+            <Ukrainian>ELCAN SpecterOS 7.62 (рясна рослинність)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_arid">
             <English>ELCAN SpecterOS (Arid)</English>
@@ -4481,6 +4767,7 @@
             <Korean>엘칸 스펙터OS (건조)</Korean>
             <Japanese>ELCAN SpecterOS (乾燥地帯迷彩)</Japanese>
             <Chinesesimp>ELCAN SpecterOS（干旱）</Chinesesimp>
+            <Ukrainian>ELCAN SpecterOS (суха місцевість)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_blk">
             <English>ELCAN SpecterOS (Black)</English>
@@ -4497,6 +4784,7 @@
             <Chinese>ELCAN SpecterOS (黑色)</Chinese>
             <Chinesesimp>ELCAN SpecterOS（黑色）</Chinesesimp>
             <Turkish>ELCAN SpecterOS (Siyah)</Turkish>
+            <Ukrainian>ELCAN SpecterOS (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ghex">
             <English>ELCAN SpecterOS (Green Hex)</English>
@@ -4513,6 +4801,7 @@
             <Chinese>ELCAN SpecterOS (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>ELCAN SpecterOS（绿色蜂巢迷彩）</Chinesesimp>
             <Turkish>ELCAN SpecterOS (Yeşil Hex)</Turkish>
+            <Ukrainian>ELCAN SpecterOS (зелений гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_lush">
             <English>ELCAN SpecterOS (Lush)</English>
@@ -4526,6 +4815,7 @@
             <Korean>엘칸 스펙터OS (초목)</Korean>
             <Japanese>ELCAN SpecterOS (緑地迷彩)</Japanese>
             <Chinesesimp>ELCAN SpecterOS（繁茂）</Chinesesimp>
+            <Ukrainian>ELCAN SpecterOS (рясна рослинність)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_pip">
             <English>ELCAN SpecterOS (PIP)</English>
@@ -4542,6 +4832,7 @@
             <Chinese>ELCAN SpecterOS (PIP)</Chinese>
             <Chinesesimp>ELCAN SpecterOS（画中画）</Chinesesimp>
             <Turkish>ELCAN SpecterOS (PIP)</Turkish>
+            <Ukrainian>ELCAN SpecterOS (PIP)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms">
             <English>Burris XTR II</English>
@@ -4558,6 +4849,7 @@
             <Chinese>Burris XTR II</Chinese>
             <Chinesesimp>Burris XTR II</Chinesesimp>
             <Turkish>Burris XTR II</Turkish>
+            <Ukrainian>Burris XTR II</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_ghex">
             <English>Burris XTR II (Green Hex)</English>
@@ -4574,6 +4866,7 @@
             <Chinese>Burris XTR II (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>Burris XTR II（绿色蜂巢迷彩）</Chinesesimp>
             <Turkish>Burris XTR II (Yeşil Hex)</Turkish>
+            <Ukrainian>Burris XTR II (зелений гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_weathered">
             <English>Burris XTR II (Old)</English>
@@ -4587,6 +4880,7 @@
             <Korean>버리스 XTR II (낡음)</Korean>
             <Japanese>Burris XTR II (使い古し)</Japanese>
             <Chinesesimp>Burris XTR II（陈旧）</Chinesesimp>
+            <Ukrainian>Burris XTR II (старий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_weathered_kir">
             <English>Burris XTR II (ASP-1 Kir)</English>
@@ -4600,6 +4894,7 @@
             <Korean>버리스 XTR II (ASP-1 키르용)</Korean>
             <Japanese>Burris XTR II (ASP-1 キール用)</Japanese>
             <Chinesesimp>Burris XTR II（ASP-1 Kir）</Chinesesimp>
+            <Ukrainian>Burris XTR II (ASP-1 Kir)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
             <English>SIG BRAVO4 / ROMEO3 (Black)</English>
@@ -4616,6 +4911,7 @@
             <Chinese>SIG BRAVO4 / ROMEO3 (黑色)</Chinese>
             <Chinesesimp>SIG BRAVO4 / ROMEO3（黑色）</Chinesesimp>
             <Turkish>SIG BRAVO4 / ROMEO3 (Siyah)</Turkish>
+            <Ukrainian>SIG BRAVO4 / ROMEO3 (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_khk">
             <English>SIG BRAVO4 / ROMEO3 (Khaki)</English>
@@ -4632,6 +4928,7 @@
             <Chinese>SIG BRAVO4 / ROMEO3 (卡其色)</Chinese>
             <Chinesesimp>SIG BRAVO4 / ROMEO3（卡其色）</Chinesesimp>
             <Turkish>SIG BRAVO4 / ROMEO3 (Haki)</Turkish>
+            <Ukrainian>SIG BRAVO4 / ROMEO3 (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_snd">
             <English>SIG BRAVO4 / ROMEO3 (Sand)</English>
@@ -4648,6 +4945,7 @@
             <Chinese>SIG BRAVO4 / ROMEO3 (沙色)</Chinese>
             <Chinesesimp>SIG BRAVO4 / ROMEO3（沙色）</Chinesesimp>
             <Turkish>SIG BRAVO4 / ROMEO3 (Kum)</Turkish>
+            <Ukrainian>SIG BRAVO4 / ROMEO3 (пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr">
             <English>Leupold Mark 4 HAMR</English>
@@ -4664,6 +4962,7 @@
             <Chinese>Leupold Mark 4 HAMR</Chinese>
             <Chinesesimp>Leupold Mark 4 HAMR</Chinesesimp>
             <Turkish>Leupold Mark 4 HAMR</Turkish>
+            <Ukrainian>Leupold Mark 4 HAMR</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr_2d">
             <English>Leupold Mark 4 HAMR (2D)</English>
@@ -4680,6 +4979,7 @@
             <Chinese>Leupold Mark 4 HAMR (2D)</Chinese>
             <Chinesesimp>Leupold Mark 4 HAMR（2D）</Chinesesimp>
             <Turkish>Leupold Mark 4 HAMR (2D)</Turkish>
+            <Ukrainian>Leupold Mark 4 HAMR (2D)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr_khk">
             <English>Leupold Mark 4 HAMR (Khaki)</English>
@@ -4696,6 +4996,7 @@
             <Chinese>Leupold Mark 4 HAMR (卡其色)</Chinese>
             <Chinesesimp>Leupold Mark 4 HAMR（卡其色）</Chinesesimp>
             <Turkish>Leupold Mark 4 HAMR (Haki)</Turkish>
+            <Ukrainian>Leupold Mark 4 HAMR (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr_pip">
             <English>Leupold Mark 4 HAMR (PIP)</English>
@@ -4712,6 +5013,7 @@
             <Chinese>Leupold Mark 4 HAMR (PIP)</Chinese>
             <Chinesesimp>Leupold Mark 4 HAMR（画中画）</Chinesesimp>
             <Turkish>Leupold Mark 4 HAMR (PIP)</Turkish>
+            <Ukrainian>Leupold Mark 4 HAMR (PIP)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight">
             <English>EOTech XPS3 (Tan)</English>
@@ -4728,6 +5030,7 @@
             <Chinese>EOTech XPS3 (黃褐色)</Chinese>
             <Chinesesimp>EOTech XPS3（沙色）</Chinesesimp>
             <Turkish>EOTech XPS3 (Tan)</Turkish>
+            <Ukrainian>EOTech XPS3 (пустельний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_arid">
             <English>EOTech XPS3 (Arid)</English>
@@ -4741,6 +5044,7 @@
             <Korean>이오텍 XPS3 (건조)</Korean>
             <Japanese>EOTech XPS3 (乾燥地帯迷彩)</Japanese>
             <Chinesesimp>EOTech XPS3（干旱）</Chinesesimp>
+            <Ukrainian>EOTech XPS3 (суха місцевість)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_blk">
             <English>EOTech XPS3 (Black)</English>
@@ -4757,6 +5061,7 @@
             <Chinese>EOTech XPS3 (黑色)</Chinese>
             <Chinesesimp>EOTech XPS3（黑色）</Chinesesimp>
             <Turkish>EOTech XPS3 (Siyah)</Turkish>
+            <Ukrainian>EOTech XPS3 (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_khk">
             <English>EOTech XPS3 (Khaki)</English>
@@ -4773,6 +5078,7 @@
             <Chinese>EOTech XPS3 (卡其色)</Chinese>
             <Chinesesimp>EOTech XPS3（卡其色）</Chinesesimp>
             <Turkish>EOTech XPS3 (Haki)</Turkish>
+            <Ukrainian>EOTech XPS3 (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_lush">
             <English>EOTech XPS3 (Lush)</English>
@@ -4786,6 +5092,7 @@
             <Korean>이오텍 XPS3 (초목)</Korean>
             <Japanese>EOTech XPS3 (緑地迷彩)</Japanese>
             <Chinesesimp>EOTech XPS3（繁茂）</Chinesesimp>
+            <Ukrainian>EOTech XPS3 (рясна рослинність)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg">
             <English>EOTech XPS3 SMG (Tan)</English>
@@ -4802,6 +5109,7 @@
             <Chinese>EOTech XPS3 SMG (黃褐色)</Chinese>
             <Chinesesimp>EOTech XPS3（冲锋枪用，沙色）</Chinesesimp>
             <Turkish>EOTech XPS3 SMG (Tan)</Turkish>
+            <Ukrainian>EOTech XPS3 SMG (пустельний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg_blk">
             <English>EOTech XPS3 SMG (Black)</English>
@@ -4818,6 +5126,7 @@
             <Chinese>EOTech XPS3 SMG (黑色)</Chinese>
             <Chinesesimp>EOTech XPS3（冲锋枪用，黑色）</Chinesesimp>
             <Turkish>EOTech XPS3 SMG (Siyah)</Turkish>
+            <Ukrainian>EOTech XPS3 SMG (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg_khk">
             <English>EOTech XPS3 SMG (Khaki)</English>
@@ -4834,6 +5143,7 @@
             <Chinese>EOTech XPS3 SMG (卡其色)</Chinese>
             <Chinesesimp>EOTech XPS3（冲锋枪用，卡其色）</Chinesesimp>
             <Turkish>EOTech XPS3 SMG (Hakii)</Turkish>
+            <Ukrainian>EOTech XPS3 SMG (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_blk">
             <English>KAHLES Helia (Black)</English>
@@ -4850,6 +5160,7 @@
             <Chinese>KAHLES Helia (Black)</Chinese>
             <Chinesesimp>KAHLES Helia（黑色）</Chinesesimp>
             <Turkish>KAHLES Helia (Siyah)</Turkish>
+            <Ukrainian>KAHLES Helia (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_hex">
             <English>KAHLES Helia (Hex)</English>
@@ -4866,6 +5177,7 @@
             <Chinese>KAHLES Helia (Hex)</Chinese>
             <Chinesesimp>KAHLES Helia（蜂巢迷彩）</Chinesesimp>
             <Turkish>KAHLES Helia (Hex)</Turkish>
+            <Ukrainian>KAHLES Helia (гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_old">
             <English>KAHLES Helia (Old)</English>
@@ -4882,6 +5194,7 @@
             <Chinese>KAHLES Helia (Old)</Chinese>
             <Chinesesimp>KAHLES Helia（旧）</Chinesesimp>
             <Turkish>KAHLES Helia (Eski)</Turkish>
+            <Ukrainian>KAHLES Helia (старий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_tan">
             <English>KAHLES Helia (Tan)</English>
@@ -4898,6 +5211,7 @@
             <Chinese>KAHLES Helia (Tan)</Chinese>
             <Chinesesimp>KAHLES Helia（沙色）</Chinesesimp>
             <Turkish>KAHLES Helia (Tan)</Turkish>
+            <Ukrainian>KAHLES Helia (пустельний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps">
             <English>Nightforce NXS</English>
@@ -4914,6 +5228,7 @@
             <Chinese>Nightforce NXS</Chinese>
             <Chinesesimp>Nightforce NXS</Chinesesimp>
             <Turkish>Nightforce NXS</Turkish>
+            <Ukrainian>Nightforce NXS</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_2d">
             <English>Nightforce NXS (2D)</English>
@@ -4930,6 +5245,7 @@
             <Chinese>Nightforce NXS (2D)</Chinese>
             <Chinesesimp>Nightforce NXS（2D）</Chinesesimp>
             <Turkish>Nightforce NXS (2D)</Turkish>
+            <Ukrainian>Nightforce NXS (2D)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_ghex">
             <English>Nightforce NXS (Green Hex)</English>
@@ -4946,6 +5262,7 @@
             <Chinese>Nightforce NXS (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>Nightforce NXS（绿色蜂巢迷彩）</Chinesesimp>
             <Turkish>Nightforce NXS (Yeşil Hex)</Turkish>
+            <Ukrainian>Nightforce NXS (зелений гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_pip">
             <English>Nightforce NXS (PIP)</English>
@@ -4962,6 +5279,7 @@
             <Chinese>Nightforce NXS (PIP)</Chinese>
             <Chinesesimp>Nightforce NXS（画中画）</Chinesesimp>
             <Turkish>Nightforce NXS (PIP)</Turkish>
+            <Ukrainian>Nightforce NXS (PIP)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_tna">
             <English>Nightforce NXS (Jungle)</English>
@@ -4978,6 +5296,7 @@
             <Chinese>Nightforce NXS (叢林色)</Chinese>
             <Chinesesimp>Nightforce NXS（丛林色）</Chinesesimp>
             <Turkish>Nightforce NXS (Orman)</Turkish>
+            <Ukrainian>Nightforce NXS (джунглі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrco">
             <English>IOR-Valdada Pitbull 2</English>
@@ -4994,6 +5313,7 @@
             <Chinese>IOR-Valdada Pitbull 2</Chinese>
             <Chinesesimp>IOR-Valdada Pitbull 2</Chinesesimp>
             <Turkish>IOR-Valdada Pitbull 2</Turkish>
+            <Ukrainian>IOR-Valdada Pitbull 2</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrco_2d">
             <English>IOR-Valdada Pitbull 2 (2D)</English>
@@ -5010,6 +5330,7 @@
             <Chinese>IOR-Valdada Pitbull 2 (2D)</Chinese>
             <Chinesesimp>IOR-Valdada Pitbull 2（2D）</Chinesesimp>
             <Turkish>IOR-Valdada Pitbull 2 (2D)</Turkish>
+            <Ukrainian>IOR-Valdada Pitbull 2 (2D)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrco_pip">
             <English>IOR-Valdada Pitbull 2 (PIP)</English>
@@ -5026,6 +5347,7 @@
             <Chinese>IOR-Valdada Pitbull 2 (PIP)</Chinese>
             <Chinesesimp>IOR-Valdada Pitbull 2（画中画）</Chinesesimp>
             <Turkish>IOR-Valdada Pitbull 2 (PIP)</Turkish>
+            <Ukrainian>IOR-Valdada Pitbull 2 (PIP)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrd_Name">
             <English>EOTech MRDS</English>
@@ -5038,6 +5360,7 @@
             <Korean>이오텍 MRDS</Korean>
             <Japanese>EOTech MRDS</Japanese>
             <Chinesesimp>EOTech MRDS</Chinesesimp>
+            <Ukrainian>EOTech MRDS</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrd_black_Name">
             <English>EOTech MRDS (Black)</English>
@@ -5050,6 +5373,7 @@
             <Korean>이오텍 MRDS (검정)</Korean>
             <Japanese>EOTech MRDS (ブラック)</Japanese>
             <Chinesesimp>EOTech MRDS (黑色)</Chinesesimp>
+            <Ukrainian>EOTech MRDS (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_sgun_huntershotgun_01_Name">
             <English>CZ 581</English>
@@ -5062,6 +5386,7 @@
             <Korean>CZ 581</Korean>
             <Japanese>CZ 581</Japanese>
             <Chinesesimp>CZ 581</Chinesesimp>
+            <Ukrainian>CZ 581</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_sgun_huntershotgun_sawedoff_01_Name">
             <English>CZ 581 (Sawed-Off)</English>
@@ -5074,6 +5399,7 @@
             <Korean>CZ 581 (소드오프)</Korean>
             <Japanese>CZ 581 (ソードオフ)</Japanese>
             <Chinesesimp>CZ 581 (截短)</Chinesesimp>
+            <Ukrainian>CZ 581 (Sawed-Off)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_01_Name">
             <English>VS-121</English>
@@ -5091,6 +5417,7 @@
             <Chinesesimp>VS-121</Chinesesimp>
             <Turkish>VS-121</Turkish>
             <Hungarian>VS-121</Hungarian>
+            <Ukrainian>VS-121</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02">
             <English>Noreen "Bad News" ULR (Black)</English>
@@ -5108,6 +5435,7 @@
             <Chinesesimp>诺琳 "坏消息" 极距狙击步枪（黑色）</Chinesesimp>
             <Turkish>Noreen "Bad News" ULR (Siyah)</Turkish>
             <Hungarian>Noreen "Bad News"ULR (Fekete)</Hungarian>
+            <Ukrainian>Noreen "Bad News" ULR (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_camo">
             <English>Noreen "Bad News" ULR (Camo)</English>
@@ -5125,6 +5453,7 @@
             <Chinesesimp>诺琳 "坏消息" 极距狙击步枪（迷彩）</Chinesesimp>
             <Turkish>Noreen "Bad News" ULR (Kamufulaj)</Turkish>
             <Hungarian>Noreen "Bad News"ULR (Terepmintás)</Hungarian>
+            <Ukrainian>Noreen "Bad News" ULR (камуфляжний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_sniper">
             <English>Noreen "Bad News" ULR (Sand)</English>
@@ -5142,6 +5471,7 @@
             <Chinesesimp>诺琳 "坏消息" 极距狙击步枪（沙色）</Chinesesimp>
             <Turkish>Noreen "Bad News" ULR (Çöl)</Turkish>
             <Hungarian>Noreen "Bad News"ULR (Homok)</Hungarian>
+            <Ukrainian>Noreen "Bad News" ULR (пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03">
             <English>SIG 556 (Black)</English>
@@ -5159,6 +5489,7 @@
             <Chinesesimp>SIG 556（黑色）</Chinesesimp>
             <Turkish>SIG 556 (Siyah)</Turkish>
             <Hungarian>SIG 556 (Fekete)</Hungarian>
+            <Ukrainian>SIG 556 (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_Khaki">
             <English>SIG 556 (Khaki)</English>
@@ -5176,6 +5507,7 @@
             <Chinesesimp>SIG 556（卡其色）</Chinesesimp>
             <Turkish>SIG 556 (Haki)</Turkish>
             <Hungarian>SIG 556 (Khaki)</Hungarian>
+            <Ukrainian>SIG 556 (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_multicam">
             <English>SIG 556 (Camo)</English>
@@ -5193,6 +5525,7 @@
             <Chinesesimp>SIG 556（迷彩）</Chinesesimp>
             <Turkish>SIG 556 (Kamufulaj)</Turkish>
             <Hungarian>SIG 556 (Terepmintás)</Hungarian>
+            <Ukrainian>SIG 556 (камуфляжний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_tan">
             <English>SIG 556 (Sand)</English>
@@ -5210,6 +5543,7 @@
             <Chinesesimp>SIG 556（沙色）</Chinesesimp>
             <Turkish>SIG 556 (Kum)</Turkish>
             <Hungarian>SIG 556 (Homok)</Hungarian>
+            <Ukrainian>SIG 556 (пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_woodland">
             <English>SIG 556 (Woodland)</English>
@@ -5227,6 +5561,7 @@
             <Chinesesimp>SIG 556（森林迷彩）</Chinesesimp>
             <Turkish>SIG 556 (Orman)</Turkish>
             <Hungarian>SIG 556 (Erdőmintás)</Hungarian>
+            <Ukrainian>SIG 556 (Ліс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_04">
             <English>ASP-1 Kir (Black)</English>
@@ -5244,6 +5579,7 @@
             <Chinesesimp>ASP-1 "基尔"（黑色）</Chinesesimp>
             <Turkish>ASP-1 Kir (Siyah)</Turkish>
             <Hungarian>ASP-1 Kir (Fekete)</Hungarian>
+            <Ukrainian>ASP-1 Kir (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_04_Tan">
             <English>ASP-1 Kir (Tan)</English>
@@ -5261,6 +5597,7 @@
             <Chinesesimp>ASP-1 "基尔"（沙色）</Chinesesimp>
             <Turkish>ASP-1 Kir (Tan)</Turkish>
             <Hungarian>ASP-1 Kir (Cserszín)</Hungarian>
+            <Ukrainian>ASP-1 Kir (пустельний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_blk">
             <English>Cyrus (Black)</English>
@@ -5278,6 +5615,7 @@
             <Chinesesimp>"居鲁士"（黑色）</Chinesesimp>
             <Turkish>Cyrus (Siyah)</Turkish>
             <Hungarian>Cyrus (Fekete)</Hungarian>
+            <Ukrainian>Cyrus (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_hex">
             <English>Cyrus (Hex)</English>
@@ -5295,6 +5633,7 @@
             <Chinesesimp>"居鲁士"（蜂巢迷彩）</Chinesesimp>
             <Turkish>Cyrus (Hex)</Turkish>
             <Hungarian>Cyrus (Hex)</Hungarian>
+            <Ukrainian>Cyrus (гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_tan">
             <English>Cyrus (Tan)</English>
@@ -5312,6 +5651,7 @@
             <Chinesesimp>"居鲁士"（沙色）</Chinesesimp>
             <Turkish>Cyrus (Tan)</Turkish>
             <Hungarian>Cyrus (Cserszín)</Hungarian>
+            <Ukrainian>Cyrus (пустельний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_camo">
             <English>M14 (Camo)</English>
@@ -5329,6 +5669,7 @@
             <Chinesesimp>M14（迷彩）</Chinesesimp>
             <Turkish>M14 (Kamufulaj)</Turkish>
             <Hungarian>M14 (Terepmintás)</Hungarian>
+            <Ukrainian>M14 (камуфляжний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_hunter">
             <English>M14 (classic)</English>
@@ -5346,6 +5687,7 @@
             <Chinesesimp>M14（经典）</Chinesesimp>
             <Turkish>M14 (klasik)</Turkish>
             <Hungarian>M14 (klasszikus)</Hungarian>
+            <Ukrainian>M14 (класичний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_olive">
             <English>M14 (Olive)</English>
@@ -5363,6 +5705,7 @@
             <Chinesesimp>M14（橄榄色）</Chinesesimp>
             <Turkish>M14 (Zeytin Yeşili)</Turkish>
             <Hungarian>M14 (Olíva)</Hungarian>
+            <Ukrainian>M14 (олива)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_07_blk">
             <English>QBU-88 (Black)</English>
@@ -5380,6 +5723,7 @@
             <Chinesesimp>88式狙击步枪（黑色）</Chinesesimp>
             <Turkish>QBU-88 (Siyah)</Turkish>
             <Hungarian>QBU-88 (Fekete)</Hungarian>
+            <Ukrainian>QBU-88 (чорний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_07_ghex">
             <English>QBU-88 (Green Hex)</English>
@@ -5397,6 +5741,7 @@
             <Chinesesimp>88式狙击步枪（绿色蜂巢迷彩）</Chinesesimp>
             <Turkish>QBU-88 (Yeşil Hex)</Turkish>
             <Hungarian>QBU-88 (Zöld Hex)</Hungarian>
+            <Ukrainian>QBU-88 (зелений гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_07_hex">
             <English>QBU-88 (Hex)</English>
@@ -5414,6 +5759,7 @@
             <Chinesesimp>88式狙击步枪（蜂巢迷彩）</Chinesesimp>
             <Turkish>QBU-88 (Hex)</Turkish>
             <Hungarian>QBU-88 (Hex)</Hungarian>
+            <Ukrainian>QBU-88 (гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_EBR_Name">
             <English>Mk14 Mod 1 EBR</English>
@@ -5431,6 +5777,7 @@
             <Chinesesimp>Mk14 Mod 1 EBR</Chinesesimp>
             <Turkish>Mk14 Mod 1 EBR</Turkish>
             <Hungarian>Mk14 Mod 1 EBR</Hungarian>
+            <Ukrainian>Mk14 Mod 1 EBR</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_GM6_Name">
             <English>GM6 Lynx</English>
@@ -5448,6 +5795,7 @@
             <Chinesesimp>GM6 "猞猁"</Chinesesimp>
             <Turkish>GM6 Lynx</Turkish>
             <Hungarian>GM6 Gepárd</Hungarian>
+            <Ukrainian>GM6 Lynx</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_GM6_camo_Name">
             <English>GM6 Lynx (Camo)</English>
@@ -5465,6 +5813,7 @@
             <Chinesesimp>GM6 "猞猁"（迷彩）</Chinesesimp>
             <Turkish>GM6 Lynx (Kamufulaj)</Turkish>
             <Hungarian>GM6 Gepárd (Terepmintás)</Hungarian>
+            <Ukrainian>GM6 Lynx (камуфляжний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_GM6_ghex">
             <English>GM6 Lynx (Green Hex)</English>
@@ -5482,6 +5831,7 @@
             <Chinesesimp>GM6 "猞猁"（绿色蜂巢迷彩）</Chinesesimp>
             <Turkish>GM6 Lynx (Yeşil Hex)</Turkish>
             <Hungarian>GM6 Lynx (Zöld Hex)</Hungarian>
+            <Ukrainian>GM6 Lynx (зелений гекс)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_LRR_Name">
             <English>M200 Intervention</English>
@@ -5499,6 +5849,7 @@
             <Chinesesimp>M200 "干预"</Chinesesimp>
             <Turkish>M200 Intervention</Turkish>
             <Hungarian>M200 Intervention</Hungarian>
+            <Ukrainian>M200 Intervention</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_LRR_camo_Name">
             <English>M200 Intervention (Camo)</English>
@@ -5516,6 +5867,7 @@
             <Chinesesimp>M200 "干预"（迷彩）</Chinesesimp>
             <Turkish>M200 Intervention (kamuflaj)</Turkish>
             <Hungarian>M200 Intervention (Terepmintás)</Hungarian>
+            <Ukrainian>M200 Intervention (камуфляжний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_LRR_tna">
             <English>M200 Intervention (Tropic)</English>
@@ -5533,6 +5885,7 @@
             <Chinesesimp>M200 "干预"（热带迷彩）</Chinesesimp>
             <Turkish>M200 Intervention (Tropic)</Turkish>
             <Hungarian>M200 Intervention (Tropikus)</Hungarian>
+            <Ukrainian>M200 Intervention (тропік)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_static_AA_Name">
             <English>Mini-Spike Launcher (AA)</English>
@@ -5550,6 +5903,7 @@
             <Chinesesimp>"迷你长钉"（防空）</Chinesesimp>
             <Turkish>Mini-Spike Launcher (AA)</Turkish>
             <Hungarian>Mini-Spike rakétarendszer (Repülő-elhárító)</Hungarian>
+            <Ukrainian>Mini-Spike ПУ (ЗРК)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_static_AT_Name">
             <English>Mini-Spike Launcher (AT)</English>
@@ -5567,6 +5921,7 @@
             <Chinesesimp>"迷你长钉"（反坦）</Chinesesimp>
             <Turkish>Mini-Spike Launcher (AT)</Turkish>
             <Hungarian>Mini-Spike rakétarendszer (Tankelhárító)</Hungarian>
+            <Ukrainian>Mini-Spike ПУ (ПТРК)</Ukrainian>
         </Key>
     </Package>
 </Project>

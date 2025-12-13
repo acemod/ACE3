@@ -17,8 +17,8 @@
  * Public: No
  */
 
-params ["_unit", "", ["_jamType", "", ""]];
-TRACE_3("params",_unit,_weapon,_jamType);
+params ["_unit", "", ["_jamType", "", [""]]];
+TRACE_2("params",_unit,_jamType);
 
 private _weapon = param [1, primaryWeapon _unit, [""]];
 

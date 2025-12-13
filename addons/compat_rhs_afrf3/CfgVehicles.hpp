@@ -1,44 +1,13 @@
 class CfgVehicles {
+    class Tank_F;
     class LandVehicle;
-    class Tank: LandVehicle {
-        class NewTurret;
-    };
-    class Tank_F: Tank {
-        class Turrets {
-            class MainTurret: NewTurret {
-                class Turrets {
-                    class CommanderOptics;
-                };
-            };
-        };
-    };
     class Car: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions {};
         };
     };
-    class Car_F: Car {
-        class ViewPilot;
-        class NewTurret;
-    };
-    class Wheeled_APC_F: Car_F {
-        class NewTurret;
-        class Turrets {
-            class MainTurret: NewTurret {
-                class ViewOptics;
-            };
-        };
-        class CommanderOptics;
-    };
-    class Air;
-    class Helicopter: Air {
-        class Turrets;
-    };
-    class Helicopter_Base_F: Helicopter {
-        class Turrets: Turrets {
-            class MainTurret;
-        };
-    };
+    class Car_F: Car {};
+    class Wheeled_APC_F: Car_F {};
 
     class rhs_tank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 1200;
@@ -61,7 +30,7 @@ class CfgVehicles {
         EGVAR(vehicle_damage,engineFireProb) = 0.7;
         EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
 
-        class EGVAR(interaction,anims);
+        class EGVAR(interaction,anims) {};
     };
 
     class rhs_infantry_msv_base;
@@ -74,15 +43,12 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 3600;
     };
 
-    class Helicopter_Base_H: Helicopter_Base_F {
-        class EventHandlers;
-    };
-    class Heli_Light_02_base_F: Helicopter_Base_H {};
+    class Heli_Light_02_base_F;
     class RHS_Mi8_base: Heli_Light_02_base_F {
         EGVAR(map,vehicleLightColor)[] = {1,0,0,0.1};
         EGVAR(refuel,fuelCapacity) = 3700;
     };
-    class Heli_Attack_02_base_F: Helicopter_Base_F {};
+    class Heli_Attack_02_base_F;
     class RHS_Ka52_base: Heli_Attack_02_base_F {
         EGVAR(refuel,fuelCapacity) = 1870;
     };
@@ -146,12 +112,7 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 78;
     };
 
-    class APC_Tracked_02_base_F: Tank_F {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {};
-        };
-    };
-
+    class APC_Tracked_02_base_F;
     class rhs_zsutank_base: APC_Tracked_02_base_F {
         EGVAR(refuel,fuelCapacity) = 515;
         EGVAR(vehicle_damage,hullDetonationProb) = 0;
@@ -1032,7 +993,7 @@ class CfgVehicles {
     // Not a fan of this style of inheritance but it's less of a headache in this case
     class StaticWeapon: LandVehicle {
         class ACE_Actions {
-            class ACE_MainActions;
+            class ACE_MainActions {};
         };
     };
     class StaticMGWeapon: StaticWeapon {};

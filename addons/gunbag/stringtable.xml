@@ -16,6 +16,7 @@
             <Chinese>槍袋</Chinese>
             <Chinesesimp>枪袋</Chinesesimp>
             <Turkish>Silah Çantası</Turkish>
+            <Ukrainian>Чохол</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gunbag_DisplayName_Settings">
             <English>Gunbag</English>
@@ -32,6 +33,7 @@
             <Chinese>槍袋</Chinese>
             <Chinesesimp>枪袋</Chinesesimp>
             <Turkish>Silah Çantası</Turkish>
+            <Ukrainian>Чохол</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gunbag_DisplayName_Tan">
             <English>Gunbag (Tan)</English>
@@ -48,6 +50,7 @@
             <Chinese>槍袋 (黃褐色)</Chinese>
             <Chinesesimp>枪袋（黄褐色）</Chinesesimp>
             <Turkish>Silah Çantası (Tan)</Turkish>
+            <Ukrainian>Чохол (жовтувато-коричневий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gunbag_Empty">
             <English>Gunbag Empty</English>
@@ -64,6 +67,7 @@
             <Chinese>槍袋為空</Chinese>
             <Chinesesimp>枪袋为空</Chinesesimp>
             <Turkish>Silah Çantası Boş</Turkish>
+            <Ukrainian>Чохол порожній</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gunbag_OffGunbag">
             <English>Get weapon out of gunbag</English>
@@ -80,6 +84,7 @@
             <Chinese>將武器拿出槍袋</Chinese>
             <Chinesesimp>将武器拿出枪袋</Chinesesimp>
             <Turkish>Silahını silah çantasından çıkart</Turkish>
+            <Ukrainian>Розчохлити зброю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gunbag_Status">
             <English>Status</English>
@@ -96,6 +101,7 @@
             <Chinese>狀態</Chinese>
             <Chinesesimp>状态</Chinesesimp>
             <Turkish>Kontrol Et</Turkish>
+            <Ukrainian>Статус</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gunbag_SwapGunbag">
             <English>Exchange weapon in gunbag</English>
@@ -110,6 +116,7 @@
             <Japanese>ガンバッグ内の武器を交換</Japanese>
             <Chinesesimp>交换枪袋中的武器</Chinesesimp>
             <Turkish>Silah çantasında silah değişimi</Turkish>
+            <Ukrainian>Замінити зброю в чохлі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gunbag_SwapGunbagEnabled_Description">
             <English>Allows interaction to directly swap the primary weapon and stored weapon.</English>
@@ -124,6 +131,7 @@
             <Japanese>持っている武器とガンバッグ内の武器を交換できるようにします。</Japanese>
             <Chinesesimp>允许互动直接切换主武器和存储武器。</Chinesesimp>
             <Turkish>Etkileşimin doğrudan birincil silahı ve depolanan silahı değiştirmesine izin verir.</Turkish>
+            <Ukrainian>Дозволяє дію прямого обміну основної зброї та захованої в чохлі.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gunbag_SwapGunbagEnabled_DisplayName">
             <English>Enable Weapon Swap</English>
@@ -138,6 +146,7 @@
             <Japanese>武器交換を有効化</Japanese>
             <Chinesesimp>启用武器互换</Chinesesimp>
             <Turkish>Silah Değiştirmeyi Etkinleştir</Turkish>
+            <Ukrainian>Увім. обмін зброєю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Gunbag_ToGunbag">
             <English>Put weapon into gunbag</English>
@@ -154,6 +163,7 @@
             <Chinese>將武器放置槍袋</Chinese>
             <Chinesesimp>将武器放置枪袋</Chinesesimp>
             <Turkish>Silahını silah çantasına koy</Turkish>
+            <Ukrainian>Зачохлити зброю</Ukrainian>
         </Key>
     </Package>
 </Project>

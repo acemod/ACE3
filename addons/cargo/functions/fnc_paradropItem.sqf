@@ -4,7 +4,7 @@
  * Unloads and paradrops an object from a plane or helicopter.
  *
  * Arguments:
- * 0: Item <STRING> or <OBJECT>
+ * 0: Item <STRING or OBJECT>
  * 1: Holder object (vehicle) <OBJECT>
  * 2: Show Hint <BOOL> (default: true)
  *

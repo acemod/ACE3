@@ -4,7 +4,7 @@
  * Calculates the true wind speed at a given world position
  *
  * Arguments:
- * 0: world position - posASL <POSTION>
+ * 0: World position ASL <ARRAY>
  * 1: Account for wind gradient (used in advanced ballistics) <BOOL>
  * 2: Account for terrain <BOOL>
  * 3: Account for obstacles <BOOL>

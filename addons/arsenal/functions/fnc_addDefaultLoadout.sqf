@@ -2,7 +2,7 @@
 /*
  * Author: 654wak654, johnb43
  * Adds a loadout to the "Default Loadouts" list.
- * If a loadout with a similar name exists (case insensitve), it is overwritten.
+ * If a loadout with a similar name exists (case insensitive), it is overwritten.
  *
  * Arguments:
  * 0: Name of loadout <STRING>
