@@ -7,7 +7,7 @@
  * '_patient in _patient' always false for body
  *
  * Arguments:
- * 0: Medic (not used) <OBJECT> (optional)
+ * 0: Medic (not used) <OBJECT>
  * 1: Patient <OBJECT>
  *
  * Return Value:
