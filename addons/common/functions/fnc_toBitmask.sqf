@@ -4,10 +4,8 @@
  * Convert an array of booleans into a number.
  *
  * Arguments:
- * 0: Boolean <BOOL> (default: false)
- * 1: Boolean <BOOL> (default: false)
- * 2: Boolean <BOOL> (default: false)
- * ...
+ * Input <ARRAY of BOOLs>
+ * Index 0 is the least significant bit.
  *
  * Return Value:
  * Bitmask <NUMBER>
