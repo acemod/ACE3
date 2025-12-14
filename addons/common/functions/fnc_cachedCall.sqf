@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Parameters <ANY>
  * 1: Function <CODE>
- * 2: Namespace to store the cache on <NAMESPACE or OBJECT>
+ * 2: Namespace (any type that supports setVariable) to store the cache on <ANY>
  * 3: Cache uid <STRING>
  * 4: Max duration of the cache <NUMBER>
  * 5: Events that clear the cache <STRING or ARRAY of STRINGs> (default: nil)
