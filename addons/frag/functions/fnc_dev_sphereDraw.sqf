@@ -8,7 +8,7 @@
  * 1: Color of sphere <STRING> (default: "blue")
  *
  * Return Value:
- * The created sphere object <OBJECT or NIL>
+ * The created sphere object <OBJECT>
  *
  * Example:
  * [getPosASL player, "red"] call ace_frag_fnc_dev_sphereDraw
@@ -18,7 +18,7 @@
 
 params ["_posASL", ["_color", "blue"]];
 
-if (!isServer) exitWith {};
+if (!isServer) exitWith {objNull};
 
 if (_color select [0,1] != "(") then {
     _color = switch (toLowerANSI _color) do {

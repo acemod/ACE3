@@ -5,8 +5,8 @@
  *
  * Arguments:
  * 0: Position (2D,3D) <ARRAY>
-* 1: Waypoint Name <STRING> (default: "Waypoint")
-* 2: Index <NUMBER> (default: auto-assign)
+ * 1: Waypoint Name <STRING> (default: "Waypoint")
+ * 2: Index <NUMBER> (default: auto-assign)
  *
  * Return Value:
  * None

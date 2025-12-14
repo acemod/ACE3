@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Enable <BOOL>
- * 1: Intensity <NUMBER> (Optional if enable is false)
+ * 1: Intensity <NUMBER> (optional if enable is false)
  *
  * Return Value:
  * None
