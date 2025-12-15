@@ -1,7 +1,5 @@
 class ace_missileguidance_type_Nlaw;
 class CfgAmmo {
-
-    // Base projectile without penetrator submunition, used in DA but not in OTA
     class M_NLAW_AT_F;
     class ACE_NLAW: M_NLAW_AT_F {
         submunitionAmmo = "ACE_NLAW_Penetrator";
