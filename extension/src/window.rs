@@ -5,8 +5,8 @@ use windows::Win32::{
     Foundation::HWND,
     System::Threading::GetCurrentProcessId,
     UI::WindowsAndMessaging::{
-        EnumWindows, FLASHW_ALL, FLASHW_TIMERNOFG, FLASHWINFO, FlashWindowEx,
-        GetWindowThreadProcessId, SetForegroundWindow, IsWindowVisible, AllowSetForegroundWindow,
+        AllowSetForegroundWindow, EnumWindows, FLASHW_ALL, FLASHW_TIMERNOFG, FLASHWINFO,
+        FlashWindowEx, GetWindowThreadProcessId, IsWindowVisible, SetForegroundWindow,
     },
 };
 
