@@ -24,7 +24,7 @@ _methodArgs params ["_ownerSelection"];
 private _targetObject = _vehicle getVariable [QGVAR(targetObject), objNull];
 private _targetPos = getPosASL _targetObject;
 
-if(isNull _targetObject) exitWith {
+if (isNull _targetObject) exitWith {
     WARNING_1("Laser is null [%1]",_targetObject);
     [-1,-1]
 };
