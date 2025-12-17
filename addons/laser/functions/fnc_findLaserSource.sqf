@@ -26,7 +26,7 @@ private _targetPos = getPosASL _targetObject;
 
 if (isNull _targetObject) exitWith {
     WARNING_1("Laser is null [%1]",_targetObject);
-    [-1,-1]
+    [-1, -1]
 };
 
 if (surfaceIsWater _targetPos && {(_targetPos select 2) < 0}) then {
