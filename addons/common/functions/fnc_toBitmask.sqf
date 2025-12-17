@@ -2,10 +2,10 @@
 /*
  * Author: commy2
  * Convert an array of booleans into a number.
+ * Takes Input <ARRAY of BOOLs> (limited to float precision)
  *
  * Arguments:
- * Input <ARRAY of BOOLs>
- * Index 0 is the least significant bit.
+ * 0: Boolean (least significant bit) <BOOL>
  *
  * Return Value:
  * Bitmask <NUMBER>
