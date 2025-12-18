@@ -4,8 +4,10 @@
  * Updates camera to be on a fixed point
  *
  * Arguments:
- * 0: Guidance Arg Array <ARRAY>
- * 1: PFID <NUMBER>
+ * 0: Camera Array <ARRAY>
+ * 1: Projectile <OBJECT>
+ * 2: Delta time <NUMBER>
+ * 3: Camera Namespace <OBJECT>
  *
  * Return Value:
  * None

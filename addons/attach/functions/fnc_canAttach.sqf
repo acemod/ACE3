@@ -6,7 +6,7 @@
  * Arguments:
  * 0: vehicle that it will be attached to (player or vehicle) <OBJECT>
  * 1: unit doing the attach (player) <OBJECT>
- * 2: Array empty or containing a string of the attachable item <ARRAY>
+ * 2: Array empty or containing a string of the attachable item <STRING or ARRAY of STRING>
  *
  * Return Value:
  * Can Attach <BOOL>

@@ -7,7 +7,7 @@
  * 0: Unit <OBJECT> (default: objNull)
  * 1: Max range (-1 to ignore) <NUMBER> (default: 0)
  * 2: Item <ARRAY> (default: [])
- * - 0: Explosive <OBJECT> (default objNull)
+ * - 0: Explosive <OBJECT> (default: objNull)
  * - 1: Fuse time <NUMBER> (default: 0)
  * 3: Trigger item classname <STRING> (default: "#unknown")
  *
