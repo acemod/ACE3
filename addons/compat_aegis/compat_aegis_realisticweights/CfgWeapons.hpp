@@ -10,7 +10,7 @@ class CfgWeapons {
         class WeaponSlotsInfo;
     };
     class Launcher;
-    class Launcher_Base_F: Launcher;
+    class Launcher_Base_F: Launcher{};
 	class launch_RPG7_F: Launcher_Base_F {
 		class WeaponSlotsInfo;
 	};
@@ -19,14 +19,14 @@ class CfgWeapons {
         class WeaponSlotsInfo;
     };
 	class arifle_AKM_base_F;
-	class arifle_AKM_F: arifle_AKM_base_F;
+	class arifle_AKM_F: arifle_AKM_base_F{};
 	class arifle_RPK_base_F: Rifle_Base_F {
 		class WeaponSlotsInfo;
 	};
 	class Aegis_arifle_RPK74_base_F: arifle_RPK_base_F {
 		class WeaponSlotsInfo;
 	};
-	class GM6_base_F: Rifle_Long_Base_F;
+	class GM6_base_F: Rifle_Long_Base_F{};
 	class Aegis_srifle_GM6B_base_F: GM6_base_F {
 		class WeaponSlotsInfo;
 	};
@@ -352,4 +352,5 @@ class CfgWeapons {
         };
 	};
 };
+
 
