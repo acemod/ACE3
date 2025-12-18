@@ -12,7 +12,7 @@ class CfgPatches {
 		};
 		skipWhenMissingDependencies = 1;
 		author= ECSTRING(common,ACETeam);
-		authors[] = {};
+		authors[] = {"PoToo"};
 		url = ECSTRING(main,URL);
 		VERSION_CONFIG;
 
@@ -21,3 +21,4 @@ class CfgPatches {
 };
 
 #include "CfgWeapons.hpp"
+
