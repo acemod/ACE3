@@ -1,6 +1,8 @@
 use arma_rs::Group;
 
+#[allow(unused_imports)]
 use std::sync::Mutex;
+#[cfg(target_os = "windows")]
 use windows::Win32::{
     Foundation::HWND,
     System::Threading::GetCurrentProcessId,
@@ -10,10 +12,16 @@ use windows::Win32::{
     },
 };
 
+#[cfg(not(target_os = "windows"))]
+pub fn group() -> Group {
+    Group::new()
+}
+#[cfg(target_os = "windows")]
 pub fn group() -> Group {
     Group::new().command("focus", focus).command("flash", flash)
 }
 
+#[cfg(target_os = "windows")]
 fn get_window() -> Option<HWND> {
     let window_handle: Mutex<Option<HWND>> = Mutex::new(None);
 
@@ -30,6 +38,7 @@ fn get_window() -> Option<HWND> {
     *window_handle.lock().unwrap()
 }
 
+#[cfg(target_os = "windows")]
 unsafe extern "system" fn enum_window_callback(
     hwnd: HWND,
     lparam: windows::Win32::Foundation::LPARAM,
@@ -52,6 +61,7 @@ unsafe extern "system" fn enum_window_callback(
     1
 }
 
+#[cfg(target_os = "windows")]
 fn focus() -> Result<(), String> {
     if let Some(hwnd) = get_window() {
         unsafe {
@@ -65,6 +75,7 @@ fn focus() -> Result<(), String> {
     }
 }
 
+#[cfg(target_os = "windows")]
 fn flash() -> Result<(), String> {
     if let Some(hwnd) = get_window() {
         let flash_info = FLASHWINFO {
