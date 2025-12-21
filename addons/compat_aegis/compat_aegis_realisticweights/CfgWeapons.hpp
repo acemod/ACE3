@@ -58,7 +58,7 @@ class CfgWeapons {
     
     class Aegis_arifle_AK74_GL_F: Aegis_arifle_AKM74_GL_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 100.7;
+            mass = 101;
         };
     };
     
