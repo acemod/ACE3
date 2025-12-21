@@ -10,7 +10,7 @@
  * 3: Textures Paths <ARRAY>
  * 4: Icon Path <STRING> (default: "")
  * 5: Material Paths <ARRAY> (default: [])
- * 6: Tag Model <STRING> (default: "UserTexture1m_F")
+ * 6: Tag Model <STRING> (default: "ace_tagging_texture1m")
  * 7: Condition for the spraytag <CODE> (default: {true})
  *
  * Return Value:
@@ -29,7 +29,7 @@ params [
     ["_textures", [], [[]]],
     ["_icon", "", [""]],
     ["_materials", [], [[]]],
-    ["_tagModel", "UserTexture1m_F", [""]],
+    ["_tagModel", QGVAR(texture1m), [""]],
     ["_condition", {true}, [{}]]
 ];
 

@@ -4,13 +4,13 @@
  * Function to compare the components of the current and target wearables.
  *
  * Arguments:
- * 0: Current variant <CONFIG>
- * 1: Desired variant <CONFIG>
+ * 0: Current variant <STRING>
+ * 1: Desired variant <STRING>
  *
  * Return Value:
  * Nested array <ARRAY>
- * - 0: Configs of missing components <ARRAY>
- * - 1: Configs of surplus components <ARRAY>
+ * - 0: Configs of missing components <ARRAY of CONFIGs>
+ * - 1: Configs of surplus components <ARRAY of CONFIGs>
  *
  * Example:
  * [G_Balaclava_blk, G_Balaclava_combat] call ace_wardrobe_fnc_compareComponents

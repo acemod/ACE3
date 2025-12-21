@@ -38,7 +38,7 @@ if (isNil QEFUNC(captives,setHandcuffed)) then {
                 [LSTRING(OnlyAlive)] call FUNC(showMessage);
             } else {
                 private _captive = GETVAR(_unit,EGVAR(captives,isHandcuffed),false);
-                // Event initalized by ACE_Captives
+                // Event initialized by ACE_Captives
                 [QEGVAR(captives,setHandcuffed), [_unit, !_captive], _unit] call CBA_fnc_targetEvent;
             };
         };

@@ -119,8 +119,8 @@ while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
     _range = GVAR(rangeCardStartRange) + _n * GVAR(rangeCardIncrement);
     if ((_bulletPos select 1) >= _range && _range <= GVAR(rangeCardEndRange)) then {
         if (_range != 0) then {
-            _tx = (_lastBulletPos select 0) + (_range - (_lastBulletPos select 1)) * ((_bulletPos select 0) - (_lastBulletPos select 0)) / ((_bulletPos select 1) - (_lastBulletPos select 1));
-            _tz = (_lastBulletPos select 2) + (_range - (_lastBulletPos select 1)) * ((_bulletPos select 2) - (_lastBulletPos select 2)) / ((_bulletPos select 1) - (_lastBulletPos select 1));
+            _tx = linearConversion [_lastBulletPos select 1, _bulletPos select 1, _range, _lastBulletPos select 0, _bulletPos select 0];
+            _tz = linearConversion [_lastBulletPos select 1, _bulletPos select 1, _range, _lastBulletPos select 2, _bulletPos select 2];
             _elevation = - atan(_tz / _range);
             _windage = - atan(_tx / _range);
             _lead = (_targetSpeed * _TOF) / (tan(MRAD_TO_DEG(1)) * _range);

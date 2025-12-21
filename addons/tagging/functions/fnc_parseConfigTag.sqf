@@ -60,7 +60,7 @@ private _icon = getText (_cfg >> "icon");
 
 private _tagModel = getText (_cfg >> "tagModel");
 if (_tagModel == "") then {
-    _tagModel = "UserTexture1m_F";
+    _tagModel = QGVAR(texture1m);
 };
 
 private _condition = getText (_cfg >> "condition");

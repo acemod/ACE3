@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Dog tag data <ARRAY>
- * 1: Display as double tag <BOOL>
+ * 1: Display as double tag <BOOL> (default: false)
  *
  * Return Value:
  * None
