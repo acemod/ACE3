@@ -61,7 +61,10 @@
 
 private _fnc_move = {
     (_this select 2) params ["_moveInCode", "_moveInParams", "_currentTurret", "_moveBackCode", "_moveBackParams"];
-    TRACE_6("fnc_move params",_moveInCode,_moveInParams,_currentTurret,_moveBackCode,_moveBackParams,call {GVAR(frame)=diag_frameNo});
+    #ifdef DEBUG_MODE_FULL
+        GVAR(frame)=diag_frameNo;
+    #endif
+    TRACE_5("fnc_move params",_moveInCode,_moveInParams,_currentTurret,_moveBackCode,_moveBackParams);
 
     // workaround getting damage when moveOut while vehicle is moving
     // also this helps with arma bug when unit is stuck in wrong anim when move in turret with configured enabledByAnimationSource
