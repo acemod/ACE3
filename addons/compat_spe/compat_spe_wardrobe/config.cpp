@@ -20,4 +20,4 @@ class CfgPatches {
 };
 
 // ACE Wardrobe
-#include "ACE_Wardrobe.hpp"
+#include "ACE_wardrobe.hpp"
