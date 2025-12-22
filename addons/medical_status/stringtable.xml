@@ -152,5 +152,90 @@
             <Turkish>Durum</Turkish>
             <Ukrainian>Статус</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Medical_Status_WindowOnWakeUp_DisplayName">
+            <English>Wake Up Window Action</English>
+            <Czech>Akce okna při probuzení</Czech>
+            <French>Action de la fenêtre au réveil</French>
+            <Spanish>Acción de la ventana al despertar</Spanish>
+            <Italian>Azione della finestra al risveglio</Italian>
+            <Polish>Akcja okna przy przebudzeniu</Polish>
+            <Portuguese>Ação da Janela ao Despertar</Portuguese>
+            <Russian>Действие окна при пробуждении</Russian>
+            <German>Aktion des Fensters beim Aufwachen</German>
+            <Korean>기상 창 동작</Korean>
+            <Japanese>起床時のウィンドウアクション</Japanese>
+            <Chinese>醒來視窗動作</Chinese>
+            <Chinesesimp>醒来窗口动作</Chinesesimp>
+            <Turkish>Uyanma Penceresi Eylemi</Turkish>
+            <Ukrainian>Дія вікна при пробудженні</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Status_WindowOnWakeUp_Description">
+            <English>Action on the window when waking up</English>
+            <Czech>Akce okna při probuzení</Czech>
+            <French>Action de la fenêtre au réveil</French>
+            <Spanish>Acción de la ventana al despertar</Spanish>
+            <Italian>Azione della finestra al risveglio</Italian>
+            <Polish>Akcja okna przy przebudzeniu</Polish>
+            <Portuguese>Ação na janela ao despertar</Portuguese>
+            <Russian>Действие окна при пробуждении</Russian>
+            <German>Aktion des Fensters beim Aufwachen</German>
+            <Korean>기상 시 창의 동작</Korean>
+            <Japanese>起床時のウィンドウの動作</Japanese>
+            <Chinese>醒來時視窗的動作</Chinese>
+            <Chinesesimp>醒来时窗口的动作</Chinesesimp>
+            <Turkish>Uyanırken pencere üzerindeki eylem</Turkish>
+            <Ukrainian>Дія вікна при пробудженні</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Status_WindowOnWakeUp_Option_Nothing">
+            <English>Do Nothing</English>
+            <Czech>Nedělat nic</Czech>
+            <French>Ne rien faire</French>
+            <Spanish>No hacer nada</Spanish>
+            <Italian>Non fare nulla</Italian>
+            <Polish>Nie robić nic</Polish>
+            <Portuguese>Não Fazer Nada</Portuguese>
+            <Russian>Ничего не делать</Russian>
+            <German>Nichts tun</German>
+            <Korean>아무것도 하지 않음</Korean>
+            <Japanese>何もしない</Japanese>
+            <Chinese>不做任何事</Chinese>
+            <Chinesesimp>不做任何事</Chinesesimp>
+            <Turkish>Hiçbir şey yapma</Turkish>
+            <Ukrainian>Нічого не робити</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Status_WindowOnWakeUp_Option_Focus">
+            <English>Focus Window</English>
+            <Czech>Ostření okna</Czech>
+            <French>Mettre la fenêtre au premier plan</French>
+            <Spanish>Enfocar ventana</Spanish>
+            <Italian>Focalizza finestra</Italian>
+            <Polish>Ustaw fokus na okno</Polish>
+            <Portuguese>Focar Janela</Portuguese>
+            <Russian>Фокус на окно</Russian>
+            <German>Fenster fokussieren</German>
+            <Korean>창에 포커스 맞추기</Korean>
+            <Japanese>ウィンドウにフォーカス</Japanese>
+            <Chinese>聚焦視窗</Chinese>
+            <Chinesesimp>聚焦窗口</Chinesesimp>
+            <Turkish>Pencereye Odaklan</Turkish>
+            <Ukrainian>Фокус на вікно</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Status_WindowOnWakeUp_Option_Flash">
+            <English>Flash Window</English>
+            <Czech>Blikání okna</Czech>
+            <French>Faire clignoter la fenêtre</French>
+            <Spanish>Parpadear ventana</Spanish>
+            <Italian>Finestra lampeggiante</Italian>
+            <Polish>Błysk okna</Polish>
+            <Portuguese>Janela Piscante</Portuguese>
+            <Russian>Мигание окна</Russian>
+            <German>Fenster blinken lassen</German>
+            <Korean>창 깜박이기</Korean>
+            <Japanese>ウィンドウを点滅させる</Japanese>
+            <Chinese>閃爍視窗</Chinese>
+            <Chinesesimp>闪烁窗口</Chinesesimp>
+            <Turkish>Pencereyi Flaş Yap</Turkish>
+            <Ukrainian>Миттєве вікно</Ukrainian>
+        </Key>
     </Package>
 </Project>

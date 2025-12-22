@@ -12,7 +12,7 @@
  * If the player can prepare the static weapon's ammo <BOOL>
  *
  * Example:
- * cursorObject call SPE_Weapons_Static_fnc_can_prepare_ammo
+ * [cursorObject, currentMagazine player] call SPE_Weapons_Static_fnc_can_prepare_ammo
  *
  * Public: No
  */

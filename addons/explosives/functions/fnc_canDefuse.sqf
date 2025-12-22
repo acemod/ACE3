@@ -1,34 +1,45 @@
 #include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
- * Whether a unit can perform the defuse action
+ * Whether a unit can perform the defuse action.
  *
  * Arguments:
- * 0: Unit <OBJECT>
- * 1: Target (ACE_DefuseObject) <OBJECT>
+ * 0: Unit <OBJECT> (default: objNull)
+ * 1: Interaction object or target explosive <OBJECT> (default: objNull)
  *
  * Return Value:
  * Able to defuse <BOOL>
  *
  * Example:
- * if ([player] call ACE_Explosives_fnc_canDefuse) then {hint "Can Defuse";};
+ * [player, cursorObject] call ace_explosives_fnc_canDefuse
  *
  * Public: Yes
  */
 
-params ["_unit", "_target"];
+params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
 TRACE_2("params",_unit,_target);
 
-private _explosive = _target getVariable [QGVAR(Explosive), objNull];
-if (isNull _explosive) exitWith {
-    deleteVehicle _target;
-    false
+if (!alive _unit || {!alive _target}) exitWith {
+    false // return
 };
-if (!isNull objectParent _unit || {(_unit call EFUNC(common,uniqueItems)) findAny GVAR(defusalKits) == -1}) exitWith {false};
 
-if (GVAR(RequireSpecialist) && {!([_unit] call EFUNC(Common,isEOD))}) exitWith {false};
+scopeName "main";
 
-//Handle the naval mines (which doens't get turned into items when defused):
-if ((_explosive isKindOf "UnderwaterMine_Range_Ammo") && {!mineActive _explosive}) exitWith {false};
+if (_target isKindOf "ACE_DefuseObject") then {
+    private _explosive = attachedTo _target;
 
-true
+    // Delete helper object attached to nothing
+    if (isNull _explosive) exitWith {
+        detach _target;
+        deleteVehicle _target;
+
+        false breakOut "main" // return
+    };
+
+    _target = _explosive;
+};
+
+(!GVAR(requireSpecialist) || {_unit call EFUNC(common,isEOD)}) &&
+{mineActive _target || {!(_target isKindOf "UnderwaterMine_Range_Ammo")}} && // Handle naval mines (which don't get turned into items when defused)
+{isNull objectParent _unit} &&
+{GVAR(defusalKits) findAny (_unit call EFUNC(common,uniqueItems)) != -1} // return

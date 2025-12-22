@@ -7,7 +7,7 @@
  * 0: Unit <OBJECT>
  * 1: The color of the tag (valid colors are black, red, green and blue or full path to custom texture) <STRING>
  * 2: Material of the tag <STRING> (default: "")
- * 3: Tag Model <STRING> (default: "UserTexture1m_F")
+ * 3: Tag Model <STRING> (default: "ace_tagging_texture1m")
  *
  * Return Value:
  * Success <BOOL>
@@ -22,11 +22,12 @@ params [
     ["_unit", objNull, [objNull]],
     ["_texture", "", [""]],
     ["_material", "", [""]],
-    ["_tagModel", "UserTexture1m_F", [""]]
+    ["_tagModel", QGVAR(texture1m), [""]]
 ];
 
 if (isNull _unit || {_texture == ""}) exitWith {
     ERROR_2("Tag parameters invalid. Unit: %1, Texture: %2",_unit,_texture);
+    false
 };
 
 private _isVehicleTag = false;

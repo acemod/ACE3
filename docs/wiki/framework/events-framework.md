@@ -91,10 +91,13 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|
 |`ace_allowDefuse` | [_mine, _allow] | Global or Target | Callable | Set allowance of the dynamic defusal action on a mine |
-|`ace_tripflareTriggered` | [_flareObject, [_posX, _posY, _posZ]] | Global | Listen | Tripflare triggered |
+|`ace_tripflareTriggered` | [_flareObject, _posAGL] | Global | Listen | Tripflare triggered |
 |`ace_explosives_clackerAdded` | [_unit, _explosive, _id] | Local | Listen | Clacker added to explosive |
 |`ace_explosives_place` | [_explosive, _dir, _pitch, _unit] | Global | Listen | Explosive is armed |
-|`ace_explosives_setup` | [_explosiveVehicle, _magClassname, _unit] | Global | Listen | Explosive is placed in the world |
+|`ace_explosives_setup` | [_explosive, _magClassname, _unit] | Global | Listen | Explosive is placed in the world |
+|`ace_explosives_defuseStart` | [_explosive, _unit] | Global | Listen | Unit starts defusing explosive |
+|`ace_explosives_defuse` | [_explosive, _unit] | Global | Listen | Explosive is safely defused |
+|`ace_explosives_explodeOnDefuse` | [_explosive, _unit] | Global | Listen | Explosive blows up when trying to defuse |
 
 ### 2.9 Logistics Wirecutter (`ace_logistics`)
 

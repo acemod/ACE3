@@ -9,7 +9,7 @@
  * 2: Hit index <NUMBER>
  * 3: Selection <STRING>
  * 4: Added damage to part <NUMBER>
- * 5: Projectile <OBJECT>
+ * 5: Projectile <STRING>
  * 6: Source of damage <OBJECT>
  * 7: Person who caused damage <OBJECT>
  *

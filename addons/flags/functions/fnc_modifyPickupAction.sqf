@@ -10,7 +10,7 @@
  * 3: Action Data <ARRAY>
  *
  * Return Value:
- * Flag items <ARRAY>
+ * None
  *
  * Example:
  * [_target, _player, [], _this select 3] call ace_flags_fnc_modifyPickupAction
