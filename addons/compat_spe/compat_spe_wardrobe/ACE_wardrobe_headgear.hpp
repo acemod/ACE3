@@ -97,8 +97,6 @@ class H_SPE_GER_Helmet_Glasses: ace_wardrobe_base {
     components[] = { QUOTE(G_SPE_Dust_Goggles) };
 };
 
-
-// ToDo: Continue US Helmets
 HELMET_GOGGLES(H_SPE_US_AB_Helmet_Net,H_SPE_US_AB_Helmet_polar_net,G_SPE_Polar_Goggles);
 
 BASE_TRIPLET(H_SPE_US_AB_Helmet_Net_up,H_SPE_US_AB_Helmet_Net_ns,H_SPE_US_AB_Helmet_Net_os);
