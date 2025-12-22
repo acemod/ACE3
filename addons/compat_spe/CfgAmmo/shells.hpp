@@ -141,6 +141,7 @@ class SPE_SprGr_KwK36_HE: SPE_ShellHE_base {
 
 // Panzer VI AP
 class SPE_PzGr39_KwK36_AP: SPE_Shell_base {
+    EGVAR(frag,enabled) = 1;
     EGVAR(frag,force) = 1;
     EGVAR(frag,metal) = 10200;
     EGVAR(frag,charge) = 109;
