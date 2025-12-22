@@ -1,3 +1,6 @@
+HELMET_GOGGLES2 -> HELMET_GOGGLES_NOCOMPONENT
+
+
 // Config
 // Adjust Weight of CfgWeapons Wearables
 #define MASS(var)\
@@ -157,22 +160,6 @@ class BoonieRolled: ace_wardrobe_base {\
     };\
 }
 
-
-
-// Helmet with Goggles Component
-#define HELMET_GOGGLES_COMPONENT(HelmetBase,HelmetGoggles,Goggles)\
-class HelmetBase: ace_wardrobe_base_H_goggles_off {\
-    class modifiableTo {\
-        class HelmetGoggles {};\
-    };\
-};\
-class HelmetGoggles: ace_wardrobe_base_H_goggles_on {\
-    class modifiableTo {\
-        class HelmetBase {};\
-    };\
-    components[] = {QUOTE(Goggles)};\
-}
-
 // Helmet with 2 Variants and Goggles
 #define HELMET_2VARIANTS_GOGGLES(HelmetV1,HelmetV2,HelmetV1Goggles,HelmetV2Goggles,Component)\
 class HelmetV1: ace_wardrobe_base {\
@@ -202,6 +189,22 @@ class HelmetV2Goggles: ace_wardrobe_base {\
     components[] = { QUOTE(Component) };\
 }
 
+// Helmets with a Scrim and No Scrim Version
+#define HELMET_SCRIM(HelmetBase,HelmetScrim)\
+class HelmetBase: ace_wardrobe_base {\
+    class modifiableTo {\
+        class HelmetScrim {\
+            directionalActionName = "Add Scrim/Foliage to Helmet";\
+        };\
+    };\
+};\
+class HelmetScrim: ace_wardrobe_base {\
+    class modifiableTo {\
+        class HelmetBase {\
+            directionalActionName = "Remove Scrim/Foliage from Helmet";\
+        };\
+    };\
+}
 
 
 // UNIFORMS
@@ -306,10 +309,27 @@ class UniformRolled: ace_wardrobe_base_U_sleeves_up {\
     };\
 }
 
+// Uniform with 2 types of rolled up
+#define UNIFORM_SLEEVES2(UniformBase,UniformRolled1,UniformRolled2)\
+class UniformBase: ace_wardrobe_base_U_sleeves_down {\
+    class modifiableTo {\
+        class UniformRolled1 {};\
+    };\
+};\
+class UniformRolled1: ace_wardrobe_base {\
+    class modifiableTo {\
+        class UniformBase {};\
+        class UniformRolled2 {};\
+    };\
+};\
+class UniformRolled2: ace_wardrobe_base_U_sleeves_up {\
+    class modifiableTo {\
+        class UniformRolled1 {};\
+    };\
+}
 
 
-
-// Facemasks
+// FACEMASKS
 // Facemask with Goggles
 #define FACEMASK_GOGGLES(FaceMaskBase,FaceMaskGoggles,Goggles)\
 class FaceMaskBase: ace_wardrobe_base {\
@@ -347,38 +367,4 @@ class FaceMaskGoggles2: ace_wardrobe_base {\
     components[] = {QUOTE(FaceMaskBase),QUOTE(Goggles2)};\
 }
 
-// Uniform with 2 types of rolled up
-#define UNIFORM_SLEEVES2(UniformBase,UniformRolled1,UniformRolled2)\
-class UniformBase: ace_wardrobe_base_U_sleeves_down {\
-    class modifiableTo {\
-        class UniformRolled1 {};\
-    };\
-};\
-class UniformRolled1: ace_wardrobe_base {\
-    class modifiableTo {\
-        class UniformBase {};\
-        class UniformRolled2 {};\
-    };\
-};\
-class UniformRolled2: ace_wardrobe_base_U_sleeves_up {\
-    class modifiableTo {\
-        class UniformRolled1 {};\
-    };\
-}
 
-// Helmets with a Scrim and No Scrim Version
-#define HELMET_SCRIM(HelmetBase,HelmetScrim)\
-class HelmetBase: ace_wardrobe_base {\
-    class modifiableTo {\
-        class HelmetScrim {\
-            directionalActionName = "Add Scrim/Foliage to Helmet";\
-        };\
-    };\
-};\
-class HelmetScrim: ace_wardrobe_base {\
-    class modifiableTo {\
-        class HelmetBase {\
-            directionalActionName = "Remove Scrim/Foliage from Helmet";\
-        };\
-    };\
-}
