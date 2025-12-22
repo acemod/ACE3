@@ -1,6 +1,3 @@
-HELMET_GOGGLES2 -> HELMET_GOGGLES_NOCOMPONENT
-
-
 // Config
 // Adjust Weight of CfgWeapons Wearables
 #define MASS(var)\
