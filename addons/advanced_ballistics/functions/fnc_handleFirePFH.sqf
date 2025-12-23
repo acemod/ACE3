@@ -23,7 +23,7 @@
         private _bulletPosition = getPosASL _bullet;
 
         if (_bulletTraceVisible && {vectorMagnitude _bulletVelocity > BULLET_TRACE_MIN_VELOCITY}) then {
-            drop ["\A3\data_f\ParticleEffects\Universal\Refract","","Billboard",1,0.1,getPos _bullet,[0,0,0],0,1.275,1,0,[0.02*_caliber,0.01*_caliber],[[0,0,0,0.65],[0,0,0,0.2]],[1,0],0,0,"","",""];
+            drop ["\A3\data_f\ParticleEffects\Universal\Refract","","Billboard",1,0.1,ASLToAGL _bulletPosition,[0,0,0],0,1.275,1,0,[0.02*_caliber,0.01*_caliber],[[0,0,0,0.65],[0,0,0,0.2]],[1,0],0,0,"","",""];
         };
 
         (
