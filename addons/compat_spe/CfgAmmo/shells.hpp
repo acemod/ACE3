@@ -75,6 +75,7 @@ class SPE_SprGr34_KWK40_HE: SPE_ShellHE_base {
 
 // Panzer IV G AP
 class SPE_PzGr39_KWK40_AP: SPE_Shell_base {
+    EGVAR(frag,force) = 1;
     EGVAR(frag,metal) = 6800;
     EGVAR(frag,charge) = 29;
     EGVAR(frag,gurney_c) = 2930;
