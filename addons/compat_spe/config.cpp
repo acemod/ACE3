@@ -7,12 +7,8 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "ace_common",
-            "WW2_SPE_Assets_c_Weapons_InfantryWeapons_c",
-            "WW2_SPE_Assets_c_Vehicles_StaticWeapons_c",
-            "WW2_SPE_Assets_c_Vehicles_Weapons_c",
-            "WW2_SPE_Core_f_System_StaticWeapons_f",
-            "WW2_SPE_Core_c_Core_c_Eventhandlers"
+            "WW2_SPE_Core_c_ZZZ_LastLoaded_c",
+            "ace_common"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
