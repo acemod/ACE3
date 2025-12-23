@@ -40,12 +40,12 @@
         private _posDiff = (_currentPosition vectorDiff _lastPosition);
         private _lengthSqr = _posDiff vectorDotProduct _posDiff;
         private _minDistance = if (_lengthSqr - 0.001 <= 0) then {
-            _lastPosition vectorDistance _targetPosition
+            _lastPosition vectorDistance _targetPosition // return
         } else {
             private _d = (_targetPosition vectorDiff _lastPosition) vectorDotProduct (_currentPosition vectorDiff _lastPosition);
             private _t = 0 max (1 min (_d / _lengthSqr));
             private _projection = _lastPosition vectorAdd ((_currentPosition vectorDiff _lastPosition) vectorMultiply _t);
-            _projection vectorDistance _targetPosition
+            _projection vectorDistance _targetPosition // return
         };
 
         _x set [2, _currentPosition];

@@ -34,6 +34,7 @@ GVAR(trackingHandle) = -1;
             private _side = _projectile getVariable [QGVAR(side), side _projectile];
             _submunitionProjectile setVariable [QGVAR(side), _side];
             TRACE_1("Submunition created",_submunitionProjectile);
+            private _toIntercept = uiNamespace getVariable QGVAR(projectilesToIntercept);
             if (local _submunitionProjectile && { (typeOf _submunitionProjectile) in _toIntercept }) then {
                 [QGVAR(track), [_submunitionProjectile, _side]] call CBA_fnc_serverEvent;
             };

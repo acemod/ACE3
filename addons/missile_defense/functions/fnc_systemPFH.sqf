@@ -30,7 +30,7 @@ if (_system isEqualTo -1) exitWith {
 {
     private _items = _system getOrDefault [_x, []];
     {
-        if (isNull _x || !alive _x) then {
+        if !(alive _x) then {
             _items deleteAt _forEachIndex;
         };
     } forEachReversed _items;

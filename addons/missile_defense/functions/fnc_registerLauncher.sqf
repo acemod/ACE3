@@ -13,10 +13,13 @@
  * Example:
  * [] call ace_missile_defense_registerLauncher
  *
- * Public: No
+ * Public: Yes
  */
 
-params ["_id", "_launcher"];
+params [
+    ["_id", "", [""]],
+    ["_launcher", objNull, [objNull]]
+];
 
 if (!isServer) exitWith {
     ERROR("missile_defense functions only run on server");

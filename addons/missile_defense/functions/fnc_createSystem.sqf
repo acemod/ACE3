@@ -13,7 +13,7 @@
  * Example:
  * [] call ace_missile_defense_createSystem
  *
- * Public: No
+ * Public: Yes
  */
 
 if (!isServer) exitWith {
