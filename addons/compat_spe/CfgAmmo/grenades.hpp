@@ -1,6 +1,5 @@
-class GrenadeBase;
 class SPE_GrenadeHand_base;
-class SPE_Grenade_base: GrenadeBase {};
+class SPE_Grenade_base;
 
 class SPE_US_M15: SPE_GrenadeHand_base {
     ACE_damageType = QGVAR(explosive_incendiary);
@@ -107,8 +106,7 @@ class SPE_G_SPRGR_30_Detonation: SPE_Grenade_base {
     EGVAR(frag,classes)[] = {"ACE_frag_small_HD"};
 };
 
-class SmokeShell;
-class SPE_SmokeShell_base: SmokeShell {};
+class SPE_SmokeShell_base;
 class SPE_US_AN_M14: SPE_SmokeShell_base {
     EGVAR(grenades,incendiary) = 1;
 };
