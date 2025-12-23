@@ -17,8 +17,6 @@
  * Public: No
  */
 
-params ["_target", "_unit"];
-
 params ["_target", "_unit", ["_event", false]];
 TRACE_3("sightDetach",_target,_unit,_event);
 
