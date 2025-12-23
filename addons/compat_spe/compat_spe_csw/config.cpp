@@ -7,11 +7,11 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "ww2_spe_assets_c_weapons_infantryweapons_c",
-            "ww2_spe_assets_c_vehicles_staticweapons_c",
-            "ww2_spe_assets_c_vehicles_weapons_c",
-            "ww2_spe_core_f_system_staticweapons_f",
-            "ww2_spe_core_c_core_c_eventhandlers",
+            "WW2_SPE_Assets_c_Weapons_InfantryWeapons_c",
+            "WW2_SPE_Assets_c_Vehicles_StaticWeapons_c",
+            "WW2_SPE_Assets_c_Vehicles_Weapons_c",
+            "WW2_SPE_Core_f_System_StaticWeapons_f",
+            "WW2_SPE_Core_c_Core_c_Eventhandlers",
             "ace_csw"
         };
         skipWhenMissingDependencies = 1;
