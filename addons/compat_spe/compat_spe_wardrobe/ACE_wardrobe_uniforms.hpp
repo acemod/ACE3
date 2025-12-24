@@ -10,6 +10,7 @@ UNIFORM_SLEEVES(U_SPE_CIV_Worker_Coverall_3,U_SPE_CIV_Worker_Coverall_3_trop);
 UNIFORM_SLEEVES(U_SPE_CIV_Worker_1,U_SPE_CIV_Worker_1_trop);
 UNIFORM_SLEEVES(U_SPE_CIV_Worker_2,U_SPE_CIV_Worker_2_trop);
 UNIFORM_SLEEVES(U_SPE_CIV_Worker_3,U_SPE_CIV_Worker_3_trop);
+UNIFORM_SLEEVES(U_SPE_CIV_Worker_4,U_SPE_CIV_Worker_4_trop);
 
 UNIFORM_SLEEVES(U_SPE_FFI_Worker_1,U_SPE_FFI_Worker_1_trop);
 UNIFORM_SLEEVES(U_SPE_FFI_Worker_2,U_SPE_FFI_Worker_2_trop);
