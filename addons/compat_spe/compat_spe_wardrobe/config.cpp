@@ -7,8 +7,8 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
+            "WW2_SPE_Core_c_ZZZ_LastLoaded_c",
             "ace_wardrobe",
-            "WW2_SPE_Core_c_Core_c"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
