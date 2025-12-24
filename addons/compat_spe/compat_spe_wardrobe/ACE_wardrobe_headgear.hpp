@@ -35,7 +35,7 @@ BASE_PAIR(H_SPE_GER_Helmet_net,H_SPE_GER_Helmet_net_ns);
 BASE_PAIR(H_SPE_GER_Helmet_os,H_SPE_GER_Helmet_ns_wire);
 
 
-//Headphones Up, Headphones Down
+// Headphones Up, Headphones Down
 BASE_PAIR(H_SPE_GER_SPGPrivateCap,H_SPE_GER_SPGPrivateCap2);
 
 BASE_PAIR(H_SPE_GER_TankPrivateCap,H_SPE_GER_TankPrivateCap2);
@@ -45,7 +45,7 @@ BASE_PAIR(H_SPE_GER_TankOfficerCap,H_SPE_GER_TankOfficerCap2);
 
 
 // Hat, Tilted
-//Normal, Tilted
+// Normal, Tilted
 
 BASE_PAIR(H_SPE_GER_M40_LW,H_SPE_GER_M40_LW_2);
 BASE_PAIR(H_SPE_GER_M40_LW_Offz,H_SPE_GER_M40_LW_Offz_2);
@@ -169,4 +169,3 @@ class H_SPE_US_jeep_cap_polar: ace_wardrobe_base {
     };
     components[] = { QUOTE(G_SPE_Polar_Goggles) };
 };
-
