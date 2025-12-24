@@ -29,8 +29,8 @@ UNIFORM_SLEEVES(U_SPE_ST_Soldier_E44_Boots,U_SPE_ST_Soldier_E44_Boots_rolled);
 
 UNIFORM_SLEEVES(U_SPE_ST_Soldier_E44,U_SPE_ST_MGunner_E44);
 
-//UNIFORM_SLEEVES2(UniformBase,UniformRolled1,UniformRolled2)
-//Normal, Offener Kragen, Offener Kragen Ärmel Hoch
+// UNIFORM_SLEEVES2(UniformBase,UniformRolled1,UniformRolled2)
+// Normal, Offener Kragen, Offener Kragen Ärmel Hoch
 
 UNIFORM_SLEEVES2(U_SPE_GER_Soldier_M36_Boots,U_SPE_GER_Soldier_M36_Boots_open,U_SPE_GER_Soldier_M36_Boots_Rolled);
 UNIFORM_SLEEVES2(U_SPE_GER_Soldier_M40_Boots,U_SPE_GER_Soldier_M40_Boots_open,U_SPE_GER_Soldier_M40_Boots_Rolled);
