@@ -236,10 +236,6 @@ if (isServer) then {
     };
 }] call CBA_fnc_addEventHandler;
 
-// Request framework
-[QGVAR(requestCallback), LINKFUNC(requestCallback)] call CBA_fnc_addEventHandler;
-[QGVAR(receiveRequest), LINKFUNC(receiveRequest)] call CBA_fnc_addEventHandler;
-
 [QGVAR(systemChatGlobal), {systemChat _this}] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
