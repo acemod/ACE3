@@ -9,6 +9,6 @@ class EGVAR(arsenal,stats) {
         showText = 1;
         textStatement = QUOTE(localize QUOTE(ELSTRING(common,yes)));
         condition = QUOTE((_this select 1) call FUNC(isModifiable));
-        tabs[] = {{3,4,5}, {}};
+        tabs[] = {{3,4,5,6}, {}};
     };
 };
