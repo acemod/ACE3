@@ -329,6 +329,33 @@ class UniformRolled2: ace_wardrobe_base_U_sleeves_up {\
     };\
 }
 
+// Uniform Closed Collar, Open Collar, RolledUpSleeves
+#define UNIFORM_COLLARCLOSED_COLLAROPEN_SLEEVESUP(ClosedCollar,OpenCollar,OpenCollarRolledUpSleeves)\
+class ClosedCollar: ace_wardrobe_base {\
+    class modifiableTo {\
+        class OpenCollar {\
+            directionalActionName = CSTRING(openCollar);\
+        };\
+    };\
+};\
+class OpenCollar: ace_wardrobe_base {\
+    class modifiableTo {\
+        class ClosedCollar {\
+            directionalActionName = CSTRING(closeCollar);\
+        };\
+        class OpenCollarRolledUpSleeves {\
+            directionalActionName = CSTRING(sleevesUp);\
+        };\
+    };\
+};\
+class OpenCollarRolledUpSleeves: ace_wardrobe_base {\
+    class modifiableTo {\
+        class OpenCollar {\
+            directionalActionName = CSTRING(sleevesDown);\
+        };\
+    };\
+}
+
 
 // FACEMASKS
 // Facemask with Goggles

@@ -37,6 +37,12 @@
         <Key ID="STR_ACE_Wardrobe_withoutTie">
             <English>Remove tie</English>
         </Key>
+        <Key ID="STR_ACE_Wardrobe_openCollar">
+            <English>Open Collar</English>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_closeCollar">
+            <English>Close Collar</English>
+        </Key>
         <Key ID="STR_ACE_Wardrobe_glovesOn">
             <English>Wear gloves</English>
             <French>Portez des gants</French>
