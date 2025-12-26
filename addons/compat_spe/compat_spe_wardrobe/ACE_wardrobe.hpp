@@ -6,6 +6,8 @@ class ace_wardrobe {
     class ace_wardrobe_base_U_gloves_off;
     class ace_wardrobe_base_H_goggles_on;
     class ace_wardrobe_base_H_goggles_off;
+    class ace_wardrobe_base_U_with_tie;
+    class ace_wardrobe_base_U_without_tie;
 
     #include "ACE_wardrobe_uniforms.hpp"
     #include "ACE_wardrobe_headgear.hpp"

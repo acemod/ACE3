@@ -47,6 +47,14 @@ class GVAR(base_U_gloves_off): GVAR(base) {
     alternativeActionName = CSTRING(glovesOff);
 };
 
+// Common base class for uniforms with gloves on/off variants
+class GVAR(base_U_with_tie): GVAR(base) {
+    alternativeActionName = CSTRING(withTie);
+};
+class GVAR(base_U_without_tie): GVAR(base) {
+    alternativeActionName = CSTRING(withoutTie);
+};
+
 // Common base class for uniforms who are open/closed in the front
 class GVAR(base_U_jacket_open): GVAR(base) {
     alternativeActionName = CSTRING(jacketOpen);

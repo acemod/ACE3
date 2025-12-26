@@ -3,6 +3,14 @@
 
 UNIFORM_GLOVES(U_SPE_FSJ_mk2,U_SPE_FSJ_mk2_gloves);
 
+UNIFORM_TIE(U_SPE_CIV_Citizen_1_tie,U_SPE_CIV_Citizen_1);
+UNIFORM_TIE(U_SPE_CIV_Citizen_2_tie,U_SPE_CIV_Citizen_2);
+UNIFORM_TIE(U_SPE_CIV_Citizen_3_tie,U_SPE_CIV_Citizen_3);
+UNIFORM_TIE(U_SPE_CIV_Citizen_4_tie,U_SPE_CIV_Citizen_4);
+UNIFORM_TIE(U_SPE_CIV_Citizen_5_tie,U_SPE_CIV_Citizen_5);
+UNIFORM_TIE(U_SPE_CIV_Citizen_6_tie,U_SPE_CIV_Citizen_6);
+UNIFORM_TIE(U_SPE_CIV_Citizen_7_tie,U_SPE_CIV_Citizen_7);
+
 UNIFORM_SLEEVES(U_SPE_CIV_Worker_Coverall_1,U_SPE_CIV_Worker_Coverall_1_trop);
 UNIFORM_SLEEVES(U_SPE_CIV_Worker_Coverall_2,U_SPE_CIV_Worker_Coverall_2_trop);
 UNIFORM_SLEEVES(U_SPE_CIV_Worker_Coverall_3,U_SPE_CIV_Worker_Coverall_3_trop);
