@@ -334,24 +334,24 @@ class UniformRolled2: ace_wardrobe_base_U_sleeves_up {\
 class ClosedCollar: ace_wardrobe_base {\
     class modifiableTo {\
         class OpenCollar {\
-            directionalActionName = CSTRING(openCollar);\
+            directionalActionName = ECSTRING(wardrobe,openCollar);\
         };\
     };\
 };\
 class OpenCollar: ace_wardrobe_base {\
     class modifiableTo {\
         class ClosedCollar {\
-            directionalActionName = CSTRING(closeCollar);\
+            directionalActionName = ECSTRING(wardrobe,closeCollar);\
         };\
         class OpenCollarRolledUpSleeves {\
-            directionalActionName = CSTRING(sleevesUp);\
+            directionalActionName = ECSTRING(wardrobe,sleevesUp);\
         };\
     };\
 };\
 class OpenCollarRolledUpSleeves: ace_wardrobe_base {\
     class modifiableTo {\
         class OpenCollar {\
-            directionalActionName = CSTRING(sleevesDown);\
+            directionalActionName = ECSTRING(wardrobe,sleevesDown);\
         };\
     };\
 }
