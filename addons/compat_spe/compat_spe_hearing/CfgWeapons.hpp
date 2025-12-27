@@ -1,6 +1,10 @@
 class CfgWeapons {
     class H_SPE_HelmetB;
-    class H_SPE_Hat: H_SPE_HelmetB {};
+    class H_SPE_Hat;
+    class H_SPE_GER_TankPrivateCap;
+    class H_SPE_GER_TankOfficerCap;
+    class H_SPE_GER_Fieldcap;
+    class H_SPE_GER_Fieldcap2;
 
     //ALLIED PILOT
     class H_SPE_US_Helmet_Pilot: H_SPE_Hat {
@@ -111,18 +115,6 @@ class CfgWeapons {
     };
 
     //AXIS TANKER
-    class H_SPE_GER_TankPrivateCap: H_SPE_Hat {
-        HEARING_PROTECTION_OPEN;
-    };
-    class H_SPE_GER_TankOfficerCap: H_SPE_Hat {
-        HEARING_PROTECTION_OPEN;
-    };
-    class H_SPE_GER_Fieldcap: H_SPE_Hat {
-        HEARING_PROTECTION_OPEN;
-    };
-    class H_SPE_GER_Fieldcap2: H_SPE_GER_Fieldcap {
-        HEARING_PROTECTION_OPEN;
-    };
     class H_SPE_GER_TankPrivateCap2: H_SPE_GER_TankPrivateCap {
         HEARING_PROTECTION_EARMUFF;
     };
