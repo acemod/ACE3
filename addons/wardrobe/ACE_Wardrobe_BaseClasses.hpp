@@ -47,12 +47,20 @@ class GVAR(base_U_gloves_off): GVAR(base) {
     alternativeActionName = CSTRING(glovesOff);
 };
 
-// Common base class for uniforms with gloves on/off variants
-class GVAR(base_U_with_tie): GVAR(base) {
-    alternativeActionName = CSTRING(withTie);
+// Common base class for uniforms with ties on/off variants
+class GVAR(base_U_tie_on): GVAR(base) {
+    alternativeActionName = CSTRING(tieOn);
 };
-class GVAR(base_U_without_tie): GVAR(base) {
-    alternativeActionName = CSTRING(withoutTie);
+class GVAR(base_U_tie_off): GVAR(base) {
+    alternativeActionName = CSTRING(tieOff);
+};
+
+// Common base class for uniforms with kneepads on/off variants
+class GVAR(base_U_kneepads_on): GVAR(base) {
+    alternativeActionName = CSTRING(kneepadsOn);
+};
+class GVAR(base_U_kneepads_off): GVAR(base) {
+    alternativeActionName = CSTRING(kneepadsOff);
 };
 
 // Common base class for uniforms who are open/closed in the front

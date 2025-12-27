@@ -1,11 +1,11 @@
-
 // Helmet with normal strap and folded Strap
 // Normal, Folded
-BASE_PAIR(H_SPE_FFI_Adrian,H_SPE_FFI_Adrian_ns);
+// FR
 BASE_PAIR(H_SPE_FR_Adrian,H_SPE_FR_Adrian_ns);
 BASE_PAIR(H_SPE_FR_Adrian_cover,H_SPE_FR_Adrian_cover_ns);
 BASE_PAIR(H_SPE_FR_Adrian_net,H_SPE_FR_Adrian_net_ns);
 
+// GER
 BASE_PAIR(H_SPE_GER_Helmet_M35_LW,H_SPE_GER_Helmet_M35_LW_ns);
 
 BASE_PAIR(H_SPE_GER_Helmet_M40_lw,H_SPE_GER_Helmet_M40_ns_lw);
@@ -14,13 +14,7 @@ BASE_PAIR(H_SPE_GER_Helmet_M40_lw_net,H_SPE_GER_Helmet_M40_ns_lw_net);
 BASE_PAIR(H_SPE_GER_Helmet_M40_lw_net_camo,H_SPE_GER_Helmet_M40_ns_lw_net_camo);
 BASE_PAIR(H_SPE_GER_Helmet_M40_lw_camo,H_SPE_GER_Helmet_M40_ns_lw_camo);
 
-BASE_PAIR(H_SPE_ST_Helmet,H_SPE_ST_Helmet_OS);
-BASE_PAIR(H_SPE_ST_Helmet2,H_SPE_ST_Helmet2_OS);
-BASE_PAIR(H_SPE_ST_Helmet3,H_SPE_ST_Helmet3_OS);
 BASE_PAIR(H_SPE_GER_HelmetCamo3,H_SPE_GER_HelmetCamo3_OS);
-BASE_PAIR(H_SPE_ST_Helmet4,H_SPE_ST_Helmet4_OS);
-BASE_PAIR(H_SPE_ST_Helmet5,H_SPE_ST_Helmet5_OS);
-BASE_PAIR(H_SPE_ST_Helmet6,H_SPE_ST_Helmet6_OS);
 
 BASE_PAIR(H_SPE_GER_Helmet_M40_burlap_band,H_SPE_GER_Helmet_M40_burlap_band_ns);
 
@@ -97,6 +91,9 @@ class H_SPE_GER_Helmet_Glasses: ace_wardrobe_base {
     components[] = { QUOTE(G_SPE_Dust_Goggles) };
 };
 
+BASE_PAIR(H_SPE_GER_HelmetUtility,H_SPE_GER_HelmetUtility_OS);
+
+// US
 HELMET_GOGGLES(H_SPE_US_AB_Helmet_Net,H_SPE_US_AB_Helmet_polar_net,G_SPE_Polar_Goggles);
 
 BASE_TRIPLET(H_SPE_US_AB_Helmet_Net_up,H_SPE_US_AB_Helmet_Net_ns,H_SPE_US_AB_Helmet_Net_os);
