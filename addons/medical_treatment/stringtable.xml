@@ -2545,6 +2545,24 @@
             <Hungarian>Ellenőrzöd a páciens reagálóképességét</Hungarian>
             <Ukrainian>Ви перевіряєте реакцію пораненого</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Check_Response_Dazed">
+            <English>%1 is dazed</English>
+            <Czech>%1 je omámený</Czech>
+            <French>%1 est étourdi.</French>
+            <Spanish>%1 está aturdido</Spanish>
+            <Italian>%1 è stordito</Italian>
+            <Polish>%1 jest oszołomiony</Polish>
+            <Portuguese>%1 está atordoado</Portuguese>
+            <Russian>%1 в замешательстве</Russian>
+            <German>%1 ist benommen</German>
+            <Korean>%1은(는) 멍한 상태입니다</Korean>
+            <Japanese>%1 はぼんやりしています</Japanese>
+            <Chinese>%1 处于眩晕状态</Chinese>
+            <Chinesesimp>%1 处于眩晕状态</Chinesesimp>
+            <Turkish>%1 sersemlemiş durumda</Turkish>
+            <Hungarian>%1 zavarodott</Hungarian>
+            <Ukrainian>%1 спантеличений</Ukrainian>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Dead">
             <English>%1 is not responsive, motionless and cold</English>
             <French>%1 est inconscient, inanimé et froid.</French>
