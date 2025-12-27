@@ -81,6 +81,10 @@ class SPE_M1903A3_Springfield: SPE_RIFLE {
     ACE_barrelTwist = 254;
     ACE_barrelLength = 610;
 };
+class SPE_No3_Mk1_Enfield: SPE_RIFLE {
+    ACE_barrelTwist = 254;
+    ACE_barrelLength = 640;
+};
 
 // ASSAULT RIFLE
 class SPE_STG44: SPE_RIFLE {
