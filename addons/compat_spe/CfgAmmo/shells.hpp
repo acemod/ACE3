@@ -196,7 +196,7 @@ class SPE_105mm_StuH42_Gr38_NB: SPE_ShellSmoke_base {
     EGVAR(rearm,caliber) = 105;
 };
 
-class SPE_105mm_LeFH_PzGrRot_AP: SPE_ShellHE_base {
+class SPE_105mm_LeFH_PzGrRot_AP: SPE_Shell_base {
     EGVAR(rearm,caliber) = 105;
 };
 
