@@ -81,60 +81,6 @@ UNIFORM_COLLARCLOSED_COLLAROPEN_SLEEVESUP(U_SPE_ST_Soldier_M40_Gaiters_closed,U_
 UNIFORM_COLLARCLOSED_COLLAROPEN_SLEEVESUP(U_SPE_ST_Soldier_Gaiters_closed,U_SPE_ST_Soldier_Gaiters,U_SPE_ST_Soldier_rolled);
 UNIFORM_COLLARCLOSED_COLLAROPEN_SLEEVESUP(U_SPE_ST_Soldier_Boots,U_SPE_ST_Soldier_Boots_open,U_SPE_ST_Soldier_Boots_rolled);
 
-// Paratrooper kneepads
-class U_SPE_FSJ_mk1: ACEWARDROBE(base_U_kneepads_off) {
-    class modifiableTo {
-        class U_SPE_FSJ_mk1_pads {
-            directionalActionName = ACEWARDROBE_CSTRING(kneepadsOn);
-        };
-    };
-};
-class U_SPE_FSJ_mk1_pads: ACEWARDROBE(base) {
-    class modifiableTo {
-        class U_SPE_FSJ_mk1 {};
-        class U_SPE_FSJ_mk1_gloves_pads {};
-    };
-};
-class U_SPE_FSJ_mk1_gloves_pads: ACEWARDROBE(base_U_gloves_on) {
-    class modifiableTo {
-        class U_SPE_FSJ_mk1_pads {
-            directionalActionName = ACEWARDROBE_CSTRING(glovesOff);
-        };
-    };
-};
-
-class U_SPE_FSJ_mk1_pads_roll: ACEWARDROBE(base_U_kneepads_on) {
-    class modifiableTo {
-        class U_SPE_FSJ_mk1_roll {
-            directionalActionName = ACEWARDROBE_CSTRING(kneepadsOff);
-        };
-    };
-};
-class U_SPE_FSJ_mk1_roll: ACEWARDROBE(base) {
-    class modifiableTo {
-        class U_SPE_FSJ_mk1_gloves {};
-        class U_SPE_FSJ_mk1_pads_roll {};
-    };
-};
-class U_SPE_FSJ_mk1_gloves: ACEWARDROBE(base_U_gloves_on) {
-    class modifiableTo {
-        class U_SPE_FSJ_mk1_roll {
-            directionalActionName = ACEWARDROBE_CSTRING(glovesOff);
-        };
-    };
-};
-
-UNIFORM_KNEEPADS(U_SPE_FSJ_mk2_split_pads,U_SPE_FSJ_mk2_split);
-
-UNIFORM_KNEEPADS(U_SPE_FSJ_mk3_split_pads,U_SPE_FSJ_mk3_split);
-UNIFORM_KNEEPADS(U_SPE_FSJ_mk3_split_pads_roll,U_SPE_FSJ_mk3_split_trop_roll);
-
-UNIFORM_KNEEPADS(U_SPE_FSJ_mk1_offz_pads,U_SPE_FSJ_mk1_offz);
-UNIFORM_KNEEPADS(U_SPE_FSJ_mk1_offz_gloves_pads,U_SPE_FSJ_mk1_offz_gloves);
-
-UNIFORM_KNEEPADS(U_SPE_FSJ_mk2_offz_pads,U_SPE_FSJ_mk2_offz);
-UNIFORM_KNEEPADS(U_SPE_FSJ_mk2_offz_gloves_pads,U_SPE_FSJ_mk2_offz_gloves);
-
 // Blouse pilot pants
 BASE_PAIR(U_SPE_GER_LW_pilot,U_SPE_GER_LW_pilot_alt);
 BASE_PAIR(U_SPE_GER_LW_pilot_trop,U_SPE_GER_LW_pilot_trop_alt);

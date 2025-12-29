@@ -8,8 +8,6 @@ class ace_wardrobe {
     class ACEWARDROBE(base_H_goggles_off);
     class ACEWARDROBE(base_U_tie_on);
     class ACEWARDROBE(base_U_tie_off);
-    class ACEWARDROBE(base_U_kneepads_on);
-    class ACEWARDROBE(base_U_kneepads_off);
 
     #include "ACE_wardrobe_uniforms.hpp"
     #include "ACE_wardrobe_headgear.hpp"

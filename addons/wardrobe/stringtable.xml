@@ -90,12 +90,6 @@
             <Russian>Растегнуть куртку</Russian>
             <Japanese>ジャケットを開く</Japanese>
         </Key>
-        <Key ID="STR_ACE_Wardrobe_kneepadsOff">
-            <English>Take kneepads off</English>
-        </Key>
-        <Key ID="STR_ACE_Wardrobe_kneepadsOn">
-            <English>Put kneepads on</English>
-        </Key>
         <Key ID="STR_ACE_Wardrobe_maskOff">
             <English>Take mask off</English>
             <French>Enlevez votre masque</French>

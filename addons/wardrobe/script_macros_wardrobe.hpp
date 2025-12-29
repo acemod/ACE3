@@ -220,9 +220,6 @@ BASIC(variantHoodRaised,variantHoodLowered,ACEWARDROBE(base_U_hood_raised),ACEWA
 #define UNIFORM_TIE(varianTieOn,variantTieOff)\
 BASIC(varianTieOn,variantTieOff,ACEWARDROBE(base_U_tie_on),ACEWARDROBE(base_U_tie_off))
 
-#define UNIFORM_KNEEPADS(variantKneepadsOn,variantKneepadsOff)\
-BASIC(variantKneepadsOn,variantKneepadsOff,ACEWARDROBE(base_U_kneepads_on),ACEWARDROBE(base_U_kneepads_off))
-
 // Uniform with Variants for Gloves, Rolled Up and Combined Gloves+Rolled Up
 #define UNIFORM_GLOVES_ROLLED(UniformBase,UniformGloves,UniformRolled,UniformGlovesRolled)\
 class UniformBase: ACEWARDROBE(base) {\
