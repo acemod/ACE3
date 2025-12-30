@@ -65,7 +65,7 @@ if (_unit == ACE_player && {missionNamespace getVariable [QEGVAR(advanced_fatigu
 private _capture = 1 max ((_po2 / IDEAL_PPO2) ^ (-_po2 * 3));
 private _positiveChange = _heartRate * 0.00368 * _oxygenSaturation * _capture;
 
-private _breathingEffectiveness = 1;
+private _breathingEffectiveness = _unit getVariable [QGVAR(breathingEffectiveness),1];
 
 private _rateOfChange = _negativeChange + (_positiveChange * _breathingEffectiveness);
 
