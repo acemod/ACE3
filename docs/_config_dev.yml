@@ -8,8 +8,8 @@ ace:
   githubUrl: https://github.com/acemod/ACE3
   version:
     major: 3
-    minor: 22
-    patch: 0
+    minor: 20
+    patch: 2
     build: 108
 
 
