@@ -10,17 +10,16 @@ class CfgWeapons {
     };
     class sgun_Mp153_classic_F: Rifle_Base_F {
         ACE_barrelLength = 750.0;
+        ACE_twistDirection = 0;
     };
     class Aegis_arifle_M16A4_base_F: Rifle_Base_F {
         ACE_barrelTwist = 177.8; // 1 in 7in like modern AR15
         ACE_barrelLength = 508.0; // 20 in
-        ace_twistDirection = 1;
     };
     class Aegis_MMG_FNMAG_Base: Rifle_Long_Base_F {
         // https://fnherstal.com/app/uploads/technical-data-fn-mag-1.pdf
         ACE_barrelTwist = 305.0; // 1 in 12in
         ACE_barrelLength = 630.0;
-        ace_twistDirection = 1;
     };
     class Aegis_MMG_FNMAG_240_F: Aegis_MMG_FNMAG_Base {
         // looks like 240L which is 4 in shorter barrel
@@ -47,5 +46,6 @@ class CfgWeapons {
     class sgun_KSG_F: Rifle_Short_Base_F {
         // https://www.keltecweapons.com/wp-content/uploads/2025/09/KEL_Shotgun_Manual_UPDATE_v1_FINAL_COMBINED.pdf
         ACE_barrelLength = 470.0; // 18.5 in
+        ACE_twistDirection = 0;
     };
 };
