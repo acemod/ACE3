@@ -28,6 +28,7 @@ class CfgWeapons {
     class sgun_M4_F: Rifle_Short_Base_F {
         //https://www.benellile.com/shotguns/m4-tactical-shotguns
         ACE_barrelLength = 469.9; // 18.5 in
+        ACE_twistDirection = 0;
     };
     class hgun_G17_F: Pistol_Base_F {
         ACE_barrelTwist = 250; // 1 in 9.84 in
