@@ -17,3 +17,5 @@ class CfgPatches {
         addonRootClass = "A3_Characters_F";
     };
 };
+
+#include "CfgWeapons.hpp"
