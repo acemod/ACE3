@@ -16,7 +16,7 @@
  * None
  *
  * Example:
- * [player, "body", ["Avulsion, 1, 2, 1]] call ace_medical_damage_fnc_addWound
+ * [player, "body", ["Avulsion", 1, 2, 1]] call ace_medical_damage_fnc_addWound
  *
  * Public: Yes
  */
