@@ -1,4 +1,3 @@
-PREP(addWound);
 PREP(debug_explosiveTest);
 PREP(determineIfFatal);
 PREP(getAmmoData);
