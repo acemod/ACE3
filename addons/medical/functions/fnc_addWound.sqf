@@ -46,7 +46,7 @@ private _injury = [_classComplex, _amountOf, _bleeding, 1];
 private _createNewWound = true;
 {
     _x params ["_classID", "_oldAmountOf", "_oldBleeding", "_oldDamage"];
-    if ((_classComplex == _classID)) exitWith {
+    if (_classComplex == _classID) exitWith {
         TRACE_2("merging with existing wound",_injury,_x);
         private _newAmountOf = _oldAmountOf + 1;
         _x set [1, _newAmountOf];
