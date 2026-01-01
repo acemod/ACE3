@@ -70,4 +70,4 @@ if (_createdWounds) then {
     _bodyPartVisParams call EFUNC(medical_engine,updateBodyPartVisuals);
     [QEGVAR(medical,injured), [_unit, _painLevel]] call CBA_fnc_localEvent;
 };
-[_unit] call EFUNC(medical_status,updateWoundBloodLoss);
+_unit call EFUNC(medical_status,updateWoundBloodLoss);
