@@ -9,9 +9,8 @@ class CfgWeapons {
         ACE_barrelLength = 610.0;
         ACE_twistDirection = 0;
     };
-    class sgun_Mp153_classic_F: Rifle_Base_F {
+    class sgun_Mp153_classic_F: sgun_Mp153_black_F {
         ACE_barrelLength = 750.0;
-        ACE_twistDirection = 0;
     };
     class Aegis_arifle_M16A4_base_F: Rifle_Base_F {
         ACE_barrelTwist = 177.8; // 1 in 7 in like modern AR15
