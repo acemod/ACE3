@@ -18,7 +18,16 @@
  * Public: No
  */
 
-private _weaponConfig = (configFile >> "CfgWeapons" >> _this);
+params ["_weapon", "_muzzle"];
+
+if (isNil "_muzzle") then {_muzzle = _weapon};
+
+// For most weapons muzzle == weapon (config value of "this" for muzzle)
+private _weaponConfig = (configFile >> "CfgWeapons" >> _muzzle);
+
+if (isNull _weaponConfig) then {
+    _weaponConfig = (configFile >> "CfgWeapons" >> _weapon >> _muzzle);
+};
 
 private _barrelTwist = 0 max getNumber(_weaponConfig >> "ACE_barrelTwist");
 private _twistDirection = parseNumber (_barrelTwist != 0);
@@ -33,6 +42,6 @@ private _barrelLength = 0 max getNumber(_weaponConfig >> "ACE_barrelLength");
 
 private _result = [_barrelTwist, _twistDirection, _barrelLength];
 
-uiNamespace setVariable [format[QGVAR(%1), _this], _result];
+uiNamespace setVariable [format[QGVAR(%1_%2), _weapon, _muzzle], _result];
 
 _result
