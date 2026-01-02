@@ -7,10 +7,10 @@
  * 0: Unit <OBJECT>
  * 1: Bodypart <STRING>
  * 2: Wound to add <ARRAY>
- *  2.1: Wound Type <STRING>
- *  2.2: Amount <NUMBER>
- *  2.3: Size (0 - 2) <NUMBER>
- *  2.4: Wound Damage <NUMBER>
+ *  2.0: Wound Type <STRING>
+ *  2.1: Amount <NUMBER>
+ *  2.2: Size (0 - 2) <NUMBER>
+ *  2.3: Wound Damage <NUMBER>
  *
  * Return Value:
  * None
