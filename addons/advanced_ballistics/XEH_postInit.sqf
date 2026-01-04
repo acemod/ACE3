@@ -6,6 +6,9 @@ GVAR(Protractor) = false;
 GVAR(ProtractorStart) = CBA_missionTime;
 GVAR(allBullets) = createHashMap;
 GVAR(currentGrid) = 0;
+GVAR(ammoData) = createHashMap;
+GVAR(weaponData) = createHashMap;
+GVAR(maxRange) = createHashMap;
 
 if (!hasInterface) exitWith {};
 

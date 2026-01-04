@@ -7,6 +7,8 @@
  *
  */
 
+GVAR(zeroAngleCorrectionData) = createHashMap;
+
 if (!hasInterface) exitWith {};
 
 // Add keybinds
