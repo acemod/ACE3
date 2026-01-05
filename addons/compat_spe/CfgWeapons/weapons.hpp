@@ -167,6 +167,15 @@ class SPE_Shotgun: Rifle_Long_Base_F {
     ACE_twistDirection = 0;
     EGVAR(overheating,closedBolt) = 1;
 };
+class SPE_Fusil_Mle_208_12: SPE_Shotgun {
+    ACE_barrelLength = 700;
+};
+class SPE_Fusil_Mle_208_12_Sawedoff: SPE_Fusil_Mle_208_12 {
+    ACE_barrelLength = 350;
+};
+class SPE_Model_37_Trenchgun: SPE_Shotgun {
+    ACE_barrelLength = 508;
+};
 
 // VESTS
 class V_SPE_Vest_Camo_Base;
