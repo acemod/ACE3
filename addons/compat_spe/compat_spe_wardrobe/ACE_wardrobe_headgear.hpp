@@ -117,6 +117,15 @@ BASE_PAIR(H_SPE_US_Helmet_H15,H_SPE_US_Helmet_H15_Op);
 BASE_PAIR(H_SPE_US_Helmet_H15_SWDG_O2,H_SPE_US_Helmet_H15_SWDG_low_O2);
 BASE_PAIR(H_SPE_US_Helmet_H15_B7_O2,H_SPE_US_Helmet_H15_B7_low_O2);
 
+BASE_PAIR(H_SPE_US_Helmet_29ID_Net_ns,H_SPE_US_Helmet_29ID_Net_os);
+BASE_PAIR(H_SPE_US_Helmet_29ID_Scrim_ns,H_SPE_US_Helmet_29ID_Scrim_os);
+BASE_TRIPLET(H_SPE_US_Helmet_cover,H_SPE_US_Helmet_cover_ns,H_SPE_US_Helmet_cover_os);
+BASE_PAIR(H_SPE_US_Helmet_Med,H_SPE_US_Helmet_Med_os);
+BASE_TRIPLET(H_SPE_US_MP_Helmet_White,H_SPE_US_MP_Helmet_White_ns,H_SPE_US_MP_Helmet_White_os);
+BASE_PAIR(H_SPE_US_Helmet_band_net_up,H_SPE_US_Helmet_band_net_os);
+BASE_TRIPLET(H_SPE_US_Helmet_Net_ns,H_SPE_US_Helmet_Net_up,H_SPE_US_Helmet_Net_os);
+BASE_PAIR(H_SPE_US_Helmet_Scrim,H_SPE_US_Helmet_Scrim_up);
+HELMET_SCRIM(H_SPE_US_Helmet_Tank_M1_NS,H_SPE_US_Helmet_Tank_M1_Scrim);
 
 
 class H_SPE_US_HBT_cap: ACEWARDROBE(base) {
