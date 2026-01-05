@@ -147,7 +147,62 @@ class H_SPE_US_HBT_cap_polar: ACEWARDROBE(base) {
 };
 
 
-class H_SPE_US_jeep_cap: ace_wardrobe_base {
+class H_SPE_US_Helmet_polar_ns: ACEWARDROBE(base) {
+    class modifiableTo {
+        class H_SPE_US_Helmet_ns {};
+    };
+    components[] = { QUOTE(G_SPE_Polar_Goggles) };
+};
+class H_SPE_US_Helmet_ns: ACEWARDROBE(base) {
+    class modifiableTo {
+        class H_SPE_US_Helmet_polar_ns {};
+    };
+};
+
+
+class H_SPE_US_Helmet_Tank_NG: ACEWARDROBE(base) {
+    class modifiableTo {
+        class H_SPE_US_Helmet_Tank_polar_low {};
+        class H_SPE_US_Helmet_Tank_polar {};
+        class H_SPE_US_Helmet_Tank_Nun {};
+    };
+};
+class H_SPE_US_Helmet_Tank_Nun: ACEWARDROBE(base) {
+    class modifiableTo {
+        class H_SPE_US_Helmet_Tank_NG {};
+    };
+};
+
+class H_SPE_US_Helmet_Tank_polar_low: ACEWARDROBE(base) {
+    class modifiableTo {
+        class H_SPE_US_Helmet_Tank_NG {};
+        class H_SPE_US_Helmet_Tank_polar {};
+    };
+    components[] = { QUOTE(G_SPE_Polar_Goggles) };
+};
+class H_SPE_US_Helmet_Tank_polar: ACEWARDROBE(base) {
+    class modifiableTo {
+        class H_SPE_US_Helmet_Tank_NG {};
+        class H_SPE_US_Helmet_Tank_polar_low {};
+    };
+    components[] = { QUOTE(G_SPE_Polar_Goggles) };
+};
+
+
+class H_SPE_US_Helmet_Tank_polar_tapes: ACEWARDROBE(base) {
+    class modifiableTo {
+        class H_SPE_US_Helmet_Tank_tapes {};
+    };
+    components[] = { QUOTE(G_SPE_Polar_Goggles) };
+};
+class H_SPE_US_Helmet_Tank_tapes: ACEWARDROBE(base) {
+    class modifiableTo {
+        class H_SPE_US_Helmet_Tank_polar_tapes {};
+    };
+};
+
+
+class H_SPE_US_jeep_cap: ACEWARDROBE(base) {
     class modifiableTo {
         class H_SPE_US_jeep_cap_rear {};
         class H_SPE_US_jeep_cap_polar {};
