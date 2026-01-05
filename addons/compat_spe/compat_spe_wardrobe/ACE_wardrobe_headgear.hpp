@@ -71,19 +71,19 @@ HELMET_2VARIANTS_GOGGLES(H_SPE_GER_Helmet_M40,H_SPE_GER_Helmet_M40_ns,H_SPE_GER_
 
 
 // Helmet With 2 Variants but only one has Goggles
-class H_SPE_GER_Helmet: ace_wardrobe_base {
+class H_SPE_GER_Helmet: ACEWARDROBE(base) {
     class modifiableTo {
         class H_SPE_GER_Helmet_ns {};
         class H_SPE_GER_Helmet_Glasses {};
     };
 };
-class H_SPE_GER_Helmet_ns: ace_wardrobe_base {
+class H_SPE_GER_Helmet_ns: ACEWARDROBE(base) {
     class modifiableTo {
         class H_SPE_GER_Helmet {};
         class H_SPE_GER_Helmet_Glasses {};
     };
 };
-class H_SPE_GER_Helmet_Glasses: ace_wardrobe_base {
+class H_SPE_GER_Helmet_Glasses: ACEWARDROBE(base) {
     class modifiableTo {
         class H_SPE_GER_Helmet {};
         class H_SPE_GER_Helmet_ns {};
@@ -119,28 +119,27 @@ BASE_PAIR(H_SPE_US_Helmet_H15_B7_O2,H_SPE_US_Helmet_H15_B7_low_O2);
 
 
 
-
-class H_SPE_US_HBT_cap: ace_wardrobe_base {
+class H_SPE_US_HBT_cap: ACEWARDROBE(base) {
     class modifiableTo {
         class H_SPE_US_HBT_cap_up {};
         class H_SPE_US_HBT_cap_rear {};
         class H_SPE_US_HBT_cap_polar {};
     };
 };
-class H_SPE_US_HBT_cap_up: ace_wardrobe_base {
+class H_SPE_US_HBT_cap_up: ACEWARDROBE(base) {
     class modifiableTo {
         class H_SPE_US_HBT_cap {};
         class H_SPE_US_HBT_cap_rear {};
     };
 };
-class H_SPE_US_HBT_cap_rear: ace_wardrobe_base {
+class H_SPE_US_HBT_cap_rear: ACEWARDROBE(base) {
     class modifiableTo {
         class H_SPE_US_HBT_cap {};
         class H_SPE_US_HBT_cap_up {};
     };
 };
 
-class H_SPE_US_HBT_cap_polar: ace_wardrobe_base {
+class H_SPE_US_HBT_cap_polar: ACEWARDROBE(base) {
     class modifiableTo {
         class H_SPE_US_HBT_cap {};
     };
@@ -154,13 +153,13 @@ class H_SPE_US_jeep_cap: ace_wardrobe_base {
         class H_SPE_US_jeep_cap_polar {};
     };
 };
-class H_SPE_US_jeep_cap_rear: ace_wardrobe_base {
+class H_SPE_US_jeep_cap_rear: ACEWARDROBE(base) {
     class modifiableTo {
         class H_SPE_US_jeep_cap {};
     };
 };
 
-class H_SPE_US_jeep_cap_polar: ace_wardrobe_base {
+class H_SPE_US_jeep_cap_polar: ACEWARDROBE(base) {
     class modifiableTo {
         class H_SPE_US_jeep_cap {};
     };
