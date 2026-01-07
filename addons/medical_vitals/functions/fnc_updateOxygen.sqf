@@ -68,11 +68,11 @@ private _positiveChange = _heartRate * 0.00368 * _oxygenSaturation * _capture;
 private _breathingEffectiveness = 1;
 {
     _breathingEffectiveness = if (_x isEqualType 0) then {
-        _breathingEffectiveness * _x
+        _breathingEffectiveness * _y
     } else {
-        _breathingEffectiveness * (_unit call _x)
+        _breathingEffectiveness * (_unit call _y)
     };
-} forEach (values GVAR(spo2DutyList));
+} forEach GVAR(spo2DutyList);
 
 private _rateOfChange = _negativeChange + (_positiveChange * _breathingEffectiveness);
 
