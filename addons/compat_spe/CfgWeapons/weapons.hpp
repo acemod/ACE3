@@ -135,31 +135,29 @@ class SPE_M1903A4_Springfield: SPE_SRIFLE {
 };
 
 // SUB MACHINE GUNS
-class SPE_SMG;
+class Rifle_Short_Base_F;
+class SPE_SMG: Rifle_Short_Base_F {
+    EGVAR(overheating,closedBolt) = 0;
+};
 class SPE_MP35: SPE_SMG {
     ACE_barrelTwist = 250;
     ACE_barrelLength = 200;
-    EGVAR(overheating,closedBolt) = 0;
 };
 class SPE_MP40: SPE_SMG {
     ACE_barrelTwist = 250;
     ACE_barrelLength = 251;
-    EGVAR(overheating,closedBolt) = 0;
 };
 class SPE_Sten_Mk2: SPE_SMG {
     ACE_barrelTwist = 254;
     ACE_barrelLength = 196;
-    EGVAR(overheating,closedBolt) = 0;
 };
 class SPE_M1A1_Thompson: SPE_SMG {
     ACE_barrelTwist = 406;
     ACE_barrelLength = 267;
-    EGVAR(overheating,closedBolt) = 0;
 };
 class SPE_M3_GreaseGun: SPE_SMG {
     ACE_barrelTwist = 406;
     ACE_barrelLength = 203.2;
-    EGVAR(overheating,closedBolt) = 0;
 };
 
 // SHOTGUNS
