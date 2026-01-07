@@ -33,7 +33,7 @@ private _newLevelEyes = _levelEyes + _change;
 _newLevelEyes = _newLevelEyes min 1;
 _newLevelEyes = _newLevelEyes max 0;
 
-private _eyesProtect = _unit getVariable [QGVAR(eyesProtection), false];
+private _eyesProtect = _unit getVariable [QGVAR(eyesProtection), 0];
 if (_eyesProtect != 0) then {
     _levelEyes = _levelEyes * (1 - _eyesProtect);
 };
@@ -64,7 +64,7 @@ _unit setVariable [QGVAR(breathingLevel), _levelBreathing, true];
 
 private _breathingEffectiveness = linearConversion [0.2, 1, _levelBreathing, 1, 0.6, true];
 if !(isNil "ace_medical_vitals_fnc_addSpO2DutyFactor") then {
-    [ADDON, _breathingEffectiveness] call ace_medical_vitals_fnc_addSpO2DutyFactor;
+    [QUOTE(ADDON), _breathingEffectiveness] call ace_medical_vitals_fnc_addSpO2DutyFactor;
 };
 
 // Event
