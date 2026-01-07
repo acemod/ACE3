@@ -7,7 +7,7 @@
  * The display mode to test showing <NUMBER>
  *
  * Return Value:
- * None
+ * <BOOL>
  *
  * Example:
  * [1] call ace_microdagr_fnc_canShow
@@ -16,9 +16,7 @@
  */
 params ["_showType"];
 
-private _returnValue = false;
-
-_returnValue = switch (_showType) do {
+private _returnValue = switch (_showType) do {
     case (DISPLAY_MODE_CLOSED): { true }; //Can always close
     case (DISPLAY_MODE_HIDDEN): { true }; //Can always hide
     case (DISPLAY_MODE_DIALOG): {

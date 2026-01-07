@@ -1,7 +1,5 @@
 class CfgAmmo {
-    // All explosive based Ammo classes. These are all listed in case they become required.
-
-    // GVAR(defuseTime) is the defuse time (default of 5 in ACE_Explosives_fnc_StartDefuse)
+    // GVAR(defuseTime) is the defuse time (default of 5 in ace_explosives_fnc_startDefuse)
     // GVAR(size) = 0; is small size
     // GVAR(size) = 1; is large size
     class ClaymoreDirectionalMine_Remote_Ammo;
@@ -67,7 +65,7 @@ class CfgAmmo {
         GVAR(size) = 0;
     };
 
-    // More sensitive pressure-fuze for the Vanilla AT Mine.
+    // More sensitive pressure-fuse for the Vanilla AT Mine
     class MineBase;
     class ATMine_Range_Ammo: MineBase {
         mineTrigger = "ACE_TankTriggerLight";
@@ -127,8 +125,8 @@ class CfgAmmo {
         GVAR(magazine) = "IEDUrbanBig_Remote_Mag";
         GVAR(size) = 1;
         soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
-        GVAR(ringtones)[] = {{QPATHTOF(Data\Audio\Cellphone_Ring.wss), 0.75, 3.16228, 1, 75}};
-        GVAR(callConnectTime)[] = {1,8};
+        GVAR(ringtones)[] = {{QPATHTOF(Data\Audio\Cellphone_Ring.wss), 0.75, 3.15, 1, 75}};
+        GVAR(callConnectTime)[] = {1, 8};
         GVAR(detonationTimingOffset) = 0.75;
     };
     class ACE_IEDUrbanBig_Command_Ammo: IEDUrbanBig_Remote_Ammo {
@@ -144,8 +142,8 @@ class CfgAmmo {
         GVAR(magazine) = "IEDUrbanSmall_Remote_Mag";
         GVAR(size) = 0;
         soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
-        GVAR(ringtones)[] = {{QPATHTOF(Data\Audio\Cellphone_Ring.wss), 0.75, 3.16228, 1, 75}};
-        GVAR(callConnectTime)[] = {1,8};
+        GVAR(ringtones)[] = {{QPATHTOF(Data\Audio\Cellphone_Ring.wss), 0.75, 3.15, 1, 75}};
+        GVAR(callConnectTime)[] = {1, 8};
         GVAR(detonationTimingOffset) = 0.75;
     };
     class ACE_IEDUrbanSmall_Command_Ammo: IEDUrbanSmall_Remote_Ammo {
@@ -161,8 +159,8 @@ class CfgAmmo {
         GVAR(magazine) = "IEDLandBig_Remote_Mag";
         GVAR(size) = 1;
         soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
-        GVAR(ringtones)[] = {{QPATHTOF(Data\Audio\Cellphone_Ring.wss), 0.75, 3.16228, 1, 75}};
-        GVAR(callConnectTime)[] = {1,8};
+        GVAR(ringtones)[] = {{QPATHTOF(Data\Audio\Cellphone_Ring.wss), 0.75, 3.15, 1, 75}};
+        GVAR(callConnectTime)[] = {1, 8};
         GVAR(detonationTimingOffset) = 0.75;
     };
     class ACE_IEDLandBig_Command_Ammo: IEDLandBig_Remote_Ammo {
@@ -178,8 +176,8 @@ class CfgAmmo {
         GVAR(magazine) = "IEDLandSmall_Remote_Mag";
         GVAR(size) = 0;
         soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
-        GVAR(ringtones)[] = {{QPATHTOF(Data\Audio\Cellphone_Ring.wss), 0.75, 3.16228, 1, 75}};
-        GVAR(callConnectTime)[] = {1,8};
+        GVAR(ringtones)[] = {{QPATHTOF(Data\Audio\Cellphone_Ring.wss), 0.75, 3.15, 1, 75}};
+        GVAR(callConnectTime)[] = {1, 8};
         GVAR(detonationTimingOffset) = 0.75;
     };
     class ACE_IEDLandSmall_Command_Ammo: IEDLandSmall_Remote_Ammo {

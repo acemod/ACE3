@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Enable effect <BOOL>
- * 1: Current bloodloss (in l/s) <NUMBER>
+ * 1: Current bloodloss (in l/s) <NUMBER> (optional if enable is false)
  * 2: Instant change <BOOL> (default: false)
  *
  * Return Value:

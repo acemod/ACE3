@@ -4,7 +4,7 @@
  * Finds the turret that has control over the marking laser.
  *
  * Arguments:
- * 0: Aircraft config <OBJECT>
+ * 0: Aircraft config <CONFIG>
  *
  * Return Value:
  * <ARRAY>

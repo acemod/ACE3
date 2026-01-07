@@ -210,7 +210,7 @@ This is not the case for inline functions or functions not contained in their ow
 
 To keep the syntax in the header consistent, we set some rules:
 1. Each argument must have a type that is enclosed in brackets `<TYPE>`. The type must be in UPPERCASE.
-2. Use one of the following types only: `OBJECT`, `NUMBER`, `STRING`, `BOOL`, `ARRAY`, `CONTROL`, `DISPLAY`, `CONFIG`, `CODE`, `ANY`, `LOGIC`, `SIDE`, `GROUP`, `HASHMAP`, `NAMESPACE`, `LOCATION`, `TEXT`.
+2. Use one of the following types only: `OBJECT`, `NUMBER`, `STRING`, `BOOL`, `ARRAY`, `CONTROL`, `DISPLAY`, `CONFIG`, `CODE`, `ANY`, `SIDE`, `GROUP`, `HASHMAP`, `NAMESPACE`, `LOCATION`, `STRUCTUREDTEXT`, `NIL`.
 3. If an argument can have multiple types, concatenate types using `or`. Example: `<STRING or CODE>`.
 4. Arrays with the same value types are written in the format `<ARRAY of TYPEs>`. The nested type has a small `s` appended at the end.
 5. If an argument is optional, the default value must be written after the type in the format `(default: value)`.
