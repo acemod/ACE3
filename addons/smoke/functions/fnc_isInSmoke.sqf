@@ -1,4 +1,19 @@
 #include "..\script_component.hpp"
+/*
+ * Author: BrettMayson
+ * Check if a unit is in smoke (or any thick particle effect that has `blockAIVisibility`)
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * Is the unit in smoke? <BOOL>
+ *
+ * Example:
+ * [player] call ace_smoke_fnc_isInSmoke
+ *
+ * Public: Yes
+ */
 
 params ["_unit"];
 

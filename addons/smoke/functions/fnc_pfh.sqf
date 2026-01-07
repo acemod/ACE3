@@ -1,4 +1,21 @@
 #include "..\script_component.hpp"
+/*
+ * Author: BrettMayson
+ * Per Frame Handler that updates smoke effects on units
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * Nothing <NOTHING>
+ *
+ * Example:
+ * [{
+ *   [player] call ace_smoke_fnc_pfh
+ * }] call CBA_fnc_addPerFrameHandler
+ *
+ * Public: No
+ */
 
 params ["_unit"];
 
