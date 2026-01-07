@@ -8,9 +8,10 @@
  * 1: New Zero range <NUMBER>
  * 2: Bore height <NUMBER>
  * 3: Weapon <STRING>
- * 4: Ammo <STRING>
- * 5: Magazine <STRING>
- * 6: Advanced Ballistics enabled? <BOOL>
+ * 4: Muzzle <STRING>
+ * 5: Ammo <STRING>
+ * 6: Magazine <STRING>
+ * 7: Advanced Ballistics enabled? <BOOL>
  *
  * Return Value:
  * zeroAngleCorrection <NUMBER>
@@ -85,6 +86,6 @@ private _trueZero = if (_advancedBallistics) then {
 
 private _zeroAngleCorrection = _trueZero - _vanillaZero;
 
-missionNamespace setVariable [format[QGVAR(%1_%2_%3_%4_%5_%6_%7), _oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics], _zeroAngleCorrection];
+missionNamespace setVariable [format[QGVAR(%1_%2_%3_%4_%5_%6_%7_%8), _oldZeroRange, _newZeroRange, _boreHeight, _weapon, _muzzle, _ammo, _magazine, _advancedBallistics], _zeroAngleCorrection];
 
 _zeroAngleCorrection

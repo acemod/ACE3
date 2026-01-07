@@ -25,7 +25,7 @@ if (isNil "_muzzle") then {_muzzle = _weapon};
 // For most weapons muzzle == weapon (config value of "this" for muzzle)
 private _weaponConfig = (configFile >> "CfgWeapons" >> _muzzle);
 
-if (isNull _weaponConfig) then {
+if (_muzzle != _weapon) then {
     _weaponConfig = (configFile >> "CfgWeapons" >> _weapon >> _muzzle);
 };
 
