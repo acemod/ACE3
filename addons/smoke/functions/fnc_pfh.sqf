@@ -1,0 +1,58 @@
+#include "..\script_component.hpp"
+
+params ["_unit"];
+
+private _isInSmoke = [_unit] call FUNC(isInSmoke);
+
+private _change = (if (_isInSmoke) then {
+    0.175 * GVAR(effectFactor)
+} else {
+    -0.04 * GVAR(recoveryFactor)
+}) * diag_deltaTime;
+
+// Eyes
+private _levelEyes = _unit getVariable [QGVAR(eyesLevel), 0];
+private _newLevelEyes = _levelEyes + _change;
+_newLevelEyes = _newLevelEyes min 1;
+_newLevelEyes = _newLevelEyes max 0;
+
+private _eyesProtect = _unit getVariable [QGVAR(eyesProtection), false];
+if (_eyesProtect != 0) then {
+    _levelEyes = _levelEyes * (1 - _eyesProtect);
+};
+_unit setVariable [QGVAR(eyesLevel), _levelEyes, true];
+
+private _dynamicBlurValue = linearConversion [0.2, 1, _levelEyes, 0, 0.8, true];
+private _colorCorrectionsValue = linearConversion [0.2, 1, _levelEyes, 1, 0.6, true];
+
+if (_unit == ace_player) then {
+    GVAR(ppHandleDynamicBlur) ppEffectAdjust [_dynamicBlurValue];
+    GVAR(ppHandleColorCorrections) ppEffectAdjust [1,1,0,[0,0,0,0],[0.8, 0.8, 0.8, _colorCorrectionsValue],[1,1,1,0]];
+
+    GVAR(ppHandleDynamicBlur) ppEffectCommit 0;
+    GVAR(ppHandleColorCorrections) ppEffectCommit 0;
+};
+
+// Breathing
+private _levelBreathing = _unit getVariable [QGVAR(breathingLevel), 0];
+private _newLevelBreathing = _levelBreathing + _change;
+_newLevelBreathing = _newLevelBreathing min 1;
+_newLevelBreathing = _newLevelBreathing max 0;
+
+private _breathProtect = _unit getVariable [QGVAR(breathingProtection), false];
+if (_breathProtect != 0) then {
+    _levelBreathing = _levelBreathing * (1 - _breathProtect);
+};
+_unit setVariable [QGVAR(breathingLevel), _levelBreathing, true];
+
+private _breathingEffectiveness = linearConversion [0.2, 1, _levelBreathing, 1, 0.6, true];
+if !(isNil "ace_medical_vitals_fnc_addSpO2DutyFactor") then {
+    [ADDON, _breathingEffectiveness] call ace_medical_vitals_fnc_addSpO2DutyFactor;
+};
+
+// Event
+private _smoked = _unit getVariable [QGVAR(smoked), false];
+if (_isInSmoke != _smoked) then {
+    [QGVAR(smoked), _isInSmoke] call CBA_fnc_localEvent;
+};
+_unit setVariable [QGVAR(smoked), _isInSmoke, true];
