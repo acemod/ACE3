@@ -32,6 +32,15 @@ workshop = [
     "1369691841", # Community Factions Project
 ]
 
+[aegis]
+extends = "default"
+workshop = [
+    "949252631", # Aegis
+]
+dlc = [
+    "ws",  # Western Sahara
+]
+
 [wardrobe]
 extends = "adt"
 mission = "Wardrobe.VR"
