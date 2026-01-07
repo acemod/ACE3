@@ -37,7 +37,7 @@ private _eyesProtect = _unit getVariable [QGVAR(eyesProtection), 0];
 if (_eyesProtect != 0) then {
     _levelEyes = _levelEyes * (1 - _eyesProtect);
 };
-_unit setVariable [QGVAR(eyesLevel), _levelEyes, true];
+_unit setVariable [QGVAR(eyesLevel), _levelEyes];
 
 private _dynamicBlurValue = linearConversion [0.2, 1, _levelEyes, 0, 0.8, true];
 private _colorCorrectionsValue = linearConversion [0.2, 1, _levelEyes, 1, 0.6, true];
