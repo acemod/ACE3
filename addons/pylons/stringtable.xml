@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Pylons">
+        <Key ID="STR_ACE_Pylons_AircraftDoesntHavePylons">
+            <English>This aircraft doesn't have pylons</English>
+            <Czech>Toto letadlo nemá pylony</Czech>
+            <French>Cet aéronef n'a pas de pylônes.</French>
+            <Spanish>Esta aeronave no tiene pilones</Spanish>
+            <Italian>Questo aereo non ha piloni</Italian>
+            <Polish>Ten pojazd nie posiada pylonów</Polish>
+            <Portuguese>Essa aeronave não possui pylons</Portuguese>
+            <Russian>Эта авиатехника не имеет пилонов</Russian>
+            <German>Dieses Flugzeug hat keine Außenlaststationen</German>
+            <Korean>이 비행기는 무장창이 없습니다.</Korean>
+            <Japanese>この航空機にはパイロンがありません</Japanese>
+            <Chinese>這架飛機沒有派龍架</Chinese>
+            <Chinesesimp>这架飞机没有导弹挂架</Chinesesimp>
+            <Ukrainian>Ця авіатехніка не має пілонів</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_AircraftLoadoutTitle">
+            <English>AIRCRAFT LOADOUT</English>
+            <Czech>VÝZBROJ LETADLA</Czech>
+            <French>ÉQUIPEMENT DE L'AÉRONEF</French>
+            <Spanish>ARMAMENTO DE AERONAVE</Spanish>
+            <Italian>ARMAMENTO DELL'AEREO</Italian>
+            <Polish>WYPOSAŻENIE POJAZDU POWIETRZNEGO</Polish>
+            <Portuguese>LOADOUT DA AERONAVE</Portuguese>
+            <Russian>СНАРЯЖЕНИЕ САМОЛЕТА</Russian>
+            <German>AUSRÜSTUNG DES FLUGGERÄTS</German>
+            <Korean>항공기 무장</Korean>
+            <Japanese>航空機の兵装</Japanese>
+            <Chinese>飛機武裝配置</Chinese>
+            <Chinesesimp>飞机武器配置</Chinesesimp>
+            <Ukrainian>СПОРЯДЖЕННЯ ЛІТАКА</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_BannerText">
+            <English>Pylons that are colored red will have to be manually rearmed.</English>
+            <Czech>Pylony označené červeně budou muset být manuálně přezbrojeny.</Czech>
+            <French>Les pylônes colorés en rouge devront être réarmés manuellement.</French>
+            <Spanish>Pilones de color rojo deben ser rearmados manualmente.</Spanish>
+            <Italian>I piloni di colore rosso devono essere riarmati manualmente.</Italian>
+            <Polish>Pylony, które są w kolorze czerwonym muszą być manualnie dozbrojone.</Polish>
+            <Portuguese>Pylons que estão coloridos de vermelho, precisarão ser rearmados manualmente.</Portuguese>
+            <Russian>Пилоны, окрашенные красным, должны быть переоборудованы вручную</Russian>
+            <German>Außenlaststationen, die rot markiert sind, müssen manuell aufmunitioniert werden.</German>
+            <Korean>붉은색의 무장창은 수동으로 재무장해야 합니다.</Korean>
+            <Japanese>赤色に設定されたパイロンは手動で再武装する必要があります。</Japanese>
+            <Chinese>以紅色標記出的派龍架必須以手動方式進行彈藥整補</Chinese>
+            <Chinesesimp>以红色标记出的导弹挂架必须以手动方式进行弹药整补。</Chinesesimp>
+            <Ukrainian>Пілони, пофарбовані червоним, мають бути переобладнані вручну</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_Category_Pylons">
+            <English>ACE Pylons</English>
+            <Czech>ACE Pylony</Czech>
+            <French>ACE Pylônes</French>
+            <Spanish>ACE Pilones</Spanish>
+            <Italian>ACE Piloni</Italian>
+            <Polish>ACE Pylony</Polish>
+            <Portuguese>ACE Pylons</Portuguese>
+            <Russian>ACE Пилоны</Russian>
+            <German>ACE Außenlaststationen</German>
+            <Korean>ACE 무장창</Korean>
+            <Japanese>ACE パイロン</Japanese>
+            <Chinese>ACE 派龍架</Chinese>
+            <Chinesesimp>ACE 导弹挂架</Chinesesimp>
+            <Ukrainian>ACE Пілони</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_ConfigurePylons">
+            <English>Configure Pylons</English>
+            <Czech>Nastavit pylony</Czech>
+            <French>Configurer les pylônes</French>
+            <Spanish>Configurar pilones</Spanish>
+            <Italian>Configura Piloni</Italian>
+            <Polish>Konfiguruj Pylony</Polish>
+            <Portuguese>Configurar Pylons</Portuguese>
+            <Russian>Настройка Пилонов</Russian>
+            <German>Konfiguriere Außenlaststationen</German>
+            <Korean>무장창 설정</Korean>
+            <Japanese>パイロン設定</Japanese>
+            <Chinese>定義派龍架</Chinese>
+            <Chinesesimp>设定导弹挂架</Chinesesimp>
+            <Ukrainian>Налаштування пілонів</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_ConfigurePylonsDisabledForZeus">
+            <English>Configure pylons module is disabled for zeus</English>
+            <Czech>Nastavení pylonů je vypnuto pro Zeuse</Czech>
+            <French>Le module de configuration des pylônes est désactivé pour Zeus.</French>
+            <Spanish>La configuración del módulo de pilones está deshabilitada para Zeus</Spanish>
+            <Italian>Il modulo Zeus per configurare i piloni è disabilitato</Italian>
+            <Polish>Konfiguracja modułu pylonów jest wyłączona dla zeus'a</Polish>
+            <Portuguese>O Módulo de configurar pylons está desativado para o Zeus</Portuguese>
+            <Russian>Модуль Настройка пилонов отключен для Zeus</Russian>
+            <German>Die Konfiguration für das Außenlaststationen ist im Zeus deaktiviert</German>
+            <Korean>제우스 무장창 모듈 설정이 비활성화 되어있습니다.</Korean>
+            <Japanese>Zeusのパイロン編集を無効化</Japanese>
+            <Chinese>宙斯模塊的派龍架設定已被禁用</Chinese>
+            <Chinesesimp>宙斯模组的导弹挂架已禁用</Chinesesimp>
+            <Ukrainian>Модуль Налаштування пілонів вимкнено для Zeus</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_Empty">
+            <English>&lt;empty&gt;</English>
+            <Czech>&lt;prázdné&gt;</Czech>
+            <French>&lt;vide&gt;</French>
+            <Spanish>&lt;vacío&gt;</Spanish>
+            <Italian>&lt;vuoto&gt;</Italian>
+            <Polish>&lt;puste&gt;</Polish>
+            <Portuguese>&lt;vazio&gt;</Portuguese>
+            <Russian>&lt;пусто&gt;</Russian>
+            <German>&lt;leer&gt;</German>
+            <Korean>&lt;비어 있음&gt;</Korean>
+            <Japanese>&lt;空&gt;</Japanese>
+            <Chinese>&lt;空&gt;</Chinese>
+            <Chinesesimp>&lt;空&gt;</Chinesesimp>
+            <Turkish>&lt;boş&gt;</Turkish>
+            <Ukrainian>&lt;порожньо&gt;</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_EnabledForZeus">
+            <English>Enable Pylons Menu for Zeus</English>
+            <Czech>Povolit menu s pylony pro Zeuse</Czech>
+            <French>Activer le menu des pylônes (Zeus)</French>
+            <Spanish>Habilitar menú de pilones para Zeus</Spanish>
+            <Italian>Abilita Menù Piloni da Zeus</Italian>
+            <Polish>Aktywuj Menu Pylonów dla Zeus'a</Polish>
+            <Portuguese>Ativar Menu de Pylon para Zeus</Portuguese>
+            <Russian>Активировать Меню пилонов для Зевса</Russian>
+            <German>Aktiviert Außenlaststationsmenü im Zeus</German>
+            <Korean>제우스 무장창 메뉴 활성화</Korean>
+            <Japanese>Zeusでパイロン メニューを有効化</Japanese>
+            <Chinese>啟用派龍架選單給宙斯</Chinese>
+            <Chinesesimp>启用宙斯导弹挂架菜单</Chinesesimp>
+            <Ukrainian>Активувати Меню пілонів для Зевса</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_EnabledForZeus_description">
+            <English>Enables use of the zeus module.</English>
+            <Czech>Povoluje použití daného Zeus modulu.</Czech>
+            <French>Permet l'utilisation des modules Zeus.</French>
+            <Spanish>Habilita el uso del módulo de Zeus.</Spanish>
+            <Italian>Abilita l'uso del modulo Zeus</Italian>
+            <Polish>Aktywuj wykorzystanie modułu zeus'a.</Polish>
+            <Portuguese>Permite usar o módulo de Zeus</Portuguese>
+            <Russian>Позволяет использовать модуль Зевса</Russian>
+            <German>Aktiviert die Nutzung im Zeus</German>
+            <Korean>제우스 무장창 메뉴를 사용할 수 있게 합니다.</Korean>
+            <Japanese>Zeusモジュールでパイロン メニューを利用できるようにします。</Japanese>
+            <Chinese>允啟使用宙斯模塊</Chinese>
+            <Chinesesimp>允许启用宙斯模组</Chinesesimp>
+            <Ukrainian>Дає змогу використовувати модуль Зевса</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_EnabledFromAmmoTrucks">
+            <English>Enable Pylons Menu from Ammo Trucks</English>
+            <Czech>Povolit menu s pylony z muničních náklaďáků.</Czech>
+            <French>Activer le menu des pylônes (camions de munitions)</French>
+            <Spanish>Habilitar menú de pilones desde camiones de munición</Spanish>
+            <Italian>Abilita Menù Piloni da mezzi di rifornimento munizioni</Italian>
+            <Polish>Aktywuj Menu Pylonów dla Ciężarówek z amunicją</Polish>
+            <Portuguese>Ativar Menu de Pylons de Caminhões de Munição</Portuguese>
+            <Russian>Меню пилонов из грузовика боеприпасов</Russian>
+            <German>Aktiviert Außenlaststationsmenü von Munitionstransportern</German>
+            <Korean>탄약 차량 무장창 메뉴 활성화</Korean>
+            <Japanese>弾薬トラックからパイロン メニューを有効化</Japanese>
+            <Chinese>啟用從彈藥卡車使用派龍架選單</Chinese>
+            <Chinesesimp>启用弹药车导弹挂架菜单</Chinesesimp>
+            <Ukrainian>Меню пілонів із вантажівки боєприпасів</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_EnabledFromAmmoTrucks_description">
+            <English>Enables use of pylons menu from ammo trucks.</English>
+            <Czech>Povoluje použití menu na nastavení pylonů z náklaďáků s municí.</Czech>
+            <French>Permet l'utilisation du menu des pylônes à partir des camions de ravitaillement de munitions.</French>
+            <Spanish>Habilita el uso del menú de pilones desde camiones de munición.</Spanish>
+            <Italian>Abilita l'uso del Menù Piloni da mezzi di rifornimento munizioni</Italian>
+            <Polish>Aktywuj wykorzystanie menu pylonów z ciężarówek z amunicją.</Polish>
+            <Portuguese>Permite abrir o menu de pylons através de veículos de munição.</Portuguese>
+            <Russian>Позволяет использовать меню пилонов из грузовика с боеприпасами</Russian>
+            <German>Aktiviert die Nutzung von Außenlaststationsmenü von Munitionstransportern.</German>
+            <Korean>탄약 차량에서 무장창 메뉴를 불러올 수 있게 합니다.</Korean>
+            <Japanese>弾薬給弾トラックからパイロン メニューを利用できます。</Japanese>
+            <Chinese>允許從彈藥卡車使用派龍架選單</Chinese>
+            <Chinesesimp>允许在弹药车上启用导弹挂架菜单</Chinesesimp>
+            <Ukrainian>Дозволяє використовувати меню пілонів із вантажівки з боєприпасами</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_InUse">
+            <English>%1 is already configuring this aircraft!</English>
+            <Czech>%1 už nastavuje výzbroj tohoto letadla!</Czech>
+            <French>%1 est déjà en train de configurer cet aéronef !</French>
+            <Spanish>%1 ya está configurando esta aeronave!</Spanish>
+            <Italian>% sta già configurando questo aereo!</Italian>
+            <Polish>%1 już konfiguruje ten pojazd!</Polish>
+            <Portuguese>%1 já está configurando essa aeronave!</Portuguese>
+            <Russian>%1 уже настраивает эту авиатехнику!</Russian>
+            <German>%1 konfiguriert dieses Fluggerät bereits!</German>
+            <Korean>이미 이 항공기에 장착되어 있음 (%1)</Korean>
+            <Japanese>%1 は すでにこの機体へ設定されています!</Japanese>
+            <Chinese>%1已經正在定義此飛機的武裝配置!</Chinese>
+            <Chinesesimp>%1已经正在定义此飞机的武器配置！</Chinesesimp>
+            <Ukrainian>%1 уже налаштовує цю авіатехніку!</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_LoadoutsFor">
+            <English>Loadouts for %1</English>
+            <Czech>Sady výzbroje pro %1</Czech>
+            <French>Équipements pour %1</French>
+            <Spanish>Armamento para %1</Spanish>
+            <Italian>Armamenti per %1</Italian>
+            <Polish>Wyposażenia dla %1</Polish>
+            <Portuguese>Loadouts para %1</Portuguese>
+            <Russian>Оснащение %1</Russian>
+            <German>Ausrüstung für %1</German>
+            <Korean>%1 무장</Korean>
+            <Japanese>%1 の兵装</Japanese>
+            <Chinese>%1用的武裝配置</Chinese>
+            <Chinesesimp>%1用的武器配置</Chinesesimp>
+            <Ukrainian>Оснащення %1</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_RearmNewPylons">
+            <English>Rearm New Pylons</English>
+            <Czech>Přezbrojit nové pylony</Czech>
+            <French>Réarmer les nouveaux pylônes</French>
+            <Spanish>Rearmar nuevos pilones</Spanish>
+            <Italian>Riarma Nuovi Piloni</Italian>
+            <Polish>Dozbrój Nowe Pylony</Polish>
+            <Portuguese>Rearmar novos pylons</Portuguese>
+            <Russian>Перевооружать новые пилоны</Russian>
+            <German>Neue Außenlaststationen. aufmunitionieren</German>
+            <Korean>새 무장창 재무장</Korean>
+            <Japanese>新規パイロンの再武装</Japanese>
+            <Chinese>重新整装新的导弹挂架</Chinese>
+            <Chinesesimp>重新武装新的派龙架</Chinesesimp>
+            <Ukrainian>Переозброювати нові пілони</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_RearmNewPylons_description">
+            <English>Automatically rearm new pylons from the nearest rearm vehicle.</English>
+            <Czech>Automaticky přezbrojit nové pylony z nejbližšího vozidla s municí.</Czech>
+            <French>Réarme automatiquement les nouveaux pylônes à partir du véhicule de ravitaillement le plus proche.</French>
+            <Spanish>Rearma automáticamente nuevos pilones desde el vehículo de rearme más cercano.</Spanish>
+            <Italian>Riarma automaticamente i nuovi piloni dal veicoli di riarmo più vicino.</Italian>
+            <Polish>Automatycznie dozbrajaj nowe pylony z najbliższego pojazdu dozbrajania.</Polish>
+            <Portuguese>Automaticamente rearmas novos pylons com o veículo de munição mais próximo</Portuguese>
+            <Russian>Автоматически перевооружать новые пилоны из ближайшей техники с боеприпасами</Russian>
+            <German>Neue Außenlaststationen. automatisch vom nächsten Munitionsfahrzeug aufmunitionieren</German>
+            <Korean>근처의 재무장 차량에서 빈 무장창을 자동으로 재무장 합니다.</Korean>
+            <Japanese>近くの補給車両から自動的に新規パイロンを再武装します。</Japanese>
+            <Chinese>自動從附近的整補載具中為派龍架進行彈藥整補</Chinese>
+            <Chinesesimp>自动从附近的整装载具中为导弹挂架进行弹药整装。</Chinesesimp>
+            <Ukrainian>Автоматично переозброювати нові пілони з найближчої техніки з боєприпасами</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_ReplacingPylon">
+            <English>Replacing pylon %1 out of %2...</English>
+            <Czech>Nahrazuji pylon %1 z %2...</Czech>
+            <French>Remplacement du pylône %1 sur %2...</French>
+            <Spanish>Reemplazando pilón %1 de %2...</Spanish>
+            <Italian>Sostituendo pilone %1 al posto di %2...</Italian>
+            <Polish>Wymiana pylonów %1 z %2...</Polish>
+            <Portuguese>Substituindo pylon %1 de %2...</Portuguese>
+            <Russian>Замена пилона %1 из %2...</Russian>
+            <German>Ersetze Außenlaststation %1 von insgesamt %2</German>
+            <Korean>%2개 중 %1번 무장창 교체 중...</Korean>
+            <Japanese>%2 個中 %1 番目のパイロンを交換しています・・・</Japanese>
+            <Chinese>共有%2個派龍架，正在整補%1號派龍架中...</Chinese>
+            <Chinesesimp>共有%2个发射架，正在整装%1号挂架...</Chinesesimp>
+            <Ukrainian>Заміна пілона %1 на %2...</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_RequireEngineer">
+            <English>Require Engineer</English>
+            <Czech>Vyžadovat Inženýra</Czech>
+            <French>Ingénieur requis</French>
+            <Spanish>Requerir Ingeniero</Spanish>
+            <Italian>Necessita Geniere</Italian>
+            <Polish>Wymaga Mechanika</Polish>
+            <Portuguese>Requer um engenheiro</Portuguese>
+            <Russian>Требуется Инженер</Russian>
+            <German>Benötigt Pionier</German>
+            <Korean>정비병 요구</Korean>
+            <Japanese>工兵の必須化</Japanese>
+            <Chinese>需要工兵</Chinese>
+            <Chinesesimp>必须是工兵</Chinesesimp>
+            <Ukrainian>Потрібен Інженер</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_RequireEngineer_description">
+            <English>Require an engineer.</English>
+            <Czech>Vyžaduje, aby hráč byl Inženýr.</Czech>
+            <French>Requiert un ingénieur.</French>
+            <Spanish>Requerir un Ingeniero.</Spanish>
+            <Italian>Necessita un Geniere.</Italian>
+            <Polish>Wymaga mechanika.</Polish>
+            <Portuguese>É necessário uma unidade definida como engenheiro para interagir com pylons.</Portuguese>
+            <Russian>Требуется роль Инженера</Russian>
+            <German>Benötigt einen Pionier.</German>
+            <Korean>정비병이 필요합니다.</Korean>
+            <Japanese>工兵を必須とします。</Japanese>
+            <Chinese>需要工兵才能進行彈藥整補</Chinese>
+            <Chinesesimp>必须是工兵才能进行弹药整装。</Chinesesimp>
+            <Ukrainian>Потрібна роль Інженера</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_RequireToolkit">
+            <English>Require Toolkit</English>
+            <Czech>Vyžadovat sadu nářadí (toolkit).</Czech>
+            <French>Trousse à outils requise</French>
+            <Spanish>Requerir Kit de herramientas</Spanish>
+            <Italian>Necessita Kit Utensili</Italian>
+            <Polish>Wymaga Narzędzi</Polish>
+            <Portuguese>Requer Kit de Ferramentas</Portuguese>
+            <Russian>Требуется Набор инструментов</Russian>
+            <German>Benötigt Werkzeugkasten</German>
+            <Korean>도구모음 요구</Korean>
+            <Japanese>ツールキットの必須化</Japanese>
+            <Chinese>需要工具包</Chinese>
+            <Chinesesimp>需要工具包</Chinesesimp>
+            <Ukrainian>Потрібен Набір інструментів</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_RequireToolkit_description">
+            <English>Require a toolkit in inventory.</English>
+            <Czech>Vyžaduje, aby hráč měl ve svém inventáři sadu nářadí (toolkit).</Czech>
+            <French>Requiert une trousse à outils dans l'inventaire.</French>
+            <Spanish>Requiere un Kit de herramientas en el inventario</Spanish>
+            <Italian>Necessita un kit utensili nell'inventario</Italian>
+            <Polish>Wymaga narzędzi w ekwipunku.</Polish>
+            <Portuguese>Requer um Kit de Ferramentas no inventário.</Portuguese>
+            <Russian>Требуется наличие Набора инструментов в инвентаре</Russian>
+            <German>Benötigt einen Werkzeugkasten im Inventar.</German>
+            <Korean>도구모음이 필요합니다.</Korean>
+            <Japanese>インベントリ内にツールキットの存在を必須とします。</Japanese>
+            <Chinese>需要工具包才能進行彈藥整補</Chinese>
+            <Chinesesimp>需要工具包才能进行弹药整装。</Chinesesimp>
+            <Ukrainian>Потрібна наявність Набору інструментів в інвентарі</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_SearchDistance">
+            <English>Search Distance</English>
+            <Czech>Vzdálenost hledání munice</Czech>
+            <French>Distance ravitaillement</French>
+            <Spanish>Distancia de búsqueda</Spanish>
+            <Italian>Distanza di Ricerca</Italian>
+            <Polish>Dystans Szukania</Polish>
+            <Portuguese>Distância de procura</Portuguese>
+            <Russian>Дальность поиска</Russian>
+            <German>Suchdistanz</German>
+            <Korean>검색 반경</Korean>
+            <Japanese>検索距離</Japanese>
+            <Chinese>搜索距離</Chinese>
+            <Chinesesimp>搜索距离</Chinesesimp>
+            <Ukrainian>Дальність пошуку</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_SearchDistance_description">
+            <English>The distance an aircraft needs to be from a rearm vehicle.</English>
+            <Czech>Maximální vzdálenost ze které je možné letadlo přezbrojit s vozidlem s municí.</Czech>
+            <French>La distance maximale à laquelle un aéronef doit se trouver du véhicule de ravitaillement.</French>
+            <Spanish>La distancia a la que debe estar una aeronave de un vehículo de rearme.</Spanish>
+            <Italian>La distanza necessaria per un aereo da un veicolo di riarmo.</Italian>
+            <Polish>Dystans, w jakim pojazd musi być od pojazdu dozbrajania.</Polish>
+            <Portuguese>A distância que a aeronave precisa estar de um veículo de munições.</Portuguese>
+            <Russian>Дальность от авиатехники до грузовика (пункта) с боеприпасами</Russian>
+            <German>Die Distanz, die ein Fahrzeug von einem Munitionsfahrzeug entfernt sein darf.</German>
+            <Korean>항공기에서 재보급 가능한 재무장 차량을 찾습니다.</Korean>
+            <Japanese>航空機と補給車両との間に必要な距離です。</Japanese>
+            <Chinese>設定飛機必須距離整補載具多少公尺才能進行彈藥整補</Chinese>
+            <Chinesesimp>设定飞机必须距离整装载具多少米才能进行弹药整装。</Chinesesimp>
+            <Ukrainian>Дальність від авіатехніки до вантажівки (пункту) з боєприпасами</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_Stopped">
+            <English>Stopped at pylon %1!</English>
+            <Czech>Přerušeno na pylonu %1!</Czech>
+            <French>Arrêté au pylône %1 !</French>
+            <Spanish>Parado en pilón %1!</Spanish>
+            <Italian>Fermato al pilone %1!</Italian>
+            <Polish>Zatrzymano na pylonie %1!</Polish>
+            <Portuguese>Parado no pylon %1!</Portuguese>
+            <Russian>Остановлено на пилоне %1!</Russian>
+            <German>Gestoppt bei Außenlaststation %1</German>
+            <Korean>%1 무장창이 멈춤</Korean>
+            <Japanese>%1 番目のパイロンで中断しました!</Japanese>
+            <Chinese>已停止在%1號派龍架!</Chinese>
+            <Chinesesimp>已在整装%1号挂架时停止！</Chinesesimp>
+            <Ukrainian>Зупинився на пілоні %1!</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_TimePerPylon">
+            <English>Time Per Pylon</English>
+            <Czech>Čas na pylon</Czech>
+            <French>Durée par pylône</French>
+            <Spanish>Tiempo por pilón</Spanish>
+            <Italian>Tempo Per Pilone</Italian>
+            <Polish>Czas na Pylon</Polish>
+            <Portuguese>Tempo por pylon</Portuguese>
+            <Russian>Время на пилон</Russian>
+            <German>Zeit pro Außenlaststation</German>
+            <Korean>무장창 당 시간</Korean>
+            <Japanese>パイロンあたりの所要時間</Japanese>
+            <Chinese>派龍架整補所需時間(個別)</Chinese>
+            <Chinesesimp>导弹挂架整装所需时间（个别）</Chinesesimp>
+            <Ukrainian>Час для пілона</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_TimePerPylon_description">
+            <English>The time it takes to replace each pylon (in seconds).</English>
+            <Czech>Udává čas jaký trvá nahrazení každého pylonu (ve vteřinách).</Czech>
+            <French>Le temps nécessaire pour remplacer chaque pylône (en secondes).</French>
+            <Spanish>El tiempo que lleva reemplazar cada pilón (en segundos).</Spanish>
+            <Italian>Il tempo che impiega ogni pilone ad essere sostituito (in secondi).</Italian>
+            <Polish>Czas, jaki trwa wymiana każdego z pylonów (w sekundach).</Polish>
+            <Portuguese>O tempo necessário para substituir cada pylon (em segundos)</Portuguese>
+            <Russian>Время для замены каждого пилона (в секундах)</Russian>
+            <German>Die benötigte Zeit, um einzelne Außenlaststationen zu ersetzen (in Sekunden).</German>
+            <Korean>무장창을 재설정 하는데 걸리는 시간 (초)</Korean>
+            <Japanese>各パイロンの置き換えに掛かる時間。 (秒単位)</Japanese>
+            <Chinese>每個派龍架需花多久時間進行整補(單位為秒)</Chinese>
+            <Chinesesimp>每个挂架需花多久时间进行整装（单位为秒）。</Chinesesimp>
+            <Ukrainian>Час для заміни кожного пілона (у секундах)</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Pylons_TooFar">
+            <English>Vehicle too far</English>
+            <Czech>Vozidlo je příliš daleko</Czech>
+            <French>Véhicule trop éloigné.</French>
+            <Spanish>Vehículo demasiado alejado</Spanish>
+            <Italian>Veicolo troppo lontano</Italian>
+            <Polish>Pojazd za daleko</Polish>
+            <Portuguese>Veículo muito longe</Portuguese>
+            <Russian>Техника слишком далеко</Russian>
+            <German>Fahrzeug zu weit entfernt</German>
+            <Korean>차량이 너무 멈</Korean>
+            <Japanese>車両が遠すぎます</Japanese>
+            <Chinese>載具過遠</Chinese>
+            <Chinesesimp>载具过远</Chinesesimp>
+            <Ukrainian>Техніка занадто далеко</Ukrainian>
+        </Key>
+    </Package>
+</Project>
