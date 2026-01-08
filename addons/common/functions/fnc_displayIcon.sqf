@@ -1,15 +1,14 @@
 #include "..\script_component.hpp"
 /*
  * Author: Glowbal
- * Draw progress bar and execute given function if succesful.
- * Finish/Failure/Conditional are all passed [args, elapsedTime, totalTime, errorCode]
+ * Displays an icon at a CBA settings-defined position and ensures multiple icons are shown after each other
  *
  * Arguments:
  * 0: icon ID <STRING>
  * 1: show <BOOL>
  * 2: Icon Path <STRING>
  * 3: Icon color <ARRAY>
- * 4: timeAlive. -1 = forever (default: 6) <NUMBER>
+ * 4: timeAlive. -1 = forever <NUMBER> (default: 6)
  *
  * Return Value:
  * None

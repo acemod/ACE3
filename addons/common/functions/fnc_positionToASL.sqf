@@ -4,12 +4,12 @@
  * Converts Arma "Position" to ASL
  *
  * Arguments:
- * 0: position x <Number>
- * 1: position y <Number>
- * 2: position z <Number>
+ * 0: Position x <NUMBER>
+ * 1: Position y <NUMBER>
+ * 2: Position z <NUMBER>
  *
  * Return Value:
- * None
+ * PosASL <ARRAY>
  *
  * Example:
  * [1, 1, 1] call ace_common_fnc_positionToASL

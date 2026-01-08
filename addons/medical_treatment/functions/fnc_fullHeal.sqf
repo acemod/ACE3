@@ -10,7 +10,7 @@
  * 3: Treatment (unused) <STRING>
  * 4: Item User (unused) <OBJECT>
  * 5: Used Item (unused) <STRING>
- * 6: Create litter (unused) <BOOLEAN>
+ * 6: Create litter (unused) <BOOL>
  * 7: Write message to patient log <BOOL> (default: true)
  *
  * Return Value:

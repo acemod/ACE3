@@ -20,59 +20,32 @@ params ["_force"];
 // Filter out any invalid entries
 GVAR(headlessClients) = GVAR(headlessClients) select {!isNull _x};
 
-GVAR(headlessClients) params [
-    ["_HC1", objNull, [objNull]],
-    ["_HC2", objNull, [objNull]],
-    ["_HC3", objNull, [objNull]]
-];
+// Don't want to filter out local HCs permanently, as bad locality could be temporary
+private _HCs = GVAR(headlessClients) select {!local _x};
+private _countHC = count _HCs;
 
-if (XGVAR(log)) then {
-    INFO_2("Present HCs: %1 - Full Rebalance: %2",GVAR(headlessClients),_force);
-};
-
-// Enable round-robin load balancing if more than one HC is present
-private _loadBalance = [false, true] select (count GVAR(headlessClients) > 1);
-
-// Get IDs and determine first HC to start with
-private _idHC1 = -1;
-private _idHC2 = -1;
-private _idHC3 = -1;
-private _currentHC = 0;
-
-// objNull is never local
-if (!local _HC1 && !isNull _HC1) then {
-    _idHC1 = owner _HC1;
-    _currentHC = 1;
-};
-
-if (!local _HC2 && !isNull _HC2) then {
-    _idHC2 = owner _HC2;
-
-    if (_currentHC == 0) then {
-        _currentHC = 2;
-    };
-};
-
-if (!local _HC3 && !isNull _HC3) then {
-    _idHC3 = owner _HC3;
-
-    if (_currentHC == 0) then {
-        _currentHC = 3;
-    };
-};
-
-if (_currentHC == 0) exitWith {
-    TRACE_1("No Valid HC to transfer to",_currentHC);
+if (_countHC == 0) exitWith {
+    TRACE_1("No Valid HC to transfer to",GVAR(headlessClients));
 
     if (XGVAR(log)) then {
         INFO("No Valid HC to transfer to");
     };
 };
 
+if (XGVAR(log)) then {
+    INFO_2("Present HCs: %1 - Full Rebalance: %2",GVAR(headlessClients),_force);
+};
+
+// Enable round-robin load balancing if more than one HC is present
+private _loadBalance = _countHC > 1;
+private _currentIndexHC = 0;
+
+// Get IDs
+private _idsHC = _HCs apply {owner _x};
+
 // Prepare statistics
-private _numTransferredHC1 = 0;
-private _numTransferredHC2 = 0;
-private _numTransferredHC3 = 0;
+private _numTransferred = [];
+_numTransferred resize [_countHC, 0];
 
 // Transfer AI groups
 {
@@ -92,7 +65,7 @@ private _numTransferredHC3 = 0;
 
     {
         // No transfer if already transferred
-        if (!_force && {(owner _x) in [_idHC1, _idHC2, _idHC3]}) exitWith {
+        if (!_force && {(owner _x) in _idsHC}) exitWith {
             _transfer = false;
         };
 
@@ -125,98 +98,42 @@ private _numTransferredHC3 = 0;
 
     // Round robin between HCs if load balance enabled, else pass all to one HC
     private _previousOwner = groupOwner _x;
+    private _HC = _HCs select _currentIndexHC;
+    private _idHC = _idsHC select _currentIndexHC;
 
-    switch (_currentHC) do {
-        case 1: {
-            if (_loadBalance) then {
-                // Find the next valid HC
-                // If none are valid, _currentHC will remain the same
-                if (_idHC2 != -1) then {
-                    _currentHC = 2;
-                } else {
-                    if (_idHC3 != -1) then {
-                        _currentHC = 3;
-                    };
-                };
-            };
+    // Don't transfer if it's already local to HC
+    if (_previousOwner != _idHC) then {
+        [QGVAR(groupTransferPre), [_x, _HC, _previousOwner, _idHC], _previousOwner] call CBA_fnc_ownerEvent; // API
+        [QGVAR(groupTransferPre), [_x, _HC, _previousOwner, _idHC], _idHC] call CBA_fnc_ownerEvent; // API
 
-            // Don't transfer if it's already local to HC1
-            if (_previousOwner == _idHC1) exitWith {};
+        private _transferred = _x setGroupOwner _idHC;
 
-            [QGVAR(groupTransferPre), [_x, _HC1, _previousOwner, _idHC1], _previousOwner] call CBA_fnc_ownerEvent; // API
-            [QGVAR(groupTransferPre), [_x, _HC1, _previousOwner, _idHC1], _idHC1] call CBA_fnc_ownerEvent; // API
+        [QGVAR(groupTransferPost), [_x, _HC, _previousOwner, _idHC, _transferred], _previousOwner] call CBA_fnc_ownerEvent; // API
+        [QGVAR(groupTransferPost), [_x, _HC, _previousOwner, _idHC, _transferred], _idHC] call CBA_fnc_ownerEvent; // API
 
-            private _transferred = _x setGroupOwner _idHC1;
-
-            [QGVAR(groupTransferPost), [_x, _HC1, _previousOwner, _idHC1, _transferred], _previousOwner] call CBA_fnc_ownerEvent; // API
-            [QGVAR(groupTransferPost), [_x, _HC1, _previousOwner, _idHC1, _transferred], _idHC1] call CBA_fnc_ownerEvent; // API
-
-            if (_transferred) then {
-                _numTransferredHC1 = _numTransferredHC1 + 1;
-            };
+        if (_transferred) then {
+            _numTransferred set [_currentIndexHC, (_numTransferred select _currentIndexHC) + 1];
         };
-        case 2: {
-            if (_loadBalance) then {
-                // Find the next valid HC
-                // If none are valid, _currentHC will remain the same
-                if (_idHC3 != -1) then {
-                    _currentHC = 3;
-                } else {
-                    if (_idHC1 != -1) then {
-                        _currentHC = 1;
-                    };
-                };
-            };
+    };
 
-            // Don't transfer if it's already local to HC2
-            if (_previousOwner == _idHC2) exitWith {};
-
-            [QGVAR(groupTransferPre), [_x, _HC2, _previousOwner, _idHC2], _previousOwner] call CBA_fnc_ownerEvent; // API
-            [QGVAR(groupTransferPre), [_x, _HC2, _previousOwner, _idHC2], _idHC2] call CBA_fnc_ownerEvent; // API
-
-            private _transferred = _x setGroupOwner _idHC2;
-
-            [QGVAR(groupTransferPost), [_x, _HC2, _previousOwner, _idHC2, _transferred], _previousOwner] call CBA_fnc_ownerEvent; // API
-            [QGVAR(groupTransferPost), [_x, _HC2, _previousOwner, _idHC2, _transferred], _idHC2] call CBA_fnc_ownerEvent; // API
-
-            if (_transferred) then {
-                _numTransferredHC2 = _numTransferredHC2 + 1;
-            };
-        };
-        case 3: {
-            if (_loadBalance) then {
-                // Find the next valid HC
-                // If none are valid, _currentHC will remain the same
-                if (_idHC1 != -1) then {
-                    _currentHC = 1;
-                } else {
-                    if (_idHC2 != -1) then {
-                        _currentHC = 2;
-                    };
-                };
-            };
-
-            // Don't transfer if it's already local to HC3
-            if (_previousOwner == _idHC3) exitWith {};
-
-            [QGVAR(groupTransferPre), [_x, _HC3, _previousOwner, _idHC3], _previousOwner] call CBA_fnc_ownerEvent; // API
-            [QGVAR(groupTransferPre), [_x, _HC3, _previousOwner, _idHC3], _idHC3] call CBA_fnc_ownerEvent; // API
-
-            private _transferred = _x setGroupOwner _idHC2;
-
-            [QGVAR(groupTransferPost), [_x, _HC3, _previousOwner, _idHC3, _transferred], _previousOwner] call CBA_fnc_ownerEvent; // API
-            [QGVAR(groupTransferPost), [_x, _HC3, _previousOwner, _idHC3, _transferred], _idHC3] call CBA_fnc_ownerEvent; // API
-
-            if (_transferred) then {
-                _numTransferredHC3 = _numTransferredHC3 + 1;
-            };
+    // Find the next valid HC if more than one HC is present
+    if (_loadBalance) then {
+        if (_currentIndexHC < _countHC) then {
+            _currentIndexHC = _currentIndexHC + 1;
+        } else {
+            _currentIndexHC = 0;
         };
     };
 } forEach allGroups;
 
 if (XGVAR(log)) then {
-    private _numTransferredTotal = _numTransferredHC1 + _numTransferredHC2 + _numTransferredHC3;
-    INFO_4("Groups Transferred: Total: %1 - HC1: %2 - HC2: %3 - HC3: %4",_numTransferredTotal,_numTransferredHC1,_numTransferredHC2,_numTransferredHC3);
+    private _numTransferredTotal = 0;
+
+    {
+        _numTransferredTotal = _numTransferredTotal + _x;
+    } forEach _numTransferred;
+
+    INFO_2("Groups Transferred: Total: %1 - per HC: %2",_numTransferredTotal,_numTransferred);
 };
 
 // Allow rebalance flag

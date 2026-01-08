@@ -13,7 +13,7 @@
  * 5: Seeker laser code. <NUMBER>
  * 6: Ignore 1 (e.g. Player's vehicle) <OBJECT> (default: objNull)
  * 7: Ignore 2 (e.g. Attached object) <OBJECT> (default: objNull)
- * 8: Owners to ignore (e.g. Player's vehicle) <ARRAY of OBJECT> (default: [])
+ * 8: Owners to ignore (e.g. Player's vehicle) <ARRAY of OBJECTs> (default: [])
  *
  * Return Value:
  * [Strongest compatible laser spot ASL pos, owner object] Nil array values if nothing found <ARRAY>
@@ -146,6 +146,13 @@ if (_spots isNotEqualTo []) then {
         {
             private _testPos = (_x select 0) vectorAdd [0,0,0.05];
             private _testIntersections = lineIntersectsSurfaces [_posASL, _testPos, _ignoreObj1, _ignoreObj2];
+
+            // Ignore intersections near the spot to avoid false LOS blocks from vehicle surfaces
+            _testIntersections = _testIntersections select { 
+                _x params ["_intersectPosASL"];
+                (_intersectPosASL vectorDistanceSqr _testPos) > 0.01;
+            };
+
             if ([] isEqualTo _testIntersections) then {
                 _bucketList pushBack _x;
             };

@@ -62,7 +62,7 @@ _cameraDir = (_cameraDir select 0) atan2 (_cameraDir select 1);
 private _phi = abs (_cameraDir - _unitDirVisual) % 360;
 _phi = [_phi, 360 - _phi] select (_phi > 180);
 
-private _power = linearConversion [0, 180, _phi - 30, 1, 0.3, true];
+private _power = linearConversion [0, 180, (ACE_player getVariable [QGVAR(throwMod), THROW_MODIFER_DEFAULT]) * (_phi - 30), 1, 0.3, true];
 ACE_player setVariable [QGVAR(throwSpeed), _throwSpeed * _power];
 
 TRACE_5("",_phi,_power,_throwSpeed * _power,_throwableMag,ACE_player getVariable ARR_2([QGVAR(activeMuzzle),ARR_2(["",-1])]));
@@ -119,12 +119,12 @@ private _posCameraWorld = AGLToASL (positionCameraToWorld [0, 0, 0]);
 _posHeadRel = _posHeadRel vectorAdd [-0.03, 0.01, 0.15]; // Bring closer to eyePos value
 private _posFin = ACE_player modelToWorldVisualWorld _posHeadRel;
 
-private _throwType = ACE_player getVariable [QGVAR(throwType), THROW_TYPE_DEFAULT];
+private _throwMod = ACE_player getVariable [QGVAR(throwMod), THROW_MODIFER_DEFAULT];
 
 // Orient it nicely, point towards player
 _activeThrowable setDir (_unitDirVisual + 90);
 
-private _pitch = [-30, -90] select (_throwType == "high");
+private _pitch = linearConversion [THROW_MODIFER_MIN, THROW_MODIFER_MAX, _throwMod, -90, -30];
 [_activeThrowable, _pitch, 0] call BIS_fnc_setPitchBank;
 
 // Force drop mode if underwater
@@ -140,8 +140,8 @@ if (ACE_player getVariable [QGVAR(dropMode), false]) then {
         ACE_player setVariable [QGVAR(dropDistance), ((ACE_player getVariable [QGVAR(dropDistance), DROP_DISTANCE_DEFAULT]) - 0.1) max DROP_DISTANCE_DEFAULT];
     };
 } else {
-    private _xAdjustBonus = [0, -0.075] select (_throwType == "high");
-    private _yAdjustBonus = [0, 0.1] select (_throwType == "high");
+    private _xAdjustBonus = linearConversion [THROW_MODIFER_MIN, THROW_MODIFER_MAX, _throwMod, -0.075, 0];
+    private _yAdjustBonus = linearConversion [THROW_MODIFER_MIN, THROW_MODIFER_MAX, _throwMod, 0.1, 0];
     private _cameraOffset = [_leanCoef, 0, 0.3] vectorAdd [-0.1, -0.15, -0.03] vectorAdd [_xAdjustBonus, _yAdjustBonus, 0];
 
     _posFin = _posFin vectorAdd (AGLToASL (positionCameraToWorld _cameraOffset));

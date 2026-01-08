@@ -56,7 +56,7 @@ if (_shooter == ACE_player) then {
 //_pitchChange = -10 max _pitchChange min 10;
 
 ((velocity _projectile) call CBA_fnc_vect2polar) params ["", "_currentYaw", "_currentPitch"];
-((ACE_player weaponDirection (currentWeapon ACE_player)) call CBA_fnc_vect2Polar) params ["", "_yaw", "_pitch"];
+((_shooter weaponDirection (currentWeapon _shooter)) call CBA_fnc_vect2Polar) params ["", "_yaw", "_pitch"];
 
 TRACE_5("attackProfileStateParams",_firedLOS,_yawChange,_pitchChange,_currentPitch,_currentYaw);
 _navigationParams set [0, _yawChange];

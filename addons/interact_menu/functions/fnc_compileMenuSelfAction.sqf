@@ -4,7 +4,7 @@
  * Compile the self action menu from config for an object's class
  *
  * Arguments:
- * 0: Object or class name <OBJECT> or <STRING>
+ * 0: Object or class name <OBJECT or STRING>
  *
  * Return Value:
  * None

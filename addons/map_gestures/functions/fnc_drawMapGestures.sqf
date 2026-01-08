@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Map Handle <CONTROL>
- * 1: Positions (objects or posAGLs) with render distance <ARRAY<ARRAY<OBJECT,NUMBER>>>
+ * 1: Positions (objects or posAGLs) with render distance <ARRAY<ARRAY<OBJECT, NUMBER>>>
  *
  * Return Value:
  * None

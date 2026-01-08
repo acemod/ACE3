@@ -95,7 +95,7 @@ GVAR(digPFH) = [{
 _unit setVariable [QGVAR(Dig), [
     _unit, "DefaultAction",
     {GVAR(digPFH) != -1},
-    {[_this select 0] call FUNC(placeConfirm)}
+    {[_this select 1] call FUNC(placeConfirm)}
 ] call EFUNC(common,addActionEventHandler)];
 
 _unit setVariable [QGVAR(isPlacing), true, true];

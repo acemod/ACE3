@@ -66,7 +66,7 @@ if ((_projPos distance _launchPos) >= 20) then {
         #endif
 
         // Limit scan to 5 meters directly down (shaped charge jet has a very limited range)
-        private _res = lineIntersectsSurfaces [_virtualPos, (_virtualPos vectorAdd [0,0,-5]), _projectile];
+        private _res = lineIntersectsSurfaces [_virtualPos, (_virtualPos vectorAdd [0,0,-5]), _projectile, objNull, true, 1, "FIRE", "VIEW"];
         if (_res isNotEqualTo []) then {
             (_res select 0) params ["_targetPos", "", "_target"];
             if ((_target isKindOf "Tank") || {_target isKindOf "Car"} || {_target isKindOf "Air"}) exitWith {
@@ -74,17 +74,8 @@ if ((_projPos distance _launchPos) >= 20) then {
                 TRACE_2("",_target worldToModel (ASLToAGL _virtualPos),boundingBoxReal _target);
                 _virtualPos = _virtualPos vectorAdd (_vectorDir vectorMultiply 1.25);
 
-                deleteVehicle _projectile;
-
-                // Damage and effects of missile exploding (timeToLive is 0 so should happen next frame)
-                private _explosion = "ACE_NLAW_Explosion" createVehicle _virtualPos;
-                _explosion setPosASL _virtualPos;
-
-                // Just damage from shaped charge
-                private _shapedCharage = "ACE_NLAW_ShapedCharge" createVehicle _virtualPos;
-                _shapedCharage setPosASL _virtualPos;
-                _shapedCharage setVectorDirAndUp [[0,0,-1], [1,0,0]];
-                _shapedCharage setVelocity [0,0,-300];
+                _projectile setMissileTarget [_target, true];
+                triggerAmmo _projectile;
 
                 _seekerStateParams set [1, true];
 

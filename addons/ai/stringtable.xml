@@ -13,6 +13,7 @@
             <Korean>야간에는 야투경을 소지품에 장착하고 주간에는 장착을 해제합니다.\n주의! 소지품에 야투경을 추가하는 것이 아닙니다!</Korean>
             <Japanese>インベントリ内の暗視装置を夜間に装備し、日中は解除し収納します。\nこれはNVGをインベントリに追加しません。</Japanese>
             <Chinesesimp>在夜晚自动佩戴夜视仪, 在白天自动摘下来\n不会将夜视仪添加进物品栏中!</Chinesesimp>
+            <Ukrainian>Екіпірує ПНБ у нічний час і відключає його в денний час.\nНе додає ПНБ в інвентар!</Ukrainian>
         </Key>
         <Key ID="STR_ACE_AI_AssignNVG_DisplayName">
             <English>Auto-Equip NVGs</English>
@@ -26,6 +27,7 @@
             <Korean>야투경 자동 창착</Korean>
             <Japanese>暗視装置の自動装備</Japanese>
             <Chinesesimp>自动佩戴夜视仪</Chinesesimp>
+            <Ukrainian>Автоматичне оснащення ПНБ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_AI_DisplayName">
             <English>AI</English>
@@ -42,6 +44,7 @@
             <Chinese>AI</Chinese>
             <Chinesesimp>AI</Chinesesimp>
             <Turkish>AI</Turkish>
+            <Ukrainian>ШІ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_AI_GarrisonInvalidPosition">
             <English>Invalid position provided.</English>
@@ -58,6 +61,7 @@
             <Chinese>提供的位置無效</Chinese>
             <Chinesesimp>提供的位置无效。</Chinesesimp>
             <Turkish>Geçersiz Konum</Turkish>
+            <Ukrainian>Вказано невірну позицію</Ukrainian>
         </Key>
         <Key ID="STR_ACE_AI_GarrisonNoBuilding">
             <English>No building found.</English>
@@ -74,6 +78,7 @@
             <Chinese>沒找到建築物</Chinese>
             <Chinesesimp>没找到建筑物。</Chinesesimp>
             <Turkish>Bir yapı bulunamadı</Turkish>
+            <Ukrainian>Будівлю не знайдено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_AI_GarrisonNoUnits">
             <English>No units provided.</English>
@@ -90,6 +95,7 @@
             <Chinese>找不到可用的單位</Chinese>
             <Chinesesimp>找不到可用的单位。</Chinesesimp>
             <Turkish>Hiçbir Birim Bulunamadı</Turkish>
+            <Ukrainian>Не вказані юніти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_AI_GarrisonNotEnoughPos">
             <English>There aren't enough positions to place all units.</English>
@@ -106,6 +112,7 @@
             <Chinese>沒有足夠的位置能擺放所有單位</Chinese>
             <Chinesesimp>没有足够的位置能摆放所有单位。</Chinesesimp>
             <Turkish>Tüm birimleri yerleştirmek için yeterli konum yok.</Turkish>
+            <Ukrainian>Недостатньо позицій для розміщення всіх юнітів</Ukrainian>
         </Key>
     </Package>
 </Project>

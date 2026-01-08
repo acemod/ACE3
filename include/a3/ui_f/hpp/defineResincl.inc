@@ -315,6 +315,8 @@ enum
 #define CT_ITEMSLOT         103
 #define CT_CHECKBOX         77
 #define CT_VEHICLE_DIRECTION 105
+#define CT_WEBBROWSER       106
+#define CT_EXTENSION        107
 
 // Static styles
 #define ST_POS            0x0F
@@ -410,6 +412,8 @@ enum
 #define IDC_RESTART       5
 #define IDC_USER_BUTTON   6
 #define IDC_EXIT_TO_MAIN  7
+#define IDC_EXIT_QUIT     8
+#define IDC_USER_BUTTON2  9
 
 // my own control window for tests
 #define IDC_MY_FIRST_LISTBOX    110
@@ -1024,6 +1028,9 @@ enum
 #define IDC_MAIN_QUICKPLAY          154
 #define IDC_MAIN_UNIT               155
 
+#define IDC_MAIN_INFO_BRANCH		156
+#define IDC_MAIN_BRANCH_NAME		160
+
 #define IDC_MAIN_CARDAS_CUDL        199 // muj vlastni cudl
 
 #define IDC_MAIN_VIDEOCONTROL       3335
@@ -1416,6 +1423,7 @@ enum
 #define IDC_OPTIONS_WIND_INFLUENCE_DYN_RTD  149
 #define IDC_OPTIONS_AUTO_TRIM_RTD           150
 #define IDC_OPTIONS_STRESS_DAMAGE_RTD       151
+#define IDC_OPTIONS_WEBBROWSER				152
 
 #define IDC_PARTICLES_EFFECTS         143
 #define IDC_OPTIONS_DYNAMIC_LIGHTS    144

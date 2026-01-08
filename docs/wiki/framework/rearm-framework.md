@@ -261,4 +261,4 @@ Removes one ammo box with 50 rounds of 500Rnd_127x99_mag_Tracer_Red from the sup
 
 | Name          | Arguments | Global? | Added in |
 | ------------- | --------- | ------- | -------- |
-| `ace_rearm_sourceInitalized` | Ammo truck (OBJECT) | Yes | 3.16.0 |
+| `ace_rearm_rearmSourceInitalized` | Ammo truck (OBJECT) | Yes | 3.16.0 |

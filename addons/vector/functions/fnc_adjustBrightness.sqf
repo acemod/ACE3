@@ -4,13 +4,13 @@
  *
  *
  * Arguments:
- * 0: Number <NUMBER>
+ * 0: Illuminate <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [5] call ace_vector_fnc_adjustBrightness
+ * [true] call ace_vector_fnc_adjustBrightness
  *
  * Public: No
  */

@@ -8,7 +8,7 @@
  * 1: Body Part <STRING>
  *
  * Return Value:
- * Wounds <ARRAY of ARRAY>:
+ * Wounds <ARRAY of ARRAYs>:
  *    0: Wound Class ID <NUMBER>
  *    1: Wound Stitched Amount <NUMBER>
  *    2: Wound Bleeding Coef <NUMBER>

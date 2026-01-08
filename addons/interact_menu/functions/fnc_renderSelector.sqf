@@ -29,12 +29,12 @@ if(GVAR(iconCount) > (count GVAR(iconCtrls))-1) then {
 
 private _ctrl = GVAR(iconCtrls) select GVAR(iconCount);
 
-private _pos = if (GVAR(UseListMenu)) then {
+private _pos = if ([GVAR(useListMenu), GVAR(useListMenuSelf)] select GVAR(keyDownSelfAction)) then {
     [_ctrl, GVAR(iconCount), format ["<img image='%1' color='%2' size='1.6'/>", _icon, GVAR(selectorColorHex)]] call FUNC(ctrlSetParsedTextCached);
-    [(_sPos select 0)-(0.014*safeZoneW), (_sPos select 1)-(0.014*safeZoneW), 0.05*safeZoneW, 0.035*safeZoneW]
+    [(_sPos select 0)-(GVAR(SELECTOR_LIST_X)*safeZoneW), (_sPos select 1)-(GVAR(SELECTOR_LIST_Y)*safeZoneW), GVAR(SELECTOR_LIST_W)*safeZoneW, GVAR(SELECTOR_LIST_H)*safeZoneW]
 } else {
     [_ctrl, GVAR(iconCount), format ["<img image='%1' color='%2' size='1.6' align='center'/>", _icon, GVAR(selectorColorHex)]] call FUNC(ctrlSetParsedTextCached);
-    [(_sPos select 0)-(0.050*safeZoneW), (_sPos select 1)-(0.014*safeZoneW), 0.1*safeZoneW, 0.035*safeZoneW]
+    [(_sPos select 0)-(GVAR(SELECTOR_RADIAL_X)*safeZoneW), (_sPos select 1)-(GVAR(SELECTOR_RADIAL_Y)*safeZoneW), GVAR(SELECTOR_RADIAL_W)*safeZoneW, GVAR(SELECTOR_RADIAL_H)*safeZoneW]
 };
 
 GVAR(iconCount) = GVAR(iconCount) + 1;

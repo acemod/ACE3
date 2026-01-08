@@ -7,12 +7,16 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Configs of all detonators <ARRAY>
+ * If unit has explosives <BOOL>
  *
  * Example:
- * _hasPlacedExplosives = [player] call ACE_Explosives_fnc_hasPlacedExplosives;
+ * player call ace_explosives_fnc_hasPlacedExplosives
  *
  * Public: Yes
  */
 
-(count (call FUNC(getPlacedExplosives)) > 0)
+// Do params type check only in FUNC(getPlacedExplosives)
+params ["_unit"];
+TRACE_1("params",_unit);
+
+(_unit call FUNC(getPlacedExplosives)) isNotEqualTo [] // return

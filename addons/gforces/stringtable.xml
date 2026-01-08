@@ -14,6 +14,7 @@
             <Japanese>ACE G フォース</Japanese>
             <Chinesesimp>ACE G力</Chinesesimp>
             <Turkish>ACE G-Kuvveti</Turkish>
+            <Ukrainian>ACE Перевантаження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_GForces_Coefficient_Description">
             <English>Controls strength of G-Force affecting players.</English>
@@ -28,6 +29,7 @@
             <Japanese>G効果がプレイヤーに与える影響量を設定できます。</Japanese>
             <Chinesesimp>控制影响玩家的G力的强度。</Chinesesimp>
             <Turkish>Oyuncuları etkileyen G-Force'un gücünü kontrol eder.</Turkish>
+            <Ukrainian>Визначає силу перевантажень, що впливають на гравців.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_GForces_Coefficient_DisplayName">
             <English>G-Force Coefficient</English>
@@ -42,6 +44,7 @@
             <Japanese>G効果係数</Japanese>
             <Chinesesimp>G力系数</Chinesesimp>
             <Turkish>G-Kuvvet Katsayısı</Turkish>
+            <Ukrainian>Коеф. перевантаження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_GForces_enabledFor_displayName">
             <English>Gforces Effects</English>
@@ -58,6 +61,7 @@
             <Chinese>G力影響</Chinese>
             <Chinesesimp>G力影响</Chinesesimp>
             <Turkish>G-Kuvveti Efekti</Turkish>
+            <Ukrainian>Ефекти перевантажень</Ukrainian>
         </Key>
         <Key ID="STR_ACE_GForces_enabledFor_onlyAircraft">
             <English>Only Aircraft</English>
@@ -74,6 +78,7 @@
             <Chinese>只有戰鬥機</Chinese>
             <Chinesesimp>仅飞行器</Chinesesimp>
             <Turkish>Sadece Uçaklar</Turkish>
+            <Ukrainian>Тільки авіація</Ukrainian>
         </Key>
         <Key ID="STR_ACE_GForces_statGReduction">
             <English>G-force reduction</English>
@@ -90,6 +95,7 @@
             <Chinese>減少G力</Chinese>
             <Chinesesimp>减少G力</Chinesesimp>
             <Turkish>G-Kuvvetinde azalma</Turkish>
+            <Ukrainian>Зменшення перевантажень</Ukrainian>
         </Key>
     </Package>
 </Project>

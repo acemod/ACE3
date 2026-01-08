@@ -6,10 +6,10 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Weapon <STRING>
- * 2: Muzzle (default: Weapon) <STRING>
- * 3: Magazine (default: magazine in Weapon) <STRING>
- * 4: Ammo count (default: Unit ammo Muzzle) <NUMBER>
- * 5: Skip animation? (default: false) <BOOL>
+ * 2: Muzzle <STRING> (default: Weapon)
+ * 3: Magazine <STRING> (default: Magazine in Weapon)
+ * 4: Ammo count <NUMBER> (default: Unit ammo Muzzle)
+ * 5: Skip animation? <BOOL> (default: false)
  *
  * Return Value:
  * None

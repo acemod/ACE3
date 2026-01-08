@@ -1,7 +1,5 @@
 class CfgVehicles {
-    class All {
-        class EventHandlers;
-    };
+    class All;
     class AllVehicles: All {};
     class Land: AllVehicles {};
     class LandVehicle: Land {};
@@ -255,6 +253,7 @@ class CfgVehicles {
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
             desiredAmmo = 1;
+            allowFireOnLoad = 2;
         };
     };
 
@@ -276,6 +275,7 @@ class CfgVehicles {
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
             desiredAmmo = 1;
+            allowFireOnLoad = 2;
         };
     };
 
@@ -289,6 +289,7 @@ class CfgVehicles {
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
             desiredAmmo = 1;
+            allowFireOnLoad = 2;
         };
     };
 

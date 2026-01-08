@@ -6,10 +6,10 @@
  *
  * Arguments:
  * 0: The patient <OBJECT>
- * 1: Added ammount of pain (can be negative) <NUMBER>
+ * 1: Added amount of pain (can be negative) <NUMBER>
  *
  * Return Value:
- * The new pain level <NUMBER>
+ * None
  *
  * Example:
  * [guy, 0.5] call ace_medical_fnc_adjustPainLevel

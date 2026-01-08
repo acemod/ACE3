@@ -12,7 +12,7 @@
  * 4: Delay between smoke and fire enabled <BOOL> (default: true)
  * 5: Ammo detonation chance <NUMBER> (default: 0)
  * 6: Detonate after cook-off <BOOL> (default: false)
- * 7: Selection for fire source <STRING><ARRAY> (default: "")
+ * 7: Selection for fire source <STRING or ARRAY> (default: "")
  * 8: Can spawn fire ring <BOOL> (default: true)
  * 9: Can spawn fire jet <BOOL> (default: true)
  * 10: Maximum intensity <NUMBER> (default: MAX_COOKOFF_INTENSITY)

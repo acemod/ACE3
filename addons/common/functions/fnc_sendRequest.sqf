@@ -8,13 +8,13 @@
  * 1: target <OBJECT>
  * 2: requestID <STRING>
  * 3: requestMessage Will be localized for other target object. <STRING>
- * 4: callback Code called upon accept or decline. <CODE>
+ * 4: callback Code called upon accept or decline. <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [bob, kevin, "ID", "Message", {callback}] call ace_common_fnc_sendRequest
+ * [bob, kevin, "ID", "Message", "call code"] call ace_common_fnc_sendRequest
  *
  * Public: Yes
  */

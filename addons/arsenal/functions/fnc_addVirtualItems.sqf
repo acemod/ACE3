@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Target <OBJECT>
- * 1: Items <ARRAY of STRINGS> <BOOL>
+ * 1: Items <BOOL or ARRAY of STRINGs>
  * 2: Add globally <BOOL> (default: false)
  *
  * Return Value:
@@ -38,7 +38,7 @@ if (isNil "_cargo") then {
     };
 };
 
-// If passed arguement is "true", add all items
+// If passed argument is "true", add all items
 if (_items isEqualType true) then {
     if (_items) then {
         private _weapons = _cargo get IDX_VIRT_WEAPONS;

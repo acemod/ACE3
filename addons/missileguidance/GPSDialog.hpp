@@ -2,12 +2,6 @@
 #include "\a3\ui_f\hpp\defineCommonColors.inc"
 #include "idc_defines.hpp"
 
-class RscText;
-class RscEdit;
-class RscPicture;
-class RscButton;
-class ctrlXSliderH;
-
 class GVAR(gpsAttackOptionsUI) {
     idd = -1;
     movingEnable = 1;
