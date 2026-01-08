@@ -5,7 +5,7 @@ PREP(burnIndicator);
 PREP(burnReaction);
 PREP(burnSimulation);
 PREP(fireManagerPFH);
-PREP(getScreams);
+PREP(getScreamSounds);
 PREP(initUnit);
 PREP(isBurning);
 PREP(medical_canPatDown);

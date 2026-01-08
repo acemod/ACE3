@@ -8,6 +8,6 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
-GVAR(screams) = createHashMap;
+GVAR(screamSounds) = createHashMap;
 
 ADDON = true;

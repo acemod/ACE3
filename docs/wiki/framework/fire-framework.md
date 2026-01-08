@@ -68,7 +68,7 @@ class CfgWeapons {
 class CfgVehicles {
     class CAManBase;
     class yourManClass: CAManBase {
-        ace_fire_screams = {
+        ace_fire_screamSounds = {
             "sound_name"    // Name of sound(s) in CfgSounds
         };
     };
@@ -101,7 +101,7 @@ class CfgVehicles {
 
 ### 4.1 Getting Screaming Sounds
 
-`ace_fire_fnc_getScreams`
+`ace_fire_fnc_getScreamSounds`
 
 ```sqf
 * Returns a list of scream sounds that a unit will play when on fire.
@@ -113,5 +113,5 @@ class CfgVehicles {
 * Scream sounds <ARRAY of STRINGs>
 *
 * Example:
-* player call ace_fire_fnc_getScreams
+* player call ace_fire_fnc_getScreamSounds
 ```
