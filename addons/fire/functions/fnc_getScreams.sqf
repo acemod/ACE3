@@ -26,11 +26,11 @@ if (_unitClass == "" || !(_unitClass isKindOf "CAManBase")) exitWith { [] };
 // If unit is defined in hash, grab sounds and return
 // If not, check each parent of the class until a value is defined
 GVAR(screams) getOrDefaultCall [_unitClass, {
-    private _type = _unitClass;
-    private _return = [];
-    while {true} do {
-        _type = configName inheritsFrom (configFile >> "CfgVehicles" >> _type);
-        if (_type in GVAR(screams)) exitWith { _return = GVAR(screams) get _type };
+    private _cfg = configFile >> "CfgVehicles" >> _unitClass;
+    private _return = getArray (_cfg >> QGVAR(screams));
+    while {!isNull _cfg} do {
+        _cfg = inheritsFrom _cfg;
+        if ((configName _cfg) in GVAR(screams)) exitWith { _return = GVAR(screams) get (configName _cfg) };
     };
     _return // return
 }];
