@@ -4,7 +4,7 @@
  * Returns a list of scream sounds that a unit will play when on fire.
  *
  * Arguments:
- * 0: Unit <OBJECT|STRING>
+ * 0: Unit <OBJECT or STRING>
  *
  * Return Value:
  * Scream sounds <ARRAY of STRING>
