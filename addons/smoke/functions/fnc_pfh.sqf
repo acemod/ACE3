@@ -56,7 +56,7 @@ private _newLevelBreathing = _levelBreathing + _change;
 _newLevelBreathing = _newLevelBreathing min 1;
 _newLevelBreathing = _newLevelBreathing max 0;
 
-private _breathProtect = _unit getVariable [QGVAR(breathingProtection), false];
+private _breathProtect = _unit getVariable [QGVAR(breathingProtection), 0];
 if (_breathProtect != 0) then {
     _levelBreathing = _levelBreathing * (1 - _breathProtect);
 };
