@@ -1,6 +1,6 @@
-use crate::common::{MuzzleVelocity, Vector3, GRAVITY};
+use crate::common::{GRAVITY, MuzzleVelocity, Vector3};
 
-use super::{drag::calculate_retard, BallisticModel};
+use super::{BallisticModel, drag::calculate_retard};
 
 pub fn replicate_vanilla(
     zero_range: f64,

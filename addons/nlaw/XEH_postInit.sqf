@@ -9,14 +9,14 @@ GVAR(yawChange) = 0;
 GVAR(pitchChange) = 0;
 
 // Add keybind
-["ACE3 Weapons", QGVAR(trackTarget), localize LSTRING(trackTarget), {
+["lock", {
     call FUNC(keyDown);
     false // Return false so it doesn't block the rest weapon action
 }, {
     TRACE_1("lock key up",GVAR(isLockKeyDown));
     GVAR(isLockKeyDown) = false;
     false
-}, [15, [false, false, false]], false] call CBA_fnc_addKeybind;  //Tab Key
+}] call EFUNC(missileguidance,keybind_add);
 
 
 

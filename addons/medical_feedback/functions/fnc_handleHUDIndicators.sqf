@@ -5,7 +5,7 @@
  * Draws an icon if there is at least 1 fracture/splint/tourniquet applied.
  *
  * Arguments:
- * 0: Flag to drop all indicators (optional) <BOOL>
+ * 0: Flag to drop all indicators <BOOL> (default: false)
  *
  * Return Value:
  * None

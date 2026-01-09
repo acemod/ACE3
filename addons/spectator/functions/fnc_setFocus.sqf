@@ -4,7 +4,7 @@
  * Function used to set the camera focus
  *
  * Arguments:
- * 0: New focus <OBJECT>
+ * 0: New focus (use true to auto-select) <OBJECT or BOOL>
  *
  * Return Value:
  * None

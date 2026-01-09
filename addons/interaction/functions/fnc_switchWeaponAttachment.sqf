@@ -31,11 +31,13 @@ if (_currWeaponType == -1) exitWith {};
 private _addNew = _newAttachment isNotEqualTo "";
 private _removeOld = _oldAttachment isNotEqualTo "";
 
+// Remove new attachment from inventory, so that we can try fit the old one in inventory
 if (_addNew) then {
     _unit removeItem _newAttachment;
 };
 
-if (_removeOld && {!([_unit, _oldAttachment] call CBA_fnc_canAddItem)}) exitWith {
+// If old attachment does not fit in inventory, quit
+if (_removeOld && {!(_unit canAdd [_oldAttachment, 1, true])}) exitWith {
     LOG("no space");
     [LELSTRING(common,Inventory_Full)] call EFUNC(common,displayTextStructured);
     if (_addNew) then {
@@ -69,7 +71,11 @@ if (!_addNew) exitWith {};
 
     if (_unit != ACE_player) exitWith {};
 
-    [[getText (configFile >> "CfgWeapons" >> _newAttachment >> "picture"), 4], true] call CBA_fnc_notify;
+    private _itemPicture = getText (configFile >> "CfgWeapons" >> _newAttachment >> "picture");
+    if (!fileExists _itemPicture) then { _itemPicture = _itemPicture + ".paa"; }; // notify needs full path to exist, try adding .paa
+    if (fileExists _itemPicture) then {
+        [[_itemPicture, 4], true] call CBA_fnc_notify;
+    };
 
     playSound "click";
 }, [_unit, _weapon, _newAttachment], 1] call CBA_fnc_waitAndExecute;

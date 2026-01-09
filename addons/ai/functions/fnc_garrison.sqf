@@ -4,7 +4,7 @@
  * Garrison function used to garrison AI inside buildings.
  *
  * Arguments:
- * 0: The building(s) nearest this position are used <POSITION>
+ * 0: The building(s) nearest this position are used <ARRAY>
  * 1: Limit the building search to those type of building <ARRAY>
  * 2: Units that will be garrisoned <ARRAY>
  * 3: Radius to fill building(s) <NUMBER> (default: 50)
@@ -31,11 +31,13 @@ private _currentUnitMoveList = missionNamespace getVariable [QGVAR(garrison_unit
 if (_startingPos isEqualTo [0,0,0]) exitWith {
     TRACE_1("fnc_garrison: StartingPos error",_startingPos);
     [LSTRING(GarrisonInvalidPosition)] call EFUNC(common,displayTextStructured);
+    _unitsArray
 };
 
 if (_unitsArray isEqualTo [] || {isNull (_unitsArray select 0)}) exitWith {
     TRACE_1("fnc_garrison: Units error",_unitsArray);
     [LSTRING(GarrisonNoUnits)] call EFUNC(common,displayTextStructured);
+    _unitsArray
 };
 
 private _buildings = nearestObjects [_startingPos, _buildingTypes, ([_fillingRadius, 50] select (_fillingRadius < 50))];
@@ -46,6 +48,7 @@ if (_fillingRadius >= 50) then {
 if (_buildings isEqualTo []) exitWith {
     TRACE_1("fnc_garrison: Building error",_buildings);
     [LSTRING(GarrisonNoBuilding)] call EFUNC(common,displayTextStructured);
+    _unitsArray
 };
 
 private _buildingsIndex = [];
@@ -117,8 +120,8 @@ switch (_fillingType) do {
     // Even filling
     case 0: {
 
-        while {count _unitsArray > 0} do {
-            if (count _buildingsIndex == 0) exitWith {};
+        while {_unitsArray isNotEqualTo []} do {
+            if (_buildingsIndex isEqualTo []) exitWith {};
             private _building = _buildingsIndex select 0;
 
             if (_building isEqualTo []) then {
@@ -130,7 +133,7 @@ switch (_fillingType) do {
                 private _nearestUnits = (_pos nearEntities ["CAManBase", 2]);
                 LOG(format [ARR_3("fnc_garrison: Unit detection | %1 units nearby | %2 units within height",count _nearestUnits,{floor ((getPos _x) select 2) == floor (_pos select 2)} count _nearestUnits)]);
 
-                if (count _nearestUnits  > 0 && {[_nearestUnits, _pos] call _fnc_comparePos}) then {
+                if ((_nearestUnits isNotEqualTo []) && {[_nearestUnits, _pos] call _fnc_comparePos}) then {
                     LOG(format [ARR_2("fnc_garrison: Unit present | removing position | %1 positions remaining for this building",count (_buildingsIndex select (_buildingsIndex find _building)) - 1)]);
                     _buildingsIndex set [0,  _building - [_pos]];
 
@@ -166,8 +169,8 @@ switch (_fillingType) do {
     // Building by building
     case 1: {
 
-        while {count _unitsArray > 0} do {
-            if (count _buildingsIndex == 0) exitWith {};
+        while {_unitsArray isNotEqualTo []} do {
+            if (_buildingsIndex isEqualTo []) exitWith {};
             private _building = _buildingsIndex select 0;
 
             if (_building isEqualTo []) then {
@@ -179,7 +182,7 @@ switch (_fillingType) do {
                 private _nearestUnits = (_pos nearEntities ["CAManBase", 2]);
                 LOG(format [ARR_3("fnc_garrison: Unit detection | %1 units nearby | %2 units within height",count _nearestUnits,{floor ((getPos _x) select 2) == floor (_pos select 2)} count _nearestUnits)]);
 
-                if (count _nearestUnits  > 0 && {[_nearestUnits, _pos] call _fnc_comparePos}) then {
+                if ((_nearestUnits isNotEqualTo []) && {[_nearestUnits, _pos] call _fnc_comparePos}) then {
                     LOG(format [ARR_2("fnc_garrison: Unit present | removing position | %1 positions remaining for this building",count (_buildingsIndex select (_buildingsIndex find _building)) - 1)]);
                     _buildingsIndex set [0, _building - [_pos]];
 
@@ -213,8 +216,8 @@ switch (_fillingType) do {
     // Random
     case 2: {
 
-        while {count _unitsArray > 0} do {
-            if (count _buildingsIndex == 0) exitWith {};
+        while {_unitsArray isNotEqualTo []} do {
+            if (_buildingsIndex isEqualTo []) exitWith {};
             private _building = selectRandom _buildingsIndex;
 
             if (_building isEqualTo []) then {
@@ -226,7 +229,7 @@ switch (_fillingType) do {
                 private _nearestUnits = (_pos nearEntities ["CAManBase", 2]);
                 LOG(format [ARR_3("fnc_garrison: Unit detection | %1 units nearby | %2 units within height",count _nearestUnits,{floor ((getPos _x) select 2) == floor (_pos select 2)} count _nearestUnits)]);
 
-                if (count _nearestUnits  > 0 && {[_nearestUnits, _pos] call _fnc_comparePos}) then {
+                if ((_nearestUnits isNotEqualTo []) && {[_nearestUnits, _pos] call _fnc_comparePos}) then {
                     LOG(format [ARR_2("fnc_garrison: Unit present | removing position | %1 positions remaining for this building",count (_buildingsIndex select (_buildingsIndex find _building)) - 1)]);
                     _buildingsIndex set [(_buildingsIndex find _building), _building - [_pos]];
 

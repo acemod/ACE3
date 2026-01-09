@@ -4,8 +4,8 @@
  * Detonate explosives via script, for use in triggers or mission scripts to detonate editor-placed explosives.
  *
  * Arguments:
- * 0: Explosives objects to detonate <OBJECT or ARRAY>
- * 1: Fuze delay (for each explosive; use negative number for random time up to value) <NUMBER> (default: 0)
+ * 0: Explosives objects to detonate <OBJECT or ARRAY of OBJECTs> (default: [])
+ * 1: Fuse delay (for all explosives; use negative number for random time up to value) <NUMBER> (default: 0)
  * 2: Trigger Item Classname <STRING> (default: "#scripted")
  *
  * Return Value:
@@ -18,13 +18,13 @@
  * Public: Yes
  */
 
-params [["_explosiveArr", [], [[], objNull]], ["_fuzeTime", 0, [0]], ["_triggerClassname", "#scripted", [""]]];
+params [["_explosiveArr", [], [[], objNull]], ["_fuseTime", 0, [0]], ["_triggerClassname", "#scripted", [""]]];
 
 if (_explosiveArr isEqualType objNull) then {
     _explosiveArr = [_explosiveArr];
 };
 
 {
-    private _detTime = if (_fuzeTime < 0) then {random abs _fuzeTime} else {_fuzeTime};
+    private _detTime = if (_fuseTime < 0) then {random abs _fuseTime} else {_fuseTime};
     [objNull, -1, [_x, _detTime], _triggerClassname] call FUNC(detonateExplosive);
 } forEach _explosiveArr;

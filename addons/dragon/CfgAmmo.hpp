@@ -1,7 +1,6 @@
 class ace_missileguidance_type_Dragon;
 class CfgAmmo {
     class ammo_Penetrator_Base;
-    class M_Scalpel_AT;
     class Rocket_03_AP_F;
 
     class GVAR(penetrator_super): ammo_Penetrator_Base {
@@ -14,7 +13,7 @@ class CfgAmmo {
     class GVAR(dragonBase): Rocket_03_AP_F {
         EGVAR(frag,skip) = 1;
         scope = 1;
-        aiAmmoUsageFlags = "128+512";
+        aiAmmoUsageFlags = 128+512;
         model = QPATHTOF(models\dragon.p3d);
         maxSpeed = 200;
         thrust = 300;

@@ -8,7 +8,7 @@
  * 1: Hit point <STRING>
  * 2: Hit index <NUMBER>
  * 3: Added damage to part <NUMBER>
- * 4: Projectile <OBJECT>
+ * 4: Projectile <STRING>
  * 5: Source of damage <OBJECT>
  * 6: Person who caused damage <OBJECT>
  *
@@ -59,10 +59,15 @@ private _indirectHit = getNumber (_projectileConfig >> "indirectHit");
 
 if (_warheadType == WARHEAD_TYPE_AP) then {
     // Change damage based on projectile speed (doesn't do this in vanilla Arma believe it or not)
-    if (!isNull _source) then {
+    if (!isNull _source && !("penetrator" in toLowerANSI _projectile)) then {
+        private _typicalSpeed = 100 max (getNumber (_projectileConfig >> "typicalSpeed"));
         private _airFriction = getNumber (_projectileConfig >> "airFriction");
         private _distance = _source distance _vehicle;
-        _addedDamage = (1 - _projectileExplosive) * _addedDamage * exp (_airFriction * _distance);
+        private _tofCoef = _airFriction * _distance / _typicalSpeed;
+        // Modified logistics map upper bound for v(n) = v(n-1) + dt * airFriction * v(n-1)^2
+        // Using estimated speed / typical speed for damage mod
+        private _damageMod = 1 / ((-_airFriction) ^ _tofCoef - _typicalSpeed * _tofCoef);
+        _addedDamage = (1 - _projectileExplosive) * _addedDamage * _damageMod;
     };
 };
 
@@ -109,7 +114,7 @@ TRACE_4("ammo effectiveness",_ammoEffectiveness,_addedDamage,_minDamage,_warhead
 
 _incendiary = _incendiary * _ammoEffectiveness;
 
-private _isCar = _vehicle isKindOf "Car" && {!(_vehicle isKindOf "Wheeled_APC_F")};
+private _isCar = _vehicle isKindOf "Car" && {!(_vehicle isKindOf "Wheeled_APC_F" || _vehicle isKindOf "gm_wheeled_APC_base")};
 
 if (_isCar) then {
     _ammoEffectiveness = (_ammoEffectiveness * 1.5) min 1;
@@ -302,7 +307,7 @@ switch (_hitArea) do {
     case "track": {
         private _damage = (0.1 max (0.1 * _addedDamage / _minDamage)) min 1;
 
-        [_vehicle, _hitPoint, _hitIndex, (_currentPartDamage + _damage) * _penChance] call FUNC(setDamage);
+        [_vehicle, _hitPoint, _hitIndex, (_currentPartDamage + _damage) * _penChance, _source, _instigator] call FUNC(setDamage);
 
         TRACE_3("damaged track",_damage,_addedDamage,_minDamage);
 

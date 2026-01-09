@@ -34,14 +34,14 @@ if (GVAR(disableNVGsWithSights) && {(hmd _unit) != ""}) then {
 
 // Handle only brightness if effects are disabled
 if (GVAR(effectScaling) == 0) exitWith {
-    GVAR(ppEffectNVGBrightness) ppEffectEnable (_visionMode == 1);
+    GVAR(ppEffectNVGBrightness) ppEffectEnable (_visionMode > 0);
 };
 
 // Start PFEH when entering night vision mode:
-if (_visionMode == 1) then {
+if (_visionMode > 0) then {
+    [true] call FUNC(setupDisplayEffects); // always reset effects (switching from NVG to Thermal)
     if (GVAR(PFID) == -1) then {
         GVAR(running) = true;
-        [true] call FUNC(setupDisplayEffects);
         [] call FUNC(refreshGoggleType);
         GVAR(PFID) = [LINKFUNC(pfeh), 0, []] call CBA_fnc_addPerFrameHandler;
         GVAR(firedEHs) = [

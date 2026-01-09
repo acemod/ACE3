@@ -16,6 +16,7 @@
             <Chinese>視線內半自動指令</Chinese>
             <Chinesesimp>半自动指令到视线（SACLOS）</Chinesesimp>
             <Turkish>Görüş alanına yarı otomatik komut</Turkish>
+            <Ukrainian>Напівавтоматичне командне наведення по лінії візування (SACLOS)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HOT_hot1">
             <English>HOT 1</English>
@@ -32,6 +33,7 @@
             <Chinese>HOT 1</Chinese>
             <Chinesesimp>HOT 1</Chinesesimp>
             <Turkish>HOT 1</Turkish>
+            <Ukrainian>HOT 1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HOT_hot1_1">
             <English>1x HOT 1 [ACE]</English>
@@ -48,6 +50,7 @@
             <Chinese>1x HOT 1 [ACE]</Chinese>
             <Chinesesimp>1x HOT 1 [ACE]</Chinesesimp>
             <Turkish>1x HOT 1 [ACE]</Turkish>
+            <Ukrainian>1x HOT 1 [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HOT_hot1_3">
             <English>3x HOT 1 [ACE]</English>
@@ -64,6 +67,7 @@
             <Chinese>3x HOT 1 [ACE]</Chinese>
             <Chinesesimp>3x HOT 1 [ACE]</Chinesesimp>
             <Turkish>3x HOT 1 [ACE]</Turkish>
+            <Ukrainian>3x HOT 1 [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HOT_hot1_4">
             <English>4x HOT 1 [ACE]</English>
@@ -80,6 +84,7 @@
             <Chinese>4x HOT 1 [ACE]</Chinese>
             <Chinesesimp>4x HOT 1 [ACE]</Chinesesimp>
             <Turkish>4x HOT 1 [ACE]</Turkish>
+            <Ukrainian>4x HOT 1 [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HOT_hot2">
             <English>HOT 2</English>
@@ -96,6 +101,7 @@
             <Chinese>HOT 2</Chinese>
             <Chinesesimp>HOT 2</Chinesesimp>
             <Turkish>HOT 2</Turkish>
+            <Ukrainian>HOT 2</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HOT_hot2_1">
             <English>1x HOT 2 [ACE]</English>
@@ -112,6 +118,7 @@
             <Chinese>1x HOT 2 [ACE]</Chinese>
             <Chinesesimp>1x HOT 2 [ACE]</Chinesesimp>
             <Turkish>1x HOT 2 [ACE]</Turkish>
+            <Ukrainian>1x HOT 2 [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HOT_hot2_3">
             <English>3x HOT 2 [ACE]</English>
@@ -128,6 +135,7 @@
             <Chinese>3x HOT 2 [ACE]</Chinese>
             <Chinesesimp>3x HOT 2 [ACE]</Chinesesimp>
             <Turkish>3x HOT 2 [ACE]</Turkish>
+            <Ukrainian>3x HOT 2 [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HOT_hot2_4">
             <English>4x HOT 2 [ACE]</English>
@@ -144,6 +152,7 @@
             <Chinese>4x HOT 2 [ACE]</Chinese>
             <Chinesesimp>4x HOT 2 [ACE]</Chinesesimp>
             <Turkish>4x HOT 2 [ACE]</Turkish>
+            <Ukrainian>4x HOT 2 [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HOT_hot2mp">
             <English>HOT 2MP</English>
@@ -160,6 +169,7 @@
             <Chinese>HOT 2MP</Chinese>
             <Chinesesimp>HOT 2MP</Chinesesimp>
             <Turkish>HOT 2MP</Turkish>
+            <Ukrainian>HOT 2MP</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HOT_hot2mp_1">
             <English>1x HOT 2MP [ACE]</English>
@@ -176,6 +186,7 @@
             <Chinese>1x HOT 2MP [ACE]</Chinese>
             <Chinesesimp>1x HOT 2MP [ACE]</Chinesesimp>
             <Turkish>1x HOT 2MP [ACE]</Turkish>
+            <Ukrainian>1x HOT 2MP [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HOT_hot2mp_3">
             <English>3x HOT 2MP [ACE]</English>
@@ -192,6 +203,7 @@
             <Chinese>3x HOT 2MP [ACE]</Chinese>
             <Chinesesimp>3x HOT 2MP [ACE]</Chinesesimp>
             <Turkish>3x HOT 2MP [ACE]</Turkish>
+            <Ukrainian>3x HOT 2MP [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HOT_hot2mp_4">
             <English>4x HOT 2MP [ACE]</English>
@@ -208,6 +220,7 @@
             <Chinese>4x HOT 2MP [ACE]</Chinese>
             <Chinesesimp>4x HOT 2MP [ACE]</Chinesesimp>
             <Turkish>4x HOT 2MP [ACE]</Turkish>
+            <Ukrainian>4x HOT 2MP [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HOT_hot3">
             <English>HOT 3</English>
@@ -224,6 +237,7 @@
             <Chinese>HOT 3</Chinese>
             <Chinesesimp>HOT 3</Chinesesimp>
             <Turkish>HOT 3</Turkish>
+            <Ukrainian>HOT 3</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HOT_hot3_1">
             <English>1x HOT 3 [ACE]</English>
@@ -240,6 +254,7 @@
             <Chinese>1x HOT 3 [ACE]</Chinese>
             <Chinesesimp>1x HOT 3 [ACE]</Chinesesimp>
             <Turkish>1x HOT 3 [ACE]</Turkish>
+            <Ukrainian>1x HOT 3 [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HOT_hot3_3">
             <English>3x HOT 3 [ACE]</English>
@@ -256,6 +271,7 @@
             <Chinese>3x HOT 3 [ACE]</Chinese>
             <Chinesesimp>3x HOT 3 [ACE]</Chinesesimp>
             <Turkish>3x HOT 3 [ACE]</Turkish>
+            <Ukrainian>3x HOT 3 [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HOT_hot3_4">
             <English>4x HOT 3 [ACE]</English>
@@ -272,6 +288,7 @@
             <Chinese>4x HOT 3 [ACE]</Chinese>
             <Chinesesimp>4x HOT 3 [ACE]</Chinesesimp>
             <Turkish>4x HOT 3 [ACE]</Turkish>
+            <Ukrainian>4x HOT 3 [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HOT_hotMissile">
             <English>HOT Missile</English>
@@ -288,6 +305,7 @@
             <Chinese>高次音速(HOT)飛彈</Chinese>
             <Chinesesimp>高次音速（HOT）导弹</Chinesesimp>
             <Turkish>HOT Missile</Turkish>
+            <Ukrainian>Ракета HOT</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HOT_missileType">
             <English>Wire-Guided</English>
@@ -304,6 +322,7 @@
             <Chinese>有線制導</Chinese>
             <Chinesesimp>有线制导</Chinesesimp>
             <Turkish>Tel-Güdümlü</Turkish>
+            <Ukrainian>Дротове керування</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HOT_missileType_Description">
             <English>Wire-Guided Missile</English>
@@ -320,6 +339,7 @@
             <Chinese>有線制導飛彈</Chinese>
             <Chinesesimp>线导导弹</Chinesesimp>
             <Turkish>Tel Güdümlü Füze</Turkish>
+            <Ukrainian>Ракета з дротовим керуванням</Ukrainian>
         </Key>
         <Key ID="STR_ACE_HOT_missileType_Description_AP">
             <English>Wire-Guided Missile (Anti-Personnel)</English>
@@ -336,6 +356,7 @@
             <Chinese>有線制導飛彈（反步兵）</Chinese>
             <Chinesesimp>线导导弹（反人员）</Chinesesimp>
             <Turkish>Tel Güdümlü Füze (Anti-Personelı)</Turkish>
+            <Ukrainian>Ракета з дротовим керуванням (Протипіхотна)</Ukrainian>
         </Key>
     </Package>
 </Project>

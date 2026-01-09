@@ -1,5 +1,7 @@
 LOG("prep");
 PREP(cycleAttackProfileKeyDown);
+PREP(keybind_add);
+PREP(keybind_pressed);
 
 PREP(changeMissileDirection);
 
@@ -22,6 +24,7 @@ PREP(handleHandoff);
 PREP(shouldFilterRadarHit);
 
 PREP(MCLOS_buttonPressed);
+PREP(MCLOS_mouseInput);
 
 // Attack Profiles
 PREP(attackProfile_AIR);

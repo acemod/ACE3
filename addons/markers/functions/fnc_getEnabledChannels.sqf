@@ -4,7 +4,7 @@
  * Return enabled channels.
  *
  * Arguments:
- * 0: false - use channel id, true - use localized channel names <BOOl> (default: false)
+ * 0: false - use channel id, true - use localized channel names <BOOL> (default: false)
  *
  * Return Value:
  * Enabled Channels <ARRAY>
@@ -27,7 +27,7 @@ for "_channelId" from 0 to 15 do {
     if (_channelId == 5) then {continue}; // Direct channel, ignore
     if (setCurrentChannel _channelId) then {
         if (_localize) then {
-            _enabledChannels pushBack (_engineChannels param [_channelId, (radioChannelInfo (_channelId - 5)) select 1]); // radioChannelInfo works off custom IDs only, offset engine channels
+            _enabledChannels pushBack (_engineChannels param [_channelId, (radioChannelInfo (_channelId - 5)) param [1, "#Unknown"]]); // radioChannelInfo works off custom IDs only, offset engine channels
         } else {
             _enabledChannels pushBack _channelId;
         };

@@ -17,6 +17,7 @@
             <Chinesesimp>附挂</Chinesesimp>
             <Turkish>Bağla</Turkish>
             <Hungarian>Hozzácsatolás</Hungarian>
+            <Ukrainian>Прикріпити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Attach_AttachDetach">
             <English>Attach item</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>附挂装备&gt;&gt;</Chinesesimp>
             <Turkish>Eşyayı bağla</Turkish>
             <Hungarian>Tárgy hozzácsatolása</Hungarian>
+            <Ukrainian>Прикріпити предмет</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Attach_Chemlight_Attached">
             <English>Chemlight Attached</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>已附挂荧光棒</Chinesesimp>
             <Turkish>Işık Çubuğu Bağlandı</Turkish>
             <Hungarian>Chemlight hozzácsatolva</Hungarian>
+            <Ukrainian>Хімсвітло прикріплено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Attach_Chemlight_Detached">
             <English>Chemlight Detached</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>已取下荧光棒</Chinesesimp>
             <Turkish>Işık Çubuğu Söküldü</Turkish>
             <Hungarian>Chemlight hozzácsatolva</Hungarian>
+            <Ukrainian>Хімсвітло від'єднано</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Attach_Detach">
             <English>Detach item</English>
@@ -85,6 +89,7 @@
             <Chinesesimp>取下装备</Chinesesimp>
             <Turkish>Eşyayı sök</Turkish>
             <Hungarian>Tárgy lecsatolása</Hungarian>
+            <Ukrainian>Від'єднати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Attach_Failed">
             <English>Attach Failed</English>
@@ -102,6 +107,7 @@
             <Chinesesimp>附挂失败</Chinesesimp>
             <Turkish>Bağlama başarısız</Turkish>
             <Hungarian>Hozzácsatolás sikertelen</Hungarian>
+            <Ukrainian>Не вдалося приєднати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Attach_IrGrenade_Attached">
             <English>IR Grenade Attached</English>
@@ -119,6 +125,7 @@
             <Chinesesimp>已附挂红外手雷</Chinesesimp>
             <Turkish>IR Bombası Bağlandı</Turkish>
             <Hungarian>Infravörös gránát hozzácsatolva</Hungarian>
+            <Ukrainian>ІЧ-граната прикріплена</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Attach_IrGrenade_Detached">
             <English>IR Grenade Detached</English>
@@ -136,6 +143,7 @@
             <Chinesesimp>已取下红外手雷</Chinesesimp>
             <Turkish>IR Bombası Söküldü</Turkish>
             <Hungarian>Infravörös gránát lecsatolva</Hungarian>
+            <Ukrainian>ІЧ-граната від'єднана</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Attached">
             <English>IR Strobe Attached</English>
@@ -153,6 +161,7 @@
             <Chinesesimp>已附挂红外频闪器</Chinesesimp>
             <Turkish>IR Strobe Bağlandı</Turkish>
             <Hungarian>Infravörös jeladó hozzácsatolva</Hungarian>
+            <Ukrainian>ІЧ-маяк прикріплено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Description">
             <English>IR Strobe allows you to signal your position through a pulsating beacon only visible with NVGs.</English>
@@ -170,6 +179,7 @@
             <Chinesesimp>红外频闪器制造只有用夜视仪才能看到的频闪信标，发出一个位置信号。</Chinesesimp>
             <Turkish>IR Stroboskop, yalnızca gece görüşlerinden gözükebilen titreşimli bir ışık aracılığıyla konumunuzu gösterir.</Turkish>
             <Hungarian>Az infravörös jeladóval megjelölheted a helyzetedet úgy, hogy annak pulzáló fénye csak éjjellátó készülékkel látható.</Hungarian>
+            <Ukrainian>ІЧ-маяк дає змогу сигналізувати про своє місцезнаходження через пульсуюче світло, видиме тільки через ПНБ.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Detached">
             <English>IR Strobe Detached</English>
@@ -187,6 +197,7 @@
             <Chinesesimp>已取下红外频闪器</Chinesesimp>
             <Turkish>IR Strobe Söküldü</Turkish>
             <Hungarian>Infravörös jeladó lecsatolva</Hungarian>
+            <Ukrainian>ІЧ-маяк від'єднаний</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Name">
             <English>IR Strobe</English>
@@ -204,6 +215,7 @@
             <Chinesesimp>红外频闪器</Chinesesimp>
             <Turkish>IR Stroboskop</Turkish>
             <Hungarian>Infravörös jeladó</Hungarian>
+            <Ukrainian>ІЧ-маяк</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Attach_Item_Attached">
             <English>%1&lt;br/&gt;Attached</English>
@@ -221,6 +233,7 @@
             <Chinesesimp>%1&lt;br/&gt;已附挂</Chinesesimp>
             <Turkish>%1&lt;br/&gt;Bağlandı</Turkish>
             <Hungarian>%1&lt;br/&gt;hozzácsatolva</Hungarian>
+            <Ukrainian>%1&lt;br/&gt;приєднаний(-а)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Attach_Item_Detached">
             <English>%1&lt;br/&gt;Detached</English>
@@ -238,6 +251,7 @@
             <Chinesesimp>%1&lt;br/&gt;已取下</Chinesesimp>
             <Turkish>%1&lt;br/&gt;Söküldü</Turkish>
             <Hungarian>%1&lt;br/&gt;lecsatolva</Hungarian>
+            <Ukrainian>%1&lt;br/&gt;від'єднаний(-а)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Attach_PlaceAction">
             <English>Place</English>
@@ -255,6 +269,7 @@
             <Chinesesimp>放置</Chinesesimp>
             <Turkish>Yerleştir</Turkish>
             <Hungarian>Elhelyez</Hungarian>
+            <Ukrainian>Встановити</Ukrainian>
         </Key>
     </Package>
 </Project>

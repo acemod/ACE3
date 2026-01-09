@@ -7,7 +7,7 @@
  * 0: Unit <OBJECT>
  * 1: Vehicle <OBJECT>
  * 2: Position ("Driver", "Pilot", "Gunner", "Commander", "Copilot", "Turret", "FFV", "Codriver", "Cargo") <STRING>
- * 3: Index (only applies to "Turret", "FFV", "Codriver", "Cargo") (default: next free index) <NUMBER>
+ * 3: Index (only applies to "Turret", "FFV", "Codriver", "Cargo") <NUMBER> (default: next free index)
  *
  * Return Value:
  * None
@@ -147,7 +147,7 @@ switch (_position) do {
     };
 
     case "codriver" : {
-        private _positions = [typeOf _vehicle] call FUNC(getVehicleCodriver);
+        private _positions = [_vehicle] call FUNC(getVehicleCodriver);
 
         {
             if (alive _x) then {_positions deleteAt (_positions find (_vehicle getCargoIndex _x))};

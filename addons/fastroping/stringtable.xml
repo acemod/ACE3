@@ -15,6 +15,7 @@
             <Japanese>ヘリコプターへ FRIES を装備</Japanese>
             <Chinese>啟用快速繩降及撤離系統給指定的直升機</Chinese>
             <Chinesesimp>启用快速绳降及撤离系统给指定的直升机</Chinesesimp>
+            <Ukrainian>Спорядити вертоліт тросами для спуску</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Eden_equipFRIES_Tooltip">
             <English>Equips the selected helicopter with a Fast Rope Insertion Extraction System</English>
@@ -30,6 +31,7 @@
             <Japanese>選択されたヘリコプターで Fast Rope Insertion Extraction System を使えるようにします。</Japanese>
             <Chinese>使指定的直升機啟用快速繩降及撤離系統</Chinese>
             <Chinesesimp>使指定的直升机启用快速绳降及撤离系统</Chinesesimp>
+            <Ukrainian>Споряджає обраний вертоліт обладнанням для спуску десанту по тросах</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_cutRopes">
             <English>Cut ropes</English>
@@ -46,6 +48,7 @@
             <Chinese>剪掉繩索</Chinese>
             <Chinesesimp>剪掉绳索</Chinesesimp>
             <Turkish>Halatı Kes</Turkish>
+            <Ukrainian>Обрізати троси</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
             <English>Deploy ropes</English>
@@ -62,6 +65,7 @@
             <Chinese>部屬繩索</Chinese>
             <Chinesesimp>部属绳索</Chinesesimp>
             <Turkish>Halatları sal</Turkish>
+            <Ukrainian>Зачепити троси</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes12">
             <English>Deploy 12m ropes</English>
@@ -78,6 +82,7 @@
             <Chinese>部屬12公尺長之繩索</Chinese>
             <Chinesesimp>部署12米长的绳索</Chinesesimp>
             <Turkish>12m halat sal</Turkish>
+            <Ukrainian>Випустити 12 м трос</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes15">
             <English>Deploy 15m ropes</English>
@@ -94,6 +99,7 @@
             <Chinese>部屬15公尺長之繩索</Chinese>
             <Chinesesimp>部署15米长的绳索</Chinesesimp>
             <Turkish>15m halat sal</Turkish>
+            <Ukrainian>Випустити 15 м трос</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes18">
             <English>Deploy 18m ropes</English>
@@ -110,6 +116,7 @@
             <Chinese>部屬18公尺長之繩索</Chinese>
             <Chinesesimp>部署18米长的绳索</Chinesesimp>
             <Turkish>18m halat sal</Turkish>
+            <Ukrainian>Випустити 18 м трос</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes27">
             <English>Deploy 27m ropes</English>
@@ -126,6 +133,7 @@
             <Chinese>部屬27公尺長之繩索</Chinese>
             <Chinesesimp>部署27米长的绳索</Chinesesimp>
             <Turkish>27m halat sal</Turkish>
+            <Ukrainian>Випустити 27 м трос</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes3">
             <English>Deploy 3m ropes</English>
@@ -142,6 +150,7 @@
             <Chinese>部屬3公尺長之繩索</Chinese>
             <Chinesesimp>部署3米长的绳索</Chinesesimp>
             <Turkish>3m halat sal</Turkish>
+            <Ukrainian>Випустити 3 м трос</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes36">
             <English>Deploy 36m ropes</English>
@@ -158,6 +167,7 @@
             <Chinese>部屬36公尺長之繩索</Chinese>
             <Chinesesimp>部署36米长的绳索</Chinesesimp>
             <Turkish>36m halat sal</Turkish>
+            <Ukrainian>Випустити 36 м трос</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes6">
             <English>Deploy 6m ropes</English>
@@ -174,6 +184,7 @@
             <Chinese>部屬6公尺長之繩索</Chinese>
             <Chinesesimp>部署6米长的绳索</Chinesesimp>
             <Turkish>6m halat sal</Turkish>
+            <Ukrainian>Випустити 6 м трос</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_fastRope">
             <English>Fast rope</English>
@@ -190,6 +201,7 @@
             <Chinese>快速繩降</Chinese>
             <Chinesesimp>快速绳降</Chinesesimp>
             <Turkish>Halatla in</Turkish>
+            <Ukrainian>Спуститися по тросу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_prepareFRIES">
             <English>Prepare fast roping system</English>
@@ -206,6 +218,7 @@
             <Chinese>準備快速繩降系統</Chinese>
             <Chinesesimp>准备快速绳降系统</Chinesesimp>
             <Turkish>Halatla inme sistemini hazırla</Turkish>
+            <Ukrainian>Підготувати троси</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_stowFRIES">
             <English>Stow fast roping system</English>
@@ -222,6 +235,7 @@
             <Chinese>收起快速繩降系統</Chinese>
             <Chinesesimp>收起快速绳降系统</Chinesesimp>
             <Turkish>Halatla inme sistemini yerleştir</Turkish>
+            <Ukrainian>Сховати систему спуску</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Module_FRIES_Description">
             <English>Equips compatible helicopters with a Fast Rope Insertion Extraction System.</English>
@@ -237,6 +251,7 @@
             <Japanese>ヘリコプターで Fast Rope Insertion Extraction System を使えるようにします。</Japanese>
             <Chinese>使可相容的直升機啟用快速繩降及撤離系統</Chinese>
             <Chinesesimp>使可相容的直升机启用快速绳降及撤离系统</Chinesesimp>
+            <Ukrainian>Споряджає сумісні вертольоти обладнанням для спуску десанту тросами.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Module_FRIES_DisplayName">
             <English>Equip FRIES</English>
@@ -252,6 +267,7 @@
             <Japanese>FRIES を装備</Japanese>
             <Chinese>啟用快速繩降及撤離系統</Chinese>
             <Chinesesimp>启用快速绳降及撤离系统</Chinesesimp>
+            <Ukrainian>Десантування по тросах</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Ropesupply">
             <English>[ACE] Ropes Supply crate</English>
@@ -268,6 +284,7 @@
             <Chinese>[ACE] 繩索補充箱</Chinese>
             <Chinesesimp>[ACE] 绳索补给箱</Chinesesimp>
             <Turkish>[ACE] Halat Sandığı</Turkish>
+            <Ukrainian>[ACE] Ящик з тросами</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Waypoint_Fastrope">
             <English>LET UNITS FAST ROPE</English>
@@ -283,6 +300,7 @@
             <Japanese>ユニットへファストロープをさせる</Japanese>
             <Chinese>讓單位快速繩降</Chinese>
             <Chinesesimp>让单位快速绳降</Chinesesimp>
+            <Ukrainian>ДЕСАНТУВАННЯ ПО ТРОСУ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_autoAddFRIES_description">
             <English>Automatically add FRIES to helicopters that support them.</English>
@@ -295,6 +313,7 @@
             <German>FRIES automatisch Helikoptern hinzufügen, die es unterstützen</German>
             <Korean>로프를 지원하는 헬기에 자동으로 패스트로프를 추가합니다.</Korean>
             <Japanese>FRIESをサポートするヘリコプターに自動的にFRIESを追加します。</Japanese>
+            <Ukrainian>Автоматично додавайте троси у вертольоти, які їх підтримують.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_autoAddFRIES_displayName">
             <English>Auto-Equip FRIES</English>
@@ -307,6 +326,7 @@
             <German>FRIES automatisch ausrüsten</German>
             <Korean>패스트로프 자동 장착</Korean>
             <Japanese>FRIESの自動装備</Japanese>
+            <Ukrainian>Авто-підготовка тросів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_categoryMenu_displayName">
             <English>Fast-roping</English>
@@ -323,6 +343,7 @@
             <Chinese>快速繩降</Chinese>
             <Chinesesimp>快速索降</Chinesesimp>
             <Turkish>Halatla Kayma</Turkish>
+            <Ukrainian>Спуск по тросу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
             <English>Require rope item to deploy</English>
@@ -339,6 +360,7 @@
             <Chinese>需要繩索來部屬</Chinese>
             <Chinesesimp>需要绳索来部署</Chinesesimp>
             <Turkish>Halatla kaymak için halat gerekli</Turkish>
+            <Ukrainian>Потрібен трос</Ukrainian>
         </Key>
     </Package>
 </Project>

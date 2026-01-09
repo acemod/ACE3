@@ -91,10 +91,13 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|
 |`ace_allowDefuse` | [_mine, _allow] | Global or Target | Callable | Set allowance of the dynamic defusal action on a mine |
-|`ace_tripflareTriggered` | [_flareObject, [_posX, _posY, _posZ]] | Global | Listen | Tripflare triggered |
+|`ace_tripflareTriggered` | [_flareObject, _posAGL] | Global | Listen | Tripflare triggered |
 |`ace_explosives_clackerAdded` | [_unit, _explosive, _id] | Local | Listen | Clacker added to explosive |
 |`ace_explosives_place` | [_explosive, _dir, _pitch, _unit] | Global | Listen | Explosive is armed |
-|`ace_explosives_setup` | [_explosiveVehicle, _magClassname, _unit] | Global | Listen | Explosive is placed in the world |
+|`ace_explosives_setup` | [_explosive, _magClassname, _unit] | Global | Listen | Explosive is placed in the world |
+|`ace_explosives_defuseStart` | [_explosive, _unit] | Global | Listen | Unit starts defusing explosive |
+|`ace_explosives_defuse` | [_explosive, _unit] | Global | Listen | Explosive is safely defused |
+|`ace_explosives_explodeOnDefuse` | [_explosive, _unit] | Global | Listen | Explosive blows up when trying to defuse |
 
 ### 2.9 Logistics Wirecutter (`ace_logistics`)
 
@@ -106,9 +109,9 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|
-|`ace_refuel_started` | [_source, _target] | Local | Listen | Refuelling has started |
-|`ace_refuel_tick` | [_source, _target, _amount] | Local | Listen | Amount of fuel transferred in a tick |
-|`ace_refuel_stopped` | [_source, _target] | Local | Listen | Refuelling has stopped |
+|`ace_refuel_started` | [_source, _target, _nozzle, _unit] | Local | Listen | Refuelling has started |
+|`ace_refuel_tick` | [_source, _target, _amount, _refuelContainer, _nozzle] | Local | Listen | Amount of fuel transferred in a tick |
+|`ace_refuel_stopped` | [_source, _target, _nozzle] | Local | Listen | Refuelling has stopped |
 
 ### 2.10 Cook Off (`ace_cookoff`)
 
@@ -192,6 +195,14 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 | `ace_huntir_monitorConnecting` | [_unit] | Local | Listen | Called when the monitor is connecting
 | `ace_huntir_monitorConnected` | [_unit, _huntir] | Local | Listen | Called when the monitor is connected
 | `ace_huntir_monitorNoGDS` | [_unit] | Local | Listen | Called when the monitor found no GDS
+
+### 2.20 Mine detector (`ace_minedetector`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_minedetector_detectorEnabled` | [_unit, _detectorType] | Local | Listen | Called when local unit turned on their mine detector
+| `ace_minedetector_detectorDisabled` | [_unit, _detectorType] | Local | Listen | Called when local unit turned off their mine detector
+| `ace_minedetector_mineDetected` | [_unit, _mine, _distance, _detectorType] | Local | Listen | Called when local unit has detected a mine
 
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.

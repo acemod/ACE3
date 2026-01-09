@@ -2,17 +2,11 @@
 #include "\a3\ui_f\hpp\defineCommonColors.inc"
 #include "idc_defines.hpp"
 
-class RscText;
-class RscEdit;
-class RscPicture;
-class RscButton;
-class ctrlXSliderH;
-
 class GVAR(gpsAttackOptionsUI) {
     idd = -1;
     movingEnable = 1;
     enableSimulation = 1;
-    onLoad = QUOTE(_this call FUNC(gps_onLoad));
+    onLoad = QUOTE(call FUNC(gps_onLoad));
     onUnload = QUOTE(call FUNC(gps_onUnload));
     class controlsBackground {
         class Header: RscText {

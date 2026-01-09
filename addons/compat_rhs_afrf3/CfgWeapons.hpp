@@ -4,7 +4,6 @@ class CfgWeapons {
         ACE_barrelTwist = 254.0;
         ACE_barrelLength = 111.76;
     };
-    class Pistol_Base_F;
     class rhs_weap_makarov_pm: rhs_weap_pya {
         ACE_barrelTwist = 240.03;
         ACE_barrelLength = 93.472;
@@ -150,5 +149,7 @@ class CfgWeapons {
     class rhs_uniform_flora;
     class rhs_uniform_df15: rhs_uniform_flora {
         ACE_GForceCoef = 0.8;
+        ace_fire_protection = 0.5;
     };
+    //rhs_uniform_df15_tan inherits from rhs_uniform_df15
 };

@@ -16,6 +16,7 @@
             <Chinese>M661 照明彈（綠色）</Chinese>
             <Chinesesimp>M661 照明弹（绿色）</Chinesesimp>
             <Turkish>M661 Aydınlatma Fişeği (Yeşil)</Turkish>
+            <Ukrainian>M661 Освітлювальна ракета (зелена)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_ir">
             <English>M992 Illumination Flare (IR)</English>
@@ -32,6 +33,7 @@
             <Chinese>M992 紅外線照明彈</Chinese>
             <Chinesesimp>M992 红外照明弹</Chinesesimp>
             <Turkish>M992 Aydınlatma Fişeği (IR)</Turkish>
+            <Ukrainian>M992 Освітлювальна ракета (IЧ)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_red">
             <English>M662 Illumination Flare (Red)</English>
@@ -48,6 +50,7 @@
             <Chinese>M662 照明彈（紅色）</Chinese>
             <Chinesesimp>M662 照明弹（红色）</Chinesesimp>
             <Turkish>M662 Aydınlatma Fişeği (Kırmızı)</Turkish>
+            <Ukrainian>M662 Освітлювальна ракета (червона)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_white">
             <English>M583 Illumination Flare (White)</English>
@@ -64,6 +67,7 @@
             <Chinese>M583 照明彈（白色）</Chinese>
             <Chinesesimp>M583 照明弹（白色）</Chinesesimp>
             <Turkish>M583 Aydınlatma Fişeği (Beyaz)</Turkish>
+            <Ukrainian>M583 Освітлювальна ракета (біла)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_CTS9_Name">
             <English>CTS 7290 9-bang Flash Grenade</English>
@@ -80,6 +84,7 @@
             <Chinese>CTS 7290-9 9閃 閃光彈</Chinese>
             <Chinesesimp>CTS 7290 9闪 闪光弹</Chinesesimp>
             <Turkish>CTS 7290 9- Flaş Bombası</Turkish>
+            <Ukrainian>CTS 7290-9 Світлошумова граната</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_CTS9_NameShort">
             <English>CTS 7290-9</English>
@@ -97,6 +102,7 @@
             <Chinesesimp>CTS 7290-9</Chinesesimp>
             <Turkish>CTS 7290-9</Turkish>
             <Hungarian>CTS 7290-9</Hungarian>
+            <Ukrainian>CTS 7290-9</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_Convert_Fuse">
             <English>Convert to short fuse</English>
@@ -110,6 +116,7 @@
             <Korean>단축 신관으로 바꾸기</Korean>
             <Japanese>短信管へ変更</Japanese>
             <Chinesesimp>切换为短引信</Chinesesimp>
+            <Ukrainian>Застосувати гніт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_LibText">
             <English>An explosive charge that is throwable. 7 second fixed fuse</English>
@@ -123,6 +130,7 @@
             <Korean>던질 수 있는 폭파 블럭입니다. 던지고 7초 후에 터집니다</Korean>
             <Japanese>投げられる爆薬ブロック。起爆まで7秒の固定時限信管付き。</Japanese>
             <Chinesesimp>一个可投掷的炸药块。7秒定时引信</Chinesesimp>
+            <Ukrainian>Заряд із вибухівкою. Детонація через 7 секунд</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_Remote_Mag_Throwable">
             <English>Explosive Charge (Throwable)</English>
@@ -136,6 +144,7 @@
             <Korean>폭파 블럭 (투척)</Korean>
             <Japanese>爆薬ブロック (投擲仕様)</Japanese>
             <Chinesesimp>炸药块（可投掷）</Chinesesimp>
+            <Ukrainian>Заряд із вибухівкою (метальний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_DropGrenade">
             <English>Drop Grenade</English>
@@ -153,6 +162,7 @@
             <Chinesesimp>下丢投掷</Chinesesimp>
             <Turkish>Bombayı Yere Bırak</Turkish>
             <Hungarian>Gránát ejtése</Hungarian>
+            <Ukrainian>Кинути собі під ноги</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_HighThrow">
             <English>High Throw</English>
@@ -170,6 +180,7 @@
             <Chinesesimp>高抛</Chinesesimp>
             <Turkish>Yüksek Fırlatma</Turkish>
             <Hungarian>Magas dobás</Hungarian>
+            <Ukrainian>Високий кидок</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_Incendiary_Description">
             <English>Incendiary grenade used to destroy weapons, ammunition and other equipment.</English>
@@ -186,6 +197,7 @@
             <Chinese>燃燒手榴彈是用來摧毀武器，彈藥以及其他裝備的好幫手</Chinese>
             <Chinesesimp>燃烧手榴弹是用来摧毁武器，弹药以及其他装备的好帮手。</Chinesesimp>
             <Turkish>Yangın bombaları, cephaneleri ve diğer teçhizatı yok etmek için kullanılır</Turkish>
+            <Ukrainian>Запальна граната використовується для знищення зброї, боєприпасів та іншого обладнання.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_Incendiary_Name">
             <English>AN-M14 Incendiary Grenade</English>
@@ -202,6 +214,7 @@
             <Chinese>AN-M14 燃燒手榴彈</Chinese>
             <Chinesesimp>AN-M14 燃烧手榴弹</Chinesesimp>
             <Turkish>AN-M14 Yangın Bombası</Turkish>
+            <Ukrainian>AN-M14 запальна граната</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_Incendiary_NameShort">
             <English>AN-M14</English>
@@ -218,6 +231,7 @@
             <Chinese>AN-M14</Chinese>
             <Chinesesimp>AN-M14</Chinesesimp>
             <Turkish>AN-M14</Turkish>
+            <Ukrainian>AN-M14</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Green_Description">
             <English>Green Hand Flare</English>
@@ -235,6 +249,7 @@
             <Chinesesimp>绿色手持式信号弹</Chinesesimp>
             <Turkish>Yeşil el işaret fişeği</Turkish>
             <Hungarian>Kézi jelzőrakéta, Zöld színű</Hungarian>
+            <Ukrainian>Фальшфейер (зелений)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Green_Name">
             <English>M127A1 Hand Held Signal (Green)</English>
@@ -252,6 +267,7 @@
             <Chinesesimp>M127A1 手持式信号弹（绿色）</Chinesesimp>
             <Turkish>M127A1 El Sinyali (Yeşil)</Turkish>
             <Hungarian>M127A1 Kézi Jelzőrakéta (Zöld)</Hungarian>
+            <Ukrainian>M127A1 Фальшфейер (зелений)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Green_NameShort">
             <English>M127A1 (Green)</English>
@@ -269,6 +285,7 @@
             <Chinesesimp>M127A1（绿色）</Chinesesimp>
             <Turkish>M127A1 (Yeşil)</Turkish>
             <Hungarian>M127A1 (Zöld)</Hungarian>
+            <Ukrainian>M127A1 (зелений)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Red_Description">
             <English>Red Hand Flare</English>
@@ -286,6 +303,7 @@
             <Chinesesimp>红色手持式信号弹</Chinesesimp>
             <Turkish>Kırmızı el işaret fişeği</Turkish>
             <Hungarian>Kézi jelzőrakéta, Piros színű</Hungarian>
+            <Ukrainian>Фальшфейер (червоний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Red_Name">
             <English>M127A1 Hand Held Signal (Red)</English>
@@ -303,6 +321,7 @@
             <Chinesesimp>M127A1 手持式信号弹（红色）</Chinesesimp>
             <Turkish>M127A1 El Sinyali (Kırmızı)</Turkish>
             <Hungarian>M127A1 Kézi Jelzőrakéta (Piros)</Hungarian>
+            <Ukrainian>M127A1 Фальшфейер (червоний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Red_NameShort">
             <English>M127A1 (Red)</English>
@@ -320,6 +339,7 @@
             <Chinesesimp>M127A1（红色）</Chinesesimp>
             <Turkish>M127A1 (Kırmızı)</Turkish>
             <Hungarian>M127A1 (Piros)</Hungarian>
+            <Ukrainian>M127A1 (червоний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_White_Description">
             <English>White Hand Flare</English>
@@ -337,6 +357,7 @@
             <Chinesesimp>白色手持式信号弹</Chinesesimp>
             <Turkish>Beyaz el işaret fişeği</Turkish>
             <Hungarian>Kézi jelzőrakéta, Fehér színű</Hungarian>
+            <Ukrainian>Фальшфейер (білий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_White_Name">
             <English>M127A1 Hand Held Signal (White)</English>
@@ -354,6 +375,7 @@
             <Chinesesimp>M127A1 手持式信号弹（白色）</Chinesesimp>
             <Turkish>M127A1 El Sinyali (Beyaz)</Turkish>
             <Hungarian>M127A1 Kézi Jelzőrakéta (Fehér)</Hungarian>
+            <Ukrainian>M127A1 Фальшфейер (білий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_White_NameShort">
             <English>M127A1 (White)</English>
@@ -371,6 +393,7 @@
             <Chinesesimp>M127A1（白色）</Chinesesimp>
             <Turkish>M127A1 (Beyaz)</Turkish>
             <Hungarian>M127A1 (Fehér)</Hungarian>
+            <Ukrainian>M127A1 (білий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Yellow_Description">
             <English>Yellow Hand Flare</English>
@@ -388,6 +411,7 @@
             <Chinesesimp>黄色手持式信号弹</Chinesesimp>
             <Turkish>Sarı el işaret fişeği</Turkish>
             <Hungarian>Kézi jelzőrakéta, Sárga színű</Hungarian>
+            <Ukrainian>Фальшфейер (жовтий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Yellow_Name">
             <English>M127A1 Hand Held Signal (Yellow)</English>
@@ -405,6 +429,7 @@
             <Chinesesimp>M127A1 手持式信号弹（黄色）</Chinesesimp>
             <Turkish>M127A1 El Sinyali (Sarı)</Turkish>
             <Hungarian>M127A1 Kézi Jelzőrakéta (Sárga)</Hungarian>
+            <Ukrainian>M127A1 Фальшфейер (жовтий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Yellow_NameShort">
             <English>M127A1 (Yellow)</English>
@@ -422,6 +447,7 @@
             <Chinesesimp>M127A1（黄色）</Chinesesimp>
             <Turkish>M127A1 (Sarı)</Turkish>
             <Hungarian>M127A1 (Sárga)</Hungarian>
+            <Ukrainian>M127A1 (жовтий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_M84_Description">
             <English>Also known as flashbang. Causes immediate flash blindness, deafness, tinnitus, and inner ear disturbance.</English>
@@ -439,6 +465,7 @@
             <Chinesesimp>也被称为闪光弹，会造成暂时性失明，耳聋，耳鸣等效果。</Chinesesimp>
             <Turkish>Flashbang olarak da bilinir. Ani flaş körlüğü, sağırlık, kulak çınlaması ve iç kulak rahatsızlığına neden olur.</Turkish>
             <Hungarian>Villanógránát néven is ismert. Azonnali villanási vakságot, süketséget, fülzúgást, és belső füli zavart okoz.</Hungarian>
+            <Ukrainian>XM84 (M84) - граната нелетальної дії, призначена для відволікання і тимчасового виведення з ладу, або дезорієнтації противника. Основне використання знайшла під час звільнення заручників, захоплення злочинців і терористів, а також проведення диверсійних місій.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_M84_Name">
             <English>M84 Stun Grenade</English>
@@ -456,6 +483,7 @@
             <Chinesesimp>M84 震撼弹</Chinesesimp>
             <Turkish>M84 Sersemletici El Bombası</Turkish>
             <Hungarian>M84 Kábítógránát</Hungarian>
+            <Ukrainian>M84 світлозвукова граната</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_M84_NameShort">
             <English>M84</English>
@@ -473,6 +501,7 @@
             <Chinesesimp>M84</Chinesesimp>
             <Turkish>M84</Turkish>
             <Hungarian>M84</Hungarian>
+            <Ukrainian>M84</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_NormalThrow">
             <English>Normal Throw</English>
@@ -490,6 +519,7 @@
             <Chinesesimp>普通投掷</Chinesesimp>
             <Turkish>Normal Fırlatma</Turkish>
             <Hungarian>Normál dobás</Hungarian>
+            <Ukrainian>Нормальний кидок</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_PreciseThrow">
             <English>Precise Throw</English>
@@ -507,6 +537,7 @@
             <Chinesesimp>精准投掷</Chinesesimp>
             <Turkish>Yakına Fırlatma</Turkish>
             <Hungarian>Pontos dobás</Hungarian>
+            <Ukrainian>Точний кидок</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_Remove_Fuse">
             <English>Remove short fuse</English>
@@ -520,6 +551,7 @@
             <Korean>단축 신관 제거하기</Korean>
             <Japanese>短信管を削除</Japanese>
             <Chinesesimp>去除短引信</Chinesesimp>
+            <Ukrainian>Прибрати гніт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_RollGrenade">
             <English>Roll Grenade</English>
@@ -537,6 +569,7 @@
             <Chinesesimp>地面滚抛</Chinesesimp>
             <Turkish>Bombayı Yuvarla</Turkish>
             <Hungarian>Gránát gurítása</Hungarian>
+            <Ukrainian>Котити гранату</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_RollGrenadeDisabled">
             <English>Can't roll this grenade, switched to %1</English>
@@ -547,6 +580,7 @@
             <German>Granate kann nicht rollen, zu %1 gewechselt</German>
             <Korean>이 수류탄은 굴릴 수 없습니다. %1(으)로 전환되었습니다.</Korean>
             <Japanese>この手榴弾は転がせません、 %1 に切り替えます</Japanese>
+            <Ukrainian>Цю гранату не можна кинути, переключіться на %1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_Description">
             <English>Type: Charge&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Things that need to die</English>
@@ -560,6 +594,7 @@
             <Korean>종류: 장약&lt;br /&gt;갯수: 1&lt;br /&gt;사용처: 죽여야 할 곳에</Korean>
             <Japanese>種類: 爆薬&lt;br /&gt;弾数: 1&lt;br /&gt;次で使用: 破壊すべき物に</Japanese>
             <Chinesesimp>类型：炸药&lt;br /&gt;数量：1&lt;br /&gt;用于：需要死亡的事物</Chinesesimp>
+            <Ukrainian>Тип: Вибухівка&lt;br /&gt;Боєприпаси 1&lt;br /&gt;Застосування: На предметах, які мають бути знищені</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_LibText">
             <English>An explosive satchel that is throwable. 7 second fixed fuse</English>
@@ -573,6 +608,7 @@
             <Korean>던질 수 있는 폭파 장약입니다. 던지고 7초 후에 터집니다</Korean>
             <Japanese>投げられる梱包爆薬。起爆まで7秒の固定時限信管付き。</Japanese>
             <Chinesesimp>一个可投掷的炸药包。7秒定时引信</Chinesesimp>
+            <Ukrainian>Ранець із вибухівкою. Детонація через 7 секунд</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_Remote_Mag_Throwable">
             <English>Explosive Satchel (Throwable)</English>
@@ -586,6 +622,7 @@
             <Korean>폭파 장약 (투척)</Korean>
             <Japanese>梱包爆薬 (投擲仕様)</Japanese>
             <Chinesesimp>炸药包（可投掷）</Chinesesimp>
+            <Ukrainian>Ранець із вибухівкою (метальний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_Settings_DisplayName">
             <English>ACE Grenades</English>
@@ -602,6 +639,7 @@
             <Chinese>ACE 手榴彈</Chinese>
             <Chinesesimp>ACE 手榴弹</Chinesesimp>
             <Turkish>ACE Bombalar</Turkish>
+            <Ukrainian>ACE Гранати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_SwitchGrenadeMode">
             <English>Switch Grenade Mode</English>
@@ -619,6 +657,7 @@
             <Chinesesimp>切换投掷模式</Chinesesimp>
             <Turkish>Bomba fırlatma modunu değiştir</Turkish>
             <Hungarian>Gránátkezelési mód váltása</Hungarian>
+            <Ukrainian>Змінити режим кидка гранати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_convertExplosives_Description">
             <English>Allow converting explosives to throwables</English>
@@ -632,6 +671,7 @@
             <Korean>폭발물을 투척무기로 변환할 수 있도록 허용합니다.</Korean>
             <Japanese>このオプションを使用すると、爆発物が手榴弾のように投擲可能になります。\nこれを行うには、インベントリを開いて爆発物をダブルクリックして、爆発物を短信管に変更します。\n信管は同じ手順で取り外すことができます。</Japanese>
             <Chinesesimp>允许将炸药转换为可投掷物</Chinesesimp>
+            <Ukrainian>Дозволяє перетворювати вибухівку на метальні снаряди</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_convertExplosives_DisplayName">
             <English>Allow Explosive Conversion</English>
@@ -645,6 +685,7 @@
             <Korean>폭발물 변환 가능여부</Korean>
             <Japanese>爆発物の変換を許可</Japanese>
             <Chinesesimp>允许转换炸药</Chinesesimp>
+            <Ukrainian>Дозволити гніти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_parachute_flare_description">
             <English>Type: Star Parachute Flare</English>
@@ -661,6 +702,7 @@
             <Chinese>類型：星式帶傘照明彈</Chinese>
             <Chinesesimp>类型：星式带伞照明弹</Chinesesimp>
             <Turkish>Tür: Yıldız Paraşüt Fişeği</Turkish>
+            <Ukrainian>Тип: Освітлювальна ракета - зірка на парашуті</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_parachute_flare_ir_description">
             <English>Type: Parachute IR Flare</English>
@@ -677,6 +719,7 @@
             <Chinese>類型：帶傘型紅外線照明彈</Chinese>
             <Chinesesimp>类型：带伞型红外照明弹</Chinesesimp>
             <Turkish>Tip : Paraşüt IR Flare</Turkish>
+            <Ukrainian>Тип: ІЧ-освітлювальна ракета на парашуті</Ukrainian>
         </Key>
     </Package>
 </Project>

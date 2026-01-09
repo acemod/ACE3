@@ -7,7 +7,7 @@
  * Args
  *
  * Return Value:
- * None
+ * <BOOL>
  *
  * Example:
  * [vehicle, player] call ace_missile_clgp_fnc_copperhead_uiCanOpen
@@ -24,6 +24,8 @@ params ["_vehicle", "_player"];
 && {
     ((magazinesAllTurrets _vehicle) findIf {
         _x params ["_xMag", "_xTurret", "_xAmmo"];
-        (_xTurret isEqualTo [0]) && {_xAmmo > 0} && {GVAR(copperheadMagazines) getOrDefault [_xMag, false]}
+        (_xTurret isEqualTo [0]) && {_xAmmo > 0} && {GVAR(copperheadMagazines) getOrDefaultCall [_xMag, {
+            (getNumber (configFile >> "CfgMagazines" >> _xMag >> QGVAR(copperheadInterface))) == 1
+        }, true]}
     }) != -1
 }

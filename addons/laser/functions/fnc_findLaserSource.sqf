@@ -23,6 +23,12 @@ _methodArgs params ["_ownerSelection"];
 // Get the laser target object stored in the unit
 private _targetObject = _vehicle getVariable [QGVAR(targetObject), objNull];
 private _targetPos = getPosASL _targetObject;
+
+if (isNull _targetObject) exitWith {
+    WARNING_1("Laser is null [%1]",_targetObject);
+    [-1, -1]
+};
+
 if (surfaceIsWater _targetPos && {(_targetPos select 2) < 0}) then {
     // Vanilla lasers seem to give position at ocean floor heigh, even though the x and y are correct??
     _targetPos set [2, 0.25];

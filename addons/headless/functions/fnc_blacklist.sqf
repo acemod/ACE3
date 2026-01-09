@@ -4,7 +4,7 @@
  * Modifies which units are blacklisted from being transferred to HCs.
  *
  * Arguments:
- * 0: Units <OBJECT, GROUP, ARRAY>
+ * 0: Units <OBJECT or GROUP or ARRAY>
  * 1: Add (true) or remove (false) from blacklist <BOOL> (default: true)
  * 2: Owner to transfer units to <NUMBER> (default: -1)
  * 3: Rebalance <NUMBER> (default: 0)
@@ -18,7 +18,7 @@
  * Public: Yes
  */
 
-params [["_units", objNull, [objNull, grpNull, []]], ["_blacklist", true, [false]], ["_owner", -1, [false]], ["_rebalance", NO_REBALANCE, [0]]];
+params [["_units", objNull, [objNull, grpNull, []]], ["_blacklist", true, [false]], ["_owner", -1, [0]], ["_rebalance", NO_REBALANCE, [0]]];
 
 if !(_units isEqualType []) then {
     _units = [_units];

@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: TheDrill, PabstMirror
- * Recieve an finger event, adds to the array (or updates if already present) and starts PFEH if not already running
+ * Receive an finger event, adds to the array (or updates if already present) and starts PFEH if not already running
  *
  * Arguments:
  * 0: Source Unit (can be self) <OBJECT>

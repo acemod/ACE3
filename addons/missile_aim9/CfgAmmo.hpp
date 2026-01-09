@@ -1,6 +1,5 @@
 class EGVAR(missileguidance,type_Sidewinder);
 class EGVAR(missileguidance,type_ASRAAM);
-class EGVAR(missileguidance,type_R73);
 class EGVAR(missileguidance,type_R74);
 class CfgAmmo {
     class Missile_AA_04_F;
@@ -10,7 +9,7 @@ class CfgAmmo {
         missileLockMaxDistance = 5000;
         missileLockMinDistance = 250;
 
-        author = "Dani (TCVM)";
+        author = "tcvm";
         maneuvrability = 0;
 
         class ace_missileguidance: EGVAR(missileguidance,type_Sidewinder) {
@@ -25,7 +24,7 @@ class CfgAmmo {
         missileLockMaxDistance = 5000;
         missileLockMinDistance = 250;
 
-        author = "Dani (TCVM)";
+        author = "tcvm";
         maneuvrability = 0;
 
         class ace_missileguidance: EGVAR(missileguidance,type_Sidewinder) {
@@ -49,7 +48,7 @@ class CfgAmmo {
         missileLockMaxDistance = 8000;
         missileLockMinDistance = 250;
 
-        author = "Dani (TCVM)";
+        author = "tcvm";
         maneuvrability = 0;
 
         class ace_missileguidance: EGVAR(missileguidance,type_ASRAAM) {
@@ -65,7 +64,7 @@ class CfgAmmo {
         missileLockMaxDistance = 5000;
         missileLockMinDistance = 250;
 
-        author = "Dani (TCVM)";
+        author = "tcvm";
         maneuvrability = 0;
 
         class ace_missileguidance: EGVAR(missileguidance,type_Sidewinder) {
@@ -80,7 +79,7 @@ class CfgAmmo {
         missileLockMaxDistance = 8000;
         missileLockMinDistance = 250;
 
-        author = "Dani (TCVM)";
+        author = "tcvm";
         maneuvrability = 0;
 
         class ace_missileguidance: EGVAR(missileguidance,type_R74) {

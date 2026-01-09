@@ -298,10 +298,10 @@ class CfgVehicles {
 
     #include "CfgModule.hpp"
 
-    // Add ACE_Clacker and ACE_DefusalKit to every explosive unit.
+    // Add ACE_Clacker and ACE_DefusalKit to every explosive unit
     #define MACRO_ADDMINEKIT \
-    items[] = {"FirstAidKit","ACE_Clacker","ACE_DefusalKit"}; \
-    respawnitems[] = {"FirstAidKit","ACE_Clacker","ACE_DefusalKit"};
+    items[] += {"ACE_Clacker","ACE_DefusalKit"}; \
+    respawnitems[] += {"ACE_Clacker","ACE_DefusalKit"};
 
     class B_Soldier_base_F; class B_soldier_exp_F: B_Soldier_base_F {MACRO_ADDMINEKIT};
     class B_Soldier_03_f; class B_engineer_F: B_Soldier_03_f {MACRO_ADDMINEKIT};
@@ -336,10 +336,10 @@ class CfgVehicles {
     class O_V_Soldier_base_F; class O_V_Soldier_Exp_hex_F: O_V_Soldier_base_F {MACRO_ADDMINEKIT};
     class O_V_Soldier_Exp_ghex_F: O_V_Soldier_Exp_hex_F {MACRO_ADDMINEKIT};
 
-    // Add ACE_Clacker to snipers and spotters for setting off Claymores
+    // Add ACE_Clacker to snipers and spotters for setting off claymores
     #define MACRO_ADDCLAYMOREKIT \
-    items[] = {"FirstAidKit","ACE_Clacker"}; \
-    respawnitems[] = {"FirstAidKit","ACE_Clacker"};
+    items[] += {"ACE_Clacker"}; \
+    respawnitems[] += {"ACE_Clacker"};
 
     class B_Soldier_sniper_base_F;
     class B_sniper_F: B_Soldier_sniper_base_F {MACRO_ADDCLAYMOREKIT};
@@ -458,5 +458,27 @@ class CfgVehicles {
         author = ECSTRING(common,aceteam);
         displayName = CSTRING(Module_IEDLandSmall_Range_DisplayName);
         explosive = "ACE_IEDLandSmall_Range_Ammo";
+    };
+    class ModuleMine_APERSMine_F;
+    class ACE_ModuleMine_APERSMine_ToePopper: ModuleMine_APERSMine_F {
+        author = ECSTRING(common,aceteam);
+        displayName = CSTRING(apersToePopper);
+        explosive = "ACE_APERSMine_ToePopper_Ammo";
+    };
+    class ModuleMine_APERSTripMine_F;
+    class ACE_ModuleMine_FlareTripMine: ModuleMine_APERSTripMine_F {
+        author = ECSTRING(common,aceteam);
+        displayName = CSTRING(TripFlare_Name);
+        explosive = "ACE_FlareTripMine_Wire_Ammo";
+    };
+    class ACE_ModuleMine_FlareTripMineRed: ModuleMine_APERSTripMine_F {
+        author = ECSTRING(common,aceteam);
+        displayName = CSTRING(TripFlare_Name_Red);
+        explosive = "ACE_FlareTripMine_Wire_Ammo_Red";
+    };
+    class ACE_ModuleMine_FlareTripMineGreen: ModuleMine_APERSTripMine_F {
+        author = ECSTRING(common,aceteam);
+        displayName = CSTRING(TripFlare_Name_Green);
+        explosive = "ACE_FlareTripMine_Wire_Ammo_Green";
     };
 };

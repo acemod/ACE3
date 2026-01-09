@@ -1,19 +1,13 @@
 
-class RscPicture;
 class RscText;
 class RscStructuredText;
-class RscButtonMenuOK;
-class RscButtonMenuCancel;
-class RscButtonMenu;
 class RscCheckBox;
-class RscEdit;
 class RscCombo;
-class RscSlider;
 class RscXSliderH;
 
 class RscDisplayInsertMarker {
-    onLoad = QUOTE(_this call DFUNC(initInsertMarker));
-    onUnload = QUOTE(_this call DFUNC(placeMarker));
+    onLoad = QUOTE(call DFUNC(initInsertMarker));
+    onUnload = QUOTE(call DFUNC(placeMarker));
     movingEnable = 1;
 
     class controls {

@@ -7,7 +7,7 @@
  * 0: CSW <OBJECT>
  * 1: Turret <ARRAY>
  * 2: Proxy weapon needed <BOOL>
- * 2: Weapon should be emptied <BOOL>
+ * 3: Weapon should be emptied <BOOL>
  *
  * Return Value:
  * None

@@ -21,10 +21,6 @@ params ["_unit", "_deltaT", "_syncValues"];
 
 private _medications = _unit getVariable [VAR_MEDICATIONS, []];
 
-if (_medications isEqualTo []) exitWith {
-    false // return
-};
-
 private _hrTargetAdjustment = 0;
 private _painSupressAdjustment = 0;
 private _peripheralResistanceAdjustment = 0;
