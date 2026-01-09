@@ -32,6 +32,7 @@ private _levelEyes = _unit getVariable [QGVAR(eyesLevel), 0];
 private _newLevelEyes = _levelEyes + _change;
 _newLevelEyes = _newLevelEyes min 1;
 _newLevelEyes = _newLevelEyes max 0;
+_levelEyes = _newLevelEyes;
 
 private _eyesProtect = _unit getVariable [QGVAR(eyesProtection), 0];
 if (_eyesProtect != 0) then {
