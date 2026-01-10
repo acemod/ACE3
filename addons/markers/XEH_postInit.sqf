@@ -79,12 +79,8 @@ if (hasInterface) then {
             if ((GVAR(quickNumberMarks) == 2) && {currentChannel == 1}) exitWith {};
             if ((markerType _newestMarker) != QGVAR(textOnly)) exitWith {};
             private _text = markerText _newestMarker;
-            private _count = count _text;
-            private _isNumber = true;
             if (_count > 6) exitWith {};
-            for "_i" from 0 to (_count - 1) do {
-                if !((_text select [_i, 1]) in "0123456789") exitWith { _isNumber = false; };
-            };
+            private _isNumber = _text regexMatch ".*?[0-9].*+/o";
             if (!_isNumber) exitWith {};
             GVAR(numberLocalLast) = parseNumber _text;
             TRACE_1("Updated local marker number",GVAR(numberLocalLast));
