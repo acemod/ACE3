@@ -7,15 +7,17 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "WW2_SPE_Core_c_ZZZ_LastLoaded_c",
-            "ace_refuel"
+            "A3_Atlas_Armor_F_Atlas_LT_01",
+            "ace_missile_manpad"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
+        authors[] = {"ThomasAngel"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
 
-        addonRootClass = QUOTE(ADDON);
+        // this prevents any patched class from requiring this addon
+        addonRootClass = "A3_Characters_F";
     };
 };
 
