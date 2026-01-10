@@ -147,8 +147,8 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do {
         if ((_bulletPos select 1) * _rangeFactor >= _range && _range <= GVAR(rangeCardEndRange)) then {
             _trueRange = _range / _rangeFactor;
             if (_trueRange != 0) then {
-                _tx = (_lastBulletPos select 0) + (_trueRange - (_lastBulletPos select 1)) * ((_bulletPos select 0) - (_lastBulletPos select 0)) / ((_bulletPos select 1) - (_lastBulletPos select 1));
-                _tz = (_lastBulletPos select 2) + (_trueRange - (_lastBulletPos select 1)) * ((_bulletPos select 2) - (_lastBulletPos select 2)) / ((_bulletPos select 1) - (_lastBulletPos select 1));
+                _tx = linearConversion [_lastBulletPos select 1, _bulletPos select 1, _trueRange, _lastBulletPos select 0, _bulletPos select 0];
+                _tz = linearConversion [_lastBulletPos select 1, _bulletPos select 1, _trueRange, _lastBulletPos select 2, _bulletPos select 2];
                 _elevation = - atan(_tz / _trueRange);
                 _windage1 = - atan(_tx / _trueRange);
                 _windDrift = (_wind2 select 0) * (_TOF - _trueRange / _muzzleVelocity);
@@ -182,8 +182,8 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do {
 };
 
 if (_targetRange != 0) then {
-    _tx = (_lastBulletPos select 0) + (_targetRange - (_lastBulletPos select 1)) * ((_bulletPos select 0) - (_lastBulletPos select 0)) / ((_bulletPos select 1) - (_lastBulletPos select 1));
-    _tz = (_lastBulletPos select 2) + (_targetRange - (_lastBulletPos select 1)) * ((_bulletPos select 2) - (_lastBulletPos select 2)) / ((_bulletPos select 1) - (_lastBulletPos select 1));
+    _tx = linearConversion [_lastBulletPos select 1, _bulletPos select 1, _targetRange, _lastBulletPos select 0, _bulletPos select 0];
+    _tz = linearConversion [_lastBulletPos select 1, _bulletPos select 1, _targetRange, _lastBulletPos select 2, _bulletPos select 2];
     _elevation = - atan(_tz / _targetRange);
     _windage1 = - atan(_tx / _targetRange);
     _windDrift = (_wind2 select 0) * (_TOF - _targetRange / _muzzleVelocity);

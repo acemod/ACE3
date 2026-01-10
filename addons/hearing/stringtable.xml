@@ -74,7 +74,7 @@
             <English>Protective Earplugs allow the wearer to be near loud weaponry without damage to his hearing.</English>
             <Czech>Ochranné špunty umožňují uživateli, aby neutrpěl zranění jeho sluchu v blízkosti hlasitých zbraní.</Czech>
             <French>Les bouchons d'oreilles anti bruit permettent au porteur d'être près d'armes bruyantes, sans risque d'endommager son ouïe.</French>
-            <Spanish>Los tapones para los oídos permiten al usuario operar armamento ruidoso sin sufrir pérdida de audición.</Spanish>
+            <Spanish>Los Tapones para los oídos permiten al usuario operar armamento ruidoso sin sufrir pérdida de audición.</Spanish>
             <Italian>Proteggono l'apparato uditivo, permettendo a chi li indossa di resistere ai suoni particolarmente forti senza alcun danno.</Italian>
             <Polish>Stopery do uszu umożliwiają użytkownikowi przebywać w pobliżu głośnej broni bez poniesienia konsekwencji jaką jest utrata słuchu.</Polish>
             <Portuguese>Protetor para ouvidos permitem que o usuário esteja próximo a ruídos sem danificar sua audição.</Portuguese>
@@ -144,6 +144,7 @@
         <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Are_Off">
             <English>Electronic Hearing Protection taken off</English>
             <French>Protection auditive électronique retirée.</French>
+            <Spanish>Quitada Protección Auditiva Electrónica</Spanish>
             <Italian>Protezione uditiva elettronica rimossa</Italian>
             <Russian>Электронная защита слуха снята</Russian>
             <German>Elektronischer Gehörschutz abgesetzt</German>
@@ -155,6 +156,7 @@
         <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Are_On">
             <English>Electronic Hearing Protection put on</English>
             <French>Protection auditive électronique mise en place</French>
+            <Spanish>Puesta Protección Auditiva Electrónica</Spanish>
             <Italian>Protezione uditiva elettronica inserita</Italian>
             <Russian>Электронная защита слуха надета</Russian>
             <German>Elektronischer Gehörschutz aufgesetzt</German>
@@ -166,6 +168,7 @@
         <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Description">
             <English>Electronic Hearing Protection protects the wearer from hearing damage without reducing situational awareness.</English>
             <French>Les protections auditives électroniques protègent le porteur contre les lésions auditives sans limiter sa conscience de la situation.</French>
+            <Spanish>La Protección Auditiva Electrónica protege a quien la lleva de daño auditivo sin reducir la conciencia situacional.</Spanish>
             <Italian>Protezione uditiva elettronica protegge l'utente da danni all'udito senza ridurre la sua situational awareness.</Italian>
             <Russian>Электронная защита органов слуха защищает пользователя от повреждения слуха, не снижая при этом его осведомленности о ситуации.</Russian>
             <German>Elektronischer Gehörschutz schützt den Träger vor Hörschäden, ohne dass sein Situationsbewusstsein eingeschränkt wird.</German>
@@ -177,6 +180,7 @@
         <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Name">
             <English>Electronic Hearing Protection</English>
             <French>Protection électronique de l'ouïe</French>
+            <Spanish>Protección Auditiva Electrónica</Spanish>
             <Italian>Protezione uditiva elettronica</Italian>
             <Russian>Электронная защита слуха</Russian>
             <German>Elektronischer Gehörschutz</German>
@@ -188,6 +192,7 @@
         <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Off">
             <English>Take off Electronic Hearing Protection</English>
             <French>Retirer les protections auditives électroniques</French>
+            <Spanish>Quitar Protección Auditiva Electrónica</Spanish>
             <Italian>Levati la protezione uditiva elettronica</Italian>
             <Russian>Снять электронную защиту слуха</Russian>
             <German>Elektronischen Gehörschutz absetzen</German>
@@ -199,6 +204,7 @@
         <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_On">
             <English>Put on Electronic Hearing Protection</English>
             <French>Mettre les protections auditives électroniques</French>
+            <Spanish>Poner Protección Auditiva Electrónica</Spanish>
             <Italian>Indossa la protezione uditiva elettronica</Italian>
             <Russian>Надеть электронную защиту слуха</Russian>
             <German>Elektronischen Gehörschutz aufsetzen</German>
@@ -317,6 +323,7 @@
         <Key ID="STR_ACE_Hearing_PutOrRemoveEHP">
             <English>Put on/take off Electronic Hearing Protection</English>
             <French>Mettre/enlever une protection auditive électronique</French>
+            <Spanish>Poner/quitar Protección Auditiva Electrónica</Spanish>
             <Italian>Inserisci/Rimuovi la protezione uditiva elettronica</Italian>
             <Russian>Надеть/снять электронную защиту слуха</Russian>
             <German>Elektronischer Gehörschutz aufsetzen/absetzen</German>
@@ -437,6 +444,7 @@
         <Key ID="STR_ACE_Hearing_explosionDeafnessCoefficient_Description">
             <English>Changes how much deafness explosions cause.\nSetting to 0 will disable explosion hearing damage.</English>
             <French>Modifie le degré de surdité causé par les explosions.\nLa valeur 0 désactive les dégâts auditifs causés par les explosions.</French>
+            <Spanish>Cambia cuanta sordera generan las explosiones.\nPoner a 0 deshabilita el daño por explosión.</Spanish>
             <Italian>Modifica quanto danno all'udito causano le esplosioni.\nSe impostato su 0 le esplosioni non causeranno danni all'udito.</Italian>
             <Russian>Изменяет степень глухоты, вызываемой взрывами.\nУстановка значения 0 отключает повреждение слуха при взрыве.</Russian>
             <German>Ändert den Grad der Taubheit, den Explosionen verursachen.\nEin Wert von 0 deaktiviert von Explosionen verursachte Hörschäden.</German>
@@ -448,6 +456,7 @@
         <Key ID="STR_ACE_Hearing_explosionDeafnessCoefficient_DisplayName">
             <English>Explosion Deafness Coefficient</English>
             <French>Coefficient de surdité à l'explosion</French>
+            <Spanish>Coeficiente de Sordera por Explosión</Spanish>
             <Italian>Coefficiente di danno da esplosioni</Italian>
             <Russian>Коэффициент оглушения при взрыве</Russian>
             <German>Koeffizient für Taubheit bei Explosionen</German>
@@ -472,6 +481,7 @@
         <Key ID="STR_ACE_Hearing_statEHP">
             <English>ELECTRONIC</English>
             <French>ELECTRONIQUE</French>
+            <Spanish>ELECTRÓNICA</Spanish>
             <Italian>ELETTRONICA</Italian>
             <Russian>ЭЛЕКТРОННЫЙ</Russian>
             <German>ELEKTRONISCH</German>

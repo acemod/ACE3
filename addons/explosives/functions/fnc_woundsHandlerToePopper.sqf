@@ -4,7 +4,7 @@
  * Wound handler for the toe-popper ammo; only does damage to legs
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: Unit (not used) <OBJECT>
  * 1: Damage <ARRAY>
  *
  * Return Value:
@@ -26,5 +26,4 @@ _array = _array select {
 
 _this set [1, _array];
 
-_this
-
+_this // return

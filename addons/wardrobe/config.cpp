@@ -18,6 +18,7 @@ class CfgPatches {
     };
 };
 
+#include "ace_arsenal_stats.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"

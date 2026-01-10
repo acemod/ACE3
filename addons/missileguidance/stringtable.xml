@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_MissileGuidance_Category">
             <English>ACE Advanced Missile Guidance</English>
             <French>ACE Guidage avancé des missiles</French>
+            <Spanish>ACE Guiado Avanzado de Misiles</Spanish>
             <Russian>ACE Продвинутое наведение ракет</Russian>
             <Korean>ACE 고급 미사일 유도</Korean>
             <Japanese>ACE 高度なミサイル誘導</Japanese>
@@ -360,6 +361,7 @@
         <Key ID="STR_ACE_MissileGuidance_chaffEffectivenessCoef_Description">
             <English>Adjusts the chance that chaff defeats a radar guided missile. Higher gives more effective chaff.</English>
             <French>Ajuste la probabilité que les paillettes éliminent un missile guidé par radar. Plus la valeur est élevée, plus les paillettes sont efficaces.</French>
+            <Spanish>Ajusta la posibilidad de que el chaff anule a un misíl guiado por radar. Más alto produce mayor efecto del chaff.</Spanish>
             <Russian>Регулирует вероятность преодоления радиолокационной ракеты пассивной помехой. Чем выше значение — тем эффективнее дипольные отражатели.</Russian>
             <Korean>채프가 레이더 유도 미사일을 무력화할 확률을 조정합니다. 값이 클수록 채프의 효과가 더 커집니다.</Korean>
             <Japanese>チャフがレーダー誘導ミサイルを欺瞞する確率を調整します。値が高いほど、チャフの効果が高まります。</Japanese>
@@ -368,6 +370,7 @@
         <Key ID="STR_ACE_MissileGuidance_chaffEffectivenessCoef_DisplayName">
             <English>Chaff Effectiveness Coefficient</English>
             <French>Coefficient d'efficacité des paillettes</French>
+            <Spanish>Coeficiente de Efectividad del Chaff</Spanish>
             <Russian>Коэф. эффективности ДО</Russian>
             <Korean>채프 효과 계수</Korean>
             <Japanese>チャフの効果係数</Japanese>
@@ -376,6 +379,7 @@
         <Key ID="STR_ACE_MissileGuidance_flareAngleCoef_Description">
             <English>Adjusts the relative angle filtering between IR missile and flare. Higher gives more effective flares.</English>
             <French>Règle l'angle relatif de filtrage entre le missile IR et la fusée éclairante. Plus l'angle est élevé, plus les fusées sont efficaces.</French>
+            <Spanish>Ajusta el filtrado del ángulo relativo entre los misiles IR y las bengalas. Más alto produce bengalas más efectivas.</Spanish>
             <Russian>Регулирует угловую селекцию цели (тепловой ловушки) ГСН ИК-ракеты. Чем выше значение — тем эффективнее тепловые помехи.</Russian>
             <Korean>적외선 유도 미사일과 플레어 사이의 상대적 각도 필터링을 조정합니다. 값이 클수록 플레어의 효과가 커집니다.</Korean>
             <Japanese>赤外線ミサイルとフレアの相対角度フィルタリングを調整します。値が高いほどフレアの効果が高まります。</Japanese>
@@ -384,14 +388,16 @@
         <Key ID="STR_ACE_MissileGuidance_flareAngleCoef_DisplayName">
             <English>Flare Angle Coefficient</English>
             <French>Coefficient d'angle de la fusée</French>
+            <Spanish>Coeficiente de Ángulo de Bengalas</Spanish>
             <Russian>Коэф. угловой селекции ЛТЦ</Russian>
             <Korean>플레어 각도 계수</Korean>
             <Japanese>フレアの角度係数</Japanese>
             <Ukrainian>Коеф. кутової селекції ЛТЦ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_flareEffectivenessCoef_Description">
-            <English>Adjute the chance that a flare defeats an IR missile. Higher gives more effective flares.</English>
+            <English>Adjust the chance that a flare defeats an IR missile. Higher gives more effective flares.</English>
             <French>Ajuste la probabilité qu'une fusée éclairante neutralise un missile IR. Plus la valeur est élevée, plus les fusées sont efficaces.</French>
+            <Spanish>Ajusta la posibilidad de que una bengala anule a un misíl IR. Más alto produce bengalas más efectivas.</Spanish>
             <Russian>Регулирует вероятность преодоления ИК-ракеты средствами тепловых помех. Чем выше значение — тем выше эффективность ложных тепловых целей (ловушек).</Russian>
             <Korean>플레어가 적외선 유도 미사일을 무력화할 확률을 조정합니다. 값이 클수록 플레어의 효과가 커집니다.</Korean>
             <Japanese>フレアが赤外線ミサイルを欺瞞する確率を調整します。値が高いほど、フレアの効果が高まります。</Japanese>
@@ -400,6 +406,7 @@
         <Key ID="STR_ACE_MissileGuidance_flareEffectivenessCoef_DisplayName">
             <English>Flare Effectiveness Coefficient</English>
             <French>Coefficient d'efficacité de la fusée</French>
+            <Spanish>Coeficiente de Efectividad de Bengalas</Spanish>
             <Russian>Коэф. эффективности ЛТЦ</Russian>
             <Korean>플레어 효과 계수</Korean>
             <Japanese>フレアの効果係数</Japanese>

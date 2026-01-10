@@ -2,27 +2,25 @@ class ace_missileguidance_type_Nlaw;
 class CfgAmmo {
     class M_NLAW_AT_F;
     class ACE_NLAW: M_NLAW_AT_F {
-        hit = 400; // Default was 500
-        indirectHit = 20; // Default was 15
+        submunitionAmmo = "ACE_NLAW_Penetrator";
+        triggerOnImpact = 0; // The shaped charge only points downwards, so don't fire it in DA mode
+        maxSpeed = 200;
+        typicalSpeed = 185;
+        thrust = 400; // 400 * 0.5 == 200 - swift acceleration to expected speed
+        thrustTime = 0.5;
+        timeToLive = 5.6; // Time until self-destruction (1000 meters @ 200m/s when accounting for air friction)
+        warheadName = "HEAT";
         class ace_missileguidance: ace_missileguidance_type_Nlaw {
             enabled = 1;
         };
     };
 
-    // Sub ammos used in OTA mode (see fnc_seeker.sqf)
-    class ACE_NLAW_Explosion: ACE_NLAW { // Based on FCS-Airburst, will explode right away
-        timeToLive = 0;
-        model = "\A3\weapons_f\empty";
-    };
-    class ACE_NLAW_ShapedCharge: ACE_NLAW { // Shaped charge from rocket explosion, no effects
-        timeToLive = 1;
-        model = "\A3\weapons_f\empty";
-        hit = 750;
-        indirectHit = 0;
-        indirectHitRange = 0;
-        explosionSoundEffect = "";
-        explosionEffects = "";
-        CraterEffects = "";
-        muzzleEffect = "";
+    class ammo_Penetrator_NLAW;
+    class ACE_NLAW_Penetrator: ammo_Penetrator_NLAW {
+        // 500mm of RHA pen (manufacturer claim) - vanilla has 400mm of RHA pen (caliber 26.67)
+        // formula: typicalSpeed * caliber * 15 / 1000 
+        // -> 1000 * 33.333 * 15 / 1000 = ~500
+        caliber = 33.333;
+        warheadName = "HEAT";
     };
 };

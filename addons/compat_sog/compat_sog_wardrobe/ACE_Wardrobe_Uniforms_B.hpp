@@ -37,7 +37,6 @@ UNIFORM_SLEEVES(vn_b_uniform_seal_01_07,vn_b_uniform_seal_02_07);
 */
 
 // macv 05 and 04 are inconsistent: different uniform maxLoad. can cause loss of items when the uniform is filled. Difference is 1lb which translates to 16~17x ace bandages or 1x 1l blood
-#undef B_U_PAIR_SET // previously defined in Uniforms_B.hpp
 #define B_U_PAIR_SET(camo)\
 B_U_PAIR(macv,02,03,camo);\
 B_U_PAIR(macv,05,04,camo)

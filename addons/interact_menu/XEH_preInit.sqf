@@ -88,7 +88,7 @@ if (str (getResolution select 4) == "3.55556") then { // 32:9
 // Init zeus menu
 [] call FUNC(compileMenuZeus);
 
-// Handle addActionToClass with Inheritance flag set (CAManBase actions are seperated for speed)
+// Handle addActionToClass with Inheritance flag set (CAManBase actions are separated for speed)
 GVAR(inheritedActionsAll) = [];
 GVAR(inheritedClassesAll) = [];
 GVAR(inheritedActionsMan) = [];

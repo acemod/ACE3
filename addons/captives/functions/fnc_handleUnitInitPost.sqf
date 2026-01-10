@@ -7,7 +7,7 @@
  * 0: _unit <OBJECT>
  *
  * Return Value:
- * The return value <BOOL>
+ * None
  *
  * Example:
  * [bob] call ACE_captives_fnc_handleUnitInitPost

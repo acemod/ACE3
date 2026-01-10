@@ -238,7 +238,7 @@
         };
 
         // engine channels (0-4) can use names directly, custom channels need an offset for radioChannelInfo
-        private _selectChannelName = CHANNEL_NAMES param [_selectChannel, radioChannelInfo (_selectChannel - 5) select 1];
+        private _selectChannelName = CHANNEL_NAMES param [_selectChannel, (radioChannelInfo (_selectChannel - 5)) param [1, "#Unknown"]];
 
         // select current channel in list box, must be done after lbDelete
         for "_j" from 0 to (lbSize _channel - 1) do {

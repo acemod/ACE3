@@ -4,7 +4,7 @@
  * Updates marker position and texts.
  *
  * Arguments:
- * 0: Marker <STRING>
+ * 0: Rallypoint <OBJECT>
  * 1: Side <SIDE>
  * 2: Position <ARRAY>
  *
