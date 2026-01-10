@@ -1,14 +1,8 @@
 class CfgWeapons {
-    class SPE_SRIFLE;
-    class SPEX_No4_Mk1_Enfield_Scoped: SPE_SRIFLE {
-        EGVAR(overheating,closedBolt) = 1;
-    };
-
     class SPE_SMG;
     class SPEX_Sten_Mk5: SPE_SMG {
         ACE_barrelTwist = 254;
         ACE_barrelLength = 196;
-        EGVAR(overheating,closedBolt) = 0;
     };
 
     // Vests
