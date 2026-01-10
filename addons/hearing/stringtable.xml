@@ -491,36 +491,36 @@
             <Ukrainian>ЕЛЕКТРОННИЙ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Hearing_statHearingLowerVolume">
-            <English>Volume muffling</English>
-            <Czech>Snížení hlasitosti</Czech>
-            <French>Atténuation du volume</French>
-            <Spanish>Atenuación de volumen</Spanish>
-            <Italian>Attenuazione del volume</Italian>
-            <Polish>Tłumienie głośności</Polish>
-            <Portuguese>Abafamento de Volume</Portuguese>
-            <Russian>Глушение звука</Russian>
+            <English>Volume Muffling</English>
+            <Czech>Snížení Hlasitosti</Czech>
+            <French>Atténuation Du Volume</French>
+            <Spanish>Atenuación De Volumen</Spanish>
+            <Italian>Attenuazione Del Volume</Italian>
+            <Polish>Tłumienie Głośności</Polish>
+            <Portuguese>Abafamento De Volume</Portuguese>
+            <Russian>Глушение Звука</Russian>
             <German>Lautstärkedämpfung</German>
             <Korean>소리 차음도</Korean>
             <Japanese>音量の抑制</Japanese>
             <Chinese>進低音量</Chinese>
             <Chinesesimp>降低音量</Chinesesimp>
-            <Ukrainian>Глушіння звуку</Ukrainian>
+            <Ukrainian>Глушіння Звуку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Hearing_statHearingProtection">
-            <English>Hearing protection</English>
-            <Czech>Ochrana sluchu</Czech>
-            <French>Protection auditive</French>
-            <Spanish>Protección auditiva</Spanish>
-            <Italian>Protezione uditiva</Italian>
-            <Polish>Ochrona słuchu</Polish>
+            <English>Hearing Protection</English>
+            <Czech>Ochrana Sluchu</Czech>
+            <French>Protection Auditive</French>
+            <Spanish>Protección Auditiva</Spanish>
+            <Italian>Protezione Uditiva</Italian>
+            <Polish>Ochrona Słuchu</Polish>
             <Portuguese>Proteção Auditiva</Portuguese>
-            <Russian>Защита слуха</Russian>
+            <Russian>Защита Слуха</Russian>
             <German>Gehörschutz</German>
             <Korean>청력 보호</Korean>
             <Japanese>聴覚保護</Japanese>
             <Chinese>聽力保護</Chinese>
             <Chinesesimp>听力保护</Chinesesimp>
-            <Ukrainian>Захист слуху</Ukrainian>
+            <Ukrainian>Захист Слуху</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_Description">
             <English>Volume when unconscious.</English>

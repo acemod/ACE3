@@ -6,7 +6,7 @@ class EGVAR(arsenal,stats) {
         showBar = 1;
         condition = QUOTE(getNumber (_this select 1 >> QQGVAR(Breathing_Protection)) > 0);
         barStatement = QUOTE(getNumber (_this select 1 >> QQGVAR(Breathing_Protection)));
-        tabs[] = {{7}, {}};
+        tabs[] = {{6,7}, {}};
     };
 
     class GVAR(eyes_protection): statBase {
@@ -15,6 +15,6 @@ class EGVAR(arsenal,stats) {
         showBar = 1;
         condition = QUOTE(getNumber (_this select 1 >> QQGVAR(Eyes_Protection)) > 0);
         barStatement = QUOTE(getNumber (_this select 1 >> QQGVAR(Eyes_Protection)));
-        tabs[] = {{7}, {}};
+        tabs[] = {{6,7}, {}};
     };
 };
