@@ -79,9 +79,8 @@ if (hasInterface) then {
             if ((GVAR(quickNumberMarks) == 2) && {currentChannel == 1}) exitWith {};
             if ((markerType _newestMarker) != QGVAR(textOnly)) exitWith {};
             private _text = markerText _newestMarker;
-            if (_count > 6) exitWith {};
-            private _isNumber = _text regexMatch ".*?[0-9].*+/o";
-            if (!_isNumber) exitWith {};
+            if (count _text > 6) exitWith {};
+            if !(_text regexMatch "^\d+$") exitWith {}; // just digits
             GVAR(numberLocalLast) = parseNumber _text;
             TRACE_1("Updated local marker number",GVAR(numberLocalLast));
         };
