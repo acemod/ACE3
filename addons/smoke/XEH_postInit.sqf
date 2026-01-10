@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-GVAR(ppHandleDynamicBlur) = ppEffectCreate ["DynamicBlur", 400];
+GVAR(ppHandleDynamicBlur) = ppEffectCreate ["DynamicBlur", 500];
 GVAR(ppHandleColorCorrections) = ppEffectCreate ["ColorCorrections", 1500];
 GVAR(ppHandleDynamicBlur) ppEffectEnable GVAR(enabled);
 GVAR(ppHandleColorCorrections) ppEffectEnable GVAR(enabled);
