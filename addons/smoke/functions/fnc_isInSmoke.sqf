@@ -17,6 +17,8 @@
 
 params ["_unit"];
 
+if (!isNull objectParent _unit) exitWith { false };
+
 private _coverage = 0;
 
 private _eyePos = eyePos _unit;
