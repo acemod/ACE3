@@ -14,7 +14,7 @@ class GVAR(base) {
     //   0 at the start of the action
     //   0.5 half way during the duration of the action - always, if completed or not
     //   1 at the end, only when completed
-    sound_timing = 0;
+    soundTiming = 0;
 
     // Gesture to be played when the action is performed
     gesture = "Gear";
@@ -70,7 +70,7 @@ class GVAR(base_H_visor_up): GVAR(base) {
     gesture = "gestureNod";
 
     sound[] = {CN_SOUND(helmet_visor,05)};
-    sound_timing = 0;
+    soundTiming = 0;
 
     alternativeActionName = CSTRING(visorUp);
 };
@@ -80,7 +80,7 @@ class GVAR(base_H_visor_down): GVAR(base) {
     gesture = "gestureNod";
 
     sound[] = {CN_SOUND(helmet_visor,05)};
-    sound_timing = 0;
+    soundTiming = 0;
 
     alternativeActionName = CSTRING(visorDown);
 };
