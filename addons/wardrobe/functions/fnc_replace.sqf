@@ -91,7 +91,7 @@ GVAR(inProgress) = true;
 
 // handle effects
 // animation/gestures
-[_player, getText (_cfgWardobeTarget >> "gesture")] call EFUNC(common,doGesture);
+[_player, _actionParams call LINKFUNC(getGesture)] call EFUNC(common,doGesture);
 
 // plays random sound at the beginning
 private _sound = _actionParams call LINKFUNC(getSound);
