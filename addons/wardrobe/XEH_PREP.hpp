@@ -11,6 +11,7 @@ PREP(getDuration);
 PREP(getGesture);
 PREP(getItemVariants);
 PREP(getSound);
+PREP(getSoundTiming);
 PREP(isModifiable);
 PREP(replace);
 PREP(replaceContainer);

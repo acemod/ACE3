@@ -99,7 +99,7 @@ if (_sound isNotEqualTo "") then {
     [
         CBA_fnc_globalSay3D,
         [_player, _sound, nil, true, true],
-        (getNumber (_cfgWardobeTarget >> "sound_timing") max 0 min 1) * _duration
+        _duration * ( _actionParams call LINKFUNC(getSoundTiming) )
     ] call CBA_fnc_waitAndExecute;
 };
 
