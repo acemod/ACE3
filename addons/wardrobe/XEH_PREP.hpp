@@ -8,6 +8,7 @@ PREP(exceptionAceSparebarrel);
 PREP(getAvailableItemVariants);
 PREP(getDisplayName);
 PREP(getDuration);
+PREP(getGesture);
 PREP(getItemVariants);
 PREP(isModifiable);
 PREP(replace);
