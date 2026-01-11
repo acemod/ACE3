@@ -94,7 +94,7 @@ GVAR(inProgress) = true;
 [_player, _actionParams call LINKFUNC(getGesture)] call EFUNC(common,doGesture);
 
 // plays random sound at the beginning
-private _sound = [_cfgWardobeTarget >> "sound"] call CBA_fnc_getCfgDataRandom;
+private _sound = _actionParams call LINKFUNC(getSound);
 if (_sound isNotEqualTo "") then {
     [
         CBA_fnc_globalSay3D,

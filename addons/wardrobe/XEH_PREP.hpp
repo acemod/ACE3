@@ -10,6 +10,7 @@ PREP(getDisplayName);
 PREP(getDuration);
 PREP(getGesture);
 PREP(getItemVariants);
+PREP(getSound);
 PREP(isModifiable);
 PREP(replace);
 PREP(replaceContainer);
