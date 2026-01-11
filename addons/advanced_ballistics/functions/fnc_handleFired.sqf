@@ -28,7 +28,7 @@ if (_abort) then {
     private _bulletVelocity = velocity _projectile;
     private _muzzleVelocity = vectorMagnitude _bulletVelocity;
 
-    private _maxRange = GVAR(maxRange) getOrDefaultCall [toLowerANSI _ammo, {
+    private _maxRange = GVAR(maxRange) getOrDefaultCall [_ammo, {
         private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
         private _airFriction = getNumber(_ammoConfig >> "airFriction");
         private _vanillaInitialSpeed = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");

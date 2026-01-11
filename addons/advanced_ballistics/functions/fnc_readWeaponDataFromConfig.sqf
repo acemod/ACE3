@@ -20,7 +20,7 @@
 
 params ["_weapon"];
 
-GVAR(weaponData) getOrDefaultCall [toLowerANSI _weapon, {
+GVAR(weaponData) getOrDefaultCall [_weapon, {
     private _weaponConfig = (configFile >> "CfgWeapons" >> _weapon);
 
     private _barrelTwist = 0 max getNumber(_weaponConfig >> "ACE_barrelTwist");

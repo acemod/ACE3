@@ -31,7 +31,7 @@ params ["_ammo"]
 
 TRACE_1("Reading Ammo Config",_ammo);
 
-GVAR(ammoData) getOrDefaultCall [toLowerANSI _ammo, {
+GVAR(ammoData) getOrDefaultCall [_ammo, {
     private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
 
     private _airFriction = getNumber(_ammoConfig >> "airFriction");
