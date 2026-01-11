@@ -8,9 +8,10 @@
  * 1: New Zero range <NUMBER>
  * 2: Bore height <NUMBER>
  * 3: Weapon <STRING>
- * 4: Ammo <STRING>
- * 5: Magazine <STRING>
- * 6: Advanced Ballistics enabled? <BOOL>
+ * 4: Muzzle <STRING>
+ * 5: Ammo <STRING>
+ * 6: Magazine <STRING>
+ * 7: Advanced Ballistics enabled? <BOOL>
  *
  * Return Value:
  * zeroAngleCorrection <NUMBER>
@@ -21,7 +22,7 @@
  * Public: No
  */
 
-params ["_oldZeroRange", "_newZeroRange", "_boreHeight"/*in cm*/, "_weapon", "_ammo", "_magazine", "_advancedBallistics"];
+params ["_oldZeroRange", "_newZeroRange", "_boreHeight"/*in cm*/, "_weapon", "_muzzle", "_ammo", "_magazine", "_advancedBallistics"];
 
 // When FFV from vehicles currentZeroing will report 0 so just bail
 if (_oldZeroRange <= 0) exitWith { 0 };
@@ -48,9 +49,9 @@ private _trueZero = if (_advancedBallistics) then {
     if (isNil "_AmmoCacheEntry") then {
         _AmmoCacheEntry = _ammo call EFUNC(advanced_ballistics,readAmmoDataFromConfig);
     };
-    private _WeaponCacheEntry = uiNamespace getVariable format[QEGVAR(advanced_ballistics,%1), _weapon];
+    private _WeaponCacheEntry = uiNamespace getVariable format[QEGVAR(advanced_ballistics,%1_%2), _weapon, _muzzle];
     if (isNil "_WeaponCacheEntry") then {
-        _WeaponCacheEntry = _weapon call EFUNC(advanced_ballistics,readWeaponDataFromConfig);
+        _WeaponCacheEntry = [_weapon, _muzzle] call EFUNC(advanced_ballistics,readWeaponDataFromConfig);
     };
 
     _AmmoCacheEntry params ["_airFriction", "_caliber", "_bulletLength", "_bulletMass", "_transonicStabilityCoef", "_dragModel", "_ballisticCoefficients", "_velocityBoundaries", "_atmosphereModel", "_ammoTempMuzzleVelocityShifts", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocityVariationSD"];
@@ -85,6 +86,6 @@ private _trueZero = if (_advancedBallistics) then {
 
 private _zeroAngleCorrection = _trueZero - _vanillaZero;
 
-missionNamespace setVariable [format[QGVAR(%1_%2_%3_%4_%5_%6_%7), _oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics], _zeroAngleCorrection];
+missionNamespace setVariable [format[QGVAR(%1_%2_%3_%4_%5_%6_%7_%8), _oldZeroRange, _newZeroRange, _boreHeight, _weapon, _muzzle, _ammo, _magazine, _advancedBallistics], _zeroAngleCorrection];
 
 _zeroAngleCorrection
