@@ -27,7 +27,7 @@ private _classOrigin = configName _cfgOrigin;
 private _cfgWardobeTarget = configFile >> QUOTE(ADDON) >> _classTarget;
 
 // duration of the "animation"
-private _duration = getNumber (_cfgWardobeTarget >> "duration");
+private _duration = _actionParams call LINKFUNC(getDuration);
 
 // replace the main Item
 private _equipmentType = "";

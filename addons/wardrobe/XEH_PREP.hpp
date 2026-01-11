@@ -7,6 +7,7 @@ PREP(exceptionAceIntel);
 PREP(exceptionAceSparebarrel);
 PREP(getAvailableItemVariants);
 PREP(getDisplayName);
+PREP(getDuration);
 PREP(getItemVariants);
 PREP(isModifiable);
 PREP(replace);
