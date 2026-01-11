@@ -18,21 +18,21 @@
  * Public: No
  */
 
-private _weaponConfig = (configFile >> "CfgWeapons" >> _this);
+params ["_weapon"];
 
-private _barrelTwist = 0 max getNumber(_weaponConfig >> "ACE_barrelTwist");
-private _twistDirection = parseNumber (_barrelTwist != 0);
-if (isNumber (_weaponConfig >> "ACE_twistDirection")) then {
-    _twistDirection = getNumber (_weaponConfig >> "ACE_twistDirection");
-    if !(_twistDirection in [-1, 0, 1]) then {
-        _twistDirection = 1;
+GVAR(weaponData) getOrDefaultCall [_weapon, {
+    private _weaponConfig = (configFile >> "CfgWeapons" >> _weapon);
+
+    private _barrelTwist = 0 max getNumber(_weaponConfig >> "ACE_barrelTwist");
+    private _twistDirection = parseNumber (_barrelTwist != 0);
+    if (isNumber (_weaponConfig >> "ACE_twistDirection")) then {
+        _twistDirection = getNumber (_weaponConfig >> "ACE_twistDirection");
+        if !(_twistDirection in [-1, 0, 1]) then {
+            _twistDirection = 1;
+        };
     };
-};
 
-private _barrelLength = 0 max getNumber(_weaponConfig >> "ACE_barrelLength");
+    private _barrelLength = 0 max getNumber(_weaponConfig >> "ACE_barrelLength");
 
-private _result = [_barrelTwist, _twistDirection, _barrelLength];
-
-uiNamespace setVariable [format[QGVAR(%1), _this], _result];
-
-_result
+    [_barrelTwist, _twistDirection, _barrelLength]
+}, true] // return
