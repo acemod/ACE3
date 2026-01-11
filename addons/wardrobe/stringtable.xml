@@ -16,6 +16,12 @@
             <German>Garderobe</German>
             <Japanese>ワードローブ</Japanese>
         </Key>
+        <Key ID="STR_ACE_Wardrobe_collarClose">
+            <English>Close collar</English>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_collarOpen">
+            <English>Open collar</English>
+        </Key>
         <Key ID="STR_ACE_Wardrobe_enable_action">
             <English>ACE Interaction</English>
             <French>Interaction ACE</French>
@@ -23,6 +29,12 @@
             <Russian>ACE взаимодействие</Russian>
             <German>Aktivieren ACE Interaction</German>
             <Japanese>ACE インタラクション</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_foliageAdd">
+            <English>Add scrim/foliage</English>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_foliageRemove">
+            <English>Remove scrim/foliage</English>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glovesOff">
             <English>Take gloves off</English>
@@ -53,13 +65,13 @@
             <Japanese>ゴーグルを着ける</Japanese>
         </Key>
         <Key ID="STR_ACE_Wardrobe_hoodLower">
-            <English>Lower Hood</English>
+            <English>Lower hood</English>
             <Russian>Снять капюшон</Russian>
             <German>Kapuze absetzen</German>
             <Japanese>フードを下ろす</Japanese>
         </Key>
         <Key ID="STR_ACE_Wardrobe_hoodRaise">
-            <English>Raise Hood</English>
+            <English>Raise hood</English>
             <Russian>Надеть капюшон</Russian>
             <German>Kapuze aufsetzen</German>
             <Japanese>フードを上げる</Japanese>
@@ -120,6 +132,12 @@
             <Spanish>Subirse las mangas</Spanish>
             <Russian>Закатать рукава</Russian>
             <Japanese>そでを巻き上げる</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_tieOff">
+            <English>Remove tie</English>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_tieOn">
+            <English>Wear tie</English>
         </Key>
         <Key ID="STR_ACE_Wardrobe_visorDown">
             <English>Visor down</English>
