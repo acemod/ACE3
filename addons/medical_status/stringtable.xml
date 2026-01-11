@@ -153,7 +153,7 @@
             <Ukrainian>Статус</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Status_WindowOnWakeUp_Description">
-            <English>Action on the window when waking up</English>
+            <English>Action on the game's window when waking up</English>
             <Czech>Akce okna při probuzení</Czech>
             <French>Action de la fenêtre au réveil</French>
             <Spanish>Acción de la ventana al despertar</Spanish>
@@ -187,7 +187,7 @@
             <Ukrainian>Дія вікна при пробудженні</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Status_WindowOnWakeUp_Option_Flash">
-            <English>Flash Window</English>
+            <English>Flash Game Window</English>
             <Czech>Blikání okna</Czech>
             <French>Faire clignoter la fenêtre</French>
             <Spanish>Parpadear ventana</Spanish>
@@ -204,7 +204,7 @@
             <Ukrainian>Миттєве вікно</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Status_WindowOnWakeUp_Option_Focus">
-            <English>Focus Window</English>
+            <English>Focus Game Window</English>
             <Czech>Ostření okna</Czech>
             <French>Mettre la fenêtre au premier plan</French>
             <Spanish>Enfocar ventana</Spanish>
