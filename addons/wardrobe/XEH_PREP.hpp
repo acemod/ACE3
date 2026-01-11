@@ -9,6 +9,7 @@ PREP(getAvailableItemVariants);
 PREP(getDisplayName);
 PREP(getDuration);
 PREP(getItemVariants);
+PREP(getSound);
 PREP(isModifiable);
 PREP(replace);
 PREP(replaceContainer);
