@@ -1,12 +1,12 @@
 PREP(addActions);
 PREP(addActionsChildren);
 PREP(addActionsIcon);
-PREP(addActionsName);
 PREP(checkMissingComponents);
 PREP(compareComponents);
 PREP(exceptionAceIntel);
 PREP(exceptionAceSparebarrel);
 PREP(getAvailableItemVariants);
+PREP(getDisplayName);
 PREP(getItemVariants);
 PREP(isModifiable);
 PREP(replace);
