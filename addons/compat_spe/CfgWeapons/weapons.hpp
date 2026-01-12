@@ -1,8 +1,8 @@
 // MACHINE GUNS
 class SPE_LMG;
 class SPE_MG42: SPE_LMG {
-    ACE_barrelTwist = 304.8;
-    ACE_barrelLength = 533;
+    ACE_barrelTwist = 240;
+    ACE_barrelLength = 530;
     EGVAR(overheating,mrbs) = 3000;
     EGVAR(overheating,closedBolt) = 0;
     EGVAR(overheating,slowdownFactor) = 1;
@@ -10,7 +10,7 @@ class SPE_MG42: SPE_LMG {
     EGVAR(overheating,dispersion) = 0.25;
 };
 class SPE_MG34: SPE_LMG {
-    ACE_barrelTwist = 101.6;
+    ACE_barrelTwist = 240;
     ACE_barrelLength = 627;
     EGVAR(overheating,mrbs) = 3000;
     EGVAR(overheating,closedBolt) = 0;
@@ -27,17 +27,8 @@ class SPE_M1919A4: SPE_LMG {
     EGVAR(overheating,allowSwapBarrel) = 1;
     EGVAR(overheating,dispersion) = 0.25;
 };
-class SPE_M1919A6: SPE_M1919A4 {
-    ACE_barrelTwist = 254;
-    ACE_barrelLength = 610;
-    EGVAR(overheating,mrbs) = 3000;
-    EGVAR(overheating,closedBolt) = 1;
-    EGVAR(overheating,slowdownFactor) = 1;
-    EGVAR(overheating,allowSwapBarrel) = 1;
-    EGVAR(overheating,dispersion) = 0.25;
-};
 class SPE_M1918A2_BAR: SPE_LMG {
-    ACE_barrelTwist = 254; // unknown set to 1:10
+    ACE_barrelTwist = 254;
     ACE_barrelLength = 610;
     EGVAR(overheating,mrbs) = 3000;
     EGVAR(overheating,closedBolt) = 0;
@@ -46,6 +37,15 @@ class SPE_M1918A2_BAR: SPE_LMG {
     EGVAR(overheating,dispersion) = 0.25;
 };
 class SPE_FM_24_M29: SPE_LMG {
+    ACE_barrelTwist = 270;
+    ACE_barrelLength = 500;
+    EGVAR(overheating,mrbs) = 3000;
+    EGVAR(overheating,closedBolt) = 0;
+    EGVAR(overheating,slowdownFactor) = 1;
+    EGVAR(overheating,allowSwapBarrel) = 0;
+    EGVAR(overheating,dispersion) = 0.25;
+};
+class SPE_LMG_303_Mk2: SPE_LMG {
     ACE_barrelTwist = 254;
     ACE_barrelLength = 635;
     EGVAR(overheating,mrbs) = 3000;
@@ -57,40 +57,56 @@ class SPE_FM_24_M29: SPE_LMG {
 
 // RIFLES
 class SPE_RIFLE;
+class SPE_FG42_E: SPE_RIFLE { // Closed bolt in semi-auto, open bolt in full-auto
+    EGVAR(overheating,JamChance) = 0.0003;
+    ACE_barrelTwist = 240;
+    ACE_barrelLength = 500;
+};
 class SPE_G43: SPE_RIFLE {
     EGVAR(overheating,JamChance) = 0.0003;
-    ACE_barrelTwist = 254; // unknown set to 1:10
+    ACE_barrelTwist = 240;
     ACE_barrelLength = 550;
 };
 class SPE_K98: SPE_RIFLE {
-    EGVAR(overheating,JamChance) = 0.0003;
-    ACE_barrelTwist = 254; // unknown set to 1:10
-    ACE_barrelLength = 550;
+    ACE_barrelTwist = 240;
+    ACE_barrelLength = 600;
 };
 class SPE_M1_Carbine: SPE_RIFLE {
     EGVAR(overheating,JamChance) = 0.0003;
-    ACE_barrelTwist = 254; // unknown set to 1:10
+    ACE_barrelTwist = 254;
     ACE_barrelLength = 460;
 };
 class SPE_M1_Garand: SPE_RIFLE {
     EGVAR(overheating,JamChance) = 0.0003;
     ACE_barrelTwist = 254;
-    ACE_barrelLength = 609.6;
+    ACE_barrelLength = 610;
 };
 class SPE_M1903A3_Springfield: SPE_RIFLE {
     ACE_barrelTwist = 254;
     ACE_barrelLength = 610;
 };
+class SPE_MAS_36: SPE_RIFLE {
+    ACE_barrelTwist = 270;
+    ACE_barrelLength = 575;
+};
+class SPE_No3_Mk1_Enfield: SPE_RIFLE {
+    ACE_barrelTwist = 254;
+    ACE_barrelLength = 640;
+    ACE_twistDirection = -1;
+};
 
 // ASSAULT RIFLE
 class SPE_STG44: SPE_RIFLE {
     EGVAR(overheating,JamChance) = 0.0015;
-    ACE_barrelTwist = 254; // unknown set to 1:10
+    ACE_barrelTwist = 240;
     ACE_barrelLength = 420;
 };
 
 // SCOPED RIFLES
-class SPE_SRIFLE;
+class Rifle_Long_Base_F;
+class SPE_SRIFLE: Rifle_Long_Base_F {
+    EGVAR(overheating,closedBolt) = 1;
+};
 class SPE_K98ZF39: SPE_SRIFLE {
     ACE_barrelTwist = 240;
     ACE_barrelLength = 600;
@@ -103,7 +119,6 @@ class SPE_K98ZF39: SPE_SRIFLE {
     discreteDistanceInitIndex = 0;
     ACE_railHeightAboveBore = 1.8;  // Distance between center of bore and rail in centimeters
     ACE_scopeHeightAboveRail = 3.8;  // Distance between center of scope and rail in centimeters
-    EGVAR(overheating,closedBolt) = 1;
 };
 class SPE_M1903A4_Springfield: SPE_SRIFLE {
     ACE_barrelTwist = 254;
@@ -117,30 +132,47 @@ class SPE_M1903A4_Springfield: SPE_SRIFLE {
     discreteDistanceInitIndex = 0;
     ACE_railHeightAboveBore = 1.8;
     ACE_scopeHeightAboveRail = 3.8;
-    EGVAR(overheating,closedBolt) = 1;
 };
 
 // SUB MACHINE GUNS
-class SPE_SMG;
-class SPE_MP40: SPE_SMG {
-    ACE_barrelTwist = 203.2;
-    ACE_barrelLength = 251;
+class Rifle_Short_Base_F;
+class SPE_SMG: Rifle_Short_Base_F {
     EGVAR(overheating,closedBolt) = 0;
+};
+class SPE_MP35: SPE_SMG {
+    ACE_barrelTwist = 250;
+    ACE_barrelLength = 200;
+};
+class SPE_MP40: SPE_SMG {
+    ACE_barrelTwist = 250;
+    ACE_barrelLength = 251;
 };
 class SPE_Sten_Mk2: SPE_SMG {
     ACE_barrelTwist = 254;
     ACE_barrelLength = 196;
-    EGVAR(overheating,closedBolt) = 0;
 };
 class SPE_M1A1_Thompson: SPE_SMG {
-    ACE_barrelTwist = 392;
-    ACE_barrelLength = 270;
-    EGVAR(overheating,closedBolt) = 0;
+    ACE_barrelTwist = 406;
+    ACE_barrelLength = 267;
 };
 class SPE_M3_GreaseGun: SPE_SMG {
-    ACE_barrelTwist = 392;
-    ACE_barrelLength = 270;
-    EGVAR(overheating,closedBolt) = 0;
+    ACE_barrelTwist = 406;
+    ACE_barrelLength = 203.2;
+};
+
+// SHOTGUNS
+class SPE_Shotgun: Rifle_Long_Base_F {
+    ACE_twistDirection = 0;
+    EGVAR(overheating,closedBolt) = 1;
+};
+class SPE_Fusil_Mle_208_12: SPE_Shotgun {
+    ACE_barrelLength = 700;
+};
+class SPE_Fusil_Mle_208_12_Sawedoff: SPE_Fusil_Mle_208_12 {
+    ACE_barrelLength = 350;
+};
+class SPE_Model_37_Trenchgun: SPE_Shotgun {
+    ACE_barrelLength = 508;
 };
 
 // VESTS

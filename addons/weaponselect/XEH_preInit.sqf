@@ -13,7 +13,6 @@ GVAR(GrenadesNonFrag) = [];
 
 private _cfgMagazines = configFile >> "CfgMagazines";
 private _cfgAmmo = configFile >> "CfgAmmo";
-private _cfgThrow = configFile >> "CfgWeapons" >> "Throw";
 
 GVAR(GrenadesAll) = compatibleMagazines "throw";
 
