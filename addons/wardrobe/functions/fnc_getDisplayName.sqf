@@ -22,13 +22,38 @@ params ["_cfgOrigin", "_cfgTarget"];
 private _classOrigin = configName _cfgOrigin;
 private _classTarget = configName _cfgTarget;
 
-// Check for directional property in wardrobe config
-private _directional = getText (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "directionalActionName");
-if (_directional isNotEqualTo "") exitWith { _directional };
+switch (true) do {
+   
+    // check legacy directional
+    case (
+        isClass (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "directionalActionName")
+    ): {
+        getText (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "directionalActionName")
+    };
 
-// Check for "alternative Display Name" of targets wardrobe config
-private _alternative = getText (configFile >> QUOTE(ADDON) >> _classTarget >> "alternativeActionName");
-if (_alternative isNotEqualTo "") exitWith { _alternative };
+    // check directional
+    case (
+        isClass (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "displayName")
+    ): {
+        getText (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "displayName")
+    };
 
-// return target config displayName
-getText (_cfgTarget >> "displayName") // return
+    // check legacy wardrobeCfg of target
+    case (
+        isClass (configFile >> QUOTE(ADDON) >> _classTarget >> "alternativeActionName")
+    ): {
+        getText (configFile >> QUOTE(ADDON) >> _classTarget >> "alternativeActionName")
+    };
+
+    // check wardrobeCfg of target
+    case (
+        isClass (configFile >> QUOTE(ADDON) >> _classTarget >> "displayName")
+    ): {
+        getText (configFile >> QUOTE(ADDON) >> _classTarget >> "displayName")
+    };
+
+    // Fallback displayName of Item
+    default {
+        getText (_cfgTarget  >> "displayName")
+    };
+};

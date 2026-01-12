@@ -23,7 +23,7 @@ class GVAR(base) {
     icon = "";
 
     // Will be used instead of the target variants displayname
-    alternativeActionName = "";
+    displayName = "";
 
     // Duration of action. Minimum value of 1 - anything above will produce a progressbar
     duration = 1;
