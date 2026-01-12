@@ -42,7 +42,7 @@ All supported Properties can be found within the `ace_wardrobe_base` baseclass.
 | `modifiableTo` | Subclasses | Possible variants this item can be turned into. Subclass can contain optional `directionalActionName` property to use as a display name for the action. |
 | `components[]` | Array of Classnames  | Components the current variant contains within itself |
 | `sound[]` | Array of CfgSound Entries | To be chosen by random when the action is performed |
-| `sound_timing` | Number 0..1 | Defines the point in time relative to the duration when the sound is played |
+| `soundTiming` | Number 0..1 | Defines the point in time relative to the duration when the sound is played |
 | `gesture` | String of Classname | Gesture to be played when the action is performed |
 | `alternativePicture` | String of path to icon | Will be used instead of target variant picture |
 | `alternativeActionName` | String | Will be used instead of the target variants displayname |
@@ -66,7 +66,7 @@ class ace_wardrobe {
 
         // Supports multiple sounds, will pick one by random.
         sound[] = { "ace_wardrobe_fabric_06", "ace_wardrobe_fabric_07", "ace_wardrobe_fabric_16", "ace_wardrobe_fabric_20", "ace_wardrobe_fabric_25"};
-        sound_timing = 0;    // [0..1] 0 at the start of the action, 0.5 half way during the duration of the action - always, if completed or not. 1 at the end, only when completed.
+        soundTiming = 0;    // [0..1] 0 at the start of the action, 0.5 half way during the duration of the action - always, if completed or not. 1 at the end, only when completed.
 
         // Gesture
         gesture = "Gear";
@@ -137,7 +137,7 @@ class ace_wardrobe_base_H_visor_up: ace_wardrobe_base {
     gesture ="gestureNod";
 
     sound[] = {CN_SOUND(helmet_visor,05)};
-    sound_timing = 0;
+    soundTiming = 0;
 
     alternativeActionName = CSTRING(visorUp);
 };
@@ -147,7 +147,7 @@ class ace_wardrobe_base_H_visor_down: ace_wardrobe_base {
     gesture ="gestureNod";
 
     sound[] = {"ace_wardrobe_05"};
-    sound_timing = 0;
+    soundTiming = 0;
 
     alternativeActionName = CSTRING(visorDown);
 };
