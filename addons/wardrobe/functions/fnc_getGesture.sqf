@@ -22,8 +22,11 @@ private _classOrigin = configName _cfgOrigin;
 private _classTarget = configName _cfgTarget;
 
 // Check for directional property in wardrobe config
-private _cfgDirectional = configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "directionalGesture";
-if (isClass _cfgDirectional) exitWith { getText _cfgDirectional };
+if (
+    isClass (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "directionalGesture")
+) exitWith {
+    getText (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "directionalGesture")
+};
 
 // return target's property in wardrobe config
 getText (configFile >> QUOTE(ADDON) >> _classTarget >> "gesture") // return
