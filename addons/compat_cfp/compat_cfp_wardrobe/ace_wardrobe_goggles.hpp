@@ -1,9 +1,9 @@
-class CFP_UA_Thermals_Blk: ace_wardrobe_base {
+class CFP_UA_Thermals_Blk: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_UA_Thermals_Blk_GPS {};
     };
 };
-class CFP_UA_Thermals_Blk_GPS: ace_wardrobe_base {
+class CFP_UA_Thermals_Blk_GPS: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_UA_Thermals_Blk {};
     };
@@ -11,12 +11,12 @@ class CFP_UA_Thermals_Blk_GPS: ace_wardrobe_base {
 };
 
 #define NECKWRAP_GLASSES(NeckwrapBase,NeckwrapGlasses,Glasses)\
-class NeckwrapBase: ace_wardrobe_base {\
+class NeckwrapBase: ACEWARDROBE(base) {\
     class modifiableTo {\
         class NeckwrapGlasses {};\
     };\
 };\
-class NeckwrapGlasses: ace_wardrobe_base {\
+class NeckwrapGlasses: ACEWARDROBE(base) {\
     class modifiableTo {\
         class NeckwrapBase {};\
     };\

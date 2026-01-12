@@ -1,10 +1,10 @@
 #define BOONIEHATS(BoonieHatUnfolded,BoonieHatFolded)\
-class BoonieHatUnfolded: ace_wardrobe_base {\
+class BoonieHatUnfolded: ACEWARDROBE(base) {\
     class modifiableTo {\
         class BoonieHatFolded {};\
     };\
 };\
-class BoonieHatFolded: ace_wardrobe_base {\
+class BoonieHatFolded: ACEWARDROBE(base) {\
     class modifiableTo {\
         class BoonieHatUnfolded {};\
     };\
@@ -14,12 +14,12 @@ BOONIEHATS(CFP_BoonieHat_DCU,CFP_BoonieHat2_DCU);
 BOONIEHATS(CFP_BoonieHat_M81,CFP_BoonieHat2_M81);
 
 #define CAPS(CapRegular,CapBackwards)\
-class CapRegular: ace_wardrobe_base {\
+class CapRegular: ACEWARDROBE(base) {\
     class modifiableTo {\
         class CapBackwards {};\
     };\
 };\
-class CapBackwards: ace_wardrobe_base {\
+class CapBackwards: ACEWARDROBE(base) {\
     class modifiableTo {\
         class CapRegular {};\
     };\
@@ -33,31 +33,31 @@ HELMET_GOGGLES_COVER(CFP_IDF_M76_BD,CFP_IDF_M76_BD_GG,CFP_IDF_M76_BD_CF_GG,CFP_I
 HELMET_GOGGLES_COVER(CFP_IDF_M76_BD_Black,CFP_IDF_M76_BD_GG_Black,CFP_IDF_M76_BD_CF_GG_Black,CFP_IDF_M76_BD_CB_GG_Black,CUP_G_ESS_BLK);
 
 #define LUNGEE_1(LungeeRegular,LungeeOpen)\
-class LungeeRegular: ace_wardrobe_base {\
+class LungeeRegular: ACEWARDROBE(base) {\
     class modifiableTo {\
         class LungeeOpen {};\
     };\
 };\
-class LungeeOpen: ace_wardrobe_base {\
+class LungeeOpen: ACEWARDROBE(base) {\
     class modifiableTo {\
         class LungeeRegular {};\
     };\
 }
 
 #define LUNGEE_2(LungeeRegular,LungeeOpen,LungeeShemagh)\
-class LungeeRegular: ace_wardrobe_base {\
+class LungeeRegular: ACEWARDROBE(base) {\
     class modifiableTo {\
         class LungeeOpen {};\
         class LungeeShemagh {};\
     };\
 };\
-class LungeeOpen: ace_wardrobe_base {\
+class LungeeOpen: ACEWARDROBE(base) {\
     class modifiableTo {\
         class LungeeRegular {};\
         class LungeeShemagh {};\
     };\
 };\
-class LungeeShemagh: ace_wardrobe_base {\
+class LungeeShemagh: ACEWARDROBE(base) {\
     class modifiableTo {\
         class LungeeRegular {};\
         class LungeeOpen {};\
@@ -119,20 +119,20 @@ HELMET_GOGGLES(SP_ZSH1Helmet_Tan1,SP_ZSH1Helmet_Tan2,SP_Goggles_Black);
 
 HELMET_GOGGLES_COVER(CFP_PASGTHelmet_M811,CFP_PASGTHelmet_M814,CFP_PASGTHelmet_M815,CFP_PASGTHelmet_M816,CUP_G_ESS_BLK);
 
-class CFP_PASGTHelmet_DBDU1: ace_wardrobe_base_H_goggles_off {
+class CFP_PASGTHelmet_DBDU1: ACEWARDROBE(base_H_goggles_off) {
     class modifiableTo {
         class CFP_PASGTHelmet_DBDU4 {};
         class CFP_PASGTHelmet_DBDU5 {};
     };
 };
-class CFP_PASGTHelmet_DBDU4: ace_wardrobe_base_H_goggles_on {
+class CFP_PASGTHelmet_DBDU4: ACEWARDROBE(base_H_goggles_on) {
     class modifiableTo {
         class CFP_PASGTHelmet_DBDU1 {};
         class CFP_PASGTHelmet_DBDU5 {};
     };
     components[] = {QUOTE(CUP_G_ESS_BLK)};
 };
-class CFP_PASGTHelmet_DBDU5: ace_wardrobe_base_H_goggles_on {
+class CFP_PASGTHelmet_DBDU5: ACEWARDROBE(base_H_goggles_on) {
     class modifiableTo {
         class CFP_PASGTHelmet_DBDU1 {};
         class CFP_PASGTHelmet_DBDU4 {};
@@ -140,20 +140,20 @@ class CFP_PASGTHelmet_DBDU5: ace_wardrobe_base_H_goggles_on {
     components[] = {QUOTE(CUP_G_ESS_BLK)};
 };
 
-class CFP_PASGTHelmet_DBDU2: ace_wardrobe_base_H_goggles_off {
+class CFP_PASGTHelmet_DBDU2: ACEWARDROBE(base_H_goggles_off) {
     class modifiableTo {
         class CFP_PASGTHelmet_DBDU3 {};
         class CFP_PASGTHelmet_DBDU6 {};
     };
 };
-class CFP_PASGTHelmet_DBDU3: ace_wardrobe_base_H_goggles_on {
+class CFP_PASGTHelmet_DBDU3: ACEWARDROBE(base_H_goggles_on) {
     class modifiableTo {
         class CFP_PASGTHelmet_DBDU2 {};
         class CFP_PASGTHelmet_DBDU6 {};
     };
     components[] = {QUOTE(CUP_G_ESS_BLK)};
 };
-class CFP_PASGTHelmet_DBDU6: ace_wardrobe_base_H_goggles_on {
+class CFP_PASGTHelmet_DBDU6: ACEWARDROBE(base_H_goggles_on) {
     class modifiableTo {
         class CFP_PASGTHelmet_DBDU2 {};
         class CFP_PASGTHelmet_DBDU3 {};
@@ -166,20 +166,20 @@ HELMET_GOGGLES(CFP_PASGTHelmet_M812,CFP_PASGTHelmet_M813,CUP_G_ESS_BLK);
 // Goggles might be changed, they are covered on the helmet
 // there exists also a variante with goggles coverd at the back
 #define OPSCORE_HELMET_SF_COVERED_GOGGLES(HelmetBase,HelmetGogglesFront,HelmetGogglesBack,Goggles)\
-class HelmetBase: ace_wardrobe_base_H_goggles_off {\
+class HelmetBase: ACEWARDROBE(base_H_goggles_off) {\
     class modifiableTo {\
         class HelmetGogglesFront {};\
         class HelmetGogglesBack {};\
         components[] = {QUOTE(Goggles)};\
     };\
 };\
-class HelmetGogglesFront: ace_wardrobe_base_H_goggles_on {\
+class HelmetGogglesFront: ACEWARDROBE(base_H_goggles_on) {\
     class modifiableTo {\
         class HelmetBase {};\
         class HelmetGogglesBack {};\
     };\
 };\
-class HelmetGogglesBack: ace_wardrobe_base_H_goggles_on {\
+class HelmetGogglesBack: ACEWARDROBE(base_H_goggles_on) {\
     class modifiableTo {\
         class HelmetBase {};\
         class HelmetGogglesFront {};\
@@ -197,7 +197,7 @@ OPSCORE_HELMET_SF_COVERED_GOGGLES(CFP_OpsC_Covered,CFP_OpsC_Cov_Goggles_Off,CFP_
 
 BASE_PAIR(CFP_75th_Patrol_Cap,CFP_75th_Patrol_Cap_Oakleys);
 
-class CFP_MitzHelm1_Des: ace_wardrobe_base {
+class CFP_MitzHelm1_Des: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_MitzHelm2_Des {};
         class CFP_MitzHelm3_Des {};
@@ -208,7 +208,7 @@ class CFP_MitzHelm1_Des: ace_wardrobe_base {
         class CFP_Mitznefet_Desert_Tropical {};
     };
 };
-class CFP_MitzHelm2_Des: ace_wardrobe_base {
+class CFP_MitzHelm2_Des: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_MitzHelm1_Des {};
         class CFP_MitzHelm3_Des {};
@@ -219,7 +219,7 @@ class CFP_MitzHelm2_Des: ace_wardrobe_base {
         class CFP_Mitznefet_Desert_Tropical {};
     };
 };
-class CFP_MitzHelm3_Des: ace_wardrobe_base {
+class CFP_MitzHelm3_Des: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_MitzHelm1_Des {};
         class CFP_MitzHelm2_Des {};
@@ -230,7 +230,7 @@ class CFP_MitzHelm3_Des: ace_wardrobe_base {
         class CFP_Mitznefet_Desert_Tropical {};
     };
 };
-class CFP_MitzHelm4_Des: ace_wardrobe_base {
+class CFP_MitzHelm4_Des: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_MitzHelm1_Des {};
         class CFP_MitzHelm2_Des {};
@@ -241,7 +241,7 @@ class CFP_MitzHelm4_Des: ace_wardrobe_base {
         class CFP_Mitznefet_Desert_Tropical {};
     };
 };
-class CFP_Mitznefet_Desert: ace_wardrobe_base {
+class CFP_Mitznefet_Desert: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_MitzHelm1_Des {};
         class CFP_MitzHelm2_Des {};
@@ -250,7 +250,7 @@ class CFP_Mitznefet_Desert: ace_wardrobe_base {
     };
     components[] = {"CUP_PMC_Facewrap_Black"};
 };
-class CFP_Mitznefet_Desert_Ranger: ace_wardrobe_base {
+class CFP_Mitznefet_Desert_Ranger: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_MitzHelm1_Des {};
         class CFP_MitzHelm2_Des {};
@@ -259,7 +259,7 @@ class CFP_Mitznefet_Desert_Ranger: ace_wardrobe_base {
     };
     components[] = {"CUP_PMC_Facewrap_Ranger"};
 };
-class CFP_Mitznefet_Desert_Tan: ace_wardrobe_base {
+class CFP_Mitznefet_Desert_Tan: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_MitzHelm1_Des {};
         class CFP_MitzHelm2_Des {};
@@ -268,7 +268,7 @@ class CFP_Mitznefet_Desert_Tan: ace_wardrobe_base {
     };
     components[] = {"CUP_PMC_Facewrap_Tan"};
 };
-class CFP_Mitznefet_Desert_Tropical: ace_wardrobe_base {
+class CFP_Mitznefet_Desert_Tropical: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_MitzHelm1_Des {};
         class CFP_MitzHelm2_Des {};
@@ -278,7 +278,7 @@ class CFP_Mitznefet_Desert_Tropical: ace_wardrobe_base {
     components[] = {"CUP_PMC_Facewrap_Tropical"};
 };
 
-class CFP_MitzHelm1_Mcam: ace_wardrobe_base {
+class CFP_MitzHelm1_Mcam: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_Mitznefet_Mcam {};
         class CFP_MitzHelm2_Mcam {};
@@ -286,7 +286,7 @@ class CFP_MitzHelm1_Mcam: ace_wardrobe_base {
         class CFP_MitzHelm4_Mcam {};
     };
 };
-class CFP_MitzHelm2_Mcam: ace_wardrobe_base {
+class CFP_MitzHelm2_Mcam: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_Mitznefet_Mcam {};
         class CFP_MitzHelm1_Mcam {};
@@ -294,7 +294,7 @@ class CFP_MitzHelm2_Mcam: ace_wardrobe_base {
         class CFP_MitzHelm4_Mcam {};
     };
 };
-class CFP_MitzHelm3_Mcam: ace_wardrobe_base {
+class CFP_MitzHelm3_Mcam: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_Mitznefet_Mcam {};
         class CFP_MitzHelm1_Mcam {};
@@ -302,7 +302,7 @@ class CFP_MitzHelm3_Mcam: ace_wardrobe_base {
         class CFP_MitzHelm4_Mcam {};
     };
 };
-class CFP_MitzHelm4_Mcam: ace_wardrobe_base {
+class CFP_MitzHelm4_Mcam: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_Mitznefet_Mcam {};
         class CFP_MitzHelm1_Mcam {};
@@ -310,7 +310,7 @@ class CFP_MitzHelm4_Mcam: ace_wardrobe_base {
         class CFP_MitzHelm3_Mcam {};
     };
 };
-class CFP_Mitznefet_Mcam: ace_wardrobe_base {
+class CFP_Mitznefet_Mcam: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_MitzHelm1_Mcam {};
         class CFP_MitzHelm2_Mcam {};
@@ -320,7 +320,7 @@ class CFP_Mitznefet_Mcam: ace_wardrobe_base {
     components[] = {"CUP_PMC_Facewrap_Black"};
 };
 
-class CFP_MitzHelm1_Wdl: ace_wardrobe_base {
+class CFP_MitzHelm1_Wdl: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_Mitznefet_Wdl {};
         class CFP_MitzHelm2_Wdl {};
@@ -332,7 +332,7 @@ class CFP_MitzHelm1_Wdl: ace_wardrobe_base {
         class CFP_Mitznefet_Tropical {};
     };
 };
-class CFP_MitzHelm2_Wdl: ace_wardrobe_base {
+class CFP_MitzHelm2_Wdl: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_Mitznefet_Wdl {};
         class CFP_MitzHelm1_Wdl {};
@@ -344,7 +344,7 @@ class CFP_MitzHelm2_Wdl: ace_wardrobe_base {
         class CFP_Mitznefet_Tropical {};
     };
 };
-class CFP_MitzHelm3_Wdl: ace_wardrobe_base {
+class CFP_MitzHelm3_Wdl: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_Mitznefet_Wdl {};
         class CFP_MitzHelm1_Wdl {};
@@ -356,7 +356,7 @@ class CFP_MitzHelm3_Wdl: ace_wardrobe_base {
         class CFP_Mitznefet_Tropical {};
     };
 };
-class CFP_MitzHelm4_Wdl: ace_wardrobe_base {
+class CFP_MitzHelm4_Wdl: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_Mitznefet_Wdl {};
         class CFP_MitzHelm1_Wdl {};
@@ -368,7 +368,7 @@ class CFP_MitzHelm4_Wdl: ace_wardrobe_base {
         class CFP_Mitznefet_Tropical {};
     };
 };
-class CFP_Mitznefet: ace_wardrobe_base {
+class CFP_Mitznefet: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_MitzHelm1_Wdl {};
         class CFP_MitzHelm2_Wdl {};
@@ -381,7 +381,7 @@ class CFP_Mitznefet: ace_wardrobe_base {
     components[] = {"CUP_PMC_Facewrap_Black"};
 };
 
-class CFP_Mitznefet_Ranger: ace_wardrobe_base {
+class CFP_Mitznefet_Ranger: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_MitzHelm1_Wdl {};
         class CFP_MitzHelm2_Wdl {};
@@ -393,7 +393,7 @@ class CFP_Mitznefet_Ranger: ace_wardrobe_base {
     };
     components[] = {"CUP_PMC_Facewrap_Ranger"};
 };
-class CFP_Mitznefet_Tan: ace_wardrobe_base {
+class CFP_Mitznefet_Tan: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_MitzHelm1_Wdl {};
         class CFP_MitzHelm2_Wdl {};
@@ -406,7 +406,7 @@ class CFP_Mitznefet_Tan: ace_wardrobe_base {
     components[] = {"CUP_PMC_Facewrap_Tan"};
 };
 
-class CFP_Mitznefet_Tropical: ace_wardrobe_base {
+class CFP_Mitznefet_Tropical: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_MitzHelm1_Wdl {};
         class CFP_MitzHelm2_Wdl {};

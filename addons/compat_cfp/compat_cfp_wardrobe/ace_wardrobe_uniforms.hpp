@@ -74,66 +74,66 @@ UNIFORM_SLEEVES2(CFP_BDU_M81Sudan,CFP_BDU_M81Sudan_2,CFP_BDU_M81Sudan_3);
 UNIFORM_SLEEVES2(CFP_BDU_M81,CFP_BDU_M812,CFP_BDU_M813);
 UNIFORM_SLEEVES2(CFP_BDU_OD_Sudan,CFP_BDU_OD_Sudan2,CFP_BDU_OD_Sudan3);
 
-class CFP_BDU_Marpat: ace_wardrobe_base {
+class CFP_BDU_Marpat: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_BDU_Marpat2 {};
         class CFP_BDU_Marpat3 {};
     };
 };
-class CFP_BDU_Marpat2: ace_wardrobe_base_U_gloves_on {
+class CFP_BDU_Marpat2: ACEWARDROBE(base_U_gloves_on) {
     class modifiableTo {
         class CFP_BDU_Marpat {};
     };
 };
-class CFP_BDU_Marpat3: ace_wardrobe_base_U_sleeves_up {
+class CFP_BDU_Marpat3: ACEWARDROBE(base_U_sleeves_up) {
     class modifiableTo {
         class CFP_BDU_Marpat {};
     };
 };
 
-class CFP_BDU_PolyDes: ace_wardrobe_base {
+class CFP_BDU_PolyDes: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_BDU_PolyDes2 {};
     };
 };
-class CFP_BDU_PolyDes2: ace_wardrobe_base {
+class CFP_BDU_PolyDes2: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_BDU_PolyDes {};
         class CFP_BDU_PolyDes3 {};
         class CFP_BDU_PolyDes5 {};
     };
 };
-class CFP_BDU_PolyDes3: ace_wardrobe_base {
+class CFP_BDU_PolyDes3: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_BDU_PolyDes2 {};
         class CFP_BDU_PolyDes4 {};
     };
 };
-class CFP_BDU_PolyDes4: ace_wardrobe_base {
+class CFP_BDU_PolyDes4: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_BDU_PolyDes3 {};
         class CFP_BDU_PolyDes5 {};
     };
 };
-class CFP_BDU_PolyDes5: ace_wardrobe_base {
+class CFP_BDU_PolyDes5: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_BDU_PolyDes4 {};
         class CFP_BDU_PolyDes2 {};
     };
 };
 
-class CFP_IDF_1: ace_wardrobe_base {
+class CFP_IDF_1: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_IDF_2 {};
     };
 };
-class CFP_IDF_2: ace_wardrobe_base {
+class CFP_IDF_2: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_IDF_1 {};
         class CFP_IDF_3 {};
     };
 };
-class CFP_IDF_3: ace_wardrobe_base {
+class CFP_IDF_3: ACEWARDROBE(base) {
     class modifiableTo {
         class CFP_IDF_2 {};
     };
