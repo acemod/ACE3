@@ -2,7 +2,7 @@
 
 class GVAR(base) {
     // Possible variants this item can be turned into
-    // Subclasses can contain optional directionalActionName property to use as display name for the action.
+    // Subclasses can contain optional directional properties, see documentation for details.
     class modifiableTo { };
 
     // Components the current variant contains within itself
