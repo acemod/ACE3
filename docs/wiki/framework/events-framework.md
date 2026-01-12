@@ -204,6 +204,13 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 | `ace_minedetector_detectorDisabled` | [_unit, _detectorType] | Local | Listen | Called when local unit turned off their mine detector
 | `ace_minedetector_mineDetected` | [_unit, _mine, _distance, _detectorType] | Local | Listen | Called when local unit has detected a mine
 
+### 2.21 Markers (`ace_markers`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_markers_editingMarker` | [markerName, display] | Local | Listen | Editing a marker
+| `ace_markers_markerPlaced` | [markerName, isEditingMarker] | Local | Listen | Marker placed
+
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.
 
