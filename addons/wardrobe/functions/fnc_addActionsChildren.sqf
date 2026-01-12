@@ -35,7 +35,7 @@ private _actions = [];
     private _aceAction = [
         configName _cfgTarget,
         [_cfgOrigin, _cfgTarget] call FUNC(getDisplayName),
-        _cfgTarget call FUNC(addActionsIcon),
+        [_cfgOrigin, _cfgTarget] call FUNC(getIcon),
         FUNC(replace),
         { true },
         {},

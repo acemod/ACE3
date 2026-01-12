@@ -1,6 +1,5 @@
 PREP(addActions);
 PREP(addActionsChildren);
-PREP(addActionsIcon);
 PREP(checkMissingComponents);
 PREP(compareComponents);
 PREP(exceptionAceIntel);
@@ -9,6 +8,7 @@ PREP(getAvailableItemVariants);
 PREP(getDisplayName);
 PREP(getDuration);
 PREP(getGesture);
+PREP(getIcon);
 PREP(getItemVariants);
 PREP(getSound);
 PREP(getSoundTiming);

@@ -20,7 +20,8 @@ class GVAR(base) {
     gesture = "Gear";
 
     // Will be used instead of target variant picture
-    alternativePicture = "";
+    icon = "";
+
     // Will be used instead of the target variants displayname
     alternativeActionName = "";
 
