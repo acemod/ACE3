@@ -1,14 +1,14 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * Getter Function for the duration of a change - checks for directional property, if not, get from target.
+ * Getter Function for the sound timing of the sound effect - checks for directional property, if not, get from target.
  *
  * Arguments:
  * 0: Current variant <CONFIG>
  * 1: Desired variant <CONFIG>
  *
  * Return Value:
- * Time <NUMBER>
+ * Sound timing <NUMBER>
  *
  * Example:
  * [(configFile >> "CfgWeapons" >> "U_B_CTRG_3"), (configFile >> "CfgWeapons" >> "U_B_CTRG_1")] call ace_wardrobe_fnc_getDuration
