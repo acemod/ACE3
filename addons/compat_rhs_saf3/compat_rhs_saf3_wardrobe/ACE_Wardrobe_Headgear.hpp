@@ -20,7 +20,7 @@ class HelmetVeil : EGVAR(wardrobe,base_H_mask_on) {\
     components[] = {\
         QUOTE(Veil)\
     };\
-    displayName = ECSTRING(wardrobe,maskOn);\
+    alternativeActionName = ECSTRING(wardrobe,maskOn);\
 };\
 class HelmetEss : EGVAR(wardrobe,base_H_goggles_on) {\
     class modifiableTo {\
