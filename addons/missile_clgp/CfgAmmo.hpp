@@ -136,7 +136,6 @@ class CfgAmmo {
         indirectHitRange = 10;
         warheadName = "HE";
 
-        EGVAR(frag,enabled) = 1;
         EGVAR(frag,force) = 1;
         EGVAR(frag,classes)[] = {QEGVAR(frag,tiny_HD)};
         EGVAR(frag,metal) = 200;
