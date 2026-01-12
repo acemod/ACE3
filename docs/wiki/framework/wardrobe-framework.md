@@ -39,18 +39,33 @@ All supported Properties can be found within the `ace_wardrobe_base` baseclass.
 
 | Class Property |  Data Type | Description |
 | -------------- |  ----------- | ----------- |
-| `modifiableTo` | Subclasses | Possible variants this item can be turned into. Subclass can contain optional `directionalActionName` property to use as a display name for the action. |
+| `modifiableTo` | Subclasses | Possible variants this item can be turned into. Subclass can contain optional "directional properties". See 2.2 for more. |
 | `components[]` | Array of Classnames  | Components the current variant contains within itself |
 | `sound[]` | Array of CfgSound Entries | To be chosen by random when the action is performed |
 | `soundTiming` | Number 0..1 | Defines the point in time relative to the duration when the sound is played |
 | `gesture` | String of Classname | Gesture to be played when the action is performed |
-| `alternativePicture` | String of path to icon | Will be used instead of target variant picture |
-| `alternativeActionName` | String | Will be used instead of the target variants displayname |
+| `icon` | String of path to icon | Will be used instead of target variant picture |
+| `displayName` | String | Will be used for action instead of the target variants displayname |
 | `duration` | Number in seconds (>= 1) | Duration of action. Items are being replaced at the end. |
 | `fallbackComponent` | String of Classname | Fallback for components that are not present within the same mod/addon. Example: RHS AFRF helmets use `rhs_ess_black` goggles, which are only part of USAF. `fallbackComponent` can be used to default to a vanilla alternative. |
 
-### 2.2 Base Classes
+## 2.2 Properties for `modifiableTo` Subclasses
 
+The following, optional "directional properties" can be defined for directional use, meaning explicitly from the origin class to the target.
+
+See 4.2 and 4.3 for examples
+
+| Directional Property | Data Type | Description |
+| -------------- |  ----------- | ----------- |
+| `sound[]` | Array of CfgSound Entries | To be chosen by random when the action is performed |
+| `soundTiming` | Number 0..1 | Defines the point in time relative to the duration when the sound is played |
+| `gesture` | String of Classname | Gesture to be played when the action is performed |
+| `icon` | String of path to icon | Will be used instead of target variant picture |
+| `displayName` | String | Will be used for action instead of the target variants displayname |
+| `duration` | Number in seconds (>= 1) | Duration of action. Items are being replaced at the end. |
+
+
+### 2.2 Base Classes
 
 All base classes can be found in `addons\wardrobe\BaseClasses.hpp`
 
@@ -71,9 +86,9 @@ class ace_wardrobe {
         // Gesture
         gesture = "Gear";
 
-        // These will be read from the target class, so for example, the uniformclass with the rolled up sleaves, it should say "roll up sleeves"
-        alternativePicture = "";
-        alternativeActionName = "";
+        // These will be read from the target class, so for example, the uniformclass with the rolled up sleeves, it should say "roll up sleeves"
+        icon = "";
+        displayName = "";
 
         duration = 1; // Minimum value: 1 - Anything above will produce a progressbar.
 
@@ -168,7 +183,7 @@ class ace_wardrobe_base_H_goggles_off: ace_wardrobe_base {
 
 ## 3. Porting - Ease of Use
 ### 3.1 Macros
-To streamline the configuration of compatible items a set of macros can be found here `addons\wardrobe\script_macros_wardrobe.hpp`
+To streamline the configuration of compatible items, a set of macros can be found here `addons\wardrobe\script_macros_wardrobe.hpp`
 
 ### 3.2 Example
 ```cpp
@@ -224,7 +239,9 @@ class ace_wardrobe {
 
     class G_Balaclava: ace_wardrobe_base {
         class modifiableTo {
-            class G_Balaclava_lowprofile {};
+            class G_Balaclava_lowprofile {
+                displayName = "Put goggles on";
+            };
         };
         components[] = {};
     };
@@ -235,7 +252,9 @@ class ace_wardrobe {
 
     class G_Balaclava_lowprofile: ace_wardrobe_base {
         class modifiableTo {
-            class G_Balaclava {};
+            class G_Balaclava {
+                displayName = "Take goggles off";
+            };
         };
         components[] = { "G_Lowprofile" };
     };
@@ -248,15 +267,18 @@ class ace_wardrobe {
 
     class G_Bandanna_blk: ace_wardrobe_base {
         class modifiableTo {
-            class G_Bandanna_aviator {};
-            class G_Aviator {};
+            class G_Bandanna_aviator {
+                displayName = "Add Glasses";
+            };
         };
         components[] = {"G_Bandanna_blk"};
     };
 
     class G_Aviator: ace_wardrobe_base {
         class modifiableTo {
-            class G_Bandanna_aviator {};
+            class G_Bandanna_aviator {
+                displayName = "Add Bandanna";
+            };
         };
 
         components[] = { "G_Aviator" };
@@ -264,8 +286,12 @@ class ace_wardrobe {
 
     class G_Bandanna_aviator: ace_wardrobe_base {
         class modifiableTo {
-            class G_Bandanna_blk {};
-            class G_Aviator {};
+            class G_Bandanna_blk {
+                displayName = "Remove Glasses";
+            };
+            class G_Aviator {
+                displayName = "Remove Bandanna";
+            };
         };
         components[] = { "G_Aviator", "G_Bandanna_blk" };
     };
