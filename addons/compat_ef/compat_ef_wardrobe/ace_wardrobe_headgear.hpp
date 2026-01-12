@@ -1,10 +1,10 @@
-class EF_H_MCH: ace_wardrobe_base {
+class EF_H_MCH: ACEWARDROBE(base) {
     class modifiableTo {
         class EF_H_MCH_Basic {};
     };
 };
 
-class EF_H_MCH_Basic: ace_wardrobe_base {
+class EF_H_MCH_Basic: ACEWARDROBE(base) {
     class modifiableTo {
         class EF_H_MCH {};
     };
