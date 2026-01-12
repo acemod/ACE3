@@ -6,10 +6,10 @@ class GVAR(base) {
     class modifiableTo { };
 
     // Components the current variant contains within itself
-    components[] = {};
+    components[] = { };
 
     // CfgSound entries, to be chosen by random when the action is performed
-    sound[] = {CN_SOUND(fabric,06), CN_SOUND(fabric,07), CN_SOUND(fabric,16), CN_SOUND(fabric,20), CN_SOUND(fabric,25)};
+    sound[] = { CN_SOUND(fabric,06), CN_SOUND(fabric,07), CN_SOUND(fabric,16), CN_SOUND(fabric,20), CN_SOUND(fabric,25) };
     // Defines the point in time relative to the duration when the sound is played, ranging from 0 to 1:
     //   0 at the start of the action
     //   0.5 half way during the duration of the action - always, if completed or not
