@@ -77,9 +77,10 @@ private _fnc_statement = {
     _target setVariable [QEGVAR(missileguidance,attackProfile), _attackProfile];
 };
 private _fnc_condition = {
-    params ["_target", "_player", "_attackProfile"];
+    params ["_target", "", "_attackProfile"];
 
-    private _turretPath = if (ACE_player == (driver _target)) then {[-1]} else {ACE_player call CBA_fnc_turretPath};
+    private _operator = if (isNull (ACE_controlledUAV select 0)) then {ACE_player} else {ACE_controlledUAV select 1};
+    private _turretPath = if (_operator == (driver _target)) then {[-1]} else {_operator call CBA_fnc_turretPath};
     private _hasWeapon = ({(isNumber (configFile >> "CfgWeapons" >> _x >> QGVAR(enabled))) && {getNumber (configFile >> "CfgWeapons" >> _x >> QGVAR(enabled)) > 0}} count (_target weaponsTurret _turretPath)) > 0;
 
     (_hasWeapon) &&
