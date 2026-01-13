@@ -26,4 +26,4 @@ private _cfgDirectional = configFile >> QUOTE(ADDON) >> _classOrigin >> "modifia
 if (isNumber _cfgDirectional) exitWith { getNumber _cfgDirectional };
 
 // return target's property in wardrobe config
-getNumber (configFile >> QUOTE(ADDON) >> _classTarget >> "duration") // return
+getNumber (configFile >> QUOTE(ADDON) >> _classTarget >> "duration") max 0.1 // return
