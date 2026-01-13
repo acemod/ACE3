@@ -22,6 +22,9 @@ if (GVAR(gps_mode) isEqualTo "too") then {
     _target params ["_tracking", "_position", "_object"];
     if (driver _vehFocusOn isNotEqualTo _focusOn) then {
         _position = _vehFocusOn lockedCameraTo [focusOn call CBA_fnc_turretPath];
+        if (_position isEqualType objNull) then { // lockedCameraTo has different return types, can be object as well as position.
+            _position = getPosASL _position;
+        };
     };
     GVAR(gps_currentSettings) set [0, _position]
 };
