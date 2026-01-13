@@ -16,8 +16,7 @@
  */
 
 if (GVAR(gps_mode) isEqualTo "too") then {
-    private _target = getPilotCameraTarget (vehicle ACE_PLAYER);
-    _target params ["_tracking", "_position", "_object"];
+    private _position = (vehicle focusOn) lockedCameraTo [focusOn call cba_fnc_turretpath];
     GVAR(gps_currentSettings) set [0, _position]
 };
 
