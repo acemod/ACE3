@@ -1,5 +1,6 @@
 PREP(addActions);
 PREP(addActionsChildren);
+PREP(checkForLegacy);
 PREP(checkMissingComponents);
 PREP(compareComponents);
 PREP(exceptionAceIntel);
