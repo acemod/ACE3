@@ -16,7 +16,11 @@
  */
 
 if (GVAR(gps_mode) isEqualTo "too") then {
-    private _position = (vehicle focusOn) lockedCameraTo [focusOn call cba_fnc_turretpath];
+    private _target = getPilotCameraTarget (vehicle focusOn);
+    _target params ["_tracking", "_position", "_object"];
+    if (driver (vehicle focusOn) isNotEqualTo focusOn) then {
+        _position = (vehicle focusOn) lockedCameraTo [focusOn call cba_fnc_turretpath];
+    };
     GVAR(gps_currentSettings) set [0, _position]
 };
 
