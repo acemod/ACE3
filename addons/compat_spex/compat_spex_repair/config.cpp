@@ -7,7 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "WW2_SPEX_Core_c_ZZZ_LastLoadedSPE_c",
+            "WW2_SPEX_Assets_c_Vehicles_ZZZ_AllVehiclesLoaded_c",
             "ace_repair"
         };
         skipWhenMissingDependencies = 1;
