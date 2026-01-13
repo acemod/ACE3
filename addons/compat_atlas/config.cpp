@@ -7,19 +7,12 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "A3_Aegis_Weapons_F_Aegis",
-            "A3_Aegis_Weapons_F_Aegis_Machineguns_MAG",
-            "A3_Aegis_Weapons_F_Aegis_Pistols_G17",
-            "A3_Aegis_Weapons_F_Aegis_Pistols_Mk26",
-            "A3_Aegis_Weapons_F_Aegis_Pistols_Ruger57",
-            "A3_Aegis_Weapons_F_Aegis_Rifles_M16",
-            "A3_Aegis_Weapons_F_Aegis_Shotguns_KSG",
-            "A3_Aegis_Weapons_F_Aegis_Shotguns_M4_SSAS",
+            "A3_Atlas_Data_F_Atlas_Loadorder",
             "ace_common"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {"johnb43"};
+        authors[] = {"ThomasAngel"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
 
@@ -27,5 +20,3 @@ class CfgPatches {
         addonRootClass = "A3_Characters_F";
     };
 };
-
-#include "CfgWeapons.hpp"

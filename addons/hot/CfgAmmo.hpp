@@ -82,7 +82,7 @@ class CfgAmmo {
         explosionEffects = "BombExplosion";
         explosive = 0.7;
 
-        EGVAR(frag,enabled) = 1;
+        EGVAR(frag,force) = 1;
         EGVAR(frag,metal) = 7100; // 1000 steel balls
         EGVAR(frag,charge) = 4100;
         EGVAR(frag,gurney_c) = 2700;
@@ -113,4 +113,3 @@ class CfgAmmo {
         };
     };
 };
-
