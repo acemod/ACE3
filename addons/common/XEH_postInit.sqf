@@ -30,7 +30,7 @@
 ["blockSpeaking", false, ["ace_unconscious"]] call FUNC(statusEffect_addType);
 ["disableWeaponAssembly", false, ["ace_common", QGVAR(lockVehicle), "ace_csw"]] call FUNC(statusEffect_addType);
 ["lockInventory", true, [], true] call FUNC(statusEffect_addType);
-["setPhysicsCollisionFlag", true, [], true] call FUNC(statusEffect_addType);
+["disableCollision", true, [], true] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
     params ["_object", "_set"];
@@ -134,10 +134,10 @@
     _object lockInventory (_set > 0);
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(setPhysicsCollisionFlag), {
+[QGVAR(disableCollision), { // Name "reversed" from `setPhysicsCollisionFlag` because we want NOR logic
     params ["_object", "_set"];
-    TRACE_2("setPhysicsCollisionFlag EH",_object,_set);
-    _object setPhysicsCollisionFlag (_set > 0);
+    TRACE_2("disableCollision EH",_object,_set);
+    _object setPhysicsCollisionFlag (_set < 1);
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(disableAiUAV), {
