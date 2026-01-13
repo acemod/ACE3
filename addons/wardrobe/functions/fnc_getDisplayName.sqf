@@ -26,28 +26,29 @@ switch (true) do {
    
     // check legacy directional
     case (
-        isClass (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "directionalActionName")
+        isText  (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "directionalActionName")
     ): {
         getText (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "directionalActionName")
     };
 
     // check directional
     case (
-        isClass (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "displayName")
+        isText  (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "displayName")
     ): {
         getText (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "displayName")
     };
 
     // check legacy wardrobeCfg of target
     case (
-        isClass (configFile >> QUOTE(ADDON) >> _classTarget >> "alternativeActionName")
+        isText  (configFile >> QUOTE(ADDON) >> _classTarget >> "alternativeActionName")
     ): {
         getText (configFile >> QUOTE(ADDON) >> _classTarget >> "alternativeActionName")
     };
 
     // check wardrobeCfg of target
     case (
-        isClass (configFile >> QUOTE(ADDON) >> _classTarget >> "displayName")
+        // since displayName is defined in the base, it's always present, so we need to check if its not an empty string
+        isText  (configFile >> QUOTE(ADDON) >> _classTarget >> "displayName") && { getText (configFile >> QUOTE(ADDON) >> _classTarget >> "displayName") isNotEqualTo "" }
     ): {
         getText (configFile >> QUOTE(ADDON) >> _classTarget >> "displayName")
     };

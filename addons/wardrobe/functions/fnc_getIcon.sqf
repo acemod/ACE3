@@ -26,21 +26,21 @@ switch (true) do {
    
     // check directional
     case (
-        isClass (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "icon")
+        isText  (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "icon")
     ): {
         getText (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "icon")
     };
 
     // check legacy wardrobeCfg of target
     case (
-        isClass (configFile >> QUOTE(ADDON) >> _classTarget >> "alternativePicture")
+        isText  (configFile >> QUOTE(ADDON) >> _classTarget >> "alternativePicture")
     ): {
         getText (configFile >> QUOTE(ADDON) >> _classTarget >> "alternativePicture")
     };
 
     // check wardrobeCfg of target
     case (
-        isClass (configFile >> QUOTE(ADDON) >> _classTarget >> "icon")
+        isText  (configFile >> QUOTE(ADDON) >> _classTarget >> "icon") && { getText (configFile >> QUOTE(ADDON) >> _classTarget >> "icon") isNotEqualTo "" }
     ): {
         getText (configFile >> QUOTE(ADDON) >> _classTarget >> "icon")
     };

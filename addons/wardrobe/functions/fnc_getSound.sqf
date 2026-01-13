@@ -22,8 +22,8 @@ private _classOrigin = configName _cfgOrigin;
 private _classTarget = configName _cfgTarget;
 
 // Check for directional property in wardrobe config
-private _cfgDirectional = configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "directionalSound";
-if (isClass _cfgDirectional) exitWith { [_cfgDirectional] call CBA_fnc_getCfgDataRandom };
+private _cfgDirectional = configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "sound";
+if (isArray _cfgDirectional) exitWith { [_cfgDirectional] call CBA_fnc_getCfgDataRandom };
 
 // return target's property in wardrobe config
 [configFile >> QUOTE(ADDON) >> _classTarget >> "sound"] call CBA_fnc_getCfgDataRandom

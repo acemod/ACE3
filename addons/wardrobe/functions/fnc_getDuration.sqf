@@ -22,8 +22,8 @@ private _classOrigin = configName _cfgOrigin;
 private _classTarget = configName _cfgTarget;
 
 // Check for directional property in wardrobe config
-private _cfgDirectional = configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "directionalDuration";
-if (isClass _cfgDirectional) exitWith { getNumber _cfgDirectional };
+private _cfgDirectional = configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "duration";
+if (isNumber _cfgDirectional) exitWith { getNumber _cfgDirectional };
 
 // return target's property in wardrobe config
 getNumber (configFile >> QUOTE(ADDON) >> _classTarget >> "duration") // return

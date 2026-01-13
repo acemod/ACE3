@@ -23,9 +23,9 @@ private _classTarget = configName _cfgTarget;
 
 // Check for directional property in wardrobe config
 if (
-    isClass (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "directionalGesture")
+    isText  (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "gesture")
 ) exitWith {
-    getText (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "directionalGesture")
+    getText (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "gesture")
 };
 
 // return target's property in wardrobe config

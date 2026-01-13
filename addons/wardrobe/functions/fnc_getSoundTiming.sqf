@@ -26,14 +26,14 @@ private _return = switch (true) do {
     
     // check directional
     case (
-        isClass   (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "soundTiming")
+        isNumber  (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "soundTiming")
     ): {
         getNumber (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "soundTiming")
     };
 
     // check legacy
     case (
-        isClass   (configFile >> QUOTE(ADDON) >> _classTarget >> "sound_timing")
+        isNumber  (configFile >> QUOTE(ADDON) >> _classTarget >> "sound_timing")
     ): {
         getNumber (configFile >> QUOTE(ADDON) >> _classTarget >> "sound_timing")
     };
