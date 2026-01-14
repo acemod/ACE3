@@ -24,7 +24,8 @@ TRACE_2("adding gps action",_player,typeOf _vehicle);
 private _condition = {
     params ["_target"];
     
-    private _turretPath = if (focusOn isEqualTo driver _target) then {[-1]} else {focusOn call CBA_fnc_turretPath};
+    private _operator = if (isNull (ACE_controlledUAV select 0)) then {ACE_player} else {ACE_controlledUAV select 1};
+    private _turretPath = if (_operator == (driver _target)) then {[-1]} else {_operator call CBA_fnc_turretPath};
     private _hasJDAM = (_target weaponsTurret _turretPath) findIf {
         private _weapon = _x;
         GVAR(gps_weapons) getOrDefaultCall [_weapon, {
