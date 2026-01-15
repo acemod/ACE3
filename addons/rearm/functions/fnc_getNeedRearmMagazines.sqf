@@ -83,7 +83,7 @@ private _turrets = [_vehicle] call FUNC(getAllRearmTurrets);
 
         /* If there is space for new magazines or if some magazines are not full, add the magazine
          * type to _magazineInfo. */
-        if ((_currentMagazines < _maxMagazines) || {({_x < _maxRoundsPerMag} count _currentRounds) > 0}) then {
+        if ((_currentMagazines < _maxMagazines) || {_currentRounds findIf {_x < _maxRoundsPerMag} != -1}) then {
             if (_magazineClass == "FakeWeapon") exitWith {};
             _magazineInfo pushBack [_magazineClass, _turretPath, false, -1, _maxMagazines, _currentMagazines, _maxRoundsPerMag, _currentRounds];
         };

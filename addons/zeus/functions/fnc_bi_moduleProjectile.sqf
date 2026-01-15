@@ -28,7 +28,7 @@ _logic = _this select 0;
 _units = _this select 1;
 _activated = _this select 2;
 
-if ({local _x} count (objectCurators _logic) > 0) then {
+if ((objectCurators _logic) findIf {local _x} != -1) then {
     //--- Reveal the circle to curators
     _logic hideObject false;
     _logic setPos position _logic;
