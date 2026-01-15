@@ -68,10 +68,15 @@ private _fnc_statement = {
     _target setVariable [QEGVAR(missileguidance,attackProfile), _attackProfile];
 };
 private _fnc_condition = {
-    params ["_target", "_player", "_attackProfile"];
+    params ["_target", "", "_attackProfile"];
 
     (_target getVariable [QEGVAR(missileguidance,attackProfile), "hellfire"]) != _attackProfile &&
-    {((_target weaponsTurret (_target unitTurret _player)) findIf {getNumber (configFile >> "CfgWeapons" >> _x >> QGVAR(enabled)) == 1}) != -1}
+    {
+        private _operator = if (isNull (ACE_controlledUAV select 0)) then {ACE_player} else {ACE_controlledUAV select 1};
+        private _cfgWeapons = configFile >> "CfgWeapons";
+
+        ((_target weaponsTurret (_target unitTurret _operator)) findIf {getNumber (_cfgWeapons >> _x >> QGVAR(enabled)) == 1}) != -1
+    }
 };
 
 {
