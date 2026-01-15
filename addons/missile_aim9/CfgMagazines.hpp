@@ -112,6 +112,7 @@ class CfgMagazines {
     class GVAR(PylonRack_2Rnd_aim132): GVAR(PylonRack_1Rnd_aim132) {
         count = 2;
         displayName = CSTRING(aim132_2x);
+        hardpoints[] += {"B_ASRAAM_DUAL_RAIL"};
         model = "\A3\Weapons_F_Jets\Ammo\PylonPod_Missile_AA_08_DualRail_x2_F";
     };
 
