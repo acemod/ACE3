@@ -70,7 +70,6 @@ class CfgMagazines {
         displayName = CSTRING(aim132_2x);
         ammo = QGVAR(aim132);
         pylonWeapon = QGVAR(aim132);
-        hardpoints[] += {"B_ASRAAM_DUAL_RAIL"};
     };
 
     class GVAR(aim132_2Rnd_MI02): 2Rnd_AAA_missiles_MI02 {
@@ -78,7 +77,6 @@ class CfgMagazines {
         displayName = CSTRING(aim132_2x);
         ammo = QGVAR(aim132);
         pylonWeapon = QGVAR(aim132);
-        hardpoints[] += {"B_ASRAAM_DUAL_RAIL"};
     };
 
     class GVAR(aim132_2Rnd_MI06): 2Rnd_AAA_missiles_MI06 {
@@ -86,7 +84,6 @@ class CfgMagazines {
         displayName = CSTRING(aim132_2x);
         ammo = QGVAR(aim132);
         pylonWeapon = QGVAR(aim132);
-        hardpoints[] += {"B_ASRAAM_DUAL_RAIL"};
     };
 
     class GVAR(aim132_4Rnd): 4Rnd_AAA_missiles {
@@ -94,7 +91,6 @@ class CfgMagazines {
         displayName = CSTRING(aim132_4x);
         ammo = QGVAR(aim132);
         pylonWeapon = QGVAR(aim132);
-        hardpoints[] += {"B_ASRAAM_QUAD_RAIL"};
     };
 
     class GVAR(aim132_4Rnd_MI02): 4Rnd_AAA_missiles_MI02 {
@@ -102,7 +98,6 @@ class CfgMagazines {
         displayName = CSTRING(aim132_4x);
         ammo = QGVAR(aim132);
         pylonWeapon = QGVAR(aim132);
-        hardpoints[] += {"B_ASRAAM_QUAD_RAIL"};
     };
 
     class GVAR(PylonRack_1Rnd_aim132): PylonRack_1Rnd_AAA_missiles {
