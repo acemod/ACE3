@@ -109,6 +109,12 @@ class CfgMagazines {
         pylonWeapon = QGVAR(aim132);
     };
 
+    class GVAR(PylonRack_2Rnd_aim132): GVAR(PylonRack_1Rnd_aim132) {
+        count = 2;
+        displayName = CSTRING(aim132_2x);
+        model = "\A3\Weapons_F_Jets\Ammo\PylonPod_Missile_AA_08_DualRail_x2_F";
+    };
+
     // R-73
     class PylonMissile_Missile_AA_R73_x1;
     class magazine_Missile_AA_R73_x1;
