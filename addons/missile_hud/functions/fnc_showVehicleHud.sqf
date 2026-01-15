@@ -21,10 +21,7 @@ TRACE_1("showHud",_player);
 if !(alive _player) exitWith {TRACE_1("Disabled - Not Alive",_player);};
 
 private _vehicle = vehicle _player;
-private _turretPath = [-1];
-if (_player != driver _vehicle) then {
-    _turretPath = _player call CBA_fnc_turretPath;
-};
+private _turretPath = _vehicle unitTurret _player;
 private _weapon = [_player, _vehicle, _turretPath] call FUNC(getCurrentWeapon);
 private _enabled = -1 != GVAR(generators) findIf { [_player, _vehicle, _weapon] call (_x select 0) };
 
