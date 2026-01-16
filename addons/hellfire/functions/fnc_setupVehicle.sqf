@@ -31,7 +31,7 @@ private _turretPath = _vehicle unitTurret _player;
 private _cfgWeapons = configFile >> "CfgWeapons";
 
 // Check all weapons to see if the hellfire is enabled - if not, exit now
-if (((_vehicle weaponsTurret _turretPath) findIf {getNumber (_cfgWeapons >> _x >> QGVAR(enabled)) == 1}) == -1) exitWith {TRACE_2("Not enabled",_vehicle,_turretPath);};
+if ((_vehicle weaponsTurret _turretPath) findIf {getNumber (_cfgWeapons >> _x >> QGVAR(enabled)) == 1} == -1) exitWith {TRACE_2("Not enabled",_vehicle,_turretPath);};
 
 
 // Add laser if vehicle is configured for one and doesn't have one yet:
@@ -75,7 +75,7 @@ private _fnc_condition = {
         private _operator = if (isNull (ACE_controlledUAV select 0)) then {ACE_player} else {ACE_controlledUAV select 1};
         private _cfgWeapons = configFile >> "CfgWeapons";
 
-        ((_target weaponsTurret (_target unitTurret _operator)) findIf {getNumber (_cfgWeapons >> _x >> QGVAR(enabled)) == 1}) != -1
+        (_target weaponsTurret (_target unitTurret _operator)) findIf {getNumber (_cfgWeapons >> _x >> QGVAR(enabled)) == 1} != -1
     }
 };
 
