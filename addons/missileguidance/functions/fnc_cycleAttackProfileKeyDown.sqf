@@ -30,7 +30,7 @@ if (isNull (ACE_controlledUAV param [0, objNull])) then {
         _currentMagazine = currentMagazine ACE_player;
     } else {
         _currentShooter = vehicle ACE_player;
-        _turretPath = if (ACE_player == (driver _currentShooter)) then {[-1]} else {ACE_player call CBA_fnc_turretPath};
+        _turretPath = _currentShooter unitTurret ACE_player;
         _currentMagazine = _currentShooter currentMagazineTurret _turretPath;
     };
 } else {
