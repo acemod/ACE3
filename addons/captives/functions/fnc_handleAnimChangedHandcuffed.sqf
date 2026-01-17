@@ -29,7 +29,7 @@ if (isNull _vehicle) then {
 } else {
     private _turretPath = _vehicle unitTurret _unit;
     TRACE_1("turret Path",_turretPath);
-    if (_turretPath isEqualTo []) exitWith {};
+    if (_turretPath in [[], [-1]]) exitWith {};
 
     TRACE_1("Handcuff (FFV) animation interrupted",_newAnimation);
     [_unit, "ACE_HandcuffedFFV", 2] call EFUNC(common,doAnimation);
