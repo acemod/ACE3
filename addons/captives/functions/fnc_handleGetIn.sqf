@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [cursorObject, "driver", player, [-1]] call ace_captives_fnc_handleGetIn
+ * [cursorObject, "driver", player, []] call ace_captives_fnc_handleGetIn
  *
  * Public: No
  */
