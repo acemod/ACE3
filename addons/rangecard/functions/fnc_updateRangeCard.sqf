@@ -81,14 +81,16 @@ if (_useBarrelLengthInfluence && _barrelLength > 0) then {
 };
 
 if (_muzzleVelocity == 0) then {
-    private _initSpeed     = getNumber (configFile >> "CfgMagazines" >> _magazineClass >> "initSpeed");
     private _initSpeedCoef = getNumber (configFile >> "CfgWeapons" >> _weaponClass >> "initSpeed");
+    private _initSpeed = 0;
 
-    if (_initSpeedCoef < 0) then {
-        _initSpeed = _initSpeed * -_initSpeedCoef;
+    if (_initSpeedCoef > 0) then {
+        _initSpeed = _initSpeedCoef;
     } else {
-        if (_initSpeedCoef > 0) then {
-            _initSpeed = _initSpeedCoef;
+        _initSpeed = getNumber (configFile >> "CfgMagazines" >> _magazineClass >> "initSpeed");
+
+        if (_initSpeedCoef < 0) then {
+            _initSpeed = _initSpeed * -_initSpeedCoef;
         };
     };
 
