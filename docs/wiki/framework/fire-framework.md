@@ -68,7 +68,7 @@ class CfgWeapons {
 class CfgVehicles {
     class CAManBase;
     class yourManClass: CAManBase {
-        ace_fire_screamSounds = {
+        ace_fire_screamSounds[] = {
             "sound_name"    // Name of sound(s) in CfgSounds
         };
     };
