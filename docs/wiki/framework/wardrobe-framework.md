@@ -103,30 +103,30 @@ class ace_wardrobe {
 Common base class for uniforms with Sleeves up/down variants
 ```cpp
 class ace_wardrobe_base_U_sleeves_up: ace_wardrobe_base {
-    alternativeActionName = CSTRING(sleevesUp);
+    displayName = CSTRING(sleevesUp);
 };
 class ace_wardrobe_base_U_sleeves_down: ace_wardrobe_base {
-    alternativeActionName = CSTRING(sleevesDown);
+    displayName = CSTRING(sleevesDown);
 };
 ```
 #### 2.2.2.2 Base Uniform Gloves On / Off
 Common base class for uniforms with gloves on/off variants
 ```cpp
 class ace_wardrobe_base_U_gloves_on: ace_wardrobe_base {
-    alternativeActionName = CSTRING(glovesOn);
+    displayName = CSTRING(glovesOn);
 };
 class ace_wardrobe_base_U_gloves_off: ace_wardrobe_base {
-    alternativeActionName = CSTRING(glovesOff);
+    displayName = CSTRING(glovesOff);
 };
 ```
 #### 2.2.2.3  Base Uniform Jacket Open / Closed
 Common base class for uniforms who are open/closed in the front
 ```cpp
 class ace_wardrobe_base_U_jacket_open: ace_wardrobe_base {
-    alternativeActionName = CSTRING(jacketOpen);
+    displayName = CSTRING(jacketOpen);
 };
 class ace_wardrobe_base_U_jacket_closed: ace_wardrobe_base {
-    alternativeActionName = CSTRING(jacketClose);
+    displayName = CSTRING(jacketClose);
 };
 ```
 #### 2.2.2.4 Base Uniform Hood On / Off
@@ -134,11 +134,11 @@ Common base class for uniforms with an raised or lowered hood
 ```cpp
 class ace_wardrobe_base_U_hood_raised: ace_wardrobe_base {
     gesture = "GestureWipeFace";
-    alternativeActionName = CSTRING(hoodRaise);
+    displayName = CSTRING(hoodRaise);
 };
 class ace_wardrobe_base_U_hood_lowered: ace_wardrobe_base {
     gesture = "GestureWipeFace";
-    alternativeActionName = CSTRING(hoodLower);
+    displayName = CSTRING(hoodLower);
 };
 ```
 
@@ -154,7 +154,7 @@ class ace_wardrobe_base_H_visor_up: ace_wardrobe_base {
     sound[] = {CN_SOUND(helmet_visor,05)};
     soundTiming = 0;
 
-    alternativeActionName = CSTRING(visorUp);
+    displayName = CSTRING(visorUp);
 };
 
 class ace_wardrobe_base_H_visor_down: ace_wardrobe_base {
@@ -164,7 +164,7 @@ class ace_wardrobe_base_H_visor_down: ace_wardrobe_base {
     sound[] = {"ace_wardrobe_05"};
     soundTiming = 0;
 
-    alternativeActionName = CSTRING(visorDown);
+    displayName = CSTRING(visorDown);
 };
 ```
 #### 2.2.3.2 Base Headgear with Goggles on / off
@@ -172,12 +172,12 @@ Common base class for headgear with goggles that can be used as a facewear item.
 ```cpp
 class ace_wardrobe_base_H_goggles_on: ace_wardrobe_base {
     gesture ="GestureWipeFace";
-    alternativeActionName = CSTRING(gogglesOn);
+    displayName = CSTRING(gogglesOn);
 };
 
 class ace_wardrobe_base_H_goggles_off: ace_wardrobe_base {
     gesture ="GestureWipeFace";
-    alternativeActionName = CSTRING(gogglesOff);
+    displayName = CSTRING(gogglesOff);
 };
 ```
 

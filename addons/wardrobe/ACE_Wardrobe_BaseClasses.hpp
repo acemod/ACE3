@@ -50,10 +50,10 @@ class GVAR(base_U_gloves_off): GVAR(base) {
 
 // Common base class for uniforms with ties on/off variants
 class GVAR(base_U_tie_on): GVAR(base) {
-    alternativeActionName = CSTRING(tieOn);
+    displayName = CSTRING(tieOn);
 };
 class GVAR(base_U_tie_off): GVAR(base) {
-    alternativeActionName = CSTRING(tieOff);
+    displayName = CSTRING(tieOff);
 };
 
 // Common base class for uniforms who are open/closed in the front
