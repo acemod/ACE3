@@ -53,16 +53,8 @@ for "_i" from 0 to (count _cfgWeapons)-1 do {
 
                 // AB initial speed --------------------------------
                 // Get Weapon and Ammo Configurations
-                private _AmmoCacheEntry = uiNamespace getVariable format[QGVAR(%1), _ammo];
-                if (isNil "_AmmoCacheEntry") then {
-                     _AmmoCacheEntry = _ammo call FUNC(readAmmoDataFromConfig);
-                };
-                private _WeaponCacheEntry = uiNamespace getVariable format[QGVAR(%1), _weapon];
-                if (isNil "_WeaponCacheEntry") then {
-                     _WeaponCacheEntry = _weapon call FUNC(readWeaponDataFromConfig);
-                };
-                _AmmoCacheEntry params ["_airFriction", "_caliber", "_bulletLength", "_bulletMass", "_transonicStabilityCoef", "_dragModel", "_ballisticCoefficients", "_velocityBoundaries", "_atmosphereModel", "_ammoTempMuzzleVelocityShifts", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocityVariationSD"];
-                _WeaponCacheEntry params ["_barrelTwist", "_twistDirection", "_barrelLength"];
+                (_ammo call FUNC(readAmmoDataFromConfig)) params ["_airFriction", "_caliber", "_bulletLength", "_bulletMass", "_transonicStabilityCoef", "_dragModel", "_ballisticCoefficients", "_velocityBoundaries", "_atmosphereModel", "_ammoTempMuzzleVelocityShifts", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocityVariationSD"];
+                (_weapon call FUNC(readWeaponDataFromConfig)) params ["_barrelTwist", "_twistDirection", "_barrelLength"];
 
                 private _barrelVelocityShift = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, _vanillaInitialSpeed] call FUNC(calculateBarrelLengthVelocityShift);
                 if (_barrelLength > 0) then {
