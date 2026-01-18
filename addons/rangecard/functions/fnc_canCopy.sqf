@@ -11,7 +11,7 @@
  * Range card is copyable <BOOL>
  *
  * Example:
- * cursorObject call ace_rangecard_fnc_canCopy
+ * [cursorObject, player] call ace_rangecard_fnc_canCopy
  *
  * Public: No
  */

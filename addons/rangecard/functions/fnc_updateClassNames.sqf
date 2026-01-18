@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * player call ace_rangecard_fnc_updateClassNames
+ * [player, player] call ace_rangecard_fnc_updateClassNames
  *
  * Public: No
  */
