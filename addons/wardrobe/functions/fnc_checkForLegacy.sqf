@@ -26,7 +26,7 @@ private _checkTwo = {
 };
 
 private _checkThree = {
-    if ( isText (_this >> "alternativePicutre") ) then { WARNING_1("depricated property 'alternativePicutre'. use 'displayName' instead: '%1'",configName _this); };
+    if ( isText (_this >> "alternativePicture") ) then { WARNING_1("depricated property 'alternativePicture'. use 'displayName' instead: '%1'",configName _this); };
 };
 
 private _checkFour = {
