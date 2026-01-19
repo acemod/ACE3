@@ -75,7 +75,7 @@ Meant to run on server only.
 |----| --------- | ------- | ------------------------ |
 | 0  | Ammo Truck | Object | Required |
 | 1  | Supply Count | Number | Optional (default: `0`) |
-| 1  | Add (`true`) or set (`false`) supply | Bool | Optional (default: `false`) |
+| 2  | Add (`true`) or set (`false`) supply | Bool | Optional (default: `false`) |
 | **R** | None | None | Return value |
 
 #### 3.1.1 Example
