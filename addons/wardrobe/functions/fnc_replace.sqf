@@ -30,23 +30,21 @@ private _cfgWardobeTarget = configFile >> QUOTE(ADDON) >> _classTarget;
 private _duration = getNumber (_cfgWardobeTarget >> "duration");
 
 // replace the main Item
-private _equipmentType = "";
 private _typeNumber = getNumber (_cfgOrigin >> "ItemInfo" >> "type");
-private _replaceCode = switch (_typeNumber) do {
-    case TYPE_HEADGEAR: { _equipmentType = "HEADGEAR"; LINKFUNC(replaceOther) };
-    case TYPE_UNIFORM:  { _equipmentType = "UNIFORM";  LINKFUNC(replaceContainer) };
-    case TYPE_VEST:     { _equipmentType = "VEST";     LINKFUNC(replaceContainer) };
-    case TYPE_BACKPACK: { _equipmentType = "BACKPACK"; LINKFUNC(replaceContainer) };
-    case TYPE_HMD:      { _equipmentType = "NVG";      LINKFUNC(replaceOther) };
-    default {
-        // CfgGlasses items do not have a ItemInfo subclass and therefore, not typeNumber
-        switch (true) do {
-            case (isClass (configFile >> "CfgGlasses" >> _classOrigin)): { _equipmentType = "FACEWEAR"; LINKFUNC(replaceOther) };
-            default { {} };
-        };
+
+if (_typeNumber isEqualTo 0) then {
+    
+    // Switch-statement incase there will be more edge cases like CfgGlassess
+    _typeNumber = switch (true) do {
+        // CfgGlasses items do not have a ItemInfo subclass and therefore, will return 0
+        case (isClass (configFile >> "CfgGlasses" >> _classOrigin)): { TYPE_GOGGLE };
+        default { 0 };
     };
 };
-if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,_classOrigin); };
+
+GVAR(replaceHashmap) getOrDefault [_typeNumber, []] params ["_equipmentType", "_replaceCode"];
+
+if (isNil "_replaceCode") exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,_classOrigin); };
 
 private _extendedInfo = createHashMap;
 [QGVAR(itemChangedStart), [_player, _classOrigin, _classTarget, _equipmentType, _extendedInfo]] call CBA_fnc_localEvent;

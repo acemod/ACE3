@@ -10,6 +10,15 @@ PREP_RECOMPILE_END;
 
 GVAR(inProgress) =  false;
 
+GVAR(replaceHashmap) = createHashMapFromArray [
+    [TYPE_HEADGEAR, ["HEADGEAR", LINKFUNC(replaceOther)]    ],
+    [TYPE_UNIFORM,  ["UNIFORM",  LINKFUNC(replaceContainer)]],
+    [TYPE_VEST,     ["VEST",     LINKFUNC(replaceContainer)]],
+    [TYPE_BACKPACK, ["BACKPACK", LINKFUNC(replaceContainer)]],
+    [TYPE_HMD,      ["NVG",      LINKFUNC(replaceOther)]    ],
+    [TYPE_GOGGLE,   ["FACEWEAR", LINKFUNC(replaceOther)]    ]
+];
+
 // Cache Wardrobe Replace Exceptions
 private _map = createHashMap;
 {
