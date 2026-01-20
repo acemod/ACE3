@@ -8,7 +8,7 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
-GVAR(inProgress) =  false;
+GVAR(inProgress) = false;
 
 GVAR(replaceHashmap) = createHashMapFromArray [
     [TYPE_HEADGEAR, LINKFUNC(replaceOther)    ],
