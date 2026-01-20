@@ -42,26 +42,26 @@ if (_typeNumber isEqualTo 0) then {
     };
 };
 
-GVAR(replaceHashmap) getOrDefault [_typeNumber, []] params ["_equipmentType", "_replaceCode"];
+private _replaceCode = GVAR(replaceHashmap) get _typeNumber;
 
 if (isNil "_replaceCode") exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,_classOrigin); };
 
 private _extendedInfo = createHashMap;
-[QGVAR(itemChangedStart), [_player, _classOrigin, _classTarget, _equipmentType, _extendedInfo]] call CBA_fnc_localEvent;
+[QGVAR(itemChangedStart), [_player, _classOrigin, _classTarget, _typeNumber, _extendedInfo]] call CBA_fnc_localEvent;
 
 // temp action disabled
 GVAR(inProgress) = true;
 
 [{
-    params ["_player", "_classOrigin", "_classTarget", "_equipmentType", "_replaceCode", "_extendedInfo"];
+    params ["_player", "_classOrigin", "_classTarget", "_typeNumber", "_replaceCode", "_extendedInfo"];
 
-    [QGVAR(itemChangedBegin), [_player, _classOrigin, _classTarget, _equipmentType, _extendedInfo]] call CBA_fnc_localEvent;
+    [QGVAR(itemChangedBegin), [_player, _classOrigin, _classTarget, _typeNumber, _extendedInfo]] call CBA_fnc_localEvent;
 
-    [_player, _classTarget, _equipmentType] call _replaceCode;
+    [_player, _classTarget, _typeNumber] call _replaceCode;
 
-    [QGVAR(itemChangedEnd), [_player, _classOrigin, _classTarget, _equipmentType, _extendedInfo]] call CBA_fnc_localEvent;
+    [QGVAR(itemChangedEnd), [_player, _classOrigin, _classTarget, _typeNumber, _extendedInfo]] call CBA_fnc_localEvent;
 
-}, [_player, _classOrigin, _classTarget, _equipmentType, _replaceCode, _extendedInfo], _duration] call CBA_fnc_waitAndExecute;
+}, [_player, _classOrigin, _classTarget, _typeNumber, _replaceCode, _extendedInfo], _duration] call CBA_fnc_waitAndExecute;
 
 // handle components
 [_classOrigin, _classTarget] call FUNC(compareComponents) params ["_missing", "_surplus"];
