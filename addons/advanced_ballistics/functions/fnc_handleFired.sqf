@@ -60,7 +60,7 @@ if (_abort) exitWith {};
 
 // Get Weapon and Ammo Configurations
 (_ammo call FUNC(readAmmoDataFromConfig)) params ["_airFriction", "_caliber", "_bulletLength", "_bulletMass", "_transonicStabilityCoef", "_dragModel", "_ballisticCoefficients", "_velocityBoundaries", "_atmosphereModel", "_ammoTempMuzzleVelocityShifts", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocityVariationSD"];
-(_weapon call FUNC(readWeaponDataFromConfig)) params ["_barrelTwist", "_twistDirection", "_barrelLength"];
+([_weapon, _muzzle] call FUNC(readWeaponDataFromConfig)) params ["_barrelTwist", "_twistDirection", "_barrelLength"];
 
 private _temperature = nil; // We need the variable in this scope. So we need to init it here.
 
