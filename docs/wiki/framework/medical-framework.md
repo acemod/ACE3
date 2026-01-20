@@ -258,9 +258,10 @@ ace_medical_engine_disableSeatLocking = ["ship"]; // disable just on boats
 ### 5.2 Running vitals loop on untouched AI
 For performance ACE will skip running vitals loop on AI that have never been wounded or treated. This can be disabled by setting:
 ```sqf
-// always run all vitals calculations on all AI (this should not be changed mid-mission)
+// always run all vitals calculations on all AI
 ace_medical_const_medicalActivity = true;
 
 // specific AI
 unit setVariable ["ace_medical_medicalActivity", true]  
 ```
+Once medical activity has been enabled, you can't disable it. In other words: if you execute `unit setVariable ["ace_medical_medicalActivity", true]`, you can't disable medical activity for that specific AI anymore. If you run `ace_medical_const_medicalActivity = true;`, you can no longer set it to `false` and all AI will have their medical activity enabled.
