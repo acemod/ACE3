@@ -201,6 +201,8 @@ PREP(swayLoop);
 PREP(switchAttachmentMode);
 PREP(switchPersistentLaser);
 PREP(switchToGroupSide);
+PREP(syncedListGet);
+PREP(syncedListPush);
 PREP(throttledPublicVariable);
 PREP(toBin);
 PREP(toBitmask);
