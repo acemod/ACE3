@@ -30,7 +30,7 @@ if (isNil QGVAR(sharedLoadoutsNamespace)) then {
     publicVariable QGVAR(sharedLoadoutsNamespace);
 };
 
-if (isNil {GVAR(sharedLoadoutsNamespace) getVariable QGVAR(sharedLoadoutsVars)}) then {
+if ((GVAR(sharedLoadoutsNamespace) isNil QGVAR(sharedLoadoutsVars))) then {
     GVAR(sharedLoadoutsNamespace) setVariable [QGVAR(sharedLoadoutsVars), [], true];
 };
 
@@ -42,7 +42,7 @@ if (isNil QGVAR(defaultLoadoutsList)) then {
     };
 };
 
-if (isNil {profileNamespace getVariable QGVAR(saved_loadouts)}) then {
+if ((profileNamespace isNil QGVAR(saved_loadouts))) then {
     profileNamespace setVariable [QGVAR(saved_loadouts), []];
 };
 
