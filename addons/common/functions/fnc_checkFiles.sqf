@@ -186,6 +186,7 @@ if (isMultiplayer) then {
         GVAR(clientVersionAr) = _mainVersionAr;
         GVAR(clientAddons) = _addons;
 
+        private _fnc_multiplayerCheck = {
         private _fnc_diagnose_versionMismatch = {
             private _title = "[ACE] ERROR: VERSION MISMATCH";
             private _fixMsg = format ["Fix: %1", "Make sure versions of server and client match. You may be using ACE from different Steam Workshop items, or just haven't updated properly."];
@@ -260,7 +261,6 @@ if (isMultiplayer) then {
             ] // default return
         };
 
-        private _fnc_multiplayerCheck = {
             // Check if we'll actually throw an error
             private _versionMismatch = GVAR(clientVersion) != GVAR(serverVersion);
             private _additionalAddons = GVAR(clientAddons) - GVAR(serverAddons);
@@ -294,6 +294,7 @@ if (isMultiplayer) then {
 
         // Clients have to wait for the variables
         if (isNil QGVAR(serverVersion) || isNil QGVAR(serverAddons)) then {
+            WARNING("Waiting for server version/addon vars");
             QGVAR(serverVersion) addPublicVariableEventHandler _fnc_multiplayerCheck;
         } else {
             call _fnc_multiplayerCheck;
