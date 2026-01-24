@@ -8,7 +8,7 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
-missionNamespace setVariable [QGVAR(inProgress), false];
+GVAR(inProgress) = false;
 
 // Cache Wardrobe Replace Exceptions
 private _map = createHashMap;

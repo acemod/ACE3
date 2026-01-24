@@ -37,6 +37,7 @@ private _replaceCode = switch (_typeNumber) do {
     case TYPE_UNIFORM:  { _equipmentType = "UNIFORM";  LINKFUNC(replaceContainer) };
     case TYPE_VEST:     { _equipmentType = "VEST";     LINKFUNC(replaceContainer) };
     case TYPE_BACKPACK: { _equipmentType = "BACKPACK"; LINKFUNC(replaceContainer) };
+    case TYPE_HMD:      { _equipmentType = "NVG";      LINKFUNC(replaceOther) };
     default {
         // CfgGlasses items do not have a ItemInfo subclass and therefore, not typeNumber
         switch (true) do {

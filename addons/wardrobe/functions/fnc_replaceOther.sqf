@@ -29,6 +29,9 @@ switch (_equipmentType) do {
         removeGoggles _player;
         _player addGoggles _classTarget;
     };
+    case "NVG": {
+        _player linkItem _classTarget;
+    };
 };
 
 GVAR(inProgress) = false; // re-enable action
