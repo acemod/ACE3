@@ -1,5 +1,6 @@
 class CfgWeapons {
 
+    // ADV. BALLISTICS
     // MACHINE GUNS
     class gm_pk_base;
     class gm_pkm_base: gm_pk_base {
@@ -7,6 +8,8 @@ class CfgWeapons {
         EGVAR(overheating,slowdownFactor) = 1;
         EGVAR(overheating,allowSwapBarrel) = 1;
         EGVAR(overheating,dispersion) = 0.25;
+        ACE_barrelLength = 645.16;
+	    ACE_barrelTwist = 240.03;
     };
     class gm_rifle_base;
     class gm_machineGun_base: gm_rifle_base {
@@ -17,10 +20,69 @@ class CfgWeapons {
         EGVAR(overheating,slowdownFactor) = 1;
         EGVAR(overheating,allowSwapBarrel) = 1;
         EGVAR(overheating,dispersion) = 0.25;
+        ACE_barrelLength = 565.15;
+	    ACE_barrelTwist = 305;
     };
     class gm_mg3_veh_base: gm_mg3_base {
         EGVAR(overheating,allowSwapBarrel) = 0;
     };
+
+    //RIFLES
+	class gm_ak74_base: gm_rifle_base
+	{
+	ACE_barrelLength = 414.02;
+	ACE_barrelTwist = 199.898;
+	};
+    class gm_rpk74_base: gm_ak74_base
+	{
+	ACE_barrelLength = 590;
+	ACE_barrelTwist = 195;
+	};
+	class gm_m16_base: gm_rifle_base {
+	    ACE_barrelLength = 508;
+	    ACE_barrelTwist=305;
+	};
+	class gm_m16a2_base: gm_rifle_base {
+	    ACE_barrelTwist=177.8;
+	};
+	class gm_svd_base: gm_rifle_base {
+	    ACE_barrelLength = 619.76;
+	    ACE_barrelTwist = 238.76;
+	};
+	class gm_psg1_base: gm_rifle_base {
+	    ACE_barrelLength = 650.24;
+	    ACE_barrelTwist = 304.8;
+	};
+	class gm_g3_base: gm_rifle_base {
+	    ACE_barrelLength = 449.58;
+	    ACE_barrelTwist = 304.8;
+	};
+    class gm_g3ka4_base: gm_g3_base {
+	    ACE_barrelLength = 314.96;
+    	ACE_barrelTwist = 304.8;
+	};
+	class gm_ak47_base: gm_rifle_base {
+	    ACE_barrelLength = 415;
+	    ACE_barrelTwist = 240;
+	};
+	class gm_rpk_base: gm_ak47_base
+	{
+	    ACE_barrelLength = 590;
+	};
+    class gm_hk33_base: gm_rifle_base {
+	    ACE_barrelLength = 390;
+	    ACE_barrelTwist = 177.8;
+	};
+    class gm_hk53_base: gm_hk33_base
+	{
+	ACE_barrelLength = 211;
+	ACE_barrelTwist = 177.8;
+	};
+    class gm_aks74n_base;
+    class gm_aks74nk_base: gm_aks74n_base {
+	    ACE_barrelLength = 317;
+	};
+    //LAUNCHERS
     class gm_launcher_base;
     class gm_carlgustaf_m2_base: gm_launcher_base {
         EGVAR(reloadlaunchers,enabled) = 1;
@@ -29,13 +91,29 @@ class CfgWeapons {
         EGVAR(overpressure,priority) = 1;
         EGVAR(overpressure,range) = 10;
     };
+	class gm_rpg7_base: gm_launcher_base {
+	    EGVAR(reloadlaunchers,enabled) = 1;
+	};
+	class gm_strela_launcher_base: gm_launcher_base {
+        EGVAR(reloadlaunchers,enabled) = 1;
+	};
+	class gm_fim43_oli: gm_fim43_base {
+        EGVAR(reloadlaunchers,enabled) = 1;
+	};
+	class gm_pzf44_2_base: gm_launcher_base {
+        EGVAR(reloadlaunchers,enabled) = 1;
+	};
 
     // SUB MACHINE GUNS
     class gm_mp2_base: gm_rifle_base {
         EGVAR(overheating,closedBolt) = 0;
+        ACE_barrelLength = 259.08;
+	    ACE_barrelTwist = 254;
     };
     class gm_pm63_base: gm_rifle_base {
         EGVAR(overheating,closedBolt) = 0;
+        ACE_barrelLength = 152.4;
+	    ACE_barrelTwist = 254;
     };
 
     // GRENADE LAUNCHERS
