@@ -67,7 +67,7 @@ private _positiveChange = _heartRate * 0.00368 * _oxygenSaturation * _capture;
 
 private _breathingEffectiveness = 1;
 {
-    _breathingEffectiveness = if (_x isEqualType 0) then {
+    _breathingEffectiveness = if (_y isEqualType 0) then {
         _breathingEffectiveness * _y
     } else {
         _breathingEffectiveness * (_unit call _y)
