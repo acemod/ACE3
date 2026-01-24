@@ -128,4 +128,6 @@ if (_currentState in ["Unconscious", "CardiacArrest"] && {_targetState in ["Defa
 // Manually activate if non-defaults are present
 [_unit] call EFUNC(medical_engine,checkForMedicalActivity);
 
+[QGVAR(deserialize), [_unit, _state]] call CBA_fnc_localEvent;
+
 _state call CBA_fnc_deleteNamespace;
