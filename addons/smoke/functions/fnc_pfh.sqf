@@ -64,8 +64,8 @@ if (_breathProtect != 0) then {
 };
 _unit setVariable [QGVAR(breathingLevel), _levelBreathing];
 
-private _breathingEffectiveness = linearConversion [0.2, 1, _levelBreathing, 1, 0.6, true];
 if !(isNil "ace_medical_vitals_fnc_addSpO2DutyFactor") then {
+    private _breathingEffectiveness = linearConversion [0.2, 1, _levelBreathing, 1, 0.6, true];
     [QUOTE(ADDON), _breathingEffectiveness] call ace_medical_vitals_fnc_addSpO2DutyFactor;
 };
 

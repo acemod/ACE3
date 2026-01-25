@@ -17,8 +17,6 @@
 
 params ["_unit"];
 
-if (!isNull objectParent _unit) exitWith { false };
-
 private _coverage = 0;
 
 private _eyePos = eyePos _unit;
@@ -32,14 +30,14 @@ private _positions = [
 {
     private _intersect = lineIntersectsSurfaces _x;
     if (_intersect isNotEqualTo []) then {
-        _x set [1, _intersect select 0 select 0];
+        _x set [1, _intersect select 0];
+    } else {
+        _x set [1, [_x#1,0,objNull]];
     };
-    // Check visibility can return 0 for really close surfaces
-    if ((_x#0) distance (_x#1) < 0.05) then {
+    if ((_x#0) distance (_x#1#0) < 0.1) then {
         _coverage = _coverage + 1;
     } else {
-        _coverage = _coverage + ([objNull, "VIEW"] checkVisibility [_x#0, _x#1]);
+        _coverage = _coverage + ([objectParent _unit, "VIEW", _x#1#2] checkVisibility [_x#0, _x#1#0]);
     };
 } forEach _positions;
-
-_coverage < ((count _positions) / 2)
+_coverage < ((count _positions) / 3)

@@ -8,14 +8,14 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     1,
     {
         [QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged);
-        if (!hasInterface) exitwith {};
+        if (!hasInterface) exitWith {};
         GVAR(ppHandleDynamicBlur) ppEffectEnable _this;
         GVAR(ppHandleColorCorrections) ppEffectEnable _this;
         if (_this) then {
             if (GVAR(pfh) == -1) then {
                 GVAR(pfh) = [{
                     [ace_player] call FUNC(pfh);
-                }] call CBA_fnc_addPerFrameHandler;
+                }, 0.25] call CBA_fnc_addPerFrameHandler;
             };
         } else {
             if (GVAR(pfh) != -1) then {
