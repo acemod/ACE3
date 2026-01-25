@@ -15,7 +15,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
             if (GVAR(pfh) == -1) then {
                 GVAR(pfh) = [{
                     [ace_player] call FUNC(pfh);
-                }, 0.25] call CBA_fnc_addPerFrameHandler;
+                }, 0.2] call CBA_fnc_addPerFrameHandler;
             };
         } else {
             if (GVAR(pfh) != -1) then {
