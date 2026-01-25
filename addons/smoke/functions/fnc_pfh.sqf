@@ -72,6 +72,6 @@ if !(isNil "ace_medical_vitals_fnc_addSpO2DutyFactor") then {
 // Event
 private _smoked = _unit getVariable [QGVAR(smoked), false];
 if (_isInSmoke != _smoked) then {
+    _unit setVariable [QGVAR(smoked), _isInSmoke, true];
     [QGVAR(smoked), _isInSmoke] call CBA_fnc_localEvent;
 };
-_unit setVariable [QGVAR(smoked), _isInSmoke, true];
