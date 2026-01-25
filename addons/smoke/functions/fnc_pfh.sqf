@@ -19,6 +19,9 @@
 
 params ["_unit"];
 
+private _vehicle = objectParent _unit;
+if (!isNull _vehicle && {_vehicle isKindOf "Tank"}) exitWith {};
+
 private _isInSmoke = [_unit] call FUNC(isInSmoke);
 
 private _change = (if (_isInSmoke) then {
