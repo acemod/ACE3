@@ -8,6 +8,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     1,
     {
         [QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged);
+        if (!hasInterface) exitwith {};
         GVAR(ppHandleDynamicBlur) ppEffectEnable _this;
         GVAR(ppHandleColorCorrections) ppEffectEnable _this;
         if (_this) then {

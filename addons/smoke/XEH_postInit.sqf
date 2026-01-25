@@ -1,5 +1,6 @@
 #include "script_component.hpp"
 
+if (!hasInterface) exitWith {};
 GVAR(ppHandleDynamicBlur) = ppEffectCreate ["DynamicBlur", 500];
 GVAR(ppHandleColorCorrections) = ppEffectCreate ["ColorCorrections", 1500];
 GVAR(ppHandleDynamicBlur) ppEffectEnable GVAR(enabled);
