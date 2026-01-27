@@ -16,6 +16,12 @@
             <German>Garderobe</German>
             <Japanese>ワードローブ</Japanese>
         </Key>
+        <Key ID="STR_ACE_Wardrobe_bandannaAdd">
+            <English>Add Bandanna</English>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_bandannaRemove">
+            <English>Remove Bandanna</English>
+        </Key>
         <Key ID="STR_ACE_Wardrobe_collarClose">
             <English>Close collar</English>
         </Key>
@@ -35,6 +41,12 @@
         </Key>
         <Key ID="STR_ACE_Wardrobe_foliageRemove">
             <English>Remove scrim/foliage</English>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_glassesOff">
+            <English>Take glasses off</English>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_glassesOn">
+            <English>Put glasses on</English>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glovesOff">
             <English>Take gloves off</English>
