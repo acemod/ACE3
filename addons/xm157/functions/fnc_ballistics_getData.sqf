@@ -4,28 +4,28 @@
  * Gets ballistic info for a weapon, mag and ammo
  *
  * Arguments:
- * None
+ * 0: Zeroing <NUMBER>
  *
  * Return Value:
  * Weapon Info <ARRAY>
  *
  * Example:
- * [] call ace_xm157_fnc_ballistics_getData
+ * [100] call ace_xm157_fnc_ballistics_getData
  *
  * Public: No
  */
 
+params ["_zeroRange"];
+
 private _unit = ace_player;
 private _weaponClass = primaryWeapon _unit;
 private _magazineClass = (primaryWeaponMagazine _unit) param [0, ""];
-private _ammoClass = getText (configFile >> "CfgMagazines" >> _magazineClass >> "ammo");
+private _optic = (primaryWeaponItems _unit) param [2, ""];
 
-private _key = format ["weaponInfoCache-%1-%2-%3",_weaponClass,_magazineClass,_ammoClass];
-private _weaponInfo = GVAR(data) getOrDefault [_key, []];
-if ((_weaponInfo isEqualTo []) && {_magazineClass != ""}) then {
-    TRACE_3("new weapon/mag",_weaponClass,_magazineClass,_ammoClass);
+GVAR(data) getOrDefaultCall [["ballistics", _weaponClass, _magazineClass, _optic, _zeroRange], {
+    private _ammoClass = getText (configFile >> "CfgMagazines" >> _magazineClass >> "ammo");
+    TRACE_4("new",_weaponClass,_magazineClass,_optic,_zeroRange);
 
-    private _zeroRange = 100;
     private _boreHeight = [_unit, 0] call EFUNC(scopes,getBoreHeight);
 
     private _ammoConfig = _ammoClass call EFUNC(advanced_ballistics,readAmmoDataFromConfig);
@@ -64,9 +64,7 @@ if ((_weaponInfo isEqualTo []) && {_magazineClass != ""}) then {
         0 // shotshell will not have any vanilla zeroing applied, 0 is a reasonable default for now
     };
 
-    _weaponInfo = [_scopeBaseAngle,_boreHeight,_airFriction,_muzzleVelocity,_bc,_dragModel,_atmosphereModel,_barrelTwist,_twistDirection,_caliber,_bulletLength,_bulletMass];
-    GVAR(data) set [_key, _weaponInfo];
+    private _weaponInfo = [_scopeBaseAngle,_boreHeight,_airFriction,_muzzleVelocity,_bc,_dragModel,_atmosphereModel,_barrelTwist,_twistDirection,_caliber,_bulletLength,_bulletMass];
     TRACE_1("setting cache",_weaponInfo);
-};
-
-_weaponInfo
+    _weaponInfo
+}, true] // return
