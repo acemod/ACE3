@@ -92,13 +92,13 @@ class CfgWeapons {
     };
 
     //Pilot / Tanker Coveralls 90s
-    class gm_ge_uniform_pilot_commando_blk: gm_ge_uniform_pilot_commando_base{
+    class gm_ge_uniform_pilot_commando_blk: gm_ge_uniform_pilot_commando_base {
         ace_fire_protection = 0.5;
     };
-    class gm_ge_uniform_pilot_commando_gry: gm_ge_uniform_pilot_commando_base{
+    class gm_ge_uniform_pilot_commando_gry: gm_ge_uniform_pilot_commando_base {
         ace_fire_protection = 0.5;
     };
-    class gm_ge_uniform_pilot_commando_oli: gm_ge_uniform_pilot_commando_base{
+    class gm_ge_uniform_pilot_commando_oli: gm_ge_uniform_pilot_commando_base {
         ace_fire_protection = 0.5;
     };
 
