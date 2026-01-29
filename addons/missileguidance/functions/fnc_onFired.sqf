@@ -19,6 +19,8 @@
  * Public: No
  */
 
+params ["_shooter", "", "", "", "", "", "_projectile"];
+
 private _configAmmo = configOf _projectile;
 
 // Bail if guidance is disabled for this ammo
