@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Gets viewports for a vehicle from config. Caches results to a setVar on the vic.
+ * Gets viewports for a vehicle from config. Caches results to a hashmap.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
