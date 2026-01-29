@@ -199,4 +199,4 @@ private _config = configOf _object;
         [_class, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
         TRACE_3("add anim",_class,_anim,_x);
     } forEach _positions;
-} forEach configProperties [_config >> QGVAR(anims), "isClass _x"];
+} forEach ("true" configClasses (_config >> QGVAR(anims)));

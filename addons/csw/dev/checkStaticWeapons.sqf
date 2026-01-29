@@ -15,7 +15,7 @@ private _inherited = [];
     private _config = _x;
     private _configEnabled = (getNumber (_config >> QUOTE(ADDON) >> "enabled")) == 1;
     if (_configEnabled) then {
-        private _configExplicit = (count configProperties [_config, toString {configName _x == QUOTE(ADDON)}, false]) == 1;
+        private _configExplicit = (QUOTE(configName _x == QUOTE(QUOTE(ADDON))) configClasses _config) isNotEqualTo [];
         if (_configExplicit) then {
             _explicitBases  pushBack (configName _config);
             _inherited pushBack [];

@@ -23,7 +23,7 @@ private _baseClasses = configProperties [configFile >> "CBA_PIPItems", "getText 
 // Carry Handle
 {
     _baseClasses append (configProperties [_x, "getText _x == _optic"]);
-} forEach configProperties [configFile >> "CBA_CarryHandleTypes"];
+} forEach ("true" configClasses (configFile >> "CBA_CarryHandleTypes"));
 
 if (_baseClasses isNotEqualTo []) then {
     _optic = configName (_baseClasses select 0);

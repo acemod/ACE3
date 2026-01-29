@@ -19,10 +19,10 @@
  * Public: No
  */
 
-params ["_shooter","_weapon","","_mode","_ammo","","_projectile"];
+private _configAmmo = configOf _projectile;
 
 // Bail if guidance is disabled for this ammo
-if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "enabled")) != 1) exitWith {};
+if ((getNumber (_configAmmo >> QUOTE(ADDON) >> "enabled")) != 1) exitWith {};
 
 // Bail on locality of the projectile, it should be local to us
 if (GVAR(enabled) < 1 || {!local _projectile} ) exitWith {};
@@ -31,7 +31,7 @@ if (GVAR(enabled) < 1 || {!local _projectile} ) exitWith {};
 if ( !isPlayer _shooter && { GVAR(enabled) < 2 } ) exitWith {};
 
 // Verify ammo has explicity added guidance config (ignore inheritances)
-private _configs = configProperties [(configFile >> "CfgAmmo" >> _ammo), QUOTE(configName _x == QUOTE(QUOTE(ADDON))), false];
+private _configs = QUOTE(configName _x == QUOTE(QUOTE(ADDON))) configClasses _configAmmo;
 if (_configs isEqualTo []) exitWith {};
 
 private _args = call FUNC(onFiredGetArgs);

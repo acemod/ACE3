@@ -40,7 +40,7 @@ private _turrets = [_vehicle] call FUNC(getAllRearmTurrets);
 } forEach _turrets;
 
 // 1.70 pylons
-private _pylonConfigs = configProperties [configFile >> "CfgVehicles" >> _vehicle >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"];
+private _pylonConfigs = "true" configClasses (configFile >> "CfgVehicles" >> _vehicle >> "Components" >> "TransportPylonsComponent" >> "Pylons");
 {
     private _defaultMag = getText (_x >> "attachment");
     TRACE_3("",_defaultMag,configName _x,_forEachIndex);

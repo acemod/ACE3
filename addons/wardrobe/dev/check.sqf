@@ -3,7 +3,7 @@
  * Author: PabstMirror
  * call compile preprocessFileLineNumbers "z\ace\addons\wardrobe\dev\check.sqf";
  */
-private _all = configProperties [configFile >> "ace_wardrobe", "true"];
+private _all = "true" configClasses (configFile >> QUOTE(ADDON));
 
 private _cfgW = configFile >> "CfgWeapons";
 private _cfgG = configFile >> "CfgGlasses";

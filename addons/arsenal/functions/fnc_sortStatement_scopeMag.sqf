@@ -18,7 +18,7 @@ private _minZoom = 999; // FOV, so smaller is more zoomed in
 
 {
     _minZoom = _minZoom min getNumber (_x >> "opticsZoomMin");
-} forEach configProperties [_config >> "ItemInfo" >> "OpticsModes", "isClass _x"];
+} forEach ("true" configClasses (_config >> "ItemInfo" >> "OpticsModes"));
 
 if (_minZoom in [0, 999]) exitWith {"?"};
 

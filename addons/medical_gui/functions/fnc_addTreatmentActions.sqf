@@ -62,4 +62,4 @@ private _fnc_condition = {
         ["CAManBase", 0, ["ACE_MainActions", "ACE_Medical_Radial", _actionPath], _action, true] call EFUNC(interact_menu,addActionToClass);
         GVAR(selfInteractionActions) pushBack ["", 1, ["ACE_SelfActions", "ACE_Medical", _actionPath], _action];
     } forEach _allowedBodyParts;
-} forEach configProperties [_actionsConfig, "isClass _x"];
+} forEach ("true" configClasses _actionsConfig);

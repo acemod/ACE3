@@ -38,9 +38,9 @@ GVAR(armorCache) getOrDefaultCall [_this joinString "$", {
                 _passThrough = 0.1 max getNumber (_entry >> "passThrough") min 1; // prevent dividing by 0
             };
         } else {
-            private _condition = format ["getText (_x >> 'hitpointName') == '%1'", _hitpoint];
-            private _entry = configProperties [_itemInfo >> "HitpointsProtectionInfo", _condition] param [0, configNull];
-            if (!isNull _entry) then {
+            private _entries = "getText (_x >> 'hitpointName') == _hitpoint" configClasses (_itemInfo >> "HitpointsProtectionInfo");
+            if (_entries isNotEqualTo []) then {
+                private _entry = _entries select 0;
                 _armor = getNumber (_entry >> "armor");
                 _passThrough = 0.1 max getNumber (_entry >> "passThrough") min 1;
             };
