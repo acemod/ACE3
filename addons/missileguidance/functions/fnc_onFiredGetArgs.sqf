@@ -6,8 +6,10 @@
  * Arguments:
  * 0: Shooter (Man/Vehicle) <OBJECT>
  * 1: Weapon <STRING>
+ * 2: Muzzle (not used) <STRING>
  * 3: Mode <STRING>
- * 4: Ammo (in the future) <STRING>
+ * 4: Ammo (not used) <STRING>
+ * 5: Magazine (not used) <STRING>
  * 6: Projectile <OBJECT>
  *
  * Return Value:
@@ -19,19 +21,19 @@
  * Public: No
  */
 
-params ["_shooter","_weapon","","_mode","_ammo","","_projectile"];
+params ["_shooter", "_weapon", "", "_mode", "", "", "_projectile"];
 
 // MissileGuidance is enabled for this shot
-TRACE_4("enabled",_shooter,_ammo,_projectile,typeOf _shooter);
+TRACE_4("enabled",_shooter,typeOf _projectile,_projectile,typeOf _shooter);
 
-private _config = configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON);
+private _config = configOf _projectile >> QUOTE(ADDON);
 
 private _target = _shooter getVariable [QGVAR(target), nil];
 private _targetPos = _shooter getVariable [QGVAR(targetPosition), nil];
 private _seekerType = _shooter getVariable [QGVAR(seekerType), nil];
 private _attackProfile = _shooter getVariable [QGVAR(attackProfile), nil];
 private _navigationType = _shooter getVariable [QGVAR(navigationType), nil];
-if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "useModeForAttackProfile")) == 1) then {
+if ((getNumber (_config >> "useModeForAttackProfile")) == 1) then {
     _attackProfile = getText (configFile >> "CfgWeapons" >> _weapon >> _mode >> QGVAR(attackProfile))
 };
 private _lockMode = _shooter getVariable [QGVAR(lockMode), nil];
@@ -133,7 +135,7 @@ private _initialPitch = getNumber (_config >> "initialPitch");
 
 private _yawRollPitch = (vectorDir _projectile) call CBA_fnc_vect2Polar;
 
-TRACE_5("Beginning ACE guidance system",_target,_ammo,_seekerType,_attackProfile,_navigationType);
+TRACE_5("Beginning ACE guidance system",_target,typeOf _projectile,_seekerType,_attackProfile,_navigationType);
 private _args = [_this,
             [   _shooter,
                 [_target, _targetPos, _launchPos, vectorDirVisual vehicle _shooter, CBA_missionTime],
