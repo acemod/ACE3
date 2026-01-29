@@ -44,7 +44,7 @@ private _classID = 0;
         GVAR(woundClassNamesComplex) set [10 * _classID + _forEachIndex, format ["%1%2", _className, _x]];
     } forEach ["Minor", "Medium", "Large"];
     _classID = _classID + 1;
-} forEach ("isClass _x" configClasses _woundsConfig);
+} forEach ("true" configClasses _woundsConfig);
 
 // --- parse damage types
 GVAR(damageTypeDetails) = createHashMap;
