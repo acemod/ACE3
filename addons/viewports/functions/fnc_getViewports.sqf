@@ -7,7 +7,7 @@
  * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * Viewport information - ARRAY
+ * Viewport information <ARRAY>
  *
  * Example:
  * [vehicle player] call ace_viewports_fnc_getViewports
