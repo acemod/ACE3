@@ -8,7 +8,7 @@
  * 1: Weapon <STRING>
  * 2: Muzzle (not used) <STRING>
  * 3: Mode <STRING>
- * 4: Ammo (not used) <STRING>
+ * 4: Ammo (in the future) <STRING>
  * 5: Magazine (not used) <STRING>
  * 6: Projectile <OBJECT>
  *
