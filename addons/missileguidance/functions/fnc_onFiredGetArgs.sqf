@@ -21,12 +21,12 @@
  * Public: No
  */
 
-params ["_shooter", "_weapon", "", "_mode", "", "", "_projectile"];
+params ["_shooter", "_weapon", "", "_mode", "_ammo", "", "_projectile"];
 
 // MissileGuidance is enabled for this shot
-TRACE_4("enabled",_shooter,typeOf _projectile,_projectile,typeOf _shooter);
+TRACE_4("enabled",_shooter,_ammo,_projectile,typeOf _shooter);
 
-private _config = configOf _projectile >> QUOTE(ADDON);
+private _config = configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON);
 
 private _target = _shooter getVariable [QGVAR(target), nil];
 private _targetPos = _shooter getVariable [QGVAR(targetPosition), nil];
@@ -135,7 +135,7 @@ private _initialPitch = getNumber (_config >> "initialPitch");
 
 private _yawRollPitch = (vectorDir _projectile) call CBA_fnc_vect2Polar;
 
-TRACE_5("Beginning ACE guidance system",_target,typeOf _projectile,_seekerType,_attackProfile,_navigationType);
+TRACE_5("Beginning ACE guidance system",_target,_ammo,_seekerType,_attackProfile,_navigationType);
 private _args = [_this,
             [   _shooter,
                 [_target, _targetPos, _launchPos, vectorDirVisual vehicle _shooter, CBA_missionTime],
