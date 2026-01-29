@@ -19,9 +19,9 @@
  * Public: No
  */
 
-params ["_shooter", "", "", "", "", "", "_projectile"];
+params ["_shooter", "", "", "", "_ammo", "", "_projectile"];
 
-private _configAmmo = configOf _projectile;
+private _configAmmo = configFile >> "CfgAmmo" >> _ammo;
 
 // Bail if guidance is disabled for this ammo
 if ((getNumber (_configAmmo >> QUOTE(ADDON) >> "enabled")) != 1) exitWith {};
