@@ -56,7 +56,7 @@ private _config = _configAmmo >> QUOTE(ADDON);
 // Bail if guidance is disabled for this ammo
 if ((getNumber (_config >> "enabled")) != 1) exitWith {TRACE_1("not enabled",_ammo)};
 
-private _useModeForAttackProfile = (getNumber (_config >> QUOTE(ADDON) >> "useModeForAttackProfile")) == 1;
+private _useModeForAttackProfile = (getNumber (_config >> "useModeForAttackProfile")) == 1;
 private _weaponStateToken = if (_currentShooter isEqualTo ACE_player) then { _currentShooter } else { [_currentShooter, _turretPath] };
 (weaponState _weaponStateToken) params ["_weapon", "", "_mode"];
 TRACE_4("",_useModeForAttackProfile,_weaponStateToken,_weapon,_mode);
