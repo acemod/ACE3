@@ -46,15 +46,14 @@ private _ammo = getText (configFile >> "CfgMagazines" >> _currentMagazine >> "am
 TRACE_3("",_currentShooter,_currentMagazine,_ammo);
 
 private _configAmmo = configFile >> "CfgAmmo" >> _ammo;
-
-// Verify ammo has explicity added guidance config (ignore inheritances)
-private _configs = QUOTE(configName _x == QUOTE(QUOTE(ADDON))) configClasses _configAmmo;
-if (_configs isEqualTo []) exitWith {TRACE_2("not explicity enabled",_ammo,_configs)};
-
 private _config = _configAmmo >> QUOTE(ADDON);
 
 // Bail if guidance is disabled for this ammo
 if ((getNumber (_config >> "enabled")) != 1) exitWith {TRACE_1("not enabled",_ammo)};
+
+// Verify ammo has explicity added guidance config (ignore inheritances)
+private _configs = QUOTE(configName _x == QUOTE(QUOTE(ADDON))) configClasses _configAmmo;
+if (_configs isEqualTo []) exitWith {TRACE_1("not explicity enabled",_ammo)};
 
 private _useModeForAttackProfile = (getNumber (_config >> "useModeForAttackProfile")) == 1;
 private _weaponStateToken = if (_currentShooter isEqualTo ACE_player) then { _currentShooter } else { [_currentShooter, _turretPath] };
