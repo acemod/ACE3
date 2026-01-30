@@ -14,4 +14,4 @@
 
 params ["_config"];
 
-(configProperties [configFile >> "CfgWeapons" >> configName _config >> QUOTE(ADDON) >> "assembleTo", "true", true]) isNotEqualTo [] // return
+(configProperties [configFile >> "CfgWeapons" >> configName _config >> QUOTE(ADDON) >> "assembleTo", "true", true]) isNotEqualTo []

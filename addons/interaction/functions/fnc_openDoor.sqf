@@ -24,7 +24,7 @@ TRACE_2("openDoor",_house,_door);
 if (isNull _house) exitWith {};
 if (_house isKindOf "Car") exitWith {};
 
-if (("true" configClasses (configOf _house >> "UserActions")) isEqualTo []) exitWith {
+if ((configProperties [configOf _house >> "UserActions"]) isEqualTo []) exitWith {
     TRACE_1("Ignore houses with no UserActions",typeOf _house); // Fix problem with Shoothouse Walls
 };
 

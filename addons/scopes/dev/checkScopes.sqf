@@ -23,7 +23,7 @@ private _fnc_checkConfig = {
         if (_diag) then {
             diag_log text format [" %1[%2] = %3 (%4)",configName _x, _xZoom, _xMem, _xOffset];
         };
-    } forEach ("true" configClasses (_config >> "ItemInfo" >> "OpticsModes"));
+    } forEach configProperties [_config >> "ItemInfo" >> "OpticsModes", "isClass _x"];
     deleteVehicle _weaponObj;
     _bestOffset
 };
