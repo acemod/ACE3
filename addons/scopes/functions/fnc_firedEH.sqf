@@ -33,7 +33,7 @@ if (GVAR(correctZeroing) || GVAR(simplifiedZeroing)) then {
     private _boreHeight = (_unit getVariable [QGVAR(boreHeight), [0,0,0]]) select _weaponIndex;
     private _oldZeroRange = currentZeroing _unit;
     private _newZeroRange = [_unit] call FUNC(getCurrentZeroRange);
-    private _zeroCorrection = [_oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics] call FUNC(calculateZeroAngleCorrection);
+    private _zeroCorrection = [_oldZeroRange, _newZeroRange, _boreHeight, _weapon, _muzzle, _ammo, _magazine, _advancedBallistics] call FUNC(calculateZeroAngleCorrection);
 
     _zeroing = if (GVAR(simplifiedZeroing)) then {
         [0, 0, _zeroCorrection - _baseAngle]
