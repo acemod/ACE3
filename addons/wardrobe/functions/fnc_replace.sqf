@@ -38,6 +38,7 @@ if (_typeNumber isEqualTo 0) then {
     _typeNumber = switch (true) do {
         // CfgGlasses items do not have a ItemInfo subclass and therefore, will return 0
         case (isClass (configFile >> "CfgGlasses" >> _classOrigin)): { TYPE_GOGGLE };
+        case (getNumber (configFile >> "CfgVehicles" >> _classOrigin >> "isBackpack") isEqualTo 1): { TYPE_BACKPACK };
         default { 0 };
     };
 };
