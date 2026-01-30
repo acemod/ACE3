@@ -3,7 +3,7 @@
 #define ZERO(NUM) class GVAR(NUM): GVAR(base) { \
     scope = 1; \
     class ItemInfo: InventoryFlashLightItem_Base_F { \
-        mass = 4; \
+        mass = 7; \
         class Pointer { \
             irLaserPos = "laser pos"; \
             irLaserEnd = QUOTE(CONCAT(laser ,NUM)); \
@@ -23,7 +23,7 @@ class CfgWeapons {
         displayName = "MILR";
         descriptionUse = "y";
         descriptionShort = "z";
-		picture = "\A3\weapons_F\Data\UI\gear_accv_pointer_CA.paa";
+        picture = "\A3\weapons_F\Data\UI\gear_accv_pointer_CA.paa";
         model = QPATHTOF(data\ace_milr.p3d);
         class ItemInfo: InventoryFlashLightItem_Base_F { // do not use inheritance on ItemInfo/Pointer as it breaks something
             mass = 7; // big chonky box

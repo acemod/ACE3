@@ -32,6 +32,7 @@ private _item = if ((GVAR(data) getOrDefault ["range", 0]) == RANGE_IN_PROGRESS)
     private _elevationMRAD = if (_range <= 0) then {
         0
     } else {
+        GVAR(data) set ["zero_range", _zero]; // set zero for xm157
         ([_range, 0, 0, 0, GVAR(data)] call EFUNC(xm157,ballistics_calculator)) params ["_be","_bw"];
         TRACE_2("ballistics_calculator",_be,_bw);
         // systemChat format ["DEBUG Ballistics: %1 - %2", _be, _bw];
