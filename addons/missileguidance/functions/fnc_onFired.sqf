@@ -5,9 +5,11 @@
  *
  * Arguments:
  * 0: Shooter (Man/Vehicle) <OBJECT>
- * 1: Weapon <STRING>
- * 3: Mode <STRING>
+ * 1: Weapon (not used) <STRING>
+ * 2: Muzzle (not used) <STRING>
+ * 3: Mode (not used) <STRING>
  * 4: Ammo <STRING>
+ * 5: Magazine (not used) <STRING>
  * 6: Projectile <OBJECT>
  *
  * Return Value:
