@@ -19,6 +19,7 @@ class CfgAmmo
   };
 	class gm_bullet_556x45mm_B_T_dm21: gm_bullet_556x45mm_B_dm11
 	{
+      ACE_bulletLength = 29.3116;
 	  ACE_bulletMass = 4.0176;
   };
 	class gm_bullet_556x45mm_B_m193: gm_bullet_base
