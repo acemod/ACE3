@@ -107,7 +107,7 @@ class CfgWeapons {
     // SUB MACHINE GUNS
     class gm_mp2_base: gm_rifle_base {
         EGVAR(overheating,closedBolt) = 0;
-        ACE_barrelLength = 259.08;
+        ACE_barrelLength = 250;
 	    ACE_barrelTwist = 254;
     };
     class gm_pm63_base: gm_rifle_base {
@@ -115,7 +115,10 @@ class CfgWeapons {
         ACE_barrelLength = 152.4;
 	    ACE_barrelTwist = 254;
     };
-
+    class gm_mp5_base: gm_rifle_base {
+        ACE_barrelLength = 225;
+	    ACE_barrelTwist = 254;
+    };
     // GRENADE LAUNCHERS
     class gm_hk69a1_base: gm_rifle_base {
         EGVAR(overheating,jamTypesAllowed)[] = {"Fire", "Dud"};
