@@ -8,7 +8,7 @@ diag_log text format ["--- Checking Map Configs ---"];
 
 private _testPass = true;
 
-private _maps = configProperties [configFile >> "CfgWorldList", "(isClass _x)", true];
+private _maps = "true" configClasses (configFile >> "CfgWorldList");
 {
     private _mapConfigName = configName _x;
     private _worldConfig = configFile >> "CfgWorlds" >> _mapConfigName;

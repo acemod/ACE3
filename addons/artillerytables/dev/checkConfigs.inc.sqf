@@ -7,7 +7,7 @@ diag_log text "-------------------------------------------";
 private _fnc_showPropertyDefined = {
     params ["_configBase", "_configProperty"];
 
-    private _customAll = configProperties [_configBase, 'isClass _x && {isNumber (_x >> _configProperty)}', true];
+    private _customAll = 'isNumber (_x >> _configProperty)' configClasses _configBase; // Would have to use configProperties if configs inherited subclasses
     private _customExplicit = _customAll select {_x == inheritsFrom (_x >> _configProperty)};
     diag_log text format ["%1 with custom %2: %3 Explicit, %4 Total]", configName _configBase, _configProperty, count _customExplicit, count _customAll];
     diag_log text format [" - Defined:   %1", _customExplicit apply {configName _x}];

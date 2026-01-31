@@ -4,7 +4,7 @@
 // and check if their magazinese are compatible
 INFO("Checking static weapons");
 
-private _staticWeaponConfigs = configProperties [configFile >> "CfgVehicles", "(isClass _x) && {(configName _x) isKindOf 'StaticWeapon'}", true];
+private _staticWeaponConfigs = "(configName _x) isKindOf 'StaticWeapon'" configClasses (configFile >> "CfgVehicles");
 private _staticPublic = _staticWeaponConfigs select {(getNumber (_x >> "scope")) == 2};
 INFO_2("Static Weapons [%1] - CSW Enabled [%2]",count _staticPublic,{(getNumber (_x >> QUOTE(ADDON) >> "enabled")) == 1} count _staticPublic);
 
