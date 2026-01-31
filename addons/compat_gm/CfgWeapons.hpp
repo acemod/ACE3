@@ -119,6 +119,10 @@ class CfgWeapons {
         ACE_barrelLength = 225;
 	    ACE_barrelTwist = 254;
     };
+	class gm_mp5sd_base: gm_rifle_base {
+        ACE_barrelLength = 146;
+	    ACE_barrelTwist = 254;
+	};
     // GRENADE LAUNCHERS
     class gm_hk69a1_base: gm_rifle_base {
         EGVAR(overheating,jamTypesAllowed)[] = {"Fire", "Dud"};
