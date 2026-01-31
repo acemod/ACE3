@@ -2,15 +2,15 @@ class CfgAmmo
 {
 	class gm_bullet_base;
 	class gm_bullet_556x45mm_base: gm_bullet_base {
-      ACE_ammoTempMuzzleVelocityShifts[] = {-27.2,-26.44,-23.76,-21,-17.54,-13.1,-7.95,-1.62,6.24,15.48,27.75};
-      ACE_ballisticCoefficients[] = {0.151};
-      ACE_barrelLengths[] = {210.82,238.76,269.24,299.72,330.2,360.68,391.16,419.1,449.58,480.06,508,609.6};
-      ACE_bulletLength = 23.4;
-      ACE_bulletMass = 4.0176;
-      ACE_caliber = 5.7;
-      ACE_dragModel = 7;
-      ACE_muzzleVelocities[] = {723,764,796,825,843,866,878,892,906,915,922,900};
-      ACE_standardAtmosphere = "ASM";
+        ACE_ammoTempMuzzleVelocityShifts[] = {-27.2,-26.44,-23.76,-21,-17.54,-13.1,-7.95,-1.62,6.24,15.48,27.75};
+        ACE_ballisticCoefficients[] = {0.151};
+        ACE_barrelLengths[] = {210.82,238.76,269.24,299.72,330.2,360.68,391.16,419.1,449.58,480.06,508,609.6};
+        ACE_bulletLength = 23.4;
+        ACE_bulletMass = 4.0176;
+        ACE_caliber = 5.7;
+        ACE_dragModel = 7;
+        ACE_muzzleVelocities[] = {723,764,796,825,843,866,878,892,906,915,922,900};
+        ACE_standardAtmosphere = "ASM";
   };
 	class gm_bullet_556x45mm_B_dm11: gm_bullet_556x45mm_base {  //https://pt.scribd.com/doc/194927638/5-56mmx45-NATO-DualCore-DM11
   	    ACE_bulletMass = 4.099827;
@@ -64,6 +64,7 @@ class CfgAmmo
 	class gm_bullet_762x54mmR_API_7bz3: gm_bullet_762x54mmR_base {
 	    ACE_ballisticCoefficients[] = {0.401};
 	    ACE_bulletMass = 10.387265;
+        ace_vehicle_damage_incendiary = 1;
 	};
 	class gm_bullet_762x54mmR_B_57N323S: gm_bullet_762x54mmR_base {
 	    ACE_ballisticCoefficients[] = {0.374};
