@@ -44,7 +44,7 @@ private _classID = 0;
         GVAR(woundClassNamesComplex) set [10 * _classID + _forEachIndex, format ["%1%2", _className, _x]];
     } forEach ["Minor", "Medium", "Large"];
     _classID = _classID + 1;
-} forEach configProperties [_woundsConfig, "isClass _x"];
+} forEach ("true" configClasses _woundsConfig);
 
 // --- parse damage types
 GVAR(damageTypeDetails) = createHashMap;
@@ -109,7 +109,7 @@ TRACE_1("Found default wound handlers",count _defaultWoundHandlers);
         } else {
             WARNING_2("Damage type %1 refers to wound %2, but it doesn't exist: skipping.",_className,configName _x);
         };
-    } forEach configProperties [_damageTypeSubClassConfig, "isClass _x"];
+    } forEach configProperties [_damageTypeSubClassConfig, "isClass _x"]; // Subclasses can be inherited
 
     GVAR(damageTypeDetails) set [_className, [_thresholds, _selectionSpecific, _woundHandlers, _damageWoundDetails]];
-} forEach configProperties [_damageTypesConfig, "isClass _x"];
+} forEach ("true" configClasses _damageTypesConfig); // damageTypes doesn't inherit, so use faster command

@@ -27,7 +27,7 @@ if (_baseClasses isNotEqualTo []) exitWith {
 // Carry Handle
 {
     _baseClasses append (configProperties [_x, "getText _x == _optic"]);
-} forEach configProperties [configFile >> "CBA_CarryHandleTypes"];
+} forEach ("true" configClasses (configFile >> "CBA_CarryHandleTypes")); // CBA_CarryHandleTypes doesn't inherit, so use faster command
 
 if (_baseClasses isNotEqualTo []) exitWith {
     configName (_baseClasses select 0) // return
