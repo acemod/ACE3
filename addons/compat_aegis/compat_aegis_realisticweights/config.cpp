@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class SUBADDON {
-        name = "ACE3 - Aegis Compatibility - Realistic Weights";
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
