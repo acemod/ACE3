@@ -1,4 +1,4 @@
-// [] execVM "z\ace\addons\realisticnames\dev_dumpPylon.sqf";
+// [] execVM "z\ace\addons\realisticnames\dev\dumpPylon.sqf";
 
 private _justLog = true;
 

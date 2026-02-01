@@ -3084,6 +3084,9 @@
             <Hungarian>MSBS Grot GL (Terepmintás)</Hungarian>
             <Ukrainian>MSBS Grot GL (камуфляжний)</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL_muzzleGPBO40">
+            <English>GPBO-40</English>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL_sand">
             <English>MSBS Grot GL (Sand)</English>
             <Czech>MSBS Grot GL (Písková)</Czech>
@@ -3227,6 +3230,9 @@
             <Turkish>MSBS Grot SG (Kamuflaj)</Turkish>
             <Hungarian>MSBS Grot SG (Terepmintás)</Hungarian>
             <Ukrainian>MSBS Grot SG (камуфляжний)</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS_muzzleSix12">
+            <English>SIX-12</English>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS_sand">
             <English>MSBS Grot SG (Sand)</English>
