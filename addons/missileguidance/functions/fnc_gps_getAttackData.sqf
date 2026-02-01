@@ -24,6 +24,10 @@ if (GVAR(gps_mode) isEqualTo "too") then {
         _position = _vehFocusOn lockedCameraTo [focusOn call CBA_fnc_turretPath];
         if (_position isEqualType objNull) then { // lockedCameraTo has different return types, can be object as well as position.
             _position = getPosASL _position;
+        } else {
+            if isNil "_position" then { // lockedCameraTo can return nil if the camera is not locked
+                _position = [0,0,0];
+            };
         };
     };
     GVAR(gps_currentSettings) set [0, _position]
