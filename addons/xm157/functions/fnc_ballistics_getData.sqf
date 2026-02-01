@@ -24,7 +24,7 @@ if (_magazineClass == "") exitWith {
 
 private _weaponClass = primaryWeapon _unit;
 
-GVAR(data) getOrDefault [[_weaponClass, _magazineClass], {
+GVAR(data) getOrDefaultCall [[_weaponClass, _magazineClass], {
     private _ammoClass = getText (configFile >> "CfgMagazines" >> _magazineClass >> "ammo");
     TRACE_3("new weapon/mag",_weaponClass,_magazineClass,_ammoClass);
 
