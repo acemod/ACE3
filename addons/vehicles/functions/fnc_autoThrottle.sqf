@@ -64,6 +64,9 @@ if (!_preserveSpeedLimit) then {
 
     private _currentThrottle = (airplaneThrottle _vehicle) ^ _throttleLogValue;
     if (_lastThrottleValue != -1 && { EPSILON < abs (_currentThrottle - _lastThrottleValue) }) then {
+        if (dialog) exitWith { // setAirplaneThrottle changes won't be respected when in a dialog and would force an exit
+            _args set [3, -1]; // reset so it can restart when dialog closed
+        };
         // player/script has moved throttle, stop limiting speed
         // ARMA will allow an increment of one throttle unit per frame, so if there is a difference between our known throttle value and actual throttle value, the player must of changed it
         [localize LSTRING(Off)] call EFUNC(common,displayTextStructured);
