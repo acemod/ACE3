@@ -15,7 +15,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
             if (GVAR(pfh) == -1) then {
                 GVAR(pfh) = [{
                     [ace_player] call FUNC(pfh);
-                }, 0.2] call CBA_fnc_addPerFrameHandler;
+                }, PFH_INTERVAL] call CBA_fnc_addPerFrameHandler;
             };
         } else {
             if (GVAR(pfh) != -1) then {
@@ -30,7 +30,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     QGVAR(effectFactor), "SLIDER",
     [LSTRING(effectFactor_DisplayName), LSTRING(effectFactor_Description)],
     _category,
-    [0, 1, 0.5, 0.1],
+    [0, 1, 0.5, 0, true],
     1,
     {[QGVAR(effectFactor), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
@@ -40,7 +40,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     QGVAR(recoveryFactor), "SLIDER",
     [LSTRING(recoveryFactor_DisplayName), LSTRING(recoveryFactor_Description)],
     _category,
-    [0, 1, 0.5, 0.1],
+    [0, 1, 0.5, 0, true],
     1,
     {[QGVAR(recoveryFactor), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart

@@ -15,7 +15,11 @@
  * Public: Yes
  */
 
-params ["_unit"];
+params [["_unit", objNull, [objNull]]];
+
+private _vehicle = objectParent _unit;
+
+if (!isNull _vehicle && {!([_vehicle, _unit] call FUNC(isOpenSeat))}) exitWith { false };
 
 private _coverage = 0;
 

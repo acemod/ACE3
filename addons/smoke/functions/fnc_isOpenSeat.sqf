@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: BrettMayson
- * Check if a seat is open and thus susceptible to smoke entering
+ * Check if a seat is open and thus susceptible to smoke entering, may not be accurate for vehicles with top coverings
  *
  * Arguments:
  * 0: Vehicle <OBJECT>

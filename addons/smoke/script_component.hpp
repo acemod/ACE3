@@ -15,3 +15,5 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define PFH_INTERVAL 0.2

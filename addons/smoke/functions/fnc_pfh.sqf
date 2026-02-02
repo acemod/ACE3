@@ -19,71 +19,54 @@
 
 params ["_unit"];
 
-private _vehicle = objectParent _unit;
+if (isGamePaused) exitWith {};
 
-private _isInSmoke = if (!isNull _vehicle) then {
-    if ([_vehicle, _unit] call FUNC(isOpenSeat)) then {
-        [_unit] call FUNC(isInSmoke)
-    } else {
-        false
-    }
-} else {
-    [_unit] call FUNC(isInSmoke)
-};
+#define EFFECT_RATE 0.3
+#define RECOVERY_RATE -0.075
+
+private _isInSmoke = [_unit] call FUNC(isInSmoke);
 
 private _change = (if (_isInSmoke) then {
-    0.175 * GVAR(effectFactor)
+    EFFECT_RATE * GVAR(effectFactor)
 } else {
-    -0.04 * GVAR(recoveryFactor)
-}) * diag_deltaTime;
+    RECOVERY_RATE * GVAR(recoveryFactor)
+}) * diag_deltaTime * (1 / PFH_INTERVAL);
+
+private _fnc_updateLevel = {
+    params ["_level", "_protect"];
+    private _innerChange = if (_protect == 1 && _isInSmoke) then {
+        RECOVERY_RATE * GVAR(recoveryFactor) * diag_deltaTime * (1 / PFH_INTERVAL)
+    } else {
+        _change
+    };
+    private _newLevel = (_level + _innerChange) min 1 max 0;
+    if (_protect != 0 && _protect != 1) then {
+        _newLevel = _newLevel * (1 - _protect);
+    };
+    _newLevel
+};
 
 // Eyes
 private _levelEyes = _unit getVariable [QGVAR(eyesLevel), 0];
 private _eyesProtect = _unit getVariable [QGVAR(eyesProtection), 0];
-
-private _eyesChange = _change;
-if (_eyesProtect == 1 && _isInSmoke) then {
-    _eyesChange = -0.04 * GVAR(recoveryFactor) * diag_deltaTime;
-};
-
-private _newLevelEyes = _levelEyes + _eyesChange;
-_newLevelEyes = _newLevelEyes min 1;
-_newLevelEyes = _newLevelEyes max 0;
-_levelEyes = _newLevelEyes;
-
-if (_eyesProtect != 0 && _eyesProtect != 1) then {
-    _levelEyes = _levelEyes * (1 - _eyesProtect);
-};
+_levelEyes = [_levelEyes, _eyesProtect] call _fnc_updateLevel;
 _unit setVariable [QGVAR(eyesLevel), _levelEyes];
 
-private _dynamicBlurValue = linearConversion [0.2, 1, _levelEyes, 0, 0.8, true];
-private _colorCorrectionsValue = linearConversion [0.2, 1, _levelEyes, 1, 0.6, true];
+private _dynamicBlurValue = linearConversion [0.05, 1, _levelEyes, 0, 0.8, true];
+private _colorCorrectionsValue = linearConversion [0.05, 1, _levelEyes, 1, 0.6, true];
 
 if (_unit == ace_player) then {
     GVAR(ppHandleDynamicBlur) ppEffectAdjust [_dynamicBlurValue];
     GVAR(ppHandleColorCorrections) ppEffectAdjust [1,1,0,[0,0,0,0],[0.8, 0.8, 0.8, _colorCorrectionsValue],[1,1,1,0]];
 
-    GVAR(ppHandleDynamicBlur) ppEffectCommit 0;
-    GVAR(ppHandleColorCorrections) ppEffectCommit 0;
+    GVAR(ppHandleDynamicBlur) ppEffectCommit PFH_INTERVAL;
+    GVAR(ppHandleColorCorrections) ppEffectCommit PFH_INTERVAL;
 };
 
 // Breathing
 private _levelBreathing = _unit getVariable [QGVAR(breathingLevel), 0];
 private _breathProtect = _unit getVariable [QGVAR(breathingProtection), 0];
-
-private _breathChange = _change;
-if (_breathProtect == 1 && _isInSmoke) then {
-    _breathChange = -0.04 * GVAR(recoveryFactor) * diag_deltaTime;
-};
-
-private _newLevelBreathing = _levelBreathing + _breathChange;
-_newLevelBreathing = _newLevelBreathing min 1;
-_newLevelBreathing = _newLevelBreathing max 0;
-_levelBreathing = _newLevelBreathing;
-
-if (_breathProtect != 0 && _breathProtect != 1) then {
-    _levelBreathing = _levelBreathing * (1 - _breathProtect);
-};
+_levelBreathing = [_levelBreathing, _breathProtect] call _fnc_updateLevel;
 _unit setVariable [QGVAR(breathingLevel), _levelBreathing];
 
 if !(isNil "ace_medical_vitals_fnc_addSpO2DutyFactor") then {

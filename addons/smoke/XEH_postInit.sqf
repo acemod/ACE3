@@ -6,12 +6,6 @@ GVAR(ppHandleColorCorrections) = ppEffectCreate ["ColorCorrections", 1500];
 GVAR(ppHandleDynamicBlur) ppEffectEnable GVAR(enabled);
 GVAR(ppHandleColorCorrections) ppEffectEnable GVAR(enabled);
 
-if (GVAR(enabled)) then {
-    GVAR(pfh) = [{
-        [ace_player] call FUNC(pfh);
-    }] call CBA_fnc_addPerFrameHandler;
-};
-
 ["loadout", {
     params ["_unit"];
     if !(local _unit) exitWith {};
