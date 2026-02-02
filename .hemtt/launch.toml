@@ -1,13 +1,18 @@
 [default]
 workshop = [
     "450814997", # CBA_A3
-    "synixe:@bozcaada",
 ]
 
 [adt]
 extends = "default"
 workshop = [
     "3499977893", # ADT
+]
+
+[zen]
+extends = "default"
+workshop = [
+    "1779063631", # ZEN
 ]
 
 [rhs]
@@ -48,15 +53,14 @@ mission = "Wardrobe.VR"
 workshop = [
     "1779063631", # ZEN
 #   "751965892",  # ACRE
-#   "623475643",  # eden enhanced
+#   "623475643",  # 3den Enhanced
 ]
 
 [sogns]
-extends = "default"
+extends = "adt"
 dlc = ["vn"]
 workshop = [
     "623475643",  # 3den Enhanced
-    "3499977893", # Advanced Developer Tools
     "3083451905", # S.O.G. Nickel Steel
     "1779063631", # Zeus Enhanced
 ]

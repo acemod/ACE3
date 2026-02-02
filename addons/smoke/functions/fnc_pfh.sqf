@@ -20,9 +20,16 @@
 params ["_unit"];
 
 private _vehicle = objectParent _unit;
-if (!isNull _vehicle && {_vehicle isKindOf "Tank"}) exitWith {};
 
-private _isInSmoke = [_unit] call FUNC(isInSmoke);
+private _isInSmoke = if (!isNull _vehicle) then {
+    if ([_vehicle, _unit] call FUNC(isOpenSeat)) then {
+        [_unit] call FUNC(isInSmoke)
+    } else {
+        false
+    }
+} else {
+    [_unit] call FUNC(isInSmoke)
+};
 
 private _change = (if (_isInSmoke) then {
     0.175 * GVAR(effectFactor)

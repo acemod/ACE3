@@ -16,6 +16,10 @@
  * Public: No
  */
 params [["_id", "", [""]], ["_factor", 1, [0, {}]]];
-if (_id == "" || {_factor isEqualTo 1}) exitWith {};
+if (_id == "") exitWith {};
+
+if (_factor isEqualTo 1) exitWith {
+    [_id] call FUNC(removeSpO2DutyFactor);
+};
 
 GVAR(spo2DutyList) set [_id, _factor];
