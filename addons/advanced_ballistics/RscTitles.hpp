@@ -1,33 +1,9 @@
 class RscTitles {
-    class RscTurretDial {
-        idd = -1;
-        movingEnable = 0;
-        duration = 5;
-        fadeIn = "false";
-        fadeOut = "false";
-        class controls {
-            class RscTurretDial {
-                idc = 132949;
-                type = 0;
-                style = 128;
-                font = "TahomaB";
-                colorBackground[] = {0, 0, 0, 0.8};
-                colorText[] = {1, 1, 1, 1};
-                x = "SafeZoneX + 0.0025";
-                y = "SafeZoneY + 0.0025";
-                w = 0.10;
-                h = 0.05;
-                sizeEx = 0.03;
-                text = "";
-            };
-        };
-    };
-
     class RscProtractor {
         idd = -1;
         onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(rscProtractor),_this select 0)]);
         movingEnable = 0;
-        duration = 60;
+        duration = 1e10;
         fadeIn = "false";
         fadeOut = "false";
         class controls {
@@ -44,10 +20,11 @@ class RscTitles {
                 h = 0.2*4/3;
                 size = 0.034;
                 sizeEx = 0.027;
-                text = "";
+                text = QPATHTOF(UI\protractor.paa);
             };
             class RscProtractorMarker: RscProtractorBase {
                 idc = 132951;
+                text = QPATHTOF(UI\protractor_marker.paa);
             };
         };
     };

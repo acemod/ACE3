@@ -17,7 +17,7 @@
 
 if (GVAR(protractor)) exitWith {
     GVAR(protractor) = false;
-    1 cutText ["", "PLAIN"];
+    QGVAR(protractor) cutText ["", "PLAIN"];
     true // return
 };
 
@@ -25,41 +25,30 @@ if (weaponLowered ACE_player || !isNull objectParent ACE_player || currentWeapon
     false // return
 };
 
-2 cutText ["", "PLAIN"];
+// Close weather's wind info, in case it's open
 EGVAR(weather,WindInfo) = false;
 (["RscWindIntuitive"] call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
+
+// Display the protractor
 GVAR(protractor) = true;
+QGVAR(protractor) cutRsc ["RscProtractor", "PLAIN", 1, false];
 
+// Update angle marker every frame
 [{
-    disableSerialization;
-
-    params ["", "_idPFH"];
-
     private _currentWeapon = currentWeapon ACE_player;
 
     if (!GVAR(protractor) || weaponLowered ACE_player || _currentWeapon != primaryWeapon ACE_player) exitWith {
+        (_this select 1) call CBA_fnc_removePerFrameHandler;
         GVAR(protractor) = false;
-        1 cutText ["", "PLAIN"];
-        _idPFH call CBA_fnc_removePerFrameHandler;
+        QGVAR(protractor) cutText ["", "PLAIN"];
     };
 
-    1 cutRsc ["RscProtractor", "PLAIN", 1, false];
+    disableSerialization;
 
-    private _display = uiNamespace getVariable QGVAR(rscProtractor);
-    private _ctrl1 = _display displayCtrl 132950;
+    private _ctrlMarker = (uiNamespace getVariable QGVAR(rscProtractor)) displayCtrl 132951;
 
-    _ctrl1 ctrlSetScale 1;
-    _ctrl1 ctrlCommit 0;
-    _ctrl1 ctrlSetText QPATHTOF(UI\protractor.paa);
-    _ctrl1 ctrlSetTextColor [1, 1, 1, 1];
-
-    private _ctrl2 = _display displayCtrl 132951;
-
-    _ctrl2 ctrlSetScale 1;
-    _ctrl2 ctrlSetPosition [safeZoneX + 0.001, safeZoneY - 0.001 - 0.1074 * (-0.86 max ((ACE_player weaponDirection _currentWeapon) select 2) min 0.86), 0.2, 0.2 * 4/3];
-    _ctrl2 ctrlCommit 0;
-    _ctrl2 ctrlSetText QPATHTOF(UI\protractor_marker.paa);
-    _ctrl2 ctrlSetTextColor [1, 1, 1, 1];
-}, 0.1] call CBA_fnc_addPerFrameHandler;
+    _ctrlMarker ctrlSetPosition [safeZoneX + 0.001, safeZoneY - 0.001 - 0.1074 * (-0.86 max ((ACE_player weaponDirection _currentWeapon) select 2) min 0.86), 0.2, 0.2 * 4/3];
+    _ctrlMarker ctrlCommit 0;
+}] call CBA_fnc_addPerFrameHandler;
 
 true // return
