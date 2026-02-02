@@ -28,19 +28,21 @@ if (_abort) then {
     private _bulletVelocity = velocity _projectile;
     private _muzzleVelocity = vectorMagnitude _bulletVelocity;
 
-    private _maxRange = uiNamespace getVariable format[QGVAR(maxRange_%1), _ammo];
-    if (isNil "_maxRange") then {
-        private _airFriction = getNumber(configFile >> "CfgAmmo" >> _ammo >> "airFriction");
+    private _maxRange = GVAR(maxRange) getOrDefaultCall [_ammo, {
+        private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
+        private _airFriction = getNumber(_ammoConfig >> "airFriction");
         private _vanillaInitialSpeed = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
-        _maxRange = if (_airFriction < 0) then {
-            private _maxTime = ((_vanillaInitialSpeed - BULLET_TRACE_MIN_VELOCITY) / (BULLET_TRACE_MIN_VELOCITY * -_airFriction * _vanillaInitialSpeed)) max getNumber(configFile >> "CfgAmmo" >> _ammo >> "tracerEndTime");
+
+        private _maxRange = if (_airFriction < 0) then {
+            private _maxTime = ((_vanillaInitialSpeed - BULLET_TRACE_MIN_VELOCITY) / (BULLET_TRACE_MIN_VELOCITY * -_airFriction * _vanillaInitialSpeed)) max getNumber(_ammoConfig >> "tracerEndTime");
             -ln(1 - _airFriction * _vanillaInitialSpeed * _maxTime) / _airFriction
         } else {
-            _vanillaInitialSpeed * getNumber(configFile >> "CfgAmmo" >> _ammo >> "tracerEndTime")
+            _vanillaInitialSpeed * getNumber(_ammoConfig >> "tracerEndTime")
         };
-        _maxRange = _maxRange * 1.3; // Adding 30% more to range just to be safe
-        uiNamespace setVariable [format[QGVAR(maxRange_%1), _ammo], _maxRange];
-    };
+
+        _maxRange * 1.3 // Adding 30% more to range just to be safe
+    }, true];
+
     if (ACE_player distance _unit > _maxRange && {ACE_player distance ((getPosASL _unit) vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply _maxRange)) > _maxRange}) exitWith {};
 
     if (_projectile getShotInfo 4) exitWith { _abort = false }; // 4=shownTracer
@@ -57,17 +59,8 @@ if (_abort) then {
 if (_abort) exitWith {};
 
 // Get Weapon and Ammo Configurations
-private _AmmoCacheEntry = uiNamespace getVariable format[QGVAR(%1), _ammo];
-if (isNil "_AmmoCacheEntry") then {
-    _AmmoCacheEntry = _ammo call FUNC(readAmmoDataFromConfig);
-};
-private _WeaponCacheEntry = uiNamespace getVariable format[QGVAR(%1), _weapon];
-if (isNil "_WeaponCacheEntry") then {
-    _WeaponCacheEntry = _weapon call FUNC(readWeaponDataFromConfig);
-};
-
-_AmmoCacheEntry params ["_airFriction", "_caliber", "_bulletLength", "_bulletMass", "_transonicStabilityCoef", "_dragModel", "_ballisticCoefficients", "_velocityBoundaries", "_atmosphereModel", "_ammoTempMuzzleVelocityShifts", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocityVariationSD"];
-_WeaponCacheEntry params ["_barrelTwist", "_twistDirection", "_barrelLength"];
+(_ammo call FUNC(readAmmoDataFromConfig)) params ["_airFriction", "_caliber", "_bulletLength", "_bulletMass", "_transonicStabilityCoef", "_dragModel", "_ballisticCoefficients", "_velocityBoundaries", "_atmosphereModel", "_ammoTempMuzzleVelocityShifts", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocityVariationSD"];
+([_weapon, _muzzle] call FUNC(readWeaponDataFromConfig)) params ["_barrelTwist", "_twistDirection", "_barrelLength"];
 
 private _temperature = nil; // We need the variable in this scope. So we need to init it here.
 

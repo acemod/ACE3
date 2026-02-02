@@ -30,39 +30,39 @@ private _cfgWardobeTarget = configFile >> QUOTE(ADDON) >> _classTarget;
 private _duration = getNumber (_cfgWardobeTarget >> "duration");
 
 // replace the main Item
-private _equipmentType = "";
 private _typeNumber = getNumber (_cfgOrigin >> "ItemInfo" >> "type");
-private _replaceCode = switch (_typeNumber) do {
-    case TYPE_HEADGEAR: { _equipmentType = "HEADGEAR"; LINKFUNC(replaceOther) };
-    case TYPE_UNIFORM:  { _equipmentType = "UNIFORM";  LINKFUNC(replaceContainer) };
-    case TYPE_VEST:     { _equipmentType = "VEST";     LINKFUNC(replaceContainer) };
-    case TYPE_BACKPACK: { _equipmentType = "BACKPACK"; LINKFUNC(replaceContainer) };
-    default {
-        // CfgGlasses items do not have a ItemInfo subclass and therefore, not typeNumber
-        switch (true) do {
-            case (isClass (configFile >> "CfgGlasses" >> _classOrigin)): { _equipmentType = "FACEWEAR"; LINKFUNC(replaceOther) };
-            default { {} };
-        };
+
+if (_typeNumber isEqualTo 0) then {
+    
+    // Switch-statement incase there will be more edge cases like CfgGlassess
+    _typeNumber = switch (true) do {
+        // CfgGlasses items do not have a ItemInfo subclass and therefore, will return 0
+        case (isClass (configFile >> "CfgGlasses" >> _classOrigin)): { TYPE_GOGGLE };
+        case (getNumber (configFile >> "CfgVehicles" >> _classOrigin >> "isBackpack") isEqualTo 1): { TYPE_BACKPACK };
+        default { 0 };
     };
 };
-if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,_classOrigin); };
+
+private _replaceCode = GVAR(replaceHashmap) get _typeNumber;
+
+if (isNil "_replaceCode") exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,_classOrigin); };
 
 private _extendedInfo = createHashMap;
-[QGVAR(itemChangedStart), [_player, _classOrigin, _classTarget, _equipmentType, _extendedInfo]] call CBA_fnc_localEvent;
+[QGVAR(itemChangedStart), [_player, _classOrigin, _classTarget, _typeNumber, _extendedInfo]] call CBA_fnc_localEvent;
 
 // temp action disabled
 GVAR(inProgress) = true;
 
 [{
-    params ["_player", "_classOrigin", "_classTarget", "_equipmentType", "_replaceCode", "_extendedInfo"];
+    params ["_player", "_classOrigin", "_classTarget", "_typeNumber", "_replaceCode", "_extendedInfo"];
 
-    [QGVAR(itemChangedBegin), [_player, _classOrigin, _classTarget, _equipmentType, _extendedInfo]] call CBA_fnc_localEvent;
+    [QGVAR(itemChangedBegin), [_player, _classOrigin, _classTarget, _typeNumber, _extendedInfo]] call CBA_fnc_localEvent;
 
-    [_player, _classTarget, _equipmentType] call _replaceCode;
+    [_player, _classTarget, _typeNumber] call _replaceCode;
 
-    [QGVAR(itemChangedEnd), [_player, _classOrigin, _classTarget, _equipmentType, _extendedInfo]] call CBA_fnc_localEvent;
+    [QGVAR(itemChangedEnd), [_player, _classOrigin, _classTarget, _typeNumber, _extendedInfo]] call CBA_fnc_localEvent;
 
-}, [_player, _classOrigin, _classTarget, _equipmentType, _replaceCode, _extendedInfo], _duration] call CBA_fnc_waitAndExecute;
+}, [_player, _classOrigin, _classTarget, _typeNumber, _replaceCode, _extendedInfo], _duration] call CBA_fnc_waitAndExecute;
 
 // handle components
 [_classOrigin, _classTarget] call FUNC(compareComponents) params ["_missing", "_surplus"];

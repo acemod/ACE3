@@ -18,7 +18,7 @@
  * Public: No
  */
 
-params ["_player", "_classTarget", "_equipmentType"];
+params ["_player", "_classTarget", "_typeNumber"];
 
 private _allMags = (magazinesAmmoFull _player) apply { _x#0 };
 
@@ -51,10 +51,10 @@ private _containerVars = [];
 } forEach [uniformContainer _player, vestContainer _player, backpackContainer _player];
 
 // Replace Wearable Container
-switch (_equipmentType) do {
-    case "UNIFORM":  { _loadout # 3 set [0, _classTarget]; };
-    case "VEST":     { _loadout # 4 set [0, _classTarget]; };
-    case "BACKPACK": { _loadout # 5 set [0, _classTarget]; };
+switch (_typeNumber) do {
+    case TYPE_UNIFORM:  { _loadout # 3 set [0, _classTarget]; };
+    case TYPE_VEST:     { _loadout # 4 set [0, _classTarget]; };
+    case TYPE_BACKPACK: { _loadout # 5 set [0, _classTarget]; };
 };
 
 // Apply new loadout

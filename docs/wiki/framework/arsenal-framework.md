@@ -70,7 +70,7 @@ In the second example a full ACE Arsenal will be opened on the player.
 |    | Arguments | Type(s) | Optional (default value) |
 |----| --------- | ------- | ------------------------ |
 | 0  | Box | Object | Required |
-| 2  | Remove globally | Boolean | Optional (default: `false`) |
+| 1  | Remove globally | Boolean | Optional (default: `false`) |
 
 Example:
 `[_box, true] call ace_arsenal_fnc_removeBox`
