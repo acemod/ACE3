@@ -23,17 +23,38 @@ params [
 
 if (_vehicle isEqualTo objNull || _unit isEqualTo objNull) exitWith { true };
 
+if (isTurnedOut _unit) exitWith { true };
+
 private _class = typeOf _vehicle;
-private _index = _vehicle getCargoIndex _unit;
+
+private _key = _vehicle unitTurret _unit;
+if (count _key >= 1) then {
+    _key = [_key select 0];
+} else {
+    _key = [-2, _vehicle getCargoIndex _unit];
+};
 
 private _open = -1;
 if (_class in GVAR(openSeatCache)) then {
     private _cache = GVAR(openSeatCache) get _class;
-    if (_index in _cache) then {
-        _open = _cache get _index;
+    if (_key in _cache) then {
+        _open = _cache get _key;
     };
 };
 if (_open isNotEqualTo -1) exitWith { _open };
+
+private _config = getArray (configOf _vehicle >> QGVAR(seats));
+if (_config isNotEqualTo []) exitWith {
+    if (typeName _config == "SCALAR") exitWith { _config == 1 };
+    private _path = switch (_key select 0) do {
+        case -2: { [2, _key select 1] };  // cargo
+        case -1: { [0, 0] }; // driver
+        default { [1, _key select 0] }; // turret
+    };
+    private _subConfig = _config select (_path select 0);
+    if (typeName _subConfig == "SCALAR") exitWith { _subConfig == 1 };
+    _subConfig select (_path select 1) == 1
+};
 
 if ([_vehicle] call FUNC(isOpenVehicle)) exitWith { true };
 
@@ -42,6 +63,6 @@ private _intersect = lineIntersectsSurfaces [_eyePos, _eyePos vectorAdd [0, 0, 1
 private _open = _intersect isEqualTo [];
 
 private _cache = GVAR(openSeatCache) getOrDefaultCall [_class, { createHashMap }, true];
-_cache set [_index, _open];
+_cache set [_key, _open];
 
 _open

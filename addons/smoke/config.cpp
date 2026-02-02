@@ -14,4 +14,5 @@ class CfgPatches {
 #include "ACE_Arsenal_Stats.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgGlasses.hpp"
+#include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"

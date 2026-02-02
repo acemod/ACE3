@@ -25,10 +25,12 @@ private _class = typeOf _vehicle;
 
 if (_class in GVAR(openVehicleCache)) exitWith { GVAR(openVehicleCache) get _class };
 
-private _attentuation = getText(configFile >> "CfgVehicles" >> _class >> "attenuationEffectType");
-if (_attentuation == "") exitWith { true };
+private _attenuation = getText(configFile >> "CfgVehicles" >> _class >> "attenuationEffectType");
+if (_attenuation == "") exitWith { true };
+// It's marked as being open, but most helis are at least mostly enclosed
+if (_attenuation == "HeliAttenuation") exitWith { false };
 
-private _attenuation = configFile >> "AttenuationEffects" >> _attentuation;
+private _attenuation = configFile >> "AttenuationEffects" >> _attenuation;
 private _open = [0,1] findIf {
     private _equalizer = getArray(_attenuation >> format ["Equalizer%1", _x] >> "gain");
     _equalizer isEqualTo [1,1,1,1]
