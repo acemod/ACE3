@@ -39,13 +39,19 @@ private _change = (if (_isInSmoke) then {
 
 // Eyes
 private _levelEyes = _unit getVariable [QGVAR(eyesLevel), 0];
-private _newLevelEyes = _levelEyes + _change;
+private _eyesProtect = _unit getVariable [QGVAR(eyesProtection), 0];
+
+private _eyesChange = _change;
+if (_eyesProtect == 1 && _isInSmoke) then {
+    _eyesChange = -0.04 * GVAR(recoveryFactor) * diag_deltaTime;
+};
+
+private _newLevelEyes = _levelEyes + _eyesChange;
 _newLevelEyes = _newLevelEyes min 1;
 _newLevelEyes = _newLevelEyes max 0;
 _levelEyes = _newLevelEyes;
 
-private _eyesProtect = _unit getVariable [QGVAR(eyesProtection), 0];
-if (_eyesProtect != 0) then {
+if (_eyesProtect != 0 && _eyesProtect != 1) then {
     _levelEyes = _levelEyes * (1 - _eyesProtect);
 };
 _unit setVariable [QGVAR(eyesLevel), _levelEyes];
@@ -63,13 +69,19 @@ if (_unit == ace_player) then {
 
 // Breathing
 private _levelBreathing = _unit getVariable [QGVAR(breathingLevel), 0];
-private _newLevelBreathing = _levelBreathing + _change;
+private _breathProtect = _unit getVariable [QGVAR(breathingProtection), 0];
+
+private _breathChange = _change;
+if (_breathProtect == 1 && _isInSmoke) then {
+    _breathChange = -0.04 * GVAR(recoveryFactor) * diag_deltaTime;
+};
+
+private _newLevelBreathing = _levelBreathing + _breathChange;
 _newLevelBreathing = _newLevelBreathing min 1;
 _newLevelBreathing = _newLevelBreathing max 0;
 _levelBreathing = _newLevelBreathing;
 
-private _breathProtect = _unit getVariable [QGVAR(breathingProtection), 0];
-if (_breathProtect != 0) then {
+if (_breathProtect != 0 && _breathProtect != 1) then {
     _levelBreathing = _levelBreathing * (1 - _breathProtect);
 };
 _unit setVariable [QGVAR(breathingLevel), _levelBreathing];
