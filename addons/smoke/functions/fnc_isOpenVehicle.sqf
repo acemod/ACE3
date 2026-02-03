@@ -27,8 +27,6 @@ if (_class in GVAR(openVehicleCache)) exitWith { GVAR(openVehicleCache) get _cla
 
 private _attenuation = getText(configFile >> "CfgVehicles" >> _class >> "attenuationEffectType");
 if (_attenuation == "") exitWith { true };
-// It's marked as being open, but most helis are at least mostly enclosed
-if (_attenuation == "HeliAttenuation") exitWith { false };
 
 private _attenuation = configFile >> "AttenuationEffects" >> _attenuation;
 private _open = [0,1] findIf {

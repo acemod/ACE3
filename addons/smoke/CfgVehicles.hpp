@@ -16,6 +16,26 @@ class CfgVehicles {
         };
     };
 
+    class Heli_light_03_base_F;
+    class Heli_light_03_unarmed_base_F: Heli_light_03_base_F {
+        ace_smoke_seats[] = {0}; // All seats are enclosed
+    };
+
+    class Heli_Light_02_base_F;
+    class Heli_Light_02_dynamicLoadout_base_F: Heli_Light_02_base_F {
+        ace_smoke_seats[] = {0}; // All seats are enclosed
+    };
+
+    class Heli_Attack_01_base_F;
+    class Heli_Attack_01_dynamicLoadout_base_F: Heli_Attack_01_base_F {
+        ace_smoke_seats[] = {0}; // All seats are enclosed
+    };
+
+    class Helicopter_Base_H;
+    class Heli_Transport_02_base_F: Helicopter_Base_H {
+        ace_smoke_seats[] = {0}; // All seats are enclosed
+    };
+
     class Car_F;
     class Offroad_01_base_F: Car_F {
         ace_smoke_seats[] = {1}; // All seats are exposed

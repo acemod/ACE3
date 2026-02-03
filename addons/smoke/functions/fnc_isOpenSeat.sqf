@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: BrettMayson
- * Check if a seat is open and thus susceptible to smoke entering, may not be accurate for vehicles with top coverings
+ * Check if a seat is open and thus susceptible to smoke entering
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
@@ -58,11 +58,7 @@ if (_config isNotEqualTo []) exitWith {
 
 if ([_vehicle] call FUNC(isOpenVehicle)) exitWith { true };
 
-private _eyePos = eyePos _unit;
-private _intersect = lineIntersectsSurfaces [_eyePos, _eyePos vectorAdd [0, 0, 1], _unit];
-private _open = _intersect isEqualTo [];
-
 private _cache = GVAR(openSeatCache) getOrDefaultCall [_class, { createHashMap }, true];
-_cache set [_key, _open];
+_cache set [_key, true];
 
-_open
+true
