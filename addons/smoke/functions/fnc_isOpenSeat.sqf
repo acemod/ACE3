@@ -60,7 +60,7 @@ if ([_vehicle] call FUNC(isOpenVehicle)) exitWith { true };
 
 private _eyePos = eyePos _unit;
 private _intersect = lineIntersectsSurfaces [_eyePos, _eyePos vectorAdd [0, 0, 1], _unit];
-private _open = _intersect isEqualTo [];
+private _open = (_intersect findIf { _x#2 == _vehicle }) == -1; // No intersection with vehicle roof
 
 private _cache = GVAR(openSeatCache) getOrDefaultCall [_class, { createHashMap }, true];
 _cache set [_key, _open];
