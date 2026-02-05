@@ -1,4 +1,128 @@
-class CfgMovesBasic;
+class CfgMovesBasic {
+    class Actions {
+        class CivilProneActions;
+        class ACE_Dazed: CivilProneActions {
+            stop = QGVAR(dazed_AmovPpneMstpSnonWnonDnon);
+            StopRelaxed = QGVAR(dazed_AmovPpneMstpSnonWnonDnon);
+            default = QGVAR(dazed_AmovPpneMstpSnonWnonDnon);
+
+            WalkF = QGVAR(dazed_AmovPpneMrunSnonWnonDf);
+            LimpF = QGVAR(dazed_AmovPpneMrunSnonWnonDf);
+            PlayerWalkF = QGVAR(dazed_AmovPpneMrunSnonWnonDf);
+            SlowF = QGVAR(dazed_AmovPpneMrunSnonWnonDf);
+            PlayerSlowF = QGVAR(dazed_AmovPpneMrunSnonWnonDf);
+            TactF = QGVAR(dazed_AmovPpneMrunSnonWnonDf);
+            PlayerTactF = QGVAR(dazed_AmovPpneMrunSnonWnonDf);
+
+            turnL = QGVAR(dazed_AmovPpneMstpSnonWnonDnon_turnL);
+            turnLRelaxed = QGVAR(dazed_AmovPpneMstpSnonWnonDnon_turnL);
+
+            turnR = QGVAR(dazed_AmovPpneMstpSnonWnonDnon_turnR);
+            turnRRelaxed = QGVAR(dazed_AmovPpneMstpSnonWnonDnon_turnR);
+            PutDown = "";
+            getOver = "";
+            throwPrepare = "";
+            throwGrenade = "";
+            LimpLF = "";
+            LimpRF = "";
+            LimpL = "";
+            LimpR = "";
+            LimpB = "";
+            LimpLB = "";
+            LimpRB = "";
+            reloadMagazine = "";
+            reloadMGun = "";
+            reloadMortar = "";
+            WalkLF = "";
+            WalkRF = "";
+            WalkL = "";
+            WalkR = "";
+            WalkLB = "";
+            WalkRB = "";
+            WalkB = "";
+            PlayerWalkLF = "";
+            PlayerWalkRF = "";
+            PlayerWalkL = "";
+            PlayerWalkR = "";
+            PlayerWalkLB = "";
+            PlayerWalkRB = "";
+            PlayerWalkB = "";
+            SlowLF = "";
+            SlowRF = "";
+            SlowL = "";
+            SlowR = "";
+            SlowLB = "";
+            SlowRB = "";
+            SlowB = "";
+            PlayerSlowLF = "";
+            PlayerSlowRF = "";
+            PlayerSlowL = "";
+            PlayerSlowR = "";
+            PlayerSlowLB = "";
+            PlayerSlowRB = "";
+            PlayerSlowB = "";
+            FastF = "";
+            FastLF = "";
+            FastRF = "";
+            FastL = "";
+            FastR = "";
+            FastLB = "";
+            FastRB = "";
+            FastB = "";
+            TactLF = "";
+            TactRF = "";
+            TactL = "";
+            TactR = "";
+            TactLB = "";
+            TactRB = "";
+            TactB = "";
+            PlayerTactLF = "";
+            PlayerTactRF = "";
+            PlayerTactL = "";
+            PlayerTactR = "";
+            PlayerTactLB = "";
+            PlayerTactRB = "";
+            PlayerTactB = "";
+            EvasiveLeft = "";
+            EvasiveRight = "";
+            down = "";
+            weaponOn = "";
+            weaponOff = "";
+            binocOff = "";
+            handGunOn = "";
+            takeFlag = "";
+            treated = "";
+            Lying = "";
+            Crouch = "";
+            CanNotMove = "";
+            FireNotPossible = "";
+            strokeGun = "";
+            PlayerStand = "";
+            Relax = "";
+            PrimaryWeapon = "";
+            SecondaryWeapon = "";
+            Binoculars = "";
+            Up = "";
+            PlayerCrouch = "";
+            PlayerProne = "";
+            Combat = "";
+            Stand = "";
+            Civil = "";
+            CivilLying = "";
+            GetInLow = "";
+            GetInMedium = "";
+            GetInHigh = "";
+            GetInSDV = "";
+            Surrender = "";
+            saluteOff = "";
+            grabDrag = "";
+            dooraction = "";
+            agonyStop = "";
+            gear = "";
+        };
+    };
+};
+
 class CfgMovesMaleSdr: CfgMovesBasic {
     class States {
         // fixes hand being stuck at rifle which is on the back
@@ -93,7 +217,10 @@ class CfgMovesMaleSdr: CfgMovesBasic {
 
         class UNCON_ANIM(faceUp): Unconscious {};
 
-        class AmovPpneMstpSnonWnonDnon;
+        class AmovPercMstpSnonWnonDnon;
+        class AmovPpneMstpSnonWnonDnon: AmovPercMstpSnonWnonDnon {
+            ConnectTo[] += {QGVAR(dazed_AmovPpneMstpSnonWnonDnon),0.1};
+        };
         class ACE_UnconsciousOutProne: AmovPpneMstpSnonWnonDnon {
             //file = "\A3\anims_f\Data\Anim\Sdr\dth\pne\stp\ras\Rfl\AdthPpneMstpSrasWrflDnon_1";
             looped = 0;
@@ -107,6 +234,44 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             InterpolateTo[] = {"Unconscious",0.2};
             ConnectTo[] = {"AmovPpneMstpSnonWnonDnon",0.2};
             speed = 100;
+        };
+
+        class GVAR(dazed_AmovPpneMstpSnonWnonDnon): AmovPpneMstpSnonWnonDnon {
+            actions = "ACE_Dazed";
+            speed = 0.5;
+            ConnectTo[] = {QGVAR(dazed_AmovPpneMstpSnonWnonDnon),0.1};
+            InterpolateTo[] = {
+                QGVAR(dazed_AmovPpneMrunSnonWnonDf),0.02,
+                QGVAR(dazed_AmovPpneMstpSnonWnonDnon_turnL),0.02,
+                QGVAR(dazed_AmovPpneMstpSnonWnonDnon_turnR),0.02,
+                "Unconscious",0.02
+            };
+            variantsPlayer[] = {};
+            disableWeapons = 1;
+        };
+        class AmovPpneMrunSnonWnonDf;
+        class GVAR(dazed_AmovPpneMrunSnonWnonDf): AmovPpneMrunSnonWnonDf {
+            actions = "ACE_Dazed";
+            speed = 0.5;
+            InterpolateTo[] = {QGVAR(dazed_AmovPpneMstpSnonWnonDnon),0.02, "Unconscious",0.02};
+            variantsPlayer[] = {};
+            disableWeapons = 1;
+        };
+        class AmovPpneMstpSnonWnonDnon_turnL;
+        class GVAR(dazed_AmovPpneMstpSnonWnonDnon_turnL): AmovPpneMstpSnonWnonDnon_turnL {
+            actions = "ACE_Dazed";
+            speed = 0.5;
+            InterpolateTo[] = {QGVAR(dazed_AmovPpneMstpSnonWnonDnon),0.02, "Unconscious",0.02};
+            variantsPlayer[] = {};
+            disableWeapons = 1;
+        };
+        class AmovPpneMstpSnonWnonDnon_turnR;
+        class GVAR(dazed_AmovPpneMstpSnonWnonDnon_turnR): AmovPpneMstpSnonWnonDnon_turnR {
+            actions = "ACE_Dazed";
+            speed = 0.5;
+            InterpolateTo[] = {QGVAR(dazed_AmovPpneMstpSnonWnonDnon),0.02, "Unconscious",0.02};
+            variantsPlayer[] = {};
+            disableWeapons = 1;
         };
     };
 };

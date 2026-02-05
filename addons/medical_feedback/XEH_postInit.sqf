@@ -54,6 +54,15 @@ GVAR(bloodTickCounter) = 0;
     ["unconscious", _unconscious] call EFUNC(common,setDisableUserInputStatus);
 }] call CBA_fnc_addEventHandler;
 
+["ace_medical_dazed", {
+    params ["_unit", "_dazed"];
+
+    if (_unit != ACE_player) exitWith {};
+    TRACE_1("player dazed eh",_dazed);
+
+    [true] call FUNC(handleEffects);
+}] call CBA_fnc_addEventHandler;
+
 // Reset volume upon death for spectators
 [QEGVAR(medical,death), {
     params ["_unit"];
