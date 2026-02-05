@@ -31,4 +31,7 @@ if (_bloodPressureL < 50 || {_bloodPressureH < 60}) exitWith { false };
 private _heartRate = GET_HEART_RATE(_unit);
 if (_heartRate < 40) exitWith { false };
 
+private _painLevel = GET_PAIN(_unit);
+if (_painLevel > PAIN_UNCONSCIOUS) exitWith { false };
+
 true
