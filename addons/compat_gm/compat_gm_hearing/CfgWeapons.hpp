@@ -25,7 +25,7 @@ class CfgWeapons {
 
     class gm_gc_headgear_crewhat_80_base;
     class gm_gc_army_headgear_crewhat_80_blk: gm_gc_headgear_crewhat_80_base {
-        HEARING_PROTECTION_PELTOR;
+        HEARING_PROTECTION_VICCREW;
     };
 
     class gm_gc_headgear_zsh3_base;
