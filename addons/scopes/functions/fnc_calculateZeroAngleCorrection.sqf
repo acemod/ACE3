@@ -27,7 +27,7 @@ params ["_oldZeroRange", "_newZeroRange", "_boreHeight"/*in cm*/, "_weapon", "_m
 // When FFV from vehicles currentZeroing will report 0 so just bail
 if (_oldZeroRange <= 0) exitWith { 0 };
 
-GVAR(zeroAngleCorrectionData) getOrDefaultCall [[_oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics], {
+GVAR(zeroAngleCorrectionData) getOrDefaultCall [_this, {
     private _airFriction = getNumber (configFile >> "CfgAmmo" >> _ammo >> "airFriction");
     private _initSpeed = getNumber(configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
     private _initSpeedCoef = getNumber(configFile >> "CfgWeapons" >> _weapon >> "initSpeed");
