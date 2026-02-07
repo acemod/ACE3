@@ -82,6 +82,71 @@ class CfgWeapons {
     class gm_aks74nk_base: gm_aks74n_base {
 	    ACE_barrelLength = 317;
 	};
+	class gm_c7a1_base: gm_m16_base
+	{
+	    ACE_barrelTwist = 177.8;
+	};
+	class gm_g11_base;
+	class gm_g11k2_base: gm_g11_base
+	{
+	    ACE_barrelLength = 540;
+	    ACE_barrelTwist = 154.94;
+	};
+	class gm_g36_base: gm_rifle_base
+	{
+	    ACE_barrelLength = 480.06;
+	    ACE_barrelTwist = 177.8;
+	};
+	class gm_hk33k_base: gm_hk33_base
+	{
+	    ACE_barrelLength = 332.74;
+	};
+	class gm_mpikms72k_base: gm_ak47_base
+	{
+	    ACE_barrelLength = 317;
+	};
+	class gm_msg90_base: gm_psg1_base
+	{
+        ACE_barrelLength = 599.44;
+	    ACE_barrelTwist = 279.4;
+	};
+	class gm_hk512_base: gm_rifle_base
+	{
+	    ACE_barrelLength = 460;
+        ACE_twistDirection = 0;
+	};
+	class gm_sg550_base: gm_rifle_base
+	{
+	    ACE_barrelLength = 528;
+	    ACE_barrelTwist = 254;
+	};
+	class gm_sg551_base: gm_rifle_base
+	{
+    	ACE_barrelLength = 363;
+	    ACE_barrelTwist = 177.8;
+	};
+	class gm_sg542_base: gm_sg550_base
+	{
+	    ACE_barrelLength = 464.82;
+	    ACE_barrelTwist = 304.8;
+	};
+    // PISTOLS
+	class gm_pistol_base;
+	class gm_p210_base: gm_pistol_base
+	{
+    	ACE_barrelLength = 120;
+    	ACE_barrelTwist = 254;
+	};
+	class gm_pm_base: gm_pistol_base
+	{
+	    ACE_barrelLength = 93.5;
+	    ACE_barrelTwist = 260;
+	};
+	class gm_p1_base: gm_pistol_base
+	{
+    	ACE_barrelLength = 125;
+	    ACE_barrelTwist = 254;
+	};
     //LAUNCHERS
     class gm_launcher_base;
     class gm_carlgustaf_m2_base: gm_launcher_base {
