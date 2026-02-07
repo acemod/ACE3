@@ -9,7 +9,7 @@ class CfgPatches {
         requiredAddons[] = {"ace_common", "gm_core"};
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {"sancron", "nomisum"};
+        authors[] = {"sancron", "nomisum", "Redzitus"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
