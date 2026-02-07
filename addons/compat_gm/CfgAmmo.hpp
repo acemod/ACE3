@@ -39,36 +39,50 @@ class CfgAmmo
   	    ACE_ammoTempMuzzleVelocityShifts[] = {-26.55,-25.47,-22.85,-20.12,-16.98,-12.8,-7.64,-1.53,5.96,15.17,26.19};
   	    ACE_ballisticCoefficients[] = {0.168};
         ACE_barrelLengths[] = {254,414.02,508};
-      	ACE_bulletLength = 21.59;
+      	ACE_bulletLength = 25.55;
   	    ACE_bulletMass = 3.42792;
       	ACE_caliber = 5.588;
       	ACE_dragModel = 7;
   	    ACE_muzzleVelocities[] = {780,880,920};
   	    ACE_standardAtmosphere = "ASM";
 	};
+	class gm_bullet_545x39mm_B_T_7T3: gm_bullet_545x39mm_base
+	{
+	    ACE_barrelLengths[] = {254,414.02,508};
+	    ACE_bulletLength = 25.32;
+	    ACE_bulletMass = 3.2;
+	    ACE_muzzleVelocities[] = {785,883,925};
+	};
 	class gm_bullet_762x54mmR_base: gm_bullet_base {
       	ACE_ammoTempMuzzleVelocityShifts[] = {-26.55,-25.47,-22.85,-20.12,-16.98,-12.8,-7.64,-1.53,5.96,15.17,26.19};
       	ACE_ballisticCoefficients[] = {0.411};
     	ACE_barrelLengths[] = {406.4,508,604.5,736.6};
-    	ACE_bulletLength = 28.956;
+	    ACE_bulletLength = 32.385;
       	ACE_bulletMass = 9.7975952;
     	ACE_caliber = 7.925;
     	ACE_dragModel = 1;
     	ACE_muzzleVelocities[] = {735,770,809,838};
     	ACE_standardAtmosphere = "ICAO";
 	};
-	class gm_bullet_762x54mmR_B_T_7t2: gm_bullet_762x54mmR_base {
-	    ACE_ballisticCoefficients[] = {0.395};
-        ACE_bulletMass = 9.6552;
-	};
 	class gm_bullet_762x54mmR_API_7bz3: gm_bullet_762x54mmR_base {
 	    ACE_ballisticCoefficients[] = {0.401};
+    	ACE_bulletLength = 36.83;
 	    ACE_bulletMass = 10.387265;
         ace_vehicle_damage_incendiary = 1;
 	};
 	class gm_bullet_762x54mmR_B_57N323S: gm_bullet_762x54mmR_base {
 	    ACE_ballisticCoefficients[] = {0.374};
 	    ACE_bulletMass = 9.6031985;
+	    ACE_barrelLengths[] = {550,605,650,658};
+	    ACE_bulletLength = 32.385;
+	    ACE_muzzleVelocities[] = {810,825,830,825};
+	};
+	class gm_bullet_762x54mmR_B_T_7t2: gm_bullet_762x54mmR_B_57N323S {
+	    ACE_ballisticCoefficients[] = {0.395};
+	    ACE_barrelLengths[] = {406.4,508,604.5,736.6};
+	    ACE_bulletLength = 35.55;
+	    ACE_bulletMass = 9.6552;
+	    ACE_muzzleVelocities[] = {735,770,809,838};
 	};
 	class gm_bullet_762x51mm_base: gm_bullet_base {
   	    ACE_ammoTempMuzzleVelocityShifts[] = {-26.55,-25.47,-22.85,-20.12,-16.98,-12.8,-7.64,-1.53,5.96,15.17,26.19};
@@ -82,7 +96,12 @@ class CfgAmmo
   	    ACE_standardAtmosphere = "ICAO";
 	};
   	class gm_bullet_762x51mm_AP_DM151: gm_bullet_762x51mm_base {
+	    ACE_bulletLength = 31.496;
   	    ACE_bulletMass = 9.78464;
+	};
+	class gm_bullet_762x51mm_B_T_DM21: gm_bullet_762x51mm_base {
+	    ACE_bulletLength = 33.782;
+	    ACE_bulletMass = 9.20145;
 	};
     class gm_bullet_9x18mm_base;
 	class gm_bullet_9x18mm_B_pst: gm_bullet_9x18mm_base {
@@ -115,4 +134,83 @@ class CfgAmmo
         ACE_bulletMass = 9.52544;
         ACE_muzzleVelocities[] = {220,250,290};
     };
+    	class gm_bullet_762x39mm_base;
+	class gm_bullet_762x39mm_B_57N231: gm_bullet_762x39mm_base
+	{
+	    ACE_ammoTempMuzzleVelocityShifts[] = {-26.55,-25.47,-22.85,-20.12,-16.98,-12.8,-7.64,-1.53,5.96,15.17,26.19};
+	    ACE_ballisticCoefficients[] = {0.275};
+	    ACE_barrelLengths[] = {254,414.02,508};
+	    ACE_bulletLength = 26.8;
+	    ACE_bulletMass = 7.899;
+	    ACE_caliber = 7.92;
+	    ACE_dragModel = 1;
+	    ACE_muzzleVelocities[] = {650,716,750};
+	    ACE_standardAtmosphere = "ICAO";
+	};
+	class gm_bullet_762x39mm_B_M43: gm_bullet_762x39mm_B_57N231
+	{
+	    ACE_ballisticCoefficients[] = {0.138};
+	    ACE_dragModel = 7;
+	    ACE_bulletMass = 7.97027;
+	};
+	class gm_bullet_762x39mm_B_T_57N231P: gm_bullet_762x39mm_B_57N231
+	{
+	    ACE_bulletLength = 27.48;
+	    ACE_bulletMass = 7.5685127;
+	};
+	class gm_bullet_762x39mm_AP_7N23: gm_bullet_762x39mm_B_57N231
+	{
+	    ACE_bulletLength = 27.4;
+	};
+	class gm_bullet_762x39mm_AP_M43: gm_bullet_762x39mm_AP_7N23
+	{
+    	ACE_bulletLength = 28.3;
+	    ACE_bulletMass = 7.87;
+	    ACE_ballisticCoefficients[] = {0.138};
+	    ACE_dragModel = 7;
+	};
+	class gm_bullet_762x39mm_BSD_57N231U: gm_bullet_762x39mm_B_57N231
+	{
+	    ACE_bulletLength = 33.62;
+	    ACE_bulletMass = 12.5;
+	    ACE_muzzleVelocities[] = {270,290,320};
+	};
+	class gm_bullet_473x33mm_base;
+	class gm_bullet_473x33mm_B_dm11: gm_bullet_473x33mm_base
+	{
+	    ACE_ammoTempMuzzleVelocityShifts[] = {-26.55,-25.47,-22.85,-20.12,-16.98,-12.8,-7.64,-1.53,5.96,15.17,26.19};
+	    ACE_ballisticCoefficients[] = {0.115};
+	    ACE_barrelLengths[] = {540};
+    	ACE_bulletLength = 21.886667;
+    	ACE_bulletMass = 3.33;
+	    ACE_caliber = 4.92;
+	    ACE_dragModel = 7;
+	    ACE_muzzleVelocities[] = {925};
+	    ACE_standardAtmosphere = "ASM";
+	};
+
+//As far as I searched, those are not actually used by any mag in the CDLC.
+	class gm_bullet_762x39mm_API_M43
+	{
+	    ACE_bulletLength = 28.57;
+	    ace_vehicle_damage_incendiary = 1;
+	    ACE_bulletMass = 7.67;
+	    ACE_ballisticCoefficients[] = {0.138};
+	    ACE_dragModel = 7;
+	};
+	class gm_bullet_762x39mm_API_T_M43
+	{
+	    ACE_bulletLength = 28.57;
+	    ace_vehicle_damage_incendiary = 1;
+	    ACE_bulletMass = 7.67;
+    	ACE_ballisticCoefficients[] = {0.138};
+	    ACE_dragModel = 7;
+	};
+	class gm_bullet_762x39mm_B_T_M43: gm_bullet_762x39mm_B_T_57N231P
+	{
+	    ACE_bulletLength = 27.48;
+	    ACE_bulletMass = 7.97027;
+	    ACE_ballisticCoefficients[] = {0.138};
+	    ACE_dragModel = 7;
+	};
 };
