@@ -286,7 +286,8 @@ private _state = profileNamespace getVariable ["MyPlayerMedicalState", ""];
 ## 6.1 Extending with custom handling
 
 You can save additional data or add custom handling by hooking into the events:
+
 | Event Name | Params | Description |
 | ---------- | ------ | ----------- |
 | ace_medical_serializeState | Unit, Namespace | Raised locally after ACE Medical's serialization has taken place |
-| ace_medical_deserializeState | Unit, Namepsace | Raised locally after ACE Medical's deserialization has taken place |
+| ace_medical_deserializeState | Unit, Namespace | Raised locally after ACE Medical's deserialization has taken place |
