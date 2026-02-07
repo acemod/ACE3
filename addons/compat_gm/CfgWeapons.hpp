@@ -130,23 +130,6 @@ class CfgWeapons {
 	    ACE_barrelLength = 464.82;
 	    ACE_barrelTwist = 304.8;
 	};
-    // PISTOLS
-	class gm_pistol_base;
-	class gm_p210_base: gm_pistol_base
-	{
-    	ACE_barrelLength = 120;
-    	ACE_barrelTwist = 254;
-	};
-	class gm_pm_base: gm_pistol_base
-	{
-	    ACE_barrelLength = 93.5;
-	    ACE_barrelTwist = 260;
-	};
-	class gm_p1_base: gm_pistol_base
-	{
-    	ACE_barrelLength = 125;
-	    ACE_barrelTwist = 254;
-	};
     //LAUNCHERS
     class gm_launcher_base;
     class gm_carlgustaf_m2_base: gm_launcher_base {
@@ -162,6 +145,7 @@ class CfgWeapons {
 	class gm_strela_launcher_base: gm_launcher_base {
         EGVAR(reloadlaunchers,enabled) = 1;
 	};
+    class gm_fim43_base;
 	class gm_fim43_oli: gm_fim43_base {
         EGVAR(reloadlaunchers,enabled) = 1;
 	};
@@ -188,6 +172,7 @@ class CfgWeapons {
         ACE_barrelLength = 146;
 	    ACE_barrelTwist = 254;
 	};
+
     // GRENADE LAUNCHERS
     class gm_hk69a1_base: gm_rifle_base {
         EGVAR(overheating,jamTypesAllowed)[] = {"Fire", "Dud"};
@@ -210,6 +195,22 @@ class CfgWeapons {
         EGVAR(overpressure,offset) = 3;
     };
 
+    // PISTOLS
+	class gm_p210_base: gm_pistol_base
+	{
+    	ACE_barrelLength = 120;
+    	ACE_barrelTwist = 254;
+	};
+	class gm_pm_base: gm_pistol_base
+	{
+	    ACE_barrelLength = 93.5;
+	    ACE_barrelTwist = 260;
+	};
+	class gm_p1_base: gm_pistol_base
+	{
+    	ACE_barrelLength = 125;
+	    ACE_barrelTwist = 254;
+	};
     //Fire Protection
     class gm_ge_ff_uniform_man_80_base;
     class gm_ge_army_uniform_pilot_base;
