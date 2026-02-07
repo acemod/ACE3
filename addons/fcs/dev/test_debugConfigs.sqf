@@ -5,7 +5,7 @@
 private _testPass = true;
 
 diag_log text format ["[ACE_FCS] ---------------"];
-private _vehicles = configProperties [configFile >> "CfgVehicles", "(isClass _x) && {2 == getNumber (_x >> 'scope')}", true];
+private _vehicles = "(getNumber (_x >> 'scope')) == 2" configClasses (configFile >> "CfgVehicles");
 private _problemUIs = [];
 {
     private _vehicleType = configName _x;

@@ -1,13 +1,13 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Gets viewports for a vehicle from config. Caches results to a setVar on the vic.
+ * Gets viewports for a vehicle from config. Caches results to a hashmap.
  *
  * Arguments:
- * 0: vehicle <OBJECT>
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * ARRAY
+ * Viewport information <ARRAY>
  *
  * Example:
  * [vehicle player] call ace_viewports_fnc_getViewports
@@ -17,10 +17,8 @@
 
 params ["_vehicle"];
 
-private _viewports = _vehicle getVariable [QGVAR(viewports), nil];
-
-if (isNil "_viewports") then {
-    _viewports = (configProperties [(configOf _vehicle) >> "ace_viewports", "isClass _x", true]) apply {
+GVAR(viewports) getOrDefaultCall [typeOf _vehicle, {
+    private _viewports = (configProperties [configOf _vehicle >> QUOTE(ADDON), "isClass _x", true]) apply {
         // name [STRING] is just used for debug
         private _name = configName _x;
         // type [STRING] - Optional
@@ -51,7 +49,7 @@ if (isNil "_viewports") then {
                 } else {
                     _vehicle selectionPosition [_camLocation, "Memory"];
                 };
-                _screenLocation =_camLocArray vectorAdd [0,0,-0.175]
+                _screenLocation = _camLocArray vectorAdd [0,0,-0.175]
             };
             _screenLocation = _vehicle selectionPosition [_screenLocation, "Memory"];
         };
@@ -68,7 +66,5 @@ if (isNil "_viewports") then {
         [_name, _type, _camLocation, _camAttach, _screenLocation, _maxDistance, _compartments, _roles]
     };
     TRACE_3("getViewports",_vehicle,typeOf _vehicle,count _viewports);
-    _vehicle setVariable [QGVAR(viewports), _viewports];
-};
-
-_viewports
+    _viewports
+}, true] // return
