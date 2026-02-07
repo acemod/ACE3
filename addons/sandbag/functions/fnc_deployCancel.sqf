@@ -17,13 +17,15 @@
 
 params ["_unit"];
 
+if (isNull _unit) exitWith {};
+
 // Enable running again
 [_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 [_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 private _sandbag = _unit getVariable [QGVAR(sandBag), objNull];
 
-// Delete placement dummy, if present (don't early exit, in case dummy was deleted by something else)
+// Delete placement dummy, if present (don't early exit, in case dummy was deleted by something else, as still need to clean up)
 if (!isNull _sandbag) then {
     deleteVehicle _sandbag;
 

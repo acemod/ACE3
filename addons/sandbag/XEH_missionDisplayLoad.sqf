@@ -6,6 +6,6 @@ _display displayAddEventHandler ["MouseZChanged", {(_this select 1) call FUNC(ha
 _display displayAddEventHandler ["MouseButtonDown", {
     // Right clicking cancels deployment
     if (_this select 1 == 1) then {
-        ACE_player call FUNC(handleDeployInterrupt);
+        ACE_player call FUNC(deployCancel);
     };
 }];

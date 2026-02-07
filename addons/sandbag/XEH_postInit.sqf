@@ -2,30 +2,45 @@
 
 if (isServer) then {
     // Cancel deploy on hard disconnection. Function is identical to interrupted
-    addMissionEventHandler ["HandleDisconnect", {(_this select 0) call FUNC(handleDeployInterrupt)}];
+    addMissionEventHandler ["HandleDisconnect", {(_this select 0) call FUNC(deployCancel)}];
 };
+
+// To be safe for FUNC(deployCancel) if called by dedicated server
+GVAR(deployPFH) = -1;
 
 if (!hasInterface) exitWith {};
 
-GVAR(deployPFH) = -1;
 GVAR(deployDistance) = -1;
 GVAR(deployDirection) = 0;
 GVAR(deployHeight) = 0;
 
-// Cancel object deployment if interact menu opened
-["ace_interactMenuOpened", {ACE_player call FUNC(handleDeployInterrupt)}] call CBA_fnc_addEventHandler;
-
 // Cancel deploy on player change. This does work when returning to lobby, but not when hard disconnecting
-["unit", LINKFUNC(handleDeployInterrupt)] call CBA_fnc_addPlayerEventHandler;
-["vehicle", {(_this select 0) call FUNC(handleDeployInterrupt)}] call CBA_fnc_addPlayerEventHandler;
-["weapon", {(_this select 0) call FUNC(handleDeployInterrupt)}] call CBA_fnc_addPlayerEventHandler;
-["loadout", {[_this select 0, objNull, false] call FUNC(handleDeployInterrupt)}] call CBA_fnc_addPlayerEventHandler;
+["unit", {
+    params ["_newPlayer", "_oldPlayer"];
 
-// When changing feature cameras, stop deployment
-["featureCamera", {(_this select 0) call FUNC(handleDeployInterrupt)}] call CBA_fnc_addPlayerEventHandler;
+    _newPlayer call FUNC(deployCancel);
+    _oldPlayer call FUNC(deployCancel);
+}] call CBA_fnc_addPlayerEventHandler;
+
+// Handle loadout change
+["loadout", {
+    params ["_unit"];
+
+    // If the unit still has a sandbag, don't cancel deployment
+    if ([_unit, "ACE_Sandbag_empty"] call EFUNC(common,hasItem)) exitWith {};
+
+    _unit call FUNC(deployCancel);
+}] call CBA_fnc_addPlayerEventHandler;
+
+["vehicle", {(_this select 0) call FUNC(deployCancel)}] call CBA_fnc_addPlayerEventHandler;
+["weapon", {(_this select 0) call FUNC(deployCancel)}] call CBA_fnc_addPlayerEventHandler;
+["featureCamera", {(_this select 0) call FUNC(deployCancel)}] call CBA_fnc_addPlayerEventHandler;
 
 // Handle death
-[QGVAR(killedEH), "Killed", {(_this select 0) call FUNC(handleDeployInterrupt)}] call CBA_fnc_addBISPlayerEventHandler;
+[QGVAR(killedEH), "Killed", {(_this select 0) call FUNC(deployCancel)}] call CBA_fnc_addBISPlayerEventHandler;
+
+// Cancel object deployment if interact menu opened
+["ace_interactMenuOpened", {ACE_player call FUNC(deployCancel)}] call CBA_fnc_addEventHandler;
 
 // Handle falling unconscious while trying to deploy
 ["ace_unconscious", {
@@ -34,17 +49,17 @@ GVAR(deployHeight) = 0;
     // Since global event, let clients handle local objects themselves
     if !(_isUnconscious && {local _unit}) exitWith {};
 
-    _unit call FUNC(handleDeployInterrupt);
+    _unit call FUNC(deployCancel);
 }] call CBA_fnc_addEventHandler;
 
 // Handle surrendering and handcuffing
 ["ace_captiveStatusChanged", {
     params ["_unit", "_state"];
 
-    // If surrendered or handcuffed, stop deployment; Since global event, let clients handle local objects themselves
+    // Since global event, let clients handle local objects themselves
     if !(_state && {local _unit}) exitWith {};
 
-    _unit call FUNC(handleDeployInterrupt);
+    _unit call FUNC(deployCancel);
 }] call CBA_fnc_addEventHandler;
 
 if (["ace_dragging"] call EFUNC(common,isModLoaded)) then {
