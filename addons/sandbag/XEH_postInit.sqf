@@ -7,7 +7,6 @@ if (isServer) then {
 
 if (!hasInterface) exitWith {};
 
-GVAR(sandBag) = objNull;
 GVAR(deployPFH) = -1;
 GVAR(deployDistance) = -1;
 GVAR(deployDirection) = 0;
@@ -25,20 +24,27 @@ GVAR(deployHeight) = 0;
 // When changing feature cameras, stop deployment
 ["featureCamera", {(_this select 0) call FUNC(handleDeployInterrupt)}] call CBA_fnc_addPlayerEventHandler;
 
-// Handle falling unconscious while trying to deploy
-["ace_unconscious", {(_this select 0) call FUNC(handleDeployInterrupt)}] call CBA_fnc_addEventHandler;
-
 // Handle death
 [QGVAR(killedEH), "Killed", {(_this select 0) call FUNC(handleDeployInterrupt)}] call CBA_fnc_addBISPlayerEventHandler;
+
+// Handle falling unconscious while trying to deploy
+["ace_unconscious", {
+    params ["_unit", "_isUnconscious"];
+
+    // Since global event, let clients handle local objects themselves
+    if !(_isUnconscious && local _unit) exitWith {};
+
+    _unit call FUNC(handleDeployInterrupt);
+}] call CBA_fnc_addEventHandler;
 
 // Handle surrendering and handcuffing
 ["ace_captiveStatusChanged", {
     params ["_unit", "_state"];
 
-    // If surrendered or handcuffed, stop deployment
-    if (_state) then {
-        _unit call FUNC(handleDeployInterrupt);
-    };
+    // If surrendered or handcuffed, stop deployment; Since global event, let clients handle local objects themselves
+    if !(_state && local _unit) exitWith {};
+
+    _unit call FUNC(handleDeployInterrupt);
 }] call CBA_fnc_addEventHandler;
 
 if (["ace_dragging"] call EFUNC(common,isModLoaded)) then {

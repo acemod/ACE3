@@ -15,25 +15,30 @@
  * Public: No
  */
 
-if (GVAR(deployPFH) == -1) exitWith {};
-
-// Save placement dummy data
-private _position = getPosASL GVAR(sandBag);
-private _direction = getDir GVAR(sandBag);
-
 params ["_unit"];
+
+private _sandbag = _unit getVariable [QGVAR(sandBag), objNull];
+
+// Save placement dummy data; Need to check now, as it's deleted later
+private _dummyDeleted = isNull _sandbag;
+private _position = getPosASL _sandbag;
+private _direction = getDir _sandbag;
 
 // Clean up hints and dummy
 _unit call FUNC(deployCancel);
 
 // Make sure unit still has empty sandbag, otherwise quit
-if (!alive _unit || {!([_unit, "ACE_Sandbag_empty"] call EFUNC(common,hasItem))}) exitWith {};
+if (_dummyDeleted || {!alive _unit} || {!([_unit, "ACE_Sandbag_empty"] call EFUNC(common,hasItem))}) exitWith {};
+
+_unit setVariable [QGVAR(isUsingSandbag), true];
 
 // Play animation
 [_unit, "PutDown"] call EFUNC(common,doGesture);
 
 [{
     params ["_unit", "_direction", "_position"];
+
+    _unit setVariable [QGVAR(isUsingSandbag), false];
 
     // Make sure unit still has empty sandbag, otherwise quit
     if (!alive _unit || {!([_unit, "ACE_Sandbag_empty"] call EFUNC(common,hasItem))}) exitWith {};

@@ -24,8 +24,6 @@ params ["_unit"];
 // Create the sandbag
 private _sandBag = createVehicle ["ACE_SandbagObject_NoGeo", [0, 0, 0], [], 0, "NONE"];
 
-GVAR(sandBag) = _sandBag;
-
 // Prevent collisions with sandbag
 [QEGVAR(common,enableSimulationGlobal), [_sandBag, false]] call CBA_fnc_serverEvent;
 
@@ -48,10 +46,12 @@ GVAR(deployPFH) = [{
 // Add mouse button action and hint
 [LLSTRING(confirmDeployment), LLSTRING(cancelDeployment), LLSTRING(scrollAction)] call EFUNC(interaction,showMouseHint);
 
-_unit setVariable [QGVAR(Deploy), [
-    _unit, "DefaultAction",
+// Intercept left mouse button to confirm sandbag deployment
+_unit setVariable [QGVAR(deploy), [
+    _unit,
+    "DefaultAction",
     {GVAR(deployPFH) != -1},
-    {[_this select 1] call FUNC(deployConfirm)}
+    {(_this select 1) call FUNC(deployConfirm)}
 ] call EFUNC(common,addActionEventHandler)];
 
-_unit setVariable [QGVAR(isDeploying), true, true];
+_unit setVariable [QGVAR(sandbag), _sandBag, true];

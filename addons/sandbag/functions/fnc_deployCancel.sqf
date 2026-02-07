@@ -15,25 +15,36 @@
  * Public: No
  */
 
-if (GVAR(deployPFH) == -1) exitWith {};
-
-// Remove deployment PFH
-GVAR(deployPFH) call CBA_fnc_removePerFrameHandler;
-GVAR(deployPFH) = -1;
-
 params ["_unit"];
 
 // Enable running again
 [_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 [_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
-// Delete placement dummy
-deleteVehicle GVAR(sandBag);
+private _sandbag = _unit getVariable [QGVAR(sandBag), objNull];
+
+// Delete placement dummy, if present (don't early exit, in case dummy was deleted by something else)
+if (!isNull _sandbag) then {
+    deleteVehicle _sandbag;
+
+    _unit setVariable [QGVAR(sandbag), nil, true];
+};
+
+// Stop intercepting left mouse button
+private _ehID = _unit getVariable [QGVAR(deploy), -1];
+
+if (_ehID != -1) then {
+    [_unit, "DefaultAction", _ehID] call EFUNC(common,removeActionEventHandler);
+
+    _unit setVariable [QGVAR(deploy), nil];
+};
+
+// Only remove deployment PFH if unit is current player
+if (_unit != ACE_player || {GVAR(deployPFH) == -1}) exitWith {};
+
+// Remove deployment PFH
+GVAR(deployPFH) call CBA_fnc_removePerFrameHandler;
+GVAR(deployPFH) = -1;
 
 // Remove mouse button actions
 call EFUNC(interaction,hideMouseHint);
-
-[_unit, "DefaultAction", _unit getVariable [QGVAR(deploy), -1]] call EFUNC(common,removeActionEventHandler);
-_unit setVariable [QGVAR(deploy), nil];
-
-_unit setVariable [QGVAR(isDeploying), nil, true];

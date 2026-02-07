@@ -20,12 +20,10 @@
 params ["_newPlayer", ["_oldPlayer", objNull], ["_ignoreItemCheck", true]];
 TRACE_3("params",_newPlayer,_oldPlayer,_ignoreItemCheck);
 
-if (!local _newPlayer) exitWith {};
-
-if (_newPlayer getVariable [QGVAR(isDeploying), false] && {_ignoreItemCheck || {!([_newPlayer, "ACE_Sandbag_empty"] call EFUNC(common,hasItem))}}) then {
+if (_ignoreItemCheck || {!([_newPlayer, "ACE_Sandbag_empty"] call EFUNC(common,hasItem))}) then {
     _newPlayer call FUNC(deployCancel);
 };
 
-if (_oldPlayer getVariable [QGVAR(isDeploying), false]) then {
+if (!isNull _oldPlayer) then {
     _oldPlayer call FUNC(deployCancel);
 };
