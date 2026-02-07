@@ -531,7 +531,7 @@
             <English>Allows easy placement of numbered markers by holding ALT when placing a marker</English>
         </Key>
         <Key ID="STR_ACE_Markers_quickNumberMarksSideSync">
-            <English>Side Synchronized</English>
+            <English>Side-Synchronized</English>
         </Key>
     </Package>
 </Project>
