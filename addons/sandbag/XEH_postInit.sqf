@@ -32,7 +32,7 @@ GVAR(deployHeight) = 0;
     params ["_unit", "_isUnconscious"];
 
     // Since global event, let clients handle local objects themselves
-    if !(_isUnconscious && local _unit) exitWith {};
+    if !(_isUnconscious && {local _unit}) exitWith {};
 
     _unit call FUNC(handleDeployInterrupt);
 }] call CBA_fnc_addEventHandler;
@@ -42,7 +42,7 @@ GVAR(deployHeight) = 0;
     params ["_unit", "_state"];
 
     // If surrendered or handcuffed, stop deployment; Since global event, let clients handle local objects themselves
-    if !(_state && local _unit) exitWith {};
+    if !(_state && {local _unit}) exitWith {};
 
     _unit call FUNC(handleDeployInterrupt);
 }] call CBA_fnc_addEventHandler;

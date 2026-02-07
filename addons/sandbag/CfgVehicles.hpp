@@ -58,9 +58,9 @@ class CfgVehicles {
         class Damage {
             tex[] = {};
             mat[] = {
-                QPATHTOF(data\bag_destruct.rvmat),
-                QPATHTOF(data\bag_destruct.rvmat),
-                QPATHTOF(data\bag_destruct.rvmat)
+                QPATHTO_R(data\bag_destruct.rvmat),
+                QPATHTO_R(data\bag_destruct.rvmat),
+                QPATHTO_R(data\bag_destruct.rvmat)
             };
         };
 
