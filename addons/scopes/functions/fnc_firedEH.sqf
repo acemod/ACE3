@@ -20,6 +20,9 @@ TRACE_10("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_veh
 
 if !(_ammo isKindOf "BulletBase") exitWith {};
 
+// Ignore secondary muzzles
+if (_weapon != _muzzle) exitWith {};
+
 private _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith {};
 
