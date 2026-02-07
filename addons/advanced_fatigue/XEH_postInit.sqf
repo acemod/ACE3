@@ -7,9 +7,9 @@ call FUNC(renderDebugLines);
 #endif
 
 // recheck weapon inertia after weapon swap, change of attachments or switching unit
-["weapon", {[ACE_player] call FUNC(getWeaponInertia)}, true] call CBA_fnc_addPlayerEventHandler;
-["loadout", {[ACE_player] call FUNC(getWeaponInertia)}, true] call CBA_fnc_addPlayerEventHandler;
-["unit", {[ACE_player] call FUNC(getWeaponInertia)}, true] call CBA_fnc_addPlayerEventHandler;
+["weapon", {GVAR(inertia) = [ACE_player] call FUNC(getWeaponInertia)}, false] call CBA_fnc_addPlayerEventHandler;
+["loadout", {GVAR(inertia) = [ACE_player] call FUNC(getWeaponInertia)}, false] call CBA_fnc_addPlayerEventHandler;
+["unit", {GVAR(inertia) = [ACE_player] call FUNC(getWeaponInertia)}, true] call CBA_fnc_addPlayerEventHandler;
 
 ["CBA_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};

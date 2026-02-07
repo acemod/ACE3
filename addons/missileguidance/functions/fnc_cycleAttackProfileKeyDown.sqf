@@ -30,7 +30,7 @@ if (isNull (ACE_controlledUAV param [0, objNull])) then {
         _currentMagazine = currentMagazine ACE_player;
     } else {
         _currentShooter = vehicle ACE_player;
-        _turretPath = if (ACE_player == (driver _currentShooter)) then {[-1]} else {ACE_player call CBA_fnc_turretPath};
+        _turretPath = _currentShooter unitTurret ACE_player;
         _currentMagazine = _currentShooter currentMagazineTurret _turretPath;
     };
 } else {
@@ -45,19 +45,22 @@ private _ammo = getText (configFile >> "CfgMagazines" >> _currentMagazine >> "am
 
 TRACE_3("",_currentShooter,_currentMagazine,_ammo);
 
-// Bail if guidance is disabled for this ammo
-if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "enabled")) != 1) exitWith {TRACE_1("not enabled",_ammo)};
+private _configAmmo = configFile >> "CfgAmmo" >> _ammo;
+private _config = _configAmmo >> QUOTE(ADDON);
 
-private _useModeForAttackProfile = (getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "useModeForAttackProfile")) == 1;
+// Bail if guidance is disabled for this ammo
+if ((getNumber (_config >> "enabled")) != 1) exitWith {TRACE_1("not enabled",_ammo)};
+
+// Verify ammo has explicity added guidance config (ignore inheritances)
+private _configs = QUOTE(configName _x == QUOTE(QUOTE(ADDON))) configClasses _configAmmo;
+if (_configs isEqualTo []) exitWith {TRACE_1("not explicity enabled",_ammo)};
+
+private _useModeForAttackProfile = (getNumber (_config >> "useModeForAttackProfile")) == 1;
 private _weaponStateToken = if (_currentShooter isEqualTo ACE_player) then { _currentShooter } else { [_currentShooter, _turretPath] };
 (weaponState _weaponStateToken) params ["_weapon", "", "_mode"];
 TRACE_4("",_useModeForAttackProfile,_weaponStateToken,_weapon,_mode);
 
-// Verify ammo has explicity added guidance config (ignore inheritances)
-private _configs = configProperties [(configFile >> "CfgAmmo" >> _ammo), QUOTE(configName _x == QUOTE(QUOTE(ADDON))), false];
-if ((count _configs) < 1) exitWith {TRACE_2("not explicity enabled",_ammo,_configs)};
-
-private _attackProfiles = getArray (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "attackProfiles");
+private _attackProfiles = getArray (_config >> "attackProfiles");
 if ((count _attackProfiles) <= 1) exitWith {TRACE_1("no choices for attack profile",_attackProfiles)};
 
 private _currentFireMode = if (_useModeForAttackProfile) then {
@@ -69,7 +72,7 @@ private _currentFireMode = if (_useModeForAttackProfile) then {
 // Just like onFired, this is case sensitive!
 private _index = _attackProfiles find _currentFireMode;
 if (_index == -1) then {
-    _index = _attackProfiles find (getText (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "defaultAttackProfile"));
+    _index = _attackProfiles find (getText (_config >> "defaultAttackProfile"));
 };
 _index = (_index + 1) % (count _attackProfiles);
 private _nextFireMode = _attackProfiles select _index;
@@ -92,7 +95,7 @@ if (_useModeForAttackProfile) then {
 
 playSound "ACE_Sound_Click";
 
-if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "showHintOnCycle")) == 1) then {
+if ((getNumber (_config >> "showHintOnCycle")) == 1) then {
     private _localizedName = getText (configFile >> QGVAR(AttackProfiles) >> _nextFireMode >> "name");
     [_localizedName] call EFUNC(common,displayTextStructured);
 };

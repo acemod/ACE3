@@ -19,6 +19,11 @@
             <Hungarian>Távolsági kártya másolása</Hungarian>
             <Ukrainian>Скопіювати таблицю поправок</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_RangeCard_DeleteRangeCardCopy">
+            <English>Delete Range Card Copy</English>
+            <French>Supprimer la copie de la table de tir</French>
+            <German>Entferne Kopie der Entfernungsspinne</German>
+        </Key>
         <Key ID="STR_ACE_RangeCard_Description">
             <English>50 METER increments -- MRAD/MRAD (reticle/turrets)</English>
             <Czech>Přidat 50 METRŮ -- MRAD/MRAD (síťka/věže)</Czech>
@@ -90,42 +95,6 @@
             <Turkish>Menzil Kartının Kopyasını Aç</Turkish>
             <Hungarian>Távolsági kártya-másolat kinyitása</Hungarian>
             <Ukrainian>Відкрити копію таблиці поправок</Ukrainian>
-        </Key>
-        <Key ID="STR_ACE_RangeCard_RangeCardCopyDialogKey">
-            <English>Open Range Card Copy</English>
-            <Czech>Otevřít kopii vzdálenostní tabulky</Czech>
-            <French>Ouvrir une copie de la table de tir</French>
-            <Spanish>Abrir copia de tarjeta de distancias</Spanish>
-            <Italian>Apri Copia Tavola Balistica</Italian>
-            <Polish>Otwórz kopię tabeli balistycznej</Polish>
-            <Portuguese>Abrir cópia da tabela de distâncias</Portuguese>
-            <Russian>Открыть копию таблицы поправок</Russian>
-            <German>Öffne Kopie der Entfernungsspinne</German>
-            <Korean>복제 사거리표 열기</Korean>
-            <Japanese>レンジカードの複製を開く</Japanese>
-            <Chinese>開啟彈道射表副本</Chinese>
-            <Chinesesimp>开启射表副本</Chinesesimp>
-            <Turkish>Menzil Kartının Kopyasını Aç</Turkish>
-            <Hungarian>Távolsági kártya-másolat kinyitása</Hungarian>
-            <Ukrainian>Відкрити копію таблиці поправок</Ukrainian>
-        </Key>
-        <Key ID="STR_ACE_RangeCard_RangeCardDialogKey">
-            <English>Open Range Card</English>
-            <Czech>Otevřít vzdálenostní tabulku</Czech>
-            <French>Ouvrir la table de tir</French>
-            <Spanish>Abrir tarjeta de distancias</Spanish>
-            <Italian>Apri Tavola Balistica</Italian>
-            <Polish>Otwórz tabelę balistyczną</Polish>
-            <Portuguese>Abrir tabela de distâncias</Portuguese>
-            <Russian>Открыть таблицу поправок</Russian>
-            <German>Öffne Entfernungsspinne</German>
-            <Korean>사거리표 열기</Korean>
-            <Japanese>レンジカードを開く</Japanese>
-            <Chinese>開啟彈道射表</Chinese>
-            <Chinesesimp>开启射表</Chinesesimp>
-            <Turkish>Menzil Kartını Aç</Turkish>
-            <Hungarian>Távolsági kártya kinyitása</Hungarian>
-            <Ukrainian>Відкрити таблицю поправок</Ukrainian>
         </Key>
     </Package>
 </Project>

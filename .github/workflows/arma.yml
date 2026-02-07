@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the source code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
     - name: Validate Config
       run: python3 tools/config_style_checker.py
     - name: Validate Stringtables
@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the source code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
     - name: Setup HEMTT
       uses: arma-actions/hemtt@v1
       with:
@@ -39,7 +39,7 @@ jobs:
     - name: Rename build folder
       run: mv .hemttout/build .hemttout/@ace
     - name: Upload Artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v6
       with:
         name: ace3-${{ github.sha }}-nobin
         path: .hemttout/@*
