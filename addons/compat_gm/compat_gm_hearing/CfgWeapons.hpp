@@ -7,15 +7,15 @@ class CfgWeapons {
 
     class gm_ge_headgear_sph4_base;
     class gm_ge_headgear_sph4_oli: gm_ge_headgear_sph4_base {
-        HEARING_PROTECTION_PELTOR;
+        HEARING_PROTECTION_VICCREW;
     };
 
     class gm_pl_headgear_wz63_base;
     class gm_pl_army_headgear_wz63_oli: gm_pl_headgear_wz63_base {
-        HEARING_PROTECTION_PELTOR;
+        HEARING_PROTECTION_VICCREW;
     };
     class gm_pl_army_headgear_wz63_net_oli: gm_pl_headgear_wz63_base {
-        HEARING_PROTECTION_PELTOR;
+        HEARING_PROTECTION_EARMUFF;
     };
 
     class gm_ge_headgear_crewhat_80_base;
@@ -30,13 +30,13 @@ class CfgWeapons {
 
     class gm_gc_headgear_zsh3_base;
     class gm_gc_headgear_zsh3_wht: gm_gc_headgear_zsh3_base {
-        HEARING_PROTECTION_PELTOR;
+        HEARING_PROTECTION_VICCREW;
     };
     class gm_gc_headgear_zsh3_blu: gm_gc_headgear_zsh3_base {
-        HEARING_PROTECTION_PELTOR;
+        HEARING_PROTECTION_VICCREW;
     };
     class gm_gc_headgear_zsh3_orn: gm_gc_headgear_zsh3_base {
-        HEARING_PROTECTION_PELTOR;
+        HEARING_PROTECTION_VICCREW;
     };
 
     class gm_ge_headgear_beret_crew_base;
