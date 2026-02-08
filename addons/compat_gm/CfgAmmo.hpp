@@ -193,7 +193,7 @@ class CfgAmmo
 	class gm_bullet_762x39mm_API_M43
 	{
 	    ACE_bulletLength = 28.57;
-	    ace_vehicle_damage_incendiary = 1;
+	    EGVAR(vehicle_damage,incendiary) = 1;
 	    ACE_bulletMass = 7.67;
 	    ACE_ballisticCoefficients[] = {0.138};
 	    ACE_dragModel = 7;
