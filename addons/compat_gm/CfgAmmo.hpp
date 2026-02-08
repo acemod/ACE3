@@ -12,7 +12,7 @@ class CfgAmmo
         ACE_muzzleVelocities[] = {723,764,796,825,843,866,878,892,906,915,922,900};
         ACE_standardAtmosphere = "ASM";
   };
-	class gm_bullet_556x45mm_B_dm11: gm_bullet_556x45mm_base {  //https://pt.scribd.com/doc/194927638/5-56mmx45-NATO-DualCore-DM11
+	class gm_bullet_556x45mm_B_dm11: gm_bullet_556x45mm_base {  // https://pt.scribd.com/doc/194927638/5-56mmx45-NATO-DualCore-DM11
   	    ACE_bulletMass = 4.099827;
   };
 	class gm_bullet_556x45mm_B_T_dm21: gm_bullet_556x45mm_B_dm11 { //https://web.archive.org/web/20090617170413/http://www.ruag.com/de/Defence_Security/Amunition/PDF_Munition/5.56mmx45_NATO_Tracer_DM21.pdf
