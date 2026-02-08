@@ -16,6 +16,11 @@
  *
  * Public: No
  */
+#define PROPORTIONAL 4.00
+#define INTEGRAL 0.60
+#define DERIVATIVE 2.50
+#define HISTORY_LENGTH (60 * 3)
+#define BIG_NUMBER (1e30)
 #define EPSILON 0.001
 
 params ["_driver", "_vehicle", ["_preserveSpeedLimit", false]];
@@ -37,7 +42,7 @@ if (!_preserveSpeedLimit) then {
     GVAR(speedLimit) = _speedLimitMS * 3.6;
 };
 
-private _pid = [4.00, 0.60, 2.50, _speedLimitMS, -1e30, 1e30, 60 * 3] call CBA_pid_fnc_create;
+private _pid = [PROPORTIONAL, INTEGRAL, DERIVATIVE, _speedLimitMS, -BIG_NUMBER, BIG_NUMBER, HISTORY_LENGTH] call CBA_pid_fnc_create;
 
 private _config = configOf _vehicle;
 private _thrustLogFactor = getNumber (_config >> "throttleToThrustLogFactor");
