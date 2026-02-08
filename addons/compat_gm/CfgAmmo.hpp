@@ -19,7 +19,7 @@ class CfgAmmo
         ACE_bulletLength = 29.3116;
 	    ACE_bulletMass = 4.0176;
   };
-	class gm_bullet_556x45mm_B_m193: gm_bullet_base {
+	class gm_bullet_556x45mm_B_m193: gm_bullet_556x45mm_base {
         ACE_bulletLength = 19.304;
         ACE_bulletMass = 3.56394;
         ACE_ballisticCoefficients[] = {0.118}; //https://internationalshootingsupplies.com/product/winchester-5-56-55gr-fmj-600-round-bulk-pack/
