@@ -140,7 +140,7 @@ private _categoryColors = [_category, format ["| %1 |", LELSTRING(common,subcate
     QGVAR(useListMenuSelf), "CHECKBOX",
     LSTRING(UseListMenu),
     [_category, LELSTRING(Interaction,InteractionMenuSelf)],
-    false,
+    (productVersion select 6) == "OSX",
     false
 ] call CBA_fnc_addSetting;
 
