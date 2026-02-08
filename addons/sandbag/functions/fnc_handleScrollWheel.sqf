@@ -30,7 +30,7 @@ if (CBA_events_control) exitWith {
 
 // Change height
 if (CBA_events_alt) exitWith {
-    GVAR(deployHeight) = 1.5 min (-1.5 max GVAR(deployHeight) + (_scroll * 0.1));
+    GVAR(deployHeight) = 1.5 min (-1.5 max (GVAR(deployHeight) + (_scroll * 0.1)));
 
     true // return
 };
