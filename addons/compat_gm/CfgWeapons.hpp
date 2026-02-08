@@ -1,6 +1,5 @@
 class CfgWeapons {
 
-    // ADV. BALLISTICS
     // MACHINE GUNS
     class gm_pk_base;
     class gm_pkm_base: gm_pk_base {
