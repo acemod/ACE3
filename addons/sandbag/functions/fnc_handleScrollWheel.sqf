@@ -36,6 +36,6 @@ if (CBA_events_alt) exitWith {
 };
 
 // Change distance
-GVAR(deployDistance) = 1.5 min (0.36 max GVAR(deployDistance) + (_scroll * 0.1));
+GVAR(deployDistance) = 1.5 min (0.36 max (GVAR(deployDistance) + (_scroll * 0.1)));
 
 true // return
