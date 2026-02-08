@@ -1,28 +1,24 @@
 #include "script_component.hpp"
 
-#include "initKeybinds.inc.sqf"
-
-GVAR(Protractor) = false;
-GVAR(ProtractorStart) = CBA_missionTime;
+GVAR(protractor) = false;
 GVAR(allBullets) = createHashMap;
-GVAR(currentGrid) = 0;
 
 if (!hasInterface) exitWith {};
 
 #include "initKeybinds.inc.sqf"
 
 ["CBA_settingsInitialized", {
-    //If not enabled, dont't add PFEH
+    // If not enabled, dont't add PFH
     if (!GVAR(enabled)) exitWith {};
 
-    //Run the terrain processor
+    // Run the terrain processor
     [] call FUNC(initializeTerrainExtension);
 
     // Register fire event handler
     ["ace_firedPlayer", LINKFUNC(handleFired)] call CBA_fnc_addEventHandler;
     ["ace_firedPlayerNonLocal", LINKFUNC(handleFired)] call CBA_fnc_addEventHandler;
 
-    // Register Perframe Handler
+    // Register PFH
     [LINKFUNC(handleFirePFH), GVAR(simulationInterval)] call CBA_fnc_addPerFrameHandler;
 }] call CBA_fnc_addEventHandler;
 
