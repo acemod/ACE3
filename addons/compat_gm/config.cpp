@@ -9,13 +9,15 @@ class CfgPatches {
         requiredAddons[] = {"ace_common", "gm_core"};
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {"sancron", "nomisum"};
+        authors[] = {"sancron", "nomisum", "Redzitus"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
+#include "CfgAmmo.hpp"
 #include "CfgEventHandlers.hpp"
+#include "CfgGlasses.hpp"
 #include "CfgMagazines.hpp"
-#include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgWeapons.hpp"
