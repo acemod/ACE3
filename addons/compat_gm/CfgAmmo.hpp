@@ -5,35 +5,39 @@ class CfgAmmo
         ACE_ammoTempMuzzleVelocityShifts[] = {-27.2,-26.44,-23.76,-21,-17.54,-13.1,-7.95,-1.62,6.24,15.48,27.75};
         ACE_ballisticCoefficients[] = {0.151};
         ACE_barrelLengths[] = {210.82,238.76,269.24,299.72,330.2,360.68,391.16,419.1,449.58,480.06,508,609.6};
-        ACE_bulletLength = 23.4;
+        ACE_bulletLength = 23.012;
         ACE_bulletMass = 4.0176;
-        ACE_caliber = 5.7;
+        ACE_caliber = 5.69;
         ACE_dragModel = 7;
-        ACE_muzzleVelocities[] = {723,764,796,825,843,866,878,892,906,915,922,900};
+        ACE_muzzleVelocities[] = {723, 764, 796, 825, 843, 866, 878, 892, 906, 915, 922, 900};
         ACE_standardAtmosphere = "ASM";
   };
 	class gm_bullet_556x45mm_B_dm11: gm_bullet_556x45mm_base {  // https://pt.scribd.com/doc/194927638/5-56mmx45-NATO-DualCore-DM11
-  	    ACE_bulletMass = 4.099827;
+  	    ACE_bulletMass = 4.1;
   };
-	class gm_bullet_556x45mm_B_T_dm21: gm_bullet_556x45mm_B_dm11 { //https://web.archive.org/web/20090617170413/http://www.ruag.com/de/Defence_Security/Amunition/PDF_Munition/5.56mmx45_NATO_Tracer_DM21.pdf
-        ACE_bulletLength = 29.3116;
+	class gm_bullet_556x45mm_B_T_dm21: gm_bullet_556x45mm_B_dm11 { // https://web.archive.org/web/20090617170413/http://www.ruag.com/de/Defence_Security/Amunition/PDF_Munition/5.56mmx45_NATO_Tracer_DM21.pdf
+        ACE_barrelLengths[] = {210.82,238.76,269.24,299.72,330.2,360.68,391.16,419.1,449.58,480.06,508,609.6};
+        ACE_bulletLength = 29.31;
 	    ACE_bulletMass = 4.0176;
+        ACE_muzzleVelocities[] = {691, 764, 764, 770, 793, 811,834, 846, 860, 874, 883, 890, 870};
   };
 	class gm_bullet_556x45mm_B_m193: gm_bullet_556x45mm_base {
-        ACE_bulletLength = 19.304;
-        ACE_bulletMass = 3.56394;
-        ACE_ballisticCoefficients[] = {0.118}; //https://internationalshootingsupplies.com/product/winchester-5-56-55gr-fmj-600-round-bulk-pack/
-        ACE_barrelLengths[] = {152.4,177.8,203.2,228.6,254,279.4,304.8,330.2,355.6,419.1,431.8,457.2,482.6,508,533.4,558.8,584.2,609.6,635,660.4};
-        ACE_muzzleVelocities[] = {595.884,650.748,699.821,732.434,758.647,786.079,806.501,821.131,855.878,911.962,905.866,930.25,932.688,943.966,950.062,962.558,965.911,971.702,984.199,999.744};
+        ACE_bulletLength = 19.3;
+        ACE_bulletMass = 3.6;
+        ACE_ballisticCoefficients[] = {0.118}; // https://internationalshootingsupplies.com/product/winchester-5-56-55gr-fmj-600-round-bulk-pack/
+        ACE_barrelLengths[] = {190.5, 266.7, 368.3, 406.4, 508, 558.8};
+        ACE_muzzleVelocities[] = {712.93, 829.97, 921.71, 992.73, 1018.94};
   };
 	class gm_bullet_556x45mm_B_T_m196: gm_bullet_556x45mm_base {
-        ACE_bulletLength = 23.114;
-        ACE_bulletMass = 3.49914;
+        ACE_bulletLength = 23.1;
+        ACE_bulletMass = 3.5;
         ACE_ballisticCoefficients[] = {0.118};
+        ACE_barrelLengths[] = {190.5, 266.7, 368.3, 406.4, 508, 558.8};
+        ACE_muzzleVelocities[] = {712.93, 829.97, 921.71, 992.73, 1018.94};
   };
 	class gm_bullet_556x45mm_B_T_m856: gm_bullet_556x45mm_base {
-  	    ACE_bulletLength = 29.3116;
-  	    ACE_bulletMass = 4.127691;
+  	    ACE_bulletLength = 29.31;
+  	    ACE_bulletMass = 4.13;
   };
 	class gm_bullet_545x39mm_base: gm_bullet_base {
   	    ACE_ammoTempMuzzleVelocityShifts[] = {-26.55,-25.47,-22.85,-20.12,-16.98,-12.8,-7.64,-1.53,5.96,15.17,26.19};
@@ -43,7 +47,7 @@ class CfgAmmo
   	    ACE_bulletMass = 3.42792;
       	ACE_caliber = 5.588;
       	ACE_dragModel = 7;
-  	    ACE_muzzleVelocities[] = {780,880,920};
+  	    ACE_muzzleVelocities[] = {780, 880, 920};
   	    ACE_standardAtmosphere = "ASM";
 	};
 	class gm_bullet_545x39mm_B_T_7T3: gm_bullet_545x39mm_base
@@ -51,7 +55,7 @@ class CfgAmmo
 	    ACE_barrelLengths[] = {254,414.02,508};
 	    ACE_bulletLength = 25.32;
 	    ACE_bulletMass = 3.2;
-	    ACE_muzzleVelocities[] = {785,883,925};
+	    ACE_muzzleVelocities[] = {785, 883, 925};
 	};
 	class gm_bullet_762x54mmR_base: gm_bullet_base {
       	ACE_ammoTempMuzzleVelocityShifts[] = {-26.55,-25.47,-22.85,-20.12,-16.98,-12.8,-7.64,-1.53,5.96,15.17,26.19};
@@ -97,10 +101,10 @@ class CfgAmmo
 	};
   	class gm_bullet_762x51mm_AP_DM151: gm_bullet_762x51mm_base {
 	    ACE_bulletLength = 31.496;
-  	    ACE_bulletMass = 9.78464;
+  	    ACE_bulletMass = 9.8;
 	};
 	class gm_bullet_762x51mm_B_T_DM21: gm_bullet_762x51mm_base {
-	    ACE_bulletLength = 33.782;
+	    ACE_bulletLength = 33.8;
 	    ACE_bulletMass = 9.20145;
 	};
     class gm_bullet_9x18mm_base;
@@ -189,7 +193,7 @@ class CfgAmmo
 	    ACE_standardAtmosphere = "ASM";
 	};
 
-//As far as I searched, those are not actually used by any mag in the CDLC.
+//Not in use by the CDLC
 	class gm_bullet_762x39mm_API_M43
 	{
 	    ACE_bulletLength = 28.57;
