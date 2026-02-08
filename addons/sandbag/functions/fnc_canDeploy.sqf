@@ -10,13 +10,11 @@
  * Can deploy <BOOL>
  *
  * Example:
- * [ACE_player] call ace_sandbag_fnc_canDeploy
+ * player call ace_sandbag_fnc_canDeploy
  *
  * Public: No
  */
 
 params ["_unit"];
 
-if !("ACE_Sandbag_empty" in (_unit call EFUNC(common,uniqueItems))) exitWith {false};
-
-_unit call EFUNC(common,canDig)
+([_unit, "ACE_Sandbag_empty"] call EFUNC(common,hasItem)) && {!(_unit getVariable [QGVAR(isUsingSandbag), false])} && {_unit call EFUNC(common,canDig)} // return
