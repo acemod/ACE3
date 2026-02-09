@@ -26,17 +26,17 @@ class CfgAmmo
         ACE_bulletMass = 3.6;
         ACE_ballisticCoefficients[] = {0.118}; // https://internationalshootingsupplies.com/product/winchester-5-56-55gr-fmj-600-round-bulk-pack/
         ACE_barrelLengths[] = {190.5, 266.7, 368.3, 406.4, 508, 558.8};
-        ACE_muzzleVelocities[] = {712.93, 829.97, 921.71, 992.73, 1018.94};
+        ACE_muzzleVelocities[] = {712.93, 829.97, 921.71, 954.33, 992.73, 1018.94};
   };
 	class gm_bullet_556x45mm_B_T_m196: gm_bullet_556x45mm_base {
         ACE_bulletLength = 23.1;
         ACE_bulletMass = 3.5;
         ACE_ballisticCoefficients[] = {0.118};
-        ACE_barrelLengths[] = {190.5, 266.7, 368.3, 406.4, 508, 558.8};
-        ACE_muzzleVelocities[] = {712.93, 829.97, 921.71, 992.73, 1018.94};
+        ACE_barrelLengths[] = {190.5, 266.7, 368.3, 406.4, 508, 558.8}; 
+        ACE_muzzleVelocities[] = {712.93, 829.97, 921.71, 954.33, 992.73, 1018.94};
   };
 	class gm_bullet_556x45mm_B_T_m856: gm_bullet_556x45mm_base {
-  	    ACE_bulletLength = 29.31;
+  	    ACE_bulletLength = 29.3;
   	    ACE_bulletMass = 4.13;
   };
 	class gm_bullet_545x39mm_base: gm_bullet_base {
@@ -71,12 +71,12 @@ class CfgAmmo
 	class gm_bullet_762x54mmR_API_7bz3: gm_bullet_762x54mmR_base {
 	    ACE_ballisticCoefficients[] = {0.401};
     	ACE_bulletLength = 36.83;
-	    ACE_bulletMass = 10.387265;
+	    ACE_bulletMass = 10.39;
         ace_vehicle_damage_incendiary = 1;
 	};
 	class gm_bullet_762x54mmR_B_57N323S: gm_bullet_762x54mmR_base {
 	    ACE_ballisticCoefficients[] = {0.374};
-	    ACE_bulletMass = 9.6031985;
+	    ACE_bulletMass = 9.6;
 	    ACE_barrelLengths[] = {550,605,650,658};
 	    ACE_bulletLength = 32.385;
 	    ACE_muzzleVelocities[] = {810,825,830,825};
@@ -85,7 +85,7 @@ class CfgAmmo
 	    ACE_ballisticCoefficients[] = {0.395};
 	    ACE_barrelLengths[] = {406.4,508,604.5,736.6};
 	    ACE_bulletLength = 35.55;
-	    ACE_bulletMass = 9.6552;
+	    ACE_bulletMass = 9.65;
 	    ACE_muzzleVelocities[] = {735,770,809,838};
 	};
 	class gm_bullet_762x51mm_base: gm_bullet_base {
@@ -185,7 +185,7 @@ class CfgAmmo
 	    ACE_ammoTempMuzzleVelocityShifts[] = {-26.55,-25.47,-22.85,-20.12,-16.98,-12.8,-7.64,-1.53,5.96,15.17,26.19};
 	    ACE_ballisticCoefficients[] = {0.115};
 	    ACE_barrelLengths[] = {540};
-    	ACE_bulletLength = 21.886667;
+    	ACE_bulletLength = 21.88;
     	ACE_bulletMass = 3.33;
 	    ACE_caliber = 4.92;
 	    ACE_dragModel = 7;
@@ -213,7 +213,7 @@ class CfgAmmo
 	class gm_bullet_762x39mm_B_T_M43: gm_bullet_762x39mm_B_T_57N231P
 	{
 	    ACE_bulletLength = 27.48;
-	    ACE_bulletMass = 7.97027;
+	    ACE_bulletMass = 7.97;
 	    ACE_ballisticCoefficients[] = {0.138};
 	    ACE_dragModel = 7;
 	};
