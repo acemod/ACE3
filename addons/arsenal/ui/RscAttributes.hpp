@@ -77,7 +77,7 @@ class GVAR(display) {
             x = QUOTE(safeZoneX + safeZoneW - 93 * GRID_W);
             h = QUOTE(safeZoneH - 34 * GRID_H);
         };
-        class blockRighttBackground: blockLeftBackground {
+        class blockRightBackground: blockLeftBackground {
             idc = IDC_blockRightBackground;
             x = QUOTE(safeZoneX + safeZoneW - 93 * GRID_W);
             h = QUOTE(safeZoneH - 34 * GRID_H);
