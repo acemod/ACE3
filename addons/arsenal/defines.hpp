@@ -45,6 +45,7 @@
 #define IDC_blockLeftBackground 4
 #define IDC_blockRightFrame 5
 #define IDC_blockRightBackground 6
+#define IDC_blockRighttBackground IDC_blockRightBackground // Backwards compatibility for external mods
 #define IDC_loadIndicator 7
 #define IDC_loadIndicatorBar 701
 #define IDC_totalWeight 8
