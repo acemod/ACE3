@@ -129,10 +129,10 @@ class CfgWeapons {
     };
 
     class gm_ge_headgear_winterhat_80_base;
-	class gm_ge_headgear_winterhat_80_oli: gm_ge_headgear_winterhat_80_base { // Winter hat with simple earflaps
+    class gm_ge_headgear_winterhat_80_oli: gm_ge_headgear_winterhat_80_base { // Winter hat with simple earflaps
         EGVAR(hearing,protection) = 0.22;
         EGVAR(hearing,lowerVolume) = 0.35;
         EGVAR(hearing,hasEHP) = 0;
-	};
+    };
 
 };
