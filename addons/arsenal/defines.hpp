@@ -44,7 +44,8 @@
 #define IDC_blockLeftFrame 3
 #define IDC_blockLeftBackground 4
 #define IDC_blockRightFrame 5
-#define IDC_blockRighttBackground 6
+#define IDC_blockRightBackground 6
+#define IDC_blockRighttBackground IDC_blockRightBackground // Backwards compatibility for external mods
 #define IDC_loadIndicator 7
 #define IDC_loadIndicatorBar 701
 #define IDC_totalWeight 8
@@ -330,6 +331,7 @@
 #define ARROWS_IDCS IDC_arrowMinus, IDC_arrowPlus
 
 #define TOGGLE_RIGHT_PANEL_WEAPON\
+[QGVAR(rightPanelWeapon), [_display]] call CBA_fnc_localEvent;\
 {\
     _x = _display displayCtrl _x;\
     _x ctrlSetFade 0;\
@@ -338,7 +340,7 @@
     _x ctrlCommit FADE_DELAY;\
 } forEach [\
     IDC_blockRightFrame,\
-    IDC_blockRighttBackground,\
+    IDC_blockRightBackground,\
     IDC_rightTabContent,\
     IDC_sortRightTab,\
     IDC_sortRightTabDirection,\
@@ -376,10 +378,11 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     _x ctrlCommit 0;\
 } forEach [\
     IDC_blockRightFrame,\
-    IDC_blockRighttBackground\
+    IDC_blockRightBackground\
 ];
 
 #define TOGGLE_RIGHT_PANEL_CONTAINER\
+[QGVAR(rightPanelContainer), [_display]] call CBA_fnc_localEvent;\
 {\
     _x = _display displayCtrl _x;\
     _x ctrlSetFade 0;\
@@ -388,7 +391,7 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     _x ctrlCommit FADE_DELAY;\
 } forEach [\
     IDC_blockRightFrame, \
-    IDC_blockRighttBackground,\
+    IDC_blockRightBackground,\
     IDC_loadIndicator,\
     IDC_rightTabContentListnBox,\
     IDC_sortRightTab,\
@@ -422,7 +425,7 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     _x ctrlCommit 0;\
 } forEach [\
     IDC_blockRightFrame,\
-    IDC_blockRighttBackground\
+    IDC_blockRightBackground\
 ];\
 if (!isNil QGVAR(customRightPanelButtons)) then {\
     private _miscOffset = 0;\
@@ -462,6 +465,7 @@ if (!isNil QGVAR(customRightPanelButtons)) then {\
 };
 
 #define TOGGLE_RIGHT_PANEL_HIDE\
+[QGVAR(rightPanelHide), [_display]] call CBA_fnc_localEvent;\
 {\
     _x = _display displayCtrl _x;\
     _x ctrlSetFade 1;\
@@ -470,7 +474,7 @@ if (!isNil QGVAR(customRightPanelButtons)) then {\
     _x ctrlCommit FADE_DELAY;\
 } forEach [\
     IDC_blockRightFrame,\
-    IDC_blockRighttBackground,\
+    IDC_blockRightBackground,\
     IDC_loadIndicator,\
     IDC_rightTabContent,\
     IDC_rightTabContentListnBox,\
