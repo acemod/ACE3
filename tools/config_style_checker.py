@@ -62,10 +62,10 @@ def check_config_style(filepath):
                         currentSpacingDepth += 1
                     else:
                         if (c == '}'): expectedSpacingDepth -= 4
-                        if ((currentSpacingDepth > 0) and (currentSpacingDepth != expectedSpacingDepth)):
+                        # if ((currentSpacingDepth > 0) and (currentSpacingDepth != expectedSpacingDepth)):
                             # too many false positives in macros/arrays
                             # print("ERROR: Incorrect spacing detected at {0} Line number: {1}. Expected spacing depth: {2}, actual spacing depth: {3}".format(filepath,lineNumber,expectedSpacingDepth,currentSpacingDepth))
-                            bad_count_file += 1
+                            # bad_count_file += 1
                         expectedSpacingDepth = 0
                         currentSpacingDepth = 0
 
