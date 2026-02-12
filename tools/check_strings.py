@@ -85,6 +85,7 @@ def main(argv):
     allUsedStrings = list(sorted(set(allUsedStrings)))
 
     if ("str_ace_tagging_name" in allUsedStrings): allUsedStrings.remove("str_ace_tagging_name") # Handle tagging macro
+    if ("str_ace_wardrobe_var" in allUsedStrings): allUsedStrings.remove("str_ace_wardrobe_var") # Handle tagging macro
 
     print("-----------")
     countUnusedStrings = 0

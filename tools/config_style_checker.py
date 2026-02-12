@@ -44,6 +44,8 @@ def check_config_style(filepath):
         lineNumber = 1
 
         indexOfCharacter = 0
+        expectedSpacingDepth = 0
+        currentSpacingDepth = 0
         # Parse all characters in the content of this file to search for potential errors
         for c in content:
             if (lastIsCurlyBrace):
@@ -55,6 +57,17 @@ def check_config_style(filepath):
                     isInString = False
             # if we are not in a comment block, we will check if we are at the start of one or count the () {} and []
             elif (isInCommentBlock == False):
+                if expectedSpacingDepth > 0:
+                    if c == ' ':
+                        currentSpacingDepth += 1
+                    else:
+                        if (c == '}'): expectedSpacingDepth -= 4
+                        if ((currentSpacingDepth > 0) and (currentSpacingDepth != expectedSpacingDepth)):
+                            # too many false positives in macros/arrays
+                            # print("ERROR: Incorrect spacing detected at {0} Line number: {1}. Expected spacing depth: {2}, actual spacing depth: {3}".format(filepath,lineNumber,expectedSpacingDepth,currentSpacingDepth))
+                            bad_count_file += 1
+                        expectedSpacingDepth = 0
+                        currentSpacingDepth = 0
 
                 # This means we have encountered a /, so we are now checking if this is an inline comment or a comment block
                 if (checkIfInComment):
@@ -109,6 +122,9 @@ def check_config_style(filepath):
                     elif (c != '*'):
                         checkIfNextIsClosingBlock = False
             indexOfCharacter += 1
+            if (c == '\n'):
+                currentSpacingDepth = 0
+                expectedSpacingDepth = 4 * (brackets_list.count('{') - brackets_list.count('}'))
 
         if brackets_list.count('[') != brackets_list.count(']'):
             print("ERROR: A possible missing square bracket [ or ] in file {0} [ = {1} ] = {2}".format(filepath,brackets_list.count('['),brackets_list.count(']')))
