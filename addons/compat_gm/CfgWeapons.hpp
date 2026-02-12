@@ -28,12 +28,12 @@ class CfgWeapons {
 
     //RIFLES
     class gm_ak74_base: gm_rifle_base {
-    ACE_barrelLength = 414.02;
-    ACE_barrelTwist = 199.898;
+        ACE_barrelLength = 414.02;
+        ACE_barrelTwist = 199.898;
     };
     class gm_rpk74_base: gm_ak74_base {
-    ACE_barrelLength = 590;
-    ACE_barrelTwist = 195;
+        ACE_barrelLength = 590;
+        ACE_barrelTwist = 195;
     };
     class gm_m16_base: gm_rifle_base {
         ACE_barrelLength = 508;
@@ -70,8 +70,8 @@ class CfgWeapons {
         ACE_barrelTwist = 177.8;
     };
     class gm_hk53_base: gm_hk33_base {
-    ACE_barrelLength = 211;
-    ACE_barrelTwist = 177.8;
+        ACE_barrelLength = 211;
+        ACE_barrelTwist = 177.8;
     };
     class gm_aks74n_base;
     class gm_aks74nk_base: gm_aks74n_base {
@@ -220,7 +220,7 @@ class CfgWeapons {
     class gm_gc_airforce_uniform_pilot_80_blu: gm_gc_uniform_pilot_80_base {
         ace_fire_protection = 0.3;
     };
-        class gm_pl_airforce_uniform_pilot_80_gry: gm_gc_uniform_pilot_80_base {
+    class gm_pl_airforce_uniform_pilot_80_gry: gm_gc_uniform_pilot_80_base {
         ace_fire_protection = 0.3;
     };
 
