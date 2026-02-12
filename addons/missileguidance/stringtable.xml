@@ -467,5 +467,11 @@
             <Japanese>ミサイル - 上</Japanese>
             <Ukrainian>Ракета - Вгору</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_too_tooltip">
+            <English>Ordnance will guide to the location the targeting camera is looking at</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp_tooltip">
+            <English>Ordnance will guide to the provided 10 digit grid coordinates</English>
+        </Key>
     </Package>
 </Project>
