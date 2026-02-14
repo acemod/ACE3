@@ -77,9 +77,11 @@ if (_shooter == ACE_player) then {
 _yawChange = -10 max _yawChange min 10;
 _pitchChange = -10 max _pitchChange min 10;
 
+_seekerStateParams set [1, SEEKER_STATE_LOOKING];
 _seekerStateParams set [2, _yawChange];
 _seekerStateParams set [3, _pitchChange];
 _seekerStateParams set [4, CBA_missionTime];
+_seekerStateParams set [5, FUZE_LENGTH];
 
 TRACE_3("attackProfileStateParams",_firedLOS,_yawChange,_pitchChange);
 _attackProfileStateParams set [0, CBA_missionTime];

@@ -14,9 +14,9 @@
  *
  * Public: No
  */
-#define PROPORTIONAL 1.526
+#define PROPORTIONAL 1.586
 #define INTEGRAL 0.25
-#define DERIVATIVE 1.085
+#define DERIVATIVE 1.225
 #define HISTORY_LENGTH 20
 
 params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams"];
