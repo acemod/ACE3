@@ -91,10 +91,6 @@ class CfgVehicles {
     class ACE_SandbagObject_NoGeo: ACE_SandbagObject {
         scope = 1;
         model = QPATHTOF(data\ace_sandbag_nogeo.p3d);
-
-        class EventHandlers: EventHandlers {
-            class CBA_Extended_EventHandlers {};
-        };
     };
 
     class Box_NATO_Support_F;
