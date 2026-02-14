@@ -3,7 +3,7 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {"ACE_ModuleMine_SLAMBottomMine", "ACE_ModuleExplosive_IEDUrbanBig_Range", "ACE_ModuleExplosive_IEDLandBig_Range", "ACE_ModuleExplosive_IEDUrbanSmall_Range", "ACE_ModuleExplosive_IEDLandSmall_Range", "ACE_APERSMine_ToePopper", "ACE_FlareTripMine_Mag", "ACE_FlareTripMine_Mag_Red", "ACE_FlareTripMine_Mag_Green", "ACE_ModuleMine_APERSMine_ToePopper", "ACE_ModuleMine_FlareTripMine", "ACE_ModuleMine_FlareTripMineRed", "ACE_ModuleMine_FlareTripMineGreen"};
+        units[] = {"ACE_ModuleMine_SLAMBottomMine", "ACE_ModuleExplosive_IEDUrbanBig_Range", "ACE_ModuleExplosive_IEDLandBig_Range", "ACE_ModuleExplosive_IEDUrbanSmall_Range", "ACE_ModuleExplosive_IEDLandSmall_Range", "ACE_APERSMine_ToePopper", "ACE_ModuleMine_APERSMine_ToePopper", "ACE_ModuleMine_FlareTripMine", "ACE_ModuleMine_FlareTripMineRed", "ACE_ModuleMine_FlareTripMineGreen"};
         weapons[] = {"ACE_Clacker", "ACE_DefusalKit", "ACE_M26_Clacker", "ACE_DeadManSwitch", "ACE_Cellphone"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
@@ -56,7 +56,7 @@ class CfgActions {
 class CfgMineTriggers {
     class IRTrigger;
     class ACE_MagneticTrigger: IRTrigger {
-        mineWireEnd[] = {0,0.1,0.5};
+        mineWireEnd[] = {0, 0.1, 0.5};
     };
 
     class TankTriggerMagnetic;

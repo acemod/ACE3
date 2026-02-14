@@ -20,34 +20,19 @@ _firedEH params ["","","","","","","_projectile"];
 _targetData params ["", "_targetDir", "_distance"];
 _flightParams params ["_pitchRate", "_yawRate"];
 
-_navigationParams params ["_proportionalGain", "", "_derivativeGain", "_lastErrorX", "_lastErrorY", "_correctionDistance"];
+_navigationParams params ["_pid_x", "_pid_y"];
 private _relativeTargetDirection = [0, (velocityModelSpace _projectile) select 1, 0] vectorAdd (_projectile vectorWorldToModelVisual (_targetDir vectorMultiply _distance));
 
 private _angleX = ((_relativeTargetDirection select 0) atan2 (_relativeTargetDirection select 1));
 private _angleY = ((_relativeTargetDirection select 2) atan2 (_relativeTargetDirection select 1));
 
-private _pX = _proportionalGain * _angleX;
-private _dX = 0;
-if (_timestep > 0) then {
-    _dX = _derivativeGain * (_angleX - _lastErrorX) / _timestep;
-};
-
-private _pY = _proportionalGain * _angleY;
-private _dY = 0;
-if (_timestep > 0) then {
-    _dY = _derivativeGain * (_angleY - _lastErrorY) / _timestep;
-};
-
-private _accelerationX = _pX + _dX;
-private _accelerationY = _pY + _dY;
+private _accelerationX = [_pid_x, -_angleX] call CBA_pid_fnc_update;
+private _accelerationY = [_pid_y, -_angleY] call CBA_pid_fnc_update;
 
 private _commandedAcceleration = [
     _accelerationX,
     0,
     _accelerationY
 ];
-
-_navigationParams set [3, _angleX];
-_navigationParams set [4, _angleY];
 
 _projectile vectorModelToWorldVisual _commandedAcceleration;

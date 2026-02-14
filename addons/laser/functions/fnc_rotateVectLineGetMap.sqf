@@ -4,10 +4,12 @@
  *
  *
  * Arguments:
- * None
+ * 0: Point to rotate around <ARRAY>
+ * 1: First point defining the line <ARRAY>
+ * 2: Second point defining the line <ARRAY>
  *
  * Return Value:
- * None
+ * <ARRAY>
  *
  * Example:
  * call ace_laser_fnc_rotateVectLineGetMap

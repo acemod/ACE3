@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Recieves the data packet from the vector rangefinder
+ * Receives the data packet from the vector rangefinder
  *
  * Arguments:
  * 0: Slope distance (Meters) <NUMBER>
@@ -22,7 +22,7 @@ params ["_slopeDistance", "_azimuth", "_inclination", ["_isMagnetic", false]];
 if (GVAR(currentWaypoint) != -2) exitWith {}; //Only take waypoint when "connected"
 if (_slopeDistance < 0) exitWith {}; //Bad Data
 
-if (_isMagnetic) then { 
+if (_isMagnetic) then {
     // We know we are getting a simple magnetic reading from a "dumb" device, convert to true heading
     _azimuth = _azimuth - (missionNamespace getVariable [QEGVAR(common,magneticDeclinationOffset), 0]);
 };

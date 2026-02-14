@@ -149,5 +149,7 @@ class CfgWeapons {
     class rhs_uniform_flora;
     class rhs_uniform_df15: rhs_uniform_flora {
         ACE_GForceCoef = 0.8;
+        ace_fire_protection = 0.5;
     };
+    //rhs_uniform_df15_tan inherits from rhs_uniform_df15
 };

@@ -30,6 +30,7 @@
 ["blockSpeaking", false, ["ace_unconscious"]] call FUNC(statusEffect_addType);
 ["disableWeaponAssembly", false, ["ace_common", QGVAR(lockVehicle), "ace_csw"]] call FUNC(statusEffect_addType);
 ["lockInventory", true, [], true] call FUNC(statusEffect_addType);
+["disableCollision", true, [], true] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
     params ["_object", "_set"];
@@ -131,6 +132,12 @@
     params ["_object", "_set"];
     TRACE_2("lockInventory EH",_object,_set);
     _object lockInventory (_set > 0);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(disableCollision), { // Name "reversed" from `setPhysicsCollisionFlag` because we want NOR logic
+    params ["_object", "_set"];
+    TRACE_2("disableCollision EH",_object,_set);
+    _object setPhysicsCollisionFlag (_set < 1);
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(disableAiUAV), {
@@ -235,10 +242,6 @@ if (isServer) then {
         _object allowDamage false;
     };
 }] call CBA_fnc_addEventHandler;
-
-// Request framework
-[QGVAR(requestCallback), LINKFUNC(requestCallback)] call CBA_fnc_addEventHandler;
-[QGVAR(receiveRequest), LINKFUNC(receiveRequest)] call CBA_fnc_addEventHandler;
 
 [QGVAR(systemChatGlobal), {systemChat _this}] call CBA_fnc_addEventHandler;
 

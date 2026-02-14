@@ -34,9 +34,11 @@ params [
 // Verify data
 if (_objects isEqualTo []) exitWith {
     ERROR("Slideshow Objects field must NOT be empty!");
+    -1
 };
 if (count _images != count _names || {_images isEqualTo []} || {_names isEqualTo []}) exitWith {
     ERROR("Slideshow Images or Names fields must NOT be empty and must have equal number of items!");
+    -1
 };
 
 // If no controllers use objects as controllers

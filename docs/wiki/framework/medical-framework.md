@@ -254,3 +254,40 @@ ACE will lock the seat of an unconscious or dead unit to prevent automatic unloa
 ace_medical_engine_disableSeatLocking = true;     // disable on everything
 ace_medical_engine_disableSeatLocking = ["ship"]; // disable just on boats
 ```
+
+### 5.2 Running vitals loop on untouched AI
+For performance ACE will skip running vitals loop on AI that have never been wounded or treated. This can be disabled by setting:
+```sqf
+// always run all vitals calculations on all AI
+ace_medical_const_medicalActivity = true;
+
+// specific AI
+unit setVariable ["ace_medical_medicalActivity", true]  
+```
+Once medical activity has been enabled, you can't disable it. In other words: if you execute `unit setVariable ["ace_medical_medicalActivity", true]`, you can't disable medical activity for that specific AI anymore. If you run `ace_medical_const_medicalActivity = true;`, you can no longer set it to `false` and all AI will have their medical activity enabled.
+
+## 6. Persisting medical state between missions
+
+A unit's medical state can be saved to JSON by calling `ace_medical_fnc_serializeState`. This can then be persisted in `profileNamespace` or your preferred flavor of persistence:
+```sqf
+private _state = player call ace_medical_fnc_serializeState;
+
+profileNamespace setVariable ["MyPlayerMedicalState", _state];
+saveProfileNamespace;
+```
+
+After a mission restart, `ace_medical_fnc_deserializeState` can be called:
+```sqf
+private _state = profileNamespace getVariable ["MyPlayerMedicalState", ""];
+
+[player, _state] call ace_medical_deserializeState;
+```
+
+## 6.1 Extending with custom handling
+
+You can save additional data or add custom handling by hooking into the events:
+
+| Event Name | Params | Description |
+| ---------- | ------ | ----------- |
+| ace_medical_serializeState | Unit, Namespace | Raised locally after ACE Medical's serialization has taken place |
+| ace_medical_deserializeState | Unit, Namespace | Raised locally after ACE Medical's deserialization has taken place |

@@ -4,7 +4,7 @@
  * Blurs screen.
  *
  * Arguments:
- * 0: ID <NUMBER>
+ * 0: ID <NUMBER or STRING>
  * 1: Show? <BOOL or NUMBER>
  *
  * Return Value:

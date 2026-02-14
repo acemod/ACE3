@@ -19,6 +19,8 @@
 params ["_vehicle", "_emptyWeapon"];
 TRACE_2("staticWeaponInit_unloadExtraMags",_vehicle,_emptyWeapon);
 
+_vehicle setVariable [QGVAR(initialising), true];
+
 private _desiredAmmo = getNumber (configOf _vehicle >> QUOTE(ADDON) >> "desiredAmmo");
 private _storeExtraMagazines = GVAR(handleExtraMagazines);
 if (_emptyWeapon) then {
@@ -109,3 +111,5 @@ if (_storeExtraMagazines) then {
         [_vehicle, _x, _containerMagazineCount select _forEachIndex] call FUNC(reload_handleReturnAmmo);
     } forEach _containerMagazineClassnames;
 };
+
+[{ _this setVariable [QGVAR(initialising), false]; }, _vehicle] call CBA_fnc_execNextFrame;

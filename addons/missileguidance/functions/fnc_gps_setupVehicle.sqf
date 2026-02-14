@@ -23,8 +23,8 @@ TRACE_2("adding gps action",_player,typeOf _vehicle);
 
 private _condition = {
     params ["_target", "_player"]; // _player may be the UAV AI
-    
-    private _turretPath = if (_player == (driver _target)) then {[-1]} else {_player call CBA_fnc_turretPath};
+
+    private _turretPath = _target unitTurret _player;;
     private _hasJDAM = (_target weaponsTurret _turretPath) findIf {
         private _weapon = _x;
         GVAR(gps_weapons) getOrDefaultCall [_weapon, {
@@ -44,4 +44,3 @@ private _statement = {
 
 private _action = [QUOTE(ADDON), "JDAM settings", "", _statement, _condition] call EFUNC(interact_menu,createAction);
 [_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToObject);
-

@@ -210,7 +210,7 @@ This is not the case for inline functions or functions not contained in their ow
 
 To keep the syntax in the header consistent, we set some rules:
 1. Each argument must have a type that is enclosed in brackets `<TYPE>`. The type must be in UPPERCASE.
-2. Use one of the following types only: `OBJECT`, `NUMBER`, `STRING`, `BOOL`, `ARRAY`, `CONTROL`, `DISPLAY`, `CONFIG`, `CODE`, `ANY`, `LOGIC`, `SIDE`, `GROUP`, `HASHMAP`, `NAMESPACE`, `LOCATION`, `TEXT`.
+2. Use one of the following types only: `OBJECT`, `NUMBER`, `STRING`, `BOOL`, `ARRAY`, `CONTROL`, `DISPLAY`, `CONFIG`, `CODE`, `ANY`, `SIDE`, `GROUP`, `HASHMAP`, `NAMESPACE`, `LOCATION`, `STRUCTUREDTEXT`, `NIL`.
 3. If an argument can have multiple types, concatenate types using `or`. Example: `<STRING or CODE>`.
 4. Arrays with the same value types are written in the format `<ARRAY of TYPEs>`. The nested type has a small `s` appended at the end.
 5. If an argument is optional, the default value must be written after the type in the format `(default: value)`.
@@ -349,29 +349,29 @@ Good:
 
 ```sqf
 // Check if the unit is an engineer
-(_obj getvariable [QGVAR(engineerSkill), 0] >= 1);
+(_obj getVariable [QGVAR(engineerSkill), 0] >= 1);
 ```
 
 Bad:
 
 ```sqf
 // Get the engineer skill and check if it is above 1
-(_obj getvariable [QGVAR(engineerSkill), 0] >= 1);
+(_obj getVariable [QGVAR(engineerSkill), 0] >= 1);
 ```
 
 Bad:
 
 ```sqf
 // Get the variable myValue from the object
-_myValue = _obj getvariable [QGVAR(myValue), 0];
+_myValue = _obj getVariable [QGVAR(myValue), 0];
 ```
 
 Bad:
 
 ```sqf
-// Loop through all units to increase the myvalue variable
+// Loop through all units to increase the myValue variable
 {
-    _x setvariable [QGVAR(myValue), (_x getvariable [QGVAR(myValue), 0]) + 1];
+    _x setVariable [QGVAR(myValue), (_x getVariable [QGVAR(myValue), 0]) + 1];
 } forEach _units;
 ```
 
@@ -480,10 +480,10 @@ Good:
 
 ```sqf
 if (call FUNC(myCondition)) then {
-    private _areAllAboveTen = true; // <- smallest feasable scope
+    private _areAllAboveTen = true; // <- smallest feasible scope
 
     {
-        if (_x >= 10) then {
+        if (_x >= 10) exitWith {
             _areAllAboveTen = false;
         };
     } forEach _anArray;
@@ -500,7 +500,7 @@ Bad:
 private _areAllAboveTen = true; // <- this is bad, because it can be initialized in the if statement
 if (call FUNC(myCondition)) then {
     {
-        if (_x >= 10) then {
+        if (_x >= 10) exitWith {
             _areAllAboveTen = false;
         };
     } forEach _anArray;
@@ -529,18 +529,18 @@ private _myVariable = 0; // good because the value will be used
 Bad:
 
 ```sqf
-private _myvariable = 0; // Bad because it is initialized with a zero, but this value does not mean anything
+private _myVariable = 0; // Bad because it is initialized with a zero, but this value does not mean anything
 if (_condition) then {
     _myVariable = 1;
 } else {
-    _myvariable = 2;
+    _myVariable = 2;
 };
 ```
 
 Good:
 
 ```sqf
-private _myvariable = [1, 2] select _condition;
+private _myVariable = [1, 2] select _condition;
 ```
 
 ### 6.9 Initialization expression in `for` loops
@@ -555,21 +555,21 @@ When using `getVariable`, there shall either be a default value given in the sta
 Bad:
 
 ```sqf
-_return = obj getvariable "varName";
-if (isnil "_return") then { _return = 0 };
+_return = obj getVariable "varName";
+if (isNil "_return") then { _return = 0 };
 ```
 
 Good:
 
 ```sqf
-_return = obj getvariable ["varName", 0];
+_return = obj getVariable ["varName", 0];
 ```
 
 Good:
 
 ```sqf
-_return = obj getvariable "varName";
-if (isnil "_return") exitwith {};
+_return = obj getVariable "varName";
+if (isNil "_return") exitWith {};
 ```
 
 ### 6.12. Global Variables
@@ -667,7 +667,7 @@ _a append [1, 2, 3];
 Bad:
 
 ```sqf
-_a set [ count _a, _value];
+_a set [count _a, _value];
 _a = a + [_value];
 ```
 
@@ -686,14 +686,14 @@ This code requires ~1.00ms and will be higher with more objects near wanted posi
 
 ```sqf
 _vehicle = _type createVehicleLocal _posATL;
-_vehicle setposATL _posATL;
+_vehicle setPosATL _posATL;
 ```
 
 While this one requires ~0.04ms:
 
 ```sqf
 _vehicle = _type createVehicleLocal [0, 0, 0];
-_vehicle setposATL _posATL;
+_vehicle setPosATL _posATL;
 ```
 
 ### 8.4 Unscheduled vs Scheduled
@@ -725,7 +725,7 @@ While is only allowed when used to perform a unknown finite amount of steps with
 Good:
 
 ```sqf
-_original = _obj getvariable [QGVAR(value), 0];
+_original = _obj getVariable [QGVAR(value), 0];
 while {_original < _weaponThreshold} do {
     _original = [_original, _weaponClass] call FUNC(getNewValue);
 }

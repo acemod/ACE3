@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * None
+ * <ARRAY>
  *
  * Example:
  * [] call ace_missileguidance_fnc_gps_getAttackData

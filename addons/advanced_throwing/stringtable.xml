@@ -18,22 +18,9 @@
             <Turkish>Gelişmiş Fırlatma</Turkish>
             <Ukrainian>Покращений кидок гранат</Ukrainian>
         </Key>
-        <Key ID="STR_ACE_Advanced_Throwing_ChangeMode">
-            <English>(Scroll) Change Mode</English>
-            <Czech>(Scrollovat) Změnit mód</Czech>
-            <French>(Défilement) Changer de mode</French>
-            <Spanish>(Scroll) Cambiar Modo</Spanish>
-            <Italian>(Scorri) Cambia Modalità</Italian>
-            <Polish>(Kółko m.) zmień tryb</Polish>
-            <Portuguese>(Roda do Mouse) Alternar modo</Portuguese>
-            <Russian>(Скролл) Изменить режим</Russian>
-            <German>(Scrollen) Modus wechseln</German>
-            <Korean>(마우스 휠) 모드 변경</Korean>
-            <Japanese>(スクロール) モード変更</Japanese>
-            <Chinese>(滾輪) 變更模式</Chinese>
-            <Chinesesimp>（滚轮）变更模式</Chinesesimp>
-            <Turkish>(Tekerlek) Modu Değiştir</Turkish>
-            <Ukrainian>(Скрол) Змінити режим</Ukrainian>
+        <Key ID="STR_ACE_Advanced_Throwing_ChangePower">
+            <English>(Scroll) Change Power</English>
+            <Russian>(Прокрутка) Изменение мощности</Russian>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Cook">
             <English>(Click) Cook</English>
@@ -337,6 +324,10 @@
             <Turkish>Atış Yayını Göster</Turkish>
             <Ukrainian>Показати траєкторію кидка</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_SnapPower">
+            <English>(Scroll) Snap Power</English>
+            <Russian>(Прокрутка) Мгновенная мощность</Russian>
+        </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Throw">
             <English>Throw</English>
             <Czech>Hodit</Czech>
@@ -369,6 +360,14 @@
             <Chinese>投擲模式 (按住)</Chinese>
             <Chinesesimp>投掷模式（按住）</Chinesesimp>
             <Ukrainian>Режим кидка гранати (утримувати)</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_throwStepSetting_Description">
+            <English>Adjust the granularity of different throwing modes by using the mouse wheel</English>
+            <Russian>Отрегулируйте степень детализации различных режимов метания с помощью колесика мыши</Russian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_throwStepSetting_DisplayName">
+            <English>Granular Throw Steps</English>
+            <Russian>Этапы гранулирвоанного броска</Russian>
         </Key>
     </Package>
 </Project>
