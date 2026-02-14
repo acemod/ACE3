@@ -26,17 +26,10 @@ _targetLaunchParams params ["", "", "_launchPos"];
 _stateParams params ["", "", "", "", "_navigationParams"];
 
 if (_attackProfile == QGVAR(directAttack)) exitWith {
-    _navigationParams set [5, 1];
     [0,0,0]
 };
 
 _seekerStateParams params ["", "", "", "_originalPitchRate", "_startTime"];
-_navigationParams params ["", "_pitchRate"];
-
-// pitch up for the first second of flight to begin an over-fly trajectory
-private _pitchChange = linearConversion [0, PITCH_UP_TIME, CBA_missionTime - _startTime, 2, 0, true];
-_navigationParams set [1, _originalPitchRate + _pitchChange];
-_navigationParams set [5, ((CBA_missionTime - _startTime) min PITCH_UP_TIME) / PITCH_UP_TIME];
 
 private _projPos = getPosASL _projectile;
 
