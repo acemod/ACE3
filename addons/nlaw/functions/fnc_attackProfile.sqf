@@ -18,12 +18,12 @@
  */
 
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
+_args params ["_firedEH", "_launchParams"];
+_launchParams params ["","_targetLaunchParams", "", "_attackProfile"];
 _attackProfileStateParams params ["_startTime"];
 private _flightTime = CBA_missionTime - _startTime;
 
 #ifdef DRAW_NLAW_INFO
-_args params ["_firedEH", "_launchParams"];
-_launchParams params ["","_targetLaunchParams", "", "_attackProfile"];
 _targetLaunchParams params ["", "", "_launchPos"];
 _firedEH params ["","","","","","","_projectile"];
 
