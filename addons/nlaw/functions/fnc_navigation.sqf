@@ -26,7 +26,7 @@ private _elapsedTime = CBA_missionTime - _launchTime;
 private _expectedPitch = _initialPitch + _elapsedTime * _pitchChange;
 private _expectedYaw = _initialYaw + _elapsedTime * _yawChange;
 
-private _position = (getPosASLVisual _projectile) vectorDiff _launchPos;
+private _position = getPosASLVisual _projectile vectorDiff _launchPos;
 
 private _distance = 0.01 max vectorMagnitude _position;
 
@@ -34,8 +34,10 @@ _profileAdjustedTargetPos params ["", "", "_heightOffset"];
 private _expectedPosition = ([_distance, _expectedYaw, _expectedPitch] call CBA_fnc_polar2vect) vectorAdd [0, 0, _heightOffset];
 private _offset = _position vectorDiff _expectedPosition;
 
-private _pitchCommand = _pitchChange + ([_pid_pitch, _offset select 2] call CBA_pid_fnc_update);
-private _yawCommand = _yawChange + ([_pid_yaw, -(_offset select 0)] call CBA_pid_fnc_update);
+private _offsetProjectileSpace = _projectile vectorWorldToModelVisual _offset;
+
+private _pitchCommand = _pitchChange + ([_pid_pitch, _offsetProjectileSpace select 2] call CBA_pid_fnc_update);
+private _yawCommand = _yawChange + ([_pid_yaw, _offsetProjectileSpace select 0] call CBA_pid_fnc_update);
 
 #ifdef DRAW_NLAW_INFO
 private _projectilePosition = getPosASLVisual _projectile;
