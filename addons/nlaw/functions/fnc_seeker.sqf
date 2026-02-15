@@ -66,7 +66,6 @@ if ((_projPos distance _launchPos) >= 20) then {
             } else {
                 _fuzeTime = _fuzeTime - _virtualTimeStep;
             };
-            systemChat str [_stepSize, _fuzeTime];
             _seekerStateParams set [5, _fuzeTime];
             if (_fuzeTime <= 0) then {
                 _seekerStateParams set [1, SEEKER_STATE_DETONATED];
