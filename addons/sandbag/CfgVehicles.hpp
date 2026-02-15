@@ -33,7 +33,10 @@ class CfgVehicles {
 
     class ThingX;
     class ACE_SandbagObject: ThingX {
-        XEH_DISABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
+        };
+
         author = ECSTRING(common,ACETeam);
         scope = 2;
         side = 3;
@@ -86,6 +89,7 @@ class CfgVehicles {
     };
 
     class ACE_SandbagObject_NoGeo: ACE_SandbagObject {
+        XEH_DISABLED;
         scope = 1;
         model = QPATHTOF(data\ace_sandbag_nogeo.p3d);
     };
