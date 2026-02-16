@@ -39,14 +39,14 @@ class CfgWeapons {
         ACE_barrelLength = 508;
         ACE_barrelTwist=305;
     };
-    class gm_m16a2_base: gm_rifle_base {
+    class gm_m16a2_base: gm_m16_base {
         ACE_barrelTwist=177.8;
     };
     class gm_svd_base: gm_rifle_base {
         ACE_barrelLength = 619.76;
         ACE_barrelTwist = 238.76;
     };
-    class gm_psg1_base: gm_rifle_base {
+    class gm_psg1_base: gm_g3_base {
         ACE_barrelLength = 650.24;
         ACE_barrelTwist = 304.8;
     };
@@ -92,7 +92,7 @@ class CfgWeapons {
     class gm_hk33k_base: gm_hk33_base {
         ACE_barrelLength = 332.74;
     };
-    class gm_mpikms72k_base: gm_ak47_base {
+    class gm_mpikms72k_base: gm_akmsn_base {
         ACE_barrelLength = 317;
     };
     class gm_msg90_base: gm_psg1_base {
@@ -107,7 +107,7 @@ class CfgWeapons {
         ACE_barrelLength = 528;
         ACE_barrelTwist = 254;
     };
-    class gm_sg551_base: gm_rifle_base {
+    class gm_sg551_base: gm_sg550_base {
         ACE_barrelLength = 363;
         ACE_barrelTwist = 177.8;
     };
@@ -153,7 +153,7 @@ class CfgWeapons {
         ACE_barrelLength = 225;
         ACE_barrelTwist = 254;
     };
-    class gm_mp5sd_base: gm_rifle_base {
+    class gm_mp5sd_base: gm_mp5_base {
         ACE_barrelLength = 146;
         ACE_barrelTwist = 254;
     };
