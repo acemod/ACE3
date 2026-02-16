@@ -46,12 +46,12 @@ class CfgWeapons {
         ACE_barrelLength = 619.76;
         ACE_barrelTwist = 238.76;
     };
-    class gm_psg1_base: gm_g3_base {
-        ACE_barrelLength = 650.24;
-        ACE_barrelTwist = 304.8;
-    };
     class gm_g3_base: gm_rifle_base {
         ACE_barrelLength = 449.58;
+        ACE_barrelTwist = 304.8;
+    };
+    class gm_psg1_base: gm_g3_base {
+        ACE_barrelLength = 650.24;
         ACE_barrelTwist = 304.8;
     };
     class gm_g3ka4_base: gm_g3_base {
@@ -92,6 +92,7 @@ class CfgWeapons {
     class gm_hk33k_base: gm_hk33_base {
         ACE_barrelLength = 332.74;
     };
+    class gm_akmsn_base;
     class gm_mpikms72k_base: gm_akmsn_base {
         ACE_barrelLength = 317;
     };
