@@ -30,12 +30,12 @@ private _change = (if (_isInSmoke) then {
     EFFECT_RATE * GVAR(effectFactor)
 } else {
     RECOVERY_RATE * GVAR(recoveryFactor)
-}) * diag_deltaTime * (1 / PFH_INTERVAL);
+}) * PFH_INTERVAL;
 
 private _fnc_updateLevel = {
     params ["_level", "_protect"];
     private _innerChange = if (_protect == 1 && _isInSmoke) then {
-        RECOVERY_RATE * GVAR(recoveryFactor) * diag_deltaTime * (1 / PFH_INTERVAL)
+        RECOVERY_RATE * GVAR(recoveryFactor) * PFH_INTERVAL
     } else {
         _change
     };

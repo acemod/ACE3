@@ -32,8 +32,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     _category,
     [0, 1, 0.5, 0, true],
     1,
-    {[QGVAR(effectFactor), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
+    {[QGVAR(effectFactor), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -42,6 +41,5 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     _category,
     [0, 1, 0.5, 0, true],
     1,
-    {[QGVAR(recoveryFactor), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
+    {[QGVAR(recoveryFactor), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;

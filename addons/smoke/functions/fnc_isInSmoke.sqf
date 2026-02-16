@@ -24,11 +24,12 @@ if (!isNull _vehicle && {!([_vehicle, _unit] call FUNC(isOpenSeat))}) exitWith {
 private _coverage = 0;
 
 private _eyePos = eyePos _unit;
+private _z = [0,3] select (stance _unit == "PRONE");
 private _positions = [
-    [_eyePos, _eyePos vectorAdd [5, 0, 0], _unit],
-    [_eyePos, _eyePos vectorAdd [-5, 0, 0], _unit],
-    [_eyePos, _eyePos vectorAdd [0, 5, 0], _unit],
-    [_eyePos, _eyePos vectorAdd [0, -5, 0], _unit]
+    [_eyePos, _eyePos vectorAdd [5, 0, _z], _unit],
+    [_eyePos, _eyePos vectorAdd [-5, 0, _z], _unit],
+    [_eyePos, _eyePos vectorAdd [0, 5, _z], _unit],
+    [_eyePos, _eyePos vectorAdd [0, -5, _z], _unit]
 ];
 
 {
