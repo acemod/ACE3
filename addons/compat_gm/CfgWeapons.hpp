@@ -59,4 +59,81 @@ class CfgWeapons {
     class gm_mlrs_122mm_launcher_base: gm_RocketLauncher_base {
         EGVAR(overpressure,offset) = 3;
     };
+
+    //Fire Protection
+    class gm_ge_ff_uniform_man_80_base;
+    class gm_ge_army_uniform_pilot_base;
+    class gm_ge_army_uniform_pilot_rolled_base;
+    class gm_ge_uniform_pilot_commando_base;
+    class gm_ge_uniform_crew_base;
+    class gm_ge_uniform_pilot_commando_rolled_base;
+    class gm_gc_uniform_pilot_80_base;
+
+    //Cold War gear has values reduced by 0.2 from modern gear
+
+    //Firefighter
+    class gm_ge_ff_uniform_man_80_orn: gm_ge_ff_uniform_man_80_base {
+        ace_fire_protection = 0.5; 
+    };
+
+    //Pilot/Tanker Coveralls 80s
+    class gm_ge_army_uniform_crew_80_oli: gm_ge_uniform_crew_base {
+        ace_fire_protection = 0.3;
+    };
+
+    class gm_gc_civ_uniform_pilot_80_blk: gm_gc_uniform_pilot_80_base {
+        ace_fire_protection = 0.3;
+    };
+    class gm_gc_airforce_uniform_pilot_80_blu: gm_gc_uniform_pilot_80_base {
+        ace_fire_protection = 0.3;
+    };
+        class gm_pl_airforce_uniform_pilot_80_gry: gm_gc_uniform_pilot_80_base {
+        ace_fire_protection = 0.3;
+    };
+
+    //Pilot / Tanker Coveralls 90s
+    class gm_ge_uniform_pilot_commando_blk: gm_ge_uniform_pilot_commando_base {
+        ace_fire_protection = 0.5;
+    };
+    class gm_ge_uniform_pilot_commando_gry: gm_ge_uniform_pilot_commando_base {
+        ace_fire_protection = 0.5;
+    };
+    class gm_ge_uniform_pilot_commando_oli: gm_ge_uniform_pilot_commando_base {
+        ace_fire_protection = 0.5;
+    };
+
+    //rolled up sleeves reduce effectivenes of fire protection
+    class gm_ge_uniform_pilot_commando_rolled_blk: gm_ge_uniform_pilot_commando_rolled_base {
+        ace_fire_protection = 0.4;
+    };
+    class gm_ge_uniform_pilot_commando_rolled_gry: gm_ge_uniform_pilot_commando_rolled_base {
+        ace_fire_protection = 0.4;
+    };
+    class gm_ge_uniform_pilot_commando_rolled_oli: gm_ge_uniform_pilot_commando_rolled_base {
+        ace_fire_protection = 0.4;
+    };
+    class gm_ge_army_uniform_crew_90_trp: gm_ge_uniform_crew_base {
+        ace_fire_protection = 0.5;
+    };
+    class gm_ge_army_uniform_crew_90_flk: gm_ge_uniform_crew_base {
+        ace_fire_protection = 0.5;
+    };
+    class gm_ge_pol_uniform_pilot_grn: gm_ge_army_uniform_pilot_base {
+        ace_fire_protection = 0.5;
+    };
+    class gm_ge_pol_uniform_pilot_rolled_grn: gm_ge_army_uniform_pilot_rolled_base {
+        ace_fire_protection = 0.4;
+    };
+    class gm_ge_army_uniform_pilot_oli: gm_ge_army_uniform_pilot_base {
+        ace_fire_protection = 0.5;
+    };
+    class gm_ge_army_uniform_pilot_rolled_oli: gm_ge_army_uniform_pilot_rolled_base {
+        ace_fire_protection = 0.4;
+    };
+    class gm_ge_army_uniform_pilot_sar: gm_ge_army_uniform_pilot_base {
+        ace_fire_protection = 0.5;
+    };
+    class gm_ge_army_uniform_pilot_rolled_sar: gm_ge_army_uniform_pilot_rolled_base {
+        ace_fire_protection = 0.4;
+    };
 };

@@ -191,3 +191,29 @@ class CfgVehicles {
     };
 };
 ```
+
+## 3. Additional Configuration Parameters
+
+There are some additional config parameters available to extend functionality.
+
+### 3.1. `allowFireOnLoad`
+
+This option will make it so that whenever the weapon is reloaded, it will fire automatically. The intended use case of this is for mortars, where
+when the shell hits the fixed firing pin it shoots immediately.
+
+```cpp
+class CfgVehicles {
+    class MyWeapon {
+        class ace_csw {
+            // other options
+            allowFireOnLoad = 1;
+            /*
+            * Available Options:
+            *   0 - Disabled
+            *   1 - Enabled, togglable on the gun via ACE interact
+            *   2 - Enabled, and forced on.
+            */
+        };
+    };
+}
+```

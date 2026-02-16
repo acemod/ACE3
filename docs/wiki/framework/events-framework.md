@@ -23,20 +23,18 @@ E.G.: If you only need to do action when player's weapon fires, this will be fas
 The vehicle events will also have the following local variables available `_gunner (OBJECT), _turret (ARRAY)`.
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|
+|---------- |------------|----------|------|-------------|
 |`ace_firedPlayer` | [_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | ACE_player fires |
 |`ace_firedPlayerNonLocal` | [_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | Any other player fires |
 |`ace_firedNonPlayer` | [_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | AI fires |
 |`ace_firedPlayerVehicle` | [_vehicle, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | ACE_player turret fires |
 |`ace_firedPlayerVehicleNonLocal` | [_vehicle, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | Any other player turret fires |
 |`ace_firedNonPlayerVehicle` | [_vehicle, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | AI turret fires |
-|`ace_versioning_clientCheckDone` | [[_missingAddonsClient, _additionalAddonsClient, _olderVersionsClient, _newerVersionsClient]] | Local | Listen | When PBO checking has finished on a client |
-|`ace_versioning_serverCheckDone` | [[_serverFiles, _serverVersions]] | Local | Listen | When PBO checking has finished on the server |
 
 ### 2.2 Medical (`ace_medical`)
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|
+|---------- |------------|----------|------|-------------|
 |`ace_unconscious` | [_unit, _state(BOOL)] | Global | Listen | Unit's unconscious state changed |
 |`ace_placedInBodyBag` | [_target, _bodyBag, _isGrave, _medic] | Global | Listen | Target placed into a bodybag Note: (Target will soon be deleted, target could be a bodybag) |
 |`ace_placedInGrave` | [_target, _grave, _medic] | Global | Listen | Target placed into a grave, _grave will be objNull if `Create Grave Markers` is disabled Note: (Target will soon be deleted) |
@@ -51,7 +49,7 @@ The vehicle events will also have the following local variables available `_gunn
 MenuType: 0 = Interaction, 1 = Self Interaction
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|
+|---------- |------------|----------|------|-------------|
 |`ace_interactMenuOpened` | [_menuType] | Local | Listen | Interaction Menu Opened
 |`ace_interactMenuClosed` | [_menuType] | Local | Listen | Interaction Menu Closed
 |`ace_interact_menu_newControllableObject` | [_typeOf] | Local | Listen | New controlable object, only fires once per type (add self interactions)
@@ -59,7 +57,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 ### 2.4 Cargo (`ace_cargo`)
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|
+|---------- |------------|----------|------|-------------|
 |`ace_addCargo` | [_item (CLASSNAME or OBJECT), _vehicle, _cargoCount] | Target | Callable | Scripted way to add cargo to vehicle |
 |`ace_cargoLoaded` | [_item, _vehicle] | Global | Listen | Cargo has been Loaded into vehicle |
 |`ace_cargoUnloaded` | [_item, _vehicle, _unloadType] | Global | Listen | Cargo has been Unloaded from vehicle |
@@ -67,7 +65,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 ### 2.5 Captives (`ace_captives`)
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|
+|---------- |------------|----------|------|-------------|
 |`ace_captiveStatusChanged` | [_unit, _state(BOOL), _reason ("SetHandcuffed" or "SetSurrendered"), _caller] | Global | Listen | Unit's captivity state changed |
 |`ace_captives_setSurrendered` | [_unit, _state(BOOL)] | Target | Callable | Sets a unit to either start or stop surrendering |
 |`ace_captives_setHandcuffed` | [_unit, _state(BOOL)] | Target | Callable | Sets a unit to either start or stop being handcuffed |
@@ -76,36 +74,39 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 ### 2.6 Settings (`ace_common`)
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|
+|---------- |------------|----------|------|-------------|
 |`ace_settingsInitialized` | [] | Local | Listen | All modules are read and settings are ready |
 |`ace_settingChanged` | [_name,_value] | Local | Listen | A setting has been changed |
 
 ### 2.7 Tagging (`ace_tagging`)
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|
+|---------- |------------|----------|------|-------------|
 |`ace_tagCreated` | [_tagObject, _texture, _tagAttachedTo (can be null), _unitThatCreated] | Global | Listen | Tag is created |
 
 ### 2.8 Explosives (`ace_explosives`)
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|
+|---------- |------------|----------|------|-------------|
 |`ace_allowDefuse` | [_mine, _allow] | Global or Target | Callable | Set allowance of the dynamic defusal action on a mine |
-|`ace_tripflareTriggered` | [_flareObject, [_posX, _posY, _posZ]] | Global | Listen | Tripflare triggered |
+|`ace_tripflareTriggered` | [_flareObject, _posAGL] | Global | Listen | Tripflare triggered |
 |`ace_explosives_clackerAdded` | [_unit, _explosive, _id] | Local | Listen | Clacker added to explosive |
 |`ace_explosives_place` | [_explosive, _dir, _pitch, _unit] | Global | Listen | Explosive is armed |
-|`ace_explosives_setup` | [_explosiveVehicle, _magClassname, _unit] | Global | Listen | Explosive is placed in the world |
+|`ace_explosives_setup` | [_explosive, _magClassname, _unit] | Global | Listen | Explosive is placed in the world |
+|`ace_explosives_defuseStart` | [_explosive, _unit] | Global | Listen | Unit starts defusing explosive |
+|`ace_explosives_defuse` | [_explosive, _unit] | Global | Listen | Explosive is safely defused |
+|`ace_explosives_explodeOnDefuse` | [_explosive, _unit] | Global | Listen | Explosive blows up when trying to defuse |
 
 ### 2.9 Logistics Wirecutter (`ace_logistics`)
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|
+|---------- |------------|----------|------|-------------|
 |`ace_wireCuttingStarted` | [_unit, _fence] | Global | Listen | Fence cutting started |
 
 ### 2.9 Refuel (`ace_refuel`)
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|
+|---------- |------------|----------|------|-------------|
 |`ace_refuel_started` | [_source, _target, _nozzle, _unit] | Local | Listen | Refuelling has started |
 |`ace_refuel_tick` | [_source, _target, _amount, _refuelContainer, _nozzle] | Local | Listen | Amount of fuel transferred in a tick |
 |`ace_refuel_stopped` | [_source, _target, _nozzle] | Local | Listen | Refuelling has stopped |
@@ -113,7 +114,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 ### 2.10 Cook Off (`ace_cookoff`)
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|
+|---------- |------------|----------|------|-------------|
 |`ace_cookoff_cookOff` | [_vehicle, _intensity, _instigator, _smokeDelayEnabled, _ammoDetonationChance, _detonateAfterCookoff, _fireSource, _canRing, _maxIntensity, _canJet] | Global | Listen | Vehicle cook-off has started |
 |`ace_cookoff_cookOffBox` | [_box, _source, _instigator, _delay] | Global | Listen | Ammo box cook-off has started |
 |`ace_cookoff_engineFire` | [_vehicle] | Global | Listen | Engine fire has started |
@@ -200,6 +201,13 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 | `ace_minedetector_detectorEnabled` | [_unit, _detectorType] | Local | Listen | Called when local unit turned on their mine detector
 | `ace_minedetector_detectorDisabled` | [_unit, _detectorType] | Local | Listen | Called when local unit turned off their mine detector
 | `ace_minedetector_mineDetected` | [_unit, _mine, _distance, _detectorType] | Local | Listen | Called when local unit has detected a mine
+
+#### 2.21 PBO checking (`ace_common`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+|`ace_versioning_clientCheckDone` | [[_missingAddonsClient, _additionalAddonsClient, _olderVersionsClient, _newerVersionsClient]] | Local | Listen | When PBO checking has finished on a client |
+|`ace_versioning_serverCheckDone` | [[_serverFiles, _serverVersions]] | Local | Listen | When PBO checking has finished on the server |
 
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.

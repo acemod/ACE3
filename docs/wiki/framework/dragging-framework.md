@@ -96,7 +96,7 @@ You will **not** be able to carry / drag objects that are too heavy, the mass is
 |----| --------- | ----------- |
 | 0  |  `foo` | My object |
 | 1  |  `true`| Carrying is enabled |
-| 2  | `[0,2,0]` | 0 meters sideways, 3 meters forward, 1 meter upwards |
+| 2  | `[0,3,1]` | 0 meters sideways, 3 meters forward, 1 meter upwards |
 | 3  | `10` | Rotated by 10° |
 
 ## 3. Corpse moving

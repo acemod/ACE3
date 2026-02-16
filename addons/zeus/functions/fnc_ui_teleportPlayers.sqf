@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: kymckay, mharis001
- * Initalizes the "Teleport Players" Zeus module display.
+ * Initializes the "Teleport Players" Zeus module display.
  *
  * Arguments:
  * 0: teleportPlayers controls group <CONTROL>

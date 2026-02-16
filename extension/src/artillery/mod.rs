@@ -3,7 +3,7 @@ use std::f64::consts::{FRAC_PI_2, FRAC_PI_4, PI};
 use arma_rs::{Context, Group};
 use rayon::prelude::*;
 
-use crate::common::{Height, MuzzleVelocity, Temperature, GRAVITY};
+use crate::common::{GRAVITY, Height, MuzzleVelocity, Temperature};
 
 mod simulate;
 
@@ -267,7 +267,7 @@ fn calc_range_table_line(
                     "{:0width$.precision$}",
                     headwind_offset,
                     width = 1,
-                    precision = if headwind_offset.abs() > 9.949 { 0 } else { 1 }
+                    precision = usize::from(headwind_offset.abs() <= 9.949)
                 )
             },
             {
@@ -286,7 +286,7 @@ fn calc_range_table_line(
                     "{:0width$.precision$}",
                     tailwind_offset,
                     width = 1,
-                    precision = if tailwind_offset.abs() > 9.949 { 0 } else { 1 }
+                    precision = usize::from(tailwind_offset.abs() <= 9.949)
                 )
             },
             {
@@ -305,7 +305,7 @@ fn calc_range_table_line(
                     "{:0width$.precision$}",
                     temp_dec_offset,
                     width = 1,
-                    precision = if temp_dec_offset.abs() > 9.949 { 0 } else { 1 }
+                    precision = usize::from(temp_dec_offset.abs() <= 9.949)
                 )
             },
             {
@@ -324,7 +324,7 @@ fn calc_range_table_line(
                     "{:0width$.precision$}",
                     temp_inc_offset,
                     width = 1,
-                    precision = if temp_inc_offset.abs() > 9.949 { 0 } else { 1 }
+                    precision = usize::from(temp_inc_offset.abs() <= 9.949)
                 )
             },
             {
@@ -343,11 +343,7 @@ fn calc_range_table_line(
                     "{:0width$.precision$}",
                     air_density_dec_offset,
                     width = 1,
-                    precision = if air_density_dec_offset.abs() > 9.949 {
-                        0
-                    } else {
-                        1
-                    }
+                    precision = usize::from(air_density_dec_offset.abs() <= 9.949)
                 )
             },
             {
@@ -366,11 +362,7 @@ fn calc_range_table_line(
                     "{:0width$.precision$}",
                     air_density_inc_offset,
                     width = 1,
-                    precision = if air_density_inc_offset.abs() > 9.949 {
-                        0
-                    } else {
-                        1
-                    }
+                    precision = usize::from(air_density_inc_offset.abs() <= 9.949)
                 )
             },
         )
@@ -384,7 +376,7 @@ fn calc_range_table_line(
         format!(
             "{:.precision$}",
             line_tof,
-            precision = if line_tof < 99.945 { 1 } else { 0 }
+            precision = usize::from(line_tof < 99.945)
         ),
         crosswind_offset,
         headwind_offset,
@@ -442,12 +434,11 @@ mod tests {
             |name, func, data| {
                 recv.fetch_add(1, Ordering::SeqCst);
                 if name == "ace:artillery" && func == "calculate_table" {
-                    if let Some(Value::Array(data)) = data {
-                        if let Value::Array(line) = &data[1] {
-                            if line[0] == Value::String(String::from("3500")) {
-                                println!("data: {line:?}");
-                            }
-                        }
+                    if let Some(Value::Array(data)) = data
+                        && let Value::Array(line) = &data[1]
+                        && line[0] == Value::String(String::from("3500"))
+                    {
+                        println!("data: {line:?}");
                     }
                     if recv.load(Ordering::SeqCst) == lines {
                         Result::Ok(())

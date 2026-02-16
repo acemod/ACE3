@@ -8,6 +8,9 @@ class CfgMagazines {
     class 200Rnd_65x39_cased_Box: 100Rnd_65x39_caseless_mag { // Mag for Stoner (LMG_Mk200)
         ACE_isBelt = 1;
     };
+    class 200Rnd_65x39_cased_Box_Red: 100Rnd_65x39_caseless_mag {
+        ACE_isBelt = 1;
+    };
 
     class 150Rnd_93x64_Mag: CA_Magazine { // Mag for HK121 (MMG_01) [DLC Opfor Heavy Gunner]
         ACE_isBelt = 1;

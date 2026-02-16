@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Wardrobe">
+        <Key ID="STR_ACE_Wardrobe_action_inProgress">
+            <English>Busy...</English>
+            <French>Occupé...</French>
+            <Spanish>Ocupado...</Spanish>
+            <Russian>Занято...</Russian>
+            <Japanese>作業中...</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_action_title">
+            <English>Wardrobe</English>
+            <French>Garde-robe</French>
+            <Spanish>Ropero</Spanish>
+            <Russian>Гардероб</Russian>
+            <German>Garderobe</German>
+            <Japanese>ワードローブ</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_bandannaAdd">
+            <English>Add Bandanna</English>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_bandannaRemove">
+            <English>Remove Bandanna</English>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_collarClose">
+            <English>Close collar</English>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_collarOpen">
+            <English>Open collar</English>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_enable_action">
+            <English>ACE Interaction</English>
+            <French>Interaction ACE</French>
+            <Spanish>Interacción ACE</Spanish>
+            <Russian>ACE взаимодействие</Russian>
+            <German>Aktivieren ACE Interaction</German>
+            <Japanese>ACE インタラクション</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_foliageAdd">
+            <English>Add scrim/foliage</English>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_foliageRemove">
+            <English>Remove scrim/foliage</English>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_glassesOff">
+            <English>Take glasses off</English>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_glassesOn">
+            <English>Put glasses on</English>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_glovesOff">
+            <English>Take gloves off</English>
+            <French>Enlever ses gants</French>
+            <Spanish>Quitarse guantes</Spanish>
+            <Russian>Снять перчатки</Russian>
+            <Japanese>グローブを外す</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_glovesOn">
+            <English>Wear gloves</English>
+            <French>Portez des gants</French>
+            <Spanish>Ponerse guantes</Spanish>
+            <Russian>Надеть перчатки</Russian>
+            <Japanese>グローブを着ける</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_gogglesOff">
+            <English>Take goggles off</English>
+            <French>Enlevez vos lunettes de protection.</French>
+            <Spanish>Quitarse gafas</Spanish>
+            <Russian>Снять очки</Russian>
+            <Japanese>ゴーグルを外す</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_gogglesOn">
+            <English>Put goggles on</English>
+            <French>Mettre des lunettes</French>
+            <Spanish>Ponerse gafas</Spanish>
+            <Russian>Надеть очки</Russian>
+            <Japanese>ゴーグルを着ける</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_hoodLower">
+            <English>Lower hood</English>
+            <Russian>Снять капюшон</Russian>
+            <German>Kapuze absetzen</German>
+            <Japanese>フードを下ろす</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_hoodRaise">
+            <English>Raise hood</English>
+            <Russian>Надеть капюшон</Russian>
+            <German>Kapuze aufsetzen</German>
+            <Japanese>フードを上げる</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_jacketClose">
+            <English>Close jacket</English>
+            <French>Fermer la veste</French>
+            <Spanish>Cerrar chaqueta</Spanish>
+            <Russian>Застегнуть куртку</Russian>
+            <Japanese>ジャケットを閉じる</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_jacketOpen">
+            <English>Open jacket</English>
+            <French>Veste ouverte</French>
+            <Spanish>Abrir chaqueta</Spanish>
+            <Russian>Растегнуть куртку</Russian>
+            <Japanese>ジャケットを開く</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_maskOff">
+            <English>Take mask off</English>
+            <French>Enlevez votre masque</French>
+            <Spanish>Quitarse máscara</Spanish>
+            <Russian>Снять маску</Russian>
+            <Japanese>マスクを外す</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_maskOn">
+            <English>Put mask on</English>
+            <French>Mettez votre masque</French>
+            <Spanish>Ponerse máscara</Spanish>
+            <Russian>Надеть маску</Russian>
+            <Japanese>マスクを着ける</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_missingComponents">
+            <English>Cannot switch to&lt;br/&gt;%1&lt;br/&gt;due to missing components</English>
+            <French>Impossible de passer à&lt;br/&gt;%1&lt;br/&gt;en raison de composants manquants</French>
+            <Spanish>No se puede cambiar a&lt;br/&gt;%1&lt;br/&gt;debido a la falta de componentes</Spanish>
+            <Russian>Не удается переключиться на&lt;br/&gt;%1&lt;br/&gt;из-за отсутствия компонентов</Russian>
+            <Japanese>コンポーネントが不足しているため&lt;br/&gt;%1&lt;br/&gt;変更が出来ません</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_setting_category_main">
+            <English>ACE Wardrobe</English>
+            <French>ACE Armoire</French>
+            <Spanish>ACE Ropero</Spanish>
+            <Russian>ACE Гардероб</Russian>
+            <German>ACE Garderobe</German>
+            <Japanese>ACE ワードローブ</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_sleevesDown">
+            <English>Roll sleeves down</English>
+            <French>Descendre ses manches</French>
+            <Spanish>Bajarse las mangas</Spanish>
+            <Russian>Раскатать рукава</Russian>
+            <Japanese>そでを下げ伸ばす</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_sleevesUp">
+            <English>Roll sleeves up</English>
+            <French>Relever ses manches</French>
+            <Spanish>Subirse las mangas</Spanish>
+            <Russian>Закатать рукава</Russian>
+            <Japanese>そでを巻き上げる</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_tieOff">
+            <English>Remove tie</English>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_tieOn">
+            <English>Wear tie</English>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_visorDown">
+            <English>Visor down</English>
+            <French>Visière baissée</French>
+            <Spanish>Visor abajo</Spanish>
+            <Russian>Опустить визор</Russian>
+            <Japanese>バイザーを下ろす</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_visorUp">
+            <English>Visor up</English>
+            <French>Visière relevée</French>
+            <Spanish>Visor arriba</Spanish>
+            <Russian>Поднять визор</Russian>
+            <Japanese>バイザーを上げる</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_wardrobeModifiable">
+            <English>Wardrobe Modifiable</English>
+            <French>Garde-robe modifiable</French>
+            <Spanish>Ropero Modificable</Spanish>
+            <Russian>Гардероб может быть изменен</Russian>
+            <Japanese>ワードローブ改変対応</Japanese>
+        </Key>
+    </Package>
+</Project>

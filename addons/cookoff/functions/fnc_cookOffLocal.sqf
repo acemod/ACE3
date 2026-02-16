@@ -7,7 +7,7 @@
  * 0: Vehicle <OBJECT>
  * 1: Spawn fire jet <BOOL>
  * 2: Spawn fire ring <BOOL>
- * 3: What selection fire will originate from <STRING><ARRAY>
+ * 3: What selection fire will originate from <STRING or ARRAY>
  * 4: Cookoff intensity value <NUMBER>
  * 5: Start time <NUMBER>
  * 6: Duration of effect (max 20 seconds) <NUMBER>
