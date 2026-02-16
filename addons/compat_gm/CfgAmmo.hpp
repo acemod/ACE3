@@ -27,14 +27,15 @@ class CfgAmmo {
         ACE_barrelLengths[] = {190.5, 266.7, 368.3, 406.4, 508, 558.8};
         ACE_muzzleVelocities[] = {712.93, 829.97, 921.71, 954.33, 992.73, 1018.94};
     };
-    class gm_bullet_556x45mm_B_T_m196: gm_bullet_556x45mm_base {
+    class gm_bullet_556x45mm_B_T_m196: gm_bullet_556x45mm_B_m193 {
         ACE_bulletLength = 23.1;
         ACE_bulletMass = 3.5;
         ACE_ballisticCoefficients[] = {0.118};
         ACE_barrelLengths[] = {190.5, 266.7, 368.3, 406.4, 508, 558.8}; 
         ACE_muzzleVelocities[] = {712.93, 829.97, 921.71, 954.33, 992.73, 1018.94};
     };
-    class gm_bullet_556x45mm_B_T_m856: gm_bullet_556x45mm_base {
+    class gm_bullet_556x45mm_B_M855;
+    class gm_bullet_556x45mm_B_T_m856: gm_bullet_556x45mm_B_M855 {
         ACE_bulletLength = 29.3;
         ACE_bulletMass = 4.13;
     };
@@ -49,7 +50,8 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {780, 880, 920};
         ACE_standardAtmosphere = "ASM";
     };
-    class gm_bullet_545x39mm_B_T_7T3: gm_bullet_545x39mm_base {
+    class gm_bullet_545x39mm_B_7N6;
+    class gm_bullet_545x39mm_B_T_7T3: gm_bullet_545x39mm_B_7N6 {
         ACE_barrelLengths[] = {254, 414.02, 508};
         ACE_bulletLength = 25.32;
         ACE_bulletMass = 3.2;
@@ -101,7 +103,8 @@ class CfgAmmo {
         ACE_bulletLength = 31.496;
         ACE_bulletMass = 9.8;
     };
-    class gm_bullet_762x51mm_B_T_DM21: gm_bullet_762x51mm_base {
+    class gm_bullet_762x51mm_B_DM41;
+    class gm_bullet_762x51mm_B_T_DM21: gm_bullet_762x51mm_B_DM41 {
         ACE_bulletLength = 33.8;
         ACE_bulletMass = 9.20145;
     };
@@ -132,7 +135,8 @@ class CfgAmmo {
         ACE_bulletMass = 5.7023;
         ACE_muzzleVelocities[] = {410,440,480};
     };
-    class gm_bullet_9x19mm_BSD_dm81: gm_bullet_9x19mm_base {
+    class gm_bullet_9x19mm_B_dm51;
+    class gm_bullet_9x19mm_BSD_dm81: gm_bullet_9x19mm_B_dm51 {
         ACE_bulletMass = 9.52544;
         ACE_muzzleVelocities[] = {220, 250, 290};
     };
@@ -185,14 +189,14 @@ class CfgAmmo {
     };
 
 //Not in use by the CDLC
-    class gm_bullet_762x39mm_API_M43 {
+    class gm_bullet_762x39mm_API_M43: gm_bullet_762x39mm_AP_7N23 {
         ACE_bulletLength = 28.57;
         EGVAR(vehicle_damage,incendiary) = 1;
         ACE_bulletMass = 7.67;
         ACE_ballisticCoefficients[] = {0.138};
         ACE_dragModel = 7;
     };
-    class gm_bullet_762x39mm_API_T_M43 {
+    class gm_bullet_762x39mm_API_T_M43: gm_bullet_762x39mm_AP_7N23 {
         ACE_bulletLength = 28.57;
         ace_vehicle_damage_incendiary = 1;
         ACE_bulletMass = 7.67;
