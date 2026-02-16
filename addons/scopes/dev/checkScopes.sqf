@@ -41,9 +41,14 @@ private _fnc_checkConfig = {
 
 
 
+private _uniqueRifles = createHashMap;
 private _rifles = "getNumber (_x >> 'scope') > 0" configClasses (configFile >> "CfgWeapons");
 _rifles = _rifles select {(getNumber (_x >> 'type')) == 1};
-_rifles = _rifles select {(configName _x) == (getText (_x >> 'baseWeapon'))};
+_rifles = _rifles select {
+    private _model = getText (_x >> "model");
+    private _configOffset = getNumber (_x >> "ACE_RailHeightAboveBore");
+    !(_uniqueRifles set [[toLower _model, _configOffset], true])
+};
 diag_log text format ["** Checking %1 weapons **", count _rifles];
 
 private _fnc_checkConfig = {
@@ -64,9 +69,20 @@ private _fnc_checkConfig = {
     deleteVehicle _weaponObj;
     _xOffset
 };
+
 {
     private _config = _x;
-    if ((compatibleItems [configName _config, "CowsSlot"]) isEqualTo []) then { continue }; // e.g. arifle_SDAR_F has no scopes
+    private _slots = configProperties [_config >> "WeaponSlotsInfo", "isClass _x"];
+    private _opticSlot = "CowsSlot";
+    {
+        if (getText (_x >> "linkProxy") == "\a3\data_f\proxies\weapon_slots\TOP") then {
+            _opticSlot = configName _x;
+        };
+    } forEach _slots;
+    if ((compatibleItems [configName _config, _opticSlot]) isEqualTo []) then { 
+        diag_log text format ["note: %1 has no compatible items for %2", configName _config, _opticSlot];
+        continue  // e.g. arifle_SDAR_F has no scopes
+    };
     private _actualOffset = [_config, false] call _fnc_checkConfig;
     if (_actualOffset == -999) then { continue };
     private _configOffset = getNumber (_config >> "ACE_RailHeightAboveBore");
