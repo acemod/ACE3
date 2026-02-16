@@ -34,7 +34,7 @@ if (_tracker in _trackers) exitWith {
 };
 
 _tracker setVariable [QGVAR(system), _id, true];
-_tracker setVariable [QGVAR(range), _range];
+_tracker setVariable [QGVAR(range), _range, true];
 
 _trackers pushBackUnique _tracker;
 

@@ -16,14 +16,14 @@
  * Public: Yes
  */
 
+params ["_sides", ["_id", ""]];
+
 if (!isServer) exitWith {
     ERROR("missile_defense functions only run on server");
 };
 
-private _id = if (count _this > 1) then {
-    _this select 1
-} else {
-    format ["%1", diag_tickTime]
+if (_id == "") then {
+    _id = format ["%1-%2", diag_tickTime, count GVAR(systems)];
 };
 
 if (_id in GVAR(systems)) exitWith {
@@ -34,7 +34,7 @@ GVAR(systems) set [_id, createHashMapFromArray [
     ["trackers", []],
     ["launchers", []],
     ["interceptors", []],
-    ["sides", _this select 0],
+    ["sides", _sides],
     ["conditions", []],
     ["targets_possible", []],
     ["targets_pending", []],
