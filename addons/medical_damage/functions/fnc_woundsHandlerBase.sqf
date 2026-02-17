@@ -53,6 +53,13 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
         continue
     };
 
+    // Check if current body part damage has reached the cap
+    if (_bodyPartDamage select _bodyPartNToAdd >= EGVAR(medical,partDamageCap)) then {
+        TRACE_1("damage cap reached for body part",_bodyPart);
+        continue  // Skip further processing for this body part if cap is reached
+    };
+
+
     // determine how many wounds to create
     private _nWounds = [_damage, _thresholds, true] call FUNC(interpolatePoints);
     if (_nWounds < 1) then {
