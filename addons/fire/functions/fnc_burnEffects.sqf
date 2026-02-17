@@ -76,7 +76,7 @@ if (isServer) then {
     };
 
     // Display burn indicators
-    if (_unit == ACE_player && {alive _unit} && {isNil {_unit getVariable QGVAR(burnUIPFH)}}) then { // This accounts for player remote controlled a new unit
+    if (_unit == ACE_player && {alive _unit} && {(_unit isNil QGVAR(burnUIPFH))}) then { // This accounts for player remote controlled a new unit
         private _burnIndicatorPFH = [LINKFUNC(burnIndicator), 1, _unit] call CBA_fnc_addPerFrameHandler;
         _unit setVariable [QGVAR(burnUIPFH), _burnIndicatorPFH];
     };

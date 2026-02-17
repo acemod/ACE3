@@ -24,7 +24,7 @@ if (!GVAR(enabled)) exitWith {
     #endif
 };
 
-if (!isNil {_vehicle getVariable QGVAR(handleDamage)}) exitWith {};
+if (!(_vehicle isNil QGVAR(handleDamage))) exitWith {};
 
 if (local _vehicle) then {
     _vehicle allowCrewInImmobile true;
@@ -35,7 +35,7 @@ if (local _vehicle) then {
 [{
     params ["_vehicle"];
 
-    if (!isNil {_vehicle getVariable QGVAR(handleDamage)}) exitWith {};
+    if (!(_vehicle isNil QGVAR(handleDamage))) exitWith {};
 
     TRACE_1("added eh",_vehicle);
 

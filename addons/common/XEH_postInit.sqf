@@ -583,7 +583,7 @@ GVAR(isReloading) = false;
             call FUNC(swayLoop);
         };
         // check for pre-3.16 sway factors being added
-        if (!isNil {missionNamespace getVariable "ACE_setCustomAimCoef"}) then {
+        if (!(missionNamespace isNil "ACE_setCustomAimCoef")) then {
             WARNING("ACE_setCustomAimCoef no longer supported - use ace_common_fnc_addSwayFactor");
             WARNING_1("source: %1",(missionNamespace getVariable "ACE_setCustomAimCoef") apply {_x});
         };

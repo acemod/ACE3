@@ -52,7 +52,7 @@ if (!(_rearmCargoConfig > 0 && _source getVariable [QGVAR(isSupplyVehicle), fals
     _source setVariable [QGVAR(isSupplyVehicle), true, true];
 
     // only add if menu does not already exist
-    if (isNil {_source getVariable QGVAR(initSupplyVehicle_jipID)}) then {
+    if ((_source isNil QGVAR(initSupplyVehicle_jipID))) then {
         private _jipID = [QGVAR(initSupplyVehicle), [_source]] call CBA_fnc_globalEventJIP;
         [_jipID, _source] call CBA_fnc_removeGlobalEventJIP;
         _source setVariable [QGVAR(initSupplyVehicle_jipID), _jipID];
