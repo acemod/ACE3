@@ -21,7 +21,7 @@ params ["_engineer", "_vehicle"];
 private _allHitPointsDamage = getAllHitPointsDamage _vehicle;
 _allHitPointsDamage params ["_hitPoints", "", "_damageValues"];
 
-private _selectionsToIgnore = _vehicle call FUNC(getSelectionsToIgnore);
+([_vehicle] call FUNC(getSelectionsToIgnore)) params ["_selectionsToIgnore"];
 
 private _repairsNeeded = 0;
 private _doExtraRepair = false;
