@@ -1,8 +1,14 @@
 // [] call compileScript ["\z\ace\addons\scopes\dev\checkScopes.sqf"];
 
 
+private _uniqueOptics = createHashMap;
 private _optics = "getNumber (_x >> 'scope') > 0" configClasses (configFile >> "CfgWeapons");
 _optics = _optics select {(getNumber (_x >> 'ItemInfo' >> 'type')) == 201};
+_optics = _optics select {
+    private _model = getText (_x >> "model");
+    private _configOffset = getNumber (_x >> "ACE_ScopeHeightAboveRail");
+    !(_uniqueOptics set [[toLower _model, _configOffset], true])
+};
 diag_log text format ["** Checking %1 scopes **", count _optics];
 
 private _fnc_checkConfig = {
@@ -33,7 +39,8 @@ private _fnc_checkConfig = {
     private _configOffset = getNumber (_config >> "ACE_ScopeHeightAboveRail");
 
     if ((abs (_actualOffset - _configOffset)) > 0.1) then {
-        diag_log text format ["Mismatch %1 - Actual %2 vs Config %3", configName _config, _actualOffset, _configOffset];
+        private _parent = configName inheritsFrom _config;
+        diag_log text format ["Mismatch %1:%2 - Actual %3 vs Config %4", configName _config, _parent, _actualOffset, _configOffset];
         [_config, true] call _fnc_checkConfig;
     };
 } forEach _optics;
@@ -88,7 +95,8 @@ private _fnc_checkConfig = {
     private _configOffset = getNumber (_config >> "ACE_RailHeightAboveBore");
 
     if ((abs (_actualOffset - _configOffset)) > 0.1) then {
-        diag_log text format ["Mismatch %1 - Actual %2 vs Config %3", configName _config, _actualOffset, _configOffset];
+        private _parent = configName inheritsFrom _config;
+        diag_log text format ["Mismatch %1:%2 - Actual %3 vs Config %4", configName _config, _parent, _actualOffset, _configOffset];
         [_config, true] call _fnc_checkConfig;
     };
 } forEach _rifles;
