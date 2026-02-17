@@ -52,7 +52,7 @@ private _fnc_filterLoadout = {
                     _name = _name call FUNC(baseWeapon);
                     if NOT_IN_ARSENAL then {
                         // This could be a backpack
-                        private _temp = [_name, "CfgVehicles"] call CBA_fnc_getNonPresetClass;
+                        private _temp = _name call FUNC(baseBackpack);
                         if (_temp == "") then { // It's not
                             _unavailableItemsList pushBack _name;
                             _name = "";
