@@ -23,3 +23,4 @@ class CfgPatches {
 #include "RscDisplayMain.hpp"
 #include "ACE_Arsenal_Sorts.hpp"
 #include "ACE_Arsenal_Stats.hpp"
+#include "ACE_Tests.hpp"
