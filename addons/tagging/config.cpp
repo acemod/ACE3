@@ -20,3 +20,4 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgEden.hpp"
+#include "CfgSounds.hpp"

@@ -23,9 +23,10 @@ params ["_unit"];
 private _possibleTags = [];
 private _useRandom = false;
 
+_unit getVariable [QGVAR(lastUsedTag), []] params ["_lastUsedTagClass", "_requiredItem"];
+
 // Last Used
 if (GVAR(quickTag) == 1) then {
-    private _lastUsedTagClass = _unit getVariable [QGVAR(lastUsedTag), nil];
 
     if (isNil "_lastUsedTagClass") then {
         _useRandom = true;
@@ -63,5 +64,5 @@ if (_possibleTags isNotEqualTo []) then {
         }
     ) params ["_randomTexture", "_randomMaterial"];
 
-    [_unit, _randomTexture, _randomMaterial, _tagModel] call FUNC(tag);
+    [_unit, _randomTexture, _randomMaterial, _tagModel, _requiredItem] call FUNC(tag);
 };

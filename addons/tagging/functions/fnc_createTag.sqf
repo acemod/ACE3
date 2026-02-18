@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: BaerMitUmlaut, esteldunedain
+ * Author: BaerMitUmlaut, esteldunedain, Zorn
  * Creates a tag and handle its destruction. Only execute on the server.
  *
  * Arguments:
@@ -22,7 +22,7 @@
  * Public: No
  */
 
-params ["_tagPosASL", "_vectorDirAndUp", "_texture", "_object", "_unit", ["_material","",[""]], ["_tagModel", QGVAR(texture1m), [""]], ["_isVehicleTag", false, [false]]];
+params ["_tagPosASL", "_vectorDirAndUp", "_texture", "_object", "_unit", ["_material","",[""]], ["_tagModel", QGVAR(texture1m), [""]], ["_isVehicleTag", false, [false]], "_sound"];
 TRACE_5("createTag:",_tagPosASL,_vectorDirAndUp,_texture,_object,_unit);
 
 if (_texture == "") exitWith {
@@ -36,6 +36,9 @@ if (_isVehicleTag) exitWith {
     _object setVariable [QGVAR(hasTag), true, true];
     // if (_material != "") then { _object setObjectMaterialGlobal ["clan", _material] }; // ??
     ["ace_tagCreated", [objNull, _texture, _object, _unit]] call CBA_fnc_globalEvent;
+
+    if (!isNil "_sound") then { [ _unit, _sound, nil, false, false, true ] call CBA_fnc_globalSay3D; };
+
     true
 };
 
@@ -43,6 +46,11 @@ private _tag = createSimpleObject [_tagModel, _tagPosASL];
 _tag setObjectTextureGlobal [0, _texture];
 if (_material != "") then { _tag setObjectMaterialGlobal [0, _material] };
 _tag setVectorDirAndUp _vectorDirAndUp;
+
+if (!isNil "_sound") then { [ _tag, _sound, nil, false, false, true ] call CBA_fnc_globalSay3D; };
+systemChat format ['[CVO](debug)(fnc_createTag) _sound: %1', _sound];
+
+
 
 // Throw a global event for mission makers
 ["ace_tagCreated", [_tag, _texture, _object, _unit]] call CBA_fnc_globalEvent;

@@ -15,6 +15,11 @@ class CfgWeapons {
             mass = 10;
         };
         GVAR(textColor) = "000000FE";
+        sounds[] = {
+            QGVAR(spray),
+            QGVAR(spray01),
+            QGVAR(spray02)
+        };
     };
     class ACE_SpraypaintRed: ACE_SpraypaintBlack {
         displayname = CSTRING(spraypaintRed);
