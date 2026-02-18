@@ -18,6 +18,11 @@
 // Exit if Quick Tag disabled
 if (GVAR(quickTag) == 0) exitWith {};
 
+// Cooldown
+if (!isNil QGVAR(cooldown)) exitWith {};
+GVAR(cooldown) = true;
+[{ GVAR(cooldown) = nil; }, [], 2] call CBA_fnc_waitAndExecute;
+
 params ["_unit"];
 
 private _possibleTags = [];
