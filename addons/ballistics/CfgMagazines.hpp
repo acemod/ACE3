@@ -230,6 +230,53 @@ class CfgMagazines {
         initSpeed = 832;
     };
 
+    class ACE_30Rnd_556x45_Stanag_M855_mag: 30Rnd_556x45_Stanag {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_556x45_Ball_M855";
+        displayName = CSTRING(30Rnd_556x45_Stanag_M855_mag_Name);
+        displayNameShort = CSTRING(30Rnd_556x45_Stanag_M855_mag_NameShort);
+        descriptionShort = CSTRING(30Rnd_556x45_Stanag_M855_mag_Description);
+        initSpeed = 869;
+        lastRoundsTracer = 0;
+    };
+
+    class ACE_30Rnd_556x45_Stanag_M856_mag: 30Rnd_556x45_Stanag_Tracer_Red {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_556x45_Ball_M856";
+        displayName = CSTRING(30Rnd_556x45_Stanag_M856_mag_Name);
+        displayNameShort = CSTRING(30Rnd_556x45_Stanag_M856_mag_NameShort);
+        descriptionShort = CSTRING(30Rnd_556x45_Stanag_M856_mag_Description);
+        initSpeed = 869;
+    };
+
+    class ACE_30Rnd_556x45_Stanag_M855A1_mag: 30Rnd_556x45_Stanag {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_556x45_Ball_M855A1";
+        displayName = CSTRING(30Rnd_556x45_Stanag_M855A1_mag_Name);
+        displayNameShort = CSTRING(30Rnd_556x45_Stanag_M855A1_mag_NameShort);
+        descriptionShort = CSTRING(30Rnd_556x45_Stanag_M855A1_mag_Description);
+        initSpeed = 869;
+        lastRoundsTracer = 0;
+    };
+
+    class ACE_30Rnd_556x45_Stanag_M856A1_mag: 30Rnd_556x45_Stanag_Tracer_Red {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_556x45_Ball_M856A1";
+        displayName = CSTRING(30Rnd_556x45_Stanag_M856A1_mag_Name);
+        displayNameShort = CSTRING(30Rnd_556x45_Stanag_M856A1_mag_NameShort);
+        descriptionShort = CSTRING(30Rnd_556x45_Stanag_M856A1_mag_Description);
+        initSpeed = 869;
+    };
+
+    class ACE_30Rnd_556x45_Stanag_M856A1IR_mag: 30Rnd_556x45_Stanag_Tracer_Red {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_556x45_Ball_M856A1IR";
+        displayName = CSTRING(30Rnd_556x45_Stanag_M856A1IR_mag_Name);
+        displayNameShort = CSTRING(30Rnd_556x45_Stanag_M856A1IR_mag_NameShort);
+        descriptionShort = CSTRING(30Rnd_556x45_Stanag_M856A1IR_mag_Description);
+        initSpeed = 869;
+    };
+
     class ACE_30Rnd_556x45_Stanag_Mk318_mag: 30Rnd_556x45_Stanag {
         author = ECSTRING(common,ACETeam);
         ammo = "ACE_556x45_Ball_Mk318";
