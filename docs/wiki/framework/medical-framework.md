@@ -280,7 +280,7 @@ After a mission restart, `ace_medical_fnc_deserializeState` can be called:
 ```sqf
 private _state = profileNamespace getVariable ["MyPlayerMedicalState", ""];
 
-[player, _state] call ace_medical_deserializeState;
+[player, _state] call ace_medical_fnc_deserializeState;
 ```
 
 ## 6.1 Extending with custom handling
