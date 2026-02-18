@@ -34,23 +34,22 @@ if (_isVehicleTag) exitWith {
     TRACE_3("tagging vehicle",_object,typeOf _object,_texture);
     _object setObjectTextureGlobal [getText (configOf _object >> "selectionClan"), _texture];
     _object setVariable [QGVAR(hasTag), true, true];
-    // if (_material != "") then { _object setObjectMaterialGlobal ["clan", _material] }; // ??
     ["ace_tagCreated", [objNull, _texture, _object, _unit]] call CBA_fnc_globalEvent;
 
+    // Sound, use unit as soundsource
     if (!isNil "_sound") then { [ _unit, _sound, nil, false, false, true ] call CBA_fnc_globalSay3D; };
 
     true
 };
 
+// Create Tag Object
 private _tag = createSimpleObject [_tagModel, _tagPosASL];
 _tag setObjectTextureGlobal [0, _texture];
 if (_material != "") then { _tag setObjectMaterialGlobal [0, _material] };
 _tag setVectorDirAndUp _vectorDirAndUp;
 
+// Sound, use tag object as sound source
 if (!isNil "_sound") then { [ _tag, _sound, nil, false, false, true ] call CBA_fnc_globalSay3D; };
-systemChat format ['[CVO](debug)(fnc_createTag) _sound: %1', _sound];
-
-
 
 // Throw a global event for mission makers
 ["ace_tagCreated", [_tag, _texture, _object, _unit]] call CBA_fnc_globalEvent;

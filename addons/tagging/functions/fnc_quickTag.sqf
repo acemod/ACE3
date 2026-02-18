@@ -21,7 +21,7 @@ if (GVAR(quickTag) == 0) exitWith {};
 // Cooldown
 if (!isNil QGVAR(cooldown)) exitWith {};
 GVAR(cooldown) = true;
-[{ GVAR(cooldown) = nil; }, [], 2] call CBA_fnc_waitAndExecute;
+[{ GVAR(cooldown) = nil; }, [], 1.5] call CBA_fnc_waitAndExecute;
 
 params ["_unit"];
 
