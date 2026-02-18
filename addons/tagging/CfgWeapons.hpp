@@ -74,7 +74,7 @@ class CfgWeapons {
 
     #define ACE_CHALK(COLOR,HEX)\
     class ACE_Chalk##COLOR##: ACE_ChalkWhite {\
-        displayName = QUOTE(chalk##COLOR);\
+        displayName = CSTRING(chalk##COLOR);\
         picture = QPATHTOF(UI\items\itemChalk##COLOR##.paa);\
         GVAR(textColor) = QUOTE(HEX);\
     }
