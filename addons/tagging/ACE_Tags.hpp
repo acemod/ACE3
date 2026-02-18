@@ -1,9 +1,16 @@
 #define GLUE(g1,g2) g1##g2
-#define TAG(name,col) class TRIPLES(ACE,name,col) { \
-        displayName = CSTRING(name); \
-        requiredItem = QUOTE(GLUE(ACE_Spraypaint,col)); \
-        textures[] = {QPATHTOF(UI\tags\col\name.paa)}; \
-        icon = QPATHTOF(UI\tags\col\name.paa); \
+#define TAG(NAME,COL) class TRIPLES(ACE,NAME,COL) { \
+        displayName = CSTRING(NAME); \
+        requiredItem = QUOTE(GLUE(ACE_Spraypaint,COL)); \
+        textures[] = {QPATHTOF(UI\tags\COL\NAME.paa)}; \
+        icon = QPATHTOF(UI\tags\COL\NAME.paa); \
+    }
+
+#define TAG_CHALK(NAME,COL) class DOUBLES(TRIPLES(ACE,NAME,COL),chalk) { \
+        displayName = CSTRING(NAME); \
+        requiredItem = QUOTE(GLUE(ACE_Chalk,COL)); \
+        textures[] = {QPATHTOF(UI\tags\COL\NAME.paa)}; \
+        icon = QPATHTOF(UI\tags\COL\NAME.paa); \
     }
 
 class ACE_Tags {
@@ -115,4 +122,16 @@ class ACE_Tags {
     TAG(square_filled,white);
     TAG(triangle,white);
     TAG(triangle_inverted,white);
+
+    TAG_CHALK(arrow_up,white);
+    TAG_CHALK(arrow_down,white);
+    TAG_CHALK(arrow_left,white);
+    TAG_CHALK(arrow_right,white);
+    TAG_CHALK(circle,white);
+    TAG_CHALK(cross,white);
+    TAG_CHALK(diamond,white);
+    TAG_CHALK(square,white);
+    TAG_CHALK(square_filled,white);
+    TAG_CHALK(triangle,white);
+    TAG_CHALK(triangle_inverted,white);
 };

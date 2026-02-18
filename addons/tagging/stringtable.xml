@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Tagging">
+        <Key ID="STR_ACE_Tagging_ChalkWhite">
+            <English>Chalk (White)</English>
+            <German>Kreide (Weiß)</German>
+        </Key>
         <Key ID="STR_ACE_Tagging_LastUsed">
             <English>Last Used</English>
             <Czech>Naposledy použitý</Czech>

@@ -2,6 +2,7 @@ class CfgWeapons {
     class ACE_ItemCore;
     class CBA_MiscItem_ItemInfo;
 
+    //Spraypaints
     class ACE_SpraypaintBlack: ACE_ItemCore {
         author = "jokoho48";
         displayname = CSTRING(spraypaintBlack);
@@ -50,5 +51,22 @@ class CfgWeapons {
         picture = QPATHTOF(UI\items\itemSpraypaintWhite.paa);
         hiddenSelectionsTextures[] = {QPATHTOF(data\spraycanWhite_co.paa)};
         GVAR(textColor) = "FFFFFFFE";
+    };
+
+    // Chalks
+    class ACE_ChalkWhite: ACE_SpraypaintWhite {
+        author = "zorn";
+        displayname = CSTRING(chalkWhite);
+        picture = QPATHTOF(UI\items\itemSpraypaintWhite.paa);
+        hiddenSelectionsTextures[] = {QPATHTOF(data\spraycanWhite_co.paa)};
+        GVAR(textColor) = "FFFFFFFE";
+        sounds[] = { 
+            QGVAR(chalk01),
+            QGVAR(chalk02),
+            QGVAR(chalk03),
+            QGVAR(chalk04),
+            QGVAR(chalk05),
+            QGVAR(chalk06)
+        };
     };
 };
