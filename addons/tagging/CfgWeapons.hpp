@@ -57,8 +57,10 @@ class CfgWeapons {
     class ACE_ChalkWhite: ACE_SpraypaintWhite {
         author = "zorn";
         displayname = CSTRING(chalkWhite);
-        picture = QPATHTOF(UI\items\itemSpraypaintWhite.paa);
-        hiddenSelectionsTextures[] = {QPATHTOF(data\spraycanWhite_co.paa)};
+        descriptionShort = CSTRING(descSpraypaint);
+        model = "\A3\weapons_F\ammo\mag_univ.p3d";
+        scope = 2;
+        picture = QPATHTOF(UI\items\itemChalkWhite.paa);
         GVAR(textColor) = "FFFFFFFE";
         sounds[] = { 
             QGVAR(chalk01),
@@ -69,4 +71,18 @@ class CfgWeapons {
             QGVAR(chalk06)
         };
     };
+
+    #define ACE_CHALK(COLOR,HEX)\
+    class ACE_Chalk##COLOR##: ACE_ChalkWhite {\
+        displayName = QUOTE(chalk##COLOR);\
+        picture = QPATHTOF(UI\items\itemChalk##COLOR##.paa);\
+        GVAR(textColor) = QUOTE(HEX);\
+    }
+
+    ACE_CHALK(Black,000000FE);
+    ACE_CHALK(Blue,0000FFFE);
+    ACE_CHALK(Red,FF0000FE);
+    ACE_CHALK(Green,00FF00FE);
+    ACE_CHALK(Yellow,FFFF00FE);
+
 };
