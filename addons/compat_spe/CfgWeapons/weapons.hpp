@@ -118,7 +118,7 @@ class SPE_K98ZF39: SPE_SRIFLE {
     discreteDistance[] = {100};
     discreteDistanceInitIndex = 0;
     ACE_railHeightAboveBore = 1.8;  // Distance between center of bore and rail in centimeters
-    ACE_scopeHeightAboveRail = 3.8;  // Distance between center of scope and rail in centimeters
+    ACE_ScopeHeightAboveRail = 3.8;  // Distance between center of scope and rail in centimeters
 };
 class SPE_M1903A4_Springfield: SPE_SRIFLE {
     ACE_barrelTwist = 254;
@@ -131,7 +131,7 @@ class SPE_M1903A4_Springfield: SPE_SRIFLE {
     discreteDistance[] = {100};
     discreteDistanceInitIndex = 0;
     ACE_railHeightAboveBore = 1.8;
-    ACE_scopeHeightAboveRail = 3.8;
+    ACE_ScopeHeightAboveRail = 3.8;
 };
 
 // SUB MACHINE GUNS
