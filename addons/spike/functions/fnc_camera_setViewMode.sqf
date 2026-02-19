@@ -20,6 +20,7 @@ params ["_cameraNamespace", "_viewMode"];
 private _userInCamera = [] call FUNC(camera_userInCamera);
 
 if (_userInCamera) then {
+    GVAR(ppEffectBW) ppEffectEnable false;
     camUseNVG false;
     false setCamUseTI (_cameraNamespace getVariable [QGVAR(tiMode), 0]);
 };
@@ -29,11 +30,17 @@ if (_thermalMode > 1) then {
     if (_userInCamera) then {
         true setCamUseTI (_thermalMode - 2);
     };
-};
-if (_thermalMode == 1) then {
-    if (_userInCamera) then {
-        camUseNVG true;
+} else {
+    if (_thermalMode == 1) then {
+        if (_userInCamera) then {
+            camUseNVG true;
+        };
+    } else {
+        GVAR(ppEffectBW) ppEffectEnable true;
     };
 };
 _cameraNamespace setVariable [QGVAR(tiMode), _thermalMode - 2];
 _cameraNamespace setVariable [QGVAR(tiModeString), _viewMode];
+
+private _thermalIndex = (_cameraNamespace getVariable [QGVAR(thermalTypes), []]) findIf { _viewMode isEqualTo _x };
+_cameraNamespace setVariable [QGVAR(currentTIModeIndex), _thermalIndex];
