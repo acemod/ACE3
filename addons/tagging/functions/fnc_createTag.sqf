@@ -12,6 +12,7 @@
  * 5: Material of the tag <STRING> (default: "")
  * 6: Model of the tag <STRING> (default: "ace_tagging_texture1m")
  * 7: Vehicle Tag <BOOL> (default: false)
+ * 8: Sound <STRING or NIL> (default: nil)
  *
  * Return Value:
  * Tag created <BOOL>
