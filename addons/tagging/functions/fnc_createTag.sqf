@@ -37,7 +37,7 @@ if (_isVehicleTag) exitWith {
     ["ace_tagCreated", [objNull, _texture, _object, _unit]] call CBA_fnc_globalEvent;
 
     // Sound, use unit as soundsource
-    if (!isNil "_sound") then { [ _unit, _sound, nil, false, false, true ] call CBA_fnc_globalSay3D; };
+    if (!isNil "_sound") then { [ _unit, _sound, nil, false, false, RND_PITCH ] call CBA_fnc_globalSay3D; };
 
     true
 };
@@ -49,7 +49,7 @@ if (_material != "") then { _tag setObjectMaterialGlobal [0, _material] };
 _tag setVectorDirAndUp _vectorDirAndUp;
 
 // Sound, use tag object as sound source
-if (!isNil "_sound") then { [ _tag, _sound, nil, false, false, true ] call CBA_fnc_globalSay3D; };
+if (!isNil "_sound") then { [ _tag, _sound, nil, false, false, RND_PITCH ] call CBA_fnc_globalSay3D; };
 
 // Throw a global event for mission makers
 ["ace_tagCreated", [_tag, _texture, _object, _unit]] call CBA_fnc_globalEvent;
