@@ -56,6 +56,7 @@ if (_isRespawn) then {
 
     // - Misc ---------------------------------------------------------------------
     _unit setVariable [VAR_UNCON, false, true];
+    _unit setVariable [VAR_DAZED, false, true];
 
     // - Treatments ---------------------------------------------------------------
     _unit setVariable [VAR_TOURNIQUET, DEFAULT_TOURNIQUET_VALUES, true];
