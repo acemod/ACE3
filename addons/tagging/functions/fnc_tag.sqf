@@ -8,6 +8,7 @@
  * 1: The color of the tag (valid colors are black, red, green and blue or full path to custom texture) <STRING>
  * 2: Material of the tag <STRING> (default: "")
  * 3: Tag Model <STRING> (default: "ace_tagging_texture1m")
+ * 4: Required Item <STRING or NIL> (default: nil)
  *
  * Return Value:
  * Success <BOOL>
