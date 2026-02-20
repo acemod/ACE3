@@ -1,5 +1,3 @@
-#define GLUE(g1,g2) g1##g2
-
 #define SPRAY_TAG(NAME,COL)\
 class TRIPLES(ACE,NAME,COL) { \
     displayName = CSTRING(NAME); \

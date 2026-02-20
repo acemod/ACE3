@@ -18,3 +18,5 @@
 
 
 #define TAG_SIZE 0.6
+
+#define GLUE(g1,g2) g1##g2
