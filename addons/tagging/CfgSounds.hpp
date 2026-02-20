@@ -1,6 +1,6 @@
 #define SOUNDEFFECT(NAME,VOLUME)\
 class GVAR(NAME) {\
-    sound[] = { QUOTE(PATHTO_R(sounds\##NAME##.ogg)), ##VOLUME##, 1, 25 };\
+    sound[] = { QUOTE(PATHTO_R(sounds\NAME.ogg)), VOLUME, 1, 25 };\
     titles[] = {};\
 }
 

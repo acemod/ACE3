@@ -1,31 +1,31 @@
 #define SPRAY_TAG(NAME,COL)\
-class TRIPLES(ACE,NAME,COL) { \
-    displayName = CSTRING(NAME); \
-    requiredItem = QUOTE(GLUE(ACE_Spraypaint,COL)); \
-    textures[] = {QPATHTOF(UI\tags\COL\NAME.paa)}; \
-    icon = QPATHTOF(UI\tags\COL\NAME.paa); \
+class TRIPLES(ACE,NAME,COL) {\
+    displayName = CSTRING(NAME);\
+    requiredItem = QUOTE(GLUE(ACE_Spraypaint,COL));\
+    textures[] = {QPATHTOF(UI\tags\COL\NAME.paa)};\
+    icon = QPATHTOF(UI\tags\COL\NAME.paa);\
 }
 
 #define CHALK_TAG(NAME,COL)\
-class DOUBLES(TRIPLES(ACE,NAME,COL),chalk) { \
-    displayName = CSTRING(NAME); \
-    requiredItem = QUOTE(GLUE(ACE_Chalk,COL)); \
-    textures[] = {QPATHTOF(UI\tags\COL\NAME.paa)}; \
-    icon = QPATHTOF(UI\tags\COL\NAME.paa); \
+class DOUBLES(TRIPLES(ACE,NAME,COL),chalk) {\
+    displayName = CSTRING(NAME);\
+    requiredItem = QUOTE(GLUE(ACE_Chalk,COL));\
+    textures[] = { QPATHTOF(UI\tags\COL\NAME.paa) };\
+    icon = QPATHTOF(UI\tags\COL\NAME.paa);\
 }
 
 #define SPRAY_TAG_X(COLOR,FOLDER)\
-class ACE_##COLOR {\
+class DOUBLES(ACE,COLOR) {\
     displayName = CSTRING(x);\
-    requiredItem = QUOTE(ACE_Spraypaint##COLOR);\
-    textures[] = {QPATHTOF(UI\tags\FOLDER\0.paa), QPATHTOF(UI\tags\FOLDER\1.paa), QPATHTOF(UI\tags\FOLDER\2.paa)};\
+    requiredItem = QUOTE(GLUE(ACE_Spraypaint,COLOR));\
+    textures[] = { QPATHTOF(UI\tags\FOLDER\0.paa), QPATHTOF(UI\tags\FOLDER\1.paa), QPATHTOF(UI\tags\FOLDER\2.paa) };\
     icon = QPATHTOF(UI\tags\FOLDER\0.paa);\
 }
 
 #define CHALK_TAG_X(COLOR,FOLDER)\
-class ACE_##COLOR##_Chalk {\
+class TRIPLES(ACE,COLOR,Chalk) {\
     displayName = CSTRING(x);\
-    requiredItem = QUOTE(ACE_Chalk##COLOR);\
+    requiredItem = QUOTE(GLUE(ACE_Chalk,COLOR));\
     textures[] = {QPATHTOF(UI\tags\FOLDER\0.paa), QPATHTOF(UI\tags\FOLDER\1.paa), QPATHTOF(UI\tags\FOLDER\2.paa)};\
     icon = QPATHTOF(UI\tags\FOLDER\0.paa);\
 }
