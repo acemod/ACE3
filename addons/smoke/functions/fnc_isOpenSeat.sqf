@@ -45,7 +45,7 @@ if (_open isNotEqualTo -1) exitWith { _open };
 
 private _config = getArray (configOf _vehicle >> QGVAR(seats));
 if (_config isNotEqualTo []) exitWith {
-    if (typeName _config == "SCALAR") exitWith { _config == 1 };
+    if (count _config == 1) exitWith { _config isEqualTo [1] }:
     private _path = switch (_key select 0) do {
         case -2: { [2, _key select 1] };  // cargo
         case -1: { [0, 0] }; // driver
