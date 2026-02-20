@@ -21,7 +21,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
             if (GVAR(pfh) != -1) then {
                 [GVAR(pfh)] call CBA_fnc_removePerFrameHandler;
                 GVAR(pfh) = -1;
-                [QUOTE(ADDON)] call FUNC(removeSpO2DutyFactor);
+                if (!isNil QEFUNC(medical_vitals,removeSpO2DutyFactor)) then { [QUOTE(ADDON)] call EFUNC(medical_vitals,removeSpO2DutyFactor); };
             };
         };
     }

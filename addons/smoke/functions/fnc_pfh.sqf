@@ -69,9 +69,9 @@ private _breathProtect = _unit getVariable [QGVAR(breathingProtection), 0];
 _levelBreathing = [_levelBreathing, _breathProtect] call _fnc_updateLevel;
 _unit setVariable [QGVAR(breathingLevel), _levelBreathing];
 
-if !(isNil QEFUNC(medical_vitals,fnc_addSpO2DutyFactor)) then {
+if !(isNil QEFUNC(medical_vitals,addSpO2DutyFactor)) then {
     private _breathingEffectiveness = linearConversion [0.2, 1, _levelBreathing, 1, 0.6, true];
-    [QUOTE(ADDON), _breathingEffectiveness] call EFUNC(medical_vitals,fnc_addSpO2DutyFactor);
+    [QUOTE(ADDON), _breathingEffectiveness] call EFUNC(medical_vitals,addSpO2DutyFactor);
 };
 
 // Event
