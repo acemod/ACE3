@@ -50,7 +50,9 @@ if (GVAR(isProne)) then {
 
 private _terrainGradient = abs _fwdAngle;
 private _terrainFactor = 1;
-private _gearMass = 0 max (((ACE_player getVariable [QEGVAR(movement,totalLoad), loadAbs ACE_player]) / 22.046 - UNDERWEAR_WEIGHT) * GVAR(loadFactor));
+private _terrainGradientFactor = ACE_player getVariable [QGVAR(terrainGradientFactor), GVAR(terrainGradientFactor)];
+private _loadFactor = ACE_player getVariable [QGVAR(loadFactor), GVAR(loadFactor)];
+private _gearMass = 0 max (((ACE_player getVariable [QEGVAR(movement,totalLoad), loadAbs ACE_player]) / 22.046 - UNDERWEAR_WEIGHT) * _loadFactor);
 
 if (isNull objectParent ACE_player && {_currentSpeed > 0.1} && {isTouchingGround ACE_player || {underwater ACE_player}}) then {
     if (!GVAR(isSwimming)) then {
@@ -68,7 +70,7 @@ if (isNull objectParent ACE_player && {_currentSpeed > 0.1} && {isTouchingGround
     };
 
     // Add a scaling factor of 0.1 to reduce excessive stamina consumption on default settings (see #10361)
-    _currentWork = [_gearMass, _terrainGradient * GVAR(terrainGradientFactor) * 0.1, _terrainFactor, _currentSpeed] call FUNC(getMetabolicCosts);
+    _currentWork = [_gearMass, _terrainGradient * _terrainGradientFactor * 0.1, _terrainFactor, _currentSpeed] call FUNC(getMetabolicCosts);
     _currentWork = _currentWork max REE;
 };
 
@@ -81,8 +83,10 @@ private _oxygen =  if (GETEGVAR(medical,enabled,false) && {EGVAR(medical_vitals,
 // Calculate muscle damage increase
 GVAR(muscleDamage) = GVAR(muscleDamage) + (_currentWork / GVAR(peakPower)) ^ 3.2 * MUSCLE_TEAR_RATE;
 
+private _recoveryFactor = ACE_player getVariable [QGVAR(recoveryFactor), GVAR(recoveryFactor)];
+
 // Calculate muscle damage recovery
-GVAR(muscleDamage) = 0 max (GVAR(muscleDamage) - MUSCLE_RECOVERY * GVAR(recoveryFactor)) min 1;
+GVAR(muscleDamage) = 0 max (GVAR(muscleDamage) - MUSCLE_RECOVERY * _recoveryFactor) min 1;
 private _muscleIntegrity = 1 - GVAR(muscleDamage);
 private _muscleFactor = sqrt _muscleIntegrity;
 
@@ -106,15 +110,15 @@ GVAR(anReserve)  = 0 max (GVAR(anReserve)  -  _anPower / GVAR(anWattsPerATP));
 GVAR(anFatigue)  = GVAR(anFatigue) + _anPower * GVAR(maxPowerFatigueRatio) * 1.1;
 
 // Aerobic ATP reserve recovery
-GVAR(ae1Reserve) = (GVAR(ae1Reserve) + _oxygen * GVAR(recoveryFactor) * AE1_ATP_RECOVERY * (GVAR(ae1PathwayPower) - _ae1Power) / GVAR(ae1PathwayPower)) min AE1_MAXRESERVE;
-GVAR(ae2Reserve) = (GVAR(ae2Reserve) + _oxygen * GVAR(recoveryFactor) * AE2_ATP_RECOVERY * (GVAR(ae2PathwayPower) - _ae2Power) / GVAR(ae2PathwayPower)) min AE2_MAXRESERVE;
+GVAR(ae1Reserve) = (GVAR(ae1Reserve) + _oxygen * _recoveryFactor * AE1_ATP_RECOVERY * (GVAR(ae1PathwayPower) - _ae1Power) / GVAR(ae1PathwayPower)) min AE1_MAXRESERVE;
+GVAR(ae2Reserve) = (GVAR(ae2Reserve) + _oxygen * _recoveryFactor * AE2_ATP_RECOVERY * (GVAR(ae2PathwayPower) - _ae2Power) / GVAR(ae2PathwayPower)) min AE2_MAXRESERVE;
 
 private _aeSurplus = _ae1PathwayPowerFatigued + _ae2PathwayPowerFatigued - _ae1Power - _ae2Power;
 
 // Anaerobic ATP reserve recovery
-GVAR(anReserve) = 0 max (GVAR(anReserve) + _aeSurplus / GVAR(VO2MaxPower) * AN_ATP_RECOVERY * GVAR(recoveryFactor) * (GVAR(anFatigue) max linearConversion [AN_MAXRESERVE, 0, GVAR(anReserve), 0, 0.75, true]) ^ 2) min AN_MAXRESERVE; // max linearConversion ensures that if GVAR(anFatigue) is very low, it will still regenerate reserves
+GVAR(anReserve) = 0 max (GVAR(anReserve) + _aeSurplus / GVAR(VO2MaxPower) * AN_ATP_RECOVERY * _recoveryFactor * (GVAR(anFatigue) max linearConversion [AN_MAXRESERVE, 0, GVAR(anReserve), 0, 0.75, true]) ^ 2) min AN_MAXRESERVE; // max linearConversion ensures that if GVAR(anFatigue) is very low, it will still regenerate reserves
 // Acidosis recovery
-GVAR(anFatigue) = 0 max (GVAR(anFatigue) - _aeSurplus * GVAR(maxPowerFatigueRatio) * GVAR(recoveryFactor) * GVAR(anFatigue) ^ 2) min 1;
+GVAR(anFatigue) = 0 max (GVAR(anFatigue) - _aeSurplus * GVAR(maxPowerFatigueRatio) * _recoveryFactor * GVAR(anFatigue) ^ 2) min 1;
 
 // Respiratory rate decrease
 GVAR(respiratoryRate) = GVAR(respiratoryRate) * GVAR(respiratoryBufferDivisor);
