@@ -17,18 +17,19 @@
             <English>[CSW] 9M111 Fagot (GM)</English>
             <Spanish>[CSW] 9M111 Fagot (GM)</Spanish>
             <Korean>[CSW] 9M111 파곳 (GM CDLC)</Korean>
+            <Japanese>[CSW] 9M111 ファゴット (GM)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_GM_CSW_MG3Tripod_displayName">
             <English>[CSW] MG3 AA Tripod (GM)</English>
             <Spanish>[CSW] Trípode MG3 AA (GM)</Spanish>
             <Korean>[CSW] MG3 대공형 삼각대 (GM CDLC)</Korean>
-            <Japanese>[CSW] 9M111 ファゴット (GM)</Japanese>
+            <Japanese>[CSW] MG3 AA 三脚 (GM)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_GM_CSW_MG3Weapon_displayName">
             <English>[CSW] MG3 AA Tripod</English>
             <Spanish>[CSW] Trípode MG3 AA</Spanish>
             <Korean>[CSW] MG3 대공형 삼각대</Korean>
-            <Japanese>[CSW] MG3 AA 三脚 (GM)</Japanese>
+            <Japanese>[CSW] MG3 AA 三脚</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_GM_CSW_MilanWeapon_displayName">
             <English>[CSW] MILAN</English>

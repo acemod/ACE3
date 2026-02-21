@@ -1,23 +1,22 @@
 #include "..\script_component.hpp"
 /*
  * Author: Ruthberg
- *
- * Calculates the stability factor of a bullet
+ * Calculates the stability factor of a bullet.
  *
  * Arguments:
- * 0: caliber - mm <NUMBER>
- * 1: bullet length - mm <NUMBER>
- * 2: bullet mass - grams <NUMBER>
- * 3: barrel twist - mm <NUMBER>
- * 4: muzzle velocity shift - m/s <NUMBER>
- * 5: temperature - degrees celcius <NUMBER>
- * 6: barometric Pressure - hPA <NUMBER>
+ * 0: Caliber - mm <NUMBER>
+ * 1: Bullet length - mm <NUMBER>
+ * 2: Bullet mass - grams <NUMBER>
+ * 3: Barrel twist - mm <NUMBER>
+ * 4: Muzzle velocity shift - m/s <NUMBER>
+ * 5: Temperature - °C <NUMBER>
+ * 6: Barometric pressure - hPA <NUMBER>
  *
  * Return Value:
- * stability factor <NUMBER>
+ * Stability factor <NUMBER>
  *
  * Example:
- * [1, 2, 3, 4, 5, 6, 7] call ace_advanced_ballistics_fnc_calculateStabilityFactor
+ * [6, 23, 4, 177.8, -23.76, 0, 1013.25] call ace_advanced_ballistics_fnc_calculateStabilityFactor
  *
  * Public: No
  */
@@ -30,8 +29,4 @@ private _length = _bulletLength / _caliber;
 
 private _stabilityFactor = 7587000 * _bulletMass / (_twist^2 * _caliber^3 * _length * (1 + _length^2));
 
-if (_muzzleVelocity > 341.376) then {
-    (_stabilityFactor * (_muzzleVelocity / 853.44) ^ (1/3)) * KELVIN(_temperature) / KELVIN(15) * 1013.25 / _barometricPressure
-} else {
-    (_stabilityFactor * (_muzzleVelocity / 341.376) ^ (1/3)) * KELVIN(_temperature) / KELVIN(15) * 1013.25 / _barometricPressure
-};
+(_stabilityFactor * (_muzzleVelocity / ([341.376, 853.44] select (_muzzleVelocity > 341.376))) ^ (1/3)) * KELVIN(_temperature) / KELVIN(15) * 1013.25 / _barometricPressure // return
