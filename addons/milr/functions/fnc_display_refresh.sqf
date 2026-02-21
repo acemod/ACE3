@@ -31,7 +31,7 @@ private _ctrlElev = _display displayCtrl IDC_MILR_ELEV;
 private _elev = GVAR(data) getOrDefault ["elevationMRAD", 0];
 private _elevText = text (call {
     if (_range == RANGE_IN_PROGRESS) exitWith { "RANGING" };
-    if (_elev <= 0) exitWith { "" };
+    if (_elev <= 0) exitWith { "---" };
     if (_elev < 30) exitWith { format ["%1 +", _elev toFixed 1] };
     format ["%1 !!!", _elev toFixed 0] // out of limits
 });

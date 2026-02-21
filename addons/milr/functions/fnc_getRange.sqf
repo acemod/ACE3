@@ -27,5 +27,5 @@ private _intersects = lineIntersectsSurfaces [_posHandASL, _posEndASL, _player, 
 if (_intersects isEqualTo []) exitWith { RANGE_NO_RETURNS };
 (_intersects select 0) params ["_intersectPosASL"];
 private _distance = _posHandASL distance _intersectPosASL;
-if (_distance < 10) exitWith { RANGE_TOO_CLOSE };
+if (_distance < RANGEFINDER_MIN_RANGE) exitWith { RANGE_TOO_CLOSE };
 _distance
