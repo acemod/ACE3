@@ -1,4 +1,4 @@
-private _category = format ["ACE %1", localize LSTRING(DisplayName)];
+private _category = format ["ACE %1", LLSTRING(DisplayName)];
 
 [
     QGVAR(enabled), "CHECKBOX",

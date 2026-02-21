@@ -25,7 +25,7 @@ private _condition = {
     params ["_target"];
     
     private _operator = if (isNull (ACE_controlledUAV select 0)) then {ACE_player} else {ACE_controlledUAV select 1};
-    private _turretPath = if (_operator == (driver _target)) then {[-1]} else {_operator call CBA_fnc_turretPath};
+    private _turretPath = _target unitTurret _operator;
     private _hasJDAM = (_target weaponsTurret _turretPath) findIf {
         private _weapon = _x;
         GVAR(gps_weapons) getOrDefaultCall [_weapon, {
@@ -45,4 +45,3 @@ private _statement = {
 
 private _action = [QUOTE(ADDON), "JDAM settings", "", _statement, _condition] call EFUNC(interact_menu,createAction);
 [_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToObject);
-

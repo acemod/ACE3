@@ -104,7 +104,7 @@ _mouseBlockCtrl ctrlEnable false;
     _x ctrlCommit 0;
 } forEach [
     IDC_blockRightFrame,
-    IDC_blockRighttBackground,
+    IDC_blockRightBackground,
     IDC_loadIndicator,
     IDC_rightTabContent,
     IDC_rightTabContentListnBox,

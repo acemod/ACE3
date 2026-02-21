@@ -1,40 +1,52 @@
 #include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, Ruthberg, edited by commy2 for better MP and eventual AI support
- * Cancels sandbag deployment
+ * Cancels sandbag deployment.
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Key (1 for left mouse button) <NUMBER> (default: 1)
  *
  * Return Value:
  * None
  *
  * Example:
- * [ACE_player] call ace_sandbag_fnc_deployCancel
+ * player call ace_sandbag_fnc_deployCancel
  *
  * Public: No
  */
 
-params ["_unit", ["_key", 1]];
+params ["_unit"];
 
-if (_key != 1 || {GVAR(deployPFH) == -1}) exitWith {};
+if (isNull _unit) exitWith {};
 
-// enable running again
+// Enable running again
 [_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 [_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
-// delete placement dummy
-deleteVehicle GVAR(sandBag);
+private _sandbag = _unit getVariable [QGVAR(sandBag), objNull];
 
-// remove deployment pfh
-[GVAR(deployPFH)] call CBA_fnc_removePerFrameHandler;
+// Delete placement dummy, if present (don't early exit, in case dummy was deleted by something else, as still need to clean up)
+if (!isNull _sandbag) then {
+    deleteVehicle _sandbag;
+
+    _unit setVariable [QGVAR(sandbag), nil, true];
+};
+
+// Stop intercepting left mouse button
+private _ehID = _unit getVariable [QGVAR(deploy), -1];
+
+if (_ehID != -1) then {
+    [_unit, "DefaultAction", _ehID] call EFUNC(common,removeActionEventHandler);
+
+    _unit setVariable [QGVAR(deploy), nil];
+};
+
+// Only remove deployment PFH if unit is current player
+if (_unit != ACE_player || {GVAR(deployPFH) == -1}) exitWith {};
+
+// Remove deployment PFH
+GVAR(deployPFH) call CBA_fnc_removePerFrameHandler;
 GVAR(deployPFH) = -1;
 
-// remove mouse button actions
+// Remove mouse button actions
 call EFUNC(interaction,hideMouseHint);
-
-[_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call EFUNC(common,removeActionEventHandler);
-[_unit, "zoomtemp",      _unit getVariable [QGVAR(Cancel), -1]] call EFUNC(common,removeActionEventHandler);
-
-_unit setVariable [QGVAR(isDeploying), false, true];
