@@ -30,7 +30,7 @@
             <Russian>Nemmera</Russian>
             <German>Nemmera</German>
             <Korean>네메라 공병장갑차</Korean>
-            <Japanese>ネマラ</Japanese>
+            <Japanese>ネメラ</Japanese>
             <Chinese>"雌豹"戰鬥工程車</Chinese>
             <Chinesesimp>"雌豹"</Chinesesimp>
             <Turkish>Nemmera</Turkish>
@@ -649,7 +649,7 @@
             <Russian>MH-6 Little Bird</Russian>
             <German>MH-6 Little Bird</German>
             <Korean>MH-6 리틀버드</Korean>
-            <Japanese>MH-6 リトル バード</Japanese>
+            <Japanese>MH-6 リトルバード</Japanese>
             <Chinese>MH-6 "小鳥"運輸直升機</Chinese>
             <Chinesesimp>MH-6 "小鸟"</Chinesesimp>
             <Turkish>MH-6 Little Bird</Turkish>
@@ -667,7 +667,7 @@
             <Russian>AH-6 Little Bird</Russian>
             <German>AH-6 Little Bird</German>
             <Korean>AH-6 리틀버드</Korean>
-            <Japanese>AH-6 リトル バード</Japanese>
+            <Japanese>AH-6 リトルバード</Japanese>
             <Chinese>AH-6 "小鳥"武裝直升機</Chinese>
             <Chinesesimp>AH-6 "小鸟"</Chinesesimp>
             <Turkish>AH-6 Little Bird</Turkish>
@@ -864,7 +864,7 @@
             <Russian>Stoner 99 LMG</Russian>
             <German>Stoner 99 LMG</German>
             <Korean>스토너 99 LMG</Korean>
-            <Japanese>ストーナー99 LMG</Japanese>
+            <Japanese>ストーナー 99 LMG</Japanese>
             <Chinese>斯通納99輕機槍</Chinese>
             <Chinesesimp>斯通纳 99</Chinesesimp>
             <Turkish>Stoner 99 LMG</Turkish>
@@ -1040,7 +1040,7 @@
             <Russian>Seara</Russian>
             <German>Seara</German>
             <Korean>시아라 다연장로켓</Korean>
-            <Japanese>シアラ</Japanese>
+            <Japanese>セアラ</Japanese>
             <Chinese>"希拉"多管火箭車</Chinese>
             <Chinesesimp>"希拉"</Chinesesimp>
             <Turkish>Seara</Turkish>
@@ -1058,7 +1058,7 @@
             <Russian>2S9 Сокор</Russian>
             <German>2S9 Sochor</German>
             <Korean>2S9 소코르</Korean>
-            <Japanese>2S9 ソーカー</Japanese>
+            <Japanese>2S9 ソホル</Japanese>
             <Chinese>2S9 "薩克爾"自走砲</Chinese>
             <Chinesesimp>2S9 "索科尔"</Chinesesimp>
             <Turkish>2S9 Sochor</Turkish>
@@ -1076,7 +1076,7 @@
             <Russian>T100 Чёрный Орел</Russian>
             <German>T100 Black Eagle</German>
             <Korean>T-100 블랙 이글</Korean>
-            <Japanese>T100 ブラック イーグル</Japanese>
+            <Japanese>T100 ブラックイーグル</Japanese>
             <Chinese>T100 "黑鷹"主戰坦克</Chinese>
             <Chinesesimp>T-100 "黑鹰"</Chinesesimp>
             <Turkish>T100 Black Eagle</Turkish>
@@ -1094,7 +1094,7 @@
             <Russian>Leopard 2SG</Russian>
             <German>Leopard 2SG</German>
             <Korean>레오파르트 2SG</Korean>
-            <Japanese>レオパルト2SG</Japanese>
+            <Japanese>レオパルト 2SG</Japanese>
             <Chinese>"豹2型新加坡版"主戰坦克</Chinese>
             <Chinesesimp>"豹"2 新加坡版</Chinesesimp>
             <Turkish>Leopard 2SG</Turkish>
@@ -1891,6 +1891,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_UAV_05_Name">
             <English>XQ-47B</English>
+            <Japanese>XQ-47B</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SLAM_Name">
             <English>M4A1 SLAM</English>
@@ -3089,6 +3090,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL_muzzleGPBO40">
             <English>GPBO-40</English>
+            <Japanese>GPBO-40</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL_sand">
             <English>MSBS Grot GL (Sand)</English>
@@ -3236,6 +3238,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS_muzzleSix12">
             <English>SIX-12</English>
+            <Japanese>SIX-12</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS_sand">
             <English>MSBS Grot SG (Sand)</English>

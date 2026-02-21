@@ -23,6 +23,7 @@
             <English>Delete Range Card Copy</English>
             <French>Supprimer la copie de la table de tir</French>
             <German>Entferne Kopie der Entfernungsspinne</German>
+            <Japanese>レンジカードの複製を削除</Japanese>
         </Key>
         <Key ID="STR_ACE_RangeCard_Description">
             <English>50 METER increments -- MRAD/MRAD (reticle/turrets)</English>
