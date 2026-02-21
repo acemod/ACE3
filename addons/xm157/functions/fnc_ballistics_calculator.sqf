@@ -8,6 +8,7 @@
  * 1: Direction of Fire (deg) - Yaw <NUMBER>
  * 2: Inlination (deg) - Pitch <NUMBER>
  * 3: Bank (deg) - Roll <NUMBER>
+ * 4: Custom Data <HASHMAP> (default: default data)
  *
  * Return Value:
  * Elevation and Windage in MRAD, Time Of Flight <ARRAY>
@@ -18,9 +19,10 @@
  * Public: No
  */
 
-params ["_targetRange", "_directionOfFire", "_inclinationAngle", "_bank"];
+params ["_targetRange", "_directionOfFire", "_inclinationAngle", "_bank", ["_data", GVAR(data)]];
 
-private _weaponInfo = [] call FUNC(ballistics_getData);
+private _zeroRange = _data getOrDefault ["zero_range", 100]; // 100 is the scope's `discreteDistance` so this doesn't need to be set explicitly
+private _weaponInfo = [_zeroRange] call FUNC(ballistics_getData);
 
 if (_weaponInfo isEqualTo []) exitWith {
     [0, 0, 0] // return
@@ -41,11 +43,11 @@ _weaponInfo params [
     "_bulletMass"
 ];
 
-private _latitude = GVAR(data) getOrDefault ["latitude", 0];
+private _latitude = _data getOrDefault ["latitude", 0];
 
 // Get Wind
-private _windSpeed = GVAR(data) getOrDefault ["wind_speed", 0];
-private _windDirection = 22.5 * (GVAR(data) getOrDefault ["wind_dir", 0]);
+private _windSpeed = _data getOrDefault ["wind_speed", 0];
+private _windDirection = 22.5 * (_data getOrDefault ["wind_dir", 0]);
 private _wind = [sin (_directionOfFire - _windDirection), -cos (_directionOfFire - _windDirection), 0] vectorMultiply _windSpeed;
 
 // Get atmosphere
