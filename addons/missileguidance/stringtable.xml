@@ -469,9 +469,11 @@
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_too_tooltip">
             <English>Ordnance will guide to the location the targeting camera is looking at</English>
+            <Japanese>兵装はターゲティングカメラで見ている場所へ誘導されます</Japanese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp_tooltip">
             <English>Ordnance will guide to the provided 10 digit grid coordinates</English>
+            <Japanese>兵装は指定された10桁のグリッド座標に誘導されます</Japanese>
         </Key>
     </Package>
 </Project>

@@ -21,6 +21,7 @@
         <Key ID="STR_ACE_Advanced_Throwing_ChangePower">
             <English>(Scroll) Change Power</English>
             <Russian>(Прокрутка) Изменение мощности</Russian>
+            <Japanese>(スクロール) 投擲力の調整</Japanese>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Cook">
             <English>(Click) Cook</English>
@@ -139,7 +140,7 @@
             <Russian>Временно показать информацию о ветре</Russian>
             <German>Zeige temporäre Windinformationen</German>
             <Korean>바람 정보 임시로 표시</Korean>
-            <Japanese>一時的に風の情報を表示</Japanese>
+            <Japanese>風の情報を一時的に表示</Japanese>
             <Chinesesimp>临时显示风场信息</Chinesesimp>
             <Ukrainian>Тимчасово показати інформацію про вітер</Ukrainian>
         </Key>
@@ -327,6 +328,7 @@
         <Key ID="STR_ACE_Advanced_Throwing_SnapPower">
             <English>(Scroll) Snap Power</English>
             <Russian>(Прокрутка) Мгновенная мощность</Russian>
+            <Japanese>(スクロール) 投擲力の切替</Japanese>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Throw">
             <English>Throw</English>
@@ -364,10 +366,12 @@
         <Key ID="STR_ACE_Advanced_Throwing_throwStepSetting_Description">
             <English>Adjust the granularity of different throwing modes by using the mouse wheel</English>
             <Russian>Отрегулируйте степень детализации различных режимов метания с помощью колесика мыши</Russian>
+            <Japanese>マウスホイールでの投擲力の調整の細かさを変更します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_throwStepSetting_DisplayName">
             <English>Granular Throw Steps</English>
             <Russian>Этапы гранулирвоанного броска</Russian>
+            <Japanese>投擲力のステップ数</Japanese>
         </Key>
     </Package>
 </Project>
