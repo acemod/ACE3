@@ -110,6 +110,19 @@ class CfgAmmo {
     };
 
     class B_12Gauge_Slug: BulletBase {
+        // Based roughly off of a generalization of a 12/70 foster slug
+        ACE_caliber = 17.5;
+        ACE_bulletLength = 38;
+        ACE_bulletMass = 28.35; // 1 oz
+        ACE_ballisticCoefficients[] = {0.11};
+        ACE_dragModel = 1;
+        ACE_muzzleVelocityVariationSD = 2;
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ASM";
+
+        ACE_muzzleVelocities[]={365.76, 381, 414.53, 426.72, 434.34, 441.96, 454.15, 455.68, 460.25};
+        ACE_barrelLengths[] = {215.9, 254, 317.5, 355.6, 457.2, 533.4, 609.6, 660.4, 711.2};
+
         //caliber = 3; //too high, ~20mm of RHA (450*3*15/1000=20), ~64mm metal
         caliber = 1.037; //~7mm RHA, ~22.4mm metal, probably still too high though as RHA is hardened.
     };
