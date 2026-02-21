@@ -180,3 +180,30 @@ private _categoryColors = [ELSTRING(medical,Interface_Category), format ["| %1 |
     false,
     false
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(medicalHintEnabled),
+    "CHECKBOX",
+    [LSTRING(medicalHintEnabled_DisplayName), LSTRING(medicalHintEnabled_Description)],
+    [ELSTRING(medical,Interface_Category), LSTRING(SubCategory)],
+    true,
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(medicalHintMessage),
+    "EDITBOX",
+    [LSTRING(medicalHintMessage_DisplayName), LSTRING(medicalHintMessage_Description)],
+    [ELSTRING(medical,Interface_Category), LSTRING(SubCategory)],
+    LLSTRING(medicalHintMessage_defaultMessage),
+    0
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(medicalHintMedicIcon),
+    "EDITBOX",
+    [LSTRING(medicalHintMedicIcon_DisplayName), LSTRING(medicalHintMedicIcon_Description)],
+    [ELSTRING(medical,Interface_Category), LSTRING(SubCategory)],
+    "",
+    0
+] call CBA_fnc_addSetting;
