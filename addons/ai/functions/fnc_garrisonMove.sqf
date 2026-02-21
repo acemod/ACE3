@@ -5,8 +5,8 @@
  *
  * Arguments:
  * 0: Array of arrays <ARRAY>
- *    0: Unit needing to be placed <UNIT>
- *    1: Position the unit need to be placed at <POSITION>
+ *    0: Unit needing to be placed <OBJECT>
+ *    1: Position the unit need to be placed at <ARRAY>
  *
  * Return Value:
  * Nothing
@@ -77,7 +77,7 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
                     [QGVAR(AISection), [[_unit], ["PATH"], false], _unit] call CBA_fnc_targetEvent;
                     [QGVAR(AISection), [[_unit], ["FSM"], true], _unit] call CBA_fnc_targetEvent;
 
-                    if ({(_x select 0) in units _unit && {!isPlayer (_x select 0)}} count _unitMoveList == 0) then {
+                    if (_unitMoveList findIf {(_x select 0) in units _unit && {!isPlayer (_x select 0)}} == -1) then {
                         [QGVAR(enableAttack), [[_unit], true], _unit] call CBA_fnc_targetEvent;
                     };
 

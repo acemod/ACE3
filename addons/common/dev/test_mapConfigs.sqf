@@ -8,7 +8,7 @@ diag_log text format ["--- Checking Map Configs ---"];
 
 private _testPass = true;
 
-private _maps = configProperties [configFile >> "CfgWorldList", "(isClass _x)", true];
+private _maps = "true" configClasses (configFile >> "CfgWorldList");
 {
     private _mapConfigName = configName _x;
     private _worldConfig = configFile >> "CfgWorlds" >> _mapConfigName;
@@ -36,7 +36,7 @@ private _maps = configProperties [configFile >> "CfgWorldList", "(isClass _x)", 
             _stepX = getNumber (_x >> "stepX");
             _stepY = getNumber (_x >> "stepY");
         };
-    } forEach configProperties [(_worldConfig >> "Grid"), "isClass _x", false];
+    } forEach ("true" configClasses (_worldConfig >> "Grid"));
     private _stepXat5 = _stepX * 10 ^ ((count _formatX) - 5);
     private _stepYat5 = -1 * _stepY * 10 ^ ((count _formatY) - 5);
     if (_stepYat5 < 0) then {diag_log text format ["%1 [%2] - Northing is reversed.",_mapDescription,_mapConfigName];};

@@ -1,10 +1,10 @@
 // by commy2
 #include "script_component.hpp"
 
-// recieve remote marker data
+// receive remote marker data
 [QGVAR(setMarkerNetwork), LINKFUNC(setMarkerNetwork)] call CBA_fnc_addEventHandler;
 
-// recieve marker data for JIP
+// receive marker data for JIP
 [QGVAR(setMarkerJIP), LINKFUNC(setMarkerJIP)] call CBA_fnc_addEventHandler;
 
 // request marker data for JIP

@@ -38,7 +38,7 @@ _bodyPart = toLowerANSI _bodyPart;
 private _bodyPartIndex = ALL_BODY_PARTS find _bodyPart;
 if (_bodyPartIndex < 0) then { _bodyPartIndex = ALL_SELECTIONS find _bodyPart; }; // 2nd attempt with selection names ("hand_l", "hand_r", "leg_l", "leg_r")
 if (_bodyPartIndex < 0) exitWith {ERROR_1("addDamageToUnit - bad selection %1",_this); false};
-if (isNull _unit || {!local _unit} || {!alive _unit}) exitWith {ERROR_2("addDamageToUnit - badUnit %1 [local %2]",_this,local _unit); false};
+if (isNull _unit || {!local _unit}) exitWith {ERROR_2("addDamageToUnit - badUnit %1 [local %2]",_this,local _unit); false};
 if (_damageToAdd < 0) exitWith {ERROR_1("addDamageToUnit - bad damage %1",_this); false};
 
 if (!_overrideInvuln && {!((isDamageAllowed _unit) && {_unit getVariable [QEGVAR(medical,allowDamage), true]})}) exitWith {

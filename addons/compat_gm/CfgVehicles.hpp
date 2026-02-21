@@ -81,6 +81,15 @@ class CfgVehicles {
 
     class gm_brdm2_base: gm_wheeled_APC_base {
         EGVAR(refuel,fuelCapacity) = 290;
+        EGVAR(vehicle_damage,hullDetonationProb) = 0;
+        EGVAR(vehicle_damage,turretDetonationProb) = 0.2;
+        EGVAR(vehicle_damage,engineDetonationProb) = 0.2;
+        EGVAR(vehicle_damage,hullFireProb) = 0.5;
+        EGVAR(vehicle_damage,turretFireProb) = 0.7;
+        EGVAR(vehicle_damage,engineFireProb) = 0.7;
+        EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
+        EGVAR(vehicle_damage,canHaveFireRing) = 0;
+        EGVAR(cookoff,canHaveFireJet) = 0;
 
         class EGVAR(interaction,anims) {
             class AmmoBox_01_unhide {
@@ -107,6 +116,15 @@ class CfgVehicles {
         };
     };
     class gm_brdm2um_base: gm_brdm2_base {
+        EGVAR(vehicle_damage,hullDetonationProb) = 0;
+        EGVAR(vehicle_damage,turretDetonationProb) = 0;
+        EGVAR(vehicle_damage,engineDetonationProb) = 0.2;
+        EGVAR(vehicle_damage,hullFireProb) = 0.5;
+        EGVAR(vehicle_damage,turretFireProb) = 0;
+        EGVAR(vehicle_damage,engineFireProb) = 0.7;
+        EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
+        EGVAR(vehicle_damage,canHaveFireRing) = 0;
+        EGVAR(cookoff,canHaveFireJet) = 0;
         class EGVAR(interaction,anims): EGVAR(interaction,anims) {
             class AmmoBox_01_unhide: AmmoBox_01_unhide {
                 positions[] = {{-0.1, -1.9, -0.5}};
@@ -119,10 +137,23 @@ class CfgVehicles {
             };
         };
     };
+    class gm_brdm2_9p133_base: gm_brdm2_base {
+        EGVAR(vehicle_damage,hullDetonationProb) = 0.2;
+        EGVAR(vehicle_damage,turretDetonationProb) = 0.5;
+    };
 
     class gm_btr60_base: gm_wheeled_APC_base {
         EGVAR(refuel,fuelCapacity) = 290;
         EGVAR(cookoff,cookoffSelections)[] = {"commanderturret_hatch"};
+        EGVAR(vehicle_damage,hullDetonationProb) = 0;
+        EGVAR(vehicle_damage,turretDetonationProb) = 0;
+        EGVAR(vehicle_damage,engineDetonationProb) = 0.2;
+        EGVAR(vehicle_damage,hullFireProb) = 0.2;
+        EGVAR(vehicle_damage,turretFireProb) = 0;
+        EGVAR(vehicle_damage,engineFireProb) = 0.7;
+        EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
+        EGVAR(vehicle_damage,canHaveFireRing) = 0;
+        EGVAR(cookoff,canHaveFireJet) = 0;
 
         class EGVAR(interaction,anims) {
             class AmmoBox_01_unhide {
@@ -175,6 +206,30 @@ class CfgVehicles {
                 text = "$STR_DN_gm_AmmoBox_wood_04_base";
             };
         };
+    };
+
+    class gm_btr60pb_base: gm_btr60_base {
+        EGVAR(vehicle_damage,hullDetonationProb) = 0;
+        EGVAR(vehicle_damage,turretDetonationProb) = 0.2;
+        EGVAR(vehicle_damage,engineDetonationProb) = 0.2;
+        EGVAR(vehicle_damage,hullFireProb) = 0.2;
+        EGVAR(vehicle_damage,turretFireProb) = 0.7;
+        EGVAR(vehicle_damage,engineFireProb) = 0.7;
+        EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
+        EGVAR(vehicle_damage,canHaveFireRing) = 0;
+        EGVAR(cookoff,canHaveFireJet) = 0;
+    };
+
+    class gm_ot64_base: gm_wheeled_APC_base {
+        EGVAR(vehicle_damage,hullDetonationProb) = 0;
+        EGVAR(vehicle_damage,turretDetonationProb) = 0.2;
+        EGVAR(vehicle_damage,engineDetonationProb) = 0.2;
+        EGVAR(vehicle_damage,hullFireProb) = 0.2;
+        EGVAR(vehicle_damage,turretFireProb) = 0.7;
+        EGVAR(vehicle_damage,engineFireProb) = 0.7;
+        EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
+        EGVAR(vehicle_damage,canHaveFireRing) = 0;
+        EGVAR(cookoff,canHaveFireJet) = 0;
     };
 
     class gm_ural375d_base: gm_wheeled_truck_base {
@@ -375,11 +430,29 @@ class CfgVehicles {
 
     class gm_fuchs_base: gm_wheeled_APC_base {
         EGVAR(refuel,fuelCapacity) = 390;
+        EGVAR(vehicle_damage,hullDetonationProb) = 0;
+        EGVAR(vehicle_damage,turretDetonationProb) = 0;
+        EGVAR(vehicle_damage,engineDetonationProb) = 0.1;
+        EGVAR(vehicle_damage,hullFireProb) = 0.2;
+        EGVAR(vehicle_damage,turretFireProb) = 0.05;
+        EGVAR(vehicle_damage,engineFireProb) = 0.5;
+        EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
+        EGVAR(vehicle_damage,canHaveFireRing) = 0;
+        EGVAR(cookoff,canHaveFireJet) = 0;
     };
 
     class gm_luchs_base: gm_wheeled_APC_base {
         EGVAR(refuel,fuelCapacity) = 500;
         EGVAR(cookoff,cookoffSelections)[] = {"mainturret_hatch", "commanderturret_hatch"};
+        EGVAR(vehicle_damage,hullDetonationProb) = 0;
+        EGVAR(vehicle_damage,turretDetonationProb) = 0.2;
+        EGVAR(vehicle_damage,engineDetonationProb) = 0.2;
+        EGVAR(vehicle_damage,hullFireProb) = 0.2;
+        EGVAR(vehicle_damage,turretFireProb) = 0.4;
+        EGVAR(vehicle_damage,engineFireProb) = 0.5;
+        EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
+        EGVAR(vehicle_damage,canHaveFireRing) = 0;
+        EGVAR(cookoff,canHaveFireJet) = 1;
     };
 
 
@@ -603,9 +676,7 @@ class CfgVehicles {
     // H E L I C O P T E R S
 
     class Helicopter_Base_F;
-    class Helicopter_Base_H: Helicopter_Base_F {
-        class EventHandlers;
-    };
+    class Helicopter_Base_H: Helicopter_Base_F {};
     class gm_helicopter_base: Helicopter_Base_H {};
 
     // WEST

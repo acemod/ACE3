@@ -964,8 +964,8 @@ Author:
 //#define PREP(var1) PREP_SYS(PREFIX,COMPONENT_F,var1)
 
 #ifdef DISABLE_COMPILE_CACHE
-    #define PREP(var1) TRIPLES(ADDON,fnc,var1) = compile preProcessFileLineNumbers 'PATHTO_SYS(PREFIX,COMPONENT_F,DOUBLES(fnc,var1))'
-    #define PREPMAIN(var1) TRIPLES(PREFIX,fnc,var1) = compile preProcessFileLineNumbers 'PATHTO_SYS(PREFIX,COMPONENT_F,DOUBLES(fnc,var1))'
+    #define PREP(var1) TRIPLES(ADDON,fnc,var1) = compile preprocessFileLineNumbers 'PATHTO_SYS(PREFIX,COMPONENT_F,DOUBLES(fnc,var1))'
+    #define PREPMAIN(var1) TRIPLES(PREFIX,fnc,var1) = compile preprocessFileLineNumbers 'PATHTO_SYS(PREFIX,COMPONENT_F,DOUBLES(fnc,var1))'
 #else
     #define PREP(var1) ['PATHTO_SYS(PREFIX,COMPONENT_F,DOUBLES(fnc,var1))', 'TRIPLES(ADDON,fnc,var1)'] call SLX_XEH_COMPILE_NEW
     #define PREPMAIN(var1) ['PATHTO_SYS(PREFIX,COMPONENT_F,DOUBLES(fnc,var1))', 'TRIPLES(PREFIX,fnc,var1)'] call SLX_XEH_COMPILE_NEW
@@ -1832,3 +1832,26 @@ Author:
     commy2
 ------------------------------------------- */
 #define FILE_EXISTS(FILE) (fileExists (FILE))
+
+/* -------------------------------------------
+Macro: QADDON, QQADDON
+
+Description:
+    Quoted Variant of ADDON
+
+Parameters:
+
+Examples:
+    (begin example)
+    QUOTE(configName _x isEqualTo QUOTE(QUOTE(abe_banana))) configClasses (configFile >> QADDON)
+    (end)
+
+Author:
+    OverlordZorn
+------------------------------------------- */
+#ifndef QADDON
+    #define QADDON QUOTE(ADDON)
+#endif
+#ifndef QQADDON
+    #define QQADDON QUOTE(QUOTE(ADDON))
+#endif

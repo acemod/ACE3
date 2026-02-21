@@ -4,7 +4,7 @@
  * Returns an array of alive players in a given radius around a given location
  *
  * Arguments:
- * 0: Center position <POSTION>
+ * 0: Center position <ARRAY>
  * 1: Radius <NUMBER>
  *
  * Return Value:

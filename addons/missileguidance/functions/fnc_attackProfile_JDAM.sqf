@@ -25,6 +25,8 @@ _gpsData params ["", "_impactAngle", "_attackDirection"];
 _targetData params ["_directionToTarget", "", "_distanceToTarget"];
 _flightParams params ["_pitchRate", "_yawRate"];
 
+if (_seekerTargetPos isEqualTo [0,0,0]) exitWith {_seekerTargetPos}; // Handle dropping JDAM as dumb ordnance
+
 if (_impactAngle <= 0) then {
     _impactAngle = 45; // immediate pitch over to attack
 };

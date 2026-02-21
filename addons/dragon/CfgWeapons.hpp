@@ -1,12 +1,9 @@
 class CfgWeapons {
     class launch_Titan_base;
-    class Launcher_Base_F;
     class missiles_titan;
     class Binocular;
     class Default;
-    class missiles_titan_static: missiles_titan {
-        class WeaponSlotsInfo;
-    };
+    class missiles_titan_static: missiles_titan {};
     class launch_Titan_F: launch_Titan_base {
         class WeaponSlotsInfo;
     };

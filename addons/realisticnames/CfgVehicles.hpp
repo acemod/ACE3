@@ -357,6 +357,10 @@ class CfgVehicles {
     class B_Heli_Attack_01_dynamicLoadout_F: Heli_Attack_01_dynamicLoadout_base_F {
         displayName = CSTRING(Heli_Attack_01_Name);
     };
+    class Heli_Attack_01_pylons_dynamicLoadout_base_F: Heli_Attack_01_dynamicLoadout_base_F {};
+    class B_Heli_Attack_01_pylons_dynamicLoadout_F: Heli_Attack_01_pylons_dynamicLoadout_base_F {
+        displayName = CSTRING(Heli_Attack_01_pylons_Name);
+    };
 
     class Heli_Light_01_unarmed_base_F;
     class B_Heli_Light_01_F: Heli_Light_01_unarmed_base_F {
@@ -472,6 +476,11 @@ class CfgVehicles {
     class Plane_Fighter_04_Base_F;
     class I_Plane_Fighter_04_F: Plane_Fighter_04_Base_F {
         displayName = CSTRING(Plane_Fighter_04_Name);
+    };
+
+    class UAV_05_Base_F;
+    class B_UAV_05_F: UAV_05_Base_F {
+        displayName = CSTRING(UAV_05_Name);
     };
 
     // UAVs

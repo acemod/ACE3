@@ -1,4 +1,8 @@
 class CfgVehicles {
+    class UserTexture1m_F;
+    class GVAR(texture1m): UserTexture1m_F {
+        scope = 1;
+    };
     class ACE_Module;
     class ACE_ModuleTagging: ACE_Module {
         author = ECSTRING(common,ACETeam);

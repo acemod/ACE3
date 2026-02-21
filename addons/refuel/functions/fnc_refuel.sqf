@@ -36,6 +36,9 @@ if (_maxFuelTank == 0) then {
     _maxFuelTank = getNumber (_config >> "fuelCapacity");
 };
 
+// Wipe refuel amount, so that nozzle doesn't carry over information from previous refuelling
+_nozzle setVariable [QGVAR(tempFuel), nil];
+
 [{
     params ["_args", "_pfID"];
     _args params [["_source", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_rate", 1, [0]], ["_maxFuelTank", 1, [0]], ["_connectFromPoint", [0,0,0], [[]], 3], ["_connectToPoint", [0,0,0], [[]], 3]];
@@ -129,7 +132,8 @@ if (_maxFuelTank == 0) then {
         [QGVAR(stopped), [_source, _sink, _nozzle]] call CBA_fnc_localEvent;
         _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
         _nozzle setVariable [QGVAR(isRefueling), false, true];
-    };
+        [_nozzle, QGVAR(nozzle_stop), nil, true, true, true] call CBA_fnc_globalSay3D;
+    }; 
 }, 1, [
     _nozzle getVariable QGVAR(source),
     _sink,

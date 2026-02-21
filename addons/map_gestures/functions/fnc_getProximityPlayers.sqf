@@ -8,7 +8,7 @@
  * 1: Range <NUMBER>
  *
  * Return Value:
- * All units in proximity with Distances to render from <ARRAY<ARRAY<OBJECT,NUMBER>>>
+ * All units in proximity with Distances to render from <ARRAY<ARRAY<OBJECT, NUMBER>>>
  *
  * Example:
  * [[[player, 6]]] call ace_map_gestures_fnc_getProximityPlayers

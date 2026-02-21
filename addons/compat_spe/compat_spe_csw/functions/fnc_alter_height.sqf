@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * cursorObject call SPE_Weapons_Static_fnc_can_alter_height
+ * [cursorObject, getText (configOf cursorObject >> "SPE_AltHeight_Tripod_Name")] call SPE_Weapons_Static_fnc_alter_height
  *
  * Public: No
  */
@@ -70,11 +70,11 @@ deleteVehicle _weaponPlatform;
         _this remoteExecCall ["enableCollisionWith", _this];
     }, [_weaponPlatform, _unit], 0.5] call CBA_fnc_waitAndExecute;
 
+    if (_magazines isEqualTo []) exitWith {};
+
     // Restore state
     // First remove magazines that were spawned in with new weapon
-    {
-        _weaponPlatform removeMagazineTurret [_x, [0]];
-    } forEach (_weaponPlatform magazinesTurret [0]);
+    _weaponPlatform removeAllMagazinesTurret [0];
 
     // Remove weapon temporarily and readd it to instantly load previous magazine
     private _weapon = (_weaponPlatform weaponsTurret [0]) param [0, ""];
@@ -82,8 +82,6 @@ deleteVehicle _weaponPlatform;
     if (_weapon != "") then {
         _weaponPlatform removeWeaponTurret [_weapon, [0]];
     };
-
-    if (_magazines isEqualTo []) exitWith {};
 
     // Find loaded magazine
     private _loadedIndex = _magazines findIf {_x select 2};

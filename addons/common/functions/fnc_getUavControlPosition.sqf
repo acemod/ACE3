@@ -1,14 +1,14 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Returns the seat position of a UAV that the unit is activly controling.
+ * Returns the seat position of a UAV that the unit is actively controlling.
  *
  * Arguments:
  * 0: Unit <OBJECT>
  *
  * Return Value:
  * Position <STRING>
- *   "" = not connected to anything or activly controling
+ *   "" = not connected to anything or actively controlling
  *   "DRIVER"
  *   "GUNNER"
  *

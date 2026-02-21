@@ -13,6 +13,7 @@
             <Korean>차량 충돌로 인해 탑승인원들이 피해를 받을 지 결정합니다.</Korean>
             <Japanese>車両が衝突をすると乗員がダメージを受けるかどうかを制御します。</Japanese>
             <Chinesesimp>控制乘员是否受到车辆碰撞的伤害。</Chinesesimp>
+            <Ukrainian>Контролює, чи отримує екіпаж шкоду від зіткнення транспортного засобу.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Engine_EnableVehicleCrashes_DisplayName">
             <English>Enable Vehicle Crash Damage</English>
@@ -26,32 +27,7 @@
             <Korean>차량 충돌 피해 활성화</Korean>
             <Japanese>車両衝突ダメージを有効化</Japanese>
             <Chinesesimp>启用车辆碰撞损坏</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Medical_Engine_damagePassThroughEffect_description">
-            <English>Controls effect of armor 'passThrough' on final damage. Makes high armor values, like ones used in GL rigs, less effective.\nUse 0% for pre 3.16.0 armor behavior.\nOnly touch this if you know what you're doing!</English>
-            <French>Contrôle l'effet de la "pénétration" de l'armure sur les dégâts finaux. Rend les valeurs d'armures élevées, comme celles utilisées dans les gilets GL, moins efficaces.\nUtilisez 0% pour le comportement des armures des versions antérieures à 3.16.0.\nNe modifiez la valeur que si vous savez ce que vous faîtes !</French>
-            <Spanish>Controla el efecto de 'passThrough' de armadura en el daño final. Hace que los valores altos de armadura, como los usados en los chalecos GL, sean menos efectivos.\nUsar 0% para comportamiento de armadura en versiones anteriores a 3.16.0.\nSólo modifica esto si sabes lo que estás haciendo!</Spanish>
-            <Italian>Determina l'effetto di danni sul corpo che 'trapassano' l'armatura. Rende alti valori di protezione, come quelli su corpetti GL, meno efficaci.\nUtilizza 0% per il comportamento prima di v3.16.0.\nModifica questo valore solo se sai cosa stai facendo!</Italian>
-            <Polish>Kontroluje wpływ "penetracji" pancerza na ostateczne obrażenia. Sprawia, że wysokie wartości pancerza, takie jak te używane w kamizelkach GL, są mniej skuteczne.\nUżyj 0% dla zachowania pancerza sprzed wersji 3.16.0.\nZmień wartość tylko jeśli wiesz co robisz!</Polish>
-            <Portuguese>Controla o efeito de penetração (passThrough) da blindagem no dano final. Torna valores de blindagem altos, como os usados em coletes GL, menos eficazes.\nUse 0% para o comportamento de blindagem anterior à versão 3.16.0.\nSó mexa nisso se souber o que está fazendo!</Portuguese>
-            <Russian>Контролирует эффект `passThrough` при нанесении конечного урона. Делает высокие значения брони, подобные тем, которые используются в GL rigs, менее эффективными.\nИспользуйте 0% для поведения брони до версии 3.16.0.n\Прикасайтесь к этому, только если знаете, что делаете!</Russian>
-            <German>Steuert den Effekt des „Durchschlagens“ von Panzerung auf den Gesamtschaden. Macht hohe Panzerungswerte, wie sie in GL-Westen verwendet werden, weniger effektiv.\nVerwende 0% für das Panzerungsverhalten vor 3.16.0.\nÄndere den Wert nur, wenn du weißt, was du tust!</German>
-            <Korean>최종 데미지에 대한 방어구의 'PassThrough' 효과를 조정합니다. GL 리그에 사용되는 것과 같은 높은 방호값을 덜 효과적으로 만듭니다\n3.16.0 이전의 방어구 동작에는 0%를 사용하십시오.\n당신이 뭘 하고 있는지 알고 있는 경우에만 이걸 설정하세요!</Korean>
-            <Japanese>ボディアーマーの'passThrough'値が最終的な身体ダメージに与える影響を調整します。擲弾兵リグで使用されるような高い装甲値では効果が低くなります。\n3.16.0以前の挙動にするには0%にしてください。\nこれが何かわからない場合は変更しないことをお勧めします。</Japanese>
-            <Chinesesimp>控制Config中PassThrough对最终伤害产生的影响. 使高装甲值护甲(像是原版榴弹胸挂)减伤效果降低\n使用0%来获得3.16.0之前的护甲效果\n除非你知道在干什么, 否则不要更改这个选项!</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Medical_Engine_damagePassThroughEffect_displayName">
-            <English>Armor PassThrough Effect</English>
-            <French>Effet de pénétration d'armure</French>
-            <Spanish>Efecto de Atravesar Armadura</Spanish>
-            <Italian>Fattore di Trapasso Armatura</Italian>
-            <Polish>Efekt penetracji pancerza</Polish>
-            <Portuguese>Efeito de Penetração de Blindagem</Portuguese>
-            <Russian>Эффект сквозного прохождения брони</Russian>
-            <German>Effekt des Panzerungsdurchschlags</German>
-            <Korean>방어구 PassThrough 효과</Korean>
-            <Japanese>装甲貫通効果</Japanese>
-            <Chinesesimp>护甲PassThrough效果更改</Chinesesimp>
+            <Ukrainian>Увім. шкоди при аварії в транспорті</Ukrainian>
         </Key>
     </Package>
 </Project>

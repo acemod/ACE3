@@ -8,7 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_missileguidance"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Dani (TCVM)", "PabstMirror"};
+        authors[] = {"tcvm", "PabstMirror"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };

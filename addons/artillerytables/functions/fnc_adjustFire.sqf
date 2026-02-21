@@ -34,7 +34,7 @@ params ["_gunPos", "_targetPos", "_adjustEast", "_adjustNorth", "_adjustUp", "_m
 //DEFAULT_AIR_FRICTION == -0.00006
 //MK6_82mm_AIR_FRICTION == -0.0001
 
-private _resultPos = [_adjustEast + _targetPos select 0, _adjustNorth + _targetPos select 1, _adjustUp + _targetPos select 2];
+private _resultPos = _targetPos vectorAdd [_adjustEast, _adjustNorth, _adjustUp];
 
 private _returns = [_gunPos, _resultPos, _muzzleVelocity, _highAngle, _airFriction, _temperature, _airDensity, _windDir, _windSpeed] call FUNC(calculateSolution);
 

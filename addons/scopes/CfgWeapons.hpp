@@ -1,7 +1,3 @@
-class Mode_SemiAuto;
-class Mode_Burst;
-class Mode_FullAuto;
-
 class CfgWeapons {
     class ItemCore;
     class InventoryOpticsItem_Base_F;
@@ -11,7 +7,7 @@ class CfgWeapons {
     };
 
     class optic_MRD: ItemCore {
-        ACE_ScopeHeightAboveRail = 2.8;
+        ACE_ScopeHeightAboveRail = 1.94867;
     };
 
     class optic_Aco: ItemCore {
@@ -130,10 +126,6 @@ class CfgWeapons {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Snip {
-                    opticsZoomMin = 0.011;
-                    opticsZoomMax = 0.045;
-                    opticsZoomInit = 0.045;
-                    discretefov[] = {0.045, 0.011};
                     discreteDistance[] = {100};
                     discreteDistanceInitIndex = 0;
                 };
@@ -195,10 +187,6 @@ class CfgWeapons {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class AMS {
-                    opticsZoomMin = 0.0285;
-                    opticsZoomMax = 0.085;
-                    opticsZoomInit = 0.085;
-                    discretefov[] = {0.085, 0.0285};
                     discreteDistance[] = {100};
                     discreteDistanceInitIndex = 0;
                 };
@@ -215,10 +203,6 @@ class CfgWeapons {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class KHS {
-                    opticsZoomMin = 0.026;
-                    opticsZoomMax = 0.06;
-                    opticsZoomInit = 0.06;
-                    discretefov[] = {0.06, 0.026};
                     discreteDistance[] = {100};
                     discreteDistanceInitIndex = 0;
                 };
@@ -235,10 +219,6 @@ class CfgWeapons {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class KHS {
-                    opticsZoomMin = 0.026;
-                    opticsZoomMax = 0.06;
-                    opticsZoomInit = 0.06;
-                    discretefov[] = {0.06, 0.026};
                     discreteDistance[] = {100};
                     discreteDistanceInitIndex = 0;
                 };
@@ -260,10 +240,7 @@ class CfgWeapons {
         ACE_IronSightBaseAngle = 0;
     };
 
-    class arifle_MX_Base_F: Rifle_Base_F {
-        class Single: Mode_SemiAuto {};
-        class FullAuto: Mode_FullAuto {};
-    };
+    class arifle_MX_Base_F: Rifle_Base_F {};
     class arifle_MX_SW_F: arifle_MX_Base_F {
         ACE_RailHeightAboveBore = 2.40874;
         ACE_IronSightBaseAngle = -0.004011;
@@ -277,9 +254,19 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 3.20768;
         ACE_IronSightBaseAngle = 0.002856;
     };
+    class arifle_SPAR_01_blk_F: arifle_SPAR_01_base_F {
+        ACE_RailHeightAboveBore = 2.96535;
+    };
+    class arifle_SPAR_01_GL_base_F: arifle_SPAR_01_base_F {};
+    class arifle_SPAR_01_GL_blk_F: arifle_SPAR_01_GL_base_F {
+        ACE_RailHeightAboveBore = 2.96535;
+    };
     class arifle_SPAR_02_base_F: Rifle_Base_F {
         ACE_RailHeightAboveBore = 3.22175;
         ACE_IronSightBaseAngle = -0.018908;
+    };
+    class arifle_SPAR_02_blk_F: arifle_SPAR_02_base_F {
+        ACE_RailHeightAboveBore = 2.97942;
     };
     class arifle_SPAR_03_base_F: Rifle_Base_F {
         ACE_RailHeightAboveBore = 3.71491;
@@ -291,7 +278,7 @@ class CfgWeapons {
         ACE_IronSightBaseAngle = 0.001719;
     };
     class LMG_Zafir_F: Rifle_Long_Base_F {
-        ACE_RailHeightAboveBore = 0.996651;
+        ACE_RailHeightAboveBore = 1.12161;
         ACE_IronSightBaseAngle = 0.004584;
     };
     class LMG_03_base_F: Rifle_Long_Base_F {
@@ -329,6 +316,10 @@ class CfgWeapons {
     class arifle_CTAR_base_F: Rifle_Base_F {
         ACE_RailHeightAboveBore = 6.07588;
         ACE_IronSightBaseAngle = 0.004584;
+    };
+    class arifle_CTAR_GL_base_F: arifle_CTAR_base_F {};
+    class arifle_CTAR_GL_blk_F: arifle_CTAR_GL_base_F {
+        ACE_RailHeightAboveBore = 6.05788;
     };
     class arifle_CTARS_base_F: Rifle_Base_F {
         ACE_RailHeightAboveBore = 6.0787;
@@ -388,6 +379,15 @@ class CfgWeapons {
     class SMG_03_TR_BASE: Rifle_Base_F {
         ACE_IronSightBaseAngle = -0.011459;
     };
+    class SMG_03_TR_black: SMG_03_TR_BASE {
+        ACE_RailHeightAboveBore = 7.32531;
+    };
+
+    class SMG_03C_BASE: SMG_03_TR_BASE {};
+    class SMG_03C_TR_black: SMG_03C_BASE {
+        ACE_RailHeightAboveBore = 7.32531;
+    };
+
     class SMG_05_base_F: Rifle_Short_Base_F {
         ACE_RailHeightAboveBore = 4.05169;
         ACE_RailBaseAngle = 0.019366;
@@ -428,8 +428,22 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 5.2;
         ACE_IronSightBaseAngle = 0.001719;
     };
+    class arifle_MSBS65_F: arifle_MSBS65_base_F {
+        ACE_RailHeightAboveBore = 5.1754;
+    };
     class arifle_MSBS65_Mark_base_F: arifle_MSBS65_base_F {
         ACE_IronSightBaseAngle = 0.002292;
+    };
+    class arifle_MSBS65_Mark_F: arifle_MSBS65_Mark_base_F {
+        ACE_RailHeightAboveBore = 5.1754;
+    };
+    class arifle_MSBS65_GL_base_F: arifle_MSBS65_base_F {};
+    class arifle_MSBS65_GL_F: arifle_MSBS65_GL_base_F {
+        ACE_RailHeightAboveBore = 5.1754;
+    };
+    class arifle_MSBS65_UBS_base_F: arifle_MSBS65_base_F {};
+    class arifle_MSBS65_UBS_F: arifle_MSBS65_UBS_base_F {
+        ACE_RailHeightAboveBore = 5.1754;
     };
 
     class EBR_base_F: Rifle_Long_Base_F {};

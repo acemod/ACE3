@@ -16,6 +16,7 @@
             <Chinese>伸長梯子</Chinese>
             <Chinesesimp>伸长梯子</Chinesesimp>
             <Turkish>Uzat</Turkish>
+            <Ukrainian>Розкласти</Ukrainian>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_AdjustTilt">
             <English>+Ctrl tilt</English>
@@ -31,6 +32,7 @@
             <Japanese>+Ctrl で傾ける</Japanese>
             <Chinese>+Ctrl 傾斜</Chinese>
             <Chinesesimp>+Ctrl 倾斜</Chinesesimp>
+            <Ukrainian>+Ctrl нахилити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Deploy">
             <English>Deploy ladder</English>
@@ -48,6 +50,7 @@
             <Chinesesimp>部署梯子</Chinesesimp>
             <Turkish>Merdiveni Konuşlandır</Turkish>
             <Hungarian>Létra lerakása</Hungarian>
+            <Ukrainian>Встановити драбину</Ukrainian>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_DisplayName">
             <English>Telescopic Ladder</English>
@@ -65,6 +68,7 @@
             <Chinesesimp>伸缩梯子</Chinesesimp>
             <Turkish>Katlanabilir Merdiven</Turkish>
             <Hungarian>Teleszkopikus létra</Hungarian>
+            <Ukrainian>Телескопічна драбина</Ukrainian>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Drop">
             <English>Drop ladder</English>
@@ -82,6 +86,7 @@
             <Chinesesimp>降下梯子</Chinesesimp>
             <Turkish>Merdiveni Bırak</Turkish>
             <Hungarian>Létra eldobása</Hungarian>
+            <Ukrainian>Покласти драбину</Ukrainian>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Pickup">
             <English>Pickup ladder</English>
@@ -99,6 +104,7 @@
             <Chinesesimp>捡起梯子</Chinesesimp>
             <Turkish>Merdiveni Al</Turkish>
             <Hungarian>Létra felvétele</Hungarian>
+            <Ukrainian>Взяти драбину</Ukrainian>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Position">
             <English>Position ladder</English>
@@ -116,6 +122,7 @@
             <Chinesesimp>梯子位置</Chinesesimp>
             <Turkish>Merdiveni Taşı</Turkish>
             <Hungarian>Létra elhelyezése</Hungarian>
+            <Ukrainian>Перенести драбину</Ukrainian>
         </Key>
     </Package>
 </Project>

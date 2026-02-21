@@ -17,6 +17,7 @@
             <Chinesesimp>RAH-66J "科曼奇"</Chinesesimp>
             <Turkish>RAH-66J Comanche</Turkish>
             <Hungarian>RAH-66J Comanche</Hungarian>
+            <Ukrainian>RAH-66J Comanche</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_EF_RealisticNames_MRAP_01_AT">
             <English>M-ATV AT</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>M-ATV AT</Chinesesimp>
             <Turkish>M-ATV AT</Turkish>
             <Hungarian>M-ATV AT</Hungarian>
+            <Ukrainian>M-ATV ПТ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_EF_RealisticNames_MRAP_01_FSV">
             <English>M-ATV FSV</English>
@@ -51,6 +53,7 @@
             <Chinesesimp>M-ATV FSV</Chinesesimp>
             <Turkish>M-ATV FSV</Turkish>
             <Hungarian>M-ATV FSV</Hungarian>
+            <Ukrainian>M-ATV FSV</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_EF_RealisticNames_MRAP_01_LAAD">
             <English>M-ATV LAAD</English>
@@ -68,6 +71,7 @@
             <Chinesesimp>M-ATV LAAD</Chinesesimp>
             <Turkish>M-ATV LAAD</Turkish>
             <Hungarian>M-ATV LAAD</Hungarian>
+            <Ukrainian>M-ATV LAAD</Ukrainian>
         </Key>
     </Package>
 </Project>

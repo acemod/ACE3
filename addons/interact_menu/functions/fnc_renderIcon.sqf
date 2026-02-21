@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Text <STRING>
- * 1: Icon file path or Array of icon file path and hex color <STRING|ARRAY>
+ * 1: Icon file path or Array of icon file path and hex color <STRING or ARRAY>
  * 2: 2d position <ARRAY>
  * 3: Text Settings <STRING>
  *
@@ -38,7 +38,7 @@ if (_iconFile isEqualTo "") then {
     _iconFile = DEFAULT_ICON;
 };
 
-_text = if ([GVAR(useListMenu), GVAR(useListMenuSelf)] select GVAR(keyDownSelfAction)) then {
+_text = if ([GVAR(useListMenu), GVAR(useListMenuSelfActual)] select GVAR(keyDownSelfAction)) then {
     format ["<img image='%1' align='left' color='%2'/><t %3>%4</t>", _iconFile, _iconColor, _textSettings, _text]
 } else {
     format ["<img image='%1' align='center' color='%2'/><br/><t %3 align='center'>%4</t>", _iconFile, _iconColor, _textSettings, ("ace" callExtension ["break_line", [_text]]) select 0];
@@ -47,7 +47,7 @@ _text = if ([GVAR(useListMenu), GVAR(useListMenuSelf)] select GVAR(keyDownSelfAc
 [_ctrl, GVAR(iconCount), _text] call FUNC(ctrlSetParsedTextCached);
 GVAR(iconCount) = GVAR(iconCount) + 1;
 
-private _pos = if ([GVAR(useListMenu), GVAR(useListMenuSelf)] select GVAR(keyDownSelfAction)) then {
+private _pos = if ([GVAR(useListMenu), GVAR(useListMenuSelfActual)] select GVAR(keyDownSelfAction)) then {
     [(_sPos select 0) - (0.0095 * safeZoneW), (_sPos select 1) - (0.0095 * safeZoneW), 0.20 * safeZoneW, 0.035 * safeZoneW]
 } else {
     [(_sPos select 0) - (0.0750 * safeZoneW), (_sPos select 1) - (0.0095 * safeZoneW), 0.15 * safeZoneW, 0.100 * safeZoneW]

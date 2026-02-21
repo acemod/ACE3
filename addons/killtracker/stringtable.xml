@@ -12,6 +12,7 @@
             <Korean>ACE 킬트래커</Korean>
             <Japanese>ACE キル トラッカー (殺傷歴追跡)</Japanese>
             <Chinesesimp>ACE 击杀追踪器</Chinesesimp>
+            <Ukrainian>ACE Відстеження вбивств</Ukrainian>
         </Key>
         <Key ID="STR_ACE_KillTracker_FriendlyFire">
             <English>Friendly Fire</English>
@@ -28,6 +29,7 @@
             <Chinese>誤擊友方</Chinese>
             <Chinesesimp>友军误击</Chinesesimp>
             <Turkish>Dost Atışı</Turkish>
+            <Ukrainian>Дружній вогонь</Ukrainian>
         </Key>
         <Key ID="STR_ACE_KillTracker_Kill">
             <English>Kill: %1 %2</English>
@@ -42,6 +44,7 @@
             <Japanese>殺害した: %1 %2</Japanese>
             <Chinesesimp>击杀：%1 %2</Chinesesimp>
             <Turkish>Öldürülen: %1 %2</Turkish>
+            <Ukrainian>Вбито: %1 %2</Ukrainian>
         </Key>
         <Key ID="STR_ACE_KillTracker_Killer">
             <English>Killer: %1 %2</English>
@@ -56,6 +59,7 @@
             <Japanese>殺された: %1 %2</Japanese>
             <Chinesesimp>击杀者：%1 %2</Chinesesimp>
             <Turkish>Öldüren: %1 %2</Turkish>
+            <Ukrainian>Вбивця: %1 %2</Ukrainian>
         </Key>
         <Key ID="STR_ACE_KillTracker_Title">
             <English>ACE Killed Events</English>
@@ -69,6 +73,7 @@
             <Korean>ACE 사살 이벤트</Korean>
             <Japanese>ACE キル イベント (殺傷記録)</Japanese>
             <Chinesesimp>ACE 击杀事件</Chinesesimp>
+            <Ukrainian>ACE Лічильник вбивств</Ukrainian>
         </Key>
         <Key ID="STR_ACE_KillTracker_TotalKills">
             <English>Total Kills:</English>
@@ -83,6 +88,7 @@
             <Japanese>合計殺害数:</Japanese>
             <Chinesesimp>总击杀数：</Chinesesimp>
             <Turkish>Toplam Öldürme:</Turkish>
+            <Ukrainian>Усього вбивств:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_KillTracker_TrackAI_Description">
             <English>Defines if killed AIs will be shown in the kill tracker during mission debriefing.</English>
@@ -95,6 +101,7 @@
             <Korean>사후강평 중 살해된 AI가 킬트래킹에 표시되는지 여부를 정의합니다.</Korean>
             <Japanese>殺害したAIをミッション終了デブリーフィング画面に表示させるかどうかを定義します。</Japanese>
             <Chinesesimp>任务结束时被击杀的AI是否会显示</Chinesesimp>
+            <Ukrainian>Визначає, чи будуть убиті ШІ відображатися в трекері вбивств під час дебрифінгу місії.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_KillTracker_TrackAI_DisplayName">
             <English>Track AI units killed by player</English>
@@ -107,6 +114,7 @@
             <Korean>플레이어가 죽인 AI 트래킹</Korean>
             <Japanese>プレイヤーが殺害したAIユニットを追跡</Japanese>
             <Chinesesimp>记录被玩家击杀的AI</Chinesesimp>
+            <Ukrainian>Відстеження юнітів ШІ, убитих гравцем</Ukrainian>
         </Key>
         <Key ID="STR_ACE_KillTracker_Vehicle">
             <English>Vehicle: %1</English>
@@ -121,6 +129,7 @@
             <Japanese>車両: %1</Japanese>
             <Chinesesimp>载具：%1</Chinesesimp>
             <Turkish>Araç :%1</Turkish>
+            <Ukrainian>Техніка: %1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_KillTracker_showCrewKills_Description">
             <English>Show kills from a vehicle to driver, gunner and commander</English>
@@ -132,6 +141,7 @@
             <Korean>차량 처치를 운전수, 사수, 지휘관에게 보여줍니다</Korean>
             <Japanese>車両での殺害を操縦手、砲手、車長で共有して表示する</Japanese>
             <Chinesesimp>将载具取得的击杀计入驾驶员, 炮手和车长</Chinesesimp>
+            <Ukrainian>Показати знищену техніку водієві, стрілку і командиру</Ukrainian>
         </Key>
         <Key ID="STR_ACE_KillTracker_showCrewKills_DisplayName">
             <English>Show vehicle kills to other crew members</English>
@@ -143,6 +153,7 @@
             <Korean>다른 승무원에게 차량 처치 표시</Korean>
             <Japanese>車両での殺害を乗員全員に表示する</Japanese>
             <Chinesesimp>将载具取得的击杀计入乘员</Chinesesimp>
+            <Ukrainian>Показати знищені машини іншим членам екіпажу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_KillTracker_showMedicalWounds_DisplayName">
             <English>Show medical wounds</English>
@@ -153,6 +164,7 @@
             <German>Zeige Verwundungen</German>
             <Korean>의료 부상 표시</Korean>
             <Japanese>受けた負傷を表示</Japanese>
+            <Ukrainian>Показати медичні рани</Ukrainian>
         </Key>
         <Key ID="STR_ACE_KillTracker_wounded">
             <English>Wounded: %1 from %2</English>
@@ -163,6 +175,7 @@
             <German>Verwundet: %1 von %2</German>
             <Korean>%1이(가) %2에 의해 부상당함</Korean>
             <Japanese>負傷した: %2 からの %1 によって</Japanese>
+            <Ukrainian>Поранений: %1 з %2</Ukrainian>
         </Key>
     </Package>
 </Project>

@@ -17,6 +17,10 @@
 
 params ["_vehicle", "_gunner", "_weapon", ["_magazine", ""]];
 
+private _isProxy = _gunner getVariable [QGVAR(autofire_isProxy), false];
+TRACE_2("checking for proxy",_gunner,_isProxy);
+if (_isProxy) exitWith {};
+
 private _turretPath = [_gunner] call EFUNC(common,getTurretIndex);
 private _reloadSource = objNull;
 private _reloadMag = "";

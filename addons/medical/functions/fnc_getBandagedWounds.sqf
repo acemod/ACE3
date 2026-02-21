@@ -8,7 +8,7 @@
  * 1: Body Part <STRING>
  *
  * Return Value:
- * Wounds <ARRAY of ARRAY>:
+ * Wounds <ARRAY of ARRAYs>:
  *    0: Wound Class ID <NUMBER>
  *    1: Wound Bandaged Amount <NUMBER>
  *    2: Wound Bleeding Coef <NUMBER>
@@ -46,6 +46,6 @@ private _bandagedWounds = [];
 
 {
     _bandagedWounds pushBack +_x; // manual deep copy so modification doesn't affect unit state
-} forEach (GET_OPEN_WOUNDS(_unit) getOrDefault [_bodyPart, []]);
+} forEach (GET_BANDAGED_WOUNDS(_unit) getOrDefault [_bodyPart, []]);
 
 _bandagedWounds

@@ -17,6 +17,7 @@
             <Chinesesimp>修改流血速度</Chinesesimp>
             <Turkish>Kanama hızını kontrol etme katsayısı.</Turkish>
             <Hungarian>Egy szorzó a vérzés sebességének szabályozására</Hungarian>
+            <Ukrainian>Коефіцієнт, що змінює швидкість втрати крові</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Status_BleedingCoefficient_DisplayName">
             <English>Bleeding Coefficient</English>
@@ -34,6 +35,7 @@
             <Chinesesimp>流血系数</Chinesesimp>
             <Turkish>Kanama Katsayısı</Turkish>
             <Hungarian>Vérzési koefficiens</Hungarian>
+            <Ukrainian>Коеф. крововтрати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChance_Description">
             <English>Chance for a player to drop their weapon when going unconscious.\nHas no effect on AI.</English>
@@ -47,6 +49,7 @@
             <Korean>플레이어가 기절할 때 무기를 떨어뜨릴 확률입니다.\nAI는 영향을 받지 않습니다.</Korean>
             <Japanese>プレーヤーが意識を失ったときに武器を落とす可能性。\nAI には影響しません。</Japanese>
             <Chinesesimp>玩家在进入昏迷时把武器扔地上的概率\n对AI无效</Chinesesimp>
+            <Ukrainian>Шанс для гравця упустити свою зброю, коли він втрачає свідомість.\nНе впливає на ШІ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChance_DisplayName">
             <English>Weapon Drop Chance</English>
@@ -60,6 +63,7 @@
             <Korean>무기 떨어뜨릴 확률</Korean>
             <Japanese>武器を落とす確率</Japanese>
             <Chinesesimp>丢失武器概率</Chinesesimp>
+            <Ukrainian>Шанс випадання зброї</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Status_IvFlowRate_Description">
             <English>Controls how quickly fluid flows out of IV Bags. The IV Bag volume change is calculated as:\ntime interval (s) * iv change per second (4.1667 mL/s) * flow rate (this coefficient).</English>
@@ -76,6 +80,7 @@
             <Chinese>控制從點滴輸入人體的液體流量多快。點滴的體積更改是以\n時間間隔（單位秒）乘上點滴每秒速度（4.1667毫升/秒）乘上流量（該係數）。</Chinese>
             <Chinesesimp>控制从点滴输入人体的液体流量多快。静脉输液袋容积变化的计算方法是：\n时间间隔（秒）x点滴每秒速度（4.1667毫升/秒）x流量（该系数）。</Chinesesimp>
             <Turkish>IV Torbalardan sıvının ne kadar hızlı aktığını kontrol eder. IV Torba hacim değişikliği şu şekilde hesaplanır: zaman aralıkları iv saniye başına değişim (4.1667 mL / s) akış hızı (bu katsayı).</Turkish>
+            <Ukrainian>Визначає, наскільки швидко подіють ефекти внутрішньовенного переливання як:\часовий інтервал (s) * зміна внутрішньовенного вливання за секунду (4,1667 мл/с) * швидкість потоку (цей коефіцієнт).</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Status_IvFlowRate_DisplayName">
             <English>IV Transfusion Flow Rate</English>
@@ -92,6 +97,7 @@
             <Chinese>點滴輸血流量</Chinese>
             <Chinesesimp>点滴输血流量</Chinesesimp>
             <Turkish>IV Transfüzyon Akış Hızı</Turkish>
+            <Ukrainian>Швидкість внутрішньовенного переливання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Status_PainCoefficient_Description">
             <English>Coefficient for controlling the intensity of pain adjustments.</English>
@@ -109,6 +115,7 @@
             <Chinesesimp>修改疼痛强度的系数</Chinesesimp>
             <Turkish>Ağrı ayarlamalarının yoğunluğunu kontrol etmek için katsayı.</Turkish>
             <Hungarian>Egy szorzó a fájdalom erősségének szabályozására</Hungarian>
+            <Ukrainian>Коефіцієнт, що змінює рівень болю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Status_PainCoefficient_DisplayName">
             <English>Pain Coefficient</English>
@@ -126,6 +133,7 @@
             <Chinesesimp>疼痛系数</Chinesesimp>
             <Turkish>Ağrı Katsayısı</Turkish>
             <Hungarian>Fájdalmi koefficiens</Hungarian>
+            <Ukrainian>Коеф. болю</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Status_SubCategory">
             <English>Status</English>
@@ -142,6 +150,92 @@
             <Chinese>狀態</Chinese>
             <Chinesesimp>状态</Chinesesimp>
             <Turkish>Durum</Turkish>
+            <Ukrainian>Статус</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Status_WindowOnWakeUp_Description">
+            <English>Action on the game's window when waking up</English>
+            <Czech>Akce herního okna při probuzení</Czech>
+            <French>Action de la fenêtre du jeu au réveil</French>
+            <Spanish>Acción en la ventana del juego al despertar</Spanish>
+            <Italian>Azione della finestra del gioco al risveglio</Italian>
+            <Polish>Akcja okna gry przy przebudzeniu</Polish>
+            <Portuguese>Ação na janela do jogo ao despertar</Portuguese>
+            <Russian>Действие окна игры при пробуждении</Russian>
+            <German>Aktion des Spielfensters beim Aufwachen</German>
+            <Korean>기상 시 게임 창의 동작</Korean>
+            <Japanese>起床時のゲームウィンドウの動作</Japanese>
+            <Chinese>醒來時遊戲視窗的動作</Chinese>
+            <Chinesesimp>醒来时游戏窗口的动作</Chinesesimp>
+            <Turkish>Uyanırken oyun penceresi üzerindeki eylem</Turkish>
+            <Ukrainian>Дія вікна гри при пробудженні</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Status_WindowOnWakeUp_DisplayName">
+            <English>Wake Up Window Action</English>
+            <Czech>Akce okna při probuzení</Czech>
+            <French>Action de la fenêtre au réveil</French>
+            <Spanish>Acción de la ventana al despertar</Spanish>
+            <Italian>Azione della finestra al risveglio</Italian>
+            <Polish>Akcja okna przy przebudzeniu</Polish>
+            <Portuguese>Ação da Janela ao Despertar</Portuguese>
+            <Russian>Действие окна при пробуждении</Russian>
+            <German>Aktion des Fensters beim Aufwachen</German>
+            <Korean>기상 창 동작</Korean>
+            <Japanese>起床時のウィンドウアクション</Japanese>
+            <Chinese>醒來視窗動作</Chinese>
+            <Chinesesimp>醒来窗口动作</Chinesesimp>
+            <Turkish>Uyanma Penceresi Eylemi</Turkish>
+            <Ukrainian>Дія вікна при пробудженні</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Status_WindowOnWakeUp_Option_Flash">
+            <English>Flash Game Window</English>
+            <Czech>Blikání herního okna</Czech>
+            <French>Faire clignoter la fenêtre du jeu</French>
+            <Spanish>Parpadear la ventana del juego</Spanish>
+            <Italian>Far lampeggiare la finestra del gioco</Italian>
+            <Polish>Błysk okna gry</Polish>
+            <Portuguese>Janela do jogo piscante</Portuguese>
+            <Russian>Мигание игрового окна</Russian>
+            <German>Spiel-Fenster blinken lassen</German>
+            <Korean>게임 창 깜박이기</Korean>
+            <Japanese>ゲームウィンドウを点滅させる</Japanese>
+            <Chinese>閃爍遊戲視窗</Chinese>
+            <Chinesesimp>闪烁游戏窗口</Chinesesimp>
+            <Turkish>Oyun penceresini flaş yap</Turkish>
+            <Ukrainian>Мігання вікна гри</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Status_WindowOnWakeUp_Option_Focus">
+            <English>Focus Game Window</English>
+            <Czech>Zaostřit herní okno</Czech>
+            <French>Mettre la fenêtre du jeu au premier plan</French>
+            <Spanish>Enfocar la ventana del juego</Spanish>
+            <Italian>Focalizza la finestra del gioco</Italian>
+            <Polish>Ustaw fokus na okno gry</Polish>
+            <Portuguese>Focar a janela do jogo</Portuguese>
+            <Russian>Фокус на окно игры</Russian>
+            <German>Fenster des Spiels fokussieren</German>
+            <Korean>게임 창에 포커스 맞추기</Korean>
+            <Japanese>ゲームウィンドウにフォーカス</Japanese>
+            <Chinese>聚焦遊戲視窗</Chinese>
+            <Chinesesimp>聚焦游戏窗口</Chinesesimp>
+            <Turkish>Oyun penceresine odaklan</Turkish>
+            <Ukrainian>Фокус на вікно гри</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Status_WindowOnWakeUp_Option_Nothing">
+            <English>Do Nothing</English>
+            <Czech>Nedělat nic</Czech>
+            <French>Ne rien faire</French>
+            <Spanish>No hacer nada</Spanish>
+            <Italian>Non fare nulla</Italian>
+            <Polish>Nie robić nic</Polish>
+            <Portuguese>Não Fazer Nada</Portuguese>
+            <Russian>Ничего не делать</Russian>
+            <German>Nichts tun</German>
+            <Korean>아무것도 하지 않음</Korean>
+            <Japanese>何もしない</Japanese>
+            <Chinese>不做任何事</Chinese>
+            <Chinesesimp>不做任何事</Chinesesimp>
+            <Turkish>Hiçbir şey yapma</Turkish>
+            <Ukrainian>Нічого не робити</Ukrainian>
         </Key>
     </Package>
 </Project>
