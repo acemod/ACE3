@@ -24,3 +24,5 @@ class CfgPatches {
 #include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+
+#include "ace_wardrobe.hpp"
