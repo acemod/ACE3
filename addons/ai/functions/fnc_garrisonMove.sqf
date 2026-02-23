@@ -77,7 +77,7 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
                     [QGVAR(AISection), [[_unit], ["PATH"], false], _unit] call CBA_fnc_targetEvent;
                     [QGVAR(AISection), [[_unit], ["FSM"], true], _unit] call CBA_fnc_targetEvent;
 
-                    if ({(_x select 0) in units _unit && {!isPlayer (_x select 0)}} count _unitMoveList == 0) then {
+                    if (_unitMoveList findIf {(_x select 0) in units _unit && {!isPlayer (_x select 0)}} == -1) then {
                         [QGVAR(enableAttack), [[_unit], true], _unit] call CBA_fnc_targetEvent;
                     };
 

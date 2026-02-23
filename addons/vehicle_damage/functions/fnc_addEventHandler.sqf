@@ -26,7 +26,9 @@ if (!GVAR(enabled)) exitWith {
 
 if (!isNil {_vehicle getVariable QGVAR(handleDamage)}) exitWith {};
 
-_vehicle allowCrewInImmobile true;
+if (local _vehicle) then {
+    _vehicle allowCrewInImmobile true;
+};
 
 // No clue why, but for some reason this needs to be exec'd next frame or else it isn't the last event handler in the system.
 // Maybe its overridden somewhere else, but this makes sure it is the last one

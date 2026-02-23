@@ -21,7 +21,7 @@ private _class = typeOf _object;
 
 if (_class in GVAR(initializedAnimClasses)) exitWith {};
 
-GVAR(initializedAnimClasses) pushBack _class;
+GVAR(initializedAnimClasses) set [_class, nil];
 
 private _statement = {
     params ["_target", "_player", "_params"];

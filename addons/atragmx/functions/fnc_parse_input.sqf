@@ -138,7 +138,7 @@ if (GVAR(currentUnit) != 2) then {
     _boreHeight = 0.1 max _boreHeight min 5;
     _bulletMass = 1 max _bulletMass min 1500;
     _bulletDiameter = 0.1 max _bulletDiameter min 1.0;
-    _rifleTwist = 1 max _rifleTwist min 36;
+    _rifleTwist = -36 max _rifleTwist min 36;
     _muzzleVelocity = 300 max _muzzleVelocity min 4500;
     _boreHeight = _boreHeight * 2.54;
     _bulletMass = _bulletMass * 0.06479891;
@@ -149,7 +149,7 @@ if (GVAR(currentUnit) != 2) then {
     _boreHeight = 0.1 max _boreHeight min 10;
     _bulletMass = 1 max _bulletMass min 100;
     _bulletDiameter = 0.1 max _bulletDiameter min 2.5;
-    _rifleTwist = 1 max _rifleTwist min 75;
+    _rifleTwist = -75 max _rifleTwist min 75;
     _muzzleVelocity = 100 max _muzzleVelocity min 1400;
 };
 _zeroRange = 25 max _zeroRange min 1000;

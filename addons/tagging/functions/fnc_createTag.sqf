@@ -10,7 +10,7 @@
  * 3: Object it should be tied to <OBJECT>
  * 4: Unit that created the tag <OBJECT>
  * 5: Material of the tag <STRING> (default: "")
- * 6: Model of the tag <STRING> (default: "UserTexture1m_F")
+ * 6: Model of the tag <STRING> (default: "ace_tagging_texture1m")
  * 7: Vehicle Tag <BOOL> (default: false)
  *
  * Return Value:
@@ -22,7 +22,7 @@
  * Public: No
  */
 
-params ["_tagPosASL", "_vectorDirAndUp", "_texture", "_object", "_unit", ["_material","",[""]], ["_tagModel", "UserTexture1m_F", [""]], ["_isVehicleTag", false, [false]]];
+params ["_tagPosASL", "_vectorDirAndUp", "_texture", "_object", "_unit", ["_material","",[""]], ["_tagModel", QGVAR(texture1m), [""]], ["_isVehicleTag", false, [false]]];
 TRACE_5("createTag:",_tagPosASL,_vectorDirAndUp,_texture,_object,_unit);
 
 if (_texture == "") exitWith {
@@ -36,6 +36,7 @@ if (_isVehicleTag) exitWith {
     _object setVariable [QGVAR(hasTag), true, true];
     // if (_material != "") then { _object setObjectMaterialGlobal ["clan", _material] }; // ??
     ["ace_tagCreated", [objNull, _texture, _object, _unit]] call CBA_fnc_globalEvent;
+    true
 };
 
 private _tag = createSimpleObject [_tagModel, _tagPosASL];

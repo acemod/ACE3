@@ -20,6 +20,7 @@ _thisArgs params ["_display"];
 if (isNull _display) exitWith {
     TRACE_1("cleaning up display",_thisEventHandler);
     GVAR(shown) = false;
+    GVAR(timeOfFlight) = nil;
     removeMissionEventHandler ["Draw3D", _thisEventHandler];
 };
 private _ctrlScopeObject = _display displayCtrl IDC_SCOPE_OBJECT;
@@ -131,13 +132,15 @@ if (_needsUpdate || {_nonMagnified isNotEqualTo _lastMagnified}) then {
 // Screen - update reticle position based on ballistics computer
 if (_range > 0 && {_size > 0}) then {
     BEGIN_COUNTER(ballistics_calculator);
-    ([_range, _weaponDir, _weaponPitch, _weaponBank] call FUNC(ballistics_calculator)) params ["_elevMRAD", "_windMRAD"];
+    ([_range, _weaponDir, _weaponPitch, _weaponBank] call FUNC(ballistics_calculator)) params ["_elevMRAD", "_windMRAD", "_TOF"];
     END_COUNTER(ballistics_calculator);
     _ctrl ctrlSetPosition [-_windMRAD / _fovMRAD + 0.5 - _size / 2,  + 4/3 * (_elevMRAD / _fovMRAD + 0.5 - _size/2), _size, _size*4/3];
     _ctrl ctrlCommit 0;
+    GVAR(timeOfFlight) = _TOF;
 } else {
     _ctrl ctrlSetPosition [0.5 - _size / 2,  + 4/3 * (0.5 - _size/2), _size, _size*4/3];
     _ctrl ctrlCommit 0;
+    GVAR(timeOfFlight) = nil;
 };
 
 

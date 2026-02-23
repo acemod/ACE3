@@ -103,6 +103,13 @@
             <Turkish>[CSW] 2B14 Tube Bag</Turkish>
             <Ukrainian>[CSW] Сумка з 2Б14 трубою</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_CSW_AddonName_Short">
+            <English>CSW</English>
+            <French>CSW</French>
+            <Spanish>CSW</Spanish>
+            <Russian>CSW</Russian>
+            <Japanese>CSW</Japanese>
+        </Key>
         <Key ID="STR_ACE_CSW_AssembleCSW_progressBar">
             <English>Assembling Gun...</English>
             <Czech>Skládám zbraň...</Czech>
@@ -118,6 +125,13 @@
             <Chinese>組裝武器中...</Chinese>
             <Chinesesimp>正在组装武器...</Chinesesimp>
             <Ukrainian>Збірка зброї...</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_CSW_DisableAutoFire_displayName">
+            <English>Disable fire on load</English>
+            <French>Désactiver le tir à l'armement</French>
+            <Spanish>Deshabilitar disparo en carga</Spanish>
+            <Russian>Выключить огонь при загрузке</Russian>
+            <Japanese>装填時に発射を無効化</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_DisassembleCSW_displayName">
             <English>Disassemble</English>
@@ -151,6 +165,13 @@
             <Chinese>拆裝武器中...</Chinese>
             <Chinesesimp>正在拆卸武器...</Chinesesimp>
             <Ukrainian>Розбирання зброї...</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_CSW_EnableAutoFire_displayName">
+            <English>Enable fire on load</English>
+            <French>Activer le tir au chargement</French>
+            <Spanish>Habilitar disparo en carga</Spanish>
+            <Russian>Включить огонь при загрузке</Russian>
+            <Japanese>装填時に発射を有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_GMGBelt_descriptionShort">
             <English>Caliber: 20 mm&lt;br/&gt;Rounds: 20&lt;br /&gt;Used in: Grenade Launcher</English>

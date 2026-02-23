@@ -7,7 +7,7 @@
  * 0: Status Effect Name, this should match a corresponding event name <STRING>
  * 1: Send event globally <BOOL>
  * 2: Common Effect Reasons to pre-seed during init <ARRAY>
- * 3: Send event to JIP (requires sending event globally) <BOOL>
+ * 3: Send event to JIP (requires sending event globally) <BOOL> (default: false)
  * 4: Event name <STRING> (default: "ace_common_<effect>")
  *
  * Return Value:

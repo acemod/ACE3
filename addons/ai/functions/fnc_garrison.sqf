@@ -31,11 +31,13 @@ private _currentUnitMoveList = missionNamespace getVariable [QGVAR(garrison_unit
 if (_startingPos isEqualTo [0,0,0]) exitWith {
     TRACE_1("fnc_garrison: StartingPos error",_startingPos);
     [LSTRING(GarrisonInvalidPosition)] call EFUNC(common,displayTextStructured);
+    _unitsArray
 };
 
 if (_unitsArray isEqualTo [] || {isNull (_unitsArray select 0)}) exitWith {
     TRACE_1("fnc_garrison: Units error",_unitsArray);
     [LSTRING(GarrisonNoUnits)] call EFUNC(common,displayTextStructured);
+    _unitsArray
 };
 
 private _buildings = nearestObjects [_startingPos, _buildingTypes, ([_fillingRadius, 50] select (_fillingRadius < 50))];
@@ -46,6 +48,7 @@ if (_fillingRadius >= 50) then {
 if (_buildings isEqualTo []) exitWith {
     TRACE_1("fnc_garrison: Building error",_buildings);
     [LSTRING(GarrisonNoBuilding)] call EFUNC(common,displayTextStructured);
+    _unitsArray
 };
 
 private _buildingsIndex = [];
@@ -82,7 +85,7 @@ if (_topDownFilling) then {
 _buildingsIndex = _buildingsIndex apply {
     _x select {
         private _testedPos = _x;
-        ({(_x select 1) isEqualTo _testedPos} count (missionNamespace getVariable [QGVAR(garrison_unitMoveList), []])) == 0
+        (missionNamespace getVariable [QGVAR(garrison_unitMoveList), []]) findIf {(_x select 1) isEqualTo _testedPos} == -1
     }
 };
 
@@ -102,13 +105,13 @@ private _unitMoveList = [];
 
 private _fnc_comparePos = {
     params ["_nearestUnits", "_pos"];
-    ({
+    (_nearestUnits findIf {
         if (surfaceIsWater getPos _x) then {
             floor ((getPosASL _x) select 2) == floor ((AGLToASL _pos) select 2)
         } else {
             floor ((getPosATL _x) select 2) == floor (_pos select 2)
         };
-    } count _nearestUnits) > 0
+    }) != -1
 };
 
 // Do the placement
@@ -265,7 +268,7 @@ private _garrison_unitMoveList = missionNamespace getVariable [QGVAR(garrison_un
 
 _garrison_unitMoveList = _garrison_unitMoveList select {
     _x params ["_testedUnit", "_testedPos"];
-    ({(_x select 0) isEqualTo _testedUnit} count _unitMoveList == 0)
+    _unitMoveList findIf {(_x select 0) isEqualTo _testedUnit} == -1
 };
 
 _garrison_unitMoveList append _unitMoveList;

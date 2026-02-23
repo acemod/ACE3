@@ -14,7 +14,7 @@
  * Example:
  * ["Hill 55", [41,324, 12]] call ace_microdagr_fnc_deviceAddWaypoint
  *
- * Public: No
+ * Public: Yes
  */
 
 params ["_waypointName","_waypointPosASL"];

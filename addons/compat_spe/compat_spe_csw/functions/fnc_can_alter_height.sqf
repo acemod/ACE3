@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Static Weapon <OBJECT>
- * 1: Check for ACE CSW <STRING> (default: false)
+ * 1: Check for ACE CSW <BOOL> (default: false)
  *
  * Return Value:
  * If the player can alter the static weapon's height <BOOL>

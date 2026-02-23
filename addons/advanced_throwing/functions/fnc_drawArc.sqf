@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * Flight path (just for debug) <ARRAY>
+ * Flight path (just for debug) <ARRAY or NIL>
  *
  * Example:
  * call ace_advanced_throwing_fnc_drawArc
@@ -26,11 +26,11 @@ private _activeThrowable = ACE_player getVariable [QGVAR(activeThrowable), objNu
 if (isNull _activeThrowable) exitWith {};
 
 private _dropMode = ACE_player getVariable [QGVAR(dropMode), false];
-private _throwType = ACE_player getVariable [QGVAR(throwType), THROW_TYPE_DEFAULT];
+private _throwMod = [ACE_player getVariable [QGVAR(throwMod), THROW_MODIFER_DEFAULT], THROW_MODIFER_MIN] select _dropMode;
 private _throwSpeed = ACE_player getVariable [QGVAR(throwSpeed), THROW_SPEED_DEFAULT];
 
-private _direction = [THROWSTYLE_NORMAL_DIR, THROWSTYLE_HIGH_DIR] select (_throwType == "high" || {_dropMode});
-private _velocity = [_throwSpeed, _throwSpeed / THROWSTYLE_HIGH_VEL_COEF / 1.25] select (_throwType == "high");
+private _direction = vectorLinearConversion [THROW_MODIFER_MIN, THROW_MODIFER_MAX, _throwMod, THROWSTYLE_HIGH_DIR, THROWSTYLE_NORMAL_DIR, true];
+private _velocity = linearConversion [THROW_MODIFER_MIN, THROW_MODIFER_MAX, _throwMod, _throwSpeed / THROWSTYLE_HIGH_VEL_COEF / 1.2, _throwSpeed, true];
 _velocity = [_velocity, THROWSTYLE_DROP_VEL] select _dropMode;
 
 private _viewStart = AGLToASL (positionCameraToWorld [0, 0, 0]);

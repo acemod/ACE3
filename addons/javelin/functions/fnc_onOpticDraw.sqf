@@ -5,10 +5,11 @@
  *
  * Arguments:
  * 0: Last run frame <NUMBER>
- * 0: Current target (what we locked last run) <OBJECT>
- * 0: Lock start time (cba mission time) <NUMBER>
- * 0: Next sound play time (ticktime) <NUMBER>
- * 0: Next target scan (ticktime) <NUMBER>
+ * 1: Current target (what we locked last run) <OBJECT>
+ * 2: Lock start time (cba mission time) <NUMBER>
+ * 3: Next sound play time (ticktime) <NUMBER>
+ * 4: Fire disabled event handler ID <NUMBER>
+ * 5: Next target scan (ticktime) <NUMBER>
  *
  * Return Value:
  * None
@@ -35,18 +36,23 @@ private _currentMagazine = currentMagazine _currentShooter;
 
 // Get weapon / ammo configs
 private _ammoCount = _currentShooter ammo _currentWeapon;
-private _weaponConfig = configProperties [configFile >> "CfgWeapons" >> _currentWeapon, QUOTE(configName _x == QUOTE(QGVAR(enabled))), false];
-private _ammoConfig = if (_currentMagazine != "") then {
+private _weaponConfig = configFile >> "CfgWeapons" >> _currentWeapon;
+private _weaponEnabledConfig = _weaponConfig >> QGVAR(enabled);
+private _ammoConfig = [];
+
+// Only consider weapons with explicit enable configs (inheritance not allowed)
+if (_weaponConfig == inheritsFrom _weaponEnabledConfig) then {
     private _ammoType = getText (configFile >> "CfgMagazines" >> _currentMagazine >> "ammo");
-    configProperties [(configFile >> "CfgAmmo" >> _ammoType), "(configName _x) == 'ace_missileguidance'", false];
+    _ammoConfig = "configName _x == 'ace_missileguidance'" configClasses (configFile >> "CfgAmmo" >> _ammoType);
 } else {
-    []
+    // If weapon enable is inherited, mark as invalid
+    _weaponEnabledConfig = configNull;
 };
 
 // Check if loaded and javelin enabled for wepaon and missile guidance enabled for loaded ammo
 if ((_ammoCount == 0) || // No ammo loaded
-        {(count _weaponConfig) < 1} || {(getNumber (_weaponConfig select 0)) != 1} || // Not enabled for weapon
-        {(count _ammoConfig) < 1} || {(getNumber ((_ammoConfig select 0) >> "enabled")) != 1} // Not enabled for ammo
+        {(getNumber _weaponEnabledConfig) != 1} || // Not enabled for weapon
+        {_ammoConfig isEqualTo []} || {(getNumber ((_ammoConfig select 0) >> "enabled")) != 1} // Not enabled for ammo
         ) exitWith {
 
     __JavelinIGUITargeting ctrlShow false;

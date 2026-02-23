@@ -34,3 +34,25 @@ class CfgAmmo {
     };
 };
 ```
+
+You can define an upper limit on a magazine's loudness regardless of ammo used, which can be useful for large caliber guns with high rates of fire.
+
+```cpp
+class CfgMagazines {
+    class MyLoudCannonMagazine {
+        ace_hearing_maxLoudness = 2;
+    };
+};
+```
+
+## Temporarily disable Hearing adjusting the Volume
+
+To temporarly disable ACE Hearing changing the volume use the global Variable `ace_hearing_disableVolumeUpdate`.
+
+```sqf
+ace_hearing_disableVolumeUpdate = true;
+/*
+your code with audio
+*/
+ace_hearing_disableVolumeUpdate = false;
+```

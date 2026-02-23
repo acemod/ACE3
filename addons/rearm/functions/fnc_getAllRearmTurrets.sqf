@@ -7,7 +7,7 @@
  * This function just adds driver turret to the array returned by "allTurrets".
  *
  * Arguments:
- * 0: Vehicle <OBJECT><STRING>
+ * 0: Vehicle <OBJECT or STRING>
  *
  * Return Value:
  * Turret paths <ARRAY>

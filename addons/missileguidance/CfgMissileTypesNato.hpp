@@ -403,8 +403,8 @@ class GVAR(type_Milan) {
 class GVAR(type_Nlaw) {
     enabled = 0;
 
-    pitchRate = 5;      // Minium flap deflection for guidance
-    yawRate = 10;      // Maximum flap deflection for guidance
+    pitchRate = 30;      // Minium flap deflection for guidance
+    yawRate = 30;      // Maximum flap deflection for guidance
 
     canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
 

@@ -7,15 +7,15 @@ private _detectableClasses = [];
 
 {
     if ((getNumber (_x >> QGVAR(detectable))) == 1) then {
-        _detectableClasses pushBackUnique configName _x;
+        _detectableClasses pushBack configName _x;
     };
-} forEach (configProperties [configFile >> "CfgVehicles", "isClass _x", true]);
+} forEach ("true" configClasses (configFile >> "CfgVehicles"));
 
 {
     if ((getNumber (_x >> QGVAR(detectable))) == 1) then {
-        _detectableClasses pushBackUnique configName _x;
+        _detectableClasses pushBack configName _x;
     };
-} forEach (configProperties [configFile >> "CfgAmmo", "isClass _x", true]);
+} forEach ("true" configClasses (configFile >> "CfgAmmo"));
 
 TRACE_1("built cache",count _detectableClasses);
 uiNamespace setVariable [QGVAR(detectableClasses), compileFinal (_detectableClasses createHashMapFromArray [])];

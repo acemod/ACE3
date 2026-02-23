@@ -152,5 +152,90 @@
             <Turkish>Durum</Turkish>
             <Ukrainian>Статус</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Medical_Status_WindowOnWakeUp_Description">
+            <English>Action on the game's window when waking up</English>
+            <Czech>Akce herního okna při probuzení</Czech>
+            <French>Action de la fenêtre du jeu au réveil</French>
+            <Spanish>Acción en la ventana del juego al despertar</Spanish>
+            <Italian>Azione della finestra del gioco al risveglio</Italian>
+            <Polish>Akcja okna gry przy przebudzeniu</Polish>
+            <Portuguese>Ação na janela do jogo ao despertar</Portuguese>
+            <Russian>Действие окна игры при пробуждении</Russian>
+            <German>Aktion des Spielfensters beim Aufwachen</German>
+            <Korean>기상 시 게임 창의 동작</Korean>
+            <Japanese>起床時のゲームウィンドウの動作</Japanese>
+            <Chinese>醒來時遊戲視窗的動作</Chinese>
+            <Chinesesimp>醒来时游戏窗口的动作</Chinesesimp>
+            <Turkish>Uyanırken oyun penceresi üzerindeki eylem</Turkish>
+            <Ukrainian>Дія вікна гри при пробудженні</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Status_WindowOnWakeUp_DisplayName">
+            <English>Wake Up Window Action</English>
+            <Czech>Akce okna při probuzení</Czech>
+            <French>Action de la fenêtre au réveil</French>
+            <Spanish>Acción de la ventana al despertar</Spanish>
+            <Italian>Azione della finestra al risveglio</Italian>
+            <Polish>Akcja okna przy przebudzeniu</Polish>
+            <Portuguese>Ação da Janela ao Despertar</Portuguese>
+            <Russian>Действие окна при пробуждении</Russian>
+            <German>Aktion des Fensters beim Aufwachen</German>
+            <Korean>기상 창 동작</Korean>
+            <Japanese>起床時のウィンドウアクション</Japanese>
+            <Chinese>醒來視窗動作</Chinese>
+            <Chinesesimp>醒来窗口动作</Chinesesimp>
+            <Turkish>Uyanma Penceresi Eylemi</Turkish>
+            <Ukrainian>Дія вікна при пробудженні</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Status_WindowOnWakeUp_Option_Flash">
+            <English>Flash Game Window</English>
+            <Czech>Blikání herního okna</Czech>
+            <French>Faire clignoter la fenêtre du jeu</French>
+            <Spanish>Parpadear la ventana del juego</Spanish>
+            <Italian>Far lampeggiare la finestra del gioco</Italian>
+            <Polish>Błysk okna gry</Polish>
+            <Portuguese>Janela do jogo piscante</Portuguese>
+            <Russian>Мигание игрового окна</Russian>
+            <German>Spiel-Fenster blinken lassen</German>
+            <Korean>게임 창 깜박이기</Korean>
+            <Japanese>ゲームウィンドウを点滅させる</Japanese>
+            <Chinese>閃爍遊戲視窗</Chinese>
+            <Chinesesimp>闪烁游戏窗口</Chinesesimp>
+            <Turkish>Oyun penceresini flaş yap</Turkish>
+            <Ukrainian>Мігання вікна гри</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Status_WindowOnWakeUp_Option_Focus">
+            <English>Focus Game Window</English>
+            <Czech>Zaostřit herní okno</Czech>
+            <French>Mettre la fenêtre du jeu au premier plan</French>
+            <Spanish>Enfocar la ventana del juego</Spanish>
+            <Italian>Focalizza la finestra del gioco</Italian>
+            <Polish>Ustaw fokus na okno gry</Polish>
+            <Portuguese>Focar a janela do jogo</Portuguese>
+            <Russian>Фокус на окно игры</Russian>
+            <German>Fenster des Spiels fokussieren</German>
+            <Korean>게임 창에 포커스 맞추기</Korean>
+            <Japanese>ゲームウィンドウにフォーカス</Japanese>
+            <Chinese>聚焦遊戲視窗</Chinese>
+            <Chinesesimp>聚焦游戏窗口</Chinesesimp>
+            <Turkish>Oyun penceresine odaklan</Turkish>
+            <Ukrainian>Фокус на вікно гри</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Status_WindowOnWakeUp_Option_Nothing">
+            <English>Do Nothing</English>
+            <Czech>Nedělat nic</Czech>
+            <French>Ne rien faire</French>
+            <Spanish>No hacer nada</Spanish>
+            <Italian>Non fare nulla</Italian>
+            <Polish>Nie robić nic</Polish>
+            <Portuguese>Não Fazer Nada</Portuguese>
+            <Russian>Ничего не делать</Russian>
+            <German>Nichts tun</German>
+            <Korean>아무것도 하지 않음</Korean>
+            <Japanese>何もしない</Japanese>
+            <Chinese>不做任何事</Chinese>
+            <Chinesesimp>不做任何事</Chinesesimp>
+            <Turkish>Hiçbir şey yapma</Turkish>
+            <Ukrainian>Нічого не робити</Ukrainian>
+        </Key>
     </Package>
 </Project>

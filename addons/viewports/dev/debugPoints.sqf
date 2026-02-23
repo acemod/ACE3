@@ -41,7 +41,7 @@
             if ((supportInfo "u:diag_mergeConfigFile") isNotEqualTo []) then {
                 call compile 'diag_mergeConfigFile ["P:\z\ace\addons\viewports\config.cpp"]';
             };
-            { _x setVariable [QGVAR(viewports), nil] } forEach vehicles;
+            GVAR(viewports) = createHashMap;
             GVAR(3denIndex) = 0;
             GVAR(3denViewports) = [];
             true
@@ -111,19 +111,19 @@
 
 // this runs in both threeden and in-game
 addMissionEventHandler ["Draw3D", {
-    private _vehicle = vehicle player;
-    private _viewports = _vehicle getVariable [QGVAR(viewports), []];
-
-    if (is3DEN) then {
-        _vehicle = (get3DENSelected "object") param [0, objNull];
-        if (isNull _vehicle) exitWith {};
-        _viewports = [_vehicle] call FUNC(getViewports);
-        if (GVAR(3denViewports) isNotEqualTo []) then {
-             _viewports = GVAR(3denViewports);
-        };
+    private _vehicle = if (is3DEN) then {
+        (get3DENSelected "object") param [0, objNull]
+    } else {
+        vehicle player
     };
+
     if (isNull _vehicle) exitWith {};
 
+    private _viewports = if (is3DEN && {GVAR(3denViewports) isNotEqualTo []}) then {
+        GVAR(3denViewports)
+    } else {
+        _vehicle call FUNC(getViewports)
+    };
 
     drawIcon3D ["#(argb,8,8,3)color(1,1,1,1)", [1,1,0,1], _vehicle modelToWorldVisual [0,0,0], 0.1, 0.1, 0, "", 1, 0.02, "TahomaB"];
     if (alive player) then { // not using ace_player so this works in 3den

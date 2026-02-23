@@ -18,7 +18,7 @@
  * Public: Yes
  */
 
-params [["_units", objNull, [objNull, grpNull, []]], ["_blacklist", true, [false]], ["_owner", -1, [false]], ["_rebalance", NO_REBALANCE, [0]]];
+params [["_units", objNull, [objNull, grpNull, []]], ["_blacklist", true, [false]], ["_owner", -1, [0]], ["_rebalance", NO_REBALANCE, [0]]];
 
 if !(_units isEqualType []) then {
     _units = [_units];

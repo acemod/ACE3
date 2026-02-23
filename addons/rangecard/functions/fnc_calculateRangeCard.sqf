@@ -1,57 +1,63 @@
 #include "..\script_component.hpp"
 /*
  * Author: Ruthberg
- * Calculates the range card data
+ * Calculates the range card data.
  *
  * Arguments:
  * 0: Scope base angle <NUMBER>
  * 1: Bore height <NUMBER>
- * 2: air friction <NUMBER>
- * 3: muzzle velocity <NUMBER>
- * 4: temperature <NUMBER>
- * 5: barometric pressure <NUMBER>
- * 6: relative humidity <NUMBER>
- * 7: simulation steps <NUMBER>
- * 8: wind speed <NUMBER>
- * 9: target speed <NUMBER>
- * 10: target range <NUMBER>
- * 11: ballistic coefficient <NUMBER>
- * 12: drag model <NUMBER>
- * 13: atmosphere model <STRING>
- * 14: transonicStabilityCoef <NUMBER>
- * 15: Range Card Slot <NUMBER>
- * 16: Use advanced ballistics config? <BOOL>
+ * 2: Air friction <NUMBER>
+ * 3: Muzzle velocity <NUMBER>
+ * 4: Temperature <NUMBER>
+ * 5: Barometric pressure <NUMBER>
+ * 6: Relative humidity <NUMBER>
+ * 7: Simulation steps <NUMBER>
+ * 8: Wind speed <NUMBER>
+ * 9: Target speed <NUMBER>
+ * 10: Target range <NUMBER>
+ * 11: Ballistic coefficient <NUMBER>
+ * 12: Drag model <NUMBER>
+ * 13: Atmosphere model <STRING>
+ * 14: TransonicStabilityCoef <NUMBER>
+ * 15: Use advanced ballistics config? <BOOL>
  *
  * Return Value:
- * None
+ * 0: Formatted muzzle velocity <STRING>
+ * 1: Formatted elevation array <ARRAY of STRINGs>
+ * 2: Formatted windage array <ARRAY of STRINGs>
+ * 3: Formatted lead array <ARRAY of STRINGs>
  *
  * Example:
- * [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ,14, 15, 16, true] call ace_rangecard_fnc_calculateRangeCard
+ * [0, 3.81, -0.00130094, 800, 15, 1013.25, 0.5, 10, 10, 0, 200, 0.4, 1, "ICAO", 0.5, true] call ace_rangecard_fnc_calculateRangeCard
  *
  * Public: No
  */
+
 params [
     "_scopeBaseAngle", "_boreHeight", "_airFriction", "_muzzleVelocity",
     "_temperature", "_barometricPressure", "_relativeHumidity", "_simSteps",
-    "_windSpeed", "_targetSpeed", "_targetRange", "_bc", "_dragModel", "_atmosphereModel",
-    "_transonicStabilityCoef", "_rangeCardSlot", "_useABConfig"
+    "_windSpeed", "_targetSpeed", "_targetRange", "_bc", "_dragModel",
+    "_atmosphereModel", "_transonicStabilityCoef", "_useABConfig"
 ];
 
-GVAR(rangeCardDataMVs) set [_rangeCardSlot, format[" %1", round(_muzzleVelocity)]];
+private _rangeCardDataMV = format [" %1", round _muzzleVelocity];
+private _rangeCardDataElevation = [];
+private _rangeCardDataWindage = [];
+private _rangeCardDataLead = [];
 
 private _tx = 0;
 private _tz = 0;
 private _lastBulletPos = [0, 0, 0];
-private _bulletPos = [0, 0, 0];
-private _bulletVelocity = [0, 0, 0];
 private _bulletAccel = [0, 0, 0];
 private _bulletSpeed = 0;
-private _gravity = [0, sin(_scopeBaseAngle) * -GRAVITY, cos(_scopeBaseAngle) * -GRAVITY];
+private _gravity = [0, sin _scopeBaseAngle, cos _scopeBaseAngle] vectorMultiply -GRAVITY;
 private _deltaT = 1 / _simSteps;
-private _speedOfSound = 0;
 private _isABenabled = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];
-if (_isABenabled) then {
-    _speedOfSound = _temperature call EFUNC(weather,calculateSpeedOfSound);
+
+private _speedOfSound = if (_isABenabled) then {
+    _temperature call EFUNC(weather,calculateSpeedOfSound)
+} else {
+    0
 };
 
 private _elevation = 0;
@@ -68,23 +74,23 @@ if (_useABConfig) then {
     _bc = parseNumber (("ace" callExtension ["ballistics:atmospheric_correction", [_bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel]]) select 0);
 };
 
-private _airFrictionCoef = 1;
-if (!_useABConfig && _isABenabled) then {
+private _airFrictionCoef = if (!_useABConfig && _isABenabled) then {
     private _airDensity = [_temperature, _barometricPressure, _relativeHumidity] call EFUNC(weather,calculateAirDensity);
-    _airFrictionCoef = _airDensity / 1.22498;
+    _airDensity / STD_AIR_DENSITY_ICAO
+} else {
+    1
 };
 
 private _speedTotal = 0;
 private _stepsTotal = 0;
 private _speedAverage = 0;
 
-_bulletPos set [0, 0];
-_bulletPos set [1, 0];
-_bulletPos set [2, -(_boreHeight / 100)];
+private _bulletPos = [0, 0, -_boreHeight / 100];
+private _bulletVelocity = [0, cos _scopeBaseAngle, sin _scopeBaseAngle] vectorMultiply _muzzleVelocity;
 
-_bulletVelocity set [0, 0];
-_bulletVelocity set [1, cos(_scopeBaseAngle) * _muzzleVelocity];
-_bulletVelocity set [2, sin(_scopeBaseAngle) * _muzzleVelocity];
+private _elevationString = "";
+private _windageString = "";
+private _leadString = "";
 
 while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
     _bulletSpeed = vectorMagnitude _bulletVelocity;
@@ -98,11 +104,11 @@ while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
     _trueVelocity = _bulletVelocity vectorDiff [-_windSpeed, 0, 0];
     _trueSpeed = vectorMagnitude _trueVelocity;
 
-    if (_useABConfig) then {
+    _bulletAccel = if (_useABConfig) then {
         private _drag = parseNumber (("ace" callExtension ["ballistics:retard", [_dragModel, _bc, _trueSpeed, _temperature]]) select 0);
-        _bulletAccel = (vectorNormalized _trueVelocity) vectorMultiply (-1 * _drag);
+        (vectorNormalized _trueVelocity) vectorMultiply -_drag
     } else {
-        _bulletAccel = _trueVelocity vectorMultiply (_trueSpeed * _airFriction * _airFrictionCoef);
+        _trueVelocity vectorMultiply (_trueSpeed * _airFriction * _airFrictionCoef)
     };
 
     _bulletAccel = _bulletAccel vectorAdd _gravity;
@@ -112,38 +118,51 @@ while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
     _bulletVelocity = _bulletVelocity vectorAdd (_bulletAccel vectorMultiply _deltaT);
     _bulletPos = _bulletPos vectorAdd (_bulletVelocity vectorMultiply (_deltaT * 0.5));
 
-    if (atan((_bulletPos select 2) / (abs(_bulletPos select 1) + 1)) < -2.254) exitWith {};
+    if (atan ((_bulletPos select 2) / (abs (_bulletPos select 1) + 1)) < -2.254) exitWith {};
 
     _TOF = _TOF + _deltaT;
 
-    _range = GVAR(rangeCardStartRange) + _n * GVAR(rangeCardIncrement);
-    if ((_bulletPos select 1) >= _range && _range <= GVAR(rangeCardEndRange)) then {
-        if (_range != 0) then {
-            _tx = (_lastBulletPos select 0) + (_range - (_lastBulletPos select 1)) * ((_bulletPos select 0) - (_lastBulletPos select 0)) / ((_bulletPos select 1) - (_lastBulletPos select 1));
-            _tz = (_lastBulletPos select 2) + (_range - (_lastBulletPos select 1)) * ((_bulletPos select 2) - (_lastBulletPos select 2)) / ((_bulletPos select 1) - (_lastBulletPos select 1));
-            _elevation = - atan(_tz / _range);
-            _windage = - atan(_tx / _range);
-            _lead = (_targetSpeed * _TOF) / (tan(MRAD_TO_DEG(1)) * _range);
-        };
+    _range = RANGE_CARD_START_RANGE + _n * RANGE_CARD_INCREMENT;
 
-        private _elevationString = str(round(-DEG_TO_MRAD(_elevation) * 10) / 10);
-        if (_elevationString == "0") then {
-            _elevationString = "-0.0";
-        };
-        if (_elevationString find "." == -1) then {
+    if ((_bulletPos select 1) < _range || _range > RANGE_CARD_END_RANGE) then {
+        continue;
+    };
+
+    if (_range != 0) then {
+        _tx = linearConversion [_lastBulletPos select 1, _bulletPos select 1, _range, _lastBulletPos select 0, _bulletPos select 0];
+        _tz = linearConversion [_lastBulletPos select 1, _bulletPos select 1, _range, _lastBulletPos select 2, _bulletPos select 2];
+        _elevation = -atan (_tz / _range);
+        _windage = -atan (_tx / _range);
+        _lead = (_targetSpeed * _TOF) / (tan (MRAD_TO_DEG(1)) * _range);
+    };
+
+    _elevationString = str (round (-DEG_TO_MRAD(_elevation) * 10) / 10);
+
+    if (_elevationString == "0") then {
+        _elevationString = "-0.0";
+    } else {
+        if !("." in _elevationString) then {
             _elevationString = _elevationString + ".0";
         };
-        private _windageString = str(round(DEG_TO_MRAD(_windage) * 10) / 10);
-        if (_windageString find "." == -1) then {
-            _windageString = _windageString + ".0";
-        };
-        private _leadString = str(round(_lead * 10) / 10);
-        if (_leadString find "." == -1) then {
-            _leadString = _leadString + ".0";
-        };
-        (GVAR(rangeCardDataElevation) select _rangeCardSlot) set [_n, _elevationString];
-        (GVAR(rangeCardDataWindage) select _rangeCardSlot) set [_n, _windageString];
-        (GVAR(rangeCardDataLead) select _rangeCardSlot) set [_n, _leadString];
-        _n = _n + 1;
     };
+
+    _windageString = str (round (DEG_TO_MRAD(_windage) * 10) / 10);
+
+    if !("." in _windageString) then {
+        _windageString = _windageString + ".0";
+    };
+
+    _leadString = str (round (_lead * 10) / 10);
+
+    if !("." in _leadString) then {
+        _leadString = _leadString + ".0";
+    };
+
+    _rangeCardDataElevation pushBack _elevationString;
+    _rangeCardDataWindage pushBack _windageString;
+    _rangeCardDataLead pushBack _leadString;
+
+    _n = _n + 1;
 };
+
+[_rangeCardDataMV, _rangeCardDataElevation, _rangeCardDataWindage, _rangeCardDataLead] // return

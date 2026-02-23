@@ -11,7 +11,7 @@
  * If the player can assemble the static weapon <BOOL>
  *
  * Example:
- * cursorObject call SPE_Weapons_Static_fnc_can_assemble_weapon
+ * [cursorObject, currentWeapon player] call SPE_Weapons_Static_fnc_can_assemble_weapon
  *
  * Public: No
  */

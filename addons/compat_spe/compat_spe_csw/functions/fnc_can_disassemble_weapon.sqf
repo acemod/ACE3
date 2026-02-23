@@ -10,7 +10,7 @@
  * If the player can disassemble the static weapon <BOOL>
  *
  * Example:
- * cursorObject call SPE_Weapons_Static_fnc_can_Reload
+ * cursorObject call SPE_Weapons_Static_fnc_can_disassemble_weapon
  *
  * Public: No
  */

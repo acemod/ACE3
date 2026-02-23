@@ -9,7 +9,7 @@
  * 2: Is event (function recursives globaly to set weapon where turret is local) <BOOL> (default: false)
  *
  * Return Value:
- * Can Attach Sighting Unit <BOOL>
+ * None
  *
  * Example:
  * [cursorObject, player] call ace_dragon_fnc_sightAttach

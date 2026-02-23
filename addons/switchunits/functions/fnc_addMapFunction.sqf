@@ -4,14 +4,13 @@
  * Adds a mapClick Eventhandler
  *
  * Arguments:
- * 0: unit <OBJECT>
- * 1: sides <ARRAY<OBJECT>>
+ * None
  *
  * Return Value:
  * None
  *
  * Example:
- * [_unit, _sides] call ace_switchunits_fnc_addMapFunction
+ * [] call ace_switchunits_fnc_addMapFunction
  *
  * Public: No
  */

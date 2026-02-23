@@ -758,6 +758,7 @@
         <Key ID="STR_ACE_UI_checkWeaponZeroing">
             <English>Check Weapon Zeroing</English>
             <French>Vérifier le zérotage de l'arme</French>
+            <Spanish>Comprobar la puesta a cero del arma</Spanish>
             <Russian>Проверить пристрелку оружия</Russian>
             <Korean>무기 영점 확인</Korean>
             <Japanese>武器のゼロインを確認</Japanese>
@@ -792,6 +793,7 @@
         <Key ID="STR_ACE_UI_meters">
             <English>Meters</English>
             <French>Mètres</French>
+            <Spanish>Metros</Spanish>
             <Russian>Метры</Russian>
             <Korean>미터</Korean>
             <Japanese>メートル</Japanese>
@@ -800,6 +802,7 @@
         <Key ID="STR_ACE_UI_weaponZeroSetTo">
             <English>Zero is set to:</English>
             <French>Le zérotage est fixé à :</French>
+            <Spanish>La puesta a cero está en:</Spanish>
             <Russian>Значение нуля равно:</Russian>
             <Korean>영점 설정값:</Korean>
             <Japanese>ゼロインの設定値:</Japanese>

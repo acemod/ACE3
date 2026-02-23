@@ -4,14 +4,13 @@
  * Handles wind deflection for projectiles.
  *
  * Arguments:
- * 0: bullet - Object the event handler is assigned to <OBJECT>
- * 1: airFriction - air friction of the bullet <NUMBER>
+ * None
  *
  * Return Value:
  * None
  *
  * Example:
- * [bullet, 2] call ace_winddeflection_fnc_updateTrajectoryPFH
+ * [] call ace_winddeflection_fnc_updateTrajectoryPFH
  *
  * Public: No
  */

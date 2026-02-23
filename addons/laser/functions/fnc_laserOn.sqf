@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Emitter <OBJECT>
  * 1: Owner <OBJECT>
- * 2: Method, can be code, which emitter and owner are passed to, a string function name, an array with a position memory point and weapon name, or an array with a position memory point, a vector begining memory point, and vector ending memory point. <STRING><CODE><ARRAY>
+ * 2: Method, can be code, which emitter and owner are passed to, a string function name, an array with a position memory point and weapon name, or an array with a position memory point, a vector begining memory point, and vector ending memory point. <STRING or CODE or ARRAY>
  * 3: Wavelength (1550nm is typical) <NUMBER>
  * 4: Laser code <NUMBER>
  * 5: Beam divergence (in mils off beam center) <NUMBER>

@@ -113,7 +113,7 @@ mod tests {
                 0.263,
                 Temperature::new_celsius(25.3642),
                 1009.61,
-                0.603173,
+                0.603_173,
                 crate::ballistics::AtmosphereModel::Icao
             ) - 0.275_454_853_636_429_13)
                 .abs()

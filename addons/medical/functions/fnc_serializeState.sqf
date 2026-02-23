@@ -60,6 +60,8 @@ _state setVariable [VAR_MEDICATIONS, _medications];
 private _currentState = [_unit, GVAR(STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
 _state setVariable [QGVAR(statemachineState), _currentState];
 
+[QGVAR(serialize), [_unit, _state]] call CBA_fnc_localEvent;
+
 // Serialize & return
 private _json = [_state] call CBA_fnc_encodeJSON;
 _state call CBA_fnc_deleteNamespace;

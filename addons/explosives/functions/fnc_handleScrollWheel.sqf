@@ -10,13 +10,15 @@
  * Handled <BOOL>
  *
  * Example:
- * 1.2 call ACE_Explosives_fnc_HandleScrollWheel;
+ * 1.2 call ace_explosives_fnc_HandleScrollWheel
  *
  * Public: No
  */
 
-if (!GVAR(pfeh_running)) exitWith {false};
+if (!GVAR(pfeh_running)) exitWith {
+    false // return
+};
 
-GVAR(TweakedAngle) = ((GVAR(TweakedAngle) + 7.2 * _this) + 360) % 360;
+GVAR(tweakedAngle) = ((GVAR(tweakedAngle) + 7.2 * _this) + 360) % 360;
 
-true
+true // return

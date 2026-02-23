@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Objects <ARRAY>
  * 1: Image Paths <ARRAY>
- * 2: State Variable Name <ARRAY>
+ * 2: State Variable Name <STRING>
  * 3: Current Slideshow <NUMBER>
  * 4: Duration <NUMBER> (0 disables automatic transitions)
  * 5: Texture Selection <NUMBER>

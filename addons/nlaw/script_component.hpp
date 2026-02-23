@@ -16,3 +16,10 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define SEEKER_STATE_LOOKING 0
+#define SEEKER_STATE_TERMINAL 1
+#define SEEKER_STATE_DETONATED 2
+
+// (vt=d), (200 * FUZE_LENGTH = distance)
+#define FUZE_LENGTH (0.0075)

@@ -7,7 +7,7 @@
  * 0: Menu Type (1 is self interaction) <NUMBER>
  *
  * Return Value:
- * Can Open <BOOL>
+ * None
  *
  * Example:
  * [1] call ace_artillerytables_fnc_interactMenuOpened

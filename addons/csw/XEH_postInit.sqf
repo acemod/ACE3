@@ -40,6 +40,8 @@ GVAR(vehicleMagCache) = createHashMap;
 [QGVAR(addTurretMag), LINKFUNC(reload_handleAddTurretMag)] call CBA_fnc_addEventHandler;
 [QGVAR(removeTurretMag), LINKFUNC(reload_handleRemoveTurretMag)] call CBA_fnc_addEventHandler;
 [QGVAR(returnAmmo), LINKFUNC(reload_handleReturnAmmo)] call CBA_fnc_addEventHandler;
+[QGVAR(autofire_fire), LINKFUNC(autofire_fire)] call CBA_fnc_addEventHandler;
+
 
 #ifdef DEBUG_MODE_FULL
 call compile preprocessFileLineNumbers QPATHTOF(dev\checkStaticWeapons.sqf);

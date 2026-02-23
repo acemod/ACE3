@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Points directly toward attack profile positon
+ * Points directly toward attack profile position
  *
  * Arguments:
  * Guidance Arg Array <ARRAY>

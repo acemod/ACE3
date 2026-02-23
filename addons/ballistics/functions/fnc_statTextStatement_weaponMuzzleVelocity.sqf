@@ -17,7 +17,7 @@
 params ["", "_configWeapon", ["_configMagazine", configNull]];
 
 if (isNull _configMagazine) then { // Get the current weapon's mag
-    _configMagazine = configFile >> "CfgMagazines" >> (weaponState EGVAR(arsenal,center)) select 3;;
+    _configMagazine = configFile >> "CfgMagazines" >> (weaponState EGVAR(arsenal,center)) select 3;
 };
 
 if (isNull _configMagazine) exitWith { // Nothing in the magwell
@@ -41,11 +41,13 @@ if (_useAB) then {
     };
 } else {
     private _initSpeedCoef = getNumber (_configWeapon >> "initSpeed");
-    if (_initSpeedCoef < 0) then {
-        _muzzleVelocity = _muzzleVelocity * -_initSpeedCoef;
-    };
+
     if (_initSpeedCoef > 0) then {
         _muzzleVelocity = _initSpeedCoef;
+    } else {
+        if (_initSpeedCoef < 0) then {
+            _muzzleVelocity = _muzzleVelocity * -_initSpeedCoef;
+        };
     };
 };
 

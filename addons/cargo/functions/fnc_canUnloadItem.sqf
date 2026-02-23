@@ -30,7 +30,7 @@ if (_item isEqualType "") then {
 if !(_item in (_vehicle getVariable [QGVAR(loaded), []])) exitWith {false};
 
 private _validItem = if (_item isEqualType objNull) then {
-    alive _item
+    alive _item && isNull (isVehicleCargo _item);
 } else {
     true
 };

@@ -80,7 +80,7 @@ Blood droplets are still classed as objects, this sets the timer at which they w
 
 ##### 1.1.4.1 Pain Effect Type
 
-When in pain the player will recieve a visual indicator in the form of either "White Flashing", "Pulsing Blur", "Chromatic Abberation" or "Only high pain effect". By default this is set to "White Flashing". This is personal preference and only impacts individuals.
+When in pain the player will receive a visual indicator in the form of either "White Flashing", "Pulsing Blur", "Chromatic Abberation" or "Only high pain effect". By default this is set to "White Flashing". This is personal preference and only impacts individuals.
 
 ##### 1.1.4.2 Low Blood Volume Effect Type
 

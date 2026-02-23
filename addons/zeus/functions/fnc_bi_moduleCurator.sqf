@@ -127,7 +127,7 @@ if (_activated) then {
                     case (_ownerUID > 0): {
                         waitUntil {
                             sleep 0.01;
-                            {getPlayerUID _x == _ownerVar} count playableUnits > 0 || isNull _logic
+                            (playableUnits findIf {getPlayerUID _x == _ownerVar}) != -1 || isNull _logic
                         };
                     };
                     default {
@@ -189,7 +189,7 @@ if (_activated) then {
                     case (_ownerUID > 0): {
                         waitUntil {
                             sleep 0.01;
-                            {getPlayerUID _x == _ownerVar} count playableUnits == 0 || isNull _logic
+                            (playableUnits findIf {getPlayerUID _x == _ownerVar} == -1) || isNull _logic
                         };
                     };
                     default {

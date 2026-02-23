@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- * hint retun value of given function every frame
+ * hint return value of given function every frame
  *
  * Arguments:
  * 0: Code to monitor <CODE>

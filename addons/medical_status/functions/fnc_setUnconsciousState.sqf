@@ -70,6 +70,17 @@ if (_active) then {
     if (_unit getVariable [QGVAR(reenableRadioProtocol), false]) then {
         _unit enableAI "RADIOPROTOCOL";
     };
+
+    if (_unit == ACE_player) then {
+        switch EGVAR(medical,windowOnWakeUp) do {
+            case 1: { // Focus
+                "ace" callExtension ["window:focus", []];
+            };
+            case 2: { // Flash
+                "ace" callExtension ["window:flash", []];
+            };
+        };
+    };
 };
 
 // This event doesn't correspond to unconscious in statemachine

@@ -26,7 +26,7 @@ _unitLight params ["_flashlight", ""];
 
 //add all carried flashlight menus and on/off submenu actions
 {
-    private _cfg = (configFile >> "CfgWeapons" >> _x);
+    private _cfg = _x call CBA_fnc_getItemConfig;
     private _displayName = getText (_cfg >> "displayName");
     private _icon = getText (_cfg >> "picture");
 

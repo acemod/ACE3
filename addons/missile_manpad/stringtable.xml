@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_MISSILE_MANPAD_rim116">
             <English>RIM-116 [ACE]</English>
             <French>RIM-116 [ACE]</French>
+            <Spanish>RIM-116 [ACE]</Spanish>
             <Italian>RIM-116 [ACE]</Italian>
             <Russian>RIM-116 [ACE]</Russian>
             <German>RIM-116 [ACE]</German>
@@ -14,6 +15,7 @@
         <Key ID="STR_ACE_MISSILE_MANPAD_rim116_21x">
             <English>21x RIM-116 [ACE]</English>
             <French>21x RIM-116 [ACE]</French>
+            <Spanish>21x RIM-116 [ACE]</Spanish>
             <Italian>21x RIM-116 [ACE]</Italian>
             <Russian>21x RIM-116 [ACE]</Russian>
             <German>21x RIM-116 [ACE]</German>
@@ -24,6 +26,7 @@
         <Key ID="STR_ACE_MISSILE_MANPAD_stinger">
             <English>FIM-92 Stinger [ACE]</English>
             <French>FIM-92 Stinger [ACE]</French>
+            <Spanish>FIM-92 Stinger [ACE]</Spanish>
             <Italian>FIM-92 Stinger [ACE]</Italian>
             <Russian>FIM-92 Stinger [ACE]</Russian>
             <German>FIM-92 Stinger [ACE]</German>
@@ -34,6 +37,7 @@
         <Key ID="STR_ACE_MISSILE_MANPAD_stinger_4x">
             <English>4x FIM-92 Stinger [ACE]</English>
             <French>4x FIM-92 Stinger [ACE]</French>
+            <Spanish>4x FIM-92 Stinger [ACE]</Spanish>
             <Italian>4x FIM-92 Stinger [ACE]</Italian>
             <Russian>4x FIM-92 Stinger [ACE]</Russian>
             <German>4x FIM-92 Stinger [ACE]</German>

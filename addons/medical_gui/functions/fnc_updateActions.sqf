@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: mharis001
- * Updates the action buttons based currently avaiable treatments.
+ * Updates the action buttons based currently available treatments.
  *
  * Arguments:
  * 0: Medical Menu display <DISPLAY>
@@ -42,10 +42,10 @@ private _shownIndex = 0;
 
     // Check action category and condition
     if (_category == _selectedCategory && {call _condition}) then {
-        private _ctrl = if (_shownIndex >= count _actionButons) then {
+        if (_shownIndex >= count _actionButons) then {
             _actionButons pushBack (_display ctrlCreate ["ACE_Medical_Menu_ActionButton", -1, _group]);
         };
-        _ctrl = _actionButons # _shownIndex;
+        private _ctrl = _actionButons # _shownIndex;
         _ctrl ctrlRemoveAllEventHandlers "ButtonClick";
         _ctrl ctrlSetPositionY POS_H(1.1 * _shownIndex);
         _ctrl ctrlCommit 0;

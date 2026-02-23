@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: mharis001
- * Updates the category buttons based currently avaiable treatments.
+ * Updates the category buttons based currently available treatments.
  *
  * Arguments:
  * 0: Medical Menu display <DISPLAY>
@@ -26,8 +26,8 @@ params ["_display"];
     };
     _ctrl ctrlEnable _enable;
 
-    if (!_enable 
-    && {isNull findDisplay 312} 
+    if (!_enable
+    && {isNull findDisplay 312}
     && {!(
         EGVAR(medical_treatment,holsterRequired) == 0
         || {!isNull objectParent ACE_player} // medic is in a vehicle, so weapon is considered holstered

@@ -23,7 +23,7 @@ if ((parseNumber _lastVersion) >= 3.12) exitWith {};
 
 INFO("-Transfering old ACE_Settings to CBA-");
 
-private _aceSettings = configProperties [configFile >> "ACE_Settings", "isClass _x"];
+private _aceSettings = "true" configClasses (configFile >> "ACE_Settings");
 {
     private _settingName = configName _x;
     private _isClientSettable = (getNumber (_x >> "isClientSettable")) > 0;

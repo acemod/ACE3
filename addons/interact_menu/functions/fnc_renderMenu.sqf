@@ -89,7 +89,7 @@ if (_numChildren == 1) then {
 // Scale menu based on the amount of children
 private _scaleX = 1;
 private _scaleY = 1;
-private _useListMenu = [GVAR(useListMenu), GVAR(useListMenuSelf)] select GVAR(keyDownSelfAction);
+private _useListMenu = [GVAR(useListMenu), GVAR(useListMenuSelfActual)] select GVAR(keyDownSelfAction);
 if (_useListMenu) then {
     private _textSize = [0.75, 0.875, 1, 1.2, 1.4] select GVAR(textSize);
     _scaleX = _textSize * 0.17 * 1.1;

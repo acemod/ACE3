@@ -937,6 +937,7 @@
         <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_DisplayName">
             <English>Consequence of extreme thirst/hunger (over 85%)</English>
             <French>Conséquences d'une soif/faim extrême (plus de 85 %)</French>
+            <Spanish>Consecuencia de la sed y hambre extremos (por encima de 85%)</Spanish>
             <Italian>Conseguenze di sete/fame estrema (oltre 85%)</Italian>
             <Russian>Последствия сильной жажды/голода (более 85%)</Russian>
             <German>Folge von extremen Durst/Hunger (über 85%)</German>
@@ -947,6 +948,7 @@
         <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_Pain">
             <English>Pain</English>
             <French>Douleur</French>
+            <Spanish>Dolor</Spanish>
             <Italian>Dolore</Italian>
             <Russian>Боль</Russian>
             <German>Schmerzen</German>
@@ -957,6 +959,7 @@
         <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_Unconsciousness">
             <English>Fainting</English>
             <French>Évanouissement</French>
+            <Spanish>Desmayo</Spanish>
             <Italian>Svenimenti</Italian>
             <Russian>Обморок</Russian>
             <German>Ohnmacht</German>
@@ -1396,6 +1399,7 @@
         <Key ID="STR_ACE_Field_Rations_ZeusUpdates_Description">
             <English>If enabled, hunger and thirst will continue to increase while the Zeus interface is open.</English>
             <French>Si cette option est activée, la faim et la soif continueront d'augmenter tant que l'interface Zeus sera ouverte.</French>
+            <Spanish>Si se habilita, el hambre y la sed siguen aumentando mientras la interfaz de Zeus está abierta.</Spanish>
             <Italian>Se attivato, fame e sete continueranno ad aumentare mentre l'interfaccia Zeus è aperta.</Italian>
             <Russian>Если эта функция включена, чувство голода и жажды будет продолжать усиливаться, пока открыт интерфейс Zeus.</Russian>
             <German>Wenn aktiviert, werden Hunger und Durst bei geöffnetem Zeus-Interface weiter zunehmen.</German>
@@ -1406,6 +1410,7 @@
         <Key ID="STR_ACE_Field_Rations_ZeusUpdates_DisplayName">
             <English>Update Hunger and Thirst in Zeus</English>
             <French>Mise à jour Faim et soif dans Zeus</French>
+            <Spanish>Actualiza el Hambre y la Sed en Zeus</Spanish>
             <Italian>Simula fame e sete in Zeus</Italian>
             <Russian>Обновление голода и жажды в Zeus</Russian>
             <German>Zunehmender Hunger und Durst im Zeus</German>

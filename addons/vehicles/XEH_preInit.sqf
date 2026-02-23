@@ -14,7 +14,7 @@ PREP_RECOMPILE_END;
     {
         params ["_vehicle"];
         _vehicle setVariable [QGVAR(engineState), isEngineOn _vehicle];
-    }
+    }, true, ["Man"]
 ] call CBA_fnc_addClassEventHandler;
 [
     "AllVehicles",
@@ -22,7 +22,7 @@ PREP_RECOMPILE_END;
     {
         params ["_vehicle", "_state"];
         _vehicle setVariable [QGVAR(engineState), _state];
-    }
+    }, true, ["Man"]
 ] call CBA_fnc_addClassEventHandler;
 [
     "AllVehicles",
@@ -36,7 +36,7 @@ PREP_RECOMPILE_END;
                 [QEGVAR(common,engineOn), _this, _vehicle] call CBA_fnc_targetEvent;
             }, [_vehicle, true]] call CBA_fnc_execNextFrame;
         };
-    }
+    }, true, ["Man"]
 ] call CBA_fnc_addClassEventHandler;
 
 ADDON = true;
