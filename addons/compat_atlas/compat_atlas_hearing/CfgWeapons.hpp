@@ -1,16 +1,4 @@
-#define PELTOR(CLASSNAME) \
-    class CLASSNAME: ItemCore { \
-        HEARING_PROTECTION_PELTOR; \
-    }
-
-#define PELTOR_PARENT(CLASSNAME,PARENT) \
-    class CLASSNAME: PARENT { \
-        HEARING_PROTECTION_PELTOR; \
-    }
-
 class CfgWeapons {
-    class ItemCore;
-
     // Boonie hat
     class H_Booniehat_flecktarn;
     class H_Booniehat_flecktarn_hs: H_Booniehat_flecktarn {
@@ -52,60 +40,34 @@ class CfgWeapons {
         HEARING_PROTECTION_PELTOR;
     };
 
-    // Shemag
-    class H_Shemag_red;
-    class H_Shemag_red_hs: H_Shemag_red {
-        HEARING_PROTECTION_PELTOR;
-    };
-
-    class H_Shemag_blk;
-    class H_Shemag_blk_hs: H_Shemag_blk {
-        HEARING_PROTECTION_PELTOR;
-    };
-
-    class H_Shemag_khk;
-    class H_Shemag_khk_hs: H_Shemag_khk {
-        HEARING_PROTECTION_PELTOR;
-    };
-
-
     // Field cap
-    class Atlas_H_FieldCap_flecktarn;
-    class Atlas_H_FieldCap_hs_flecktarn: Atlas_H_FieldCap_flecktarn {
+    class HelmetBase;
+    class Atlas_H_FieldCap_hs_flecktarn: HelmetBase {
         HEARING_PROTECTION_PELTOR;
     };
-
-    class Atlas_H_FieldCap_multitarn;
-    class Atlas_H_FieldCap_hs_multitarn: Atlas_H_FieldCap_multitarn {
+    class Atlas_H_FieldCap_hs_multitarn: Atlas_H_FieldCap_hs_flecktarn {
         HEARING_PROTECTION_PELTOR;
     };
-    
-    class Atlas_H_FieldCap_kzg;
-    class Atlas_H_FieldCap_hs_kzg: Atlas_H_FieldCap_kzg {
+    class Atlas_H_FieldCap_hs_kzg: Atlas_H_FieldCap_hs_flecktarn {
         HEARING_PROTECTION_PELTOR;
     };
-    
-    class Atlas_H_FieldCap_ldf;
-    class Atlas_H_FieldCap_hs_ldf: Atlas_H_FieldCap_ldf {
+    class Atlas_H_FieldCap_hs_ldf: Atlas_H_FieldCap_hs_flecktarn {
         HEARING_PROTECTION_PELTOR;
     };
-    
-    class Atlas_H_FieldCap_pantera;
-    class Atlas_H_FieldCap_hs_pantera: Atlas_H_FieldCap_pantera {
+    class Atlas_H_FieldCap_hs_pantera: Atlas_H_FieldCap_hs_flecktarn {
         HEARING_PROTECTION_PELTOR;
     };
 
     // Guardian helmet
-    PELTOR(H_HelmetI_I_01_base_F);
-    PELTOR(H_HelmetI_I_01_cover_base_F);
-    PELTOR(Atlas_H_HelmetI_I_01_cover_alt_base_F);
-    
+    class H_HelmetI_I_01_base_F: HelmetBase {
+        HEARING_PROTECTION_PELTOR;
+    };
+
     // Intruder helmet
     class Atlas_H_HelmetCCH_HiCut_base_F;
     class Atlas_H_HelmetCCH_HiCut_Cover_base_F: Atlas_H_HelmetCCH_HiCut_base_F {
         HEARING_PROTECTION_PELTOR;
     };
-
     class Atlas_H_HelmetCCH_HiCut_Headset_base_F: Atlas_H_HelmetCCH_HiCut_base_F {
         HEARING_PROTECTION_PELTOR;
     };
@@ -115,7 +77,6 @@ class CfgWeapons {
     class Atlas_H_HelmetCCH_Cover_base_F: Atlas_H_HelmetCCH_base_F {
         HEARING_PROTECTION_PELTOR;
     };
-
     class Atlas_H_HelmetCCH_Headset_base_F: Atlas_H_HelmetCCH_base_F {
         HEARING_PROTECTION_PELTOR;
     };
