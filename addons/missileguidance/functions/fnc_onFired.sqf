@@ -5,9 +5,11 @@
  *
  * Arguments:
  * 0: Shooter (Man/Vehicle) <OBJECT>
- * 1: Weapon <STRING>
- * 3: Mode <STRING>
+ * 1: Weapon (not used) <STRING>
+ * 2: Muzzle (not used) <STRING>
+ * 3: Mode (not used) <STRING>
  * 4: Ammo <STRING>
+ * 5: Magazine (not used) <STRING>
  * 6: Projectile <OBJECT>
  *
  * Return Value:
@@ -19,10 +21,12 @@
  * Public: No
  */
 
-params ["_shooter","_weapon","","_mode","_ammo","","_projectile"];
+params ["_shooter", "", "", "", "_ammo", "", "_projectile"];
+
+private _configAmmo = configFile >> "CfgAmmo" >> _ammo;
 
 // Bail if guidance is disabled for this ammo
-if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "enabled")) != 1) exitWith {};
+if ((getNumber (_configAmmo >> QUOTE(ADDON) >> "enabled")) != 1) exitWith {};
 
 // Bail on locality of the projectile, it should be local to us
 if (GVAR(enabled) < 1 || {!local _projectile} ) exitWith {};
@@ -31,7 +35,7 @@ if (GVAR(enabled) < 1 || {!local _projectile} ) exitWith {};
 if ( !isPlayer _shooter && { GVAR(enabled) < 2 } ) exitWith {};
 
 // Verify ammo has explicity added guidance config (ignore inheritances)
-private _configs = configProperties [(configFile >> "CfgAmmo" >> _ammo), QUOTE(configName _x == QUOTE(QUOTE(ADDON))), false];
+private _configs = QUOTE(configName _x == QUOTE(QUOTE(ADDON))) configClasses _configAmmo;
 if (_configs isEqualTo []) exitWith {};
 
 private _args = call FUNC(onFiredGetArgs);

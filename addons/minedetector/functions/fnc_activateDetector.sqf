@@ -25,7 +25,9 @@ if (!local _unit || {!alive _unit}) exitWith {
 private _currentWeapon = currentWeapon _unit;
 private _detectorType = param [1, _currentWeapon, [""]];
 
-if (_detectorType == "" || {!([_unit, _detectorType] call FUNC(canActivateDetector))}) exitWith {false};
+if (_detectorType == "" || {!([_unit, _detectorType] call FUNC(canActivateDetector))}) exitWith {
+    false // return
+};
 
 // Select mine detector if not already selected
 if (_currentWeapon != _detectorType) then {

@@ -12,7 +12,7 @@
  * 3: On Failure: Code called or STRING raised as event. <CODE or STRING>
  * 4: Localized Title <STRING> (default: "")
  * 5: Code to check each frame <CODE> (default: {true})
- * 6: Exceptions for checking ace_common_fnc_canInteractWith <ARRAY> (default: [])
+ * 6: Exceptions for checking ace_common_fnc_canInteractWith (works like a permission system, if there is an exception, it will return true; e.g. "isNotSwimming" in the exceptions, the progress bar will work while swimming) <ARRAY> (default: [])
  * 7: Create progress bar as dialog, this blocks user input <BOOL> (default: true)
  *
  * Return Value:

@@ -41,11 +41,13 @@ if (_useAB) then {
     };
 } else {
     private _initSpeedCoef = getNumber (_configWeapon >> "initSpeed");
-    if (_initSpeedCoef < 0) then {
-        _muzzleVelocity = _muzzleVelocity * -_initSpeedCoef;
-    };
+
     if (_initSpeedCoef > 0) then {
         _muzzleVelocity = _initSpeedCoef;
+    } else {
+        if (_initSpeedCoef < 0) then {
+            _muzzleVelocity = _muzzleVelocity * -_initSpeedCoef;
+        };
     };
 };
 

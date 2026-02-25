@@ -19,7 +19,7 @@
 (if ((isNull objectParent ACE_player) || {ACE_player call CBA_fnc_canUseWeapon}) then {
     weaponState ACE_player
 } else {
-    private _turretPath = if (ACE_player == (driver _currentShooter)) then {[-1]} else {ACE_player call CBA_fnc_turretPath};
+    private _turretPath = _currentShooter unitTurret ACE_player;
     weaponState [vehicle ACE_player, _turretPath]
 }) params ["_weapon", "", "_mode"];
 

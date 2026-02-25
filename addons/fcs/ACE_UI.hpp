@@ -1,7 +1,7 @@
 class ACE_UI {
     class gunnerZeroing {
         class conditions {
-            ADDON = QUOTE(getNumber ([ARR_2(vehicle ACE_player,ACE_player call CBA_fnc_turretPath)] call CBA_fnc_getTurret >> 'ace_fcs_enabled') != 1);
+            ADDON = QUOTE(private _vehicle = vehicle ACE_player; getNumber ([ARR_2(_vehicle,_vehicle unitTurret ACE_player)] call CBA_fnc_getTurret >> QQGVAR(enabled)) != 1);
         };
     };
 };

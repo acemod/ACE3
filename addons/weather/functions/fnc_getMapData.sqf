@@ -60,11 +60,8 @@ if !(isNull (_missionCfgPath  >> "ACE_TempDay")) then {
     _cfgPath = _missionCfgPath;
 };
 
-// Get all non inherited arrays to filter maps that inherit from Stratis/Altis/Tanoa
-private _nonInheritedArrays = configProperties [_cfgPath, "isArray _x", false];
-
-// And check if any custom non-inherited weather is defined through config and use that if so
-if ((_cfgPath >> "ACE_TempDay") in _nonInheritedArrays) exitWith {
+// Check if any custom non-inherited weather from Stratis/Altis/Tanoa is defined through config and use that if so
+if (_cfgPath == inheritsFrom (_cfgPath >> "ACE_TempDay")) exitWith {
     if (isArray (_cfgPath >> "ACE_TempDay")) then {
         GVAR(TempDay) = getArray (_cfgPath >> "ACE_TempDay");
     };

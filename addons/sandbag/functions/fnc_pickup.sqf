@@ -1,17 +1,17 @@
 #include "..\script_component.hpp"
 /*
  * Author: Ruthberg
- * Pick up sandbag
+ * Picks up a sandbag.
  *
  * Arguments:
- * 0: unit <OBJECT>
- * 1: sandbag <OBJECT>
+ * 0: Unit <OBJECT>
+ * 1: Sandbag <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [_unit, _sandbag] call ace_sandbag_fnc_pickup
+ * [player, cursorObject] call ace_sandbag_fnc_pickup
  *
  * Public: No
  */
@@ -27,14 +27,17 @@ _unit setVariable [QGVAR(isUsingSandbag), true];
 
     _unit setVariable [QGVAR(isUsingSandbag), false];
 
-    if (isNull _sandbag) exitWith {};
+    // If another unit picked up the sandbag or otherwise sandbag no longer present, exit
+    if (!alive _unit || {!alive _sandbag}) exitWith {};
+
+    private _nearSandbags = (_sandbag nearObjects ["ACE_SandbagObject", 5]) - [_sandbag];
 
     deleteVehicle _sandbag;
 
-    // Force physx update
+    // Force PhysX update
     {
-        _x setPosASL (getPosASL _x);
-    } forEach (_unit nearObjects ["ACE_SandbagObject", 5]);
+        [QEGVAR(common,awake), [_x, true]] call CBA_fnc_globalEvent;
+    } forEach _nearSandbags;
 
     [_unit, "ACE_Sandbag_empty"] call EFUNC(common,addToInventory);
-}, [_unit, _sandbag], 1.5] call CBA_fnc_waitAndExecute;
+}, [_unit, _sandbag], 1] call CBA_fnc_waitAndExecute;

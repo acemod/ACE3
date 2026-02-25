@@ -347,42 +347,42 @@ class CfgRecoils {
 
     class recoil_nlaw: recoil_default {
         muzzleOuter[] = {
-            2*MUZZLERIGHT_POS,
-            3*MUZZLECLIMB_POS,
-            1*MUZZLERIGHT_MAG,
-            0.5*MUZZLECLIMB_MAG
+            0.1*MUZZLERIGHT_POS,
+            0.2*MUZZLECLIMB_POS,
+            0.3*MUZZLERIGHT_MAG,
+            0.4*MUZZLECLIMB_MAG
         };
         kickBack[] = {
-            0.06*KICKBACK,
-            0.08*KICKBACK
+            0.0*KICKBACK,
+            0.05*KICKBACK
         };
         temporary = 0.08*MUZZLETEMP;
     };
 
     class recoil_titan_long: recoil_default {
         muzzleOuter[] = {
-            2*MUZZLERIGHT_POS,
-            3*MUZZLECLIMB_POS,
-            1*MUZZLERIGHT_MAG,
+            0.1*MUZZLERIGHT_POS,
+            0.2*MUZZLECLIMB_POS,
+            0.3*MUZZLERIGHT_MAG,
             0.5*MUZZLECLIMB_MAG
         };
         kickBack[] = {
-            0.1*KICKBACK,
-            0.12*KICKBACK
+            0.0*KICKBACK,
+            0.05*KICKBACK
         };
         temporary = 0.15*MUZZLETEMP;
     };
 
     class recoil_titan_short: recoil_default {
         muzzleOuter[] = {
-            2*MUZZLERIGHT_POS,
-            3*MUZZLECLIMB_POS,
-            1*MUZZLERIGHT_MAG,
+            0.1*MUZZLERIGHT_POS,
+            0.2*MUZZLECLIMB_POS,
+            0.3*MUZZLERIGHT_MAG,
             0.5*MUZZLECLIMB_MAG
         };
         kickBack[] = {
-            0.1*KICKBACK,
-            0.12*KICKBACK
+            0.0*KICKBACK,
+            0.05*KICKBACK
         };
         temporary = 0.12*MUZZLETEMP;
     };

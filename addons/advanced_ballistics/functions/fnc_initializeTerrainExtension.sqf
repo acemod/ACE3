@@ -21,9 +21,8 @@ if (!GVAR(enabled)) exitWith {};
 private _initStartTime = diag_tickTime;
 private _mapSize = worldSize;
 
-(
-    "ace" callExtension ["ballistics:map:init", [worldName, _mapSize]]
-) params ["_data", "_code"];
+("ace" callExtension ["ballistics:map:init", [worldName, _mapSize]]) params ["_data", "_code"];
+
 if (_code != 0) exitWith {
     ERROR("Error initializing map")
 };
@@ -35,7 +34,7 @@ if (_data == "true") exitWith {
     #endif
 };
 
-private _mapGrids = ceil(_mapSize / 50) + 1;
+private _mapGrids = ceil (_mapSize / 50) + 1;
 private _gridCells = _mapGrids * _mapGrids;
 
 GVAR(currentGrid) = 0;
@@ -49,14 +48,14 @@ INFO_2("Starting Terrain Extension [cells: %1] [world: %2]",_gridCells,worldName
     if (GVAR(currentGrid) >= _gridCells) exitWith {
         INFO_2("Finished terrain initialization in %1 seconds [world: %2]",(diag_tickTime - _initStartTime) toFixed 2,worldName);
         #ifdef DEBUG_MODE_FULL
-            systemChat format["AdvancedBallistics: Finished terrain initialization in %1 seconds", (diag_tickTime - _initStartTime) toFixed 2];
+            systemChat format ["AdvancedBallistics: Finished terrain initialization in %1 seconds", (diag_tickTime - _initStartTime) toFixed 2];
         #endif
-        [_idPFH] call CBA_fnc_removePerFrameHandler;
+        _idPFH call CBA_fnc_removePerFrameHandler;
     };
 
     for "_i" from 1 to 50 do {
-        private _x = floor(GVAR(currentGrid) / _mapGrids) * 50;
-        private _y = (GVAR(currentGrid) - floor(GVAR(currentGrid) / _mapGrids) * _mapGrids) * 50;
+        private _x = floor (GVAR(currentGrid) / _mapGrids) * 50;
+        private _y = (GVAR(currentGrid) - floor (GVAR(currentGrid) / _mapGrids) * _mapGrids) * 50;
 
         private _gridCenter = [_x + 25, _y + 25];
         private _gridHeight = round getTerrainHeightASL _gridCenter;

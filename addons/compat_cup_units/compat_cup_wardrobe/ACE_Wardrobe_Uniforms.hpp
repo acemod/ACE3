@@ -1,17 +1,17 @@
 // Macros
 #define CUP_UNIFORM_TSHIRT(tshirtBase,tshirtGloves,tshirtKnee)\
-class tshirtBase : EGVAR(wardrobe,base) {\
+class tshirtBase: EGVAR(wardrobe,base) {\
     class modifiableTo {\
         class tshirtGloves {};\
         class tshirtKnee {};\
     };\
 };\
-class tshirtGloves : EGVAR(wardrobe,base) {\
+class tshirtGloves: EGVAR(wardrobe,base) {\
     class modifiableTo {\
         class tshirtBase {};\
     };\
 };\
-class tshirtKnee : EGVAR(wardrobe,base) {\
+class tshirtKnee: EGVAR(wardrobe,base) {\
     class modifiableTo {\
         class tshirtBase {};\
     };\

@@ -18,7 +18,7 @@
 
 params [["_logAll", false, [false]]];
 
-private _allAmmoConfigs = configProperties [configFile >> "CfgAmmo", "isClass _x && !('ace_frag' in configName _x)", true];
+private _allAmmoConfigs = QUOTE(!(QUOTE(QUOTE(ADDON)) in configName _x)) configClasses (configFile >> "CfgAmmo");
 private _processedCfgAmmos = createHashMap;
 
 private _numberPrinted = 0;

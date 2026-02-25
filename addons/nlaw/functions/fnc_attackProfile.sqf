@@ -18,19 +18,20 @@
  */
 
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
-
-#ifdef DRAW_NLAW_INFO
 _args params ["_firedEH", "_launchParams"];
 _launchParams params ["","_targetLaunchParams", "", "_attackProfile"];
+_attackProfileStateParams params ["_startTime"];
+private _flightTime = CBA_missionTime - _startTime;
+
+#ifdef DRAW_NLAW_INFO
 _targetLaunchParams params ["", "", "_launchPos"];
 _firedEH params ["","","","","","","_projectile"];
 
-_attackProfileStateParams params ["_startTime", "_startLOS", "_yawChange", "_pitchChange"];
+_attackProfileStateParams params ["", "_startLOS", "_yawChange", "_pitchChange"];
 (_startLOS call CBA_fnc_vect2Polar) params ["", "_yaw", "_pitch"];
 
 private _projectilePos = getPosASL _projectile;
 private _distanceFromLaunch = (_launchPos distance _projectilePos) + 10;
-private _flightTime = CBA_missionTime - _startTime;
 
 private _realYaw = _yaw + _yawChange * _flightTime;
 private _realPitch = _pitch + _pitchChange * _flightTime;
@@ -47,4 +48,10 @@ if ((count _test) > 0) then {
 };
 #endif
 
-[0, 0, 1]
+if (_attackProfile == QGVAR(overflyTopAttack)) then {
+    private _denominmator = 1 + exp (1.0 - 3.0 * _flightTime);
+    [0, 0, 3.5 / _denominmator]
+} else {
+    [0, 1, 0]
+}
+

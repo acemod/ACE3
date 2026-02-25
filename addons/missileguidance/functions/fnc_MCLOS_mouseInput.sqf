@@ -28,7 +28,7 @@ if ((isNull objectParent _player) || {_player call CBA_fnc_canUseWeapon}) then {
     if (_currentWeapon != "") then { _weapons pushBack _currentWeapon };
 } else {
     _shooter = vehicle _player;
-    private _turretPath = if (_player == (driver _shooter)) then {[-1]} else {_player call CBA_fnc_turretPath};
+    private _turretPath = _shooter unitTurret _player;
     _weapons = _shooter weaponsTurret _turretPath;
 };
 
@@ -68,7 +68,7 @@ TRACE_1("start mouse input",typeOf _shooter);
         {!([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith))} ||
         {!GVAR(MCLOS_mouseInput)} ||
         {isNull _display}
-    ) exitWith { 
+    ) exitWith {
         TRACE_1("stop mouse input",typeOf _shooter);
         if (!isNull _display) then {
             closeDialog 1;
@@ -90,7 +90,7 @@ TRACE_1("start mouse input",typeOf _shooter);
     private _realY = linearConversion [_minY, _maxY, _clampY, 1, -1, true]; // Inverted Y axis for the mouse
     setMousePosition [_clampX, _clampY];
 
-    
+
     private _joystickIcon = _display displayCtrl 2000;
     private _iconWidth = _halfX * 0.2;
     private _iconHeight = _halfY * 0.2;

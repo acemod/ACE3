@@ -1,36 +1,36 @@
 #include "..\script_component.hpp"
 /*
  * Authors: Ruthberg
- * Opens the range card dialog
+ * Opens the range card dialog.
  *
  * Arguments:
- * Open copy? <BOOL>
+ * 0: Open copy? <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [true] call ace_rangecard_fnc_openRangeCard
+ * true call ace_rangecard_fnc_openRangeCard
  *
  * Public: No
  */
 
-if (GVAR(RangeCardOpened)) exitWith {};
+if (GVAR(rangeCardOpened)) exitWith {};
 
-if (_this) then {
-    if (GVAR(ammoClassCopy) != "" && GVAR(magazineClassCopy) != "" && GVAR(weaponClassCopy) != "") then {
-        GVAR(RangeCardOpened) = true;
+params ["_openCopy"];
 
-        createDialog "ACE_RangeCard_Dialog";
+if (_openCopy) exitWith {
+    // If no info to display, exit
+    if (GVAR(rangeCardCopyInfo) isEqualTo []) exitWith {};
 
-        [GVAR(zeroRangeCopy), GVAR(boreHeightCopy), GVAR(ammoClassCopy), GVAR(magazineClassCopy), GVAR(weaponClassCopy)] call FUNC(updateRangeCard);
-    };
-} else {
-    if (ACE_player call FUNC(updateClassNames)) then {
-        GVAR(RangeCardOpened) = true;
+    createDialog "ACE_RangeCard_Dialog";
 
-        createDialog "ACE_RangeCard_Dialog";
-
-        [GVAR(zeroRange), GVAR(boreHeight), GVAR(ammoClass), GVAR(magazineClass), GVAR(weaponClass)] call FUNC(updateRangeCard);
-    };
+    GVAR(rangeCardCopyInfo) call FUNC(updateRangeCard);
 };
+
+// Fetch most recent information to generate range card
+[ACE_player, ACE_player] call FUNC(updateClassNames);
+
+createDialog "ACE_RangeCard_Dialog";
+
+GVAR(rangeCardInfo) call FUNC(updateRangeCard);

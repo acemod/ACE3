@@ -15,9 +15,8 @@
  * Public: No
  */
 
-private _flagItems = configProperties [configFile >> "CfgWeapons", QUOTE(isClass _x && {isText (_x >> QQGVAR(texture))}), true];
+private _flagItems = QUOTE(isText (_x >> QQGVAR(texture))) configClasses (configFile >> "CfgWeapons");
 private _flagItemCache = createHashMap;
-
 private _carrierItemMapping = createHashMap;
 
 {

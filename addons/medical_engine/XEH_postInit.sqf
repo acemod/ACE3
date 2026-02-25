@@ -8,6 +8,7 @@
 
 ["CAManBase", "init", {
     params ["_unit"];
+    [LINKFUNC(checkForMedicalActivity), _unit, 2] call CBA_fnc_waitAndExecute;
 
     if (unitIsUAV _unit) exitWith {TRACE_1("ignore UAV AI",typeOf _unit);};
     if (getNumber (configOf _unit >> "isPlayableLogic") == 1) exitWith {TRACE_1("ignore logic unit",typeOf _unit);};

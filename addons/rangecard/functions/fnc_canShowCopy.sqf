@@ -1,13 +1,13 @@
 #include "..\script_component.hpp"
 /*
  * Authors: Ruthberg
- * Tests if the Range Card copy can be shown
+ * Checks if the range card copy can be shown.
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * canShow <BOOL>
+ * Can show? <BOOL>
  *
  * Example:
  * [] call ace_rangecard_fnc_canShowCopy
@@ -15,8 +15,4 @@
  * Public: No
  */
 
-GVAR(ammoClassCopy) != "" &&
-GVAR(magazineClassCopy) != "" &&
-GVAR(weaponClassCopy) != "" &&
-!GVAR(RangeCardOpened) &&
-"ACE_RangeCard" in ([ACE_player] call EFUNC(common,uniqueItems))
+!GVAR(rangeCardOpened) && {GVAR(rangeCardCopyInfo) isNotEqualTo []} && {[ACE_player, "ACE_RangeCard"] call EFUNC(common,hasItem)} // return

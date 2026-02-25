@@ -68,7 +68,7 @@ class CfgAmmo {
         ACE_ballisticCoefficients[] = {0.151};
 
         ACE_velocityBoundaries[] = {};  // Array of velocity boundaries
-        ACE_standardAtmosphere = "ASM";  // "ASM" or "ICAO"
+        ACE_standardAtmosphere = "ASM";  // "ASM" or "ICAO" (ICAO conditions: 15°C, 1013.25 hPa, 0% - ASM conditions: 15°C, 999.916 hPa, 78%) https://en.wikipedia.org/wiki/International_Standard_Atmosphere#ICAO_Standard_Atmosphere
         ACE_dragModel = 7;  // Number that specifies the drag model [1, 2, 5, 6, 7, 8]
 
         // Array of muzzle velocities (same size as barrel length array)

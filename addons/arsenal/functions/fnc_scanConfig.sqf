@@ -30,7 +30,7 @@ private _toolList = createHashMap;
 // https://community.bistudio.com/wiki/Arma_3:_Characters_And_Gear_Encoding_Guide#Character_configuration
 // https://github.com/acemod/ACE3/pull/9040#issuecomment-1597748331
 private _filterFunction = toString {
-    isClass _x && {if (isNumber (_x >> "scopeArsenal")) then {getNumber (_x >> "scopeArsenal") == 2 && {getNumber (_x >> "scope") > 0}} else {getNumber (_x >> "scope") == 2}} && {getNumber (_x >> QGVAR(hide)) != 1}
+    (if (isNumber (_x >> "scopeArsenal")) then {getNumber (_x >> "scopeArsenal") == 2 && {getNumber (_x >> "scope") > 0}} else {getNumber (_x >> "scope") == 2}) && {getNumber (_x >> QGVAR(hide)) != 1}
 };
 
 private _cfgWeapons = configFile >> "CfgWeapons";
@@ -132,7 +132,7 @@ private _isTool = false;
             if (_isTool) then {_toolList set [_className, nil]};
         };
     };
-} forEach configProperties [_cfgWeapons, _filterFunction, true];
+} forEach (_filterFunction configClasses _cfgWeapons);
 
 // Get all grenades
 // Explicitly don't look at scope for these, we want hidden items to be sorted as grenades/explosives properly
@@ -191,19 +191,19 @@ _magazineMiscItems deleteAt "";
             (_configItems get IDX_VIRT_ITEMS_ALL) set [_className, nil];
         };
     };
-} forEach configProperties [_cfgMagazines, _filterFunction, true];
+} forEach (_filterFunction configClasses _cfgMagazines);
 
 // Get all backpacks
 {
     if (getNumber (_x >> "isBackpack") == 1) then {
         (_configItems get IDX_VIRT_BACKPACK) set [configName _x, nil];
     };
-} forEach configProperties [configFile >> "CfgVehicles", _filterFunction, true];
+} forEach (_filterFunction configClasses (configFile >> "CfgVehicles"));
 
 // Get all facewear
 {
     (_configItems get IDX_VIRT_GOGGLES) set [configName _x, nil];
-} forEach configProperties [configFile >> "CfgGlasses", _filterFunction, true];
+} forEach (_filterFunction configClasses (configFile >> "CfgGlasses"));
 
 // Get all faces
 private _faceCache = createHashMap;
@@ -229,7 +229,7 @@ private _faceCategory = "";
 } forEach ("true" configClasses (configFile >> "CfgFaces"));
 
 // Get all voices
-private _voiceCache = (configProperties [configFile >> "CfgVoice", "isClass _x && {getNumber (_x >> 'scope') == 2}", true]) - [configFile >> "CfgVoice" >> "NoVoice"];
+private _voiceCache = ("getNumber (_x >> 'scope') == 2" configClasses (configFile >> "CfgVoice")) - [configFile >> "CfgVoice" >> "NoVoice"];
 _voiceCache = _voiceCache apply {configName _x};
 
 // Get all insignia

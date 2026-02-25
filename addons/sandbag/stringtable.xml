@@ -182,22 +182,20 @@
             <Ukrainian>Ящик мішків із піском</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Sandbag_ScrollAction">
-            <English>Rotate</English>
-            <Czech>Otočit</Czech>
-            <French>Tourner</French>
-            <Spanish>Girar</Spanish>
-            <Italian>Rotazione</Italian>
-            <Polish>Obrót</Polish>
-            <Portuguese>Rotaciona</Portuguese>
-            <Russian>Bращать</Russian>
-            <German>Drehen</German>
-            <Korean>돌리기</Korean>
-            <Japanese>回転</Japanese>
-            <Chinese>旋轉</Chinese>
-            <Chinesesimp>旋转</Chinesesimp>
-            <Turkish>Yönlendir</Turkish>
-            <Hungarian>Forgatás</Hungarian>
-            <Ukrainian>Обертати</Ukrainian>
+            <English>Distance | (Ctrl + Scroll) Rotate | (Alt + Scroll) Height</English>
+            <Czech>Vzdálenost | (Ctrl + Kolečko myši) Otáčet | (Alt + Kolečko myši) Výška</Czech>
+            <French>Distance | (Ctrl + Scroll) Rotation | (Alt + Scroll) Hauteur</French>
+            <Spanish>Distancia | (Ctrl + Scroll) Rotar | (Alt + Scroll) Altura</Spanish>
+            <Italian>Distanza | (Ctrl + Rotellina) Ruota | (Alt + Rotellina) Altezza</Italian>
+            <Polish>Odległość | (Ctrl + Kółko myszy) obracanie | (Alt + Kółko myszy) Wysokość</Polish>
+            <Portuguese>Distância | (Ctrl + Scroll) Rotacionar | (Alt + Scroll) Altura</Portuguese>
+            <Russian>Дистанция | (Ctrl + Скролл) Крутить | (Alt + Скролл) Высота</Russian>
+            <German>Entfernung | (Strg + Scrollen) Drehen | (Alt + Scrollen) Höhe</German>
+            <Korean>거리 | (컨트롤 + 스크롤) 회전 | (Alt + 스크롤) 고도</Korean>
+            <Japanese>距離 | (Ctrl + スクロール) 回転 | (Alt + スクロール) 高さ</Japanese>
+            <Chinesesimp>距离 |（Ctrl + 鼠标滚轮）旋转 |（Alt + 鼠标滚轮）高度</Chinesesimp>
+            <Turkish>Mesafe | (Ctrl + Tekerlek) Döndür | (Alt + Tekerlek) Yükseklik</Turkish>
+            <Ukrainian>Дистанція | (Ctrl + Скрол) Крутити | (Alt + Скрол) Висота</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Sandbag_sandbagEmpty_displayName">
             <English>Sandbag (empty)</English>

@@ -21,7 +21,7 @@
 
 params ["_idleText", "_lockedText", "_unit", "_vehicle", "_ammoConfig"];
 
-private _turretPath = _unit call CBA_fnc_turretPath;
+private _turretPath = _vehicle unitTurret _unit;
 private _turretConfig = [_vehicle, _turretPath] call CBA_fnc_getTurret;
 private _laserSource = _vehicle modelToWorldWorld (_vehicle selectionPosition getText (_turretConfig >> "memoryPointGunnerOptics"));
 private _laserCode = _vehicle getVariable [QEGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
@@ -52,4 +52,3 @@ if (_displayText == "") then {
         ["ICON", "\a3\Ui_F_Curator\Data\CfgCurator\laser_ca.paa", _laserColor]
     ]
 }
-
