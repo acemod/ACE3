@@ -23,6 +23,4 @@ class CfgWeapons {
     class cwr3_optic_iws: CUP_optic_AN_PVS_4 {
         ACE_ScopeHeightAboveRail = 8.34381;
     };
-
-
 };
