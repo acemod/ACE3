@@ -19,7 +19,7 @@ class CfgAmmo {
     class B_45ACP_Ball_Green: B_45ACP_Ball {model = QPATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green
     class B_45ACP_Ball_Yellow: B_45ACP_Ball {model = QPATHTOF(ace_TracerYellow2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_yellow
 
-    class B_570x28_Ball : BulletBase {model = QPATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green
+    class B_570x28_Ball: BulletBase {model = QPATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green
 
     //Assault rifle
 
@@ -149,17 +149,17 @@ class CfgAmmo {
     class Gatling_30mm_HE_Plane_CAS_01_F: BulletBase {model = QPATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red.p3d
     class Cannon_30mm_HE_Plane_CAS_02_F: Gatling_30mm_HE_Plane_CAS_01_F {model = QPATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green.p3d
 
-    class ammo_Gun20mmAABase : BulletBase {model = QPATHTOF(ace_TracerWhite2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
-    class ammo_Fighter01_Gun20mm_AA : ammo_Gun20mmAABase {model = QPATHTOF(ace_TracerWhite2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
-    class ammo_Fighter04_Gun20mm_AA : ammo_Gun20mmAABase {model = QPATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green
+    class ammo_Gun20mmAABase: BulletBase {model = QPATHTOF(ace_TracerWhite2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
+    class ammo_Fighter01_Gun20mm_AA: ammo_Gun20mmAABase {model = QPATHTOF(ace_TracerWhite2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
+    class ammo_Fighter04_Gun20mm_AA: ammo_Gun20mmAABase {model = QPATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green
 
-    class ammo_Gun30mmAABase : BulletBase {model = QPATHTOF(ace_TracerWhite2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
-    class ammo_Fighter02_Gun30mm_AA : ammo_Gun30mmAABase {model = QPATHTOF(ace_TracerWhite2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
+    class ammo_Gun30mmAABase: BulletBase {model = QPATHTOF(ace_TracerWhite2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
+    class ammo_Fighter02_Gun30mm_AA: ammo_Gun30mmAABase {model = QPATHTOF(ace_TracerWhite2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
 
-    class ammo_Gun35mmAABase : BulletBase {model = QPATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red
-    class ammo_AAA_Gun35mm_AA : ammo_Gun35mmAABase {model = QPATHTOF(ace_TracerWhite2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
+    class ammo_Gun35mmAABase: BulletBase {model = QPATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red
+    class ammo_AAA_Gun35mm_AA: ammo_Gun35mmAABase {model = QPATHTOF(ace_TracerWhite2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
 
-    class ACE_Gatling_30mm_Sub_HEI : SubmunitionBullet {model = QPATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red.p3d
+    class ACE_Gatling_30mm_Sub_HEI: SubmunitionBullet {model = QPATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red.p3d
 
     //Cannon
     class Sh_120mm_HE: ShellBase {model = QPATHTOF(ace_shell_tracer_white.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\shell_tracer_white
