@@ -7,10 +7,10 @@
  * 0: Unit <OBJECT>
  * 1: Bodypart <STRING>
  * 2: Wound to add <ARRAY>
- *  2.0: Wound Type <STRING>
- *  2.1: Amount <NUMBER>
- *  2.2: Size (0 - 2) <NUMBER>
- *  2.3: Wound Damage <NUMBER>
+ * - 0: Wound Type (case-sensitive) <STRING>
+ * - 1: Amount <NUMBER>
+ * - 2: Size (0, 1 or 2) <NUMBER>
+ * - 3: Wound Damage <NUMBER>
  *
  * Return Value:
  * None
@@ -35,6 +35,9 @@ private _openWounds = GET_OPEN_WOUNDS(_unit);
 private _existingWounds = _openWounds getOrDefault [_bodyPart, [], true];
 private _bodyPartDamage = GET_BODYPART_DAMAGE(_unit);
 EGVAR(medical_damage,woundDetails) get _woundType params ["","_injuryBleedingRate","_injuryPain"];
+if (isNil "_injuryBleedingRate") exitWith {
+    ERROR_1("invalid wound type %1",_woundType);
+};
 TRACE_1("_injuryBleedingRate",_injuryBleedingRate);
 private _woundClassIDToAdd = EGVAR(medical_damage,woundClassNames) find _woundType;
 TRACE_1("_woundClassIDToAdd",_woundClassIDToAdd);
