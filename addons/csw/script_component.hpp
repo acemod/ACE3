@@ -26,3 +26,8 @@
 #else
     #define TIME_PROGRESSBAR(X) ((X) * GVAR(progressBarTimeCoefficent))
 #endif
+
+// The following are calculated mass values for the Vanilla M2 HMG components (mass = pounds * 10)
+#define M2_MASS 840 // 84 pound M2 Browning
+#define M2_SIGHT_MASS 62 // 4.2 pound Trijicon MGRS + ~2 pound mounting adaptor
+#define M2_SHIELD_MASS 550 // 55 pound ~800x450x8 millimeter steel plate and mounting arms

@@ -407,6 +407,11 @@
             <Turkish>[CSW] Static XM312 Gun</Turkish>
             <Ukrainian>[CSW] Станковий XM312 кулемет</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_CSW_StaticM2BareBag_displayName">
+            <English>[CSW] Static M2 w/o Attachments</English>
+            <Italian>[CSW] M2 Statico senza Accessori</Italian>
+            <German>[CSW] Statisches M2 ohne Schild</German>
+        </Key>
         <Key ID="STR_ACE_CSW_StaticM2ShieldBag_displayName">
             <English>[CSW] Static M2 w/ Shield</English>
             <Czech>[CSW] Statická zbraň M2 se štítem</Czech>
@@ -421,6 +426,16 @@
             <Japanese>[CSW] 設置型 防盾付き M2</Japanese>
             <Chinesesimp>[班组] 固定式防盾型 M2 重机枪</Chinesesimp>
             <Ukrainian>[CSW] Станковий M2 зі щитом</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_CSW_StaticM2ShieldSightBag_displayName">
+            <English>[CSW] Static M2 w/ Shield and Sight</English>
+            <Italian>[CSW] M2 Statico con Scudo e Ottica</Italian>
+            <German>[CSW] Statisches M2 mit Schild und Optik</German>
+        </Key>
+        <Key ID="STR_ACE_CSW_StaticM2SightBag_displayName">
+            <English>[CSW] Static M2 w/ Sight</English>
+            <Italian>[CSW] M2 Statico con ottica</Italian>
+            <German>[CSW] Statisches M2 mit Optik</German>
         </Key>
         <Key ID="STR_ACE_CSW_actionLink">
             <English>Link %1</English>
