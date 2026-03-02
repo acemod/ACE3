@@ -45,7 +45,7 @@
             <Italian>Namer</Italian>
             <Polish>Namer</Polish>
             <Portuguese>Namer</Portuguese>
-            <Russian>Намер</Russian>
+            <Russian>Namer</Russian>
             <German>Namer</German>
             <Korean>나메르 병력수송장갑차</Korean>
             <Japanese>ナメル</Japanese>
@@ -63,7 +63,7 @@
             <Italian>ZSU-35 Tigris</Italian>
             <Polish>ZSU-35 Tigris</Polish>
             <Portuguese>ZSU-35 Tigris</Portuguese>
-            <Russian>ЗСУ-35 Tigris</Russian>
+            <Russian>ЗСУ-35 Тигрис</Russian>
             <German>ZSU-35 Tigris</German>
             <Korean>ZSU-35 티그리스</Korean>
             <Japanese>ZSU-35 ティグリス</Japanese>
@@ -117,7 +117,7 @@
             <Italian>Otokar ARMA</Italian>
             <Polish>Otokar ARMA</Polish>
             <Portuguese>Otokar ARMA</Portuguese>
-            <Russian>Otokar ARMA</Russian>
+            <Russian>Отокар ARMA</Russian>
             <German>Otokar ARMA</German>
             <Korean>오토카 아르마 APC</Korean>
             <Japanese>オトカ アルマ</Japanese>
@@ -983,7 +983,7 @@
             <Italian>Merkava Mk IV LIC</Italian>
             <Polish>Merkawa Mk IV LIC</Polish>
             <Portuguese>Merkava Mk IV LIC</Portuguese>
-            <Russian>Меркава Mk IV LIC</Russian>
+            <Russian>Merkava Mk IV LIC</Russian>
             <German>Merkava Mk IV LIC</German>
             <Korean>메르카바 Mk IV LIC</Korean>
             <Japanese>メルカバ Mk IV LIC</Japanese>
@@ -1001,7 +1001,7 @@
             <Italian>Sholef</Italian>
             <Polish>Sholef</Polish>
             <Portuguese>Sholef</Portuguese>
-            <Russian>Шолеф</Russian>
+            <Russian>Sholef</Russian>
             <German>Sholef</German>
             <Korean>숄레프 자주포</Korean>
             <Japanese>ショレフ</Japanese>
@@ -1019,7 +1019,7 @@
             <Italian>Merkava Mk IV M</Italian>
             <Polish>Merkawa Mk IV M</Polish>
             <Portuguese>Merkava Mk IV M</Portuguese>
-            <Russian>Меркава Mk IV M</Russian>
+            <Russian>Merkava Mk IV M</Russian>
             <German>Merkava Mk IV M</German>
             <Korean>메르카바 Mk IV M</Korean>
             <Japanese>メルカバ Mk IV M</Japanese>
@@ -1448,7 +1448,7 @@
             <Italian>Burraq UCAV</Italian>
             <Polish>Burraq UCAV</Polish>
             <Portuguese>Burraq UCAV</Portuguese>
-            <Russian>Burraq UCAV</Russian>
+            <Russian>Буррак БПЛА</Russian>
             <German>Burraq UCAV</German>
             <Korean>부라크 UCAV</Korean>
             <Japanese>ブラク UCAV</Japanese>
@@ -1892,6 +1892,7 @@
         <Key ID="STR_ACE_RealisticNames_UAV_05_Name">
             <English>XQ-47B</English>
             <Japanese>XQ-47B</Japanese>
+            <Russian>XQ-47B</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SLAM_Name">
             <English>M4A1 SLAM</English>
@@ -3091,6 +3092,7 @@
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL_muzzleGPBO40">
             <English>GPBO-40</English>
             <Japanese>GPBO-40</Japanese>
+            <Russian>GPBO-40</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL_sand">
             <English>MSBS Grot GL (Sand)</English>
@@ -3239,6 +3241,7 @@
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS_muzzleSix12">
             <English>SIX-12</English>
             <Japanese>SIX-12</Japanese>
+            <Russian>SIX-12</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS_sand">
             <English>MSBS Grot SG (Sand)</English>
