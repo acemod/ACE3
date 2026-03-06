@@ -4,7 +4,7 @@
  * Handle the app being closed
  *
  * Arguments:
- * TacPhone main display
+ * Tacphone main display
  *
  * Return Value:
  * None

@@ -4,7 +4,7 @@
  * Handle the app being closed
  *
  * Arguments:
- * 0: TacPhone main display <DISPLAY>
+ * 0: Tacphone main display <DISPLAY>
  *
  * Return Value:
  * None
@@ -16,6 +16,8 @@
  */
 
 params ["_display"];
+
+[QGVAR(phoneClosed), _display] call CBA_fnc_localEvent;
 
 systemChat "BFT closed";
 // We simply clear out the app section

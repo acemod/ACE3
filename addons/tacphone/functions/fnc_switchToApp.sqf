@@ -1,11 +1,11 @@
 #include "..\script_component.hpp"
 /*
  * Author: KJW
- * Switches the TacPhone to a different app
+ * Switches the Tacphone to a different app
  * Closes currently active app, opens new one
  *
  * Arguments:
- * TacPhone to switch the app on <DISPLAY>
+ * Tacphone to switch the app on <DISPLAY>
  * Classname of the new app to be switched to <STRING>
  *
  * Return Value:

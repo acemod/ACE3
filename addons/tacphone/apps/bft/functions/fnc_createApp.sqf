@@ -4,13 +4,13 @@
  * Initializes the App
  *
  * Arguments:
- * TacPhone main display
+ * Tacphone main display
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call ace_tacphone_bft_fnc_createApp
+ * [] call ace_tacphone_fnc_createApp
  *
  * Public: No
  */
@@ -24,7 +24,7 @@ _appsection ctrlSetPosition _fullSize;
 _appsection ctrlCommit 0;
 
 _map = _display ctrlCreate [QEGVAR(tacphone,mapControl), -1, _appsection];
-_map ctrlMapSetPosition [0, 0, (ctrlPosition _appsection)#2, (ctrlPosition _appsection)#3]; 
+_map ctrlMapSetPosition [0, 0, (ctrlPosition _appsection)#2, (ctrlPosition _appsection)#3];
 _map ctrlCommit 0;
 private _plrPos = _map ctrlMapWorldToScreen position player;
 
@@ -39,7 +39,7 @@ _map ctrlAddEventHandler ["Draw", {
 _map ctrlAddEventHandler ["MouseButtonDblClick", {
     params ["_control", "_button", "_xPos", "_yPos", "_shift", "_ctrl", "_alt"];
     private _worldPos = (_control ctrlMapScreenToWorld [_xPos, _yPos]);
-    
+
     /*
         Create map marker menu. Should be separate function.
     */

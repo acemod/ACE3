@@ -4,7 +4,8 @@
  * Initializes the App
  *
  * Arguments:
- * TacPhone main display
+ * 0: Phone main display <DISPLAY>
+ * 1: App section <CONTROL>
  *
  * Return Value:
  * None

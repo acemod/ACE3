@@ -4,7 +4,7 @@
  * Initializes the App
  *
  * Arguments:
- * TacPhone main display
+ * Tacphone main display
  *
  * Return Value:
  * None
@@ -43,27 +43,27 @@ GVAR(home_background_apps) = [];
 
 {
     _x params ["_classname", "_displayName","_displayNameShort","_picture"];
-    
+
     private _column = _forEachIndex mod _columns;
-    private _row = floor (_forEachIndex/_columns);    
-        
+    private _row = floor (_forEachIndex/_columns);
+
     private _app = _display ctrlCreate ["RscActivePicture", -1, _appsection];
     private _appLabel = _display ctrlCreate ["RscText", -1, _appsection];
-    
+
     GVAR(home_background_apps) pushBack [_app,_appLabel];
-    
+
     _app ctrlSetText _picture;
     _appLabel ctrlSetText _displayNameShort;
-    
+
     private _coordX = _column * _spacingX;
     private _coordY = _row * _spacingY;
-    
+
     _app ctrlSetPosition [_coordX, _coordY, 0.1, 0.1];
     _appLabel ctrlSetPosition [_coordX+0.025, _coordY+0.06, 0.1, 0.1]; // Just need to center the text in this textbox... Dunno how.
-    
+
     _app setVariable [QEGVAR(tacphone,appClassname), _classname];
     _app setVariable [QEGVAR(tacphone,display), _display];
-    
+
     _app ctrlAddEventHandler ["MouseButtonClick",{
         params ["_control", "_button", "_xPos", "_yPos", "_shift", "_ctrl", "_alt"];
         private _appClassname = _control getVariable [QEGVAR(tacphone,appClassname),""];
@@ -73,7 +73,7 @@ GVAR(home_background_apps) = [];
             [_display, _appClassname] call EFUNC(tacphone,switchToApp);
         };
     }];
-    
+
     _app ctrlCommit 0;
     _appLabel ctrlCommit 0;
 
