@@ -3,8 +3,13 @@
 if (!hasInterface) exitWith {};
 GVAR(ppHandleDynamicBlur) = ppEffectCreate ["DynamicBlur", 500];
 GVAR(ppHandleColorCorrections) = ppEffectCreate ["ColorCorrections", 1500];
-GVAR(ppHandleDynamicBlur) ppEffectEnable GVAR(enabled);
-GVAR(ppHandleColorCorrections) ppEffectEnable GVAR(enabled);
+
+["featureCamera", {
+    params ["", "_newCamera"];
+    private _showEffects = (_newCamera == "") && {GVAR(pfh) != -1};
+    GVAR(ppHandleDynamicBlur) ppEffectEnable _showEffects;
+    GVAR(ppHandleColorCorrections) ppEffectEnable _showEffects;
+}] call CBA_fnc_addPlayerEventHandler;
 
 ["loadout", {
     params ["_unit"];

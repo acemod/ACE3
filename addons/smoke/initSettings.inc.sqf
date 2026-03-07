@@ -9,8 +9,9 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     {
         [QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged);
         if (!hasInterface) exitWith {};
-        GVAR(ppHandleDynamicBlur) ppEffectEnable _this;
-        GVAR(ppHandleColorCorrections) ppEffectEnable _this;
+        private _showEffects = _this && !EGVAR(common,OldIsCamera);
+        GVAR(ppHandleDynamicBlur) ppEffectEnable _showEffects;
+        GVAR(ppHandleColorCorrections) ppEffectEnable _showEffects;
         if (_this) then {
             if (GVAR(pfh) == -1) then {
                 GVAR(pfh) = [{
