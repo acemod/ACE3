@@ -57,6 +57,7 @@ _unit setVariable [QGVAR(cancelActionEH), [_unit, "zoomtemp", {true}, {GVAR(plac
 private _supportedTriggers = getArray (_configMagazine >> "ACE_Triggers" >> "SupportedTriggers");
 private _aceTriggers = configFile >> "ACE_Triggers";
 private _isAttachable = _supportedTriggers findIf {(getNumber (_aceTriggers >> _x >> "isAttachable")) == 1} != -1;
+private _isObjectAttachable = getNumber (_configMagazine >> QGVAR(isObjectAttachable)) == 1;
 
 GVAR(pfeh_running) = true;
 GVAR(placeAction) = PLACE_WAITING;
@@ -68,7 +69,7 @@ GVAR(TweakedAngle) = 0;
     disableSerialization;
 
     params ["_args", "_pfhID"];
-    _args params ["_unit", "_magClassname", "_setupObjectClass", "_isAttachable"];
+    _args params ["_unit", "_magClassname", "_setupObjectClass", "_isAttachable", "_isObjectAttachable"];
 
     private _lookDirVector = ((positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL)) vectorFromTo ((positionCameraToWorld [0, 0, 10]) call EFUNC(common,positionToASL));
     private _basePosASL = eyePos _unit;
@@ -121,14 +122,19 @@ GVAR(TweakedAngle) = 0;
         } forEach [[0, 0], [-TEST_LENGTH, -TEST_LENGTH], [TEST_LENGTH, -TEST_LENGTH], [-TEST_LENGTH, TEST_LENGTH], [TEST_LENGTH, TEST_LENGTH]];
 
         if (
-            !isNull _attachVehicle &&
-            {(_attachVehicle isKindOf "Car") || {_attachVehicle isKindOf "Tank"} || {_attachVehicle isKindOf "Air"} || {_attachVehicle isKindOf "Ship"}} &&
+            !isNull _attachVehicle && (
+                // Allow attaching to non-unit objects (if set) or any vehicle
+                (_isObjectAttachable && {!(_attachVehicle isKindOf "CAManBase")}) || {(_attachVehicle isKindOf "Car")} ||
+                {_attachVehicle isKindOf "Tank"} ||
+                {_attachVehicle isKindOf "Air"} ||
+                {_attachVehicle isKindOf "Ship"}
+            ) &&
             {PLACE_RANGE_MIN call _testPositionIsValid}
         ) then {
             private _min = PLACE_RANGE_MIN;
             private _max = PLACE_RANGE_MAX;
 
-            for "_index" from 0 to 6 do {
+            for "_" from 0 to 6 do {
                 _distanceFromBase = (_min + _max) / 2;
 
                 if (_distanceFromBase call _testPositionIsValid) then {
@@ -255,6 +261,6 @@ GVAR(TweakedAngle) = 0;
     };
 
     END_COUNTER(pfeh);
-}, 0, [_unit, _magClassname, _setupObjectClass, _isAttachable]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_unit, _magClassname, _setupObjectClass, _isAttachable, _isObjectAttachable]] call CBA_fnc_addPerFrameHandler;
 
 nil
