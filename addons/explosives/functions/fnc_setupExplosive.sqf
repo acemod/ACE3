@@ -214,6 +214,16 @@ GVAR(TweakedAngle) = 0;
                 _placeAngle = _placeAngle + 180; // CfgAmmos seem to be 180 for some reason
             } else {
                 private _modelOffset = _attachVehicle worldToModel (_virtualPosASL call EFUNC(common,ASLToPosition));
+
+                // Terrain objects (seemingly) can't have objects attached to them, so create a dummy instead
+                // Terrain objects always have an owner of 1, but `owner` command is server exec. So we just check first character of netId
+                if ((netId _attachVehicle) select [0, 1] == "1") then {
+                    _attachVehicle = createVehicle ["Helper_Base_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+                    _attachVehicle setPosASL _virtualPosASL;
+                    _attachVehicle setDir _placeAngle;
+                    _modelOffset = [0, 0, 0];
+                };
+
                 _placeAngle = _cameraAngle - (getDir _attachVehicle) + 180;
                 _expSetupVehicle attachTo [_attachVehicle, _modelOffset];
                 _expSetupVehicle setVectorDirAndUp [[0, 0, -1], [sin _placeAngle, cos _placeAngle, 0]];
