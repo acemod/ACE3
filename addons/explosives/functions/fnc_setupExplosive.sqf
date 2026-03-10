@@ -216,8 +216,7 @@ GVAR(TweakedAngle) = 0;
                 private _modelOffset = [0, 0, 0];
 
                 // Terrain objects (seemingly) can't have objects attached to them, so create a dummy instead
-                // Terrain objects always have an owner of 1, but `owner` command is server exec. So we just check first character of netId
-                if ((netId _attachVehicle) select [0, 1] == "1") then {
+                if (_attachVehicle call EFUNC(common,isTerrainObject)) then {
                     _attachVehicle = createVehicle ["Helper_Base_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
                     _attachVehicle setPosASL _virtualPosASL;
                     _attachVehicle setDir _placeAngle;

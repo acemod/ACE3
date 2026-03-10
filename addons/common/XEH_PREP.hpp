@@ -134,6 +134,7 @@ PREP(isMedic);
 PREP(isModLoaded);
 PREP(isPlayer);
 PREP(isSwimming);
+PREP(isTerrainObject);
 PREP(lightIntensityFromObject);
 PREP(loadPerson);
 PREP(loadPersonLocal);
