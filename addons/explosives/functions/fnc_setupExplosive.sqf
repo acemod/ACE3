@@ -57,7 +57,7 @@ _unit setVariable [QGVAR(cancelActionEH), [_unit, "zoomtemp", {true}, {GVAR(plac
 private _supportedTriggers = getArray (_configMagazine >> "ACE_Triggers" >> "SupportedTriggers");
 private _aceTriggers = configFile >> "ACE_Triggers";
 private _isAttachable = _supportedTriggers findIf {(getNumber (_aceTriggers >> _x >> "isAttachable")) == 1} != -1;
-private _isObjectAttachable = getNumber (_configMagazine >> QGVAR(isObjectAttachable)) == 1;
+private _isObjectAttachable = getNumber (_configMagazine >> QGVAR(attachable)) == 1;
 
 GVAR(pfeh_running) = true;
 GVAR(placeAction) = PLACE_WAITING;
