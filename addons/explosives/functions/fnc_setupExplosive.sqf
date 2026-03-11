@@ -57,6 +57,7 @@ _unit setVariable [QGVAR(cancelActionEH), [_unit, "zoomtemp", {true}, {GVAR(plac
 private _supportedTriggers = getArray (_configMagazine >> "ACE_Triggers" >> "SupportedTriggers");
 private _aceTriggers = configFile >> "ACE_Triggers";
 private _isAttachable = _supportedTriggers findIf {(getNumber (_aceTriggers >> _x >> "isAttachable")) == 1} != -1;
+private _isSticky = getNumber (_configMagazine >> QGVAR(isSticky)) == 1;
 
 GVAR(pfeh_running) = true;
 GVAR(placeAction) = PLACE_WAITING;
@@ -68,7 +69,7 @@ GVAR(TweakedAngle) = 0;
     disableSerialization;
 
     params ["_args", "_pfhID"];
-    _args params ["_unit", "_magClassname", "_setupObjectClass", "_isAttachable"];
+    _args params ["_unit", "_magClassname", "_setupObjectClass", "_isAttachable", "_isSticky"];
 
     private _lookDirVector = ((positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL)) vectorFromTo ((positionCameraToWorld [0, 0, 10]) call EFUNC(common,positionToASL));
     private _basePosASL = eyePos _unit;
@@ -121,14 +122,19 @@ GVAR(TweakedAngle) = 0;
         } forEach [[0, 0], [-TEST_LENGTH, -TEST_LENGTH], [TEST_LENGTH, -TEST_LENGTH], [-TEST_LENGTH, TEST_LENGTH], [TEST_LENGTH, TEST_LENGTH]];
 
         if (
-            !isNull _attachVehicle &&
-            {(_attachVehicle isKindOf "Car") || {_attachVehicle isKindOf "Tank"} || {_attachVehicle isKindOf "Air"} || {_attachVehicle isKindOf "Ship"}} &&
+            !isNull _attachVehicle && (
+                // Allow attaching to non-unit objects (if set) or any vehicle
+                (_isSticky && {!(_attachVehicle isKindOf "CAManBase")}) || {(_attachVehicle isKindOf "Car")} ||
+                {_attachVehicle isKindOf "Tank"} ||
+                {_attachVehicle isKindOf "Air"} ||
+                {_attachVehicle isKindOf "Ship"}
+            ) &&
             {PLACE_RANGE_MIN call _testPositionIsValid}
         ) then {
             private _min = PLACE_RANGE_MIN;
             private _max = PLACE_RANGE_MAX;
 
-            for "_index" from 0 to 6 do {
+            for "_" from 0 to 6 do {
                 _distanceFromBase = (_min + _max) / 2;
 
                 if (_distanceFromBase call _testPositionIsValid) then {
@@ -207,7 +213,17 @@ GVAR(TweakedAngle) = 0;
                 _expSetupVehicle setPosASL _virtualPosASL;
                 _placeAngle = _placeAngle + 180; // CfgAmmos seem to be 180 for some reason
             } else {
-                private _modelOffset = _attachVehicle worldToModel (_virtualPosASL call EFUNC(common,ASLToPosition));
+                private _modelOffset = [0, 0, 0];
+
+                // Terrain objects (seemingly) can't have objects attached to them, so create a dummy instead
+                if (_attachVehicle call EFUNC(common,isTerrainObject)) then {
+                    _attachVehicle = createVehicle ["Helper_Base_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+                    _attachVehicle setPosASL _virtualPosASL;
+                    _attachVehicle setDir _placeAngle;
+                } else {
+                    _modelOffset = [_attachVehicle worldToModel (_virtualPosASL call EFUNC(common,ASLToPosition))];
+                };
+
                 _placeAngle = _cameraAngle - (getDir _attachVehicle) + 180;
                 _expSetupVehicle attachTo [_attachVehicle, _modelOffset];
                 _expSetupVehicle setVectorDirAndUp [[0, 0, -1], [sin _placeAngle, cos _placeAngle, 0]];
@@ -255,6 +271,6 @@ GVAR(TweakedAngle) = 0;
     };
 
     END_COUNTER(pfeh);
-}, 0, [_unit, _magClassname, _setupObjectClass, _isAttachable]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_unit, _magClassname, _setupObjectClass, _isAttachable, _isSticky]] call CBA_fnc_addPerFrameHandler;
 
 nil
