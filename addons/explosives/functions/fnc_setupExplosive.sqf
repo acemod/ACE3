@@ -57,7 +57,7 @@ _unit setVariable [QGVAR(cancelActionEH), [_unit, "zoomtemp", {true}, {GVAR(plac
 private _supportedTriggers = getArray (_configMagazine >> "ACE_Triggers" >> "SupportedTriggers");
 private _aceTriggers = configFile >> "ACE_Triggers";
 private _isAttachable = _supportedTriggers findIf {(getNumber (_aceTriggers >> _x >> "isAttachable")) == 1} != -1;
-private _isObjectAttachable = getNumber (_configMagazine >> QGVAR(attachable)) == 1;
+private _isSticky = getNumber (_configMagazine >> QGVAR(isSticky)) == 1;
 
 GVAR(pfeh_running) = true;
 GVAR(placeAction) = PLACE_WAITING;
@@ -69,7 +69,7 @@ GVAR(TweakedAngle) = 0;
     disableSerialization;
 
     params ["_args", "_pfhID"];
-    _args params ["_unit", "_magClassname", "_setupObjectClass", "_isAttachable", "_isObjectAttachable"];
+    _args params ["_unit", "_magClassname", "_setupObjectClass", "_isAttachable", "_isSticky"];
 
     private _lookDirVector = ((positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL)) vectorFromTo ((positionCameraToWorld [0, 0, 10]) call EFUNC(common,positionToASL));
     private _basePosASL = eyePos _unit;
@@ -124,7 +124,7 @@ GVAR(TweakedAngle) = 0;
         if (
             !isNull _attachVehicle && (
                 // Allow attaching to non-unit objects (if set) or any vehicle
-                (_isObjectAttachable && {!(_attachVehicle isKindOf "CAManBase")}) || {(_attachVehicle isKindOf "Car")} ||
+                (_isSticky && {!(_attachVehicle isKindOf "CAManBase")}) || {(_attachVehicle isKindOf "Car")} ||
                 {_attachVehicle isKindOf "Tank"} ||
                 {_attachVehicle isKindOf "Air"} ||
                 {_attachVehicle isKindOf "Ship"}
@@ -271,6 +271,6 @@ GVAR(TweakedAngle) = 0;
     };
 
     END_COUNTER(pfeh);
-}, 0, [_unit, _magClassname, _setupObjectClass, _isAttachable, _isObjectAttachable]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_unit, _magClassname, _setupObjectClass, _isAttachable, _isSticky]] call CBA_fnc_addPerFrameHandler;
 
 nil
