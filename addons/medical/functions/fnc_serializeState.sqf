@@ -50,7 +50,7 @@ private _state = [] call CBA_fnc_createNamespace;
 ];
 
 // Convert medications time to offset
-private _medications = _unit getVariable [VAR_MEDICATIONS, []];
+private _medications = +(_unit getVariable [VAR_MEDICATIONS, []]);
 {
     _x set [1, _x#1 - CBA_missionTime];
 } forEach _medications;
