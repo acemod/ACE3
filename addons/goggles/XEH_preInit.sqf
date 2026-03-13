@@ -7,5 +7,8 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
+GVAR(respiratorPairs) = createHashMap;
+GVAR(respiratorHoseList) = createHashMap;
+GVAR(respiratorHoseTextures) = createHashMap;
 
 ADDON = true;
