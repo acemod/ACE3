@@ -526,12 +526,15 @@
         </Key>
         <Key ID="STR_ACE_Markers_quickNumberMarks">
             <English>Quick Number Marks</English>
+            <Russian>Быстрые числовые метки</Russian>
         </Key>
         <Key ID="STR_ACE_Markers_quickNumberMarksDescription">
             <English>Allows easy placement of numbered markers by holding ALT when placing a marker</English>
+            <Russian>Позволяет легко размещать пронумерованные маркеры, удерживая клавишу ALT при размещении маркера</Russian>
         </Key>
         <Key ID="STR_ACE_Markers_quickNumberMarksSideSync">
             <English>Side-Synchronized</English>
+            <Russian>Синхронизация по бокам</Russian>
         </Key>
     </Package>
 </Project>
