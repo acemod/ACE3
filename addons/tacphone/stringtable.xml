@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Tacphone">
+        <Key ID="STR_ACE_Tacphone_tacphoneDisplayName">
+            <English>Tacphone</English>
+        </Key>
+        <Key ID="STR_ACE_Tacphone_tacphoneCategory">
+            <English>Tacphone</English>
+        </Key>
+        <Key ID="STR_ACE_Tacphone_openPhoneKey">
+            <English>Open Phone</English>
+        </Key>
+        <Key ID="STR_ACE_Tacphone_tacphoneDescr">
+            <English>An End-User Device created by Banana Industries</English>
+        </Key>
+    </Package>
+</Project>
