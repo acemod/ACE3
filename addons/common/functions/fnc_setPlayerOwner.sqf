@@ -24,7 +24,7 @@ if (isServer) then {
     addMissionEventHandler ["HandleDisconnect", {
         params ["_dcPlayer"];
         TRACE_1("HandleDisconnect eh",_dcPlayer);
-        if (!isNil {_dcPlayer getVariable QGVAR(playerOwner)}) then {
+        if (!(_dcPlayer isNil QGVAR(playerOwner))) then {
             _dcPlayer setVariable [QGVAR(playerOwner), nil, true];
         };
     }];

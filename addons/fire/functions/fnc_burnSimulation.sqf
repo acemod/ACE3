@@ -54,7 +54,7 @@ params ["_unit", "_instigator"];
 
         _pfhID call CBA_fnc_removePerFrameHandler;
 
-        if (!isNil {_unit getVariable QGVAR(stopDropRoll)} && {!isPlayer _unit}) then {
+        if (!(_unit isNil QGVAR(stopDropRoll)) && {!isPlayer _unit}) then {
             _unit setUnitPos "AUTO";
 
             _unit setVariable [QGVAR(stopDropRoll), nil, true];
