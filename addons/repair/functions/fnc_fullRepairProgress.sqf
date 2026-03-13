@@ -32,7 +32,7 @@ if (_totalTime - _elapsedTime > ([_engineer, _vehicle] call FUNC(getFullRepairTi
 private _allHitPointsDamage = getAllHitPointsDamage _vehicle;
 _allHitPointsDamage params ["_hitPoints", "", "_damageValues"];
 
-private _selectionsToIgnore = _vehicle call FUNC(getSelectionsToIgnore);
+([_vehicle] call FUNC(getSelectionsToIgnore)) params ["_selectionsToIgnore"];
 
 private _firstDamagedIndex = {
     if (_x > 0 && {!(_forEachIndex in _selectionsToIgnore)}) exitWith {_forEachIndex};
