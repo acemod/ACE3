@@ -18,3 +18,6 @@
 
 
 #define TAG_SIZE 0.6
+#define RND_PITCH 0.5
+
+#define GLUE(g1,g2) g1##g2

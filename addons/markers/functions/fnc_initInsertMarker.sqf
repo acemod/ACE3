@@ -356,4 +356,6 @@
     [_aceScaleSlider, _curSelScale] call FUNC(onSliderPosChangedScale);
     _aceScaleSlider ctrlAddEventHandler ["SliderPosChanged", {call FUNC(onSliderPosChangedScale)}];
     _aceScaleSlider ctrlAddEventHandler ["MouseButtonUp", {call FUNC(onSliderMouseButtonUpScale)}];
+
+    [QGVAR(editingMarker), [GVAR(editingMarker), _display]] call CBA_fnc_localEvent;
 }, _this] call CBA_fnc_execNextFrame;

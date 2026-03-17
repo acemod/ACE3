@@ -1,22 +1,23 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class ADDON {
+    class SUBADDON {
         name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common"};
+        requiredAddons[] = {
+            "CUP_Weapons_LoadOrder",
+            "ace_tracers"
+        };
+        skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {"commy2"};
+        authors[] = {};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
+
+        addonRootClass = QUOTE(ADDON);
     };
 };
 
-#include "CfgEventHandlers.hpp"
-#include "ACE_Settings.hpp"
-#include "CfgVehicles.hpp"
-#include "CfgMarkers.hpp"
-
-#include "InsertMarker.hpp"
+#include "CfgAmmo.hpp"

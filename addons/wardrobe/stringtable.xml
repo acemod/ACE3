@@ -19,18 +19,22 @@
         <Key ID="STR_ACE_Wardrobe_bandannaAdd">
             <English>Add Bandanna</English>
             <Japanese>バンダナを着ける</Japanese>
+            <Russian>Надеть Банданну</Russian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_bandannaRemove">
             <English>Remove Bandanna</English>
             <Japanese>バンダナを外す</Japanese>
+            <Russian>Снять Банданну</Russian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_collarClose">
             <English>Close collar</English>
             <Japanese>襟をしめる</Japanese>
+            <Russian>Застегнуть воротник</Russian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_collarOpen">
             <English>Open collar</English>
             <Japanese>襟をあける</Japanese>
+            <Russian>Расстегнуть воротник</Russian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_enable_action">
             <English>ACE Interaction</English>
@@ -43,18 +47,22 @@
         <Key ID="STR_ACE_Wardrobe_foliageAdd">
             <English>Add scrim/foliage</English>
             <Japanese>スクリム/偽装を付ける</Japanese>
+            <Russian>Добавить сетку/листву</Russian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_foliageRemove">
             <English>Remove scrim/foliage</English>
             <Japanese>スクリム/偽装を外す</Japanese>
+            <Russian>Снять сетку/листву</Russian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glassesOff">
             <English>Take glasses off</English>
             <Japanese>眼鏡を外す</Japanese>
+            <Russian>Снять очки</Russian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glassesOn">
             <English>Put glasses on</English>
             <Japanese>眼鏡を着ける</Japanese>
+            <Russian>Надеть очки</Russian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glovesOff">
             <English>Take gloves off</English>
@@ -156,10 +164,12 @@
         <Key ID="STR_ACE_Wardrobe_tieOff">
             <English>Remove tie</English>
             <Japanese>ネクタイを外す</Japanese>
+            <Russian>Снять галстук</Russian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_tieOn">
             <English>Wear tie</English>
             <Japanese>ネクタイを着ける</Japanese>
+            <Russian>Надеть галстук</Russian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_visorDown">
             <English>Visor down</English>
