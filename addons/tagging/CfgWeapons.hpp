@@ -2,6 +2,7 @@ class CfgWeapons {
     class ACE_ItemCore;
     class CBA_MiscItem_ItemInfo;
 
+    //Spraypaints
     class ACE_SpraypaintBlack: ACE_ItemCore {
         author = "jokoho48";
         displayname = CSTRING(spraypaintBlack);
@@ -15,6 +16,11 @@ class CfgWeapons {
             mass = 10;
         };
         GVAR(textColor) = "000000FE";
+        sounds[] = {
+            QGVAR(spray),
+            QGVAR(spray01),
+            QGVAR(spray02)
+        };
     };
     class ACE_SpraypaintRed: ACE_SpraypaintBlack {
         displayname = CSTRING(spraypaintRed);
@@ -46,4 +52,37 @@ class CfgWeapons {
         hiddenSelectionsTextures[] = {QPATHTOF(data\spraycanWhite_co.paa)};
         GVAR(textColor) = "FFFFFFFE";
     };
+
+    // Chalks
+    class ACE_ChalkWhite: ACE_SpraypaintWhite {
+        author = "zorn";
+        displayname = CSTRING(chalkWhite);
+        descriptionShort = CSTRING(descSpraypaint);
+        model = "\A3\weapons_F\ammo\mag_univ.p3d";
+        scope = 2;
+        picture = QPATHTOF(UI\items\itemChalkWhite.paa);
+        GVAR(textColor) = "FFFFFFFE";
+        sounds[] = { 
+            QGVAR(chalk01),
+            QGVAR(chalk02),
+            QGVAR(chalk03),
+            QGVAR(chalk04),
+            QGVAR(chalk05),
+            QGVAR(chalk06)
+        };
+    };
+
+    #define ACE_CHALK(COLOR,HEX)\
+    class GLUE(ACE_Chalk,COLOR): ACE_ChalkWhite {\
+        displayName = CSTRING(GLUE(chalk,COLOR));\
+        picture = QPATHTOF(UI\items\GLUE(itemChalk,COLOR).paa);\
+        GVAR(textColor) = QUOTE(HEX);\
+    }
+
+    ACE_CHALK(Black,000000FE);
+    ACE_CHALK(Blue,0000FFFE);
+    ACE_CHALK(Red,FF0000FE);
+    ACE_CHALK(Green,00FF00FE);
+    ACE_CHALK(Yellow,FFFF00FE);
+
 };

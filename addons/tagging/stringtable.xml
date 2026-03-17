@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Tagging">
+        <Key ID="STR_ACE_Tagging_ChalkBlack">
+            <English>Chalk (Black)</English>
+            <German>Kreide (Schwarz)</German>
+            <Russian>Мел (Черный)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_ChalkBlue">
+            <English>Chalk (Blue)</English>
+            <German>Kreide (Blau)</German>
+            <Russian>Мел (Синий)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_ChalkGreen">
+            <English>Chalk (Green)</English>
+            <German>Kreide (Grün)</German>
+            <Russian>Мел (Зеленый)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_ChalkRed">
+            <English>Chalk (Red)</English>
+            <German>Kreide (Rot)</German>
+            <Russian>Мел (Красный)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_ChalkWhite">
+            <English>Chalk (White)</English>
+            <German>Kreide (Weiß)</German>
+            <Russian>Мел (Белый)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_ChalkYellow">
+            <English>Chalk (Yellow)</English>
+            <German>Kreide (Gelb)</German>
+            <Russian>Мел (Желтый)</Russian>
+        </Key>
         <Key ID="STR_ACE_Tagging_LastUsed">
             <English>Last Used</English>
             <Czech>Naposledy použitý</Czech>
@@ -314,6 +344,11 @@
             <Japanese>十字</Japanese>
             <Chinesesimp>十字</Chinesesimp>
             <Ukrainian>Перехрестя</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_descChalk">
+            <English>A chalk marker for tagging walls.</English>
+            <German>Ein Kreidestift um Wände zu markieren.</German>
+            <Russian>Меловой маркер для разметки стен.</Russian>
         </Key>
         <Key ID="STR_ACE_Tagging_descSpraypaint">
             <English>A can of spray paint for tagging walls.</English>

@@ -209,6 +209,13 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |`ace_versioning_clientCheckDone` | [[_missingAddonsClient, _additionalAddonsClient, _olderVersionsClient, _newerVersionsClient]] | Local | Listen | When PBO checking has finished on a client |
 |`ace_versioning_serverCheckDone` | [[_serverFiles, _serverVersions]] | Local | Listen | When PBO checking has finished on the server |
 
+### 2.22 Markers (`ace_markers`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_markers_editingMarker` | [markerName, display] | Local | Listen | Editing a marker
+| `ace_markers_markerPlaced` | [markerName, isEditingMarker] | Local | Listen | Marker placed
+
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.
 

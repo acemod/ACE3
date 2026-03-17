@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: BaerMitUmlaut, esteldunedain
+ * Author: BaerMitUmlaut, esteldunedain, Zorn
  * Creates a tag on a wall that is on the closest surface within 2m on front of the unit.
  *
  * Arguments:
@@ -8,6 +8,7 @@
  * 1: The color of the tag (valid colors are black, red, green and blue or full path to custom texture) <STRING>
  * 2: Material of the tag <STRING> (default: "")
  * 3: Tag Model <STRING> (default: "ace_tagging_texture1m")
+ * 4: Required Item <STRING or NIL> (default: nil)
  *
  * Return Value:
  * Success <BOOL>
@@ -22,7 +23,8 @@ params [
     ["_unit", objNull, [objNull]],
     ["_texture", "", [""]],
     ["_material", "", [""]],
-    ["_tagModel", QGVAR(texture1m), [""]]
+    ["_tagModel", QGVAR(texture1m), [""]],
+    "_requiredItem"
 ];
 
 if (isNull _unit || {_texture == ""}) exitWith {
@@ -118,18 +120,33 @@ if ( (!_isVehicleTag) && {
     false
 };
 
+// get Sounds
+private _soundEffects = if (isNil "_requiredItem") then { [ QGVAR(spray) ] } else { (configFile >> "CfgWeapons" >> _requiredItem >> "sounds") call BIS_fnc_getCfgDataArray };
+private _sound = selectRandom _soundEffects;
 
 // Everything ok, make the unit create the tag
 [_unit, "PutDown"] call EFUNC(common,doGesture);
 
-[{
-    params ["", "", "", "", "_unit"];
-    TRACE_2("Unit:",_unit,_this);
+[
+    {
+        params ["", "", "", "", "_unit", "", "", "", "_sound"];
+        TRACE_2("Unit:",_unit,_this);
 
-    playSound3D [QUOTE(PATHTO_R(sounds\spray.ogg)), _unit, false, (eyePos _unit), 5, 1, 15];
-
-    // Tell the server to create the tag and handle its destruction
-    [QGVAR(createTag), _this] call CBA_fnc_serverEvent;
-}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _texture, _object, _unit, _material, _tagModel, _isVehicleTag], 0.6] call CBA_fnc_waitAndExecute;
+        // Tell the server to create the tag and handle its destruction
+        [QGVAR(createTag), _this] call CBA_fnc_serverEvent;
+    },
+    [
+        _touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06),
+        _vectorDirAndUp,
+        _texture,
+        _object,
+        _unit,
+        _material,
+        _tagModel,
+        _isVehicleTag,
+        _sound
+    ],
+    0.6
+] call CBA_fnc_waitAndExecute;
 
 true

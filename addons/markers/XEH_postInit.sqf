@@ -39,3 +39,50 @@ GVAR(userPlacedMarkers) = [];
         _data set [2, _pos];
     };
 }] call CBA_fnc_addEventHandler;
+
+if (hasInterface) then {
+    GVAR(numberNextMarker) = false;
+    GVAR(numberLocalLast) = 0;
+    [QGVAR(editingMarker), {
+        params ["_marker", "_display"];
+        TRACE_2("editingMarker",_marker,_display);
+        if (GVAR(quickNumberMarks) == 0) exitWith {};
+        if (!cba_events_alt) exitWith {}; // not available before mission start
+        if (_marker != "") exitWith {}; // editing an existing marker
+
+        private _description = _display displayCtrl IDC_INSERT_MARKER;
+        private _number = if ((GVAR(quickNumberMarks) == 1) || {currentChannel != 1}) then {
+            GVAR(numberLocalLast) = GVAR(numberLocalLast) + 1;
+            GVAR(numberLocalLast) // local numbering
+        } else {
+            private _hash = missionNamespace getVariable [QGVAR(numberSideLast), createHashMap];
+            private _side = side group player;
+            private _next = (_hash getOrDefault [_side, 0]) + 1;
+            _hash set [_side, _next];
+            missionNamespace setVariable [QGVAR(numberSideLast), _hash, true];
+            _next // side-synchronized numbering
+        };
+        _description ctrlSetText str _number;
+        GVAR(numberNextMarker) = true;
+        _display closeDisplay 1; // push ok button
+    }] call CBA_fnc_addEventHandler;
+
+    [QGVAR(markerPlaced), {
+        params ["_newestMarker"];
+        TRACE_1("markerPlaced",_newestMarker);
+        if (missionNamespace getVariable [QGVAR(numberNextMarker), false]) then {
+            // set marker type to text only (temporarily for this marker)
+            GVAR(numberNextMarker) = false;
+            GVAR(currentMarkerConfigName) = QGVAR(textOnly);
+        } else {
+            // try to update our local marker index when placing a text-only marker with a number
+            if ((GVAR(quickNumberMarks) == 2) && {currentChannel == 1}) exitWith {};
+            if ((markerType _newestMarker) != QGVAR(textOnly)) exitWith {};
+            private _text = markerText _newestMarker;
+            if (count _text > 6) exitWith {};
+            if !(_text regexMatch "^\d+$") exitWith {}; // just digits
+            GVAR(numberLocalLast) = parseNumber _text;
+            TRACE_1("Updated local marker number",GVAR(numberLocalLast));
+        };
+    }] call CBA_fnc_addEventHandler;
+};
