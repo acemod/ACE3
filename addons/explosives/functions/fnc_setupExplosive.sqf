@@ -222,7 +222,7 @@ GVAR(TweakedAngle) = 0;
 
                     [0, 0, 0];
                 } else {
-                    [_attachVehicle worldToModel (_virtualPosASL call EFUNC(common,ASLToPosition))];
+                    _attachVehicle worldToModel (_virtualPosASL call EFUNC(common,ASLToPosition));
                 };
 
                 _placeAngle = _cameraAngle - (getDir _attachVehicle) + 180;
