@@ -527,14 +527,17 @@
         <Key ID="STR_ACE_Markers_quickNumberMarks">
             <English>Quick Number Marks</English>
             <Russian>Быстрые числовые метки</Russian>
+            <Japanese>クイック番号マーク</Japanese>
         </Key>
         <Key ID="STR_ACE_Markers_quickNumberMarksDescription">
             <English>Allows easy placement of numbered markers by holding ALT when placing a marker</English>
             <Russian>Позволяет легко размещать пронумерованные маркеры, удерживая клавишу ALT при размещении маркера</Russian>
+            <Japanese>ALTキーを押しながらマーカーを配置することで、 番号付きマーカーを簡単に配置出来るようにします。</Japanese>
         </Key>
         <Key ID="STR_ACE_Markers_quickNumberMarksSideSync">
             <English>Side-Synchronized</English>
             <Russian>Синхронизация по бокам</Russian>
+            <Japanese>陣営内で同期</Japanese>
         </Key>
     </Package>
 </Project>
