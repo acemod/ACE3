@@ -21,7 +21,7 @@ params ["_unit", "_container", "_item"];
 
 if (!alive _unit) exitWith {};
 
- // Don't run when placing a tripod in a vehicle/box
+// Don't run when placing a tripod in a vehicle/box
 if !(_container isKindOf "GroundWeaponHolder") exitWith {};
 
 private _weaponConfig = configFile >> "CfgWeapons" >> _item;
@@ -44,6 +44,7 @@ if (_tripodClass == "") exitWith {};
 _container addItemCargoGlobal [_item, -1];
 
 // Create a vehicle replacing the tripod
-private _weaponPlatform = createVehicle [_tripodClass, (getPosATL _unit) vectorAdd (_vectorDir vectorMultiply 1.1), [], 0, "CAN_COLLIDE"];
+private _pos = (getPosATL _unit) vectorAdd (_vectorDir vectorMultiply 1.1);
+private _weaponPlatform = createVehicle [_tripodClass, _pos, [], 0, "CAN_COLLIDE"];
 
-_weaponPlatform setVectorDir _vectorDir;
+_weaponPlatform setVectorDirAndUp [_vectorDir, surfaceNormal _pos];
