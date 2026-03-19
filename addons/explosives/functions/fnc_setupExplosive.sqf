@@ -124,7 +124,8 @@ GVAR(TweakedAngle) = 0;
         if (
             !isNull _attachVehicle && (
                 // Allow attaching to non-unit objects (if set) or any vehicle
-                (_isSticky && {!(_attachVehicle isKindOf "CAManBase")}) || {(_attachVehicle isKindOf "Car")} ||
+                (_isSticky && {!(_attachVehicle isKindOf "Man")}) ||
+                {_attachVehicle isKindOf "Car"} ||
                 {_attachVehicle isKindOf "Tank"} ||
                 {_attachVehicle isKindOf "Air"} ||
                 {_attachVehicle isKindOf "Ship"}
@@ -213,13 +214,13 @@ GVAR(TweakedAngle) = 0;
                 _expSetupVehicle setPosASL _virtualPosASL;
                 _placeAngle = _placeAngle + 180; // CfgAmmos seem to be 180 for some reason
             } else {
-                private _modelOffset = [0, 0, 0];
-
                 // Terrain objects (seemingly) can't have objects attached to them, so create a dummy instead
-                if (_attachVehicle call EFUNC(common,isTerrainObject)) then {
+                private _modelOffset = if (_attachVehicle call EFUNC(common,isTerrainObject)) then {
                     _attachVehicle = createVehicle ["Helper_Base_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
                     _attachVehicle setPosASL _virtualPosASL;
                     _attachVehicle setDir _placeAngle;
+                    
+                    [0, 0, 0]
                 } else {
                     _modelOffset = [_attachVehicle worldToModel (_virtualPosASL call EFUNC(common,ASLToPosition))];
                 };
