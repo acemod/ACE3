@@ -220,7 +220,7 @@ GVAR(TweakedAngle) = 0;
                     _attachVehicle setPosASL _virtualPosASL;
                     _attachVehicle setDir _placeAngle;
 
-                    [0, 0, 0]
+                    [0, 0, 0];
                 } else {
                     [_attachVehicle worldToModel (_virtualPosASL call EFUNC(common,ASLToPosition))];
                 };
