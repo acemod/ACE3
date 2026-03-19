@@ -215,14 +215,14 @@ GVAR(TweakedAngle) = 0;
                 _placeAngle = _placeAngle + 180; // CfgAmmos seem to be 180 for some reason
             } else {
                 // Terrain objects (seemingly) can't have objects attached to them, so create a dummy instead
-                private _modelOffset = if (_attachVehicle call EFUNC(common,isTerrainObject)) then {
+                private _modelOffset = if (_attachVehicle call CBA_fnc_isTerrainObject) then {
                     _attachVehicle = createVehicle ["Helper_Base_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
                     _attachVehicle setPosASL _virtualPosASL;
                     _attachVehicle setDir _placeAngle;
-                    
+
                     [0, 0, 0]
                 } else {
-                    _modelOffset = [_attachVehicle worldToModel (_virtualPosASL call EFUNC(common,ASLToPosition))];
+                    [_attachVehicle worldToModel (_virtualPosASL call EFUNC(common,ASLToPosition))];
                 };
 
                 _placeAngle = _cameraAngle - (getDir _attachVehicle) + 180;
