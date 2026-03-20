@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="Smoke">
-        <Key ID="STR_ACE_Smoke_DisplayName">
+    <Package name="Irritants">
+        <Key ID="STR_ACE_Irritants_DisplayName">
+            <English>Irritants</English>
+            <Czech>Dráždivé látky</Czech>
+            <French>Irritants</French>
+            <Spanish>Irritantes</Spanish>
+            <Italian>Agenti irritanti</Italian>
+            <Polish>Drażniące substancje</Polish>
+            <Portuguese>Irritantes</Portuguese>
+            <Russian>Раздражители</Russian>
+            <German>Reizstoffe</German>
+            <Korean>자극제</Korean>
+            <Japanese>刺激物</Japanese>
+            <Chinese>刺激物</Chinese>
+            <Chinesesimp>刺激物</Chinesesimp>
+            <Ukrainian>Роздратування</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Irritants_Smoke_DisplayName">
             <English>Smoke Effects</English>
             <Czech>Kouřové efekty</Czech>
             <French>Effets de fumée</French>
@@ -17,7 +33,7 @@
             <Chinesesimp>烟雾效果</Chinesesimp>
             <Ukrainian>Ефекти диму</Ukrainian>
         </Key>
-        <Key ID="STR_ACE_Smoke_effectFactor_Description">
+        <Key ID="STR_ACE_Irritants_Smoke_effectFactor_Description">
             <English>Adjusts the rate of smoke effect. Lower values increase the duration that can be spent in smoke.</English>
             <Czech>Upravuje rychlost kouřového efektu. Nižší hodnoty prodlužují dobu, kterou lze strávit v kouři.</Czech>
             <French>Modifie la vitesse de l'effet de fumée. Des valeurs plus basses augmentent la durée pendant laquelle on peut rester dans la fumée.</French>
@@ -33,7 +49,7 @@
             <Chinesesimp>调整烟雾效果的速率。较低的值会增加在烟雾中停留的时间。</Chinesesimp>
             <Ukrainian>Регулює швидкість ефекту диму. Нижчі значення збільшують тривалість перебування в диму.</Ukrainian>
         </Key>
-        <Key ID="STR_ACE_Smoke_effectFactor_DisplayName">
+        <Key ID="STR_ACE_Irritants_Smoke_effectFactor_DisplayName">
             <English>Effect Factor</English>
             <Czech>Faktor efektu</Czech>
             <French>Facteur d'effet</French>
@@ -49,7 +65,7 @@
             <Chinesesimp>效果系数</Chinesesimp>
             <Ukrainian>Фактор ефекту</Ukrainian>
         </Key>
-        <Key ID="STR_ACE_Smoke_enabled_Description">
+        <Key ID="STR_ACE_Irritants_Smoke_enabled_Description">
             <English>Enable / Disable Smoke Effects</English>
             <Czech>Povolit / Zakázat kouřové efekty</Czech>
             <French>Activer / Désactiver les effets de fumée</French>
@@ -65,7 +81,7 @@
             <Chinesesimp>启用 / 禁用 烟雾效果</Chinesesimp>
             <Ukrainian>Увімкнути / Вимкнути ефекти диму</Ukrainian>
         </Key>
-        <Key ID="STR_ACE_Smoke_enabled_DisplayName">
+        <Key ID="STR_ACE_Irritants_Smoke_enabled_DisplayName">
             <English>Enabled</English>
             <Czech>Povoleno</Czech>
             <French>Activé</French>
@@ -81,7 +97,7 @@
             <Chinesesimp>启用</Chinesesimp>
             <Ukrainian>Увімкнено</Ukrainian>
         </Key>
-        <Key ID="STR_ACE_Smoke_recoveryFactor_Description">
+        <Key ID="STR_ACE_Irritants_Smoke_recoveryFactor_Description">
             <English>Adjusts the rate of recovery from smoke effects. Higher values increase the rate of recovery after leaving smoke.</English>
             <Czech>Upravuje rychlost zotavení z kouřových efektů. Vyšší hodnoty zvyšují rychlost zotavení po opuštění kouře.</Czech>
             <French>Modifie la vitesse de récupération des effets de fumée. Des valeurs plus élevées augmentent la vitesse de récupération après avoir quitté la fumée.</French>
@@ -97,7 +113,7 @@
             <Chinesesimp>调整从烟雾效果中恢复的速率。较高的值会增加离开烟雾后的恢复速率。</Chinesesimp>
             <Ukrainian>Регулює швидкість відновлення від ефектів диму. Вищі значення збільшують швидкість відновлення після виходу з диму.</Ukrainian>
         </Key>
-        <Key ID="STR_ACE_Smoke_recoveryFactor_DisplayName">
+        <Key ID="STR_ACE_Irritants_Smoke_recoveryFactor_DisplayName">
             <English>Recovery Factor</English>
             <Czech>Faktor zotavení</Czech>
             <French>Facteur de récupération</French>
@@ -113,7 +129,7 @@
             <Chinesesimp>恢复系数</Chinesesimp>
             <Ukrainian>Фактор відновлення</Ukrainian>
         </Key>
-        <Key ID="STR_ACE_Smoke_statBreatingProtection">
+        <Key ID="STR_ACE_Irritants_statBreatingProtection">
             <English>Breathing Protection</English>
             <Czech>Ochrana dýchání</Czech>
             <French>Protection respiratoire</French>
@@ -129,7 +145,7 @@
             <Chinesesimp>呼吸保护</Chinesesimp>
             <Ukrainian>Захист дихання</Ukrainian>
         </Key>
-        <Key ID="STR_ACE_Smoke_statEyesProtection">
+        <Key ID="STR_ACE_Irritants_statEyesProtection">
             <English>Eye Protection</English>
             <Czech>Ochrana očí</Czech>
             <French>Protection des yeux</French>
