@@ -37,6 +37,9 @@
         private _currentPosition = getPosASLVisual _projectile;
         private _targetPosition = getPosASLVisual _target;
 
+        private _proximityFuseRange = _projectile getVariable [QGVAR(proximityFuseRange),GVAR(proximityFuseRange)];
+        private _proximityFuseFailureChance = _projectile getVariable [QGVAR(proximityFuseFailureChance),GVAR(proximityFuseFailureChance)];
+
         private _posDiff = (_currentPosition vectorDiff _lastPosition);
         private _lengthSqr = _posDiff vectorDotProduct _posDiff;
         private _minDistance = if (_lengthSqr - 0.001 <= 0) then {
@@ -51,11 +54,11 @@
         _x set [2, _currentPosition];
         _x set [3, _minDistance];
 
-        if (_minDistance <= GVAR(proximityFuseRange) || { _minDistance > _lastDistance }) then {
+        if (_minDistance <= _proximityFuseRange || { _minDistance > _lastDistance }) then {
             triggerAmmo _projectile;
             _interceptors deleteAt _forEachIndex;
             // if we overshot target, dont take out target
-            if (_minDistance <= _lastDistance && { GVAR(proximityFuseFailureChance) <= random 1 }) then {
+            if (_minDistance <= _lastDistance && { _proximityFuseFailureChance <= random 1 }) then {
                 private _explosion = createVehicle ["SmallSecondary", _target, [], 0, "CAN_COLLIDE"];
                 [QGVAR(destroyProjectile), [_target, typeOf _target, getPos _target]] call CBA_fnc_globalEvent;
                 deleteVehicle _target;
