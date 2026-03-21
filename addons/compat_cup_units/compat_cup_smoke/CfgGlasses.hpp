@@ -1,5 +1,5 @@
 #define PROTECT(var1,eyes,breathing) class var1: None { \
-    ace_smoke_eyes_protection = eyes; \
+    ace_irritants_eyes_protection = eyes; \
     ace_smoke_breathing_protection = breathing; \
 }
 
