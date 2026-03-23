@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: BaerMitUmlaut, esteldunedain
+ * Author: BaerMitUmlaut, esteldunedain, Zorn
  * Creates a tag and handle its destruction. Only execute on the server.
  *
  * Arguments:
@@ -12,6 +12,7 @@
  * 5: Material of the tag <STRING> (default: "")
  * 6: Model of the tag <STRING> (default: "ace_tagging_texture1m")
  * 7: Vehicle Tag <BOOL> (default: false)
+ * 8: Sound <STRING or NIL> (default: nil)
  *
  * Return Value:
  * Tag created <BOOL>
@@ -22,7 +23,7 @@
  * Public: No
  */
 
-params ["_tagPosASL", "_vectorDirAndUp", "_texture", "_object", "_unit", ["_material","",[""]], ["_tagModel", QGVAR(texture1m), [""]], ["_isVehicleTag", false, [false]]];
+params ["_tagPosASL", "_vectorDirAndUp", "_texture", "_object", "_unit", ["_material","",[""]], ["_tagModel", QGVAR(texture1m), [""]], ["_isVehicleTag", false, [false]], "_sound"];
 TRACE_5("createTag:",_tagPosASL,_vectorDirAndUp,_texture,_object,_unit);
 
 if (_texture == "") exitWith {
@@ -34,15 +35,22 @@ if (_isVehicleTag) exitWith {
     TRACE_3("tagging vehicle",_object,typeOf _object,_texture);
     _object setObjectTextureGlobal [getText (configOf _object >> "selectionClan"), _texture];
     _object setVariable [QGVAR(hasTag), true, true];
-    // if (_material != "") then { _object setObjectMaterialGlobal ["clan", _material] }; // ??
     ["ace_tagCreated", [objNull, _texture, _object, _unit]] call CBA_fnc_globalEvent;
+
+    // Sound, use unit as soundsource
+    if (!isNil "_sound") then { [ _unit, _sound, nil, false, false, RND_PITCH ] call CBA_fnc_globalSay3D; };
+
     true
 };
 
+// Create Tag Object
 private _tag = createSimpleObject [_tagModel, _tagPosASL];
 _tag setObjectTextureGlobal [0, _texture];
 if (_material != "") then { _tag setObjectMaterialGlobal [0, _material] };
 _tag setVectorDirAndUp _vectorDirAndUp;
+
+// Sound, use tag object as sound source
+if (!isNil "_sound") then { [ _tag, _sound, nil, false, false, RND_PITCH ] call CBA_fnc_globalSay3D; };
 
 // Throw a global event for mission makers
 ["ace_tagCreated", [_tag, _texture, _object, _unit]] call CBA_fnc_globalEvent;

@@ -1,4 +1,5 @@
 PREP(addDamageToUnit);
+PREP(addWound);
 PREP(adjustPainLevel);
 PREP(deserializeState);
 PREP(fullHeal);
@@ -7,7 +8,7 @@ PREP(getBloodLoss);
 PREP(getIVs);
 PREP(getOpenWounds);
 PREP(getStitchedWounds);
-PREP(isInjured);
 PREP(isInStableCondition);
+PREP(isInjured);
 PREP(serializeState);
 PREP(setUnconscious);

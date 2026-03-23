@@ -93,3 +93,10 @@ private _formatDescription = [
         1
     ]
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(quickNumberMarks), "LIST",
+    [LSTRING(quickNumberMarks), LSTRING(quickNumberMarksDescription)],
+    [_categoryName, LLSTRING(Module_DisplayName)],
+    [[0,1,2], [disabled, "STR_cba_settings_ButtonLocal", LSTRING(quickNumberMarksSideSync)], 2]
+] call CBA_fnc_addSetting;

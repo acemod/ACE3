@@ -120,6 +120,12 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_SpraypaintGreen,5);
             MACRO_ADDITEM(ACE_SpraypaintYellow,5);
             MACRO_ADDITEM(ACE_SpraypaintWhite,5);
+            MACRO_ADDITEM(ACE_ChalkBlack,5);
+            MACRO_ADDITEM(ACE_ChalkRed,5);
+            MACRO_ADDITEM(ACE_ChalkBlue,5);
+            MACRO_ADDITEM(ACE_ChalkGreen,5);
+            MACRO_ADDITEM(ACE_ChalkYellow,5);
+            MACRO_ADDITEM(ACE_ChalkWhite,5);
         };
     };
 };
