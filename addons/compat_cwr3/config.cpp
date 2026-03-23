@@ -8,7 +8,11 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "ace_common",
-            "cwr3_vehicle_m41"
+            "cwr3_air_weapons",
+            "cwr3_crates",
+            "cwr3_optics",
+            "cwr3_vehicle_m41",
+            "cwr3_weapons"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
@@ -18,4 +22,8 @@ class CfgPatches {
     };
 };
 
+#include "CfgMagazines.hpp"
+#include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
+
+#include "ace_wardrobe.hpp"
