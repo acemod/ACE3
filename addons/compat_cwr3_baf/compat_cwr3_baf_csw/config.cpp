@@ -7,7 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "ace_compat_cwr3_baf_weapons",
+            "ace_compat_cwr3_baf",
             "ace_csw"
         };
         skipWhenMissingDependencies = 1;

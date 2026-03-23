@@ -7,7 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "ace_compat_cwr3_weapons",
+            "ace_compat_cwr3",
             "cwr3_expansion_uk",
             "cwr3_soldiers_uk"
         };
