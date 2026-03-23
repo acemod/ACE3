@@ -30,7 +30,15 @@ private _tripods = (weaponCargo _container) select {getNumber (_cfgWeapons >> _x
 if (_tripods isEqualTo []) exitWith {};
 
 private _vectorDir = vectorDir _unit;
-private _pos = (getPosATL _unit) vectorAdd (_vectorDir vectorMultiply 1.1);
+private _posASL = (eyePos _unit) vectorAdd (_vectorDir vectorMultiply 1.1);
+
+private _lisPos = lineIntersectsSurfaces [_posASL, _posASL vectorAdd [0, 0, -3], _unit, objNull, true, 1, "ROADWAY", "FIRE"];
+
+if (_lisPos isEqualTo []) exitWith {};
+
+_lisPos = _lisPos select 0;
+
+_posASL = (ASLToAGL (_lisPos select 0)) vectorAdd [0, 0, 0.1];
 
 {
     private _tripodClass = if (EGVAR(csw,defaultAssemblyMode)) then {
@@ -48,7 +56,7 @@ private _pos = (getPosATL _unit) vectorAdd (_vectorDir vectorMultiply 1.1);
     _container addItemCargoGlobal [_x, -1];
 
     // Create a vehicle replacing the tripod
-    private _weaponPlatform = createVehicle [_tripodClass, _pos, [], 0, ["NONE", "CAN_COLLIDE"] select (_forEachIndex == 0)];
+    private _weaponPlatform = createVehicle [_tripodClass, _posASL, [], 0, ["NONE", "CAN_COLLIDE"] select (_forEachIndex == 0)];
 
-    _weaponPlatform setVectorDirAndUp [_vectorDir, surfaceNormal getPosWorld _weaponPlatform];
+    _weaponPlatform setVectorDirAndUp [_vectorDir, _lisPos select 1];
 } forEach _tripods;

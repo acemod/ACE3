@@ -29,8 +29,6 @@ private _weaponConfig = configFile >> "CfgWeapons" >> _item;
 // isKindOf does not currently work for weapons
 if (getNumber (_weaponConfig >> "SPE_isTripod") == 0) exitWith {};
 
-private _vectorDir = vectorDir _unit;
-
 private _tripodClass = if (EGVAR(csw,defaultAssemblyMode)) then {
     getText (_weaponConfig >> "ace_csw" >> "deploy")
 } else {
@@ -40,11 +38,19 @@ private _tripodClass = if (EGVAR(csw,defaultAssemblyMode)) then {
 
 if (_tripodClass == "") exitWith {};
 
+// Check if there is a surface on which the tripod can be placed
+private _vectorDir = vectorDir _unit;
+private _posASL = (eyePos _unit) vectorAdd (_vectorDir vectorMultiply 1.1);
+private _lisPos = lineIntersectsSurfaces [_posASL, _posASL vectorAdd [0, 0, -3], _unit, objNull, true, 1, "ROADWAY", "FIRE"];
+
+if (_lisPos isEqualTo []) exitWith {};
+
+_lisPos = _lisPos select 0;
+
 // Remove tripod from container
 _container addItemCargoGlobal [_item, -1];
 
 // Create a vehicle replacing the tripod
-private _pos = (getPosATL _unit) vectorAdd (_vectorDir vectorMultiply 1.1);
-private _weaponPlatform = createVehicle [_tripodClass, _pos, [], 0, "CAN_COLLIDE"];
+private _weaponPlatform = createVehicle [_tripodClass, (ASLToAGL (_lisPos select 0)) vectorAdd [0, 0, 0.1], [], 0, "CAN_COLLIDE"];
 
-_weaponPlatform setVectorDirAndUp [_vectorDir, surfaceNormal _pos];
+_weaponPlatform setVectorDirAndUp [_vectorDir, _lisPos select 1];
