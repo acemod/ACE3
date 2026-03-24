@@ -17,14 +17,16 @@
 
 params ["_display", "_appSection"];
 
-private _fullSize = [0, 0, (ctrlPosition _appSection)#2, (ctrlPosition _appSection)#3];
-systemChat _appsection;
-_appsection = _display ctrlCreate ["RscControlsGroupNoScrollbars", -1, _appSection];
-_appsection ctrlSetPosition _fullSize;
-_appsection ctrlCommit 0;
+private _posAppSection = ctrlPosition _appSection;
+private _fullSize = [0, 0, _posAppSection#2, _posAppSection#3];
 
-_map = _display ctrlCreate [QEGVAR(tacphone,mapControl), -1, _appsection];
-_map ctrlMapSetPosition [0, 0, (ctrlPosition _appsection)#2, (ctrlPosition _appsection)#3];
+systemChat _appSection;
+_appSection = _display ctrlCreate ["RscControlsGroupNoScrollbars", -1, _appSection];
+_appSection ctrlSetPosition _fullSize;
+_appSection ctrlCommit 0;
+
+_map = _display ctrlCreate [QEGVAR(tacphone,mapControl), -1, _appSection];
+_map ctrlMapSetPosition _fullSize;
 _map ctrlCommit 0;
 private _plrPos = _map ctrlMapWorldToScreen position player;
 
