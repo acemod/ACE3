@@ -11,7 +11,7 @@
  *
  * Example:
  * [{
- *   [player] call ace_smoke_fnc_pfh
+ *   [player] call ace_irritants_fnc_pfh
  * }] call CBA_fnc_addPerFrameHandler
  *
  * Public: No

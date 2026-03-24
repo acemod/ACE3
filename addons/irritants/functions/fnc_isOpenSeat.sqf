@@ -11,7 +11,7 @@
  * Is the seat open? <BOOL>
  *
  * Example:
- * [_vehicle, _unit] call ace_smoke_fnc_isOpenSeat
+ * [_vehicle, _unit] call ace_irritants_fnc_isOpenSeat
  *
  * Public: Yes
  */

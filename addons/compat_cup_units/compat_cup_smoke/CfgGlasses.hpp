@@ -1,17 +1,17 @@
 #define PROTECT(var1,eyes,breathing) class var1: None { \
     ace_irritants_eyes_protection = eyes; \
-    ace_smoke_breathing_protection = breathing; \
+    ace_irritants_breathing_protection = breathing; \
 }
 
 class CfgGlasses {
     class None;
 
     class CUP_RUS_Balaclava_blk: None {
-        ace_smoke_breathing_protection = 0.4;
+        ace_irritants_breathing_protection = 0.4;
     };
 
     class CUP_G_Ratnik_Balaclava_base: None {
-        ace_smoke_breathing_protection = 0.4;
+        ace_irritants_breathing_protection = 0.4;
     };
 
     PROTECT(CUP_G_ESS_BLK_Dark,1,0);

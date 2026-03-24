@@ -10,7 +10,7 @@
  * Is the unit in smoke? <BOOL>
  *
  * Example:
- * [player] call ace_smoke_fnc_isInSmoke
+ * [player] call ace_irritants_fnc_isInSmoke
  *
  * Public: Yes
  */

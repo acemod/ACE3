@@ -10,7 +10,7 @@
  * Is the vehicle open? <BOOL>
  *
  * Example:
- * [vehicle player] call ace_smoke_fnc_isOpenVehicle
+ * [vehicle player] call ace_irritants_fnc_isOpenVehicle
  *
  * Public: Yes
  */
