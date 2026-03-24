@@ -35,7 +35,7 @@ _map ctrlAddEventHandler ["Draw", {
     /*
         Move to separate function. Group drawing & unit drawing should be separate.
     */
-    _ctrl drawIcon ["\A3\ui_f\data\map\markers\nato\b_air.paa", [1,0,0,1], getPosASLVisual player, 20, 20, 0, "boobies!!", 0, -1]
+    _ctrl drawIcon ["\A3\ui_f\data\map\markers\nato\b_air.paa", [1,0,0,1], getPosASLVisual ACE_player, 20, 20, 0, "boobies!!", 0, -1]
 }];
 
 _map ctrlAddEventHandler ["MouseButtonDblClick", {
