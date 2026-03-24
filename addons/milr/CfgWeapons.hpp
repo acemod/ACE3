@@ -21,8 +21,8 @@ class CfgWeapons {
         inertia = 0.1;
         author = ECSTRING(common,ACETeam);
         displayName = "MILR";
-        descriptionUse = "y";
-        descriptionShort = "z";
+        descriptionUse = "$STR_A3_cfgWeapons_use_pointer_IR0";
+        descriptionShort = CSTRING(descriptionShort);
         picture = "\A3\weapons_F\Data\UI\gear_accv_pointer_CA.paa";
         model = QPATHTOF(data\ace_milr.p3d);
         class ItemInfo: InventoryFlashLightItem_Base_F { // do not use inheritance on ItemInfo/Pointer as it breaks something

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="MILR">
+        <Key ID="STR_ACE_MILR_descriptionShort">
+            <English>IR Laser Pointer and Rangefinder</English>
+        </Key>
+    </Package>
+</Project>
