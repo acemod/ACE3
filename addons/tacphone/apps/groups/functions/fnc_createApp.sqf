@@ -20,9 +20,9 @@ params ["_display", "_appSection"];
 
 private _fullSize = [0, 0, (ctrlPosition _appSection)#2, (ctrlPosition _appSection)#3];
 
-_appsection = _display ctrlCreate ["RscControlsGroupNoScrollbars", -1, _appSection];
-_appsection ctrlSetPosition _fullSize;
-_appsection ctrlCommit 0;
+_appSection = _display ctrlCreate ["RscControlsGroupNoScrollbars", -1, _appSection];
+_appSection ctrlSetPosition _fullSize;
+_appSection ctrlCommit 0;
 
 /*
 
