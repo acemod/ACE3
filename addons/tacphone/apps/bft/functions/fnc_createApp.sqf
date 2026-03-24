@@ -28,7 +28,7 @@ _appSection ctrlCommit 0;
 _map = _display ctrlCreate [QEGVAR(tacphone,mapControl), -1, _appSection];
 _map ctrlMapSetPosition _fullSize;
 _map ctrlCommit 0;
-private _plrPos = _map ctrlMapWorldToScreen position player;
+private _plrPos = _map ctrlMapWorldToScreen position ACE_player;
 
 _map ctrlAddEventHandler ["Draw", {
     params ["_ctrl"];
