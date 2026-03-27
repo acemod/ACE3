@@ -2,14 +2,14 @@
 layout: null
 ---
 [
-{% assign sortedPages = site.pages | sort: "title" %}
-{% for curPage in sortedPages %}{% if curPage.parent == "wiki" %}
+{% assign wikiPages = site.pages | where: "parent", "wiki" | sort: "title" %}
+{% for curPage in wikiPages %}
     {
-        "title"         : "{{curPage.title | escape}}",
-        "group"         : "{{curPage.group | escape}}",
-        "description"   : "{{curPage.description | escape}}",
-        "url"           : "{{site.baseurl}}{{curPage.url}}",
-        "content"       : "{{ curPage.content | strip_html | strip_newlines | replace:'\',' ' | escape | downcase }}"
+        "title"         : {{ curPage.title | jsonify }},
+        "group"         : {{ curPage.group | jsonify }},
+        "description"   : {{ curPage.description | jsonify }},
+        "url"           : {{ site.baseurl | append: curPage.url | jsonify }},
+        "content"       : {{ curPage.content | strip_html | normalize_whitespace | replace: '\\', ' ' | downcase | jsonify }}
     }{% unless forloop.last %},{% endunless %}
-{% endif %}{% endfor %}
+{% endfor %}
 ]

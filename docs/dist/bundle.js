@@ -3110,6 +3110,25 @@ window.app.contentSearch = (function ($) {
     var $contentSearchField = $liveSearch.find(".contentSearch-field");
     var $contentSearchResultList = $(".searchPage-result-list");
 
+    function normalizeSearchTerm(term) {
+        return (term || "").trim().toLowerCase();
+    }
+
+    function combineSearchTerm(searchTerm) {
+        return searchTerm.replace(/\s+/g, "");
+    }
+
+    function normalizePage(currentPage) {
+        return {
+            title: (currentPage.title || ""),
+            group: (currentPage.group || ""),
+            description: (currentPage.description || ""),
+            url: (currentPage.url || ""),
+            content: (currentPage.content || ""),
+            value: 0
+        };
+    }
+
     function init() {
 
         updateSearchFieldFromQueryParams();
@@ -3143,12 +3162,7 @@ window.app.contentSearch = (function ($) {
 
             var found = false;
 
-            if (results.length >= maxEntries) {
-                break;
-            }
-
-            var currentPage = response[i];
-            currentPage.value = 0;
+            var currentPage = normalizePage(response[i]);
 
             var occurrences = 0;
 
@@ -3204,19 +3218,22 @@ window.app.contentSearch = (function ($) {
             }
         });
 
-        return results;
+        return results.slice(0, maxEntries);
     }
 
     function getSearchResults() {
-        return $.getJSON(searchJsonUrl);
+        return $.getJSON(searchJsonUrl).fail(function (jqXHR, textStatus, errorThrown) {
+            console.error("ACE docs search JSON request failed", {
+                url: searchJsonUrl,
+                status: jqXHR && jqXHR.status,
+                textStatus: textStatus,
+                error: errorThrown
+            });
+        });
     }
 
     function searchTermValid(searchTerm) {
-        if (searchTerm === "" || searchTerm.length < _searchStartLength) {
-            return false;
-        } else {
-            return true;
-        }
+        return !(searchTerm === "" || searchTerm.length < _searchStartLength);
     }
 
 
@@ -3247,8 +3264,12 @@ window.app.contentSearch = (function ($) {
     }
 
     function showLiveResultList(results) {
-        if (!results) {
-            $liveSearchResultList.removeClass("hidden");
+        if ($liveSearchResultList.length === 0) {
+            return;
+        }
+
+        if (!results || results.length === 0) {
+            $liveSearchResultList.empty().addClass("hidden");
             return;
         }
 
@@ -3272,17 +3293,25 @@ window.app.contentSearch = (function ($) {
     }
 
     function hideLiveResultList() {
-        $liveSearchResultList.addClass("hidden");
+        if ($liveSearchResultList.length > 0) {
+            $liveSearchResultList.addClass("hidden");
+        }
     }
 
     function search() {
         var term = $liveSearchField.val();
 
-        _searchTerm = term.trim().toLowerCase();
-        _searchTermCombined = _searchTerm.replace(" ", "");
+        _searchTerm = normalizeSearchTerm(term);
+        _searchTermCombined = combineSearchTerm(_searchTerm);
+
+        console.info("ACE docs live search", {
+            term: _searchTerm,
+            minLength: _searchStartLength
+        });
 
         if (!searchTermValid(_searchTerm)) {
             $liveSearchResultList.empty();
+            hideLiveResultList();
             return false;
         }
 
@@ -3303,12 +3332,25 @@ window.app.contentSearch = (function ($) {
 
     function handleLiveSearchResult(response) {
         var results = findSearchTermInArray(response, _maxEntriesLive);
+        console.info("ACE docs live search results", {
+            term: _searchTerm,
+            count: results.length
+        });
         showLiveResultList(results);
     }
 
     function openSearchPage(e) {
-        e.preventDefault();
-        var searchTerm = $liveSearchField.val().trim();
+        if (e) {
+            e.preventDefault();
+        }
+
+        var searchTerm = normalizeSearchTerm($liveSearchField.val());
+
+        if (!searchTermValid(searchTerm)) {
+            hideLiveResultList();
+            return false;
+        }
+
         document.location.href = String.format("search.html?{0}={1}", searchTermParamName, encodeURIComponent(searchTerm));
         return false;
     }
@@ -3343,18 +3385,24 @@ window.app.contentSearch = (function ($) {
     function contentSearch() {
         var term = $contentSearchField.val();
 
-        _searchTerm = term.trim().toLowerCase();
-        _searchTermCombined = _searchTerm.replace(" ", "");
+        _searchTerm = normalizeSearchTerm(term);
+        _searchTermCombined = combineSearchTerm(_searchTerm);
+
+        console.info("ACE docs content search", {
+            term: _searchTerm,
+            minLength: _searchStartLength
+        });
 
         if (!searchTermValid(_searchTerm)) {
+            $contentSearchResultList.empty();
             return false;
         }
         startContentSearch();
     }
 
     function updateSearchFieldFromQueryParams() {
-        _searchTerm = utils.getQueryParam(searchTermParamName);
-        _searchTermCombined = _searchTerm.replace(" ", "");
+        _searchTerm = normalizeSearchTerm(utils.getQueryParam(searchTermParamName));
+        _searchTermCombined = combineSearchTerm(_searchTerm);
         $contentSearchField.val(_searchTerm);
         if (searchTermValid(_searchTerm)) {
             startContentSearch();
@@ -3376,14 +3424,27 @@ window.app.contentSearch = (function ($) {
 
     function handleContentSearchResult(response) {
         var results = findSearchTermInArray(response, _maxEntriesContent);
+        console.info("ACE docs content search results", {
+            term: _searchTerm,
+            count: results.length
+        });
         showContentResultList(results);
     }
 
     function showContentResultList(results) {
+        if ($contentSearchResultList.length === 0) {
+            return;
+        }
+
         var i = 0,
             length = results.length;
 
         var html = "";
+
+        if (length === 0) {
+            $contentSearchResultList.empty().append("<li>No results found.</li>");
+            return;
+        }
 
         for (i; i < length; i++) {
             var currentPage = results[i];
@@ -3393,7 +3454,7 @@ window.app.contentSearch = (function ($) {
                 description = description.substr(0, _maxDescriptionLengthContent) + "&hellip;";
             }
 
-            html += String.format("<li><a href=\"{1}\">{0}</a><span class=\"additionalInfo\"><br><small><span class=\"url\">{3}</span><br><span class\"description\">{2}</small></small></span></li>", currentPage.title, currentPage.url, description, document.location.origin + currentPage.url);
+            html += String.format("<li><a href=\"{1}\">{0}</a><span class=\"additionalInfo\"><br><small><span class=\"url\">{3}</span><br><span class=\"description\">{2}</span></small></span></li>", currentPage.title, currentPage.url, description, document.location.origin + currentPage.url);
         }
 
         $contentSearchResultList.empty().append(html);
