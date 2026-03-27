@@ -1,5 +1,4 @@
 FROM ghcr.io/github/pages-gem:latest
-LABEL maintainer "bux"
 
 ENV BUNDLE_GEMFILE=/src/site/Gemfile
 
