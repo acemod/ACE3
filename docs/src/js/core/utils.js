@@ -22,7 +22,7 @@ Date.prototype.addHours = function (hours) {
 window.utils = window.utils || {};
 utils.getQueryParam = function (name) {
     "use strict";
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    name = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
         results = regex.exec(location.search);
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));

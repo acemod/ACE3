@@ -112,7 +112,7 @@ window.app.contentSearch = (function ($) {
     }
 
     function combineSearchTerm(searchTerm) {
-        return searchTerm.replace(/\s+/g, "");
+        return searchTerm.replace(" ", "");
     }
 
     function findSearchTermInArray(response, maxEntries) {
