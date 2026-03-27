@@ -2796,7 +2796,7 @@
 
     Slick.prototype.updateArrows = function() {
 
-        var _ = this;
+        var _ = this;
 
         Math.floor(_.options.slidesToShow / 2);
 
