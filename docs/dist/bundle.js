@@ -2796,7 +2796,8 @@
 
     Slick.prototype.updateArrows = function() {
 
-        var _ = this;
+        var _ = this;
+
 
         Math.floor(_.options.slidesToShow / 2);
 
@@ -3085,7 +3086,8 @@ window.app.storage = (function () {
 window.app = window.app || {};
 window.app.contentSearch = (function ($) {
 
-    var searchJsonUrl = "/js/search.json";
+    var defaultSearchJsonUrl = "/js/search.json";
+    var logPrefix = "[ACE3 docs search]";
     var storageKeyName = "searchResult";
 
     var searchTermParamName = "searchTerm";
@@ -3111,7 +3113,11 @@ window.app.contentSearch = (function ($) {
     var $contentSearchResultList = $(".searchPage-result-list");
 
     function init() {
-
+        logInfo("Initializing search", {
+            searchJsonUrl: getSearchJsonUrl(),
+            hasLiveSearchField: $liveSearchField.length > 0,
+            hasContentSearchField: $contentSearchField.length > 0
+        });
         updateSearchFieldFromQueryParams();
 
         $liveSearchField.on("keyup", handleLiveKeyDown);
@@ -3131,6 +3137,69 @@ window.app.contentSearch = (function ($) {
      ===
      */
 
+    function getSearchJsonUrl() {
+        var $bundleScript = $("script[src*='/dist/bundle']");
+        var bundleSrc = $bundleScript.last().attr("src");
+
+        if (!bundleSrc) {
+            return defaultSearchJsonUrl;
+        }
+
+        return new URL("../js/search.json", new URL(bundleSrc, document.location.href)).toString();
+    }
+
+    function logInfo(message, data) {
+        if (!window.console || typeof window.console.info !== "function") {
+            return;
+        }
+
+        if (typeof data === "undefined") {
+            window.console.info(logPrefix, message);
+        } else {
+            window.console.info(logPrefix, message, data);
+        }
+    }
+
+    function getCachedSearchResults() {
+        try {
+            return app.storage.getItem(storageKeyName);
+        } catch (e) {
+            return null;
+        }
+    }
+
+    function setCachedSearchResults(searchResults) {
+        try {
+            app.storage.setItem(storageKeyName, searchResults);
+        } catch (e) {
+            return;
+        }
+    }
+
+    function getPageText(currentPage, key) {
+        var value = currentPage[key];
+
+        if (typeof value !== "string") {
+            return "";
+        }
+
+        return value.toLowerCase();
+    }
+
+    function getPageValue(currentPage, key) {
+        var value = currentPage[key];
+
+        if (typeof value !== "string") {
+            return "";
+        }
+
+        return value;
+    }
+
+    function combineSearchTerm(searchTerm) {
+        return searchTerm.replace(/\s+/g, "");
+    }
+
     function findSearchTermInArray(response, maxEntries) {
         var results = [],
             i = 0,
@@ -3143,10 +3212,6 @@ window.app.contentSearch = (function ($) {
 
             var found = false;
 
-            if (results.length >= maxEntries) {
-                break;
-            }
-
             var currentPage = response[i];
             currentPage.value = 0;
 
@@ -3158,19 +3223,19 @@ window.app.contentSearch = (function ($) {
 
                 switch (j) {
                     case 0:
-                        text = currentPage.description.toLowerCase();
+                        text = getPageText(currentPage, "description");
                         multiplier = 100;
                         break;
                     case 1:
-                        text = currentPage.title.toLowerCase();
+                        text = getPageText(currentPage, "title");
                         multiplier = 1000;
                         break;
                     case 2:
-                        text = currentPage.group.toLowerCase();
+                        text = getPageText(currentPage, "group");
                         multiplier = 10;
                         break;
                     case 3:
-                        text = currentPage.content.toLowerCase();
+                        text = getPageText(currentPage, "content");
                         multiplier = 1;
                 }
 
@@ -3204,11 +3269,11 @@ window.app.contentSearch = (function ($) {
             }
         });
 
-        return results;
+        return results.slice(0, maxEntries);
     }
 
     function getSearchResults() {
-        return $.getJSON(searchJsonUrl);
+        return $.getJSON(getSearchJsonUrl());
     }
 
     function searchTermValid(searchTerm) {
@@ -3260,12 +3325,12 @@ window.app.contentSearch = (function ($) {
         for (i; i < length; i++) {
             var currentPage = results[i];
 
-            var description = currentPage.description;
+            var description = getPageValue(currentPage, "description");
             if (description.length > _maxDescriptionLengthLive) {
-                description = description.substr(0, _maxDescriptionLengthLive) + "&hellip;";
+                description = description.substr(0, _maxDescriptionLengthLive) + "&hellip;"
             }
 
-            html += String.format("<li><a href=\"{1}\">{0}<br><small>{2}</small></a></li>", currentPage.title, currentPage.url, description);
+            html += String.format("<li><a href=\"{1}\">{0}<br><small>{2}</small></a></li>", getPageValue(currentPage, "title"), getPageValue(currentPage, "url"), description);
         }
 
         $liveSearchResultList.empty().append(html).removeClass("hidden");
@@ -3279,9 +3344,10 @@ window.app.contentSearch = (function ($) {
         var term = $liveSearchField.val();
 
         _searchTerm = term.trim().toLowerCase();
-        _searchTermCombined = _searchTerm.replace(" ", "");
+        _searchTermCombined = combineSearchTerm(_searchTerm);
 
         if (!searchTermValid(_searchTerm)) {
+            logInfo("Skipping live search for short term", _searchTerm);
             $liveSearchResultList.empty();
             return false;
         }
@@ -3290,19 +3356,25 @@ window.app.contentSearch = (function ($) {
     }
 
     function startLiveSearch() {
-        var cachedSearchResults = app.storage.getItem(storageKeyName);
+        var cachedSearchResults = getCachedSearchResults();
         if (!cachedSearchResults) {
+            logInfo("Fetching search index for live search", getSearchJsonUrl());
             getSearchResults().done(function (response) {
-                app.storage.setItem(storageKeyName, response);
+                setCachedSearchResults(response);
                 handleLiveSearchResult(response);
             });
         } else {
+            logInfo("Using cached search index for live search");
             handleLiveSearchResult(cachedSearchResults);
         }
     }
 
     function handleLiveSearchResult(response) {
         var results = findSearchTermInArray(response, _maxEntriesLive);
+        logInfo("Live search completed", {
+            searchTerm: _searchTerm,
+            results: results.length
+        });
         showLiveResultList(results);
     }
 
@@ -3344,9 +3416,10 @@ window.app.contentSearch = (function ($) {
         var term = $contentSearchField.val();
 
         _searchTerm = term.trim().toLowerCase();
-        _searchTermCombined = _searchTerm.replace(" ", "");
+        _searchTermCombined = combineSearchTerm(_searchTerm);
 
         if (!searchTermValid(_searchTerm)) {
+            logInfo("Skipping content search for short term", _searchTerm);
             return false;
         }
         startContentSearch();
@@ -3354,7 +3427,8 @@ window.app.contentSearch = (function ($) {
 
     function updateSearchFieldFromQueryParams() {
         _searchTerm = utils.getQueryParam(searchTermParamName);
-        _searchTermCombined = _searchTerm.replace(" ", "");
+        _searchTermCombined = combineSearchTerm(_searchTerm);
+        logInfo("Loaded search term from query params", _searchTerm);
         $contentSearchField.val(_searchTerm);
         if (searchTermValid(_searchTerm)) {
             startContentSearch();
@@ -3362,13 +3436,15 @@ window.app.contentSearch = (function ($) {
     }
 
     function startContentSearch() {
-        var cachedSearchResults = app.storage.getItem(storageKeyName);
+        var cachedSearchResults = getCachedSearchResults();
         if (!cachedSearchResults) {
+            logInfo("Fetching search index for content search", getSearchJsonUrl());
             getSearchResults().done(function (response) {
-                app.storage.setItem(storageKeyName, response);
+                setCachedSearchResults(response);
                 handleContentSearchResult(response);
             });
         } else {
+            logInfo("Using cached search index for content search");
             handleContentSearchResult(cachedSearchResults);
         }
     }
@@ -3376,6 +3452,10 @@ window.app.contentSearch = (function ($) {
 
     function handleContentSearchResult(response) {
         var results = findSearchTermInArray(response, _maxEntriesContent);
+        logInfo("Content search completed", {
+            searchTerm: _searchTerm,
+            results: results.length
+        });
         showContentResultList(results);
     }
 
@@ -3388,12 +3468,12 @@ window.app.contentSearch = (function ($) {
         for (i; i < length; i++) {
             var currentPage = results[i];
 
-            var description = currentPage.description;
+            var description = getPageValue(currentPage, "description");
             if (description.length > _maxDescriptionLengthContent) {
-                description = description.substr(0, _maxDescriptionLengthContent) + "&hellip;";
+                description = description.substr(0, _maxDescriptionLengthContent) + "&hellip;"
             }
 
-            html += String.format("<li><a href=\"{1}\">{0}</a><span class=\"additionalInfo\"><br><small><span class=\"url\">{3}</span><br><span class\"description\">{2}</small></small></span></li>", currentPage.title, currentPage.url, description, document.location.origin + currentPage.url);
+            html += String.format("<li><a href=\"{1}\">{0}</a><span class=\"additionalInfo\"><br><small><span class=\"url\">{3}</span><br><span class=\"description\">{2}</span></small></span></li>", getPageValue(currentPage, "title"), getPageValue(currentPage, "url"), description, document.location.origin + getPageValue(currentPage, "url"));
         }
 
         $contentSearchResultList.empty().append(html);
@@ -3405,6 +3485,9 @@ window.app.contentSearch = (function ($) {
 
 
 })(jQuery);
+
+
+
 
 jQuery(document).ready(function(){
 
