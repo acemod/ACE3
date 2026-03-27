@@ -14,6 +14,7 @@ window.app.contentSearch = (function ($) {
 
     var _searchTerm = "";
     var _searchTermCombined = "";
+    var _searchTokens = [];
     var _timeOutID;
 
     var $liveSearch = $("#liveSearch");
@@ -31,7 +32,30 @@ window.app.contentSearch = (function ($) {
     }
 
     function combineSearchTerm(searchTerm) {
-        return searchTerm.replace(/\s+/g, "");
+        return searchTerm.replace(/[^a-z0-9]+/g, "");
+    }
+
+    function tokenizeSearchTerm(searchTerm) {
+        return searchTerm.split(/[^a-z0-9]+/).filter(function (token) {
+            return token.length > 0;
+        });
+    }
+
+    function escapeRegExp(value) {
+        return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    }
+
+    function uniqueTokens(tokens) {
+        var seen = {};
+
+        return tokens.filter(function (token) {
+            if (seen[token]) {
+                return false;
+            }
+
+            seen[token] = true;
+            return true;
+        });
     }
 
     function normalizePage(currentPage) {
@@ -43,6 +67,117 @@ window.app.contentSearch = (function ($) {
             content: (currentPage.content || ""),
             value: 0
         };
+    }
+
+    function updateSearchState(term) {
+        _searchTerm = normalizeSearchTerm(term);
+        _searchTermCombined = combineSearchTerm(_searchTerm);
+        _searchTokens = uniqueTokens(tokenizeSearchTerm(_searchTerm));
+    }
+
+    function countMatches(text, searchValues) {
+        var matchCount = 0;
+        var i = 0;
+
+        for (i; i < searchValues.length; i++) {
+            matchCount += countWordOccurrences(text, searchValues[i]);
+        }
+
+        return matchCount;
+    }
+
+    function countWordOccurrences(text, searchValue) {
+        var matches = text.match(new RegExp("(^|[^a-z0-9])" + escapeRegExp(searchValue) + "(?=$|[^a-z0-9])", "g"));
+
+        return matches ? matches.length : 0;
+    }
+
+    function fieldContainsToken(text, token) {
+        return countWordOccurrences(text, token) > 0;
+    }
+
+    function fieldContainsAllTokens(text) {
+        var i = 0;
+
+        if (_searchTokens.length === 0) {
+            return false;
+        }
+
+        for (i; i < _searchTokens.length; i++) {
+            if (!fieldContainsToken(text, _searchTokens[i])) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    function pageContainsAllTokens(pageFields) {
+        var i = 0;
+        var j = 0;
+
+        if (_searchTokens.length === 0) {
+            return false;
+        }
+
+        for (i; i < _searchTokens.length; i++) {
+            var found = false;
+
+            for (j = 0; j < pageFields.length; j++) {
+                if (fieldContainsToken(pageFields[j], _searchTokens[i])) {
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    function scoreTitleMatches(currentPage) {
+        var title = currentPage.title.toLowerCase();
+        var score = 0;
+
+        if (_searchTerm !== "" && title === _searchTerm) {
+            score += 5000;
+        }
+
+        if (_searchTerm !== "" && title.indexOf(_searchTerm) === 0) {
+            score += 2500;
+        }
+
+        if (_searchTermCombined !== _searchTerm && _searchTermCombined !== "" && combineSearchTerm(title).indexOf(_searchTermCombined) === 0) {
+            score += 1500;
+        }
+
+        if (fieldContainsAllTokens(title)) {
+            score += 1200;
+        }
+
+        return score;
+    }
+
+    function scoreUrlMatches(currentPage) {
+        var url = currentPage.url.toLowerCase();
+        var score = 0;
+
+        if (_searchTerm !== "" && url.indexOf(_searchTerm) >= 0) {
+            score += 300;
+        }
+
+        if (_searchTermCombined !== _searchTerm && _searchTermCombined !== "" && combineSearchTerm(url).indexOf(_searchTermCombined) >= 0) {
+            score += 200;
+        }
+
+        if (fieldContainsAllTokens(url)) {
+            score += 400;
+        }
+
+        return score;
     }
 
     function init() {
@@ -74,15 +209,31 @@ window.app.contentSearch = (function ($) {
             text = "",
             multiplier = 0;
 
+        var searchValues = _searchTokens.slice();
+
         for (i; i < length; i++) {
 
             var found = false;
 
             var currentPage = normalizePage(response[i]);
+            var pageFields = [
+                currentPage.title.toLowerCase(),
+                currentPage.description.toLowerCase(),
+                currentPage.group.toLowerCase(),
+                currentPage.url.toLowerCase(),
+                currentPage.content.toLowerCase()
+            ];
+
+            if (!pageContainsAllTokens(pageFields)) {
+                continue;
+            }
+
+            currentPage.value += scoreTitleMatches(currentPage);
+            currentPage.value += scoreUrlMatches(currentPage);
 
             var occurrences = 0;
 
-            for (j = 0; j < 4; j++) {
+            for (j = 0; j < 5; j++) {
 
                 occurrences = 0;
 
@@ -100,16 +251,26 @@ window.app.contentSearch = (function ($) {
                         multiplier = 10;
                         break;
                     case 3:
+                        text = currentPage.url.toLowerCase();
+                        multiplier = 120;
+                        break;
+                    case 4:
                         text = currentPage.content.toLowerCase();
                         multiplier = 1;
                 }
 
-                if (text.indexOf(_searchTerm) >= 0 || text.indexOf(_searchTermCombined) >= 0) {
+                if (searchValues.some(function (value) { return fieldContainsToken(text, value); }) ||
+                    (_searchTerm !== "" && text.indexOf(_searchTerm) >= 0) ||
+                    (_searchTermCombined !== "" && combineSearchTerm(text).indexOf(_searchTermCombined) >= 0)) {
                     found = true;
-                    occurrences = utils.countOccurrences(text, _searchTerm);
+                    occurrences = countMatches(text, searchValues);
 
-                    if (_searchTermCombined !== _searchTerm) {
-                        occurrences += utils.countOccurrences(text, _searchTermCombined);
+                    if (_searchTerm !== "" && text.indexOf(_searchTerm) >= 0) {
+                        occurrences += 2;
+                    }
+
+                    if (_searchTermCombined !== "" && combineSearchTerm(text).indexOf(_searchTermCombined) >= 0) {
+                        occurrences += 2;
                     }
 
                     if (occurrences > 0) {
@@ -217,11 +378,11 @@ window.app.contentSearch = (function ($) {
     function search() {
         var term = $liveSearchField.val();
 
-        _searchTerm = normalizeSearchTerm(term);
-        _searchTermCombined = combineSearchTerm(_searchTerm);
+        updateSearchState(term);
 
         console.info("ACE docs live search", {
             term: _searchTerm,
+            tokens: _searchTokens,
             minLength: _searchStartLength
         });
 
@@ -301,11 +462,11 @@ window.app.contentSearch = (function ($) {
     function contentSearch() {
         var term = $contentSearchField.val();
 
-        _searchTerm = normalizeSearchTerm(term);
-        _searchTermCombined = combineSearchTerm(_searchTerm);
+        updateSearchState(term);
 
         console.info("ACE docs content search", {
             term: _searchTerm,
+            tokens: _searchTokens,
             minLength: _searchStartLength
         });
 
@@ -317,8 +478,7 @@ window.app.contentSearch = (function ($) {
     }
 
     function updateSearchFieldFromQueryParams() {
-        _searchTerm = normalizeSearchTerm(utils.getQueryParam(searchTermParamName));
-        _searchTermCombined = combineSearchTerm(_searchTerm);
+        updateSearchState(utils.getQueryParam(searchTermParamName));
         $contentSearchField.val(_searchTerm);
         if (searchTermValid(_searchTerm)) {
             startContentSearch();

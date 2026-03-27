@@ -9,7 +9,7 @@ layout: null
         "group"         : {{ curPage.group | jsonify }},
         "description"   : {{ curPage.description | jsonify }},
         "url"           : {{ site.baseurl | append: curPage.url | jsonify }},
-        "content"       : {{ curPage.content | strip_html | normalize_whitespace | replace: '\\', ' ' | downcase | jsonify }}
+        "content"       : {{ curPage.content | markdownify | strip_html | normalize_whitespace | replace: '\\', ' ' | downcase | jsonify }}
     }{% unless forloop.last %},{% endunless %}
 {% endfor %}
 ]
