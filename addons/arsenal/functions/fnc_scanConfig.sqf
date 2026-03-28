@@ -54,14 +54,15 @@ private _isTool = false;
     _isTool = getNumber (_x >> "ACE_isTool") isEqualTo 1;
 
     switch (true) do {
-        case (_isMiscItem): {
+        // Forced items with ACE_asItem = 2
+        case (_isMiscItem == 2): {
             (_configItems get IDX_VIRT_MISC_ITEMS) set [_className, nil];
             if (_isTool) then {_toolList set [_className, nil]};
         };
         // Weapon attachments
         case (
             _hasItemInfo &&
-            {!_isMiscItem} &&
+            {_isMiscItem == 0} &&
             {_itemInfoType in [TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_MUZZLE, TYPE_BIPOD]}
         ): {
             // Convert type to array index
@@ -131,7 +132,7 @@ private _isTool = false;
             };
         };
         // Misc. items
-        case (_hasItemInfo && _isMiscItem): {
+        case (_hasItemInfo && _isMiscItem == 1): {
             (_configItems get IDX_VIRT_MISC_ITEMS) set [_className, nil];
             if (_isTool) then {_toolList set [_className, nil]};
         };
