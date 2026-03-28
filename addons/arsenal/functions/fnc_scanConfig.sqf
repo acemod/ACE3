@@ -54,6 +54,10 @@ private _isTool = false;
     _isTool = getNumber (_x >> "ACE_isTool") isEqualTo 1;
 
     switch (true) do {
+        case (_isMiscItem): {
+            (_configItems get IDX_VIRT_MISC_ITEMS) set [_className, nil];
+            if (_isTool) then {_toolList set [_className, nil]};
+        };
         // Weapon attachments
         case (
             _hasItemInfo &&
