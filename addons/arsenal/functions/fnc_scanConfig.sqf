@@ -161,7 +161,7 @@ private _magazineMiscItems = createHashMap;
     _magazineMiscItems set [configName _x, nil];
 } forEach ((toString {
     with uiNamespace do { // configClasses runs in missionNamespace even if we're in preStart apparently
-        [configName _x, _x, true, true] call FUNC(isMiscItem);
+        ([configName _x, _x, true, true] call FUNC(isMiscItem)) > 0
     };
 }) configClasses _cfgMagazines);
 
