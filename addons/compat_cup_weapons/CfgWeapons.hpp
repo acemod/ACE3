@@ -1367,7 +1367,7 @@ class CfgWeapons {
         ace_RailHeightAboveBore = 2.08789;
     };
 
-    class CUP_srifle_CZ750_Base: Pistol_Base_F {
+    class CUP_srifle_CZ750_Base: Rifle_Long_Base_F {
         ace_barrelLength = 660.4;
         ace_barrelTwist = 304.8;
         ace_RailHeightAboveBore = 2.379;
