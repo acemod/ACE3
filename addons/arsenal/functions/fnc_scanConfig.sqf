@@ -40,7 +40,7 @@ private _simulationType = "";
 private _configItemInfo = "";
 private _hasItemInfo = false;
 private _itemInfoType = 0;
-private _isMiscItem = false;
+private _isMiscItem = 0;
 private _isTool = false;
 
 // Get weapons and other various items
