@@ -1128,11 +1128,11 @@ class CfgWeapons {
         ace_barrelLength = 349;
         ace_barrelTwist = 305;
     };
-    class CUP_lmg_m249_pip3 :CUP_lmg_minimi_railed {
+    class CUP_lmg_m249_pip3: CUP_lmg_minimi_railed {
         ace_barrelLength = 349;
         ace_barrelTwist = 305;
     };
-    class CUP_lmg_m249_pip4 :CUP_lmg_minimi_railed {
+    class CUP_lmg_m249_pip4: CUP_lmg_minimi_railed {
         ace_barrelLength = 465;
         ace_barrelTwist = 305;
     };

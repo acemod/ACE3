@@ -3,38 +3,38 @@
     <Package name="Tagging">
         <Key ID="STR_ACE_Tagging_ChalkBlack">
             <English>Chalk (Black)</English>
-            <German>Kreide (Schwarz)</German>
             <Russian>Мел (Черный)</Russian>
+            <German>Kreide (Schwarz)</German>
             <Japanese>チョーク (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkBlue">
             <English>Chalk (Blue)</English>
-            <German>Kreide (Blau)</German>
             <Russian>Мел (Синий)</Russian>
+            <German>Kreide (Blau)</German>
             <Japanese>チョーク (青)</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkGreen">
             <English>Chalk (Green)</English>
-            <German>Kreide (Grün)</German>
             <Russian>Мел (Зеленый)</Russian>
+            <German>Kreide (Grün)</German>
             <Japanese>チョーク (緑)</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkRed">
             <English>Chalk (Red)</English>
-            <German>Kreide (Rot)</German>
             <Russian>Мел (Красный)</Russian>
+            <German>Kreide (Rot)</German>
             <Japanese>チョーク (赤)</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkWhite">
             <English>Chalk (White)</English>
-            <German>Kreide (Weiß)</German>
             <Russian>Мел (Белый)</Russian>
+            <German>Kreide (Weiß)</German>
             <Japanese>チョーク (白)</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkYellow">
             <English>Chalk (Yellow)</English>
-            <German>Kreide (Gelb)</German>
             <Russian>Мел (Желтый)</Russian>
+            <German>Kreide (Gelb)</German>
             <Japanese>チョーク (黄)</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_LastUsed">
@@ -353,8 +353,8 @@
         </Key>
         <Key ID="STR_ACE_Tagging_descChalk">
             <English>A chalk marker for tagging walls.</English>
-            <German>Ein Kreidestift um Wände zu markieren.</German>
             <Russian>Меловой маркер для разметки стен.</Russian>
+            <German>Ein Kreidestift um Wände zu markieren.</German>
             <Japanese>壁に目印を描くためのチョークマーカー。</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_descSpraypaint">

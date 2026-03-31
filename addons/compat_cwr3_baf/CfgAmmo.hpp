@@ -1,7 +1,7 @@
 class CfgAmmo {
     class MissileBase;
 
-    class cwr3_m_javelin_aa : MissileBase {
+    class cwr3_m_javelin_aa: MissileBase {
         effectsMissile = "missile2"; // Remove vanilla tracking flare, missileguidance adds it's own.
         thrust = 275;       // Give a more realistic thrust and thrustTime
         thrustTime = 3;     // Since we don't need it longer for the vanilla flare.
@@ -17,7 +17,7 @@ class CfgAmmo {
         };
     };
 
-    class cwr3_m_blowpipe_aa : cwr3_m_javelin_aa {
+    class cwr3_m_blowpipe_aa: cwr3_m_javelin_aa {
         thrust = 240;
         thrustTime = 3;
         class ace_missileguidance: ace_missileguidance_type_Blowpipe {
