@@ -1,57 +1,58 @@
 #include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, Ruthberg, edited by commy2 for better MP and eventual AI support
- * Confirms sandbag deployment
+ * Confirms sandbag deployment.
  *
  * Arguments:
- * 0: unit <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [ACE_player] call ace_sandbag_fnc_deployConfirm
+ * player call ace_sandbag_fnc_deployConfirm
  *
  * Public: No
  */
 
 params ["_unit"];
 
-// enable running again
-[_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+private _sandbag = _unit getVariable [QGVAR(sandBag), objNull];
 
-// remove sandbag from inventory
-_unit removeItem "ACE_Sandbag_empty";
+// Save placement dummy data; Need to check now, as it's deleted later
+private _dummyDeleted = isNull _sandbag;
+private _position = getPosASL _sandbag;
+private _direction = getDir _sandbag;
 
-// delete placement dummy and create real sandbag
-[{
-    if (isNull GVAR(sandBag)) exitWith {};
+// Clean up hints and dummy
+_unit call FUNC(deployCancel);
 
-    params ["_unit"];
+// Make sure unit still has empty sandbag, otherwise quit
+if (_dummyDeleted || {!alive _unit} || {!([_unit, "ACE_Sandbag_empty"] call EFUNC(common,hasItem))}) exitWith {};
 
-    private _position = getPosASL GVAR(sandBag);
-    private _direction = getDir GVAR(sandBag);
+_unit setVariable [QGVAR(isUsingSandbag), true];
 
-    deleteVehicle GVAR(sandBag);
-
-    private _sandBag = createVehicle ["ACE_SandbagObject", [0, 0, 0], [], 0, "NONE"];
-    _sandBag setPosASL _position;
-    _sandBag setDir _direction;
-
-    GVAR(sandBag) = objNull;
-}, [_unit], 1] call CBA_fnc_waitAndExecute;
-
-// remove deployment pfh
-[GVAR(deployPFH)] call CBA_fnc_removePerFrameHandler;
-GVAR(deployPFH) = -1;
-
-// remove mouse button actions
-call EFUNC(interaction,hideMouseHint);
-
-[_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call EFUNC(common,removeActionEventHandler);
-
-// play animation
+// Play animation
 [_unit, "PutDown"] call EFUNC(common,doGesture);
 
-_unit setVariable [QGVAR(isDeploying), false, true];
+[{
+    params ["_unit", "_direction", "_position"];
+
+    _unit setVariable [QGVAR(isUsingSandbag), false];
+
+    // Make sure unit still has empty sandbag, otherwise quit
+    if (!alive _unit || {!([_unit, "ACE_Sandbag_empty"] call EFUNC(common,hasItem))}) exitWith {};
+
+    // Remove sandbag from inventory
+    _unit removeItem "ACE_Sandbag_empty";
+
+    // Create real sandbag
+    private _sandBag = createVehicle ["ACE_SandbagObject", [0, 0, 0], [], 0, "NONE"];
+
+    _sandBag setDir _direction;
+    _sandBag setPosASL _position;
+
+    // Prevent collision damage
+    [QEGVAR(common,fixCollision), _unit] call CBA_fnc_localEvent;
+    [QEGVAR(common,fixCollision), _sandBag] call CBA_fnc_localEvent;
+}, [_unit, _direction, _position], 0.5] call CBA_fnc_waitAndExecute;

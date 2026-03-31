@@ -76,7 +76,7 @@ if (_useABConfig) then {
 
 private _airFrictionCoef = if (!_useABConfig && _isABenabled) then {
     private _airDensity = [_temperature, _barometricPressure, _relativeHumidity] call EFUNC(weather,calculateAirDensity);
-    _airDensity / 1.22498
+    _airDensity / STD_AIR_DENSITY_ICAO
 } else {
     1
 };

@@ -22,9 +22,10 @@ _vehicle setVariable [QGVAR(gps_actionsAdded), true];
 TRACE_2("adding gps action",_player,typeOf _vehicle);
 
 private _condition = {
-    params ["_target", "_player"]; // _player may be the UAV AI
-
-    private _turretPath = _target unitTurret _player;;
+    params ["_target"];
+    
+    private _operator = if (isNull (ACE_controlledUAV select 0)) then {ACE_player} else {ACE_controlledUAV select 1};
+    private _turretPath = _target unitTurret _operator;
     private _hasJDAM = (_target weaponsTurret _turretPath) findIf {
         private _weapon = _x;
         GVAR(gps_weapons) getOrDefaultCall [_weapon, {
