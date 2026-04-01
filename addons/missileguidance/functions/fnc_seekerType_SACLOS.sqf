@@ -33,6 +33,9 @@ private _projPos = getPosASL _projectile;
 private _lookDirection = switch (_dirMode) do {
     case SCALOS_DIR_WEAPON: { // Player/StaticWeapon
         _shooterPos = eyePos _shooter;
+        if (_weapon isNotEqualTo (currentWeapon _shooter)) then {
+            _weapon = CBA_disposable_usedLaunchers getOrDefault [_weapon, _weapon];
+        };
         _shooter weaponDirection _weapon
     };
     case SCALOS_DIR_ANIM: { // use animationSourcePhase
