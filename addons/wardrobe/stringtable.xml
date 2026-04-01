@@ -18,27 +18,27 @@
         </Key>
         <Key ID="STR_ACE_Wardrobe_bandannaAdd">
             <English>Add Bandanna</English>
+            <Spanish>Añadir Bandana</Spanish>
             <Russian>Надеть Банданну</Russian>
             <Japanese>バンダナを着ける</Japanese>
-            <Spanish>Añadir Bandana</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_bandannaRemove">
             <English>Remove Bandanna</English>
+            <Spanish>Quitar Bandana</Spanish>
             <Russian>Снять Банданну</Russian>
             <Japanese>バンダナを外す</Japanese>
-            <Spanish>Quitar Bandana</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_collarClose">
             <English>Close collar</English>
+            <Spanish>Cerrar Cuello</Spanish>
             <Russian>Застегнуть воротник</Russian>
             <Japanese>襟をしめる</Japanese>
-            <Spanish>Cerrar Cuello</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_collarOpen">
             <English>Open collar</English>
+            <Spanish>Abrir Cuello</Spanish>
             <Russian>Расстегнуть воротник</Russian>
             <Japanese>襟をあける</Japanese>
-            <Spanish>Abrir Cuello</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_enable_action">
             <English>ACE Interaction</English>
@@ -50,27 +50,27 @@
         </Key>
         <Key ID="STR_ACE_Wardrobe_foliageAdd">
             <English>Add scrim/foliage</English>
+            <Spanish>Añadir malla de camuflaje/vegetación</Spanish>
             <Russian>Добавить сетку/листву</Russian>
             <Japanese>スクリム/偽装を付ける</Japanese>
-            <Spanish>Añadir malla de camuflaje/vegetación</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_foliageRemove">
             <English>Remove scrim/foliage</English>
+            <Spanish>Quitar malla de camuflaje/vegetación</Spanish>
             <Russian>Снять сетку/листву</Russian>
             <Japanese>スクリム/偽装を外す</Japanese>
-            <Spanish>Quitar malla de camuflaje/vegetación</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glassesOff">
             <English>Take glasses off</English>
+            <Spanish>Quitarse Gafas</Spanish>
             <Russian>Снять очки</Russian>
             <Japanese>眼鏡を外す</Japanese>
-            <Spanish>Quitarse Gafas</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glassesOn">
             <English>Put glasses on</English>
+            <Spanish>Ponerse Gafas</Spanish>
             <Russian>Надеть очки</Russian>
             <Japanese>眼鏡を着ける</Japanese>
-            <Spanish>Ponerse Gafas</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glovesOff">
             <English>Take gloves off</English>
@@ -102,17 +102,17 @@
         </Key>
         <Key ID="STR_ACE_Wardrobe_hoodLower">
             <English>Lower hood</English>
+            <Spanish>Bajar Capucha</Spanish>
             <Russian>Снять капюшон</Russian>
             <German>Kapuze absetzen</German>
             <Japanese>フードを下ろす</Japanese>
-            <Spanish>Bajar Capucha</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_hoodRaise">
             <English>Raise hood</English>
+            <Spanish>Subir Capucha</Spanish>
             <Russian>Надеть капюшон</Russian>
             <German>Kapuze aufsetzen</German>
             <Japanese>フードを上げる</Japanese>
-            <Spanish>Subir Capucha</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_jacketClose">
             <English>Close jacket</English>
@@ -173,15 +173,15 @@
         </Key>
         <Key ID="STR_ACE_Wardrobe_tieOff">
             <English>Remove tie</English>
+            <Spanish>Quitar Corbata</Spanish>
             <Russian>Снять галстук</Russian>
             <Japanese>ネクタイを外す</Japanese>
-            <Spanish>Quitar Corbata</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_tieOn">
             <English>Wear tie</English>
+            <Spanish>Poner Corbata</Spanish>
             <Russian>Надеть галстук</Russian>
             <Japanese>ネクタイを着ける</Japanese>
-            <Spanish>Poner Corbata</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_visorDown">
             <English>Visor down</English>
