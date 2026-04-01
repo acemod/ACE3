@@ -2568,6 +2568,7 @@
             <English>XQ-47B</English>
             <Russian>XQ-47B</Russian>
             <Japanese>XQ-47B</Japanese>
+            <Spanish>XQ-47B</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_afv_wheeled_01">
             <English>Rooikat 120</English>
@@ -3093,6 +3094,7 @@
             <English>GPBO-40</English>
             <Russian>GPBO-40</Russian>
             <Japanese>GPBO-40</Japanese>
+            <Spanish>GPBO-40</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL_sand">
             <English>MSBS Grot GL (Sand)</English>
@@ -3242,6 +3244,7 @@
             <English>SIX-12</English>
             <Russian>SIX-12</Russian>
             <Japanese>SIX-12</Japanese>
+            <Spanish>SIX-12</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS_sand">
             <English>MSBS Grot SG (Sand)</English>

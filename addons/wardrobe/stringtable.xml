@@ -20,21 +20,25 @@
             <English>Add Bandanna</English>
             <Russian>Надеть Банданну</Russian>
             <Japanese>バンダナを着ける</Japanese>
+            <Spanish>Añadir Bandana</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_bandannaRemove">
             <English>Remove Bandanna</English>
             <Russian>Снять Банданну</Russian>
             <Japanese>バンダナを外す</Japanese>
+            <Spanish>Quitar Bandana</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_collarClose">
             <English>Close collar</English>
             <Russian>Застегнуть воротник</Russian>
             <Japanese>襟をしめる</Japanese>
+            <Spanish>Cerrar Cuello</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_collarOpen">
             <English>Open collar</English>
             <Russian>Расстегнуть воротник</Russian>
             <Japanese>襟をあける</Japanese>
+            <Spanish>Abrir Cuello</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_enable_action">
             <English>ACE Interaction</English>
@@ -48,21 +52,25 @@
             <English>Add scrim/foliage</English>
             <Russian>Добавить сетку/листву</Russian>
             <Japanese>スクリム/偽装を付ける</Japanese>
+            <Spanish>Añadir malla de camuflaje/vegetación</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_foliageRemove">
             <English>Remove scrim/foliage</English>
             <Russian>Снять сетку/листву</Russian>
             <Japanese>スクリム/偽装を外す</Japanese>
+            <Spanish>Quitar malla de camuflaje/vegetación</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glassesOff">
             <English>Take glasses off</English>
             <Russian>Снять очки</Russian>
             <Japanese>眼鏡を外す</Japanese>
+            <Spanish>Quitarse Gafas</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glassesOn">
             <English>Put glasses on</English>
             <Russian>Надеть очки</Russian>
             <Japanese>眼鏡を着ける</Japanese>
+            <Spanish>Ponerse Gafas</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glovesOff">
             <English>Take gloves off</English>
@@ -81,14 +89,14 @@
         <Key ID="STR_ACE_Wardrobe_gogglesOff">
             <English>Take goggles off</English>
             <French>Enlevez vos lunettes de protection.</French>
-            <Spanish>Quitarse gafas</Spanish>
+            <Spanish>Quitarse Gafas de Protección</Spanish>
             <Russian>Снять очки</Russian>
             <Japanese>ゴーグルを外す</Japanese>
         </Key>
         <Key ID="STR_ACE_Wardrobe_gogglesOn">
             <English>Put goggles on</English>
             <French>Mettre des lunettes</French>
-            <Spanish>Ponerse gafas</Spanish>
+            <Spanish>Ponerse Gafas de Protección</Spanish>
             <Russian>Надеть очки</Russian>
             <Japanese>ゴーグルを着ける</Japanese>
         </Key>
@@ -97,12 +105,14 @@
             <Russian>Снять капюшон</Russian>
             <German>Kapuze absetzen</German>
             <Japanese>フードを下ろす</Japanese>
+            <Spanish>Bajar Capucha</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_hoodRaise">
             <English>Raise hood</English>
             <Russian>Надеть капюшон</Russian>
             <German>Kapuze aufsetzen</German>
             <Japanese>フードを上げる</Japanese>
+            <Spanish>Subir Capucha</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_jacketClose">
             <English>Close jacket</English>
@@ -165,11 +175,13 @@
             <English>Remove tie</English>
             <Russian>Снять галстук</Russian>
             <Japanese>ネクタイを外す</Japanese>
+            <Spanish>Quitar Corbata</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_tieOn">
             <English>Wear tie</English>
             <Russian>Надеть галстук</Russian>
             <Japanese>ネクタイを着ける</Japanese>
+            <Spanish>Poner Corbata</Spanish>
         </Key>
         <Key ID="STR_ACE_Wardrobe_visorDown">
             <English>Visor down</English>
