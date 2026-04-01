@@ -33,7 +33,7 @@ jobs:
     - name: Setup HEMTT
       uses: arma-actions/hemtt@v1
       with:
-        annotate: false
+        annotate: true
     - name: Run HEMTT build
       run: hemtt build
     - name: Rename build folder
