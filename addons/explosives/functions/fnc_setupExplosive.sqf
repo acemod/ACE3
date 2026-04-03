@@ -207,8 +207,7 @@ GVAR(TweakedAngle) = 0;
                 _unit, _expSetupVehicle, true, 1, "FIRE", "GEOM"
             ] param [0, []];
             _virtualPosASL = if (_intersect isNotEqualTo []) then {
-                _posASL = _intersect select 0;
-                _normal = _intersect select 1;
+               _intersect params ["_posASL", "_normal"];
 
                 if (_normal isEqualTo [0,0,0]) then {
                     _normal = surfaceNormal _posASL;
