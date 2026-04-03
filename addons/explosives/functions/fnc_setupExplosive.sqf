@@ -214,7 +214,7 @@ GVAR(TweakedAngle) = 0;
                 };
 
                 private _bbox = boundingBoxReal [_expSetupVehicle, "FireGeometry"];
-                _offset = -((_bbox select 0) select 2);
+                private _offset = -((_bbox select 0) select 2);
                 _posASL vectorAdd (_normal vectorMultiply _offset);
             } else {
                 _basePosASL vectorAdd (_lookDirVector vectorMultiply _distanceFromBase);
