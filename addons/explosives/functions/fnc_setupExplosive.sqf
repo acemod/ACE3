@@ -213,7 +213,7 @@ GVAR(TweakedAngle) = 0;
                     _normal = surfaceNormal _posASL;
                 };
 
-                _bbox = boundingBoxReal [_expSetupVehicle, "FireGeometry"];
+                private _bbox = boundingBoxReal [_expSetupVehicle, "FireGeometry"];
                 _offset = -((_bbox select 0) select 2);
                 _posASL vectorAdd (_normal vectorMultiply _offset);
             } else {
