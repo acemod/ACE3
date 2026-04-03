@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="RealisticNames">
         <Key ID="STR_ACE_RealisticNames_APC_Tracked_01_AA_Name">
@@ -3095,6 +3095,7 @@
             <Spanish>GPBO-40</Spanish>
             <Russian>GPBO-40</Russian>
             <Japanese>GPBO-40</Japanese>
+            <French>GPBO-40</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL_sand">
             <English>MSBS Grot GL (Sand)</English>
@@ -3245,6 +3246,7 @@
             <Spanish>SIX-12</Spanish>
             <Russian>SIX-12</Russian>
             <Japanese>SIX-12</Japanese>
+            <French>SIX-12</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS_sand">
             <English>MSBS Grot SG (Sand)</English>

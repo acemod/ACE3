@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="CSW">
         <Key ID="STR_ACE_CSW_127x108_displayName">
@@ -412,6 +412,7 @@
             <Spanish>[CSW] M2 Estática sin Accesorios</Spanish>
             <Italian>[CSW] M2 Statico senza Accessori</Italian>
             <German>[CSW] Statisches M2 ohne Schild</German>
+            <French>[CSW] M2 Statique sans accessoires</French>
         </Key>
         <Key ID="STR_ACE_CSW_StaticM2ShieldBag_displayName">
             <English>[CSW] Static M2 w/ Shield</English>
@@ -433,12 +434,14 @@
             <Spanish>[CSW] M2 Estática con Escudo y Visor</Spanish>
             <Italian>[CSW] M2 Statico con Scudo e Ottica</Italian>
             <German>[CSW] Statisches M2 mit Schild und Optik</German>
+            <French>[CSW] M2 statique avec bouclier et viseur</French>
         </Key>
         <Key ID="STR_ACE_CSW_StaticM2SightBag_displayName">
             <English>[CSW] Static M2 w/ Sight</English>
             <Spanish>[CSW] M2 Estática con Visor</Spanish>
             <Italian>[CSW] M2 Statico con ottica</Italian>
             <German>[CSW] Statisches M2 mit Optik</German>
+            <French>[CSW] M2 statique avec viseur</French>
         </Key>
         <Key ID="STR_ACE_CSW_actionLink">
             <English>Link %1</English>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Wardrobe">
         <Key ID="STR_ACE_Wardrobe_action_inProgress">
@@ -21,24 +21,28 @@
             <Spanish>Añadir Bandana</Spanish>
             <Russian>Надеть Банданну</Russian>
             <Japanese>バンダナを着ける</Japanese>
+            <French>Ajouter un bandana</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_bandannaRemove">
             <English>Remove Bandanna</English>
             <Spanish>Quitar Bandana</Spanish>
             <Russian>Снять Банданну</Russian>
             <Japanese>バンダナを外す</Japanese>
+            <French>Retirer le bandana</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_collarClose">
             <English>Close collar</English>
             <Spanish>Cerrar Cuello</Spanish>
             <Russian>Застегнуть воротник</Russian>
             <Japanese>襟をしめる</Japanese>
+            <French>Col fermé</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_collarOpen">
             <English>Open collar</English>
             <Spanish>Abrir Cuello</Spanish>
             <Russian>Расстегнуть воротник</Russian>
             <Japanese>襟をあける</Japanese>
+            <French>Col ouvert</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_enable_action">
             <English>ACE Interaction</English>
@@ -53,24 +57,28 @@
             <Spanish>Añadir malla de camuflaje/vegetación</Spanish>
             <Russian>Добавить сетку/листву</Russian>
             <Japanese>スクリム/偽装を付ける</Japanese>
+            <French>Ajouter un filet de camouflage/végétation</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_foliageRemove">
             <English>Remove scrim/foliage</English>
             <Spanish>Quitar malla de camuflaje/vegetación</Spanish>
             <Russian>Снять сетку/листву</Russian>
             <Japanese>スクリム/偽装を外す</Japanese>
+            <French>Retirer le filet de camouflage/végétation</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glassesOff">
             <English>Take glasses off</English>
             <Spanish>Quitarse Gafas</Spanish>
             <Russian>Снять очки</Russian>
             <Japanese>眼鏡を外す</Japanese>
+            <French>Enlevez vos lunettes</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glassesOn">
             <English>Put glasses on</English>
             <Spanish>Ponerse Gafas</Spanish>
             <Russian>Надеть очки</Russian>
             <Japanese>眼鏡を着ける</Japanese>
+            <French>Mets tes lunettes</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glovesOff">
             <English>Take gloves off</English>
@@ -106,6 +114,7 @@
             <Russian>Снять капюшон</Russian>
             <German>Kapuze absetzen</German>
             <Japanese>フードを下ろす</Japanese>
+            <French>Enlever la capuche</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_hoodRaise">
             <English>Raise hood</English>
@@ -113,6 +122,7 @@
             <Russian>Надеть капюшон</Russian>
             <German>Kapuze aufsetzen</German>
             <Japanese>フードを上げる</Japanese>
+            <French>Mettre la capuche</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_jacketClose">
             <English>Close jacket</English>
@@ -176,12 +186,14 @@
             <Spanish>Quitar Corbata</Spanish>
             <Russian>Снять галстук</Russian>
             <Japanese>ネクタイを外す</Japanese>
+            <French>Retirer la cravate</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_tieOn">
             <English>Wear tie</English>
             <Spanish>Poner Corbata</Spanish>
             <Russian>Надеть галстук</Russian>
             <Japanese>ネクタイを着ける</Japanese>
+            <French>Porter une cravate</French>
         </Key>
         <Key ID="STR_ACE_Wardrobe_visorDown">
             <English>Visor down</English>
