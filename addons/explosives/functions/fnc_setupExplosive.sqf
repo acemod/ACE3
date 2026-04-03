@@ -201,7 +201,7 @@ GVAR(TweakedAngle) = 0;
             private _placeAngle = 0;
             private _expSetupVehicle = _setupObjectClass createVehicle [0, 0, 0]; //(_virtualPosASL call EFUNC(common,ASLToPosition));
             // Running it AGAIN in here because it needs the _expSetupVehicle Object for the boundingBox
-            _intersect = lineIntersectsSurfaces [
+            private _intersect = lineIntersectsSurfaces [
                 eyePos _unit,
                 _basePosASL vectorAdd (_lookDirVector vectorMultiply PLACE_RANGE_MAX),
                 _unit, _expSetupVehicle, true, 1, "FIRE", "GEOM"
