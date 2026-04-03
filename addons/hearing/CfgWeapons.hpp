@@ -61,7 +61,7 @@ class CfgWeapons {
         HEARING_PROTECTION_EARMUFF;
     };
 
-   class H_HeadSet_base_F: HelmetBase {
+    class H_HeadSet_base_F: HelmetBase {
         HEARING_PROTECTION_EARMUFF;
     };
 

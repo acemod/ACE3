@@ -409,6 +409,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_StaticM2BareBag_displayName">
             <English>[CSW] Static M2 w/o Attachments</English>
+            <Spanish>[CSW] M2 Estática sin Accesorios</Spanish>
             <Italian>[CSW] M2 Statico senza Accessori</Italian>
             <German>[CSW] Statisches M2 ohne Schild</German>
         </Key>
@@ -429,11 +430,13 @@
         </Key>
         <Key ID="STR_ACE_CSW_StaticM2ShieldSightBag_displayName">
             <English>[CSW] Static M2 w/ Shield and Sight</English>
+            <Spanish>[CSW] M2 Estática con Escudo y Visor</Spanish>
             <Italian>[CSW] M2 Statico con Scudo e Ottica</Italian>
             <German>[CSW] Statisches M2 mit Schild und Optik</German>
         </Key>
         <Key ID="STR_ACE_CSW_StaticM2SightBag_displayName">
             <English>[CSW] Static M2 w/ Sight</English>
+            <Spanish>[CSW] M2 Estática con Visor</Spanish>
             <Italian>[CSW] M2 Statico con ottica</Italian>
             <German>[CSW] Statisches M2 mit Optik</German>
         </Key>

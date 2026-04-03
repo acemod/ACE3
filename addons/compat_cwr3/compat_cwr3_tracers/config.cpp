@@ -7,8 +7,11 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "CUP_Weapons_LoadOrder",
-            "ace_scopes"
+            "ace_tracers",
+            "cwr3_air_weapons",
+            "cwr3_crates",
+            "cwr3_optics",
+            "cwr3_weapons"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
@@ -20,4 +23,4 @@ class CfgPatches {
     };
 };
 
-#include "CfgWeapons.hpp"
+#include "CfgAmmo.hpp"

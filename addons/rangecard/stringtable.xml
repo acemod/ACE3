@@ -5,7 +5,7 @@
             <English>Copy Range Card</English>
             <Czech>Kopírovat vzdálenostní tabulku</Czech>
             <French>Recopier la table de tir</French>
-            <Spanish>Copiar tarjeta de distancias</Spanish>
+            <Spanish>Copiar Tarjeta de Distancias</Spanish>
             <Italian>Copia Tavola Balistica</Italian>
             <Polish>Skopiuj tabelę balistyczną</Polish>
             <Portuguese>Copiar tabela de distâncias</Portuguese>
@@ -22,9 +22,10 @@
         <Key ID="STR_ACE_RangeCard_DeleteRangeCardCopy">
             <English>Delete Range Card Copy</English>
             <French>Supprimer la copie de la table de tir</French>
+            <Spanish>Borrar copia de Tarjeta de Distancias</Spanish>
+            <Russian>Удалить копию таблицы поправок</Russian>
             <German>Entferne Kopie der Entfernungsspinne</German>
             <Japanese>レンジカードの複製を削除</Japanese>
-            <Russian>Удалить копию таблицы поправок</Russian>
         </Key>
         <Key ID="STR_ACE_RangeCard_Description">
             <English>50 METER increments -- MRAD/MRAD (reticle/turrets)</English>
@@ -48,7 +49,7 @@
             <English>Range Card</English>
             <Czech>Vzdálenostní tabulka</Czech>
             <French>Table de tir</French>
-            <Spanish>Tarjeta de distancias</Spanish>
+            <Spanish>Tarjeta de Distancias</Spanish>
             <Italian>Tavola Balistica</Italian>
             <Polish>Tabela balistyczna</Polish>
             <Portuguese>Tabela de distâncias</Portuguese>
@@ -66,7 +67,7 @@
             <English>Open Range Card</English>
             <Czech>Otevřít vzdálenostní tabulku</Czech>
             <French>Ouvrir la table de tir</French>
-            <Spanish>Abrir tarjeta de distancias</Spanish>
+            <Spanish>Abrir Tarjeta de Distancias</Spanish>
             <Italian>Apri Tavola Balistica</Italian>
             <Polish>Otwórz tabelę balistyczną</Polish>
             <Portuguese>Abrir tabela de distâncias</Portuguese>
@@ -84,7 +85,7 @@
             <English>Open Range Card Copy</English>
             <Czech>Otevřít kopii vzdálenostní tabulky</Czech>
             <French>Ouvrir une copie de la table de tir</French>
-            <Spanish>Abrir copia de tarjeta de distancias</Spanish>
+            <Spanish>Abrir copia de Tarjeta de Distancias</Spanish>
             <Italian>Apri Copia Tavola Balistica</Italian>
             <Polish>Otwórz kopię tabeli balistycznej</Polish>
             <Portuguese>Abrir cópia da tabela de distâncias</Portuguese>

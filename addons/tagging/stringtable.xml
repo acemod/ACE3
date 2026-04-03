@@ -3,38 +3,44 @@
     <Package name="Tagging">
         <Key ID="STR_ACE_Tagging_ChalkBlack">
             <English>Chalk (Black)</English>
-            <German>Kreide (Schwarz)</German>
+            <Spanish>Tiza (Negra)</Spanish>
             <Russian>Мел (Черный)</Russian>
+            <German>Kreide (Schwarz)</German>
             <Japanese>チョーク (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkBlue">
             <English>Chalk (Blue)</English>
-            <German>Kreide (Blau)</German>
+            <Spanish>Tiza (Azul)</Spanish>
             <Russian>Мел (Синий)</Russian>
+            <German>Kreide (Blau)</German>
             <Japanese>チョーク (青)</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkGreen">
             <English>Chalk (Green)</English>
-            <German>Kreide (Grün)</German>
+            <Spanish>Tiza (Verde)</Spanish>
             <Russian>Мел (Зеленый)</Russian>
+            <German>Kreide (Grün)</German>
             <Japanese>チョーク (緑)</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkRed">
             <English>Chalk (Red)</English>
-            <German>Kreide (Rot)</German>
+            <Spanish>Tiza (Roja)</Spanish>
             <Russian>Мел (Красный)</Russian>
+            <German>Kreide (Rot)</German>
             <Japanese>チョーク (赤)</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkWhite">
             <English>Chalk (White)</English>
-            <German>Kreide (Weiß)</German>
+            <Spanish>Tiza (Blanca)</Spanish>
             <Russian>Мел (Белый)</Russian>
+            <German>Kreide (Weiß)</German>
             <Japanese>チョーク (白)</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkYellow">
             <English>Chalk (Yellow)</English>
-            <German>Kreide (Gelb)</German>
+            <Spanish>Tiza (Amarilla)</Spanish>
             <Russian>Мел (Желтый)</Russian>
+            <German>Kreide (Gelb)</German>
             <Japanese>チョーク (黄)</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_LastUsed">
@@ -353,15 +359,16 @@
         </Key>
         <Key ID="STR_ACE_Tagging_descChalk">
             <English>A chalk marker for tagging walls.</English>
-            <German>Ein Kreidestift um Wände zu markieren.</German>
+            <Spanish>Tiza para marcar paredes.</Spanish>
             <Russian>Меловой маркер для разметки стен.</Russian>
+            <German>Ein Kreidestift um Wände zu markieren.</German>
             <Japanese>壁に目印を描くためのチョークマーカー。</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_descSpraypaint">
             <English>A can of spray paint for tagging walls.</English>
             <Czech>Plechovka se sprejem k vytváření značek.</Czech>
             <French>Une bombe de peinture en spray pour tagger les murs.</French>
-            <Spanish>Lata de pintura en aerosol para marcar.</Spanish>
+            <Spanish>Lata de pintura en aerosol para marcar paredes.</Spanish>
             <Italian>Una bomboletta spay per applicare marker sui muri.</Italian>
             <Polish>Farba w sprayu, służy do oznakowywania terenu.</Polish>
             <Portuguese>Uma lata de tinta spray para marcar paredes.</Portuguese>

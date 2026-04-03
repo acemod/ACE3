@@ -4,31 +4,31 @@
  * Gets ballistic info for a weapon, mag and ammo.
  *
  * Arguments:
- * None
+ * 0: Zeroing <NUMBER>
  *
  * Return Value:
  * Weapon Info <ARRAY>
  *
  * Example:
- * [] call ace_xm157_fnc_ballistics_getData
+ * [100] call ace_xm157_fnc_ballistics_getData
  *
  * Public: No
  */
 
-private _unit = ACE_player;
-private _magazineClass = (primaryWeaponMagazine _unit) param [0, ""];
+params ["_zeroRange"];
 
+private _unit = ace_player;
+private _magazineClass = (primaryWeaponMagazine _unit) param [0, ""];
 if (_magazineClass == "") exitWith {
     [] // return
 };
-
 private _weaponClass = primaryWeapon _unit;
+private _optic = (primaryWeaponItems _unit) param [2, ""];
 
-GVAR(data) getOrDefaultCall [[_weaponClass, _magazineClass], {
+GVAR(data) getOrDefaultCall [["ballistics", _weaponClass, _magazineClass, _optic, _zeroRange], {
     private _ammoClass = getText (configFile >> "CfgMagazines" >> _magazineClass >> "ammo");
-    TRACE_3("new weapon/mag",_weaponClass,_magazineClass,_ammoClass);
+    TRACE_4("new",_weaponClass,_magazineClass,_optic,_zeroRange);
 
-    private _zeroRange = 100;
     private _boreHeight = [_unit, 0] call EFUNC(scopes,getBoreHeight);
 
     (_ammoClass call EFUNC(advanced_ballistics,readAmmoDataFromConfig)) params ["_airFriction", "_caliber", "_bulletLength", "_bulletMass", "", "_dragModel", "_ballisticCoefficients", "", "_atmosphereModel", "", "_muzzleVelocityTable", "_barrelLengthTable"];

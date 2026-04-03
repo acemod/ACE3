@@ -1889,11 +1889,6 @@
             <Turkish>JAS 39 Gripen</Turkish>
             <Ukrainian>JAS 39 Gripen</Ukrainian>
         </Key>
-        <Key ID="STR_ACE_RealisticNames_UAV_05_Name">
-            <English>XQ-47B</English>
-            <Japanese>XQ-47B</Japanese>
-            <Russian>XQ-47B</Russian>
-        </Key>
         <Key ID="STR_ACE_RealisticNames_SLAM_Name">
             <English>M4A1 SLAM</English>
             <Czech>M4A1 SLAM</Czech>
@@ -2569,6 +2564,12 @@
             <Hungarian>YABHON-R3</Hungarian>
             <Ukrainian>YABHON-R3</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_UAV_05_Name">
+            <English>XQ-47B</English>
+            <Spanish>XQ-47B</Spanish>
+            <Russian>XQ-47B</Russian>
+            <Japanese>XQ-47B</Japanese>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_afv_wheeled_01">
             <English>Rooikat 120</English>
             <Czech>Rooikat 120</Czech>
@@ -3091,8 +3092,9 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL_muzzleGPBO40">
             <English>GPBO-40</English>
-            <Japanese>GPBO-40</Japanese>
+            <Spanish>GPBO-40</Spanish>
             <Russian>GPBO-40</Russian>
+            <Japanese>GPBO-40</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL_sand">
             <English>MSBS Grot GL (Sand)</English>
@@ -3240,8 +3242,9 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS_muzzleSix12">
             <English>SIX-12</English>
-            <Japanese>SIX-12</Japanese>
+            <Spanish>SIX-12</Spanish>
             <Russian>SIX-12</Russian>
+            <Japanese>SIX-12</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS_sand">
             <English>MSBS Grot SG (Sand)</English>

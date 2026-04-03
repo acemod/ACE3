@@ -20,6 +20,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ChangePower">
             <English>(Scroll) Change Power</English>
+            <Spanish>(Scroll) Ajustar Potencia</Spanish>
             <Russian>(Прокрутка) Изменение мощности</Russian>
             <Japanese>(スクロール) 投擲力の調整</Japanese>
         </Key>
@@ -327,6 +328,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_SnapPower">
             <English>(Scroll) Snap Power</English>
+            <Spanish>(Scroll) Cambiar Potencia por Niveles</Spanish>
             <Russian>(Прокрутка) Мгновенная мощность</Russian>
             <Japanese>(スクロール) 投擲力の切替</Japanese>
         </Key>
@@ -365,11 +367,13 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_throwStepSetting_Description">
             <English>Adjust the granularity of different throwing modes by using the mouse wheel</English>
+            <Spanish>Ajusta la granularidad de los distintos modos de lanzamiento usando la rueda del ratón</Spanish>
             <Russian>Отрегулируйте степень детализации различных режимов метания с помощью колесика мыши</Russian>
             <Japanese>マウスホイールでの投擲力の調整の細かさを変更します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_throwStepSetting_DisplayName">
             <English>Granular Throw Steps</English>
+            <Spanish>Pasos de ajuste del lanzamiento</Spanish>
             <Russian>Этапы гранулирвоанного броска</Russian>
             <Japanese>投擲力のステップ数</Japanese>
         </Key>
