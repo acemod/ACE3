@@ -103,7 +103,7 @@ private _airData = [_thrustLogFactor, _maxSpeed, _acceleration, _thrustCoefs, _t
         [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
 
-    private _setpoint = _pid getVariable "CBA_pid_setpoint";
+    private _setpoint = _pid get "cba_pid_setpoint";
     if (abs ((GVAR(speedLimit) / 3.6) - _setpoint) > EPSILON) then {
         [_pid, GVAR(speedLimit) / 3.6] call CBA_pid_fnc_setpoint;
     };
