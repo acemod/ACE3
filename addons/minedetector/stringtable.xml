@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MineDetector">
+        <Key ID="STR_ACE_MineDetector_Category">
+            <English>Mine Detector</English>
+        </Key>
+        <Key ID="STR_ACE_MineDetector_radiusMode">
+            <English>Mine Detector Radius</English>
+        </Key>
+        <Key ID="STR_ACE_MineDetector_radiusMode_Desc">
+            <English></English>
+        </Key>
         <Key ID="STR_ACE_MineDetector_ActivateDetector">
             <English>Activate</English>
             <Czech>Aktivovat</Czech>
