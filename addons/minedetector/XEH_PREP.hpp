@@ -11,3 +11,4 @@ PREP(getDetectorConfig);
 PREP(hasDetector);
 PREP(isDetectorEnabled);
 PREP(playDetectorSound);
+PREP(updateDetectorRadius);
