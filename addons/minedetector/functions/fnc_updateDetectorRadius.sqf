@@ -15,13 +15,15 @@
  * Public: No
  */
 
+params ["_setting"];
+
+
+if !( _setting in [QGVAR(radiusMode), QGVAR(radiusMode_customRadius)] ) exitWith {};
+
 {
     _y set [
-        2,
-        switch (QGVAR(radiusMode)) do {
-            case "CUSTOM_RADIUS": { GVAR(radiusMode_customRadius) };
-            default { getNumber (configFile >> "ACE_detector" >> "detectors" >> _x >> "radius") };
-        }
+        1,
+        _x call FUNC(getDetectorRadius)
     ];
 
 } forEach GVAR(detectorConfigs);
