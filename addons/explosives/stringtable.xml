@@ -405,6 +405,24 @@
             <Hungarian>Thor III bekapcsolása</Hungarian>
             <Ukrainian>Активувати Thor III</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Explosives_M152_Clacker_description">
+            <English>Used to remotely trigger explosives.&lt;br/&gt;Has an operational range of about 5km.</English>
+            <Czech>Používané ke vzdálenému odpalování výbušnin. (5km)</Czech>
+            <French>Utilisé pour déclencher des explosifs à distance. (5km)</French>
+            <Spanish>Usado para detonar remotamente explosivos. (5km)</Spanish>
+            <Italian>Usato per l'innesco a distanza degli esplosivi. (5km)</Italian>
+            <Polish>Używany do zdalnego detonowania ładunków wybuchowych. (5km)</Polish>
+            <Portuguese>Usado para acionar explosivos remotamente. (5km)</Portuguese>
+            <Russian>Используется для удаленной детонации зарядов. (5km)</Russian>
+            <German>Wird benutzt um Sprengstoffe fernzuzünden.&lt;br/&gt;Hat eine Reichweite von ungefähr 5km.</German>
+            <Korean>원격으로 폭발물을 폭파시킬때 씁니다. (5km)</Korean>
+            <Japanese>爆発物を遠隔で起爆させるのに使います. (5km)</Japanese>
+            <Chinese>用於遠端引爆炸藥. (5km)</Chinese>
+            <Chinesesimp>用于远程引爆炸药. (5km)</Chinesesimp>
+            <Turkish>Patlayıcıları uzaktan tetiklemek için kullanılır. (5km)</Turkish>
+            <Hungarian>Robbanóanyagok távoli robbantásához. (5km)</Hungarian>
+            <Ukrainian>Використовується для віддаленої детонації зарядів. (5km)</Ukrainian>
+        </Key>
         <Key ID="STR_ACE_Explosives_M152_Clacker_displayName">
             <English>M152 Firing Device</English>
             <Czech>Odpalovací zařízení M152</Czech>
@@ -1226,24 +1244,6 @@
             <Turkish>Patlayıcıları uzaktan tetiklemek için kullanılır. (250m)</Turkish>
             <Hungarian>Robbanóanyagok távoli robbantásához. (250m)</Hungarian>
             <Ukrainian>Використовується для віддаленої детонації зарядів. (250m)</Ukrainian>
-        </Key>
-        <Key ID="STR_ACE_Explosives_M152_Clacker_description">
-            <English>Used to remotely trigger explosives.&lt;br/&gt;Has an operational range of about 5km.</English>
-            <Czech>Používané ke vzdálenému odpalování výbušnin. (5km)</Czech>
-            <French>Utilisé pour déclencher des explosifs à distance. (5km)</French>
-            <Spanish>Usado para detonar remotamente explosivos. (5km)</Spanish>
-            <Italian>Usato per l'innesco a distanza degli esplosivi. (5km)</Italian>
-            <Polish>Używany do zdalnego detonowania ładunków wybuchowych. (5km)</Polish>
-            <Portuguese>Usado para acionar explosivos remotamente. (5km)</Portuguese>
-            <Russian>Используется для удаленной детонации зарядов. (5km)</Russian>
-            <German>Wird benutzt um Sprengstoffe fernzuzünden.&lt;br/&gt;Hat eine Reichweite von ungefähr 5km.</German>
-            <Korean>원격으로 폭발물을 폭파시킬때 씁니다. (5km)</Korean>
-            <Japanese>爆発物を遠隔で起爆させるのに使います. (5km)</Japanese>
-            <Chinese>用於遠端引爆炸藥. (5km)</Chinese>
-            <Chinesesimp>用于远程引爆炸药. (5km)</Chinesesimp>
-            <Turkish>Patlayıcıları uzaktan tetiklemek için kullanılır. (5km)</Turkish>
-            <Hungarian>Robbanóanyagok távoli robbantásához. (5km)</Hungarian>
-            <Ukrainian>Використовується для віддаленої детонації зарядів. (5km)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Explosives_clacker_displayName">
             <English>M57 Firing Device</English>
