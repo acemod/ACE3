@@ -42,7 +42,7 @@ GVAR(detectorConfigs) getOrDefaultCall [toLowerANSI _detectorType, {
 
         [
             _detectorPosition,
-            getNumber (_cfgEntry >> "radius"),
+            _detectorType call FUNC(getDetectorRadius),
             _sounds,
             _soundDistances,
             _soundIntervals,
