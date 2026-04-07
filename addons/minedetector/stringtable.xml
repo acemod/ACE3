@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MineDetector">
-        <Key ID="STR_ACE_MineDetector_Category">
-            <English>Mine Detector</English>
-        </Key>
-        <Key ID="STR_ACE_MineDetector_radiusMode">
-            <English>Mine Detector Radius</English>
-        </Key>
-        <Key ID="STR_ACE_MineDetector_radiusMode_Desc">
-            <English>Default uses Config Entry (2.5m).\nCustom Radius will apply the custom Radius on all ace mine detectors.</English>
-        </Key>
-        <Key ID="STR_ACE_MineDetector_radiusMode_Default">
-            <English>Default</English>
-        </Key>
-        <Key ID="STR_ACE_MineDetector_radiusMode_customRadius">
-            <English>Custom Radius</English>
-        </Key>
-        <Key ID="STR_ACE_MineDetector_radiusMode_customRadius_Desc">
-            <English>When Custom Radius selected, this value will be applied to all ace mine detectors.</English>
-        </Key>
         <Key ID="STR_ACE_MineDetector_ActivateDetector">
             <English>Activate</English>
             <Czech>Aktivovat</Czech>
@@ -35,6 +17,9 @@
             <Chinesesimp>启用探测器</Chinesesimp>
             <Turkish>Aktif</Turkish>
             <Ukrainian>Увімкнути</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_MineDetector_Category">
+            <English>Mine Detector</English>
         </Key>
         <Key ID="STR_ACE_MineDetector_ConnectHeadphones">
             <English>Connect Headphones</English>
@@ -154,6 +139,21 @@
             <Chinesesimp>金属探测器</Chinesesimp>
             <Turkish>Metal Dedektör</Turkish>
             <Ukrainian>Детектор металу</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_MineDetector_radiusMode">
+            <English>Mine Detector Radius</English>
+        </Key>
+        <Key ID="STR_ACE_MineDetector_radiusMode_Default">
+            <English>Default</English>
+        </Key>
+        <Key ID="STR_ACE_MineDetector_radiusMode_Desc">
+            <English>Default uses Config Entry (2.5m).\nCustom Radius will apply the custom Radius on all ace mine detectors.</English>
+        </Key>
+        <Key ID="STR_ACE_MineDetector_radiusMode_customRadius">
+            <English>Custom Radius</English>
+        </Key>
+        <Key ID="STR_ACE_MineDetector_radiusMode_customRadius_Desc">
+            <English>When Custom Radius selected, this value will be applied to all ace mine detectors.</English>
         </Key>
     </Package>
 </Project>
