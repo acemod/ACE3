@@ -18,7 +18,7 @@
 params ["_setting"];
 
 
-if !( _setting in [QGVAR(radiusMode), QGVAR(radiusMode_customRadius)] ) exitWith {};
+if ( _setting isNotEqualTo QGVAR(BoostRadius) ) exitWith {};
 
 {
     _y set [

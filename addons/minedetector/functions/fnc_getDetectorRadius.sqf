@@ -17,7 +17,4 @@
 
 params ["_detectorType"];
 
-switch ( GVAR(radiusMode) ) do {
-    case "CUSTOM_RADIUS": { round (GVAR(radiusMode_customRadius) * 10 ) / 10 };
-    default { getNumber (configFile >> "ACE_detector" >> "detectors" >> _detectorType >> "radius") };
-}
+getNumber (configFile >> "ACE_detector" >> "detectors" >> _detectorType >> "radius") + ( round (GVAR(BoostRadius) * 10) / 10 ) // return
