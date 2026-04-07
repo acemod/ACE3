@@ -413,6 +413,7 @@
             <Italian>[CSW] M2 Statico senza Accessori</Italian>
             <German>[CSW] Statisches M2 ohne Schild</German>
             <French>[CSW] M2 Statique sans accessoires</French>
+            <Japanese>[CSW] 設置型 M2 付属品無し</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_StaticM2ShieldBag_displayName">
             <English>[CSW] Static M2 w/ Shield</English>
@@ -425,7 +426,7 @@
             <Russian>[CSW] Станковый M2 со щитом</Russian>
             <German>[CSW] Statisches M2 mit Schild</German>
             <Korean>[CSW] 거치형 M2 (방패)</Korean>
-            <Japanese>[CSW] 設置型 防盾付き M2</Japanese>
+            <Japanese>[CSW] 設置型 M2 防盾付き</Japanese>
             <Chinesesimp>[班组] 固定式防盾型 M2 重机枪</Chinesesimp>
             <Ukrainian>[CSW] Станковий M2 зі щитом</Ukrainian>
         </Key>
@@ -435,6 +436,7 @@
             <Italian>[CSW] M2 Statico con Scudo e Ottica</Italian>
             <German>[CSW] Statisches M2 mit Schild und Optik</German>
             <French>[CSW] M2 statique avec bouclier et viseur</French>
+            <Japanese>[CSW] 設置型 M2 照準・防盾付き</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_StaticM2SightBag_displayName">
             <English>[CSW] Static M2 w/ Sight</English>
@@ -442,6 +444,7 @@
             <Italian>[CSW] M2 Statico con ottica</Italian>
             <German>[CSW] Statisches M2 mit Optik</German>
             <French>[CSW] M2 statique avec viseur</French>
+            <Japanese>[CSW] 設置型 M2 照準付き</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_actionLink">
             <English>Link %1</English>
