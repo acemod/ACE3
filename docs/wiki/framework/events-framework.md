@@ -161,6 +161,11 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |---------- |------------|----------|------|-------------|
 | `ace_interaction_doorOpeningStarted` | [_house, _door, _animations] | Local | Listen | Called when local unit starts interacting with doors
 | `ace_interaction_doorOpeningStopped` | [_house, _door, _animations] | Local | Listen | Called when local unit stops interacting with doors
+| `ace_interaction_tapShoulder` | [_target, _shoulderNum, _unit] | Target | Listen | Called when target gets their shoulder tapped
+| `ace_interaction_getDown` | _unit | Target | Listen | Civilian is told to get down
+| `ace_interaction_sendAway` | [_unit, _position] | Target | Listen | Civilian is told to go away
+| `ace_interaction_pardon` | _unit | Target | Listen | Unit is pardoned (`rating` restored)
+| `ace_interaction_joinedTeam` | [_unit, _team] | Target | Listen | Unit joins a fireteam (color)
 
 ### 2.17 Headless (`ace_headless`)
 
