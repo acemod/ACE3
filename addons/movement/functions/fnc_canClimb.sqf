@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- * Tests the the player can climb.
+ * Tests whether the player can climb.
  *
  * Arguments:
  * 0: The Unit (usually the player) <OBJECT>

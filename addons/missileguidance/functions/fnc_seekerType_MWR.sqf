@@ -11,7 +11,7 @@
  * Seeker Pos <ARRAY>
  *
  * Example:
- * [] call call ace_missileguidance_fnc_seekerType_MWR;
+ * [] call ace_missileguidance_fnc_seekerType_MWR;
  *
  * Public: No
  */
