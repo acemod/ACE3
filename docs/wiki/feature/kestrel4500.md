@@ -15,7 +15,7 @@ version:
 
 ## 1. Overview
 
-The Kestrel 4500 Pocket Weather Tracker is Kestrel's environmental meter. This is a mini weather station in itself :
+The Kestrel 4500 Pocket Weather Tracker is Kestrel's environmental meter. This is a mini weather station in itself:
 - Heading
 - Wind direction
 - Crosswind
