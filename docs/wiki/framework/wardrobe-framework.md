@@ -38,10 +38,10 @@ Only directly defined subclasses will be taken into account. A fully inherited s
 
 All supported Properties can be found within the `ace_wardrobe_base` baseclass.
 
-| Class Property |  Data Type | Description |
-| -------------- |  ----------- | ----------- |
+| Class Property | Data Type | Description |
+| -------------- | ----------- | ----------- |
 | `modifiableTo` | Subclasses | Possible variants this item can be turned into. Subclass can contain optional "directional properties". See 2.2 for more. |
-| `components[]` | Array of Classnames  | Components the current variant contains within itself |
+| `components[]` | Array of Classnames | Components the current variant contains within itself |
 | `sound[]` | Array of CfgSound Entries | To be chosen by random when the action is performed |
 | `soundTiming` | Number 0..1 | Defines the point in time relative to the duration when the sound is played |
 | `gesture` | String of Classname | Gesture to be played when the action is performed |
@@ -57,14 +57,13 @@ The following, optional "directional properties" can be defined for directional 
 See 4.2 and 4.3 for examples
 
 | Directional Property | Data Type | Description |
-| -------------- |  ----------- | ----------- |
+| -------------- | ----------- | ----------- |
 | `sound[]` | Array of CfgSound Entries | To be chosen by random when the action is performed |
 | `soundTiming` | Number 0..1 | Defines the point in time relative to the duration when the sound is played |
 | `gesture` | String of Classname | Gesture to be played when the action is performed |
 | `icon` | String of path to icon | Will be used instead of target variant picture |
 | `displayName` | String | Will be used for action instead of the target variants displayname |
 | `duration` | Number in seconds (>= 1) | Duration of action. Items are being replaced at the end. |
-
 
 ### 2.2 Base Classes
 
