@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Glowbal, Ruthberg, joko // Jonas, Brett Mayson
- * Handle the PFH for Bullets
+ * Handle the PFH for Bullets.
  *
  * Arguments:
  * None
@@ -16,7 +16,7 @@
  */
 
 {
-    _y params ["_bullet","_caliber","_bulletTraceVisible"];
+    _y params ["_bullet", "_caliber", "_bulletTraceVisible"];
 
     if (alive _bullet) then {
         private _bulletVelocity = velocity _bullet;
@@ -32,15 +32,16 @@
                 _bulletVelocity,
                 _bulletPosition,
                 wind,
-                ASLToATL(_bulletPosition) select 2,
+                (ASLToATL _bulletPosition) select 2,
                 CBA_missionTime toFixed 6
             ]]
         ) params ["_data", "_code"];
+
         if (_code == 0) then {
-            _bullet setVelocity (_bulletVelocity vectorAdd (parseSimpleArray (_data)));
+            _bullet setVelocity (_bulletVelocity vectorAdd (parseSimpleArray _data));
         };
     } else {
         GVAR(allBullets) deleteAt _x;
         "ace" callExtension ["ballistics:bullet:delete", [_x]];
     };
-} forEach GVAR(allBullets)
+} forEach GVAR(allBullets);

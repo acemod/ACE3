@@ -40,15 +40,31 @@ All supported Properties can be found within the `ace_wardrobe_base` baseclass.
 
 | Class Property |  Data Type | Description |
 | -------------- |  ----------- | ----------- |
-| `modifiableTo` | Subclasses | Possible variants this item can be turned into. Subclass can contain optional `directionalActionName` property to use as a display name for the action. |
+| `modifiableTo` | Subclasses | Possible variants this item can be turned into. Subclass can contain optional "directional properties". See 2.2 for more. |
 | `components[]` | Array of Classnames  | Components the current variant contains within itself |
 | `sound[]` | Array of CfgSound Entries | To be chosen by random when the action is performed |
-| `sound_timing` | Number 0..1 | Defines the point in time relative to the duration when the sound is played |
+| `soundTiming` | Number 0..1 | Defines the point in time relative to the duration when the sound is played |
 | `gesture` | String of Classname | Gesture to be played when the action is performed |
-| `alternativePicture` | String of path to icon | Will be used instead of target variant picture |
-| `alternativeActionName` | String | Will be used instead of the target variants displayname |
+| `icon` | String of path to icon | Will be used instead of target variant picture |
+| `displayName` | String | Will be used for action instead of the target variants displayname |
 | `duration` | Number in seconds (>= 1) | Duration of action. Items are being replaced at the end. |
 | `fallbackComponent` | String of Classname | Fallback for components that are not present within the same mod/addon. Example: RHS AFRF helmets use `rhs_ess_black` goggles, which are only part of USAF. `fallbackComponent` can be used to default to a vanilla alternative. |
+
+## 2.2 Properties for `modifiableTo` Subclasses
+
+The following, optional "directional properties" can be defined for directional use, meaning explicitly from the origin class to the target.
+
+See 4.2 and 4.3 for examples
+
+| Directional Property | Data Type | Description |
+| -------------- |  ----------- | ----------- |
+| `sound[]` | Array of CfgSound Entries | To be chosen by random when the action is performed |
+| `soundTiming` | Number 0..1 | Defines the point in time relative to the duration when the sound is played |
+| `gesture` | String of Classname | Gesture to be played when the action is performed |
+| `icon` | String of path to icon | Will be used instead of target variant picture |
+| `displayName` | String | Will be used for action instead of the target variants displayname |
+| `duration` | Number in seconds (>= 1) | Duration of action. Items are being replaced at the end. |
+
 
 ### 2.2 Base Classes
 
@@ -67,14 +83,14 @@ class ace_wardrobe {
 
         // Supports multiple sounds, will pick one by random.
         sound[] = { "ace_wardrobe_fabric_06", "ace_wardrobe_fabric_07", "ace_wardrobe_fabric_16", "ace_wardrobe_fabric_20", "ace_wardrobe_fabric_25"};
-        sound_timing = 0;    // [0..1] 0 at the start of the action, 0.5 half way during the duration of the action - always, if completed or not. 1 at the end, only when completed.
+        soundTiming = 0;    // [0..1] 0 at the start of the action, 0.5 half way during the duration of the action - always, if completed or not. 1 at the end, only when completed.
 
         // Gesture
         gesture = "Gear";
 
-        // These will be read from the target class, so for example, the uniformclass with the rolled up sleaves, it should say "roll up sleeves"
-        alternativePicture = "";
-        alternativeActionName = "";
+        // These will be read from the target class, so for example, the uniformclass with the rolled up sleeves, it should say "roll up sleeves"
+        icon = "";
+        displayName = "";
 
         duration = 1; // Minimum value: 1 - Anything above will produce a progressbar.
 
@@ -91,10 +107,10 @@ Common base class for uniforms with Sleeves up/down variants
 
 ```cpp
 class ace_wardrobe_base_U_sleeves_up: ace_wardrobe_base {
-    alternativeActionName = CSTRING(sleevesUp);
+    displayName = CSTRING(sleevesUp);
 };
 class ace_wardrobe_base_U_sleeves_down: ace_wardrobe_base {
-    alternativeActionName = CSTRING(sleevesDown);
+    displayName = CSTRING(sleevesDown);
 };
 ```
 
@@ -104,10 +120,10 @@ Common base class for uniforms with gloves on/off variants
 
 ```cpp
 class ace_wardrobe_base_U_gloves_on: ace_wardrobe_base {
-    alternativeActionName = CSTRING(glovesOn);
+    displayName = CSTRING(glovesOn);
 };
 class ace_wardrobe_base_U_gloves_off: ace_wardrobe_base {
-    alternativeActionName = CSTRING(glovesOff);
+    displayName = CSTRING(glovesOff);
 };
 ```
 
@@ -117,10 +133,10 @@ Common base class for uniforms who are open/closed in the front
 
 ```cpp
 class ace_wardrobe_base_U_jacket_open: ace_wardrobe_base {
-    alternativeActionName = CSTRING(jacketOpen);
+    displayName = CSTRING(jacketOpen);
 };
 class ace_wardrobe_base_U_jacket_closed: ace_wardrobe_base {
-    alternativeActionName = CSTRING(jacketClose);
+    displayName = CSTRING(jacketClose);
 };
 ```
 
@@ -131,11 +147,11 @@ Common base class for uniforms with an raised or lowered hood
 ```cpp
 class ace_wardrobe_base_U_hood_raised: ace_wardrobe_base {
     gesture = "GestureWipeFace";
-    alternativeActionName = CSTRING(hoodRaise);
+    displayName = CSTRING(hoodRaise);
 };
 class ace_wardrobe_base_U_hood_lowered: ace_wardrobe_base {
     gesture = "GestureWipeFace";
-    alternativeActionName = CSTRING(hoodLower);
+    displayName = CSTRING(hoodLower);
 };
 ```
 
@@ -150,9 +166,9 @@ class ace_wardrobe_base_H_visor_up: ace_wardrobe_base {
     gesture ="gestureNod";
 
     sound[] = {CN_SOUND(helmet_visor,05)};
-    sound_timing = 0;
+    soundTiming = 0;
 
-    alternativeActionName = CSTRING(visorUp);
+    displayName = CSTRING(visorUp);
 };
 
 class ace_wardrobe_base_H_visor_down: ace_wardrobe_base {
@@ -160,9 +176,9 @@ class ace_wardrobe_base_H_visor_down: ace_wardrobe_base {
     gesture ="gestureNod";
 
     sound[] = {"ace_wardrobe_05"};
-    sound_timing = 0;
+    soundTiming = 0;
 
-    alternativeActionName = CSTRING(visorDown);
+    displayName = CSTRING(visorDown);
 };
 ```
 
@@ -173,12 +189,12 @@ Common base class for headgear with goggles that can be used as a facewear item.
 ```cpp
 class ace_wardrobe_base_H_goggles_on: ace_wardrobe_base {
     gesture ="GestureWipeFace";
-    alternativeActionName = CSTRING(gogglesOn);
+    displayName = CSTRING(gogglesOn);
 };
 
 class ace_wardrobe_base_H_goggles_off: ace_wardrobe_base {
     gesture ="GestureWipeFace";
-    alternativeActionName = CSTRING(gogglesOff);
+    displayName = CSTRING(gogglesOff);
 };
 ```
 
@@ -186,7 +202,7 @@ class ace_wardrobe_base_H_goggles_off: ace_wardrobe_base {
 
 ### 3.1 Macros
 
-To streamline the configuration of compatible items a set of macros can be found here `addons\wardrobe\script_macros_wardrobe.hpp`
+To streamline the configuration of compatible items, a set of macros can be found here `addons\wardrobe\script_macros_wardrobe.hpp`
 
 ### 3.2 Example
 
@@ -248,7 +264,9 @@ class ace_wardrobe {
 
     class G_Balaclava: ace_wardrobe_base {
         class modifiableTo {
-            class G_Balaclava_lowprofile {};
+            class G_Balaclava_lowprofile {
+                displayName = "Put goggles on";
+            };
         };
         components[] = {};
     };
@@ -259,7 +277,9 @@ class ace_wardrobe {
 
     class G_Balaclava_lowprofile: ace_wardrobe_base {
         class modifiableTo {
-            class G_Balaclava {};
+            class G_Balaclava {
+                displayName = "Take goggles off";
+            };
         };
         components[] = { "G_Lowprofile" };
     };
@@ -274,15 +294,18 @@ class ace_wardrobe {
 
     class G_Bandanna_blk: ace_wardrobe_base {
         class modifiableTo {
-            class G_Bandanna_aviator {};
-            class G_Aviator {};
+            class G_Bandanna_aviator {
+                displayName = "Add Glasses";
+            };
         };
         components[] = {"G_Bandanna_blk"};
     };
 
     class G_Aviator: ace_wardrobe_base {
         class modifiableTo {
-            class G_Bandanna_aviator {};
+            class G_Bandanna_aviator {
+                displayName = "Add Bandanna";
+            };
         };
 
         components[] = { "G_Aviator" };
@@ -290,8 +313,12 @@ class ace_wardrobe {
 
     class G_Bandanna_aviator: ace_wardrobe_base {
         class modifiableTo {
-            class G_Bandanna_blk {};
-            class G_Aviator {};
+            class G_Bandanna_blk {
+                displayName = "Remove Glasses";
+            };
+            class G_Aviator {
+                displayName = "Remove Bandanna";
+            };
         };
         components[] = { "G_Aviator", "G_Bandanna_blk" };
     };
@@ -360,14 +387,14 @@ Therefore, the debug script found at `addons\wardrobe\dev\compareContainerMaxLoa
 
 ### 6.2.1 Listenable
 
-`_itemType` is STRING ["UNIFORM", "VEST", "BACKPACK", "HEADGEAR", "FACEWEAR"]
+`_typeNumber` is NUMBER, see [script_macros.hpp](https://github.com/acemod/ACE3/blob/master/addons/main/script_macros.hpp#L75-L114)
 `_extendedInfo` is HASHMAP will be passed between events (works similar to `CBA_loadoutSet` events)
 
 | Event Name | Description | Passed Parameter(s) | Locality |
 | ---------- | ----------- | ------------------- | -------- |
-| `ace_wardrobe_itemChangedStart` | Raised when the action to change an item is taken, but before any changes. | `[_player, _oldItem, _newItem, _itemType, _extendedInfo]` | Local |
-| `ace_wardrobe_itemChangedBegin` | Raised just before the item is changed. | `[_player, _oldItem, _newItem, _itemType, _extendedInfo]` | Local |
-| `ace_wardrobe_itemChangedEnd` | Raised just after the item has been changed. | `[_player, _oldItem, _newItem, _itemType, _extendedInfo]` | Local |
+| `ace_wardrobe_itemChangedStart` | Raised when the action to change an item is taken, but before any changes. | `[_player, _oldItem, _newItem, _typeNumber, _extendedInfo]` | Local |
+| `ace_wardrobe_itemChangedBegin` | Raised just before the item is changed. | `[_player, _oldItem, _newItem, _typeNumber, _extendedInfo]` | Local |
+| `ace_wardrobe_itemChangedEnd` | Raised just after the item has been changed. | `[_player, _oldItem, _newItem, _typeNumber, _extendedInfo]` | Local |
 
 ## 6.3 Container Variables
 

@@ -8,6 +8,8 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
+GVAR(viewports) = createHashMap;
+
 #ifdef POINT_CONFIG_DEBUG
 call compileScript [QPATHTOF(dev\debugPoints.sqf)];
 #endif

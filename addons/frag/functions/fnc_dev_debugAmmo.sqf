@@ -57,7 +57,7 @@ if (_onlyShotAmmoTypes) then {
             };
         };
     };
-    private _allMagazineConfigs = configProperties [configFile >> "CfgMagazines", "isClass _x", true];
+    private _allMagazineConfigs = "true" configClasses (configFile >> "CfgMagazines");
     private _cfgAmmoCfgPath = configFile >> "CfgAmmo";
     {
         private _magAmmo = getText (_x >> "ammo");
@@ -65,7 +65,7 @@ if (_onlyShotAmmoTypes) then {
     } forEach _allMagazineConfigs;
     _allAmmoConfigs = keys _allAmmoConfigs;
 } else {
-    _allAmmoConfigs = configProperties [configFile >> "CfgAmmo", "isClass _x && !('ace_frag' in configName _x)", true] apply {configName _x};
+    _allAmmoConfigs = (QUOTE(!(QUOTE(QUOTE(ADDON)) in configName _x)) configClasses (configFile >> "CfgAmmo")) apply {configName _x};
 };
 
 private _processedCfgAmmos = 0;

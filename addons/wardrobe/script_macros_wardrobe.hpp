@@ -191,14 +191,14 @@ class HelmetV2Goggles: ACEWARDROBE(base) {\
 class HelmetBase: ACEWARDROBE(base) {\
     class modifiableTo {\
         class HelmetScrim {\
-            directionalActionName = ACEWARDROBE_CSTRING(foliageAdd);\
+            displayName = ACEWARDROBE_CSTRING(foliageAdd);\
         };\
     };\
 };\
 class HelmetScrim: ACEWARDROBE(base) {\
     class modifiableTo {\
         class HelmetBase {\
-            directionalActionName = ACEWARDROBE_CSTRING(foliageRemove);\
+            displayName = ACEWARDROBE_CSTRING(foliageRemove);\
         };\
     };\
 }
@@ -301,14 +301,14 @@ class UniformBase: ACEWARDROBE(base) {\
 class UniformGloves: ACEWARDROBE(base_U_gloves_on) {\
     class modifiableTo {\
         class UniformBase {\
-            directionalActionName = ACEWARDROBE_CSTRING(glovesOff);\
+            displayName = ACEWARDROBE_CSTRING(glovesOff);\
         };\
     };\
 };\
 class UniformRolled: ACEWARDROBE(base_U_sleeves_up) {\
     class modifiableTo {\
         class UniformBase {\
-            directionalActionName = ACEWARDROBE_CSTRING(sleevesDown);\
+            displayName = ACEWARDROBE_CSTRING(sleevesDown);\
         };\
     };\
 }
@@ -337,24 +337,24 @@ class UniformRolled2: ACEWARDROBE(base_U_sleeves_up) {\
 class ClosedCollar: ACEWARDROBE(base) {\
     class modifiableTo {\
         class OpenCollar {\
-            directionalActionName = ACEWARDROBE_CSTRING(collarOpen);\
+            displayName = ACEWARDROBE_CSTRING(collarOpen);\
         };\
     };\
 };\
 class OpenCollar: ACEWARDROBE(base) {\
     class modifiableTo {\
         class ClosedCollar {\
-            directionalActionName = ACEWARDROBE_CSTRING(collarClose);\
+            displayName = ACEWARDROBE_CSTRING(collarClose);\
         };\
         class OpenCollarRolledUpSleeves {\
-            directionalActionName = ACEWARDROBE_CSTRING(sleevesUp);\
+            displayName = ACEWARDROBE_CSTRING(sleevesUp);\
         };\
     };\
 };\
 class OpenCollarRolledUpSleeves: ACEWARDROBE(base) {\
     class modifiableTo {\
         class OpenCollar {\
-            directionalActionName = ACEWARDROBE_CSTRING(sleevesDown);\
+            displayName = ACEWARDROBE_CSTRING(sleevesDown);\
         };\
     };\
 }

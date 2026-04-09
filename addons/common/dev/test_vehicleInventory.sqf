@@ -4,7 +4,7 @@
 
 private _testPass = true;
 
-private _vehicles = configProperties [configFile >> "CfgVehicles", "(isClass _x)", true];
+private _vehicles = "true" configClasses (configFile >> "CfgVehicles");
 {
     private _vehType = configName _x;
     {

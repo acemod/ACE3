@@ -25,7 +25,6 @@ if (GVAR(WindInfo)) exitWith {
 };
 
 EGVAR(advanced_ballistics,Protractor) = false;
-1 cutText ["", "PLAIN"];
 GVAR(WindInfo) = true;
 
 

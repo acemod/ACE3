@@ -43,6 +43,8 @@ if (_knockOut isEqualTo IS_UNCONSCIOUS(_unit)) exitWith {
     false
 };
 
+if (!IS_MEDICAL_ACTIVITY(_unit)) then { [QGVAR(activateMedical), _unit] call CBA_fnc_localEvent; };
+
 if (currentWeapon _unit != primaryWeapon _unit) then {
     _unit selectWeapon primaryWeapon _unit;
 };

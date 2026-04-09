@@ -27,4 +27,6 @@ if (!alive _patient) exitWith {
     ERROR_2("fullHeal [medic %1][patient %2] Patient is dead or null",_medic,_patient);
 };
 
+if (!IS_MEDICAL_ACTIVITY(_patient)) then { [QGVAR(activateMedical), _patient, _patient] call CBA_fnc_targetEvent; };
+
 [_medic, _patient, "", "", objNull, "", false, _logMessage] call EFUNC(medical_treatment,fullHeal);

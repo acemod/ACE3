@@ -27,7 +27,7 @@ GVAR(actions) = [];
     private _items = getArray (_x >> "items");
 
     GVAR(actions) pushBack [_displayName, _category, _condition, _statement, _items];
-} forEach configProperties [configFile >> QEGVAR(medical_treatment,actions), "isClass _x"];
+} forEach ("true" configClasses (configFile >> QEGVAR(medical_treatment,actions)));
 
 
 if ("ace_dragging" call EFUNC(common,isModLoaded)) then {

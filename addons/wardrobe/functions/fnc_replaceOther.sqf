@@ -18,16 +18,19 @@
  * Public: No
  */
 
-params ["_player", "_classTarget", "_equipmentType"];
+params ["_player", "_classTarget", "_typeNumber"];
 
-switch (_equipmentType) do {
-    case "HEADGEAR": {
+switch (_typeNumber) do {
+    case TYPE_HEADGEAR: {
         removeHeadgear _player;
         _player addHeadgear _classTarget;
     };
-    case "FACEWEAR": {
+    case TYPE_GOGGLE: {
         removeGoggles _player;
         _player addGoggles _classTarget;
+    };
+    case TYPE_HMD: {
+        _player linkItem _classTarget;
     };
 };
 

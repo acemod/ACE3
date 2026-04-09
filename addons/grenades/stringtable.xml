@@ -114,7 +114,7 @@
             <Russian>Применить фитиль</Russian>
             <German>Zündschnur verkürzen</German>
             <Korean>단축 신관으로 바꾸기</Korean>
-            <Japanese>短信管へ変更</Japanese>
+            <Japanese>信管を導火線に変える</Japanese>
             <Chinesesimp>切换为短引信</Chinesesimp>
             <Ukrainian>Застосувати гніт</Ukrainian>
         </Key>
@@ -549,7 +549,7 @@
             <Russian>Убрать фитиль</Russian>
             <German>Kurze Zündschnur entfernen</German>
             <Korean>단축 신관 제거하기</Korean>
-            <Japanese>短信管を削除</Japanese>
+            <Japanese>導火線を外す</Japanese>
             <Chinesesimp>去除短引信</Chinesesimp>
             <Ukrainian>Прибрати гніт</Ukrainian>
         </Key>
@@ -592,7 +592,7 @@
             <Russian>Тип: Взрывчатка&lt;br /&gt;Боеприпасы 1&lt;br /&gt;Применение: На предметах, которые должны быть уничтожены</Russian>
             <German>Typ: Ladung &lt;br/&gt;Patronen:1&lt;br/&gt;Benutzt für: Dinge die Sterben müssen</German>
             <Korean>종류: 장약&lt;br /&gt;갯수: 1&lt;br /&gt;사용처: 죽여야 할 곳에</Korean>
-            <Japanese>種類: 爆薬&lt;br /&gt;弾数: 1&lt;br /&gt;次で使用: 破壊すべき物に</Japanese>
+            <Japanese>種類: 爆薬&lt;br /&gt;弾数: 1&lt;br /&gt;次で使用: 破壊すべき全てのものに</Japanese>
             <Chinesesimp>类型：炸药&lt;br /&gt;数量：1&lt;br /&gt;用于：需要死亡的事物</Chinesesimp>
             <Ukrainian>Тип: Вибухівка&lt;br /&gt;Боєприпаси 1&lt;br /&gt;Застосування: На предметах, які мають бути знищені</Ukrainian>
         </Key>
@@ -669,7 +669,7 @@
             <Russian>Разрешает преобразовывать взрывчатку в метательные снаряды</Russian>
             <German>Erlaube die Umwandlung von Sprengstoffen in werfbare Ladungen</German>
             <Korean>폭발물을 투척무기로 변환할 수 있도록 허용합니다.</Korean>
-            <Japanese>このオプションを使用すると、爆発物が手榴弾のように投擲可能になります。\nこれを行うには、インベントリを開いて爆発物をダブルクリックして、爆発物を短信管に変更します。\n信管は同じ手順で取り外すことができます。</Japanese>
+            <Japanese>このオプションを使用すると、爆発物が手榴弾のように投擲可能になります。\nこれを行うには、インベントリを開いて爆発物をダブルクリックして、爆発物の信管を導火線に変更します。\n導火線は同じ手順で取り外すことができます。</Japanese>
             <Chinesesimp>允许将炸药转换为可投掷物</Chinesesimp>
             <Ukrainian>Дозволяє перетворювати вибухівку на метальні снаряди</Ukrainian>
         </Key>

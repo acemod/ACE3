@@ -223,3 +223,9 @@
 
 // Ignore UAV/Drone AI Base Classes
 #define IGNORE_BASE_UAVPILOTS "B_UAV_AI", "O_UAV_AI", "UAV_AI_base_F"
+
+// Medical Activity (optimization for AI)
+#define VAR_MEDICAL_ACTIVITY          QEGVAR(medical,medicalActivity)
+#define MEDICAL_ACTIVITY              EGVAR(medical,const_medicalActivity)
+#define MEDICAL_ACTIVITY_DEFAULT      false
+#define IS_MEDICAL_ACTIVITY(unit)     (unit getVariable [VAR_MEDICAL_ACTIVITY, MEDICAL_ACTIVITY])

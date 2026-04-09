@@ -1,40 +1,45 @@
 #include "..\script_component.hpp"
 /*
  * Author: Ruthberg
- * Calculates the zero angle correction for the new zero range based on current zero range and bore height (distance between bore- and sight axis)
+ * Calculates the zero angle correction for the new zero range based on current zero range and bore height (distance between bore- and sight axis).
  *
  * Arguments:
  * 0: Old Zero range <NUMBER>
  * 1: New Zero range <NUMBER>
- * 2: Bore height <NUMBER>
+ * 2: Bore height - cm <NUMBER>
  * 3: Weapon <STRING>
- * 4: Ammo <STRING>
- * 5: Magazine <STRING>
- * 6: Advanced Ballistics enabled? <BOOL>
+ * 4: Muzzle <STRING>
+ * 5: Ammo <STRING>
+ * 6: Magazine <STRING>
+ * 7: Advanced Ballistics enabled? <BOOL>
  *
  * Return Value:
- * zeroAngleCorrection <NUMBER>
+ * Zero angle correction <NUMBER>
  *
  * Example:
- * [5, 6, 7, gun, ammo, magazine, true] call ace_scopes_fnc_calculateZeroAngleCorrection
+ * [5, 6, 3.81, "arifle_MXM_F", "B_65x39_Caseless", "30Rnd_65x39_caseless_mag", true] call ace_scopes_fnc_calculateZeroAngleCorrection
  *
  * Public: No
  */
 
-params ["_oldZeroRange", "_newZeroRange", "_boreHeight"/*in cm*/, "_weapon", "_ammo", "_magazine", "_advancedBallistics"];
+params ["_oldZeroRange", "_newZeroRange", "_boreHeight", "_weapon", "_muzzle", "_ammo", "_magazine", "_advancedBallistics"];
 
 // When FFV from vehicles currentZeroing will report 0 so just bail
 if (_oldZeroRange <= 0) exitWith { 0 };
 
-GVAR(zeroAngleCorrectionData) getOrDefaultCall [[_oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics], {
+GVAR(zeroAngleCorrectionData) getOrDefaultCall [_this, {
     private _airFriction = getNumber (configFile >> "CfgAmmo" >> _ammo >> "airFriction");
-    private _initSpeed = getNumber(configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
-    private _initSpeedCoef = getNumber(configFile >> "CfgWeapons" >> _weapon >> "initSpeed");
+    private _initSpeed = 0;
+    private _initSpeedCoef = getNumber (configFile >> "CfgWeapons" >> _weapon >> "initSpeed");
+
     if (_initSpeedCoef > 0) then {
         _initSpeed = _initSpeedCoef;
-    };
-    if (_initSpeedCoef < 0) then {
-        _initSpeed = _initSpeed * (-1 * _initSpeedCoef);
+    } else {
+        _initSpeed = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
+
+        if (_initSpeedCoef < 0) then {
+            _initSpeed = _initSpeed * -_initSpeedCoef;
+        };
     };
 
     private _vanillaZero = parseNumber (("ace" callExtension ["ballistics:replicate_vanilla_zero", [_oldZeroRange, _initSpeed, _airFriction]]) select 0);
@@ -46,7 +51,7 @@ GVAR(zeroAngleCorrectionData) getOrDefaultCall [[_oldZeroRange, _newZeroRange, _
     private _trueZero = if (_advancedBallistics) then {
         // Get Weapon and Ammo Configurations
         (_ammo call EFUNC(advanced_ballistics,readAmmoDataFromConfig)) params ["_airFriction", "_caliber", "_bulletLength", "_bulletMass", "_transonicStabilityCoef", "_dragModel", "_ballisticCoefficients", "_velocityBoundaries", "_atmosphereModel", "_ammoTempMuzzleVelocityShifts", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocityVariationSD"];
-        (_weapon call EFUNC(advanced_ballistics,readWeaponDataFromConfig)) params ["_barrelTwist", "_twistDirection", "_barrelLength"];
+        ([_weapon, _muzzle] call EFUNC(advanced_ballistics,readWeaponDataFromConfig)) params ["_barrelTwist", "_twistDirection", "_barrelLength"];
 
         if (missionNamespace getVariable [QEGVAR(advanced_ballistics,barrelLengthInfluenceEnabled), false]) then {
             private _barrelVelocityShift = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, _initSpeed] call EFUNC(advanced_ballistics,calculateBarrelLengthVelocityShift);

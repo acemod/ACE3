@@ -27,3 +27,4 @@ if (_displayHint && {_unit == ACE_player}) then {
     private _message = format [LLSTRING(JoinedTeam), _team];
     [_message] call EFUNC(common,displayTextStructured);
 };
+[QGVAR(joinedTeam), [_unit, _team], _unit] call CBA_fnc_targetEvent;
