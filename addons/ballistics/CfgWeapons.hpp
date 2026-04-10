@@ -141,11 +141,13 @@ class CfgWeapons {
     class sgun_HunterShotgun_01_base_F: Rifle_Long_Base_F {
         ACE_barrelLength = 699.3; // https://www.imfdb.org/wiki/CZ-581
         ACE_twistDirection = 0;
+        initSpeed = -0.99385; // 0.99385x488= 485m/s according to ACE_muzzleVelocities ASM conditions (15°C, 999.916hPa, 78%)
     };
 
     // CZ-581 (sawed off)
     class sgun_HunterShotgun_01_sawedoff_base_F: sgun_HunterShotgun_01_base_F {
         ACE_barrelLength = 349.7; // About half of original length
+        initSpeed = -0.893443; // 0.893443x488= 436m/s according to ACE_muzzleVelocities ASM conditions (15°C, 999.916hPa, 78%)
     };
 
     // Rifle_Base_F
@@ -377,9 +379,11 @@ class CfgWeapons {
 
     // MSBS GROT UBS
     class arifle_MSBS65_UBS_base_F: arifle_MSBS65_base_F {
+        // initSpeed = -0.971576;
         class UBS_F: Rifle_Base_F {
             ACE_barrelLength = 317; // https://modernfirearms.net/en/shotguns/u-s-a-shotguns/crye-six12-eng/
             ACE_twistDirection = 0;
+            // initSpeed = 0; // tested with -2 and 1000 w/o effect on secondary UBS_F muzzle velocity
         };
     };
 
