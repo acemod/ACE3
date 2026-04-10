@@ -18,11 +18,11 @@
             <Turkish>Aktif</Turkish>
             <Ukrainian>Увімкнути</Ukrainian>
         </Key>
-        <Key ID="STR_ACE_MineDetector_BoostRadius">
-            <English>Boost Radius</English>
+        <Key ID="STR_ACE_MineDetector_RadiusCoefficient">
+            <English>Radius Coefficient</English>
         </Key>
-        <Key ID="STR_ACE_MineDetector_BoostRadius_Desc">
-            <English>Adds the value in meters to boost the radius of each individual mine detector.</English>
+        <Key ID="STR_ACE_MineDetector_RadiusCoefficient_Desc">
+            <English>Coefficient to modify the radius of each individual mine detector.</English>
         </Key>
         <Key ID="STR_ACE_MineDetector_Category">
             <English>Mine Detector</English>
