@@ -8,8 +8,6 @@ PREP(deactivateDetector);
 PREP(detectorLoop);
 PREP(getDetectedObject);
 PREP(getDetectorConfig);
-PREP(getDetectorRadius);
 PREP(hasDetector);
 PREP(isDetectorEnabled);
 PREP(playDetectorSound);
-PREP(updateDetectorRadius);

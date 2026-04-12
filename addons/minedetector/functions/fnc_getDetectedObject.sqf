@@ -21,7 +21,8 @@
  */
 
 params ["_unit", "_detectorType", "_detectorConfig"];
-_detectorConfig params ["_detectorPosition", "_radius"];
+_detectorConfig params ["_detectorPosition", "_radius"]; // the original radius from config
+_radius = _radius * GVAR(BoostRadius); // modify by setting
 
 private _worldPosition = _unit modelToWorld (_unit selectionPosition "granat");
 
