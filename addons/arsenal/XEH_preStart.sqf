@@ -12,5 +12,6 @@ uiNamespace setVariable [QGVAR(dlcPictureCache), createHashMap];
 uiNamespace setVariable [QGVAR(rightPanelCache), createHashMap];
 uiNamespace setVariable [QGVAR(sortCache), createHashMap];
 uiNamespace setVariable [QGVAR(isMiscItemCache), createHashMap];
+uiNamespace setVariable [QGVAR(isWeaponCache), createHashMap];
 
 call FUNC(scanConfig);
