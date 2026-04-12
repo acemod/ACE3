@@ -17,7 +17,7 @@ version:
 
 ### 1.1 Guidance
 
-The M47 Dragon is a wire-guided SACLOS missile with a unique maneuver system. It has a series of charges along the missile that fire every third of a second to adjust the missile on course
+The M47 Dragon is a wire-guided SACLOS missile with a unique maneuver system. It has a series of charges along the missile that fire every third of a second to adjust the missile on course.
 
 ### 1.2 Attack profiles
 
