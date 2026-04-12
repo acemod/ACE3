@@ -3,8 +3,6 @@
 // Create a dictionary to store detector configs
 GVAR(detectorConfigs) = createHashMap;
 
-["CBA_SettingChanged", FUNC(updateDetectorRadius)] call CBA_fnc_addEventHandler;
-
 // Shows detector and mine posistions in 3d when debug is on
 #ifdef DEBUG_MODE_FULL
 GVAR(debugDetector) = [];
