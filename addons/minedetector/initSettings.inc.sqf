@@ -1,6 +1,6 @@
 [
-    QGVAR(RadiusCoefficient), "SLIDER",
-    [LSTRING(RadiusCoefficient), LSTRING(RadiusCoefficient_Desc)],
+    QGVAR(BoostRadius), "SLIDER",
+    [LSTRING(BoostRadius), LSTRING(BoostRadius_Desc)],
     format ["ACE %1", localize LSTRING(Category)],
     [0, 10, 0, 1],
     1

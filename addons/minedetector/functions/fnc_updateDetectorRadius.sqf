@@ -18,7 +18,7 @@
 params ["_setting"];
 
 
-if ( _setting isNotEqualTo QGVAR(RadiusCoefficient) ) exitWith {};
+if ( _setting isNotEqualTo QGVAR(BoostRadius) ) exitWith {};
 
 {
     _y set [

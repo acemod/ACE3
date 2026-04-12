@@ -17,4 +17,4 @@
 
 params ["_detectorType"];
 
-getNumber (configFile >> "ACE_detector" >> "detectors" >> _detectorType >> "radius") * GVAR(RadiusCoefficient) // return
+getNumber (configFile >> "ACE_detector" >> "detectors" >> _detectorType >> "radius") + ( round (GVAR(BoostRadius) * 10) / 10 ) // return
