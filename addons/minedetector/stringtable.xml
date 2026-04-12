@@ -18,6 +18,9 @@
             <Turkish>Aktif</Turkish>
             <Ukrainian>Увімкнути</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_MineDetector_arsenalStatRadius">
+            <English>Mine detection radius</English>
+        </Key>
         <Key ID="STR_ACE_MineDetector_ConnectHeadphones">
             <English>Connect Headphones</English>
             <Czech>Připojit sluchátka</Czech>
