@@ -24,7 +24,7 @@ The M47 Dragon is a wire-guided SACLOS missile with a unique maneuver system. It
 The missile requires line of sight to the target at all times. Keep your crosshair on the target as the missile cruises toward it until impact.
 If you lose line of sight the missile will stop tracking toward your crosshair and will fly on its current trajectory. You can regain control if the missile re-enters line of sight.
 If the missile exceeds its maximum range the wire will snap and it will fly off in a random direction.
-The missile's maneuver system causes inaccuracy that cannot be corrected for by the gunner. This means that the risk of missing increases as range goes up
+The missile's maneuver system causes inaccuracy that cannot be corrected for by the gunner. This means that the risk of missing increases as range goes up.
 
 ## 2. Usage
 
