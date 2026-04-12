@@ -41,9 +41,8 @@ The missiles manuever system causes inaccuracy that cannot be corrected for by t
 
 ### 2.2 Tear Down
 - Interact with the missile <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Interaction Key`)
-- Select 'Disassemble'
-- Look to the right of the launcher and pick up the sighting unit
-- Move on
+- Select 'Detach Sight'
+- Move on (the launcher can't be disassembled any further)
 
 ## 3. Sight Ranging
 
