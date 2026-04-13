@@ -51,7 +51,7 @@ if (_isNotEqualTypeNumber && {
             case TYPE_HMD:      { "" isNotEqualTo hmd _player };
         }
     }
-) exitWith { [ [LLSTRING(slotOccupied), _typeTarget call LINKFUNC(getSlotName)] ] call EFUNC(common,displayTextStructured); };
+) exitWith { [ [LLSTRING(slotOccupied), _typeTarget call LINKFUNC(getSlotName)], 2 ] call EFUNC(common,displayTextStructured); };
 
 // REPLACE MECHANIC
 // Disables Wardrobe Action temporarily
