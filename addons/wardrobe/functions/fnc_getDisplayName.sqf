@@ -23,7 +23,7 @@ private _classOrigin = configName _cfgOrigin;
 private _classTarget = configName _cfgTarget;
 
 switch (true) do {
-   
+
     // check legacy directional
     case (
         isText  (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "directionalActionName")
@@ -55,6 +55,23 @@ switch (true) do {
 
     // Fallback displayName of Item
     default {
-        getText (_cfgTarget  >> "displayName")
+
+        private _return = getText (_cfgTarget  >> "displayName");
+
+        // Adds type-descriptor when its converting to a different slot
+        private _typeOrigin = _cfgOrigin call LINKFUNC(getTypeNumber);
+        private _typeTarget = _cfgTarget call LINKFUNC(getTypeNumber);
+        if (_typeOrigin isNotEqualTo _typeTarget) then {
+
+            private _str = switch (_typeTarget) do {
+                case TYPE_HEADGEAR: { localize "str_a3_rscdisplayarsenal_tab_headgear" };
+                case TYPE_GOGGLE:   { localize "str_a3_rscdisplayarsenal_tab_goggles" };
+                case TYPE_HMD:      { localize "str_a3_rscdisplayarsenal_tab_nvgs" };
+            };
+
+            _return = _return + " (" + _str + ")";
+        };
+
+        _return
     };
 };
