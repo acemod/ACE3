@@ -17,22 +17,19 @@
 
 params ["_itemConfig"];
 
-private _typeNumber = getNumber (_cfgOrigin >> "ItemInfo" >> "type");
+private _typeNumber = getNumber (_itemConfig >> "ItemInfo" >> "type");
 
 
-// Edgecases:
-// CfgGlasses items do not have a ItemInfo subclass and therefore, will return 0
-// Backpacks
+// Handle Edgecases
 if (_typeNumber isEqualTo 0) then {
-
     private _className = configName _itemConfig;
 
     _typeNumber = switch (true) do {
-        case (isClass (configFile >> "CfgGlasses" >> _className)): { TYPE_GOGGLE };
-        case (getNumber (configFile >> "CfgVehicles" >> _className >> "isBackpack") isEqualTo 1): { TYPE_BACKPACK };
+        case (isClass (configFile >> "CfgGlasses" >> _className)): { TYPE_GOGGLE }; // CfgGlasses items do not have ItemInfo subclass
+        case (getNumber (configFile >> "CfgVehicles" >> _className >> "isBackpack") isEqualTo 1): { TYPE_BACKPACK }; // Backpacks
         default { 0 };
     };
 };
 
 //return
-_typeName
+_typeNumber
