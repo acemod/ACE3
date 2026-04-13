@@ -26,6 +26,19 @@
         </Key>
         <Key ID="STR_ACE_MineDetector_Category">
             <English>Mine Detector</English>
+            <Czech>Minohledačka</Czech>
+            <French>Détecteur de mines</French>
+            <Spanish>Detector de minas</Spanish>
+            <Italian>Rilevatore di mine</Italian>
+            <Polish>Wykrywacz min</Polish>
+            <Portuguese>Detector de minas</Portuguese>
+            <Russian>Миноискатель</Russian>
+            <German>Minendetektor</German>
+            <Korean>지뢰탐지기</Korean>
+            <Japanese>地雷探知器</Japanese>
+            <Chinese>地雷偵測器</Chinese>
+            <Chinesesimp>探雷器</Chinesesimp>
+            <Turkish>Mayın Dedektörü</Turkish>
         </Key>
         <Key ID="STR_ACE_MineDetector_ConnectHeadphones">
             <English>Connect Headphones</English>
