@@ -1,19 +1,16 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * Function to replace a unit's Facewear, NVG/HMD or .
+ * Function to replace a unit's Facewear, NVG/HMD or Headgear.
  *
  * Arguments:
  * 0: Params Hash <HASHMAP>
- * 1: Desired variant as classname <STRING>
- * 2: Type of wearable container <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, "G_Bandanna_blk", "FACEWEAR"] call ace_wardrobe_fnc_replaceOther
- * [player, "G_Bandanna_aviator", "FACEWEAR"] call ace_wardrobe_fnc_replaceOther
+ * [_replaceData] call ace_wardrobe_fnc_replaceOther
  *
  * Public: No
  */

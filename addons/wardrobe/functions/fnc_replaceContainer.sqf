@@ -4,16 +4,13 @@
  * Function to replace a units wearable container while maintaining the content of the container.
  *
  * Arguments:
- * 0: Unit <OBJECT>
- * 1: Desired variant as classname <STRING>
  * 0: Params Hash <HASHMAP>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, "U_B_CTRG_3", "UNIFORM"] call ace_wardrobe_fnc_replaceContainer
- * [player, "U_B_CTRG_1", "UNIFORM"] call ace_wardrobe_fnc_replaceContainer
+ * [_replaceData] call ace_wardrobe_fnc_replaceContainer
  *
  * Public: No
  */
