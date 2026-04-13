@@ -4,7 +4,7 @@
  * Function to replace a unit's Facewear, NVG/HMD or .
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: Params Hash <HASHMAP>
  * 1: Desired variant as classname <STRING>
  * 2: Type of wearable container <STRING>
  *
