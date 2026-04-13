@@ -13,6 +13,7 @@ PREP(getIcon);
 PREP(getItemVariants);
 PREP(getSound);
 PREP(getSoundTiming);
+PREP(getTypeNumber);
 PREP(isModifiable);
 PREP(replace);
 PREP(replaceContainer);
