@@ -14,15 +14,24 @@
 
 params ["_config"];
 
-private _fireRate = [];
+private _modes = getArray (_config >> "modes");
+
+if (_modes isEqualTo []) exitWith {0};
+
+private _fireRate = 1e40;
 
 {
-    _fireRate pushBackUnique getNumber (_config >> _x >> "reloadTime");
-} forEach (getArray (_config >> "modes"));
+    private _weaponConfig = if (_x == "this") then {
+        _config
+    } else {
+        _config >> _x
+    };
 
-_fireRate sort true;
-_fireRate = _fireRate param [0, 0];
+    if (getNumber (_weaponConfig >> "showToPlayer") != 0) then {
+        _fireRate = _fireRate min (getNumber (_weaponConfig >> "reloadTime"));
+    };
+} forEach _modes;
 
-if (_fireRate == 0) exitWith {0};
+if (!finite _fireRate || {_fireRate <= 0}) exitWith {0};
 
 round (60 / _fireRate)

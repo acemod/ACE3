@@ -11,7 +11,7 @@
  * Seeker Pos <ARRAY>
  *
  * Example:
- * [] call call ace_missileguidance_fnc_seekerType_MWR;
+ * [] call ace_missileguidance_fnc_seekerType_MWR;
  *
  * Public: No
  */
@@ -62,7 +62,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
         // Look in front of seeker for any targets
         private _nearestObjects = nearestObjects [ASLToAGL _searchPos, _lockTypes, _seekerBaseRadiusAdjusted, false];
         _nearestObjects = _nearestObjects apply {
-            // I check both Line of Sight versions to make sure that a single bush doesnt make the target lock dissapear but at the same time ensure that this can see through smoke. Should work 80% of the time
+            // I check both Line of Sight versions to make sure that a single bush doesn't make the target lock disappear but at the same time ensure that this can see through smoke. Should work 80% of the time
             if ([_projectile, getPosASL _x, _seekerAngle] call FUNC(checkSeekerAngle) && { ([_projectile, _x, true] call FUNC(checkLOS)) || { ([_projectile, _x, false] call FUNC(checkLOS)) } }) then {
                 _x
             } else {
@@ -96,7 +96,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
     // if the target is in the remote targets for the side, whoever the donor is will "datalink" the target for the hellfire.
     private _remoteTargets = listRemoteTargets side _shooter;
     if ((_remoteTargets findIf { (_target in _x) && (_x#1 > 0) }) < 0) then {
-        // I check both Line of Sight versions to make sure that a single bush doesnt make the target lock dissapear but at the same time ensure that this can see through smoke. Should work 80% of the time
+        // I check both Line of Sight versions to make sure that a single bush doesn't make the target lock disappear but at the same time ensure that this can see through smoke. Should work 80% of the time
         if (!_shooterHasRadar || { !isVehicleRadarOn vehicle _shooter } || { !alive vehicle _shooter } || { !([vehicle _shooter, _target, true] call FUNC(checkLOS)) && { !([vehicle _shooter, _target, false] call FUNC(checkLOS)) } }) then {
             _seekerStateParams set [0, true];
             _target = objNull; // set up state for active guidance

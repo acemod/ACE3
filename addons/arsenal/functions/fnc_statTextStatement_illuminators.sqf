@@ -4,7 +4,7 @@
  * Text statement for the pointer slot capabilites.
  *
  * Arguments:
- * 0: Not used
+ * 0: Stats array (not used) <ARRAY>
  * 1: Item config path <CONFIG>
  *
  * Return Value:
@@ -38,5 +38,7 @@ if (_allItems isEqualTo []) then { _allItems = [configName _config] };
     };
     _allModes pushBackUnique _text;
 } forEach _allItems;
+
+_allModes sort true;
 
 _allModes joinString ", "
