@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Desired variant as classname <STRING>
- * 2: Type of wearable container <STRING>
+ * 0: Params Hash <HASHMAP>
  *
  * Return Value:
  * None
