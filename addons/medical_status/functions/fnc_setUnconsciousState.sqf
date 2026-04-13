@@ -89,6 +89,7 @@ if (_active) then {
 };
 
 if (isPlayer _unit) then {
+    [QEGVAR(ui,hideHud), [_active]] call CBA_fnc_localEvent;
     [QGVAR(unconscious), _hudMask] call EFUNC(common,showHud);
 };
 
