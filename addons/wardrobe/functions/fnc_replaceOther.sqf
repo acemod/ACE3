@@ -1,7 +1,7 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * Function to replace a unit's goggles/facewear.
+ * Function to replace a unit's Facewear, NVG/HMD or .
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -18,19 +18,33 @@
  * Public: No
  */
 
-params ["_player", "_classTarget", "_typeNumber"];
+params ["_replaceData"];
 
-switch (_typeNumber) do {
+private _player = _replaceData get "player";
+
+// Remove
+switch (_replaceData get "typeOrigin") do {
     case TYPE_HEADGEAR: {
         removeHeadgear _player;
-        _player addHeadgear _classTarget;
     };
     case TYPE_GOGGLE: {
         removeGoggles _player;
-        _player addGoggles _classTarget;
     };
     case TYPE_HMD: {
-        _player linkItem _classTarget;
+        _player unlinkItem (_replaceData get "classOrigin")
+    };
+};
+
+// ADD
+switch (_replaceData get "typeTarget") do {
+    case TYPE_HEADGEAR: {
+        _player addHeadgear (_replaceData get "classTarget");
+    };
+    case TYPE_GOGGLE: {
+        _player addGoggles (_replaceData get "classTarget");
+    };
+    case TYPE_HMD: {
+        _player linkItem (_replaceData get "classTarget");
     };
 };
 
