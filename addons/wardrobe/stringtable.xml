@@ -152,6 +152,9 @@
             <Russian>Надеть маску</Russian>
             <Japanese>マスクを着ける</Japanese>
         </Key>
+        <Key ID="STR_ACE_Wardrobe_slotOccupied">
+            <English>Your %1 slot is already occupied</English>
+        </Key>
         <Key ID="STR_ACE_Wardrobe_missingComponents">
             <English>Cannot switch to&lt;br/&gt;%1&lt;br/&gt;due to missing components</English>
             <French>Impossible de passer à&lt;br/&gt;%1&lt;br/&gt;en raison de composants manquants</French>

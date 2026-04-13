@@ -61,17 +61,12 @@ switch (true) do {
         // Adds type-descriptor when its converting to a different slot
         private _typeOrigin = _cfgOrigin call LINKFUNC(getTypeNumber);
         private _typeTarget = _cfgTarget call LINKFUNC(getTypeNumber);
+
         if (_typeOrigin isNotEqualTo _typeTarget) then {
-
-            private _str = switch (_typeTarget) do {
-                case TYPE_HEADGEAR: { localize "str_a3_rscdisplayarsenal_tab_headgear" };
-                case TYPE_GOGGLE:   { localize "str_a3_rscdisplayarsenal_tab_goggles" };
-                case TYPE_HMD:      { localize "str_a3_rscdisplayarsenal_tab_nvgs" };
-            };
-
-            _return = _return + " (" + _str + ")";
+            _return = _return + " (" + ( _typeTarget call LINKFUNC(getSlotName) ) + ")";
         };
 
         _return
+
     };
-};
+} // return

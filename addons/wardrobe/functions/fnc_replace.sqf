@@ -51,7 +51,7 @@ if (_isNotEqualTypeNumber && {
             case TYPE_HMD:      { "" isNotEqualTo hmd _player };
         }
     }
-) exitWith { ["slot is occupied"] call EFUNC(common,displayTextStructured); }; // Todo: Better text + localized
+) exitWith { [ [LLSTRING(slotOccupied), _typeTarget call LINKFUNC(getSlotName)] ] call EFUNC(common,displayTextStructured); };
 
 // REPLACE MECHANIC
 // Disables Wardrobe Action temporarily

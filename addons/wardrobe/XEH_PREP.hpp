@@ -11,6 +11,7 @@ PREP(getDuration);
 PREP(getGesture);
 PREP(getIcon);
 PREP(getItemVariants);
+PREP(getSlotName);
 PREP(getSound);
 PREP(getSoundTiming);
 PREP(getTypeNumber);
