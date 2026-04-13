@@ -88,7 +88,9 @@ if (_active) then {
     };
 };
 
-[QGVAR(unconscious), _hudMask] call EFUNC(common,showHud);
+if (isPlayer _unit) then {
+    [QGVAR(unconscious), _hudMask] call EFUNC(common,showHud);
+};
 
 // This event doesn't correspond to unconscious in statemachine
 // It's for any time a unit changes consciousness (including cardiac arrest)
