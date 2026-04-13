@@ -21,6 +21,7 @@
     [QGVAR(addInventoryActions), _unit] call CBA_fnc_globalEvent;
 }, true] call CBA_fnc_addClassEventHandler;
 
+if (!hasInterface) exitWith {};
 
 // Handle comms status effects for spectator
 // Separate from medical_feedback as these affect unit behavior rather than what the player sees
@@ -35,4 +36,16 @@
     } else {
         [_unit, false, true] call FUNC(setStatusEffects);
     };
+}] call CBA_fnc_addPlayerEventHandler;
+
+// Hide hud when knocked unconscious
+["unit", {
+    params ["_unit"];
+
+    private _hudMask = [];
+    private _isUnconscious = IS_UNCONSCIOUS(_unit);
+    if (_isUnconscious) then { _hudMask resize [10, false] };
+
+    [QEGVAR(ui,hideHud), [_isUnconscious]] call CBA_fnc_localEvent;
+    [QGVAR(unconscious), _hudMask] call EFUNC(common,showHud);
 }] call CBA_fnc_addPlayerEventHandler;
