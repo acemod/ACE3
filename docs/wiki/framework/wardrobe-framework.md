@@ -24,7 +24,7 @@ Since there is no reliable, common patterns in terms of class inheritance, not e
 ### 1.1 Components
 
 Components are an optional assistance to define a group of variants where a variant is made of one or more components.
-For example, a bandana with sunglasses would have the the bandana and the sunglasses as components, while the bandana and sunglasses only have themselves as a component.
+For example, a bandana with sunglasses would have the bandana and the sunglasses as components, while the bandana and sunglasses only have themselves as a component.
 
 If the player switches from a variant with more components to a variant with less components, the surplus components will be deposited in their inventory. On the other hand, if the player wants to change from a variant with less components to a variant with more components, they are required to have the missing components in their inventory, which will be removed on conversion.
 
@@ -35,12 +35,13 @@ More examples can be found below.
 Only directly defined subclasses will be taken into account. A fully inherited subclass will be ignored and will not provide any interaction. The `ace_wardrobe` properties are to be found as a subclass of the item itself. Multiple base configs are designed at root of `configFile`.
 
 ## 2.1 Properties
+
 All supported Properties can be found within the `ace_wardrobe_base` baseclass.
 
-| Class Property |  Data Type | Description |
-| -------------- |  ----------- | ----------- |
+| Class Property | Data Type | Description |
+| -------------- | ----------- | ----------- |
 | `modifiableTo` | Subclasses | Possible variants this item can be turned into. Subclass can contain optional "directional properties". See 2.2 for more. |
-| `components[]` | Array of Classnames  | Components the current variant contains within itself |
+| `components[]` | Array of Classnames | Components the current variant contains within itself |
 | `sound[]` | Array of CfgSound Entries | To be chosen by random when the action is performed |
 | `soundTiming` | Number 0..1 | Defines the point in time relative to the duration when the sound is played |
 | `gesture` | String of Classname | Gesture to be played when the action is performed |
@@ -56,7 +57,7 @@ The following, optional "directional properties" can be defined for directional 
 See 4.2 and 4.3 for examples
 
 | Directional Property | Data Type | Description |
-| -------------- |  ----------- | ----------- |
+| -------------- | ----------- | ----------- |
 | `sound[]` | Array of CfgSound Entries | To be chosen by random when the action is performed |
 | `soundTiming` | Number 0..1 | Defines the point in time relative to the duration when the sound is played |
 | `gesture` | String of Classname | Gesture to be played when the action is performed |
@@ -64,12 +65,12 @@ See 4.2 and 4.3 for examples
 | `displayName` | String | Will be used for action instead of the target variants displayname |
 | `duration` | Number in seconds (>= 1) | Duration of action. Items are being replaced at the end. |
 
-
 ### 2.2 Base Classes
 
 All base classes can be found in `addons\wardrobe\BaseClasses.hpp`
 
 #### 2.2.1 Base
+
 ```cpp
 // root of configFile
 class ace_wardrobe {
@@ -100,7 +101,9 @@ class ace_wardrobe {
 ```
 
 #### 2.2.2.1 Base Uniform Sleeves Up / Down
+
 Common base class for uniforms with Sleeves up/down variants
+
 ```cpp
 class ace_wardrobe_base_U_sleeves_up: ace_wardrobe_base {
     displayName = CSTRING(sleevesUp);
@@ -109,8 +112,11 @@ class ace_wardrobe_base_U_sleeves_down: ace_wardrobe_base {
     displayName = CSTRING(sleevesDown);
 };
 ```
+
 #### 2.2.2.2 Base Uniform Gloves On / Off
+
 Common base class for uniforms with gloves on/off variants
+
 ```cpp
 class ace_wardrobe_base_U_gloves_on: ace_wardrobe_base {
     displayName = CSTRING(glovesOn);
@@ -119,8 +125,11 @@ class ace_wardrobe_base_U_gloves_off: ace_wardrobe_base {
     displayName = CSTRING(glovesOff);
 };
 ```
+
 #### 2.2.2.3  Base Uniform Jacket Open / Closed
+
 Common base class for uniforms who are open/closed in the front
+
 ```cpp
 class ace_wardrobe_base_U_jacket_open: ace_wardrobe_base {
     displayName = CSTRING(jacketOpen);
@@ -129,8 +138,11 @@ class ace_wardrobe_base_U_jacket_closed: ace_wardrobe_base {
     displayName = CSTRING(jacketClose);
 };
 ```
+
 #### 2.2.2.4 Base Uniform Hood On / Off
+
 Common base class for uniforms with an raised or lowered hood
+
 ```cpp
 class ace_wardrobe_base_U_hood_raised: ace_wardrobe_base {
     gesture = "GestureWipeFace";
@@ -143,6 +155,7 @@ class ace_wardrobe_base_U_hood_lowered: ace_wardrobe_base {
 ```
 
 #### 2.2.3.1 Base Helmet Visor Up / Down
+
 Common base class for helmets with a visor that can be flipped up or down.
 Here, the duration is carefully timed to be aligned with the "click" of the sound.
 
@@ -167,8 +180,11 @@ class ace_wardrobe_base_H_visor_down: ace_wardrobe_base {
     displayName = CSTRING(visorDown);
 };
 ```
+
 #### 2.2.3.2 Base Headgear with Goggles on / off
+
 Common base class for headgear with goggles that can be used as a facewear item.
+
 ```cpp
 class ace_wardrobe_base_H_goggles_on: ace_wardrobe_base {
     gesture ="GestureWipeFace";
@@ -182,10 +198,13 @@ class ace_wardrobe_base_H_goggles_off: ace_wardrobe_base {
 ```
 
 ## 3. Porting - Ease of Use
+
 ### 3.1 Macros
+
 To streamline the configuration of compatible items, a set of macros can be found here `addons\wardrobe\script_macros_wardrobe.hpp`
 
 ### 3.2 Example
+
 ```cpp
 #include "\z\ace\addons\wardrobe\script_macros_wardrobe.hpp"
 class ace_wardrobe {
@@ -209,8 +228,11 @@ class ace_wardrobe {
     // Begin to define your configs ...
 };
 ```
+
 ## 4. Configuration examples
+
 ### 4.1 Simple Example - Uniform sleeves - No requirement for components
+
 ```cpp
 class ace_wardrobe {
     class ace_wardrobe_base_U_sleeves_down;
@@ -232,7 +254,9 @@ class ace_wardrobe {
 };
 
 ```
+
 ### 4.2 Advanced example - Balaclava with combat glasses - Partial use of components
+
 ```cpp
 class ace_wardrobe {
     class ace_wardrobe_base;
@@ -260,7 +284,9 @@ class ace_wardrobe {
     };
 };
 ```
+
 ### 4.3 Complex example - Bandana with aviators - Complex use of multiple components
+
 ```cpp
 class ace_wardrobe {
     class ace_wardrobe_base;
@@ -299,9 +325,11 @@ class ace_wardrobe {
 ```
 
 ## 5. Sounds
+
 The following `CfgSounds` classes are integrated in `ace_wardrobe` and are the default sounds for the `ace_wardrobe_base` and `ace_wardrobe_base_H_visor_up`/`ace_wardrobe_base_H_visor_down` base classes.
 
 ### 5.1 Integrated Sounds
+
 The number at the end of the classnames indicates the length of the file in 1/10th seconds.
 10 -> 1 sec, 15 -> 1.5sec, ...
 
@@ -315,6 +343,7 @@ The number at the end of the classnames indicates the length of the file in 1/10
 ## 6. Compatibility
 
 ## 6.1 MagazineID
+
 If an addon/mod utilizes a magazine's `magazineID` to handle additional data on items, then the process of modifying a wearable container (uniform, vest, backpack) to another variant will result in new `magazineID`s for all magazines on the player.
 Therefore additional handling of exceptions is required.
 
@@ -337,13 +366,13 @@ class ace_wardrobe_exceptions {
 
 };
 ```
+
 Per magazine classname that needs to be handled exceptionally, a configclass inside `class ace_wardrobe_exceptions` is needed where the classname is identical to the items classname.
 
 | Class Property | Data Type | Description                                                                    |
 | -------------- | --------- | ------------------------------------------------------------------------------ |
 | code           | string    | Functionname - provided parameters: ["_className", "_oldMagIDs", "_newMagIDs"] |
 | mode           | string    | "server" or "local" - defines where code shall be executed                     |
-
 
 Currently, `ace_intelitems` and `ace_overheating` (spare barrels) are already supported and can be referenced as an example.
 
@@ -372,6 +401,7 @@ When changing uniform, vest or backpack the `setUnitLoadout` command is used.
 All variables on all containers will be reset. (e.g. `(backpackContainer player) getVariable "myThing"`)
 This can be handled via event system or by adding an entry to `ace_wardrobe_containerVarsToTransfer` to have ace transfer it.
 Keys are varName (must be lower-case!), values is global-broadcast
+
 ```sqf
 ace_wardrobe_containerVarsToTransfer set [toLower "myMod_localX", false]; // will transfer this var
 ace_wardrobe_containerVarsToTransfer set [toLower "myMod_backpackID", true]; // will transfer this var and broadcast globally

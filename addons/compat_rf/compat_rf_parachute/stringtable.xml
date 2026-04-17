@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Compat_RF_Parachute">
+        <Key ID="STR_ACE_Compat_RF_Parachute_ReserveParachuteBlue">
+            <English>Reserve Parachute (Blue)</English>
+            <Czech>Záložní padák (Modrý)</Czech>
+            <French>Parachute de secours (Bleu)</French>
+            <Spanish>Paracaídas de reserva (Azul)</Spanish>
+            <Italian>Paracadute di Riserva (Blu)</Italian>
+            <Polish>Spadochron awaryjny (Niebieski)</Polish>
+            <Portuguese>Paraquedas de reserva (Azul)</Portuguese>
+            <Russian>Запасной парашют (Синий)</Russian>
+            <German>Reserve Fallschirm (Blau)</German>
+            <Korean>예비 낙하산 (파란색)</Korean>
+            <Japanese>予備パラシュート (青)</Japanese>
+            <Chinese>備用降落傘 (蓝色)</Chinese>
+            <Chinesesimp>备用降落伞 (蓝色)</Chinesesimp>
+            <Turkish>Yedek Paraşüt (Mavi)</Turkish>
+            <Hungarian>Tartalék ejtőernyő (Kék)</Hungarian>
+            <Ukrainian>Запасний парашут (Синій)</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_Parachute_ReserveParachuteGreen">
+            <English>Reserve Parachute (Green)</English>
+            <Czech>Záložní padák (Zelený)</Czech>
+            <French>Parachute de secours (Vert)</French>
+            <Spanish>Paracaídas de reserva (Verde)</Spanish>
+            <Italian>Paracadute di Riserva (Verde)</Italian>
+            <Polish>Spadochron awaryjny (Zielony)</Polish>
+            <Portuguese>Paraquedas de reserva (Verde)</Portuguese>
+            <Russian>Запасной парашют (Зеленый)</Russian>
+            <German>Reserve Fallschirm (Grün)</German>
+            <Korean>예비 낙하산 (녹색)</Korean>
+            <Japanese>予備パラシュート (緑)</Japanese>
+            <Chinese>備用降落傘 (绿色)</Chinese>
+            <Chinesesimp>备用降落伞 (绿色)</Chinesesimp>
+            <Turkish>Yedek Paraşüt (Yeşil)</Turkish>
+            <Hungarian>Tartalék ejtőernyő (Zöld)</Hungarian>
+            <Ukrainian>Запасний парашут (Зелений)</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_Parachute_ReserveParachuteOrange">
+            <English>Reserve Parachute (Orange)</English>
+            <Czech>Záložní padák (Oranžový)</Czech>
+            <French>Parachute de secours (Orange)</French>
+            <Spanish>Paracaídas de reserva (Naranja)</Spanish>
+            <Italian>Paracadute di Riserva (Arancione)</Italian>
+            <Polish>Spadochron awaryjny (Pomarańczowy)</Polish>
+            <Portuguese>Paraquedas de reserva (Laranja)</Portuguese>
+            <Russian>Запасной парашют (Оранжевый)</Russian>
+            <German>Reserve Fallschirm (Orange)</German>
+            <Korean>예비 낙하산 (주황색)</Korean>
+            <Japanese>予備パラシュート (オレンジ)</Japanese>
+            <Chinese>備用降落傘 (橙色)</Chinese>
+            <Chinesesimp>备用降落伞 (橙色)</Chinesesimp>
+            <Turkish>Yedek Paraşüt (Turuncu)</Turkish>
+            <Hungarian>Tartalék ejtőernyő (Narancs)</Hungarian>
+            <Ukrainian>Запасний парашут (Помаранчевий)</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_Parachute_ReserveParachuteWhite">
+            <English>Reserve Parachute (White)</English>
+            <Czech>Záložní padák (Bílý)</Czech>
+            <French>Parachute de secours (Blanc)</French>
+            <Spanish>Paracaídas de reserva (Blanco)</Spanish>
+            <Italian>Paracadute di Riserva (Bianco)</Italian>
+            <Polish>Spadochron awaryjny (Biały)</Polish>
+            <Portuguese>Paraquedas de reserva (Branco)</Portuguese>
+            <Russian>Запасной парашют (Белый)</Russian>
+            <German>Reserve Fallschirm (Weiß)</German>
+            <Korean>예비 낙하산 (흰색)</Korean>
+            <Japanese>予備パラシュート (白)</Japanese>
+            <Chinese>備用降落傘 (白色)</Chinese>
+            <Chinesesimp>备用降落伞 (白色)</Chinesesimp>
+            <Turkish>Yedek Paraşüt (Beyaz)</Turkish>
+            <Hungarian>Tartalék ejtőernyő (Fehér)</Hungarian>
+            <Ukrainian>Запасний парашут (Білий)</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_Parachute_ReserveParachuteYellow">
+            <English>Reserve Parachute (Yellow)</English>
+            <Czech>Záložní padák (Žlutý)</Czech>
+            <French>Parachute de secours (Jaune)</French>
+            <Spanish>Paracaídas de reserva (Amarillo)</Spanish>
+            <Italian>Paracadute di Riserva (Giallo)</Italian>
+            <Polish>Spadochron awaryjny (Żółty)</Polish>
+            <Portuguese>Paraquedas de reserva (Amarelo)</Portuguese>
+            <Russian>Запасной парашют (Желтый)</Russian>
+            <German>Reserve Fallschirm (Gelb)</German>
+            <Korean>예비 낙하산 (노란색)</Korean>
+            <Japanese>予備パラシュート (黄色)</Japanese>
+            <Chinese>備用降落傘 (黄色)</Chinese>
+            <Chinesesimp>备用降落伞 (黄色)</Chinesesimp>
+            <Turkish>Yedek Paraşüt (Sarı)</Turkish>
+            <Hungarian>Tartalék ejtőernyő (Sárga)</Hungarian>
+            <Ukrainian>Запасний парашут (Жовтий)</Ukrainian>
+        </Key>
+    </Package>
+</Project>

@@ -7,6 +7,7 @@ class EGVAR(arsenal,stats) {
         displayName = CSTRING(statBarrelType);
         showText = 1;
         textStatement = QUOTE(call FUNC(statTextStatement_allowSwapBarrel));
+        condition = QUOTE(call EFUNC(arsenal,statCondition_isWeapon));
         tabs[] = {{0,1}, {}};
     };
     class ACE_boltType: statBase {
@@ -16,6 +17,7 @@ class EGVAR(arsenal,stats) {
         displayName = CSTRING(statBoltType);
         showText = 1;
         textStatement = QUOTE(call FUNC(statTextStatement_boltType));
+        condition = QUOTE(call EFUNC(arsenal,statCondition_isWeapon));
         tabs[] = {{0,1}, {}};
     };
 };

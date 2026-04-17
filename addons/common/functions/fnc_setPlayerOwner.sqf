@@ -1,9 +1,9 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Sets the player's owner id as a variable on his player ojbect.
+ * Sets the player's owner id as a variable on his player object.
  * Should be called on all machines (including server)
- * Note: Needs to wait for CBA_clientID to be recieved from server.
+ * Note: Needs to wait for CBA_clientID to be received from server.
  *
  * Arguments:
  * None

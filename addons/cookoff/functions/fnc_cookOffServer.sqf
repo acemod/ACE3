@@ -106,12 +106,26 @@ if (_delayBetweenSmokeAndFire) then {
             isNull _vehicle ||
             !GVAR(enableFire) ||
             {!(_vehicle getVariable [QGVAR(enable), true])} || // QGVAR(enable) is API
+            {_vehicle getVariable [QGVAR(interruptFireCookoff), false]} || // QGVAR(interruptFireCookoff) stops the current cook-off (allowing future ones), whereas QGVAR(enable) disables it entirely
             {GVAR(cookoffDuration) == 0} ||
             {underwater _vehicle} ||
             {private _posASL = getPosWorld _vehicle; surfaceIsWater _posASL && {(_posASL select 2) < 0}} // Underwater is not very reliable, so use model center instead
         ) exitWith {
             // Effects are deleted when vehicle is deleted
             (_this select 1) call CBA_fnc_removePerFrameHandler;
+
+            if (_vehicle getVariable [QGVAR(interruptFireCookoff), false]) then {
+                _vehicle setVariable [QGVAR(interruptFireCookoff), nil, true];
+
+                // Remove effects from JIP
+                _smokeJipID call CBA_fnc_removeGlobalEventJIP;
+                _fireJipID call CBA_fnc_removeGlobalEventJIP;
+
+                // Remove effects
+                [QGVAR(cleanupEffects), _vehicle] call CBA_fnc_globalEvent;
+            };
+
+            _vehicle setVariable [QGVAR(isCookingOff), nil, true];
         };
 
         private _intensity = _vehicle getVariable [QGVAR(intensity), 0];

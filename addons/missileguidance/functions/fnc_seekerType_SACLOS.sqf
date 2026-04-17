@@ -44,7 +44,7 @@ private _lookDirection = switch (_dirMode) do {
         _shooterPos = _shooter modelToWorldVisualWorld getPilotCameraPosition _shooter;
         private _trackingTarget = getPilotCameraTarget _shooter;
         _trackingTarget params ["_isTracking", "_trackingPos"];
-        // Because ARMA doesnt update the camera rotation if you are locked on immediatly, we have to calculate the look direction manually or else the SACLOS target will be wrong, especially if shooter is moving
+        // Because ARMA doesn't update the camera rotation if you are locked on immediately, we have to calculate the look direction manually or else the SACLOS target will be wrong, especially if shooter is moving
         if (_isTracking) then {
             vectorNormalized (_trackingPos vectorDiff _shooterPos);
         } else {
