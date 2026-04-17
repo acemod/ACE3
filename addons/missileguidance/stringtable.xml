@@ -136,10 +136,10 @@
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp_tooltip">
             <English>Ordnance will guide to the provided 10 digit grid coordinates</English>
+            <French>Le projectile sera guidé vers les coordonnées de grille à 10 chiffres fournies.</French>
             <Spanish>La munición será guiada a las coordenadas de cuadrícula de 10 dígitos proporcionadas.</Spanish>
             <Russian>Боеприпас будет ориентироваться на предоставленные 10-значные координаты в сетке</Russian>
             <Japanese>兵装は指定された10桁のグリッド座標に誘導されます</Japanese>
-            <French>Le projectile sera guidé vers les coordonnées de grille à 10 chiffres fournies.</French>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_too">
             <English>TARGET OF OPPORTUNITY</English>
@@ -154,10 +154,10 @@
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_too_tooltip">
             <English>Ordnance will guide to the location the targeting camera is looking at</English>
+            <French>Les armes sont guidées vers l'endroit que la caméra de visée observe</French>
             <Spanish>La munición será guiada hacia la ubicación a la que apunta la cámara de apuntado</Spanish>
             <Russian>Боеприпас будет направлен в то место, на которое смотрит камера наведения</Russian>
             <Japanese>兵装はターゲティングカメラで見ている場所へ誘導されます</Japanese>
-            <French>Les armes sont guidées vers l'endroit que la caméra de visée observe</French>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K">
             <English>Hellfire II AGM-114K Missile</English>
