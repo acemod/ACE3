@@ -412,7 +412,7 @@ ace_wardrobe_containerVarsToTransfer set [toLower "myMod_localX", false]; // wil
 ace_wardrobe_containerVarsToTransfer set [toLower "myMod_backpackID", true]; // will transfer this var and broadcast globally
 ```
 
-## 6.4 Headgear, Facewear and NVGs can be converted
+## 6.5 Headgear, Facewear and NVGs can be converted
 
 Headgear, Facewear, and NVG items can now be converted into one another.
 If such a conversion is detected, the interaction will automatically add the `(TargetType)` - suffix, provided no custom displayName is set.
