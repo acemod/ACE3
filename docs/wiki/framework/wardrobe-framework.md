@@ -400,7 +400,7 @@ Therefore, the debug script found at `addons\wardrobe\dev\compareContainerMaxLoa
 | `ace_wardrobe_itemChangedBegin` | Raised just before the item is changed. | `[_replaceData, _extendedInfo]` | Local |
 | `ace_wardrobe_itemChangedEnd` | Raised just after the item has been changed. | `[_replaceData, _extendedInfo]` | Local |
 
-## 6.3 Container Variables
+## 6.4 Container Variables
 
 When changing uniform, vest or backpack the `setUnitLoadout` command is used.
 All variables on all containers will be reset. (e.g. `(backpackContainer player) getVariable "myThing"`)
