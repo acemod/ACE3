@@ -6,7 +6,7 @@ class CfgWeapons {
         ACE_barrelTwist = 0.0;
         ACE_twistDirection = 0;
         ACE_RailHeightAboveBore = 4.99572; // checkScopes.sqf
-        initSpeed = -0.940574; // 0.940574x488= 459m/s according to ACE_muzzleVelocities ASM conditions (15°C, 999.916hPa, 78%)
+        initSpeed = -0.940574; // 459, 574m/s according to ACE_muzzleVelocities ICAO and ASM conditions (15°C, 59°F)
     };
 
     // Galat Arm
