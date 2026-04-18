@@ -141,13 +141,13 @@ class CfgWeapons {
     class sgun_HunterShotgun_01_base_F: Rifle_Long_Base_F {
         ACE_barrelLength = 699.3; // https://www.imfdb.org/wiki/CZ-581
         ACE_twistDirection = 0;
-        initSpeed = -0.99385; // 0.99385x488= 485m/s according to ACE_muzzleVelocities ASM conditions (15°C, 999.916hPa, 78%)
+        initSpeed = -0.99385; // 485, 606m/s according to ACE_muzzleVelocities ICAO and ASM conditions (15°C, 59°F)
     };
 
     // CZ-581 (sawed off)
     class sgun_HunterShotgun_01_sawedoff_base_F: sgun_HunterShotgun_01_base_F {
         ACE_barrelLength = 349.7; // About half of original length
-        initSpeed = -0.893443; // 0.893443x488= 436m/s according to ACE_muzzleVelocities ASM conditions (15°C, 999.916hPa, 78%)
+        initSpeed = -0.893443; // 436, 545m/s according to ACE_muzzleVelocities ICAO and ASM conditions (15°C, 59°F)
     };
 
     // Rifle_Base_F
