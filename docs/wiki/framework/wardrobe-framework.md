@@ -384,7 +384,7 @@ Therefore, the debug script found at `addons\wardrobe\dev\compareContainerMaxLoa
 
 ## 6.3 Events
 
-### 6.2.1 Listenable
+### 6.3.1 Listenable
 
 - `_replaceData` is HASHMAP containing the following keys (Strings)
   - `"player"` - Playerobject
