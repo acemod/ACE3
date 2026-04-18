@@ -110,12 +110,28 @@ class CfgMagazines {
 
     class 2Rnd_12Gauge_Slug: 2Rnd_12Gauge_Pellets {
         // ammo = "B_12Gauge_Slug_NoCartridge";
-        initSpeed = 488; // according to ACE_muzzleVelocities ASM conditions (15°C, 999.916hPa, 78%), 450
+        initSpeed = 488; // according to ACE_muzzleVelocities 12 Gauge SAAMI test barrel 30" ASM conditions (15°C, 999.916hPa, 78%), 450
+    };
+
+    class ACE_2Rnd_12Gauge_Slug: 2Rnd_12Gauge_Slug {
+        author = ECSTRING(common,ACETeam);
+        displayName = CSTRING(2Rnd_12Gauge_Slug_Name);
+        displayNameShort = CSTRING(2Rnd_12Gauge_Slug_NameShort);
+        ammo = "ACE_12Gauge_Slug_NoCartridge";
+        initSpeed = 610; // according to ACE_muzzleVelocities 12 Gauge SAAMI test barrel 30" ICAO conditions (15°C, 1013,25 hPa, 0%)
     };
 
     class 6Rnd_12Gauge_Slug: 2Rnd_12Gauge_Pellets { // arifle_MSBS65_UBS_base_F, arifle_XMS_Shot_lxWS
         // ammo="B_12Gauge_Slug_NoCartridge";
         initSpeed = 431; // 431x0.971576= 419m/s according to Crye Six12 ACE_muzzleVelocities ASM conditions (15°C, 999.916hPa, 78%), 450
+    };
+
+    class ACE_6Rnd_12Gauge_Slug: 6Rnd_12Gauge_Slug { // arifle_MSBS65_UBS_base_F, arifle_XMS_Shot_lxWS
+        author = ECSTRING(common,ACETeam);
+        displayName = CSTRING(6Rnd_12Gauge_Slug_Name);
+        displayNameShort = CSTRING(6Rnd_12Gauge_Slug_NameShort);
+        ammo = "ACE_12Gauge_Slug_NoCartridge";
+        initSpeed = 537; // 537x0.971576= 524m/s according to Crye Six12 ACE_muzzleVelocities ICAO conditions (15°C, 1013,25 hPa, 0%)
     };
 
     class 15Rnd_12Gauge_Slug: 15Rnd_12Gauge_Pellets {
