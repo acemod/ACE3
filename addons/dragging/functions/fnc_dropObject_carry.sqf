@@ -125,10 +125,14 @@ _target setVariable [QGVAR(carryDirection_temp), nil];
 if (_loadCargo) then {
     [_unit, _target, _cursorObject] call EFUNC(cargo,startLoadIn);
 } else {
-    if (_tryLoad && {_unit distance _cursorObject <= MAX_LOAD_DISTANCE_MAN} && {_target isKindOf "CAManBase"}) then {
-        private _vehicles = [_cursorObject, 0, true] call EFUNC(common,nearestVehiclesFreeSeat);
+    if (
+        _tryLoad
+        && {_target isKindOf "CAManBase"}
+        && {[_unit, _cursorObject] call EFUNC(interaction,getInteractionDistance) < MAX_LOAD_DISTANCE_MAN}
+    ) then {
+        private _vehicles = _target call EFUNC(common,nearestVehiclesFreeSeat);
 
-        if ([_cursorObject] isEqualTo _vehicles) then {
+        if (_cursorObject in _vehicles) then {
             if (GETEGVAR(medical,enabled,false)) then {
                 [_unit, _target, _cursorObject] call EFUNC(medical_treatment,loadUnit);
             } else {
