@@ -20,11 +20,11 @@
         </Key>
         <Key ID="STR_ACE_MineDetector_BoostRadius">
             <English>Boost Radius</English>
-            <Japanese>ブースト範囲</Japanese>
+            <Japanese>ブースト範囲(半径)</Japanese>
         </Key>
         <Key ID="STR_ACE_MineDetector_BoostRadius_Desc">
             <English>Adds the value in meters to boost the radius of each individual mine detector.</English>
-            <Japanese>各地雷探知機の探知半径を拡大します。 値はメートル単位でを加算されます。</Japanese>
+            <Japanese>各地雷探知機の探知範囲を拡大します。 値はメートル単位でを加算されます。</Japanese>
         </Key>
         <Key ID="STR_ACE_MineDetector_Category">
             <English>Mine Detector</English>
@@ -163,6 +163,7 @@
         </Key>
         <Key ID="STR_ACE_MineDetector_arsenalStatRadius">
             <English>Mine detection radius</English>
+            <Japanese>地雷探知範囲(半径)</Japanese>
         </Key>
     </Package>
 </Project>
