@@ -382,20 +382,25 @@ When the player changes from one container item to another through the wardrobe 
 
 Therefore, the debug script found at `addons\wardrobe\dev\compareContainerMaxLoad.sqf` can be used to compare the item's `maximumLoad`. The result will be dumped into the .rpt.
 
-## 6.2 Events
+## 6.3 Events
 
-### 6.2.1 Listenable
+### 6.3.1 Listenable
 
-`_typeNumber` is NUMBER, see [script_macros.hpp](https://github.com/acemod/ACE3/blob/master/addons/main/script_macros.hpp#L75-L114)
-`_extendedInfo` is HASHMAP will be passed between events (works similar to `CBA_loadoutSet` events)
+- `_replaceData` is HASHMAP containing the following keys (Strings)
+  - `"player"` - Playerobject
+  - `"classOrigin"` - Classname
+  - `"classTarget"` - Classname
+  - `"typeOrigin"` - Typenumber, see [script_macros.hpp](https://github.com/acemod/ACE3/blob/master/addons/main/script_macros.hpp#L75-L114)
+  - `"typeTarget"` - Typenumber, see [script_macros.hpp](https://github.com/acemod/ACE3/blob/master/addons/main/script_macros.hpp#L75-L114)
+- `_extendedInfo` is HASHMAP will be passed between events (works similar to `CBA_loadoutSet` events)
 
 | Event Name | Description | Passed Parameter(s) | Locality |
 | ---------- | ----------- | ------------------- | -------- |
-| `ace_wardrobe_itemChangedStart` | Raised when the action to change an item is taken, but before any changes. | `[_player, _oldItem, _newItem, _typeNumber, _extendedInfo]` | Local |
-| `ace_wardrobe_itemChangedBegin` | Raised just before the item is changed. | `[_player, _oldItem, _newItem, _typeNumber, _extendedInfo]` | Local |
-| `ace_wardrobe_itemChangedEnd` | Raised just after the item has been changed. | `[_player, _oldItem, _newItem, _typeNumber, _extendedInfo]` | Local |
+| `ace_wardrobe_itemChangedStart` | Raised when the action to change an item is taken, but before any changes. | `[_replaceData, _extendedInfo]` | Local |
+| `ace_wardrobe_itemChangedBegin` | Raised just before the item is changed. | `[_replaceData, _extendedInfo]` | Local |
+| `ace_wardrobe_itemChangedEnd` | Raised just after the item has been changed. | `[_replaceData, _extendedInfo]` | Local |
 
-## 6.3 Container Variables
+## 6.4 Container Variables
 
 When changing uniform, vest or backpack the `setUnitLoadout` command is used.
 All variables on all containers will be reset. (e.g. `(backpackContainer player) getVariable "myThing"`)
@@ -406,3 +411,8 @@ Keys are varName (must be lower-case!), values is global-broadcast
 ace_wardrobe_containerVarsToTransfer set [toLower "myMod_localX", false]; // will transfer this var
 ace_wardrobe_containerVarsToTransfer set [toLower "myMod_backpackID", true]; // will transfer this var and broadcast globally
 ```
+
+## 6.5 Headgear, Facewear and NVGs can be converted
+
+Headgear, Facewear, and NVG items can now be converted into one another.
+If such a conversion is detected, the interaction will automatically add the `(TargetType)` - suffix, provided no custom displayName is set.

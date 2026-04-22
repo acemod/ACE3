@@ -161,5 +161,8 @@
             <Turkish>Metal Dedektör</Turkish>
             <Ukrainian>Детектор металу</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_MineDetector_arsenalStatRadius">
+            <English>Mine detection radius</English>
+        </Key>
     </Package>
 </Project>

@@ -82,21 +82,6 @@ class GVAR(positions) {
         {"Land_FuelStation_01_pump_F", {{5495,18693,0},{32067,29608,0},{32087,29611,0},{33215,4147,0},{37293,13172,0},{37293,13193,0}}},
         {"Land_FuelStation_Feed_F", {{19303,16449,0},{31064,20116,0}}}
     };
-    Farabad[] = { /*  Farabad  */
-        {"Land_Benzina_schnell", {{592,7505,0},{804,1445,0},{3132,3129,0}}},
-        {"Land_fs_feed_F", {{1920,4960,0},{5052,4703,1},{9456,9277,0}}},
-        {"Land_FuelStation_01_pump_F", {{2378,6248,0},{7092,534,0}}},
-        {"Land_Ind_FuelStation_Feed_EP1", {{3920,4105,0},{4788,5525,0}}}
-    };
-    go_map_fjord[] = { /*  Fjord  */
-        {"Land_fs_feed_F", {{26,14296,0},{121,14298,0},{7480,1812,0}}},
-        {"Land_FuelStation_01_pump_F", {{66,14293,0}}},
-        {"Land_FuelStation_Feed_F", {{37,14301,0}}}
-    };
-    IslaPera[] = { /*  Isla Pera  */
-        {"Land_fs_feed_F", {{1855,2866,0}}},
-        {"Land_FuelStation_01_pump_malevil_F", {{3981,2065,0},{5306,8796,0},{9236,4287,0}}}
-    };
     egl_laghisola[] = { /*  Laghisola  */
         {"Land_fs_feed_F", {{281,595,0},{1926,5751,0},{4904,6278,0}}},
         {"Land_FuelStation_01_pump_F", {{1347,8907,0},{6478,2391,0}}}
