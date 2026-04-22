@@ -149,7 +149,7 @@ class CfgAmmo {
         ACE_ballisticCoefficients[] = {0.2};
         ACE_standardAtmosphere = "ICAO"; // Hornady
         ACE_muzzleVelocities[] = {425, 550, 596, 611, 646}; // Muzzle Velocities 70°F (21°C, MV 15°C +1m/s), 524m/s (317mm), 545m/s (349.7mm), 574m/s (457mm), 606m/s (699.3mm), 610m/s (2000fps, 30") ICAO conditions (15°C, 1013,25 hPa, 0%)
-        // 12 Gauge SAAMI test barrel 30" https://static.hornady.media/presscenter/docs/1411008168-1768498925-Hornady-2026-Product-Catalog.pdf#page=200
+        // 12 Gauge SAAMI test barrel 30" https://static.hornady.media/presscenter/docs/1411008168-1768498925-Hornady-2026-Product-Catalog.pdf#page=190
         airFriction = -0.00212; // based on terminal velocities, Hornady Slug 2000fps 30" ICAO: Mach 1 340m/s ~275m (Strelok Pro)
     };
 
