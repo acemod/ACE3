@@ -46,3 +46,12 @@
     [1, 30, 1.5, 1],
     true
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(dazedChance),
+    "SLIDER",
+    [LSTRING(dazedChance_DisplayName), LSTRING(dazedChance_Description)],
+    LSTRING(Category),
+    [0, 1, 0, 2, true],
+    true
+] call CBA_fnc_addSetting;

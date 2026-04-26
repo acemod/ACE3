@@ -62,6 +62,41 @@ class ACE_Medical_StateMachine {
             targetState = "FatalInjury";
             events[] = {QEGVAR(medical,FatalInjury)};
         };
+        class DazedStart {
+            targetState = "Dazed";
+            condition = QUOTE([ARR_2(_this,true)]call FUNC(conditionDazedShift));
+            onTransition = QUOTE([ARR_2(_this,false)] call EFUNC(medical_status,setUnconsciousState));
+        };
+    };
+    class Dazed {
+        onState = QUOTE(call FUNC(handleStateDazed));
+        onStateEntered = QUOTE(call FUNC(enteredStateDazed));
+        onStateLeaving = QUOTE(call FUNC(leftStateDazed));
+        class FullHeal {
+            targetState = "Default";
+            events[] = {QEGVAR(medical,FullHeal)};
+        };
+        class WakeUp {
+            targetState = "Injured";
+            condition = QEFUNC(medical_status,hasStableVitals);
+            events[] = {QEGVAR(medical,WakeUp)};
+        };
+        class DazedStop {
+            targetState = "Unconscious";
+            condition = QUOTE([ARR_2(_this,false)]call FUNC(conditionDazedShift));
+        };
+        class CriticalInjuryOrVitals {
+            targetState = "Unconscious";
+            events[] = {QEGVAR(medical,CriticalInjury), QEGVAR(medical,CriticalVitals), QEGVAR(medical,knockOut)};
+        };
+        class FatalTransitions {
+            targetState = "CardiacArrest";
+            events[] = {QEGVAR(medical,FatalVitals), QEGVAR(medical,Bleedout)};
+        };
+        class FatalInjury {
+            targetState = "FatalInjury";
+            events[] = {QEGVAR(medical,FatalInjury)};
+        };
     };
     class FatalInjury {
         // Transition state for handling instant death from fatal injuries

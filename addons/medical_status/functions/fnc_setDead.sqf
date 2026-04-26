@@ -24,6 +24,7 @@ _unit setVariable [VAR_BLOOD_PRESS, [0, 0], true];
 
 // Clear uncon variable just to be safe
 _unit setVariable [VAR_UNCON, nil, true];
+_unit setVariable [VAR_DAZED, nil, true];
 
 _unit setVariable [QEGVAR(medical,causeOfDeath), _reason, true];
 

@@ -111,6 +111,13 @@ GVAR(ppUnconsciousBlackout) = [
     [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
 ] call _fnc_createEffect;
 
+// - Dazed --------------------------------------------------------------
+GVAR(ppDazedDOF) = [
+    "DepthOfField",
+    817, // weird if over ~2000
+    [8, 5, 8]
+] call _fnc_createEffect;
+
 // - Incapacitation -----------------------------------------------------------
 GVAR(ppIncapacitationGlare) = [
     "ColorCorrections",

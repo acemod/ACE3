@@ -413,6 +413,12 @@
             <Turkish>Kapalı Gözkapağı</Turkish>
             <Ukrainian>Закрити кришку</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Medical_dazedChance_Description">
+            <English>The probability that a person with stable vitals will enter a dazed state from unconscious (checked every 10 seconds).</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_dazedChance_DisplayName">
+            <English>Dazed Chance</English>
+        </Key>
         <Key ID="STR_ACE_Medical_openLid">
             <English>Open lid</English>
             <Czech>Otevřít víko</Czech>
