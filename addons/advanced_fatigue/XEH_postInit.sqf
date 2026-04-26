@@ -73,3 +73,12 @@ call FUNC(renderDebugLines);
     // - Add main loop at 1 second interval -------------------------------------------------------------
     [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;
+
+[QEGVAR(ui,hideHud), {
+    if (!GVAR(enableStaminaBar)) exitWith {};
+    params ["_hide"];
+
+    private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
+    _staminaBarContainer ctrlSetFade ([1, 0] select _hide);
+    _staminaBarContainer ctrlCommit 0;
+}] call CBA_fnc_addEventHandler;
