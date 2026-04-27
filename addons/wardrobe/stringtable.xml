@@ -20,14 +20,14 @@
             <English>Add Bandanna</English>
             <French>Ajouter un bandana</French>
             <Spanish>Añadir Bandana</Spanish>
-            <Russian>Надеть Банданну</Russian>
+            <Russian>Надеть бандану</Russian>
             <Japanese>バンダナを着ける</Japanese>
         </Key>
         <Key ID="STR_ACE_Wardrobe_bandannaRemove">
             <English>Remove Bandanna</English>
             <French>Retirer le bandana</French>
             <Spanish>Quitar Bandana</Spanish>
-            <Russian>Снять Банданну</Russian>
+            <Russian>Снять бандану</Russian>
             <Japanese>バンダナを外す</Japanese>
         </Key>
         <Key ID="STR_ACE_Wardrobe_collarClose">
@@ -155,6 +155,7 @@
         <Key ID="STR_ACE_Wardrobe_slotOccupied">
             <English>Your %1 slot is already occupied</English>
             <Japanese>%1番目のスロットは占有済</Japanese>
+            <Russian>Ваш слот %1 уже занят</Russian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_missingComponents">
             <English>Cannot switch to&lt;br/&gt;%1&lt;br/&gt;due to missing components</English>
@@ -203,14 +204,14 @@
             <English>Visor down</English>
             <French>Visière baissée</French>
             <Spanish>Visor abajo</Spanish>
-            <Russian>Опустить визор</Russian>
+            <Russian>Опустить забрало</Russian>
             <Japanese>バイザーを下ろす</Japanese>
         </Key>
         <Key ID="STR_ACE_Wardrobe_visorUp">
             <English>Visor up</English>
             <French>Visière relevée</French>
             <Spanish>Visor arriba</Spanish>
-            <Russian>Поднять визор</Russian>
+            <Russian>Поднять забрало</Russian>
             <Japanese>バイザーを上げる</Japanese>
         </Key>
         <Key ID="STR_ACE_Wardrobe_wardrobeModifiable">
