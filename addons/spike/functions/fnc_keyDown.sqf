@@ -19,8 +19,9 @@
 private _currentWeapon = currentWeapon ACE_player;
 if !(GVAR(launcherWeapons) getOrDefaultCall [_currentWeapon, {
     private _weaponConfig = configFile >> "CfgWeapons" >> _currentWeapon;
+    private _weaponConfigEnabled = _weaponConfig >> QGVAR(enabled);
 
-    _weaponConfig == inheritsFrom (_weaponConfig >> QGVAR(enabled))
+    (_weaponConfig == inheritsFrom _weaponConfigEnabled) && {getNumber _weaponConfigEnabled == 1}
 }, true]) exitWith {};
 
 params ["_key", "_down"];

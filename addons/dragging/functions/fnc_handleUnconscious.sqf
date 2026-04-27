@@ -41,7 +41,7 @@ if (_player getVariable [QGVAR(isCarrying), false]) then {
         [_unit, _carriedObject] call FUNC(dropObject_carry);
     };
 
-    // Handle waking up dragged unit
+    // Handle waking up carried unit
     if (_unit == _carriedObject) then {
         [_player, _carriedObject] call FUNC(dropObject_carry);
     };

@@ -211,7 +211,7 @@ private _attachments = GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS;
             _configItemInfo = _config >> "ItemInfo";
             _hasItemInfo = isClass (_configItemInfo);
             _itemInfoType = if (_hasItemInfo) then {getNumber (_configItemInfo >> "type")} else {0};
-            _isMiscItem = _x call FUNC(isMiscItem);
+            _isMiscItem = (_x call FUNC(isMiscItem) > 0);
 
             _baseWeapon = if (!_isMiscItem) then {
                 _x call FUNC(baseWeapon)

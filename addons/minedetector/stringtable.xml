@@ -18,6 +18,30 @@
             <Turkish>Aktif</Turkish>
             <Ukrainian>Увімкнути</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_MineDetector_BoostRadius">
+            <English>Boost Radius</English>
+            <Japanese>ブースト範囲(半径)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MineDetector_BoostRadius_Desc">
+            <English>Adds the value in meters to boost the radius of each individual mine detector.</English>
+            <Japanese>各地雷探知機の探知範囲を拡大します。 値はメートル単位でを加算されます。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MineDetector_Category">
+            <English>Mine Detector</English>
+            <Czech>Minohledačka</Czech>
+            <French>Détecteur de mines</French>
+            <Spanish>Detector de minas</Spanish>
+            <Italian>Rilevatore di mine</Italian>
+            <Polish>Wykrywacz min</Polish>
+            <Portuguese>Detector de minas</Portuguese>
+            <Russian>Миноискатель</Russian>
+            <German>Minendetektor</German>
+            <Korean>지뢰탐지기</Korean>
+            <Japanese>地雷探知器</Japanese>
+            <Chinese>地雷偵測器</Chinese>
+            <Chinesesimp>探雷器</Chinesesimp>
+            <Turkish>Mayın Dedektörü</Turkish>
+        </Key>
         <Key ID="STR_ACE_MineDetector_ConnectHeadphones">
             <English>Connect Headphones</English>
             <Czech>Připojit sluchátka</Czech>
@@ -136,6 +160,10 @@
             <Chinesesimp>金属探测器</Chinesesimp>
             <Turkish>Metal Dedektör</Turkish>
             <Ukrainian>Детектор металу</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_MineDetector_arsenalStatRadius">
+            <English>Mine detection radius</English>
+            <Japanese>地雷探知範囲(半径)</Japanese>
         </Key>
     </Package>
 </Project>

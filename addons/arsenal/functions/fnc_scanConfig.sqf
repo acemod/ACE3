@@ -40,7 +40,7 @@ private _simulationType = "";
 private _configItemInfo = "";
 private _hasItemInfo = false;
 private _itemInfoType = 0;
-private _isMiscItem = false;
+private _isMiscItem = 0;
 private _isTool = false;
 
 // Get weapons and other various items
@@ -54,10 +54,15 @@ private _isTool = false;
     _isTool = getNumber (_x >> "ACE_isTool") isEqualTo 1;
 
     switch (true) do {
+        // Forced items with ACE_asItem = 2
+        case (_isMiscItem == 2): {
+            (_configItems get IDX_VIRT_MISC_ITEMS) set [_className, nil];
+            if (_isTool) then {_toolList set [_className, nil]};
+        };
         // Weapon attachments
         case (
             _hasItemInfo &&
-            {!_isMiscItem} &&
+            {_isMiscItem == 0} &&
             {_itemInfoType in [TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_MUZZLE, TYPE_BIPOD]}
         ): {
             // Convert type to array index
@@ -127,7 +132,7 @@ private _isTool = false;
             };
         };
         // Misc. items
-        case (_hasItemInfo && _isMiscItem): {
+        case (_hasItemInfo && _isMiscItem == 1): {
             (_configItems get IDX_VIRT_MISC_ITEMS) set [_className, nil];
             if (_isTool) then {_toolList set [_className, nil]};
         };
@@ -156,7 +161,7 @@ private _magazineMiscItems = createHashMap;
     _magazineMiscItems set [configName _x, nil];
 } forEach ((toString {
     with uiNamespace do { // configClasses runs in missionNamespace even if we're in preStart apparently
-        [configName _x, _x, true, true] call FUNC(isMiscItem);
+        ([configName _x, _x, true, true] call FUNC(isMiscItem)) > 0
     };
 }) configClasses _cfgMagazines);
 
