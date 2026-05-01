@@ -1,5 +1,9 @@
 class CfgWeapons {
-    class weapon_LGBLauncherBase;
+    class RocketPods;
+    class weapon_LGBLauncherBase: RocketPods {
+        class LoalAltitude;
+    };
+
     class GVAR(12): weapon_LGBLauncherBase {
         displayName = CSTRING(12);
         magazines[] = {
@@ -10,6 +14,10 @@ class CfgWeapons {
             QGVAR(1_PylonMissile_1Rnd_12),
             QGVAR(PylonMissile_Bomb_GBU12_x1),
             QGVAR(PylonRack_Bomb_GBU12_x2)
+        };
+
+        class LoalAltitude: LoalAltitude {
+             displayName = CSTRING(12);
         };
 
         EGVAR(laser,canSelect) = 1; // can ace_laser lock (allows switching laser code)
@@ -23,6 +31,10 @@ class CfgWeapons {
             QGVAR(2Rnd_FAB250),
             QGVAR(1_PylonMissile_1Rnd_FAB250),
             QGVAR(PylonMissile_1Rnd_FAB250)
+        };
+
+        class LoalAltitude: LoalAltitude {
+             displayName = CSTRING(fab250);
         };
 
         EGVAR(laser,canSelect) = 1; // can ace_laser lock (allows switching laser code)
