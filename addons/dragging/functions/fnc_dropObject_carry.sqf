@@ -130,9 +130,10 @@ if (_loadCargo) then {
         && {_target isKindOf "CAManBase"}
         && {[_unit, _cursorObject] call EFUNC(interaction,getInteractionDistance) < MAX_LOAD_DISTANCE_MAN}
     ) then {
-        private _vehicles = _target call EFUNC(common,nearestVehiclesFreeSeat);
+        // can't search nearest vehicles because target position can be desynced ATM
+        private _vehicles = [_target, nil, nil, _cursorObject] call EFUNC(common,nearestVehiclesFreeSeat);
 
-        if (_cursorObject in _vehicles) then {
+        if (_vehicles isEqualTo [_cursorObject]) then {
             if (GETEGVAR(medical,enabled,false)) then {
                 [_unit, _target, _cursorObject] call EFUNC(medical_treatment,loadUnit);
             } else {

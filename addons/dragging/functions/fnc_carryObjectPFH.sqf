@@ -99,7 +99,7 @@ if (
     {
         if (_target isKindOf "CAManBase") then {
             [_unit, _cursorObject] call EFUNC(interaction,getInteractionDistance) < MAX_LOAD_DISTANCE_MAN
-            && {_target call EFUNC(common,nearestVehiclesFreeSeat) isNotEqualTo []}
+            && {[_target, nil, nil, _cursorObject] call EFUNC(common,nearestVehiclesFreeSeat) isEqualTo [_cursorObject]}
         } else {
             ["ace_cargo"] call EFUNC(common,isModLoaded) &&
             {EGVAR(cargo,enable)} &&

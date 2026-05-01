@@ -7,6 +7,7 @@
  * 0: Unit <OBJECT>
  * 1: Distance <NUMBER> (default: 10)
  * 2: Restricted to cargo only <BOOL> (default: false)
+ * 3: Override vehicle to check instead of distance search <OBJECT> (default: objNull)
  *
  * Return Value:
  * Nearest vehicles with a free seat <ARRAY>
@@ -14,12 +15,17 @@
  * Example:
  * [cursorObject] call ace_common_fnc_nearestVehiclesFreeSeat
  *
- * Public: Yes
+ * Public: No
  */
 
-params ["_unit", ["_distance", 10], ["_cargoOnly", false]];
+params ["_unit", ["_distance", 10], ["_cargoOnly", false], ["_overrideVehicle", objNull]];
 
-private _nearVehicles = nearestObjects [_unit, ["Car", "Air", "Tank", "Ship_F", "Pod_Heli_Transport_04_crewed_base_F"], _distance];
+private _nearVehicles = if (isNull _overrideVehicle) then {
+    nearestObjects [_unit, ["Car", "Air", "Tank", "Ship_F", "Pod_Heli_Transport_04_crewed_base_F"], _distance]
+} else {
+    [_overrideVehicle]
+};
+
 _nearVehicles select {
     private _vehicle = _x;
     alive _vehicle
