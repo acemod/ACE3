@@ -44,20 +44,20 @@ private _vehicleConfig = configOf _vehicle;
   When the whole second half of cargo is occupied,
   moveInAny can not be used for cargo at all.
   Cargo example:
-  2  3  4  5  6  7  8  9 10 11 12 13 14    _cargoIndex (fullCrew, moveInCargo, lockedCargo)
+  2  3  4  5  6  8  9 10 11 12 14 15 16    _cargoIndex (fullCrew, moveInCargo, lockedCargo)
   0  1  2  3  4  5  6  7  8  9 10 11 12    _cargoPositionNumber (action GetInCargo)
   L  o  _  o  L  o  L  o  _  o  _  L  L    seats: _ empty, o unit, L empty locked
         S        P  A     T     S
-                 |___________| <--- moveInAny can fill (5(o) + A + T + C + C = 9)
+                 |___________| <--- moveInAny can fill (5(o) + A + T + S + S = 9)
     P _cargoCurrentPositionNumber
     A locked but can fill with moveInAny
-    T _targetCargoPositionNumber
-    s _cargoSpareIndexes
+    T _cargoTargetPositionNumber
+    S _cargoSpareIndexes
 */
 
 // Pre-scan cargo seats to determine moveInAny target position and remapping data
 private _cargoCurrentPositionNumber = count fullCrew [_vehicle, "cargo"];
-private _targetCargoPositionNumber = -1;
+private _cargoTargetPositionNumber = -1;
 private _cargoSpareIndexes = [];
 private _cargoIndexes = [];
 private _cargoAvailable = 0 == getNumber (_vehicleConfig >> "ejectDeadCargo");
@@ -67,15 +67,15 @@ if (_cargoAvailable) then {
         _cargoIndexes pushBack _cargoIndex;
         if (!isNull _crewUnit || {_vehicle lockedCargo _cargoIndex}) then {continue};
         private _cargoPositionNumber = _forEachIndex;
-        if (_targetCargoPositionNumber == -1 && {_cargoPositionNumber >= _cargoCurrentPositionNumber}) then {
-            _targetCargoPositionNumber = _cargoPositionNumber;
+        if (_cargoTargetPositionNumber == -1 && {_cargoPositionNumber >= _cargoCurrentPositionNumber}) then {
+            _cargoTargetPositionNumber = _cargoPositionNumber;
         } else {
             _cargoSpareIndexes pushBack _cargoIndex;
         };
     } forEach fullCrew [_vehicle, "cargo", true];
-    _cargoAvailable = _targetCargoPositionNumber > -1;
+    _cargoAvailable = _cargoTargetPositionNumber > -1;
 };
-TRACE_5("cargo pre-scan",_cargoAvailable,_cargoCurrentPositionNumber,_targetCargoPositionNumber,_cargoSpareIndexes,_cargoIndexes);
+TRACE_5("cargo pre-scan",_cargoAvailable,_cargoCurrentPositionNumber,_cargoTargetPositionNumber,_cargoSpareIndexes,_cargoIndexes);
 private _cargoRemap = createHashMap;
 
 // Determine highest-priority available seats
@@ -100,13 +100,13 @@ private _allSeats = fullCrew [_vehicle, "", true];
         case "cargo": {
             if (!_cargoAvailable) then {continue};
             private _cargoPositionNumber = _cargoIndexes find _cargoIndex;
-            if (_cargoPositionNumber > _targetCargoPositionNumber) then {break};
-            if (_cargoPositionNumber == _targetCargoPositionNumber) then {
+            if (_cargoPositionNumber > _cargoTargetPositionNumber) then {break};
+            if (_cargoPositionNumber == _cargoTargetPositionNumber) then {
                 _priority = PRIORITY_CARGO;
             } else {
                 if (
                     _cargoPositionNumber < _cargoCurrentPositionNumber // unavailable for moveInAny
-                    || {isNull _crewUnit} // locked empty seat before _targetCargoPositionNumber
+                    || {isNull _crewUnit} // locked empty seat before _cargoTargetPositionNumber
                 ) then {
                     TRACE_4("cargo skip",_cargoIndex,_cargoPositionNumber,_crewUnit,_vehicle lockedCargo _cargoIndex);
                     continue;
@@ -156,7 +156,7 @@ if (_bestSeatsPriority == PRIORITY_NONE) exitWith {
     TRACE_1("No seats found",_allSeats apply {_x select [ARR_2(0,5)]});
 };
 
-TRACE_4("emptySeats",_bestSeatsPriority,_bestSeatsRole,_bestSeatsParams,_cargoRemap);
+TRACE_4("bestSeats",_bestSeatsPriority,_bestSeatsRole,_bestSeatsParams,_cargoRemap);
 
 // createVehicle(Local) + moveInAny crashes dedicated server https://feedback.bistudio.com/T198846, use createAgent instead
 private _createSeatHolder = if (isDedicated) then {
@@ -167,16 +167,16 @@ private _createSeatHolder = if (isDedicated) then {
 
 // Probe seat positions using temporary units to identify exact seat
 private _seatHolders = [];
-private _remainingEmptyPositions = _vehicle emptyPositions ""; // Guard against infinite loop if moveInAny fails with true
+private _remainingEmptyPositions = _vehicle emptyPositions ""; // Guard against infinite loop
 while {_remainingEmptyPositions > 0} do {
     // advance moveInAny cargo position
-    while {_cargoCurrentPositionNumber in _cargoRemap} do {
+    if (_cargoCurrentPositionNumber in _cargoRemap) then {
+        // moveInCargo does not support createVehicleLocal units
         private _seatHolder = createAgent [SEATHOLDER_CLASS, [0,0,0], [], 0, "CAN_COLLIDE"];
-        _seatHolders pushBack _seatHolder;
         private _moveInCargoIndex = _cargoRemap get _cargoCurrentPositionNumber;
         _seatHolder moveInCargo [_vehicle, _moveInCargoIndex]; // cannot use "false" 3rd argument here https://feedback.bistudio.com/T198984
-        private _seatHolderSeatParams = fullCrew _vehicle select {_x select 0 == _seatHolder};
-        if (_seatHolderSeatParams isEqualTo [] || {_seatHolderSeatParams select 0 select 2 != _moveInCargoIndex}) then {
+        private _seatHolderSeat = fullCrew _vehicle select {_x select 0 == _seatHolder};
+        if (_seatHolderSeat isEqualTo [] || {_seatHolderSeat select 0 select 2 != _moveInCargoIndex}) then {
             ERROR_8("moveInCargo holder failed _unit=%1[%2] _vehicle=%3[%4] _seatHolder=%5 _moveInCargoIndex=%6 fullCrew=%7 %8",_unit,typeOf _unit,_vehicle,typeOf _vehicle,_seatHolder,_moveInCargoIndex,fullCrew _vehicle apply {_x select [ARR_2(0,5)]},__FILE__);
             _vehicle deleteVehicleCrew _seatHolder;
             if (!isNull _seatHolder) then { // failsafe
@@ -185,15 +185,17 @@ while {_remainingEmptyPositions > 0} do {
             };
             break;
         };
-        TRACE_4("cargo move",_remainingEmptyPositions,_cargoCurrentPositionNumber,_moveInCargoIndex,_seatHolderSeatParams);
+        TRACE_4("cargo move",_remainingEmptyPositions,_cargoCurrentPositionNumber,_moveInCargoIndex,_seatHolderSeat);
+        _seatHolders pushBack _seatHolder;
         INC(_cargoCurrentPositionNumber);
         DEC(_remainingEmptyPositions);
+        continue;
     };
 
     private _seatHolder = call _createSeatHolder;
     private _seatHolderMoveSuccess = _seatHolder moveInAny _vehicle;
-    private _seatHolderSeatParams = fullCrew _vehicle select {_x select 0 == _seatHolder};
-    if (!_seatHolderMoveSuccess || {_seatHolderSeatParams isEqualTo []}) then {
+    private _seatHolderSeat = fullCrew _vehicle select {_x select 0 == _seatHolder};
+    if (!_seatHolderMoveSuccess || {_seatHolderSeat isEqualTo []}) then {
         ERROR_8("moveInAny holder failed _unit=%1[%2] _vehicle=%3[%4] _seatHolder=%5 _seatHolderMoveSuccess=%6 fullCrew=%7 %8",_unit,typeOf _unit,_vehicle,typeOf _vehicle,_seatHolder,_seatHolderMoveSuccess,fullCrew _vehicle apply {_x select [ARR_2(0,5)]},__FILE__);
         _vehicle deleteVehicleCrew _seatHolder;
         if (!isNull _seatHolder) then { // failsafe
@@ -202,14 +204,14 @@ while {_remainingEmptyPositions > 0} do {
         };
         break;
     };
-    _seatHolderSeatParams select 0 params ["", "_role", "_cargoIndex", "_turretPath"];
+    _seatHolderSeat select 0 params ["", "_role", "_cargoIndex", "_turretPath"];
     if (_role == _bestSeatsRole && {[_cargoIndex, _turretPath] in _bestSeatsParams}) then {
         _vehicle deleteVehicleCrew _seatHolder;
         private _unitMoveSuccess = _unit moveInAny _vehicle;
         if (_unitMoveSuccess) then {
-            [QGVAR(deadPersonLoaded), _unit] call CBA_fnc_globalEvent; // Ensure remote dead unit stays unconscious
+            [QGVAR(deadPersonLoaded), _unit] call CBA_fnc_globalEvent; // Ensure dead unit stays unconscious on all clients
         } else {
-            ERROR_8("moveInAny unit failed _unit=%1[%2] _vehicle=%3[%4] _seatHolder=%5 _seatHolderSeatParams=%6 fullCrew=%7 %8",_unit,typeOf _unit,_vehicle,typeOf _vehicle,_seatHolder,_seatHolderSeatParams,fullCrew _vehicle apply {_x select [ARR_2(0,5)]},__FILE__);
+            ERROR_8("moveInAny unit failed _unit=%1[%2] _vehicle=%3[%4] _seatHolder=%5 _seatHolderSeat=%6 fullCrew=%7 %8",_unit,typeOf _unit,_vehicle,typeOf _vehicle,_seatHolder,_seatHolderSeat,fullCrew _vehicle apply {_x select [ARR_2(0,5)]},__FILE__);
         };
         TRACE_4("seat",_remainingEmptyPositions,_role,_cargoIndex,_turretPath);
         break;
