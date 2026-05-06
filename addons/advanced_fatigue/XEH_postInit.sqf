@@ -11,10 +11,15 @@ call FUNC(renderDebugLines);
 ["loadout", {GVAR(inertia) = [ACE_player] call FUNC(getWeaponInertia)}, false] call CBA_fnc_addPlayerEventHandler;
 ["unit", {GVAR(inertia) = [ACE_player] call FUNC(getWeaponInertia)}, true] call CBA_fnc_addPlayerEventHandler;
 
+GVAR(uiHidden) = false; // internal var to track if ui is hidden, based on EGVAR(ui,hideHud) var but set from event handler for compatilbity
 ["CBA_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};
 
-    [QEGVAR(ui,hideHud), LINKFUNC(updateStaminaBar)] call CBA_fnc_addEventHandler;
+    [QEGVAR(ui,hideHud), {
+        params ["_hide"];
+        GVAR(uiHidden) = _hide;
+        call FUNC(updateStaminaBar);
+    }] call CBA_fnc_addEventHandler;
 
     ["baseline", {
         private _fatigue = ACE_player getVariable [QGVAR(aimFatigue), 0];
@@ -72,13 +77,4 @@ call FUNC(renderDebugLines);
 
     // - Add main loop at 1 second interval -------------------------------------------------------------
     [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
-}] call CBA_fnc_addEventHandler;
-
-[QEGVAR(ui,hideHud), {
-    if (!GVAR(enableStaminaBar)) exitWith {};
-    params ["_hide"];
-
-    private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
-    _staminaBarContainer ctrlSetFade ([1, 0] select _hide);
-    _staminaBarContainer ctrlCommit 0;
 }] call CBA_fnc_addEventHandler;
