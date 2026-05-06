@@ -44,6 +44,6 @@ if (GVAR(usePylonPosition) && {GVAR(level) > 0} && {typeOf _attachedDummy isNotE
             params ["_dummy", "_unit"];
             _dummy == _unit getVariable [QGVAR(dummy), objNull]
         }
-    ] call ace_interact_menu_fnc_createAction;
+    ] call EFUNC(interact_menu,createAction);
     [_dummy , 0, [], _action] call ace_interact_menu_fnc_addActionToObject;
 };
