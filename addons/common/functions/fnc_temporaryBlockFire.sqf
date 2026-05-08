@@ -17,8 +17,8 @@
 
 params [["_duration", 1, [0]]];
 
-if (!alive ace_player) exitWith {};
-if (!isNil QGVAR(temporaryBlockFireEH)) exitWith {}; // if in-progress temporary block already exists, don't create another one
+// If in-progress temporary block already exists, don't create another one
+if (!alive ace_player || !isNil QGVAR(temporaryBlockFireEH)) exitWith {};
 
 private _firedEH = [ACE_player, "DefaultAction", {true}, {true}] call FUNC(addActionEventHandler);
 GVAR(temporaryBlockFireEH) = [ace_player, _firedEH];
