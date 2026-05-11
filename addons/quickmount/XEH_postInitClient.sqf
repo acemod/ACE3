@@ -7,3 +7,5 @@ if (!hasInterface) exitWith {};
         [] call FUNC(getInNearest);
     };
 }] call CBA_fnc_addKeybind;
+
+GVAR(initializedVehicleClasses) = [];

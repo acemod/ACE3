@@ -35,12 +35,14 @@ class CfgVehicles {
         };
     };
 
+// because Get In action has its own statement
+// we have to cache subactions in args and reuse them in insertChildren code
 #define GETIN_ACTIONS \
         class ACE_Actions { \
             class ACE_MainActions { \
                 class GVAR(GetIn) { \
                     displayName = "$STR_rscMenu.hppRscGroupRootMenu_Items_GetIn1"; \
-                    condition = QUOTE(call DFUNC(canShowFreeSeats)); \
+                    condition = QUOTE(call DFUNC(canShowFreeSeats) && {_this select 2 set [ARR_2(0,call DFUNC(addFreeSeatsActions))];_this select 2 select 0 isNotEqualTo []}); \
                     statement = QUOTE(call DFUNC(getInNearest)); \
                     exceptions[] = {"isNotSwimming"}; \
                     insertChildren = QUOTE((_this select 2) param [ARR_2(0,[])]); \

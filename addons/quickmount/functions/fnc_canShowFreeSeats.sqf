@@ -2,11 +2,13 @@
 /*
  * Author: Dystopian
  * Checks if Free Seats menu can be shown.
+ * Result is cached for 1 second for reuse in several visible ATM actions.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
  * 1: Unit <OBJECT>
  * 2: Args <ARRAY>
+ * 3: Use cache <BOOL> (default: true)
  *
  * Return Value:
  * Can show menu <BOOL>
@@ -17,9 +19,17 @@
  * Public: No
  */
 
-params ["_vehicle", "_unit", "_args"];
+params ["_vehicle", "_unit", ["_args", []], ["_useCache", true]];
 
 private _isInVehicle = _unit in _vehicle;
+
+// function is called by multiple actions and MainAction
+if (!_isInVehicle && {_useCache}) exitWith {
+    _this set [3, false];
+    [_this, LINKFUNC(canShowFreeSeats), _vehicle, QGVAR(canShowFreeSeats), 1] call EFUNC(common,cachedCall) // return
+};
+
+TRACE_6("canShowFreeSeats",_vehicle,typeOf _vehicle,_unit,_isInVehicle,_args,_useCache);
 
 GVAR(enabled)
 && {
@@ -28,23 +38,21 @@ GVAR(enabled)
     || {!_isInVehicle && {GVAR(enableMenu) == 1}}
 }
 && {alive _vehicle}
-&& {2 > locked _vehicle}
+&& {locked _vehicle < 2}
 && {isNull getConnectedUAVUnit _unit}
 && {simulationEnabled _vehicle}
+&& {[_unit, _vehicle] call EFUNC(interaction,canInteractWithVehicleCrew)}
 && {
-    [_unit, _vehicle] call EFUNC(interaction,canInteractWithVehicleCrew)
-}
-&& {
-    0.3 < vectorUp _vehicle select 2 // moveIn* and GetIn* don't work for flipped vehicles
+    vectorUp _vehicle select 2 > 0.3 // moveIn* and GetIn* don't work for flipped vehicles
     || {_vehicle isKindOf "Air"} // except Air
 }
 && {
     _isInVehicle
+    || {typeOf _vehicle in GVAR(initializedVehicleClasses)}
     || {
-        // because Get In action has its own statement
-        // we have to cache subactions in args and reuse them in insertChildren code
-        private _subActions = call FUNC(addFreeSeatsActions);
-        _args set [0, _subActions];
-        [] isNotEqualTo _subActions
+        // init vehicle actions here to skip useless checks on clients with disabled quickmount
+        GVAR(initializedVehicleClasses) pushBack typeOf _vehicle;
+        _vehicle call FUNC(addGetInActions);
+        true
     }
 }
