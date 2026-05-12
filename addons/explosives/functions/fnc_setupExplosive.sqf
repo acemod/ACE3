@@ -209,9 +209,6 @@ GVAR(TweakedAngle) = 0;
             _virtualPosASL = if (_intersect isNotEqualTo []) then {
                _intersect params ["_posASL", "_normal"];
 
-                if (_normal isEqualTo [0,0,0]) then {
-                    _normal = surfaceNormal _posASL;
-                };
 
                 private _bbox = boundingBoxReal [_expSetupVehicle, "FireGeometry"];
                 private _offset = -((_bbox select 0) select 2);
