@@ -48,6 +48,14 @@ private _recoil = GVAR(recoilCache) getOrDefaultCall [_weapon + _muzzle, {
         _recoil = [0, 0];
     };
 
+    private _customShakeCoef = if (isArray (configFile >> "CfgRecoils" >> _recoil >> GVAR(customShakeCoef)) then {
+        getArray (configFile >> "CfgRecoils" >> _recoil)
+    } else {
+        1
+    };
+
+    _recoil = _recoil vectorMultiply _customShakeCoef;
+
     TRACE_3("Caching Recoil config",_weapon,_muzzle,_recoil);
 
     // Ensure format is correct
