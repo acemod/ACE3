@@ -30,7 +30,7 @@ _unit setVariable [QGVAR(isUsingSandbag), true];
     // If another unit picked up the sandbag or otherwise sandbag no longer present, exit
     if (!alive _unit || {!alive _sandbag}) exitWith {};
 
-    private _nearSandbags = (_sandbag nearObjects ["ACE_SandbagObject", 5]) - [_sandbag];
+    private _nearSandbags = (_sandbag nearObjects ["ACE_SandbagObject", 1.5]) - [_sandbag];
 
     deleteVehicle _sandbag;
 

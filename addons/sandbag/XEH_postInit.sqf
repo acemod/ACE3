@@ -72,7 +72,7 @@ if (["ace_dragging"] call EFUNC(common,isModLoaded)) then {
         // Force PhysX update
         {
             [QEGVAR(common,awake), [_x, true]] call CBA_fnc_globalEvent;
-        } forEach ((_target nearObjects ["ACE_SandbagObject", 5]) - [_target]);
+        } forEach ((_target nearObjects ["ACE_SandbagObject", 1.5]) - [_target]);
     }] call CBA_fnc_addEventHandler;
 
     // When carrying stops, update surrounding sandbags
@@ -84,6 +84,6 @@ if (["ace_dragging"] call EFUNC(common,isModLoaded)) then {
         // Force PhysX update
         {
             [QEGVAR(common,awake), [_x, true]] call CBA_fnc_globalEvent;
-        } forEach ((_target nearObjects ["ACE_SandbagObject", 5]) - [_target]);
+        } forEach ((_target nearObjects ["ACE_SandbagObject", 1.5]) - [_target]);
     }] call CBA_fnc_addEventHandler;
 };
