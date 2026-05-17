@@ -1,17 +1,25 @@
 #include "..\script_component.hpp"
 
 // call compileScript ["z\ace\addons\quickmount\dev\drawSeatProxies.sqf"]
+// [_showSingleProxies, _minProxyDistance, _showAnyProxy] call compileScript ["z\ace\addons\quickmount\dev\drawSeatProxies.sqf"]
 
-addMissionEventHandler ["Draw3D", {
+params [["_showSingleProxies", false], ["_minProxyDistance", 0.1], ["_showAnyProxy", false]];
+
+GVAR(showSingleProxies) = _showSingleProxies; // show seats that have only one proxy point
+GVAR(minProxyDistance) = _minProxyDistance; // minimum distance between nearby proxies to show both
+GVAR(showAnyProxy) = _showAnyProxy; // show any proxy not only seat
+
+if (!isNil QGVAR(draw3DEH)) then {
+    removeMissionEventHandler ["Draw3D", GVAR(draw3DEH)];
+};
+
+GVAR(draw3DEH) = addMissionEventHandler ["Draw3D", {
     {
         private _vehicle = _x;
-        if (
-            isNull _vehicle
-            || {!(_vehicle isKindOf "AllVehicles")}
-            || {_vehicle isKindOf "Man"}
-        ) then {continue};
+        if (!(_vehicle isKindOf "AllVehicles") || {_vehicle isKindOf "Man"}) then {continue};
 
-        private _seatProxies = _vehicle getVariable QGVAR(seatProxies);
+        // make unique var name to recalc proxies
+        private _seatProxies = _vehicle getVariable format ["%1%2", QGVAR(seatProxies), GVAR(draw3DEH)];
         if (isNil "_seatProxies") then {
             // see fnc_getSeatProxies
             _seatProxies = createHashMap;
@@ -32,21 +40,22 @@ addMissionEventHandler ["Draw3D", {
                     if (_proxyIndex < 1) then {continue};
                     private _proxyRole = toLower (_substrings select -2);
                     private _proxyGroup = _proxyRoleMappings select (_proxyRolePrefixes findIf {_proxyRole find _x == 0});
-                    if (_proxyGroup == "") then {continue};
+                    if (_proxyGroup == "" && {!GVAR(showAnyProxy)}) then {continue};
 
                     private _proxyHashMap = _seatProxies getOrDefault [_proxyGroup, createHashMap, true];
                     private _proxies = _proxyHashMap getOrDefault [_proxyIndex, [], true];
                     private _pos = _vehicle selectionPosition [_proxyPath, _lodNumber, "AveragePoint"];
-                    if (-1 < _proxies findIf {0.1 > _vehicle selectionPosition (_x select 0) vectorDistance _pos}) then {continue}; // ignore near points
+                    // skip nearby proxies
+                    if (-1 < _proxies findIf {GVAR(minProxyDistance) > _vehicle selectionPosition (_x select 0) vectorDistance _pos}) then {continue};
                     _proxies pushBack [[_proxyPath, _lodNumber, "AveragePoint"], format ["%1:%2.%3", _lodNumber, _proxyRole, _proxyIndex], _color];
                 } forEach _proxyPaths;
             } forEach _allLODsNumbers;
-            _vehicle setVariable [QGVAR(seatProxies), _seatProxies];
+            _vehicle setVariable [format ["%1%2", QGVAR(seatProxies), GVAR(draw3DEH)], _seatProxies];
         };
 
         {
             {
-                if (count _y < 2) then {continue}; // ignore single points
+                if (!GVAR(showSingleProxies) && {count _y < 2}) then {continue}; // skip seats with only one proxy
                 {
                     drawIcon3D [
                         "\a3\ui_f\data\gui\cfg\hints\icon_text\group_1_ca.paa",
@@ -60,3 +69,5 @@ addMissionEventHandler ["Draw3D", {
         } forEach _seatProxies;
     } forEach [cursorObject, objectParent ACE_player];
 }];
+
+GVAR(draw3DEH)
