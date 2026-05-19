@@ -21,7 +21,19 @@ private _vehicleClass = typeOf _vehicle;
 private _vehicleConfig = configOf _vehicle;
 private _cargoProxyIndexes = getArray (_vehicleConfig >> "cargoProxyIndexes");
 private _seatProxies = _vehicle call FUNC(getSeatProxies);
-TRACE_3("addGetInActions",_vehicleClass,_cargoProxyIndexes,_seatProxies);
+
+private _seatPositions = GETVAR(_vehicle,GVAR(seatPositions),[]);
+if (_seatPositions isEqualType []) then {
+    _seatPositions = createHashMapFromArray _seatPositions;
+};
+private _seatPositionsConfig = getArray (_vehicleConfig >> QGVAR(seatPositions));
+_seatPositionsConfig params [["_model", ""], ["_seatPositionsArray", []]];
+// handle inherited classes with different model
+if (_model == getText (_vehicleConfig >> "model")) then {
+    _seatPositions merge createHashMapFromArray _seatPositionsArray;
+};
+
+TRACE_4("addGetInActions",_vehicleClass,_cargoProxyIndexes,_seatPositions,_seatProxies);
 
 private _conditionCrew = {
     call FUNC(canShowFreeSeats)
@@ -50,7 +62,7 @@ private _cargoPositionNumber = -1;
     _x params ["", "_role", "_cargoIndex", "_turretPath", "_isPersonTurret", "", "_positionName"];
     private _name = if (isLocalized _positionName) then {localize _positionName} else {_positionName};
 
-    private ["_proxyGroup", "_proxyIndex", "_icon", "_condition", "_statement", "_params"];
+    private ["_proxyGroup", "_proxyIndex", "_icon", "_condition", "_statement", "_params", "_position", "_positionCrew"];
     switch (_role) do {
         case "driver": {
             if (
@@ -116,19 +128,26 @@ private _cargoPositionNumber = -1;
         };
     };
 
-    private _seatProxy = _seatProxies getOrDefault [_proxyGroup, createHashMap] getOrDefault [_proxyIndex, []];
-    TRACE_6("seat proxy",_role,_cargoIndex,_turretPath,_proxyGroup,_proxyIndex,_seatProxy);
-    if (_seatProxy isEqualTo []) then {continue};
+    private _positionString = _seatPositions getOrDefault [_params select 0, ""];
+    if (_positionString != "") then {
+        _position = compile _positionString;
+        _positionCrew = compile format ["(%1) vectorAdd [0, 0, 0.3]", _positionString];
+        TRACE_6("seat position",_role,_cargoIndex,_turretPath,_proxyGroup,_proxyIndex,_position);
+    } else {
+        private _seatProxy = _seatProxies getOrDefault [_proxyGroup, createHashMap] getOrDefault [_proxyIndex, []];
+        TRACE_6("seat proxy",_role,_cargoIndex,_turretPath,_proxyGroup,_proxyIndex,_seatProxy);
+        if (_seatProxy isEqualTo []) then {continue};
+        // cannot use static position because some proxy positions move with turret rotation
+        _position = compile format ["_target selectionPosition ['%1', %2, 'AveragePoint']", _seatProxy select 0, _seatProxy select 1];
+        _positionCrew = compile format ["_target selectionPosition ['%1', %2, 'AveragePoint'] vectorAdd [0, 0, 0.3]", _seatProxy select 0, _seatProxy select 1];
+    };
 
-    // cannot use static position because some proxy positions move with turret rotation
-    private _position = compile format ["_target selectionPosition ['%1', %2, 'AveragePoint']", _seatProxy select 0, _seatProxy select 1];
     private _action = [
         format ["%1%2%3empty", _role, _cargoIndex, _turretPath],
         _name, _icon, _statement, _condition, {}, _params, _position, 4
     ] call EFUNC(interact_menu,createAction);
     [_vehicleClass, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
 
-    private _positionCrew = compile format ["_target selectionPosition ['%1', %2, 'AveragePoint'] vectorAdd [0, 0, 0.3]", _seatProxy select 0, _seatProxy select 1];
     private _actionCrew = [
         format ["%1%2%3crew", _role, _cargoIndex, _turretPath],
         "", [_icon, "#FFFFFF"], {}, _conditionCrew, _insertChildrenCrew, _params, _positionCrew, 4, nil, _modifierFunctionCrew
