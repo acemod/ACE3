@@ -15,6 +15,9 @@
  * Public: No
  */
 
+#define ACTION_DISTANCE 4
+#define CREW_HEIGHT_ABOVE_SEAT 0.3
+
 params ["_vehicle"];
 
 private _vehicleClass = typeOf _vehicle;
@@ -131,7 +134,7 @@ private _cargoPositionNumber = -1;
     private _positionString = _seatPositions getOrDefault [_params select 0, ""];
     if (_positionString != "") then {
         _position = compile _positionString;
-        _positionCrew = compile format ["(%1) vectorAdd [0, 0, 0.3]", _positionString];
+        _positionCrew = compile format ["(%1) vectorAdd [0, 0, %2]", _positionString, CREW_HEIGHT_ABOVE_SEAT];
         TRACE_6("seat position",_role,_cargoIndex,_turretPath,_proxyGroup,_proxyIndex,_position);
     } else {
         private _seatProxy = _seatProxies getOrDefault [_proxyGroup, createHashMap] getOrDefault [_proxyIndex, []];
@@ -139,18 +142,25 @@ private _cargoPositionNumber = -1;
         if (_seatProxy isEqualTo []) then {continue};
         // cannot use static position because some proxy positions move with turret rotation
         _position = compile format ["_target selectionPosition ['%1', %2, 'AveragePoint']", _seatProxy select 0, _seatProxy select 1];
-        _positionCrew = compile format ["_target selectionPosition ['%1', %2, 'AveragePoint'] vectorAdd [0, 0, 0.3]", _seatProxy select 0, _seatProxy select 1];
+        _positionCrew = compile format [
+            "_target selectionPosition ['%1', %2, 'AveragePoint'] vectorAdd [0, 0, %3]",
+            _seatProxy select 0,
+            _seatProxy select 1,
+            CREW_HEIGHT_ABOVE_SEAT
+        ];
     };
 
     private _action = [
         format ["%1%2%3empty", _role, _cargoIndex, _turretPath],
-        _name, _icon, _statement, _condition, {}, _params, _position, 4
+        _name, _icon, _statement, _condition, {}, _params, _position, ACTION_DISTANCE
     ] call EFUNC(interact_menu,createAction);
     [_vehicleClass, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
 
+    // modifier function needs icon color
     private _actionCrew = [
         format ["%1%2%3crew", _role, _cargoIndex, _turretPath],
-        "", [_icon, "#FFFFFF"], {}, _conditionCrew, _insertChildrenCrew, _params, _positionCrew, 4, nil, _modifierFunctionCrew
+        "", [_icon, "#FFFFFF"], {}, _conditionCrew, _insertChildrenCrew,
+        _params, _positionCrew, ACTION_DISTANCE, nil, _modifierFunctionCrew
     ] call EFUNC(interact_menu,createAction);
     [_vehicleClass, 0, [], _actionCrew] call EFUNC(interact_menu,addActionToClass);
 } forEach _allSeats;
