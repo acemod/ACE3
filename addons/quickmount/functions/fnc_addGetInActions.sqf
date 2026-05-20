@@ -40,10 +40,10 @@ TRACE_4("addGetInActions",_vehicleClass,_cargoProxyIndexes,_seatPositions,_seatP
 
 private _conditionCrew = {
     call FUNC(canShowFreeSeats)
-    && {!isNull ([_target, _this select 2 select 0] call FUNC(getSeatUnit))}
+    && {!isNull ([_target, _actionParams select 0] call FUNC(getSeatUnit))}
 };
 private _insertChildrenCrew = {
-    private _unit = [_target, _this select 2 select 0] call FUNC(getSeatUnit);
+    private _unit = [_target, _actionParams select 0] call FUNC(getSeatUnit);
     [nil, nil, _unit] call EFUNC(interaction,addPassengerActions)
 };
 private _modifierFunctionCrew = {
@@ -91,12 +91,12 @@ private _cargoPositionNumber = -1;
             _condition = {
                 call FUNC(canShowFreeSeats)
                 && {
-                    private _cargoIndex = _this select 2 select 0;
+                    private _cargoIndex = _actionParams select 0;
                     !(_target lockedCargo _cargoIndex)
                     && {!alive ([_target, _cargoIndex] call FUNC(getSeatUnit))}
                 }
             };
-            _statement = {_player action ["GetInCargo", _target, _this select 2 select 1]};
+            _statement = {_player action ["GetInCargo", _target, _actionParams select 1]};
             _name = format ["%1 %2", _name, _cargoPositionNumber + 1];
             _icon = ICON_CARGO;
         };
@@ -114,12 +114,12 @@ private _cargoPositionNumber = -1;
             _condition = {
                 call FUNC(canShowFreeSeats)
                 && {
-                    private _turretPath = _this select 2 select 0;
+                    private _turretPath = _actionParams select 0;
                     !(_target lockedTurret _turretPath)
                     && {!alive ([_target, _turretPath] call FUNC(getSeatUnit))}
                 }
             };
-            _statement = {_player action ["GetInTurret", _target, _this select 2 select 0]};
+            _statement = {_player action ["GetInTurret", _target, _actionParams select 0]};
             _icon = switch true do {
                 case (getNumber (_turretConfig >> "isCopilot") > 0): {ICON_PILOT};
                 case (_role == "gunner"): {ICON_GUNNER};
