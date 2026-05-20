@@ -39,7 +39,7 @@ _origActionData params [
     "_statementCode",
     "_conditionCode",
     "_insertChildrenCode",
-    "_actionParams", // Define _actionParams so its accessible within the statement/condition
+    "_actionParams", // Define _actionParams so its accessible within the condition/insertChildren
     "_position",
     "_distance"
 ];
