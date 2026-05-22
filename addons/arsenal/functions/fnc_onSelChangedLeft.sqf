@@ -395,7 +395,7 @@ switch (GVAR(currentLeftPanel)) do {
     };
     // Backpack
     case IDC_buttonBackpack: {
-        if (_item == "") then {
+        if (_item == "" || (not (isClass (configFile >> "CfgVehicles">>_item)))) then {
             removeBackpack GVAR(center);
             GVAR(currentItems) set [IDX_CURR_BACKPACK_ITEMS, []];
             GVAR(currentItems) set [IDX_CURR_BACKPACK, ""];
