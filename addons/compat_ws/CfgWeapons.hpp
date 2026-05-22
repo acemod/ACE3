@@ -2,11 +2,11 @@ class CfgWeapons {
     // AA40
     class Rifle_Base_F;
     class sgun_aa40_base_lxWS: Rifle_Base_F {
-        ACE_barrelLength = 457;
+        ACE_barrelLength = 330.2; // WS AA-12 CQB version 13" https://en.wikipedia.org/wiki/Atchisson_AA-12 https://modernfirearms.net/userfiles/_thumbs/Images/shotgun/sh29/aa-12.jpg
         ACE_barrelTwist = 0.0;
         ACE_twistDirection = 0;
         ACE_RailHeightAboveBore = 4.99572; // checkScopes.sqf
-        initSpeed = -0.940574; // 459, 574m/s according to ACE_muzzleVelocities ICAO and ASM conditions (15°C, 59°F)
+        initSpeed = -0.873; // 426, 533 m/s according to ACE_muzzleVelocities ICAO and ASM conditions (15°C, 59°F)
     };
 
     // Galat Arm
