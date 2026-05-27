@@ -20,8 +20,7 @@ if (!params [["_fullPath", [], [[]]]]) exitWith {ERROR("Bad Params"); []};
 if ((_fullPath param [0, ""]) != "ACE_ZeusActions") exitWith {ERROR_1("Bad path %1 - should have ACE_ZeusActions as base",_fullPath); []};
 TRACE_1("removeActionFromZeus",_fullPath);
 
-private _res = _fullPath call FUNC(splitPath);
-_res params ["_parentPath", "_actionName"];
+_fullPath call FUNC(splitPath) params ["_parentPath", "_actionName"];
 
 private _currentPath = GVAR(ZeusActions);
 private _pathValid = false;
