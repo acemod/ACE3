@@ -109,7 +109,7 @@ while {_remainingEmptyPositions > 0} do {
         break;
     };
     _seatHolderSeat select 0 params ["", "_role", "_cargoIndex", "_turretPath"];
-    if (_role == _bestSeatsRole && {[_cargoIndex, _turretPath] in _bestSeatsParams}) then {
+    if ([_cargoIndex, _turretPath] in _bestSeatsParams) then {
         _vehicle deleteVehicleCrew _seatHolder;
         private _unitMoveSuccess = _unit moveInAny [_vehicle, _moveInAnyPositions];
         if (_unitMoveSuccess) then {
