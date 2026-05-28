@@ -81,7 +81,11 @@ private _bestSeatsParams = [];
         continue;
     };
     if (_priority == _bestSeatsPriority) then {
+        if (_priority == PRIORITY_CARGO) then {
+            _bestSeatsParams = [[_cargoIndex, _turretPath]]; // use only the last cargo seat
+        } else {
         _bestSeatsParams pushBack [_cargoIndex, _turretPath];
+        };
     };
 } forEach _emptySeats;
 
