@@ -8,7 +8,7 @@
  * 1: Target <OBJECT>
  *
  * Return Value:
- * The return value <BOOL>
+ * None
  *
  * Example:
  * [bob, bill] call ACE_captives_fnc_doRemoveHandcuffs

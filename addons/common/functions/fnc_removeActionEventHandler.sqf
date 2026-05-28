@@ -39,7 +39,7 @@ _actionIDs = _actionIDs - [-1];
 _actions set [_id, []];
 _actions = _actions - [[]];
 
-if (count _actions == 0) then {
+if (_actions isEqualTo []) then {
     _unit removeAction _actionID;
     _actionID = -1;
 };

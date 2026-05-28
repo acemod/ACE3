@@ -14,58 +14,43 @@
  *
  * Public: No
  */
-// arbitrary constant
-#define PROPORTIONALITY_CONSTANT 20
 params ["_args", "_timestep", "_seekerTargetPos", "_profileAdjustedTargetPos", "_targetData", "_navigationParams"];
-_args params ["_firedEH"];
+_args params ["_firedEH", "_launchParams", "_flightParams"];
 _firedEH params ["","","","","","","_projectile"];
+_flightParams params ["_missilePitchRate", "_missileYawRate"];
+_launchParams params ["","_targetLaunchParams"];
+_targetLaunchParams params ["", "", "_launchPos"];
 
-_navigationParams params ["_yawChange", "_pitchChange", "_lastPitch", "_lastYaw", "_initialPitch", "_pitchUp", "_lastYawRateDifference"];
+_navigationParams params ["_pid_pitch", "_pid_yaw", "_launchTime", "_pitchChange", "_yawChange", "_initialPitch", "_initialYaw"];
+private _elapsedTime = CBA_missionTime - _launchTime;
+private _expectedPitch = _initialPitch + _elapsedTime * _pitchChange;
+private _expectedYaw = _initialYaw + _elapsedTime * _yawChange;
 
-// for some reason we need to multiply this. I don't know why, but it just works
-_pitchChange = _pitchChange * 1.5;
-_yawChange = _yawChange * 1.5;
+private _position = getPosASLVisual _projectile vectorDiff _launchPos;
 
-((velocity _projectile) call CBA_fnc_vect2polar) params ["", "_currentYaw", "_currentPitch"];
+private _distance = 0.01 max vectorMagnitude _position;
 
-private _pitchRate = if (_timestep == 0) then {
-    0
-} else {
-    (_currentPitch - _lastPitch) / _timestep
-};
-_navigationParams set [2, _currentPitch];
+_profileAdjustedTargetPos params ["", "", "_heightOffset"];
+private _expectedPosition = ([_distance, _expectedYaw, _expectedPitch] call CBA_fnc_polar2vect) vectorAdd [0, 0, _heightOffset];
+private _offset = _position vectorDiff _expectedPosition;
 
-private _pitchModifier = if (_pitchChange == 0) then {
-    1
-} else {
-    abs (_pitchRate / _pitchChange)
-};
-private _desiredPitchChange = (_pitchChange - _pitchRate) * PROPORTIONALITY_CONSTANT * _pitchModifier;
-_desiredPitchChange = _desiredPitchChange + _pitchUp * (_initialPitch - _currentPitch) * PROPORTIONALITY_CONSTANT * _pitchModifier;
+private _offsetProjectileSpace = _projectile vectorWorldToModelVisual _offset;
 
-private _yawRate = if (_timestep == 0) then {
-    0
-} else {
-    (_currentYaw - _lastYaw) / _timestep
-};
-_navigationParams set [3, _currentYaw];
-
-private _yawRateDifference = _yawChange - _yawRate;
-_navigationParams set [6, _yawRateDifference];
-
-private _desiredYawChange = _yawRateDifference * PROPORTIONALITY_CONSTANT + _yawRateDifference * 2;
+private _pitchCommand = _pitchChange + ([_pid_pitch, _offsetProjectileSpace select 2] call CBA_pid_fnc_update);
+private _yawCommand = _yawChange + ([_pid_yaw, _offsetProjectileSpace select 0] call CBA_pid_fnc_update);
 
 #ifdef DRAW_NLAW_INFO
-private _yawModifier = if (_yawChange == 0) then {
-    1
-} else {
-    abs (_yawRate / _yawChange)
-};
-drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,1,1], ASLToAGL getPosASLVisual _projectile, 0.75, 0.75, 0, format ["dP [%1] dY: [%2]", _desiredPitchChange, _desiredYawChange], 1, 0.025, "TahomaB"];
-drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,1,1], [0, 0, 1] vectorAdd ASLToAGL getPosASLVisual _projectile, 0.75, 0.75, 0, format ["pitch proportional [%1] yaw proportional [%2]", _pitchModifier, _yawModifier], 1, 0.025, "TahomaB"];
+private _projectilePosition = getPosASLVisual _projectile;
+drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,1,1], [0, 0, 0.75] vectorAdd ASLtoAGL _projectilePosition, 0.75, 0.75, 0, format ["%1", _position], 1, 0.025, "TahomaB"];
+drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,1,1], [0, 0, 0.50] vectorAdd ASLtoAGL _projectilePosition, 0.75, 0.75, 0, format ["%1 m/s", vectorMagnitude velocity _projectile], 1, 0.025, "TahomaB"];
+drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,1,1], [0, 0, 0.25] vectorAdd ASLtoAGL _projectilePosition, 0.75, 0.75, 0, format ["pCmd [%1] yCmd: [%2]", _pitchCommand, _yawCommand], 1, 0.025, "TahomaB"];
+drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,1,1], [0, 0, -0.25] vectorAdd ASLtoAGL _projectilePosition, 0.75, 0.75, 0, format ["%1secs", _elapsedTime], 1, 0.025, "TahomaB"];
+
+drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,1,1], ASLtoAGL (_launchPos vectorAdd _expectedPosition), 0.75, 0.75, 0, format ["Expected Position"], 1, 0.025, "TahomaB"];
+drawLine3D [ASLtoAGL _launchPos, ASLtoAGL (_launchPos vectorAdd _expectedPosition), [1, 0, 0, 1], 6];
+drawLine3D [ASLtoAGL _projectilePosition, ASLtoAGL (_projectilePosition vectorAdd _offset), [0, 0, 1, 1], 6];
+
+hintSilent format ["pCmd [%1]\nyCmd: [%2]\n\n%3 err\n%4secs", _pitchCommand, _yawCommand, vectorMagnitude _offset, _elapsedTime];
 #endif
 
-TRACE_4("nlaw pitch/yaw info",_currentPitch,_lastPitch,_currentYaw,_lastYaw);
-TRACE_6("nlaw navigation",_yawChange,_desiredYawChange,_pitchChange,_desiredPitchChange,_yawRate,_pitchRate);
-
-_projectile vectorModelToWorldVisual [_yawChange + _desiredYawChange, 0, _pitchChange + _desiredPitchChange]
+_projectile vectorModelToWorldVisual [_yawCommand, 0, _pitchCommand]

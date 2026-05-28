@@ -9,15 +9,13 @@
  * 2: Is event (function recursives globaly to set weapon where turret is local) <BOOL> (default: false)
  *
  * Return Value:
- * Can Attach Sighting Unit <BOOL>
+ * None
  *
  * Example:
  * [cursorObject, player] call ace_dragon_fnc_sightDetach;
  *
  * Public: No
  */
-
-params ["_target", "_unit"];
 
 params ["_target", "_unit", ["_event", false]];
 TRACE_3("sightDetach",_target,_unit,_event);

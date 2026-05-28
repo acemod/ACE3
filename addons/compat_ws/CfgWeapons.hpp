@@ -61,6 +61,11 @@ class CfgWeapons {
         ACE_barrelTwist = 178.0;
         ACE_twistDirection = 1;
     };
+    // 20 inch barrel for the marksman/autorifle
+    class arifle_XMS_lxWS;
+    class arifle_XMS_M_lxWS: arifle_XMS_lxWS {
+        ACE_barrelLength = 508.0;
+    };
 
     // Headgear
     // ION Cap (Headphones)

@@ -85,7 +85,7 @@ private _refresh = {
 };
 
 if (_show) then {
-    if ({_x select 0 == _iconId} count _list == 0) then {
+    if (_list findIf {_x select 0 == _iconId} == -1) then {
         _list pushBack [_iconId, _icon, _color, CBA_missionTime];
     } else {
         {

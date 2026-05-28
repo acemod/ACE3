@@ -4,7 +4,7 @@
  * Switches away from the currently controlled camera
  *
  * Arguments:
- * 0: Camera <OBJECT>
+ * 0: Camera <OBJECT> (default: objNull)
  *
  * Return Value:
  * <BOOL>

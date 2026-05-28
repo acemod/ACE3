@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * Flight path (just for debug) <ARRAY>
+ * Flight path (just for debug) <ARRAY or NIL>
  *
  * Example:
  * call ace_advanced_throwing_fnc_drawArc

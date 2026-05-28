@@ -110,6 +110,19 @@ class CfgAmmo {
     };
 
     class B_12Gauge_Slug: BulletBase {
+        // Based roughly off of a generalization of a 12/70 foster slug
+        ACE_caliber = 17.5;
+        ACE_bulletLength = 38;
+        ACE_bulletMass = 28.35; // 1 oz
+        ACE_ballisticCoefficients[] = {0.11};
+        ACE_dragModel = 1;
+        ACE_muzzleVelocityVariationSD = 2;
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ASM";
+
+        ACE_muzzleVelocities[]={365.76, 381, 414.53, 426.72, 434.34, 441.96, 454.15, 455.68, 460.25};
+        ACE_barrelLengths[] = {215.9, 254, 317.5, 355.6, 457.2, 533.4, 609.6, 660.4, 711.2};
+
         //caliber = 3; //too high, ~20mm of RHA (450*3*15/1000=20), ~64mm metal
         caliber = 1.037; //~7mm RHA, ~22.4mm metal, probably still too high though as RHA is hardened.
     };
@@ -741,7 +754,7 @@ class CfgAmmo {
 
     class B_50BW_Ball_F: BulletBase { // http://www.alexanderarms.com/images/pdfs/beowulf_ballistics.pdf#page=2
         airFriction = -0.002098; // According with the G1 BC 0.21 and the muzzle velocity 1800 ft/s: 549 m/s
-        ACE_caliber = 4.55; // instead 12.7 to match with the .50BW adv. ballistics (twist rate 20") overwritten by the Katiba rifle twist 8" until a BI fix
+        ACE_caliber = 12.7;
         ACE_bulletLength = 24.13;
         ACE_bulletMass = 21.64; // 334 grains
         ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};

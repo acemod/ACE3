@@ -5,7 +5,7 @@
  * Used by moduleAssign* within various parts of the ACE3 project.
  *
  * Arguments:
- * 0: List <STRING>
+ * 0: List <STRING or ARRAY>
  * 1: Variable Name <STRING>
  * 2: Value <ANY>
  * 3: Global <BOOL>

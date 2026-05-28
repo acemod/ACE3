@@ -31,7 +31,7 @@ private _rate = if (isNumber (_config >> QGVAR(flowRate))) then {
 // How much fuel is in a vehicle's fuel tank
 private _maxFuelTank = getNumber (_config >> QGVAR(fuelCapacity));
 // Fall back to vanilla fuelCapacity value (only air and sea vehicles don't have this defined by default by us)
-// Air and sea vehicles have that value properly defined in liters, unlike ground vehicles which is is formula of (range * tested factor) - different fuel consumption system than ground vehicles
+// Air and sea vehicles have that value properly defined in liters, unlike ground vehicles where it is a formula of (range * tested factor) due to a different fuel consumption system
 if (_maxFuelTank == 0) then {
     _maxFuelTank = getNumber (_config >> "fuelCapacity");
 };
@@ -133,7 +133,7 @@ _nozzle setVariable [QGVAR(tempFuel), nil];
         _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
         _nozzle setVariable [QGVAR(isRefueling), false, true];
         [_nozzle, QGVAR(nozzle_stop), nil, true, true, true] call CBA_fnc_globalSay3D;
-    }; 
+    };
 }, 1, [
     _nozzle getVariable QGVAR(source),
     _sink,

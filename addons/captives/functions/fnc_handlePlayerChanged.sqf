@@ -8,7 +8,7 @@
  * 1: _oldUnit <OBJECT>
  *
  * Return Value:
- * The return value <BOOL>
+ * None
  *
  * Example:
  * [bob1, bob2] call ACE_captives_fnc_handlePlayerChanged

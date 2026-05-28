@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: True to take captive, false to release captive <BOOL>
- * 2: Caller <OBJECT>
+ * 2: Caller <OBJECT> (default: objNull)
  *
  * Return Value:
  * None

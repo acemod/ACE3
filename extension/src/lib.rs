@@ -4,7 +4,7 @@
 
 //! ACE3 Extension for quick maths and OS APIs
 
-use arma_rs::{arma, Extension};
+use arma_rs::{Extension, arma};
 
 mod artillery;
 mod ballistics;
@@ -12,6 +12,7 @@ mod break_line;
 mod clipboard;
 mod common;
 mod fcs;
+mod window;
 
 #[arma]
 fn init() -> Extension {
@@ -20,6 +21,7 @@ fn init() -> Extension {
         .group("artillery", artillery::group())
         .group("ballistics", ballistics::group())
         .group("clipboard", clipboard::group())
+        .group("window", window::group())
         .command("break_line", break_line::break_line)
         .command("fcs", fcs::get_solution)
         .command("version", || env!("GIT_HASH"))

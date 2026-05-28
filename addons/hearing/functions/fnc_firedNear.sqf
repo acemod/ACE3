@@ -11,7 +11,7 @@
  * 4: Muzzle <STRING>
  * 5: Current mode of the fired weapon <STRING>
  * 6: Ammo <STRING>
- * 7: Unit that fired the weapon <STRING>
+ * 7: Unit that fired the weapon <OBJECT>
  *
  * Return Value:
  * None

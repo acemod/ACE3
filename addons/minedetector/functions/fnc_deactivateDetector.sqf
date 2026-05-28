@@ -16,7 +16,7 @@
  * Public: Yes
  */
 
-params [["_unit", objNull, [objNull]], ["_detectorType", "", [""]]];
+params [["_unit", objNull, [objNull]]];
 
 if (!local _unit) exitWith {
     false // return
@@ -24,7 +24,9 @@ if (!local _unit) exitWith {
 
 private _detectorType = param [1, currentWeapon _unit, [""]];
 
-if (_detectorType == "" || {!([_unit, _detectorType] call FUNC(canDeactivateDetector))}) exitWith {false};
+if (_detectorType == "" || {!([_unit, _detectorType] call FUNC(canDeactivateDetector))}) exitWith {
+    false // return
+};
 
 _unit setVariable [format [QGVAR(enable_%1), _detectorType], nil, true];
 

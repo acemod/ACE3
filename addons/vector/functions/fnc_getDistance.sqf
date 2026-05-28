@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * Array <ARRAY>
+ * Distance <NUMBER>
  *
  * Example:
  * call ace_vector_fnc_getDistance

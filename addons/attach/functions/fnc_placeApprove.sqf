@@ -15,7 +15,7 @@
  * 3: Light Vehicle Classname <STRING>
  * 4: On Attach Text <STRING>
  * 5: Starting Pos of dummy item <ARRAY>
- * 5: Orientation of model <ARRAY>
+ * 6: Orientation of model <ARRAY>
  *
  * Return Value:
  * None

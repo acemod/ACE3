@@ -9,7 +9,7 @@
  * 2: _unit <OBJECT>
  *
  * Return Value:
- * The return value <BOOL>
+ * None
  *
  * Example:
  * [car2, x, player] call ACE_captives_fnc_handleGetOut

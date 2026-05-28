@@ -33,3 +33,20 @@
     [0, 1, 0, 2, true],
     true
 ] call CBA_fnc_addSetting;
+
+[
+    QEGVAR(medical,windowOnWakeUp),
+    "LIST",
+    [LSTRING(WindowOnWakeUp_DisplayName), LSTRING(WindowOnWakeUp_Description)],
+    ELSTRING(medical,Category),
+    [
+        [0,1,2],
+        [
+            LSTRING(WindowOnWakeUp_Option_Nothing),
+            LSTRING(WindowOnWakeUp_Option_Focus),
+            LSTRING(WindowOnWakeUp_Option_Flash)
+        ],
+        1
+    ],
+    0
+] call CBA_fnc_addSetting;

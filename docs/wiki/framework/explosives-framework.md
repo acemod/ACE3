@@ -27,6 +27,7 @@ class CfgMagazines {
     class banana_satchel_remote_mag: CA_Magazine {
         useAction = 0;  // Disable the vanilla interaction
         ace_explosives_placeable = 1;  // Can be placed
+        ace_explosives_isSticky = 1; // 1 = Explosive can be attached to objects, also requires an attachable trigger
         ace_explosives_setupObject = "banana_satchel_place";  // The object placed before the explosive is armed
         class ACE_Triggers {  // Trigger configurations
             SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};  // Triggers that can be used

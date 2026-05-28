@@ -6,13 +6,15 @@
  *
  * Arguments:
  * 0: Projectile <OBJECT>
- * 1: Direction (unit vector) <ARRAY>
+ * 1: Direction Pitch <NUMBER>
+ * 2: Direction Yaw <NUMBER>
+ * 3: Direction Roll <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [missile, [0,1,0]] call ace_missileguidance_fnc_changeMissileDirection;
+ * [missile, 0, 1, 0] call ace_missileguidance_fnc_changeMissileDirection;
  *
  * Public: No
  */

@@ -14,7 +14,7 @@
  * 7: Hit point <STRING>
  *
  * Return Value:
- * Current or maximum damage of part <NUMBER>
+ * Current or maximum damage of part (nil if not local) <NUMBER or NIL> 
  *
  * Example:
  * [cursorObject, "hit_engine_point", 0.5, player, projectile, 1, player, "HitEngine"] call ace_vehicle_damage_fnc_handleDamage

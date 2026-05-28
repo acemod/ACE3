@@ -20,8 +20,9 @@ class RscDisplayMain: RscStandardDisplay {
 
         class ACE_news_apex: InfoNews {
             idc = IDC_MAIN_INFO;
+            onLoad = "params ['_ctrl', '_config']; if (productVersion # 8 != '') then {_ctrl ctrlSetPositionY (getNumber (_config >> 'yAlt')); _ctrl ctrlCommit 0}";
             y = "safeZoneY + safeZoneH - (3 * 2 + 1) * (pixelH * pixelGrid * 2) - 4 * (4 * pixelH)";
-
+            yAlt = "safeZoneY + safeZoneH - (4 * 2 + 1) * (pixelH * pixelGrid * 2) - 4 * (4 * pixelH)";
             class Controls: Controls {
                 class Background: Background {};
                 class BackgroundIcon: BackgroundIcon {};

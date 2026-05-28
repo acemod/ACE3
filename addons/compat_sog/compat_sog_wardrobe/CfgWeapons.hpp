@@ -15,10 +15,10 @@ class CfgWeapons {
     class vn_b_helmet_m1_14_01: vn_b_helmet_m1_01_01 {};
 
 
-    class vn_b_helmet_m1_20_01 : vn_b_helmet_m1_14_01 {
+    class vn_b_helmet_m1_20_01: vn_b_helmet_m1_14_01 {
         MASS(12);
     };
-    class vn_b_helmet_m1_20_02 : vn_b_helmet_m1_20_01 {
+    class vn_b_helmet_m1_20_02: vn_b_helmet_m1_20_01 {
         MASS(12);
     };
 

@@ -2,6 +2,8 @@ class Mode_SemiAuto;
 class Mode_FullAuto;
 
 class CfgWeapons {
+    class Rifle_Base_F;
+    class UGL_F;
     #include "CfgWeaponsAttachments.hpp"
 
     // Assault rifles
@@ -899,7 +901,11 @@ class CfgWeapons {
     class arifle_MSBS65_sand_F: arifle_MSBS65_base_sand_F {
         displayName = CSTRING(arifle_MSBS65_sand);
     };
-    class arifle_MSBS65_GL_base_F;
+    class arifle_MSBS65_GL_base_F: arifle_MSBS65_base_F {
+        class UGL: UGL_F {
+            displayName = CSTRING(arifle_MSBS65_GL_muzzleGPBO40);
+        };
+    };
     class arifle_MSBS65_GL_F: arifle_MSBS65_GL_base_F {
         displayName = CSTRING(arifle_MSBS65_GL);
     };
@@ -931,7 +937,11 @@ class CfgWeapons {
     class arifle_MSBS65_Mark_sand_F: arifle_MSBS65_Mark_base_sand_F {
         displayName = CSTRING(arifle_MSBS65_Mark_sand);
     };
-    class arifle_MSBS65_UBS_base_F;
+    class arifle_MSBS65_UBS_base_F: arifle_MSBS65_base_F {
+        class UBS_F: Rifle_Base_F {
+            displayName = CSTRING(arifle_MSBS65_UBS_muzzleSix12);
+        };
+    };
     class arifle_MSBS65_UBS_F: arifle_MSBS65_UBS_base_F {
         displayName = CSTRING(arifle_MSBS65_UBS);
     };

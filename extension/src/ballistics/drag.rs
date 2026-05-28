@@ -179,7 +179,7 @@ pub fn calculate_retard(
 
 #[cfg(test)]
 mod tests {
-    use crate::ballistics::{atmosphere::speed_of_sound, Temperature};
+    use crate::ballistics::{Temperature, atmosphere::speed_of_sound};
 
     use super::DragFunction;
 

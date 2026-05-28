@@ -1,118 +1,89 @@
-#define GLUE(g1,g2) g1##g2
-#define TAG(name,col) class TRIPLES(ACE,name,col) { \
-        displayName = CSTRING(name); \
-        requiredItem = QUOTE(GLUE(ACE_Spraypaint,col)); \
-        textures[] = {QPATHTOF(UI\tags\col\name.paa)}; \
-        icon = QPATHTOF(UI\tags\col\name.paa); \
-    }
+#define SPRAY_TAG(NAME,COL)\
+class TRIPLES(ACE,NAME,COL) {\
+    displayName = CSTRING(NAME);\
+    requiredItem = QUOTE(GLUE(ACE_Spraypaint,COL));\
+    textures[] = {QPATHTOF(UI\tags\COL\NAME.paa)};\
+    icon = QPATHTOF(UI\tags\COL\NAME.paa);\
+}
+
+#define CHALK_TAG(NAME,COL)\
+class DOUBLES(TRIPLES(ACE,NAME,COL),chalk) {\
+    displayName = CSTRING(NAME);\
+    requiredItem = QUOTE(GLUE(ACE_Chalk,COL));\
+    textures[] = { QPATHTOF(UI\tags\COL\NAME.paa) };\
+    icon = QPATHTOF(UI\tags\COL\NAME.paa);\
+}
+
+#define SPRAY_TAG_X(COLOR,FOLDER)\
+class DOUBLES(ACE,COLOR) {\
+    displayName = CSTRING(x);\
+    requiredItem = QUOTE(GLUE(ACE_Spraypaint,COLOR));\
+    textures[] = { QPATHTOF(UI\tags\FOLDER\0.paa), QPATHTOF(UI\tags\FOLDER\1.paa), QPATHTOF(UI\tags\FOLDER\2.paa) };\
+    icon = QPATHTOF(UI\tags\FOLDER\0.paa);\
+}
+
+#define CHALK_TAG_X(COLOR,FOLDER)\
+class TRIPLES(ACE,COLOR,Chalk) {\
+    displayName = CSTRING(x);\
+    requiredItem = QUOTE(GLUE(ACE_Chalk,COLOR));\
+    textures[] = {QPATHTOF(UI\tags\FOLDER\0.paa), QPATHTOF(UI\tags\FOLDER\1.paa), QPATHTOF(UI\tags\FOLDER\2.paa)};\
+    icon = QPATHTOF(UI\tags\FOLDER\0.paa);\
+}
+
+
+#define SPRAY_TAGS(COLOR)\
+SPRAY_TAG(arrow_up,COLOR);\
+SPRAY_TAG(arrow_down,COLOR);\
+SPRAY_TAG(arrow_left,COLOR);\
+SPRAY_TAG(arrow_right,COLOR);\
+SPRAY_TAG(circle,COLOR);\
+SPRAY_TAG(cross,COLOR);\
+SPRAY_TAG(diamond,COLOR);\
+SPRAY_TAG(square,COLOR);\
+SPRAY_TAG(square_filled,COLOR);\
+SPRAY_TAG(triangle,COLOR);\
+SPRAY_TAG(triangle_inverted,COLOR)
+
+#define CHALK_TAGS(COLOR)\
+CHALK_TAG(arrow_up,COLOR);\
+CHALK_TAG(arrow_down,COLOR);\
+CHALK_TAG(arrow_left,COLOR);\
+CHALK_TAG(arrow_right,COLOR);\
+CHALK_TAG(circle,COLOR);\
+CHALK_TAG(cross,COLOR);\
+CHALK_TAG(diamond,COLOR);\
+CHALK_TAG(square,COLOR);\
+CHALK_TAG(square_filled,COLOR);\
+CHALK_TAG(triangle,COLOR);\
+CHALK_TAG(triangle_inverted,COLOR)
+
 
 class ACE_Tags {
-    class ACE_XBlack {
-        displayName = CSTRING(x);
-        requiredItem = "ACE_SpraypaintBlack";
-        textures[] = {QPATHTOF(UI\tags\black\0.paa), QPATHTOF(UI\tags\black\1.paa), QPATHTOF(UI\tags\black\2.paa)};
-        icon = QPATHTOF(UI\tags\black\0.paa);
-    };
-    class ACE_XRed {
-        displayName = CSTRING(x);
-        requiredItem = "ACE_SpraypaintRed";
-        textures[] = {QPATHTOF(UI\tags\red\0.paa), QPATHTOF(UI\tags\red\1.paa), QPATHTOF(UI\tags\red\2.paa)};
-        icon = QPATHTOF(UI\tags\red\0.paa);
-    };
-    class ACE_XGreen {
-        displayName = CSTRING(x);
-        requiredItem = "ACE_SpraypaintGreen";
-        textures[] = {QPATHTOF(UI\tags\green\0.paa), QPATHTOF(UI\tags\green\1.paa), QPATHTOF(UI\tags\green\2.paa)};
-        icon = QPATHTOF(UI\tags\green\0.paa);
-    };
-    class ACE_XBlue {
-        displayName = CSTRING(x);
-        requiredItem = "ACE_SpraypaintBlue";
-        textures[] = {QPATHTOF(UI\tags\blue\0.paa), QPATHTOF(UI\tags\blue\1.paa), QPATHTOF(UI\tags\blue\2.paa)};
-        icon = QPATHTOF(UI\tags\blue\0.paa);
-    };
-    class ACE_XYellow {
-        displayName = CSTRING(x);
-        requiredItem = "ACE_SpraypaintYellow";
-        textures[] = {QPATHTOF(UI\tags\yellow\0.paa), QPATHTOF(UI\tags\yellow\1.paa), QPATHTOF(UI\tags\yellow\2.paa)};
-        icon = QPATHTOF(UI\tags\yellow\0.paa);
-    };
-    class ACE_XWhite {
-        displayName = CSTRING(x);
-        requiredItem = "ACE_SpraypaintWhite";
-        textures[] = {QPATHTOF(UI\tags\white\0.paa), QPATHTOF(UI\tags\white\1.paa), QPATHTOF(UI\tags\white\2.paa)};
-        icon = QPATHTOF(UI\tags\white\0.paa);
-    };
+    SPRAY_TAG_X(Black,black);
+    SPRAY_TAG_X(Blue,blue);
+    SPRAY_TAG_X(Green,green);
+    SPRAY_TAG_X(Red,red);
+    SPRAY_TAG_X(Yellow,yellow);
+    SPRAY_TAG_X(White,white);
 
-    TAG(arrow_up,black);
-    TAG(arrow_down,black);
-    TAG(arrow_left,black);
-    TAG(arrow_right,black);
-    TAG(circle,black);
-    TAG(cross,black);
-    TAG(diamond,black);
-    TAG(square,black);
-    TAG(square_filled,black);
-    TAG(triangle,black);
-    TAG(triangle_inverted,black);
+    SPRAY_TAGS(black);
+    SPRAY_TAGS(blue);
+    SPRAY_TAGS(green);
+    SPRAY_TAGS(red);
+    SPRAY_TAGS(yellow);
+    SPRAY_TAGS(white);
 
-    TAG(arrow_up,blue);
-    TAG(arrow_down,blue);
-    TAG(arrow_left,blue);
-    TAG(arrow_right,blue);
-    TAG(circle,blue);
-    TAG(cross,blue);
-    TAG(diamond,blue);
-    TAG(square,blue);
-    TAG(square_filled,blue);
-    TAG(triangle,blue);
-    TAG(triangle_inverted,blue);
+    CHALK_TAG_X(Black,black);
+    CHALK_TAG_X(Blue,blue);
+    CHALK_TAG_X(Green,green);
+    CHALK_TAG_X(Red,red);
+    CHALK_TAG_X(Yellow,yellow);
+    CHALK_TAG_X(White,white);
 
-    TAG(arrow_up,green);
-    TAG(arrow_down,green);
-    TAG(arrow_left,green);
-    TAG(arrow_right,green);
-    TAG(circle,green);
-    TAG(cross,green);
-    TAG(diamond,green);
-    TAG(square,green);
-    TAG(square_filled,green);
-    TAG(triangle,green);
-    TAG(triangle_inverted,green);
-
-    TAG(arrow_up,red);
-    TAG(arrow_down,red);
-    TAG(arrow_left,red);
-    TAG(arrow_right,red);
-    TAG(circle,red);
-    TAG(cross,red);
-    TAG(diamond,red);
-    TAG(square,red);
-    TAG(square_filled,red);
-    TAG(triangle,red);
-    TAG(triangle_inverted,red);
-
-    TAG(arrow_up,yellow);
-    TAG(arrow_down,yellow);
-    TAG(arrow_left,yellow);
-    TAG(arrow_right,yellow);
-    TAG(circle,yellow);
-    TAG(cross,yellow);
-    TAG(diamond,yellow);
-    TAG(square,yellow);
-    TAG(square_filled,yellow);
-    TAG(triangle,yellow);
-    TAG(triangle_inverted,yellow);
-
-    TAG(arrow_up,white);
-    TAG(arrow_down,white);
-    TAG(arrow_left,white);
-    TAG(arrow_right,white);
-    TAG(circle,white);
-    TAG(cross,white);
-    TAG(diamond,white);
-    TAG(square,white);
-    TAG(square_filled,white);
-    TAG(triangle,white);
-    TAG(triangle_inverted,white);
+    CHALK_TAGS(black);
+    CHALK_TAGS(blue);
+    CHALK_TAGS(green);
+    CHALK_TAGS(red);
+    CHALK_TAGS(yellow);
+    CHALK_TAGS(white);
 };

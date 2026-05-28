@@ -69,7 +69,7 @@ if (_fuelCargo == REFUEL_DISABLED_FUEL) exitWith {};
 if (
     !isNil "_hooks"
     && {_hooks isEqualTypeAll []}
-    && {0 == {!(_x isEqualTypeParams [0,0,0]) || {3 < count _x}} count _hooks}
+    && {_hooks findIf {!(_x isEqualTypeParams [0,0,0]) || {3 < count _x}} == -1}
 ) then {
     _source setVariable [QGVAR(hooks), _hooks, true];
 };

@@ -52,3 +52,4 @@ missionNamespace setVariable ["ace_killtracker_globalSync", true];
 
  // access on any unit
 _unit getVariable ["ace_killtracker_output", ""];
+```

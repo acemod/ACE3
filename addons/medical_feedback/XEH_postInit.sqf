@@ -124,11 +124,11 @@ GVAR(bloodTickCounter) = 0;
 #ifdef DISABLE_VANILLA_DAMAGE_EFFECTS
 TRACE_1("disabling vanilla bleeding feedback effects",_this);
 [{
-    {isNil _x} count [
+    [
         "BIS_fnc_feedback_damageCC",
         "BIS_fnc_feedback_damageRadialBlur",
         "BIS_fnc_feedback_damageBlur"
-    ] == 0
+    ] findIf {isNil _x} == -1 
 }, {
     {
         ppEffectDestroy _x;

@@ -14,13 +14,17 @@
  *
  * Public: No
  */
+#define PROPORTIONAL 1.588
+#define INTEGRAL 0.358
+#define DERIVATIVE 1.255
+#define HISTORY_LENGTH 30
 
 params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams"];
 _firedEH params ["_shooter","","","","","","_projectile"];
 _launchParams params ["","_targetLaunchParams","","_attackProfile"];
 _targetLaunchParams params ["_target"];
 _stateParams params ["", "", "", "", "_navigationParams"];
-
+_flightParams params ["_pitchRate", "_yawRate"];
 // Reset _launchPos origin as projectile's height instead of player's foot
 _targetLaunchParams set [2, getPosASL _projectile];
 
@@ -55,16 +59,25 @@ if (_shooter == ACE_player) then {
 //_yawChange = -10 max _yawChange min 10;
 //_pitchChange = -10 max _pitchChange min 10;
 
-((velocity _projectile) call CBA_fnc_vect2polar) params ["", "_currentYaw", "_currentPitch"];
-((ACE_player weaponDirection (currentWeapon ACE_player)) call CBA_fnc_vect2Polar) params ["", "_yaw", "_pitch"];
+private _velocity = velocity _projectile;
+private _forwardVelocity = [_velocity select 0, _velocity select 1, 0];
+private _currentPitch = (_velocity select 2) atan2 vectorMagnitude _forwardVelocity;
+private _currentYaw = (_velocity select 0) atan2 (_velocity select 1);
+(_firedLOS call CBA_fnc_vect2Polar) params ["", "_yaw", "_pitch"];
+
+private _additionalPitch = 1 + abs _pitchChange;
+private _additionalYaw = 1 + abs _yawChange;
+
+private _pid_pitch = [PROPORTIONAL * _additionalPitch, INTEGRAL, DERIVATIVE * _additionalPitch , 0, -_pitchRate, _pitchRate, HISTORY_LENGTH] call CBA_pid_fnc_create;
+private _pid_yaw = [PROPORTIONAL * _additionalYaw, INTEGRAL, DERIVATIVE * _additionalYaw, 0, -_yawRate, _yawRate, HISTORY_LENGTH] call CBA_pid_fnc_create;
 
 TRACE_5("attackProfileStateParams",_firedLOS,_yawChange,_pitchChange,_currentPitch,_currentYaw);
-_navigationParams set [0, _yawChange];
-_navigationParams set [1, _pitchChange];
-_navigationParams set [2, _currentPitch]; // last pitch
-_navigationParams set [3, _currentYaw]; // last yaw
-_navigationParams set [4, _pitch]; // initial pitch
-_navigationParams set [5, 0]; // whether or not to zero out the pitch
-_navigationParams set [6, 0];
+_navigationParams set [0, _pid_pitch];
+_navigationParams set [1, _pid_yaw];
+_navigationParams set [2, CBA_missionTime];
+_navigationParams set [3, _pitchChange];
+_navigationParams set [4, _yawChange];
+_navigationParams set [5, _pitch];
+_navigationParams set [6, _yaw];
 _navigationParams
 

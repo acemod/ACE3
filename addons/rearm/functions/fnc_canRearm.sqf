@@ -29,6 +29,6 @@ if (isNil "_magazineClass") exitWith {false};
 private _needRearmMags = [_vehicle] call FUNC(getNeedRearmMagazines);
 
 // Testing if vehicle needs rearm on any magazines of class _magazineClass
-private _needsRearm = ({(_x select 0) isEqualTo _magazineClass} count _needRearmMags) > 0;
+private _needsRearm = (_needRearmMags findIf {(_x select 0) isEqualTo _magazineClass}) != -1;
 
 _needsRearm

@@ -18,7 +18,7 @@
 
 params ["_posASL", ["_color", "blue"]];
 
-if (!isServer) exitWith {};
+if (!isServer) exitWith {objNull};
 
 if (_color select [0,1] != "(") then {
     _color = switch (toLowerANSI _color) do {

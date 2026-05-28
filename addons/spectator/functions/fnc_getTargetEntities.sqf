@@ -5,7 +5,7 @@
  * Optionally includes dead units for the list and switching.
  *
  * Arguments:
- * 0: Include dead <BOOL>
+ * 0: Include dead <BOOL> (default: false)
  *
  * Return Value:
  * Valid entities <ARRAY>

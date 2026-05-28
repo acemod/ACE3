@@ -8,7 +8,7 @@
  * 1: Weapon <STRING>
  * 2: Muzzle <STRING>
  * 3: Show hint <BOOL> (default: true)
- * 3: Only unlock <BOOL> (default: false)
+ * 4: Only unlock <BOOL> (default: false)
  *
  * Return Value:
  * None

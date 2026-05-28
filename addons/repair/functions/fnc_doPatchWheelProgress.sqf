@@ -4,15 +4,18 @@
  * Called by repair action / progress bar. Raise events to set the new hitpoint damage.
  *
  * Arguments:
- * 0: Unit that does the patching <OBJECT>
- * 1: Vehicle to patch <OBJECT>
- * 2: Selected wheel hitpoint <STRING>
+ * 0: Arguments <ARRAY>
+ *    0: Unit that does the patching <OBJECT>
+ *    1: Vehicle to patch <OBJECT>
+ *    2: Selected wheel hitpoint <STRING>
+ * 1: Elapsed Time <NUMBER>
+ * 2: Total Time <NUMBER>
  *
  * Return Value:
  * Should patching continue? <BOOL>
  *
  * Example:
- * [unit, vehicle, "hitpoint"] call ace_repair_fnc_doPatchWheelProgress
+ * [[unit, vehicle, "hitpoint"], 1, 2] call ace_repair_fnc_doPatchWheelProgress
  *
  * Public: No
  */

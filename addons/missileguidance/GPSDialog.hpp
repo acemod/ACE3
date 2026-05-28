@@ -32,6 +32,7 @@ class GVAR(gpsAttackOptionsUI) {
         class TOOButton: RscButton {
             idc = GPS_UI_TOO;
             text = CSTRING(GPS_ui_too);
+            tooltip = CSTRING(GPS_ui_too_tooltip);
             onButtonClick = QUOTE([GPS_UI_TOO] call FUNC(gps_modeSelect));
             x = QUOTE(14 * GUI_GRID_W + GUI_GRID_CENTER_X);
             y = QUOTE(6.3 * GUI_GRID_H + GUI_GRID_CENTER_Y);
@@ -45,6 +46,7 @@ class GVAR(gpsAttackOptionsUI) {
         class PPButton: RscButton {
             idc = GPS_UI_PB;
             text = CSTRING(GPS_ui_pp);
+            tooltip = CSTRING(GPS_ui_pp_tooltip);
             onButtonClick = QUOTE([GPS_UI_PB] call FUNC(gps_modeSelect));
             x = QUOTE(26 * GUI_GRID_W + GUI_GRID_CENTER_X);
             y = QUOTE(6.3 * GUI_GRID_H + GUI_GRID_CENTER_Y);

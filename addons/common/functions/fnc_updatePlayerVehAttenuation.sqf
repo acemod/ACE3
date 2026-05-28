@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * Amount that unit can hear outside <NUMBER>
+ * None
  *
  * Example:
  * call ace_common_fnc_updatePlayerVehAttenuation

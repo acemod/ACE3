@@ -9,7 +9,7 @@
  * 2: Unloader (player) <OBJECT> (default: objNull)
  *
  * Return Value:
- * Succesfully unloaded person <BOOL>
+ * Successfully unloaded person <BOOL>
  *
  * Example:
  * [bob, car, bob] call ace_common_fnc_unloadPersonLocal

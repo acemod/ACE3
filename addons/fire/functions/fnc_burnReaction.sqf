@@ -23,4 +23,9 @@ if (
     _unit call EFUNC(common,throwWeapon);
 };
 
-[QGVAR(playScream), [format [QGVAR(scream_%1), floor (1 + random 15)], _unit]] call CBA_fnc_globalEvent;
+// There is a potential issue if a client side mod defines new sounds and adds them
+// Since the class that's broadcasted would not be defined on other clients
+private _scream = selectRandom (_unit call FUNC(getScreamSounds));
+if (!isNil "_scream" && {_scream != ""}) then {
+    [QGVAR(playScream), [_scream, _unit]] call CBA_fnc_globalEvent;
+};

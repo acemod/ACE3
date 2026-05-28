@@ -1,4 +1,4 @@
-use crate::common::{Height, MuzzleVelocity, Temperature, Vector3, GRAVITY, GRAVITY_ACCEL};
+use crate::common::{GRAVITY, GRAVITY_ACCEL, Height, MuzzleVelocity, Temperature, Vector3};
 
 const TIME_STEP: f64 = 1.0 / 60.0;
 
@@ -94,7 +94,7 @@ pub fn find_solution(
     let mut current_elevation = -1.0;
     loop {
         number_of_attempts -= 1;
-        current_elevation = (search_min + search_max) / 2.0;
+        current_elevation = f64::midpoint(search_min, search_max);
         let (_, shot_distance, shot_time) = shot(
             current_elevation,
             height_to_hit,

@@ -21,5 +21,5 @@ private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 
 ((driver _vehicle != _unit) &&
 {_deployedRopes isNotEqualTo []} &&
-{{!(_x select 5) && !(_x select 6)} count (_deployedRopes) > 0} &&
+{_deployedRopes findIf {!(_x select 5) && !(_x select 6)} != -1} &&
 {getPos _vehicle select 2 > 2})

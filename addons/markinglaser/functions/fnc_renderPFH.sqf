@@ -33,7 +33,9 @@ if (((currentVisionMode focusOn) != 1) || {EGVAR(laser,laserEmitters) isEqualTo 
         _cycle > 1/6
     }) then { continue };
 
-    (_y call EFUNC(laser,findLaserSource)) params ["_laserPosASL", "_laserDir"];
+    private _laser = _y call EFUNC(laser,findLaserSource);
+    if ((_laser isEqualTo []) || {_laser isEqualTo [-1, -1]}) then { continue };
+    _laser params ["_laserPosASL", "_laserDir"];
 
     #ifdef DEBUG_MODE_FULL
     private _targetObject = _aircraft getVariable [QEGVAR(laser,targetObject), objNull];

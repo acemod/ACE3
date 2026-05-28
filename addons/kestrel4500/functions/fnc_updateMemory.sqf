@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Slot <NUMBER>
- * 1: Value <STRING>
+ * 1: Value <NUMBER>
  *
  * Return Value:
  * None

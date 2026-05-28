@@ -7,7 +7,7 @@
  * Args
  *
  * Return Value:
- * None
+ * <BOOL>
  *
  * Example:
  * [vehicle, player] call ace_missile_clgp_fnc_copperhead_uiCanOpen

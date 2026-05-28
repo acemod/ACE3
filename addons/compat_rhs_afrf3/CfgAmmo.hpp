@@ -153,7 +153,6 @@ class CfgAmmo {
 
     class GrenadeHand;
     class rhs_ammo_rgd5: GrenadeHand {
-        EGVAR(frag,enabled) = 1;
         EGVAR(frag,metal) = 200;
         EGVAR(frag,charge) = 110;
         EGVAR(frag,gurney_c) = 2440;
@@ -172,16 +171,9 @@ class CfgAmmo {
         EGVAR(frag,skip) = 1;
         EGVAR(frag,force) = 0;
     };
-    class rhs_ammo_fakels: rhs_ammo_fakel {};
-    class rhs_ammo_zarya2: rhs_ammo_fakels {};
-    class rhs_ammo_plamyam: rhs_ammo_fakels {};
 
-    class RocketBase;
-    class R_PG32V_F: RocketBase {};
-    class rhs_rpg26_rocket: R_PG32V_F {};
-    class rhs_rpg7v2_pg7vl: rhs_rpg26_rocket {};
+    class rhs_rpg7v2_pg7vl;
     class rhs_rpg7v2_og7v: rhs_rpg7v2_pg7vl {
-        EGVAR(frag,enabled) = 1;
         EGVAR(frag,metal) = 400;
         EGVAR(frag,charge) = 210;
         EGVAR(frag,gurney_c) = 2800;

@@ -4,7 +4,7 @@
  * Checks if the player can dig on the surface below (enough dust).
  *
  * Arguments:
- * 0: Unit or Position (2d/3d) <OBJECT><ARRAY>
+ * 0: Unit or Position (2d/3d) <OBJECT or ARRAY>
  *
  * Return Value:
  * Can Dig <BOOL>

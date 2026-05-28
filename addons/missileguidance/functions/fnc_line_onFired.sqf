@@ -21,16 +21,12 @@ private _ammoConfig = configOf _projectile;
 private _p = getNumber (_ammoConfig >> QUOTE(ADDON) >> "lineGainP");
 private _d = getNumber (_ammoConfig >> QUOTE(ADDON) >> "lineGainD");
 if ((_p == 0) && {_d == 0}) then { WARNING_1("Ammo %1 has zero P/D",typeOf _projectile) };
-private _correctionDistance = getNumber (_ammoConfig >> QUOTE(ADDON) >> "correctionDistance");
 
-if (_correctionDistance == 0) then {
-    _correctionDistance = 1;
-};
+private _pid_x = [_p, 0, _d, 0] call CBA_pid_fnc_create;
+private _pid_y = [_p, 0, _d, 0] call CBA_pid_fnc_create;
 
 private _navigationParams = [
-    _p, 0, _d,
-    0,
-    0,
-    _correctionDistance
+    _pid_x,
+    _pid_y
 ];
 _navigationParams

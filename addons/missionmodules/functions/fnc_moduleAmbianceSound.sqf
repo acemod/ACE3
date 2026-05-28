@@ -92,7 +92,7 @@ TRACE_1("",_ambianceSounds);
 
             TRACE_1("",_newPosASL);
             // If no unit is to close to this position, we will play the sound.
-            if ({(_newPosASL distance _x < (_minimalDistance / 2))}count _allUnits == 0) then {
+            if (_allUnits findIf {_newPosASL distance _x < (_minimalDistance / 2)} == -1) then {
                 private _soundFile = selectRandom _ambianceSounds;
                 TRACE_2("playing file",_soundFile,_newPosASL);
                 playSound3D [_soundFile, objNull,  false, _newPosASL, _volume, 1, 1000];

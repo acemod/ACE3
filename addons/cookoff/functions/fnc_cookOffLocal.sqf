@@ -7,7 +7,7 @@
  * 0: Vehicle <OBJECT>
  * 1: Spawn fire jet <BOOL>
  * 2: Spawn fire ring <BOOL>
- * 3: What selection fire will originate from <STRING><ARRAY>
+ * 3: What selection fire will originate from <STRING or ARRAY>
  * 4: Cookoff intensity value <NUMBER>
  * 5: Start time <NUMBER>
  * 6: Duration of effect (max 20 seconds) <NUMBER>
@@ -67,7 +67,7 @@ if (isServer) then {
     private _elapsedTime = CBA_missionTime - _startTime;
 
     // Clean up effects once effects have finished or vehicle has been deleted
-    if (isNull _vehicle || {_elapsedTime >= _duration}) exitWith {
+    if (isNull _vehicle || {_elapsedTime >= _duration} || {!(_vehicle getVariable [QGVAR(isCookingOff), false])}) exitWith {
         (_this select 1) call CBA_fnc_removePerFrameHandler;
 
         deleteVehicle _light;

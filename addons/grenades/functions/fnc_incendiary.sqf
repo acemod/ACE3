@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Incendiary grenade <OBJECT>
- * 1: Incendiary lifetime <OBJECT>
+ * 1: Incendiary lifetime <NUMBER>
  * 2: Instigator's side <SIDE>
  *
  * Return Value:

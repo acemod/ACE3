@@ -25,7 +25,7 @@ if (
     _vehicle != _unit
     && {!isTurnedOut _unit}
     && GVAR(vehicleLightCondition)
-    && {!((_unit call CBA_fnc_turretPath) in GVAR(vehicleExteriorTurrets))}
+    && {!((_vehicle unitTurret _unit) in GVAR(vehicleExteriorTurrets))}
 ) exitWith {
     TRACE_1("Player in a enclosed vehicle",GVAR(vehicleLightColor));
     [GVAR(vehicleLightColor) isNotEqualTo [1,1,1,0], GVAR(vehicleLightColor)]

@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Tagging">
+        <Key ID="STR_ACE_Tagging_ChalkBlack">
+            <English>Chalk (Black)</English>
+            <French>Craie (noire)</French>
+            <Spanish>Tiza (Negra)</Spanish>
+            <Russian>Мел (Черный)</Russian>
+            <German>Kreide (Schwarz)</German>
+            <Japanese>チョーク (黒)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Tagging_ChalkBlue">
+            <English>Chalk (Blue)</English>
+            <French>Craie (bleue)</French>
+            <Spanish>Tiza (Azul)</Spanish>
+            <Russian>Мел (Синий)</Russian>
+            <German>Kreide (Blau)</German>
+            <Japanese>チョーク (青)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Tagging_ChalkGreen">
+            <English>Chalk (Green)</English>
+            <French>Craie (verte)</French>
+            <Spanish>Tiza (Verde)</Spanish>
+            <Russian>Мел (Зеленый)</Russian>
+            <German>Kreide (Grün)</German>
+            <Japanese>チョーク (緑)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Tagging_ChalkRed">
+            <English>Chalk (Red)</English>
+            <French>Craie (rouge)</French>
+            <Spanish>Tiza (Roja)</Spanish>
+            <Russian>Мел (Красный)</Russian>
+            <German>Kreide (Rot)</German>
+            <Japanese>チョーク (赤)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Tagging_ChalkWhite">
+            <English>Chalk (White)</English>
+            <French>Craie (blanche)</French>
+            <Spanish>Tiza (Blanca)</Spanish>
+            <Russian>Мел (Белый)</Russian>
+            <German>Kreide (Weiß)</German>
+            <Japanese>チョーク (白)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Tagging_ChalkYellow">
+            <English>Chalk (Yellow)</English>
+            <French>Craie (jaune)</French>
+            <Spanish>Tiza (Amarilla)</Spanish>
+            <Russian>Мел (Желтый)</Russian>
+            <German>Kreide (Gelb)</German>
+            <Japanese>チョーク (黄)</Japanese>
+        </Key>
         <Key ID="STR_ACE_Tagging_LastUsed">
             <English>Last Used</English>
             <Czech>Naposledy použitý</Czech>
@@ -12,7 +60,7 @@
             <Russian>Повторить последний</Russian>
             <German>Zuletzt benutzt</German>
             <Korean>최근 사용</Korean>
-            <Japanese>最後に使用したタグ</Japanese>
+            <Japanese>最後に使用した印</Japanese>
             <Chinese>上次最後使用</Chinese>
             <Chinesesimp>上次最后使用</Chinesesimp>
             <Turkish>Son Kullanan</Turkish>
@@ -29,7 +77,7 @@
             <Russian>Настройка работы системы спрей-маркеров по умолчанию.</Russian>
             <German>Konfiguriert, wie das Markieren standardmäßig funktioniert.</German>
             <Korean>태그 시스템의 기본사항을 설정합니다.</Korean>
-            <Japanese>タグ付けシステムの標準動作を設定します。</Japanese>
+            <Japanese>印付けシステムの標準動作を設定します。</Japanese>
             <Chinese>定義噴漆系統預設設定</Chinese>
             <Chinesesimp>定义喷漆系统预设设定</Chinesesimp>
             <Ukrainian>Налаштування роботи системи спрей-маркерів за замовчуванням.</Ukrainian>
@@ -45,7 +93,7 @@
             <Russian>Быстрый маркер</Russian>
             <German>Schnelle Markierung (Spraydose)</German>
             <Korean>스프레이 페인트 - 빠른 태그</Korean>
-            <Japanese>スプレーペイント - クイックタグ</Japanese>
+            <Japanese>スプレーペイント - クイック目印</Japanese>
             <Chinese>快速噴漆</Chinese>
             <Chinesesimp>快速喷漆</Chinesesimp>
             <Turkish>Sprey Boya- Hızlı Işaretleme</Turkish>
@@ -62,7 +110,7 @@
             <Russian>Действие, выполняемое при выборе главного пункта меню маркировки.</Russian>
             <German>Aktion, die am Haupt-Interaktionspunkt ausgeführt werden soll.</German>
             <Korean>상호작용 시 표시할 낙서를 고릅니다.</Korean>
-            <Japanese>上層にある"タグ"のインタラクションを選択した際に行われるアクション。</Japanese>
+            <Japanese>"目印"のインタラクション自体を選択した際に行われるアクション。</Japanese>
             <Chinese>直接噴漆在互動選單瞄準的點上。</Chinese>
             <Chinesesimp>直接喷漆在互动菜单瞄准的点上。</Chinesesimp>
             <Ukrainian>Дія, що виконується під час вибору головного пункту меню маркування.</Ukrainian>
@@ -214,7 +262,7 @@
             <Russian>Маркер</Russian>
             <German>Markieren (Spraydose)</German>
             <Korean>태그</Korean>
-            <Japanese>タグ (スプレーペイント)</Japanese>
+            <Japanese>目印</Japanese>
             <Chinese>噴漆</Chinese>
             <Chinesesimp>喷漆</Chinesesimp>
             <Turkish>Işaretle</Turkish>
@@ -231,7 +279,7 @@
             <Russian>Маркировка</Russian>
             <German>Markieren (Spraydose)</German>
             <Korean>태그하기</Korean>
-            <Japanese>タグ付け</Japanese>
+            <Japanese>目印付け</Japanese>
             <Chinese>噴漆</Chinese>
             <Chinesesimp>喷漆</Chinesesimp>
             <Turkish>Işaretleme</Turkish>
@@ -315,18 +363,26 @@
             <Chinesesimp>十字</Chinesesimp>
             <Ukrainian>Перехрестя</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Tagging_descChalk">
+            <English>A chalk marker for tagging walls.</English>
+            <French>Un crayon à la craie pour marquer les murs.</French>
+            <Spanish>Tiza para marcar paredes.</Spanish>
+            <Russian>Меловой маркер для разметки стен.</Russian>
+            <German>Ein Kreidestift um Wände zu markieren.</German>
+            <Japanese>壁に目印を描くためのチョークマーカー。</Japanese>
+        </Key>
         <Key ID="STR_ACE_Tagging_descSpraypaint">
             <English>A can of spray paint for tagging walls.</English>
             <Czech>Plechovka se sprejem k vytváření značek.</Czech>
             <French>Une bombe de peinture en spray pour tagger les murs.</French>
-            <Spanish>Lata de pintura en aerosol para marcar.</Spanish>
+            <Spanish>Lata de pintura en aerosol para marcar paredes.</Spanish>
             <Italian>Una bomboletta spay per applicare marker sui muri.</Italian>
             <Polish>Farba w sprayu, służy do oznakowywania terenu.</Polish>
             <Portuguese>Uma lata de tinta spray para marcar paredes.</Portuguese>
             <Russian>Балончик спрея для рисования маркеров на стенах.</Russian>
             <German>Eine Farbsprühdose um Wände zu markieren.</German>
             <Korean>벽에 낙서할 수 있는 스프레이캔 입니다.</Korean>
-            <Japanese>壁にタグを描くためのスプレーペイント缶。</Japanese>
+            <Japanese>壁に目印を描くためのスプレーペイント缶。</Japanese>
             <Chinese>噴漆可噴塗在牆壁上</Chinese>
             <Chinesesimp>喷漆可喷涂在墙壁上</Chinesesimp>
             <Ukrainian>Балончик спрею для малювання маркерів на стінах.</Ukrainian>
@@ -392,7 +448,7 @@
             <Russian>Заменяет тег клана трафаретным текстом</Russian>
             <German>Ersetzt das Clan-Tag durch Schablonentext</German>
             <Korean>클랜 태그를 스텐실 텍스트로 바꿉니다.</Korean>
-            <Japanese>部隊タグをステンシルテキストに置き換える</Japanese>
+            <Japanese>部隊章をステンシルテキストに置き換える</Japanese>
             <Chinesesimp>用模板文字代替战队徽标</Chinesesimp>
             <Ukrainian>Замінює тег клану трафаретним текстом</Ukrainian>
         </Key>

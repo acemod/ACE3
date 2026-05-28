@@ -18,5 +18,4 @@ class CfgAmmo {
     class PipeBombBase: PipeBombCore {
         GVAR(detectable) = 1;
     };
-
 };

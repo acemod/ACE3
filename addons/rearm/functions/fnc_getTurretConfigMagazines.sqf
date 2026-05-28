@@ -4,7 +4,7 @@
  * Returns all magazines a turret of a vehicle object can hold according to config.
  *
  * Arguments:
- * 0: Vehicle object or typeOf <OBJECT><STRING>
+ * 0: Vehicle object or typeOf <OBJECT or STRING>
  * 1: Turret Path <ARRAY>
  *
  * Return Value:

@@ -45,7 +45,7 @@ jobs:
     runs-on: ${{ matrix.arrays.os.tag }}
     steps:
     - name: Checkout the source code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
     - name: Install stable Rust
       uses: actions-rs/toolchain@v1
       with:
@@ -57,7 +57,7 @@ jobs:
     - name: Build
       run: cargo build --verbose
     - name: Upload
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v6
       with:
         name: ${{ matrix.arrays.os.target }}
         path: target/debug/ace.dll

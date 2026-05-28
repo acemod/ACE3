@@ -5,13 +5,12 @@
  *
  * Arguments:
  * 0: player <OBJECT>
- * 1: sides <ARRAY<OBJECT>>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, [west]] call ace_switchunits_fnc_initPlayer
+ * [player] call ace_switchunits_fnc_initPlayer
  *
  * Public: No
  */

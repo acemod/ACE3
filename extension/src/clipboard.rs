@@ -1,5 +1,5 @@
 use arboard::Clipboard;
-use arma_rs::{loadout::Loadout, FromArma, Group};
+use arma_rs::{FromArma, Group, loadout::Loadout};
 
 pub fn group() -> Group {
     Group::new()

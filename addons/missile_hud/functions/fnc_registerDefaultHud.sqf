@@ -17,10 +17,7 @@
 
 [{
     params ["_unit", "_vehicle", "_weapon"];
-    private _turretPath = _unit call CBA_fnc_turretPath;
-    if (_unit == driver _vehicle) then {
-        _turretPath = [-1];
-    };
+    private _turretPath = _vehicle unitTurret _unit;
     private _pylons = (getAllPylonsInfo _vehicle) select { (_x select 2) isEqualTo _turretPath };
     private _hasAttackMode = false;
     scopeName "cond";
@@ -46,10 +43,7 @@
     params ["_unit", "_vehicle", "_weapon"];
     private _magazineDetails = createHashMap;
 
-    private _turretPath = _unit call CBA_fnc_turretPath;
-    if (_unit == driver _vehicle) then {
-        _turretPath = [-1];
-    };
+    private _turretPath = _vehicle unitTurret _unit;
     private _pylons = (getAllPylonsInfo _vehicle) select { (_x select 2) isEqualTo _turretPath };
     {
         _x params ["", "", "", "_magazine"];
@@ -64,7 +58,7 @@
             private _config = configFile >> QEGVAR(missileguidance,AttackProfiles) >> _x;
             _modes set [_x, [getText (_config >> "name"), getText (_config >> "nameLocked")]];
         } forEach _attackProfiles;
-        
+
         _magazineDetails set [_magazine, [_modes, _defaultAttackProfile, _hudFnc, _ammoConfig]];
     } forEach _pylons;
 
@@ -72,10 +66,7 @@
 }, {
     params ["_unit", "_vehicle", "_weapon", "_params"];
     _params params ["_magazineDetails"];
-    private _turretPath = _unit call CBA_fnc_turretPath;
-    if (_unit == driver _vehicle) then {
-        _turretPath = [-1];
-    };
+    private _turretPath = _vehicle unitTurret _unit;
     private _magazine = _vehicle currentMagazineTurret _turretPath;
     if !(_magazine in _magazineDetails) exitWith { [] };
     (_magazineDetails get _magazine) params ["_modes", "_defaultAttackProfile", "_hudFnc", "_ammoConfig"];

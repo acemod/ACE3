@@ -25,6 +25,8 @@ private _success = if (_type != "SPACER") then {
     if !((_color isEqualTypeArray [0, 0, 0]) || (_color isEqualTypeArray [0, 0, 0, 0])) exitWith { TRACE_1("Invalid - Color not number",_color); false };
     if (-1 != _color findIf { _x > 1 || _x < 0 }) exitWith { TRACE_1("Invalid - Color not in range [0, 1]",_color); false };
     true
+} else {
+    true
 };
 if !(_success) exitWith { false };
 

@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: LongPath <ARRAY>
- * 1: ShortPath <STRING>
+ * 1: ShortPath <ARRAY>
  *
  * Return Value:
  * Bool <BOOL>

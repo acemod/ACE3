@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: PFH arguments <ARRAY>
- * 1: PFH handle <OBJECT>
+ * 1: PFH handle <NUMBER>
  *
  * Return Value:
  * None

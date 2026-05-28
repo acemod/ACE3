@@ -6,8 +6,8 @@ class CfgVehicles {
                 class GVAR(copyRangeCard) {
                     displayName = CSTRING(CopyRangeCard);
                     distance = 2.0;
-                    condition = QUOTE(_target call FUNC(canCopy));
-                    statement = QUOTE(_target call FUNC(updateClassNames));
+                    condition = QUOTE(call FUNC(canCopy));
+                    statement = QUOTE(call FUNC(updateClassNames));
                     icon = QPATHTOF(UI\RangeCard_Icon.paa);
                 };
             };
@@ -16,14 +16,15 @@ class CfgVehicles {
             class ACE_Equipment {
                 class GVAR(open) {
                     displayName = CSTRING(OpenRangeCard);
-                    condition = QUOTE(call FUNC(canShow) && !GVAR(RangeCardOpened));
+                    condition = QUOTE(call FUNC(canShow));
                     statement = QUOTE(false call FUNC(openRangeCard));
                     showDisabled = 0;
                     icon = QPATHTOF(UI\RangeCard_Icon.paa);
                     exceptions[] = {"notOnMap", "isNotInside"};
+
                     class GVAR(openCopy) {
                         displayName = CSTRING(OpenRangeCardCopy);
-                        condition = QUOTE(call FUNC(canShowCopy) && !GVAR(RangeCardOpened));
+                        condition = QUOTE(call FUNC(canShowCopy));
                         statement = QUOTE(true call FUNC(openRangeCard));
                         showDisabled = 0;
                         icon = QPATHTOF(UI\RangeCard_Icon.paa);
@@ -31,8 +32,16 @@ class CfgVehicles {
                     };
                     class GVAR(makeCopy) {
                         displayName = CSTRING(CopyRangeCard);
-                        condition = QUOTE(call FUNC(canShow) && !GVAR(RangeCardOpened));
-                        statement = QUOTE(GVAR(zeroRangeCopy)=GVAR(zeroRange); GVAR(boreHeightCopy)=GVAR(boreHeight); GVAR(ammoClassCopy)=GVAR(ammoClass); GVAR(magazineClassCopy)=GVAR(magazineClass); GVAR(weaponClassCopy)=GVAR(weaponClass););
+                        condition = QUOTE(call FUNC(canShow));
+                        statement = QUOTE(GVAR(rangeCardCopyInfo) = +GVAR(rangeCardInfo));
+                        showDisabled = 0;
+                        icon = QPATHTOF(UI\RangeCard_Icon.paa);
+                        exceptions[] = {"notOnMap", "isNotInside"};
+                    };
+                    class GVAR(deleteCopy) {
+                        displayName = CSTRING(DeleteRangeCardCopy);
+                        condition = QUOTE(call FUNC(canShowCopy));
+                        statement = QUOTE(GVAR(rangeCardCopyInfo) = []);
                         showDisabled = 0;
                         icon = QPATHTOF(UI\RangeCard_Icon.paa);
                         exceptions[] = {"notOnMap", "isNotInside"};
@@ -47,7 +56,7 @@ class CfgVehicles {
         author = "Ruthberg";
         scope = 2;
         scopeCurator = 2;
-        displayName = "Range Card";
+        displayName = CSTRING(Name);
         vehicleClass = "Items";
         class TransportItems {
             MACRO_ADDITEM(ACE_RangeCard,1);
