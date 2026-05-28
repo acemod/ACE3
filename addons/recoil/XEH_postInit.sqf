@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-// This is too niche to be a setting, but making it not a magic number is good
+// This is too niche to be a setting, but making it not just hardcoded is good
 GVAR(extraLauncherShake) = 25.0;
 
 // Register fire event handler
