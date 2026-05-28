@@ -129,7 +129,6 @@ while {_remainingEmptyPositions > 0} do {
     DEC(_remainingEmptyPositions);
 };
 
-// Cleanup all temporary seat holders
 {
     _vehicle deleteVehicleCrew _x;
 } forEach _seatHolders;
