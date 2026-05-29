@@ -21,7 +21,11 @@ params ["_unit", "_target"];
 private _alive = alive _target;
 private _isPerson = _target isKindOf "CAManBase";
 
-if !((_alive || _isPerson) && {_target getVariable [QGVAR(canDrag), false]} && {isNull objectParent _target}) exitWith {false};
+if !(
+    (_alive || _isPerson)
+    && {_target getVariable [QGVAR(canDrag), false]}
+    && {isNull objectParent _target || {_target isKindOf "WeaponHolder"}}
+) exitWith {false};
 
 if !([_unit, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
 

@@ -24,7 +24,7 @@ private _isPerson = _target isKindOf "CAManBase";
 if !(
     (_alive || _isPerson)
     && {_target getVariable [QGVAR(canCarry), false]}
-    && {isNull objectParent _target || {!isNull getCorpse _target}}
+    && {isNull objectParent _target || {_target isKindOf "WeaponHolder"} || {!isNull getCorpse _target}}
 ) exitWith {false};
 
 if !([_unit, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
