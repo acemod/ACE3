@@ -17,9 +17,9 @@
  */
 
 params ["_unit", "_vehicle"];
-TRACE_5("loadDeadPerson",_unit,_vehicle,typeOf _vehicle,local _unit,local _vehicle);
+TRACE_4("loadDeadPerson",_unit,_vehicle,typeOf _vehicle,local _unit);
 
-if (!local _vehicle) exitWith {ERROR_4("loadDeadPerson vehicle not local _unit=%1[%2] _vehicle=%3[%4]",_unit,typeOf _unit,_vehicle,typeOf _vehicle)};
+if (!local _vehicle) exitWith {ERROR_4("loadDeadPerson vehicle not local; unit=%1[%2] vehicle=%3[%4]",_unit,typeOf _unit,_vehicle,typeOf _vehicle)};
 
 #define PRIORITY_NONE         -1
 #define PRIORITY_DRIVER        0
@@ -90,21 +90,22 @@ private _bestSeatsParams = [];
 } forEach _emptySeats;
 
 if (_bestSeatsPriority == PRIORITY_NONE) exitWith {
-    TRACE_2("No seats found",_emptySeats apply {_x select [ARR_2(1,4)]},fullCrew _vehicle apply {_x select [ARR_2(0,5)]});
+    TRACE_2("No seats found",_emptySeats apply {_x select [ARR_2(1,3)]},fullCrew _vehicle apply {_x select [ARR_2(0,4)]});
 };
 
-TRACE_3("emptySeats",_bestSeatsPriority,_bestSeatsRole,_bestSeatsParams);
+private _moveInAnyPosition = toUpper _bestSeatsRole;
+private _emptyPositions = _vehicle emptyPositions [_moveInAnyPosition];
+TRACE_4("emptySeats",_bestSeatsPriority,_bestSeatsRole,_bestSeatsParams,_emptyPositions);
 
 // Probe seat positions using temporary units to identify exact seat
 private _seatHolders = [];
-private _moveInAnyPosition = toUpper _bestSeatsRole;
-private _remainingEmptyPositions = _vehicle emptyPositions [_moveInAnyPosition]; // Guard against infinite loop
-while {_remainingEmptyPositions > 0} do {
+
+while {_emptyPositions > 1} do {
     private _seatHolder = createVehicleLocal [QGVAR(seatHolder), [0,0,0], [], 0, "CAN_COLLIDE"];
     private _seatHolderMoveSuccess = _seatHolder moveInAny [_vehicle, [_moveInAnyPosition]];
     private _seatHolderSeat = fullCrew _vehicle select {_x select 0 == _seatHolder};
     if (!_seatHolderMoveSuccess || {_seatHolderSeat isEqualTo []}) then {
-        ERROR_8("moveInAny holder failed _unit=%1[%2] _vehicle=%3[%4] _seatHolder=%5 _seatHolderMoveSuccess=%6 fullCrew=%7 %8",_unit,typeOf _unit,_vehicle,typeOf _vehicle,_seatHolder,_seatHolderMoveSuccess,fullCrew _vehicle apply {_x select [ARR_2(0,5)]},__FILE__);
+        ERROR_8("moveInAny holder failed unit=%1[%2] vehicle=%3[%4] pos=%5 seatHolder=%6 success=%7 fullCrew=%8",_unit,typeOf _unit,_vehicle,typeOf _vehicle,_moveInAnyPosition,_seatHolder,_seatHolderMoveSuccess,fullCrew _vehicle apply {_x select [ARR_2(0,4)]});
         _vehicle deleteVehicleCrew _seatHolder;
         if (!isNull _seatHolder) then { // failsafe
             moveOut _seatHolder;
@@ -112,21 +113,24 @@ while {_remainingEmptyPositions > 0} do {
         };
         break;
     };
-    _seatHolderSeat select 0 params ["", "_role", "_cargoIndex", "_turretPath"];
+    _seatHolderSeat select 0 params ["", "", "_cargoIndex", "_turretPath"];
+    TRACE_3("seatHolder",_emptyPositions,_cargoIndex,_turretPath);
     if ([_cargoIndex, _turretPath] in _bestSeatsParams) then {
         _vehicle deleteVehicleCrew _seatHolder;
-        private _unitMoveSuccess = _unit moveInAny [_vehicle, [_moveInAnyPosition]];
-        if (_unitMoveSuccess) then {
-            [QGVAR(deadPersonLoaded), _unit] call CBA_fnc_globalEvent; // Ensure dead unit stays unconscious on all clients
-        } else {
-            ERROR_8("moveInAny unit failed _unit=%1[%2] _vehicle=%3[%4] _seatHolder=%5 _seatHolderSeat=%6 fullCrew=%7 %8",_unit,typeOf _unit,_vehicle,typeOf _vehicle,_seatHolder,_seatHolderSeat,fullCrew _vehicle apply {_x select [ARR_2(0,5)]},__FILE__);
-        };
-        TRACE_4("seat",_remainingEmptyPositions,_role,_cargoIndex,_turretPath);
+        _emptyPositions = 1;
         break;
     };
-    TRACE_4("seatHolder",_remainingEmptyPositions,_role,_cargoIndex,_turretPath);
     _seatHolders pushBack _seatHolder;
-    DEC(_remainingEmptyPositions);
+    DEC(_emptyPositions);
+};
+
+if (_emptyPositions == 1) then { // need this check in case of seatHolder moveInAny fail
+    private _unitMoveSuccess = _unit moveInAny [_vehicle, [_moveInAnyPosition]];
+    if (_unitMoveSuccess) then {
+        [QGVAR(deadPersonLoaded), _unit] call CBA_fnc_globalEvent; // Ensure dead unit stays unconscious on all clients
+    } else {
+        ERROR_8("moveInAny unit failed unit=%1[%2] vehicle=%3[%4] pos=%5 local=%6 seatHolders=%7 fullCrew=%8",_unit,typeOf _unit,_vehicle,typeOf _vehicle,_moveInAnyPosition,local _unit,_seatHolders,fullCrew _vehicle apply {_x select [ARR_2(0,4)]});
+    };
 };
 
 {
