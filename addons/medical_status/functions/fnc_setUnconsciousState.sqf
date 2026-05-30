@@ -25,6 +25,9 @@ if (_active isEqualTo IS_UNCONSCIOUS(_unit) || {!alive _unit}) exitWith { TRACE_
 
 _unit setVariable [VAR_UNCON, _active, true];
 
+// Hide hud when knocked unconscious
+private _hudMask = [];
+
 // Toggle unit ragdoll state
 [_unit, _active] call EFUNC(medical_engine,setUnconsciousAnim);
 
@@ -32,6 +35,8 @@ _unit setVariable [VAR_UNCON, _active, true];
 [_unit, _active] call FUNC(setStatusEffects);
 
 if (_active) then {
+    _hudMask resize [10, false];
+
     // Don't bother setting this if not used
     if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
         private _lastWakeUpCheck = _unit getVariable [QEGVAR(medical,lastWakeUpCheck), 0]; // could be set higher from ace_medical_fnc_setUnconscious
@@ -81,6 +86,11 @@ if (_active) then {
             };
         };
     };
+};
+
+if (_unit == ace_player) then {
+    [QEGVAR(ui,hideHud), [_active]] call CBA_fnc_localEvent;
+    [QGVAR(unconscious), _hudMask] call EFUNC(common,showHud);
 };
 
 // This event doesn't correspond to unconscious in statemachine
