@@ -151,6 +151,7 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
     private _currentDisplayName = "";
     private _currentClassname = "";
 
+    private _isMagazine = isClass (configFile >> "CfgMagazines" >> _searchString); // Check if search term is a magazine for magazine lookups. Direct match is fine as user will ctrl+c the classname
     // Go through all items in panel and see if they need to be deleted or not
     for "_lbIndex" from (lbSize _leftPanelCtrl) - 1 to 0 step -1 do {
         _currentDisplayName = _leftPanelCtrl lbText _lbIndex;
@@ -159,7 +160,7 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
         if (_currentDisplayName isEqualTo format [" <%1>", localize "str_empty"]) then {continue};
 
         // Remove item in panel if it doesn't match search, skip otherwise
-        if ((_currentDisplayName == "") || {!(_currentDisplayName regexMatch _searchPattern) && {!(_currentClassname regexMatch _searchPattern) && {!(isClass (configFile >> "CfgMagazines" >> _searchString) && {_searchString in (compatibleMagazines _currentClassname)})}}}) then {
+        if ((_currentDisplayName == "") || {!(_currentDisplayName regexMatch _searchPattern) && {!(_currentClassname regexMatch _searchPattern) && {!_isMagazine && {_searchString in (compatibleMagazines _currentClassname)}}}}) then {
             _leftPanelCtrl lbDelete _lbIndex;
         };
     };
