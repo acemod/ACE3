@@ -156,8 +156,10 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
         _currentDisplayName = _leftPanelCtrl lbText _lbIndex;
         _currentClassname = _leftPanelCtrl lbData _lbIndex;
 
+        if (_currentDisplayName isEqualTo format [" <%1>", localize "str_empty"]) then {continue};
+
         // Remove item in panel if it doesn't match search, skip otherwise
-        if ((_currentDisplayName == "") || {!(_currentDisplayName regexMatch _searchPattern) && {!(_currentClassname regexMatch _searchPattern)}}) then {
+        if ((_currentDisplayName == "") || {!(_currentDisplayName regexMatch _searchPattern) && {!(_currentClassname regexMatch _searchPattern) && {!(isClass (configFile >> "CfgMagazines" >> _searchString) && {_searchString in (compatibleMagazines _currentClassname)})}}}) then {
             _leftPanelCtrl lbDelete _lbIndex;
         };
     };
