@@ -61,7 +61,7 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
             _currentClassname = _rightPanelCtrl lbData _lbIndex;
 
             // Remove item in panel if it doesn't match search, skip otherwise
-            if ((_currentDisplayName == "") || {!(_currentDisplayName regexMatch _searchPattern) && {!(_currentClassname regexMatch _searchPattern) && {!(GVAR(searchMagazines) && _searchString in (compatibleMagazines _currentClassname))}}}) then {
+            if ((_currentDisplayName == "") || {!(_currentDisplayName regexMatch _searchPattern) && {!(_currentClassname regexMatch _searchPattern)}}) then {
                 _rightPanelCtrl lbDelete _lbIndex;
             };
         };
