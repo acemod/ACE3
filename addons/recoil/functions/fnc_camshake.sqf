@@ -38,6 +38,12 @@ private _recoil = GVAR(recoilCache) getOrDefaultCall [_weapon + _muzzle, {
         getText (_config >> _muzzle >> "recoil")
     };
 
+    private _customShakeCoef = if (isNumber (configFile >> "CfgRecoils" >> _recoil >> QGVAR(customShakeCoef))) then {
+        getNumber (configFile >> "CfgRecoils" >> _recoil >> QGVAR(customShakeCoef))
+    } else {
+        1
+    };
+
     if (isClass (configFile >> "CfgRecoils" >> _recoil)) then {
         _recoil = getArray (configFile >> "CfgRecoils" >> _recoil >> "kickBack");
 
@@ -46,12 +52,6 @@ private _recoil = GVAR(recoilCache) getOrDefaultCall [_weapon + _muzzle, {
         };
     } else {
         _recoil = [0, 0];
-    };
-
-    private _customShakeCoef = if (isNumber (configFile >> "CfgRecoils" >> _recoil >> QGVAR(customShakeCoef))) then {
-        getNumber (configFile >> "CfgRecoils" >> _recoil >> QGVAR(customShakeCoef))
-    } else {
-        1
     };
 
 
