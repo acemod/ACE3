@@ -75,7 +75,7 @@ ACE_10Rnd_762x54_Tracer_mag | 7.62mm | Magazine |
 
 Class Name | In-Game Name | Type   |
 ---------- | --------- | ---------
-ACE_CableTie | cable tie |  ACE_ItemCore |
+ACE_CableTie | Cable Tie |  ACE_ItemCore |
 
 ### Chemlights
 
@@ -97,7 +97,7 @@ ACE_Chemlight_IR | Chemlight (IR) | Throwable |
 
 Class Name | In-Game Name | Type   |
 ---------- | --------- | ---------
-ACE_Banana | banana |  ACE_ItemCore |
+ACE_Banana | Banana |  ACE_ItemCore |
 
 ### Concertina Wire
 
@@ -198,7 +198,7 @@ ACE_EHP | Electronic Hearing Protection | ACE_ItemCore |
 
 Class Name | In-Game Name | Type   |
 ---------- | --------- | ---------
-ACE_HuntIR_monitor | HuntIR monitor | ACE_ItemCore |
+ACE_HuntIR_monitor | HuntIR Monitor | ACE_ItemCore |
 ACE_HuntIR_M203 | HuntIR Round | Grenade shell |
 ACE_HuntIR_Box | HuntIR Transport Box | ammo box |
 
@@ -230,7 +230,7 @@ ACE_Kestrel4500 | Kestrel 4500NV | ACE_ItemCore |
 Class Name | In-Game Name | Type   |
 ---------- | --------- | ---------
 acc_pointer_IR | Laser Pointer (red) | Weapon accessory |
-ACE_acc_pointer_red | Laser Pointer (green) | Weapon accessory |
+ACE_acc_pointer_red | Laser Pointer (red) | Weapon accessory |
 ACE_acc_pointer_green_IR | Laser Pointer (green) | Weapon accessory |
 ACE_acc_pointer_green | Laser Pointer (green) | Weapon accessory |
 
@@ -257,7 +257,7 @@ ACE_MapTools | Map Tools | ACE_ItemCore |
 
 Class Name | In-Game Name | Type   |
 ---------- | --------- | ---------
-ACE_atropine | Atropin auto injector | ACE_ItemCore |
+ACE_atropine | Atropine Autoinjector | ACE_ItemCore |
 ACE_fieldDressing | Bandage (Basic) | ACE_ItemCore |
 ACE_elasticBandage | Bandage (Elastic) | ACE_ItemCore |
 ACE_quikclot | Basic Field Dressing (QuikClot) | ACE_ItemCore |
@@ -373,7 +373,7 @@ ACE_ReserveParachute | Reserve Parachute | Backpack |
 
 Class Name | In-Game Name | Type   |
 ---------- | --------- | ---------
-ACE_RangeCard | rangecard | ACE_ItemCore |
+ACE_RangeCard | Range Card | ACE_ItemCore |
 
 ### Repair
 
@@ -479,8 +479,8 @@ ACE_key_civ | Vehicle Key: Civilian | ACE_ItemCore |
 
 Class Name | In-Game Name | Type   |
 --------- | --------- | ---------
-ACE_Vector | Vector 21 | Binoculars |
-ACE_VectorDay | Vector 21 (Day) | Binoculars |
+ACE_Vector | Vector 21 Nite | Binoculars |
+ACE_VectorDay | Vector 21 | Binoculars |
 
 ### Yardage 450
 
