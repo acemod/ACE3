@@ -21,10 +21,12 @@
         <Key ID="STR_ACE_MineDetector_BoostRadius">
             <English>Boost Radius</English>
             <Japanese>ブースト範囲(半径)</Japanese>
+            <Russian>Увеличение радиуса</Russian>
         </Key>
         <Key ID="STR_ACE_MineDetector_BoostRadius_Desc">
             <English>Adds the value in meters to boost the radius of each individual mine detector.</English>
             <Japanese>各地雷探知機の探知範囲を拡大します。 値はメートル単位でを加算されます。</Japanese>
+            <Russian>Увеличивает радиус действия каждого отдельного миноискателя на указанное значение в метрах.</Russian>
         </Key>
         <Key ID="STR_ACE_MineDetector_Category">
             <English>Mine Detector</English>
@@ -135,7 +137,7 @@
             <Italian>Metal detector</Italian>
             <Polish>Wykrywacz metali</Polish>
             <Portuguese>Detector de Metais</Portuguese>
-            <Russian>Детектор металла</Russian>
+            <Russian>Металлоискатель</Russian>
             <German>Metalldetektor</German>
             <Korean>지뢰탐지기</Korean>
             <Japanese>金属探知機</Japanese>
@@ -152,7 +154,7 @@
             <Italian>Metal detector</Italian>
             <Polish>Wykrywacz metali</Polish>
             <Portuguese>Detector de Metais</Portuguese>
-            <Russian>Детектор металла</Russian>
+            <Russian>Металлоискатель</Russian>
             <German>Metalldetektor</German>
             <Korean>지뢰탐지기</Korean>
             <Japanese>金属探知機</Japanese>
@@ -164,6 +166,7 @@
         <Key ID="STR_ACE_MineDetector_arsenalStatRadius">
             <English>Mine detection radius</English>
             <Japanese>地雷探知範囲(半径)</Japanese>
+            <Russian>Радиус обнаружения мин</Russian>
         </Key>
     </Package>
 </Project>

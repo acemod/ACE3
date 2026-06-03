@@ -1822,31 +1822,38 @@
         <Key ID="STR_ACE_Medical_GUI_medicalHintEnabled_DisplayName">
             <English>Medical Menu Message Enabled</English>
             <Japanese>医療メニューメッセージ有効化</Japanese>
+            <Russian>Включено сообщение медицинского меню</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_medicalHintEnabled_Description">
             <English>If enabled, patients will have a customizable message displayed when a player opens their medical menu.</English>
             <Japanese>有効化すると、プレイヤーが医療メニューを開いた際に、患者にカスタマイズ可能なメッセージが表示されます。</Japanese>
+            <Russian>Если эта функция включена, при открытии медицинского меню у пациентов будет отображаться настраиваемое сообщение.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_medicalHintMessage_defaultMessage">
             <!-- %1 = medic's name -->
             <English>%1 is treating you</English>
             <Japanese>%1 が治療中です</Japanese>
+            <Russian>%1 лечит вас</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_medicalHintMessage_DisplayName">
             <English>Medical Menu Message</English>
             <Japanese>医療メニューメッセージ</Japanese>
+            <Russian>Сообщение медицинского меню</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_medicalHintMessage_Description">
             <English>Custom message to display to patients when opening their medical menu.\n%1 will be your name.</English>
             <Japanese>患者が医療メニューを開いた際に表示されるカスタムメッセージ。\n%1は治療者の名前です。</Japanese>
+            <Russian>Пользовательское сообщение, которое отображается для пациентов при открытии медицинского меню. \n%1 — это ваше имя.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_medicalHintMedicIcon_DisplayName">
             <English>Medical Menu Medic Icon</English>
             <Japanese>医療メニューのメディックアイコン</Japanese>
+            <Russian>Значок медика в медицинском меню</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_medicalHintMedicIcon_Description">
             <English>Image path to display in the medical hint if the player is a medic.</English>
             <Japanese>プレイヤーがメディックの場合、医療ヒントに表示される画像ファイルのパスを設定します。</Japanese>
+            <Russian>Путь к изображению, которое будет отображаться в медицинской подсказке, если игрок — медик.</Russian>
         </Key>
     </Package>
 </Project>
