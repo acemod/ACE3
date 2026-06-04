@@ -7,5 +7,8 @@
             <Japanese>赤外線レーザー照準器と距離計</Japanese>
             <Russian>ИК-лазерная указка и дальномер</Russian>
         </Key>
+        <Key ID="STR_ACE_MILR_milrRangeDisplay">
+            <English>Range: %1 Meters</English>
+        </Key>
     </Package>
 </Project>
