@@ -69,7 +69,7 @@ addMissionEventHandler ["Loaded", {
     } forEach GVAR(fixedStatics);
 }];
 
-["ace_unconscious", {
+["ace_unconscious_animation", {
     params ["_unit", "_active"];
     if (_active) then {
         // Use object reference to indicate the waitUnit is already running (this prevents issues with respawning units keeping SetVars)
