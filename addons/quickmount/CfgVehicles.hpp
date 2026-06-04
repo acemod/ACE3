@@ -42,10 +42,10 @@ class CfgVehicles {
             class ACE_MainActions { \
                 class GVAR(GetIn) { \
                     displayName = "$STR_rscMenu.hppRscGroupRootMenu_Items_GetIn1"; \
-                    condition = QUOTE(call DFUNC(canShowFreeSeats) && {_this select 2 set [ARR_2(0,call DFUNC(addFreeSeatsActions))];_this select 2 select 0 isNotEqualTo []}); \
+                    condition = QUOTE(call DFUNC(canShowFreeSeats) && {_actionParams set [ARR_2(0,call DFUNC(addFreeSeatsActions))];_actionParams select 0 isNotEqualTo []}); \
                     statement = QUOTE(call DFUNC(getInNearest)); \
                     exceptions[] = {"isNotSwimming"}; \
-                    insertChildren = QUOTE((_this select 2) param [ARR_2(0,[])]); \
+                    insertChildren = QUOTE(_actionParams param [ARR_2(0,[])]); \
                 }; \
             }; \
         }; \
