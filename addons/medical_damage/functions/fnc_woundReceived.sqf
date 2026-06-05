@@ -37,7 +37,8 @@ private _lastHandlerName = _woundHandlers select -1 select 0; // will usually be
     TRACE_2("Wound handler returned",_damageData,_handlerName);
 
     // Done
-    if (_handlerName == _lastHandlerName) then {
+    if (_handlerName == _lastHandlerName || {_damageData isEqualTo []}) then {
+        TRACE_2("Wound handling done",_damageData,_handlerName);
         break;
     };
 

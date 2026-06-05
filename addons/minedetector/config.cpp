@@ -14,9 +14,10 @@ class CfgPatches {
     };
 };
 
+#include "ACE_Arsenal_Stats.hpp"
+#include "ACE_detector.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgSounds.hpp"
-#include "ACE_detector.hpp"

@@ -40,7 +40,7 @@ if ((count _door == 7) && {(_door select [0, 6]) == "door_0"}) then {
     _lockedVariableAlt = format ["bis_disabled_door_%1", _door select [6, 1]]; // stip off the leading zero then check both vars
 };
 
-// Check if the door can be locked aka have locked variable, otherwhise cant lock it
+// Check if the door can be locked, i.e. it has a lock variable; otherwise, it can't be locked
 if ((_house animationPhase (_animations select 0) <= 0) &&
     {(_house getVariable [_lockedVariable, 0] == 1) || {_house getVariable [_lockedVariableAlt, 0] == 1}}) exitWith {
     private _lockedAnimation = format ["%1_locked_source", _door];

@@ -24,21 +24,21 @@ ACE3 provides a full suite of base concepts and guidance for the majority of mod
 
 Finally, flight profiles and mechanics for realistic missile simulations are also implemented; allowing for lock-steering bump guidance flight such as with the M47 Dragon or GBU steering fins, or finely tuned direct flight guidance which is currently available with other missile types.
 
-
 ## 2. Components
 
 The framework is broken up into 3 major components: Navigation Types, Seeker Types and Attack Profiles. In combination, these components build out the entire process of launching, locking and going terminal flight against targets.
 
-#### 2.1 Navigation Types
+### 2.1 Navigation Types
+
 Navigation types define how the missile flies to the designated target. ACE 3 implements the most common ones in use, Proportional Navigation, Augmented Proportional Navigation, and Zero-Effort Miss. These navigation types give an acceleration command to the missile who attempts to satisfy the command by adjusting its pitch and yaw to fly to the target.
 
-#### 2.2 Seeker Types
-Each seeker is generally assumed to be the logic for the seeker head unit within any given munition. Seekers within this framework provide the basic targeting functionality for the entire framework. The locking type will provide a generic target to the seeker, or the seeker may aquire a target on its own. The seeker then provides a target, either an object or a ASL position, which is then passed further into the framework. This target (or position) should be the actual current target position for the missiles flight. Seekers are required to perform all limitations and checks within their systems, although various limitations have been provided in this framework such as LOS FOV, laser guidance, etc.
+### 2.2 Seeker Types
 
-#### 2.3 Attack Profiles
+Each seeker is generally assumed to be the logic for the seeker head unit within any given munition. Seekers within this framework provide the basic targeting functionality for the entire framework. The locking type will provide a generic target to the seeker, or the seeker may acquire a target on its own. The seeker then provides a target, either an object or an ASL position, which is then passed further into the framework. This target (or position) should be the actual current target position for the missile's flight. Seekers are required to perform all limitations and checks within their systems, although various limitations have been provided in this framework such as LOS FOV, laser guidance, etc.
 
-An attack profile adjusts the current target flight location to create the actual flight path of the missile. The attack profile is provided with all parameters of the system, including the returned target of the seeker. Using this information, the attack profile then will adjust the *direct flight target position* to specifically direct where and how the missile shall flight.
+### 2.3 Attack Profiles
 
+An attack profile adjusts the current target flight location to create the actual flight path of the missile. The attack profile is provided with all parameters of the system, including the returned target of the seeker. Using this information, the attack profile then will adjust the *direct flight target position* to specifically direct where and how the missile shall fly.
 
 ## 3. How it all ties together
 
@@ -47,7 +47,6 @@ The system is executed in a linear series of calls to each step of the process, 
 On each step of execution, the seeker finds and returns the position of its target (ASL) and, optionally, sets target data specifying the target's direction from the missile, range, velocity and acceleration (if able). Then, this data is passed to the attack profile, which then returns an "adjusted attack position" (ASL), which is the location the missile should *currently* be homing on for flight. Finally, the navigation system processes the seeker's data about the target and returns a "Commanded Acceleration" vector which the missile attempts to satisfy.
 
 In the simplest sense, the entire system provides the flight trajectory of the missile homing directly on the "adjusted attack position"; thus, an attack profile would ajust this position to direct the missile.  For example, top down attacks return the adjusted attack position high above the target, until entering their terminal stages, which then changes the position to be directly on top of the target - thus "walking the missile" along its flight path and to the impact.
-
 
 ## 4. Config Values
 
@@ -135,6 +134,7 @@ class ace_missileguidance_attackProfiles {
 ```
 
 ### 4.4 Custom Navigation Type
+
 ```cpp
 class ace_missileguidance_navigationTypes {
     class MyNavigationProfile {

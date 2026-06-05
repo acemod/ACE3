@@ -65,6 +65,12 @@
             <Chinesesimp>已经没有剩余的弹药了。</Chinesesimp>
             <Ukrainian>Запас боєкомплекту порожній</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Rearm_Hint_MunitionDistance">
+            <English>Munition is too far from pylon. Distance: %1 m</English>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Hint_MunitionAngle">
+            <English>Munition is not aligned with pylon. Angle: %1</English>
+        </Key>
         <Key ID="STR_ACE_Rearm_Hint_RearmedTriple">
             <English>Rearmed %1 rounds of %2 on %3</English>
             <Czech>Přezbrojeno % nábojů z %2 u %3</Czech>
@@ -640,6 +646,12 @@
             <Chinese>無限彈藥</Chinese>
             <Chinesesimp>无限弹药</Chinesesimp>
             <Ukrainian>Необмежений боєзапас</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_usePylonPosition_Description">
+            <English>When rearming a pylon, the munition must be held aligned at the pylon. Only applies if Rearm Amount is not Entire Vehicle.</English>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_usePylonPosition_DisplayName">
+            <English>Use Pylon Position</English>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_vehicle">
             <English>Entire Vehicle</English>

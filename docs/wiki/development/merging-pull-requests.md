@@ -30,4 +30,4 @@ If the changes consist of trivial updates, such as spelling or indentation fixes
 
 ...then the PR can be merged right away by one of the maintainers.
 
-Non-trivial pull requests should ideally be thouroughly reviewed by multiple maintainers or at least one maintainer highly familiar with any code modified.
+Non-trivial pull requests should ideally be thoroughly reviewed by multiple maintainers or at least one maintainer highly familiar with any code modified.

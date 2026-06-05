@@ -15,7 +15,7 @@ order: 9
 - [cargo-make](https://crates.io/crates/cargo-make)  
 `cargo install --no-default-features --force cargo-make`
 
-### 1.2 Recomendations
+### 1.2 Recommendations
 
 - [VSCode](https://code.visualstudio.com/)
 - [Rust Analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)

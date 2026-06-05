@@ -20,6 +20,9 @@
 BEGIN_COUNTER(guidancePFH);
 
 params ["_args", "_pfID"];
+
+[QGVAR(guidanceTick),_args] call CBA_fnc_localEvent; // This is not API, and may be broken in the future
+
 _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams", "_targetData", "_navigationStateParams"];
 _firedEH params ["_shooter","","","","_ammo","","_projectile"];
 _launchParams params ["","_targetLaunchParams","","","","","_navigationType"];
