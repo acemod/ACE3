@@ -76,7 +76,7 @@ if (accTime > 0 && !isGamePaused) then {
     private _frontAspectMultiplier = 1;
     if (_trackingTarget isKindOf "Air") then {
         private _targetVelocity = velocity _trackingTarget;
-        
+
         private _directionToTarget = (getPosASLVisual _projectile) vectorFromTo getPosASLVisual _trackingTarget;
         private _angle = acos (_directionToTarget vectorCos _targetVelocity);
 
@@ -93,7 +93,7 @@ if (accTime > 0 && !isGamePaused) then {
             private _flareRelativeVelocity = _projectile vectorWorldToModelVisual velocity _x;
             _flareRelativeVelocity set [1, 0];
             private _angleBetweenVelocities = acos (_relativeTargetVelocity vectorCos _flareRelativeVelocity);
-            // further away targets are filtered out by assumption that target cant move instantenously
+            // Targets further away are filtered out by the assumption that the target can't move instantaneously
             private _chanceToDecoy = 1 - (_trackingTarget distance _x) / (_flareDistanceFilter * _frontAspectMultiplier);
             if !(_foundDecoy) then {
                 if (_angleBetweenVelocities <= (_flareAngleFilter * GVAR(flareAngleCoef))) then {

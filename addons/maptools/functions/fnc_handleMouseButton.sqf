@@ -4,7 +4,7 @@
  * Handle mouse buttons.
  *
  * Arguments:
- * 0: 1 if mouse down down, 0 if mouse button up <NUMBER>
+ * 0: 1 if mouse button down, 0 if mouse button up <NUMBER>
  * 1: Parameters of the mouse button event <ARRAY>
  *
  * Return Value:

@@ -227,6 +227,7 @@ if (isServer) then {
 [QGVAR(removeMagazinesTurret), {(_this select 0) removeMagazinesTurret [_this select 1, _this select 2]}] call CBA_fnc_addEventHandler;
 [QGVAR(setMagazineTurretAmmo), {(_this select 0) setMagazineTurretAmmo [_this select 1, _this select 2, _this select 3]}] call CBA_fnc_addEventHandler;
 [QGVAR(triggerAmmo), {triggerAmmo _this}] call CBA_fnc_addEventHandler;
+[QGVAR(awake), {(_this select 0) awake (_this select 1)}] call CBA_fnc_addEventHandler;
 
 [QGVAR(setVanillaHitPointDamage), {
     params ["_object", "_hitPointAnddamage"];

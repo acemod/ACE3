@@ -21,3 +21,4 @@ addMissionEventHandler ["Draw3D", {
     } forEach _mines;
 }];
 #endif
+

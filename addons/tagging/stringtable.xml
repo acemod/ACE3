@@ -3,51 +3,51 @@
     <Package name="Tagging">
         <Key ID="STR_ACE_Tagging_ChalkBlack">
             <English>Chalk (Black)</English>
+            <French>Craie (noire)</French>
             <Spanish>Tiza (Negra)</Spanish>
             <Russian>Мел (Черный)</Russian>
             <German>Kreide (Schwarz)</German>
             <Japanese>チョーク (黒)</Japanese>
-            <French>Craie (noire)</French>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkBlue">
             <English>Chalk (Blue)</English>
+            <French>Craie (bleue)</French>
             <Spanish>Tiza (Azul)</Spanish>
             <Russian>Мел (Синий)</Russian>
             <German>Kreide (Blau)</German>
             <Japanese>チョーク (青)</Japanese>
-            <French>Craie (bleue)</French>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkGreen">
             <English>Chalk (Green)</English>
+            <French>Craie (verte)</French>
             <Spanish>Tiza (Verde)</Spanish>
             <Russian>Мел (Зеленый)</Russian>
             <German>Kreide (Grün)</German>
             <Japanese>チョーク (緑)</Japanese>
-            <French>Craie (verte)</French>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkRed">
             <English>Chalk (Red)</English>
+            <French>Craie (rouge)</French>
             <Spanish>Tiza (Roja)</Spanish>
             <Russian>Мел (Красный)</Russian>
             <German>Kreide (Rot)</German>
             <Japanese>チョーク (赤)</Japanese>
-            <French>Craie (rouge)</French>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkWhite">
             <English>Chalk (White)</English>
+            <French>Craie (blanche)</French>
             <Spanish>Tiza (Blanca)</Spanish>
             <Russian>Мел (Белый)</Russian>
             <German>Kreide (Weiß)</German>
             <Japanese>チョーク (白)</Japanese>
-            <French>Craie (blanche)</French>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkYellow">
             <English>Chalk (Yellow)</English>
+            <French>Craie (jaune)</French>
             <Spanish>Tiza (Amarilla)</Spanish>
             <Russian>Мел (Желтый)</Russian>
             <German>Kreide (Gelb)</German>
             <Japanese>チョーク (黄)</Japanese>
-            <French>Craie (jaune)</French>
         </Key>
         <Key ID="STR_ACE_Tagging_LastUsed">
             <English>Last Used</English>
@@ -365,11 +365,11 @@
         </Key>
         <Key ID="STR_ACE_Tagging_descChalk">
             <English>A chalk marker for tagging walls.</English>
+            <French>Un crayon à la craie pour marquer les murs.</French>
             <Spanish>Tiza para marcar paredes.</Spanish>
             <Russian>Меловой маркер для разметки стен.</Russian>
             <German>Ein Kreidestift um Wände zu markieren.</German>
             <Japanese>壁に目印を描くためのチョークマーカー。</Japanese>
-            <French>Un crayon à la craie pour marquer les murs.</French>
         </Key>
         <Key ID="STR_ACE_Tagging_descSpraypaint">
             <English>A can of spray paint for tagging walls.</English>

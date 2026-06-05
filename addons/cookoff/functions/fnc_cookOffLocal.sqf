@@ -67,7 +67,7 @@ if (isServer) then {
     private _elapsedTime = CBA_missionTime - _startTime;
 
     // Clean up effects once effects have finished or vehicle has been deleted
-    if (isNull _vehicle || {_elapsedTime >= _duration}) exitWith {
+    if (isNull _vehicle || {_elapsedTime >= _duration} || {!(_vehicle getVariable [QGVAR(isCookingOff), false])}) exitWith {
         (_this select 1) call CBA_fnc_removePerFrameHandler;
 
         deleteVehicle _light;
