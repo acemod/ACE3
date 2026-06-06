@@ -16,7 +16,7 @@
  */
 
 params ["_ammo"];
-if (isNull _ammo || {!local _ammo}) exitWith {};
+if (isNull _ammo || {!(_ammo getShotInfo 5)}) exitWith {};
 
 _ammo addEventHandler ["Explode", { 
     params ["_projectile"];
