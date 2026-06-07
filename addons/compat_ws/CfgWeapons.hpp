@@ -60,11 +60,17 @@ class CfgWeapons {
         ACE_barrelLength = 406.4;
         ACE_barrelTwist = 178.0;
         ACE_twistDirection = 1;
+        ACE_IronSightBaseAngle = 0.096; // primary (5.56x45, default discreteDistance 200m) POI=POA -1.68mRad: 0.096°, arifle_SPAR_01_base_F 0.002856
+        ACE_RailHeightAboveBore = 6.7; // no value checkScopes.sqf, estimation based on arifle_MSBS65_UBS_F 5.1754 and test in-game (riflescope POI=POA 100m), arifle_SPAR_01_base_F 3.20768
     };
     // 20 inch barrel for the marksman/autorifle
     class arifle_XMS_lxWS;
     class arifle_XMS_M_lxWS: arifle_XMS_lxWS {
         ACE_barrelLength = 508.0;
+    };
+
+    class arifle_XMS_Shot_lxWS: arifle_XMS_Base_lxWS {
+        ACE_IronSightBaseAngle = -0.0465; // primary (5.56x45, default discreteDistance 200m) POI=POA -1.68mRad: 0.096°, secondary (Slug, default discreteDistance 50m) POI=POA +3.3mRad: -0.189°, middle value +0.81mRad -0.0465°, arifle_SPAR_01_base_F 0.002856
     };
 
     // Headgear
