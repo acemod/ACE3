@@ -6,7 +6,7 @@ class CfgWeapons {
         ACE_barrelTwist = 0.0;
         ACE_twistDirection = 0;
         ACE_RailHeightAboveBore = 4.99572; // checkScopes.sqf
-        initSpeed = -0.873; // 426, 533 m/s according to ACE_muzzleVelocities ICAO and ASM conditions (15°C, 59°F)
+        initSpeed = -0.873; // 426m/s according to ACE_muzzleVelocities ASM conditions (15°C, 59°F)
     };
 
     // Galat Arm
@@ -69,8 +69,6 @@ class CfgWeapons {
         ACE_barrelLength = 406.4;
         ACE_barrelTwist = 178.0;
         ACE_twistDirection = 1;
-        ACE_IronSightBaseAngle = 0; // arifle_SPAR_01_base_F 0.002856
-        ACE_RailHeightAboveBore = 6; // no value checkScopes.sqf, estimation based on arifle_MSBS65_UBS_F 5.1754, arifle_SPAR_01_base_F 3.20768
         initSpeed = -0.971576; // Western Sahara 900
     };
 
