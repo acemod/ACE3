@@ -104,4 +104,4 @@ TRACE_2("searching for new vehicles",_vehicleAdded,_rangeTablesShown);
             ace_player setVariable [QGVAR(rangeTablesShown), _rangeTablesShown];
         };
     };
-} forEach (nearestObjects [ace_player, ["LandVehicle"], 25]);
+} forEach (nearestObjects [ace_player, ["LandVehicle", "Ship"], 25]);
