@@ -142,17 +142,6 @@ class CfgAmmo {
         airFriction = -0.006; // based on terminal velocities, Federal Slug 1600fps 30" ASM: Mach 1 340m/s ~60m (Strelok Pro), B_12Gauge_Slug -0.008
     };
 
-    class ACE_12Gauge_Slug_NoCartridge: B_12Gauge_Slug_NoCartridge { // Hornady Shotgun Slug 300gr https://www.hornady.com/ammunition/shotgun/12-ga-sst-300-gr-ftx-slug#!/
-        ACE_caliber = 12.7; // 500 S&W https://www.hornady.com/bullets/handgun/50-cal-500-300-gr-ftx-500-s-w#!/ https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/500-s-w-mag-en.pdf
-        ACE_bulletLength = 24.03; // 0.946" (Hornady Load Data)
-        ACE_bulletMass = 19.44; // 300gr
-        ACE_ballisticCoefficients[] = {0.2};
-        ACE_standardAtmosphere = "ICAO"; // Hornady
-        ACE_muzzleVelocities[] = {425, 550, 596, 611, 646}; // Muzzle Velocities 70°F (21°C, MV 15°C +1m/s), 524m/s (317mm), 533m/s (330.2mm), 545m/s (349.7mm), 606m/s (699.3mm), 610m/s (2000fps, 30") ICAO conditions (15°C, 1013,25 hPa, 0%)
-        // 12 Gauge SAAMI test barrel 30" https://static.hornady.media/presscenter/docs/1411008168-1768498925-Hornady-2026-Product-Catalog.pdf#page=190
-        airFriction = -0.00212; // based on terminal velocities, Hornady Slug 2000fps 30" ICAO: Mach 1 340m/s ~275m (Strelok Pro)
-    };
-
     class B_556x45_Ball: BulletBase {
         airFriction=-0.00130094;
         tracerScale = 1;
