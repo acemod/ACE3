@@ -82,16 +82,13 @@ class CfgWeapons {
     };
 
     class arifle_XMS_Shot_lxWS: arifle_XMS_Base_lxWS {
+        ACE_IronSightBaseAngle = -0.0465; // primary (5.56x45, default discreteDistance 200m) POI=POA -1.68mRad: 0.096°, secondary (Slug, default discreteDistance 50m) POI=POA +3.3mRad: -0.189°, middle value +0.81mRad -0.0465°, arifle_SPAR_01_base_F 0.002856
         // initSpeed = -0.971576;
         class UBS_lxWS: Rifle_Base_F {
             ACE_barrelLength = 317; // https://modernfirearms.net/en/shotguns/u-s-a-shotguns/crye-six12-eng/
             ACE_twistDirection = 0;
             // initSpeed = 0; // tested with -2 and 1000 w/o effect on secondary UBS_lxWS muzzle velocity
         };
-    };
-
-    class arifle_XMS_Shot_lxWS: arifle_XMS_Base_lxWS {
-        ACE_IronSightBaseAngle = -0.0465; // primary (5.56x45, default discreteDistance 200m) POI=POA -1.68mRad: 0.096°, secondary (Slug, default discreteDistance 50m) POI=POA +3.3mRad: -0.189°, middle value +0.81mRad -0.0465°, arifle_SPAR_01_base_F 0.002856
     };
 
     // Headgear
