@@ -29,7 +29,14 @@ if (_add) then {
     GVAR(setHearingCapabilityMap) deleteAt _id;
 };
 
-private _lowestVolume = selectMin values GVAR(setHearingCapabilityMap);
+private _volumes = values GVAR(setHearingCapabilityMap);
+
+// If no deafening volumes are left, put it back to default
+private _lowestVolume = if (_volumes isEqualTo []) then {
+    1
+} else {
+    selectMin _volumes
+};
 
 // In-game sounds
 _fadeDuration fadeSound _lowestVolume;

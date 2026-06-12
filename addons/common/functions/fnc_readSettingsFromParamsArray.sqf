@@ -55,10 +55,6 @@ TRACE_1("Reading missionConfigFile params",_paramsArray);
             WARNING_3("readSettingsFromParamsArray - param [%1] type not valid [%2] - expected type [%3]",_settingName,_settingValue,_settingType);
         };
 
-        if ([_settingName, "mission"] call CBA_settings_fnc_isForced) then {
-            WARNING_1("Setting [%1] - Already Forced",_settingName);
-        };
-
         // Set the setting as a mission setting and force it
         private _return = ["CBA_settings_setSettingMission", [_settingName, _settingValue, true]] call CBA_fnc_localEvent;
         TRACE_3("setSettingMission from paramsArray",_settingName,_settingValue,_return);

@@ -15,6 +15,7 @@ You know an in-game name but want the class name? <kbd>CTRL</kbd> + <kbd>F</kbd>
 ## ACE3
 
 ### AtragMX
+
 `Added in 3.0.0`
 
 Class Name | In-Game Name  | Type  |
@@ -22,6 +23,7 @@ Class Name | In-Game Name  | Type  |
 ACE_ATragMX | ATragMX  |  ACE_ItemCore |
 
 ### Attachable
+
 `Added in 3.0.0`
 
 Class Name | In-Game Name | Type   |
@@ -29,6 +31,7 @@ Class Name | In-Game Name | Type   |
 ACE_IR_Strobe_Item | IR strobe  | ACE_ItemCore |
 
 ### Ballistics
+
 `Added in 3.0.0`
 
 Class Name | In-Game Name | Type   |
@@ -67,13 +70,15 @@ ACE_16Rnd_9x19_mag | 9x19mm | Magazine |
 ACE_10Rnd_762x54_Tracer_mag | 7.62mm | Magazine |
 
 ### Captive
+
 `Added in 3.0.0`
 
 Class Name | In-Game Name | Type   |
 ---------- | --------- | ---------
-ACE_CableTie | cable tie |  ACE_ItemCore |
+ACE_CableTie | Cable Tie |  ACE_ItemCore |
 
 ### Chemlights
+
 `Added in 3.7.0`
 
 Class Name | In-Game Name | Type   |
@@ -87,13 +92,15 @@ ACE_Chemlight_White | Chemlight (White) | Throwable |
 ACE_Chemlight_IR | Chemlight (IR) | Throwable |
 
 ### Common
+
 `Added in 3.0.0`
 
 Class Name | In-Game Name | Type   |
 ---------- | --------- | ---------
-ACE_Banana | banana |  ACE_ItemCore |
+ACE_Banana | Banana |  ACE_ItemCore |
 
 ### Concertina Wire
+
 `Added in 3.1.1`
 
 Class Name | In-Game Name | Type   |
@@ -102,6 +109,7 @@ ACE_ConcertinaWireCoil | Concertina Wire Coil |  ThingX |
 ACE_ConcertinaWire | Concertina Wire | deployed concertina wire |
 
 ### DAGR
+
 `Added in 3.1.1`
 
 Class Name | In-Game Name | Type   |
@@ -109,6 +117,7 @@ Class Name | In-Game Name | Type   |
 ACE_DAGR | DAGR | ACE_ItemCore |
 
 ### Disposable
+
 `Added in 3.0.0`
 
 Class Name | In-Game Name | Type   |
@@ -116,6 +125,7 @@ Class Name | In-Game Name | Type   |
 ACE_launch_NLAW_Used_F | used NLAW | Weapon |
 
 ### Explosives
+
 `Added in 3.0.0`
 
 Class Name | In-Game Name | Type   |
@@ -127,6 +137,7 @@ ACE_DefusalKit | Defusal Kit |  ACE_ItemCore |
 ACE_DeadManSwitch | Dead Man's Switch |  ACE_ItemCore |
 
 ### Flashlights
+
 `Added in 3.3.0`
 
 Class Name | In-Game Name | Type   |
@@ -135,19 +146,36 @@ ACE_Flashlight_MX991 | Fulton MX-991 | ACE_ItemCore |
 ACE_Flashlight_KSF1 | KSF-1 | ACE_ItemCore |
 ACE_Flashlight_XL50 | Maglite XL50 | ACE_ItemCore |
 
+### Flags
+
+`Added in 3.19.0`
+
+Class Name | In-Game Name | Type |
+---------- | --------- | --------- |
+ace_flags_black | Flag (Black) | ACE_ItemCore |
+ace_flags_blue | Flag (Blue) | ACE_ItemCore |
+ace_flags_green | Flag (Green) | ACE_ItemCore |
+ace_flags_orange | Flag (Orange) | ACE_ItemCore |
+ace_flags_purple | Flag (Purple) | ACE_ItemCore |
+ace_flags_red | Flag (Red) | ACE_ItemCore |
+ace_flags_white | Flag (White) | ACE_ItemCore |
+ace_flags_yellow | Flag (Yellow) | ACE_ItemCore |
+
 ### Grenades
+
 `Added in 3.0.0`
 
 Class Name | In-Game Name | Type   |
 ---------- | --------- | ---------
 ACE_HandFlare_White | M127A1 Hand Held Signal (White) | Grenade |
-ACE_HandFlare_Red | M127A1 Hand Held Signal (Red | Grenade |
+ACE_HandFlare_Red | M127A1 Hand Held Signal (Red) | Grenade |
 ACE_HandFlare_Green | M127A1 Hand Held Signal (Green) | Grenade |
 ACE_HandFlare_Yellow | M127A1 Hand Held Signal (Yellow) | Grenade |
 ACE_M14 | AN-M14 Incendiary Grenade | Grenade |
 ACE_M84 | M84 Stun Grenade | Grenade |
 
 ### Gun Bag
+
 `Added in 3.6.0`
 
 Class Name | In-Game Name | Type   |
@@ -156,6 +184,7 @@ ACE_gunbag | Gunbag | Backpack |
 ACE_gunbag_Tan | Gunbag | Backpack |
 
 ### Hearing
+
 `Added in 3.0.0`
 
 Class Name | In-Game Name | Type   |
@@ -164,15 +193,17 @@ ACE_EarPlugs | Earplugs | ACE_ItemCore |
 ACE_EHP | Electronic Hearing Protection | ACE_ItemCore |
 
 ### HuntIR
+
 `Added in 3.1.1`
 
 Class Name | In-Game Name | Type   |
 ---------- | --------- | ---------
-ACE_HuntIR_monitor | HuntIR monitor | ACE_ItemCore |
+ACE_HuntIR_monitor | HuntIR Monitor | ACE_ItemCore |
 ACE_HuntIR_M203 | HuntIR Round | Grenade shell |
 ACE_HuntIR_Box | HuntIR Transport Box | ammo box |
 
 ### IR Lights
+
 `Added in 3.16.0`
 
 Class Name | In-Game Name | Type   |
@@ -185,6 +216,7 @@ ACE_SPIR | SPIR | Weapon accessory |
 ACE_SPIR_LR | SPIR | Weapon accessory |
 
 ### Kestrel
+
 `Added in 3.0.0`
 
 Class Name | In-Game Name | Type   |
@@ -192,16 +224,18 @@ Class Name | In-Game Name | Type   |
 ACE_Kestrel4500 | Kestrel 4500NV | ACE_ItemCore |
 
 ### Laser Pointers
+
 `Added in 3.0.0`
 
 Class Name | In-Game Name | Type   |
 ---------- | --------- | ---------
 acc_pointer_IR | Laser Pointer (red) | Weapon accessory |
-ACE_acc_pointer_red | Laser Pointer (green) | Weapon accessory |
+ACE_acc_pointer_red | Laser Pointer (red) | Weapon accessory |
 ACE_acc_pointer_green_IR | Laser Pointer (green) | Weapon accessory |
 ACE_acc_pointer_green | Laser Pointer (green) | Weapon accessory |
 
 ### Logistics
+
 `Added in 3.0.0`
 
 Class Name | In-Game Name | Type   |
@@ -210,6 +244,7 @@ ACE_UAVBattery | UAV Battery | ACE_ItemCore |
 ACE_wirecutter | Wirecutter | ACE_ItemCore |
 
 ### Map Tools
+
 `Added in 3.0.0`
 
 Class Name | In-Game Name | Type   |
@@ -217,12 +252,12 @@ Class Name | In-Game Name | Type   |
 ACE_MapTools | Map Tools | ACE_ItemCore |
 
 ### Medical
-`Added in 3.0.0`
 
+`Added in 3.0.0`
 
 Class Name | In-Game Name | Type   |
 ---------- | --------- | ---------
-ACE_atropine | Atropin auto injector | ACE_ItemCore |
+ACE_atropine | Atropine Autoinjector | ACE_ItemCore |
 ACE_fieldDressing | Bandage (Basic) | ACE_ItemCore |
 ACE_elasticBandage | Bandage (Elastic) | ACE_ItemCore |
 ACE_quikclot | Basic Field Dressing (QuikClot) | ACE_ItemCore |
@@ -249,6 +284,7 @@ ACE_medicalSupplyCrate | Simple ACE Medical Supply Crate | ammo box |
 ACE_medicalSupplyCrate_advanced | Advanced ACE Medical Supply Crate | ammo box |
 
 ### MicroDAGR
+
 `Added in 3.0.0`
 
 Class Name | In-Game Name | Type   |
@@ -256,6 +292,7 @@ Class Name | In-Game Name | Type   |
 ACE_microDAGR | MicroDAGR GPS | ACE_ItemCore |
 
 ### Mine Detector
+
 `Added in 3.6.0`
 
 Class Name | In-Game Name | Type   |
@@ -264,6 +301,7 @@ ACE_VMH3 | VMH3 | Pistol_Base_F |
 ACE_VMM3 | VMM3 | Pistol_Base_F |
 
 ### MK6 Mortar
+
 `Added in 3.0.0`
 
 Class Name | In-Game Name | Type   |
@@ -276,14 +314,15 @@ ACE_1Rnd_82mm_Mo_HE_Guided | 82mm Guided HE Round | Magazine |
 ACE_1Rnd_82mm_Mo_HE_LaserGuided | 82mm Laser Guided HE Round | Magazine |
 
 ### MX2A
+
 `Added in 3.1.1`
 
 Class Name | In-Game Name | Type   |
 ---------- | --------- | ---------
 ACE_MX2A | MX-2A | Binocular |
 
-
 ### Nightvision
+
 `Added in 3.0.0`
 
 Class Name | In-Game Name | Type   |
@@ -293,8 +332,8 @@ ACE_NVG_Gen2 | NV Goggles (Gen2) | NVG |
 ACE_NVG_Gen4 | NV Goggles (Gen4) | NVG |
 ACE_NVG_Wide | NV Goggles (Wide) | NVG |
 
-
 ### Optics
+
 `Added in 3.0.0`
 
 Class Name | In-Game Name | Type   |
@@ -311,6 +350,7 @@ ACE_optic_Hamr_2D | RCO (2D) | Weapon accessory |
 ACE_optic_Hamr_PIP | RCO (PIP) | Weapon accessory |
 
 ### Overheating
+
 `Added in 3.0.0`
 
 Class Name | In-Game Name | Type   |
@@ -318,6 +358,7 @@ Class Name | In-Game Name | Type   |
 ACE_SpareBarrel | Spare barrel | ACE_ItemCore |
 
 ### Parachute
+
 `last modified in 3.2.0`
 
 Class Name | In-Game Name | Type  |
@@ -327,13 +368,15 @@ ACE_NonSteerableParachute | Non-Steerable Parachute | Backpack |
 ACE_ReserveParachute | Reserve Parachute | Backpack |
 
 ### Rangecard
+
 `Added in 3.1.1`
 
 Class Name | In-Game Name | Type   |
 ---------- | --------- | ---------
-ACE_RangeCard | rangecard | ACE_ItemCore |
+ACE_RangeCard | Range Card | ACE_ItemCore |
 
 ### Repair
+
 `Added in 3.3.0`
 
 Class Name | In-Game Name | Type   |
@@ -342,6 +385,7 @@ ACE_Track | Spare Track | thingX |
 ACE_Wheel | Spare Wheel | thingX |
 
 ### Respawn
+
 `last modified in 3.2.0`
 
 Class Name | In-Game Name | Type   |
@@ -354,6 +398,7 @@ ACE_Rallypoint_East_Base | Rallypoint East (Base) | FlagCarrier |
 ACE_Rallypoint_Independent_Base | Rallypoint Independent (Base) | FlagCarrier |
 
 ### Sandbag
+
 `Added in 3.1.1`
 
 Class Name | In-Game Name | Type |
@@ -362,6 +407,7 @@ ACE_Sandbag_empty | Sandbag (empty) | ACE_ItemCore |
 ACE_SandbagObject | Sandbag | ThingX |
 
 ### Spotting Scope
+
 `Added in 3.1.1`
 
 Class Name | In-Game Name | Type |
@@ -369,8 +415,8 @@ Class Name | In-Game Name | Type |
 ACE_SpottingScope | Spotting Scope | ACE_ItemCore |
 ACE_SpottingScopeObject | Spotting Scope (placed) | StaticATWeapon |
 
-
 ### Tactical Ladder
+
 `Added in 3.1.1`
 
 Class Name | In-Game Name | Type |
@@ -379,16 +425,26 @@ ACE_TacticalLadder_Pack | Telescopic Ladder | Backpack |
 ACE_Tactical_Ladder | Telescopic Ladder (placed) | house |
 
 ### Tagging
+
 `Added in 3.5.0`
 
 Class Name | In-Game Name | Type |
 ---------- | --------- | ---------
+ACE_ChalkBlack | Chalk (Black) | ACE_ItemCore |
+ACE_ChalkBlue | Chalk (Blue) | ACE_ItemCore |
+ACE_ChalkGreen | Chalk (Green) | ACE_ItemCore |
+ACE_ChalkRed | Chalk (Red) | ACE_ItemCore |
+ACE_ChalkWhite | Chalk (White) | ACE_ItemCore |
+ACE_ChalkYellow | Chalk (Yellow) | ACE_ItemCore |
 ACE_SpraypaintBlack | Black spray paint | ACE_ItemCore |
 ACE_SpraypaintBlue | Blue spray paint | ACE_ItemCore |
 ACE_SpraypaintGreen | Green spray paint | ACE_ItemCore |
 ACE_SpraypaintRed | Red spray paint | ACE_ItemCore |
+ACE_SpraypaintWhite | White spray paint | ACE_ItemCore |
+ACE_SpraypaintYellow | Yellow spray paint | ACE_ItemCore |
 
 ### Trenches
+
 `Added in 3.5.0`
 
 Class Name | In-Game Name | Type |
@@ -396,6 +452,7 @@ Class Name | In-Game Name | Type |
 ACE_EntrenchingTool | Entrenching Tool | ACE_ItemCore |
 
 ### Tripod
+
 `Added in 3.1.1`
 
 Class Name | In-Game Name | Type |
@@ -404,6 +461,7 @@ ACE_Tripod | SSWT Kit | ACE_ItemCore |
 ACE_TripodObject | SSWT Kit (placed) | ThingX |
 
 ### Vehicle Lock
+
 `Added in 3.0.0`
 
 Class Name | In-Game Name | Type   |
@@ -416,15 +474,16 @@ ACE_key_indp | Vehicle Key: Independent | ACE_ItemCore |
 ACE_key_civ | Vehicle Key: Civilian | ACE_ItemCore |
 
 ### Vector
+
 `Added in 3.0.0`
 
 Class Name | In-Game Name | Type   |
 --------- | --------- | ---------
-ACE_Vector | Vector 21 | Binoculars |
-ACE_VectorDay | Vector 21 (Day) | Binoculars |
-
+ACE_Vector | Vector 21 Nite | Binoculars |
+ACE_VectorDay | Vector 21 | Binoculars |
 
 ### Yardage 450
+
 `Added in 3.1.1`
 
 Class Name | In-Game Name | Type |
