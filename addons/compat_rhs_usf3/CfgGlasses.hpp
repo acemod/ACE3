@@ -7,7 +7,7 @@ class CfgGlasses {
         ACE_Overlay = QPATHTOEF(goggles,textures\HUD\CombatGoggles.paa);
         ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
         ACE_OverlayCracked = QPATHTOEF(goggles,textures\HUD\CombatGogglesCracked.paa);
-        ACE_Resistance = 1;
+        ACE_Resistance = 2;
         ACE_Protection = 1;
         ACE_DustPath = QPATHTOEF(goggles,textures\fx\dust\%1.paa);
     };
@@ -55,7 +55,7 @@ class CfgGlasses {
         ACE_Overlay = QPATHTOEF(goggles,textures\HUD\CombatGoggles.paa);
         ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
         ACE_OverlayCracked = QPATHTOEF(goggles,textures\HUD\CombatGogglesCracked.paa);
-        ACE_Resistance = 1;
+        ACE_Resistance = 2;
         ACE_Protection = 1;
         ACE_DustPath = QPATHTOEF(goggles,textures\fx\dust\%1.paa);
     };
@@ -87,7 +87,7 @@ class CfgGlasses {
         ACE_Overlay = QPATHTOEF(goggles,textures\HUD\CombatGoggles.paa);
         ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
         ACE_OverlayCracked = QPATHTOEF(goggles,textures\HUD\CombatGogglesCracked.paa);
-        ACE_Resistance = 1;
+        ACE_Resistance = 2;
         ACE_Protection = 1;
         ACE_DustPath = QPATHTOEF(goggles,textures\fx\dust\%1.paa);
     };
