@@ -109,21 +109,21 @@
             <Ukrainian>Сила відмички за замовчуванням</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_DisplayName">
-            <English>ACE Vehicle Lock</English>
-            <Czech>ACE Zamykání Vozidel</Czech>
-            <French>ACE Verrouillage véhicule</French>
-            <Spanish>ACE Bloqueo de vehículo</Spanish>
-            <Italian>ACE Blocco Veicolo</Italian>
-            <Polish>ACE Zamknięcie Pojazdu</Polish>
-            <Portuguese>ACE Trancar Veículos</Portuguese>
-            <Russian>ACE Блокировка транспорта</Russian>
-            <German>ACE Fahrzeugsperre</German>
-            <Korean>ACE 차량 잠금</Korean>
-            <Japanese>ACE 車両の施錠</Japanese>
-            <Chinese>ACE 載具上鎖</Chinese>
-            <Chinesesimp>ACE 载具上锁</Chinesesimp>
-            <Turkish>ACE Araç Kilidi</Turkish>
-            <Ukrainian>ACE Блокування транспорту</Ukrainian>
+            <English>Vehicle Lock</English>
+            <Czech>Zamykání Vozidel</Czech>
+            <French>Verrouillage véhicule</French>
+            <Spanish>Bloqueo de vehículo</Spanish>
+            <Italian>Blocco Veicolo</Italian>
+            <Polish>Zamknięcie Pojazdu</Polish>
+            <Portuguese>Trancar Veículos</Portuguese>
+            <Russian>Блокировка транспорта</Russian>
+            <German>Fahrzeugsperre</German>
+            <Korean>차량 잠금</Korean>
+            <Japanese>車両の施錠</Japanese>
+            <Chinese>載具上鎖</Chinese>
+            <Chinesesimp>载具上锁</Chinesesimp>
+            <Turkish>Araç Kilidi</Turkish>
+            <Ukrainian>Блокування транспорту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Item_Civ_Description">
             <English>A key that should open most CIV vehicle.</English>

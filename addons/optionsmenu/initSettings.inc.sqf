@@ -1,4 +1,4 @@
-private _category = [LELSTRING(common,categoryUncategorized), LLSTRING(aceNews)];
+private _category = format ["ACE %1", LELSTRING(common,DisplayName)];
 
 [
     QGVAR(showNewsOnMainMenu), "CHECKBOX",

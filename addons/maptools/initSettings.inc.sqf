@@ -1,4 +1,4 @@
-private _category = format ["ACE %1", LLSTRING(Name)];
+private _category = [format ["ACE %1", LELSTRING(map,Module_DisplayName)], LLSTRING(Name)];
 
 [
     QGVAR(rotateModifierKey), "LIST",

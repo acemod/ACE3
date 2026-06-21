@@ -1,4 +1,4 @@
-private _category = [LELSTRING(common,categoryUncategorized), LLSTRING(SettingCategory)];
+private _category = [LELSTRING(common,ACEKeybindCategoryEquipment), LLSTRING(SettingCategory)];
 
 [
     QGVAR(enablePlacing),
