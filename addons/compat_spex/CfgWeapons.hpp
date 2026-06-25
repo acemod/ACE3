@@ -3,6 +3,7 @@ class CfgWeapons {
     class SPEX_Sten_Mk5: SPE_SMG {
         ACE_barrelTwist = 254;
         ACE_barrelLength = 196;
+        ace_overheating_barrelMass = 1.76;
     };
 
     // Vests
