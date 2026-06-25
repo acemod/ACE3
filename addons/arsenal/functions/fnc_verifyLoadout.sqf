@@ -14,7 +14,7 @@
  * Public: No
 */
 
-#define NOT_IN_ARSENAL !(_name in GVAR(virtualItemsFlat))
+#define IN_ARSENAL (_name in GVAR(virtualItemsFlat))
 
 params ["_loadout", ["_recoverInvalidContainers", false]];
 
@@ -40,38 +40,39 @@ private _missingExtendedInfo = [];
 private _fnc_filterLoadout = {
     params ["_loadout", ["_recoverInvalidContainers", false]];
     _loadout apply {
-        if (_x isEqualType "" && {_x != ""}) then {
-            _name = _x call EFUNC(common,getConfigName);
-
-            // If item doesn't exist in config, "" is returned
-            if (_name == "") then {
-                _nullItemsList pushBack _x;
-            } else {
-                // Check if item or its base weapon exist in the arsenal
-                if NOT_IN_ARSENAL then {
-                    _name = _name call FUNC(baseWeapon);
-                    if NOT_IN_ARSENAL then {
-                        // This could be a backpack
-                        private _temp = [_name, "CfgVehicles"] call CBA_fnc_getNonPresetClass;
-                        if (_temp == "") then { // It's not
-                            _unavailableItemsList pushBack _name;
-                            _name = "";
-                        } else { // It is
-                            _name = _temp;
-                            // Check if it's available again
-                            if NOT_IN_ARSENAL then {
-                                _unavailableItemsList pushBack _name;
-                                _name = "";
-                            };
-                        };
-                    };
+        switch true do {
+            case (_x isEqualType "" && {_x != ""}): { // Handle item classnames
+                _name = _x call EFUNC(common,getConfigName);
+                // If item doesn't exist in config, "" is returned
+                if (_name == "") then {
+                    _nullItemsList pushBack _x;
+                    breakWith ""
                 };
-            };
 
-            _name
-        } else {
-            // Handle arrays
-            if (_x isEqualType []) then {
+                if (IN_ARSENAL || {
+                    _name = _name call FUNC(baseWeapon);
+                    IN_ARSENAL
+                }) then { // Item or its baseWeapon in arsenal, all good
+                    breakWith _name
+                };
+
+                // Could be a backpack
+                private _backpackClass = [_name, "CfgVehicles"] call CBA_fnc_getNonPresetClass;
+                if (_backpackClass == "") then { // It's not
+                    _unavailableItemsList pushBack _name;
+                    breakWith ""
+                } else { // It is
+                    _name = _backpackClass;
+                };
+
+                if IN_ARSENAL then {
+                    breakWith _name
+                };
+
+                _unavailableItemsList pushBack _name;
+                breakWith ""
+            };
+            case (_x isEqualType []): { // Handle arrays
                 _itemArray = [_x, true] call _fnc_filterLoadout;
 
                 // If "" is given as a container, an error is thrown, therefore, filter out all unavailable/null containers
@@ -79,10 +80,10 @@ private _fnc_filterLoadout = {
                     _itemArray = [];
                 };
 
-                _itemArray
-            } else {
-                // All other types and empty strings
-                _x
+                breakWith _itemArray
+            };
+            default { // All other types and empty strings
+                breakWith _x
             };
         };
     };
