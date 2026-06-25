@@ -22,6 +22,12 @@ PREP(canWipeGlasses);
 PREP(clearGlasses);
 PREP(getExplosionIndex);
 
+// respirator
+PREP(respiratorConditions);
+PREP(respiratorConnect);
+PREP(respiratorDisconnect);
+PREP(respiratorFilter);
+
 // eventhandlers
 PREP(handleExplosion);
 PREP(handleFired);
