@@ -169,6 +169,7 @@ class SPE_MP40: SPE_SMG {
 class SPE_Sten_Mk2: SPE_SMG {
     ACE_barrelTwist = 254;
     ACE_barrelLength = 196;
+    ace_overheating_barrelMass = 0.5; // Could be similar to MP40 maybe lighter
 };
 class SPE_M1A1_Thompson: SPE_SMG {
     ACE_barrelTwist = 406;
