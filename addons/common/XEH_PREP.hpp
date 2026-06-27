@@ -135,6 +135,7 @@ PREP(isModLoaded);
 PREP(isPlayer);
 PREP(isSwimming);
 PREP(lightIntensityFromObject);
+PREP(loadDeadPerson);
 PREP(loadPerson);
 PREP(loadPersonLocal);
 PREP(moduleCheckPBOs);
