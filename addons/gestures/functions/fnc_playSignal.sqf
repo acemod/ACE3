@@ -34,4 +34,7 @@ private _gesture = if ((_this select [0,2]) == "BI") then {
 
 TRACE_1("playing gesture",_gesture);
 [ACE_player, _gesture] call EFUNC(common,doGesture);
+
+[QGVAR(gestureDone), [_gesture]] call CBA_fnc_localEvent;
+
 true
