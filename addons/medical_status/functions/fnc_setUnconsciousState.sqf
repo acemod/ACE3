@@ -96,3 +96,4 @@ if (_unit == ace_player) then {
 // This event doesn't correspond to unconscious in statemachine
 // It's for any time a unit changes consciousness (including cardiac arrest)
 ["ace_unconscious", [_unit, _active]] call CBA_fnc_globalEvent;
+["ace_unconscious_animation", [_unit, _active]] call CBA_fnc_globalEvent;

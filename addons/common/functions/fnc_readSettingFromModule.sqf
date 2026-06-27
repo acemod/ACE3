@@ -40,10 +40,6 @@ if (_value isEqualTo -1) then {
     };
 };
 
-if ([_settingName, "mission"] call CBA_settings_fnc_isForced) then {
-    WARNING_1("Setting [%1] - Already Forced",_settingName);
-};
-
 // Set the setting as a mission setting and force it
 TRACE_2("setSettingMission from module",_settingName,_value);
 ["CBA_settings_setSettingMission", [_settingName, _value, true]] call CBA_fnc_localEvent;

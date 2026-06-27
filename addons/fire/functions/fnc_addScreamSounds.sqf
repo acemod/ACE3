@@ -20,7 +20,7 @@
  */
 
 params [["_unitClass", "", [""]], ["_screams", [], [[]]], ["_append", true, [false]]];
-TRACE_3("fnc_addScreamSounds",_unitClass,_screams,_overwrite);
+TRACE_3("fnc_addScreamSounds",_unitClass,_screams,_append);
 
 if (_unitClass == "" || _screams isEqualTo [] || !(_unitClass isKindOf "CAManBase")) exitWith { false };
 
