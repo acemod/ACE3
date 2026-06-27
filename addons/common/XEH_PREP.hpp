@@ -63,6 +63,7 @@ PREP(fixCollision);
 PREP(fixFloating);
 PREP(fixLoweredRifleAnimation);
 PREP(fixPosition);
+PREP(focusWindow);
 PREP(getAddon);
 PREP(getAllDefinedSetVariables);
 PREP(getAwakeAnim);

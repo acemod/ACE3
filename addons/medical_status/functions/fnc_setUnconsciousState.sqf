@@ -77,14 +77,7 @@ if (_active) then {
     };
 
     if (_unit == ACE_player) then {
-        switch EGVAR(medical,windowOnWakeUp) do {
-            case 1: { // Focus
-                "ace" callExtension ["window:focus", []];
-            };
-            case 2: { // Flash
-                "ace" callExtension ["window:flash", []];
-            };
-        };
+        EGVAR(medical,windowOnWakeUp) call EFUNC(common,focusWindow);
     };
 };
 
