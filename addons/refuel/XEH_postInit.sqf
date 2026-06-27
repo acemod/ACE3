@@ -62,13 +62,9 @@ if (hasInterface) then {
 
     ["All", "InitPost", {
         params ["_vehicle"];
-        if (getFuelCargo _vehicle <= 0) exitWith {};
-        TRACE_1("initPost",_vehicle);
-
-        if (local _vehicle) then {
-            _vehicle setFuelCargo 0;
-            LOG("initPost setFuelCargo");
-        };
+        if !(typeOf _vehicle in (uiNamespace getVariable QGVAR(cacheRefuelCargo))) exitWith {};
+        TRACE_3("initPost",_vehicle,local _vehicle,getFuelCargo _vehicle);
+        _vehicle call FUNC(initObject);
     }, true, ["Man"], true] call CBA_fnc_addClassEventHandler;
 
     if (isServer) then {
@@ -85,8 +81,7 @@ if (hasInterface) then {
                     WARNING_3("no pumps %1 found near %2 %3",_class,worldName,_x);
                 } else {
                     {
-                        // terrain fuel pumps don't trigger init and must setFuelCargo on each client
-                        _x setFuelCargo 0;
+                        _x call FUNC(initObject);
                     } forEach _objects;
                 };
             } forEach _positions;
@@ -95,11 +90,10 @@ if (hasInterface) then {
         // placed in editor static objects don't trigger init but synchronize fuel cargo
         // placed in editor vehicles both trigger init and synchronize fuel cargo
         {
-            if (getFuelCargo _x > 0 && {local _x}) then {
-                TRACE_1("allMissionObjects",_x);
-                _x setFuelCargo 0;
-            };
-        } forEach allMissionObjects "";
+            if (getFuelCargo _x < 0) then {continue};
+            TRACE_3("init mission object",_x,local _x,getFuelCargo _x);
+            _x call FUNC(initObject);
+        } forEach (8 allObjects 0);
     } else {
         // here are both terrain and editor static objects
         WARNING_2("World %1: %2 is not configured; can load slower",worldName,QGVAR(positions));
@@ -110,7 +104,7 @@ if (hasInterface) then {
 
         {
             {
-                _x setFuelCargo 0;
+                _x call FUNC(initObject);
             } forEach (_worldCenter nearObjects [_x, _halfWorldSize]);
         } forEach _baseStaticClasses;
     };
