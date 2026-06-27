@@ -4,7 +4,6 @@
 
 // cache refuel vehicles, see XEH_postInit.sqf
 private _staticClasses = [];
-private _baseStaticClasses = [];
 private _baseDynamicClasses = [];
 private _cacheRefuelCargo = createHashMap;
 
@@ -25,9 +24,6 @@ private _cacheRefuelCargo = createHashMap;
                     WARNING_3("Class %1: %2 [%3] needs XEH",_sourceClass,configName inheritsFrom _x,configSourceMod _x);
                 };
                 _staticClasses pushBack _sourceClass;
-                if (_baseStaticClasses findIf {_sourceClass isKindOf _x} == -1) then {
-                    _baseStaticClasses pushBack _sourceClass;
-                };
             };
         } else {
             if (_baseDynamicClasses findIf {_sourceClass isKindOf _x} == -1) then {
@@ -40,8 +36,7 @@ private _cacheRefuelCargo = createHashMap;
     };
 } forEach ("true" configClasses (configFile >> "CfgVehicles"));
 
-TRACE_3("found",count _staticClasses,count _baseStaticClasses,count _baseDynamicClasses);
+TRACE_2("found",count _staticClasses,count _baseDynamicClasses);
 uiNamespace setVariable [QGVAR(cacheRefuelClassesStatic), compileFinal (_staticClasses createHashMapFromArray [])];
-uiNamespace setVariable [QGVAR(cacheRefuelClassesBaseStatic), compileFinal (_baseStaticClasses createHashMapFromArray [])];
 uiNamespace setVariable [QGVAR(cacheRefuelClassesBaseDynamic), compileFinal (_baseDynamicClasses createHashMapFromArray [])];
 uiNamespace setVariable [QGVAR(cacheRefuelCargo), compileFinal _cacheRefuelCargo];

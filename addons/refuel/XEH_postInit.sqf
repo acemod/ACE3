@@ -71,43 +71,18 @@ if (hasInterface) then {
         addMissionEventHandler ["HandleDisconnect", {call FUNC(handleDisconnect)}];
     };
 
-    private _cfgPositions = configFile >> QGVAR(positions) >> worldName;
-    if (isArray _cfgPositions) then {
+    private _staticClasses = keys (uiNamespace getVariable QGVAR(cacheRefuelClassesStatic));
+    private _staticFound = [];
+    {
+        // terrain and editor pumps
+        private _objects = _x allObjects 0;
+        if (_objects isEqualTo []) then {continue};
+        _staticFound pushBack [_x, count _objects];
         {
-            _x params ["_class", "_positions"];
-            {
-                private _objects = _x nearObjects [_class, 30];
-                if (_objects isEqualTo []) then {
-                    WARNING_3("no pumps %1 found near %2 %3",_class,worldName,_x);
-                } else {
-                    {
-                        _x call FUNC(initObject);
-                    } forEach _objects;
-                };
-            } forEach _positions;
-        } forEach getArray _cfgPositions;
-
-        // placed in editor static objects don't trigger init but synchronize fuel cargo
-        // placed in editor vehicles both trigger init and synchronize fuel cargo
-        {
-            if (getFuelCargo _x < 0) then {continue};
-            TRACE_3("init mission object",_x,local _x,getFuelCargo _x);
             _x call FUNC(initObject);
-        } forEach (8 allObjects 0);
-    } else {
-        // here are both terrain and editor static objects
-        WARNING_2("World %1: %2 is not configured; can load slower",worldName,QGVAR(positions));
-        private _halfWorldSize = worldSize / 2;
-        private _worldCenter = [_halfWorldSize, _halfWorldSize];
-        _halfWorldSize = _halfWorldSize * sqrt 2;
-        private _baseStaticClasses = keys (uiNamespace getVariable QGVAR(cacheRefuelClassesBaseStatic));
-
-        {
-            {
-                _x call FUNC(initObject);
-            } forEach (_worldCenter nearObjects [_x, _halfWorldSize]);
-        } forEach _baseStaticClasses;
-    };
+        } forEach _objects;
+    } forEach _staticClasses;
+    TRACE_1("init terrain",_staticFound);
 
     if (!hasInterface) exitWith {};
 
@@ -115,7 +90,6 @@ if (hasInterface) then {
 
     ["MouseButtonDown", LINKFUNC(onMouseButtonDown)] call CBA_fnc_addDisplayHandler;
 
-    private _staticClasses = keys (uiNamespace getVariable QGVAR(cacheRefuelClassesStatic));
     private _baseDynamicClasses = keys (uiNamespace getVariable QGVAR(cacheRefuelClassesBaseDynamic));
 
     // init menu for config refuel vehicles
