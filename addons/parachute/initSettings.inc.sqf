@@ -1,4 +1,4 @@
-private _category = [LELSTRING(common,categoryUncategorized), localize "str_dn_parachute"];
+private _category = [LELSTRING(common,ACEKeybindCategoryEquipment), localize "str_dn_parachute"];
 
 [
     QGVAR(hideAltimeter),
