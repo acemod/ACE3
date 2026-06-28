@@ -2,7 +2,7 @@
 #include "script_component.hpp"
 
 if (!hasInterface) exitWith {};
-GVAR(isSpeedLimiter) = false;
+GVAR(isSpeedControlActive) = false;
 
 // Add keybinds
 ["ACE3 Vehicles", QGVAR(speedLimiter), localize LSTRING(SpeedLimiter), {
@@ -14,7 +14,7 @@ GVAR(isSpeedLimiter) = false;
 }, {false}, [DIK_INSERT, [false, false, false]], false] call CBA_fnc_addKeybind;
 
 ["ACE3 Vehicles", QGVAR(scrollUp), localize LSTRING(IncreaseSpeedLimit), {
-    if (GVAR(isSpeedLimiter)) then {
+    if (GVAR(isSpeedControlActive)) then {
         GVAR(speedLimit) = round (GVAR(speedLimit) + GVAR(speedLimiterStep)) max (5 max GVAR(speedLimiterStep));
         GVAR(speedLimit) = 5 max GVAR(speedLimiterStep) * floor (GVAR(speedLimit) / GVAR(speedLimiterStep));
         [["%1: %2", LSTRING(SpeedLimit), GVAR(speedLimit)]] call EFUNC(common,displayTextStructured);
@@ -26,7 +26,7 @@ GVAR(isSpeedLimiter) = false;
 }, {false}, [MOUSE_SCROLL_UP, [false, true, false]], false] call CBA_fnc_addKeybind; // Ctrl + Mouse Wheel Scroll Up
 
 ["ACE3 Vehicles", QGVAR(scrollDown), localize LSTRING(DecreaseSpeedLimit), {
-    if (GVAR(isSpeedLimiter)) then {
+    if (GVAR(isSpeedControlActive)) then {
         GVAR(speedLimit) = round (GVAR(speedLimit) - GVAR(speedLimiterStep)) max (5 max GVAR(speedLimiterStep));
         GVAR(speedLimit) = 5 max GVAR(speedLimiterStep) * ceil (GVAR(speedLimit) / GVAR(speedLimiterStep));
         [["%1: %2", LSTRING(SpeedLimit), GVAR(speedLimit)]] call EFUNC(common,displayTextStructured);
