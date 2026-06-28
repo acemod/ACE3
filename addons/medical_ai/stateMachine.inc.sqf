@@ -31,7 +31,7 @@ GVAR(stateMachine) = [{call EFUNC(common,getLocalUnits)}, true] call CBA_statema
 
 
 [GVAR(stateMachine), "HealSelf", "Initial", { // Go back to initial state when done healing
-    !(call FUNC(isInjured)) && {isNil {_this getVariable QGVAR(currentTreatment)}}
+    !(call FUNC(isInjured)) && {(_this isNil QGVAR(currentTreatment))}
 }, {
     #ifdef DEBUG_MODE_FULL
     systemChat format ["%1 finished healing themself", _this];
@@ -39,7 +39,7 @@ GVAR(stateMachine) = [{call EFUNC(common,getLocalUnits)}, true] call CBA_statema
 }, "Initial"] call CBA_statemachine_fnc_addTransition;
 
 [GVAR(stateMachine), "HealSelf", "Injured", { // Stop treating when it's no more safe
-    !(call FUNC(isSafe)) && {isNil {_this getVariable QGVAR(currentTreatment)}}
+    !(call FUNC(isSafe)) && {(_this isNil QGVAR(currentTreatment))}
 }, {
     #ifdef DEBUG_MODE_FULL
     systemChat format ["%1 is no longer safe", _this];
@@ -48,7 +48,7 @@ GVAR(stateMachine) = [{call EFUNC(common,getLocalUnits)}, true] call CBA_statema
 
 
 [GVAR(stateMachine), "HealUnit", "Initial", { // Go back to initial state when done healing or it's no more safe to treat
-    !((call FUNC(wasRequested)) && FUNC(isSafe)) && {isNil {_this getVariable QGVAR(currentTreatment)}}
+    !((call FUNC(wasRequested)) && FUNC(isSafe)) && {(_this isNil QGVAR(currentTreatment))}
 }, {
     #ifdef DEBUG_MODE_FULL
     systemChat format ["%1 finished healing someone", _this];
@@ -56,7 +56,7 @@ GVAR(stateMachine) = [{call EFUNC(common,getLocalUnits)}, true] call CBA_statema
 }, "Initial"] call CBA_statemachine_fnc_addTransition;
 
 [GVAR(stateMachine), "HealUnit", "Injured", { // Treating yourself has priority
-    (call FUNC(isInjured)) && {isNil {_this getVariable QGVAR(currentTreatment)}}
+    (call FUNC(isInjured)) && {(_this isNil QGVAR(currentTreatment))}
 }, {
     #ifdef DEBUG_MODE_FULL
     systemChat format ["%1 was injured while healing someone", _this];

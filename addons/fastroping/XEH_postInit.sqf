@@ -34,7 +34,7 @@ if (isServer) then {
     ["Air", "init", {
         if (!GVAR(autoAddFRIES)) exitWith {};
         params ["_vehicle"];
-        if (isNumber (configOf _vehicle >> QGVAR(enabled)) && {isNil {_vehicle getVariable [QGVAR(FRIES), nil]}}) then {
+        if (isNumber (configOf _vehicle >> QGVAR(enabled)) && {(_vehicle isNil QGVAR(FRIES))}) then {
             [_vehicle] call FUNC(equipFRIES);
         };
     }, true, ["ACE_friesBase"], true] call CBA_fnc_addClassEventHandler;
