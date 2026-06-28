@@ -38,6 +38,12 @@ private _recoil = GVAR(recoilCache) getOrDefaultCall [_weapon + _muzzle, {
         getText (_config >> _muzzle >> "recoil")
     };
 
+    private _customShakeCoef = if (isNumber (configFile >> "CfgRecoils" >> _recoil >> QGVAR(customShakeCoef))) then {
+        getNumber (configFile >> "CfgRecoils" >> _recoil >> QGVAR(customShakeCoef))
+    } else {
+        1
+    };
+
     if (isClass (configFile >> "CfgRecoils" >> _recoil)) then {
         _recoil = getArray (configFile >> "CfgRecoils" >> _recoil >> "kickBack");
 
@@ -47,6 +53,10 @@ private _recoil = GVAR(recoilCache) getOrDefaultCall [_weapon + _muzzle, {
     } else {
         _recoil = [0, 0];
     };
+
+
+
+    _recoil = _recoil vectorMultiply _customShakeCoef;
 
     TRACE_3("Caching Recoil config",_weapon,_muzzle,_recoil);
 
@@ -62,7 +72,7 @@ private _powerCoef = RECOIL_COEF * linearConversion [0, 1, random 1, _recoil sel
 if (isWeaponRested _unit) then {_powerMod = _powerMod - 0.07};
 if (isWeaponDeployed _unit) then {_powerMod = _powerMod - 0.11};
 if (_weapon isEqualTo secondaryWeapon _unit) then {
-    _powerCoef = _powerCoef + 25.0;
+    _powerCoef = _powerCoef + GVAR(extraLauncherShake);
 };
 
 private _camshake = [
