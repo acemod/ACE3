@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Dystopian
- * Initializes vanilla refuel object.
+ * Initializes object with vanilla refuel.
  *
  * Arguments:
  * 0: Source <OBJECT>

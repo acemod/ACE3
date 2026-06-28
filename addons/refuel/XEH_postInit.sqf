@@ -99,7 +99,6 @@ if (hasInterface) then {
         {
             [_className, 0, ["ACE_MainActions", QGVAR(Refuel)], _x] call EFUNC(interact_menu,addActionToClass);
         } forEach GVAR(actions);
-        TRACE_1("add menu to static",_className);
     } forEach _staticClasses;
 
     {
@@ -108,7 +107,6 @@ if (hasInterface) then {
         {
             [_className, 0, ["ACE_MainActions", QGVAR(Refuel)], _x, true] call EFUNC(interact_menu,addActionToClass);
         } forEach GVAR(actions);
-        TRACE_1("add menu to dynamic",_className);
     } forEach _baseDynamicClasses;
 
     #ifdef DRAW_HOOKS_POS

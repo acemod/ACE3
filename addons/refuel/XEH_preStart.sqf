@@ -24,10 +24,12 @@ private _cacheRefuelCargo = createHashMap;
                     WARNING_3("Class %1: %2 [%3] needs XEH",_sourceClass,configName inheritsFrom _x,configSourceMod _x);
                 };
                 _staticClasses pushBack _sourceClass;
+                TRACE_3("static",_sourceClass,_transportFuel,_fuelCargo);
             };
         } else {
             if (_baseDynamicClasses findIf {_sourceClass isKindOf _x} == -1) then {
                 _baseDynamicClasses pushBack _sourceClass;
+                TRACE_3("dynamic",_sourceClass,_transportFuel,_fuelCargo);
             };
         };
         if (_isPublic) then {
@@ -36,7 +38,6 @@ private _cacheRefuelCargo = createHashMap;
     };
 } forEach ("true" configClasses (configFile >> "CfgVehicles"));
 
-TRACE_2("found",count _staticClasses,count _baseDynamicClasses);
 uiNamespace setVariable [QGVAR(cacheRefuelClassesStatic), compileFinal (_staticClasses createHashMapFromArray [])];
 uiNamespace setVariable [QGVAR(cacheRefuelClassesBaseDynamic), compileFinal (_baseDynamicClasses createHashMapFromArray [])];
 uiNamespace setVariable [QGVAR(cacheRefuelCargo), compileFinal _cacheRefuelCargo];
