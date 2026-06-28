@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: joko // Jonas, Emperias, Zigomarvin
- * Detect if the player and play the Gesture Animation
+ * Detect if the player is ready and play the Gesture Animation
  *
  * Arguments:
  * Animation <STRING>
@@ -35,6 +35,6 @@ private _gesture = if ((_this select [0,2]) == "BI") then {
 TRACE_1("playing gesture",_gesture);
 [ACE_player, _gesture] call EFUNC(common,doGesture);
 
-[QGVAR(gestureDone), [_gesture]] call CBA_fnc_localEvent;
+[QGVAR(playGesture), [_gesture]] call CBA_fnc_localEvent;
 
 true
