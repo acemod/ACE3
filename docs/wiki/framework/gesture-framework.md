@@ -18,4 +18,4 @@ version:
 
 | Event Name | Description | Passed Parameter(s) | Locality |
 | ---------- | ----------- | ------------------- | -------- |
-| `ace_gesture_playGesture` | Gesture | `[_gesture]` | Local |
+| `ace_gesture_playGesture` | Raised just after Gesture is triggered | `[_gesture]` | Local |
