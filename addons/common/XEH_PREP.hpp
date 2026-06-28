@@ -197,6 +197,7 @@ PREP(swayLoop);
 PREP(switchAttachmentMode);
 PREP(switchPersistentLaser);
 PREP(switchToGroupSide);
+PREP(temporaryBlockFire);
 PREP(throttledPublicVariable);
 PREP(toBin);
 PREP(toBitmask);
