@@ -21,6 +21,7 @@ PREP(handleUnconscious);
 PREP(initObject);
 PREP(initPerson);
 PREP(isObjectOnObject);
+PREP(moveCorpse);
 PREP(pauseCarry);
 PREP(pauseDrag);
 PREP(resumeCarry);
