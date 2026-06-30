@@ -20,6 +20,7 @@ if (isServer) then {
         [{ // Convert ace_common's local explosion to a hearing global explosion event
             params ["_projectile", "_pos"];
             TRACE_1("Explode",_this);
+            if (typeOf _projectile isEqualTo "SmallSecondary") exitWith {};
 
             // If projectile is local only, don't raise event globally
             if ((netId _projectile) == "0:0") then {
@@ -30,7 +31,9 @@ if (isServer) then {
         }] call EFUNC(common,addExplosionEventHandler);
     } else {
         [{
+            params ["_projectile"];
             TRACE_1("Explode",_this);
+            if (typeOf _projectile isEqualTo "SmallSecondary") exitWith {};
             [QGVAR(explosion), _this] call CBA_fnc_localEvent;
         }] call EFUNC(common,addExplosionEventHandler);
     };
