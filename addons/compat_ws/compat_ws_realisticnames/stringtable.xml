@@ -526,6 +526,19 @@
             <Chinesesimp>XMS SG（沙色）</Chinesesimp>
             <Ukrainian>XMS SG (пісочний)</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_UBS_lxWS_Name">
+            <English>SIX-12</English>
+            <French>SIX-12</French>
+            <Spanish>SIX-12</Spanish>
+            <Italian>SIX-12</Italian>
+            <Portuguese>SIX-12</Portuguese>
+            <Russian>SIX-12</Russian>
+            <German>SIX-12</German>
+            <Korean>SIX-12</Korean>
+            <Japanese>SIX-12</Japanese>
+            <Chinesesimp>SIX-12</Chinesesimp>
+            <Ukrainian>SIX-12</Ukrainian>
+        </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Camo_Name">
             <English>XMS SW (Stripes)</English>
             <French>XMS SW (Rayé)</French>
