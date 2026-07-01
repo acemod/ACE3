@@ -197,18 +197,18 @@ if (isServer) then {
 [QGVAR(loadDeadPerson), LINKFUNC(loadDeadPerson)] call CBA_fnc_addEventHandler;
 [QGVAR(deadPersonLoaded), {
     params ["_unit"];
-    TRACE_5("deadPersonLoaded event",_unit,isAwake _unit,local _unit,typeOf objectParent _unit,local objectParent _unit);
+    TRACE_5("deadPersonLoaded",_unit,isAwake _unit,local _unit,typeOf objectParent _unit,local objectParent _unit);
     if (local _unit) exitWith {}; // no awake problems with local unit
     if (isAwake _unit) then {_unit awake false};
     // Unit may be set to awake multiple times after moveIn; keep it in non-awake state
-    private _pfeh = [{
+    [{
         params ["_unit"];
         if (isAwake _unit) then {
-            TRACE_5("deadPersonLoaded pfh",_unit,isAwake _unit,local _unit,typeOf objectParent _unit,local objectParent _unit);
+            TRACE_4("deadPerson awake",_unit,local _unit,typeOf objectParent _unit,local objectParent _unit);
             _unit awake false;
         };
-    }, 0, _unit] call CBA_fnc_addPerFrameHandler;
-    [{_this call CBA_fnc_removePerFrameHandler}, _pfeh, 2] call CBA_fnc_waitAndExecute;
+        false
+    }, {}, _unit, 2] call CBA_fnc_waitUntilAndExecute;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(lockVehicle), {
