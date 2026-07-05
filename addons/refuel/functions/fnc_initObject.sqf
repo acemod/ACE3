@@ -22,6 +22,6 @@ if (local _source && {getFuelCargo _source > 0}) then {
 };
 
 if (_source getVariable [QGVAR(HDEHID), -1] == -1) then {
-    private _HDEHID = _source addEventHandler ["HandleDamage", LINKFUNC(handleDamage)];
+    private _HDEHID = _source addEventHandler ["HandleDamage", {call FUNC(handleDamage)}];
     _source setVariable [QGVAR(HDEHID), _HDEHID];
 };
