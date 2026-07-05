@@ -33,6 +33,18 @@ class CfgWeapons {
         modelOptics = "";
         displayName = CSTRING(NVG_Gen3_black);
     };
+	class Integrated_NVG_F: NVGoggles {
+		GVAR(border) = "";
+		GVAR(generation) = 4;
+	};
+	class Integrated_NVG_TI_0_F: NVGoggles {
+		GVAR(border) = "";
+		GVAR(generation) = 4;
+	};
+	class Integrated_NVG_TI_1_F: NVGoggles {
+		GVAR(border) = "";
+		GVAR(generation) = 4;
+	};
     class ACE_NVGoggles_OPFOR_WP: NVGoggles_OPFOR {
         displayName = CSTRING(NVG_Gen3_black_WP);
         descriptionShort = CSTRING(NVG_WP_desc);
