@@ -30,5 +30,9 @@ TRACE_3("Flag pickup",_unit,_item,_flag);
     if (isNull _unit || isNull _flag) exitWith {};
 
     [_unit, _item] call EFUNC(common,addToInventory);
+
+    // Provide hook
+    [QGVAR(pickedUp), [_unit, _flag, _item]] call CBA_fnc_localEvent;
+
     deleteVehicle _flag;
 }, [_unit, _item, _flag], 0.7] call CBA_fnc_waitAndExecute;
