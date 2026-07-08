@@ -20,7 +20,7 @@ params ["_player"];
 private _actions = [];
 
 {
-    (GVAR(flagItemCache) get _x) params ["_flagName", "", "", "_actionIconPlace", "_actionIconCarry"];
+    (GVAR(flagItemCache) get _x) params ["_flagName", "", "", "", "_actionIconPlace", "_actionIconCarry"];
 
     // Place flag
     _actions pushBack [

@@ -31,6 +31,9 @@ class CfgWeapons {
         picture = "\addon_prefix\data\pictures\my_flag_inventory_pic.paa"; // Path to the picture for the inventory item
 
         ace_flags_texture = "\addon_prefix\data\flags\my_flag.paa"; // Path to the flag texture
+        // Optional path to the flag texture used by the placeable flag. If empty, ace_flags_texture is used.
+        ace_flags_textureCarrier = "\addon_prefix\data\flags\my_carrier_flag.paa"; 
+
         ace_flags_carrier = "TAG_Carrier_MyFlag"; // Classname of the corresponding vehicle that gets placed.
         
         // Path to the icon for the place action. Do not overwrite for default white icon (inherited by ace_flags_white).
