@@ -207,6 +207,7 @@ class CfgVehicles {
     class NATO_Box_Base;
     class EAST_Box_Base;
     class IND_Box_Base;
+    class ReammoBox_F;
     class FIA_Box_Base_F;
     class Box_NATO_Support_F;
 
@@ -231,8 +232,27 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_Clacker,12);
             MACRO_ADDITEM(ACE_M26_Clacker,6);
             MACRO_ADDITEM(ACE_DefusalKit,12);
-            MACRO_ADDITEM(ACE_Deadmanswitch,2);
+        };
+    };
+
+    class Box_EAF_AmmoOrd_F: Box_IND_AmmoOrd_F {
+        class TransportItems {
+            MACRO_ADDITEM(ACE_Clacker,12);
+            MACRO_ADDITEM(ACE_M26_Clacker,6);
+            MACRO_ADDITEM(ACE_DefusalKit,12);
+        };
+    };
+
+    class Box_IED_Exp_F: ReammoBox_F {
+        class TransportItems {
+            MACRO_ADDITEM(ACE_Deadmanswitch,6);
             MACRO_ADDITEM(ACE_Cellphone,3);
+        };
+    };
+
+    class Box_IDAP_AmmoOrd_F: Box_IND_AmmoOrd_F {
+        class TransportItems {
+            MACRO_ADDITEM(ACE_Clacker,2);
         };
     };
 
