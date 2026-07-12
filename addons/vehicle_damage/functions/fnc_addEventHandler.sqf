@@ -91,16 +91,16 @@ private _fnc_iterateThroughConfig = {
     } forEach _hitPointAliases;
 
     if (_isGun || _isTurret || _isEra || _isSlat || _isMisc) then {
-        if (_isGun) then {
+        if (!_isMisc && _isGun) then {
             _hitPointHash set [_configName, ["gun", abs getNumber (_config >> "minimalHit")]];
         };
-        if (_isTurret) then {
+        if (!_isMisc && _isTurret) then {
             _hitPointHash set [_configName, ["turret", abs getNumber (_config >> "minimalHit")]];
         };
-        if (_isEra) then {
+        if (!_isMisc && _isEra) then {
             _hitPointHash set [_configName, ["era", abs getNumber (_config >> "minimalHit")]];
         };
-        if (_isSlat) then {
+        if (!_isMisc && _isSlat) then {
             _hitPointHash set [_configName, ["slat", abs getNumber (_config >> "minimalHit")]];
         };
 
