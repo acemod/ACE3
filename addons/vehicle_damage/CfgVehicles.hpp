@@ -140,7 +140,6 @@ class CfgVehicles {
     };
     class B_MBT_01_base_F: MBT_01_base_F {};
     class B_MBT_01_cannon_F: B_MBT_01_base_F {
-        GVAR(hitpointAlias)[] = {{"gun", {"HitComTurret"}}};
         GVAR(turret)[] = { QGVAR(Turret_MBT_01), {0, -1, 0.5} };
     };
     class B_MBT_01_TUSK_F: B_MBT_01_cannon_F {

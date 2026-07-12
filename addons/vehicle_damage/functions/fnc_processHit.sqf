@@ -52,7 +52,7 @@ private _warheadType = ["he", "ap", "heat", "tandemheat"] find _warheadTypeStr; 
 private _incendiary = [_projectileConfig >> QGVAR(incendiary), "NUMBER", [0.3, 0.1, 1, 1, 0] select _warheadType] call CBA_fnc_getConfigEntry;
 
 private _hitPointHash = GVAR(vehicleClassesHitPointHash) getOrDefault [typeOf _vehicle, createHashMap];
-(_hitPointHash getOrDefault [_hitPoint, []]) params ["_hitArea", "_minDamage"];
+(_hitPointHash getOrDefault [_hitPoint, []]) params ["_hitArea", "_minDamage", ["_turretPath", false, [[], false]]];
 
 private _projectileExplosive = getNumber (_projectileConfig >> "explosive");
 private _indirectHit = getNumber (_projectileConfig >> "indirectHit");
@@ -151,6 +151,11 @@ if (_magazines isNotEqualTo []) then {
 };
 
 private _return = true;
+
+// Secondary turrets are non-lethal
+if (_hitArea == "turret" && {_turretPath isEqualType [] && {_turretPath isNotEqualTo [0]}}) then {
+    _hitArea = "gun";
+};
 
 switch (_hitArea) do {
     case "engine": {
