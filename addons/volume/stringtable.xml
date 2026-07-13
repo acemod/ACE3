@@ -143,8 +143,8 @@
             <Turkish>Ses</Turkish>
             <Ukrainian>Гучність</Ukrainian>
         </Key>
-        <Key ID="STR_ACE_Volume_Reduction">
-            <English>Reduction</English>
+        <Key ID="STR_ACE_Volume_ReductionSound">
+            <English>Reduction of sound effects</English>
             <French>Réduction</French>
             <Spanish>Reducción</Spanish>
             <Italian>Riduzione</Italian>
@@ -158,8 +158,38 @@
             <Chinesesimp>降低</Chinesesimp>
             <Ukrainian>Зменшення</Ukrainian>
         </Key>
-        <Key ID="STR_ACE_Volume_ReductionDescription">
-            <English>Reduce volume by this percentage.</English>
+        <Key ID="STR_ACE_Volume_ReductionDescriptionSound">
+            <English>Reduce sound effects volume by this percentage.</English>
+            <French>Réduit le volume de ce pourcentage.</French>
+            <Spanish>Reducir el volumen este porcentaje.</Spanish>
+            <Italian>Riduci il volume di questa percentuale.</Italian>
+            <Polish>Zmniejsz głosność o tyle procent</Polish>
+            <Portuguese>Reduzir o volume por esta porcentagem.</Portuguese>
+            <Russian>Уменьшает громкость</Russian>
+            <German>Reduziere Lautstärke um diesen Prozentsatz.</German>
+            <Korean>다음의 비율로 음량을 감소합니다.</Korean>
+            <Japanese>この割合で音量を低減します。</Japanese>
+            <Chinese>使用此百分比來調整音量降低大小。</Chinese>
+            <Chinesesimp>使用此百分比来调整音量降低大小。</Chinesesimp>
+            <Ukrainian>Зменшує гучність</Ukrainian>
+        </Key>
+            <Key ID="STR_ACE_Volume_ReductionMusic">
+            <English>Reduction of music</English>
+            <French>Réduction</French>
+            <Spanish>Reducción</Spanish>
+            <Italian>Riduzione</Italian>
+            <Polish>Redukcja</Polish>
+            <Portuguese>Redução</Portuguese>
+            <Russian>Уменьшение</Russian>
+            <German>Reduzierung</German>
+            <Korean>감소</Korean>
+            <Japanese>低減</Japanese>
+            <Chinese>降低</Chinese>
+            <Chinesesimp>降低</Chinesesimp>
+            <Ukrainian>Зменшення</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Volume_ReductionDescriptionMusic">
+            <English>Reduce music volume by this percentage.</English>
             <French>Réduit le volume de ce pourcentage.</French>
             <Spanish>Reducir el volumen este porcentaje.</Spanish>
             <Italian>Riduci il volume di questa percentuale.</Italian>
