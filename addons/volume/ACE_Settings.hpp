@@ -2,7 +2,10 @@ class ACE_Settings {
     class XGVAR(enabled) {
         movedToSQF = 1;
     };
-    class XGVAR(reduction) {
+    class XGVAR(reduction_sound) {
+        movedToSQF = 1;
+    };
+    class XGVAR(reduction_music) {
         movedToSQF = 1;
     };
     class XGVAR(fadeDelay) {
