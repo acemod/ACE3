@@ -29,7 +29,7 @@ private _carrierItemMapping = createHashMap;
     private _actionIconCarry = getText (_x >> QGVAR(actionIconCarry));
     private _mass = getNumber (_x >> "ItemInfo" >> "mass");
 
-    _flagItemCache set [_name, [_displayName, _texture, _textureCarrier, _carrier, _actionIconPlace, _actionIconCarry, _mass]];
+    _flagItemCache set [_name, [_displayName, _texture, _carrier, _actionIconPlace, _actionIconCarry, _mass, _textureCarrier]];
     _carrierItemMapping set [_carrier, _name];
 } forEach _flagItems;
 

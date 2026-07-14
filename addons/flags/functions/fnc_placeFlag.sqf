@@ -20,7 +20,7 @@
 params ["_player", "_item"];
 TRACE_2("Placing flag",_player,_item);
 
-(GVAR(flagItemCache) get _item) params ["_flagName", "", "", "_carrierClass"];
+(GVAR(flagItemCache) get _item) params ["_flagName", "", "_carrierClass"];
 
 // Set flag start height
 GVAR(objectHeight) = MIN_HEIGHT;
