@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [ace_missile_defense_interceptorPFH] call CBA_fnc_addPerFrameHandler
+ * [ace_missile_defense_fnc_interceptorPFH] call CBA_fnc_addPerFrameHandler
  *
  * Public: No
  */

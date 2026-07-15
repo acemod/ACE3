@@ -4,14 +4,14 @@
  * Create a missile defense system.
  *
  * Arguments:
- * 0: Sides <ARRAY of SIDEs> - The sides that the missile defense system will engage. If not provided, it will engage all sides.
- * 1: ID <STRING> - Optional, The ID of the missile defense system to create.
+ * 0: Sides - The sides that the missile defense system will engage. If not provided, it will engage all sides. <ARRAY of SIDEs>
+ * 1: ID - Optional, The ID of the missile defense system to create. <STRING>
  *
  * Return Value:
- * <STRING> - The ID of the created missile defense system.
+ The ID of the created missile defense system. <STRING>
  *
  * Example:
- * [] call ace_missile_defense_createSystem
+ * [] call ace_missile_defense_fnc_createSystem
  *
  * Public: Yes
  */
@@ -49,6 +49,6 @@ if (isNil QGVAR(systemIndex)) then {
 
 TRACE_1("Registered missile defense system",_id);
 
-[QGVAR(startTracking)] call CBA_fnc_globalEventJIP;
+[QGVAR(startTracking), []] call CBA_fnc_globalEventJIP;
 
 _id

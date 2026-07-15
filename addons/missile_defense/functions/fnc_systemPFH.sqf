@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [ace_missile_defense_systemPFH] call CBA_fnc_addPerFrameHandler
+ * [ace_missile_defense_fnc_systemPFH] call CBA_fnc_addPerFrameHandler
  *
  * Public: No
  */
@@ -41,7 +41,7 @@ private _target = (_system getOrDefault ["targets_possible", []]) deleteAt 0;
 if (!isNil "_target" && {!isNull _target}) then {
     private _sides = _system getOrDefault ["sides", []];
     private _side = _target getVariable [QGVAR(side), side _target];
-    if (_side in _sides) then {
+    if (_side in _sides || {_sides isEqualTo []}) then {
         TRACE_1("Moved pending target",_target);
         (_system getOrDefault ["targets_pending", []]) pushBack _target;
     } else {
@@ -74,7 +74,7 @@ if (!isNil "_tracked" && {!isNull _tracked}) then {
         private _state = _x getVariable [QGVAR(state), LAUNCH_STATE_IDLE];
         _state == LAUNCH_STATE_IDLE && someAmmo _x
     };
-    if (count _launchers == 0) exitWith {
+    if (_launchers isEqualTo []) exitWith {
         TRACE_1("No launchers available to fire at tracked target",_tracked);
         _system getOrDefault ["targets_tracking", []] pushBack _tracked;
     };
@@ -150,7 +150,7 @@ if (!isNil "_tracked" && {!isNull _tracked}) then {
                 if (_angle <= GVAR(launchAcceptableAngle) && _elevation >= GVAR(launchAcceptableElevation)) then {
                     _launcher setVariable [QGVAR(state), LAUNCH_STATE_COOLDOWN];
                     _launcher setVariable [QGVAR(lastLaunchTime), CBA_missionTime];
-                    private _turret = [_launcher, (crew _launcher) select 0] call CBA_fnc_turretPath;
+                    private _turret = [(crew _launcher) select 0] call CBA_fnc_turretPath;
                     [_launcher, _launcher currentWeaponTurret _turret] call BIS_fnc_fire;
                     [QGVAR(launcherFired), [_launcher, _target, typeOf _target, getPos _target]] call CBA_fnc_globalEvent;
                     TRACE_2("Launcher fired at target",_launcher,_target);

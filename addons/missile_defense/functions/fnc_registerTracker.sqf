@@ -1,20 +1,20 @@
 #include "..\script_component.hpp"
 /*
  * Author: Brett Mayson
- *  Register a tracker to a missile defense system.
+ * Register a tracker to a missile defense system.
  *
  * Arguments:
- * 0: ID <String> - The ID of the missile defense system to modify
- * 1: Tracker <Object> - The tracker object to register.
- * 2: Range <Number> - The range of the tracker in meters. If not provided, defaults to 3000.
+ * 0: ID - The ID of the missile defense system to modify <STRING>
+ * 1: Tracker - The tracker object to register <OBJECT>
+ * 2: Range - The range of the tracker in meters. If not provided, defaults to 3000 <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call ace_missile_defense_registerTracker
+ * [] call ace_missile_defense_fnc_registerTracker
  *
- * Public: No
+ * Public: Yes
  */
 
 params ["_id", "_tracker", ["_range", 3000]];
