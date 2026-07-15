@@ -7,7 +7,7 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QXGVAR(reduction_sound),
+    QXGVAR(reduction),
     "LIST",
     [LSTRING(ReductionSound), LSTRING(ReductionDescriptionSound)],
     format ["ACE %1", LLSTRING(Name)],
@@ -15,7 +15,7 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QXGVAR(reduction_music),
+    QXGVAR(reductionMusic),
     "LIST",
     [LSTRING(ReductionMusic), LSTRING(ReductionDescriptionMusic)],
     format ["ACE %1", LLSTRING(Name)],
