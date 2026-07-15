@@ -14,14 +14,18 @@ private _cacheRefuelCargo = createHashMap;
         private _sourceClass = configName _x;
         private _noXEH = !isText (_x >> "EventHandlers" >> "CBA_Extended_EventHandlers" >> "init");
         private _isPublic = getNumber (_x >> "scope") == 2;
+        private _isStatic = _sourceClass isKindOf "Static";
         // check if we can use actions with inheritance
         if (
             _noXEH // addActionToClass relies on XEH init
-            || {_sourceClass isKindOf "Static"} // CBA_fnc_addClassEventHandler doesn't support "Static" class
+            || {_isStatic} // CBA_fnc_addClassEventHandler doesn't support "Static" class
         ) then {
             if (_isPublic) then {
                 if (_noXEH) then {
-                    WARNING_3("Class %1: %2 [%3] needs XEH",_sourceClass,configName inheritsFrom _x,configSourceMod _x);
+                    WARNING_3("Class %1: %2 %3 needs XEH",_sourceClass,configName inheritsFrom _x,configSourceModList _x);
+                };
+                if (_isStatic && {_transportFuel == 0}) then {
+                    WARNING_3("Class %1 %2 fuelCargo=%3 needs transportFuel",_sourceClass,configSourceModList _x,_fuelCargo);
                 };
                 _staticClasses pushBack _sourceClass;
                 TRACE_3("static",_sourceClass,_transportFuel,_fuelCargo);
