@@ -222,6 +222,15 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 | `ace_markers_editingMarker` | [markerName, display] | Local | Listen | Editing a marker
 | `ace_markers_markerPlaced` | [markerName, isEditingMarker] | Local | Listen | Marker placed
 
+### 2.22 Flags (`ace_flags`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_flags_startCarry` | [_unit, _item] | Local | Listen | After flag is attached to the back of the unit and item was removed from the inventory |
+| `ace_flags_stopCarry` | [_unit, _item] | Local | Listen | After flag is removed from the back and item was added back to the inventory |
+| `ace_flags_placed` | [_unit, _flag, _item] | Local | Listen | After flag was placed and the item was removed from the inventory |
+| `ace_flags_pickedUp` | [_unit, _flag, _item] | Local | Listen | Before flag is deleted but after the item was added to the inventory |
+
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.
 
