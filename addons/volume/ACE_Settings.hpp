@@ -5,9 +5,6 @@ class ACE_Settings {
     class XGVAR(reduction) {
         movedToSQF = 1;
     };
-    class XGVAR(reductionMusic) {
-        movedToSQF = 1;
-    };
     class XGVAR(fadeDelay) {
         movedToSQF = 1;
     };
