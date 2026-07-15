@@ -17,11 +17,11 @@
 
 EGVAR(hearing,disableVolumeUpdate) = true;
 
-private _coef_sound = XGVAR(reduction_sound) / 10;
-private _coef_music = XGVAR(reduction_music) / 10;
+private _coefSound = XGVAR(reduction) / 10;
+private _coefMusic = XGVAR(reductionMusic) / 10;
 
-private _reductionGame = _coef_sound * GVAR(initialGameVolume);
-private _reductionMusic = _coef_music * GVAR(initialMusicVolume);
+private _reductionGame = _coefSound * GVAR(initialGameVolume);
+private _reductionMusic = _coefMusic * GVAR(initialMusicVolume);
 
 
 
