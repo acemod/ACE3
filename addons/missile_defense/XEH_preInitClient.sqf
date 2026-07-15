@@ -9,7 +9,7 @@ GVAR(destroyRadius) = 20;
         TRACE_1("Destroyed projectile using object",_target);
     };
     private _near = nearestObjects [_position, [_type], GVAR(destroyRadius)];
-    if (count _near > 0) then {
+    if (_near isNotEqualTo []) then {
         TRACE_2("Destroying nearby entities of type",_type,_near);
         deleteVehicle _near;
     } else {
