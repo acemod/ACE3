@@ -144,7 +144,7 @@
             <Ukrainian>Гучність</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Volume_ReductionSound">
-            <English>Reduction</English>
+            <English>Reduction (Sound Effects)</English>
             <French>Réduction</French>
             <Spanish>Reducción</Spanish>
             <Italian>Riduzione</Italian>
@@ -190,18 +190,6 @@
         </Key>
         <Key ID="STR_ACE_Volume_ReductionDescriptionMusic">
             <English>Reduce volume by this percentage.</English>
-            <French>Réduit le volume de ce pourcentage.</French>
-            <Spanish>Reducir el volumen este porcentaje.</Spanish>
-            <Italian>Riduci il volume di questa percentuale.</Italian>
-            <Polish>Zmniejsz głosność o tyle procent</Polish>
-            <Portuguese>Reduzir o volume por esta porcentagem.</Portuguese>
-            <Russian>Уменьшает громкость</Russian>
-            <German>Reduziere Lautstärke um diesen Prozentsatz.</German>
-            <Korean>다음의 비율로 음량을 감소합니다.</Korean>
-            <Japanese>この割合で音量を低減します。</Japanese>
-            <Chinese>使用此百分比來調整音量降低大小。</Chinese>
-            <Chinesesimp>使用此百分比来调整音量降低大小。</Chinesesimp>
-            <Ukrainian>Зменшує гучність</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Volume_RemindIfLowered">
             <English>Reminder if lowered</English>
