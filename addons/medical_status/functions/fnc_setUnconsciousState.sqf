@@ -79,6 +79,7 @@ if (_active) then {
     if (_unit == ACE_player) then {
         switch EGVAR(medical,windowOnWakeUp) do {
             case 1: { // Focus
+                [0.5] call EFUNC(common,temporaryBlockFire); // prevent firing from surprise context switch
                 "ace" callExtension ["window:focus", []];
             };
             case 2: { // Flash
