@@ -37,10 +37,10 @@ private _cacheRefuelCargo = createHashMap;
     if (!_isPublic) then {continue};
 
     if (!_hasXEH) then {
-        WARNING_3("Class %1: %2 %3 needs XEH",_sourceClass,configName inheritsFrom _x,configSourceModList _x);
+        WARNING_3("Class %1: %2 %3 needs XEH, mission objects not initialized",_sourceClass,configName inheritsFrom _x,configSourceModList _x);
     };
     if (_isStatic && {_transportFuel == 0}) then {
-        WARNING_3("Class %1 %2 fuelCargo=%3 needs transportFuel",_sourceClass,configSourceModList _x,_fuelCargo);
+        WARNING_3("Class %1 %2 fuelCargo=%3 needs transportFuel for burning",_sourceClass,configSourceModList _x,_fuelCargo);
     };
     _staticClasses pushBack _sourceClass;
     TRACE_3("static",_sourceClass,_transportFuel,_fuelCargo);
