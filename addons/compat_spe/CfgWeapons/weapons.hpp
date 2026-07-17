@@ -8,7 +8,7 @@ class SPE_MG42: SPE_LMG {
     EGVAR(overheating,slowdownFactor) = 1;
     EGVAR(overheating,allowSwapBarrel) = 1;
     EGVAR(overheating,dispersion) = 0.25;
-    EGVAR(overheating,barrelMass) = 1.75;
+    EGVAR(overheating,barrelMass) = 1.76; //3 lbs 14.25 oz https://forums.sjgames.com/showthread.php?t=26149
 };
 class SPE_MG34: SPE_LMG {
     ACE_barrelTwist = 240;
@@ -18,7 +18,7 @@ class SPE_MG34: SPE_LMG {
     EGVAR(overheating,slowdownFactor) = 1;
     EGVAR(overheating,allowSwapBarrel) = 1;
     EGVAR(overheating,dispersion) = 0.25;
-    EGVAR(overheating,barrelMass) = 2;
+    EGVAR(overheating,barrelMass) = 2; //2 kg https://forums.sjgames.com/showthread.php?t=26149
 };
 class SPE_M1919A4: SPE_LMG {
     ACE_barrelTwist = 254;
@@ -28,7 +28,7 @@ class SPE_M1919A4: SPE_LMG {
     EGVAR(overheating,slowdownFactor) = 1;
     EGVAR(overheating,allowSwapBarrel) = 1;
     EGVAR(overheating,dispersion) = 0.25;
-    EGVAR(overheating,barrelMass) = 3.52; // approx 8 lbs 7lb 12 oz https://www.1919a4.com/threads/turning-an-a4-barrel-into-an-a6-profile.27933/?utm_source=google&utm_medium=organic
+    EGVAR(overheating,barrelMass) = 3.52; //approx 8 lbs 7lb 12 oz https://www.1919a4.com/threads/turning-an-a4-barrel-into-an-a6-profile.27933/?utm_source=google&utm_medium=organic
 };
 class SPE_M1918A2_BAR: SPE_LMG {
     ACE_barrelTwist = 254;
@@ -48,7 +48,7 @@ class SPE_FM_24_M29: SPE_LMG {
     EGVAR(overheating,slowdownFactor) = 1;
     EGVAR(overheating,allowSwapBarrel) = 0;
     EGVAR(overheating,dispersion) = 0.25;
-    EGVAR(overheating,barrelMass) = 3; // Could be similar to the Bren maybe heavier
+    EGVAR(overheating,barrelMass) = 3; //Estiminated to be similar to the Bren or heavier
 };
 class SPE_LMG_303_Mk2: SPE_LMG {
     ACE_barrelTwist = 254;
@@ -67,13 +67,13 @@ class SPE_FG42_E: SPE_RIFLE { // Closed bolt in semi-auto, open bolt in full-aut
     EGVAR(overheating,JamChance) = 0.0003;
     ACE_barrelTwist = 240;
     ACE_barrelLength = 500;
-    EGVAR(overheating,barrelMass) = 1.3; // Could be similar to K98 maybe heavier
+    EGVAR(overheating,barrelMass) = 1.3; //Estiminated to be similar to K98 or heavier
 };
 class SPE_G43: SPE_RIFLE {
     EGVAR(overheating,JamChance) = 0.0003;
     ACE_barrelTwist = 240;
     ACE_barrelLength = 550;
-    EGVAR(overheating,barrelMass) = 1.3; // Could be similar to K98 maybe heavier
+    EGVAR(overheating,barrelMass) = 1.3; //Estiminated to be similar to K98 or heavier
 };
 class SPE_K98: SPE_RIFLE {
     ACE_barrelTwist = 240;
@@ -114,7 +114,7 @@ class SPE_STG44: SPE_RIFLE {
     EGVAR(overheating,JamChance) = 0.0015;
     ACE_barrelTwist = 240;
     ACE_barrelLength = 420;
-    EGVAR(overheating,barrelMass) = 1.3; // Could be similar to K98 maybe heavier
+    EGVAR(overheating,barrelMass) = 1.3; //Estiminated to be similar to K98 or heavier
 };
 
 // SCOPED RIFLES
@@ -159,7 +159,7 @@ class SPE_SMG: Rifle_Short_Base_F {
 class SPE_MP35: SPE_SMG {
     ACE_barrelTwist = 250;
     ACE_barrelLength = 200;
-    EGVAR(overheating,barrelMass) = 0.6; // Could be similar to MP40 maybe heavier
+    EGVAR(overheating,barrelMass) = 0.6; //Estiminated to be similar to MP40 or heavier
 };
 class SPE_MP40: SPE_SMG {
     ACE_barrelTwist = 250;
@@ -169,7 +169,7 @@ class SPE_MP40: SPE_SMG {
 class SPE_Sten_Mk2: SPE_SMG {
     ACE_barrelTwist = 254;
     ACE_barrelLength = 196;
-    EGVAR(overheating,barrelMass) = 0.5; // Could be similar to MP40 maybe lighter
+    EGVAR(overheating,barrelMass) = 0.5; //Estiminated to be similar to MP40 or lighter
 };
 class SPE_M1A1_Thompson: SPE_SMG {
     ACE_barrelTwist = 406;
