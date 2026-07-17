@@ -28,7 +28,7 @@ class SPE_M1919A4: SPE_LMG {
     EGVAR(overheating,slowdownFactor) = 1;
     EGVAR(overheating,allowSwapBarrel) = 1;
     EGVAR(overheating,dispersion) = 0.25;
-    ace_overheating_barrelMass = 3.52; //approx 8 lbs 7lb 12 oz https://www.1919a4.com/threads/turning-an-a4-barrel-into-an-a6-profile.27933/?utm_source=google&utm_medium=organic
+    ace_overheating_barrelMass = 3.52; // approx 8 lbs 7lb 12 oz https://www.1919a4.com/threads/turning-an-a4-barrel-into-an-a6-profile.27933/?utm_source=google&utm_medium=organic
 };
 class SPE_M1918A2_BAR: SPE_LMG {
     ACE_barrelTwist = 254;
