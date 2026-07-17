@@ -54,17 +54,13 @@ private _recoil = GVAR(recoilCache) getOrDefaultCall [_weapon + _muzzle, {
         _recoil = [0, 0];
     };
 
-
-
-    _recoil = _recoil vectorMultiply _customShakeCoef;
-
-    TRACE_3("Caching Recoil config",_weapon,_muzzle,_recoil);
+    TRACE_4("Caching Recoil config",_weapon,_muzzle,_recoil,_customShakeCoef);
 
     // Ensure format is correct
     _recoil resize [2, 0];
 
     // Parse numbers
-    _recoil apply { if (_x isEqualType 0) then { _x } else { call compile format ["%1", _x] } } // return
+    _recoil apply { if (_x isEqualType 0) then { _x } else { call compile format ["%1", _x] } } vectorMultiply _customShakeCoef // return
 }, true];
 
 private _powerCoef = RECOIL_COEF * linearConversion [0, 1, random 1, _recoil select 0, _recoil select 1, false];
