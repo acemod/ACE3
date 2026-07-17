@@ -8,7 +8,7 @@ class SPE_MG42: SPE_LMG {
     EGVAR(overheating,slowdownFactor) = 1;
     EGVAR(overheating,allowSwapBarrel) = 1;
     EGVAR(overheating,dispersion) = 0.25;
-    ace_overheating_barrelMass = 1.75;
+    EGVAR(overheating,barrelMass) = 1.75;
 };
 class SPE_MG34: SPE_LMG {
     ACE_barrelTwist = 240;
