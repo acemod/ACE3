@@ -208,6 +208,7 @@ switch (_ctrlIDC) do {
 
         if (_leftPanelState) then {
             {
+                if (_x != _selectedItem && {!isNil {GVAR(virtualItemsFlatAll) get _x}}) then {continue}; // don't add unique attachments attached to weapons
                 if (_x in ((GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS) get _index)) then {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
                 };
