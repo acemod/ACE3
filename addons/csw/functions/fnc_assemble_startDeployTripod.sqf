@@ -40,11 +40,8 @@ _tripodPreviewObject setMass 1e-12;
 // Detect radius of zone where collision can damage the player
 private _tripodPreviewObjectRadius = 1 max ((boundingBoxReal [_tripodPreviewObject, "FireGeometry"]) select 2);
 
-// Add height offset of model
-private _offset = ((_tripodPreviewObject modelToWorldVisual [0, 0, 0]) select 2) - ((_player modelToWorldVisual [0, 0, 0]) select 2) + 1;
-
 // Attach object
-_tripodPreviewObject attachTo [_player, [0, 1.5 * _tripodPreviewObjectRadius, _offset]];
+_tripodPreviewObject attachTo [_player, [0, 1.5 * _tripodPreviewObjectRadius, 1]];
 
 GVAR(placeAction) = PLACE_WAITING;
 
