@@ -30,6 +30,7 @@ PREP(onInventoryChanged);
 PREP(openTimerUI);
 PREP(placeExplosive);
 PREP(removeFromSpeedDial);
+PREP(replaceEODUnitItems);
 PREP(scriptedExplosive);
 PREP(selectTrigger);
 PREP(setPosition);
