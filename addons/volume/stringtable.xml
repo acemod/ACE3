@@ -173,7 +173,7 @@
             <Chinesesimp>使用此百分比来调整音量降低大小。</Chinesesimp>
             <Ukrainian>Зменшує гучність</Ukrainian>
         </Key>
-            <Key ID="STR_ACE_Volume_ReductionMusic">
+        <Key ID="STR_ACE_Volume_ReductionMusic">
             <English>Reduction (Music)</English>
             <French>Réduction (Musique)</French>
             <Spanish>Reducción (Música)</Spanish>
