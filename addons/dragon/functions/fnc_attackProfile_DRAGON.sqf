@@ -1,4 +1,5 @@
 #include "..\script_component.hpp"
+#define GRAVITY_OFFSET [0, 0, _serviceInterval^2 * 4.9025]
 /*
  * Author: tcvm (Code inspired by NouberNou's Dragon Guidance)
  * Attack profile: Dragon Guidance
@@ -19,7 +20,7 @@
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
 _args params ["_firedEH", "", "", "", "_stateParams"];
 _firedEH params ["_shooter","_weapon","","","","","_projectile"];
-_attackProfileStateParams params ["_maxCorrectableDistance", "_wireCut", "_seekerMaxRangeSqr", "_seekerMinRangeSqr", "_wireCutSource", "_lastTime", "_serviceInterval", "_serviceChargeCount", "_serviceChargeAcceleration", "_dragonSpeed"];
+_attackProfileStateParams params ["_maxCorrectableDistance", "_wireCut", "_seekerMaxRangeSqr", "_seekerMinRangeSqr", "_wireCutSource", "_lastTime", "_serviceInterval", "_serviceChargeCount", "_serviceChargeAcceleration"];
 
 private _projectilePos = getPosASL _projectile;
 private _distanceToProjectile = (getPosASL _shooter) vectorDistanceSqr _projectilePos;
@@ -51,27 +52,16 @@ if (_distanceToProjectile <= _seekerMinRangeSqr || { _serviceChargeCount <= 0 } 
 if (((_lastTime - CBA_missionTime) <= 0) || {(_lastTime - CBA_missionTime) < (_serviceInterval / 2) && (_projectilePos vectorDistance _seekerTargetPos > 1)}) then {
     _attackProfileStateParams set [5, CBA_missionTime + _serviceInterval];
 
-    private _vectorToCrosshair = vectorNormalized (_projectile worldToModel (ASLToAGL _seekerTargetPos));
-    private _vectorToPos = vectorNormalized (((_projectile vectorWorldToModelVisual (_shooter weaponDirection _weapon)) vectorMultiply (_dragonSpeed * _serviceInterval)) vectorAdd (_vectorToCrosshair vectorMultiply _maxCorrectableDistance));
+    private _vectorToCrosshair = vectorNormalized (_projectile worldToModel (GRAVITY_OFFSET vectorAdd ASLToAGL _seekerTargetPos));
+    // Plus or minus since we'll assume the change a charge is at the exact vector is pseudo random
+    private _angle = ((_vectorToCrosshair#2) atan2 (_vectorToCrosshair#0)) - 22.5 + random 45;
 
-    if ((_vectorToPos select 2) < 0) then {
-        _vectorToPos set [2, 0];
-    } else {
-        private _a = _vectorToPos select 1;
-        private _b = _vectorToPos select 2;
-        // The booster has some angle to it, so we introduce that axis if the angle is too low
-        if (abs(_a) > 0 && { abs(atan (_b / _a)) < DRAGON_BOOSTER_ANGLE }) then {
-            _vectorToPos set [2, abs(_a)];
-        };
-    };
-
-    _projectile setVelocityModelSpace ((velocityModelSpace _projectile) vectorAdd (_vectorToPos vectorMultiply _serviceChargeAcceleration));
-
+    _projectile setVelocityModelSpace ((velocityModelSpace _projectile) vectorAdd ([cos _angle * sin DRAGON_BOOSTER_ANGLE, cos DRAGON_BOOSTER_ANGLE , sin _angle * sin DRAGON_BOOSTER_ANGLE] vectorMultiply _serviceChargeAcceleration));
     private _charge = createVehicle [QGVAR(serviceCharge), [0, 0, 0], [], 0, "NONE"];
-    _charge setPosASL (_projectilePos vectorAdd ((_vectorToCrosshair vectorMultiply -1) vectorMultiply 0.025));
+    _charge setPosASL (_projectilePos vectorAdd (_vectorToCrosshair vectorMultiply -0.025));
+    [QEGVAR(common,setShotParents), [_charge] + getShotParents _projectile] call CBA_fnc_serverEvent; // AI should be alerted of popping source
 
     _attackProfileStateParams set [7, _serviceChargeCount - 1];
 };
 
 _retPos
-
