@@ -3,6 +3,7 @@ class CfgWeapons {
     class SPEX_Sten_Mk5: SPE_SMG {
         ACE_barrelTwist = 254;
         ACE_barrelLength = 196;
+        EGVAR(overheating,barrelMass) = 0.5; // Estimated to be similar to MP40 or lighter
     };
 
     // Vests
