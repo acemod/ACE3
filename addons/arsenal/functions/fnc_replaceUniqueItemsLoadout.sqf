@@ -70,7 +70,7 @@ private _cfgVehicles = configFile >> "CfgVehicles";
             if (_containerClass != "") then {
                 if (_forEachIndex == IDX_LOADOUT_BACKPACK) then {
                     // Check for non-preset first
-                    _uniqueBaseCfgText = [_containerClass, "CfgVehicles"] call CBA_fnc_getNonPresetClass;
+                    _uniqueBaseCfgText = _containerClass call FUNC(baseBackpack);
 
                     if (_uniqueBaseCfgText != "") then {
                         _containerClass = _uniqueBaseCfgText;
@@ -102,7 +102,7 @@ private _cfgVehicles = configFile >> "CfgVehicles";
                             if (_containerClass != "") then {
                                 if (_isBackpack) then {
                                     // Check for non-preset first
-                                    _uniqueBaseCfgText = [_containerClass, "CfgVehicles"] call CBA_fnc_getNonPresetClass;
+                                    _uniqueBaseCfgText = _containerClass call FUNC(baseBackpack);
 
                                     if (_uniqueBaseCfgText != "") then {
                                         _containerClass = _uniqueBaseCfgText;
