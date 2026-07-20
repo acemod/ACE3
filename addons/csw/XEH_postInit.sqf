@@ -1,6 +1,7 @@
 #include "script_component.hpp"
 
 GVAR(vehicleMagCache) = createHashMap;
+GVAR(deployPFH) = -1;
 
 ["CBA_settingsInitialized", {
     TRACE_3("settingsInit",GVAR(defaultAssemblyMode),GVAR(handleExtraMagazines),GVAR(ammoHandling));
@@ -42,6 +43,21 @@ GVAR(vehicleMagCache) = createHashMap;
 [QGVAR(returnAmmo), LINKFUNC(reload_handleReturnAmmo)] call CBA_fnc_addEventHandler;
 [QGVAR(autofire_fire), LINKFUNC(autofire_fire)] call CBA_fnc_addEventHandler;
 
+// Cancel placement if interact menu open
+["ace_interactMenuOpened", {
+    if (GVAR(deployPFH) != -1) then {
+        GVAR(placeAction) = PLACE_CANCEL;
+    };
+}] call CBA_fnc_addEventHandler;
+
+// When changing cameras, drop deploying CSWs
+["featureCamera", {
+    if ((_this select 1) == "") exitWith {};
+
+    if (GVAR(deployPFH) != -1) then {
+        GVAR(placeAction) = PLACE_CANCEL;
+    };
+}] call CBA_fnc_addPlayerEventHandler;
 
 #ifdef DEBUG_MODE_FULL
 call compile preprocessFileLineNumbers QPATHTOF(dev\checkStaticWeapons.sqf);

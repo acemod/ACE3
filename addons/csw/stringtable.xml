@@ -126,6 +126,23 @@
             <Chinesesimp>正在组装武器...</Chinesesimp>
             <Ukrainian>Збірка зброї...</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_CSW_BlockedAction">
+            <English>Blocked</English>
+            <Czech>Blokováno</Czech>
+            <French>Bloqué</French>
+            <Spanish>Obstruido</Spanish>
+            <Italian>Bloccato</Italian>
+            <Polish>Zablokowany</Polish>
+            <Portuguese>Bloqueado</Portuguese>
+            <Russian>Заблокировано</Russian>
+            <German>Blockiert</German>
+            <Korean>막힘</Korean>
+            <Japanese>取り付け不可</Japanese>
+            <Chinese>斷開</Chinese>
+            <Chinesesimp>断开</Chinesesimp>
+            <Turkish>Bloke Edilmiş</Turkish>
+            <Ukrainian>Заблоковано</Ukrainian>
+        </Key>
         <Key ID="STR_ACE_CSW_DisableAutoFire_displayName">
             <English>Disable fire on load</English>
             <French>Désactiver le tir à l'armement</French>
@@ -272,6 +289,24 @@
             <Chinesesimp>捡起三脚架</Chinesesimp>
             <Ukrainian>Підібрати триногу</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_CSW_PlaceAction">
+            <English>Place</English>
+            <Czech>Položit</Czech>
+            <French>Placer</French>
+            <Spanish>Colocar</Spanish>
+            <Italian>Piazza</Italian>
+            <Polish>Umieść</Polish>
+            <Portuguese>Colocar</Portuguese>
+            <Russian>Установить</Russian>
+            <German>Platzieren</German>
+            <Korean>설치</Korean>
+            <Japanese>設置</Japanese>
+            <Chinese>放置</Chinese>
+            <Chinesesimp>放置</Chinesesimp>
+            <Turkish>Yerleştir</Turkish>
+            <Hungarian>Elhelyezés</Hungarian>
+            <Ukrainian>Встановити</Ukrainian>
+        </Key>
         <Key ID="STR_ACE_CSW_PlaceTripod_displayName">
             <English>Place Tripod</English>
             <Czech>Položit trojnožku</Czech>
@@ -304,6 +339,22 @@
             <Chinese>部署三腳架...</Chinese>
             <Chinesesimp>部署三脚架...</Chinesesimp>
             <Ukrainian>Розміщення триноги...</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_CSW_RaiseLowerRotate">
+            <English>Raise/Lower | (Ctrl + Scroll) Rotate</English>
+            <Czech>Zvednout/Snížit | (Ctrl + Kolečko myši) Otáčet</Czech>
+            <French>Lever/Baisser | (Ctrl + Scroll) Rotation</French>
+            <Spanish>Subir/Bajar | (Ctrl + Scroll) Rotar</Spanish>
+            <Italian>Alza/Abbassa | (Ctrl + Rotellina) Ruota</Italian>
+            <Polish>Wyżej/niżej | (Ctrl + Kółko myszy) obracanie</Polish>
+            <Portuguese>Subir/Abaixar | (Ctrl + Scroll) Rotacionar</Portuguese>
+            <Russian>Поднять/опустить | (Ctrl + Скролл) Крутить</Russian>
+            <German>Heben/Senken | (Strg + Scrollen) Drehen</German>
+            <Korean>높이기/내리기 | (컨트롤 + 스크롤) 회전</Korean>
+            <Japanese>上げる/下げる | (Ctrl + スクロール) 回転</Japanese>
+            <Chinesesimp>抬起/放低 |（Ctrl + 鼠标滚轮）旋转</Chinesesimp>
+            <Turkish>Yükselt/Alçalt | (Ctrl + Tekerlek) Döndür</Turkish>
+            <Ukrainian>Підняти/опустити | (Ctrl + Скрол) Крутити</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAABag_displayName">
             <English>[CSW] Static Mini-Spike Launcher (AA)</English>

@@ -24,10 +24,13 @@ PREP(assemble_deployWeapon);
 PREP(assemble_deployWeaponModifier);
 PREP(assemble_pickupTripod);
 PREP(assemble_pickupWeapon);
+PREP(assemble_startDeployTripod);
 
 PREP(canGetIn);
-
+PREP(deployCancel);
+PREP(deployConfirm);
 PREP(getCarryMagazine);
+PREP(handleScrollWheel);
 PREP(proxyWeapon);
 
 PREP(getLoadActions);
