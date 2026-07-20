@@ -397,4 +397,18 @@ class CfgVehicles {
     class O_Heli_Transport_04_medevac_F: Heli_Transport_04_base_F {
         GVAR(patientSeats)[] = {0,1,2};
     };
+
+    class LSV_01_base_F;
+    class LSV_01_armed_base_F: LSV_01_base_F {
+        GVAR(patientReverseFill) = 0;
+    };
+    class LSV_01_unarmed_base_F: LSV_01_base_F {
+        GVAR(patientReverseFill) = 0;
+    };
+    class LSV_01_light_base_F: LSV_01_base_F {
+        GVAR(patientReverseFill) = 0;
+    };
+    class LSV_01_AT_base_F: LSV_01_base_F {
+        GVAR(patientReverseFill) = 0;
+    };
 };
