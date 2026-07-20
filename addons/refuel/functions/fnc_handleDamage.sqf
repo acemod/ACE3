@@ -15,15 +15,18 @@
  * Public: No
  */
 
-params ["_source", "", "_damage"];
+params ["_source", "_selection", "_damage"];
 
 // run only once when destroyed
 if (
     !alive _source
+    || {_selection isNotEqualTo ""} // overall structural damage
     || {_damage < 1}
-    || {_source getVariable [QGVAR(handled), false]}
 ) exitWith {};
-_source setVariable [QGVAR(handled), true];
+
+//IGNORE_PRIVATE_WARNING ["_thisEventHandler"];
+_source removeEventHandler ["HandleDamage", _thisEventHandler];
+_source setVariable [QGVAR(HDEHID), nil];
 
 // burn time does not depend on amount so just check if > 0
 private _amount = _source getVariable [QGVAR(currentFuelCargo), 1];
