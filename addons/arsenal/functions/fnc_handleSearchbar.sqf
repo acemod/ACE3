@@ -153,7 +153,7 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
 
     private _isMagazine = isClass (configFile >> "CfgMagazines" >> _searchString); // Check if search term is a magazine for magazine lookups. Direct match is fine as user will ctrl+c the classname
     if (_isMagazine) then {
-        _searchString = configName (configFile >> "CfgMagazines" >> _searchString); // Get the config-case
+        _searchString = _searchString call EFUNC(common,getConfigName);
     };
     // Go through all items in panel and see if they need to be deleted or not
     for "_lbIndex" from (lbSize _leftPanelCtrl) - 1 to 0 step -1 do {
