@@ -2,18 +2,18 @@
 <Project name="ACE">
     <Package name="Casings">
         <Key ID="STR_ACE_Casings_Settings_DisplayName">
-            <English>ACE Casings</English>
-            <French>ACE Douilles</French>
-            <Spanish>ACE Casquillos</Spanish>
-            <Italian>ACE Bossoli</Italian>
-            <Polish>ACE Łuski</Polish>
-            <Portuguese>ACE Cartuchos</Portuguese>
-            <Russian>ACE Гильзы</Russian>
-            <German>ACE Patronenhülsen</German>
-            <Korean>ACE 탄피</Korean>
-            <Japanese>ACE 薬莢</Japanese>
-            <Chinesesimp>ACE 弹壳</Chinesesimp>
-            <Ukrainian>ACE Гільзи</Ukrainian>
+            <English>Casings</English>
+            <French>Douilles</French>
+            <Spanish>Casquillos</Spanish>
+            <Italian>Bossoli</Italian>
+            <Polish>Łuski</Polish>
+            <Portuguese>Cartuchos</Portuguese>
+            <Russian>Гильзы</Russian>
+            <German>Patronenhülsen</German>
+            <Korean>탄피</Korean>
+            <Japanese>薬莢</Japanese>
+            <Chinesesimp>弹壳</Chinesesimp>
+            <Ukrainian>Гільзи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Casings_description">
             <English>Enable persistent casings (POTENTIAL performance impact on old/weak systems)</English>

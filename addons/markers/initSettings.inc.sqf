@@ -1,9 +1,9 @@
-private _categoryName = format ["ACE %1", localize ELSTRING(map,Module_DisplayName)];
+private _category = [format ["ACE %1", LELSTRING(map,Module_DisplayName)], LLSTRING(Module_DisplayName)];
 
 [
     QGVAR(moveRestriction), "LIST",
     [LSTRING(MoveRestriction), LSTRING(MoveRestriction_Description)],
-    [_categoryName, LLSTRING(Module_DisplayName)],
+    _category,
     [
         [
             MOVE_RESTRICTION_NOBODY,
@@ -28,14 +28,14 @@ private _categoryName = format ["ACE %1", localize ELSTRING(map,Module_DisplayNa
 [
     QGVAR(timestampEnabled), "CHECKBOX",
     [LSTRING(TimestampEnabled), LSTRING(TimestampEnabledDescription)],
-    [_categoryName, LLSTRING(Module_DisplayName)],
+    _category,
     true
 ] call CBA_fnc_addSetting;
 
 [
     QGVAR(timestampTimezone), "LIST",
     [LSTRING(TimestampTimezone), LSTRING(TimestampTimezoneDescription)],
-    [_categoryName, LLSTRING(Module_DisplayName)],
+    _category,
     [
         [0, 1, 2],
         [LSTRING(TimestampTimezoneIngameTime), LSTRING(TimestampTimezoneSystemTime), LSTRING(TimestampTimezoneUTCTime)],
@@ -47,7 +47,7 @@ private _categoryName = format ["ACE %1", localize ELSTRING(map,Module_DisplayNa
 [
     QGVAR(timestampUTCOffset), "SLIDER",
     [LSTRING(TimestampUTCOffset), LSTRING(TimestampUTCOffsetDescription)],
-    [_categoryName, LLSTRING(Module_DisplayName)],
+    _category,
     [-12, 14, 0, 0],
     true
 ] call CBA_fnc_addSetting;
@@ -55,7 +55,7 @@ private _categoryName = format ["ACE %1", localize ELSTRING(map,Module_DisplayNa
 [
     QGVAR(TimestampUTCMinutesOffset), "LIST",
     [LSTRING(TimestampUTCMinutesOffset), LSTRING(TimestampUTCMinutesOffsetDescription)],
-    [_categoryName, LLSTRING(Module_DisplayName)],
+    _category,
     [
         [0, 15, 30, 45],
         [0, 15, 30, 45],
@@ -66,7 +66,7 @@ private _categoryName = format ["ACE %1", localize ELSTRING(map,Module_DisplayNa
 [
     QGVAR(timestampHourFormat), "LIST",
     [LSTRING(TimestampHourFormat), LSTRING(TimestampHourFormatDescription)],
-    [_categoryName, LLSTRING(Module_DisplayName)],
+    _category,
     [
         [24, 12],
         [LSTRING(TimestampHourFormat24), LSTRING(TimestampHourFormat12)],
@@ -86,7 +86,7 @@ private _formatDescription = [
 [
     QGVAR(timestampFormat), "LIST",
     [LSTRING(timestampFormat), _formatDescription],
-    [_categoryName, LLSTRING(Module_DisplayName)],
+    _category,
     [
         ["HH", "HH:MM", "HH:MM:SS", "HH:MM:SS:MM", "HH:MM:SS.mmm"],
         ["HH", "HH:MM", "HH:MM:SS", "HH:MM:SS:MM", "HH:MM:SS.mmm"],
@@ -97,6 +97,6 @@ private _formatDescription = [
 [
     QGVAR(quickNumberMarks), "LIST",
     [LSTRING(quickNumberMarks), LSTRING(quickNumberMarksDescription)],
-    [_categoryName, LLSTRING(Module_DisplayName)],
+    _category,
     [[0,1,2], [disabled, "STR_cba_settings_ButtonLocal", LSTRING(quickNumberMarksSideSync)], 2]
 ] call CBA_fnc_addSetting;

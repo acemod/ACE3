@@ -625,21 +625,21 @@
             <Ukrainian>Ранець із вибухівкою (метальний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_Settings_DisplayName">
-            <English>ACE Grenades</English>
-            <Czech>ACE Granáty</Czech>
-            <French>ACE Grenades</French>
-            <Spanish>ACE Granadas</Spanish>
-            <Italian>ACE Granate</Italian>
-            <Polish>ACE Granaty</Polish>
-            <Portuguese>ACE Granadas</Portuguese>
-            <Russian>ACE Гранаты</Russian>
-            <German>ACE Granaten</German>
-            <Korean>ACE 수류탄</Korean>
-            <Japanese>ACE 手榴弾</Japanese>
-            <Chinese>ACE 手榴彈</Chinese>
-            <Chinesesimp>ACE 手榴弹</Chinesesimp>
-            <Turkish>ACE Bombalar</Turkish>
-            <Ukrainian>ACE Гранати</Ukrainian>
+            <English>Grenades</English>
+            <Czech>Granáty</Czech>
+            <French>Grenades</French>
+            <Spanish>Granadas</Spanish>
+            <Italian>Granate</Italian>
+            <Polish>Granaty</Polish>
+            <Portuguese>Granadas</Portuguese>
+            <Russian>Гранаты</Russian>
+            <German>Granaten</German>
+            <Korean>수류탄</Korean>
+            <Japanese>手榴弾</Japanese>
+            <Chinese>手榴彈</Chinese>
+            <Chinesesimp>手榴弹</Chinesesimp>
+            <Turkish>Bombalar</Turkish>
+            <Ukrainian>Гранати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_SwitchGrenadeMode">
             <English>Switch Grenade Mode</English>
