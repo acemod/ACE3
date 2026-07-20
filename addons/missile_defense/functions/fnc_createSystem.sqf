@@ -8,7 +8,7 @@
  * 1: ID - Optional, The ID of the missile defense system to create. <STRING>
  *
  * Return Value:
- The ID of the created missile defense system. <STRING>
+ * The ID of the created missile defense system or "#error". <STRING>
  *
  * Example:
  * [] call ace_missile_defense_fnc_createSystem
@@ -19,7 +19,7 @@
 params ["_sides", ["_id", ""]];
 
 if (!isServer) exitWith {
-    ERROR("missile_defense functions only run on server");
+    ERROR("missile_defense functions only run on server"); "#error"
 };
 
 if (_id == "") then {
@@ -27,7 +27,7 @@ if (_id == "") then {
 };
 
 if (_id in GVAR(systems)) exitWith {
-    ERROR_1("Missile defense system with ID '%1' already exists",_id);
+    ERROR_1("Missile defense system with ID '%1' already exists",_id); "#error"
 };
 
 GVAR(systems) set [_id, createHashMapFromArray [
