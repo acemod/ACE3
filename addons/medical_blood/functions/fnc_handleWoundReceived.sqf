@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Damage done to each body part <ARRAY>
+ * 1: Damage <NUMBER or ARRAY>
  * 2: Shooter <OBJECT>
  * 3: Ammo classname or damage type <STRING>
  *
@@ -13,13 +13,18 @@
  * None
  *
  * Example:
- * [player, "Body", 0.5, badGuy] call ace_medical_blood_fnc_handleWoundReceived
+ * [player, 0.5, badGuy, "bullet"] call ace_medical_blood_fnc_handleWoundReceived
  *
  * Public: No
  */
 
-params ["_unit", "_allDamages", "_shooter", "_damageType"];
-(_allDamages select 0) params ["_damage"];
+params ["_unit", "_damage", "_shooter", "_damageType"];
+
+if (_damage isEqualTo []) exitWith {};
+
+if (_damage isEqualType []) then {
+    _damage = _damage select 0 select 0;
+};
 
 // Don't bleed if damage type does not cause bleeding
 if (_damageType in (uiNamespace getVariable QGVAR(noBloodDamageTypes))) exitWith {};
