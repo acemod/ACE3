@@ -2,9 +2,7 @@
     [LELSTRING(common,Enabled), LLSTRING(setting_enabled_description)],
     [ELSTRING(main,Category_Logistics), LSTRING(displayName)],
     true,
-    true,
-    {},
-    false
+    true
 ] call CBA_fnc_addSetting;
 
 [
