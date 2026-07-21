@@ -26,6 +26,11 @@ private _return = _cache get _item;
 
 // Don't replace with getOrDefaultCall, we want the key to only be set if return is true or _skipFalseKeys is false
 if (isNil "_return") then {
+
+    if (isNil "_config") then {
+        _config = _item call CBA_fnc_getItemConfig;
+    };
+
     private _asItem = getNumber (_config >> "ACE_asItem");
     private _fnc_hasProperty = { parseNumber (_asItem > 0 || {getNumber (_config >> "ACE_isUnique") == 1}) };
 
@@ -33,9 +38,6 @@ if (isNil "_return") then {
         case (_asItem == 2): {2}; // Forced misc item,
         case (_item isKindOf ["CBA_MiscItem", configFile >> "CfgWeapons"]): {1}; // CBA misc item, easy
 
-        if (isNil "_config") then {
-            _config = _item call CBA_fnc_getItemConfig;
-        };
 
         case (_isMag): _fnc_hasProperty; // Magazine misc item, also easy
 
