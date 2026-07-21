@@ -49,9 +49,9 @@ private _xDeviation = 0;
 private _tof = 0;
 
 while {abs(_resultDistance - _targetDistance) > 0.5} do {
-    TRACE_7("callExtension:artillery:simulate_find_solution",_useDistance,_targetHeight,_muzzleVelocity,_airFriction,_higharc,DEFAULT_MIN_ELEV,DEFAULT_MAX_ELEV);
+    TRACE_9("callExtension:artillery:simulate_find_solution",_useDistance,_targetHeight,_muzzleVelocity,_airFriction,_higharc,DEFAULT_MIN_ELEV,DEFAULT_MAX_ELEV,_temperature,_airDensity);
     (
-        "ace" callExtension ["artillery:simulate_find_solution", [_useDistance, _targetHeight, _muzzleVelocity, _airFriction, _higharc, DEFAULT_MIN_ELEV, DEFAULT_MAX_ELEV]]
+        "ace" callExtension ["artillery:simulate_find_solution", [_useDistance, _targetHeight, _muzzleVelocity, _airFriction, _higharc, DEFAULT_MIN_ELEV, DEFAULT_MAX_ELEV, _temperature, _airDensity]]
     ) params ["_data", "_code"];
     TRACE_1("",_code);
     (parseSimpleArray _data) params ["", "_useAngleRad", ""];
