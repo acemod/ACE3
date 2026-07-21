@@ -94,7 +94,7 @@ if (hasInterface) then {
             format ["%1: %2", LLSTRING(itemName), LLSTRING(checkDogtag)],
             QPATHTOF(data\dogtag_icon_ca.paa),
             {[_player, _target] call FUNC(checkDogtag)},
-            {!isNil {_target getVariable QGVAR(dogtagData)}}
+            {!(_target isNil QGVAR(dogtagData))}
         ] call EFUNC(interact_menu,createAction);
 
         ["ACE_bodyBagObject", 0, ["ACE_MainActions"], _checkTagAction, true] call EFUNC(interact_menu,addActionToClass);
@@ -104,7 +104,7 @@ if (hasInterface) then {
             format ["%1: %2", LLSTRING(itemName), LLSTRING(takeDogtag)],
             QPATHTOF(data\dogtag_icon_ca.paa),
             {[_player, _target] call FUNC(takeDogtag)},
-            {(!isNil {_target getVariable QGVAR(dogtagData)}) && {((_target getVariable [QGVAR(dogtagTaken), objNull]) != _target)}}
+            {(!(_target isNil QGVAR(dogtagData))) && {((_target getVariable [QGVAR(dogtagTaken), objNull]) != _target)}}
         ] call EFUNC(interact_menu,createAction);
 
         ["ACE_bodyBagObject", 0, ["ACE_MainActions"], _takeTagAction, true] call EFUNC(interact_menu,addActionToClass);

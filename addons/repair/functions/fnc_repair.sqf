@@ -188,7 +188,7 @@ if (_loopAnim) then {
         if (_anim isEqualTo (_caller getVariable [QGVAR(repairCurrentAnimCaller), ""])) then {
             [{
                 params ["_caller", "_anim"];
-                if !(isNil {_caller getVariable QGVAR(repairCurrentAnimCaller)}) then {
+                if !((_caller isNil QGVAR(repairCurrentAnimCaller))) then {
                     TRACE_2("loop",_caller,_anim);
                     call EFUNC(common,doAnimation)
                 };
