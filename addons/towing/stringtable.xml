@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Towing">
+        <Key ID="STR_ACE_Towing_setting_enabled_description">
+            <English>Enables ACE Towing interactions and behavior.</English>
+            <French>Active les interactions et le comportement du remorquage ACE.</French>
+            <Spanish>Activa las interacciones y el comportamiento de remolque de ACE.</Spanish>
+            <Italian>Abilita interazioni e comportamento del traino ACE.</Italian>
+            <Polish>Włącza interakcje i działanie holowania ACE.</Polish>
+            <Portuguese>Ativa as interações e o comportamento de reboque do ACE.</Portuguese>
+            <Russian>Включает взаимодействия и работу буксировки ACE.</Russian>
+            <German>Aktiviert ACE-Abschleppinteraktionen und -verhalten.</German>
+            <Korean>ACE 견인 상호작용과 동작을 활성화합니다.</Korean>
+            <Japanese>ACE けん引の操作と挙動を有効化します。</Japanese>
+            <Chinesesimp>启用 ACE 牵引的交互与行为。</Chinesesimp>
+            <Ukrainian>Увімкнути взаємодії та поведінку буксирування ACE.</Ukrainian>
+        </Key>
         <Key ID="STR_ACE_Towing_Setting_addRopeToVehicleInventory_DisplayName">
             <English>Add Tow Rope to Vehicle Inventory</English>
             <French>Ajouter une corde à l'inventaire des véhicules</French>

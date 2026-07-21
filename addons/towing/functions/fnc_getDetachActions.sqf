@@ -16,6 +16,8 @@
  */
 params ["_vehicle"];
 
+if (!GVAR(enabled)) exitWith {[]};
+
 private _statement = {
     params ["", "_player", "_hook"];
     [_player, _hook] call FUNC(detachRope);
