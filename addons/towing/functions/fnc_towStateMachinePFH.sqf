@@ -42,7 +42,6 @@ if (GVAR(isSwimming) && {currentWeapon _unit isNotEqualTo ""}) then {
 };
 
 private _exitCondition = !(
-    GVAR(enabled) &&
     (alive GVAR(attachHelper)) &&
     { alive _parent } &&
     { _unit call EFUNC(common,isAwake) } &&
