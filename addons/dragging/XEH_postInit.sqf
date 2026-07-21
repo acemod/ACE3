@@ -1,35 +1,7 @@
 // by PabstMirror, commy2
 #include "script_component.hpp"
 
-[QGVAR(moveCorpse), {
-    params ["_corpse", "_dir", "_posATL"];
-
-    if (isNull _corpse) exitWith {};
-
-    // Check if the corpse is already close to the target
-    // If so, don't teleport
-    if ((getPosATL _corpse) distance _posATL > 0.25) then {
-        // Set direction before position
-        _corpse setDir _dir;
-
-        // Bring corpse back to clone's position
-        _corpse setPosATL _posATL;
-    };
-
-    // Sync the corpse with its position
-    [{
-        _this awake true;
-
-        [{
-            _this awake false;
-        }, _this] call CBA_fnc_execNextFrame;
-    }, _corpse] call CBA_fnc_execNextFrame;
-
-    // Allow the corpse to be synced for JIP players
-    if (isServer) exitWith {
-        GVAR(movedCorpses) pushBackUnique _corpse;
-    };
-}] call CBA_fnc_addEventHandler;
+[QGVAR(moveCorpse), LINKFUNC(moveCorpse)] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
     // Release object on disconnection. Function is identical to killed
