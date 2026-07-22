@@ -2,7 +2,7 @@
 #define TOW_ACTION(length) \
     class GVAR(CONCAT(startTow,length)) {\
         displayName = CSTRING(CONCAT(start,length));\
-        condition = QUOTE([ARR_2(_player,'CONCAT(ACE_rope,length)')] call DEFUNC(common,hasItem));\
+        condition = QUOTE(GVAR(enabled) && {[ARR_2(_player,'CONCAT(ACE_rope,length)')] call DEFUNC(common,hasItem)});\
         statement = QUOTE([ARR_3(_player,_target,'CONCAT(ACE_rope,length)')] call DFUNC(startTow));\
         exceptions[] = { INTERACTION_EXCEPTIONS };\
     }
