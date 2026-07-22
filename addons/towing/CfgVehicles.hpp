@@ -2,7 +2,7 @@
 #define TOW_ACTION(length) \
     class GVAR(CONCAT(startTow,length)) {\
         displayName = CSTRING(CONCAT(start,length));\
-        condition = QUOTE(GVAR(enabled) && {[ARR_2(_player,'CONCAT(ACE_rope,length)')] call DEFUNC(common,hasItem)});\
+        condition = QUOTE([ARR_2(_player,'CONCAT(ACE_rope,length)')] call DEFUNC(common,hasItem));\
         statement = QUOTE([ARR_3(_player,_target,'CONCAT(ACE_rope,length)')] call DFUNC(startTow));\
         exceptions[] = { INTERACTION_EXCEPTIONS };\
     }
@@ -12,7 +12,7 @@
             class ADDON {\
                 displayName = CSTRING(displayName);\
                 distance = TOW_ACTION_DISTANCE;\
-                condition = QUOTE(GVAR(enabled) && {alive _target && {_target call DFUNC(isSuitableSimulation)}});\
+                condition = QUOTE(alive _target && {_target call DFUNC(isSuitableSimulation)});\
                 exceptions[] = { INTERACTION_EXCEPTIONS };\
                 insertChildren = QUOTE(_target call DFUNC(getDetachActions));\
                 TOW_ACTION(3);\
@@ -54,7 +54,6 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(detach);
-                condition = QUOTE(GVAR(enabled));
                 statement = QUOTE([ARR_2(_player,_target)] call DFUNC(detachRope));
                 distance = TOW_ACTION_DISTANCE;
             };
