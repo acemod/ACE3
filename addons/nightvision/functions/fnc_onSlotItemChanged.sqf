@@ -23,6 +23,11 @@ TRACE_4("onSlotItemChanged",_unit,_item,_slot,_assign);
 
 if (_slot != TYPE_HMD) exitWith {
     if (_slot != TYPE_HEADGEAR && {(hmd _unit) isEqualTo ""}) exitWith {};
+    if (!_assign) exitWith {
+        if ((hmd _unit) isEqualTo "") exitWith {
+            GVAR(playerHMD) = "";
+        };
+    };
     private _subItems = getArray (configFile >> "CfgWeapons" >> _item >> "subItems");
     if (_subItems isEqualTo []) exitWith {};
     private _nvg = _subItems findIf { "nvg" in (toLower _x) };
