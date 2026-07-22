@@ -212,12 +212,58 @@ class CfgGlasses {
         ACE_Protection = 1;
         ACE_Overlay_Angle = 180;
     };
+    class G_AirPurifyingRespirator_01_F: G_AirPurifyingRespirator_01_base_F {
+        ACE_RespiratorFilterPair = "G_AirPurifyingRespirator_01_nofilter_F";
+    };
+    class G_AirPurifyingRespirator_01_nofilter_F: G_AirPurifyingRespirator_01_F {
+        ACE_RespiratorFilterPair = "G_AirPurifyingRespirator_01_F";
+        ACE_RespiratorHoseList[] = {
+            {"B_CombinationUnitRespirator_01_F", {0, "a3\supplies_f_enoch\bags\data\b_cur_01_co.paa", "a3\supplies_f_enoch\bags\data\b_cur_01_co.paa", ""}},
+            {"B_SCBA_01_F", {0, "a3\supplies_f_enoch\bags\data\b_scba_01_co.paa", ""}}
+        };
+    };
+
     class G_AirPurifyingRespirator_02_base_F: G_AirPurifyingRespirator_01_base_F {
         ACE_Overlay = "a3\ui_f_enoch\data\objects\data\optics_APR_02_CA.paa";
     };
+    class G_AirPurifyingRespirator_02_black_F: G_AirPurifyingRespirator_02_base_F {
+        ACE_RespiratorFilterPair = "G_AirPurifyingRespirator_02_black_nofilter_F";
+    };
+    class G_AirPurifyingRespirator_02_black_nofilter_F: G_AirPurifyingRespirator_02_black_F {
+        ACE_RespiratorFilterPair = "G_AirPurifyingRespirator_02_black_F";
+        ACE_RespiratorHoseList[] = {
+            {"B_CombinationUnitRespirator_01_F", {0, "a3\supplies_f_enoch\bags\data\b_cur_01_co.paa", "a3\supplies_f_enoch\bags\data\b_cur_01_co.paa", ""}},
+            {"B_SCBA_01_F", {0, "a3\supplies_f_enoch\bags\data\b_scba_01_co.paa", ""}}
+        };
+    };
+    class G_AirPurifyingRespirator_02_olive_F: G_AirPurifyingRespirator_02_base_F {
+        ACE_RespiratorFilterPair = "G_AirPurifyingRespirator_02_olive_nofilter_F";
+    };
+    class G_AirPurifyingRespirator_02_olive_nofilter_F: G_AirPurifyingRespirator_02_olive_F {
+        ACE_RespiratorFilterPair = "G_AirPurifyingRespirator_02_olive_F";
+        ACE_RespiratorHoseList[] = {
+            {"B_CombinationUnitRespirator_01_F", {0, "a3\supplies_f_enoch\bags\data\b_cur_01_co.paa", "a3\supplies_f_enoch\bags\data\b_cur_01_co.paa", ""}},
+            {"B_SCBA_01_F", {0, "a3\supplies_f_enoch\bags\data\b_scba_01_co.paa", ""}}
+        };
+    };
+    class G_AirPurifyingRespirator_02_sand_F: G_AirPurifyingRespirator_02_base_F {
+        ACE_RespiratorFilterPair = "G_AirPurifyingRespirator_02_sand_nofilter_F";
+    };
+    class G_AirPurifyingRespirator_02_sand_nofilter_F: G_AirPurifyingRespirator_02_sand_F {
+        ACE_RespiratorFilterPair = "G_AirPurifyingRespirator_02_sand_F";
+        ACE_RespiratorHoseList[] = {
+            {"B_CombinationUnitRespirator_01_F", {0, "a3\supplies_f_enoch\bags\data\b_cur_01_co.paa", "a3\supplies_f_enoch\bags\data\b_cur_01_co.paa", ""}},
+            {"B_SCBA_01_F", {0, "a3\supplies_f_enoch\bags\data\b_scba_01_co.paa", ""}}
+        };
+    };
+
     class G_RegulatorMask_base_F: None {
         ACE_Overlay = "a3\ui_f_enoch\data\objects\data\optics_regulator_ca.paa";
         ACE_OverlayCracked = "";
         ACE_Overlay_Angle = 180;
+        ACE_RespiratorHoseList[] = {
+            {"B_CombinationUnitRespirator_01_F", {0, "a3\supplies_f_enoch\bags\data\b_cur_01_co.paa", "", "a3\supplies_f_enoch\bags\data\b_cur_01_co.paa"}},
+            {"B_SCBA_01_F", {0, "", "a3\supplies_f_enoch\bags\data\b_scba_01_co.paa"}}
+        };
     };
 };
