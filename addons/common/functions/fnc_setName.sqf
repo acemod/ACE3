@@ -20,7 +20,7 @@ params ["_unit", ["_forceSet", false]];
 
 private _name = name _unit;
 
-TRACE_3("setName",_unit,alive _unit,_name);
+TRACE_4("setName",_unit,alive _unit,_name,_forceSet);
 
 if (isNull _unit || {!alive _unit} || { !(_unit isKindOf "CAManBase") }) exitWith {};
 
