@@ -8,6 +8,9 @@ on:
     - 'Cargo.lock'
     - '.github/workflows/extensions.yml'
 
+permissions:
+  contents: read
+
 jobs:
   lint:
     runs-on: ubuntu-latest
