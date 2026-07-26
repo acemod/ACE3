@@ -1,8 +1,10 @@
+private _category = [ELSTRING(common,ACEKeybindCategoryVehicles), LLSTRING(category_displayName)];
+
 [
     QGVAR(enabled),
     "CHECKBOX",
     [ELSTRING(common,Enabled), LSTRING(setting_description)],
-    LSTRING(category_displayName),
+    _category,
     false,
     1,
     {[QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
@@ -13,7 +15,7 @@
     QGVAR(enableCarDamage),
     "CHECKBOX",
     [LSTRING(carDamage_setting_enable), LSTRING(carDamage_setting_description)],
-    LSTRING(category_displayName),
+    _category,
     false,
     1,
     {[QGVAR(enableCarDamage), _this] call EFUNC(common,cbaSettings_settingChanged)},

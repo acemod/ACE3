@@ -1,4 +1,4 @@
-private _category = [LELSTRING(common,categoryUncategorized), LLSTRING(itemName)];
+private _category = [LELSTRING(common,ACEKeybindCategoryEquipment), LLSTRING(itemName)];
 
 [
     QGVAR(mapDataAvailable), "LIST",
