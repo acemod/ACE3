@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Towing">
+        <Key ID="STR_ACE_Towing_setting_enabled_description">
+            <English>Enables ACE Towing interactions and behavior.</English>
+            <German>Aktiviert ACE-Abschleppinteraktionen und -verhalten.</German>
+        </Key>
         <Key ID="STR_ACE_Towing_Setting_addRopeToVehicleInventory_DisplayName">
             <English>Add Tow Rope to Vehicle Inventory</English>
             <French>Ajouter une corde à l'inventaire des véhicules</French>
