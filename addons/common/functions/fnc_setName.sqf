@@ -24,10 +24,11 @@ TRACE_4("setName",_unit,alive _unit,_name,_forceSet);
 
 if (isNull _unit || {!alive _unit} || { !(_unit isKindOf "CAManBase") }) exitWith {};
 
-if (_forceSet || _unit isNil "ACE_Name") then {
+if (_forceSet || !(_unit getVariable ["ace_setCustomName", false])) then {
     private _sanitizedName = [_name, true] call FUNC(sanitizeString);
     private _rawName = [_name, false] call FUNC(sanitizeString);
 
     _unit setVariable ["ACE_Name", _sanitizedName, true];
     _unit setVariable ["ACE_NameRaw", _rawName, true];
+    _unit setVariable ["ace_setCustomName", nil, true];
 };
