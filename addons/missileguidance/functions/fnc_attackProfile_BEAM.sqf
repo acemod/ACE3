@@ -26,6 +26,8 @@ private _shooterPos = getPosASL _shooter;
 
 private _distanceToProjectile = _shooterPos vectorDistanceSqr _projectilePos;
 
+[QEGVAR(laser_warning,ping), [_shooterPos, _shooterPos vectorFromTo _seekerTargetPos]] call CBA_fnc_globalEvent;
+
 if ((_distanceToProjectile > _seekerMaxRangeSqr) || { _wireCut }) exitWith {
     // wire snap, random direction
     if !(_wireCut) then {
