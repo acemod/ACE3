@@ -66,17 +66,16 @@ private _replaceData = createHashMapFromArray [
     ["typeTarget", _typeTarget]
 ];
 
-private _extendedInfo = createHashMap;
-[QGVAR(itemChangedStart), [_replaceData, _extendedInfo]] call CBA_fnc_localEvent; // API
+[QGVAR(itemChangedStart), [_replaceData]] call CBA_fnc_localEvent; // API
 
 [{
-    params ["_replaceData", "_replaceCode", "_extendedInfo"];
+    params ["_replaceData", "_replaceCode"];
 
-    [QGVAR(itemChangedBegin), [_replaceData, _extendedInfo]] call CBA_fnc_localEvent; // API
+    [QGVAR(itemChangedBegin), [_replaceData]] call CBA_fnc_localEvent; // API
     _replaceData call _replaceCode;
-    [QGVAR(itemChangedEnd), [_replaceData, _extendedInfo]] call CBA_fnc_localEvent; // API
+    [QGVAR(itemChangedEnd), [_replaceData]] call CBA_fnc_localEvent; // API
 
-}, [_replaceData, _replaceCode, _extendedInfo], _duration] call CBA_fnc_waitAndExecute;
+}, [_replaceData, _replaceCode], _duration] call CBA_fnc_waitAndExecute;
 
 
 // HANDLE COMPONENTS
