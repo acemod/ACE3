@@ -84,6 +84,12 @@ if (hasInterface) then {
     } forEach _staticClasses;
     TRACE_1("init terrain",_staticFound);
 
+    [QGVAR(setFuelCargo), {
+        params ["_source", "_fuel"];
+        TRACE_2("setFuelCargo event",_fuel,_source);
+        _source setFuelCargo _fuel;
+    }] call CBA_fnc_addEventHandler;
+
     if (!hasInterface) exitWith {};
 
     ["isNotRefueling", {!((_this select 0) getVariable [QGVAR(isRefueling), false])}] call EFUNC(common,addCanInteractWithCondition);
