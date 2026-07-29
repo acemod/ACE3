@@ -25,3 +25,18 @@ if (_source getVariable [QGVAR(HDEHID), -1] == -1) then {
     private _HDEHID = _source addEventHandler ["HandleDamage", {call FUNC(handleDamage)}];
     _source setVariable [QGVAR(HDEHID), _HDEHID];
 };
+
+// `Vehicle Damage` and `Cook off` use setDamage to destroy vehicle, so we can not catch this moment
+if (missionNamespace getVariable [QEGVAR(vehicle_damage,enabled), false]) then {
+    // need next next frame to check if VD HD EH exists
+    [{
+        [{
+            params ["_source"];
+            if (isNil {_source getVariable QEGVAR(vehicle_damage,handleDamage)}) exitWith {};
+            TRACE_1("VD enabled",_source);
+
+            _source removeEventHandler ["HandleDamage", _source getVariable QGVAR(HDEHID)];
+            _source setVariable [QGVAR(HDEHID), nil];
+        }, _this] call CBA_fnc_execNextFrame;
+    }, _source] call CBA_fnc_execNextFrame;
+};
