@@ -39,7 +39,7 @@ if (_model == getText (_vehicleConfig >> "model")) then {
 TRACE_4("addGetInActions",_vehicleClass,_cargoProxyIndexes,_seatPositions,_seatProxies);
 
 private _conditionCrew = {
-    call FUNC(canShowFreeSeats)
+    [_target, _player, false] call FUNC(canShowFreeSeats)
     && {!isNull ([_target, _actionParams select 0] call FUNC(getSeatUnit))}
 };
 private _insertChildrenCrew = {
@@ -76,7 +76,7 @@ private _cargoPositionNumber = -1;
             _proxyIndex = 1;
             _params = [_turretPath];
             _condition = {
-                call FUNC(canShowFreeSeats)
+                [_target, _player, false] call FUNC(canShowFreeSeats)
                 && {!lockedDriver _target}
                 && {!alive driver _target}
             };
@@ -89,7 +89,7 @@ private _cargoPositionNumber = -1;
             _proxyIndex = _cargoProxyIndexes param [_cargoPositionNumber, _cargoPositionNumber + 1];
             _params = [_cargoIndex, _cargoPositionNumber];
             _condition = {
-                call FUNC(canShowFreeSeats)
+                [_target, _player, false] call FUNC(canShowFreeSeats)
                 && {
                     private _cargoIndex = _actionParams select 0;
                     !(_target lockedCargo _cargoIndex)
@@ -112,7 +112,7 @@ private _cargoPositionNumber = -1;
             _proxyIndex = getNumber (_turretConfig >> "proxyIndex");
             _params = [_turretPath];
             _condition = {
-                call FUNC(canShowFreeSeats)
+                [_target, _player, false] call FUNC(canShowFreeSeats)
                 && {
                     private _turretPath = _actionParams select 0;
                     !(_target lockedTurret _turretPath)

@@ -7,35 +7,43 @@
  * Arguments:
  * 0: Vehicle <OBJECT>
  * 1: Unit <OBJECT>
- * 2: Args <ARRAY>
+ * 2: Menu (true for menu, false for 3d interactions) <BOOL>
  * 3: Use cache <BOOL> (default: true)
  *
  * Return Value:
  * Can show menu <BOOL>
  *
  * Example:
- * [cursorObject, player] call ace_quickmount_fnc_canShowFreeSeats
+ * [cursorObject, player, true] call ace_quickmount_fnc_canShowFreeSeats
  *
  * Public: No
  */
 
-params ["_vehicle", "_unit", ["_args", []], ["_useCache", true]];
+params ["_vehicle", "_unit", ["_menu", true], ["_useCache", true]];
 
 private _isInVehicle = _unit in _vehicle;
 
 // function is called by multiple actions and MainAction
 if (!_isInVehicle && {_useCache}) exitWith {
     _this set [3, false];
-    [_this, LINKFUNC(canShowFreeSeats), _vehicle, QGVAR(canShowFreeSeats), 1] call EFUNC(common,cachedCall) // return
+    [_this, LINKFUNC(canShowFreeSeats), _vehicle, format [QGVAR(canShowFreeSeats%1), _menu], 1] call EFUNC(common,cachedCall) // return
 };
 
-TRACE_6("canShowFreeSeats",_vehicle,typeOf _vehicle,_unit,_isInVehicle,_args,_useCache);
+TRACE_6("canShowFreeSeats",_vehicle,typeOf _vehicle,_unit,_isInVehicle,_menu,_useCache);
 
 GVAR(enabled)
 && {
-    GVAR(enableMenu) == 3
-    || {_isInVehicle && {GVAR(enableMenu) == 2}}
-    || {!_isInVehicle && {GVAR(enableMenu) == 1}}
+    if (_menu) then {
+        GVAR(enableMenu) == 3
+        || {_isInVehicle && {GVAR(enableMenu) == 2}}
+        || {!_isInVehicle && {GVAR(enableMenu) == 1}}
+    } else {
+        switch (GVAR(enable3d)) do {
+            case 2: {true};
+            case 1: {CBA_events_shift};
+            default {false};
+        }
+    }
 }
 && {alive _vehicle}
 && {locked _vehicle < 2}
@@ -48,11 +56,8 @@ GVAR(enabled)
 }
 && {
     _isInVehicle
-    || {typeOf _vehicle in GVAR(initializedVehicleClasses)}
-    || {
-        // init vehicle actions here to skip useless checks on clients with disabled quickmount
-        GVAR(initializedVehicleClasses) pushBack typeOf _vehicle;
+    || {GVAR(initializedVehicleClasses) getOrDefaultCall [typeOf _vehicle, {
         _vehicle call FUNC(addGetInActions);
         true
-    }
+    }, true]}
 }
