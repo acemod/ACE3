@@ -22,11 +22,7 @@
 params ["_vehicle", "_turret", "_carryMag", "_magSource", "_unit"];
 TRACE_5("loadMagazine",_vehicle,_turret,_carryMag,_magSource,_unit);
 
-private _timeToLoad = 1;
-private _config = configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime";
-if (!isNull _config) then {
-    _timeToLoad = getNumber _config;
-};
+private _timeToLoad = GET_NUMBER(configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime",1);
 
 private _displayName = format [LLSTRING(loadX), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")];
 
@@ -52,6 +48,9 @@ private _onFinish = {
     [_magSource, _carryMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
     if (_bestAmmoToSend == 0) exitWith {};
 
+    // Emptying a weapon holder deletes it, so the cached source list can hold a deleted object
+    [QGVAR(clearNearbySourcesCache), []] call CBA_fnc_localEvent;
+
     // Workaround for removeSpecificMagazine and WeaponHolders being deleted when empty, give back to the unit if the weapon holder was deleted
     // TODO: Pass type and position of deleted object to create a new one
     private _args = [_vehicle, _turret, _magSource, _carryMag, _bestAmmoToSend];
@@ -69,7 +68,7 @@ private _onFinish = {
 
 [
     TIME_PROGRESSBAR(_timeToLoad),
-    [_vehicle, _turret, _carryMag, _magSource],
+    [_vehicle, _turret, _carryMag, _magSource, _unit],
     _onFinish,
     {TRACE_1("load progressBar fail",_this);},
     _displayName,
