@@ -24,7 +24,7 @@ TRACE_5("loadMagazine",_vehicle,_turret,_carryMag,_magSource,_unit);
 
 private _timeToLoad = GET_NUMBER(configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime",1);
 
-private _displayName = format [LLSTRING(loadX), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")];
+private _displayName = format [LLSTRING(actionLoad), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")];
 
 private _onFinish = {
     (_this select 0) params ["_vehicle", "_turret", "_carryMag", "_magSource", "_unit"];
