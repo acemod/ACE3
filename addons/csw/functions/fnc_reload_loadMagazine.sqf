@@ -53,15 +53,11 @@ private _onFinish = {
 
     // Workaround for removeSpecificMagazine and WeaponHolders being deleted when empty, give back to the unit if the weapon holder was deleted
     // TODO: Pass type and position of deleted object to create a new one
-    private _args = [_vehicle, _turret, _magSource, _carryMag, _bestAmmoToSend];
+    private _returnTo = [_magSource, _unit] select (_magSource getEntityInfo 14);
 
-    // If the source is set for deletion, give mag back to unit
-    if (_magSource getEntityInfo 14) then {
-        _args pushBack _unit;
-    };
-
+    private _args = [_vehicle, _turret, _carryMag, _bestAmmoToSend, _returnTo];
     TRACE_1("calling addTurretMag event",_args);
-    [QGVAR(addTurretMag), _args] call CBA_fnc_globalEvent;
+    [QGVAR(addTurretMag), _args, _vehicle, _turret] call CBA_fnc_turretEvent;
     _vehicle setVariable [QGVAR(reloader), _unit, true];
 };
 
