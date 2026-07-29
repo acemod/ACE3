@@ -43,18 +43,16 @@ _magazineInfo params ["_carryMag", "_turretPath", "", "_magSource", "_ammo"];
 // Remove the mag from the source
 [_magSource, _carryMag, _ammo] call EFUNC(common,removeSpecificMagazine);
 
-// No source: the magazine is already gone by the time the event fires, so there is nothing left to
-// check it against. Leftover ammo goes to the gunner, passed explicitly since it can't default to
-// the source any more
-private _eventParams = [_vehicle, _turretPath, objNull, _carryMag, _ammo, _gunner];
+// Leftover ammo goes back to the gunner
+private _eventParams = [_vehicle, _turretPath, _carryMag, _ammo, _gunner];
 
 private _timeToLoad = GET_NUMBER(configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime",1);
 TRACE_1("Reloading in progress",_timeToLoad);
 
 [{
-    params ["_vehicle", "", "", "", "", "_gunner"];
+    params ["_vehicle", "_turretPath", "", "", "_gunner"];
     if !(alive _vehicle && {alive _gunner}) exitWith {TRACE_2("invalid state",alive _vehicle,alive _gunner)};
 
     TRACE_1("calling addTurretMag event",_this);
-    [QGVAR(addTurretMag), _this] call CBA_fnc_globalEvent;
+    [QGVAR(addTurretMag), _this, _vehicle, _turretPath] call CBA_fnc_turretEvent;
 }, _eventParams, _timeToLoad] call CBA_fnc_waitAndExecute;
