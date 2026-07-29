@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: LinkIsGrim
- * Points an AI gunner at the proxy weapon that just replaced the one they had selected.
+ * Points a gunner at the proxy weapon that just replaced the one they had selected.
  * Called from a global event, only does anything where the gunner is local.
  *
  * Arguments:
@@ -24,14 +24,16 @@ TRACE_3("proxyWeaponChanged",_vehicle,_turret,_proxyWeapon);
 
 private _gunner = _vehicle turretUnit _turret;
 
-// Nobody to point anywhere, and players pick their own weapon
-if (isNull _gunner || {[_gunner] call EFUNC(common,isPlayer)}) exitWith {};
+if (isNull _gunner) exitWith {};
 
-// selectWeaponTurret has no documented locality, but AI weapon selection follows the gunner rather
-// than the turret, and FUNC(proxyWeapon) already ran on whichever machine owns the turret
+// selectWeaponTurret has no documented locality, but weapon selection follows the gunner rather than
+// the turret, and FUNC(proxyWeapon) already ran on whichever machine owns the turret
 if !(local _gunner) exitWith {TRACE_2("gunner not local",_vehicle,_gunner)};
 
-if ((_vehicle currentWeaponTurret _turret) isEqualTo _proxyWeapon) exitWith {TRACE_1("already selected",_proxyWeapon)};
+// Only step in when the selection no longer exists, which is what the swap just did to it. A gunner
+// who still has a valid weapon picked it deliberately, including a player cycling turret weapons
+private _selected = _vehicle currentWeaponTurret _turret;
+if (_selected in (_vehicle weaponsTurret _turret)) exitWith {TRACE_1("selection still valid",_selected)};
 
-TRACE_3("selecting proxy weapon",_vehicle,_turret,_proxyWeapon);
+TRACE_4("selecting proxy weapon",_vehicle,_turret,_selected,_proxyWeapon);
 _vehicle selectWeaponTurret [_proxyWeapon, _turret];

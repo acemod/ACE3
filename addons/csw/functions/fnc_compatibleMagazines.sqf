@@ -19,7 +19,9 @@
 
 params [["_csw", objNull, [objNull]]];
 
-if !((typeOf _csw) in GVAR(initializedStaticTypes)) exitWith {createHashMap};
+// Read from config rather than GVAR(initializedStaticTypes), which is only filled where there is an
+// interface and so is always empty on a dedicated server
+if ((getNumber (configOf _csw >> QUOTE(ADDON) >> "enabled")) != 1) exitWith {createHashMap};
 
 // Caches are filled here rather than on weapon swap, a CSW without a proxy weapon needs them too
 private _fnc_cacheWeapon = {
