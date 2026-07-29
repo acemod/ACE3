@@ -42,10 +42,11 @@ if ((_fullMagazines == 0) && {_bulletsRemaining == 0}) exitWith {};
 // Try to use object inventory or existing container
 private _container = [_unloadTo, objNull] select _unloadToUnit;
 if ((maxLoad _container) isEqualTo 0) then {
+    // Same radius the loading side searches, or ammo lands somewhere it can't be loaded back from
     _container = _unloadTo getVariable [QGVAR(container), objNull];
-    if ((_container distance _unloadTo) > 10) then { _container = objNull; };
+    if ((_container distance _unloadTo) > DISTANCE_SEARCH_RADIUS) then { _container = objNull; };
     if (isNull _container) then {
-        _container = (nearestObjects [_unloadTo, [["GroundWeaponHolder"], [QGVAR(ammo_holder)]] select GVAR(handleExtraMagazinesType), 10]) param [0, objNull];
+        _container = (nearestObjects [_unloadTo, [["GroundWeaponHolder"], [QGVAR(ammo_holder)]] select GVAR(handleExtraMagazinesType), DISTANCE_SEARCH_RADIUS]) param [0, objNull];
     };
 };
 
