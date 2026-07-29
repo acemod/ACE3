@@ -40,6 +40,7 @@ PREP(getLoadActions);
 PREP(getUnloadActions);
 PREP(reload_canLoadMagazine);
 PREP(reload_canUnloadMagazine);
+PREP(reload_canUseSource);
 PREP(reload_getLoadableMagazines);
 PREP(reload_getVehicleMagazine);
 PREP(reload_handleAddTurretMag);
