@@ -29,7 +29,10 @@ PREP(assemble_startDeployTripod);
 PREP(canGetIn);
 PREP(deployCancel);
 PREP(deployConfirm);
+PREP(compatibleMagazines);
 PREP(getCarryMagazine);
+PREP(getNearbySources);
+PREP(getSourceCompatibleMagazines);
 PREP(handleScrollWheel);
 PREP(proxyWeapon);
 
