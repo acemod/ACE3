@@ -43,6 +43,14 @@ GVAR(selfInteractionActions) = [];
 }] call CBA_fnc_addEventHandler;
 
 ["ace_medicalMenuOpened", LINKFUNC(showMedicalHint)] call CBA_fnc_addEventHandler;
+[QGVAR(medicalHint), {
+    params ["_medic", "_msgArray"];
+    switch (GVAR(medicalHintEnabled)) do {
+        case 0: {};
+        case 1: { _msgArray call EFUNC(common,displayTextPicture) };
+        case 2: { playSound3D ["\A3\Sounds_F\characters\ingame\AinvPknlMstpSlayWpstDnon_medicIn.wss", _medic, false, _medic, 0.5, 1, 0, 0, true] }; // local only
+    };
+}] call CBA_fnc_addEventHandler;
 
 [QEGVAR(medical,woundReceived), {
     params ["_unit", "_allDamages", ""];
