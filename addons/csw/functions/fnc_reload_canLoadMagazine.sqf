@@ -19,21 +19,14 @@
  */
 
 params ["_vehicle", "_turret", "_carryMag", ["_magSource", objNull]];
-// TRACE_4("reload_canLoadMagazine",_vehicle,_turret,_carryMag,_magSource);
+TRACE_4("reload_canLoadMagazine",_vehicle,_turret,_carryMag,_magSource);
 
 private _return = [false, "", -2, false];
 
 // Handle disassembled or deleted
 if (!alive _vehicle) exitWith { _return };
-// Verify holder has carry magazine
-if (
-    (!isNull _magSource) &&
-    {!((_magSource isKindOf "Bag_Base") || {_magSource isKindOf "ContainerSupply"})} && // Hacky workaround for magazines within dropped backpacks
-    {
-        ((_vehicle distance _magSource) > 10) ||
-        {((magazineCargo _magSource) findIf {_x == _carryMag}) == -1}
-    }
-) exitWith { _return };
+
+if !([_vehicle, _carryMag, _magSource] call FUNC(reload_canUseSource)) exitWith { _return };
 
 // solve config lookups
 private _cfgMagazines = configFile >> "CfgMagazines";
