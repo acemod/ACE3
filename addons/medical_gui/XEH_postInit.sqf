@@ -46,7 +46,6 @@ GVAR(selfInteractionActions) = [];
 [QGVAR(medicalHint), {
     params ["_medic", "_msgArray"];
     switch (GVAR(medicalHintEnabled)) do {
-        case 0: {};
         case 1: { _msgArray call EFUNC(common,displayTextPicture) };
         case 2: { playSound3D ["\A3\Sounds_F\characters\ingame\AinvPknlMstpSlayWpstDnon_medicIn.wss", _medic, false, _medic, 0.5, 1, 0, 0, true] }; // local only
     };
