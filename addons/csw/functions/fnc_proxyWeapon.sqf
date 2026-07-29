@@ -49,3 +49,7 @@ TRACE_2("swapping to proxy weapon",_currentWeapon,_proxyWeapon);
 _vehicle removeWeaponTurret [_currentWeapon, _turret];
 _vehicle addWeaponTurret [_proxyWeapon, _turret];
 _vehicle setVariable [format [QGVAR(proxyHandled_%1), _turret], true, true];
+
+// An AI already sitting in the turret had the weapon it selected taken away. Weapon selection has to
+// happen where the gunner is local, which isn't necessarily this machine
+[QGVAR(proxyWeaponChanged), [_vehicle, _turret, _currentWeapon, _proxyWeapon]] call CBA_fnc_globalEvent;
