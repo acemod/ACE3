@@ -22,7 +22,7 @@
 params ["_vehicle", "_unit", ["_menu", true], ["_useCache", true]];
 
 // function is called by multiple actions
-if (!_menu && {_useCache}) exitWith {
+if (!_menu && _useCache) exitWith {
     _this set [3, false];
     [_this, LINKFUNC(canShowFreeSeats), _vehicle, QGVAR(canShowFreeSeats_3d), 1] call EFUNC(common,cachedCall) // return
 };
@@ -34,6 +34,11 @@ TRACE_6("canShowFreeSeats",_vehicle,typeOf _vehicle,_unit,_isInVehicle,_menu,_us
 GVAR(enabled)
 && {
     if (_menu) then {
+        // add 3d interactions for vehicles now
+        GVAR(initializedVehicleClasses) getOrDefaultCall [typeOf _vehicle, {
+            _vehicle call FUNC(addGetInActions);
+            true
+        }, true];
         GVAR(enableMenu) == 3
         || {_isInVehicle && {GVAR(enableMenu) == 2}}
         || {!_isInVehicle && {GVAR(enableMenu) == 1}}
@@ -53,11 +58,4 @@ GVAR(enabled)
 && {
     vectorUp _vehicle select 2 > 0.3 // moveIn* and GetIn* don't work for flipped vehicles
     || {_vehicle isKindOf "Air"} // except Air
-}
-&& {
-    _menu
-    || {GVAR(initializedVehicleClasses) getOrDefaultCall [typeOf _vehicle, {
-        _vehicle call FUNC(addGetInActions);
-        true
-    }, true]}
 }
