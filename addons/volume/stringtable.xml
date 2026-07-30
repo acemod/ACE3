@@ -143,20 +143,8 @@
             <Turkish>Ses</Turkish>
             <Ukrainian>Гучність</Ukrainian>
         </Key>
-        <Key ID="STR_ACE_Volume_ReductionSound">
-            <English>Reduction (Sound Effects)</English>
-            <French>Réduction</French>
-            <Spanish>Reducción</Spanish>
-            <Italian>Riduzione</Italian>
-            <Polish>Redukcja</Polish>
-            <Portuguese>Redução</Portuguese>
-            <Russian>Уменьшение</Russian>
-            <German>Reduzierung</German>
-            <Korean>감소</Korean>
-            <Japanese>低減</Japanese>
-            <Chinese>降低</Chinese>
-            <Chinesesimp>降低</Chinesesimp>
-            <Ukrainian>Зменшення</Ukrainian>
+        <Key ID="STR_ACE_Volume_ReductionDescriptionMusic">
+            <English>Reduce volume by this percentage.</English>
         </Key>
         <Key ID="STR_ACE_Volume_ReductionDescriptionSound">
             <English>Reduce volume by this percentage.</English>
@@ -188,8 +176,20 @@
             <Chinesesimp>降低 (音乐)</Chinesesimp>
             <Ukrainian>Зменшення (музика)</Ukrainian>
         </Key>
-        <Key ID="STR_ACE_Volume_ReductionDescriptionMusic">
-            <English>Reduce volume by this percentage.</English>
+        <Key ID="STR_ACE_Volume_ReductionSound">
+            <English>Reduction (Sound Effects)</English>
+            <French>Réduction</French>
+            <Spanish>Reducción</Spanish>
+            <Italian>Riduzione</Italian>
+            <Polish>Redukcja</Polish>
+            <Portuguese>Redução</Portuguese>
+            <Russian>Уменьшение</Russian>
+            <German>Reduzierung</German>
+            <Korean>감소</Korean>
+            <Japanese>低減</Japanese>
+            <Chinese>降低</Chinese>
+            <Chinesesimp>降低</Chinesesimp>
+            <Ukrainian>Зменшення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Volume_RemindIfLowered">
             <English>Reminder if lowered</English>

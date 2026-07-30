@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Position ASL <ARRAY>
- * 2: Vector direction & up <NUMBER>
+ * 2: Vector direction & up <ARRAY>
  *
  * Return Value:
  * None
