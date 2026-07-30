@@ -1,27 +1,25 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class ADDON {
+    class SUBADDON {
         name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "ace_compat_cwr3",
-            "cwr3_expansion_uk",
-            "cwr3_soldiers_uk"
+            "ace_compat_cwr3_baf",
+            "ace_missileguidance"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         authors[] = {"CWR3", "drofseh"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
+
+        addonRootClass = QUOTE(ADDON);
     };
 };
 
-#include "CfgAmmo.hpp"
-#include "CfgMagazines.hpp"
-#include "CfgWeapons.hpp"
-#include "CfgVehicles.hpp"
+#include "\z\ace\addons\missileguidance\script_missileBases.hpp"
 
-#include "ace_wardrobe.hpp"
+#include "CfgAmmo.hpp"
