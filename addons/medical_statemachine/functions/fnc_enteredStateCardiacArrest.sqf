@@ -17,7 +17,7 @@
  */
 
 params ["_unit"];
-if (isNull _unit || {!isNil {_unit getVariable QEGVAR(medical,causeOfDeath)}}) exitWith {
+if (isNull _unit || {!(_unit isNil QEGVAR(medical,causeOfDeath))}) exitWith {
     WARNING_1("enteredStateCardiacArrest: State transition on dead or null unit - %1",_unit);
 };
 
