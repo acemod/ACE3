@@ -554,7 +554,7 @@ class CfgVehicles {
         EGVAR(cargo,hasCargo) = 0;
         EGVAR(cargo,space) = 0;
         damageEffect = "";
-        destrType = "";
+        destrType = "DestructNo";
         class HitPoints {};
         class Turrets {};
         class TransportItems {};
