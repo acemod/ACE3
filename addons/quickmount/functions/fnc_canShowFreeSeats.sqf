@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Vehicle <OBJECT>
  * 1: Unit <OBJECT>
- * 2: Menu (true for menu, false for 3d interactions) <BOOL>
+ * 2: Menu (true for menu, false for 3d interactions) <BOOL> (default: true)
  * 3: Use cache <BOOL> (default: true)
  *
  * Return Value:
@@ -21,13 +21,13 @@
 
 params ["_vehicle", "_unit", ["_menu", true], ["_useCache", true]];
 
-private _isInVehicle = _unit in _vehicle;
-
-// function is called by multiple actions and MainAction
-if (!_isInVehicle && {_useCache}) exitWith {
+// function is called by multiple actions
+if (!_menu && {_useCache}) exitWith {
     _this set [3, false];
-    [_this, LINKFUNC(canShowFreeSeats), _vehicle, format [QGVAR(canShowFreeSeats%1), _menu], 1] call EFUNC(common,cachedCall) // return
+    [_this, LINKFUNC(canShowFreeSeats), _vehicle, QGVAR(canShowFreeSeats_3d), 1] call EFUNC(common,cachedCall) // return
 };
+
+private _isInVehicle = _unit in _vehicle;
 
 TRACE_6("canShowFreeSeats",_vehicle,typeOf _vehicle,_unit,_isInVehicle,_menu,_useCache);
 
@@ -55,7 +55,7 @@ GVAR(enabled)
     || {_vehicle isKindOf "Air"} // except Air
 }
 && {
-    _isInVehicle
+    _menu
     || {GVAR(initializedVehicleClasses) getOrDefaultCall [typeOf _vehicle, {
         _vehicle call FUNC(addGetInActions);
         true
