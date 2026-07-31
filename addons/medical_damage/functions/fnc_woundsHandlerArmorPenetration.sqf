@@ -34,9 +34,6 @@
 // suit under a heavy plate carrier is meant to be absurd - at this value it beats tungsten AP and
 // still loses to anti-materiel calibers
 #define ARMOR_LAYER_EFFICIENCY 0.5
-// Penetration depth in mm is velocity * caliber * penetrability / 1000, RHA penetrability is 15
-// ref https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#caliber
-#define ARMOR_PENETRABILITY 0.015
 // Spread of the ballistic limit. Armor defeats rounds over a velocity band rather than at a hard
 // cutoff, and this also stands in for the two things we can't derive from a HandleDamage event:
 // impact obliquity, which lengthens the path through the plate by 1/cos and so only ever raises
@@ -50,12 +47,12 @@ if (!EGVAR(medical,alternateArmorPenetration)) exitWith {_this};
 params ["_unit", "_allDamages", "_typeOfDamage", "_ammo"];
 TRACE_4("woundsHandlerArmorPenetration",_unit,_allDamages,_typeOfDamage,_ammo);
 
-(_ammo call FUNC(getAmmoData)) params ["_hit", "_caliber", "_typicalSpeed", "_explosive"];
+(_ammo call FUNC(getAmmoData)) params ["_hit", "_penFactor", "_typicalSpeed", "_explosive"];
 
 // Skip ammo we can't reason about. At explosive >= 1 no part of hit is scaled by speed,
 // so impact velocity can't be recovered from the damage at all
-if (_hit <= 0 || {_caliber <= 0} || {_typicalSpeed <= 0} || {_explosive >= 1}) exitWith {
-    TRACE_4("skipping unusable ammo",_hit,_caliber,_typicalSpeed,_explosive);
+if (_hit <= 0 || {_penFactor <= 0} || {_typicalSpeed <= 0} || {_explosive >= 1}) exitWith {
+    TRACE_4("skipping unusable ammo",_hit,_penFactor,_typicalSpeed,_explosive);
     _this // return
 };
 
@@ -98,46 +95,59 @@ if (_impactSpeed <= 0) exitWith {
 // I FAST SF (9mm @ 364), II FAST XP/LE (9mm @ 427), III TBH-IIIA (7.62x25 @ 450),
 // IV RF1 (7.62x39 MSC @ 725), V RF2 (7.62x51 M80 @ 847).
 // Only the last two are rifle rated, everything below is fragmentation and pistol only
-private _torsoPoints = [0, 6.7, 9.2, 12.5, 20.4, 26.4];
-private _helmetPoints = [0, 6.6, 7.7, 9.2, 13.5, 20.4];
+private _uniform = uniform _unit;
+private _vest = vest _unit;
+private _headgear = headgear _unit;
 
-private _fnc_levelToThickness = {
-    params ["_level", "_points"];
-    private _lowerLevel = floor _level;
-    private _thickness = _points select _lowerLevel;
+// The whole layer stack collapses to one thickness/passThrough pair that only changes when the
+// gear or the hitpoint does, so resolve it once per combination rather than on every hit
+(GVAR(armorLayerCache) getOrDefaultCall [[_uniform, _vest, _headgear, _hitpoint] joinString "$", {
+    TRACE_1("Armor layer cache miss",_this);
+    private _torsoPoints = [0, 6.7, 9.2, 12.5, 20.4, 26.4];
+    private _helmetPoints = [0, 6.6, 7.7, 9.2, 13.5, 20.4];
 
-    // Levels are continuous, interpolate between the anchors
-    if (_lowerLevel < MAX_PLATE_LEVEL) then {
-        _thickness = _thickness + (_level - _lowerLevel) * ((_points select (_lowerLevel + 1)) - _thickness);
+    private _fnc_levelToThickness = {
+        params ["_level", "_points"];
+        private _lowerLevel = floor _level;
+        private _levelThickness = _points select _lowerLevel;
+
+        // Levels are continuous, interpolate between the anchors
+        if (_lowerLevel < MAX_PLATE_LEVEL) then {
+            _levelThickness = _levelThickness + (_level - _lowerLevel) * ((_points select (_lowerLevel + 1)) - _levelThickness);
+        };
+
+        _levelThickness // return
     };
 
-    _thickness // return
-};
+    // Uniforms are on the same ladder as vests (CSAT fatigues are level II, Viper suits level III),
+    // headgear gets its own table since helmets are rated against different threats
+    ([_uniform, _hitpoint] call EFUNC(medical_engine,getItemPlate)) params ["_uniformLevel", "_uniformPassThrough"];
+    ([_vest, _hitpoint] call EFUNC(medical_engine,getItemPlate)) params ["_vestLevel", "_vestPassThrough"];
+    ([_headgear, _hitpoint] call EFUNC(medical_engine,getItemPlate)) params ["_headLevel", "_headPassThrough"];
 
-// Uniforms are on the same ladder as vests (CSAT fatigues are level II, Viper suits level III),
-// headgear gets its own table since helmets are rated against different threats
-([uniform _unit, _hitpoint] call EFUNC(medical_engine,getItemPlate)) params ["_uniformLevel", "_uniformPassThrough"];
-([vest _unit, _hitpoint] call EFUNC(medical_engine,getItemPlate)) params ["_vestLevel", "_vestPassThrough"];
-([headgear _unit, _hitpoint] call EFUNC(medical_engine,getItemPlate)) params ["_headLevel", "_headPassThrough"];
+    private _layers = [
+        [[_uniformLevel, _torsoPoints] call _fnc_levelToThickness, _uniformPassThrough],
+        [[_vestLevel, _torsoPoints] call _fnc_levelToThickness, _vestPassThrough],
+        [[_headLevel, _helmetPoints] call _fnc_levelToThickness, _headPassThrough]
+    ];
 
-private _layers = [
-    [[_uniformLevel, _torsoPoints] call _fnc_levelToThickness, _uniformPassThrough],
-    [[_vestLevel, _torsoPoints] call _fnc_levelToThickness, _vestPassThrough],
-    [[_headLevel, _helmetPoints] call _fnc_levelToThickness, _headPassThrough]
-];
+    _layers sort false;
 
-_layers sort false;
+    // Layers stack, but nowhere near additively - the outermost hard layer does almost all the work
+    // and what sits behind it only catches the residual. Anything else would let a plate carrier over
+    // an armored suit sum its way past the top of the ladder
+    (_layers select 0) params ["_bestThickness", "_bestPassThrough"];
 
-// Layers stack, but nowhere near additively - the outermost hard layer does almost all the work
-// and what sits behind it only catches the residual. Anything else would let a plate carrier over
-// an armored suit sum its way past the top of the ladder
-(_layers select 0) params ["_thickness", "_passThrough"];
-_thickness = _thickness + ARMOR_LAYER_EFFICIENCY * ((_layers select 1 select 0) + (_layers select 2 select 0));
+    [
+        _bestThickness + ARMOR_LAYER_EFFICIENCY * ((_layers select 1 select 0) + (_layers select 2 select 0)),
+        _bestPassThrough
+    ] // return
+}, true]) params ["_thickness", "_passThrough"];
 
 // Speed at which this round's penetration exactly equals the plate.
 // Real armor has a zone of mixed results rather than a hard cutoff - the limit is a V50, where
 // half the rounds get through - so vary it a little to avoid an unnaturally sharp step
-private _ballisticLimit = (_thickness / (_caliber * ARMOR_PENETRABILITY)) * random [1 - BALLISTIC_LIMIT_COVERAGE, 1, 1 + BALLISTIC_LIMIT_OBLIQUITY];
+private _ballisticLimit = (_thickness / _penFactor) * random [1 - BALLISTIC_LIMIT_COVERAGE, 1, 1 + BALLISTIC_LIMIT_OBLIQUITY];
 
 // Recht-Ipson residual velocity, zero when the plate defeats the round
 private _residualSpeed = sqrt (0 max (_impactSpeed^2 - _ballisticLimit^2));
@@ -158,7 +168,6 @@ private _babtDamage = ((_hit/DAMAGE_SCALING_FACTOR) * ((_impactSpeed - _residual
 private _finalDamage = _penetratingDamage max _babtDamage;
 _damageData set [0, _finalDamage];
 
-TRACE_4("Armor penetration handled",_plateLevel,_impactSpeed,_ballisticLimit,_finalDamage);
-TRACE_3("passing damage",_finalDamage,_damageData,_allDamages);
+TRACE_5("Armor penetration handled",_thickness,_impactSpeed,_ballisticLimit,_finalDamage,_allDamages);
 
 _this // return

@@ -9,7 +9,7 @@
  *
  * Return Value:
  * 0: Base damage value <NUMBER>
- * 1: Penetration multiplier ("caliber") <NUMBER>
+ * 1: Penetration factor, mm RHA per m/s (caliber * penetrability) <NUMBER>
  * 2: Muzzle velocity <NUMBER>
  * 3: Fraction of damage that is explosive rather than kinetic, 0..1 <NUMBER>
  *
@@ -18,6 +18,10 @@
  *
  * Public: No
  */
+
+// Penetration depth in mm is velocity * caliber * penetrability / 1000, RHA penetrability is 15
+// ref https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#caliber
+#define ARMOR_PENETRABILITY 0.015
 
 params ["_ammo"];
 
@@ -29,10 +33,10 @@ GVAR(ammoCache) getOrDefaultCall [toLowerANSI _ammo, {
         [0, 0, 0, 0] // return
     } else {
         private _hit = getNumber (_ammoConfig >> "hit");
-        private _caliber = getNumber (_ammoConfig >> "caliber");
+        private _penFactor = getNumber (_ammoConfig >> "caliber") * ARMOR_PENETRABILITY;
         private _typicalSpeed = getNumber (_ammoConfig >> "typicalSpeed");
         // Some vanilla ammo goes above 1 (B_20mm is 1.8), clamp so callers can rely on the range
         private _explosive = 0 max getNumber (_ammoConfig >> "explosive") min 1;
-        [_hit, _caliber, _typicalSpeed, _explosive] // return
+        [_hit, _penFactor, _typicalSpeed, _explosive] // return
     };
 }, true]
