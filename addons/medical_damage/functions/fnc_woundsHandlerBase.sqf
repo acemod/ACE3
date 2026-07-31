@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [player, [[0.5, "Body", 1]], "bullet"] call ace_medical_damage_fnc_woundsHandlerBase
+ * [player, [[0.5, "Body", 1, "HitChest"]], "bullet"] call ace_medical_damage_fnc_woundsHandlerBase
  *
  * Public: No
  */

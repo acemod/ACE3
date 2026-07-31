@@ -75,7 +75,7 @@ if (
     {_damage isEqualTo (_oldDamage + 0.005)}
 ) exitWith {
     TRACE_5("Drowning",_unit,_shooter,_instigator,_damage,_newDamage);
-    [QEGVAR(medical,woundReceived), [_unit, [[_newDamage, "Body", _newDamage]], _unit, "drowning"]] call CBA_fnc_localEvent;
+    [QEGVAR(medical,woundReceived), [_unit, [[_newDamage, "Body", _newDamage, "HitChest"]], _unit, "drowning"]] call CBA_fnc_localEvent;
 
     0
 };
@@ -94,7 +94,7 @@ if (
     // todo: no way to detect if stationary and another vehicle hits you
 ) exitWith {
     TRACE_5("Crash",_unit,_shooter,_instigator,_damage,_newDamage);
-    [QEGVAR(medical,woundReceived), [_unit, [[_newDamage, _hitPoint, _newDamage]], _unit, "vehiclecrash"]] call CBA_fnc_localEvent;
+    [QEGVAR(medical,woundReceived), [_unit, [[_newDamage, _hitPoint, _newDamage, _hitpoint]], _unit, "vehiclecrash"]] call CBA_fnc_localEvent;
 
     0
 };
@@ -114,7 +114,7 @@ if (
     _unit setVariable [QEGVAR(medical,lastDamageSource), _shooter];
     _unit setVariable [QEGVAR(medical,lastInstigator), _instigator];
 
-    [QEGVAR(medical,woundReceived), [_unit, [[_newDamage, _hitPoint, _newDamage]], _shooter, "vehiclehit"]] call CBA_fnc_localEvent;
+    [QEGVAR(medical,woundReceived), [_unit, [[_newDamage, _hitPoint, _newDamage, _hitpoint]], _shooter, "vehiclehit"]] call CBA_fnc_localEvent;
 
     0
 };

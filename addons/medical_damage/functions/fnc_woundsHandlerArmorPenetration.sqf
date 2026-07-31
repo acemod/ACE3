@@ -66,7 +66,11 @@ if (_damageIndex < 0) exitWith {
 };
 
 private _damageData = _allDamages select _damageIndex;
-_damageData params ["", "_bodyPart", "_realDamage", "_hitpoint"];
+_damageData params ["", "_bodyPart", "_realDamage", ["_hitpoint", ""]];
+if (_hitpoint isEqualTo "") exitWith {
+    TRACE_1("no engine hitpoint", _allDamages);
+    _this // return
+};
 
 // Engine damage is hit * (speed/typicalSpeed), and only the (1 - explosive) portion is scaled by speed,
 // so this recovers the true impact speed. Damage is already lowered by the engine for hit angle
