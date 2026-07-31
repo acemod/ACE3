@@ -82,12 +82,17 @@ if (_impactSpeed <= 0) exitWith {
 };
 
 // RHA equivalent thickness in mm per level.
-// Torso plates are anchored so each level barely defeats its NIJ test round:
-// I/IIA 9mm, II/IIIA .44 Magnum, IV/III 7.62x51 ball, V/IV .30-06 AP. Level III sits above its
-// own IIIA anchor on purpose - a vest named "Carrier" should carry plates, and at the IIIA value
-// the Carrier Lite performs like a TacVest against every rifle round in the game. Level II
-// inherits the vacated IIIA anchor, otherwise I and II sit 1.1mm apart and integrated soft armor
-// (CSAT fatigues) ends up worth almost nothing when layered under a vest.
+// Torso levels are anchored to the velocity at which their NIJ test round is barely defeated:
+//   I   -> NIJ IIA  (9mm @ 373)
+//   II  -> NIJ IIIA (.44 Magnum @ 436)
+//   III -> no NIJ equivalent, see below
+//   IV  -> NIJ III  (7.62x51 M80 @ 847)
+//   V   -> NIJ IV   (.30-06 M2 AP @ 878)
+// Level III is deliberately unanchored. Its own IIIA value is pistol-only, which left the Carrier
+// Lite performing like a TacVest against every rifle round in the game, so it sits at a "special
+// threat" tier instead: stops 5.56, coin-flips 7.62x39, never stops M80. That vacated the IIIA
+// anchor, which level II then took - otherwise I and II sat 1.1mm apart and integrated soft armor
+// (CSAT fatigues) was worth almost nothing layered under a vest. NIJ II has no rung as a result.
 // Helmets need their own anchors, one Ops-Core model per level, using their published V0
 // resistance to penetration figures run through the same formula:
 // I FAST SF (9mm @ 364), II FAST XP/LE (9mm @ 427), III TBH-IIIA (7.62x25 @ 450),
