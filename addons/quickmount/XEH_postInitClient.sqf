@@ -8,4 +8,4 @@ if (!hasInterface) exitWith {};
     };
 }] call CBA_fnc_addKeybind;
 
-GVAR(initializedVehicleClasses) = [];
+GVAR(initializedVehicleClasses) = createHashMap;

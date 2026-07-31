@@ -42,7 +42,7 @@ class CfgVehicles {
             class ACE_MainActions { \
                 class GVAR(GetIn) { \
                     displayName = "$STR_rscMenu.hppRscGroupRootMenu_Items_GetIn1"; \
-                    condition = QUOTE(call DFUNC(canShowFreeSeats) && {_actionParams set [ARR_2(0,call DFUNC(addFreeSeatsActions))];_actionParams select 0 isNotEqualTo []}); \
+                    condition = QUOTE([ARR_3(_target,_player,true)] call DFUNC(canShowFreeSeats) && {_actionParams set [ARR_2(0,call DFUNC(addFreeSeatsActions))];_actionParams select 0 isNotEqualTo []}); \
                     statement = QUOTE(call DFUNC(getInNearest)); \
                     exceptions[] = {"isNotSwimming"}; \
                     insertChildren = QUOTE(_actionParams param [ARR_2(0,[])]); \
@@ -53,7 +53,7 @@ class CfgVehicles {
             class GVAR(ChangeSeat) { \
                 displayName = CSTRING(ChangeSeat); \
                 icon = QPATHTOF(UI\Seats_ca.paa); \
-                condition = QUOTE(call DFUNC(canShowFreeSeats)); \
+                condition = QUOTE([ARR_3(_target,_player,true)] call DFUNC(canShowFreeSeats)); \
                 insertChildren = QUOTE(call DFUNC(addFreeSeatsActions)); \
             }; \
         }

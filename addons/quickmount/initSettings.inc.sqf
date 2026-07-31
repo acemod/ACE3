@@ -52,3 +52,19 @@ private _category = [ELSTRING(common,ACEKeybindCategoryVehicles), LLSTRING(Categ
         3
     ]
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enable3d),
+    "LIST",
+    [LSTRING(enable3d), LSTRING(enable3d_Description)],
+    _category,
+    [
+        [0,1,2],
+        [
+            ELSTRING(common,Disabled),
+            LSTRING(enable3d_shiftKey),
+            ELSTRING(common,Enabled)
+        ],
+        2
+    ]
+] call CBA_fnc_addSetting;
