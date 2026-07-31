@@ -131,25 +131,38 @@ if (_context == 2) then {
 
     private _damageStructural = _unit getVariable [QGVAR($#structural), [0,0]];
 
+    // Hitpoint spheres overlap, so a hit near a zone boundary lands inside several of them and the
+    // engine gives each the same damage divided by its own armor - meaning _realDamage ties exactly.
+    // Break that tie on sphere size: the smallest sphere containing the impact is the most specific
+    // location. This matters because HitPelvis is by far the largest torso sphere (0.24 vs 0.16-0.18)
+    // and no vanilla vest covers it, so without this a plated hit resolves to the unplated zone
+    // roughly half the time. Sort keys are [realDamage, -radius, newDamage, hitpoint], all descending
+    // Radii are per unit type and never change, so read them once
+    private _radii = GVAR(hitpointRadiusCache) getOrDefaultCall [typeOf _unit, {
+        TRACE_1("Radius cache miss",_this);
+        private _hitpointCfg = configOf _unit >> "HitPoints";
+        createHashMapFromArray (["HitFace", "HitNeck", "HitHead", "HitPelvis", "HitAbdomen", "HitDiaphragm", "HitChest"] apply {
+            [_x, getNumber (_hitpointCfg >> _x >> "radius")]
+        })
+    }, true];
+
+    private _fnc_worstHitpoint = {
+        private _candidates = _this apply {
+            private _hitPointName = _x;
+            (_unit getVariable [format [QGVAR($%1), _hitPointName], [0,0]]) params ["_real", "_new"];
+            [_real, -(_radii getOrDefault [_hitPointName, 0]), _new, _hitPointName]
+        };
+        _candidates sort false;
+        _candidates select 0 // return
+    };
+
     // --- Head
-    private _damageHead = [
-        _unit getVariable [QGVAR($HitFace), [0,0]],
-        _unit getVariable [QGVAR($HitNeck), [0,0]],
-        _unit getVariable [QGVAR($HitHead), [0,0]]
-    ];
-    _damageHead sort false;
-    _damageHead = _damageHead select 0;
+    // Keep the engine hitpoint that won, armor coverage varies a lot between them (e.g. helmets rarely cover HitNeck)
+    private _damageHead = ["HitFace", "HitNeck", "HitHead"] call _fnc_worstHitpoint;
 
     // --- Body
-    private _damageBody = [
-        _unit getVariable [QGVAR($HitPelvis), [0,0]],
-        _unit getVariable [QGVAR($HitAbdomen), [0,0]],
-        _unit getVariable [QGVAR($HitDiaphragm), [0,0]],
-        _unit getVariable [QGVAR($HitChest), [0,0]]
-        // HitBody removed as it's a placeholder hitpoint and the high armor value (1000) throws the calculations off
-    ];
-    _damageBody sort false;
-    _damageBody = _damageBody select 0;
+    // HitBody removed as it's a placeholder hitpoint and the high armor value (1000) throws the calculations off
+    private _damageBody = ["HitPelvis", "HitAbdomen", "HitDiaphragm", "HitChest"] call _fnc_worstHitpoint;
 
     // --- Arms and Legs
     private _damageLeftArm = _unit getVariable [QGVAR($HitLeftArm), [0,0]];
@@ -159,20 +172,20 @@ if (_context == 2) then {
 
     // Find hit point that received the maximum damage
     // Priority used for sorting if incoming damage is equal
-    // _realDamage, priority, _newDamage, body part name
+    // _realDamage, priority, _newDamage, body part name, engine hitpoint
     private _allDamages = [
-        [_damageHead select 0,       PRIORITY_HEAD,       _damageHead select 1,       "Head"],
-        [_damageBody select 0,       PRIORITY_BODY,       _damageBody select 1,       "Body"],
-        [_damageLeftArm select 0,    PRIORITY_LEFT_ARM,   _damageLeftArm select 1,    "LeftArm"],
-        [_damageRightArm select 0,   PRIORITY_RIGHT_ARM,  _damageRightArm select 1,   "RightArm"],
-        [_damageLeftLeg select 0,    PRIORITY_LEFT_LEG,   _damageLeftLeg select 1,    "LeftLeg"],
-        [_damageRightLeg select 0,   PRIORITY_RIGHT_LEG,  _damageRightLeg select 1,   "RightLeg"],
-        [_damageStructural select 0, PRIORITY_STRUCTURAL, _damageStructural select 1, "#structural"]
+        [_damageHead select 0,       PRIORITY_HEAD,       _damageHead select 2,       "Head",        _damageHead select 3],
+        [_damageBody select 0,       PRIORITY_BODY,       _damageBody select 2,       "Body",        _damageBody select 3],
+        [_damageLeftArm select 0,    PRIORITY_LEFT_ARM,   _damageLeftArm select 1,    "LeftArm",     "HitLeftArm"],
+        [_damageRightArm select 0,   PRIORITY_RIGHT_ARM,  _damageRightArm select 1,   "RightArm",    "HitRightArm"],
+        [_damageLeftLeg select 0,    PRIORITY_LEFT_LEG,   _damageLeftLeg select 1,    "LeftLeg",     "HitLeftLeg"],
+        [_damageRightLeg select 0,   PRIORITY_RIGHT_LEG,  _damageRightLeg select 1,   "RightLeg",    "HitRightLeg"],
+        [_damageStructural select 0, PRIORITY_STRUCTURAL, _damageStructural select 1, "#structural", "#structural"]
     ];
     TRACE_2("incoming",_allDamages,_damageStructural);
 
     _allDamages sort false;
-    _allDamages = _allDamages apply {[_x select 2, _x select 3, _x select 0]};
+    _allDamages = _allDamages apply {[_x select 2, _x select 3, _x select 0, _x select 4]};
 
     // Environmental damage sources all have empty ammo string
     // No explicit source given, we infer from differences between them

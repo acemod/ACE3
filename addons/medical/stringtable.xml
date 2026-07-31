@@ -466,6 +466,9 @@
             <Hungarian>Játékosok és AI</Hungarian>
             <Ukrainian>Гравців і ботів</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Medical_sortByArmorText">
+            <English>Sort by armor level</English>
+        </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
             <English>When an unconscious patient has Epinephrine in their system, the time between spontaneous wake up checks is divided by this value.</English>
             <Czech>Zvyšuje jak často je proveden test na probuzení z bezvědomí pokud má pacient Epinefrin ve svém krevním oběhu.</Czech>

@@ -12,3 +12,6 @@ PREP(isInStableCondition);
 PREP(isInjured);
 PREP(serializeState);
 PREP(setUnconscious);
+PREP(sortStatement_armor);
+PREP(statBarStatement_armor);
+PREP(statTextStatement_armor);
