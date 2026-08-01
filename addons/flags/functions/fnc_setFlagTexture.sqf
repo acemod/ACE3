@@ -20,6 +20,7 @@ params ["_flag"];
 private _carrierClass = typeOf _flag;
 private _item = GVAR(carrierItemMapping) getOrDefault [_carrierClass, ""];
 if (_item isEqualTo "") exitWith {ERROR_1("Cannot set flag texture. No linked item for carrier %1.",_carrierClass)};
-(GVAR(flagItemCache) get _item) params ["", "_texture"];
+(GVAR(flagItemCache) get _item) params ["", "_texture", "", "", "", "", "_textureCarrier"];
 
-_flag setFlagTexture _texture;
+private _textureToSet = [_textureCarrier, _texture] select (_textureCarrier isEqualTo "");
+_flag setFlagTexture _textureToSet;

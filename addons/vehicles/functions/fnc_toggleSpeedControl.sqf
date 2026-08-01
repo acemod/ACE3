@@ -41,7 +41,7 @@ if (_role != "") then {
 if (
     !_continue
     || {!(isEngineOn _vehicle)}
-    || {!GVAR(isSpeedLimiter) && _cruiseControl && {speed _vehicle < 1}} // don't enable CC when stop or move backward
+    || {!GVAR(isSpeedControlActive) && _cruiseControl && {speed _vehicle < 1}} // don't enable CC when stop or move backward
 ) exitWith {false};
 
 private _allowedVehicleClasses = ["Car", "Tank", "Ship"];
@@ -53,7 +53,7 @@ if (-1 == _allowedVehicleClasses findIf {_vehicle isKindOf _x}) exitWith {false}
 if (_vehicle isKindOf "Plane") then {
     [ACE_player, _vehicle, _preserveSpeedLimit] call FUNC(autoThrottle);
 } else {
-    [ACE_player, _vehicle, _cruiseControl, _preserveSpeedLimit] call FUNC(speedLimiter);
+    [ACE_player, _vehicle, _cruiseControl, _preserveSpeedLimit] call FUNC(speedControl);
 };
 
 true

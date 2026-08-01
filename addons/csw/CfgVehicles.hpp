@@ -8,7 +8,7 @@ class CfgVehicles {
                 class GVAR(placeTripod) {
                     displayName = CSTRING(PlaceTripod_displayName);
                     condition = QUOTE(call FUNC(canDeployTripod));
-                    statement = QUOTE(call FUNC(assemble_deployTripod));
+                    statement = QUOTE(call FUNC(assemble_startDeployTripod));
                     exceptions[] = {};
                 };
             };

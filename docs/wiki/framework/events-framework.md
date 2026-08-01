@@ -36,6 +36,7 @@ The vehicle events will also have the following local variables available `_gunn
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
 |`ace_unconscious` | [_unit, _state(BOOL)] | Global | Listen | Unit's unconscious state changed |
+|`ace_unconscious_animation` | [_unit, _state(BOOL)] | Global | Listen | Unit went into an uncon animation |
 |`ace_placedInBodyBag` | [_target, _bodyBag, _isGrave, _medic] | Global | Listen | Target placed into a bodybag Note: (Target will soon be deleted, target could be a bodybag) |
 |`ace_placedInGrave` | [_target, _grave, _medic] | Global | Listen | Target placed into a grave, _grave will be objNull if `Create Grave Markers` is disabled Note: (Target will soon be deleted) |
 |`ace_treatmentStarted` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem, _createLitter] | Local | Listen | Treatment action has started (local on the _caller) |
@@ -220,6 +221,15 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |---------- |------------|----------|------|-------------|
 | `ace_markers_editingMarker` | [markerName, display] | Local | Listen | Editing a marker
 | `ace_markers_markerPlaced` | [markerName, isEditingMarker] | Local | Listen | Marker placed
+
+### 2.22 Flags (`ace_flags`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_flags_startCarry` | [_unit, _item] | Local | Listen | After flag is attached to the back of the unit and item was removed from the inventory |
+| `ace_flags_stopCarry` | [_unit, _item] | Local | Listen | After flag is removed from the back and item was added back to the inventory |
+| `ace_flags_placed` | [_unit, _flag, _item] | Local | Listen | After flag was placed and the item was removed from the inventory |
+| `ace_flags_pickedUp` | [_unit, _flag, _item] | Local | Listen | Before flag is deleted but after the item was added to the inventory |
 
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.

@@ -28,3 +28,6 @@ _unit removeItem _item;
 if ("ace_movement" call EFUNC(common,isModLoaded)) then {
     [_unit, _unit, _mass] call EFUNC(movement,addLoadToUnitContainer);
 };
+
+// Provide hook
+[QGVAR(startCarry), [_unit, _item]] call CBA_fnc_localEvent;

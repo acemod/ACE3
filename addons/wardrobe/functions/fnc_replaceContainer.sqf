@@ -51,6 +51,9 @@ private _containerVars = [];
     } forEach allVariables _item;
 } forEach [uniformContainer _player, vestContainer _player, backpackContainer _player];
 
+// Handle Uniform Insignias PRE-Replace
+private _insignia = if (_typeTarget isEqualTo TYPE_UNIFORM) then { [_player] call BIS_fnc_getUnitInsignia } else { nil };
+
 // Replace Wearable Container
 switch (_typeTarget) do {
     case TYPE_UNIFORM:  { _loadout # 3 set [0, _classTarget]; };
@@ -60,6 +63,9 @@ switch (_typeTarget) do {
 
 // Apply new loadout
 _player setUnitLoadout _loadout;
+
+// Handle Uniform Insignias POST-Replace
+if (!isNil "_insignia") then { [_player, _insignia] call BIS_fnc_setUnitInsignia; };
 
 // Update Exceptions with new magID's
 { _x set [ 2, [_player, _x#0] call CBA_fnc_getMagazineIndex ]; } forEach _exceptions;

@@ -152,11 +152,6 @@
             <Russian>Надеть маску</Russian>
             <Japanese>マスクを着ける</Japanese>
         </Key>
-        <Key ID="STR_ACE_Wardrobe_slotOccupied">
-            <English>Your %1 slot is already occupied</English>
-            <Japanese>%1番目のスロットは占有済</Japanese>
-            <Russian>Ваш слот %1 уже занят</Russian>
-        </Key>
         <Key ID="STR_ACE_Wardrobe_missingComponents">
             <English>Cannot switch to&lt;br/&gt;%1&lt;br/&gt;due to missing components</English>
             <French>Impossible de passer à&lt;br/&gt;%1&lt;br/&gt;en raison de composants manquants</French>
@@ -185,6 +180,11 @@
             <Spanish>Subirse las mangas</Spanish>
             <Russian>Закатать рукава</Russian>
             <Japanese>そでを巻き上げる</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_slotOccupied">
+            <English>Your %1 slot is already occupied</English>
+            <Russian>Ваш слот %1 уже занят</Russian>
+            <Japanese>%1番目のスロットは占有済</Japanese>
         </Key>
         <Key ID="STR_ACE_Wardrobe_tieOff">
             <English>Remove tie</English>

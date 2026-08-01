@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- * Toggle speed limiter for Driver in Vehicle.
+ * Toggle speed control for Driver in Vehicle.
  *
  * Arguments:
  * 0: Driver <OBJECT>
@@ -13,20 +13,20 @@
  * None
  *
  * Example:
- * [player, car, true] call ace_vehicles_fnc_speedLimiter
+ * [player, car, true] call ace_vehicles_fnc_speedControl
  *
  * Public: No
  */
 
 params ["_driver", "_vehicle", ["_cruiseControl", false], ["_preserveSpeedLimit", false]];
 
-if (GVAR(isSpeedLimiter)) exitWith {
+if (GVAR(isSpeedControlActive)) exitWith {
     switch ([GVAR(isCruiseControl), _cruiseControl]) do {
         case [true, true]: {
             [localize LSTRING(OffCruise)] call EFUNC(common,displayTextStructured);
             playSound "ACE_Sound_Click";
             _vehicle setCruiseControl [0, false];
-            GVAR(isSpeedLimiter) = false;
+            GVAR(isSpeedControlActive) = false;
         };
         case [true, false]: {
             [localize LSTRING(On)] call EFUNC(common,displayTextStructured);
@@ -44,7 +44,7 @@ if (GVAR(isSpeedLimiter)) exitWith {
             [localize LSTRING(Off)] call EFUNC(common,displayTextStructured);
             playSound "ACE_Sound_Click";
             _vehicle setCruiseControl [0, false];
-            GVAR(isSpeedLimiter) = false;
+            GVAR(isSpeedControlActive) = false;
         };
     };
 };
@@ -56,7 +56,7 @@ if (_speedLimit != 0) exitWith { TRACE_1("speed limit set by external source",_s
     [LSTRING(On), LSTRING(OnCruise)] select _cruiseControl
 )] call EFUNC(common,displayTextStructured);
 playSound "ACE_Sound_Click";
-GVAR(isSpeedLimiter) = true;
+GVAR(isSpeedControlActive) = true;
 GVAR(isCruiseControl) = _cruiseControl;
 
 if (!_preserveSpeedLimit) then {
@@ -71,21 +71,27 @@ GVAR(speedLimitInit) = true;
     private _role = _driver call EFUNC(common,getUavControlPosition);
     if (GVAR(isUAV)) then {
         if (_role == "") then {
-            GVAR(isSpeedLimiter) = false;
+            GVAR(isSpeedControlActive) = false;
             TRACE_1("UAV controller changed, disabling speedlimit",_vehicle);
         };
     } else {
         if (_driver != driver _vehicle || {_role != ""}) then {
-            GVAR(isSpeedLimiter) = false;
+            GVAR(isSpeedControlActive) = false;
             TRACE_3("Vehicle driver changed, disabling speedlimit",_driver,driver _vehicle,_vehicle);
         };
     };
 
     if (call CBA_fnc_getActiveFeatureCamera != "") then {
-        GVAR(isSpeedLimiter) = false;
+        GVAR(isSpeedControlActive) = false;
     };
 
-    if (!GVAR(isSpeedLimiter)) exitWith {
+    if (GVAR(isCruiseControl) && {speed _vehicle < 1}) then { // handle vehicle flip/collision
+        GVAR(isSpeedControlActive) = false;
+        [localize LSTRING(OffCruise)] call EFUNC(common,displayTextStructured);
+        playSound "ACE_Sound_Click";
+    };
+
+    if (!GVAR(isSpeedControlActive)) exitWith {
         _vehicle setCruiseControl [0, false];
         [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
@@ -93,7 +99,7 @@ GVAR(speedLimitInit) = true;
     getCruiseControl _vehicle params ["_currentSpeedLimit", "_cruiseControlActive"];
     if (GVAR(isCruiseControl) && {!GVAR(speedLimitInit) && {!_cruiseControlActive}}) exitWith {
         [_idPFH] call CBA_fnc_removePerFrameHandler;
-        GVAR(isSpeedLimiter) = false;
+        GVAR(isSpeedControlActive) = false;
         [localize LSTRING(OffCruise)] call EFUNC(common,displayTextStructured);
         playSound "ACE_Sound_Click";
     };
