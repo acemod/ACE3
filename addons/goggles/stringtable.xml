@@ -47,21 +47,21 @@
             <Ukrainian>Показувати дію Протерти окуляри</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Goggles_SettingsName">
-            <English>ACE Goggles</English>
-            <Czech>ACE Brýle</Czech>
-            <French>ACE Lunettes</French>
-            <Spanish>[ACE] Gafas</Spanish>
-            <Italian>ACE Occhiali</Italian>
-            <Polish>ACE Gogle</Polish>
-            <Portuguese>ACE Óculos</Portuguese>
-            <Russian>ACE Очки</Russian>
-            <German>ACE Schutzbrille</German>
-            <Korean>ACE 고글</Korean>
-            <Japanese>ACE ゴーグル</Japanese>
-            <Chinese>ACE 護目鏡</Chinese>
-            <Chinesesimp>ACE 护目镜</Chinesesimp>
-            <Turkish>ACE Gözlük</Turkish>
-            <Ukrainian>ACE Окуляри</Ukrainian>
+            <English>Goggles</English>
+            <Czech>Brýle</Czech>
+            <French>Lunettes</French>
+            <Spanish>Gafas</Spanish>
+            <Italian>Occhiali</Italian>
+            <Polish>Gogle</Polish>
+            <Portuguese>Óculos</Portuguese>
+            <Russian>Очки</Russian>
+            <German>Schutzbrille</German>
+            <Korean>고글</Korean>
+            <Japanese>ゴーグル</Japanese>
+            <Chinese>護目鏡</Chinese>
+            <Chinesesimp>护目镜</Chinesesimp>
+            <Turkish>Gözlük</Turkish>
+            <Ukrainian>Окуляри</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Goggles_ShowInThirdPerson">
             <English>Show Goggle Effects in Third Person</English>

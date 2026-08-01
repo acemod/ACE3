@@ -32,7 +32,7 @@ if (GVAR(openedMenuType) >= 0) then {
         [[0.5,0.5], "\a3\ui_f\data\IGUI\Cfg\Cursors\selected_ca.paa"] call FUNC(renderSelector);
     };
 
-    private _cursorScreenPos = [worldToScreen _cursorPos2, GVAR(cursorPos)] select (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]);
+    private _cursorScreenPos = [worldToScreen _cursorPos2, GVAR(cursorPos)] select (true isEqualTo (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]));
 
     private _closestDistance = 1000000;
     private _closestSelection = -1;

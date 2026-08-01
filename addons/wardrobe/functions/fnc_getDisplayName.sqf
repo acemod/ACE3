@@ -23,7 +23,7 @@ private _classOrigin = configName _cfgOrigin;
 private _classTarget = configName _cfgTarget;
 
 switch (true) do {
-   
+
     // check legacy directional
     case (
         isText  (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "directionalActionName")
@@ -55,6 +55,18 @@ switch (true) do {
 
     // Fallback displayName of Item
     default {
-        getText (_cfgTarget  >> "displayName")
+
+        private _return = getText (_cfgTarget  >> "displayName");
+
+        // Adds type-descriptor when its converting to a different slot
+        private _typeOrigin = _cfgOrigin call LINKFUNC(getTypeNumber);
+        private _typeTarget = _cfgTarget call LINKFUNC(getTypeNumber);
+
+        if (_typeOrigin isNotEqualTo _typeTarget) then {
+            _return = _return + " (" + ( _typeTarget call LINKFUNC(getSlotName) ) + ")";
+        };
+
+        _return
+
     };
-};
+} // return

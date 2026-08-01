@@ -15,7 +15,7 @@
  * Whether or not to filter out this target <BOOL>
  *
  * Example:
- * [] call call ace_missileguidance_fnc_shouldFilterRadarHit;
+ * [] call ace_missileguidance_fnc_shouldFilterRadarHit;
  *
  * Public: Yes
  */

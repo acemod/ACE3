@@ -1,5 +1,5 @@
-BASE_PAIR(rhs_facewear_6m2,rhs_6m2_nvg);
-BASE_PAIR(rhs_facewear_6m2_1,rhs_6m2_1_nvg);
+BASE_TRIPLET(rhs_6m2,rhs_facewear_6m2,rhs_6m2_nvg);
+BASE_TRIPLET(rhs_6m2_1,rhs_facewear_6m2_1,rhs_6m2_1_nvg);
 
 #define HEADSET rhs_facewear_6m2
 #define HEADSET_MIC rhs_facewear_6m2_1

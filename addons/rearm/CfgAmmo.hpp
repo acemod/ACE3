@@ -15,6 +15,30 @@ class CfgAmmo {
     class Missile_AA_03_F: Missile_AA_04_F {
         GVAR(dummy) = QGVAR(Missile_AA_03_F);
     };
+    class M_Air_AA: MissileBase {
+        GVAR(dummy) = QGVAR(M_Air_AA);
+    };
+    class M_Titan_AA;
+    class M_Zephyr: M_Titan_AA {
+        GVAR(dummy) = QGVAR(M_Zephyr);
+    };
+    class ammo_Missile_MediumRangeAABase;
+    class ammo_Missile_AMRAAM_C: ammo_Missile_MediumRangeAABase {
+        GVAR(dummy) = QGVAR(ammo_Missile_AMRAAM_C);
+    };
+    class ammo_Missile_AMRAAM_D: ammo_Missile_MediumRangeAABase {
+        GVAR(dummy) = QGVAR(ammo_Missile_AMRAAM_D);
+    };
+    class ammo_Missile_AA_R77: ammo_Missile_MediumRangeAABase {
+        GVAR(dummy) = QGVAR(ammo_Missile_AA_R77);
+    };
+    class ammo_Missile_ShortRangeAABase;
+    class ammo_Missile_BIM9X: ammo_Missile_ShortRangeAABase {
+        GVAR(dummy) = QGVAR(ammo_Missile_BIM9X);
+    };
+    class ammo_Missile_AA_R73: ammo_Missile_ShortRangeAABase {
+        GVAR(dummy) = QGVAR(ammo_Missile_AA_R73);
+    };
 
     class Rocket_04_HE_F: MissileBase {
         GVAR(caliber) = 70;
@@ -33,11 +57,25 @@ class CfgAmmo {
         GVAR(caliber) = 70;
         GVAR(dummy) = QGVAR(M_PG_AT);
     };
+    class M_Scalpel_AT: MissileBase {
+        GVAR(dummy) = QGVAR(M_Scalpel_AT);
+    };
     class Missile_AGM_02_F: MissileBase {
         GVAR(dummy) = QGVAR(Missile_AGM_02_F);
     };
     class Missile_AGM_01_F: Missile_AGM_02_F {
         GVAR(dummy) = QGVAR(Missile_AGM_01_F);
+    };
+    class ammo_Missile_AntiRadiationBase;
+    class ammo_Missile_HARM: ammo_Missile_AntiRadiationBase {
+        GVAR(dummy) = QGVAR(ammo_Missile_HARM);
+    };
+    class ammo_Missile_KH58: ammo_Missile_AntiRadiationBase {
+        GVAR(dummy) = QGVAR(ammo_Missile_KH58);
+    };
+    class ammo_Bomb_SmallDiameterBase;
+    class ammo_Bomb_SDB: ammo_Bomb_SmallDiameterBase {
+        GVAR(dummy) = QGVAR(ammo_Bomb_SDB);
     };
 
     class RocketCore;
@@ -180,6 +218,12 @@ class CfgAmmo {
 
     class Bo_Mk82: BombCore {
         GVAR(dummy) = QGVAR(Bo_Mk82);
+    };
+    class BombDemine_01_Ammo_F: BombCore {
+        GVAR(dummy) = QGVAR(BombDemine_01_Ammo_F);
+    };
+    class BombDemine_01_DummyAmmo_F: BombDemine_01_Ammo_F {
+        GVAR(dummy) = QGVAR(BombDemine_01_DummyAmmo_F);
     };
 
     class Bo_GBU12_LGB: ammo_Bomb_LaserGuidedBase {

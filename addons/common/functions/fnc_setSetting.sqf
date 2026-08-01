@@ -28,8 +28,4 @@ if (!_broadcastChanges) exitWith {
     ERROR_1("Setting [%1] - SetSetting no longer supports non-global settings",_name);
 };
 
-if ([_name, "mission"] call CBA_settings_fnc_isForced) then {
-    WARNING_1("Setting [%1] - Already mission forced - Ignoring",_name);
-};
-
 [QGVAR(setSetting), [_name, _value], (format [QGVAR(setSetting_%1), _name])] call CBA_fnc_globalEventJIP;

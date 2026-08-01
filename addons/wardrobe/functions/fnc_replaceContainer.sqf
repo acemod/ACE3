@@ -4,21 +4,22 @@
  * Function to replace a units wearable container while maintaining the content of the container.
  *
  * Arguments:
- * 0: Unit <OBJECT>
- * 1: Desired variant as classname <STRING>
- * 2: Type of wearable container <STRING>
+ * 0: Params Hash <HASHMAP>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, "U_B_CTRG_3", "UNIFORM"] call ace_wardrobe_fnc_replaceContainer
- * [player, "U_B_CTRG_1", "UNIFORM"] call ace_wardrobe_fnc_replaceContainer
+ * [_replaceData] call ace_wardrobe_fnc_replaceContainer
  *
  * Public: No
  */
 
-params ["_player", "_classTarget", "_typeNumber"];
+params ["_replaceData"];
+private _player = _replaceData get "player";
+private _classTarget = _replaceData get "classTarget";
+private _typeTarget = _replaceData get "typeTarget";
+
 
 private _allMags = (magazinesAmmoFull _player) apply { _x#0 };
 
@@ -50,8 +51,11 @@ private _containerVars = [];
     } forEach allVariables _item;
 } forEach [uniformContainer _player, vestContainer _player, backpackContainer _player];
 
+// Handle Uniform Insignias PRE-Replace
+private _insignia = if (_typeTarget isEqualTo TYPE_UNIFORM) then { [_player] call BIS_fnc_getUnitInsignia } else { nil };
+
 // Replace Wearable Container
-switch (_typeNumber) do {
+switch (_typeTarget) do {
     case TYPE_UNIFORM:  { _loadout # 3 set [0, _classTarget]; };
     case TYPE_VEST:     { _loadout # 4 set [0, _classTarget]; };
     case TYPE_BACKPACK: { _loadout # 5 set [0, _classTarget]; };
@@ -59,6 +63,9 @@ switch (_typeNumber) do {
 
 // Apply new loadout
 _player setUnitLoadout _loadout;
+
+// Handle Uniform Insignias POST-Replace
+if (!isNil "_insignia") then { [_player, _insignia] call BIS_fnc_setUnitInsignia; };
 
 // Update Exceptions with new magID's
 { _x set [ 2, [_player, _x#0] call CBA_fnc_getMagazineIndex ]; } forEach _exceptions;

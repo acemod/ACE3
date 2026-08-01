@@ -526,24 +526,24 @@
         </Key>
         <Key ID="STR_ACE_Markers_quickNumberMarks">
             <English>Quick Number Marks</English>
+            <French>Marques numériques rapides</French>
             <Spanish>Marcas Rápidas Numéricas</Spanish>
             <Russian>Быстрые числовые метки</Russian>
             <Japanese>クイック番号マーク</Japanese>
-            <French>Marques numériques rapides</French>
         </Key>
         <Key ID="STR_ACE_Markers_quickNumberMarksDescription">
             <English>Allows easy placement of numbered markers by holding ALT when placing a marker</English>
+            <French>Permet de placer facilement des repères numérotés en maintenant la touche ALT enfoncée lors de la création d'un repère</French>
             <Spanish>Permite colocar fácilmente marcadores numerados manteniendo pulsado ALT al colocar un marcador</Spanish>
             <Russian>Позволяет легко размещать пронумерованные маркеры, удерживая клавишу ALT при размещении маркера</Russian>
             <Japanese>ALTキーを押しながらマーカーを配置することで、 番号付きマーカーを簡単に配置出来るようにします。</Japanese>
-            <French>Permet de placer facilement des repères numérotés en maintenant la touche ALT enfoncée lors de la création d'un repère</French>
         </Key>
         <Key ID="STR_ACE_Markers_quickNumberMarksSideSync">
             <English>Side-Synchronized</English>
+            <French>Synchronisation latérale</French>
             <Spanish>Sincronizado en Bando</Spanish>
             <Russian>Синхронизация по бокам</Russian>
             <Japanese>陣営内で同期</Japanese>
-            <French>Synchronisation latérale</French>
         </Key>
     </Package>
 </Project>

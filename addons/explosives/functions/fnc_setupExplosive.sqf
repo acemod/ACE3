@@ -61,7 +61,7 @@ private _isSticky = getNumber (_configMagazine >> QGVAR(isSticky)) == 1;
 
 GVAR(pfeh_running) = true;
 GVAR(placeAction) = PLACE_WAITING;
-GVAR(TweakedAngle) = 0;
+GVAR(tweakedAngle) = 0;
 
 [{
     BEGIN_COUNTER(pfeh);
@@ -81,7 +81,7 @@ GVAR(TweakedAngle) = 0;
 
     if ((stance _unit) == "PRONE") then {
         // If prone, lower base and increase up angle of look - Makes it much easier to attach to underside of vehicles
-        _basePosASL vectorAdd [0, 0, -0.3];
+        _basePosASL = _basePosASL vectorAdd [0, 0, -0.3];
         _lookDirVector = ((positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL)) vectorFromTo ((positionCameraToWorld [0, 3, 10]) call EFUNC(common,positionToASL));
     };
 
@@ -200,6 +200,21 @@ GVAR(TweakedAngle) = 0;
         if (GVAR(placeAction) == PLACE_APPROVE) then {
             private _placeAngle = 0;
             private _expSetupVehicle = _setupObjectClass createVehicle [0, 0, 0]; //(_virtualPosASL call EFUNC(common,ASLToPosition));
+            // Running it AGAIN in here because it needs the _expSetupVehicle Object for the boundingBox
+            private _intersect = lineIntersectsSurfaces [
+                eyePos _unit,
+                _basePosASL vectorAdd (_lookDirVector vectorMultiply PLACE_RANGE_MAX),
+                _unit, _expSetupVehicle, true, 1, "FIRE", "GEOM"
+            ] param [0, []];
+            _virtualPosASL = if (_intersect isNotEqualTo []) then {
+               _intersect params ["_posASL", "_normal"];
+
+                private _bbox = boundingBoxReal [_expSetupVehicle, "FireGeometry"];
+                private _offset = -((_bbox select 0) select 2);
+                _posASL vectorAdd (_normal vectorMultiply _offset);
+            } else {
+                _basePosASL vectorAdd (_lookDirVector vectorMultiply _distanceFromBase);
+            };
 
             TRACE_1("Planting Mass",getMass _expSetupVehicle);
 

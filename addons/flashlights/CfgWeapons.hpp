@@ -19,7 +19,6 @@ class CfgWeapons {
         recoil = "empty";
         muzzlePos = "flash";
         muzzleEnd = "flash dir";
-        magazines[] = {"FakeMagazine"}; // Required for the weapon info box to work correctly.
         textureType = "default"; // empty texture
         weaponInfoType = "RscWeaponEmpty";
 

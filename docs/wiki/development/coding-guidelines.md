@@ -90,7 +90,7 @@ There also exists the `FUNC` family of Macros:
 |`EFUNC(leg,face)` | `ace_leg_fnc_face` or the call trace wrapper for that function. |
 |`DFUNC(face)` | `ace_balls_fnc_face` and will ALWAYS be the function global variable. |
 |`DEFUNC(leg,face)` | `ace_leg_fnc_face` and will ALWAYS be the function global variable. |
-|`LINKFUNC(face)` | `FUNC(face)` or "pass by reference" `{_this call FUNC(face)}` |
+|`LINKFUNC(face)` | `FUNC(face)` or "pass by reference" `{call FUNC(face)}` |
 |`QFUNC(face)` | `"ace_balls_fnc_face"` |
 |`QEFUNC(leg,face)` | `"ace_leg_fnc_face"` |
 |`QQFUNC(face)` | `""ace_balls_fnc_face""` used inside `QUOTE` macros where double quotation is required.  |
@@ -639,13 +639,6 @@ All ACE3 components shall be implemented in an event driven fashion. This is don
 Event handlers in ACE3 are implemented through the CBA event system (ACE3's own event system is deprecated since 3.6.0). They should be used to trigger or allow triggering of specific functionality.
 
 More information on the [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} and [CBA Player Events](https://github.com/CBATeam/CBA_A3/wiki/Player-Events){:target="_blank"} pages.
-
-**Warning about BIS event handlers:**
-BIS's event handlers (`addEventHandler`, `addMissionEventHandler`) are slow when passing a large code variable. Use a short code block that calls the function you want.
-```sqf
-player addEventHandler ["Fired", FUNC(handleFired)]; // bad
-player addEventHandler ["Fired", {call FUNC(handleFired)}]; // good
-```
 
 ## 8. Performance Considerations
 
