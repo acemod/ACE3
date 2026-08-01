@@ -77,7 +77,9 @@ if (_active) then {
     };
 
     if (_unit == ACE_player) then {
-        [0.5] call EFUNC(common,temporaryBlockFire); // prevent firing from surprise context switch
+        if (EGVAR(medical,blockInputOnUiEvent) > 0) then {
+            [EGVAR(medical,blockInputOnUiEvent)] call EFUNC(common,temporaryBlockFire); // prevent firing from surprise context switch
+        };
         EGVAR(medical,windowOnWakeUp) call EFUNC(common,focusWindow);
     };
 };
