@@ -68,7 +68,7 @@ if (_damageIndex < 0) exitWith {
 private _damageData = _allDamages select _damageIndex;
 _damageData params ["", "_bodyPart", "_realDamage", ["_hitpoint", ""]];
 if (_hitpoint isEqualTo "") exitWith {
-    TRACE_1("no engine hitpoint", _allDamages);
+    TRACE_1("no engine hitpoint",_allDamages);
     _this // return
 };
 
