@@ -32,8 +32,8 @@ switch (_func) do {
             private _range = if (_holdTime < 5) then { [_player] call FUNC(getRange) } else { 0 };
             TRACE_1("Updating range",_range);
             GVAR(data) set ["range", _range];
-            if (_range > 5) then {
-                [[LLSTRING(milrRangeDisplay), (round _range)], 1.5, _player, 8] call EFUNC(common,displayTextStructured);
+            if (_range > 5 && {GVAR(showRangeHint) == 1}) then {
+                [[format ["%1 %2 %3", LLSTRING(milrRangeDisplay), (round _range), LLSTRING(meter)]], 1.5, _player, 8] call EFUNC(common,displayTextStructured);
             };
             // systemChat format ["DEBUG: range: %1 meters", _range];
         };
