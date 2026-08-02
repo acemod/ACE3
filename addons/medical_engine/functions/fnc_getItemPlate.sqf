@@ -2,7 +2,6 @@
 /*
  * Author: LinkIsGrim
  * Returns the armor plate level and passThrough an item provides to a hitpoint.
- * Only vests and headgear count as plates, uniforms are soft armor and don't stop bullets.
  *
  * Arguments:
  * 0: Item Class <STRING>
