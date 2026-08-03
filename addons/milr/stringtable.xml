@@ -7,5 +7,41 @@
             <Russian>ИК-лазерная указка и дальномер</Russian>
             <Japanese>赤外線レーザー照準器と距離計</Japanese>
         </Key>
+        <Key ID="STR_ACE_MILR_meter">
+            <English>m</English>
+            <Czech>m</Czech>
+            <French>m</French>
+            <Spanish>m</Spanish>
+            <Italian>m</Italian>
+            <Polish>m</Polish>
+            <Portuguese>m</Portuguese>
+            <Russian>м</Russian>
+            <German>m</German>
+            <Korean>m</Korean>
+            <Japanese>m</Japanese>
+            <Chinese>公尺</Chinese>
+            <Chinesesimp>米</Chinesesimp>
+            <Turkish>m</Turkish>
+        </Key>
+        <Key ID="STR_ACE_MILR_milrRangeDisplay">
+            <English>Range:</English>
+            <Czech>Vzdálenost:</Czech>
+            <French>Distance :</French>
+            <Spanish>Distancia:</Spanish>
+            <Italian>Distanza:</Italian>
+            <Polish>Dystans:</Polish>
+            <Portuguese>Distância:</Portuguese>
+            <Russian>Дистанция:</Russian>
+            <German>Distanz:</German>
+            <Korean>거리:</Korean>
+            <Japanese>距離:</Japanese>
+            <Chinese>範圍:</Chinese>
+            <Chinesesimp>范围：</Chinesesimp>
+            <Hungarian>Távolság:</Hungarian>
+            <Ukrainian>Дистанція:</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_MILR_showRangeHint">
+            <English>Show range hint</English>
+        </Key>
     </Package>
 </Project>
