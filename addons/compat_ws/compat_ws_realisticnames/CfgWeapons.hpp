@@ -127,6 +127,7 @@ class CfgWeapons {
     };
 
     // XMS has no realistic name as it's a make believe hybrid of the XM8/VHS-K2: XM8+VHS = XMS, this just removes the 5.56 mm from the name.
+    class Rifle_Base_F;
     class arifle_SPAR_01_base_F;
     class arifle_XMS_Base_lxWS: arifle_SPAR_01_base_F {
         displayName = SUBCSTRING(XMS_Name);
@@ -162,6 +163,9 @@ class CfgWeapons {
     };
     class arifle_XMS_Shot_lxWS: arifle_XMS_Base_lxWS {
         displayName = SUBCSTRING(XMS_SG_Name);
+        class UBS_lxWS: Rifle_Base_F {
+            displayName = SUBCSTRING(UBS_lxWS_Name);
+        };
     };
     class arifle_XMS_Shot_Camo_lxWS: arifle_XMS_Shot_lxWS {
         displayName = SUBCSTRING(XMS_SG_Camo_Name);
