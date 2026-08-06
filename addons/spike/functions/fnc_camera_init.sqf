@@ -48,7 +48,7 @@ if (_designating) then {
 _activeCameraNamespace setVariable [QGVAR(reticleData), _reticleData];
 _shooter setVariable [QGVAR(missileCamera), _activeCameraNamespace];
 _activeCameraNamespace setVariable [QGVAR(shooter), _shooter];
-[_activeCameraNamespace, _initialThermalType] call FUNC(camera_setViewMode);
+[_activeCameraNamespace, GVAR(visionMode)] call FUNC(camera_setViewMode);
 
 private _pos = getPosASL _projectile;
 
