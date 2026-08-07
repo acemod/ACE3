@@ -15,7 +15,7 @@ private _cacheRefuelCargo = createHashMap;
 
     private _sourceClass = configName _x;
     private _hasXEH = isText (_x >> "EventHandlers" >> "CBA_Extended_EventHandlers" >> "init");
-    private _isPublic = getNumber (_x >> "scope") == 2;
+    private _isPublic = getNumber (_x >> "scope") > 0;
     private _isStatic = _sourceClass isKindOf "Static";
 
     if (_isPublic) then {
