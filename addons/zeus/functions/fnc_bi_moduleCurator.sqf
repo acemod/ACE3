@@ -248,7 +248,7 @@ if (_activated) then {
                 {
                     if !(_x in _addons) then {_addons pushBack _x;};
                     {
-                        if !(_x in _addons) then {_addons pushBack _x;};
+                        if !(_x in _addons) then {_addons pushBackUnique _x;};
                     } forEach (unitAddons _x);
                 } forEach _paramAddons;
             };
