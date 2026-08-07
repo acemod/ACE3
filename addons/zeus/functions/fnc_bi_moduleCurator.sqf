@@ -246,9 +246,9 @@ if (_activated) then {
             if (typeOf _x == "ModuleCuratorAddAddons_F") then {
                 _paramAddons = call compile ("[" + (_x getVariable ["addons",""]) + "]");
                 {
-                    if !(_x in _addons) then {_addons pushBack _x;};
+                    _addons pushBackUnique _x;
                     {
-                        if !(_x in _addons) then {_addons pushBackUnique _x;};
+                        _addons pushBackUnique _x;
                     } forEach (unitAddons _x);
                 } forEach _paramAddons;
             };
