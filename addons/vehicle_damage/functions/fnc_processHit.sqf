@@ -227,7 +227,7 @@ switch (_hitArea) do {
 
                     _partKill append (ENGINE_HITPOINTS select 0);
 
-                    if !(_vehicle isKindOf "Wheeled_APC_F") then {
+                    if (_vehicle isKindOf "Tank") then {
                         _partKill append (TRACK_HITPOINTS select 0);
                     };
 
@@ -238,7 +238,7 @@ switch (_hitArea) do {
 
                     _partKill append (ENGINE_HITPOINTS select 0);
 
-                    if !(_vehicle isKindOf "Wheeled_APC_F") then {
+                    if (_vehicle isKindOf "Tank") then {
                         _partKill append (TRACK_HITPOINTS select 0);
                     };
 

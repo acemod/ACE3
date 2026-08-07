@@ -307,6 +307,19 @@
             <Japanese>FN FAL 50.00 (木製)</Japanese>
             <Ukrainian>FN FAL 50.00 (лісний)</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_UBS_lxWS_Name">
+            <English>SIX-12</English>
+            <French>SIX-12</French>
+            <Spanish>SIX-12</Spanish>
+            <Italian>SIX-12</Italian>
+            <Portuguese>SIX-12</Portuguese>
+            <Russian>SIX-12</Russian>
+            <German>SIX-12</German>
+            <Korean>SIX-12</Korean>
+            <Japanese>SIX-12</Japanese>
+            <Chinesesimp>SIX-12</Chinesesimp>
+            <Ukrainian>SIX-12</Ukrainian>
+        </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R4_Name">
             <English>Vektor R4</English>
             <French>Vektor R4</French>
