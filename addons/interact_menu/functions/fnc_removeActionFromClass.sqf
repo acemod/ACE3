@@ -75,5 +75,5 @@ private _found = false;
 } forEach (_parentNode select 1);
 
 if (!_found) then {
-    WARNING_1("Failed to find action to delete from %1." _objectType);
+    WARNING_1("Failed to find action to delete from %1.",_objectType);
 };
