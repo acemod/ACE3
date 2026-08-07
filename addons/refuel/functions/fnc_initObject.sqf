@@ -5,6 +5,7 @@
  *
  * Arguments:
  * 0: Source <OBJECT>
+ * 1: Is static <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -15,7 +16,11 @@
  * Public: No
  */
 
-params ["_source"];
+params ["_source", ["_isStatic", false]];
+
+if (!_isStatic) then {
+    TRACE_3("init",_source,local _source,getFuelCargo _source);
+};
 
 if (local _source && {getFuelCargo _source > 0}) then {
     _source setFuelCargo 0;

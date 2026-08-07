@@ -60,12 +60,10 @@ if (hasInterface) then {
         GVAR(actions) = nil;
     };
 
-    ["All", "InitPost", {
-        params ["_vehicle"];
-        if !(typeOf _vehicle in (uiNamespace getVariable QGVAR(cacheRefuelCargo))) exitWith {};
-        TRACE_3("initPost",_vehicle,local _vehicle,getFuelCargo _vehicle);
-        _vehicle call FUNC(initObject);
-    }, true, ["Man"], true] call CBA_fnc_addClassEventHandler;
+    {
+        // inheritance is not needed because all classes are listed
+        [_x, "InitPost", LINKFUNC(initObject), false, [], true] call CBA_fnc_addClassEventHandler;
+    } forEach (uiNamespace getVariable QGVAR(cacheRefuelCargo));
 
     if (isServer) then {
         addMissionEventHandler ["HandleDisconnect", {call FUNC(handleDisconnect)}];
@@ -79,7 +77,7 @@ if (hasInterface) then {
         if (_objects isEqualTo []) then {continue};
         _staticFound pushBack [_x, count _objects];
         {
-            _x call FUNC(initObject);
+            [_x, true] call FUNC(initObject);
         } forEach _objects;
     } forEach _staticClasses;
     TRACE_1("init terrain",_staticFound);
