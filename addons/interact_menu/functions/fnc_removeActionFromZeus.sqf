@@ -48,5 +48,5 @@ private _found = false;
 } forEach _currentPath;
 
 if (!_found) then {
-    WARNING("Failed to find action to delete");
+    WARNING("Failed to find action to delete from Zeus!");
 }
