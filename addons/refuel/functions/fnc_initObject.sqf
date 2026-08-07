@@ -32,11 +32,17 @@ if (_source getVariable [QGVAR(HDEHID), -1] == -1) then {
 };
 
 // `Vehicle Damage` and `Cook off` use setDamage to destroy vehicle, so we can not catch this moment
-if (missionNamespace getVariable [QEGVAR(vehicle_damage,enabled), false]) then {
+if (
+    missionNamespace getVariable [QEGVAR(vehicle_damage,enabled), false]
+    && {_source isKindOf "AllVehicles"}
+) then {
     // VD HD EH is added in the next frame
     [{
         params ["_source"];
-        if (isNil {_source getVariable QEGVAR(vehicle_damage,handleDamage)}) exitWith {};
+        if (
+            isNil {_source getVariable QEGVAR(vehicle_damage,handleDamage)}
+            || {isNil {_source getVariable QGVAR(HDEHID)}}
+        ) exitWith {};
         TRACE_1("VD enabled",_source);
 
         _source removeEventHandler ["HandleDamage", _source getVariable QGVAR(HDEHID)];
