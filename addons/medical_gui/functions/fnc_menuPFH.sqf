@@ -27,6 +27,10 @@ if !(
 
         [[ELSTRING(medical,DistanceToFar), GVAR(target) call EFUNC(common,getName)], 2] call EFUNC(common,displayTextStructured);
     };
+
+    if (EGVAR(medical,blockInputOnUiEvent) > 0) then {
+        [EGVAR(medical,blockInputOnUiEvent)] call EFUNC(common,temporaryBlockFire); // prevent firing from sudden menu closure
+    };
 };
 
 // Get the Medical Menu display
