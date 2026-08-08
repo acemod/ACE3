@@ -10,5 +10,11 @@ PREP_RECOMPILE_END;
 
 GVAR(initializedStaticTypes) = [];
 
+// Config-derived, so they hold for the whole session. Filled lazily by FUNC(compatibleMagazines) and
+// FUNC(getCarryMagazine) rather than on weapon swap, a CSW without a proxy weapon needs them too
+GVAR(vehicleMagCache) = createHashMap;
+GVAR(compatibleCarryMagsCache) = createHashMap;
+GVAR(compatibleVehicleMagsCache) = createHashMap;
+
 ADDON = true;
 
