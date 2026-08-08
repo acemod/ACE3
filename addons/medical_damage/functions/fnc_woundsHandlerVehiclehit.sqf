@@ -39,7 +39,7 @@ for "_i" from 1 to (_damageToApply * 6) do {
 
 private _newDamages = [];
 {
-    _newDamages pushBack [_damageMap get _x, _x, _damageToApply];
+    _newDamages pushBack [_damageMap get _x, _x, _damageToApply, ""];
 } forEach (keys _damageMap); // micro-optimization again, two 'get's is still faster than iterating over a hashmap
 
 TRACE_1("Vehicle explosion handled, passing damage",_newDamages);

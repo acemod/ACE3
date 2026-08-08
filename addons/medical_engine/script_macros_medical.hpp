@@ -68,6 +68,27 @@
 #define PENETRATION_THRESHOLD EGVAR(medical,const_penetrationThreshold)
 #define PENETRATION_THRESHOLD_DEFAULT 0.35
 
+// Armor plate classification, see EFUNC(medical_engine,getItemPlate)
+// Vanilla armor items sit on an exact linear ladder: vests are 4*(level+1), headgear 2*(level+1),
+// and vest passThrough is 0.6-0.1*level. Both encode the same level for every well formed item.
+#define ARMOR_LEVEL_STEP_VEST 4
+#define ARMOR_LEVEL_STEP_HEADGEAR 2
+#define ARMOR_LEVEL_PASSTHROUGH_BASE 0.6
+#define ARMOR_LEVEL_PASSTHROUGH_STEP 0.1
+// How much the armor value is trusted over passThrough when the two disagree.
+// They only disagree on malformed items (V_PlateCarrierGL_rgr is armor 78 / passThrough 0.6),
+// so this only decides how those outliers rank. Note vanilla's own UI reads passThrough as
+// ballistic protection and armor as explosive protection, hence not trusting either outright.
+#define ARMOR_LEVEL_ARMOR_WEIGHT 0.75
+// Both go up to level V. Headgear uses its own thickness table rather than a lower cap, since
+// high end helmets (Enhanced/Viper are Ops-Core XR class) do defeat rifle threats, just not the
+// 7.62x51 ball that anchors level IV for torso plates.
+#define MAX_PLATE_LEVEL 5
+#define MAX_HELMET_LEVEL 5
+// Uniforms sit on the same ladder, but their hitpoint armor is a coefficient of the unit's base
+// armor rather than an absolute value, so it has to be multiplied out first. That puts CSAT
+// fatigues at level II and Viper suits at level III, which is what they're meant to be
+
 // To be replaced by a proper blood pressure calculation
 #define BLOOD_LOSS_KNOCK_OUT_THRESHOLD EGVAR(medical,const_bloodLossKnockOutThreshold)
 #define BLOOD_LOSS_KNOCK_OUT_THRESHOLD_DEFAULT 0.5 // 50% of cardiac output

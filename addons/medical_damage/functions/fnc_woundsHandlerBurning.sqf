@@ -22,7 +22,7 @@ TRACE_3("woundsHandlerBurning",_unit,_allDamages,_typeOfDamage);
 #define FIRE_DAMAGE_INTERVAL 1
 
 {
-    _x params ["_damage", "_bodyPart"];
+    _x params ["_damage", "_bodyPart", "", "_hitpoint"];
 
     if (_bodyPart != "#structural") then {
         continue
@@ -37,9 +37,9 @@ TRACE_3("woundsHandlerBurning",_unit,_allDamages,_typeOfDamage);
         [{
             params ["_unit"];
 
-            private _bodyPart = selectRandom ["body", "leftleg", "rightleg"];
+            private _bodyPart = selectRandom [["body", "HitChest"], ["leftleg", "HitLeftLeg"], ["rightleg", "HitRightLeg"]];
             private _storedDamage = _unit getVariable [QGVAR(storedBurnDamage), 0];
-            [QEGVAR(medical,woundReceived), [_unit, [[_storedDamage, _bodyPart, _storedDamage]], _unit, "burn"]] call CBA_fnc_localEvent;
+            [QEGVAR(medical,woundReceived), [_unit, [[_storedDamage, _bodyPart select 0, _storedDamage, _bodyPart select 1]], _unit, "burn"]] call CBA_fnc_localEvent;
             _unit setVariable [QGVAR(storedBurnDamage), 0, true];
         },
         [_unit], FIRE_DAMAGE_INTERVAL] call CBA_fnc_waitAndExecute;
