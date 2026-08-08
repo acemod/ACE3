@@ -14,10 +14,10 @@
     ELSTRING(common,ACEKeybindCategoryVehicles),
     true,
     2, {
-        profileNamespace setVariable [QGVAR(showEjectAction), parseNumber !_this];
-        saveProfileNamespace;
+        #define ACTION_ENUM_EJECT 51
+        [ACTION_ENUM_EJECT, QUOTE(ADDON), _this] call EFUNC(common,hideAction);
     },
-    true // needs restart
+    true // needs restart (for ace_aircraft's initEjectAction text color)
 ] call CBA_fnc_addSetting;
 
 [
