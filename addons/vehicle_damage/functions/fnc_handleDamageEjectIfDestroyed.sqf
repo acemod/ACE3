@@ -16,19 +16,40 @@
  * Public: No
  */
 
-params ["_vehicle", "", "", "", "_ammo"];
+params ["_vehicle", "_selection", "_damage", "", "_projectile"];
 
-if (alive _vehicle) exitWith {};
+if (
+    alive _vehicle
+    && {_selection isNotEqualTo "" || {_damage < 1}} // overall structural damage
+) exitWith {};
 
-TRACE_2("handleDamageEjectIfDestroyed",typeOf _vehicle,_this);
-
-if (IS_INEXPLOSIVE_AMMO(_ammo)) then {
-    {
-        if (alive _x) then {
-            moveOut _x;
-        };
-    } forEach crew _vehicle;
-};
+TRACE_5("handleDamageEjectIfDestroyed",alive _vehicle,speed _vehicle,velocity _vehicle,typeOf _vehicle,_this);
 
 //IGNORE_PRIVATE_WARNING ["_thisEventHandler"];
 _vehicle removeEventHandler ["HandleDamage", _thisEventHandler];
+
+if (_projectile isNotEqualTo "") exitWith {
+    if (IS_INEXPLOSIVE_AMMO(_projectile)) then {
+        {
+            moveOut _x;
+        } forEach crew _vehicle;
+    };
+};
+
+if (_vehicle isKindOf "StaticWeapon") exitWith {
+    {
+        moveOut _x;
+    } forEach crew _vehicle;
+};
+
+// boat collision damage
+{
+    moveOut _x;
+    private _posASL = getPosASLW _x;
+    // if moved out under water, move it upper
+    if (_posASL select 2 < 0.5) then {
+        TRACE_3("move up",_x,_posASL select 2,velocity _x);
+        _posASL set [2, 0.5];
+        _x setPosASLW _posASL;
+    };
+} forEach crew _vehicle;
