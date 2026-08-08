@@ -1,14 +1,20 @@
 
 class CfgAmmo {
-    class BulletCore;
-
-    class BulletBase: BulletCore {
-        timeToLive=6;
-    };
-
+    class BulletBase;
     class ShotgunBase;
 
-    class B_12Gauge_Pellets_Submunition: BulletBase { //#00 Buckshot
+    class B_12Gauge_Pellets_Submunition: BulletBase { //#00 Buckshot https://en.wikipedia.org/wiki/Shot_(pellet)
+        ACE_caliber = 8.38; // 0.33"
+        ACE_bulletLength = 8.38; // 0.33"
+        ACE_bulletMass = 3.486; // 53.8gr
+        ACE_ballisticCoefficients[] = {0.049}; // ICAO G1 BC estimation based on size, mass and velocity from exterior ballistic app "EBC V2".
+        ACE_dragModel = 1;
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ICAO";
+        ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619}; // default ACE_ammoTempMuzzleVelocityShifts values /10 (Ammo Temp MV Curve Tables by TiborasaurusRex). Muzzle velocity shift 0m/s 70°F (21°C), -1m/s 15°C
+        ACE_muzzleVelocities[] = {265, 343, 372, 381, 403}; // Muzzle Velocities 70°F (21°C, MV 15°C +1m/s), 326m/s (317mm), 332m/s (330.2mm), 340m/s (349.7mm), 378m/s (699.3mm), 380m/s 30" ICAO (15°C, 1013.25 hPa, 0%)
+        ACE_barrelLengths[] = {165.1, 355.6, 546.1, 762, 914.4}; // 6.5, 14, 21.5, 30, 36"
+        airFriction = -0.005307; // based on terminal velocities M0.8 272m/s 63m
         //vanilla values have been left as comments for reference purposes
         caliber = 0.525; //penetration of ~3mm RHA, ~9.6mm metal
         //caliber = 1; //too high, ~5.7mm of RHA (380*1*15/1000=5.7), ~18.25 metal
@@ -17,15 +23,25 @@ class CfgAmmo {
         //simulationStep = 0.0001;
         //cartridge = "";
         //submunitionAmmo = "B_12Gauge_Pellets_Submunition_Deploy";
-        submunitionConeType[] = {"poissondisc", 9};  //#00 Buckshot generally has 9 pellets per shell
+        submunitionConeType[] = {"poissondisc", 8};  //#00 Buckshot generally has 8 pellets per shell
         //submunitionConeType[] = {"poissondisc", 18};
         //submunitionConeAngle = 0.8;
         //triggerSpeedCoef[] = {0.85, 1};
         triggerTime = 0.008; // Shot takes ~5-15 feet to start spreading out and the vanilla triggerTime is too short to allow that
         //triggerTime = 0.001;
     };
-    class B_12Gauge_Pellets_Submunition_Deploy: BulletBase {
-        airFriction = -0.0030;
+    class B_12Gauge_Pellets_Submunition_Deploy: BulletBase { // https://en.wikipedia.org/wiki/Shot_(pellet)
+        ACE_caliber = 8.38; // 0.33"
+        ACE_bulletLength = 8.38; // 0.33"
+        ACE_bulletMass = 3.486; // 53.8gr
+        ACE_ballisticCoefficients[] = {0.049}; // ICAO G1 BC estimation based on size, mass and velocity from exterior ballistic app "EBC V2".
+        ACE_dragModel = 1;
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ICAO";
+        ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619}; // default ACE_ammoTempMuzzleVelocityShifts values /10 (Ammo Temp MV Curve Tables by TiborasaurusRex). Muzzle velocity shift 0m/s 70°F (21°C), -1m/s 15°C
+        ACE_muzzleVelocities[] = {265, 343, 372, 381, 403}; // Muzzle Velocities 70°F (21°C, MV 15°C +1m/s), 326m/s (317mm), 332m/s (330.2mm), 340m/s (349.7mm), 378m/s (699.3mm), 380m/s 30" ICAO (15°C, 1013.25 hPa, 0%)
+        ACE_barrelLengths[] = {165.1, 355.6, 546.1, 762, 914.4}; // 6.5, 14, 21.5, 30, 36"
+        airFriction = -0.005307; // based on terminal velocities M0.8 272m/s 63m
         //airFriction = -0.0067;
         caliber = 0.525;
         hit = 2.55; //vanilla hit is way too high
@@ -41,61 +57,111 @@ class CfgAmmo {
     };
 
     class ACE_12Gauge_Pellets_Submunition_No0_Buck: B_12Gauge_Pellets_Submunition {
+        ACE_caliber = 8.13; // 0.32"
+        ACE_bulletLength = 8.13; // 0.32"
+        ACE_bulletMass = 3.175; // 49gr
+        ACE_ballisticCoefficients[] = {0.048};
+        airFriction = -0.005379; // based on terminal velocities M0.8 272m/s 62m
         caliber = 0.5;
         submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No0_Buck_Deploy";
         submunitionConeType[] = {"poissondisc", 9};
         submunitionConeAngle = 0.81;
     };
     class ACE_12Gauge_Pellets_Submunition_No0_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
-        airFriction = -0.0033;
+        ACE_caliber = 8.13; // 0.32"
+        ACE_bulletLength = 8.13; // 0.32"
+        ACE_bulletMass = 3.175; // 49gr
+        ACE_ballisticCoefficients[] = {0.048};
+        airFriction = -0.005379; // based on terminal velocities M0.8 272m/s 62m
         caliber = 0.5;
         hit = 2.27;
     };
     class ACE_12Gauge_Pellets_Submunition_No1_Buck: B_12Gauge_Pellets_Submunition {
+        ACE_caliber = 7.62; // 0.30"
+        ACE_bulletLength = 7.62; // 0.30"
+        ACE_bulletMass = 2.624; // 40.5gr
+        ACE_ballisticCoefficients[] = {0.045};
+        airFriction = -0.005773; // based on terminal velocities M0.8 272m/s 58m
         caliber = 0.475;
         submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No1_Buck_Deploy";
-        submunitionConeType[] = {"poissondisc", 11};
+        submunitionConeType[] = {"poissondisc", 10};
         submunitionConeAngle = 0.83;
     };
     class ACE_12Gauge_Pellets_Submunition_No1_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
-        airFriction = -0.0038;
+        ACE_caliber = 7.62; // 0.30"
+        ACE_bulletLength = 7.62; // 0.30"
+        ACE_bulletMass = 2.624; // 40.5gr
+        ACE_ballisticCoefficients[] = {0.045};
+        airFriction = -0.005773; // based on terminal velocities M0.8 272m/s 58m
         caliber = 0.475;
         hit = 1.86;
     };
     class ACE_12Gauge_Pellets_Submunition_No2_Buck: B_12Gauge_Pellets_Submunition {
+        ACE_caliber = 6.86; // 0.27"
+        ACE_bulletLength = 6.86; // 0.27"
+        ACE_bulletMass = 1.905; // 29.4gr
+        ACE_ballisticCoefficients[] = {0.04};
+        airFriction = -0.006538; // based on terminal velocities M0.8 272m/s 51m
         caliber = 0.45;
         submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No2_Buck_Deploy";
         submunitionConeType[] = {"poissondisc", 14};
         submunitionConeAngle = 0.85;
     };
     class ACE_12Gauge_Pellets_Submunition_No2_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
-        airFriction = -0.0048;
+        ACE_caliber = 6.86; // 0.27"
+        ACE_bulletLength = 6.86; // 0.27"
+        ACE_bulletMass = 1.905; // 29.4gr
+        ACE_ballisticCoefficients[] = {0.04};
+        airFriction = -0.006538; // based on terminal velocities M0.8 272m/s 51m
         caliber = 0.45;
         hit = 1.46;
     };
     class ACE_12Gauge_Pellets_Submunition_No3_Buck: B_12Gauge_Pellets_Submunition {
+        ACE_caliber = 6.35; // 0.25"
+        ACE_bulletLength = 6.35; // 0.25"
+        ACE_bulletMass = 1.516; // 23.4gr
+        ACE_ballisticCoefficients[] = {0.038};
+        airFriction = -0.006762; // based on terminal velocities M0.8 272m/s 49m
         caliber = 0.425;
         submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No3_Buck_Deploy";
         submunitionConeType[] = {"poissondisc", 18};
         submunitionConeAngle = 0.87;
     };
     class ACE_12Gauge_Pellets_Submunition_No3_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
-        airFriction = -0.0067;
+        ACE_caliber = 6.35; // 0.25"
+        ACE_bulletLength = 6.35; // 0.25"
+        ACE_bulletMass = 1.516; // 23.4gr
+        ACE_ballisticCoefficients[] = {0.038};
+        airFriction = -0.006762; // based on terminal velocities M0.8 272m/s 49m
         caliber = 0.425;
         hit = 1.13;
     };
     class ACE_12Gauge_Pellets_Submunition_No4_Buck: B_12Gauge_Pellets_Submunition {
+        ACE_caliber = 6.1; // 0.24"
+        ACE_bulletLength = 6.1; // 0.24"
+        ACE_bulletMass = 1.341; // 20.7gr
+        ACE_ballisticCoefficients[] = {0.036};
+        airFriction = -0.00726; // based on terminal velocities M0.8 272m/s 46m
         caliber = 0.4;
         submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No4_Buck_Deploy";
         submunitionConeType[] = {"poissondisc", 21};
         submunitionConeAngle = 0.89;
     };
     class ACE_12Gauge_Pellets_Submunition_No4_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
-        airFriction = -0.0085;
+        ACE_caliber = 6.1; // 0.24"
+        ACE_bulletLength = 6.1; // 0.24"
+        ACE_bulletMass = 1.341; // 20.7gr
+        ACE_ballisticCoefficients[] = {0.036};
+        airFriction = -0.00726; // based on terminal velocities M0.8 272m/s 46m
         caliber = 0.4;
         hit = 0.97;
     };
     class ACE_12Gauge_Pellets_Submunition_No4_Bird: B_12Gauge_Pellets_Submunition {
+        ACE_caliber = 3.3; // 0.13"
+        ACE_bulletLength = 3.3; // 0.13"
+        ACE_bulletMass = 0.21; // 3.24gr
+        ACE_ballisticCoefficients[] = {0.02};
+        airFriction = -0.013447; // based on terminal velocities M0.8 272m/s 25m
         caliber = 0.2;
         hit = 3;
         submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No4_Bird_Deploy";
@@ -104,8 +170,12 @@ class CfgAmmo {
         triggerSpeedCoef[] = {0.8, 1};
     };
     class ACE_12Gauge_Pellets_Submunition_No4_Bird_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
+        ACE_caliber = 3.3; // 0.13"
+        ACE_bulletLength = 3.3; // 0.13"
+        ACE_bulletMass = 0.21; // 3.24gr
+        ACE_ballisticCoefficients[] = {0.02};
+        airFriction = -0.013447; // based on terminal velocities M0.8 272m/s 25m
         caliber = 0.2;
-        airFriction = -0.0800;
         hit = 0.15;
     };
 
