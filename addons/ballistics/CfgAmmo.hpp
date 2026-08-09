@@ -116,12 +116,12 @@ class CfgAmmo {
         caliber = 0.45;
         hit = 1.46;
     };
-    class ACE_12Gauge_Pellets_Submunition_No3_Buck: B_12Gauge_Pellets_Submunition {
+    class ACE_12Gauge_Pellets_Submunition_No3_Buck: B_12Gauge_Pellets_Submunition { // vanilla Pellets
         ACE_caliber = 6.35; // 0.25"
         ACE_bulletLength = 6.35; // 0.25"
         ACE_bulletMass = 1.516; // 23.4gr
         ACE_ballisticCoefficients[] = {0.038};
-        airFriction = -0.006762; // based on terminal velocities M0.8 272m/s 49m
+        airFriction = -0.006762; // based on terminal velocities M0.8 272m/s 49m, vanilla -0.0005
         caliber = 0.425;
         submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No3_Buck_Deploy";
         submunitionConeType[] = {"poissondisc", 18};
@@ -132,7 +132,7 @@ class CfgAmmo {
         ACE_bulletLength = 6.35; // 0.25"
         ACE_bulletMass = 1.516; // 23.4gr
         ACE_ballisticCoefficients[] = {0.038};
-        airFriction = -0.006762; // based on terminal velocities M0.8 272m/s 49m
+        airFriction = -0.006762; // based on terminal velocities M0.8 272m/s 49m, vanilla -0.0067
         caliber = 0.425;
         hit = 1.13;
     };
