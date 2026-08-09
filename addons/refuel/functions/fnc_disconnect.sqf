@@ -22,6 +22,11 @@ private _sink = _nozzle getVariable [QGVAR(sink), objNull];
 if (isNull _sink) exitWith {};
 
 _sink setVariable [QGVAR(nozzle), nil, true];
+// If the nozzle was providing fuel whilst abruptly disconnected, play stop sound (stops refilling sound)
+if (_nozzle getVariable [QGVAR(isRefueling), false] && {!(_nozzle getVariable [QGVAR(jerryCan), false])}) then {
+    [_nozzle, QGVAR(nozzle_stop), nil, true, true, true] call CBA_fnc_globalSay3D;
+};
+
 if (_nozzle isKindOf "Land_CanisterFuel_F") then { _nozzle setVariable [QEGVAR(cargo,canLoad), true, true]; };
 _nozzle setVariable [QGVAR(sink), nil, true];
 _nozzle setVariable [QGVAR(isConnected), false, true];
