@@ -44,7 +44,7 @@ private _intersections = lineIntersectsSurfaces [_posA, _posB, _unit, _nozzle, t
 TRACE_1("",_intersections);
 private _groundPosition = [];
 if (_intersections isNotEqualTo []) then {
-    private _index = _intersections findIf {!(_intersectObject isKindOf QGVAR(fuelHoseSegment)) && {!(_intersectObject isKindOf "CAManBase")}};
+    private _index = _intersections findIf {!((_x select 2) isKindOf QGVAR(fuelHoseSegment)) && {!((_x select 2) isKindOf "CAManBase")}};
 
     if (_index != -1) then {
         _groundPosition = ((_intersections select _index) select 0) vectorAdd [0, 0, 0.005];
