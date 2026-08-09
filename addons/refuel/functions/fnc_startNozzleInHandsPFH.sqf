@@ -46,7 +46,7 @@ TRACE_2("start",_unit,_nozzle);
     };
 
     // check drop from external events
-    if (isNull _nozzle) exitWith {
+    if (isNull (_unit getVariable [QGVAR(nozzle), objNull])) exitWith {
         TRACE_2("stop drop",_unit,_nozzle);
         UNHOLSTER_WEAPON
         END_PFH
