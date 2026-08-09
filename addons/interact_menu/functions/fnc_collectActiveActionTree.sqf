@@ -28,7 +28,7 @@ private _player = ACE_player;
 if ((_origActionData select 10) isNotEqualTo {}) then {
     // It should, so make a copy and pass it to the modifierFunction
     _origActionData = +_origActionData;
-    private _actionParams = _origActionData select 6; // Define _actionParams so its accessible within the statement/condition
+    private _actionParams = _origActionData select 6; // Define _actionParams so its accessible within modifierFunction
     [_target, ACE_player, _actionParams, _origActionData] call (_origActionData select 10);
 };
 
@@ -39,12 +39,12 @@ _origActionData params [
     "_statementCode",
     "_conditionCode",
     "_insertChildrenCode",
-    "_customParams",
+    "_actionParams", // Define _actionParams so its accessible within the condition/insertChildren
     "_position",
     "_distance"
 ];
 
-private _result = [_target, ACE_player, _customParams] call _conditionCode;
+private _result = [_target, ACE_player, _actionParams] call _conditionCode;
 
 // Handle nil as false
 if (isNil "_result") then {
@@ -69,7 +69,7 @@ private _activeChildren = [];
 
 // If there's a statement to dynamically insert children then execute it
 if (_insertChildrenCode isNotEqualTo {}) then {
-    private _dynamicChildren = [_target, ACE_player, _customParams] call _insertChildrenCode;
+    private _dynamicChildren = [_target, ACE_player, _actionParams] call _insertChildrenCode;
 
     // Collect dynamic children class actions
     {

@@ -396,6 +396,12 @@
             <Hungarian>Stabil</Hungarian>
             <Ukrainian>Після стабілізації</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Medical_blockInputOnUiEvent_Description">
+            <English>Prevent accidental firing after medical menu unexpectedly closes or waking up</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_blockInputOnUiEvent_DisplayName">
+            <English>Block mouse input after unexpected UI change</English>
+        </Key>
         <Key ID="STR_ACE_Medical_closeLid">
             <English>Close lid</English>
             <Czech>Zavřít víko</Czech>

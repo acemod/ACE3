@@ -17,7 +17,7 @@ params ["_config"];
 private _cfgWeapons = configFile >> "CfgWeapons";
 private _cfgVehicles = configFile >> "CfgVehicles";
 
-(configProperties [_cfgWeapons >> configName _config >> QUOTE(ADDON) >> "assembleTo", "true", true]) apply {
+(configProperties [_config >> QUOTE(ADDON) >> "assembleTo", "true", true]) apply {
     private _tripod = getText (_cfgVehicles >> configName _x >> QUOTE(ADDON) >> "disassembleTo");
 
     getText (_cfgWeapons >> _tripod >> "displayName")

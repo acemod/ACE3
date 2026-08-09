@@ -19,7 +19,7 @@ class CfgPatches {
     };
 };
 
-// #include "CfgAmmo.hpp" // Uncomment when CWR3 updates
+#include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"

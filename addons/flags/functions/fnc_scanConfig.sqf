@@ -23,12 +23,13 @@ private _carrierItemMapping = createHashMap;
     private _name = configName _x;
     private _displayName = getText (_x >> "displayName");
     private _texture = getText (_x >> QGVAR(texture));
+    private _textureCarrier = getText (_x >> QGVAR(textureCarrier));
     private _carrier = getText (_x >> QGVAR(carrier));
     private _actionIconPlace = getText (_x >> QGVAR(actionIconPlace));
     private _actionIconCarry = getText (_x >> QGVAR(actionIconCarry));
     private _mass = getNumber (_x >> "ItemInfo" >> "mass");
 
-    _flagItemCache set [_name, [_displayName, _texture, _carrier, _actionIconPlace, _actionIconCarry, _mass]];
+    _flagItemCache set [_name, [_displayName, _texture, _carrier, _actionIconPlace, _actionIconCarry, _mass, _textureCarrier]];
     _carrierItemMapping set [_carrier, _name];
 } forEach _flagItems;
 

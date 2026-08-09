@@ -19,7 +19,7 @@
 params ["_medic", "_patient"];
 TRACE_2("fnc_showMedicalHint",_medic,_patient);
 
-if (!GVAR(medicalHintEnabled) || GVAR(medicalHintMessage) == "" || GVAR(pendingReopen) ||
+if (GVAR(medicalHintMessage) == "" || GVAR(pendingReopen) ||
     _medic == _patient || !(_patient call EFUNC(common,isPlayer))
 ) exitWith {};
 
@@ -35,4 +35,4 @@ if (GVAR(medicalHintMedicIcon) != "" && {_medic call EFUNC(medical_treatment,isM
     };
 };
 
-[QEGVAR(common,displayTextPicture), [_message, _image, [1, 1, 1], _patient], _patient] call CBA_fnc_targetEvent;
+[QGVAR(medicalHint), [_medic, [_message, _image, [1, 1, 1], _patient]], _patient] call CBA_fnc_targetEvent;

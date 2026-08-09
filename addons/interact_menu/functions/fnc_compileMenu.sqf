@@ -37,85 +37,80 @@ if ((_objectType isKindOf "CAManBase") && {!isNil QGVAR(cacheManActions)}) exitW
 
 private _recurseFnc = {
     params ["_actionsCfg", "_parentDistance"];
-    private _actions = [];
 
-    {
+    configProperties [_actionsCfg, "isClass _x", true] apply {
         private _entryCfg = _x;
-        if (isClass _entryCfg) then {
-            private _displayName = getText (_entryCfg >> "displayName");
-            private _distance = _parentDistance;
-            if (isNumber (_entryCfg >> "distance")) then {_distance = getNumber (_entryCfg >> "distance");};
-            // if (_distance < _parentDistance) then {WARNING_3("[%1] distance %2 less than parent %3",configName _entryCfg,_distance,_parentDistance);};
-            private _icon = if (isArray (_entryCfg >> "icon")) then {
-                getArray (_entryCfg >> "icon");
-            } else {
-                [getText (_entryCfg >> "icon"), "#FFFFFF"];
-            };
-            private _statement = compile (getText (_entryCfg >> "statement"));
-
-            // If the position entry is present, compile it
-            private _position = getText (_entryCfg >> "position");
-            if (_position != "") then {
-                _position = compile _position;
-            } else {
-                // If the not, but the selection entry is present use that
-                _position = getText (_entryCfg >> "selection");
-                if (_position != "") then {
-                    _position = compile format ["_target selectionPosition '%1'", _position];
-                } else {
-                    // Otherwise, just use the origin
-                    _position = {[0,0,0]};
-                };
-            };
-
-            private _condition = getText (_entryCfg >> "condition");
-
-            if (configName _entryCfg == "ACE_MainActions") then {
-                if (_condition isEqualTo "") then {_condition = "true"};
-            } else {
-                // Add canInteract (including exceptions) and canInteractWith to condition
-                private _canInteractCondition = format [QUOTE([ARR_3(ACE_player,_target,%1)] call EFUNC(common,canInteractWith)),getArray (_entryCfg >> "exceptions")];
-                private _conditionFormatPattern = ["%1 && {%2}", "%2"] select (_condition isEqualTo "" || {_condition == "true"});
-                _condition = format [_conditionFormatPattern, _condition, _canInteractCondition];
-            };
-
-            private _insertChildren = compile (getText (_entryCfg >> "insertChildren"));
-            private _modifierFunction = compile (getText (_entryCfg >> "modifierFunction"));
-
-            private _showDisabled = (getNumber (_entryCfg >> "showDisabled")) > 0;
-            private _enableInside = (getNumber (_entryCfg >> "enableInside")) > 0;
-            private _canCollapse = (getNumber (_entryCfg >> "canCollapse")) > 0;
-            private _runOnHover = false;
-            if (isText (_entryCfg >> "runOnHover")) then {
-                _runOnHover = compile getText (_entryCfg >> "runOnHover");
-            } else {
-                _runOnHover = (getNumber (_entryCfg >> "runOnHover")) > 0;
-            };
-            private _doNotCheckLOS = getNumber (_entryCfg >> "doNotCheckLOS") > 0;
-
-            _condition = compile _condition;
-            private _children = [_entryCfg, _distance] call _recurseFnc;
-
-            private _entry = [
-                        [
-                            configName _entryCfg,
-                            _displayName,
-                            _icon,
-                            _statement,
-                            _condition,
-                            _insertChildren,
-                            [],
-                            _position,
-                            _distance,
-                            [_showDisabled, _enableInside, _canCollapse, _runOnHover, _doNotCheckLOS],
-                            _modifierFunction
-                        ],
-                        _children
-                    ];
-            _actions pushBack _entry;
+        private _displayName = getText (_entryCfg >> "displayName");
+        private _distance = _parentDistance;
+        if (isNumber (_entryCfg >> "distance")) then {_distance = getNumber (_entryCfg >> "distance");};
+        // if (_distance < _parentDistance) then {WARNING_3("[%1] distance %2 less than parent %3",configName _entryCfg,_distance,_parentDistance);};
+        private _icon = if (isArray (_entryCfg >> "icon")) then {
+            getArray (_entryCfg >> "icon");
+        } else {
+            [getText (_entryCfg >> "icon"), "#FFFFFF"];
         };
-    } forEach (configProperties [_actionsCfg, "isClass _x", true]);
-    _actions
+        private _statement = compile (getText (_entryCfg >> "statement"));
+
+        // If the position entry is present, compile it
+        private _position = getText (_entryCfg >> "position");
+        if (_position != "") then {
+            _position = compile _position;
+        } else {
+            // If the not, but the selection entry is present use that
+            _position = getText (_entryCfg >> "selection");
+            if (_position != "") then {
+                _position = compile format ["_target selectionPosition '%1'", _position];
+            } else {
+                // Otherwise, just use the origin
+                _position = {[0,0,0]};
+            };
+        };
+
+        private _condition = getText (_entryCfg >> "condition");
+
+        if (configName _entryCfg == "ACE_MainActions") then {
+            if (_condition isEqualTo "") then {_condition = "true"};
+        } else {
+            // Add canInteract (including exceptions) and canInteractWith to condition
+            private _canInteractCondition = format [QUOTE([ARR_3(ACE_player,_target,%1)] call EFUNC(common,canInteractWith)),getArray (_entryCfg >> "exceptions")];
+            private _conditionFormatPattern = ["%1 && {%2}", "%2"] select (_condition isEqualTo "" || {_condition == "true"});
+            _condition = format [_conditionFormatPattern, _condition, _canInteractCondition];
+        };
+
+        private _insertChildren = compile (getText (_entryCfg >> "insertChildren"));
+        private _modifierFunction = compile (getText (_entryCfg >> "modifierFunction"));
+
+        private _showDisabled = (getNumber (_entryCfg >> "showDisabled")) > 0;
+        private _enableInside = (getNumber (_entryCfg >> "enableInside")) > 0;
+        private _canCollapse = (getNumber (_entryCfg >> "canCollapse")) > 0;
+        private _runOnHover = false;
+        if (isText (_entryCfg >> "runOnHover")) then {
+            _runOnHover = compile getText (_entryCfg >> "runOnHover");
+        } else {
+            _runOnHover = (getNumber (_entryCfg >> "runOnHover")) > 0;
+        };
+        private _doNotCheckLOS = getNumber (_entryCfg >> "doNotCheckLOS") > 0;
+
+        _condition = compile _condition;
+        private _children = [_entryCfg, _distance] call _recurseFnc;
+
+        [
+            [
+                configName _entryCfg,
+                _displayName,
+                _icon,
+                _statement,
+                _condition,
+                _insertChildren,
+                [],
+                _position,
+                _distance,
+                [_showDisabled, _enableInside, _canCollapse, _runOnHover, _doNotCheckLOS],
+                _modifierFunction
+            ],
+            _children
+        ]
+    }
 };
 
 private _actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_Actions";

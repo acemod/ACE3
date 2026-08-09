@@ -61,7 +61,7 @@ private _isSticky = getNumber (_configMagazine >> QGVAR(isSticky)) == 1;
 
 GVAR(pfeh_running) = true;
 GVAR(placeAction) = PLACE_WAITING;
-GVAR(TweakedAngle) = 0;
+GVAR(tweakedAngle) = 0;
 
 [{
     BEGIN_COUNTER(pfeh);
@@ -81,7 +81,7 @@ GVAR(TweakedAngle) = 0;
 
     if ((stance _unit) == "PRONE") then {
         // If prone, lower base and increase up angle of look - Makes it much easier to attach to underside of vehicles
-        _basePosASL vectorAdd [0, 0, -0.3];
+        _basePosASL = _basePosASL vectorAdd [0, 0, -0.3];
         _lookDirVector = ((positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL)) vectorFromTo ((positionCameraToWorld [0, 3, 10]) call EFUNC(common,positionToASL));
     };
 

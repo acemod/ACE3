@@ -19,7 +19,7 @@
 params ["_sPos", "_icon"];
 
 if(GVAR(iconCount) > (count GVAR(iconCtrls))-1) then {
-    private _displayNum = [[46, 12] select visibleMap,91919] select (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]);
+    private _displayNum = [[46, 12] select visibleMap,91919] select (true isEqualTo (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]));
     GVAR(iconCtrls) pushBack ((findDisplay _displayNum) ctrlCreate ["RscStructuredText", 54021+GVAR(iconCount)]);
     if (GVAR(useCursorMenu)) then {
         ((findDisplay _displayNum) displayCtrl (54021+GVAR(iconCount))) ctrlAddEventHandler ["MouseMoving", DFUNC(handleMouseMovement)];

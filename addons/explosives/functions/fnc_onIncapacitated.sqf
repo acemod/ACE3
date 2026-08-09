@@ -55,7 +55,7 @@ if (isText (_magazineTrigger >> "ammo")) then {
 };
 
 private _explosive = _ammo createVehicle [0, 0, 0];
-_explosive setPosASL (getPosASL _unit);
+_explosive attachTo [_unit, [0, 0.15, 0.15], "Pelvis"];
 
 // Explode, ignoring range, with a 0.5 second delay
 [_unit, -1, [_explosive, 0.5], "ACE_DeadManSwitch"] call FUNC(detonateExplosive);

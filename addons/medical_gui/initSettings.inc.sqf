@@ -183,11 +183,15 @@ private _categoryColors = [ELSTRING(medical,Interface_Category), format ["| %1 |
 
 [
     QGVAR(medicalHintEnabled),
-    "CHECKBOX",
+    "LIST",
     [LSTRING(medicalHintEnabled_DisplayName), LSTRING(medicalHintEnabled_Description)],
     [ELSTRING(medical,Interface_Category), LSTRING(SubCategory)],
-    true,
-    1
+    [
+        [0, 1, 2],
+        [ELSTRING(common,Disabled), ELSTRING(common,Enabled), LSTRING(medicalHintEnabled_justSound)],
+        1
+    ],
+    0
 ] call CBA_fnc_addSetting;
 
 [

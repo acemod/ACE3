@@ -65,11 +65,11 @@
             <Chinesesimp>已经没有剩余的弹药了。</Chinesesimp>
             <Ukrainian>Запас боєкомплекту порожній</Ukrainian>
         </Key>
-        <Key ID="STR_ACE_Rearm_Hint_MunitionDistance">
-            <English>Munition is too far from pylon. Distance: %1 m</English>
-        </Key>
         <Key ID="STR_ACE_Rearm_Hint_MunitionAngle">
             <English>Munition is not aligned with pylon. Angle: %1</English>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Hint_MunitionDistance">
+            <English>Munition is too far from pylon. Distance: %1 m</English>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RearmedTriple">
             <English>Rearmed %1 rounds of %2 on %3</English>

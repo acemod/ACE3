@@ -7,7 +7,7 @@
  * 0: Player <OBJECT>
  *
  * Return Value:
- * None
+ * Distance (or error code) <NUMBER>
  *
  * Example:
  * [player] call ace_milr_fnc_getRange
