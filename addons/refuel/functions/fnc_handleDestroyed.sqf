@@ -29,6 +29,11 @@ if (!isNull _sink) then {
 };
 
 private _unit = attachedTo _nozzle;
+
+if !(_unit isKindOf "CAManBase") then {
+    _unit = objNull;
+};
+
 [_unit, _nozzle] call FUNC(dropNozzle);
 
 deleteVehicle (_nozzle getVariable [QGVAR(helper), objNull]);

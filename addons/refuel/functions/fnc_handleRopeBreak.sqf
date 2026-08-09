@@ -35,6 +35,11 @@ _ropeEndPosition = if (_ropeEndPosition isNotEqualTo []) then {
 };
 
 private _unit = attachedTo _nozzle;
+
+if !(_unit isKindOf "CAManBase") then {
+    _unit = objNull;
+};
+
 [_unit, _nozzle, false, _ropeEndPosition] call FUNC(disconnect);
 [_nozzle, [0, -0.20, 0.12]] ropeAttachTo _rope;
 
