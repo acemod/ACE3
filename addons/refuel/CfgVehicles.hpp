@@ -110,6 +110,8 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {"#(argb,8,8,3)color(0.009,0.009,0.009,1.0,co)"};
         segmentType = QGVAR(fuelHoseSegment);
         model = QPATHTOF(data\hose.p3d);
+        maxRelLenght = 1;
+        maxExtraLenght = 2;
     };
 
     class All;
