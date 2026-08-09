@@ -53,11 +53,19 @@ private _bestPosDistance = 1e38;
 
 //Checks (too close to center or can't attach)
 if (_bestPosASL isEqualTo []) exitWith {
-    [localize LSTRING(Failed)] call EFUNC(common,displayTextStructured);
+    [LSTRING(Failed), nil, _unit] call EFUNC(common,displayTextStructured);
 };
 
 //Move it out slightly, for visibility sake (better to look a little funny than be embedded//sunk in the hull and be useless)
 _bestPosASL = _bestPosASL vectorAdd ((_bestPosASL vectorFromTo _startingPosASL) vectorMultiply 0.05);
+
+// Don't connect to fuel sinks that are too far away
+if (!(_nozzle getVariable [QGVAR(jerryCan), false]) && {
+    private _source = _nozzle getVariable [QGVAR(source), objNull];
+    (_source getVariable [QGVAR(hoseLength), GVAR(hoseLength)]) < _bestPosASL distance (_source modelToWorldWorld (_nozzle getVariable QGVAR(attachPos)))
+}) exitWith {
+    [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
+};
 
 private _attachPosModel = _sink worldToModel (ASLToAGL _bestPosASL);
 

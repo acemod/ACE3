@@ -32,7 +32,7 @@ TRACE_2("start",_unit,_nozzle);
 
 [{
     params ["_args", "_idPFH"];
-    _args params ["_unit", "_nozzle"];
+    _args params ["_unit", "_nozzle", "_isNozzle"];
 
     if !(
         _unit call EFUNC(common,isAwake)
@@ -78,8 +78,8 @@ TRACE_2("start",_unit,_nozzle);
 
     // check hoseLength < distance
     if (
-        !(_nozzle getVariable [QGVAR(jerryCan), false])
-        && {((_source getVariable [QGVAR(hoseLength), GVAR(hoseLength)]) - 2) < _unit distance (_source modelToWorld (_nozzle getVariable QGVAR(attachPos)))}
+        _isNozzle
+        && {(_source getVariable [QGVAR(hoseLength), GVAR(hoseLength)]) < _unit distance (_source modelToWorld (_nozzle getVariable QGVAR(attachPos)))}
     ) exitWith {
         TRACE_1("stop length",_unit);
         DROP_NOZZLE
@@ -106,4 +106,4 @@ TRACE_2("start",_unit,_nozzle);
         _unit setVariable [QGVAR(hint), _hint];
         _hint call EFUNC(interaction,showMouseHint);
     };
-}, 0, [_unit, _nozzle]] call cba_fnc_addPerFrameHandler;
+}, 0, [_unit, _nozzle, !(_nozzle getVariable [QGVAR(jerryCan), false])]] call cba_fnc_addPerFrameHandler;
