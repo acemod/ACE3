@@ -26,7 +26,7 @@ if (isNil _settingName) exitWith {
 };
 
 // Check if the parameter is defined in the module
-if (isNil {_logic getVariable _moduleVariable}) exitWith {
+if ((_logic isNil _moduleVariable)) exitWith {
     WARNING_2("Warning in %1 module: %2 setting is missing. Probably an obsolete version of the module is used in the mission.",typeOf _logic,_moduleVariable);
 };
 
