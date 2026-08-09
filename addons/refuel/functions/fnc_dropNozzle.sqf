@@ -7,6 +7,7 @@
  * 0: Unit <OBJECT> (default: objNull)
  * 1: Nozzle <OBJECT>
  * 2: Disconnect Only <BOOL> (default: false)
+ * 3: Ground position to drop to (default: nozzle's current position)
  *
  * Return Value:
  * None
@@ -27,10 +28,15 @@ _nozzle setVariable [QGVAR(isRefueling), false, true];
 // Remove claim on nozzle
 [objNull, _nozzle] call EFUNC(common,claim);
 
+if (!isNull _unit) then {
+    _unit setVariable [QGVAR(isRefueling), false];
+    _unit setVariable [QGVAR(nozzle), objNull, true];
+};
+
 if (_disconnectOnly) exitWith {};
 _nozzle setVelocity [0, 0, 0];
 
-private _groundPosition = getPosASL _nozzle;
+private _groundPosition = param [3, getPosASL _nozzle];
 private _posA = (getPosASL _nozzle) vectorAdd [0,0,0.05];
 private _posB = (getPosASL _nozzle) vectorAdd [0,0,-((_nozzle getVariable [QGVAR(source), objNull]) getVariable [QGVAR(hoseLength), GVAR(hoseLength)])];
 private _intersections = lineIntersectsSurfaces [_posA, _posB, _unit, _nozzle, true, 1, "GEOM"];
@@ -47,7 +53,3 @@ if (_intersections isEqualTo []) then {
 };
 _nozzle setPosASL _groundPosition;
 TRACE_1("finalPos",getPosATL _nozzle);
-
-if (isNull _unit) exitWith {};
-_unit setVariable [QGVAR(isRefueling), false];
-_unit setVariable [QGVAR(nozzle), objNull, true];

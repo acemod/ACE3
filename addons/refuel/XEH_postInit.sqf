@@ -68,7 +68,13 @@ if (hasInterface) then {
         if (isServer) then {
             [_x, "Deleted", LINKFUNC(handleDestroyed), false, [], true] call CBA_fnc_addClassEventHandler;
         };
+
+        if (_x isKindOf "AllVehicles") then {
+            [_x, "RopeBreak", LINKFUNC(handleRopeBreak), false, [], true] call CBA_fnc_addClassEventHandler;
+        };
     } forEach (uiNamespace getVariable QGVAR(cacheRefuelCargo));
+
+    [QGVAR(helper), "RopeBreak", LINKFUNC(handleRopeBreak), false, [], true] call CBA_fnc_addClassEventHandler;
 
     if (isServer) then {
         addMissionEventHandler ["HandleDisconnect", {call FUNC(handleDisconnect)}];

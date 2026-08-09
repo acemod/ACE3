@@ -46,15 +46,6 @@ _nozzle setVariable [QGVAR(tempFuel), nil];
         [_pfID] call CBA_fnc_removePerFrameHandler;
     };
 
-        [_pfID] call CBA_fnc_removePerFrameHandler;
-    };
-
-    // Quit if hose distance was exceeded
-    private _hoseLength = _source getVariable [QGVAR(hoseLength), GVAR(hoseLength)];
-    private _tooFar = ((_sink modelToWorld _connectToPoint) distance (_source modelToWorld _connectFromPoint)) > (_hoseLength - 2);
-    if (_tooFar && {!(_nozzle getVariable [QGVAR(jerryCan), false])}) exitWith {
-        [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
-        [objNull, _nozzle] call FUNC(disconnect);
     // Quit if fuel tank was destroyed
     if (!alive _sink) exitWith {
         [_unit, _nozzle, false] call FUNC(disconnect);

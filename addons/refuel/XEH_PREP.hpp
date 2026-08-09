@@ -16,6 +16,7 @@ PREP(handleDamage);
 PREP(handleDestroyed);
 PREP(handleDisconnect);
 PREP(handleRespawn);
+PREP(handleRopeBreak);
 PREP(initObject);
 PREP(initSource);
 PREP(makeJerryCan);
