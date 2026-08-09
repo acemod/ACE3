@@ -36,20 +36,29 @@ if (!isNull _unit) then {
 if (_disconnectOnly) exitWith {};
 _nozzle setVelocity [0, 0, 0];
 
-private _groundPosition = param [3, getPosASL _nozzle];
-private _posA = (getPosASL _nozzle) vectorAdd [0,0,0.05];
-private _posB = (getPosASL _nozzle) vectorAdd [0,0,-((_nozzle getVariable [QGVAR(source), objNull]) getVariable [QGVAR(hoseLength), GVAR(hoseLength)])];
-private _intersections = lineIntersectsSurfaces [_posA, _posB, _unit, _nozzle, true, 1, "GEOM"];
+private _nozzlePosition = getPosASL _nozzle;
+private _startPosition = param [3, _nozzlePosition];
+private _posA = _startPosition vectorAdd [0, 0, 0.05];
+private _posB = _startPosition vectorAdd [0, 0, -((_nozzle getVariable [QGVAR(source), objNull]) getVariable [QGVAR(hoseLength), GVAR(hoseLength)])];
+private _intersections = lineIntersectsSurfaces [_posA, _posB, _unit, _nozzle, true, 3, "ROADWAY", "GEOM"];
 TRACE_1("",_intersections);
-if (_intersections isEqualTo []) then {
-    WARNING_1("no ground intersections for nozzle drop @ %1",_groundPosition);
+private _groundPosition = [];
+if (_intersections isNotEqualTo []) then {
+    private _index = _intersections findIf {!(_intersectObject isKindOf QGVAR(fuelHoseSegment)) && {!(_intersectObject isKindOf "CAManBase")}};
+
+    if (_index != -1) then {
+        _groundPosition = ((_intersections select _index) select 0) vectorAdd [0, 0, 0.005];
+    };
+};
+
+if (_groundPosition isEqualTo []) then {
+    WARNING_1("no ground intersections for nozzle drop @ %1",_nozzlePosition);
     if (!isNull _unit) then {
         _groundPosition = getPosASL _unit; // place at unit's feet
     } else {
-        _groundPosition set [2, (getTerrainHeightASL _groundPosition) + 0.005];
+        _groundPosition set [2, (getTerrainHeightASL _nozzlePosition) + 0.005];
     };
-} else {
-    _groundPosition = ((_intersections select 0) select 0) vectorAdd [0,0,0.005];
 };
+
 _nozzle setPosASL _groundPosition;
 TRACE_1("finalPos",getPosATL _nozzle);
