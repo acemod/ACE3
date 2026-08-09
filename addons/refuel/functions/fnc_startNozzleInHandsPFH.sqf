@@ -46,25 +46,8 @@ TRACE_2("start",_unit,_nozzle);
     };
 
     // check drop from external events
-    if (isNull (_unit getVariable [QGVAR(nozzle), objNull])) exitWith {
+    if (isNull _nozzle) exitWith {
         TRACE_2("stop drop",_unit,_nozzle);
-        UNHOLSTER_WEAPON
-        END_PFH
-    };
-
-    private _source = _nozzle getVariable [QGVAR(source), objNull];
-    if !(alive _source) exitWith {
-        TRACE_3("stop source",_unit,_nozzle,_source);
-        DROP_NOZZLE
-        private _rope = _nozzle getVariable [QGVAR(rope), objNull];
-        if !(isNull _rope) then {
-            ropeDestroy _rope;
-        };
-        private _helper = _nozzle getVariable [QGVAR(helper), objNull];
-        if !(isNull _helper) then {
-            deleteVehicle _helper;
-        };
-        deleteVehicle _nozzle;
         UNHOLSTER_WEAPON
         END_PFH
     };
@@ -75,6 +58,8 @@ TRACE_2("start",_unit,_nozzle);
         UNHOLSTER_WEAPON
         END_PFH
     };
+
+    private _source = _nozzle getVariable [QGVAR(source), objNull];
 
     // check hoseLength < distance
     if (

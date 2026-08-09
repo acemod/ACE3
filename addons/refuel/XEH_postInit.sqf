@@ -63,6 +63,11 @@ if (hasInterface) then {
     {
         // inheritance is not needed because all classes are listed
         [_x, "InitPost", LINKFUNC(initObject), false, [], true] call CBA_fnc_addClassEventHandler;
+        [_x, "Killed", LINKFUNC(handleDestroyed), false, [], true] call CBA_fnc_addClassEventHandler;
+
+        if (isServer) then {
+            [_x, "Deleted", LINKFUNC(handleDestroyed), false, [], true] call CBA_fnc_addClassEventHandler;
+        };
     } forEach (uiNamespace getVariable QGVAR(cacheRefuelCargo));
 
     if (isServer) then {

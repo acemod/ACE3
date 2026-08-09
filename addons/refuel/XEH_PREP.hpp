@@ -13,6 +13,7 @@ PREP(getCapacity);
 PREP(getFuel);
 PREP(getFuelCargo);
 PREP(handleDamage);
+PREP(handleDestroyed);
 PREP(handleDisconnect);
 PREP(handleRespawn);
 PREP(initObject);

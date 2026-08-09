@@ -7,7 +7,6 @@
  * 0: Unit <OBJECT>
  * 1: Vehicle <OBJECT>
  * 2: Nozzle <OBJECT>
- * 3: Connection Point <ARRAY>
  *
  * Return Value:
  * None
@@ -18,7 +17,7 @@
  * Public: No
  */
 
-params [["_unit", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_connectToPoint", [0,0,0], [[]], 3]];
+params ["_unit", "_sink", "_nozzle"];
 
 private _config = configOf _sink;
 private _rate = if (isNumber (_config >> QGVAR(flowRate))) then {
@@ -41,15 +40,12 @@ _nozzle setVariable [QGVAR(tempFuel), nil];
 
 [{
     params ["_args", "_pfID"];
-    _args params [["_source", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_rate", 1, [0]], ["_maxFuelTank", 1, [0]], ["_connectFromPoint", [0,0,0], [[]], 3], ["_connectToPoint", [0,0,0], [[]], 3]];
+    _args params ["_source", "_sink", "_unit", "_nozzle", "_rate", "_maxFuelTank"];
 
     if !(_nozzle getVariable [QGVAR(isConnected), false]) exitWith {
         [_pfID] call CBA_fnc_removePerFrameHandler;
     };
 
-    // Quit if target or fuel tank got destroyed
-    if (!alive _source || {!alive _sink}) exitWith {
-        [objNull, _nozzle] call FUNC(disconnect);
         [_pfID] call CBA_fnc_removePerFrameHandler;
     };
 
@@ -59,6 +55,9 @@ _nozzle setVariable [QGVAR(tempFuel), nil];
     if (_tooFar && {!(_nozzle getVariable [QGVAR(jerryCan), false])}) exitWith {
         [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
         [objNull, _nozzle] call FUNC(disconnect);
+    // Quit if fuel tank was destroyed
+    if (!alive _sink) exitWith {
+        [_unit, _nozzle, false] call FUNC(disconnect);
         [_pfID] call CBA_fnc_removePerFrameHandler;
     };
 
@@ -144,7 +143,5 @@ _nozzle setVariable [QGVAR(tempFuel), nil];
     _unit,
     _nozzle,
     _rate,
-    _maxFuelTank,
-    _nozzle getVariable [QGVAR(attachPos), [0,0,0]],
-    _connectToPoint
+    _maxFuelTank
 ]] call CBA_fnc_addPerFrameHandler;
