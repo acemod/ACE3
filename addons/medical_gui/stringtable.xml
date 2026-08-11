@@ -1709,6 +1709,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_medicalHintEnabled_justSound">
             <English>Sound Effect instead of hint</English>
+            <Russian>Звуковой эффект вместо подсказки</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_medicalHintMedicIcon_Description">
             <English>Image path to display in the medical hint if the player is a medic.</English>
