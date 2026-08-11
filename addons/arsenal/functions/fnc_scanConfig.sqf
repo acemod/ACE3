@@ -20,7 +20,7 @@ private _configItems = [
 
 _configItems = createHashMapFromArray _configItems;
 
-for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
+for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_GOGGLES do {
     _configItems set [_index, createHashMap];
 };
 
@@ -207,7 +207,12 @@ _magazineMiscItems deleteAt "";
 
 // Get all facewear
 {
-    (_configItems get IDX_VIRT_GOGGLES) set [configName _x, nil];
+    private _configName = configName _x;
+    if (([_configName, _x] call FUNC(isMiscItem) > 0)) then {
+        (_configItems get IDX_VIRT_MISC_GOGGLES) set [_configName, nil];
+    } else {
+        (_configItems get IDX_VIRT_GOGGLES) set [_configName, nil];
+    };
 } forEach (_filterFunction configClasses (configFile >> "CfgGlasses"));
 
 // Get all faces
@@ -260,7 +265,7 @@ private _configItemsFlat = +_configItems;
 private _weapons = _configItemsFlat deleteAt IDX_VIRT_WEAPONS;
 private _attachments = _configItemsFlat deleteAt IDX_VIRT_ATTACHMENTS;
 
-for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
+for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_GOGGLES do {
     _configItemsFlat merge [_configItemsFlat deleteAt _index, true];
 };
 

@@ -54,7 +54,7 @@ if (isNil QGVAR(virtualItems)) then {
 
     _virtualItems = createHashMapFromArray _virtualItems;
 
-    for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
+    for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_GOGGLES do {
         _virtualItems set [_index, createHashMap];
     };
 
