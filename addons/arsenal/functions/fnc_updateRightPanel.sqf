@@ -51,6 +51,7 @@ private _curSel = lnbCurSelRow _control;
 
 // Disable '+' button if item is unique or too big to fit in remaining space
 if (_curSel != -1) then {
+    private _plusButtonCtrl = _display displayCtrl IDC_arrowPlus;
     _plusButtonCtrl ctrlEnable ((_control lnbValue [_curSel, 2]) != 1 && {_container canAdd (_control lnbData [_curSel, 0])});
     _plusButtonCtrl ctrlCommit FADE_DELAY;
 };
