@@ -117,7 +117,7 @@ private _validate_preset = {
         if (_gun call _validate_preset) then {
             _gun set [0, (_gun select 0) select [0, 14]];
             _gun set [20, false];
-            GVAR(gunList) = GVAR(gunList) + [_gun];
+            GVAR(gunList) pushBack _gun;
         };
     };
 } forEach ("true" configClasses (configFile >> "ACE_ATragMX_Presets"));
