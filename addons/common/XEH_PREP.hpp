@@ -122,7 +122,6 @@ PREP(hasItem);
 PREP(hasMagazine);
 PREP(hasZeusAccess);
 PREP(headBugFix);
-PREP(hideAction);
 PREP(hideUnit);
 PREP(interpolateFromArray);
 PREP(inTransitionAnim);

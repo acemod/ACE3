@@ -15,7 +15,11 @@
     true,
     2, {
         #define ACTION_ENUM_EJECT 51
-        [ACTION_ENUM_EJECT, QUOTE(ADDON), _this] call EFUNC(common,hideAction);
+        if (isNil "CBA_fnc_hideAction") then {
+            hideActions [_this, [ACTION_ENUM_EJECT]];
+        } else {
+            [ACTION_ENUM_EJECT, QUOTE(ADDON), _this] call CBA_fnc_hideAction;
+        };
     },
     true // needs restart (for ace_aircraft's initEjectAction text color)
 ] call CBA_fnc_addSetting;
