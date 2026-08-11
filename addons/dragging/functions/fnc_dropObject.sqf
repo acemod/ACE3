@@ -50,11 +50,12 @@ if (_unit call EFUNC(common,isAwake)) then {
 // Release object
 detach _target;
 
+// Put unit into correct animation
 if (_target isKindOf "CAManBase") then {
-    if (_target getVariable ["ACE_isUnconscious", false]) then {
-        [_target, "unconscious", 2] call EFUNC(common,doAnimation);
+    if (_target call EFUNC(common,isAwake)) then {
+        [_target, "amovppnemstpsnonwnondnon", 2] call EFUNC(common,doAnimation);
     } else {
-        [_target, "", 2] call EFUNC(common,doAnimation);  //@todo "AinjPpneMrunSnonWnonDb_release" seems to fall back to unconsciousness anim.
+        [_target, "unconscious", 2] call EFUNC(common,doAnimation);
     };
 };
 

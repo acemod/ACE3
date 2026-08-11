@@ -44,3 +44,15 @@ class CfgMagazines {
     };
 };
 ```
+
+## Temporarily disable Hearing adjusting the Volume
+
+To temporarly disable ACE Hearing changing the volume use the global Variable `ace_hearing_disableVolumeUpdate`.
+
+```sqf
+ace_hearing_disableVolumeUpdate = true;
+/*
+your code with audio
+*/
+ace_hearing_disableVolumeUpdate = false;
+```

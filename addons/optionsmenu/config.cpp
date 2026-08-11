@@ -31,6 +31,7 @@ class CfgAddons {
 
 class CfgCommands {
     allowedHTMLLoadURIs[] += {
-        "https://ace3.acemod.org/version.html"
+        "https://ace3.acemod.org/version.html",
+        "https://github.com/acemod/ACE3/releases"
     };
 };

@@ -43,14 +43,19 @@ if (_shooter == ACE_player) then {
     GVAR(debug_firedPrediction) = [];
     private _debugPos = getPosASL _projectile;
     ((ACE_player weaponDirection (currentWeapon ACE_player)) call CBA_fnc_vect2Polar) params ["", "_debugYaw", "_debugPitch"];
+    private _timeToLive = getNumber ((configOf _projectile) >> "timeToLive");
+    private _thrust = getNumber ((configOf _projectile) >> "thrust");
+    private _thrustTime = getNumber ((configOf _projectile) >> "thrustTime");
     private _distance = 0;
-    for "_x" from 0 to 6 step 0.1 do {
-        private _debugAproxVel = linearConversion [0, 1, 5, 40, 170, true];
-        _distance = _distance + _debugAproxVel * 0.1;
+    private _timestep = 0.1;
+    for "_x" from 0 to _timeToLive step _timestep do {
+        private _debugAproxVel = linearConversion [0, _thrustTime, _x, 0, _thrust * _thrustTime, true];
+        _distance = _distance + _debugAproxVel * _timestep;
         private _debugYaw = _debugYaw + _yawChange * _x;
         private _debugPitch = _debugPitch + _pitchChange * _x;
         private _debugPos = _debugPos vectorAdd ([_distance, _debugYaw, _debugPitch] call CBA_fnc_polar2vect);
         GVAR(debug_firedPrediction) pushBack ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,0,0,1], ASLToAGL _debugPos, 0.5, 0.5, 0, format ["%1", _x], 1, 0.025, "TahomaB"];
+        GVAR(debug_firedPrediction) pushBack ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,0,0,1], [0, 0, 0.25] vectorAdd ASLToAGL _debugPos, 0.5, 0.5, 0, format ["%1 m/s", _debugAproxVel], 1, 0.025, "TahomaB"];
     };
     #endif
 } else {
@@ -72,9 +77,11 @@ if (_shooter == ACE_player) then {
 _yawChange = -10 max _yawChange min 10;
 _pitchChange = -10 max _pitchChange min 10;
 
+_seekerStateParams set [1, SEEKER_STATE_LOOKING];
 _seekerStateParams set [2, _yawChange];
 _seekerStateParams set [3, _pitchChange];
 _seekerStateParams set [4, CBA_missionTime];
+_seekerStateParams set [5, FUZE_LENGTH];
 
 TRACE_3("attackProfileStateParams",_firedLOS,_yawChange,_pitchChange);
 _attackProfileStateParams set [0, CBA_missionTime];

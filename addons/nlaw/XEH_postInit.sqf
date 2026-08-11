@@ -23,7 +23,7 @@ GVAR(pitchChange) = 0;
 // Visual debuging, idealy used with a moving vehicle called "testTarget"
 #ifdef DRAW_NLAW_INFO
 GVAR(debug_firedPrediction) = [];
-addMissionEventHandler ["Draw3d", {
+addMissionEventHandler ["Draw3D", {
     // BLACK - On fired path prediction
     { drawIcon3D _x; } forEach GVAR(debug_firedPrediction);
 

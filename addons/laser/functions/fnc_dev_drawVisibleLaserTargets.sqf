@@ -52,7 +52,13 @@ private _testSeekerDir = vectorDirVisual _seekerVehicle;
         private _targetPosASL = getPosASL _targetObject;
         drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1,0,0,1], (ASLToAGL _targetPosASL), 0.5, 0.5, 0, "", 0.5, 0.025, "TahomaB"];
 
-        (_y call FUNC(findLaserSource)) params ["_laserPosASL", "_laserDir"];
+        (_y call FUNC(findLaserSource)) params ["_laserPosASL", "_laserDir"];    
+            
+        if (([_laserPosASL,_laserDir] isEqualTo []) || {[_laserPosASL,_laserDir] isEqualTo [-1,-1]}) then {
+            WARNING_2("Bad Laser Return [%1,%2]",_laserPosASL,_laserDir); 
+            continue;
+        };
+
         private _resultsRay = [_laserPosASL, _laserDir, _obj] call FUNC(shootRay);
 
         private _rayPos = _resultsRay select 0;

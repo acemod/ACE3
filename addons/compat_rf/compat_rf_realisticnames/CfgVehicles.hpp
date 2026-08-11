@@ -142,8 +142,8 @@ class CfgVehicles {
         displayName = SUBCSTRING(twinmortar_Name);
     };
 
-    class Helicopter_Base_F;
-    class UAV_RC40_Base_RF: Helicopter_Base_F {
+    class UAV_01_base_F;
+    class UAV_RC40_Base_RF: UAV_01_base_F {
         displayName = SUBCSTRING(rc40_base_Name);
     };
     class UAV_RC40_Base_Sensor_RF: UAV_RC40_Base_RF {

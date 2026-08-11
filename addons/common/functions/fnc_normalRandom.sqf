@@ -5,8 +5,8 @@
  * Uses Box-Muller transform to approximate distribution
  *
  * Arguments:
- * 0: Mean <NUMBER> or <ARRAY>
- * 1: Standard Deviation <NUMBER> or <ARRAY>
+ * 0: Mean <NUMBER or ARRAY>
+ * 1: Standard Deviation <NUMBER or ARRAY>
  *
  * Return Value:
  * Pair of random numbers according to normal distribution <ARRAY>

@@ -1,19 +1,18 @@
 #include "..\script_component.hpp"
 /*
  * Author: Ruthberg
- *
- * Calculates the retardation of the bullet
+ * Calculates the retardation of the bullet.
  *
  * Arguments:
- * 0: drag model - integer 1-7 <NUMBER>
- * 1: drag coefficient - bc <NUMBER>
- * 2: velocity - m/s <NUMBER>
+ * 0: Drag model - integer 1-7 <NUMBER>
+ * 1: Drag coefficient - bc <NUMBER>
+ * 2: Velocity - m/s <NUMBER>
  *
  * Return Value:
- * retardation - m/(s^2) <NUMBER>
+ * Retardation - m/(s^2) <NUMBER>
  *
  * Example:
- * [5, 20, 10] call ace_advanced_ballistics_fnc_calculateRetardation
+ * [7, 0.151, 878] call ace_advanced_ballistics_fnc_calculateRetardation
  *
  * Public: No
  */
@@ -22,6 +21,7 @@
 
 private ["_A", "_M"];
 params ["_dragModel", "_dragCoefficient", "_velocity"];
+
 _velocity = _velocity * 3.2808399;
 
 switch _dragModel do {
@@ -129,7 +129,7 @@ switch _dragModel do {
 };
 
 if (!isNil "_A" && !isNil "_M" && _velocity > 0 && _velocity < 10000) then {
-    (_A * (_velocity ^ _M) / _dragCoefficient) / 3.2808399
+    (_A * (_velocity ^ _M) / _dragCoefficient) / 3.2808399 // return
 } else {
-    0
+    0 // return
 };

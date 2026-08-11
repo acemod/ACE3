@@ -5,8 +5,19 @@ if (["ace_cookoff"] call EFUNC(common,isModLoaded)) then {
     [missionNamespace, "lxRF_water_droppedOnVehicle", {
         params ["_vehicle"];
 
-        if (_vehicle getVariable [QEGVAR(cookoff,isAmmoDetonating), false]) then {
+        // Ammo detonation
+        if (_vehicle getVariable [QEGVAR(cookoff,isAmmoDetonating), false] && {!(_vehicle getVariable [QEGVAR(cookoff,interruptAmmoCookoff), false])}) then {
             _vehicle setVariable [QEGVAR(cookoff,interruptAmmoCookoff), true, true];
+        };
+
+        // Fire
+        if (_vehicle getVariable [QEGVAR(cookoff,isCookingOff), false] && {!(_vehicle getVariable [QEGVAR(cookoff,interruptFireCookoff), false])}) then {
+            _vehicle setVariable [QEGVAR(cookoff,interruptFireCookoff), true, true];
+        };
+
+        // Engine fire
+        if (_vehicle getVariable [QEGVAR(cookoff,isEngineSmoking), false] && {!(_vehicle getVariable [QEGVAR(cookoff,interruptEngineFire), false])}) then {
+            _vehicle setVariable [QEGVAR(cookoff,interruptEngineFire), true, true];
         };
     }] call BIS_fnc_addScriptedEventHandler;
 };

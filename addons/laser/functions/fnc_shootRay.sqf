@@ -7,7 +7,7 @@
  * 0: Origin position ASL <ARRAY>
  * 1: Direction (normalized) <ARRAY>
  * 2: Ignore 1 (e.g. Player's vehicle) <OBJECT> (default: objNull)
- * 2: Ignore 2 (e.g. Player's vehicle) <OBJECT> (default: objNull)
+ * 3: Ignore 2 (e.g. Player's vehicle) <OBJECT> (default: objNull)
  *
  * Return Value:
  * [posASL, distance] - pos will be nil if no intersection <ARRAY>

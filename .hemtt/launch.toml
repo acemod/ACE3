@@ -3,36 +3,6 @@ workshop = [
     "450814997", # CBA_A3
 ]
 
-[spe]
-extends = "default"
-dlc = [
-    "Spearhead 1944"
-]
-
-[vn]
-extends = "default"
-dlc = [
-    "S.O.G. Prairie Fire",
-]
-
-[ws]
-extends = "default"
-dlc = [
-    "Western Sahara",
-]
-
-[rf]
-extends = "default"
-dlc = [
-    "Reaction Forces"
-]
-
-[gm]
-extends = "default"
-dlc = [
-    "Global Mobilization - Cold War Germany"
-]
-
 [rhs]
 extends = "default"
 workshop = [
@@ -62,5 +32,16 @@ mission = "Wardrobe.VR"
 workshop = [
     "3499977893", # Advanced Developer Tools
     "1779063631", # ZEN
-#    "623475643",  # eden enhanced
+#   "751965892",  # ACRE
+#   "623475643",  # eden enhanced
+]
+
+[sogns]
+extends = "default"
+dlc = ["vn"]
+workshop = [
+    "623475643",  # 3den Enhanced
+    "3499977893", # Advanced Developer Tools
+    "3083451905", # S.O.G. Nickel Steel
+    "1779063631", # Zeus Enhanced
 ]

@@ -10,7 +10,7 @@
  * True <BOOL>
  *
  * Example:
- * [_explosive] call ace_explosives_fnc_openTimerUI
+ * cursorObject call ace_explosives_fnc_openTimerUI
  *
  * Public: No
  */
@@ -26,24 +26,26 @@ private _display = uiNamespace getVariable [QGVAR(timerDisplay), displayNull];
 (_display displayCtrl IDC_TIMER_SLIDER) sliderSetRange [GVAR(customTimerMin), GVAR(customTimerMax)];
 (_display displayCtrl IDC_TIMER_SLIDER) sliderSetPosition (GVAR(customTimerDefault) max GVAR(customTimerMin) min GVAR(customTimerMax));
 
-
 // Add confirm button action
 GVAR(explosive) = _explosive;
+
 (_display displayCtrl IDC_TIMER_CONFIRM) ctrlAddEventHandler ["ButtonClick", {
     params ["_button"];
 
     private _slider = ctrlParent _button displayCtrl IDC_TIMER_SLIDER;
     private _time = floor sliderPosition _slider;
     private _explosive = GVAR(explosive);
+
     [
         ACE_player,
         getPosATL _explosive,
-        _explosive getVariable QGVAR(Direction),
+        _explosive getVariable QGVAR(direction),
         _explosive getVariable QGVAR(class),
         "Timer",
         [_time],
         _explosive
     ] call FUNC(placeExplosive);
+
     closeDialog 0;
 }];
 
@@ -52,7 +54,10 @@ _display displayAddEventHandler ["MouseZChanged", {
     params ["_display", "_scroll"];
 
     private _change = round _scroll;
-    if (cba_events_control) then {_change = _change * 10};
+
+    if (cba_events_control) then {
+        _change = _change * 10;
+    };
 
     private _slider = _display displayCtrl IDC_TIMER_SLIDER;
     private _value = (sliderPosition _slider + _change) max GVAR(customTimerMin) min GVAR(customTimerMax);
@@ -71,17 +76,20 @@ _display displayAddEventHandler ["MouseZChanged", {
     // Make sure explosive still exists and is near player
     if (!alive GVAR(explosive) || {(ACE_player distance GVAR(explosive)) > 5}) exitWith {
         INFO_2("%1's explosive %2 became invalid",ACE_player,GVAR(explosive));
-        closeDialog 0;
+
         _pfhID call CBA_fnc_removePerFrameHandler;
+
+        closeDialog 0;
     };
 
     private _value = sliderPosition (_display displayCtrl IDC_TIMER_SLIDER);
     private _minutes = floor (_value / 60);
     private _seconds = floor (_value % 60);
-    private _digitArray = [floor (_minutes / 10), _minutes mod 10, floor (_seconds / 10), _seconds mod 10];
+    private _digitArray = [floor (_minutes / 10), _minutes % 10, floor (_seconds / 10), _seconds % 10];
+
     {
         (_display displayCtrl _x) ctrlSetText format [QPATHTOF(UI\seven_segment_%1.paa), _digitArray select _forEachIndex];
     } forEach TIMER_DIGIT_IDCs;
 }, 0.1, _display] call CBA_fnc_addPerFrameHandler;
 
-true
+true // return

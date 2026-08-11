@@ -4,7 +4,7 @@
  * Initializes the Interaction module.
  *
  * Arguments:
- * 0: Logic <NUMBER>
+ * 0: Logic <OBJECT>
  * 1: Units <ARRAY>
  * 2: Activation State <BOOL>
  *

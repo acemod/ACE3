@@ -21,7 +21,7 @@ TRACE_2("params",_unit,_items);
 
 private _return = true;
 {
-    if ((_x isEqualType []) && {({[_unit, _x] call EFUNC(common,hasItem)} count _x == 0)}) exitWith {
+    if ((_x isEqualType []) && {_x findIf {[_unit, _x] call EFUNC(common,hasItem)} == -1}) exitWith {
         _return = false;
     };
     if ((_x isEqualType "") && {!([_unit, _x] call EFUNC(common,hasItem))}) exitWith {

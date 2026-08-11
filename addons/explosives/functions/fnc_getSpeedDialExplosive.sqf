@@ -7,23 +7,24 @@
  * 0: Speed dial entry <STRING>
  *
  * Return Value:
- * Associated explosive (or ObjNull) <OBJECT>
+ * Associated explosive <ARRAY>, empty array if invalid input
+ * 0: Explosive <OBJECT>
+ * 1: Code <STRING>
+ * 2: Fuse time <NUMBER>
  *
  * Example:
- * ["2113"] call ace_explosives_fnc_getSpeedDialExplosive;
+ * "2113" call ace_explosives_fnc_getSpeedDialExplosive
  *
  * Public: Yes
  */
 
-params ["_code"];
+params [["_code", "", [""]]];
 TRACE_1("params",_code);
 
-if (isNil QGVAR(CellphoneIEDs)) exitWith {[]};
-private _explosive = [];
-{
-    if ((_x select 1) == _code) exitWith {
-        _explosive = _x;
-    };
-} forEach GVAR(CellphoneIEDs);
+if (_code == "" || {isNil QGVAR(cellphoneIEDs)} || {!(_code in GVAR(cellphoneIEDs))}) exitWith {
+    [] // return
+};
 
-_explosive
+private _explosive = GVAR(cellphoneIEDs) get _code;
+
+[_explosive select 0, _code, _explosive select 1] // return

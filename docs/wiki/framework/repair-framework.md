@@ -89,6 +89,6 @@ Prevents a vehicle from being repaired by players by setting the `ace_repair_dis
 // vehicles Init field in the 
 this setVariable ["ace_repair_disabled", true];
 
-// exeucted by a serverside script during a cutscene
+// executed by a serverside script during a cutscene
 _truck setVariable ["ace_repair_disabled", true, true];
 ```

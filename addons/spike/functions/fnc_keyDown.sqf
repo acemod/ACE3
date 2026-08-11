@@ -18,8 +18,10 @@
 
 private _currentWeapon = currentWeapon ACE_player;
 if !(GVAR(launcherWeapons) getOrDefaultCall [_currentWeapon, {
-    private _weaponConfig = configProperties [configFile >> "CfgWeapons" >> _currentWeapon, QUOTE(configName _x == QUOTE(QGVAR(enabled))), false];
-    (_weaponConfig isNotEqualTo []) && {(getNumber (_weaponConfig select 0)) == 1}
+    private _weaponConfig = configFile >> "CfgWeapons" >> _currentWeapon;
+    private _weaponConfigEnabled = _weaponConfig >> QGVAR(enabled);
+
+    (_weaponConfig == inheritsFrom _weaponConfigEnabled) && {getNumber _weaponConfigEnabled == 1}
 }, true]) exitWith {};
 
 params ["_key", "_down"];

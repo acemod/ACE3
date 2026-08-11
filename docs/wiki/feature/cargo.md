@@ -25,7 +25,7 @@ Adds the ability to load and unload cargo from vehicles. Unloading can happen vi
 - Wait for the progress bar to finish. To cancel loading, press <kbd>Escape</kbd>.
 
 ### 2.2 Checking a vehicle's cargo
-- Interact with the vehicle whose cargo is to b e checked <kbd>⊞ win</kbd>.
+- Interact with the vehicle whose cargo is to be checked <kbd>⊞ win</kbd>.
 - Select the `Cargo` option.
 
 ### 2.3 Unloading an object from a vehicle

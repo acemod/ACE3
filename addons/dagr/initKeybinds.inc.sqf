@@ -46,7 +46,7 @@ private _toggleCode = {
 private _closeCode = {
     // Statement
     if (GVAR(run)) then {
-        //If dispaly is open, close it:
+        //If display is open, close it:
         [] call FUNC(toggleOverlay);
     };
     if (dialog && GVAR(menuRun)) then {

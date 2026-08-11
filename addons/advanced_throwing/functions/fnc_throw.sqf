@@ -27,16 +27,17 @@ if !(_unit getVariable [QGVAR(primed), false]) then {
 [_unit, "ThrowGrenade"] call EFUNC(common,doGesture);
 
 // Pass position to reset later because animation may change it in certain stances
+private _dropMode = _unit getVariable [QGVAR(dropMode), false];
 [{
-    params ["_unit", "_activeThrowable", "_posThrown", "_throwType", "_throwSpeed", "_dropMode"];
-    TRACE_6("delayParams",_unit,_activeThrowable,_posThrown,_throwType,_throwSpeed,_dropMode);
+    params ["_unit", "_activeThrowable", "_posThrown", "_throwMod", "_throwSpeed", "_dropMode"];
+    TRACE_6("delayParams",_unit,_activeThrowable,_posThrown,_throwMod,_throwSpeed,_dropMode);
 
     // Reset position in case animation changed it
     _activeThrowable setPosASL _posThrown;
 
     // Launch actual throwable
-    private _direction = [THROWSTYLE_NORMAL_DIR, THROWSTYLE_HIGH_DIR] select (_throwType == "high" || {_dropMode});
-    private _velocity = [_throwSpeed, _throwSpeed / THROWSTYLE_HIGH_VEL_COEF / 1.25] select (_throwType == "high");
+    private _direction = vectorLinearConversion [THROW_MODIFER_MIN, THROW_MODIFER_MAX, _throwMod, THROWSTYLE_HIGH_DIR, THROWSTYLE_NORMAL_DIR, true];
+    private _velocity = linearConversion [THROW_MODIFER_MIN, THROW_MODIFER_MAX, _throwMod, _throwSpeed / THROWSTYLE_HIGH_VEL_COEF / 1.2, _throwSpeed, true];
     _velocity = [_velocity, THROWSTYLE_DROP_VEL] select _dropMode;
 
     private _p2 = (eyePos _unit) vectorAdd (AGLToASL (positionCameraToWorld _direction)) vectorDiff (AGLToASL (positionCameraToWorld [0, 0, 0]));
@@ -58,9 +59,7 @@ if !(_unit getVariable [QGVAR(primed), false]) then {
     if (_dropMode) then {
         _torqueMag = _torqueMag * THROWSTYLE_DROP_TORQUE_COEF;
     } else {
-        if (_throwType == "high") then {
-            _torqueMag = _torqueMag * THROWSTYLE_HIGH_TORQUE_COEF;
-        };
+        _torqueMag = _torqueMag * linearConversion [THROW_MODIFER_MIN, THROW_MODIFER_MAX, _throwMod, THROWSTYLE_HIGH_TORQUE_COEF, 1];
     };
 
     private _torque = _torqueDir vectorMultiply _torqueMag;
@@ -77,9 +76,9 @@ if !(_unit getVariable [QGVAR(primed), false]) then {
     _unit,
     _unit getVariable [QGVAR(activeThrowable), objNull],
     getPosASLVisual (_unit getVariable [QGVAR(activeThrowable), objNull]),
-    _unit getVariable [QGVAR(throwType), THROW_TYPE_DEFAULT],
+    [ACE_player getVariable [QGVAR(throwMod), THROW_MODIFER_DEFAULT], THROW_MODIFER_MIN] select _dropMode,
     _unit getVariable [QGVAR(throwSpeed), THROW_SPEED_DEFAULT],
-    _unit getVariable [QGVAR(dropMode), false]
+    _dropMode
 ], 0.3] call CBA_fnc_waitAndExecute;
 
 

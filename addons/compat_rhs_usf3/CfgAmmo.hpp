@@ -360,7 +360,6 @@ class CfgAmmo {
         EGVAR(frag,force) = 0;
     };
     class rhs_ammo_m67: GrenadeHand {
-        EGVAR(frag,enabled) = 1;
         EGVAR(frag,metal) = 213;
         EGVAR(frag,charge) = 185;
         EGVAR(frag,gurney_c) = 2700;
@@ -370,7 +369,6 @@ class CfgAmmo {
         EGVAR(frag,force) = 1;
     };
     class rhs_ammo_M136_hedp_rocket: rhs_ammo_M136_rocket {
-        EGVAR(frag,enabled) = 1;
         EGVAR(frag,metal) = 330;
         EGVAR(frag,charge) = 280;
         EGVAR(frag,gurney_c) = 2800;

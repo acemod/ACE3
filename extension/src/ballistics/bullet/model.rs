@@ -6,13 +6,13 @@ use rand_chacha::ChaCha8Rng;
 use crate::{
     ballistics::{
         atmosphere::{
-            calculate_air_density, calculate_atmospheric_correction, calculate_roughness_length,
-            speed_of_sound, AtmosphereModel,
+            AtmosphereModel, calculate_air_density, calculate_atmospheric_correction,
+            calculate_roughness_length, speed_of_sound,
         },
-        drag::{calculate_retard, DragFunction},
+        drag::{DragFunction, calculate_retard},
         map::Map,
     },
-    common::{Temperature, Vector3, GRAVITY_ACCEL},
+    common::{GRAVITY_ACCEL, Temperature, Vector3},
 };
 
 const STD_AIR_DENSITY_ICAO: f64 = 1.22498;

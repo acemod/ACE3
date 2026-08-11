@@ -1,6 +1,8 @@
 private _category = format ["ACE %1", LLSTRING(DisplayName)];
 private _categoryColors = [_category, LSTRING(subcategory_colors)];
-private _categorySway = [_category, LSTRING(subcategory_sway)];
+private _categoryEquipment = LLSTRING(ACEKeybindCategoryEquipment);
+private _categoryWeapons = LSTRING(ACEKeybindCategoryWeapons);
+private _categorySway = [_categoryWeapons, LSTRING(subcategory_sway)];
 
 [
     QGVAR(checkPBOsAction),
@@ -78,7 +80,7 @@ private _categorySway = [_category, LSTRING(subcategory_sway)];
     QGVAR(persistentLaserEnabled),
     "CHECKBOX",
     [LSTRING(SettingPersistentLaserName), LSTRING(SettingPersistentLaserDesc)],
-    LSTRING(ACEKeybindCategoryWeapons),
+    _categoryWeapons,
     false,
     false,
     LINKFUNC(switchPersistentLaser)
@@ -115,7 +117,7 @@ private _categorySway = [_category, LSTRING(subcategory_sway)];
     QGVAR(magneticDeclination),
     "CHECKBOX",
     [LSTRING(magneticDeclination), LSTRING(magneticDeclinationooltip)],
-    _category,
+    _categoryEquipment,
     false,
     1,
     {call FUNC(getMagneticBearingOffset)}

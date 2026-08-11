@@ -8,18 +8,28 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
-missionNamespace setVariable [QGVAR(inProgress), false];
+GVAR(inProgress) = false;
 
-// Cache Wardrobe Replace Exceptions
+GVAR(replaceHashmap) = createHashMapFromArray [
+    [TYPE_HEADGEAR, LINKFUNC(replaceOther)    ],
+    [TYPE_UNIFORM,  LINKFUNC(replaceContainer)],
+    [TYPE_VEST,     LINKFUNC(replaceContainer)],
+    [TYPE_BACKPACK, LINKFUNC(replaceContainer)],
+    [TYPE_HMD,      LINKFUNC(replaceOther)    ],
+    [TYPE_GOGGLE,   LINKFUNC(replaceOther)    ]
+];
+
+// Handle Variables on containers (key is varName, values is global-broadcast)
+GVAR(containerVarsToTransfer) = createHashMapFromArray [
+    [toLower QEGVAR(gunbag,gunbagWeapon), true],
+    [toLower QEGVAR(movement,vload), true],
+    [toLower "radio_settings", true] // From TFAR
+];
+
+// Exception Handling
 private _map = createHashMap;
 {
-    _map set [
-        configName _x,
-        [
-            toLower getText (_x >> "mode"),
-            getText (_x >> "code") call CBA_fnc_convertStringCode
-        ]
-    ];
+    _map set [ configName _x, [ toLower getText (_x >> "mode"), getText (_x >> "code") call CBA_fnc_convertStringCode ] ];
 } forEach ("true" configClasses (configFile >> QGVAR(exceptions)));
 GVAR(exceptions) = _map;
 

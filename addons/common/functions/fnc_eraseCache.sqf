@@ -4,7 +4,7 @@
  * Deletes a cached result
  *
  * Arguments:
- * 0: Namespace to store the cache on <NAMESPACE>
+ * 0: Namespace (any type that supports setVariable) to store the cache on <ANY>
  * 1: Cache uid <STRING>
  *
  * Return Value:

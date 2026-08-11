@@ -22,36 +22,63 @@
 params ["", "_player", "_actionParams"];
 _actionParams params ["_cfgOrigin", "_cfgTarget"];
 
-private _classTarget = configName _cfgTarget;
-private _classOrigin = configName _cfgOrigin;
-private _cfgWardobeTarget = configFile >> QUOTE(ADDON) >> _classTarget;
 
-// temp action disabled
+// PREP
+private _classOrigin = configName _cfgOrigin;
+private _classTarget = configName _cfgTarget;
+
+private _typeOrigin = _cfgOrigin call LINKFUNC(getTypeNumber);
+private _typeTarget = _cfgTarget call LINKFUNC(getTypeNumber);
+
+// Duration of Animationphase
+private _duration = _actionParams call LINKFUNC(getDuration);
+
+
+private _replaceCode = GVAR(replaceHashmap) get _typeOrigin;
+
+
+// FAIL CONDITIONS
+private _isNotEqualTypeNumber = _typeOrigin isNotEqualTo _typeTarget;
+
+if (isNil "_replaceCode") exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeOrigin,_classOrigin); };
+if (_isNotEqualTypeNumber && { _typeTarget in [TYPE_UNIFORM, TYPE_VEST, TYPE_BACKPACK] }) exitWith {
+    ERROR_4("Convertion of containers not supported: %1: %2 -> %3: %4",_classOrigin,_typeOrigin,_classTarget,_typeTarget)
+};
+if (_isNotEqualTypeNumber && {
+        switch (_typeTarget) do {
+            case TYPE_HEADGEAR: { "" isNotEqualTo headgear _player };
+            case TYPE_GOGGLE:   { "" isNotEqualTo goggles _player };
+            case TYPE_HMD:      { "" isNotEqualTo hmd _player };
+        }
+    }
+) exitWith { [ [LLSTRING(slotOccupied), _typeTarget call LINKFUNC(getSlotName)], 2 ] call EFUNC(common,displayTextStructured); };
+
+// REPLACE MECHANIC
+// Disables Wardrobe Action temporarily
 GVAR(inProgress) = true;
 
-// duration of the "animation"
-private _duration = getNumber (_cfgWardobeTarget >> "duration");
+// use hashmap instead of array to futureproofing - espl. regarding API Events - extended data can simply be added
+private _replaceData = createHashMapFromArray [
+    ["player", _player],
+    ["classOrigin", _classOrigin],
+    ["classTarget", _classTarget],
+    ["typeOrigin", _typeOrigin],
+    ["typeTarget", _typeTarget]
+];
 
-// replace the main Item
-private _equipmentType = "";
-private _typeNumber = getNumber (_cfgOrigin >> "ItemInfo" >> "type");
-private _replaceCode = switch (_typeNumber) do {
-    case TYPE_HEADGEAR: { _equipmentType = "HEADGEAR"; LINKFUNC(replaceOther) };
-    case TYPE_UNIFORM:  { _equipmentType = "UNIFORM";  LINKFUNC(replaceContainer) };
-    case TYPE_VEST:     { _equipmentType = "VEST";     LINKFUNC(replaceContainer) };
-    case TYPE_BACKPACK: { _equipmentType = "BACKPACK"; LINKFUNC(replaceContainer) };
-    default {
-        // CfgGlasses items do not have a ItemInfo subclass and therefore, not typeNumber
-        switch (true) do {
-            case (isClass (configFile >> "CfgGlasses" >> _classOrigin)): { _equipmentType = "FACEWEAR"; LINKFUNC(replaceOther) };
-            default { {} };
-        };
-    };
-};
-if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,_classOrigin); };
-[_replaceCode, [_player, _classTarget, _equipmentType], _duration] call CBA_fnc_waitAndExecute;
+[QGVAR(itemChangedStart), [_replaceData]] call CBA_fnc_localEvent; // API
 
-// handle components
+[{
+    params ["_replaceData", "_replaceCode"];
+
+    [QGVAR(itemChangedBegin), [_replaceData]] call CBA_fnc_localEvent; // API
+    _replaceData call _replaceCode;
+    [QGVAR(itemChangedEnd), [_replaceData]] call CBA_fnc_localEvent; // API
+
+}, [_replaceData, _replaceCode], _duration] call CBA_fnc_waitAndExecute;
+
+
+// HANDLE COMPONENTS
 [_classOrigin, _classTarget] call FUNC(compareComponents) params ["_missing", "_surplus"];
 
 // add surplus
@@ -76,21 +103,22 @@ if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2
     };
 } forEach _missing;
 
-// handle effects
-// animation/gestures
-[_player, getText (_cfgWardobeTarget >> "gesture")] call EFUNC(common,doGesture);
 
-// plays random sound at the beginning
-private _sound = [_cfgWardobeTarget >> "sound"] call CBA_fnc_getCfgDataRandom;
+// EFFECTS
+// animation/gestures
+[_player, _actionParams call LINKFUNC(getGesture)] call EFUNC(common,doGesture);
+
+// Soundseffects
+private _sound = _actionParams call LINKFUNC(getSound);
 if (_sound isNotEqualTo "") then {
     [
         CBA_fnc_globalSay3D,
         [_player, _sound, nil, true, true],
-        (getNumber (_cfgWardobeTarget >> "sound_timing") max 0 min 1) * _duration
+        _duration * ( _actionParams call LINKFUNC(getSoundTiming) )
     ] call CBA_fnc_waitAndExecute;
 };
 
-// notification
+// Notification
 private _imgNotify = getText (_cfgTarget >> "picture");
 if !(".paa" in _imgNotify) then {
     // some vanilla items dont have the .paa and cba notify will display the path as a string without the .paa

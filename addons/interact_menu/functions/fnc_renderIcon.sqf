@@ -24,7 +24,7 @@ params ["_text", "_icon", "_sPos", "_textSettings"];
 TRACE_2("Icon",_text,_sPos);
 
 if(GVAR(iconCount) > (count GVAR(iconCtrls))-1) then {
-    private _displayNum = [[46, 12] select visibleMap, 91919] select (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]);
+    private _displayNum = [[46, 12] select visibleMap, 91919] select (true isEqualTo (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]));
     GVAR(iconCtrls) pushBack ((findDisplay _displayNum) ctrlCreate ["RscStructuredText", 54021 + GVAR(iconCount)]);
     if (GVAR(useCursorMenu)) then {
         ((findDisplay _displayNum) displayCtrl (54021 + GVAR(iconCount))) ctrlAddEventHandler ["MouseMoving", DFUNC(handleMouseMovement)];
@@ -38,7 +38,7 @@ if (_iconFile isEqualTo "") then {
     _iconFile = DEFAULT_ICON;
 };
 
-_text = if ([GVAR(useListMenu), GVAR(useListMenuSelf)] select GVAR(keyDownSelfAction)) then {
+_text = if ([GVAR(useListMenu), GVAR(useListMenuSelfActual)] select GVAR(keyDownSelfAction)) then {
     format ["<img image='%1' align='left' color='%2'/><t %3>%4</t>", _iconFile, _iconColor, _textSettings, _text]
 } else {
     format ["<img image='%1' align='center' color='%2'/><br/><t %3 align='center'>%4</t>", _iconFile, _iconColor, _textSettings, ("ace" callExtension ["break_line", [_text]]) select 0];
@@ -47,7 +47,7 @@ _text = if ([GVAR(useListMenu), GVAR(useListMenuSelf)] select GVAR(keyDownSelfAc
 [_ctrl, GVAR(iconCount), _text] call FUNC(ctrlSetParsedTextCached);
 GVAR(iconCount) = GVAR(iconCount) + 1;
 
-private _pos = if ([GVAR(useListMenu), GVAR(useListMenuSelf)] select GVAR(keyDownSelfAction)) then {
+private _pos = if ([GVAR(useListMenu), GVAR(useListMenuSelfActual)] select GVAR(keyDownSelfAction)) then {
     [(_sPos select 0) - (0.0095 * safeZoneW), (_sPos select 1) - (0.0095 * safeZoneW), 0.20 * safeZoneW, 0.035 * safeZoneW]
 } else {
     [(_sPos select 0) - (0.0750 * safeZoneW), (_sPos select 1) - (0.0095 * safeZoneW), 0.15 * safeZoneW, 0.100 * safeZoneW]

@@ -30,7 +30,7 @@ GVAR(tempWindInfo) = false;
     private _currentDropMode = ACE_player getVariable [QGVAR(dropMode), false];
     ACE_player setVariable [QGVAR(dropMode), !_currentDropMode];
 
-    ACE_player setVariable [QGVAR(throwType), THROW_TYPE_DEFAULT]; // Reset for consistency when opening
+    ACE_player setVariable [QGVAR(throwMod), THROW_MODIFER_DEFAULT]; // Reset for consistency when opening
     call FUNC(updateControlsHint); // Change controls hint for MMB
     true
 }, {false}, [34, [false, true, false]], false] call CBA_fnc_addKeybind; // Ctrl + G
@@ -41,7 +41,7 @@ GVAR(tempWindInfo) = false;
 
     // Statement
     ACE_player setVariable [QGVAR(dropMode), true];
-    ACE_player setVariable [QGVAR(throwType), THROW_TYPE_DEFAULT]; // Reset for consistency when opening
+    ACE_player setVariable [QGVAR(throwMod), THROW_MODIFER_DEFAULT]; // Reset for consistency when opening
     call FUNC(updateControlsHint); // Change controls hint for MMB
     true
 }, {

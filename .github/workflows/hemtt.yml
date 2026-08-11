@@ -6,6 +6,11 @@ on:
     - master
   pull_request_target:
 
+permissions:
+  contents: read
+  checks: write
+  statuses: write
+
 jobs:
   windows:
     runs-on: windows-latest
@@ -15,13 +20,14 @@ jobs:
       with:
         toolsUrl: ${{ secrets.ARMA3_TOOLS_URL }}
     - name: Checkout the source code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
     - name: Setup HEMTT
       uses: arma-actions/hemtt@v1
     - name: Checkout pull request
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
       if: ${{ github.event_name == 'pull_request_target' }}
       with:
+        allow-unsafe-pr-checkout: true
         path: pullrequest
         ref: 'refs/pull/${{ github.event.number }}/merge'
     - name: Replace addons with pull request addons
@@ -40,7 +46,7 @@ jobs:
     - name: Rename build folder
       run: mv .hemttout/build .hemttout/@ace
     - name: Upload Artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v6
       with:
         name: ace3-${{ github.sha }}
         path: .hemttout/@*

@@ -1,5 +1,5 @@
 class ace_wardrobe {
-    class ace_wardrobe_base;
+    class ACEWARDROBE(base);
     
     #include "ACE_Wardrobe_Headgear.hpp"
 };

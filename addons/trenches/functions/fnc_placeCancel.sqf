@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Key <NUMBER>
+ * 1: Key (1 for left mouse button) <NUMBER> (default: 1)
  *
  * Return Value:
  * None
@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params ["_unit", "_key"];
+params ["_unit", ["_key", 1]];
 
 if (_key != 1 || {GVAR(digPFH) == -1}) exitWith {};
 

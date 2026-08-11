@@ -168,7 +168,9 @@ class CfgWeapons {
     class optic_SOS: ItemCore {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
-                class Snip;
+                class Snip {
+                    modelOptics[] = {QPATHTOF(models\reticle_sos_2x), QPATHTOF(models\reticle_sos_5x)};
+                };
                 class Iron;
             };
         };
@@ -226,7 +228,7 @@ class CfgWeapons {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Snip {
-                    modelOptics[] = {QPATHTOF(models\ld3k_reticle_lrps_F), QPATHTOF(models\ld3k_reticle_lrps_z_F)};
+                    modelOptics[] = {QPATHTOF(models\reticle_lrps_6x), QPATHTOF(models\reticle_lrps_25x)};
                 };
             };
         };
@@ -237,7 +239,7 @@ class CfgWeapons {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class AMS {
-                    modelOptics[] = {QPATHTOF(models\ld3k_reticle_acco_ams_F), QPATHTOF(models\ld3k_reticle_acco_ams_z_F)};
+                    modelOptics[] = {QPATHTOF(models\reticle_ams_3x), QPATHTOF(models\reticle_ams_10x)};
                 };
             };
         };
@@ -248,7 +250,7 @@ class CfgWeapons {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class KHS {
-                    modelOptics[] = {QPATHTOF(models\ld3k_reticle_acco_khs_F), QPATHTOF(models\ld3k_reticle_acco_khs_z_F)};
+                    modelOptics[] = {QPATHTOF(models\reticle_khs_5x), QPATHTOF(models\reticle_khs_11x)};
                 };
             };
         };
@@ -259,7 +261,7 @@ class CfgWeapons {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class KHS {
-                    modelOptics[] = {QPATHTOF(models\ld3k_reticle_acco_khs_F), QPATHTOF(models\ld3k_reticle_acco_khs_z_F)};
+                    modelOptics[] = {QPATHTOF(models\reticle_khs_5x), QPATHTOF(models\reticle_khs_11x)};
                 };
             };
         };

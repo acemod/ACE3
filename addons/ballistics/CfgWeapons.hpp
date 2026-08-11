@@ -136,6 +136,20 @@ class CfgWeapons {
         initSpeed = -1.0;
     };
 
+    // Rifle_Long_Base_F Shotgun
+    // CZ-581
+    class sgun_HunterShotgun_01_base_F: Rifle_Long_Base_F {
+        ACE_barrelLength = 699.3; // https://www.imfdb.org/wiki/CZ-581
+        ACE_twistDirection = 0;
+        initSpeed = -0.99385; // according to ACE_muzzleVelocities ICAO and ASM conditions (15°C, 59°F)
+    };
+
+    // CZ-581 (sawed off)
+    class sgun_HunterShotgun_01_sawedoff_base_F: sgun_HunterShotgun_01_base_F {
+        ACE_barrelLength = 349.7; // About half of original length
+        initSpeed = -0.893443; // according to ACE_muzzleVelocities ICAO and ASM conditions (15°C, 59°F)
+    };
+
     // Rifle_Base_F
     // MX variants
     class arifle_MX_Base_F: Rifle_Base_F {};
@@ -360,6 +374,16 @@ class CfgWeapons {
         magazines[] += { // 6.5C Rechambering, only available for Grot MR
             "ACE_30Rnd_65_Creedmor_msbs_mag",
             "ACE_30Rnd_65x47_Scenar_msbs_mag"
+        };
+    };
+
+    // MSBS GROT UBS
+    class arifle_MSBS65_UBS_base_F: arifle_MSBS65_base_F {
+        // initSpeed = -0.971576;
+        class UBS_F: Rifle_Base_F {
+            ACE_barrelLength = 317; // https://modernfirearms.net/en/shotguns/u-s-a-shotguns/crye-six12-eng/
+            ACE_twistDirection = 0;
+            // initSpeed = 0; // tested with -2 and 1000 w/o effect on secondary UBS_F muzzle velocity
         };
     };
 

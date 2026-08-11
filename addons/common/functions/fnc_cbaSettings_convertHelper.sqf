@@ -23,7 +23,7 @@ private _addonSearch = _addon + "_";
 private _addonSearchCount = count _addonSearch;
 TRACE_2("",_addonSearch,_addonSearchCount);
 
-private _settings = configProperties [configFile >> "ACE_Settings", "(isClass _x) && {((configName _x) select [0, _addonSearchCount]) == _addonSearch}"];
+private _settings = "((configName _x) select [0, _addonSearchCount]) == _addonSearch" configClasses (configFile >> "ACE_Settings");
 
 {
     private _config = _x;

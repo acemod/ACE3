@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Input value <NUMBER>
  * 1: Function points, must be in descending order by X (input) value <ARRAY>
- * 2: Whether to force integer <BOOL>
+ * 2: Whether to force integer <BOOL> (default: false)
  *
  * ReturnValue:
  * Interpolated result <NUMBER>

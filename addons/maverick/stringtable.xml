@@ -15,16 +15,16 @@
                 <Ukrainian>AGM-65 Maverick D</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Maverick_d_mag_x1">
-                <English>AGM-65 Maverick D [ACE]</English>
-                <French>AGM-65 Maverick D [ACE]</French>
-                <Spanish>AGM-65 Maverick D [ACE]</Spanish>
-                <Italian>AGM-65 Maverick D [ACE]</Italian>
-                <Russian>AGM-65 Maverick D [ACE]</Russian>
-                <German>AGM-65 Maverick D [ACE]</German>
-                <Korean>AGM-65 매버릭 D [ACE]</Korean>
-                <Japanese>AGM-65 マーベリック D [ACE]</Japanese>
-                <Chinesesimp>AGM-65"小牛"空地D型 [ACE]</Chinesesimp>
-                <Ukrainian>AGM-65 Maverick D [ACE]</Ukrainian>
+                <English>1x AGM-65 Maverick D [ACE]</English>
+                <French>1x AGM-65 Maverick D [ACE]</French>
+                <Spanish>1x AGM-65 Maverick D [ACE]</Spanish>
+                <Italian>1x AGM-65 Maverick D [ACE]</Italian>
+                <Russian>1x AGM-65 Maverick D [ACE]</Russian>
+                <German>1x AGM-65 Maverick D [ACE]</German>
+                <Korean>1x AGM-65 매버릭 D [ACE]</Korean>
+                <Japanese>1x AGM-65 マーベリック D [ACE]</Japanese>
+                <Chinesesimp>1x AGM-65"小牛"空地D型 [ACE]</Chinesesimp>
+                <Ukrainian>1x AGM-65 Maverick D [ACE]</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Maverick_d_mag_x3">
                 <English>3x AGM-65 Maverick D [ACE]</English>
@@ -51,16 +51,16 @@
                 <Ukrainian>AGM-65 Maverick G</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Maverick_g_mag_x1">
-                <English>AGM-65 Maverick G [ACE]</English>
-                <French>AGM-65 Maverick G [ACE]</French>
-                <Spanish>AGM-65 Maverick G [ACE]</Spanish>
-                <Italian>AGM-65 Maverick G [ACE]</Italian>
-                <Russian>AGM-65 Maverick G [ACE]</Russian>
-                <German>AGM-65 Maverick G [ACE]</German>
-                <Korean>AGM-65 매버릭 G [ACE]</Korean>
-                <Japanese>AGM-65 マーベリック G [ACE]</Japanese>
-                <Chinesesimp>AGM-65"小牛"空地G型 [ACE]</Chinesesimp>
-                <Ukrainian>AGM-65 Maverick G [ACE]</Ukrainian>
+                <English>1x AGM-65 Maverick G [ACE]</English>
+                <French>1x AGM-65 Maverick G [ACE]</French>
+                <Spanish>1x AGM-65 Maverick G [ACE]</Spanish>
+                <Italian>1x AGM-65 Maverick G [ACE]</Italian>
+                <Russian>1x AGM-65 Maverick G [ACE]</Russian>
+                <German>1x AGM-65 Maverick G [ACE]</German>
+                <Korean>1x AGM-65 매버릭 G [ACE]</Korean>
+                <Japanese>1x AGM-65 マーベリック G [ACE]</Japanese>
+                <Chinesesimp>1x AGM-65"小牛"空地G型 [ACE]</Chinesesimp>
+                <Ukrainian>1x AGM-65 Maverick G [ACE]</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Maverick_g_mag_x2">
                 <English>2x AGM-65 Maverick G [ACE]</English>
@@ -152,21 +152,21 @@
                 <Ukrainian>MAVL</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Maverick_l_mag_x1">
-                <English>AGM-65 Maverick L [ACE]</English>
-                <Czech>AGM-65 Maverick L [ACE]</Czech>
+                <English>1x AGM-65 Maverick L [ACE]</English>
+                <Czech>1x AGM-65 Maverick L [ACE]</Czech>
                 <French>1x AGM-65L Maverick [ACE]</French>
-                <Spanish>AGM-65 Maverick L [ACE]</Spanish>
-                <Italian>AGM-65 Maverick L [ACE]</Italian>
-                <Polish>AGM-65 Maverick L [ACE]</Polish>
-                <Portuguese>AGM-65 Maverick L [ACE]</Portuguese>
-                <Russian>AGM-65 Maverick L [ACE]</Russian>
-                <German>AGM-65 Maverick L [ACE]</German>
-                <Korean>AGM-65 매버릭 L [ACE]</Korean>
-                <Japanese>AGM-65 マーベリック L [ACE]</Japanese>
-                <Chinese>AGM-65"小牛"飛彈L型 [ACE]</Chinese>
-                <Chinesesimp>AGM-65"小牛"空地L型 [ACE]</Chinesesimp>
-                <Turkish>AGM-65 Maverick L [ACE]</Turkish>
-                <Ukrainian>AGM-65 Maverick L [ACE]</Ukrainian>
+                <Spanish>1x AGM-65 Maverick L [ACE]</Spanish>
+                <Italian>1x AGM-65 Maverick L [ACE]</Italian>
+                <Polish>1x AGM-65 Maverick L [ACE]</Polish>
+                <Portuguese>1x AGM-65 Maverick L [ACE]</Portuguese>
+                <Russian>1x AGM-65 Maverick L [ACE]</Russian>
+                <German>1x AGM-65 Maverick L [ACE]</German>
+                <Korean>1x AGM-65 매버릭 L [ACE]</Korean>
+                <Japanese>1x AGM-65 マーベリック L [ACE]</Japanese>
+                <Chinese>1x AGM-65"小牛"飛彈L型 [ACE]</Chinese>
+                <Chinesesimp>1x AGM-65"小牛"空地L型 [ACE]</Chinesesimp>
+                <Turkish>1x AGM-65 Maverick L [ACE]</Turkish>
+                <Ukrainian>1x AGM-65 Maverick L [ACE]</Ukrainian>
             </Key>
             <Key ID="STR_ACE_Maverick_l_mag_x2">
                 <English>2x AGM-65 Maverick L [ACE]</English>

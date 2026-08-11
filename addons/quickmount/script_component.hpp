@@ -19,3 +19,11 @@
 #define DEFAULT_DISTANCE 3
 #define DEFAULT_SPEED 18
 #define DEFAULT_PRIORITY 0
+
+#define ICON_DRIVER    "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_driver_ca.paa"
+#define ICON_PILOT     "A3\ui_f\data\IGUI\Cfg\Actions\getinpilot_ca.paa"
+#define ICON_CARGO     "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_cargo_ca.paa"
+#define ICON_GUNNER    "A3\ui_f\data\IGUI\Cfg\Actions\getingunner_ca.paa"
+#define ICON_COMMANDER "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_commander_ca.paa"
+#define ICON_TURRET    "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_gunner_ca.paa"
+#define ICON_FFV       "A3\ui_f\data\IGUI\Cfg\CrewAimIndicator\gunnerAuto_ca.paa"

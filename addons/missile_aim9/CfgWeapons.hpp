@@ -35,7 +35,8 @@ class CfgWeapons {
             QGVAR(aim132_4Rnd),
             QGVAR(aim132_4Rnd_MI02),
             QGVAR(PylonRack_1Rnd_aim132),
-            QGVAR(PylonMissile_1Rnd_aim132)
+            QGVAR(PylonMissile_1Rnd_aim132),
+            QGVAR(PylonRack_2Rnd_aim132)
         };
     };
 

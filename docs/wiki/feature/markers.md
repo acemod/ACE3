@@ -34,3 +34,7 @@ Adds the ability to move map markers after they are placed. (Note: Must be enabl
     <h5>Note:</h5>
     <p>Does not work in Editor Preview! Conflicts with vanilla teleport keybind.</p>
 </div>
+
+### 2.2 Placing Numbered Markers
+
+To quickly place an incrementing numbered marker hold <kbd>Alt</kbd> and double left click

@@ -42,7 +42,7 @@ _csw setVariable [QGVAR(autofire_agent), _agent, true];
 [
     {
         params ["_csw", "_reloadedWeapon", "_reloadedMuzzle", "_enterTime"];
-        private _turret = [gunner _csw] call CBA_fnc_turretPath;
+        private _turret = _csw unitTurret (gunner _csw);
         private _reloadPhase = (weaponState [_csw, _turret, _reloadedWeapon, _reloadedMuzzle]) select 6;
         TRACE_4("reload phase",_csw,gunner _csw,_reloadedMuzzle,_reloadPhase);
         _reloadPhase <= 0
@@ -50,7 +50,7 @@ _csw setVariable [QGVAR(autofire_agent), _agent, true];
     {
         params ["_csw", "_reloadedWeapon", "_reloadedMuzzle", "_enterTime"];
         TRACE_4("firing after load",_csw,_reloadedWeapon,_reloadedMuzzle,CBA_missionTime - _enterTime);
-        [QGVAR(autofire_fire), [_csw, _reloadedWeapon, _reloadedMuzzle], _csw, [gunner _csw] call CBA_fnc_turretPath] call CBA_fnc_turretEvent;
+        [QGVAR(autofire_fire), [_csw, _reloadedWeapon, _reloadedMuzzle], _csw, _csw unitTurret (gunner _csw)] call CBA_fnc_turretEvent;
     },
     [_csw, _reloadedWeapon, _reloadedMuzzle, CBA_missionTime]
 ] call CBA_fnc_waitUntilAndExecute;

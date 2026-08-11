@@ -10,7 +10,7 @@
  * 3: Treatment <STRING>
  *
  * Return Value:
- * Treatment Started <BOOL>
+ * Treatment Started <BOOL> or <NIL> if cursor menu is open
  *
  * Example:
  * [player, cursorObject, "Head", "BasicBandage"] call ace_medical_treatment_fnc_treatment
@@ -23,6 +23,7 @@ params ["_medic", "_patient", "_bodyPart", "_classname"];
 // Delay by a frame if cursor menu is open to prevent progress bar failing
 if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened), false]) exitWith {
     [FUNC(treatment), _this] call CBA_fnc_execNextFrame;
+    nil
 };
 
 if !(call FUNC(canTreat)) exitWith {false};

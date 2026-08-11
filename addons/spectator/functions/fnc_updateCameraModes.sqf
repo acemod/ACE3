@@ -14,7 +14,7 @@
  * 1: Camera modes to remove <ARRAY>
  *
  * Return Value:
- * Available camera modes <ARRAY>
+ * Available camera modes <ARRAY> or <NIL> if called before settings are initialized
  *
  * Example:
  * [[0], [1,2]] call ace_spectator_fnc_updateCameraModes
@@ -24,6 +24,7 @@
 
 if !(EGVAR(common,settingsInitFinished)) exitWith {
     EGVAR(common,runAtSettingsInitialized) pushBack [DFUNC(updateCameraModes),_this];
+    nil
 };
 
 params [["_addModes",[],[[]]], ["_removeModes",[],[[]]]];

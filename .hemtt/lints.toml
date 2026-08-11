@@ -1,6 +1,9 @@
 [config.file_type]
 options.allow_no_extension = true
 
+[config.cfgpatches_scope]
+options.ignore_prefixes = ["vn_"] # sog compat
+
 [stringtables.usage]
 options.ignore = [
     "str_ace_repair_hit",

@@ -153,6 +153,8 @@ params ["_unit", "_instigator"];
         private _painUnconscious = missionNamespace getVariable [QEGVAR(medical,painUnconsciousThreshold), 0];
         private _damageToAdd = [0.15, _intensity / BURN_MAX_INTENSITY] select (!alive _unit || {_painPercieved < _painUnconscious + random 0.2});
 
+        _damageToAdd = _damageToAdd * (1 - (getNumber (configFile >> "CfgWeapons" >> uniform _unit >> QGVAR(protection))));
+
         if (GETEGVAR(medical,enabled,false)) then {
             if (!isNull _instigator) then {
                 _unit setVariable [QEGVAR(medical,lastDamageSource), _instigator];

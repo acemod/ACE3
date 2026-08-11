@@ -1,5 +1,6 @@
-FROM starefossen/github-pages
-LABEL maintainer "bux"
+FROM ghcr.io/github/pages-gem:latest
+
+ENV BUNDLE_GEMFILE=/src/site/Gemfile
 
 COPY entrypoint.sh /usr/local/bin/entrypoint
 

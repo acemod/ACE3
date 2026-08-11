@@ -11,7 +11,7 @@
  * Seeker Pos <ARRAY>
  *
  * Example:
- * [] call call ace_missileguidance_fnc_seekerType_Doppler;
+ * [] call ace_missileguidance_fnc_seekerType_Doppler;
  *
  * Public: No
  */
@@ -67,7 +67,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
             _nearestObjects = _nearestObjects select {
                 // If target within angle AND we can see target AND we shouldn't filter target, then target is a candidate
                 [_projectile, getPosASL _x, _seekerAngle] call FUNC(checkSeekerAngle) && {
-                    // I check both Line of Sight versions to make sure that a single bush doesnt make the target lock dissapear but at the same
+                    // I check both Line of Sight versions to make sure that a single bush doesn't make the target lock disappear but at the same
                     // time ensure that this can see through smoke
                     ([_projectile, _x, true] call FUNC(checkLos)) || { ([_projectile, _x, false] call FUNC(checkLos)) }
                 } && {
@@ -99,7 +99,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
     // if the target is in the remote targets for the side, whoever the donor is will "datalink" the target for the hellfire.
     private _remoteTargets = listRemoteTargets side _shooter;
     if ((_remoteTargets findIf { (_target in _x) && (_x#1 > 0) }) == -1) then {
-        // I check both Line of Sight versions to make sure that a single bush doesnt make the target lock dissapear but at the same time ensure that this can see through smoke. Should work 80% of the time
+        // I check both Line of Sight versions to make sure that a single bush doesn't make the target lock disappear but at the same time ensure that this can see through smoke. Should work 80% of the time
         private _vehicle = vehicle _shooter;
         if (!_shooterHasRadar || { !isVehicleRadarOn _vehicle } || { !alive _vehicle } || { !([_vehicle, _target, true] call FUNC(checkLOS)) && { !([_vehicle, _target, false] call FUNC(checkLOS)) } }) then {
             _seekerStateParams set [0, true];

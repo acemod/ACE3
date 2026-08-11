@@ -1,6 +1,20 @@
 class CfgWeapons {
     class H_SPE_HelmetB;
-    class H_SPE_Hat: H_SPE_HelmetB {};
+    class H_SPE_Hat;
+    class H_SPE_GER_TankPrivateCap;
+    class H_SPE_GER_TankOfficerCap;
+    class H_SPE_GER_Fieldcap;
+    class H_SPE_GER_Fieldcap2;
+    class H_SPE_GER_NCOCap;
+    class H_SPE_GER_M38_Pz;
+    class H_SPE_GER_M38_Pz_Offz;
+    class H_SPE_GER_ST_M40_cap;
+    class H_SPE_GER_ST_M40_cap_Offz;
+    class H_SPE_GER_ST_M40_Pz_cap;
+    class H_SPE_GER_ST_M40_Pz_cap_Offz;
+    class H_SPE_GER_M38_art;
+    class H_SPE_GER_M38_Art_Offz;
+    class H_SPE_GER_M38;
 
     //ALLIED PILOT
     class H_SPE_US_Helmet_Pilot: H_SPE_Hat {
@@ -111,18 +125,6 @@ class CfgWeapons {
     };
 
     //AXIS TANKER
-    class H_SPE_GER_TankPrivateCap: H_SPE_Hat {
-        HEARING_PROTECTION_OPEN;
-    };
-    class H_SPE_GER_TankOfficerCap: H_SPE_Hat {
-        HEARING_PROTECTION_OPEN;
-    };
-    class H_SPE_GER_Fieldcap: H_SPE_Hat {
-        HEARING_PROTECTION_OPEN;
-    };
-    class H_SPE_GER_Fieldcap2: H_SPE_GER_Fieldcap {
-        HEARING_PROTECTION_OPEN;
-    };
     class H_SPE_GER_TankPrivateCap2: H_SPE_GER_TankPrivateCap {
         HEARING_PROTECTION_EARMUFF;
     };
@@ -132,13 +134,46 @@ class CfgWeapons {
     class H_SPE_GER_TankOfficerCap2: H_SPE_GER_TankOfficerCap {
         HEARING_PROTECTION_EARMUFF;
     };
+    class H_SPE_GER_PzNCOCap: H_SPE_GER_NCOCap {
+        HEARING_PROTECTION_EARMUFF;
+    };
     class H_SPE_GER_SPGPrivateCap: H_SPE_Hat {
         HEARING_PROTECTION_EARMUFF;
+    };
+    class H_SPE_GER_SPGPrivateCap2: H_SPE_GER_SPGPrivateCap {
+        HEARING_PROTECTION_OPEN;
     };
     class H_SPE_GER_ST_Tanker_Cap2: H_SPE_GER_Fieldcap2 {
         HEARING_PROTECTION_EARMUFF;
     };
     class H_SPE_GER_ST_Tanker_Cap: H_SPE_GER_Fieldcap {
+        HEARING_PROTECTION_EARMUFF;
+    };
+    class H_SPE_GER_M38_Pz_headset: H_SPE_GER_M38_Pz {
+        HEARING_PROTECTION_EARMUFF;
+    };
+    class H_SPE_GER_M38_Pz_Offz_headset: H_SPE_GER_M38_Pz_Offz {
+        HEARING_PROTECTION_EARMUFF;
+    };
+    class H_SPE_GER_ST_M40_cap_hp: H_SPE_GER_ST_M40_cap {
+        HEARING_PROTECTION_EARMUFF;
+    };
+    class H_SPE_GER_ST_M40_cap_Offz_hp: H_SPE_GER_ST_M40_cap_Offz {
+        HEARING_PROTECTION_EARMUFF;
+    };
+    class H_SPE_GER_ST_M40_Pz_cap_headset: H_SPE_GER_ST_M40_Pz_cap {
+        HEARING_PROTECTION_EARMUFF;
+    };
+    class H_SPE_GER_ST_M40_Pz_cap_Offz_headset: H_SPE_GER_ST_M40_Pz_cap_Offz {
+        HEARING_PROTECTION_EARMUFF;
+    };
+    class H_SPE_GER_M38_art_headset: H_SPE_GER_M38_art {
+        HEARING_PROTECTION_EARMUFF;
+    };
+    class H_SPE_GER_M38_Art_Offz_headset: H_SPE_GER_M38_Art_Offz {
+        HEARING_PROTECTION_EARMUFF;
+    };
+    class H_SPE_GER_M38_headset: H_SPE_GER_M38 {
         HEARING_PROTECTION_EARMUFF;
     };
 };

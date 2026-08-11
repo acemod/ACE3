@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Player <OBJECT>
- * 0: Target Vehicle <OBJECT>
+ * 1: Target Vehicle <OBJECT>
  *
  * Return Value:
  * Distance to interaction point <NUMBER>

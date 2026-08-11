@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Gets item's localized name or indicates if not availabe
+ * Gets item's localized name or indicates if not available
  *
  * Arguments:
  * 0: Classname <STRING>
