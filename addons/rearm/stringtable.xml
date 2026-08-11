@@ -67,9 +67,11 @@
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_MunitionAngle">
             <English>Munition is not aligned with pylon. Angle: %1</English>
+            <Russian>Боеприпас не выровнен с пилоном. Угол наклона: %1</Russian>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_MunitionDistance">
             <English>Munition is too far from pylon. Distance: %1 m</English>
+            <Russian>Боеприпас находится слишком далеко от пилона. Расстояние: % 1 мБоеприпас находится слишком далеко от опоры. Расстояние: %1 м</Russian>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RearmedTriple">
             <English>Rearmed %1 rounds of %2 on %3</English>
@@ -649,9 +651,11 @@
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_usePylonPosition_Description">
             <English>When rearming a pylon, the munition must be held aligned at the pylon. Only applies if Rearm Amount is not Entire Vehicle.</English>
+            <Russian>При перевооружении пилона, боеприпас должен быть закреплен ровно на пилоне. Применяется только в том случае, если перевооружение производится не на весь автомобиль.</Russian>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_usePylonPosition_DisplayName">
             <English>Use Pylon Position</English>
+            <Russian>Использовать положение пилона</Russian>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_vehicle">
             <English>Entire Vehicle</English>

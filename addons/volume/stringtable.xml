@@ -145,6 +145,7 @@
         </Key>
         <Key ID="STR_ACE_Volume_ReductionDescriptionMusic">
             <English>Reduce volume by this percentage.</English>
+            <Russian>Уменьшает громкость на этот процент.</Russian>
         </Key>
         <Key ID="STR_ACE_Volume_ReductionDescriptionSound">
             <English>Reduce volume by this percentage.</English>
