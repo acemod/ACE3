@@ -146,6 +146,7 @@
         <Key ID="STR_ACE_Volume_ReductionDescriptionMusic">
             <English>Reduce volume by this percentage.</English>
             <Russian>Уменьшает громкость на этот процент.</Russian>
+            <Japanese>この割合で音量を低減します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Volume_ReductionDescriptionSound">
             <English>Reduce volume by this percentage.</English>
@@ -187,7 +188,7 @@
             <Russian>Уменьшение</Russian>
             <German>Reduzierung</German>
             <Korean>감소</Korean>
-            <Japanese>低減</Japanese>
+            <Japanese>低減 (効果音)</Japanese>
             <Chinese>降低</Chinese>
             <Chinesesimp>降低</Chinesesimp>
             <Ukrainian>Зменшення</Ukrainian>
@@ -202,7 +203,7 @@
             <Russian>Напоминать о снижении громкости</Russian>
             <German>Erinnere wenn verringert</German>
             <Korean>감소 시 알림</Korean>
-            <Japanese>低減時に通知</Japanese>
+            <Japanese>低減中のリマインド</Japanese>
             <Chinese>降低音量時是否提醒</Chinese>
             <Chinesesimp>降低音量时是否提醒</Chinesesimp>
             <Turkish>Eğer Düşükse Hatırlat</Turkish>
@@ -218,7 +219,7 @@
             <Russian>Ежеминутное напоминание о сниженной громкости</Russian>
             <German>Erinnert dich jede Minute, wenn deine Lautstärke verringert wurde.</German>
             <Korean>음량이 감소되면 매 분 마다 알려줍니다</Korean>
-            <Japanese>音量を低減時は毎分ごとに通知します。</Japanese>
+            <Japanese>音量の低減中に毎分リマインドします。</Japanese>
             <Chinese>開啟後會每分鐘警告一次你的音量已被降低。</Chinese>
             <Chinesesimp>开启后会每分钟警告一次你的音量已被降低。</Chinesesimp>
             <Turkish>Eğer ses düşükse her dakika hatırlatır.</Turkish>
