@@ -43,6 +43,7 @@
         <Key ID="STR_ACE_MILR_showRangeHint">
             <English>Show range hint</English>
             <Russian>Показать подсказку о диапазоне</Russian>
+            <Japanese>距離のヒントを表示</Japanese>
         </Key>
     </Package>
 </Project>

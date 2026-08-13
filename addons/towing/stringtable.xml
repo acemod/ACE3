@@ -75,6 +75,7 @@
             <English>Enables ACE Towing interactions and behavior.</English>
             <Russian>Включает взаимодействие и поведение ACE буксировки</Russian>
             <German>Aktiviert ACE-Abschleppinteraktionen und -verhalten.</German>
+            <Japanese>ACEけん引のインタラクションと動作を有効化します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Towing_start12">
             <English>Attach Tow Rope (12.2m)</English>
