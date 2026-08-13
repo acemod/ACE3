@@ -84,7 +84,7 @@ createDialog QGVAR(cam_dialog_off);
                             GVAR(state) = "noGDS";
                             [QGVAR(monitorNoGDS), [ACE_player]] call CBA_fnc_localEvent;
                         };
-                        if (_elapsedTime > 5 && {{_x getHitPointDamage "HitCamera" < 0.25} count _nearestHuntIRs > 0}) then {
+                        if (_elapsedTime > 5 && {_nearestHuntIRs findIf {_x getHitPointDamage "HitCamera" < 0.25} != -1}) then {
                             GVAR(state) = "connecting";
                             [QGVAR(monitorConnecting), [ACE_player]] call CBA_fnc_localEvent;
                         };

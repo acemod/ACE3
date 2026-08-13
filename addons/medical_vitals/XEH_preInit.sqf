@@ -8,6 +8,7 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
+GVAR(spo2DutyList) = createHashMap;
 GVAR(oxygenSupplyConditionCache) = uiNamespace getVariable QGVAR(oxygenSupplyConditionCache);
 
 ADDON = true;

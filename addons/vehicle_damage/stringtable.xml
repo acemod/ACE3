@@ -30,18 +30,18 @@
             <Ukrainian>Увімкнути розширене пошкодження автомобіля</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_category_displayName">
-            <English>ACE Advanced Vehicle Damage</English>
-            <French>ACE Dégâts de véhicule avancés</French>
-            <Spanish>ACE Daño avanzado de vehículos</Spanish>
-            <Italian>ACE Danni Veicolo Avanzati</Italian>
-            <Polish>ACE Zaawansowany system uszkodzeń pojazdów</Polish>
-            <Portuguese>ACE Dano avançãdo de veículos</Portuguese>
-            <Russian>ACE Продвинутое повреждение техники</Russian>
-            <German>ACE Erweiterter Fahrzeugsschaden</German>
-            <Korean>ACE 고급 차량 피해</Korean>
-            <Japanese>ACE 高度な乗り物ダメージ</Japanese>
-            <Chinesesimp>ACE 高级载具损坏</Chinesesimp>
-            <Ukrainian>ACE Розширене пошкодження техніки</Ukrainian>
+            <English>Advanced Vehicle Damage</English>
+            <French>Dégâts de véhicule avancés</French>
+            <Spanish>Daño avanzado de vehículos</Spanish>
+            <Italian>Danni Veicolo Avanzati</Italian>
+            <Polish>Zaawansowany system uszkodzeń pojazdów</Polish>
+            <Portuguese>Dano avançãdo de veículos</Portuguese>
+            <Russian>Продвинутое повреждение техники</Russian>
+            <German>Erweiterter Fahrzeugsschaden</German>
+            <Korean>고급 차량 피해</Korean>
+            <Japanese>高度な乗り物ダメージ</Japanese>
+            <Chinesesimp>高级载具损坏</Chinesesimp>
+            <Ukrainian>Розширене пошкодження техніки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_generic_turret_wreck">
             <English>Wreck (Turret)</English>

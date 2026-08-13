@@ -4,9 +4,10 @@ class EGVAR(arsenal,stats) {
         scope = 2;
         priority = 1;
         stats[] = {"ACE_barrelTwist"};
-        displayName= CSTRING(statBarrelTwist);
+        displayName = CSTRING(statBarrelTwist);
         showText = 1;
         textStatement = QUOTE(params [ARR_2('_stat','_config')]; private _barrelTwist = getNumber (_config >> _stat select 0); format [ARR_3('%1mm (%2in)',_barrelTwist toFixed 0,(_barrelTwist / 25.4) toFixed 1)]);
+        condition = QUOTE(call EFUNC(arsenal,statCondition_isWeapon));
         tabs[] = {{0,1}, {}};
     };
     class ACE_barrelLength: statBase {
@@ -16,6 +17,7 @@ class EGVAR(arsenal,stats) {
         displayName = CSTRING(statBarrelLength);
         showText = 1;
         textStatement = QUOTE(params [ARR_2('_stat','_config')]; private _barrelLength = getNumber (_config >> _stat select 0); format [ARR_3('%1mm (%2in)',_barrelLength toFixed 0,(_barrelLength / 25.4) toFixed 1)]);
+        condition = QUOTE(call EFUNC(arsenal,statCondition_isWeapon));
         tabs[] = {{0,1}, {}};
     };
     class ACE_ammo: statBase {
@@ -24,19 +26,19 @@ class EGVAR(arsenal,stats) {
         stats[] = {"ammo", "displayName"};
         displayName = "$STR_dn_ammo";
         showText = 1;
-        condition = QUOTE(getText (_this select 1 >> _this select 0 select 0) isNotEqualTo '');
         textStatement = QUOTE(params [ARR_2('_stat','_config')]; private _ammoDisplayName = getText (configFile >> 'CfgAmmo' >> (getText (_config >> 'ammo')) >> _stat select 1); [ARR_2(_ammoDisplayName,getText (_config >> _stat select 0))] select (_ammoDisplayName == ''));
+        condition = QUOTE(getText (_this select 1 >> _this select 0 select 0) isNotEqualTo '');
         tabs[] = {{}, {4}};
     };
     class ACE_ballisticCoef: statBase {
         scope = 2;
         priority = 4;
-        stats[] = {"ACE_dragModel","ACE_ballisticCoefficients", "ACE_standardAtmosphere"};
-        displayName= CSTRING(statBallisticCoef);
-        showText= 1;
+        stats[] = {"ACE_dragModel", "ACE_ballisticCoefficients", "ACE_standardAtmosphere"};
+        displayName = CSTRING(statBallisticCoef);
+        showText = 1;
         textStatement = QUOTE(params[ARR_2('_stat','_config')]; private _ammoCfg = (configFile >> 'CfgAmmo' >> (getText (_config >> 'ammo'))); private _ballisticCoef = getArray (_ammoCfg >> _stat select 1); _ballisticCoef sort false; format [ARR_4('%1 G%2 (%3)',_ballisticCoef select 0,getNumber (_ammoCfg >> _stat select 0),getText (_ammoCfg >> _stat select 2))]);
         condition = QUOTE(params[ARR_2('_stat','_config')]; private _ammoCfg = (configFile >> 'CfgAmmo' >> (getText (_config >> 'ammo'))); (getArray (_ammoCfg >> _stat select 1) isNotEqualTo []));
-        tabs[] ={{}, {4}};
+        tabs[] = {{}, {4}};
     };
     class ACE_bulletMass: statBase {
         scope = 2;
@@ -52,7 +54,7 @@ class EGVAR(arsenal,stats) {
         scope = 2;
         priority = 3;
         stats[] = {"initSpeed", "ammo"};
-        displayName= CSTRING(statMuzzleVelocity);
+        displayName = CSTRING(statMuzzleVelocity);
         showText= 1;
         textStatement = QUOTE([ARR_2(_this select 0,_this select 1)] call FUNC(statTextStatement_magazineMuzzleVelocity));
         condition = QUOTE(getText (_this select 1 >> _this select 0 select 1) isNotEqualTo '' && {getNumber (_this select 1 >> (_this select 0) select 0) > 0});
@@ -62,17 +64,18 @@ class EGVAR(arsenal,stats) {
         scope = 2;
         priority = 1;
         stats[] = {"initSpeed"};
-        displayName= CSTRING(statMuzzleVelocity);
+        displayName = CSTRING(statMuzzleVelocity);
         showText = 1;
         textStatement = QUOTE([ARR_2(_this select 0,_this select 1)] call FUNC(statTextStatement_weaponMuzzleVelocity));
+        condition = QUOTE(call EFUNC(arsenal,statCondition_isWeapon));
         tabs[] = {{0,1}, {}};
     };
     class ACE_magazineAiUsage: statBase {
         scope = 2;
         priority = 0;
         stats[] = {"aiAmmoUsageFlags"};
-        displayName= CSTRING(ammoUsage_ai);
-        showText= 1;
+        displayName = CSTRING(ammoUsage_ai);
+        showText = 1;
         textStatement = QUOTE(call FUNC(statTextStatement_magazineAiUsage));
         condition = QUOTE(is3DEN || {!isNull getAssignedCuratorLogic player} || {missionNamespace getVariable [ARR_2(QQGVAR(showAIMagazineUse),missionName == 'Arsenal')]});
         tabs[] = {{}, {4}};

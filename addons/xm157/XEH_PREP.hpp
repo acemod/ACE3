@@ -1,5 +1,6 @@
 LOG("prep");
 
+PREP(airburst_ammoFired);
 PREP(ballistics_calculator);
 PREP(ballistics_getData);
 PREP(keyPress);

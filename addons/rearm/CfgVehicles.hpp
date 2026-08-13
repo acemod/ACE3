@@ -178,6 +178,12 @@ class CfgVehicles {
     class GVAR(Bo_Mk82): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F\Ammo\Bomb_02_F";
     };
+    class GVAR(BombDemine_01_Ammo_F): GVAR(defaultCarriedObject) {
+        model = "\a3\Weapons_F_Orange\Ammo\BombDemine_01_F";
+    };
+    class GVAR(BombDemine_01_DummyAmmo_F): GVAR(defaultCarriedObject) {
+        model = "\a3\Weapons_F_Orange\Ammo\BombDemine_01_Dummy_F";
+    };
     class GVAR(Bomb_04_F): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Bomb_04_F.p3d";
     };
@@ -190,11 +196,44 @@ class CfgVehicles {
     class GVAR(Missile_AA_03_F): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Missile_AA_03_F.p3d";
     };
+    class GVAR(M_Air_AA): GVAR(defaultCarriedObject) {
+        model = "\A3\Weapons_F_EPC\Ammo\M_Air_AA.p3d";
+    };
+    class GVAR(M_Zephyr): GVAR(defaultCarriedObject) {
+        model = "\A3\Weapons_F\Ammo\Missile_AA_02_F.p3d";
+    };
+    class GVAR(ammo_Missile_AMRAAM_C): GVAR(defaultCarriedObject) {
+        model = "\A3\Weapons_F_Jets\Ammo\Missile_AA_10_F";
+    };
+    class GVAR(ammo_Missile_AMRAAM_D): GVAR(defaultCarriedObject) {
+        model = "\A3\Weapons_F_Jets\Ammo\Missile_AA_06_F";
+    };
+    class GVAR(ammo_Missile_AA_R77): GVAR(defaultCarriedObject) {
+        model = "\A3\Weapons_F_Jets\Ammo\Missile_AA_05_F";
+    };
+    class GVAR(ammo_Missile_BIM9X): GVAR(defaultCarriedObject) {
+        model = "\A3\Weapons_F_Jets\Ammo\Missile_AA_08_F";
+    };
+    class GVAR(ammo_Missile_AA_R73): GVAR(defaultCarriedObject) {
+        model = "\A3\Weapons_F_Jets\Ammo\Missile_AA_07_F";
+    };
+    class GVAR(M_Scalpel_AT): GVAR(defaultCarriedObject) {
+        model = "\A3\Weapons_F\Ammo\Missile_AT_03_F";
+    };
     class GVAR(Missile_AGM_02_F): GVAR(defaultCarriedObject) {
-        model = "\A3\Weapons_F_EPC\Ammo\Missile_AGM_02_F.p3d";
+        model = "\A3\Weapons_F\Ammo\Missile_AT_02_F";
     };
     class GVAR(Missile_AGM_01_F): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Missile_AGM_01_F.p3d";
+    };
+    class GVAR(ammo_Missile_HARM): GVAR(defaultCarriedObject) {
+        model = "\A3\Weapons_F_Sams\Ammo\Missile_AR_01_F.p3d";
+    };
+    class GVAR(ammo_Missile_KH58): GVAR(defaultCarriedObject) {
+        model = "\A3\Weapons_F_Sams\Ammo\Missile_AR_02_F.p3d";
+    };
+    class GVAR(ammo_Bomb_SDB): GVAR(defaultCarriedObject) {
+        model = "\A3\Weapons_F_Sams\Ammo\Bomb_05_F.p3d";
     };
     class GVAR(R_230mm_fly): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F\Ammo\Missile_AT_02_F";

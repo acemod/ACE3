@@ -12,7 +12,7 @@
  * 5: Person who caused damage <OBJECT>
  *
  * Return Value:
- * None
+ * Should Detonate Ammo <BOOL>
  *
  * Example:
  * [cursorObject, 0.5, true, player, player] call ace_vehicle_damage_fnc_handleDetonation

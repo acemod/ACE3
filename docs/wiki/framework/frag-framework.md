@@ -26,7 +26,7 @@ The system for the end-developer is easy to use, and only requires minimal resea
 ```cpp
 class CfgAmmo {
     class MyGrenade {
-        ace_frag_enabled = 1;  // Deprecated
+        ace_frag_enabled = 1;  // Removed in 3.18 (has no effect)
         ace_frag_metal = 210;  // Amount of metal being fragmented (grams) - information below
         ace_frag_charge = 185;  // Amount of explosive filler (grams) - information below
         ace_frag_gurney_c = 2843;  // Gurney velocity constant for explosive type - information below

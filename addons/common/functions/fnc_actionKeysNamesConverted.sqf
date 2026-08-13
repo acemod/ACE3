@@ -70,10 +70,10 @@ private _keybinds = actionKeysNamesArray _action apply {
             _keyImage = PLACEHOLDER_PLUS + (_keyImage select [1]);
         };
 
-        // - and as character seperated by "+"
+        // - and as character separated by "+"
         _keyImage = [_keyImage, "++", "+" + PLACEHOLDER_PLUS] call CBA_fnc_replace;
 
-        // get single keys (also revert back non-seperator "+" keys)
+        // get single keys (also revert back non-separator "+" keys)
         _keyImage = _keyImage splitString "+" apply {
             [_x, "+"] select (_x isEqualTo PLACEHOLDER_PLUS);
         };

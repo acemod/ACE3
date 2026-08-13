@@ -21,6 +21,8 @@
 params ["_caller", "_target", "_hitPoint", "_className"];
 TRACE_4("params",_caller,_target,_hitPoint,_className);
 
+if ( _target getVariable [QGVAR(disabled), false] ) exitWith {false};
+
 private _config = (configFile >> "ACE_Repair" >> "Actions" >> _className);
 if !(isClass _config) exitWith {false}; // or go for a default?
 

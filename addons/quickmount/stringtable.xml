@@ -220,5 +220,20 @@
             <Turkish>Araç Kilitli</Turkish>
             <Ukrainian>Техніка закрита</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_QuickMount_enable3d">
+            <English>Show Seat Actions</English>
+            <Russian>Показать действия с сиденьем</Russian>
+            <Japanese>座席アクションを表示</Japanese>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_enable3d_Description">
+            <English>Show get-in action for every seat in 3d interaction</English>
+            <Russian>Показывает, как можно получить доступ к каждому месту в 3d-интерактиве</Russian>
+            <Japanese>3Dインタラクションで各座席に着席アクションを表示します。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_enable3d_shiftKey">
+            <English>When holding SHIFT</English>
+            <Russian>При удержании нажатой клавиши SHIFT</Russian>
+            <Japanese>SHIFTキー押下時</Japanese>
+        </Key>
     </Package>
 </Project>

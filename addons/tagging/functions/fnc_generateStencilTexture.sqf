@@ -9,7 +9,7 @@
  * 2: Text Color (in HEX 6 or 8) <STRING> (default: "000000" - black)
  * 3: Background Color (in HEX 6 or 8) <STRING> (default: "00000000" - transparent)
  * 4: Auto newlines <BOOL> (default: true)
- * 4: Texture Dimensions <BOOL> (default: 512)
+ * 5: Texture Dimensions <NUMBER> (default: 512)
  *
  * Return Value:
  * Texture <STRING>

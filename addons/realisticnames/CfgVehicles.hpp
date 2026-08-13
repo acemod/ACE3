@@ -478,6 +478,11 @@ class CfgVehicles {
         displayName = CSTRING(Plane_Fighter_04_Name);
     };
 
+    class UAV_05_Base_F;
+    class B_UAV_05_F: UAV_05_Base_F {
+        displayName = CSTRING(UAV_05_Name);
+    };
+
     // UAVs
     class UAV_02_base_F;
     class B_UAV_02_F: UAV_02_base_F {

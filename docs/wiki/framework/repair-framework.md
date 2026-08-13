@@ -50,12 +50,12 @@ class CfgVehicles {
 
 ## 2.1 Make A Vehicle Into A Repair Truck
 
-A vehicle can be turned into a repair truck by setting the variable `ace_repair_canRepair` to `1` to enable, `0` to disable.
+A vehicle can be turned into a repair truck by setting the variable `ACE_isRepairVehicle` to `1` to enable, `0` to disable.
 - Setting `fullRepairLocation` needs to be enabled and is by *disabled* default.
 - Can be set via 3den attribute.
 
 ```cpp
-VEHICLE setVariable ["ace_repair_canRepair", 1, true];
+VEHICLE setVariable ["ACE_isRepairVehicle", 1, true];
 ```
 
 ## 2.2 Make An Object Into A Repair Facility
@@ -81,4 +81,14 @@ To set a units engineer trait level set the variable `ace_isEngineer` to:
 
 ```cpp
 UNIT setVariable ["ace_isEngineer", 1, true];
+```
+
+## 2.3 Blacklist a Vehicle for Repairs
+Prevents a vehicle from being repaired by players by setting the `ace_repair_disabled` variable to `true`.
+```sqf
+// vehicles Init field in the 
+this setVariable ["ace_repair_disabled", true];
+
+// executed by a serverside script during a cutscene
+_truck setVariable ["ace_repair_disabled", true, true];
 ```

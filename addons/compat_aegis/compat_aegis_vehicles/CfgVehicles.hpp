@@ -1,8 +1,20 @@
 class CfgVehicles {
-    class Tank;
+    class All;
+    class AllVehicles: All {
+        class NewTurret;
+    };
+    class Land: AllVehicles {};
+    class LandVehicle: Land {
+        class CommanderOptics: NewTurret {};
+    };
+    class Tank: LandVehicle {};
     class Tank_F: Tank {
         class Turrets {
-            class MainTurret;
+            class MainTurret: NewTurret {
+                class Turrets {
+                    class CommanderOptics: CommanderOptics {};
+                };
+            };
         };
     };
 
@@ -88,6 +100,22 @@ class CfgVehicles {
                     "200Rnd_762x51_Belt_Red",
                     "200Rnd_762x51_Belt_Red",
                     "4Rnd_120mm_LG_cannon_missiles" // Aegis adds laser-guided munitions
+                };
+            };
+        };
+    };
+
+    class MBT_04_base_F: Tank_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                class Turrets: Turrets {
+                    class CommanderOptics: CommanderOptics {
+                        // Overwrite the changes Aegis makes for the NSVT commander MG on the T-140 Ankara/T-14
+                        // Ideally would be kept as realistically as possible (so 127x108 ammo instead of 127x99),
+                        // but since it's been like this for a very long time, bad idea to change (will break missions with magazine loadouts)
+                        weapons[] = {"ACE_HMG_127_KORD", "SmokeLauncher"};
+                        magazines[] = {"500Rnd_127x99_mag_Tracer_Yellow", "SmokeLauncherMag"};
+                    };
                 };
             };
         };

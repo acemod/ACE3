@@ -152,7 +152,7 @@ switch (_position) do {
     };
 
     case "codriver" : {
-        private _positions = [typeOf _vehicle] call FUNC(getVehicleCodriver);
+        private _positions = [_vehicle] call FUNC(getVehicleCodriver);
 
         {
             if (alive _x) then {_positions deleteAt (_positions find (_vehicle getCargoIndex _x))};

@@ -29,7 +29,8 @@ class ACE_Tags {
         textures[] = {"path\to\texture1.paa", "path\to\texture2.paa"};  // List of texture variations (one is randomly selected when tagging)
         materials[] = {"path\to\material.rvmat"}; // Optional: List of material variations (one is randomly selected). Keep empty if you don't need a custom material.
         icon = "path\to\icon.paa";  // Icon being displayed in the interaction menu
-        tagModel = "UserTexture1m_F"; // Optional: The 3D Model that will be spawned with the texture on it, can either be CfgVehicles classname or P3D file path.
+        tagModel = "ace_tagging_texture1m"; // Optional: The 3D Model that will be spawned with the texture on it, can either be CfgVehicles classname or P3D file path.
+        condition = "true"; // Optional: Condition for the Spraytag Action. Needs to return bool.
     };
 };
 ```
@@ -49,7 +50,8 @@ class ACE_Tags {
 | 3  | Textures | Array | Required |
 | 4  | Icon | String | Optional (default: `""` - Default white point) |
 | 5  | Material Paths | Array | Optional (default: `[]` - No custom material) |
-| 6  | Tag Model | String | Optional (default: `"UserTexture1m_F"` - 1x1m texture surface) |
+| 6  | Tag Model | String | Optional (default: `"ace_tagging_texture1m"` - 1x1m texture surface) |
+| 7  | Condition | Code | Optional (default: `{true}` - always accessible) |
 | **R** | Successfully Added Tag | Boolean | Return value |
 
 #### 2.1.1 Example
@@ -80,7 +82,8 @@ class ACE_Tags {
         textures[] = {"@path\to\texture1.paa", "@path\to\texture2.paa"};  // List of texture variations (one is randomly selected when tagging)
         materials[] = {"@path\to\material.rvmat"}; // Optional: List of material variations (one is randomly selected). Keep empty if you don't need a custom material.
         icon = "@path\to\icon.paa";  // Icon being displayed in the interaction menu
-        tagModel = "UserTexture1m_F"; // Optional: The 3D Model that will be spawned with the texture on it, can either be CfgVehicles classname or P3D file path.
+        tagModel = "ace_tagging_texture1m"; // Optional: The 3D Model that will be spawned with the texture on it, can either be CfgVehicles classname or P3D file path.
+        condition = "true"; // Optional: Condition for the Spraytag Action. Needs to return bool.
     };
 };
 ```

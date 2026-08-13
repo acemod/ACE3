@@ -8,6 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "A3_Aegis_Armor_F_Aegis_MBT_01",
+            "A3_Aegis_Armor_F_Aegis_MBT_04",
             "A3_Aegis_Armor_F_Aegis_APC_Tracked_03",
             "ace_vehicles"
         };

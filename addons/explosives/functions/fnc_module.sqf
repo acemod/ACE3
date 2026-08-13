@@ -17,8 +17,8 @@
 
 params ["_logic"];
 
-[_logic, QGVAR(RequireSpecialist), "RequireSpecialist"] call EFUNC(Common,readSettingFromModule);
-[_logic, QGVAR(PunishNonSpecialists),"PunishNonSpecialists"] call EFUNC(Common,readSettingFromModule);
-[_logic, QGVAR(ExplodeOnDefuse),"ExplodeOnDefuse"] call EFUNC(Common,readSettingFromModule);
+[_logic, QGVAR(requireSpecialist), "RequireSpecialist"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(punishNonSpecialists), "PunishNonSpecialists"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(explodeOnDefuse), "ExplodeOnDefuse"] call EFUNC(common,readSettingFromModule);
 
 INFO("Explosive Module Initialized.");

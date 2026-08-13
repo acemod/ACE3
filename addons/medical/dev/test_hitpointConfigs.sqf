@@ -17,7 +17,7 @@ private _units = _uniforms apply {
 };
 if (param [0, false]) then { // Check all units (if naked)
     INFO("checking ALL units");
-   _units append ((configProperties [configFile >> "CfgVehicles", "(isClass _x) && {(getNumber (_x >> 'scope')) == 2} && {configName _x isKindOf 'CAManBase'}", true]));
+   _units append ("(getNumber (_x >> 'scope')) == 2 && {configName _x isKindOf 'CAManBase'}" configClasses _cfgVehicles);
 };
 
 INFO_1("Checking uniforms for correct medical hitpoints [%1 units]",count _units);

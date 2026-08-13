@@ -19,7 +19,7 @@
 params ["_sPos", "_icon"];
 
 if(GVAR(iconCount) > (count GVAR(iconCtrls))-1) then {
-    private _displayNum = [[46, 12] select visibleMap,91919] select (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]);
+    private _displayNum = [[46, 12] select visibleMap,91919] select (true isEqualTo (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]));
     GVAR(iconCtrls) pushBack ((findDisplay _displayNum) ctrlCreate ["RscStructuredText", 54021+GVAR(iconCount)]);
     if (GVAR(useCursorMenu)) then {
         ((findDisplay _displayNum) displayCtrl (54021+GVAR(iconCount))) ctrlAddEventHandler ["MouseMoving", DFUNC(handleMouseMovement)];
@@ -29,7 +29,7 @@ if(GVAR(iconCount) > (count GVAR(iconCtrls))-1) then {
 
 private _ctrl = GVAR(iconCtrls) select GVAR(iconCount);
 
-private _pos = if ([GVAR(useListMenu), GVAR(useListMenuSelf)] select GVAR(keyDownSelfAction)) then {
+private _pos = if ([GVAR(useListMenu), GVAR(useListMenuSelfActual)] select GVAR(keyDownSelfAction)) then {
     [_ctrl, GVAR(iconCount), format ["<img image='%1' color='%2' size='1.6'/>", _icon, GVAR(selectorColorHex)]] call FUNC(ctrlSetParsedTextCached);
     [(_sPos select 0)-(GVAR(SELECTOR_LIST_X)*safeZoneW), (_sPos select 1)-(GVAR(SELECTOR_LIST_Y)*safeZoneW), GVAR(SELECTOR_LIST_W)*safeZoneW, GVAR(SELECTOR_LIST_H)*safeZoneW]
 } else {

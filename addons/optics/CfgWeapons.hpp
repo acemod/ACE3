@@ -168,7 +168,9 @@ class CfgWeapons {
     class optic_SOS: ItemCore {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
-                class Snip;
+                class Snip {
+                    modelOptics[] = {QPATHTOF(models\reticle_sos_2x), QPATHTOF(models\reticle_sos_5x)};
+                };
                 class Iron;
             };
         };
@@ -225,7 +227,42 @@ class CfgWeapons {
     class optic_LRPS: ItemCore {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
-                class Snip;
+                class Snip {
+                    modelOptics[] = {QPATHTOF(models\reticle_lrps_6x), QPATHTOF(models\reticle_lrps_25x)};
+                };
+            };
+        };
+    };
+
+    // AMS
+    class optic_AMS_base: ItemCore {
+        class ItemInfo: InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class AMS {
+                    modelOptics[] = {QPATHTOF(models\reticle_ams_3x), QPATHTOF(models\reticle_ams_10x)};
+                };
+            };
+        };
+    };
+
+    // Kahlia
+    class optic_KHS_base: ItemCore {
+        class ItemInfo: InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class KHS {
+                    modelOptics[] = {QPATHTOF(models\reticle_khs_5x), QPATHTOF(models\reticle_khs_11x)};
+                };
+            };
+        };
+    };
+
+    // Kahlia (Old)
+    class optic_KHS_old: ItemCore {
+        class ItemInfo: InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class KHS {
+                    modelOptics[] = {QPATHTOF(models\reticle_khs_5x), QPATHTOF(models\reticle_khs_11x)};
+                };
             };
         };
     };

@@ -18,16 +18,19 @@
 params [["_class", "", [""]]];
 
 GVAR(flashlights) getOrDefaultCall [_class, {
-    private _items = ([_class] + (_class call CBA_fnc_switchableAttachments));
-    private _cfgWeapons = configFile >> "CfgWeapons";
+    private _items = [_class];
+    if (isClass (configFile >> "CfgWeapons" >> _class)) then {
+        _items append (_class call CBA_fnc_switchableAttachments); // Contains _class in the return
+    };
+    _items = _items arrayIntersect _items; // Prevent duplicate config lookups
 
     // if this item or any of the switchable items is a flashlight
     _items findIf {
-        private _weaponConfig = _cfgWeapons >> _x;
+        private _itemConfig = _x call CBA_fnc_getItemConfig;
 
         [
-            _weaponConfig >> "ItemInfo" >> "FlashLight",
-            _weaponConfig >> "FlashLight"
+            _itemConfig >> "ItemInfo" >> "FlashLight",
+            _itemConfig >> "FlashLight"
         ] findIf {
             isText (_x >> "ACE_Flashlight_Colour")
             || {!(getArray (_x >> "ambient") in [[], [0,0,0]]) && {getNumber (_x >> "irLight") == 0}}

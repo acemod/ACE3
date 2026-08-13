@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- * Get the Defualt animation for the unit
+ * Get the Default animation for the unit
  *
  * Arguments:
  * 0: unit <OBJECT>

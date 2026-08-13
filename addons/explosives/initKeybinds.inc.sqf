@@ -9,7 +9,7 @@
     closeDialog 0;
     createDialog "Rsc_ACE_PhoneInterface";
 
-    true
+    true // return
 }] call CBA_fnc_addKeybind; // Unbound
 
 ["ACE3 Equipment", QGVAR(detonateActiveClacker), LLSTRING(DetonateAllOnActive), {
@@ -17,34 +17,28 @@
     if !([ACE_player, objNull, ["isNotSwimming", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {};
 
     private _detonator = GVAR(activeTrigger);
-    if (_detonator == "" || !(_detonator in ([ACE_player] call FUNC(getDetonators)))) exitWith {};
+
+    if (_detonator == "" || {!(_detonator in (ACE_player call FUNC(getDetonators)))}) exitWith {};
 
     // When using a Dead Man's Switch, skip all other logic and just call fnc_onIncapacitated, since it already handles everything that is required to detonate all connected explosives
     if (_detonator == "ACE_DeadManSwitch") exitWith {
-        [ACE_player] call FUNC(onIncapacitated);
+        ACE_player call FUNC(onIncapacitated);
     };
 
-    private _range = getNumber (configFile >> "CfgWeapons" >> _detonator >> QGVAR(Range));
+    private _range = getNumber (configFile >> "CfgWeapons" >> _detonator >> QGVAR(range));
+    private _cfgAceTriggers = configFile >> "ACE_Triggers";
 
-    private _explosivesList = [];
     {
-        if (!isNull (_x select 0)) then {
-            private _required = getArray (configFile >> "ACE_Triggers" >> _x select 4 >> "requires");
-            if (_detonator in _required) then {
-                _explosivesList pushBack _x;
-            };
-        };
-    } forEach ([ACE_player] call FUNC(getPlacedExplosives));
+        [ACE_player, _range, _x, _detonator] call FUNC(detonateExplosive);
+    } forEach ((ACE_player call FUNC(getPlacedExplosives)) select {_detonator in (getArray (_cfgAceTriggers >> _x select 4 >> "requires"))});
 
-    [ACE_player, _range, _explosivesList, _detonator] call FUNC(detonateExplosiveAll);
-
-    true
+    true // return
 }] call CBA_fnc_addKeybind; // Unbound
 
 ["ACE3 Equipment", QGVAR(cycleActiveClacker), LLSTRING(CycleActiveTrigger), {
     if !([ACE_player, objNull, ["isNotSwimming", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {};
 
-    [ACE_player] call FUNC(cycleActiveTrigger);
+    ACE_player call FUNC(cycleActiveTrigger);
 
-    true
+    true // return
 }] call CBA_fnc_addKeybind; // Unbound

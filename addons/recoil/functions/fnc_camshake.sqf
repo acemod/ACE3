@@ -32,29 +32,34 @@ private _powerMod = ([0, -0.1, -0.1, 0, -0.2] select (["STAND", "CROUCH", "PRONE
 private _recoil = GVAR(recoilCache) getOrDefaultCall [_weapon + _muzzle, {
     private _config = configFile >> "CfgWeapons" >> _weapon;
 
-    private _recoil = if (_muzzle == _weapon) then {
+    private _recoilClass = if (_muzzle == _weapon) then {
         getText (_config >> "recoil")
     } else {
         getText (_config >> _muzzle >> "recoil")
     };
 
-    if (isClass (configFile >> "CfgRecoils" >> _recoil)) then {
-        _recoil = getArray (configFile >> "CfgRecoils" >> _recoil >> "kickBack");
+    private _recoil = [0, 0];
+    private _customShakeCoef = 1;
+    private _recoilConfig = configFile >> "CfgRecoils" >> _recoilClass;
+    if (isClass _recoilConfig) then {
+        _recoil = getArray (_recoilConfig >> "kickBack");
+
+        if (isNumber (_recoilConfig >> QGVAR(customShakeCoef))) then {
+            _customShakeCoef = getNumber (_recoilConfig >> QGVAR(customShakeCoef));
+        };
 
         if (count _recoil < 2) then {
             _recoil = [0, 0];
         };
-    } else {
-        _recoil = [0, 0];
     };
 
-    TRACE_3("Caching Recoil config",_weapon,_muzzle,_recoil);
+    TRACE_4("Caching Recoil config",_weapon,_muzzle,_recoil,_customShakeCoef);
 
     // Ensure format is correct
     _recoil resize [2, 0];
 
     // Parse numbers
-    _recoil apply { if (_x isEqualType 0) then { _x } else { call compile format ["%1", _x] } } // return
+    _recoil apply { if (_x isEqualType 0) then { _x } else { call compile format ["%1", _x] } } vectorMultiply _customShakeCoef // return
 }, true];
 
 private _powerCoef = RECOIL_COEF * linearConversion [0, 1, random 1, _recoil select 0, _recoil select 1, false];
@@ -62,7 +67,7 @@ private _powerCoef = RECOIL_COEF * linearConversion [0, 1, random 1, _recoil sel
 if (isWeaponRested _unit) then {_powerMod = _powerMod - 0.07};
 if (isWeaponDeployed _unit) then {_powerMod = _powerMod - 0.11};
 if (_weapon isEqualTo secondaryWeapon _unit) then {
-    _powerCoef = _powerCoef + 25.0;
+    _powerCoef = _powerCoef + GVAR(extraLauncherShake);
 };
 
 private _camshake = [

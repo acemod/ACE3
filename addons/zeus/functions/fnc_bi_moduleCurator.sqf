@@ -74,7 +74,7 @@ if (_activated) then {
                 _cfgPatches = configFile >> "cfgpatches";
                 for "_i" from 0 to (count _cfgPatches - 1) do {
                     _class = _cfgPatches select _i;
-                    if (isClass _class) then {_addons set [count _addons,configName _class];};
+                    if (isClass _class) then {_addons pushBack configName _class;};
                 };
                 // Modified by ace_zeus - bis_fnc_activateaddons will error if time > 0 so only call if at start
                 if (time <= 0) then { _addons call bis_fnc_activateaddons; };
@@ -127,7 +127,7 @@ if (_activated) then {
                     case (_ownerUID > 0): {
                         waitUntil {
                             sleep 0.01;
-                            {getPlayerUID _x == _ownerVar} count playableUnits > 0 || isNull _logic
+                            (playableUnits findIf {getPlayerUID _x == _ownerVar}) != -1 || isNull _logic
                         };
                     };
                     default {
@@ -189,7 +189,7 @@ if (_activated) then {
                     case (_ownerUID > 0): {
                         waitUntil {
                             sleep 0.01;
-                            {getPlayerUID _x == _ownerVar} count playableUnits == 0 || isNull _logic
+                            (playableUnits findIf {getPlayerUID _x == _ownerVar} == -1) || isNull _logic
                         };
                     };
                     default {
@@ -246,9 +246,9 @@ if (_activated) then {
             if (typeOf _x == "ModuleCuratorAddAddons_F") then {
                 _paramAddons = call compile ("[" + (_x getVariable ["addons",""]) + "]");
                 {
-                    if !(_x in _addons) then {_addons set [count _addons,_x];};
+                    _addons pushBackUnique _x;
                     {
-                        if !(_x in _addons) then {_addons set [count _addons,_x];};
+                        _addons pushBackUnique _x;
                     } forEach (unitAddons _x);
                 } forEach _paramAddons;
             };

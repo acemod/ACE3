@@ -143,22 +143,12 @@
             <Turkish>Ses</Turkish>
             <Ukrainian>Гучність</Ukrainian>
         </Key>
-        <Key ID="STR_ACE_Volume_Reduction">
-            <English>Reduction</English>
-            <French>Réduction</French>
-            <Spanish>Reducción</Spanish>
-            <Italian>Riduzione</Italian>
-            <Polish>Redukcja</Polish>
-            <Portuguese>Redução</Portuguese>
-            <Russian>Уменьшение</Russian>
-            <German>Reduzierung</German>
-            <Korean>감소</Korean>
-            <Japanese>低減</Japanese>
-            <Chinese>降低</Chinese>
-            <Chinesesimp>降低</Chinesesimp>
-            <Ukrainian>Зменшення</Ukrainian>
+        <Key ID="STR_ACE_Volume_ReductionDescriptionMusic">
+            <English>Reduce volume by this percentage.</English>
+            <Russian>Уменьшает громкость на этот процент.</Russian>
+            <Japanese>この割合で音量を低減します。</Japanese>
         </Key>
-        <Key ID="STR_ACE_Volume_ReductionDescription">
+        <Key ID="STR_ACE_Volume_ReductionDescriptionSound">
             <English>Reduce volume by this percentage.</English>
             <French>Réduit le volume de ce pourcentage.</French>
             <Spanish>Reducir el volumen este porcentaje.</Spanish>
@@ -173,6 +163,36 @@
             <Chinesesimp>使用此百分比来调整音量降低大小。</Chinesesimp>
             <Ukrainian>Зменшує гучність</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Volume_ReductionMusic">
+            <English>Reduction (Music)</English>
+            <French>Réduction (Musique)</French>
+            <Spanish>Reducción (Música)</Spanish>
+            <Italian>Riduzione (Musica)</Italian>
+            <Polish>Redukcja (Muzyka)</Polish>
+            <Portuguese>Redução (Música)</Portuguese>
+            <Russian>Уменьшение (Музыка)</Russian>
+            <German>Reduzierung (Musik)</German>
+            <Korean>감소 (음악)</Korean>
+            <Japanese>低減 (BGM)</Japanese>
+            <Chinese>降低 (音樂)</Chinese>
+            <Chinesesimp>降低 (音乐)</Chinesesimp>
+            <Ukrainian>Зменшення (музика)</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Volume_ReductionSound">
+            <English>Reduction (Sound Effects)</English>
+            <French>Réduction</French>
+            <Spanish>Reducción</Spanish>
+            <Italian>Riduzione</Italian>
+            <Polish>Redukcja</Polish>
+            <Portuguese>Redução</Portuguese>
+            <Russian>Уменьшение</Russian>
+            <German>Reduzierung</German>
+            <Korean>감소</Korean>
+            <Japanese>低減 (効果音)</Japanese>
+            <Chinese>降低</Chinese>
+            <Chinesesimp>降低</Chinesesimp>
+            <Ukrainian>Зменшення</Ukrainian>
+        </Key>
         <Key ID="STR_ACE_Volume_RemindIfLowered">
             <English>Reminder if lowered</English>
             <French>Rappel si réduit</French>
@@ -183,7 +203,7 @@
             <Russian>Напоминать о снижении громкости</Russian>
             <German>Erinnere wenn verringert</German>
             <Korean>감소 시 알림</Korean>
-            <Japanese>低減時に通知</Japanese>
+            <Japanese>低減中のリマインド</Japanese>
             <Chinese>降低音量時是否提醒</Chinese>
             <Chinesesimp>降低音量时是否提醒</Chinesesimp>
             <Turkish>Eğer Düşükse Hatırlat</Turkish>
@@ -199,7 +219,7 @@
             <Russian>Ежеминутное напоминание о сниженной громкости</Russian>
             <German>Erinnert dich jede Minute, wenn deine Lautstärke verringert wurde.</German>
             <Korean>음량이 감소되면 매 분 마다 알려줍니다</Korean>
-            <Japanese>音量を低減時は毎分ごとに通知します。</Japanese>
+            <Japanese>音量の低減中に毎分リマインドします。</Japanese>
             <Chinese>開啟後會每分鐘警告一次你的音量已被降低。</Chinese>
             <Chinesesimp>开启后会每分钟警告一次你的音量已被降低。</Chinesesimp>
             <Turkish>Eğer ses düşükse her dakika hatırlatır.</Turkish>

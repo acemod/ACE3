@@ -1070,6 +1070,7 @@
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityMedicIfMedic">
             <English>Medic's Equipment First [If medic role]</English>
             <French>Équipement de l'infirmier d'abord [Si l'infirmier joue un rôle].</French>
+            <Spanish>Primero Equipamiento del Médico [Si tiene el rol de médico]</Spanish>
             <Italian>Prima le risorse del medico [Se ruolo medico]</Italian>
             <Russian>Сначала медикаменты врача [Если медик]</Russian>
             <German>Ausrüstung des Sanitäters zuerst [Wenn Sanitäter]</German>
@@ -1948,6 +1949,23 @@
             <Chinesesimp>此人（%1）处于清醒状态，因此无法被装载</Chinesesimp>
             <Turkish>Bu kişi (% 1) uyanık ve yüklenemiyor</Turkish>
             <Ukrainian>Боєць (%1) у свідомості і не може бути завантажений</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_CanNotLoadDead">
+            <English>This person (%1) is dead and cannot be loaded</English>
+            <Czech>Tato osoba (%1) je mrtvá a nemůže být naložena</Czech>
+            <French>%1 est mort et ne peut être embarqué.</French>
+            <Spanish>Esta persona (%1) está muerta y no puede ser cargado</Spanish>
+            <Italian>Questa persona (%1) è morta e non può essere caricata.</Italian>
+            <Polish>Ta osoba (%1) jest martwa i nie może zostać załadowana</Polish>
+            <Portuguese>Esta pessoa (%1) está morta e não pode ser carregada</Portuguese>
+            <Russian>Боец (%1) мертв и не может быть погружен</Russian>
+            <German>Diese Person (%1) ist tot und kann nicht verladen werden</German>
+            <Korean>이 사람 (%1) 은(는) 사망하여 태우지 못합니다</Korean>
+            <Japanese>患者 (%1) は死亡しており、積み込めない</Japanese>
+            <Chinese>此人(%1)已死亡，无法被装载</Chinese>
+            <Chinesesimp>此人（%1）已死亡，无法被装载</Chinesesimp>
+            <Turkish>Bu kişi (%1) ölü ve yüklenemiyor</Turkish>
+            <Ukrainian>Боєць (%1) мертвий і не може бути завантажений</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Carry">
             <English>Carry</English>
@@ -3328,6 +3346,7 @@
         <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_Description">
             <English>Controls where Adenosine can be used.</English>
             <French>Contrôle où l'Adénosine peut être utilisée.</French>
+            <Spanish>Controla dónde puede ser usada la Adenosina.</Spanish>
             <Italian>Controlla dove si può usare l'Adenosina.</Italian>
             <Russian>Контролирует, где можно использовать Аденозин.</Russian>
             <German>Legt fest, wo Adenosin benutzt werden kann.</German>
@@ -3339,6 +3358,7 @@
         <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_DisplayName">
             <English>Locations Adenosine</English>
             <French>Lieux d'utilisation de l'adénosine</French>
+            <Spanish>Ubicaciones de Adenosina</Spanish>
             <Italian>Luoghi Adenosina</Italian>
             <Russian>Места использования Аденозина</Russian>
             <German>Orte für Adenosin</German>
@@ -3412,6 +3432,7 @@
         <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_Description">
             <English>Controls where Morphine can be used.</English>
             <French>Contrôle où la morphine peut être utilisée.</French>
+            <Spanish>Controla dónde puede ser usada la Morfina</Spanish>
             <Italian>Controlla dove si può usare la Morfina.</Italian>
             <Russian>Контролирует, где можно использовать Морфин.</Russian>
             <German>Legt fest, wo Morphin benutzt werden kann.</German>
@@ -3423,6 +3444,7 @@
         <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_DisplayName">
             <English>Locations Morphine</English>
             <French>Lieux d'utilisation de la morphine</French>
+            <Spanish>Ubicación de Morfina</Spanish>
             <Italian>Luoghi Morfina</Italian>
             <Russian>Места использования Морфина</Russian>
             <German>Orte für Morphin</German>
@@ -3469,6 +3491,7 @@
         <Key ID="STR_ACE_Medical_Treatment_LocationSplint_Description">
             <English>Controls where Splints can be used.</English>
             <French>Contrôle l'endroit où les attelles peuvent être utilisées.</French>
+            <Spanish>Controla dónde pueden ser usadas la Férula</Spanish>
             <Italian>Controlla dove si possono applicare Gessature.</Italian>
             <Russian>Контролирует, где можно использовать шины.</Russian>
             <German>Legt fest, wo eine Schiene benutzt werden kann.</German>
@@ -3480,6 +3503,7 @@
         <Key ID="STR_ACE_Medical_Treatment_LocationSplint_DisplayName">
             <English>Locations Splint</English>
             <French>Emplacement des attelles</French>
+            <Spanish>Ubicación de Férula</Spanish>
             <Italian>Luoghi Gessature</Italian>
             <Russian>Места наложения шины</Russian>
             <German>Orte für Schiene</German>
@@ -3575,6 +3599,7 @@
         <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_Description">
             <English>Training level required to use Adenosine.</English>
             <French>Niveau de formation requis pour utiliser l'Adénosine.</French>
+            <Spanish>Nivel de capacitación requerido para usar Adenosina.</Spanish>
             <Italian>Formazione richiesta per iniettare Adenosina.</Italian>
             <Russian>Уровень подготовки, необходимый для использования Аденозина</Russian>
             <German>'Fähigkeiten-Level', das benötigt wird, um Adenosin zu benutzen.</German>
@@ -3586,6 +3611,7 @@
         <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_DisplayName">
             <English>Allow Adenosine</English>
             <French>Autoriser l'adénosine</French>
+            <Spanish>Permitir Adenosina</Spanish>
             <Italian>Permetti Adenosina</Italian>
             <Russian>Доступ к Аденозину</Russian>
             <German>Erlaube Adenosin</German>
@@ -3663,6 +3689,7 @@
         <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_Description">
             <English>Training level required to use Morphine.</English>
             <French>Niveau de formation requis pour l'utilisation de la morphine.</French>
+            <Spanish>Nivel de capacitación requerido para usar Morfina.</Spanish>
             <Italian>Formazione richiesta per iniettare Morfina.</Italian>
             <Russian>Уровень подготовки, необходимый для использования Морфина.</Russian>
             <German>'Fähigkeiten-Level', das benötigt wird, um Morphin zu benutzen.</German>
@@ -3674,6 +3701,7 @@
         <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_DisplayName">
             <English>Allow Morphine</English>
             <French>Autoriser la morphine</French>
+            <Spanish>Permitir Morfina</Spanish>
             <Italian>Permetti Morfina</Italian>
             <Russian>Доступ к Морфину</Russian>
             <German>Erlaube Morphin</German>
@@ -3720,6 +3748,7 @@
         <Key ID="STR_ACE_Medical_Treatment_MedicSplint_Description">
             <English>Training level required to use Splint.</English>
             <French>Niveau de formation requis pour l'utilisation de l'attelle.</French>
+            <Spanish>Nivel de capacitación requerido para usar Férula</Spanish>
             <Italian>Formazione richiesta per applicare Gessature.</Italian>
             <Russian>Уровень подготовки, необходимый для использования шины.</Russian>
             <German>'Fähigkeiten-Level', das benötigt wird, um eine Schiene zu benutzen.</German>
@@ -3731,6 +3760,7 @@
         <Key ID="STR_ACE_Medical_Treatment_MedicSplint_DisplayName">
             <English>Allow Splint</English>
             <French>Accès aux attelles</French>
+            <Spanish>Permitir Férula</Spanish>
             <Italian>Permetti Gessature</Italian>
             <Russian>Доступ к наложению шины</Russian>
             <German>Erlaube Schiene</German>
@@ -3916,6 +3946,7 @@
         <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_Description">
             <English>Makes Check Pulse action give a numerical value based on setting</English>
             <French>L'action de vérification du pouls fournit une valeur numérique, en fonction de vos paramètres.</French>
+            <Spanish>Hace que la acción Comprobar Pulso de un valor numérico dependiendo de esta opción</Spanish>
             <Italian>L'azione di controllare il polso darà un risultato numerico a seconda di questo settaggio.</Italian>
             <Russian>Заставляет действие контрольного импульса выдавать числовое значение, основанное на настройке</Russian>
             <German>Die Aktion "Puls überprüfen" liefert einen numerischen Wert abhängig von der Einstellung</German>
@@ -3927,6 +3958,7 @@
         <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_DisplayName">
             <English>Numerical Pulse</English>
             <French>Pouls numérique</French>
+            <Spanish>Pulso Numérico</Spanish>
             <Italian>Frequenza Cardiaca Numerica</Italian>
             <Russian>Числовое значение пульса</Russian>
             <German>Numerischer Puls</German>

@@ -287,4 +287,11 @@ class CfgWeapons {
     class RHS_jetpilot_usaf: H_HelmetB {
         ACE_Protection = 1;
     };
+
+    //Fire Protection
+    class rhs_uniform_cu_ocp;
+    class rhs_uniform_FROG01_d: rhs_uniform_cu_ocp {
+        ace_fire_protection = 0.2;
+    };
+    //rhs_uniform_FROG01_wd inherits from rhs_uniform_FROG01_d
 };

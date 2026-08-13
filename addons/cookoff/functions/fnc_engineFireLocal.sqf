@@ -56,7 +56,7 @@ if (hasInterface) then {
     };
 
     // Spawn smoke
-    _smoke = createVehicleLocal ["#particlesource", ASLToAGL getPosASL _vehicle, [], 0, "CAN_COLLIDE"];;
+    _smoke = createVehicleLocal ["#particlesource", ASLToAGL getPosASL _vehicle, [], 0, "CAN_COLLIDE"];
     _smoke setParticleClass "ObjectDestructionSmoke1_2Smallx";
     _smoke attachTo [_vehicle, _position];
 };
@@ -64,7 +64,7 @@ if (hasInterface) then {
 [{
     (_this select 0) params ["_vehicle", "_smoke", "_endTime"];
 
-    if (alive _vehicle && {_vehicle getHitPointDamage "HitEngine" >= 0.9} && {CBA_missionTime < _endTime}) exitWith {};
+    if (alive _vehicle && {_vehicle getHitPointDamage "HitEngine" >= 0.9} && {CBA_missionTime < _endTime} && {!(_vehicle getVariable [QGVAR(interruptEngineFire), false])}) exitWith {};
 
     (_this select 1) call CBA_fnc_removePerFrameHandler;
 
@@ -72,7 +72,11 @@ if (hasInterface) then {
 
     if (!isServer || {isNull _vehicle}) exitWith {};
 
-    // Reset variable, so engine can smoke again in the future
+    // Reset variables, so engine can smoke again in the future
+    if (_vehicle getVariable [QGVAR(interruptEngineFire), false]) then {
+        _vehicle setVariable [QGVAR(interruptEngineFire), nil, true];
+    };
+
     _vehicle setVariable [QGVAR(isEngineSmoking), nil, true];
 
     private _jipID = _vehicle getVariable QGVAR(engineFireJipID);

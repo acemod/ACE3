@@ -1,0 +1,3 @@
+UNIFORM_SLEEVES(cwr3_b_uk_uniform_olive,cwr3_b_uk_uniform_olive_rolled);
+UNIFORM_SLEEVES(cwr3_b_uk_uniform_dpm,cwr3_b_uk_uniform_dpm_rolled);
+UNIFORM_SLEEVES(cwr3_b_uk_uniform_dpm_weathered,cwr3_b_uk_uniform_dpm_weathered_rolled);

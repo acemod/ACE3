@@ -15,7 +15,7 @@
  * Public: No
  */
 
-GVAR(enableStaminaBarRealized) = GVAR(enabled) && GVAR(enableStaminaBar) && {!(missionNamespace getVariable [QEGVAR(ui,hideHud), false])};
+GVAR(enableStaminaBarRealized) = GVAR(enabled) && GVAR(enableStaminaBar) && {!GVAR(uiHidden)};
 TRACE_1("updateStaminaBar",GVAR(enableStaminaBarRealized));
 
 private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];

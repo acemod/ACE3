@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Static Weapon <OBJECT>
- * 1: Default magazine to load (unused) (default: "")
+ * 1: Default magazine to load (unused)
  *
  * Return Value:
  * If the player can load the selected ammo for the static weapon's <BOOL>

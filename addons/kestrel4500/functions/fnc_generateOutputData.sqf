@@ -61,7 +61,7 @@ private _textCenterLine6 = "";
 private _windSpeed = call FUNC(measureWindSpeed);
 private _windDir = (wind select 0) atan2 (wind select 1);
 
-private _playerDir = getDir ACE_player;
+private _playerDir = (ACE_player call CBA_fnc_headDir) select 0;
 private _playerAltitude = (getPosASL ACE_player) select 2;
 
 private _temperature = _playerAltitude call EFUNC(weather,calculateTemperatureAtHeight);

@@ -58,7 +58,11 @@ if (_flashlight == "") then {
     private _mousePos = GVAR(mousePos);
 
     //flashlight settings
-    private _cfg = configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> "FlashLight";
+    private _cfg = _flashlight call CBA_fnc_getItemConfig;
+    if (isClass (_cfg >> "ItemInfo")) then {
+        _cfg = _cfg >> "ItemInfo";
+    };
+    _cfg = _cfg >> "FlashLight";
     private _size = [_cfg >> "ACE_Flashlight_Size", "number", DEFAULT_FLASHLIGHT_SIZE] call CBA_fnc_getConfigEntry;
     private _flashTex = [_cfg >> "ACE_Flashlight_Beam", "text", QPATHTOF(UI\Flashlight_beam_white_ca.paa)] call CBA_fnc_getConfigEntry;
     private _beamSize = (safeZoneW/safeZoneWAbs) * _screenSize / _size;

@@ -1,4 +1,4 @@
-private _category = format ["ACE %1", localize LSTRING(DisplayName)];
+private _category = [ELSTRING(common,ACEKeybindCategoryWeapons), LSTRING(DisplayName)];
 
 [
     QGVAR(enabled), "CHECKBOX",

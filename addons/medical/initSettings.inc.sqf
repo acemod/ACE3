@@ -46,3 +46,12 @@
     [1, 30, 1.5, 1],
     true
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(blockInputOnUiEvent),
+    "SLIDER",
+    [LSTRING(blockInputOnUiEvent_DisplayName), LSTRING(blockInputOnUiEvent_Description)],
+    [ELSTRING(medical,Interface_Category), "str_a3_mdl_category_misc"],
+    [0, 3, 1, 1],
+    0
+] call CBA_fnc_addSetting;

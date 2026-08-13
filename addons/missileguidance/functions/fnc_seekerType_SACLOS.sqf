@@ -33,6 +33,10 @@ private _projPos = getPosASL _projectile;
 private _lookDirection = switch (_dirMode) do {
     case SCALOS_DIR_WEAPON: { // Player/StaticWeapon
         _shooterPos = eyePos _shooter;
+        if (_weapon isNotEqualTo (currentWeapon _shooter)) then {
+            if (isNil "CBA_disposable_usedLaunchers") exitWith {};
+            _weapon = CBA_disposable_usedLaunchers getOrDefault [_weapon, _weapon];
+        };
         _shooter weaponDirection _weapon
     };
     case SCALOS_DIR_ANIM: { // use animationSourcePhase
@@ -44,7 +48,7 @@ private _lookDirection = switch (_dirMode) do {
         _shooterPos = _shooter modelToWorldVisualWorld getPilotCameraPosition _shooter;
         private _trackingTarget = getPilotCameraTarget _shooter;
         _trackingTarget params ["_isTracking", "_trackingPos"];
-        // Because ARMA doesnt update the camera rotation if you are locked on immediatly, we have to calculate the look direction manually or else the SACLOS target will be wrong, especially if shooter is moving
+        // Because ARMA doesn't update the camera rotation if you are locked on immediately, we have to calculate the look direction manually or else the SACLOS target will be wrong, especially if shooter is moving
         if (_isTracking) then {
             vectorNormalized (_trackingPos vectorDiff _shooterPos);
         } else {
@@ -61,7 +65,7 @@ private _distanceToProj = _shooterPos vectorDistance _projPos;
 private _testPointVector = vectorNormalized (_projPos vectorDiff _shooterPos);
 private _testDotProduct = (_lookDirection vectorDotProduct _testPointVector);
 
-private _testIntersections = lineIntersectsSurfaces [_shooterPos, _projPos, _shooter];
+private _testIntersections = lineIntersectsSurfaces [_shooterPos, _projPos, _shooter, _projectile];
 
 if ((_testDotProduct < (cos _seekerAngle)) || {_testIntersections isNotEqualTo []}) exitWith {
     // out of LOS of seeker

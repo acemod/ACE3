@@ -85,6 +85,7 @@
         <Key ID="STR_ACE_IntelItems_Header_Tooltip">
             <English>Defines the header for the intel item. If the value is empty (""), the object's display name is used.</English>
             <French>Définit l'en-tête de l'élément intel. Si la valeur est vide (""),  le nom d'affichage de l'objet est utilisé.</French>
+            <Spanish>Define la cabecera para el Objeto de Inteligencia. Si el valor está vacío (""), se usa el nombre mostrado del objeto.</Spanish>
             <Russian>Определяет заголовок для элемента данных. Если значение пустое (""), используется отображаемое имя объекта.</Russian>
             <Korean>인텔 아이템의 헤더를 정의합니다. 값이 비어 있다면("") 오브젝트의 표시명이 사용됩니다.</Korean>
             <Japanese>インテルアイテムのヘッダーを定義します。値が空 ("")の場合、オブジェクトの表示名が使用されます。</Japanese>

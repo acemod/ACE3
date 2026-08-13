@@ -71,6 +71,12 @@
             <Chinesesimp>牵引</Chinesesimp>
             <Ukrainian>Буксирування</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Towing_setting_enabled_description">
+            <English>Enables ACE Towing interactions and behavior.</English>
+            <German>Aktiviert ACE-Abschleppinteraktionen und -verhalten.</German>
+            <Russian>Включает взаимодействие и поведение ACE буксировки</Russian>
+            <Japanese>ACEけん引のインタラクションと動作を有効化します。</Japanese>
+        </Key>
         <Key ID="STR_ACE_Towing_start12">
             <English>Attach Tow Rope (12.2m)</English>
             <French>Attacher la corde (12,2 m)</French>

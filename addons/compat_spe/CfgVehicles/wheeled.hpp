@@ -49,7 +49,6 @@ class SPE_OpelBlitz_Ambulance: SPE_OpelBlitz_base {
 
 class SPE_OpelBlitz_Repair: SPE_OpelBlitz_base {
     EGVAR(repair,canRepair) = 1;
-    EGVAR(rearm,defaultSupply) = 1200;
 };
 
 class SPE_OpelBlitz_Ammo: SPE_OpelBlitz_base {

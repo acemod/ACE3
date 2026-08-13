@@ -28,3 +28,6 @@ if ("ace_movement" call EFUNC(common,isModLoaded)) then {
     private _mass = (GVAR(flagItemCache) get _item) select 5;
     [_unit, _unit, -_mass] call EFUNC(movement,addLoadToUnitContainer);
 };
+
+// Provide hook
+[QGVAR(stopCarry), [_unit, _item]] call CBA_fnc_localEvent;

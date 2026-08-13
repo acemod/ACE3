@@ -27,14 +27,22 @@ if (_distance > 50) exitWith {};
 // Calculate explosion power
 // This formula was once revealed to me in a dream
 private _cfg = configOf _vehicle;
-private _explosionPower = getNumber (_cfg >> "secondaryExplosion");
-if (_explosionPower == 0) exitWith {};
+private _secondaryExplosion = getNumber (_cfg >> "secondaryExplosion");
+if (_secondaryExplosion == 0) exitWith {};
 
-if (_explosionPower < 0) then {
-    private _fuelCargoPower = (getFuelCargo _vehicle max 0) * getNumber (_cfg >> "transportFuel") * 0.1;
-    private _fuelPower = fuel _vehicle * getNumber (_cfg >> "fuelCapacity") * 0.1;
+private _explosionPower = _secondaryExplosion;
+if (_secondaryExplosion < 0) then {
+    private _ammoCargoPower = 0;
+    private _transportAmmo = getNumber (_cfg >> "transportAmmo");
+    if (_transportAmmo > 0) then {
+        private _ammoCargo = if (["ace_rearm"] call EFUNC(common,isModLoaded) && {EGVAR(rearm,enabled)}) then {
+            1 // ignoring rearm level
+        } else {
+            getAmmoCargo _vehicle max 0
+        };
+        _ammoCargoPower = _ammoCargo * _transportAmmo * 0.05;
+    };
 
-    private _ammoCargoPower = (getAmmoCargo _vehicle max 0) * getNumber (_cfg >> "transportAmmo") * 0.05;
     private _ammoPower = 0;
     private _magCache = createHashMap;
     {
@@ -47,10 +55,11 @@ if (_explosionPower < 0) then {
         _ammoPower = _ammoPower + _hit * _count * 0.015;
     } forEach magazinesAmmoFull _vehicle;
 
-    _explosionPower = abs _explosionPower * (_ammoCargoPower + _fuelCargoPower + _fuelPower + _ammoPower);
+    _explosionPower = abs _secondaryExplosion * (_ammoCargoPower + _ammoPower);
 };
 
 private _powerCoef = getNumber (_cfg >> "fuelExplosionPower");
+TRACE_5("VehicleKilled",_vehicle,_distance,_secondaryExplosion,_explosionPower,_powerCoef);
 
 // A low explosion power causes no immediate audible explosion
 // Number + coef mechanics found through extensive testing

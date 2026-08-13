@@ -21,7 +21,7 @@ params ["_projectile", "_cameraArray", "_shooter", "_switchOnFireInit"];
 _cameraArray params ["_enabled", "_fovLevels", "_initialFOV", "_thermalTypes", "_initialThermalType", "_switchOnFire", "_lerpFOV", "_fovChangeTime", "", "_gimbalData", "_reticleData", "_designating"];
 _gimbalData params ["_hasGimbal", "_maxGimbalX", "_maxGimbalY", "_gimbalSpeedX", "_gimbalSpeedY", "_initGimbalAngleX", "_initGimbalAngleY", "_gimbalZoomSpeedModifiers"];
 
-if !(_enabled) exitWith {};
+if !(_enabled) exitWith { objNull };
 
 private _activeCameraNamespace = [] call CBA_fnc_createNamespace;
 _activeCameraNamespace setVariable [QGVAR(fovLevels), _fovLevels];

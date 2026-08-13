@@ -7,7 +7,7 @@
  * HandleDamage EH <ARRAY>
  *
  * Return Value:
- * Damage to be inflicted (can be nil) <NUMBER>
+ * Damage to be inflicted (can be nil) <NUMBER or NIL>
  *
  * Example:
  * _this call ace_cookoff_fnc_handleDamageBox

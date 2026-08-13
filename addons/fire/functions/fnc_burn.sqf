@@ -45,6 +45,13 @@ if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), t
     TRACE_1("unit is invulnerable",_unit);
 };
 
+private _protection = getNumber (configFile >> "CfgWeapons" >> uniform _unit >> QGVAR(protection));
+if (_protection == 1) exitWith {
+    TRACE_2("unit's uniform is immune to fire",_unit,uniform _unit);
+};
+
+_intensity = _intensity * (1 - _protection);
+
 private _eyePos = eyePos _unit;
 
 // Check if unit is mostly submerged in water

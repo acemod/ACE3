@@ -25,7 +25,9 @@ if (GVAR(currentApplicationPage) == 1) then {
     _theMap ctrlMapAnimAdd [0, DUMMY_ZOOM, DUMMY_POS];
     ctrlMapAnimCommit _theMap;
     private _size = 412 * _mapSize;
-    _theMap drawIcon [QUOTE(PATHTO_R(images\compass_starInverted.paa)), [1,1,1,1], DUMMY_POS, _size, _size, (-1 * (([ACE_player] call CBA_fnc_headDir) select 0)), '', 0 ];
+    private _headDir = ([ACE_player] call CBA_fnc_headDir) select 0;
+    if (GVAR(settingShowMagneticNorth)) then { _headDir = _headDir call EFUNC(common,getMagneticBearing); };
+    _theMap drawIcon [QUOTE(PATHTO_R(images\compass_starInverted.paa)), [1,1,1,1], DUMMY_POS, _size, _size, -_headDir, '', 0 ];
     _theMap drawIcon [QUOTE(PATHTO_R(images\compass_needle.paa)), [0.533,0.769,0.76,1], DUMMY_POS, _size, _size, 0, '', 0 ];
 
     if (GVAR(currentWaypoint) != -1) then {

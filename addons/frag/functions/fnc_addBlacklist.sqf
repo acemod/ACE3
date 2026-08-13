@@ -19,7 +19,7 @@
 params [["_projectile", objNull, [objNull]]];
 TRACE_2("addBlackList",_projectile,typeOf projectile);
 
-if (isNull _projectile || {!isClass (configFile >> "CfgAmmo" >> (typeOf _projectile))}) exitWith {
+if (isNull _projectile || {!isClass configOf _projectile}) exitWith {
     TRACE_1("Invalid projectile",_this);
     false
 };

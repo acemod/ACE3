@@ -40,7 +40,7 @@ TRACE_1("params",_this);
     private _vehicle = vehicle ACE_player;
     TRACE_2("",_vehicle,typeOf _vehicle);
     if ((alive ACE_player) && {_vehicle != ACE_player}) then {
-        private _turretPath = if (ACE_player == (driver _vehicle)) then {[-1]} else {ACE_player call CBA_fnc_turretPath};
+        private _turretPath = _vehicle unitTurret ACE_player;
         TRACE_1("",_turretPath);
         if (_turretPath isNotEqualTo []) then {
             private _currentWeapon = _vehicle currentWeaponTurret _turretPath;

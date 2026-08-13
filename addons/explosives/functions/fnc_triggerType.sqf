@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
- * Gets the types of triggers associated with the explosive
+ * Gets the types of triggers associated with the explosive.
  *
  * Arguments:
  * 0: Explosive magazine <STRING>
@@ -10,19 +10,18 @@
  * Supported triggers as ACE_Triggers config entries <ARRAY>
  *
  * Example:
- * ["SatchelCharge_Remote_Mag"] call ACE_Explosives_fnc_TriggerType
+ * "SatchelCharge_Remote_Mag" call ace_explosives_fnc_triggerType
  *
  * Public: Yes
  */
 
-params ["_magazineClassname"];
-TRACE_1("params",_magazineClassname);
+params [["_magazine", "", [""]]];
+TRACE_1("params",_magazine);
 
-private _result = [];
-private _config = getArray (configFile >> "CfgMagazines" >> _magazineClassname >> "ACE_Triggers" >> "SupportedTriggers");
-private _count = count _config;
-
-for "_index" from 0 to (_count - 1) do {
-    _result set [_index, configFile >> "ACE_Triggers" >> (_config select _index)];
+if (_magazine == "") exitWith {
+    [] // return
 };
-_result
+
+private _cfgAceTriggers = configFile >> "ACE_Triggers";
+
+getArray (configFile >> "CfgMagazines" >> _magazine >> "ACE_Triggers" >> "SupportedTriggers") apply {_cfgAceTriggers >> _x} // return

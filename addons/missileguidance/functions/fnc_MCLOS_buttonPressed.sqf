@@ -26,7 +26,7 @@ if ((isNull objectParent _player) || {_player call CBA_fnc_canUseWeapon}) then {
     if (_currentWeapon != "") then { _weapons pushBack _currentWeapon };
 } else {
     _shooter = vehicle _player;
-    private _turretPath = if (_player == (driver _shooter)) then {[-1]} else {_player call CBA_fnc_turretPath};
+    private _turretPath = _shooter unitTurret _player;
     _weapons = _shooter weaponsTurret _turretPath;
 };
 

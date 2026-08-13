@@ -46,4 +46,16 @@ class CfgWeapons {
             };
         };
     };
+#ifdef CREATE_MOCK_PLATFORMS
+    class arifle_MX_Black_F;
+    class GVAR(mock_gl): arifle_MX_Black_F {
+        scope = 1;
+        scopeArsenal = 1;
+        magazineWell[] = {};
+        magazines[] = { QGVAR(mock_airburst_mag) };
+        modes[] = {"Single"};
+        discreteDistance[] = {100};
+        discreteDistanceInitIndex = 0;
+    };
+#endif
 };

@@ -38,7 +38,7 @@ if (isNil "_cargo") then {
     };
 };
 
-// If passed arguement is "true", add all items
+// If passed argument is "true", add all items
 if (_items isEqualType true) then {
     if (_items) then {
         private _weapons = _cargo get IDX_VIRT_WEAPONS;

@@ -2,6 +2,15 @@ TRACE_1("",QUOTE(ADDON));
 
 PREP(aceRearmGetCarryMagazines);
 
+PREP(isModEnabled);
+
+PREP(autofire_enable);
+PREP(autofire_disable);
+PREP(autofire_canEnable);
+PREP(autofire_canDisable);
+PREP(autofire_fire);
+PREP(autofire_onReload);
+
 PREP(ai_handleFired);
 PREP(ai_handleGetIn);
 PREP(ai_reload);
@@ -15,10 +24,13 @@ PREP(assemble_deployWeapon);
 PREP(assemble_deployWeaponModifier);
 PREP(assemble_pickupTripod);
 PREP(assemble_pickupWeapon);
+PREP(assemble_startDeployTripod);
 
 PREP(canGetIn);
-
+PREP(deployCancel);
+PREP(deployConfirm);
 PREP(getCarryMagazine);
+PREP(handleScrollWheel);
 PREP(proxyWeapon);
 
 PREP(getLoadActions);

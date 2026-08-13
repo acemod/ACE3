@@ -24,13 +24,13 @@ class CfgAmmo {
     class x_submunition: SubmunitionBase { // this ammo can be fired normally
         ace_missile_clgp_deployCondition = "your_fnc"; // function that returns true when it should be triggered
         ace_missile_clgp_artilleryDrag = 1;
-        submunitionAmmo = "x_missle";
+        submunitionAmmo = "x_missile";
         class Eventhandlers {
             fired = "call ace_missile_clgp_fnc_submunition_ammoFired"; // need to add the EH yourself to all ammos
         };
     };
 
-    class x_missle: MissileBase {
+    class x_missile: MissileBase {
         class ace_missileguidance {
             enabled = 2;
             // rest of normal ace missile guidance config

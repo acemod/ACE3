@@ -1,13 +1,5 @@
 #include "script_component.hpp"
 
-#pragma hemtt flag pe23_ignore_has_include
-#if __has_include("\z\ace\addons\nomedical\script_component.hpp")
-#define PATCH_SKIP "No Medical"
-#endif
-
-#ifdef PATCH_SKIP
-ACE_PATCH_NOT_LOADED(ADDON,PATCH_SKIP)
-#else
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
@@ -15,6 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_medical_engine"};
+        skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         authors[] = {"Glowbal", "KoffeinFlummi"};
         url = ECSTRING(main,URL);
@@ -24,5 +17,3 @@ class CfgPatches {
 
 #include "ACE_settings.hpp"
 #include "CfgEventHandlers.hpp"
-
-#endif

@@ -12,6 +12,7 @@ texHeaders.bin
 *.swp
 *.swo
 *.biprivatekey
+*.hemttprivatekey
 Thumbs.db
 CHANGELOG.md
 sqfvm.exe
