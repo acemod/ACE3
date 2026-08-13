@@ -17,7 +17,7 @@ class RscInGameUI {
         onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscUnitInfo"",'IGUI')] call (uiNamespace getvariable 'BIS_fnc_initDisplay'); uiNamespace setVariable [ARR_2('ACE_dlgAircraft',_this select 0)];);
     };
 
-    class RscUnitInfoAir: RscUnitInfoAirNoWeapon {
+    class RscUnitInfoAir: RscUnitInfo {
         onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscUnitInfo"",'IGUI')] call (uiNamespace getvariable 'BIS_fnc_initDisplay'); uiNamespace setVariable [ARR_2('ACE_dlgAircraft',_this select 0)];);
     };
 
