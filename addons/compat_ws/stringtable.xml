@@ -37,7 +37,7 @@
             <Hungarian>12 Gauge 20Rnd Slug 300gr Tan Mag</Hungarian>
             <Ukrainian>12 Gauge 20Rnd Slug 300gr Tan Mag</Ukrainian>
         </Key>
-            <Key ID="STR_ACE_Compat_WS_20Rnd_12Gauge_AA40_Slug_Snake_lxWS_Name">
+        <Key ID="STR_ACE_Compat_WS_20Rnd_12Gauge_AA40_Slug_Snake_lxWS_Name">
             <English>12 Gauge 20Rnd Slug 300gr Snake Mag</English>
             <Czech>12 Gauge 20Rnd Slug 300gr Snake Mag</Czech>
             <French>12 Gauge 20Rnd Slug 300gr Snake Mag</French>
@@ -73,7 +73,7 @@
             <Hungarian>12 Gauge 8Rnd Slug 300gr Mag</Hungarian>
             <Ukrainian>12 Gauge 8Rnd Slug 300gr Mag</Ukrainian>
         </Key>
-            <Key ID="STR_ACE_Compat_WS_8Rnd_12Gauge_AA40_Slug_Tan_lxWS_Name">
+        <Key ID="STR_ACE_Compat_WS_8Rnd_12Gauge_AA40_Slug_Tan_lxWS_Name">
             <English>12 Gauge 8Rnd Slug 300gr Tan Mag</English>
             <Czech>12 Gauge 8Rnd Slug 300gr Tan Mag</Czech>
             <French>12 Gauge 8Rnd Slug 300gr Tan Mag</French>
