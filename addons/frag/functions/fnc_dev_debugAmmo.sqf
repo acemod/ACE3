@@ -7,8 +7,7 @@
  * Arguments:
  * 0: Log ammo types that wouldn't normally frag <BOOL> (default: false)
  * 1: Only print ammo without ACE_frag entries, inherited or otherwise <BOOL> (default: true)
- * 2: Only export ammo classes of classes referenced in CfgMagazines and their
- *    submunitions <BOOL> (default: false)
+ * 2: Only export ammo classes of classes referenced in CfgMagazines and their submunitions <BOOL> (default: false)
  * 3: Force a CSV format on debug print. <BOOL> (default: false)
  *
  * Return Value:
