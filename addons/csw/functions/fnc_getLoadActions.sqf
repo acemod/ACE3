@@ -47,7 +47,7 @@ private _actions = [];
     private _text = if (_isBeltLinking) then {
         format [LLSTRING(actionLink), _displayName];
     } else {
-        format [LLSTRING(loadX), _displayName];
+        format [LLSTRING(actionLoad), _displayName];
     };
 
     private _action = [format ["load_%1", _forEachIndex], _text, _picture, _statement, _condition, {}, _x] call EFUNC(interact_menu,createAction);

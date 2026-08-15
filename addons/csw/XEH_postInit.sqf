@@ -1,6 +1,5 @@
 #include "script_component.hpp"
 
-GVAR(vehicleMagCache) = createHashMap;
 GVAR(deployPFH) = -1;
 
 ["CBA_settingsInitialized", {
@@ -41,6 +40,7 @@ GVAR(deployPFH) = -1;
 [QGVAR(addTurretMag), LINKFUNC(reload_handleAddTurretMag)] call CBA_fnc_addEventHandler;
 [QGVAR(removeTurretMag), LINKFUNC(reload_handleRemoveTurretMag)] call CBA_fnc_addEventHandler;
 [QGVAR(returnAmmo), LINKFUNC(reload_handleReturnAmmo)] call CBA_fnc_addEventHandler;
+[QGVAR(proxyWeaponChanged), LINKFUNC(handleProxyWeaponChanged)] call CBA_fnc_addEventHandler;
 [QGVAR(autofire_fire), LINKFUNC(autofire_fire)] call CBA_fnc_addEventHandler;
 
 // Cancel placement if interact menu open

@@ -516,6 +516,42 @@
             <Chinesesimp>连接 %1</Chinesesimp>
             <Ukrainian>З'єднати %1</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_CSW_actionLoad">
+            <English>Load %1</English>
+            <Czech>Nabít %1</Czech>
+            <French>Charger %1</French>
+            <Spanish>Cargar %1</Spanish>
+            <Italian>Carica %1</Italian>
+            <Polish>Załaduj %1</Polish>
+            <Portuguese>Carregar %1</Portuguese>
+            <Russian>Загрузить %1</Russian>
+            <German>Lade %1</German>
+            <Korean>%1 싣기</Korean>
+            <Japanese>%1 を装填</Japanese>
+            <Chinese>裝填 %1</Chinese>
+            <Chinesesimp>装填 %1</Chinesesimp>
+            <Turkish>Yükle %1</Turkish>
+            <Hungarian>Load %1</Hungarian>
+            <Ukrainian>Завантажити %1</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_CSW_actionUnload">
+            <English>Unload %1</English>
+            <Czech>Vytáhnout zásobník z %1</Czech>
+            <French>Décharger %1</French>
+            <Spanish>Descargar %1</Spanish>
+            <Italian>Scarica %1</Italian>
+            <Polish>Rozładuj %1</Polish>
+            <Portuguese>Descarregar %1</Portuguese>
+            <Russian>Разгрузить %1</Russian>
+            <German>Entlade %1</German>
+            <Korean>%1 내리기</Korean>
+            <Japanese>%1 を除去</Japanese>
+            <Chinese>卸載 %1</Chinese>
+            <Chinesesimp>卸载 %1</Chinesesimp>
+            <Turkish>Boşalt %1</Turkish>
+            <Hungarian>Unload %1</Hungarian>
+            <Ukrainian>Розвантажити %1</Ukrainian>
+        </Key>
         <Key ID="STR_ACE_CSW_ags30_gun">
             <English>[CSW] AGS-30 Gun Bag</English>
             <Czech>[CSW] ASG-30 zbraň v pouzdře</Czech>
@@ -899,24 +935,6 @@
             <Chinesesimp>[班组] 9M113 短号发射器</Chinesesimp>
             <Turkish>[CSW] 9m113 Kornet Launcher</Turkish>
             <Ukrainian>[CSW] Сумка з 9К135 Корнет</Ukrainian>
-        </Key>
-        <Key ID="STR_ACE_CSW_loadX">
-            <English>Load %1</English>
-            <Czech>Nabít %1</Czech>
-            <French>Charger %1</French>
-            <Spanish>Cargar %1</Spanish>
-            <Italian>Carica %1</Italian>
-            <Polish>Załaduj %1</Polish>
-            <Portuguese>Carregar %1</Portuguese>
-            <Russian>Загрузить %1</Russian>
-            <German>Lade %1</German>
-            <Korean>%1 싣기</Korean>
-            <Japanese>%1 を装填</Japanese>
-            <Chinese>裝填 %1</Chinese>
-            <Chinesesimp>装填 %1</Chinesesimp>
-            <Turkish>Yükle %1</Turkish>
-            <Hungarian>Load %1</Hungarian>
-            <Ukrainian>Завантажити %1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_m220TripodFolded_displayName">
             <English>[CSW] M220 Deployable Tripod</English>
@@ -1317,24 +1335,6 @@
             <Chinesesimp>[班组] BGM-71 陶式导弹发射器包</Chinesesimp>
             <Turkish>[CSW] BGM-71 TOW Launcher Bag</Turkish>
             <Ukrainian>[CSW] Сумка з BGM-71 TOW установкою</Ukrainian>
-        </Key>
-        <Key ID="STR_ACE_CSW_unloadX">
-            <English>Unload %1</English>
-            <Czech>Vytáhnout zásobník z %1</Czech>
-            <French>Décharger %1</French>
-            <Spanish>Descargar %1</Spanish>
-            <Italian>Scarica %1</Italian>
-            <Polish>Rozładuj %1</Polish>
-            <Portuguese>Descarregar %1</Portuguese>
-            <Russian>Разгрузить %1</Russian>
-            <German>Entlade %1</German>
-            <Korean>%1 내리기</Korean>
-            <Japanese>%1 を除去</Japanese>
-            <Chinese>卸載 %1</Chinese>
-            <Chinesesimp>卸载 %1</Chinesesimp>
-            <Turkish>Boşalt %1</Turkish>
-            <Hungarian>Unload %1</Hungarian>
-            <Ukrainian>Розвантажити %1</Ukrainian>
         </Key>
     </Package>
 </Project>

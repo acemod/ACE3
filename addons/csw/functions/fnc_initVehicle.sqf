@@ -157,3 +157,16 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
         [_typeOf, 1, ["ACE_SelfActions"], _disableAction] call EFUNC(interact_menu,addActionToClass);
     }
 };
+
+// Crew placed in the CSW from the editor are already seated by the time this runs, so the GetIn
+// handler above never fires for them, and emptying the weapon leaves them nothing to fire either.
+// Next frame, so the magazine handling above has settled and QGVAR(initialising) has cleared
+if (_configEnabled && {GVAR(ammoHandling) == 2}) then {
+    [{
+        params ["_vehicle"];
+
+        {
+            [_vehicle, "", _x] call FUNC(ai_handleGetIn);
+        } forEach (crew _vehicle);
+    }, [_vehicle]] call CBA_fnc_execNextFrame;
+};
