@@ -32,25 +32,25 @@ private _powerMod = ([0, -0.1, -0.1, 0, -0.2] select (["STAND", "CROUCH", "PRONE
 private _recoil = GVAR(recoilCache) getOrDefaultCall [_weapon + _muzzle, {
     private _config = configFile >> "CfgWeapons" >> _weapon;
 
-    private _recoil = if (_muzzle == _weapon) then {
+    private _recoilClass = if (_muzzle == _weapon) then {
         getText (_config >> "recoil")
     } else {
         getText (_config >> _muzzle >> "recoil")
     };
 
+    private _recoil = [0, 0];
     private _customShakeCoef = 1;
-    if (isClass (configFile >> "CfgRecoils" >> _recoil)) then {
-        _recoil = getArray (configFile >> "CfgRecoils" >> _recoil >> "kickBack");
+    private _recoilConfig = configFile >> "CfgRecoils" >> _recoilClass;
+    if (isClass _recoilConfig) then {
+        _recoil = getArray (_recoilConfig >> "kickBack");
 
-        if (isNumber (configFile >> "CfgRecoils" >> _recoil >> QGVAR(customShakeCoef))) then {
-            _customShakeCoef = getNumber (configFile >> "CfgRecoils" >> _recoil >> QGVAR(customShakeCoef));
+        if (isNumber (_recoilConfig >> QGVAR(customShakeCoef))) then {
+            _customShakeCoef = getNumber (_recoilConfig >> QGVAR(customShakeCoef));
         };
 
         if (count _recoil < 2) then {
             _recoil = [0, 0];
         };
-    } else {
-        _recoil = [0, 0];
     };
 
     TRACE_4("Caching Recoil config",_weapon,_muzzle,_recoil,_customShakeCoef);

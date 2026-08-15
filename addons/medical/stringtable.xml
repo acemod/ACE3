@@ -398,9 +398,13 @@
         </Key>
         <Key ID="STR_ACE_Medical_blockInputOnUiEvent_Description">
             <English>Prevent accidental firing after medical menu unexpectedly closes or waking up</English>
+            <Russian>Предотвратите случайную стрельбу после неожиданного закрытия медицинского меню или пробуждения</Russian>
+            <Japanese>予期せず医療メニューが閉じた場合の意図しない発砲を防ぎます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_blockInputOnUiEvent_DisplayName">
             <English>Block mouse input after unexpected UI change</English>
+            <Russian>Блокирует ввод данных с помощью мыши после неожиданного изменения пользовательского интерфейса</Russian>
+            <Japanese>UIの予期せぬ変更後にマウス入力をブロック</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_closeLid">
             <English>Close lid</English>

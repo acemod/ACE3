@@ -36,9 +36,9 @@ if (!_primed && {_throwable isEqualTo []}) exitWith {
 
 _throwable params ["_throwableMag", "_muzzle"];
 
-// If not primed, double check we actually have the magazine in inventory
+// If not primed, double check we actually have the magazine in inventory (throwables includes inventory and muzzles)
 // Can't use ace_common_fnc_hasMagazine, as it doesn't account for empty mags (grenade is emptied so that it can't be thrown via vanilla keybind)
-if (!_primed && {!(_throwableMag in (magazines [ACE_player, true]))}) exitWith {
+if (!_primed && {!(_throwableMag in (throwables [ACE_player, true] apply { _x select 0 }))}) exitWith {
     [ACE_player, "No valid throwable (glitched currentThrowable)"] call FUNC(exitThrowMode);
 };
 
@@ -52,7 +52,8 @@ if (_primed) then {
 
 // Some throwables have different classname for magazine and ammo
 // Primed magazine may be different, read speed before checking primed magazine!
-private _throwSpeed = getNumber (configFile >> "CfgMagazines" >> _throwableMag >> "initSpeed");
+private _throwableConfig = configFile >> "CfgMagazines" >> _throwableMag;
+private _throwSpeed = getNumber (_throwableConfig >> "initSpeed");
 
 // Reduce power of throw over shoulder and to sides
 private _unitDirVisual = getDirVisual ACE_player;
@@ -67,7 +68,7 @@ ACE_player setVariable [QGVAR(throwSpeed), _throwSpeed * _power];
 
 TRACE_5("",_phi,_power,_throwSpeed * _power,_throwableMag,ACE_player getVariable ARR_2([QGVAR(activeMuzzle),ARR_2(["",-1])]));
 
-private _throwableType = getText (configFile >> "CfgMagazines" >> _throwableMag >> "ammo");
+private _throwableType = getText (_throwableConfig >> "ammo");
 
 if (!_primed && {!([ACE_player] call FUNC(canThrow))}) exitWith {
     if (!isNull _activeThrowable) then {
