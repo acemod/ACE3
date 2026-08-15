@@ -294,7 +294,11 @@ private _attachments = GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS;
         };
         // Facewear
         case (isClass (_cfgGlasses >> _x)): {
-            (GVAR(virtualItems) get IDX_VIRT_UNIQUE_GOGGLES) set [_x, !(_x in (GVAR(virtualItems) get IDX_VIRT_GOGGLES))];
+            if ((_x call FUNC(isMiscItem) > 0)) then {
+                (GVAR(virtualItems) get IDX_VIRT_UNIQUE_MISC_ITEMS) set [_x, nil];
+            } else {
+                (GVAR(virtualItems) get IDX_VIRT_UNIQUE_GOGGLES) set [_x, !(_x in (GVAR(virtualItems) get IDX_VIRT_GOGGLES))];
+            };
         };
         // Unknown
         default {
