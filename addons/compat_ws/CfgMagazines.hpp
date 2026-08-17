@@ -18,3 +18,4 @@ class CfgMagazines {
         initSpeed = 380;
     };
 };
+
