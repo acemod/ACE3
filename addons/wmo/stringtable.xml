@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="WMO">
+        <Key ID="STR_ACE_WMO_Category">
+            <English>Walkable Moving Objects</English>
+        </Key>
+        <Key ID="STR_ACE_WMO_Enabled_Description">
+            <English>Allows units to stand and walk on moving vehicles without sliding off.</English>
+        </Key>
+        <Key ID="STR_ACE_WMO_Enabled_DisplayName">
+            <English>Enable Walkable Moving Objects</English>
+        </Key>
+        <Key ID="STR_ACE_WMO_Roadway_DisplayName">
+            <English>Walkable Moving Objects Roadway Helper</English>
+        </Key>
+    </Package>
+</Project>
