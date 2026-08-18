@@ -25,7 +25,7 @@ if !(_units isEqualType []) then {
 };
 
 // Make sure passed arguments are objects or groups
-_units = _units select {_x isEqualType objNull || {_x isEqualType grpNull}};
+_units = _units select {_x isEqualTypeAny [objNull, grpNull]};
 _units = _units select {!isNull _x};
 
 if (_units isEqualTo []) exitWith {};
