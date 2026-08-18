@@ -6,7 +6,8 @@ class CfgMagazineWells {
             "ACE_2Rnd_12Gauge_Pellets_No2_Buck",
             "ACE_2Rnd_12Gauge_Pellets_No3_Buck",
             "ACE_2Rnd_12Gauge_Pellets_No4_Buck",
-            "ACE_2Rnd_12Gauge_Pellets_No4_Bird"
+            "ACE_2Rnd_12Gauge_Pellets_No4_Bird",
+            "ACE_2Rnd_12Gauge_Slug"
         };
     };
 
@@ -17,7 +18,8 @@ class CfgMagazineWells {
             "ACE_2Rnd_12Gauge_Pellets_No2_Buck",
             "ACE_2Rnd_12Gauge_Pellets_No3_Buck",
             "ACE_2Rnd_12Gauge_Pellets_No4_Buck",
-            "ACE_2Rnd_12Gauge_Pellets_No4_Bird"
+            "ACE_2Rnd_12Gauge_Pellets_No4_Bird",
+            "ACE_2Rnd_12Gauge_Slug"
         };
     };
 
@@ -28,7 +30,8 @@ class CfgMagazineWells {
             "ACE_6Rnd_12Gauge_Pellets_No2_Buck",
             "ACE_6Rnd_12Gauge_Pellets_No3_Buck",
             "ACE_6Rnd_12Gauge_Pellets_No4_Buck",
-            "ACE_6Rnd_12Gauge_Pellets_No4_Bird"
+            "ACE_6Rnd_12Gauge_Pellets_No4_Bird",
+            "ACE_6Rnd_12Gauge_Slug"
         };
     };
 
