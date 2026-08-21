@@ -234,12 +234,12 @@ The damage elements are sorted in descending order according to how much damage 
 Ammo can be a CfgAmmo classname (like `" B_556x45_Ball"`), empty string, or special ammo from `medical_engine`/another wound handler. Check if the passed ammo is within your expected values (like `!isNull (configFile >> "CfgAmmo" >> _ammo)` for CfgAmmo classes) before using it.
 
 ### Example
-`[player, [[0.5, "Body", 1], [0.3, "Head", 0.6]], "grenade", "grenade_ammo"] ace_medical_damage_fnc_woundsHandlerBase`
+`[player, [[0.5, "Body", 1, "HitChest"], [0.3, "Head", 0.6, "HitHead"]], "grenade", "grenade_ammo"] ace_medical_damage_fnc_woundsHandlerBase`
 
 |    | Arguments | Explanation |
 | ---| --------- | ----------- |
 | 0  | `player` | Unit that was hit |
-| 1  | `[[0.5, "Body", 1], [0.3, "Head", 0.6]]` | 0.5 damage to body (was 1 before armor), 0.3 damage to head (was 0.6 before armor) |
+| 1  | `[[0.5, "Body", 1, "HitChest"], [0.3, "Head", 0.6, "HitHead"]]` | 0.5 damage to body (was 1 before armor), 0.3 damage to head (was 0.6 before armor), hitpoint that actually took the hit (may be nil or blank, use `params` with a default value and exit appropriately) |
 | 2  | `"grenade"` | type grenade (non-selection-specific) |
 | 3  | `"grenade_ammo"` | ammo |
 
