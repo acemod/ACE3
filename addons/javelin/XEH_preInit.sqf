@@ -12,9 +12,12 @@ GVAR(pfehID) = -1;
 DFUNC(disableFire) = {
     params ["_firedEH"];
 
-    if (_firedEH < 0 && {difficulty > 0}) then {
+    if (_firedEH < 0 && {difficulty > 0} && {
+        private _ammo = getText (configFile >> "CfgMagazines" >> currentMagazine ACE_player >> "ammo");
+        getNumber (configFile >> "CfgAmmo" >> _ammo >> QEGVAR(missileguidance,allowDumbFire)) == 0;
+    }) then {
         _firedEH = [ACE_player, "DefaultAction", {true}, {
-            private _canFire = (_this select 1) getVariable ["ace_missileguidance_target", nil];
+            private _canFire = (_this select 1) getVariable [QEGVAR(missileguidance,target), nil];
             if (!isNil "_canFire") exitWith { false };
             true
         }] call EFUNC(common,addActionEventHandler);
