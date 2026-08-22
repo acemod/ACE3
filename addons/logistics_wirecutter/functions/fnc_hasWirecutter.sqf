@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror, OverlordZorn
- * Function to theck if the provided Unit has a wirecutter.
+ * Function to check if the provided Unit has a wirecutter.
  *
  * Arguments:
  * 0: Unit <OBJECT>
