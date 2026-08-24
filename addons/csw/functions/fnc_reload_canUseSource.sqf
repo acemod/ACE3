@@ -3,13 +3,10 @@
  * Author: LinkIsGrim
  * Tests whether a magazine source is close enough to a CSW and still holds the magazine.
  *
- * A null source passes. Callers that picked their source from FUNC(getNearbySources) already know
- * both, and only want to know whether the magazine fits the turret.
- *
  * Arguments:
  * 0: CSW <OBJECT>
  * 1: Carryable Magazine <STRING>
- * 2: Magazine source <OBJECT> (default: objNull)
+ * 2: Magazine source <OBJECT>
  *
  * Return Value:
  * Source is usable <BOOL>
@@ -20,9 +17,7 @@
  * Public: No
  */
 
-params ["_vehicle", "_carryMag", ["_magSource", objNull]];
-
-if (isNull _magSource) exitWith {true};
+params ["_vehicle", "_carryMag", "_magSource"];
 
 if !(_carryMag in (magazineCargo _magSource)) exitWith {
     TRACE_2("source does not have carry mag",_magSource,_carryMag);

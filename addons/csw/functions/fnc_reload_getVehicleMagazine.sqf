@@ -28,9 +28,6 @@ private _bestMag = "#";
 private _bestMagCount = -1;
 private _cfgMagazines = configFile >> "CfgMagazines";
 
-// Warms GVAR(compatibleVehicleMagsCache) for every weapon on the CSW, read per turret below
-[_vehicle] call FUNC(compatibleMagazines);
-
 {
     {
         if ((getNumber (_carryGroupCfg >> _x)) == 1) then {
@@ -40,7 +37,7 @@ private _cfgMagazines = configFile >> "CfgMagazines";
                 _bestMagCount = _xAmmo;
             };
         };
-    } forEach (GVAR(compatibleVehicleMagsCache) getOrDefault [_x, []]);
+    } forEach (compatibleMagazines _x);
 } forEach (_vehicle weaponsTurret _turret);
 TRACE_3("best fit",_desiredAmmo,_bestMag,_bestMagCount);
 

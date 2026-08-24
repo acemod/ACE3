@@ -48,11 +48,10 @@ private _onFinish = {
     [_magSource, _carryMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
     if (_bestAmmoToSend == 0) exitWith {};
 
-    // Emptying a weapon holder deletes it, so the cached source list can hold a deleted object
+    // Emptying a weapon holder deletes it, which both invalidates the cached source list and
+    // leaves nowhere to put leftover ammo but the unit
     [QGVAR(clearNearbySourcesCache), []] call CBA_fnc_localEvent;
 
-    // Workaround for removeSpecificMagazine and WeaponHolders being deleted when empty, give back to the unit if the weapon holder was deleted
-    // TODO: Pass type and position of deleted object to create a new one
     private _returnTo = [_magSource, _unit] select (_magSource getEntityInfo 14);
 
     private _args = [_vehicle, _turret, _carryMag, _bestAmmoToSend, _returnTo];

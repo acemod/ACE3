@@ -26,7 +26,8 @@ private _return = [false, "", -2, false];
 // Handle disassembled or deleted
 if (!alive _vehicle) exitWith { _return };
 
-if !([_vehicle, _carryMag, _magSource] call FUNC(reload_canUseSource)) exitWith { _return };
+// No source given means the caller picked one already and only wants the turret checked
+if (!isNull _magSource && {!([_vehicle, _carryMag, _magSource] call FUNC(reload_canUseSource))}) exitWith { _return };
 
 // solve config lookups
 private _cfgMagazines = configFile >> "CfgMagazines";

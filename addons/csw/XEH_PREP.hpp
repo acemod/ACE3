@@ -33,7 +33,6 @@ PREP(compatibleMagazines);
 PREP(getCarryMagazine);
 PREP(getNearbySources);
 PREP(getSourceCompatibleMagazines);
-PREP(handleProxyWeaponChanged);
 PREP(handleScrollWheel);
 PREP(proxyWeapon);
 

@@ -40,8 +40,12 @@ private _magazineInfo = [];
 
 _magazineInfo params ["_carryMag", "_turretPath", "", "_magSource", "_ammo"];
 
-// Remove the mag from the source
-[_magSource, _carryMag, _ammo] call EFUNC(common,removeSpecificMagazine);
+// The source list is cached for a few seconds, so it can still name a crate somebody has emptied.
+// Loading anyway would give the AI a magazine nobody paid for
+if !([_magSource, _carryMag, _ammo] call EFUNC(common,removeSpecificMagazine)) exitWith {
+    TRACE_2("source no longer has the magazine",_magSource,_carryMag);
+    [QGVAR(clearNearbySourcesCache), []] call CBA_fnc_localEvent;
+};
 
 // Leftover ammo goes back to the gunner
 private _eventParams = [_vehicle, _turretPath, _carryMag, _ammo, _gunner];
