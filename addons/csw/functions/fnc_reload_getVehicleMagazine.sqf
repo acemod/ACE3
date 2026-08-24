@@ -20,24 +20,28 @@
 params ["_vehicle", "_turret", "_carryMag"];
 TRACE_3("reload_getVehicleMagazine",_vehicle,_turret,_carryMag);
 
-private _carryGroupCfg = configFile >> QGVAR(groups) >> _carryMag;
 private _desiredAmmo = getNumber (configOf _vehicle >> QUOTE(ADDON) >> "desiredAmmo");
 if (_desiredAmmo == 0) then { _desiredAmmo = 100; };
 
 private _bestMag = "#";
 private _bestMagCount = -1;
-private _cfgMagazines = configFile >> "CfgMagazines";
+
+// Read from config once per carry magazine and kept, rather than walked again on every load
+private _groupMags = _carryMag call FUNC(getMagazineGroup);
 
 {
+    private _weaponMags = compatibleMagazines _x;
+
     {
-        if ((getNumber (_carryGroupCfg >> _x)) == 1) then {
-            private _xAmmo = getNumber (_cfgMagazines >> _x >> "ammo");
-            if (((_xAmmo >= _bestMagCount) && {_bestMagCount < _desiredAmmo}) || {(_xAmmo >= _desiredAmmo) && {_xAmmo < _bestMagCount}}) then {
-                _bestMag = _x;
-                _bestMagCount = _xAmmo;
-            };
+        _x params ["_xMag", "_xAmmo"];
+
+        if !(_xMag in _weaponMags) then {continue};
+
+        if (((_xAmmo >= _bestMagCount) && {_bestMagCount < _desiredAmmo}) || {(_xAmmo >= _desiredAmmo) && {_xAmmo < _bestMagCount}}) then {
+            _bestMag = _xMag;
+            _bestMagCount = _xAmmo;
         };
-    } forEach (compatibleMagazines _x);
+    } forEach _groupMags;
 } forEach (_vehicle weaponsTurret _turret);
 TRACE_3("best fit",_desiredAmmo,_bestMag,_bestMagCount);
 

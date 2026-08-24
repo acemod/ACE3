@@ -31,6 +31,7 @@ PREP(deployCancel);
 PREP(deployConfirm);
 PREP(compatibleMagazines);
 PREP(getCarryMagazine);
+PREP(getMagazineGroup);
 PREP(getNearbySources);
 PREP(getSourceCompatibleMagazines);
 PREP(handleScrollWheel);

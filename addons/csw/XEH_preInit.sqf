@@ -14,6 +14,7 @@ GVAR(initializedStaticTypes) = [];
 // FUNC(getCarryMagazine) rather than on weapon swap, a CSW without a proxy weapon needs them too
 GVAR(vehicleMagCache) = createHashMap;
 GVAR(compatibleCarryMagsCache) = createHashMap;
+GVAR(magGroupCache) = createHashMap;
 
 ADDON = true;
 
