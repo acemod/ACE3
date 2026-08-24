@@ -27,9 +27,9 @@ PREP(assemble_pickupWeapon);
 PREP(assemble_startDeployTripod);
 
 PREP(canGetIn);
+PREP(compatibleMagazines);
 PREP(deployCancel);
 PREP(deployConfirm);
-PREP(compatibleMagazines);
 PREP(getCarryMagazine);
 PREP(getMagazineGroup);
 PREP(getNearbySources);

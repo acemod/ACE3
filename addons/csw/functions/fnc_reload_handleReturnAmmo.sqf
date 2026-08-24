@@ -20,6 +20,11 @@
 params ["_unloadTo", "_carryMag", "_ammo"];
 TRACE_4("reload_handleReturnAmmo",_unloadTo,typeOf _unloadTo,_carryMag,_ammo);
 
+// Sources are containers rather than the units holding them, since magazineCargo cannot read a
+// unit's inventory. Ammo belongs to the unit, whose capacity is checked, not to their vest
+private _wearer = objectParent _unloadTo;
+if (_wearer isKindOf "CAManBase") then {_unloadTo = _wearer};
+
 private _carryMaxAmmo = getNumber (configFile >> "CfgMagazines" >> _carryMag >> "count");
 private _fullMagazines = floor (_ammo / _carryMaxAmmo);
 private _bulletsRemaining = _ammo % _carryMaxAmmo;

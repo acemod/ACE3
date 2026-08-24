@@ -19,7 +19,7 @@
  */
 
 params ["_vehicle", "_turret", "_carryMag", ["_magSource", objNull]];
-TRACE_4("reload_canLoadMagazine",_vehicle,_turret,_carryMag,_magSource);
+// TRACE_4("reload_canLoadMagazine",_vehicle,_turret,_carryMag,_magSource); // runs per frame in an interact menu condition
 
 private _return = [false, "", -2, false];
 

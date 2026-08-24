@@ -165,8 +165,12 @@ if (_configEnabled && {GVAR(ammoHandling) == 2}) then {
     [{
         params ["_vehicle"];
 
+        // Only the crew actually in a turret. A passenger would otherwise reload turret 0, and two
+        // of them would each pull a magazine before either load resolves
+        private _turrets = allTurrets _vehicle;
+
         {
             [_vehicle, "", _x] call FUNC(ai_handleGetIn);
-        } forEach (crew _vehicle);
+        } forEach ((crew _vehicle) select {(_vehicle unitTurret _x) in _turrets});
     }, [_vehicle]] call CBA_fnc_execNextFrame;
 };

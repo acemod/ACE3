@@ -42,7 +42,7 @@ private _onFinish = {
                 _bestAmmoToSend = _xAmmo;
             };
         };
-    } forEach (if (_magSource isKindOf "CAManBase") then {magazinesAmmo _magSource} else {magazinesAmmoCargo _magSource});
+    } forEach (magazinesAmmoCargo _magSource);
 
     if (_bestAmmoToSend == -1) exitWith {ERROR_2("No ammo [%1 - %2]?",_carryMag,_bestAmmoToSend);};
     [_magSource, _carryMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
