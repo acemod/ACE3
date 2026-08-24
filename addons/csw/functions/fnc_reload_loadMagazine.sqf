@@ -30,7 +30,7 @@ private _onFinish = {
     (_this select 0) params ["_vehicle", "_turret", "_carryMag", "_magSource", "_unit"];
     TRACE_5("load progressBar finish",_vehicle,_turret,_carryMag,_magSource,_unit);
 
-    ([_vehicle, _turret, _carryMag, _magSource] call FUNC(reload_canLoadMagazine)) params ["", "", "_neededAmmo", ""];
+    ([_vehicle, _turret, _carryMag, _magSource, _unit] call FUNC(reload_canLoadMagazine)) params ["", "", "_neededAmmo", ""];
     if (_neededAmmo <= 0) exitWith { ERROR_1("Can't load ammo - %1",_this); };
 
     // Figure out what we can add from the magazines we have

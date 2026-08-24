@@ -33,7 +33,7 @@ private _condition = {
     _args params ["_carryMag", "_turretPath", "", "_magSource"];
 
     [_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew) &&
-    {([_target, _turretPath, _carryMag, _magSource] call FUNC(reload_canLoadMagazine)) select 0}
+    {([_target, _turretPath, _carryMag, _magSource, _player] call FUNC(reload_canLoadMagazine)) select 0}
 };
 
 private _cfgMagazines = configFile >> "CfgMagazines"; // Micro-optimization

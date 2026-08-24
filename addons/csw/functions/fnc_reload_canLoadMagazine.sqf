@@ -8,6 +8,7 @@
  * 1: Turret Path <ARRAY>
  * 2: Carryable Magazine <STRING>
  * 3: Supplier <OBJECT> (default: objNull)
+ * 4: Unit loading, only needed with a supplier <OBJECT> (default: objNull)
  *
  * Return Value:
  * [Can Load <BOOL>, Loaded Mag <STRING>, Ammo Needed <NUMBER>, Is Belt Linking <BOOL>] <ARRAY>
@@ -18,7 +19,7 @@
  * Public: No
  */
 
-params ["_vehicle", "_turret", "_carryMag", ["_magSource", objNull]];
+params ["_vehicle", "_turret", "_carryMag", ["_magSource", objNull], ["_unit", objNull]];
 // TRACE_4("reload_canLoadMagazine",_vehicle,_turret,_carryMag,_magSource); // runs per frame in an interact menu condition
 
 private _return = [false, "", -2, false];
@@ -27,7 +28,7 @@ private _return = [false, "", -2, false];
 if (!alive _vehicle) exitWith { _return };
 
 // No source given means the caller picked one already and only wants the turret checked
-if (!isNull _magSource && {!([_vehicle, _carryMag, _magSource] call FUNC(reload_canUseSource))}) exitWith { _return };
+if (!isNull _magSource && {!([_unit, _carryMag, _magSource] call FUNC(reload_canUseSource))}) exitWith { _return };
 
 // solve config lookups
 private _cfgMagazines = configFile >> "CfgMagazines";
