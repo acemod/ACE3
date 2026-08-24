@@ -30,6 +30,6 @@ GVAR(magGroupCache) getOrDefaultCall [_carryMag, {
     (configProperties [configFile >> QGVAR(groups) >> _carryMag, "getNumber _x == 1", false]) apply {
         private _vehicleMag = configName _x;
 
-        [_vehicleMag, getNumber (_cfgMagazines >> _vehicleMag >> "ammo")]
+        [_vehicleMag, getNumber (_cfgMagazines >> _vehicleMag >> "count")]
     }
 }, true] // return
