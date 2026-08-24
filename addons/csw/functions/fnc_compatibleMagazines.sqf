@@ -28,7 +28,8 @@ private _fnc_cacheWeapon = {
         // compatibleMagazines here is the engine command, not this function
         private _carryMags = ((compatibleMagazines _weapon) apply {_x call FUNC(getCarryMagazine)}) select {_x != ""};
 
-        _carryMags createHashMapFromArray (_carryMags apply {true})
+        // Used as a set, only the keys are ever read
+        _carryMags createHashMapFromArray []
     }, true]
 };
 

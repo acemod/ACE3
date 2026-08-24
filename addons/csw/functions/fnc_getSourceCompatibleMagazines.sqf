@@ -28,7 +28,7 @@ if (_magazines isEqualTo []) exitWith {[]};
 
 // Reading it per source means a deep copy per source, so callers with more than one pass it in
 if (_compatibleMagazines isEqualTo createHashMap) then {
-    _compatibleMagazines = [_csw] call FUNC(compatibleMagazines);
+    _compatibleMagazines = _csw call FUNC(compatibleMagazines);
 };
 
 if (_compatibleMagazines isEqualTo createHashMap) exitWith {[]};

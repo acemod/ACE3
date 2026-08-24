@@ -17,6 +17,9 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
+// Prefer the largest magazine that still fits what the turret has room for
+#define IS_BETTER_FIT(ammo,best,needed) ((best == -1) || ((ammo > best) && (ammo <= needed)))
+
 #define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
 
 // How far a magazine source can be from a CSW and still be loadable from

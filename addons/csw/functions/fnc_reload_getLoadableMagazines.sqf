@@ -24,7 +24,7 @@ params ["_vehicle", "_unit", ["_aiReload", false]];
 private _availableMagazines = createHashMap;
 
 // Once for the CSW rather than once per source
-private _compatibleMagazines = [_vehicle] call FUNC(compatibleMagazines);
+private _compatibleMagazines = _vehicle call FUNC(compatibleMagazines);
 
 {
     private _xSource = _x;
@@ -42,7 +42,7 @@ private _compatibleMagazines = [_vehicle] call FUNC(compatibleMagazines);
             _availableMagazines set [_classname, [_xSource, _ammo]];
         };
     } forEach ([_xSource, _vehicle, _compatibleMagazines] call FUNC(getSourceCompatibleMagazines));
-} forEach ([_unit] call FUNC(getNearbySources));
+} forEach (_unit call FUNC(getNearbySources));
 
 if (_availableMagazines isEqualTo createHashMap) exitWith {[]}; // fast exit if no available mags
 

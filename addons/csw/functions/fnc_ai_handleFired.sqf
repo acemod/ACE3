@@ -18,7 +18,7 @@ params ["_vehicle", "", "", "", "", "", "", "_gunner"];
 TRACE_2("firedEH:",_vehicle,_gunner);
 
 if (someAmmo _vehicle) exitWith {};
-if ((!local _gunner) || {[_gunner] call EFUNC(common,isPlayer)}) exitWith {};
+if ((!local _gunner) || {_gunner call EFUNC(common,isPlayer)}) exitWith {};
 
 TRACE_1("need ammo",magazinesAllTurrets _vehicle);
 

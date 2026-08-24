@@ -38,7 +38,7 @@ private _onFinish = {
     {
         _x params ["_xMag", "_xAmmo"];
         if (_xMag == _carryMag) then {
-            if ((_bestAmmoToSend == -1) || {(_xAmmo > _bestAmmoToSend) && {_xAmmo <= _neededAmmo}}) then {
+            if (IS_BETTER_FIT(_xAmmo,_bestAmmoToSend,_neededAmmo)) then {
                 _bestAmmoToSend = _xAmmo;
             };
         };

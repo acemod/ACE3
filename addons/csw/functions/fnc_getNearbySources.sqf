@@ -29,7 +29,7 @@ params ["_unit"];
         // group is also grpNull on crates and weapon holders, which is what lets them through
         private _nearSupplies = (_unit nearSupplies DISTANCE_SEARCH_RADIUS) select {
             isNull (group _x) ||
-            {!([_x] call EFUNC(common,isPlayer)) && {[_side, side group _x] call BIS_fnc_sideIsFriendly}}
+            {!(_x call EFUNC(common,isPlayer)) && {[_side, side group _x] call BIS_fnc_sideIsFriendly}}
         };
 
         _nearSupplies pushBackUnique _unit;

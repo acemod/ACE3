@@ -38,7 +38,7 @@ private _magazineInfo = [];
     // means a 50 round top-up consumes a 100 round belt and hands half of it straight back
     private _neededAmmo = (_x select 2) select 2;
 
-    if ((_bestAmmo == -1) || {(_ammo > _bestAmmo) && {_ammo <= _neededAmmo}}) then {
+    if (IS_BETTER_FIT(_ammo,_bestAmmo,_neededAmmo)) then {
         _bestAmmo = _ammo;
         _magazineInfo = _x;
     };
