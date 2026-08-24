@@ -32,8 +32,14 @@ private _bestAmmo = -1;
 private _magazineInfo = [];
 
 {
-    if ((_x select 4) > _bestAmmo) then {
-        _bestAmmo = _x select 4;
+    private _ammo = _x select 4;
+
+    // Load info carries what the turret still has room for. Taking the fullest magazine regardless
+    // means a 50 round top-up consumes a 100 round belt and hands half of it straight back
+    private _neededAmmo = (_x select 2) select 2;
+
+    if ((_bestAmmo == -1) || {(_ammo > _bestAmmo) && {_ammo <= _neededAmmo}}) then {
+        _bestAmmo = _ammo;
         _magazineInfo = _x;
     };
 } forEach _loadableMagazines;

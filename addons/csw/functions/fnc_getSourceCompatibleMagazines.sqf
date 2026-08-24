@@ -6,6 +6,7 @@
  * Arguments:
  * 0: Magazine Source <OBJECT> (default: objNull)
  * 1: CSW <OBJECT> (default: objNull)
+ * 2: Compatible carry magazines, if the caller already has them <HASHMAP> (default: read from the CSW)
  *
  * Return Value:
  * Magazines, grouped by classname, fullest of each type first <ARRAY>
@@ -18,14 +19,18 @@
  * Public: Yes
  */
 
-params [["_source", objNull, [objNull]], ["_csw", objNull, [objNull]]];
+params [["_source", objNull, [objNull]], ["_csw", objNull, [objNull]], ["_compatibleMagazines", createHashMap, [createHashMap]]];
 
 if (isNull _source || {!alive _csw}) exitWith {[]};
 
 private _magazines = magazinesAmmoCargo _source;
 if (_magazines isEqualTo []) exitWith {[]};
 
-private _compatibleMagazines = [_csw] call FUNC(compatibleMagazines);
+// Reading it per source means a deep copy per source, so callers with more than one pass it in
+if (_compatibleMagazines isEqualTo createHashMap) then {
+    _compatibleMagazines = [_csw] call FUNC(compatibleMagazines);
+};
+
 if (_compatibleMagazines isEqualTo createHashMap) exitWith {[]};
 
 private _return = _magazines select {(_x select 0) in _compatibleMagazines};

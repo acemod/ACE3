@@ -23,6 +23,9 @@ params ["_vehicle", "_unit", ["_aiReload", false]];
 // Hashmap rather than an array, the source each magazine came from has to be carried along
 private _availableMagazines = createHashMap;
 
+// Once for the CSW rather than once per source
+private _compatibleMagazines = [_vehicle] call FUNC(compatibleMagazines);
+
 {
     private _xSource = _x;
     private _handledSourceMags = [];
@@ -38,7 +41,7 @@ private _availableMagazines = createHashMap;
         if (_ammo > ((_availableMagazines getOrDefault [_classname, [objNull, 0]]) select 1)) then {
             _availableMagazines set [_classname, [_xSource, _ammo]];
         };
-    } forEach ([_xSource, _vehicle] call FUNC(getSourceCompatibleMagazines));
+    } forEach ([_xSource, _vehicle, _compatibleMagazines] call FUNC(getSourceCompatibleMagazines));
 } forEach ([_unit] call FUNC(getNearbySources));
 
 if (_availableMagazines isEqualTo createHashMap) exitWith {[]}; // fast exit if no available mags
