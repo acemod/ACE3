@@ -50,7 +50,7 @@ if (_weaponSelected) then {
 _safedWeaponMuzzles set [_muzzle, _firemode];
 
 // Lock muzzle
-if (isNil {_unit getVariable QGVAR(actionID)}) then {
+if ((_unit isNil QGVAR(actionID))) then {
     _unit setVariable [QGVAR(actionID), [
         _unit, "DefaultAction", {
             params ["", "_unit"];

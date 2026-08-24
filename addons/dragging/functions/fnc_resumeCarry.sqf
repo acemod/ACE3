@@ -21,7 +21,7 @@ params ["_unit"];
 if !(_unit getVariable [QGVAR(isCarrying), false]) exitWith {};
 
 // If action is already present, don't add it again
-if (!isNil {_unit getVariable QGVAR(releaseActionID)}) exitWith {};
+if (!(_unit isNil QGVAR(releaseActionID))) exitWith {};
 
 // Remove drop action
 _unit setVariable [QGVAR(releaseActionID), [
