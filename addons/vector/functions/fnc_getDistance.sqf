@@ -22,6 +22,7 @@ disableSerialization;
 private _dlgVector = GETUVAR(ACE_dlgVector,displayNull);
 
 private _distance = ctrlText (_dlgVector displayCtrl 151);
+[QEGVAR(laser_warning,ping), [AGLToASL positionCameraToWorld [0, 0, 0], getCameraViewDirection ACE_PLAYER]] call CBA_fnc_globalEvent;
 
 if (_distance == "----") exitWith {-1000};
 
