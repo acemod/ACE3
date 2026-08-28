@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Map">
+        <Key ID="STR_ACE_Map_Styles_allowAllLayers">
+            <English>Allow all layers on default map</English>
+        </Key>
+        <Key ID="STR_ACE_Map_Styles_allowAllLayers_Description">
+            <English>Allows the generic map (`ItemMap`) to display all possible map layers</English>
+        </Key>
+        <Key ID="STR_ACE_Map_Styles_item_roadMap">
+            <English>Road Map</English>
+        </Key>
+        <Key ID="STR_ACE_Map_Styles_item_satellite">
+            <English>Satellite Map</English>
+        </Key>
+        <Key ID="STR_ACE_Map_Styles_item_topographic">
+            <English>Topographic Map</English>
+        </Key>
+    </Package>
+</Project>
