@@ -65,7 +65,7 @@ private _indexCurrentItems = -1;
         case IDX_LOADOUT_BACKPACK: {
             _x params [["_backpack", ""], ["_items", []]];
             if (_backpack != "") then {
-                _backpack = [_backpack, "CfgVehicles"] call CBA_fnc_getNonPresetClass;
+                _backpack = _backpack call FUNC(baseBackpack);
             };
             GVAR(currentItems) set [IDX_CURR_BACKPACK, _backpack];
             GVAR(currentItems) set [IDX_CURR_BACKPACK_ITEMS, _items];
