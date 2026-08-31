@@ -57,7 +57,7 @@ class CfgWeapons {
     class ACE_ChalkWhite: ACE_SpraypaintWhite {
         author = "zorn";
         displayname = CSTRING(chalkWhite);
-        descriptionShort = CSTRING(descSpraypaint);
+        descriptionShort = CSTRING(descChalk);
         model = "\A3\weapons_F\ammo\mag_univ.p3d";
         scope = 2;
         picture = QPATHTOF(UI\items\itemChalkWhite.paa);

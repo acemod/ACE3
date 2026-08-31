@@ -7,12 +7,12 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "CUP_Weapons_LoadOrder",
-            "ace_scopes"
+            "ace_compat_cwr3_baf",
+            "ace_missileguidance"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {};
+        authors[] = {"CWR3", "drofseh"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
 
@@ -20,4 +20,6 @@ class CfgPatches {
     };
 };
 
-#include "CfgWeapons.hpp"
+#include "\z\ace\addons\missileguidance\script_missileBases.hpp"
+
+#include "CfgAmmo.hpp"

@@ -12,6 +12,7 @@ class CfgWeapons {
         picture = QPATHTOF(data\pictures\white_item.paa);
 
         GVAR(texture) = "\a3\data_f\flags\flag_white_co.paa";
+        GVAR(textureCarrier) = ""; // Optional, will use texture if empty
         GVAR(carrier) = QGVAR(carrier_white);
         GVAR(actionIconPlace) = QPATHTOF(data\icons\place\white_place_icon.paa);
         GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\white_carry_icon.paa);

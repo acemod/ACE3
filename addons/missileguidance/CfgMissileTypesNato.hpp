@@ -753,6 +753,7 @@ class GVAR(type_TOW) {
     defaultAttackProfile = "WIRE";
     attackProfiles[] = {"WIRE"};
 };
+
 class GVAR(type_Blowpipe) {
     enabled = 0;
 

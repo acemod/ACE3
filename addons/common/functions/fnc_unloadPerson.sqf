@@ -7,7 +7,7 @@
  * 0: unit <OBJECT>
  *
  * Return Value:
- * Returns true if succesfully unloaded person <BOOL>
+ * Returns true if successfully unloaded person <BOOL>
  *
  * Example:
  * [hurtGuy] call ace_common_fnc_unloadPerson

@@ -25,15 +25,15 @@
 
 params ["_driver", "_vehicle", ["_preserveSpeedLimit", false]];
 
-if (GVAR(isSpeedLimiter)) exitWith {
+if (GVAR(isSpeedControlActive)) exitWith {
     [localize LSTRING(Off)] call EFUNC(common,displayTextStructured);
     playSound "ACE_Sound_Click";
-    GVAR(isSpeedLimiter) = false;
+    GVAR(isSpeedControlActive) = false;
 };
 
 [localize LSTRING(On)] call EFUNC(common,displayTextStructured);
 playSound "ACE_Sound_Click";
-GVAR(isSpeedLimiter) = true;
+GVAR(isSpeedControlActive) = true;
 GVAR(isCruiseControl) = true; // enables SET/RESUME
 
 private _speedLimitMS = ((velocityModelSpace _vehicle) select 1) max (5 / 3.6);
@@ -71,11 +71,11 @@ private _airData = [_thrustLogFactor, _maxSpeed, _acceleration, _thrustCoefs, _t
     private _role = _driver call EFUNC(common,getUavControlPosition);
     if (GVAR(isUAV)) then {
         if (_role != "DRIVER") then {
-            GVAR(isSpeedLimiter) = false;
+            GVAR(isSpeedControlActive) = false;
         };
     } else {
         if (_driver != currentPilot _vehicle || {_role != ""}) then {
-            GVAR(isSpeedLimiter) = false;
+            GVAR(isSpeedControlActive) = false;
         };
     };
 
@@ -92,18 +92,18 @@ private _airData = [_thrustLogFactor, _maxSpeed, _acceleration, _thrustCoefs, _t
         // ARMA will allow an increment of one throttle unit per frame, so if there is a difference between our known throttle value and actual throttle value, the player must of changed it
         [localize LSTRING(Off)] call EFUNC(common,displayTextStructured);
         playSound "ACE_Sound_Click";
-        GVAR(isSpeedLimiter) = false;
+        GVAR(isSpeedControlActive) = false;
     };
 
     if (call CBA_fnc_getActiveFeatureCamera != "") then {
-        GVAR(isSpeedLimiter) = false;
+        GVAR(isSpeedControlActive) = false;
     };
 
-    if (!GVAR(isSpeedLimiter)) exitWith {
+    if (!GVAR(isSpeedControlActive)) exitWith {
         [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
 
-    private _setpoint = _pid getVariable "CBA_pid_setpoint";
+    private _setpoint = _pid get "cba_pid_setpoint";
     if (abs ((GVAR(speedLimit) / 3.6) - _setpoint) > EPSILON) then {
         [_pid, GVAR(speedLimit) / 3.6] call CBA_pid_fnc_setpoint;
     };
@@ -127,9 +127,8 @@ private _airData = [_thrustLogFactor, _maxSpeed, _acceleration, _thrustCoefs, _t
 
     private _velocityCommand = [_pid, _velocity] call CBA_pid_fnc_update;
     private _throttle = 1 min (0 max (_currentThrottle + _velocityCommand / _availableAcceleration));
-    
+
     _vehicle setAirplaneThrottle _throttle;
     _args set [4, _throttle];
 
 }, 0, [_driver, _vehicle, _pid, _airData, -1]] call CBA_fnc_addPerFrameHandler;
-

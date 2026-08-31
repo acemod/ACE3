@@ -60,6 +60,10 @@ addUserActionEventHandler ["ReloadMagazine", "Activate", {
 
     // If on foot, skip
     if (isNull _vehicle) exitWith {};
+    // Conditions: canInteract
+    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {};
+    // Not in FFV
+    if (ACE_player call CBA_fnc_canUseWeapon) exitWith {};
 
     // weaponState is only updated after 3 frames, so wait to run checks in case we're doing an engine reload at the same time
     [{

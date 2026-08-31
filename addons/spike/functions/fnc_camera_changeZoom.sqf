@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Camera <OBJECT>
- * 1: Increase <BOOL
+ * 1: Increase <BOOL>
  *
  * Return Value:
  * None

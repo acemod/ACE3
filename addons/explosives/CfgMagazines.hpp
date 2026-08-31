@@ -78,6 +78,7 @@ class CfgMagazines {
     class SatchelCharge_Remote_Mag: CA_Magazine {
         useAction = 0;
         GVAR(placeable) = 1;
+        GVAR(isSticky) = 1;
         GVAR(setupObject) = "ACE_Explosives_Place_SatchelCharge";
         class ACE_Triggers {
             SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};

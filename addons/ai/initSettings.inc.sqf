@@ -1,4 +1,4 @@
-private _category = format ["ACE %1", LLSTRING(DisplayName)];
+private _category = [LELSTRING(common,ACEKeybindCategoryEquipment), LLSTRING(DisplayName)];
 
 [
     QGVAR(assignNVG), "CHECKBOX",

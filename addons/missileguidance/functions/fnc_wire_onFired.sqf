@@ -26,7 +26,7 @@ private _distanceAheadOfMissile = [_config >> "missileLeadDistance", "NUMBER", D
 private _maxDistanceSqr = _seekerMaxRange * _seekerMaxRange;
 private _minDistanceSqr = _seekerMinRange * _seekerMinRange;
 
-// AI don't know how to use the crosshair offset becauze they dum dum
+// AI doesn't know how to use the crosshair offset
 private _crosshairOffset = if ((_gunner != ACE_player) && {_gunner != (ACE_controlledUAV select 1)}) then {
     [0, 0, 0];
 } else {

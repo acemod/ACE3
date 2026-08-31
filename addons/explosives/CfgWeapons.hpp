@@ -35,6 +35,7 @@ class CfgWeapons {
     class ACE_M26_Clacker: ACE_Clacker {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(M152_Clacker_displayName);
+        descriptionShort = CSTRING(M152_Clacker_description);
         picture = QPATHTOF(Data\UI\MK26_Transmitter_ca.paa);
         GVAR(range) = 5000;
         GVAR(triggerType) = "MK16_Transmitter";

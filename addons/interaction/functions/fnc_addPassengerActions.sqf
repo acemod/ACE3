@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Vehicle (not used) <OBJECT>
  * 1: Player (not used) <OBJECT>
- * 2: Parameters <ARRAY>
+ * 2: Parameters <ARRAY or OBJECT>
  *
  * Return Value:
  * Children actions <ARRAY>

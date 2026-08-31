@@ -6,6 +6,10 @@ on:
     - master
     - wog-release
 
+permissions:
+  contents: write
+  pull-requests: read
+
 jobs:
   draft:
     runs-on: ubuntu-latest

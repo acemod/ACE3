@@ -16,7 +16,8 @@ version:
 ## 1. Overview
 
 ### 1.1 Vector 21 Rangefinder
-ACE3 adds a realistic depiction of the Vector 21 rangefinder to the game. Unlike other rangefinders, it doesn't just magically show you the range to your target, but in exchange allows you to do alot of things with it that the other choices in Arma do not offer. The Vector's functions include, but are not limited to:
+
+ACE3 adds a realistic depiction of the Vector 21 rangefinder to the game. Unlike other rangefinders, it doesn't just magically show you the range to your target, but in exchange allows you to do a lot of things with it that the other choices in Arma do not offer. The Vector's functions include, but are not limited to:
 
 - Distance to a target
 - Azimuth to a target
@@ -31,34 +32,40 @@ ACE3 adds a realistic depiction of the Vector 21 rangefinder to the game. Unlike
 
 The Vector is controlled with 2 keys: the azimuth key and the range key; <kbd>Tab</kbd> and <kbd>R</kbd> and is brought up like any other binoculars.
 
-#### 2.1 Slope distance
+### 2.1 Slope distance
+
 <img src="{{ site.baseurl }}/img/wiki/user/vector1.webp" width="500" height="160" alt="Measuring Slope distance" />
 
 - Press and hold <kbd>R</kbd> until the red pointing circle appears. Sight the circle on the object and release the key.
 
-#### 2.2 Azimuth
+### 2.2 Azimuth
+
 <img src="{{ site.baseurl }}/img/wiki/user/vector2.webp" width="500" height="160" alt="Measuring Azimuth" />
 
 - Press and hold the <kbd>Tab&nbsp;↹</kbd> until the azimuth is displayed.
 
-#### 2.3 Slope distance and Azimuth
+### 2.3 Slope distance and Azimuth
+
 <img src="{{ site.baseurl }}/img/wiki/user/vector3.webp" width="500" height="160" alt="Measuring Slope distance and Azimuth" />
 
 - Press and hold both <kbd>R</kbd> and <kbd>Tab&nbsp;↹</kbd> until the red pointing circle appears.
 - Sight the circle on the object and release both keys.
 
-#### 2.4 Horizontal distance and height difference
+### 2.4 Horizontal distance and height difference
+
 <img src="{{ site.baseurl }}/img/wiki/user/vector4.webp" width="500" height="160" alt="Measuring Horizontal distance and height difference"/>
 
 - Tap <kbd>R</kbd> once then press and hold it until the red pointing circle appears.
 - Sight the circle on the object and release the key.
 
 #### 2.5 Azimuth and Inclination
+
 <img src="{{ site.baseurl }}/img/wiki/user/vector5.webp" width="500" height="160" alt="Measuring Azimuth and Inclination"/>
 
 - Tap <kbd>Tab&nbsp;↹</kbd> once then press and hold it until the azimuth and inclination is displayed.
 
 #### 2.6 Distance between two points
+
 <img src="{{ site.baseurl }}/img/wiki/user/vector6.webp" width="500" height="160" alt="Measuring Distance between two points"/>
 
 - Press and hold <kbd>R</kbd> until the red pointing circle appears.
@@ -66,6 +73,7 @@ The Vector is controlled with 2 keys: the azimuth key and the range key; <kbd>Ta
 - Sight the second object and release <kbd>R</kbd>.
 
 #### 2.7 Horizontal and vertical distance between two points
+
 <img src="{{ site.baseurl }}/img/wiki/user/vector7.webp" width="500" height="160" alt="Measuring Horizontal and vertical distance between two points"/>
 
 - Tap <kbd>R</kbd> once then press and hold it until the red pointing circle appears.
@@ -73,6 +81,7 @@ The Vector is controlled with 2 keys: the azimuth key and the range key; <kbd>Ta
 - Sight the second object and release <kbd>R</kbd>.
 
 #### 2.8 Horizontal distance and azimuth between two points
+
 <img src="{{ site.baseurl }}/img/wiki/user/vector8.webp" width="500" height="160" alt="Measuring Horizontal distance and azimuth between two points"/>
 
 - Press and hold <kbd>Tab&nbsp;↹</kbd> until the azimuth appears.
@@ -80,6 +89,7 @@ The Vector is controlled with 2 keys: the azimuth key and the range key; <kbd>Ta
 - Sight the second object and release <kbd>Tab&nbsp;↹</kbd>.
 
 #### 2.9 Fall of shot
+
 <img src="{{ site.baseurl }}/img/wiki/user/vector9.webp" width="500" height="160" alt="Measuring Fall of shot"/>
 
 - Tap <kbd>Tab&nbsp;↹</kbd> once then press and hold it until the azimuth appears.
@@ -97,4 +107,4 @@ The Vector is controlled with 2 keys: the azimuth key and the range key; <kbd>Ta
 Polish version of this manual with some comments and small additional section
 /polska wersja tego dokumentu opatrzona komentarzami oraz niewielkim dodatkiem:
 
-http://pgm.armaonline.pl/forum/viewtopic.php?f=15&t=548
+<http://pgm.armaonline.pl/forum/viewtopic.php?f=15&t=548>

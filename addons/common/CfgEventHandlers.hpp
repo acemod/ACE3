@@ -43,7 +43,7 @@ class Extended_Respawn_EventHandlers {
             respawn = QUOTE(call FUNC(restoreVariablesJIP));
         };
         class GVAR(setName) {
-            respawn = QUOTE(call FUNC(setName));
+            respawn = QUOTE((_this select 0) call FUNC(setName));
         };
         class GVAR(RESETDefaults) {
             respawn = QUOTE(call FUNC(resetAllDefaults));

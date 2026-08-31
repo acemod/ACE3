@@ -1462,6 +1462,8 @@ enum
 #define IDC_OPTIONS_UI_VALUE  121
 #define IDC_OPTIONS_UI_SLIDER 122
 
+#define IDC_OPTIONS_AUDIO_INPUT_COMBO    123
+
 // microphone adjustment
 #define IDC_OPTIONS_MIC_PROGRESS_BAR    1001
 #define IDC_OPTIONS_MIC_PROGRESS        1002

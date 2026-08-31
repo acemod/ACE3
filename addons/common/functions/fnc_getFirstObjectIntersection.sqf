@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Ruthberg
- * Returns the the first intersection with terrain between two positions.
+ * Returns the first intersection with terrain between two positions.
  *
  * Arguments:
  * 0: PositionASL <ARRAY>

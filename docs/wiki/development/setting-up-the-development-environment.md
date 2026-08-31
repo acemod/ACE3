@@ -1,14 +1,13 @@
 ---
 layout: wiki
 title: Setting Up the Development Environment
-description: This page describes how you can setup your development environment for ACE3, allowing you to properly build ACE and utilize file patching.
+description: This page describes how you can set up your development environment for ACE3, allowing you to properly build ACE and utilize file patching.
 group: development
 parent: wiki
 order: 0
 ---
 
-This page describes how you can setup your development environment for ACE3, allowing you to properly build ACE and utilize file patching.
-
+This page describes how you can set up your development environment for ACE3, allowing you to properly build ACE and utilize file patching.
 
 ## 1. Requirements
 
@@ -18,17 +17,18 @@ This page describes how you can setup your development environment for ACE3, all
 - [CBA](https://github.com/CBATeam/CBA_A3/releases/latest) mod (release or development version)
 
 **HEMTT:** _(recommended)_
+
 - [Windows] PowerShell v3.0+ _(pre-installed on Windows 8 or newer)_
 - [HEMTT](https://hemtt.dev/installation) (>=v1.7.2)
     - `hemtt` (Linux / MacOS) or `hemtt.exe` (Windows)
 
 **Mikero Tools:**
+
 - P-drive
 - [Python 3.x](https://www.python.org/)
 - [Mikero Tools](https://mikero.bytex.digital/Downloads): DePbo, DeOgg, Rapify, MakePbo, PboProject >=3.16
   - `*.hpp` removed from PboProject's "Exclude From Pbo" list
 - Python, Mikero Tools and Git in PATH environment variable
-
 
 ## 2. Why so complicated?
 
@@ -36,13 +36,11 @@ If you have contributed to AGM you might be used to an easier build process, whe
 
 Not including `.exe`s in the repository for the tools we use allows us to make easy changes without the hassle of compiling self-extracting exes all the time.
 
-
 ## 3. Getting Source Code
 
 To actually get the ACE3 source code on your machine, it is recommended that you use Git. Tutorials for this are all around the web, and it allows you to track your changes and easily update your local copy.
 
 If you just want to create a quick and dirty build, you can also directly download the source code using the "Download ZIP" button on the front page of the GitHub repo.
-
 
 ## 4. Setup and Building (HEMTT)
 
@@ -71,6 +69,7 @@ Run `$ hemtt dev` to build the mod for use with [file patching](#file-patching) 
 Run `$ hemtt launch` to run ACE3 with pre-configured file patching. _Uses `$ hemtt dev` before launching Arma._
 
 To launch a development build using file patching with CBA versions different than latest published, or with other mods, you must build the mod with `$ hemtt dev` and start the game by providing a modline:
+
 ```bat
 -mod=@CBA_A3;z\ace -skipIntro -noSplash -showScriptErrors -debug -filePatching
 ```
@@ -80,6 +79,7 @@ To launch a development build using file patching with CBA versions different th
 To create a development build to test changes or to debug something, execute `build.bat` (double-click on Windows) or run `$ hemtt build` in the root folder. This will populate the `.hemttout/build` folder with binarized PBOs. This type of build is meant for sharing, group testing, but not for release.
 
 To start the game using this build, you can use the following modline:
+
 ```bat
 -mod=@CBA_A3;z\ace -skipIntro -noSplash -showScriptErrors -debug
 ```

@@ -57,7 +57,7 @@ if (!isNil "_currentButtonInPosition") then {
 
 // If spot found, add items and return position
 // Sanitize to configCase and drop anything that's not a misc item
-_items = _items apply {_x call EFUNC(common,getConfigName)} select {_x call FUNC(isMiscItem)};
+_items = _items apply {_x call EFUNC(common,getConfigName)} select {(_x call FUNC(isMiscItem)) > 0};
 
 GVAR(customRightPanelButtons) set [_position, [_items, _picture, _tooltip, _moveOnOverwrite]];
 

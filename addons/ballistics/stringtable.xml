@@ -1769,40 +1769,40 @@
             <Ukrainian>6,5 мм ІЧ-трасуючі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_65_Creedmor_mag_Description">
-            <English>Caliber: 6.5x47 mm Creedmor&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: QBU-88</English>
-            <Czech>Ráže: 6.5x47 mm Creedmor&lt;br /&gt;Nábojů: 20&lt;br /&gt;Použití u: QBU-88</Czech>
-            <French>Calibre: 6,5x47 mm Creedmor &lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé avec: QBU-88</French>
-            <Spanish>Calibre: 6.5 mm Creedmor&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: QBU-88</Spanish>
-            <Italian>Calibro: 6.5 mm Creedmor&lt;br /&gt;Munizioni: 20&lt;br /&gt;In uso su: QBU-88</Italian>
-            <Polish>Kaliber: 6,5x47 mm Creedmor&lt;br /&gt;Pociski: 20&lt;br /&gt;Używany w: QBU-88</Polish>
-            <Portuguese>Calibre: 6.5x47 mm Creedmor&lt;br/&gt;Cartuchos: 20&lt;br/&gt;Usado em: QBU-88</Portuguese>
-            <Russian>Калибр: 6,5x47мм Creedmor&lt;br /&gt;Патронов: 20&lt;br /&gt;Используются c: QBU-88</Russian>
-            <German>Kaliber: 6,5x47 mm  Creedmor&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: QBU-88</German>
-            <Korean>구경: 6.5x47mm 크리드무어&lt;br/&gt;장탄수: 20&lt;br/&gt;사용처: QBU-88</Korean>
-            <Japanese>口径: 6.5x47 mm クリードモア&lt;br /&gt;装填数: 20&lt;br /&gt;次で使用: QBU-88</Japanese>
-            <Chinese>口徑: 6.5x47毫米 克里德莫爾 狙擊專用彈&lt;br /&gt;發數: 20&lt;br /&gt;使用於: QBU-88</Chinese>
-            <Chinesesimp>口径：6.5x47 mm Creedmor 狙击专用弹&lt;br /&gt;发数：20&lt;br /&gt;使用于：QBU-88</Chinesesimp>
-            <Turkish>Kalibre: 6.5x47 mm Creedmor&lt;br /&gt;Mermi: 20&lt;br /&gt;Kullanıyor: QBU-88</Turkish>
-            <Hungarian>Kaliber: 6,5x47 mm Creedmor&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: QBU-88</Hungarian>
-            <Ukrainian>Калібр: 6,5x47мм Creedmor&lt;br /&gt;Набоїв: 20&lt;br /&gt;Використовуються з: QBU-88</Ukrainian>
+            <English>Caliber: 6.5x48 mm Creedmoor&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: QBU-88</English>
+            <Czech>Ráže: 6.5x48 mm Creedmoor&lt;br /&gt;Nábojů: 20&lt;br /&gt;Použití u: QBU-88</Czech>
+            <French>Calibre: 6,5x48 mm Creedmoor &lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé avec: QBU-88</French>
+            <Spanish>Calibre: 6.5 mm Creedmoor&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: QBU-88</Spanish>
+            <Italian>Calibro: 6.5 mm Creedmoor&lt;br /&gt;Munizioni: 20&lt;br /&gt;In uso su: QBU-88</Italian>
+            <Polish>Kaliber: 6,5x48 mm Creedmoor&lt;br /&gt;Pociski: 20&lt;br /&gt;Używany w: QBU-88</Polish>
+            <Portuguese>Calibre: 6.5x48 mm Creedmoor&lt;br/&gt;Cartuchos: 20&lt;br/&gt;Usado em: QBU-88</Portuguese>
+            <Russian>Калибр: 6,5x48мм Creedmoor&lt;br /&gt;Патронов: 20&lt;br /&gt;Используются c: QBU-88</Russian>
+            <German>Kaliber: 6,5x48 mm  Creedmoor&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: QBU-88</German>
+            <Korean>구경: 6.5x48mm 크리드무어&lt;br/&gt;장탄수: 20&lt;br/&gt;사용처: QBU-88</Korean>
+            <Japanese>口径: 6.5x48 mm クリードモア&lt;br /&gt;装填数: 20&lt;br /&gt;次で使用: QBU-88</Japanese>
+            <Chinese>口徑: 6.5x48毫米 克里德莫爾 狙擊專用彈&lt;br /&gt;發數: 20&lt;br /&gt;使用於: QBU-88</Chinese>
+            <Chinesesimp>口径：6.5x48 mm Creedmoor 狙击专用弹&lt;br /&gt;发数：20&lt;br /&gt;使用于：QBU-88</Chinesesimp>
+            <Turkish>Kalibre: 6.5x48 mm Creedmoor&lt;br /&gt;Mermi: 20&lt;br /&gt;Kullanıyor: QBU-88</Turkish>
+            <Hungarian>Kaliber: 6,5x48 mm Creedmoor&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: QBU-88</Hungarian>
+            <Ukrainian>Калібр: 6,5x48мм Creedmoor&lt;br /&gt;Набоїв: 20&lt;br /&gt;Використовуються з: QBU-88</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_65_Creedmor_mag_Name">
-            <English>6.5 mm Creedmor 20Rnd Mag</English>
-            <Czech>6.5 mm Creedmor 20náb. Zásobník</Czech>
-            <French>Ch. 6,5 mm Creedmor 20Cps</French>
-            <Spanish>Cargador de 20 balas Creedmor de 6.5 mm</Spanish>
-            <Italian>6.5 mm Creedmor 20cp Car</Italian>
-            <Polish>Magazynek 6,5 mm Creedmor 20rd</Polish>
-            <Portuguese>Carregador 6.5 mm com 20 cartuchos Creedmor</Portuguese>
-            <Russian>Магазин из 20-ти 6,5 мм Creedmor</Russian>
-            <German>6,5 mm Creedmor 20-Patronen-Magazin</German>
+            <English>6.5 mm Creedmoor 20Rnd Mag</English>
+            <Czech>6.5 mm Creedmoor 20náb. Zásobník</Czech>
+            <French>Ch. 6,5 mm Creedmoor 20Cps</French>
+            <Spanish>Cargador de 20 balas Creedmoor de 6.5 mm</Spanish>
+            <Italian>6.5 mm Creedmoor 20cp Car</Italian>
+            <Polish>Magazynek 6,5 mm Creedmoor 20rd</Polish>
+            <Portuguese>Carregador 6.5 mm com 20 cartuchos Creedmoor</Portuguese>
+            <Russian>Магазин из 20-ти 6,5 мм Creedmoor</Russian>
+            <German>6,5 mm Creedmoor 20-Patronen-Magazin</German>
             <Korean>6.5mm 크리드무어 20발 들이 탄창</Korean>
             <Japanese>6.5 mm クリードモア 20Rnd マガジン</Japanese>
             <Chinese>6.5毫米 20發 彈匣 (克里德莫爾(CM) 狙擊專用彈)</Chinese>
-            <Chinesesimp>6.5 mm 20发 弹匣（Creedmor）</Chinesesimp>
-            <Turkish>6.5 mm Creedmor 20Rnd Mag</Turkish>
-            <Hungarian>6,5 mm Creedmor 20-lövedékes tár</Hungarian>
-            <Ukrainian>Магазин з 20-ти 6,5 мм Creedmor</Ukrainian>
+            <Chinesesimp>6.5 mm 20发 弹匣（Creedmoor）</Chinesesimp>
+            <Turkish>6.5 mm Creedmoor 20Rnd Mag</Turkish>
+            <Hungarian>6,5 mm Creedmoor 20-lövedékes tár</Hungarian>
+            <Ukrainian>Магазин з 20-ти 6,5 мм Creedmoor</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_65_Creedmor_mag_NameShort">
             <English>6.5 mm CM</English>
@@ -2535,6 +2535,42 @@
             <Turkish>12 kalibre 2 mermi #4 İrisaçma</Turkish>
             <Ukrainian>12 Калібр 2 патр. #4 Картеч</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Slug_Name">
+            <English>12 Gauge 2Rnd Slug 300gr</English>
+            <Czech>12 Gauge 2Rnd Slug 300gr</Czech>
+            <French>12 Gauge 2Rnd Slug 300gr</French>
+            <Spanish>12 Gauge 2Rnd Slug 300gr</Spanish>
+            <Italian>12 Gauge 2Rnd Slug 300gr</Italian>
+            <Polish>12 Gauge 2Rnd Slug 300gr</Polish>
+            <Portuguese>12 Gauge 2Rnd Slug 300gr</Portuguese>
+            <Russian>12 Gauge 2Rnd Slug 300gr</Russian>
+            <German>12 Gauge 2Rnd Slug 300gr</German>
+            <Korean>12 Gauge 2Rnd Slug 300gr</Korean>
+            <Japanese>12 Gauge 2Rnd Slug 300gr</Japanese>
+            <Chinese>12 Gauge 2Rnd Slug 300gr</Chinese>
+            <Chinesesimp>12 Gauge 2Rnd Slug 300gr</Chinesesimp>
+            <Turkish>12 Gauge 2Rnd Slug 300gr</Turkish>
+            <Hungarian>12 Gauge 2Rnd Slug 300gr</Hungarian>
+            <Ukrainian>12 Gauge 2Rnd Slug 300gr</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Slug_NameShort">
+            <English>Slug 300gr</English>
+            <Czech>Slug 300gr</Czech>
+            <French>Slug 300gr</French>
+            <Spanish>Slug 300gr</Spanish>
+            <Italian>Slug 300gr</Italian>
+            <Polish>Slug 300gr</Polish>
+            <Portuguese>Slug 300gr</Portuguese>
+            <Russian>Slug 300gr</Russian>
+            <German>Slug 300gr</German>
+            <Korean>Slug 300gr</Korean>
+            <Japanese>Slug 300gr</Japanese>
+            <Chinese>Slug 300gr</Chinese>
+            <Chinesesimp>Slug 300gr</Chinesesimp>
+            <Turkish>Slug 300gr</Turkish>
+            <Hungarian>Slug 300gr</Hungarian>
+            <Ukrainian>Slug 300gr</Ukrainian>
+        </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_M995_AP_mag_Description">
             <English>Caliber: 5.56x45 mm NATO (M995 AP)&lt;br /&gt;Rounds: 30</English>
             <Czech>Ráže: 5.56x45 mm NATO (M995 AP)&lt;br /&gt;Nábojů: 30</Czech>
@@ -2752,64 +2788,64 @@
             <Ukrainian>5,56 мм ІЧ-трасуючі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_black_mag_Name">
-            <English>6.5 mm Creedmor 30Rnd Black Mag</English>
-            <French>Ch. 6,5 mm Creedmor 30Cps Noir</French>
-            <Spanish>Cargador de 30 balas de 6.5mm Creedmor Negro</Spanish>
-            <Italian>6.5 mm Creedmor 30cp Car Nero</Italian>
-            <Polish>Magazynek 6.5 mm Creedmor 30Rnd Czarny</Polish>
-            <Portuguese>Carregador 6.5 mm com 30 cartuchos Creedmor Preto</Portuguese>
-            <Russian>Магазин из 30-ти 6.5 мм Creedmor Чёрный</Russian>
-            <German>6.5 mm Creedmor 30-Patronen-Magazin Schwarz</German>
+            <English>6.5 mm Creedmoor 30Rnd Black Mag</English>
+            <French>Ch. 6,5 mm Creedmoor 30Cps Noir</French>
+            <Spanish>Cargador de 30 balas de 6.5mm Creedmoor Negro</Spanish>
+            <Italian>6.5 mm Creedmoor 30cp Car Nero</Italian>
+            <Polish>Magazynek 6.5 mm Creedmoor 30Rnd Czarny</Polish>
+            <Portuguese>Carregador 6.5 mm com 30 cartuchos Creedmoor Preto</Portuguese>
+            <Russian>Магазин из 30-ти 6.5 мм Creedmoor Чёрный</Russian>
+            <German>6.5 mm Creedmoor 30-Patronen-Magazin Schwarz</German>
             <Korean>6.5mm 크리드무어 30발 들이 탄창/검정</Korean>
             <Japanese>6.5mm 30Rnd クリードモア（黒）マガジン</Japanese>
-            <Chinesesimp>6.5 mm 30发 黑色弹匣（Creedmor）</Chinesesimp>
-            <Ukrainian>Магазин із 30-ти 6.5 мм Creedmor Чорний</Ukrainian>
+            <Chinesesimp>6.5 mm 30发 黑色弹匣（Creedmoor）</Chinesesimp>
+            <Ukrainian>Магазин із 30-ти 6.5 мм Creedmoor Чорний</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_khaki_mag_Name">
-            <English>6.5 mm Creedmor 30Rnd Khaki Mag</English>
-            <French>Ch. 6,5 mm Creedmor 30Cps Kaki</French>
-            <Spanish>Cargador de 30 balas de 6.5mm Creedmor Caqui</Spanish>
-            <Italian>6.5 mm Creedmor 30cp Car Cachi</Italian>
-            <Polish>Magazynek 6.5 mm Creedmor 30Rnd Khaki</Polish>
-            <Portuguese>Carregador 6.5 mm com 30 cartuchos Creedmor Caqui</Portuguese>
-            <Russian>Магазин из 30-ти 6.5 мм Creedmor Хаки</Russian>
-            <German>6.5 mm Creedmor 30-Patronen-Magazin Khaki</German>
+            <English>6.5 mm Creedmoor 30Rnd Khaki Mag</English>
+            <French>Ch. 6,5 mm Creedmoor 30Cps Kaki</French>
+            <Spanish>Cargador de 30 balas de 6.5mm Creedmoor Caqui</Spanish>
+            <Italian>6.5 mm Creedmoor 30cp Car Cachi</Italian>
+            <Polish>Magazynek 6.5 mm Creedmoor 30Rnd Khaki</Polish>
+            <Portuguese>Carregador 6.5 mm com 30 cartuchos Creedmoor Caqui</Portuguese>
+            <Russian>Магазин из 30-ти 6.5 мм Creedmoor Хаки</Russian>
+            <German>6.5 mm Creedmoor 30-Patronen-Magazin Khaki</German>
             <Korean>6.5mm 크리드무어 30발 들이 탄창/카키</Korean>
             <Japanese>6.5mm 30Rnd クリードモア（カーキ）マガジン</Japanese>
-            <Chinesesimp>6.5 mm 30发 卡其色弹匣（Creedmor）</Chinesesimp>
-            <Ukrainian>Магазин з 30-ти 6,5 мм Creedmor Khaki</Ukrainian>
+            <Chinesesimp>6.5 mm 30发 卡其色弹匣（Creedmoor）</Chinesesimp>
+            <Ukrainian>Магазин з 30-ти 6,5 мм Creedmoor Khaki</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_mag_Description">
-            <English>Caliber: 6.5x47 mm Creedmor&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MXM</English>
-            <Czech>Ráže: 6.5x47 mm Creedmor&lt;br /&gt;Nábojů: 30&lt;br /&gt;Použití u: MXM</Czech>
-            <French>Calibre: 6,5x47 mm Creedmor &lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé avec: MXM</French>
-            <Spanish>Calibre: 6.5 mm Creedmor&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: MXM</Spanish>
-            <Italian>Calibro: 6.5 mm Creedmor&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: MXM</Italian>
-            <Polish>Kaliber: 6,5x47 mm Creedmor&lt;br /&gt;Pociski: 30&lt;br /&gt;Używany w: MXM</Polish>
-            <Portuguese>Calibre: 6.5x47 mm Creedmor&lt;br/&gt;Cartuchos: 30&lt;br/&gt;Usado em: MXM</Portuguese>
-            <Russian>Калибр: 6,5x47мм Creedmor&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются c: MXM</Russian>
-            <German>Kaliber: 6,5x47 mm  Creedmor&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: MXM</German>
-            <Korean>구경: 6.5x47mm 크리드무어&lt;br/&gt;장탄수: 30&lt;br/&gt;사용처: MXM</Korean>
-            <Japanese>口径: 6.5x47 mm クリードモア&lt;br /&gt;装填数: 30&lt;br /&gt;次で使用: MXM</Japanese>
-            <Chinese>口徑: 6.5x47毫米 克里德莫爾 狙擊專用彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: MXM</Chinese>
-            <Chinesesimp>口径：6.5x47 mm Creedmor 狙击专用弹&lt;br /&gt;发数：30&lt;br /&gt;使用于：MXM</Chinesesimp>
-            <Turkish>Kalibre: 6.5x47 mm Creedmor&lt;br /&gt;Mermi: 30&lt;br /&gt;Kullanıyor: MXM</Turkish>
-            <Hungarian>Kaliber: 6,5x47 mm Creedmor&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: MXM</Hungarian>
-            <Ukrainian>Калібр: 6,5x47мм Creedmor&lt;br /&gt;Набоїв: 30&lt;br /&gt;Використовуються з: MXM</Ukrainian>
+            <English>Caliber: 6.5x48 mm Creedmoor&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MXM</English>
+            <Czech>Ráže: 6.5x48 mm Creedmoor&lt;br /&gt;Nábojů: 30&lt;br /&gt;Použití u: MXM</Czech>
+            <French>Calibre: 6,5x48 mm Creedmoor &lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé avec: MXM</French>
+            <Spanish>Calibre: 6.5 mm Creedmoor&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: MXM</Spanish>
+            <Italian>Calibro: 6.5 mm Creedmoor&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: MXM</Italian>
+            <Polish>Kaliber: 6,5x48 mm Creedmoor&lt;br /&gt;Pociski: 30&lt;br /&gt;Używany w: MXM</Polish>
+            <Portuguese>Calibre: 6.5x48 mm Creedmoor&lt;br/&gt;Cartuchos: 30&lt;br/&gt;Usado em: MXM</Portuguese>
+            <Russian>Калибр: 6,5x48мм Creedmoor&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются c: MXM</Russian>
+            <German>Kaliber: 6,5x48 mm  Creedmoor&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: MXM</German>
+            <Korean>구경: 6.5x48mm 크리드무어&lt;br/&gt;장탄수: 30&lt;br/&gt;사용처: MXM</Korean>
+            <Japanese>口径: 6.5x48 mm クリードモア&lt;br /&gt;装填数: 30&lt;br /&gt;次で使用: MXM</Japanese>
+            <Chinese>口徑: 6.5x48毫米 克里德莫爾 狙擊專用彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: MXM</Chinese>
+            <Chinesesimp>口径：6.5x48 mm Creedmoor 狙击专用弹&lt;br /&gt;发数：30&lt;br /&gt;使用于：MXM</Chinesesimp>
+            <Turkish>Kalibre: 6.5x48 mm Creedmoor&lt;br /&gt;Mermi: 30&lt;br /&gt;Kullanıyor: MXM</Turkish>
+            <Hungarian>Kaliber: 6,5x48 mm Creedmoor&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: MXM</Hungarian>
+            <Ukrainian>Калібр: 6,5x48мм Creedmoor&lt;br /&gt;Набоїв: 30&lt;br /&gt;Використовуються з: MXM</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_mag_Name">
-            <English>6.5 mm Creedmor 30Rnd Sand Mag</English>
-            <French>Ch. 6,5 mm Creedmor 30Cps Sable</French>
-            <Spanish>Cargador de 30 balas de 6.5mm Creedmor Arena</Spanish>
-            <Italian>6.5 mm Creedmor 30cp Car Sabbia</Italian>
-            <Polish>Magazynek 6.5 mm Creedmor 30Rnd Piaskowy</Polish>
-            <Portuguese>Carregador 6.5 mm com 30 cartuchos Creedmor Areia</Portuguese>
-            <Russian>Магазин из 30-ти 6.5 мм Creedmor Песочный</Russian>
-            <German>6.5 mm Creedmor 30-Patronen-Magazin Sandfarben</German>
+            <English>6.5 mm Creedmoor 30Rnd Sand Mag</English>
+            <French>Ch. 6,5 mm Creedmoor 30Cps Sable</French>
+            <Spanish>Cargador de 30 balas de 6.5mm Creedmoor Arena</Spanish>
+            <Italian>6.5 mm Creedmoor 30cp Car Sabbia</Italian>
+            <Polish>Magazynek 6.5 mm Creedmoor 30Rnd Piaskowy</Polish>
+            <Portuguese>Carregador 6.5 mm com 30 cartuchos Creedmoor Areia</Portuguese>
+            <Russian>Магазин из 30-ти 6.5 мм Creedmoor Песочный</Russian>
+            <German>6.5 mm Creedmoor 30-Patronen-Magazin Sandfarben</German>
             <Korean>6.5mm 크리드무어 30발 들이 탄창/사막</Korean>
             <Japanese>6.5mm 30Rnd クリードモア（砂色）マガジン</Japanese>
-            <Chinesesimp>6.5 mm 30发 沙色弹匣（Creedmor）</Chinesesimp>
-            <Ukrainian>Магазин із 30-ти 6.5 мм Creedmor Пісочний</Ukrainian>
+            <Chinesesimp>6.5 mm 30发 沙色弹匣（Creedmoor）</Chinesesimp>
+            <Ukrainian>Магазин із 30-ти 6.5 мм Creedmoor Пісочний</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_mag_NameShort">
             <English>6.5 mm CM</English>
@@ -2830,36 +2866,36 @@
             <Ukrainian>6,5 мм CM</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_msbs_mag_Description">
-            <English>Caliber: 6.5x47 mm Creedmor&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Promet MR</English>
-            <Czech>Ráže: 6.5x47 mm Creedmor&lt;br /&gt;Nábojů: 30&lt;br /&gt;Použití u: Promet MR</Czech>
-            <French>Calibre: 6,5x47 mm Creedmor &lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé avec: Promet MR</French>
-            <Spanish>Calibre: 6.5 mm Creedmor&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: Promet MR</Spanish>
-            <Italian>Calibro: 6.5 mm Creedmor&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: Promet MR</Italian>
-            <Polish>Kaliber: 6,5x47 mm Creedmor&lt;br /&gt;Pociski: 30&lt;br /&gt;Używany w: Promet MR</Polish>
-            <Portuguese>Calibre: 6.5x47 mm Creedmor&lt;br/&gt;Cartuchos: 30&lt;br/&gt;Usado em: Promet MR</Portuguese>
-            <Russian>Калибр: 6,5x47мм Creedmor&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются c: Promet MR</Russian>
-            <German>Kaliber: 6,5x47 mm  Creedmor&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: Promet MR</German>
-            <Korean>구경: 6.5x47mm 크리드무어&lt;br/&gt;장탄수: 30&lt;br/&gt;사용처: MSBS 그롯/GL/MR/SG</Korean>
-            <Japanese>口径: 6.5x47 mm クリードモア&lt;br /&gt;装填数: 30&lt;br /&gt;次で使用: Promet MR</Japanese>
-            <Chinese>口徑: 6.5x47毫米 克里德莫爾 狙擊專用彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: Promet MR</Chinese>
-            <Chinesesimp>口径：6.5x47 mm Creedmor 狙击专用弹&lt;br /&gt;发数：30&lt;br /&gt;使用于：Promet MR</Chinesesimp>
-            <Turkish>Kalibre: 6.5x47 mm Creedmor&lt;br /&gt;Mermi: 30&lt;br /&gt;Kullanıyor: Promet MR</Turkish>
-            <Hungarian>Kaliber: 6,5x47 mm Creedmor&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: Promet MR</Hungarian>
-            <Ukrainian>Калібр: 6,5x47мм Creedmor&lt;br /&gt;Набоїв: 30&lt;br /&gt;Використовуються з: Promet MR</Ukrainian>
+            <English>Caliber: 6.5x48 mm Creedmoor&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Promet MR</English>
+            <Czech>Ráže: 6.5x48 mm Creedmoor&lt;br /&gt;Nábojů: 30&lt;br /&gt;Použití u: Promet MR</Czech>
+            <French>Calibre: 6,5x48 mm Creedmoor &lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé avec: Promet MR</French>
+            <Spanish>Calibre: 6.5 mm Creedmoor&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: Promet MR</Spanish>
+            <Italian>Calibro: 6.5 mm Creedmoor&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: Promet MR</Italian>
+            <Polish>Kaliber: 6,5x48 mm Creedmoor&lt;br /&gt;Pociski: 30&lt;br /&gt;Używany w: Promet MR</Polish>
+            <Portuguese>Calibre: 6.5x48 mm Creedmoor&lt;br/&gt;Cartuchos: 30&lt;br/&gt;Usado em: Promet MR</Portuguese>
+            <Russian>Калибр: 6,5x48мм Creedmoor&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются c: Promet MR</Russian>
+            <German>Kaliber: 6,5x48 mm  Creedmoor&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: Promet MR</German>
+            <Korean>구경: 6.5x48mm 크리드무어&lt;br/&gt;장탄수: 30&lt;br/&gt;사용처: MSBS 그롯/GL/MR/SG</Korean>
+            <Japanese>口径: 6.5x48 mm クリードモア&lt;br /&gt;装填数: 30&lt;br /&gt;次で使用: Promet MR</Japanese>
+            <Chinese>口徑: 6.5x48毫米 克里德莫爾 狙擊專用彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: Promet MR</Chinese>
+            <Chinesesimp>口径：6.5x48 mm Creedmoor 狙击专用弹&lt;br /&gt;发数：30&lt;br /&gt;使用于：Promet MR</Chinesesimp>
+            <Turkish>Kalibre: 6.5x48 mm Creedmoor&lt;br /&gt;Mermi: 30&lt;br /&gt;Kullanıyor: Promet MR</Turkish>
+            <Hungarian>Kaliber: 6,5x48 mm Creedmoor&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: Promet MR</Hungarian>
+            <Ukrainian>Калібр: 6,5x48мм Creedmoor&lt;br /&gt;Набоїв: 30&lt;br /&gt;Використовуються з: Promet MR</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_msbs_mag_Name">
-            <English>6.5 mm Creedmor 30Rnd Promet Mag</English>
-            <French>Ch. 6,5 mm Creedmor 30Cps Promet</French>
-            <Spanish>Cargador de 30 balas de 6.5mm Creedmor Promet</Spanish>
-            <Italian>6.5 mm Creedmor 30cp Car Promet</Italian>
-            <Polish>Magazynek 6.5 mm Creedmor 30Rnd Promet</Polish>
-            <Portuguese>Carregador 6.5 mm com 30 cartuchos Creedmor Promet</Portuguese>
-            <Russian>Магазин из 30-ти 6.5 мм Creedmor Promet</Russian>
-            <German>6.5 mm Creedmor 30-Patronen-Magazin für Promet</German>
+            <English>6.5 mm Creedmoor 30Rnd Promet Mag</English>
+            <French>Ch. 6,5 mm Creedmoor 30Cps Promet</French>
+            <Spanish>Cargador de 30 balas de 6.5mm Creedmoor Promet</Spanish>
+            <Italian>6.5 mm Creedmoor 30cp Car Promet</Italian>
+            <Polish>Magazynek 6.5 mm Creedmoor 30Rnd Promet</Polish>
+            <Portuguese>Carregador 6.5 mm com 30 cartuchos Creedmoor Promet</Portuguese>
+            <Russian>Магазин из 30-ти 6.5 мм Creedmoor Promet</Russian>
+            <German>6.5 mm Creedmoor 30-Patronen-Magazin für Promet</German>
             <Korean>6.5mm 크리드무어 30발 들이 탄창/프로멧용</Korean>
             <Japanese>6.5 mm 30Rnd Promet クリードモア・マガジン</Japanese>
-            <Chinesesimp>6.5 mm 30发 Promet 弹匣（Creedmor）</Chinesesimp>
-            <Ukrainian>Магазин із 30-ти 6.5 мм Creedmor Promet</Ukrainian>
+            <Chinesesimp>6.5 mm 30发 Promet 弹匣（Creedmoor）</Chinesesimp>
+            <Ukrainian>Магазин із 30-ти 6.5 мм Creedmoor Promet</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_green_mag_APDescription">
             <English>Caliber: 6.5x39 mm AP&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba</English>
@@ -3575,6 +3611,42 @@
             <Chinesesimp>12铅径 6发 #4 鹿弹</Chinesesimp>
             <Turkish>12 kalibre 6 mermi #4 İrisaçma</Turkish>
             <Ukrainian>12 Калібр 6 патр. #4 Картеч</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Slug_Name">
+            <English>12 Gauge 6Rnd Slug 300gr</English>
+            <Czech>12 Gauge 6Rnd Slug 300gr</Czech>
+            <French>12 Gauge 6Rnd Slug 300gr</French>
+            <Spanish>12 Gauge 6Rnd Slug 300gr</Spanish>
+            <Italian>12 Gauge 6Rnd Slug 300gr</Italian>
+            <Polish>12 Gauge 6Rnd Slug 300gr</Polish>
+            <Portuguese>12 Gauge 6Rnd Slug 300gr</Portuguese>
+            <Russian>12 Gauge 6Rnd Slug 300gr</Russian>
+            <German>12 Gauge 6Rnd Slug 300gr</German>
+            <Korean>12 Gauge 6Rnd Slug 300gr</Korean>
+            <Japanese>12 Gauge 6Rnd Slug 300gr</Japanese>
+            <Chinese>12 Gauge 6Rnd Slug 300gr</Chinese>
+            <Chinesesimp>12 Gauge 6Rnd Slug 300gr</Chinesesimp>
+            <Turkish>12 Gauge 6Rnd Slug 300gr</Turkish>
+            <Hungarian>12 Gauge 6Rnd Slug 300gr</Hungarian>
+            <Ukrainian>12 Gauge 6Rnd Slug 300gr</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Slug_NameShort">
+            <English>Slug 300gr</English>
+            <Czech>Slug 300gr</Czech>
+            <French>Slug 300gr</French>
+            <Spanish>Slug 300gr</Spanish>
+            <Italian>Slug 300gr</Italian>
+            <Polish>Slug 300gr</Polish>
+            <Portuguese>Slug 300gr</Portuguese>
+            <Russian>Slug 300gr</Russian>
+            <German>Slug 300gr</German>
+            <Korean>Slug 300gr</Korean>
+            <Japanese>Slug 300gr</Japanese>
+            <Chinese>Slug 300gr</Chinese>
+            <Chinesesimp>Slug 300gr</Chinesesimp>
+            <Turkish>Slug 300gr</Turkish>
+            <Hungarian>Slug 300gr</Hungarian>
+            <Ukrainian>Slug 300gr</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_7Rnd_408_305gr_Mag_Description">
             <English>Caliber: .408 CheyTac (305gr)&lt;br /&gt;Rounds: 7</English>

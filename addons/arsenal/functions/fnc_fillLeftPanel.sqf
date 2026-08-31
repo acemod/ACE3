@@ -88,9 +88,15 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
         case IDC_buttonFace: {
             private _lbAdd = -1; // micro-optimization
             // Faces need to be added like this because their config path is
-            // configFile >> "CfgFaces" >> face category >> className
+            // configFile >> "CfgFaces" >> face type >> className
+            private _unitFaceType = getText (configOf GVAR(center) >> "faceType");
             {
-                _y params ["_displayName", "_modPicture"];
+                _y params ["_displayName", "_modPicture", "_faceType"];
+                if (_unitFaceType != _faceType) then {
+                    TRACE_3("Hid face that doesn't match faceType",_x,_unitFaceType,_faceType);
+                    continue
+                };
+
                 _lbAdd = _ctrlPanel lbAdd _displayName;
                 _ctrlPanel lbSetData [_lbAdd, _x];
                 _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _x]];

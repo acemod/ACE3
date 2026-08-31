@@ -6,11 +6,11 @@
   },
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
-    "node-sass": "^9.0.0",
     "rollup": "^4.1.4",
     "rollup-plugin-scss": "^4.0.0",
     "rollup-plugin-svg-icons": "^2.1.2",
-    "rollup-plugin-svg-sprite-loader": "^0.0.4"
+    "rollup-plugin-svg-sprite-loader": "^0.0.4",
+    "sass": "^1.98.0"
   },
   "dependencies": {
     "ace3": "file:"

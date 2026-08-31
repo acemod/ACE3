@@ -17,7 +17,7 @@ private _virtualItemsFlat = +GVAR(virtualItems);
 private _weapons = _virtualItemsFlat deleteAt IDX_VIRT_WEAPONS;
 private _attachments = _virtualItemsFlat deleteAt IDX_VIRT_ATTACHMENTS;
 
-for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
+for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_GOGGLES do {
     _virtualItemsFlat merge [_virtualItemsFlat deleteAt _index, true];
 };
 

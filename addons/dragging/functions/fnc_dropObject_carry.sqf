@@ -48,16 +48,21 @@ if (_tryLoad && {!(_target isKindOf "CAManBase")} && {["ace_cargo"] call EFUNC(c
     detach _target;
 };
 
-// Fix anim when aborting carrying persons
-if (_target isKindOf "CAManBase" || {animationState _unit in CARRY_ANIMATIONS}) then {
-    if (isNull objectParent _unit && {_unit call EFUNC(common,isAwake)}) then {
-        [_unit, "", 2] call EFUNC(common,doAnimation);
-    };
-
-    if (_target getVariable ["ACE_isUnconscious", false]) then {
-        [_target, "unconscious", 2] call EFUNC(common,doAnimation);
+// Put unit into correct animation
+if (_target isKindOf "CAManBase") then {
+    if (_target call EFUNC(common,isAwake)) then {
+        [_target, "amovppnemstpsnonwnondnon", 2] call EFUNC(common,doAnimation);
     } else {
-        [_target, "", 2] call EFUNC(common,doAnimation);  //@todo
+        [_target, "unconscious", 2] call EFUNC(common,doAnimation);
+    };
+};
+
+// Fix anim when aborting carrying persons
+if (isNull objectParent _unit && {_unit call EFUNC(common,isAwake)}) then {
+    private _animationState = animationState _unit;
+
+    if (_animationState regexMatch "^acinpercmrunsnonwnond.*" || {_animationState in CARRY_ANIMATIONS}) then {
+        [_unit, "", 2] call EFUNC(common,doAnimation);
     };
 };
 

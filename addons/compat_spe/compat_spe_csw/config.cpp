@@ -35,6 +35,8 @@ class CfgFunctions {
             OVERWRITE_FUNC(can_Reload);
             OVERWRITE_FUNC(can_resupply_ammo);
             OVERWRITE_FUNC(can_unload_ammo);
+            OVERWRITE_FUNC(player_put_EH);
+            OVERWRITE_FUNC(player_take_EH);
         };
     };
 };

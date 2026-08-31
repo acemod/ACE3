@@ -49,4 +49,5 @@ private _magAmmoCounts = [];
 TRACE_1("",_magAmmoCounts);
 
 // Select maximum
+if (_magAmmoCounts isEqualTo []) exitWith { ERROR_1("no turret mags [%1] found to reload",_magazine); false };
 (selectMax _magAmmoCounts) > _ammoCount
