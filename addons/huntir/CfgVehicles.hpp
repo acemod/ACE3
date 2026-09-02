@@ -10,7 +10,7 @@ class CfgVehicles {
                     statement = QUOTE([FUNC(huntir)] call CBA_fnc_execNextFrame;);
                     showDisabled = 0;
                     icon = QPATHTOF(UI\w_huntir_monitor_ca.paa);
-                    exceptions[] = {};
+                    exceptions[] = {"isNotInside"};
                 };
             };
         };
