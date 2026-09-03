@@ -1,9 +1,19 @@
 #include "script_component.hpp"
 /*
  * Author: commy2
+ * Create dummy targets
+ *
+ * Arguments:
+ * 0: Classname <STRING>
+ * 1: Position <ARRAY>
+ * 2: Group <GROUP> (optional)
+ * 3: Variable name <STRING> (optional)
+ *
+ * Return Value:
+ * Target <OBJECT>
  *
  * Public: No
-*/
+ */
 
 params ["_type", "_position", ["_group", grpNull], "_varName"];
 

@@ -4,12 +4,10 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {
-            QGVAR(moduleConfigurePylons),
             QGVAR(moduleDefendArea),
             QGVAR(moduleEditableObjects),
             QGVAR(moduleGlobalSetSkill),
             QGVAR(moduleGroupSide),
-            QGVAR(moduleLoadIntoCargo),
             QGVAR(modulePatrolArea),
             QGVAR(moduleSearchArea),
             QGVAR(moduleSearchNearby),
@@ -22,11 +20,8 @@ class CfgPatches {
             QGVAR(moduleSuppressiveFire),
             QGVAR(AddFullArsenal),
             QGVAR(RemoveFullArsenal),
-            QGVAR(moduleTeleportPlayers),
             QGVAR(moduleHeal),
-            QGVAR(moduleSuicideBomber),
-            QGVAR(AddFullAceArsenal),
-            QGVAR(RemoveFullAceArsenal)
+            QGVAR(moduleSuicideBomber)
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
