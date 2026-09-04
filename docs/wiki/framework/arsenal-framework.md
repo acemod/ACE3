@@ -518,6 +518,9 @@ All are local.
 | `ace_arsenal_rightPanelHide` | Arsenal display (DISPLAY) | 3.20.3 |
 | `ace_arsenal_rightPanelWeapon` | Arsenal display (DISPLAY) | 3.20.3 |
 | `ace_arsenal_rightPanelContainer` | Arsenal display (DISPLAY) | 3.20.3 |
+| `ace_arsenal_itemsChanged` | Arsenal display (DISPLAY), panel IDC the change originated from (NUMBER, -1 if not panel-specific e.g. a loadout load/import), items gained (HASHMAP), items lost (HASHMAP) |
+
+`ace_arsenal_itemsChanged`'s items gained/lost HashMaps are keyed by classname, valued by how many of it were gained/lost - a diff, not a full snapshot, so a classname whose count didn't change appears in neither. It fires once for every way an item can enter or leave the arsenal (a weapon/attachment/magazine pick, a container being equipped, the +/- cargo buttons, remove-all/remove-selected, and a whole loadout being loaded or imported), so it's a single place to hook if you need to know what a player actually took or returned - useful for a limited arsenal backed by a real stock (an inventory, an external economy) rather than ACE's own unlimited virtual items.
 
 ## 9. Custom sub item categories
 
@@ -613,3 +616,23 @@ private _loadout = [ACE_player] call CBA_fnc_getLoadout; // or getUnitLoadout AC
 private _replaceExisting = true; // optional, default: false
 ["Current Loadout", _loadout, _replaceExisting] call ace_arsenal_fnc_saveLoadout;
 ```
+
+### 10.5 Reacting to items being taken or returned
+
+`ace_arsenal_itemsChanged` fires once for every way an item can enter or leave the arsenal - see section 8. The following prints what was taken and what was returned every time the player changes anything:
+
+```sqf
+["ace_arsenal_itemsChanged", {
+    params ["_display", "_panel", "_newItems", "_oldItems"];
+
+    {
+        systemChat format ["Took %1x %2", _y, _x];
+    } forEach _newItems;
+
+    {
+        systemChat format ["Returned %1x %2", _y, _x];
+    } forEach _oldItems;
+}] call CBA_fnc_addEventHandler;
+```
+
+This is the primitive a limited/pooled arsenal (backed by a real inventory, or an external economy) needs: instead of diffing the unit's loadout before and after every possible panel interaction yourself, listen for this one event and charge or credit your own stock by exactly what it reports.
