@@ -35,7 +35,10 @@ private _extendedLoadout = switch (GVAR(currentLoadoutsTab)) do {
 };
 
 // Apply loadout to unit
+private _oldItemCounts = call FUNC(getLoadoutItemCounts);
 [GVAR(center), _extendedLoadout, true] call CBA_fnc_setLoadout;
+
+[_display, -1, _oldItemCounts, call FUNC(getLoadoutItemCounts)] call FUNC(fireItemsChangedEvent);
 
 // Prevent overloading of inventory containers
 GVAR(center) call FUNC(preventOverfilling);
