@@ -26,7 +26,12 @@ class CfgPatches {
             "ACE_NVGoggles_INDEP_WP",
             "ACE_NVG_Wide_Black_WP",
             "ACE_NVG_Wide_WP",
-            "ACE_NVG_Wide_Green_WP"
+            "ACE_NVG_Wide_Green_WP",
+			"ACE_H_PilotHelmetFighter_B_WP",
+			"ACE_H_PilotHelmetFighter_I_WP",
+			"ACE_H_PilotHelmetFighter_O_WP",
+			"ACE_H_HelmetO_ViperSP_hex_WP",
+			"ACE_H_HelmetO_ViperSP_ghex_WP"
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
