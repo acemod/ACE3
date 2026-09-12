@@ -25,7 +25,7 @@ if (isNull _projectile || {!isClass configOf _projectile}) exitWith {
 };
 
 _projectile setVariable [QGVAR(blacklisted), true];
-(_projectile getVariable [QGVAR(spallEH), [-1, -1]]) params ["_hitPartEH", "_penetratedEH"];
+(_projectile getVariable [QGVAR(hitPartEventHandler), [-1, -1]]) params ["_hitPartEH", "_penetratedEH"];
 _projectile removeEventHandler ["HitPart", _hitPartEH];
 _projectile removeEventHandler ["Penetrated", _penetratedEH];
 
