@@ -34,8 +34,7 @@ private _nearestObjects = nearestObjects [_detectorPointAGL, [], _radius];
 GVAR(debugDetector) = [_detectorPointAGL, _nearestObjects];
 #endif
 
-private _detectableClasses = uiNamespace getVariable QGVAR(detectableClasses);
-private _index = _nearestObjects findIf {(typeOf _x) in _detectableClasses && {(getModelInfo _x) select 0 != "empty.p3d"}};
+private _index = _nearestObjects findIf {(typeOf _x) in GVAR(detectableClasses) && {(getModelInfo _x) select 0 != "empty.p3d"}};
 
 // Not found
 if (_index == -1) then {
