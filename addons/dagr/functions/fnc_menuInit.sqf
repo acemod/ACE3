@@ -63,7 +63,7 @@ GVAR(busy) = false;
 GVAR(busyTimer) = 0;
 
 GVAR(showNoWaypointsFound) = false;
-GVAR(showInfoUpdatin) = false;
+GVAR(showInfoUpdating) = false;
 GVAR(showDeleting) = false;
 GVAR(showOutOfSpace) = false;
 
