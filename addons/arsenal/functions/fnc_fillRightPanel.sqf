@@ -296,6 +296,12 @@ switch (_ctrlIDC) do {
                 ["CfgWeapons", _x] call _fnc_fillRightContainer;
             };
         } forEach (keys (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS));
+        // misc. goggles
+        {
+            if !(_x in _items) then {
+                ["CfgGlasses", _x] call _fnc_fillRightContainer;
+            };
+        } forEach (keys (GVAR(virtualItems) get IDX_VIRT_MISC_GOGGLES));
         // Unique items
         {
             if !(_x in _items) then {
@@ -334,6 +340,10 @@ switch (_ctrlIDC) do {
                     // "Regular" misc. items
                     case (_x in (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS)): {
                         ["CfgWeapons", _x] call _fnc_fillRightContainer;
+                    };
+                    // "Regular" misc. goggles
+                    case (_x in (GVAR(virtualItems) get IDX_VIRT_MISC_GOGGLES)): {
+                        ["CfgGlasses", _x] call _fnc_fillRightContainer;
                     };
                     // Unique items
                     case (_x in (GVAR(virtualItems) get IDX_VIRT_UNIQUE_MISC_ITEMS)): {

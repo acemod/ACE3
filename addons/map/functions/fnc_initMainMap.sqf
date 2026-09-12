@@ -2,9 +2,19 @@
 #include "\a3\ui_f\hpp\defineResincl.inc"
 /*
  * Author: commy2
+ * XEH for main map
+ *
+ * Arguments:
+ * 0: RscDiary Display <DISPLAY>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [findDisplay 12] call ace_map_fnc_initMainMap
  *
  * Public: No
-*/
+ */
 
 params ["_display"];
 if (ctrlIDD _display != IDD_MAIN_MAP) exitWith {};

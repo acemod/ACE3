@@ -75,7 +75,7 @@ if (_items isEqualType true) then {
 
             // Other
             default {
-                for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
+                for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_GOGGLES do {
                     if (_x in (_cargo get _index)) exitWith {
                         (_cargo get _index) deleteAt _x;
                     };
@@ -91,7 +91,7 @@ if (_items isEqualType true) then {
 
     _empty = createHashMapFromArray _empty;
 
-    for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
+    for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_GOGGLES do {
         _empty set [_index, createHashMap];
     };
 

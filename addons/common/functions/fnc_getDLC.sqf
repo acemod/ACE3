@@ -52,7 +52,7 @@ private _name = switch (_id) do {
     case "601670": { "Jets" };
     case "288520": { "Kart" };
     case "332350": { "Mark" };
-    case "288520": { "Orange" };
+    case "571710": { "Orange" };
     case "744950": { "Tacops" };
     case "798390": { "Tank" };
     case "1042220": { "GM" };

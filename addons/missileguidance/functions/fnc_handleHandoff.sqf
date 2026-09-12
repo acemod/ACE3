@@ -20,3 +20,5 @@ params ["_target", "_args"];
 if (isNil "_target" || {isNull _target} || {!local _target} ) exitWith { false };
 
 [LINKFUNC(guidancePFH), 0, _args] call CBA_fnc_addPerFrameHandler;
+
+true

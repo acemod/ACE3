@@ -24,7 +24,7 @@ params ["_interactionType"];
 if (
     _interactionType != 0
     || {!isNull objectParent ACE_player}
-    || {!HAS_WIRECUTTER(ACE_player)}
+    || {! (ACE_player call FUNC(hasWirecutter)) }
 ) exitWith {};
 
 TRACE_1("Starting wirecuter interact PFH",_interactionType);
@@ -53,7 +53,7 @@ TRACE_1("Starting wirecuter interact PFH",_interactionType);
 
                 !isNull _attachedFence
                 && {damage _attachedFence < 1}
-                && {HAS_WIRECUTTER(_player)}
+                && {_player call FUNC(hasWirecutter)}
                 && {[_player, _attachedFence, ["isNotSwimming"]] call EFUNC(common,canInteractWith)}
                 && {
                     // Custom LOS check for fence

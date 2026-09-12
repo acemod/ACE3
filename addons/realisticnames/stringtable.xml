@@ -4179,22 +4179,22 @@
             <Ukrainian>CPW</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_01">
-            <English>Makarov PM</English>
-            <Czech>Makarov PM</Czech>
-            <French>Makarov PM</French>
-            <Spanish>Makarov PM</Spanish>
-            <Italian>Makarov PM</Italian>
-            <Polish>Makarowa PM</Polish>
-            <Portuguese>Makarov PM</Portuguese>
-            <Russian>ПМ</Russian>
-            <German>Makarov PM</German>
-            <Korean>마카로프 PM</Korean>
-            <Japanese>マカロフ PM</Japanese>
+            <English>Makarov PMM</English>
+            <Czech>Makarov PMM</Czech>
+            <French>Makarov PMM</French>
+            <Spanish>Makarov PMM</Spanish>
+            <Italian>Makarov PMM</Italian>
+            <Polish>Makarowa PMM</Polish>
+            <Portuguese>Makarov PMM</Portuguese>
+            <Russian>ПММ</Russian>
+            <German>Makarov PMM</German>
+            <Korean>마카로프 PMM</Korean>
+            <Japanese>マカロフ PMM</Japanese>
             <Chinese>"馬卡洛夫"手槍</Chinese>
             <Chinesesimp>"马卡洛夫"</Chinesesimp>
-            <Turkish>Makarov PM</Turkish>
-            <Hungarian>Makarov PM</Hungarian>
-            <Ukrainian>ПМ</Ukrainian>
+            <Turkish>Makarov PMM</Turkish>
+            <Hungarian>Makarov PMM</Hungarian>
+            <Ukrainian>ПММ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_Signal_Name">
             <English>Taurus Judge</English>
