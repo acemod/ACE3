@@ -195,6 +195,7 @@ class CfgAmmo {
     };
     class APERSMine_Range_Ammo;
     class ACE_APERSMine_ToePopper_Ammo: APERSMine_Range_Ammo {
+        EGVAR(frag,skip) = 1; // designed to be "non lethal"
         ACE_damageType = QGVAR(toePopper);
     };
     class TrainingMine_Ammo: APERSMine_Range_Ammo {
