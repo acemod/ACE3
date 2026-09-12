@@ -41,10 +41,10 @@ _objects = _objects select {
     _isValid
 };
 
-if (!isNil {missionNamespace getVariable format [QGVAR(Budget_%1), _side]}) then {
+if (!(missionNamespace isNil format [QGVAR(Budget_%1), _side])) then {
     INFO_1("Overwriting previous budget for side [%1]",_side);
 };
-if (!isNil {missionNamespace getVariable format [QGVAR(Objects_%1), _side]}) then {
+if (!(missionNamespace isNil format [QGVAR(Objects_%1), _side])) then {
     INFO_1("Overwriting previous objects for side [%1]",_side);
 };
 

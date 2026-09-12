@@ -22,7 +22,7 @@ params [["_object", objNull, [objNull]], ["_items", true, [[], true]], ["_global
 
 if (isNull _object) exitWith {};
 
-if (_global && {isMultiplayer} && {isNil {_object getVariable QGVAR(initBoxJIP)}}) then {
+if (_global && {isMultiplayer} && {(_object isNil QGVAR(initBoxJIP))}) then {
     private _id = [QGVAR(initBox), [_object, _items, false]] call CBA_fnc_globalEventJIP;
 
     // Remove JIP EH if object is deleted
@@ -52,7 +52,7 @@ if (_global && {isMultiplayer} && {isNil {_object getVariable QGVAR(initBoxJIP)}
     [_object, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToObject);
 
     // If items were set globally, do not add items locally
-    if (isNil {_object getVariable QGVAR(virtualItems)}) then {
+    if ((_object isNil QGVAR(virtualItems))) then {
         [_object, _items, false] call FUNC(addVirtualItems);
     };
 
