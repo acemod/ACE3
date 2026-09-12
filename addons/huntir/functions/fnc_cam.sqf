@@ -24,7 +24,6 @@ GVAR(pos) = ASLToAGL getPosASLVisual GVAR(huntIR);
 
 GVAR(ZOOM) = 0;
 GVAR(NV) = 0;
-GVAR(TI) = 0;
 GVAR(cur_cam) = 0;
 GVAR(ROTATE) = 0;
 GVAR(ELEVAT) = 0.01;
