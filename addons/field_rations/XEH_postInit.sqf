@@ -106,7 +106,7 @@ if !(hasInterface) exitWith {};
     // Add status modifiers
     if (GETEGVAR(medical,enabled,false)) then {
         [0, {
-            if (_this getVariable [QEGVAR(medical,isBleeding), false]) exitWith {
+            if ((_this getVariable [QEGVAR(medical,woundBleeding), 0]) > 0) exitWith {
                 0.5
             };
             -1 * count (_this getVariable [QEGVAR(medical,ivBags), []]);
