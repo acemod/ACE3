@@ -1,6 +1,5 @@
 #include "script_component.hpp"
 
-GVAR(vehicleMagCache) = createHashMap;
 GVAR(deployPFH) = -1;
 
 ["CBA_settingsInitialized", {
