@@ -20,7 +20,9 @@ params ["_control", "_curSel"];
 if (_curSel < 0) exitWith {};
 
 private _display = ctrlParent _control;
-private _oldItemCounts = call FUNC(getLoadoutItemCounts);
+// Face, voice and insignia are cosmetic-only and don't pull from the virtual item pool
+private _isCosmeticPanel = GVAR(currentLeftPanel) in [IDC_buttonFace, IDC_buttonVoice, IDC_buttonInsignia];
+private _oldItemCounts = if (_isCosmeticPanel) then {createHashMap} else {call FUNC(getLoadoutItemCounts)};
 private _item = [_control lbData _curSel, _control lnbData [_curSel, 0]] select (ctrlType _control == CT_LISTNBOX);
 
 // When having chosen a new category, see if the current right panel can be kept open, otherwise take default
@@ -697,4 +699,6 @@ switch (GVAR(currentLeftPanel)) do {
 
 (_display displayCtrl IDC_totalWeightText) ctrlSetText (format ["%1 (%2)", GVAR(center) call EFUNC(common,getWeight), [GVAR(center), 1] call EFUNC(common,getWeight)]);
 
-[_display, GVAR(currentLeftPanel), _oldItemCounts, call FUNC(getLoadoutItemCounts)] call FUNC(fireItemsChangedEvent);
+if !(_isCosmeticPanel) then {
+    [_display, GVAR(currentLeftPanel), _oldItemCounts, call FUNC(getLoadoutItemCounts)] call FUNC(fireItemsChangedEvent);
+};

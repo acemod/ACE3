@@ -17,7 +17,7 @@
  * Classname -> count <HASHMAP>
  *
  * Example:
- * call FUNC(getLoadoutItemCounts)
+ * call ace_arsenal_fnc_getLoadoutItemCounts
  *
  * Public: No
 */
@@ -25,7 +25,7 @@
 private _counts = createHashMap;
 
 private _fnc_add = {
-    params [["_class", "", [""]], ["_amount", 1, [0]]];
+    params ["_class", ["_amount", 1]];
     if (_class == "" || {_amount == 0}) exitWith {};
     _counts set [_class, (_counts getOrDefault [_class, 0]) + _amount];
 };
@@ -33,11 +33,11 @@ private _fnc_add = {
 // Weapon-format slot: [type, muzzle, pointer, optic, [primary mag, ammo],
 // [secondary mag, ammo], bipod] - shared by primary/secondary/handgun/binocular.
 private _fnc_addWeaponSlot = {
-    params [["_slot", [], [[]]]];
+    params ["_slot"];
     _slot params [
-        ["_weapon", "", [""]], ["_muzzle", "", [""]], ["_pointer", "", [""]],
-        ["_optic", "", [""]], ["_primaryMag", [], [[]]], ["_secondaryMag", [], [[]]],
-        ["_bipod", "", [""]]
+        ["_weapon", ""], ["_muzzle", ""], ["_pointer", ""],
+        ["_optic", ""], ["_primaryMag", []], ["_secondaryMag", []],
+        ["_bipod", ""]
     ];
     [_weapon] call _fnc_add;
     [_muzzle] call _fnc_add;
@@ -50,11 +50,11 @@ private _fnc_addWeaponSlot = {
 
 // Uniform/vest/backpack slots: [type, [[item, count], [item, count], ...]]
 private _fnc_addContainerSlot = {
-    params [["_slot", [], [[]]]];
-    _slot params [["_container", "", [""]], ["_items", [], [[]]]];
+    params ["_slot"];
+    _slot params [["_container", ""], ["_items", []]];
     [_container] call _fnc_add;
     {
-        _x params [["_itemClass", "", [""]], ["_itemAmount", 1, [0]]];
+        _x params ["_itemClass", ["_itemAmount", 1]];
         [_itemClass, _itemAmount] call _fnc_add;
     } forEach _items;
 };

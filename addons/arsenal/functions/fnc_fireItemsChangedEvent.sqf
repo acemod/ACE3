@@ -16,12 +16,7 @@
  * Public: No
 */
 
-params [
-    ["_display", displayNull, [displayNull]],
-    ["_panel", -1, [0]],
-    ["_oldCounts", createHashMap, [createHashMap]],
-    ["_newCounts", createHashMap, [createHashMap]]
-];
+params ["_display", "_panel", "_oldCounts", "_newCounts"];
 
 private _added = +_newCounts;
 {
@@ -35,7 +30,7 @@ private _removed = +_oldCounts;
     if (_remaining > 0) then {_removed set [_x, _remaining]} else {_removed deleteAt _x};
 } forEach _newCounts;
 
-if (count _added == 0 && {count _removed == 0}) exitWith {};
+if (_added isEqualTo createHashMap && {_removed isEqualTo createHashMap}) exitWith {};
 
 // QGVAR(itemsChanged): [_display, _panel, _newItem (gained), _oldItem (lost)]
 [QGVAR(itemsChanged), [_display, _panel, _added, _removed]] call CBA_fnc_localEvent;
