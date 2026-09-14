@@ -1,4 +1,4 @@
-class cfgMagazines {
+class CfgMagazines {
     class CA_Magazine;
     class VehicleMagazine;
     class rhsusf_mag_40Rnd_46x30_AP: CA_Magazine {

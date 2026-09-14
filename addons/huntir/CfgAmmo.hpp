@@ -5,7 +5,7 @@ class CfgAmmo {
         lightColor[] = {0, 0, 0, 0};
         smokeColor[] = {0, 0, 0, 0};
         timeToLive = 6;
-        class Eventhandlers {
+        class EventHandlers {
             fired = QUOTE(call FUNC(handleFired));
         };
     };
