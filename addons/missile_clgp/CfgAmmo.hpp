@@ -22,7 +22,7 @@ class CfgAmmo {
         muzzleEffect = "";
         airFriction = 0;
 
-        class Eventhandlers {
+        class EventHandlers {
             fired = QUOTE(call FUNC(submunition_ammoFired));
         };
         class CamShakeFire {
@@ -110,7 +110,7 @@ class CfgAmmo {
         submunitionCount = 1;
         submunitionConeAngle = 0;
         triggerTime = 0.1;
-        class Eventhandlers {
+        class EventHandlers {
             fired = QUOTE(call FUNC(submunition_ammoFired));
         };
     };

@@ -1,10 +1,10 @@
 #define EMPTY_TEXTURE(weapon) \
-    class weapon: default { \
+    class weapon: Default { \
         texture = ""; \
     }
 
 class CfgWeaponCursors {
-    class default;
+    class Default;
     EMPTY_TEXTURE(arifle);
     EMPTY_TEXTURE(mg);
     EMPTY_TEXTURE(srifle);
