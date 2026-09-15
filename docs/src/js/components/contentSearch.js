@@ -14,6 +14,7 @@ window.app.contentSearch = (function ($) {
 
     var _searchTerm = "";
     var _searchTermCombined = "";
+    var _searchTokens = [];
     var _timeOutID;
 
     var $liveSearch = $("#liveSearch");
@@ -25,6 +26,159 @@ window.app.contentSearch = (function ($) {
 
     var $contentSearchField = $liveSearch.find(".contentSearch-field");
     var $contentSearchResultList = $(".searchPage-result-list");
+
+    function normalizeSearchTerm(term) {
+        return (term || "").trim().toLowerCase();
+    }
+
+    function combineSearchTerm(searchTerm) {
+        return searchTerm.replace(/[^a-z0-9]+/g, "");
+    }
+
+    function tokenizeSearchTerm(searchTerm) {
+        return searchTerm.split(/[^a-z0-9]+/).filter(function (token) {
+            return token.length > 0;
+        });
+    }
+
+    function escapeRegExp(value) {
+        return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    }
+
+    function uniqueTokens(tokens) {
+        var seen = {};
+
+        return tokens.filter(function (token) {
+            if (seen[token]) {
+                return false;
+            }
+
+            seen[token] = true;
+            return true;
+        });
+    }
+
+    function normalizePage(currentPage) {
+        return {
+            title: (currentPage.title || ""),
+            group: (currentPage.group || ""),
+            description: (currentPage.description || ""),
+            url: (currentPage.url || ""),
+            content: (currentPage.content || ""),
+            value: 0
+        };
+    }
+
+    function updateSearchState(term) {
+        _searchTerm = normalizeSearchTerm(term);
+        _searchTermCombined = combineSearchTerm(_searchTerm);
+        _searchTokens = uniqueTokens(tokenizeSearchTerm(_searchTerm));
+    }
+
+    function countMatches(text, searchValues) {
+        var matchCount = 0;
+        var i = 0;
+
+        for (i; i < searchValues.length; i++) {
+            matchCount += countWordOccurrences(text, searchValues[i]);
+        }
+
+        return matchCount;
+    }
+
+    function countWordOccurrences(text, searchValue) {
+        var matches = text.match(new RegExp("(^|[^a-z0-9])" + escapeRegExp(searchValue) + "(?=$|[^a-z0-9])", "g"));
+
+        return matches ? matches.length : 0;
+    }
+
+    function fieldContainsToken(text, token) {
+        return countWordOccurrences(text, token) > 0;
+    }
+
+    function fieldContainsAllTokens(text) {
+        var i = 0;
+
+        if (_searchTokens.length === 0) {
+            return false;
+        }
+
+        for (i; i < _searchTokens.length; i++) {
+            if (!fieldContainsToken(text, _searchTokens[i])) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    function pageContainsAllTokens(pageFields) {
+        var i = 0;
+        var j = 0;
+
+        if (_searchTokens.length === 0) {
+            return false;
+        }
+
+        for (i; i < _searchTokens.length; i++) {
+            var found = false;
+
+            for (j = 0; j < pageFields.length; j++) {
+                if (fieldContainsToken(pageFields[j], _searchTokens[i])) {
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    function scoreTitleMatches(currentPage) {
+        var title = currentPage.title.toLowerCase();
+        var score = 0;
+
+        if (_searchTerm !== "" && title === _searchTerm) {
+            score += 5000;
+        }
+
+        if (_searchTerm !== "" && title.indexOf(_searchTerm) === 0) {
+            score += 2500;
+        }
+
+        if (_searchTermCombined !== _searchTerm && _searchTermCombined !== "" && combineSearchTerm(title).indexOf(_searchTermCombined) === 0) {
+            score += 1500;
+        }
+
+        if (fieldContainsAllTokens(title)) {
+            score += 1200;
+        }
+
+        return score;
+    }
+
+    function scoreUrlMatches(currentPage) {
+        var url = currentPage.url.toLowerCase();
+        var score = 0;
+
+        if (_searchTerm !== "" && url.indexOf(_searchTerm) >= 0) {
+            score += 300;
+        }
+
+        if (_searchTermCombined !== _searchTerm && _searchTermCombined !== "" && combineSearchTerm(url).indexOf(_searchTermCombined) >= 0) {
+            score += 200;
+        }
+
+        if (fieldContainsAllTokens(url)) {
+            score += 400;
+        }
+
+        return score;
+    }
 
     function init() {
 
@@ -55,20 +209,31 @@ window.app.contentSearch = (function ($) {
             text = "",
             multiplier = 0;
 
+        var searchValues = _searchTokens.slice();
+
         for (i; i < length; i++) {
 
             var found = false;
 
-            if (results.length >= maxEntries) {
-                break;
+            var currentPage = normalizePage(response[i]);
+            var pageFields = [
+                currentPage.title.toLowerCase(),
+                currentPage.description.toLowerCase(),
+                currentPage.group.toLowerCase(),
+                currentPage.url.toLowerCase(),
+                currentPage.content.toLowerCase()
+            ];
+
+            if (!pageContainsAllTokens(pageFields)) {
+                continue;
             }
 
-            var currentPage = response[i];
-            currentPage.value = 0;
+            currentPage.value += scoreTitleMatches(currentPage);
+            currentPage.value += scoreUrlMatches(currentPage);
 
             var occurrences = 0;
 
-            for (j = 0; j < 4; j++) {
+            for (j = 0; j < 5; j++) {
 
                 occurrences = 0;
 
@@ -86,16 +251,26 @@ window.app.contentSearch = (function ($) {
                         multiplier = 10;
                         break;
                     case 3:
+                        text = currentPage.url.toLowerCase();
+                        multiplier = 120;
+                        break;
+                    case 4:
                         text = currentPage.content.toLowerCase();
                         multiplier = 1;
                 }
 
-                if (text.indexOf(_searchTerm) >= 0 || text.indexOf(_searchTermCombined) >= 0) {
+                if (searchValues.some(function (value) { return fieldContainsToken(text, value); }) ||
+                    (_searchTerm !== "" && text.indexOf(_searchTerm) >= 0) ||
+                    (_searchTermCombined !== "" && combineSearchTerm(text).indexOf(_searchTermCombined) >= 0)) {
                     found = true;
-                    occurrences = utils.countOccurrences(text, _searchTerm);
+                    occurrences = countMatches(text, searchValues);
 
-                    if (_searchTermCombined !== _searchTerm) {
-                        occurrences += utils.countOccurrences(text, _searchTermCombined);
+                    if (_searchTerm !== "" && text.indexOf(_searchTerm) >= 0) {
+                        occurrences += 2;
+                    }
+
+                    if (_searchTermCombined !== "" && combineSearchTerm(text).indexOf(_searchTermCombined) >= 0) {
+                        occurrences += 2;
                     }
 
                     if (occurrences > 0) {
@@ -120,19 +295,22 @@ window.app.contentSearch = (function ($) {
             }
         });
 
-        return results;
+        return results.slice(0, maxEntries);
     }
 
     function getSearchResults() {
-        return $.getJSON(searchJsonUrl);
+        return $.getJSON(searchJsonUrl).fail(function (jqXHR, textStatus, errorThrown) {
+            console.error("ACE docs search JSON request failed", {
+                url: searchJsonUrl,
+                status: jqXHR && jqXHR.status,
+                textStatus: textStatus,
+                error: errorThrown
+            });
+        });
     }
 
     function searchTermValid(searchTerm) {
-        if (searchTerm === "" || searchTerm.length < _searchStartLength) {
-            return false;
-        } else {
-            return true;
-        }
+        return !(searchTerm === "" || searchTerm.length < _searchStartLength);
     }
 
 
@@ -163,8 +341,12 @@ window.app.contentSearch = (function ($) {
     }
 
     function showLiveResultList(results) {
-        if (!results) {
-            $liveSearchResultList.removeClass("hidden");
+        if ($liveSearchResultList.length === 0) {
+            return;
+        }
+
+        if (!results || results.length === 0) {
+            $liveSearchResultList.empty().addClass("hidden");
             return;
         }
 
@@ -178,7 +360,7 @@ window.app.contentSearch = (function ($) {
 
             var description = currentPage.description;
             if (description.length > _maxDescriptionLengthLive) {
-                description = description.substr(0, _maxDescriptionLengthLive) + "&hellip;"
+                description = description.substr(0, _maxDescriptionLengthLive) + "&hellip;";
             }
 
             html += String.format("<li><a href=\"{1}\">{0}<br><small>{2}</small></a></li>", currentPage.title, currentPage.url, description);
@@ -188,17 +370,25 @@ window.app.contentSearch = (function ($) {
     }
 
     function hideLiveResultList() {
-        $liveSearchResultList.addClass("hidden");
+        if ($liveSearchResultList.length > 0) {
+            $liveSearchResultList.addClass("hidden");
+        }
     }
 
     function search() {
         var term = $liveSearchField.val();
 
-        _searchTerm = term.trim().toLowerCase();
-        _searchTermCombined = _searchTerm.replace(" ", "");
+        updateSearchState(term);
+
+        console.info("ACE docs live search", {
+            term: _searchTerm,
+            tokens: _searchTokens,
+            minLength: _searchStartLength
+        });
 
         if (!searchTermValid(_searchTerm)) {
             $liveSearchResultList.empty();
+            hideLiveResultList();
             return false;
         }
 
@@ -219,12 +409,25 @@ window.app.contentSearch = (function ($) {
 
     function handleLiveSearchResult(response) {
         var results = findSearchTermInArray(response, _maxEntriesLive);
+        console.info("ACE docs live search results", {
+            term: _searchTerm,
+            count: results.length
+        });
         showLiveResultList(results);
     }
 
     function openSearchPage(e) {
-        e.preventDefault();
-        var searchTerm = $liveSearchField.val().trim();
+        if (e) {
+            e.preventDefault();
+        }
+
+        var searchTerm = normalizeSearchTerm($liveSearchField.val());
+
+        if (!searchTermValid(searchTerm)) {
+            hideLiveResultList();
+            return false;
+        }
+
         document.location.href = String.format("search.html?{0}={1}", searchTermParamName, encodeURIComponent(searchTerm));
         return false;
     }
@@ -259,18 +462,23 @@ window.app.contentSearch = (function ($) {
     function contentSearch() {
         var term = $contentSearchField.val();
 
-        _searchTerm = term.trim().toLowerCase();
-        _searchTermCombined = _searchTerm.replace(" ", "");
+        updateSearchState(term);
+
+        console.info("ACE docs content search", {
+            term: _searchTerm,
+            tokens: _searchTokens,
+            minLength: _searchStartLength
+        });
 
         if (!searchTermValid(_searchTerm)) {
+            $contentSearchResultList.empty();
             return false;
         }
         startContentSearch();
     }
 
     function updateSearchFieldFromQueryParams() {
-        _searchTerm = utils.getQueryParam(searchTermParamName);
-        _searchTermCombined = _searchTerm.replace(" ", "");
+        updateSearchState(utils.getQueryParam(searchTermParamName));
         $contentSearchField.val(_searchTerm);
         if (searchTermValid(_searchTerm)) {
             startContentSearch();
@@ -292,24 +500,37 @@ window.app.contentSearch = (function ($) {
 
     function handleContentSearchResult(response) {
         var results = findSearchTermInArray(response, _maxEntriesContent);
+        console.info("ACE docs content search results", {
+            term: _searchTerm,
+            count: results.length
+        });
         showContentResultList(results);
     }
 
     function showContentResultList(results) {
+        if ($contentSearchResultList.length === 0) {
+            return;
+        }
+
         var i = 0,
             length = results.length;
 
         var html = "";
+
+        if (length === 0) {
+            $contentSearchResultList.empty().append("<li>No results found.</li>");
+            return;
+        }
 
         for (i; i < length; i++) {
             var currentPage = results[i];
 
             var description = currentPage.description;
             if (description.length > _maxDescriptionLengthContent) {
-                description = description.substr(0, _maxDescriptionLengthContent) + "&hellip;"
+                description = description.substr(0, _maxDescriptionLengthContent) + "&hellip;";
             }
 
-            html += String.format("<li><a href=\"{1}\">{0}</a><span class=\"additionalInfo\"><br><small><span class=\"url\">{3}</span><br><span class\"description\">{2}</small></small></span></li>", currentPage.title, currentPage.url, description, document.location.origin + currentPage.url);
+            html += String.format("<li><a href=\"{1}\">{0}</a><span class=\"additionalInfo\"><br><small><span class=\"url\">{3}</span><br><span class=\"description\">{2}</span></small></span></li>", currentPage.title, currentPage.url, description, document.location.origin + currentPage.url);
         }
 
         $contentSearchResultList.empty().append(html);

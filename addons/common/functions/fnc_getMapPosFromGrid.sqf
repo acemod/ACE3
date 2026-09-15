@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Grid Cords <STRING>
- * 1: Grid center (true), Grid Bottom Right (false) (default: true) <BOOL>
+ * 1: Grid center (true), Grid Bottom Right (false) <BOOL> (default: true)
  *
  * Return Value:
  * Position <ARRAY>
@@ -20,7 +20,7 @@ params ["_inputString", ["_getCenterOfGrid", true]];
 
 if (count GVAR(mapGridData) == 0) exitWith {
     ERROR("Map has bad data, falling back to BIS_fnc_gridToPos");
-    (_this call BIS_fnc_gridToPos) select 0
+    (call BIS_fnc_gridToPos) select 0
 };
 
 GVAR(mapGridData) params ["_offsetX", "_realOffsetY", "_stepXat5", "_stepYat5"];

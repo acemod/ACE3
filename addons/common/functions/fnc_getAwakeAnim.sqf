@@ -24,14 +24,13 @@ if (_vehicle isEqualTo _unit) exitWith {""};
 
 // --- driver
 private _config = configOf _vehicle;
+private _turret = _vehicle unitTurret _unit;
 
-if (_unit == driver _vehicle) exitWith {
+if (_turret isEqualTo [-1]) exitWith {
     getText (configFile >> "CfgMovesBasic" >> "ManActions" >> getText (_config >> "driverAction")) // return
 };
 
 // --- turret
-private _turret = _unit call CBA_fnc_turretPath;
-
 if (_turret isNotEqualTo []) exitWith {
     private _turretConfig = [_vehicle, _turret] call CBA_fnc_getTurret;
 

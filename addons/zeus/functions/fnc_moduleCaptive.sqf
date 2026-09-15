@@ -29,7 +29,7 @@ if (isNil QEFUNC(captives,setHandcuffed)) then {
     if ((_mouseOver select 0) != "OBJECT") then {
         [LSTRING(NothingSelected)] call FUNC(showMessage);
     } else {
-        private _unit = effectivecommander (_mouseOver select 1);
+        private _unit = effectiveCommander (_mouseOver select 1);
 
         if !(_unit isKindOf "CAManBase") then {
             [LSTRING(OnlyInfantry)] call FUNC(showMessage);
@@ -38,7 +38,7 @@ if (isNil QEFUNC(captives,setHandcuffed)) then {
                 [LSTRING(OnlyAlive)] call FUNC(showMessage);
             } else {
                 private _captive = GETVAR(_unit,EGVAR(captives,isHandcuffed),false);
-                // Event initalized by ACE_Captives
+                // Event initialized by ACE_Captives
                 [QEGVAR(captives,setHandcuffed), [_unit, !_captive], _unit] call CBA_fnc_targetEvent;
             };
         };

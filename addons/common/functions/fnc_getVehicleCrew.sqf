@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
- * 1: Slot types filter (default: ["driver", "commander", "gunner", "turret", "cargo", "ffv"]) <ARRAY>
+ * 1: Slot types filter <ARRAY> (default: ["driver", "commander", "gunner", "turret", "cargo", "ffv"])
  *
  * Return Value:
  * Crew <ARRAY>

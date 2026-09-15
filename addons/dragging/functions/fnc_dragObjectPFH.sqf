@@ -51,8 +51,8 @@ if (_unit distance _target > 10 && {(CBA_missionTime - _startTime) >= 1}) exitWi
     _idPFH call CBA_fnc_removePerFrameHandler;
 };
 
-// Drop static if crew is in it (UAV crew deletion may take a few frames)
-if (_target isKindOf "StaticWeapon" && {!(_target getVariable [QGVAR(isUAV), false])} && {(crew _target) isNotEqualTo []}) exitWith {
+// Drop static if either non-UAV crew or new UAV crew is in it (ignore saved UAV crew)
+if (_target isKindOf "StaticWeapon" && {((crew _target) - (_target getVariable [QGVAR(isUAV), []])) isNotEqualTo []}) exitWith {
     TRACE_2("static weapon crewed",_unit,_target);
 
     [_unit, _target] call FUNC(dropObject);
@@ -61,4 +61,9 @@ if (_target isKindOf "StaticWeapon" && {!(_target getVariable [QGVAR(isUAV), fal
     call EFUNC(interaction,hideMouseHint);
 
     _idPFH call CBA_fnc_removePerFrameHandler;
+};
+
+// Clones can die of drowning if oxygen is under 0.5, so refill their oxygen from time to time
+if (_target isKindOf QGVAR(clone) && {getOxygenRemaining _target < 0.8}) then {
+    _target setOxygenRemaining 1;
 };

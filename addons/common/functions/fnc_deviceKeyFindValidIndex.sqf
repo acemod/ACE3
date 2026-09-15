@@ -4,7 +4,7 @@
  * Finds next valid index for the device array.
  *
  * Arguments:
- * 0: Offset from currentIndex (use 1 to find next valid after current) or a displayName string (default: 0) <STRING, NUMBER>
+ * 0: Offset from currentIndex (use 1 to find next valid after current) or a displayName string <STRING or NUMBER> (default: 0)
  *
  * Return Value:
  * The new index (-1 if no valid) <NUMBER>

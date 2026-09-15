@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Item or item type ID to replace <STRING or NUMBER>
  * 1: Item or list of items <STRING or ARRAY>
- * 2: Replace items that inherit from original item (only if 0 is STRING) (Optional)<BOOL>
+ * 2: Replace items that inherit from original item (only if 0 is STRING) <BOOL> (default: false)
  *
  * Return Value:
  * None

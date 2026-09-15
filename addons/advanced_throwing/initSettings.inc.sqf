@@ -1,4 +1,4 @@
-private _category = format ["ACE %1", localize LSTRING(Category)];
+private _category = format ["ACE %1", LLSTRING(Category)];
 [
     QGVAR(enabled),
     "CHECKBOX",
@@ -46,5 +46,13 @@ private _category = format ["ACE %1", localize LSTRING(Category)];
     [LSTRING(EnableTempWindInfo_DisplayName), LSTRING(EnableTempWindInfo_Description)],
     _category,
     true,
+    0
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(throwStepSetting), "SLIDER",
+    [LSTRING(throwStepSetting_DisplayName), LSTRING(throwStepSetting_Description)],
+    _category,
+    [1, 12, 8, -1, false],
     0
 ] call CBA_fnc_addSetting;

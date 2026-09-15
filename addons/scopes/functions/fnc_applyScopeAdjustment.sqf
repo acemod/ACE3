@@ -43,6 +43,10 @@ if (cameraView == "GUNNER") then {
         _yaw = _yaw + _windageDifference;
         [_unit, _pitch, _bank, _yaw] call EFUNC(common,setPitchBankYaw);
     };
+
+    if (GVAR(inScopeAdjustment)) then {
+        [] call FUNC(showZeroing);
+    };
 } else {
     [] call FUNC(showZeroing);
 };

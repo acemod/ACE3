@@ -45,5 +45,6 @@ _holder setVelocity _velocity;
 _holder addTorque (call CBA_fnc_randomVector3D vectorMultiply THROW_TORQUE);
 
 ["ACE_weaponThrown", [_unit, _holder, _data]] call CBA_fnc_localEvent;
+_unit action ["SwitchWeapon", _unit, _unit, 299];
 
 _holder // return

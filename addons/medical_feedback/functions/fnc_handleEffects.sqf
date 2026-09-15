@@ -5,7 +5,7 @@
  * Note: Heart beat sounds run in a different PFH - see fnc_effectHeartBeat.
  *
  * Arguments:
- * 0: Manual, instant update (optional, default false) <BOOL>
+ * 0: Manual, instant update <BOOL> (default: false)
  *
  * Return Value:
  * None

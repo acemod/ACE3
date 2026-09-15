@@ -26,7 +26,7 @@ if (isServer) then {
 
 // A virtual spectator cannot exist without an interface
 if (hasInterface) then {
-    // Local player (not ACE_Player) must be initalized to check
+    // Local player (not ACE_Player) must be initialized to check
     [
         { !isNull player },
         {

@@ -19,7 +19,7 @@ params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_statePa
 _firedEH params ["_shooter","","","","","","_projectile"];
 _launchParams params ["","_targetLaunchParams","","_attackProfile"];
 _targetLaunchParams params ["_target"];
-_stateParams params ["", "", "_attackProfileStateParams"];
+_stateParams params ["", "_seekerStateParams", "_attackProfileStateParams"];
 
 // Reset _launchPos origin as projectile's height instead of player's foot
 _targetLaunchParams set [2, getPosASL _projectile];
@@ -27,7 +27,7 @@ _targetLaunchParams set [2, getPosASL _projectile];
 // Get state params:
 TRACE_3("start of attack profile",_attackProfile,_shooter,vectorDir _projectile);
 
-private _firedLOS = _shooter weaponDirection (currentWeapon _shooter);
+private _firedLOS = vectorDir _projectile;
 private _yawChange = 0;
 private _pitchChange = 0;
 
@@ -36,6 +36,28 @@ if (_shooter == ACE_player) then {
     _yawChange = GVAR(yawChange);
     _pitchChange = GVAR(pitchChange);
     TRACE_1("los check",_firedLOS call CBA_fnc_vect2Polar);
+
+    #ifdef DRAW_NLAW_INFO
+    systemChat format ["YAW [%1]", _yawChange];
+    systemChat format ["PITCH [%1]", _pitchChange];
+    GVAR(debug_firedPrediction) = [];
+    private _debugPos = getPosASL _projectile;
+    ((ACE_player weaponDirection (currentWeapon ACE_player)) call CBA_fnc_vect2Polar) params ["", "_debugYaw", "_debugPitch"];
+    private _timeToLive = getNumber ((configOf _projectile) >> "timeToLive");
+    private _thrust = getNumber ((configOf _projectile) >> "thrust");
+    private _thrustTime = getNumber ((configOf _projectile) >> "thrustTime");
+    private _distance = 0;
+    private _timestep = 0.1;
+    for "_x" from 0 to _timeToLive step _timestep do {
+        private _debugAproxVel = linearConversion [0, _thrustTime, _x, 0, _thrust * _thrustTime, true];
+        _distance = _distance + _debugAproxVel * _timestep;
+        private _debugYaw = _debugYaw + _yawChange * _x;
+        private _debugPitch = _debugPitch + _pitchChange * _x;
+        private _debugPos = _debugPos vectorAdd ([_distance, _debugYaw, _debugPitch] call CBA_fnc_polar2vect);
+        GVAR(debug_firedPrediction) pushBack ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,0,0,1], ASLToAGL _debugPos, 0.5, 0.5, 0, format ["%1", _x], 1, 0.025, "TahomaB"];
+        GVAR(debug_firedPrediction) pushBack ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,0,0,1], [0, 0, 0.25] vectorAdd ASLToAGL _debugPos, 0.5, 0.5, 0, format ["%1 m/s", _debugAproxVel], 1, 0.025, "TahomaB"];
+    };
+    #endif
 } else {
     if ((!isNil "_target") && {!isNull _target}) then {
         _firedLOS = (getPosASL _projectile) vectorFromTo (aimPos _target);
@@ -54,6 +76,12 @@ if (_shooter == ACE_player) then {
 // Limit Max Deflection
 _yawChange = -10 max _yawChange min 10;
 _pitchChange = -10 max _pitchChange min 10;
+
+_seekerStateParams set [1, SEEKER_STATE_LOOKING];
+_seekerStateParams set [2, _yawChange];
+_seekerStateParams set [3, _pitchChange];
+_seekerStateParams set [4, CBA_missionTime];
+_seekerStateParams set [5, FUZE_LENGTH];
 
 TRACE_3("attackProfileStateParams",_firedLOS,_yawChange,_pitchChange);
 _attackProfileStateParams set [0, CBA_missionTime];

@@ -48,7 +48,7 @@ private _missionRoot = str missionConfigFile select [0, count str missionConfigF
         };
     } else {
         if (isClass (configFile >> "CfgSounds" >> _x)) then {
-            _soundPath = (getArray(configFile >> "CfgSounds" >> _x >> "sound")) param [0, ""];
+            private _soundPath = (getArray(configFile >> "CfgSounds" >> _x >> "sound")) param [0, ""];
             if ((_soundPath select [0, 1]) == "\") then {_soundPath = _soundPath select [1];};
             _ambianceSounds pushBack _soundPath;
         } else {
@@ -85,14 +85,14 @@ TRACE_1("",_ambianceSounds);
             private _newPosASL = if (_followPlayers) then {
                 // Select a target unit at random.
                 private _targetUnit = selectRandom _allUnits;
-                AGLtoASL (_targetUnit getPos [_minimalDistance + random (_maximalDistance - _minimalDistance), random 360]);
+                AGLToASL (_targetUnit getPos [_minimalDistance + random (_maximalDistance - _minimalDistance), random 360]);
             } else {
-                AGLtoASL (_logic getPos [_minimalDistance + random (_maximalDistance - _minimalDistance), random 360]);
+                AGLToASL (_logic getPos [_minimalDistance + random (_maximalDistance - _minimalDistance), random 360]);
             };
 
             TRACE_1("",_newPosASL);
             // If no unit is to close to this position, we will play the sound.
-            if ({(_newPosASL distance _x < (_minimalDistance / 2))}count _allUnits == 0) then {
+            if (_allUnits findIf {_newPosASL distance _x < (_minimalDistance / 2)} == -1) then {
                 private _soundFile = selectRandom _ambianceSounds;
                 TRACE_2("playing file",_soundFile,_newPosASL);
                 playSound3D [_soundFile, objNull,  false, _newPosASL, _volume, 1, 1000];

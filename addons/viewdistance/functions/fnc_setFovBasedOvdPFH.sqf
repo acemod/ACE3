@@ -4,11 +4,11 @@
  * Sets Object View Distance dynamically based on current Field of View, between Object View Distance (minimal value) and View Distance (maximum value) set before this PFH starts.
  *
  * Arguments:
- * 0: PFH Arguments <ARRAY>
+ * 0: PFH Arguments (not used) <ARRAY>
  * 1: PFH Handle <NUMBER>
  *
  * Return Value:
- * PFH Handle <NUMBER>
+ * None
  *
  * Example:
  * [] call ace_viewdistance_fnc_setFovBasedOvdPFH
@@ -17,6 +17,7 @@
  */
 
 params ["", "_idPFH"];
+// IGNORE_PRIVATE_WARNING["ace_viewdistance_fovBasedPFHminimalViewDistance"];
 
 // Remove PFH and set Object View Distance back to what it was before
 if (GVAR(objectViewDistanceCoeff) < 6) exitWith {

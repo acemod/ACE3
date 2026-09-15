@@ -1,10 +1,10 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Checks if the unit can deploy a tripod
+ * Checks if the player can deploy the tripod.
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: Player <OBJECT>
  *
  * Return Value:
  * Can deploy <BOOL>
@@ -15,8 +15,8 @@
  * Public: No
  */
 
-params ["_unit"];
+params ["_player"];
 
-private _secondaryWeapon = secondaryWeapon _unit;
+private _secondaryWeapon = secondaryWeapon _player;
 
 _secondaryWeapon != "" && {getText (configFile >> "CfgWeapons" >> _secondaryWeapon >> QUOTE(ADDON) >> "type") == "mount"} // return

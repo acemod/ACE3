@@ -2,7 +2,7 @@
 
 if (isServer) then {
     // Cancel dig on hard disconnection. Function is identical to killed
-    addMissionEventHandler ["HandleDisconnect", {_this call FUNC(handleKilled)}];
+    addMissionEventHandler ["HandleDisconnect", {call FUNC(handleKilled)}];
 
     // Wrapper for blockTrench_place, on failure send hint back to source
     [QGVAR(layTrenchline), {

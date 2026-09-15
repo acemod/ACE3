@@ -33,8 +33,8 @@ private _ctrlLaserCode = _display displayCtrl IDC_LASERDESIGNATOR_LASERCODE;
 _ctrlLaserCode ctrlSetText format ["Code: %1", [_laserCode, 4, 0, false] call CBA_fnc_formatNumber];
 
 private _ctrlDistanceACE = _display displayCtrl IDC_LASERDESIGNATOR_ACEDISTANCE;
-if (!isLaserOn _currentShooter) exitWith {
-    _ctrlDistanceACE ctrlSetText "----";
+if (isLaserOn _currentShooter) then {
+    _ctrlDistanceACE ctrlSetText (ctrlText (_display displayCtrl IDC_LASERDESIGNATOR_CONSTANTDISTANCE));
+} else {
+    _ctrlDistanceACE ctrlSetText (ctrlText (_display displayCtrl IDC_LASERDESIGNATOR_DISTANCE));
 };
-
-_ctrlDistanceACE ctrlSetText (ctrlText (_display displayCtrl IDC_LASERDESIGNATOR_DISTANCE));

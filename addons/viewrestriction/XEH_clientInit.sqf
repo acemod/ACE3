@@ -3,7 +3,7 @@
 // Exit on Headless Client
 if !(hasInterface) exitWith {};
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     // Exit if module is disabled
     if (XGVAR(mode) == 0) exitWith {};
 

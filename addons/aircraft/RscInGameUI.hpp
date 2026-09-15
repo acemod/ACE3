@@ -1,12 +1,6 @@
-class RscControlsGroup;
 class RscText;
 class RangeText: RscText {};
 class RscPicture;
-class RscOpticsText;
-class RscIGProgress;
-class RscOpticsValue;
-class VScrollbar;
-class HScrollbar;
 class RscLadderPicture;
 class RscControlsGroupNoScrollbars;
 
@@ -16,18 +10,8 @@ class RscInGameUI {
         idd = 300;
         controls[] = {"CA_IGUI_elements_group", "CA_VehicleToggles"};
 
-        class VScrollbar;
-        class HScrollbar;
-        class CA_IGUI_elements_group: RscControlsGroup {
+        class CA_IGUI_elements_group: RscControlsGroupNoScrollbars {
             idc = 170;
-
-            class VScrollbar: VScrollbar {
-                width = 0;
-            };
-
-            class HScrollbar: HScrollbar {
-                height = 0;
-            };
 
             x = "0 * (0.01875 * SafezoneH) + (SafezoneX + ((SafezoneW - SafezoneH) / 2))";
             y = "0 * (0.025 * SafezoneH) + (SafezoneY)";
@@ -177,16 +161,8 @@ class RscInGameUI {
         idd = 300;
         controls[] = {"CA_Zeroing", "CA_IGUI_elements_group", "CA_VehicleToggles"};
 
-        class CA_IGUI_elements_group: RscControlsGroup {
+        class CA_IGUI_elements_group: RscControlsGroupNoScrollbars {
             idc = 170;
-
-            class VScrollbar: VScrollbar {
-                width = 0;
-            };
-
-            class HScrollbar: HScrollbar {
-                height = 0;
-            };
 
             x = "0 * (0.01875 * SafezoneH) + (SafezoneX + ((SafezoneW - SafezoneH) / 2))";
             y = "0 * (0.025 * SafezoneH) + (SafezoneY)";
@@ -360,16 +336,9 @@ class RscInGameUI {
         idd = 300;
         controls[] = {"WeaponInfoControlsGroupRight", "CA_BackgroundVehicle", "CA_BackgroundVehicleTitle", "CA_BackgroundVehicleTitleDark", "CA_BackgroundFuel", "CA_Vehicle", "CA_VehicleRole", "CA_HitZones", "CA_SpeedBackground", "CA_SpeedUnits", "CA_Speed", "CA_ValueFuel", "CA_AltBackground", "CA_AltUnits", "CA_Alt", "CA_VehicleToggles", "CA_Radar", "DriverOpticsGroup"};
 
-        class DriverOpticsGroup: RscControlsGroup {
+        class DriverOpticsGroup: RscControlsGroupNoScrollbars {
             idc = 392;
 
-            class VScrollbar: VScrollbar {
-                width = 0;
-            };
-
-            class HScrollbar: HScrollbar {
-                height = 0;
-            };
             x = "0 * (0.01875 * SafezoneH) + (SafezoneX + ((SafezoneW - SafezoneH) / 2))";
             y = "0 * (0.025 * SafezoneH) + (SafezoneY)";
             w = "53.5 * (0.01875 * SafezoneH)";

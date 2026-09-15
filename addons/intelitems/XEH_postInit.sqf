@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// Notepad item to magazine
+[QGVAR(notepad_Item), QXGVAR(notepad)] call EFUNC(common,registerItemReplacement);
+
 // Only handle loadout change when on map or have open controls
 ["loadout", {
     if (!visibleMap && {GVAR(controlsGroups) isEqualTo []}) exitWith {};

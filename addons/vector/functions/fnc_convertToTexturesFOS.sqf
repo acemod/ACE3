@@ -4,14 +4,14 @@
  * converts rangefinder distance into array of textures for the vectors scripted info control
  *
  * Arguments:
- * 0: Number <NUMBER>
+ * 0: Array <ARRAY of NUMBERs>
  * 1: Number <NUMBER>
  *
  * Return Value:
  * Array <ARRAY>
  *
  * Example:
- * [5, 6] call ace_vector_fnc_convertToTexturesFOS
+ * [[5], 0] call ace_vector_fnc_convertToTexturesFOS
  *
  * Public: No
  */

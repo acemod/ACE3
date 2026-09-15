@@ -182,16 +182,52 @@ class CfgWeapons {
     class GVAR(staticM2ShieldCarry): GVAR(staticHMGCarry) {
         class ADDON: ADDON {
             class assembleTo {
-                GVAR(m3Tripod) = "B_HMG_02_high_F";
-                GVAR(m3TripodLow) = "B_HMG_02_F";
+                GVAR(m3Tripod) = QGVAR(HMG_02_shield_high);
+                GVAR(m3TripodLow) = QGVAR(HMG_02_shield);
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 1000;
+            mass = M2_MASS + M2_SHIELD_MASS;
         };
         displayName = CSTRING(StaticM2ShieldBag_displayName);
         author = ECSTRING(common,ACETeam);
         picture = QPATHTOF(UI\StaticM2Shield_Icon_ca.paa);
+    };
+    class GVAR(staticM2ShieldSightCarry): GVAR(staticM2ShieldCarry) {
+        class ADDON: ADDON {
+            class assembleTo {
+                GVAR(m3Tripod) = QGVAR(HMG_02_shield_sight_high);
+                GVAR(m3TripodLow) = QGVAR(HMG_02_shield_sight);
+            };
+        };
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = M2_MASS + M2_SHIELD_MASS + M2_SIGHT_MASS;
+        };
+        displayName = CSTRING(StaticM2ShieldSightBag_displayName);
+    };
+    class GVAR(staticM2SightCarry): GVAR(staticM2ShieldCarry) {
+        class ADDON: ADDON {
+            class assembleTo {
+                GVAR(m3Tripod) = QGVAR(HMG_02_sight_high);
+                GVAR(m3TripodLow) = QGVAR(HMG_02_sight);
+            };
+        };
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = M2_MASS + M2_SIGHT_MASS;
+        };
+        displayName = CSTRING(StaticM2SightBag_displayName);
+    };
+    class GVAR(staticM2BareCarry): GVAR(staticM2ShieldCarry) {
+        class ADDON: ADDON {
+            class assembleTo {
+                GVAR(m3Tripod) = QGVAR(HMG_02_bare_high);
+                GVAR(m3TripodLow) = QGVAR(HMG_02_bare);
+            };
+        };
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = M2_MASS;
+        };
+        displayName = CSTRING(StaticM2BareBag_displayName);
     };
 
     class GVAR(staticGMGCarry): Launcher_Base_F {

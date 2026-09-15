@@ -50,10 +50,11 @@ class CfgWeapons {
 
 ## 2. Event Handlers
 ### 2.1 Listenable Events
-| Event Key | Parameters | Locality | Description |
-|----------|---------|---------|---------|
-|`ace_attach_attached` | [_attachedObject, _itemClassname, _temporary] | Local | Called after an item is attached to an object. `_temporary` flag means the item is being re-attached (after a unit is exiting a vehicle, for example) |
-|`ace_attach_detaching` | [_attachedObject, _itemClassname, _temporary] | Local | Called just before an item is detached/removed from an object. `_temporary` flag means the item will be reattached later, see above. |
+
+| Event Key | Parameters | Locality | Type | Description |
+|----------|---------|---------|---------|---------|
+|`ace_attach_attached` | [_attachedObject, _itemClassname, _temporary] | Local | Listen | After an item was attached to a unit/vehicle. _temporary flag means a item is being re-attached after the player exits a vehicle |
+|`ace_attach_detaching` | [_attachedObject, _itemName, _temporary] | Local | Listen | Just before an item gets detached/removed from a unit/vehicle. _temporary flag means its detached because the player unit entered a vehicle. |
 
 ### 2.2 Other events for attached objects
 Use [CBA Extended Event Handlers](https://github.com/CBATeam/CBA_A3/wiki/Extended-Event-Handlers-(new)). Note that objects attached to units will be deleted/created upon entering/exiting vehicles and should be handled accordingly.

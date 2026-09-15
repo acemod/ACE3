@@ -15,14 +15,18 @@ class CfgMagazines {
     class gm_100rnd_762x54mmR_pk_grn;
     class gm_100Rnd_762x54mm_API_b32_pk_grn: gm_100rnd_762x54mmR_pk_grn {
         ACE_isBelt = 1;
+        type = 256;
     };
     class gm_100Rnd_762x54mm_B_T_t46_pk_grn: gm_100rnd_762x54mmR_pk_grn {
         ACE_isBelt = 1;
+        type = 256;
     };
     class gm_100Rnd_762x54mmR_API_7bz3_pk_grn: gm_100rnd_762x54mmR_pk_grn {
         ACE_isBelt = 1;
+        type = 256;
     };
     class gm_100Rnd_762x54mmR_B_T_7t2_pk_grn: gm_100rnd_762x54mmR_pk_grn {
         ACE_isBelt = 1;
+        type = 256;
     };
 };

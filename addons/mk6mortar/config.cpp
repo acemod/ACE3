@@ -24,12 +24,6 @@ class CfgPatches {
 
 //UI Stuff:
 class RscText;
-class RscListBox;
-class RscListNBox;
-class RscPicture;
 class RscControlsGroup;
-class ScrollBar;
-class RscActiveText;
-class RscStructuredText;
 
 #include "RscInGameUI.hpp"

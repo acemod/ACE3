@@ -1,4 +1,5 @@
 PREP(addChangeFuseItemContextMenuOptions);
+PREP(altFlashbangInit);
 PREP(damageEngineAndWheels);
 PREP(flare);
 PREP(flashbangExplosionEH);

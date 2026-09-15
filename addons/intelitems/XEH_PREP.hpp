@@ -11,3 +11,4 @@ ACEX_PREP(onMouseButtonUp);
 ACEX_PREP(onMouseMoving);
 ACEX_PREP(pickup);
 ACEX_PREP(setObjectData);
+ACEX_PREP(setObjectHeader);

@@ -5,8 +5,8 @@
  *
  * Arguments:
  * 0: Function <STRING>
- * 1: Input array <CODE>
- * 2: Scale (optional: 1) <NUMBER>
+ * 1: Input array <ARRAY>
+ * 2: Scale <NUMBER> (default: 1)
  *
  * Return Value:
  * Value <ARRAY>

@@ -6,7 +6,7 @@
  * Arguments:
  * 0: The player. <OBJECT>
  * 1: The interaction target. objNull to ignore. <OBJECT>
- * 2: Exceptions. What general conditions are to skip? (default: []) <ARRAY>
+ * 2: Exceptions. What general conditions are to skip? (works like a permission system, if there is an exception, it will return true; e.g. "isNotSwimming" in the exceptions, the progress bar will work while swimming) <ARRAY> (default: [])
  *
  * Return Value:
  * Unit can interact? <BOOL>
@@ -27,15 +27,11 @@ private _owner = _target getVariable [QGVAR(owner), objNull];
 if (!isNull _owner && {_unit != _owner}) exitWith {false};
 
 // check general conditions
-private _conditions = missionNamespace getVariable [QGVAR(InteractionConditions), [[],[]]];
-_conditions params ["_conditionNames", "_conditionFuncs"];
-
 private _canInteract = true;
-
 {
-    if (!(_x in _exceptions) && {!([_unit, _target] call (_conditionFuncs select _forEachIndex))}) exitWith {
+    if (!(_x in _exceptions) && {!([_unit, _target] call _y)}) exitWith {
         _canInteract = false;
     };
-} forEach _conditionNames;
+} forEach GVAR(InteractionConditions);
 
 _canInteract

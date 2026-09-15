@@ -1,7 +1,9 @@
+private _category = [ELSTRING(common,ACEKeybindCategoryWeapons), LSTRING(Settings_DisplayName)];
+
 [
     QGVAR(enabled), "CHECKBOX",
     [LSTRING(displayName), LSTRING(description)],
-    LSTRING(Settings_DisplayName),
+    _category,
     true,
     false,
     {},
@@ -11,7 +13,7 @@
 [
     QGVAR(maxCasings), "SLIDER",
     [LSTRING(maxCasings_displayName), LSTRING(maxCasings_description)],
-    LSTRING(Settings_DisplayName),
+    _category,
     [100, 500, 250, -1],
     false
 ] call CBA_fnc_addSetting;

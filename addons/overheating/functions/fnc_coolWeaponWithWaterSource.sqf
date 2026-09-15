@@ -37,7 +37,7 @@ private _fnc_onFinish = {
         ] call CBA_fnc_notify;
     };
 
-    [_player, _player, currentWeapon _player] call ace_overheating_fnc_checkTemperature;
+    [_player, _player, currentWeapon _player] call FUNC(checkTemperature);
     GVAR(coolingWeaponWithWaterSource) = false;
 };
 

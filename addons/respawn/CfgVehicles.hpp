@@ -80,17 +80,17 @@ class CfgVehicles {
     class FlagCarrier;
     class Flag_NATO_F: FlagCarrier {
         class EventHandlers;
-        class ACE_Actions;
+        class ACE_Actions {};
     };
 
     class Flag_CSAT_F: FlagCarrier {
         class EventHandlers;
-        class ACE_Actions;
+        class ACE_Actions {};
     };
 
     class Flag_AAF_F: FlagCarrier {
         class EventHandlers;
-        class ACE_Actions;
+        class ACE_Actions {};
     };
 
     // static

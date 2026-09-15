@@ -20,7 +20,7 @@ class GVAR(m2_carry): Launcher_Base_F {
     modes[] = {};
     picture = QPATHTOF(UI\csw_m2b_ca.paa);
 
-    class ACE_CSW {
+    class ace_csw {
         type = "weapon";
         deployTime = 4;
         pickupTime = 4;
@@ -48,7 +48,7 @@ class GVAR(m1919a4_carry): Launcher_Base_F {
     modes[] = {};
     picture = QPATHTOF(UI\csw_m1919a4_ca.paa);
 
-    class ACE_CSW {
+    class ace_csw {
         type = "weapon";
         deployTime = 4;
         pickupTime = 4;
@@ -76,7 +76,7 @@ class GVAR(m1919a6_carry): Launcher_Base_F {
     modes[] = {};
     picture = QPATHTOF(UI\csw_m1919a6_ca.paa);
 
-    class ACE_CSW {
+    class ace_csw {
         type = "mount";
         deployTime = 2;
         pickupTime = 2;
@@ -100,7 +100,7 @@ class GVAR(m60_carry): Launcher_Base_F {
     modes[] = {};
     picture = QPATHTOF(UI\csw_m60_ca.paa);
 
-    class ACE_CSW {
+    class ace_csw {
         type = "weapon";
         deployTime = 4;
         pickupTime = 4;
@@ -128,7 +128,7 @@ class GVAR(tow_carry): Launcher_Base_F {
     modes[] = {};
     picture = QPATHTOF(UI\csw_tow_ca.paa);
 
-    class ACE_CSW {
+    class ace_csw {
         type = "weapon";
         deployTime = 4;
         pickupTime = 4;
@@ -155,7 +155,7 @@ class GVAR(dshkm_carry): Launcher_Base_F {
     modes[] = {};
     picture = QPATHTOF(UI\csw_dshkm_ca.paa);
 
-    class ACE_CSW {
+    class ace_csw {
         type = "weapon";
         deployTime = 4;
         pickupTime = 4;
@@ -183,7 +183,7 @@ class GVAR(dshkm_shield_carry): Launcher_Base_F {
     modes[] = {};
     picture = QPATHTOF(UI\csw_dshkm_shield_ca.paa);
 
-    class ACE_CSW {
+    class ace_csw {
         type = "weapon";
         deployTime = 4;
         pickupTime = 4;
@@ -210,7 +210,7 @@ class GVAR(dshkm_AA_carry): Launcher_Base_F {
     modes[] = {};
     picture = QPATHTOF(UI\csw_dshkm_aa_ca.paa);
 
-    class ACE_CSW {
+    class ace_csw {
         type = "weapon";
         deployTime = 4;
         pickupTime = 4;
@@ -237,7 +237,7 @@ class GVAR(rpd_carry): Launcher_Base_F {
     modes[] = {};
     picture = QPATHTOF(UI\csw_rpd_ca.paa);
 
-    class ACE_CSW {
+    class ace_csw {
         type = "weapon";
         deployTime = 4;
         pickupTime = 4;
@@ -264,7 +264,7 @@ class GVAR(pk_carry): Launcher_Base_F {
     modes[] = {};
     picture = QPATHTOF(UI\csw_pk_ca.paa);
 
-    class ACE_CSW {
+    class ace_csw {
         type = "weapon";
         deployTime = 4;
         pickupTime = 4;
@@ -292,7 +292,7 @@ class GVAR(mortar_m29_carry): Launcher_Base_F {
     modes[] = {};
     picture = QPATHTOF(UI\csw_m29_ca.paa);
 
-    class ACE_CSW {
+    class ace_csw {
         type = "weapon";
         deployTime = 20;
         pickupTime = 25;
@@ -319,7 +319,7 @@ class GVAR(mg42_carry): Launcher_Base_F {
     modes[] = {};
     picture = QPATHTOF(UI\csw_mg42_ca.paa);
 
-    class ACE_CSW {
+    class ace_csw {
         type = "mount";
         deployTime = 4;
         pickupTime = 4;
@@ -347,7 +347,7 @@ class GVAR(sgm_carry): Launcher_Base_F {
     modes[] = {};
     picture = QPATHTOF(UI\csw_sgm_ca.paa);
 
-    class ACE_CSW {
+    class ace_csw {
         type = "weapon";
         deployTime = 4;
         pickupTime = 4;
@@ -374,7 +374,7 @@ class GVAR(sgm_shield_carry): Launcher_Base_F {
     modes[] = {};
     picture = QPATHTOF(UI\csw_sgm_shield_ca.paa);
 
-    class ACE_CSW {
+    class ace_csw {
         type = "weapon";
         deployTime = 4;
         pickupTime = 4;
@@ -401,7 +401,7 @@ class GVAR(mk18_carry): Launcher_Base_F {
     modes[] = {};
     picture = QPATHTOF(UI\csw_mk18_ca.paa);
 
-    class ACE_CSW {
+    class ace_csw {
         type = "weapon";
         deployTime = 4;
         pickupTime = 4;
@@ -430,7 +430,7 @@ class GVAR(mortar_m2_carry): Launcher_Base_F {
     modes[] = {};
     picture = QPATHTOF(UI\csw_m2_ca.paa);
 
-    class ACE_CSW {
+    class ace_csw {
         type = "weapon";
         deployTime = 20;
         pickupTime = 25;
@@ -457,7 +457,7 @@ class GVAR(mortar_type53_carry): Launcher_Base_F {
     modes[] = {};
     picture = QPATHTOF(UI\csw_type53_ca.paa);
 
-    class ACE_CSW {
+    class ace_csw {
         type = "weapon";
         deployTime = 20;
         pickupTime = 25;

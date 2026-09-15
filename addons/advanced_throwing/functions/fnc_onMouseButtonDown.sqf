@@ -24,7 +24,7 @@ params ["", "_key"];
 if (_key == 0) exitWith {
     if (!isNull (ACE_player getVariable [QGVAR(activeThrowable), objNull])) then {
         // Look gets automatically pointed at weapon direction on first LMB press when in FFV seat, require weapon to be up if in vehicle
-        private _inVehicle = vehicle ACE_player != ACE_player;
+        private _inVehicle = !isNull objectParent ACE_player;
         if (!_inVehicle || {_inVehicle && {!weaponLowered ACE_player}}) then {
             [ACE_player] call FUNC(throw);
         };

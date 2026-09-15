@@ -51,7 +51,7 @@ if (isNull _leader) exitWith { [ICON_UNKNOWN, CIV_ICON_UNKNOWN] select (side _gr
 
 // Civilians are easy, just check leader's vehicle (unlikely group is large)
 if (side _group == civilian) exitWith {
-    if (_leader != vehicle _leader) then {
+    if (!isNull objectParent _leader) then {
         // More common cases should be checked first
         (vehicle _leader) call {
             if (_this isKindOf "Car") exitWith {

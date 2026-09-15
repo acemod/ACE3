@@ -1,8 +1,8 @@
 [
-    QGVAR(enabled), "CHECKBOX", 
-    [LSTRING(setting), LSTRING(setting_tooltip)], 
+    QGVAR(enabled), "CHECKBOX",
+    [LSTRING(setting), LSTRING(setting_tooltip)],
     [LELSTRING(Common,CategoryUncategorized), LLSTRING(DisplayName)],
-    true, 
+    true,
     true, {
     params ["_enabled"];
 

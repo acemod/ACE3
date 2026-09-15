@@ -32,8 +32,8 @@ Important notes:
 
 `ace_slideshow_fnc_createSlideshow`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Screen Objects | Array | Required |
 | 1  | Controller Objects | Array | Required (screen objects are used if empty `[]`, none are available with automatic transitions) |
 | 2  | Image Paths | Array | Required (paths must use backslash `\`) |
@@ -75,7 +75,7 @@ _Note: Set Name argument added in 3.9.1._
  * - 1: Text <STRING> (default: "")
  * - 2: Marker Type or Icon Name <STRING> (default: "mil_dot")
  * - 3: Color <ARRAY> (default: [1, 0, 0, 1])
- * 3: Map Type (0: Normal, 1: Topographic, 2: Satelite) or any custom class (even mission config) <NUMBER, STRING> (default: 0)
+ * 3: Map Type (0: Normal, 1: Topographic, 2: Satelite) or any custom class (even mission config) <NUMBER or STRING> (default: 0)
  * 4: Code to run on init (will be passed [_map, _display, _displayID]) <CODE> (default: {})
  * 5: Resolution <NUMBER> (default: 4096)
 ```

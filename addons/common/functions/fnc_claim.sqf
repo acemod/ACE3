@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit that claims another object. ObjNull to remove claim. <OBJECT>
  * 1: The object that gets claimed. <OBJECT>
- * 2: Lock the claimed object aswell? (optional: false) <BOOL>
+ * 2: Lock the claimed object as well? <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -30,10 +30,10 @@ _target setVariable [QGVAR(owner), _unit, true];
 
 // lock target object
 if (_lockTarget) then {
-    if (!isNull _unit) then {
-        [QGVAR(lockVehicle), _target, _target] call CBA_fnc_targetEvent;
-    } else {
+    if (isNull _unit) then {
         [QGVAR(unlockVehicle), _target, _target] call CBA_fnc_targetEvent;
+    } else {
+        [QGVAR(lockVehicle), _target, _target] call CBA_fnc_targetEvent;
     };
 };
 

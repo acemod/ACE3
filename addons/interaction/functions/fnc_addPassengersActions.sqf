@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Vehicle <OBJECT>
  * 1: Player <OBJECT>
- * 2: Parameters <ARRAY>
+ * 2: Parameters (not used) <ARRAY>
  *
  * Return Value:
  * Children actions <ARRAY>
@@ -24,26 +24,23 @@ if !(_player in _vehicle || {[_player, _vehicle] call FUNC(canInteractWithVehicl
     [] // return
 };
 
-private _actions = [];
-private _icon = "";
-
-{
+((fullCrew _vehicle) select {_x select 0 != _player && {!unitIsUAV (_x select 0)}}) apply {
     _x params ["_unit", "_role"];
 
-    _icon = [
-        "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_driver_ca.paa",
-        "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_gunner_ca.paa",
-        "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_commander_ca.paa",
-        ""
-    ] select (["driver", "gunner", "commander"] find _role);
-
-    if (_unit getVariable [QEGVAR(captives,isHandcuffed), false]) then {
-        _icon = QPATHTOEF(captives,UI\handcuff_ca.paa);
+    private _icon = if (_unit getVariable [QEGVAR(captives,isHandcuffed), false] && {["ace_captives"] call EFUNC(common,isModLoaded)}) then {
+        QPATHTOEF(captives,UI\handcuff_ca.paa)
+    } else {
+        [
+            "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_driver_ca.paa",
+            "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_gunner_ca.paa",
+            "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_commander_ca.paa",
+            ""
+        ] select (["driver", "gunner", "commander"] find _role)
     };
 
-    _actions pushBack [
+    [
         [
-            str _unit,
+            QGVAR(passengerAction_) + str _unit,
             [_unit, true] call EFUNC(common,getName),
             [_icon, "#FFFFFF"],
             {
@@ -54,7 +51,7 @@ private _icon = "";
             {true},
             {
                 if (EGVAR(interact_menu,selectedTarget) isEqualTo _target) then {
-                    _this call FUNC(addPassengerActions)
+                    call FUNC(addPassengerActions)
                 } else {
                     [] // not selected, don't waste time on actions
                 };
@@ -67,7 +64,5 @@ private _icon = "";
         ] call EFUNC(interact_menu,createAction),
         [],
         _unit
-    ];
-} forEach ((fullCrew _vehicle) select {_x select 0 != _player && {!unitIsUAV (_x select 0)}});
-
-_actions
+    ]
+} // return

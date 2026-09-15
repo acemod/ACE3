@@ -43,3 +43,10 @@ Needs to be set before postInit.
 ```sqf
 ace_nametags_useFactionIcons = false; // by default true
 ```
+
+### 2.2 Object variable to treat AI as players
+
+Treats AI units as a player, including enemy AI.
+```sqf
+this setVariable ["ace_nametags_forceShowTags", true]
+```

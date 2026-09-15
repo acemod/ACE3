@@ -4,7 +4,7 @@
  * Adds or removes an id to a status effect and will send an event to apply.
  *
  * Arguments:
- * 0: vehicle that it will be attached to (player or vehicle) <OBJECT>
+ * 0: Vehicle that it will be attached to (player or vehicle) <OBJECT>
  * 1: Effect Name <STRING>
  * 2: Unique Reason ID <STRING>
  * 3: Is Set (true adds/false removes) <BOOL>

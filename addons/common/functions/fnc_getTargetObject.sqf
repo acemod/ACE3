@@ -17,11 +17,9 @@
 
 params ["_maxDistance"];
 
-private _position = ATLToASL positionCameraToWorld [0, 0, 0];
-_position set [2, (_position select 2) - (getTerrainHeightASL _position min 0)];
+private _position = AGLToASL positionCameraToWorld [0, 0, 0];
 
-private _laser = ATLToASL positionCameraToWorld [0, 0, _maxDistance];
-_laser set [2, (_laser select 2) - (getTerrainHeightASL _laser min 0)];
+private _laser = AGLToASL positionCameraToWorld [0, 0, _maxDistance];
 
 private _intersects = lineIntersectsObjs [_position, _laser, objNull, objNull, true, 2];
 

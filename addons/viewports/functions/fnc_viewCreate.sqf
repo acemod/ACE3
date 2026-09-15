@@ -68,12 +68,12 @@ switch (true) do {
 
         private _ctrlRender = _display ctrlCreate ["RscPicture", -1];
         _ctrlRender ctrlSetText _renderTexture;
-        _ctrlRender ctrlSetPosition [safezoneX + 0.5 * safezoneW - 0.5 * _viewWidth, safezoneY + 0.5 * safeZoneH - 0.5 * _viewHeight, _viewWidth, _viewHeight];
+        _ctrlRender ctrlSetPosition [safeZoneX + 0.5 * safeZoneW - 0.5 * _viewWidth, safeZoneY + 0.5 * safeZoneH - 0.5 * _viewHeight, _viewWidth, _viewHeight];
         _ctrlRender ctrlCommit 0;
 
         private _ctrlOverlay = _display ctrlCreate ["RscPicture", -1];
         _ctrlOverlay ctrlSetText "\a3\weapons_f\reticle\data\optika_tv_ca.paa";
-        _ctrlOverlay ctrlSetPosition [safezoneX + 0.5 * safezoneW - 0.5 * _viewWidth, safezoneY + 0.5 * safeZoneH - 0.5 * _viewHeight, _viewWidth, _viewHeight];
+        _ctrlOverlay ctrlSetPosition [safeZoneX + 0.5 * safeZoneW - 0.5 * _viewWidth, safeZoneY + 0.5 * safeZoneH - 0.5 * _viewHeight, _viewWidth, _viewHeight];
         _ctrlOverlay ctrlCommit 0;
 
         if (_usingGoggles) then {
@@ -82,7 +82,7 @@ switch (true) do {
 
             private _ctrlNVG = _display ctrlCreate ["RscPicture", -1];
             _ctrlNVG ctrlSetText "#(argb,8,8,3)color(1,1,0.6,0.9)";
-            _ctrlNVG ctrlSetPosition [safezoneX + 0.5 * safezoneW - 0.5 * _viewWidth, safezoneY + 0.5 * safeZoneH - 0.5 * _viewHeight, _viewWidth, _viewHeight];
+            _ctrlNVG ctrlSetPosition [safeZoneX + 0.5 * safeZoneW - 0.5 * _viewWidth, safeZoneY + 0.5 * safeZoneH - 0.5 * _viewHeight, _viewWidth, _viewHeight];
             _ctrlNVG ctrlCommit 0;
         } else {
             _camEffect = [0]; // 2.08's currentVisionMode change could allow matching real turret's vision mode
@@ -106,20 +106,20 @@ switch (true) do {
 
         private _ctrlRender = _display ctrlCreate ["RscPicture", -1];
         _ctrlRender ctrlSetText _renderTexture;
-        _ctrlRender ctrlSetPosition [safezoneX + 0.5 * safezoneW - 0.5 * _viewWidth, safezoneY + 0.5 * safeZoneH - 0.5 * _viewHeight, _viewWidth, _viewHeight];
+        _ctrlRender ctrlSetPosition [safeZoneX + 0.5 * safeZoneW - 0.5 * _viewWidth, safeZoneY + 0.5 * safeZoneH - 0.5 * _viewHeight, _viewWidth, _viewHeight];
         _ctrlRender ctrlCommit 0;
 
         if (_usingGoggles) then {
             // Roughly try to color match ace_nvg, and make it semi-opaque
             private _ctrlNVG = _display ctrlCreate ["RscPicture", -1];
             _ctrlNVG ctrlSetText "#(argb,8,8,3)color(0.25,0.2,0.05,0.75)";
-            _ctrlNVG ctrlSetPosition [safezoneX + 0.5 * safezoneW - 0.5 * _viewWidth, safezoneY + 0.5 * safeZoneH - 0.5 * _viewHeight, _viewWidth, _viewHeight];
+            _ctrlNVG ctrlSetPosition [safeZoneX + 0.5 * safeZoneW - 0.5 * _viewWidth, safeZoneY + 0.5 * safeZoneH - 0.5 * _viewHeight, _viewWidth, _viewHeight];
             _ctrlNVG ctrlCommit 0;
         };
 
         private _ctrlOverlay = _display ctrlCreate ["RscPicture", -1];
         _ctrlOverlay ctrlSetText QPATHTOF(data\optic_window_ca.paa);
-        _ctrlOverlay ctrlSetPosition [safezoneX + 0.5 * safezoneW - 0.5 * _viewWidth, safezoneY + 0.5 * safeZoneH - 0.5 * _viewHeight, _viewWidth, _viewHeight];
+        _ctrlOverlay ctrlSetPosition [safeZoneX + 0.5 * safeZoneW - 0.5 * _viewWidth, safeZoneY + 0.5 * safeZoneH - 0.5 * _viewHeight, _viewWidth, _viewHeight];
         _ctrlOverlay ctrlCommit 0;
     };
 };

@@ -33,7 +33,12 @@ if (
     false
 };
 
-private _config = configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> "FlashLight";
+private _config = _flashlight call CBA_fnc_getItemConfig;
+if (isClass (_config >> "ItemInfo")) then {
+    _config = _config >> "ItemInfo";
+};
+_config = _config >> "FlashLight";
+
 if (!isClass _config) exitWith {
     TRACE_1("weapon with unmountable flashlight",_flashlight);
     true

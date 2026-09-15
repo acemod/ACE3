@@ -3,7 +3,7 @@ class Bush {
     icon = "";
     color[] = {0.450000, 0.640000, 0.330000, 0.0};
     size = 14;
-    importance = "0.2 * 14 * 0.05";
+    importance = 0.2 * 14 * 0.05;
     coefMin = 0.250000;
     coefMax = 4;
 };
@@ -13,7 +13,7 @@ class SmallTree {
     icon = "";
     color[] = {0.450000, 0.640000, 0.330000, 0.0};
     size = 12;
-    importance = "0.6 * 12 * 0.05";
+    importance = 0.6 * 12 * 0.05;
     coefMin = 0.250000;
     coefMax = 4;
 };
@@ -21,7 +21,7 @@ class Tree {
     icon = "";
     color[] = {0.450000, 0.640000, 0.330000, 0.0};
     size = 12;
-    importance = "0.9 * 16 * 0.05";
+    importance = 0.9 * 16 * 0.05;
     coefMin = 0.250000;
     coefMax = 4;
 };

@@ -28,9 +28,11 @@ params ["_weapon"];
 private _weaponData = GVAR(cacheWeaponData) get _weapon;
 if (!isNil "_weaponData") exitWith {_weaponData};
 
+private _weaponConfig = configFile >> "CfgWeapons" >> _weapon;
+
 // Search the config
 // The old and new properties have the same name for dispersion, so read whichever is closer to the children
-private _property = configFile >> "CfgWeapons" >> _weapon >> QGVAR(dispersion);
+private _property = _weaponConfig >> QGVAR(dispersion);
 private _dispersion = if (isNumber _property) then {
     getNumber _property;
 } else {
@@ -43,7 +45,7 @@ private _dispersion = if (isNumber _property) then {
 };
 
 // The old and new properties have the same name for slowdownFactor, so read whichever is closer to the children
-_property = configFile >> "CfgWeapons" >> _weapon >> QGVAR(slowdownFactor);
+_property = _weaponConfig >> QGVAR(slowdownFactor);
 private _slowdownFactor = if (isNumber _property) then {
     getNumber _property;
 } else {
@@ -57,33 +59,33 @@ private _slowdownFactor = if (isNumber _property) then {
 
 // For jam chance, try reading the legacy property first (ace_overheating_jamChance).
 private _jamChance = 1 / 3000;
-_property = configFile >> "CfgWeapons" >> _weapon >> QGVAR(JamChance);
+_property = _weaponConfig >> QGVAR(JamChance);
 // If it exists read it, as the weapon is probably third party and not updated to the new properties
 if (isArray _property) then {
     // Map old array property to new number property
     _jamChance = (getArray _property) select 1;
 } else {
     // No legacy property was found, look for the new one
-    _property = configFile >> "CfgWeapons" >> _weapon >> QGVAR(mrbs);
+    _property = _weaponConfig >> QGVAR(mrbs);
     if (isNumber _property) then {
         _jamChance = 1 / getNumber _property;
     };
 };
 
 // for cookoff
-private _modes = getArray (configFile >> "CfgWeapons" >> _weapon >> "modes");
-private _muzzle = getArray (configFile >> "CfgWeapons" >> _weapon >> "muzzles") select 0;
+private _modes = getArray (_weaponConfig >> "modes");
+private _muzzle = getArray (_weaponConfig >> "muzzles") select 0;
 if (_muzzle == "this") then {
     _muzzle = _weapon;
 };
 
-private _reloadTime = getNumber (configfile >> "CfgWeapons" >> _weapon >> (_modes select 0) >> "reloadTime");
+private _reloadTime = getNumber (_weaponConfig >> (_modes select 0) >> "reloadTime");
 
-private _closedBolt = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(closedBolt));
+private _closedBolt = getNumber (_weaponConfig >> QGVAR(closedBolt));
 
-private _barrelMass = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(barrelMass));
+private _barrelMass = getNumber (_weaponConfig >> QGVAR(barrelMass));
 if (_barrelMass <= 0) then {
-    _barrelMass = METAL_MASS_RATIO * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
+    _barrelMass = METAL_MASS_RATIO * (getNumber (_weaponConfig >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
 };
 
 // Cache the values

@@ -7,7 +7,7 @@ private _categoryColors = [_category, format ["| %1 |", LELSTRING(common,subcate
     _categoryColors,
     [1, 0, 0],
     false,
-    {GVAR(selectorColorHex) = _this call BIS_fnc_colorRGBtoHTML} // Stored in Hex to avoid constant conversion
+    {GVAR(selectorColorHex) = call BIS_fnc_colorRGBtoHTML} // Stored in Hex to avoid constant conversion
 ] call CBA_fnc_addSetting;
 
 [
@@ -140,8 +140,11 @@ private _categoryColors = [_category, format ["| %1 |", LELSTRING(common,subcate
     QGVAR(useListMenuSelf), "CHECKBOX",
     LSTRING(UseListMenu),
     [_category, LELSTRING(Interaction,InteractionMenuSelf)],
+    (productVersion select 6) == "OSX",
     false,
-    false
+    {
+        GVAR(useListMenuSelfActual) = _this || {(productVersion select 6) == "OSX"}
+    }
 ] call CBA_fnc_addSetting;
 
 [

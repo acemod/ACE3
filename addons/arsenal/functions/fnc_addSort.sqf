@@ -5,15 +5,15 @@
  *
  * Arguments:
  * 0: Tabs to add sort to <ARRAY>
- * - 0: Left Tab Indexes <ARRAY of NUMBERS>
- * - 1: Right Tab Indexes <ARRAY of NUMBERS>
+ * - 0: Left Tab Indexes <ARRAY of NUMBERs>
+ * - 1: Right Tab Indexes <ARRAY of NUMBERs>
  * 1: Sort class (a unique string for each algorithm) <STRING>
  * 2: Title <STRING>
  * 3: Algorithm <CODE>
  * 4: Condition <CODE> (default: {true})
  *
  * Return Value:
- * 0: Array of IDs <ARRAY of STRINGS>
+ * 0: Array of IDs <ARRAY of STRINGs>
  *
  * Example:
  *  [[[0, 1], []], "fireRateSort", "Sort by fire rate", {

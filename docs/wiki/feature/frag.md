@@ -2,7 +2,7 @@
 layout: wiki
 title: Frag
 component: frag
-description: Shapnel system for explosives.
+description: Shrapnel system for explosives.
 group: feature
 category: realism
 parent: wiki

@@ -71,7 +71,7 @@ if (GVAR(plottingBoard_Shown) == 0) then {
 
         // Rotate all points of polyline
         if (_count >= 4) then { // polylines need at least 2 points (2 components per point)
-            _rotatedPolyline = [];
+            private _rotatedPolyline = [];
 
             for "_i" from 0 to _count - 1 step 2 do {
                 _rotatedPolyPos = [[0, 0], [_polyline select _i, _polyline select (_i + 1)], -_angle] call CBA_fnc_vectRotate2D;

@@ -14,7 +14,7 @@ class CfgWeapons {
 
     class GVAR(2b14_carry): Launcher_Base_F {
         dlc = "ace";
-        class ACE_CSW {
+        class ace_csw {
             type = "weapon";
             deployTime = 20;
             pickupTime = 25;
@@ -40,7 +40,7 @@ class CfgWeapons {
 
     class GVAR(nsv_carry): Launcher_Base_F {
         dlc = "ace";
-        class ACE_CSW {
+        class ace_csw {
             type = "weapon";
             deployTime = 4;
             pickupTime = 4;
@@ -64,7 +64,7 @@ class CfgWeapons {
 
     class GVAR(kord_carry): Launcher_Base_F {
         dlc = "ace";
-        class ACE_CSW {
+        class ace_csw {
             type = "weapon";
             deployTime = 4;
             pickupTime = 4;
@@ -89,7 +89,7 @@ class CfgWeapons {
 
     class GVAR(ags30_carry): Launcher_Base_F {
         dlc = "ace";
-        class ACE_CSW {
+        class ace_csw {
             type = "weapon";
             deployTime = 4;
             pickupTime = 4;
@@ -113,7 +113,7 @@ class CfgWeapons {
 
     class GVAR(spg9_carry): Launcher_Base_F {
         dlc = "ace";
-        class ACE_CSW {
+        class ace_csw {
             type = "weapon";
             deployTime = 4;
             pickupTime = 4;
@@ -136,7 +136,7 @@ class CfgWeapons {
     };
 
     class GVAR(spg9m_carry): GVAR(spg9_carry) {
-        class ACE_CSW: ACE_CSW {
+        class ace_csw: ace_csw {
             class assembleTo {
                 EGVAR(csw,spg9Tripod) = "rhs_SPG9M_MSV";
             };
@@ -147,7 +147,7 @@ class CfgWeapons {
 
     class GVAR(metis_carry): Launcher_Base_F {
         dlc = "ace";
-        class ACE_CSW {
+        class ace_csw {
             type = "mount";
             deployTime = 4;
             pickupTime = 4;
@@ -169,7 +169,7 @@ class CfgWeapons {
 
     class GVAR(kornet_carry): Launcher_Base_F {
         dlc = "ace";
-        class ACE_CSW {
+        class ace_csw {
             type = "mount";
             deployTime = 4;
             pickupTime = 4;

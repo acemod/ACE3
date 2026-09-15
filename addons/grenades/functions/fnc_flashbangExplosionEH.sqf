@@ -20,7 +20,7 @@ TRACE_1("params",_grenadePosASL);
 
 // Affect local AI (players are not local, except for ACE_player)
 // @todo: Affect units in static weapons, turned out, etc
-private _affected = ((ASLtoAGL _grenadePosASL) nearEntities ["CAManBase", 20]) - [ACE_player];
+private _affected = ((ASLToAGL _grenadePosASL) nearEntities ["CAManBase", 20]) - [ACE_player];
 
 {
     private _unit = _x;
@@ -69,7 +69,7 @@ private _affected = ((ASLtoAGL _grenadePosASL) nearEntities ["CAManBase", 20]) -
 if (!hasInterface) exitWith {};
 
 // Create flash to illuminate environment
-private _light = "#lightpoint" createVehicleLocal ASLtoAGL _grenadePosASL;
+private _light = "#lightpoint" createVehicleLocal ASLToAGL _grenadePosASL;
 _light setPosASL _grenadePosASL;
 
 _light setLightBrightness 20;
@@ -113,7 +113,7 @@ if (["ace_hearing"] call EFUNC(common,isModLoaded) && {_strength > 0} && {EGVAR(
 };
 
 // Add ace_medical pain effect
-if (GETEGVAR(medical,enabled,false) && {_strength > 0.1} && {isDamageAllowed _unit} && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) then {
+if (GETEGVAR(medical,enabled,false) && {_strength > 0.1} && {isDamageAllowed ACE_player} && {ACE_player getVariable [QEGVAR(medical,allowDamage), true]}) then {
     [ACE_player, _strength / 2] call EFUNC(medical,adjustPainLevel);
 };
 
@@ -122,7 +122,7 @@ _strength = 1 - (((_eyePos vectorDistance _grenadePosASL) min 25) / 25) ^ 0.4;
 _strength = _strength * _losCoefficient;
 
 // Account for people looking away by slightly reducing the effect for visual effects.
-private _eyeDir = ((AGLtoASL positionCameraToWorld [0, 0, 1]) vectorDiff (AGLtoASL positionCameraToWorld [0, 0, 0]));
+private _eyeDir = ((AGLToASL positionCameraToWorld [0, 0, 1]) vectorDiff (AGLToASL positionCameraToWorld [0, 0, 0]));
 private _dirToUnitVector = _eyePos vectorFromTo _grenadePosASL;
 private _angleDiff = acos (_eyeDir vectorDotProduct _dirToUnitVector);
 TRACE_2("",_angleDiff,((1 - (_angleDiff - 45) / (120 - 45)) max 0));

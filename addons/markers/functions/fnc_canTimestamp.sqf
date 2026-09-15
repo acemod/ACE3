@@ -20,7 +20,7 @@ params [["_unit", ACE_player]];
 private _assignedItems = assignedItems _unit;
 
 private _index = _assignedItems findIf {
-    ([_x] call EFUNC(common,getItemType)) isEqualTo ["item", "watch"]
+    ([_x] call EFUNC(common,getItemType) select 1) in ["watch", "gps", "uav_terminal"]
 };
 
 _index != -1

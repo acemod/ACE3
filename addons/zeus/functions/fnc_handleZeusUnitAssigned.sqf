@@ -10,7 +10,7 @@
  *
  * Arguments:
  * 0: The zeus logic <LOGIC>
- * 1: The zeus player <UNIT>
+ * 1: The zeus player <OBJECT>
  *
  * Return Value:
  * None

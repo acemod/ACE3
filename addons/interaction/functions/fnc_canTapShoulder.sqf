@@ -11,7 +11,7 @@
  * Able to tap a shoulder <BOOL>
  *
  * Example:
- * [player, target] call ace_interaction_fnc_canTapShoulder
+ * [player, cursorObject] call ace_interaction_fnc_canTapShoulder
  *
  * Public: No
  */

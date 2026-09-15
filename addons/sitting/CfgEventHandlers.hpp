@@ -19,7 +19,7 @@ class Extended_PostInit_EventHandlers {
 class Extended_Killed_EventHandlers {
     class CAManBase {
         class ADDON {
-            killed = QUOTE(_this call DFUNC(handleInterrupt));
+            killed = QUOTE(call DFUNC(handleInterrupt));
         };
     };
 };

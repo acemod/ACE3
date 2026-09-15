@@ -19,7 +19,7 @@ class Extended_PostInit_EventHandlers {
 class Extended_Hit_EventHandlers {
     class CAManBase {
         class ADDON {
-            hit = QUOTE(_this call FUNC(fallDown));
+            hit = QUOTE(call FUNC(fallDown));
         };
     };
 };

@@ -93,7 +93,7 @@ class CfgVehicles {
                     distance = 4;
                     condition = "true";
                     //wait a frame to handle "Do When releasing action menu key" option:
-                    statement = QUOTE([ARR_2({_this call FUNC(positionTL)},[ARR_2(_player,_target)])] call CBA_fnc_execNextFrame);
+                    statement = QUOTE([ARR_2({call FUNC(positionTL)},[ARR_2(_player,_target)])] call CBA_fnc_execNextFrame);
                     showDisabled = 0;
                     exceptions[] = {};
                 };

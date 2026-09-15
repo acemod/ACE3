@@ -1,24 +1,40 @@
 #include "script_component.hpp"
 
-[QGVAR(burn), LINKFUNC(burn)] call CBA_fnc_addEventHandler;
-[QGVAR(burnEffects), LINKFUNC(burnEffects)] call CBA_fnc_addEventHandler;
-[QGVAR(burnSimulation), LINKFUNC(burnSimulation)] call CBA_fnc_addEventHandler;
-
-[QGVAR(playScream), {
-    params ["_scream", "_source"];
-
-    // Only play sound if enabled in settings and enabled for the unit
-    if (GVAR(enableScreams) && {_source getVariable [QGVAR(enableScreams), true]}) then {
-        _source say3D _scream;
-    };
-}] call CBA_fnc_addEventHandler;
-
-if (!isServer) exitWith {};
-
 ["CBA_settingsInitialized", {
-    TRACE_1("settingsInit",GVAR(enabled));
+    TRACE_1("settingsInitialized",GVAR(enabled));
 
     if (!GVAR(enabled)) exitWith {};
+
+    [QGVAR(burn), LINKFUNC(burn)] call CBA_fnc_addEventHandler;
+    [QGVAR(burnEffects), LINKFUNC(burnEffects)] call CBA_fnc_addEventHandler;
+    [QGVAR(burnSimulation), LINKFUNC(burnSimulation)] call CBA_fnc_addEventHandler;
+
+    // Make burning wrecks into fire sources
+    ["AllVehicles", "Killed", {
+        params ["_vehicle", "", "", "_useEffects"];
+
+        if (_useEffects && {_vehicle getEntityInfo 13}) then {
+            [QGVAR(addFireSource), [
+                _vehicle,
+                (boundingBoxReal [_vehicle, "FireGeometry"]) select 2,
+                BURN_MAX_INTENSITY,
+                QGVAR(wreck) + hashValue _vehicle,
+                {_this getEntityInfo 13},
+                _vehicle
+            ]] call CBA_fnc_serverEvent;
+        };
+    }, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler; // Use "Man" to exclude animals as well
+
+    [QGVAR(playScream), {
+        params ["_scream", "_source"];
+
+        // Only play sound if enabled in settings and enabled for the unit
+        if (GVAR(enableScreams) && {_source getVariable [QGVAR(enableScreams), true]}) then {
+            _source say3D _scream;
+        };
+    }] call CBA_fnc_addEventHandler;
+
+    if (!isServer) exitWith {};
 
     GVAR(fireSources) = createHashMap;
 

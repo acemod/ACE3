@@ -66,6 +66,13 @@ private _capture = 1 max ((_po2 / IDEAL_PPO2) ^ (-_po2 * 3));
 private _positiveChange = _heartRate * 0.00368 * _oxygenSaturation * _capture;
 
 private _breathingEffectiveness = 1;
+{
+    _breathingEffectiveness = if (_y isEqualType 0) then {
+        _breathingEffectiveness * _y
+    } else {
+        _breathingEffectiveness * (_unit call _y)
+    };
+} forEach GVAR(spo2DutyList);
 
 private _rateOfChange = _negativeChange + (_positiveChange * _breathingEffectiveness);
 

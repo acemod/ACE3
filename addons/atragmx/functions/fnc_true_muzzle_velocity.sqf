@@ -18,7 +18,7 @@
 private _referenceDrop = GVAR(truingDropDropData) select 0;
 private _actualDrop = GVAR(truingDropDropData) select 1;
 
-if (Round(_actualDrop * 10) / 10 == Round(_referenceDrop * 10) / 10) exitWith {};
+if (round(_actualDrop * 10) / 10 == round(_referenceDrop * 10) / 10) exitWith {};
 
 private _step = 10;
 if (_actualDrop > _referenceDrop) then {

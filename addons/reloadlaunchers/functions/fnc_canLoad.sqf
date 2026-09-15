@@ -10,7 +10,7 @@
  * 3: Missile name <STRING>
  *
  * Return Value:
- * None
+ * Can Load <BOOL>
  *
  * Example:
  * [player, cursorTarget, "launch_RPG32_F", "RPG32_F"] call ace_reloadlaunchers_fnc_canLoad

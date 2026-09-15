@@ -7,7 +7,7 @@
  * 0: Name of mode ("settings", "config") <STRING>
  *
  * Return Value:
- * Array <ARRAY>
+ * None
  *
  * Example:
  * ["settings"] call ace_vector_fnc_nextMode
@@ -37,6 +37,7 @@ switch (_this select 0) do {
     };
 
     case ("config"): {
+        //IGNORE_PRIVATE_WARNING ["ace_vector_configTemp"];
         GVAR(configTemp) = GVAR(configTemp) + 1;
         if (GVAR(configTemp) > 2) then {GVAR(configTemp) = 0};
 

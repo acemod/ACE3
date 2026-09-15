@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Message <ANY>
- * 1: Level (default: 2) <NUMBER>
+ * 1: Level <NUMBER> (default: 2)
  *
  * Return Value:
  * Message is Printed <BOOL>

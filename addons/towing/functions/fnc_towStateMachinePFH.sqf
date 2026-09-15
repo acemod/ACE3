@@ -70,7 +70,7 @@ switch (_state) do {
             // can't use createVehicleLocal because rope can be non-local (like parent) and it must be attached to global vehicle
             GVAR(helper) = createVehicle [QGVAR(helper), [0, 0, 0], [], 0, "CAN_COLLIDE"];
             GVAR(helper) attachTo [_unit, [0, 0, 0], "LeftHand", true];
-            _rope = ropeCreate [_parent, _parent worldToModelVisual ASLtoAGL getPosASLVisual GVAR(attachHelper), GVAR(helper), [0, 0, 0], _length];
+            _rope = ropeCreate [_parent, _parent worldToModelVisual ASLToAGL getPosASLVisual GVAR(attachHelper), GVAR(helper), [0, 0, 0], _length];
             _args set [3, _rope];
         };
 
@@ -95,7 +95,7 @@ switch (_state) do {
     case TOW_STATE_ATTACH: {
         TRACE_3("state attach",GVAR(attachHelper),_parent,_rope);
         private _child = GVAR(attachHelper) getVariable [QGVAR(object), objNull];
-        private _relativeAttachPos = _child worldToModelVisual ASLtoAGL getPosASLVisual GVAR(attachHelper);
+        private _relativeAttachPos = _child worldToModelVisual ASLToAGL getPosASLVisual GVAR(attachHelper);
 
         TRACE_3("child&pos",_parent,_child,_relativeAttachPos);
 
@@ -118,7 +118,7 @@ switch (_state) do {
         };
 
         private _hookParent = createVehicle [QGVAR(hook), [0, 0, 0], [], 0, "CAN_COLLIDE"];
-        _hookParent attachTo [_parent, _parent worldToModelVisual ASLtoAGL getPosASLVisual _rope];
+        _hookParent attachTo [_parent, _parent worldToModelVisual ASLToAGL getPosASLVisual _rope];
 
         private _hook = createVehicle [QGVAR(hook), [0, 0, 0], [], 0, "CAN_COLLIDE"];
         _hook attachTo [_child, _relativeAttachPos];

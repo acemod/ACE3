@@ -23,8 +23,14 @@ private _bb = boundingBoxReal _target;
 (_bb select 0) params ["_bbX", "_bbY", "_bbZ"];
 
 private _config = configOf _target;
-if (isNumber (_config >> QGVAR(bodyWidth))) then {_bbX = getNumber (_config >> QGVAR(bodyWidth));};
-if (isNumber (_config >> QGVAR(bodyLength))) then {_bbY = getNumber (_config >> QGVAR(bodyLength));};
+
+if (isNumber (_config >> QGVAR(bodyWidth))) then {
+    _bbX = getNumber (_config >> QGVAR(bodyWidth));
+};
+
+if (isNumber (_config >> QGVAR(bodyLength))) then {
+    _bbY = getNumber (_config >> QGVAR(bodyLength));
+};
 
 private _relPos = _target worldToModelVisual ASLToAGL _cameraPosASL;
 _relPos params ["_dx", "_dy", "_dz"];
@@ -33,23 +39,21 @@ private _ndx = (abs _dx) / (((abs (_bbX)) - 1) max 1);
 private _ndy = (abs _dy) / (((abs (_bbY)) - 1) max 1);
 private _ndz = (abs _dz) / (((abs (_bbZ)) - 1) max 1);
 
-
-private _pos = [];
-if (_ndx > _ndy) then {
+private _pos = if (_ndx > _ndy) then {
     if (_ndx > _ndz) then {
-        // _ndx is greater, will colide with x plane first
-        _pos = _relPos vectorMultiply ((1 / _ndx) min 0.8);
+        // _ndx is greater, will collide with x plane first
+        _relPos vectorMultiply ((1 / _ndx) min 0.8)
     } else {
-        // _ndz is greater, will colide with z plane first
-        _pos = _relPos vectorMultiply ((1 / _ndz) min 0.8);
+        // _ndz is greater, will collide with z plane first
+        _relPos vectorMultiply ((1 / _ndz) min 0.8)
     };
 } else {
     if (_ndy > _ndz) then {
-        // _ndy is greater, will colide with y plane first
-        _pos = _relPos vectorMultiply ((1 / _ndy) min 0.8);
+        // _ndy is greater, will collide with y plane first
+        _relPos vectorMultiply ((1 / _ndy) min 0.8)
     } else {
-        // _ndz is greater, will colide with z plane first
-        _pos = _relPos vectorMultiply ((1 / _ndz) min 0.8);
+        // _ndz is greater, will collide with z plane first
+        _relPos vectorMultiply ((1 / _ndz) min 0.8)
     };
 };
 

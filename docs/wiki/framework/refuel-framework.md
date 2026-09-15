@@ -45,8 +45,8 @@ Meant to be called on server only.
 
 `ace_refuel_fnc_makeSource`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Fuel Source | Object | Required |
 | 1  | Amount (in liters) | Number | Optional (default: `0`) |
 | 2  | Hooks positions | Array | Optional (default: `[[0,0,0]]`) |
@@ -65,8 +65,8 @@ Meant to be called on server only.
 
 `ace_refuel_fnc_getFuel`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Fuel Truck | Object | Required |
 | **R** | Fuel amount left (in liters) | Number | Return value |
 
@@ -82,8 +82,8 @@ Meant to be called on server only.
 
 `ace_refuel_fnc_setFuel`
 
-|    | Arguments | Type | Optional (default value) |
-| ---| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Fuel Truck | Object | Required |
 | 1  | Amount (in liters) | Number | Required |
 | **R** | None | None | Return value |
@@ -103,8 +103,8 @@ Meant to be run on all clients and server.
 
 `ace_refuel_fnc_makeJerryCan`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Jerry Can | Object | Required |
 | 1  | Amount (in liters) | Number | Optional (default: `20`) |
 | **R** | None | None | Return value |

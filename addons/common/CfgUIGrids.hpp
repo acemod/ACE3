@@ -5,13 +5,13 @@ class CfgUIGrids {
                 class Variables {
                     grid_ACE_displayText[] = {
                         {
-                            "((safezoneX + safezoneW) - (10 *(((safezoneW / safezoneH) min 1.2) / 40)) - 2.9 *(((safezoneW / safezoneH) min 1.2) / 40))",
-                            "safeZoneY + 0.175 * safezoneH",
-                            "(10 *(((safezoneW / safezoneH) min 1.2) / 40))",
-                            "(3 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))"
+                            "((safeZoneX + safeZoneW) - (10 *(((safeZoneW / safeZoneH) min 1.2) / 40)) - 2.9 *(((safeZoneW / safeZoneH) min 1.2) / 40))",
+                            "safeZoneY + 0.175 * safeZoneH",
+                            "(10 *(((safeZoneW / safeZoneH) min 1.2) / 40))",
+                            "(3 *((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25))"
                         },
-                        "(((safezoneW / safezoneH) min 1.2) / 40)",
-                        "((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)"
+                        "(((safeZoneW / safeZoneH) min 1.2) / 40)",
+                        "((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)"
                     };
                 };
             };

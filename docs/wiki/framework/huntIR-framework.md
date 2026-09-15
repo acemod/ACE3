@@ -30,3 +30,15 @@ class CfgWeapons {
   };
 };
 ```
+
+## 2. Player Animation
+
+Player animation when entering the HuntIR Monitor can be disabled by setting `ace_huntir_animatePlayer` to `false`.
+
+```sqf
+// Disable player animation locally
+missionNamespace setVariable ["ace_huntir_animatePlayer", false];
+
+// Disable player animation for everyone
+missionNamespace setVariable ["ace_huntir_animatePlayer", false, true];
+```

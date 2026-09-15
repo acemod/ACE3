@@ -29,7 +29,7 @@ private _fnc_getActions = {
         private _isMagazine = _config == _cfgMagazines;
         {
             private _itemConfig = _config >> _x;
-            if (getNumber (_itemConfig >> QXGVAR(thirstQuenched)) > 0 || {getNumber (_itemConfig >> QXGVAR(hungerSatiated)) > 0}) then {
+            if (getNumber (_itemConfig >> QXGVAR(thirstQuenched)) != 0 || {getNumber (_itemConfig >> QXGVAR(hungerSatiated)) != 0}) then {
                 private _displayName = getText (_itemConfig >> "displayName");
                 private _picture = getText (_itemConfig >> "picture");
 
@@ -40,7 +40,7 @@ private _fnc_getActions = {
         } forEach _items;
     } forEach [
         [_cfgWeapons, _player call EFUNC(common,uniqueItems)],
-        [_cfgMagazines, [magazines _player] call EFUNC(common,uniqueElements)]
+        [_cfgMagazines, [_player, 2] call EFUNC(common,uniqueItems)]
     ];
 
     _actions

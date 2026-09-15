@@ -14,7 +14,7 @@
  *
  * Public: No
  */
-// IGNORE_PRIVATE_WARNING(_target);
+//IGNORE_PRIVATE_WARNING ["_target"];
 
 private _weaponDir = _target weaponDirection currentWeapon _target;
 private _refSystem = _weaponDir call EFUNC(common,createOrthonormalReference);

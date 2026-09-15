@@ -31,7 +31,7 @@ redirect_from: "/wiki/frameworkx/field-rations-framework.html"
 | `ACE_isFieldRationItem` | Number | Force adds the item to the ACE Field Rations category in ACE Arsenal (OPTIONAL) |
 
 
-_* Value range is 0 to 100 and can be modified by the corresponding coefficient setting._
+_* Value range is -100 to 100 and can be modified by the corresponding coefficient setting._
 
 _** Array is in format: STAND, CROUCH, PRONE. If player is in vehicle, the first element is used._
 

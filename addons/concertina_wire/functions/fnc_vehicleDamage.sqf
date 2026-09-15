@@ -36,7 +36,6 @@ if (_mode == -1) exitWith {};
 //9.78744 (10)
 
 _type = typeOf _wire;
-private _anim = _wire animationPhase "wire_2";
 private _pos_w = getPos _wire;
 private _dir_w = getDir _wire;
 
@@ -55,7 +54,7 @@ if (_mode == 0) then {
         _found = false;
         private _no = nearestObjects [_x, [typeOf _wire], 3];     //diag_log _no; diag_log ".....";
         _no = _no - [_wire];                            //diag_log _no;
-        if (count _no > 0) exitWith {
+        if (_no isNotEqualTo []) exitWith {
             _found = true;                                //diag_log "found";
         };
     } forEach _wireCheckPosAr;

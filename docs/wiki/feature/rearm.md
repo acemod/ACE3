@@ -64,6 +64,14 @@ To fully rearm 2000 rounds of 7.62mm machine gun, you need five ammo boxes.
 - Can check what magazines are loaded on supply vehicle
 
 
+## 2.3 Use Pylon Position (`ace_rearm_usePylonPosition`)
+Rearming a pylon magazine requires the player to position ammo object (missile or bomb) nearby and aligned with the correct pylon on the vehicle. This requirement takes effect if all of these conditions are met:
+- This setting Use Pylon Position is enabled
+- The setting Rearm Amount set to `Entire Magazine` or `Amount based on caliber`, not `Entire vehicle`
+- The magazine being rearmed is a pylon magazine
+- The ammobox is a munition model, not the default ammobox
+
+
 ## 3. FAQ
 
 ### Can I drop the ammo box?

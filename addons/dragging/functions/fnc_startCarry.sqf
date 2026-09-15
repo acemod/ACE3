@@ -15,6 +15,7 @@
  *
  * Public: No
  */
+
 params ["_unit", "_target"];
 
 // Try to claim the object

@@ -20,7 +20,8 @@ if (isNil QUOTE(PAIN_FADE_TIME)) then {PAIN_FADE_TIME = PAIN_FADE_TIME_DEFAULT};
 if (isNil QUOTE(LIMPING_DAMAGE_THRESHOLD)) then {LIMPING_DAMAGE_THRESHOLD = LIMPING_DAMAGE_THRESHOLD_DEFAULT};
 if (isNil QUOTE(FRACTURE_DAMAGE_THRESHOLD)) then {FRACTURE_DAMAGE_THRESHOLD = FRACTURE_DAMAGE_THRESHOLD_DEFAULT};
 if (isNil QUOTE(CARDIAC_OUTPUT_MIN)) then {CARDIAC_OUTPUT_MIN = CARDIAC_OUTPUT_MIN_DEFAULT};
-// Derive the alternate fatal damage coefficents
+if (isNil QUOTE(MEDICAL_ACTIVITY)) then {MEDICAL_ACTIVITY = MEDICAL_ACTIVITY_DEFAULT};
+// Derive the alternate fatal damage coefficients
 if (isNil QUOTE(FATAL_SUM_DAMAGE_WEIBULL_K) || isNil QUOTE(FATAL_SUM_DAMAGE_WEIBULL_L)) then {
     private _x1 = 0.5;
     private _y1 = 0.1;
@@ -68,7 +69,7 @@ addMissionEventHandler ["Loaded", {
     } forEach GVAR(fixedStatics);
 }];
 
-["ace_unconscious", {
+["ace_unconscious_animation", {
     params ["_unit", "_active"];
     if (_active) then {
         // Use object reference to indicate the waitUnit is already running (this prevents issues with respawning units keeping SetVars)

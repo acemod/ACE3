@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Glowbal
- * Update the heart rate
+ * Update unit's heart rate
  *
  * Arguments:
  * 0: The Unit <OBJECT>
@@ -9,8 +9,8 @@
  * 2: Time since last update <NUMBER>
  * 3: Sync value? <BOOL>
  *
- * ReturnValue:
- * Current Heart Rate <NUMBER>
+ * Return Value:
+ * None
  *
  * Example:
  * [player, 0, 1, false] call ace_medical_vitals_fnc_updateHeartRate
@@ -65,5 +65,3 @@ if IN_CRDC_ARRST(_unit) then {
 };
 
 _unit setVariable [VAR_HEART_RATE, _heartRate, _syncValue];
-
-_heartRate

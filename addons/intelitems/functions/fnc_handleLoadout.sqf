@@ -21,7 +21,6 @@ private _allIndices = [];
 
 // Handle magazine ids with missing index assignments
 private _cfgMagazines = configFile >> "CfgMagazines";
-private _magazines = magazines _player;
 
 {
     if (getNumber (_cfgMagazines >> _x >> QGVAR(intel)) == 1) then {
@@ -39,7 +38,7 @@ private _magazines = magazines _player;
             };
         } forEach _magazineIds;
     };
-} forEach (_magazines arrayIntersect _magazines);
+} forEach ([_player, 2] call EFUNC(common,uniqueItems));
 
 // Close any open controls if player no longer has needed magazine
 {

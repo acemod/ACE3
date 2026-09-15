@@ -96,7 +96,7 @@ private _state = [_json] call CBA_fnc_parseJSON;
     [QEGVAR(medical,ivBags), nil],
     [QEGVAR(medical,triageLevel), 0],
     [QEGVAR(medical,triageCard), []],
-    [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]]
+    [VAR_BODYPART_DAMAGE, DEFAULT_BODYPART_DAMAGE_VALUES]
     // Offset needs to be converted
     // [VAR_MEDICATIONS, []]
 ];
@@ -124,5 +124,10 @@ private _targetState = _state getVariable [QGVAR(statemachineState), "Default"];
 if (_currentState in ["Unconscious", "CardiacArrest"] && {_targetState in ["Default", "Injured"]}) then {
     [_unit, false] call EFUNC(medical_status,setUnconsciousState);
 };
+
+// Manually activate if non-defaults are present
+[_unit] call EFUNC(medical_engine,checkForMedicalActivity);
+
+[QGVAR(deserialize), [_unit, _state]] call CBA_fnc_localEvent;
 
 _state call CBA_fnc_deleteNamespace;

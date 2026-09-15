@@ -5,7 +5,7 @@
 private _testPass = true;
 
 diag_log text format ["[ACE_FCS] ---------------"];
-private _vehicles = configProperties [configFile >> "CfgVehicles", "(isClass _x) && {2 == getNumber (_x >> 'scope')}", true];
+private _vehicles = "(getNumber (_x >> 'scope')) == 2" configClasses (configFile >> "CfgVehicles");
 private _problemUIs = [];
 {
     private _vehicleType = configName _x;
@@ -71,13 +71,13 @@ private _problemUIs = [];
                         _problemUIs pushBackUnique format ["%1: ACE_FCS, but missing ACE_CA_DIST", _turretInfo];
                     };
                     if (_aceFCS && {(198 in _idcList)}) then {
-                        _problemUIs pushBackUnique format ["%1: ACE_FCS, but NEW Lazr CA_DIST", _turretInfo, _vehicleType];
+                        _problemUIs pushBackUnique format ["%1-%2: ACE_FCS, but NEW Lazr CA_DIST", _turretInfo, _vehicleType];
                     };
                     if ((!_aceFCS) && {(1713151 in _idcList)}) then {
-                        _problemUIs pushBackUnique format ["%1: Not ACE but has ACE_CA_DIST", _turretInfo, _vehicleType];
+                        _problemUIs pushBackUnique format ["%1-%2: Not ACE but has ACE_CA_DIST", _turretInfo, _vehicleType];
                     };
                     if (_vanillaFCS && {!(198 in _idcList)}) then {
-                        _problemUIs pushBackUnique format ["%1: vanillaFCS but missing NEW Lazr CA_DIST [just a warning]", _turretInfo, _vehicleType];
+                        _problemUIs pushBackUnique format ["%1-%2: vanillaFCS but missing NEW Lazr CA_DIST [just a warning]", _turretInfo, _vehicleType];
                     };
                 };
             };

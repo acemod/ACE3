@@ -2,9 +2,9 @@ class CfgMagazines {
     class CA_Magazine;
     class CUP_TimeBomb_M: CA_Magazine {
         scope = 1;
-        ace_explosives_placeable = 1;
+        EGVAR(explosives,placeable) = 1;
         useAction = 0;
-        ace_explosives_setupObject = "ACE_PipeBomb_place_CUP";
+        EGVAR(explosives,setupObject) = "ACE_PipeBomb_place_CUP";
         class ACE_Triggers {
             SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch", "Cellphone"};
             class Timer {
@@ -16,9 +16,9 @@ class CfgMagazines {
         };
     };
     class CUP_Mine_M: CUP_TimeBomb_M {
-        ace_explosives_placeable = 1;
+        EGVAR(explosives,placeable) = 1;
         useAction = 0;
-        ace_explosives_setupObject = "ACE_Mine_place_CUP";
+        EGVAR(explosives,setupObject) = "ACE_Mine_place_CUP";
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
@@ -27,9 +27,9 @@ class CfgMagazines {
         };
     };
     class CUP_MineE_M: CUP_TimeBomb_M {
-        ace_explosives_placeable = 1;
+        EGVAR(explosives,placeable) = 1;
         useAction = 0;
-        ace_explosives_setupObject = "ACE_MineE_place_CUP";
+        EGVAR(explosives,setupObject) = "ACE_MineE_place_CUP";
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
@@ -39,20 +39,20 @@ class CfgMagazines {
     };
 
     class CUP_IED_V1_M: CUP_Mine_M {
-        ace_explosives_placeable = 1;
+        EGVAR(explosives,placeable) = 1;
         useAction = 0;
-        ace_explosives_setupObject = "ACE_IED_V1_place_CUP";
+        EGVAR(explosives,setupObject) = "ACE_IED_V1_place_CUP";
         class ACE_Triggers {
             SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch", "Cellphone", "PressurePlate"};
         };
     };
     class CUP_IED_V2_M: CUP_IED_V1_M {
         useAction = 0;
-        ace_explosives_setupObject = "ACE_IED_V2_place_CUP";
+        EGVAR(explosives,setupObject) = "ACE_IED_V2_place_CUP";
     };
     class CUP_IED_V3_M: CUP_IED_V1_M {
         useAction = 0;
-        ace_explosives_setupObject = "ACE_IED_V3_place_CUP";
+        EGVAR(explosives,setupObject) = "ACE_IED_V3_place_CUP";
         class ACE_Triggers {
             SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch", "Cellphone", "PressurePlate"};
             class Timer {
@@ -77,7 +77,7 @@ class CfgMagazines {
     };
     class CUP_IED_V4_M: CUP_IED_V1_M {
         useAction = 0;
-        ace_explosives_setupObject = "ACE_IED_V4_place_CUP";
+        EGVAR(explosives,setupObject) = "ACE_IED_V4_place_CUP";
         class ACE_Triggers {
             SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch", "Cellphone", "PressurePlate"};
             class Timer {

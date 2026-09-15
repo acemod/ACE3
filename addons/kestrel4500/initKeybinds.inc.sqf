@@ -46,7 +46,7 @@ private _toggleCode = {
 private _closeCode = {
     // Statement
     if (GVAR(Overlay)) then {
-        //If dispaly is open, close it:
+        //If display is open, close it:
         GVAR(Overlay) = false;
     };
     if (dialog && {!isNull (uiNamespace getVariable ["Kestrel4500_Display", displayNull])}) then {

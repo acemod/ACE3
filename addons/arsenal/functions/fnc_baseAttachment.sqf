@@ -22,7 +22,7 @@ TRACE_1("looking up base attachment",_item);
 
 private _switchableClasses = [];
 
-private _cfgWeapons = configfile >> "CfgWeapons";
+private _cfgWeapons = configFile >> "CfgWeapons";
 private _config = _cfgWeapons >> _item;
 _item = configName _config;
 

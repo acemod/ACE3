@@ -3,19 +3,16 @@
 // Exit on Headless
 if (!hasInterface) exitWith {};
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     TRACE_1("SettingInit",XGVAR(enable));
 
     // If not enabled, then do not add CanInteractWith Condition or event handlers
     if (!XGVAR(enable)) exitWith {};
 
-    // Initialize classes as they spawn
-    ["ThingX", "init", LINKFUNC(addSitActions), nil, nil, true] call CBA_fnc_addClassEventHandler;
-
-    // Initialize statically defined benches (also appear as world objects, no class EH thrown)
+    // Initialize all seats
     {
-        [_x] call FUNC(addSitActions);
-    } forEach [BENCHES];
+        _x call FUNC(addSitActions);
+    } forEach keys (uiNamespace getVariable [QGVAR(seats), []]);
 
     // Add interaction menu exception
     ["isNotSitting", {isNil {(_this select 0) getVariable QGVAR(sittingStatus)}}] call EFUNC(common,addCanInteractWithCondition);

@@ -45,5 +45,5 @@ GVAR(adjustPFH) = [{
 _unit setVariable [QGVAR(Adjust), [
     _unit, "DefaultAction",
     {GVAR(adjustPFH) != -1},
-    {(_this select 0) setVariable [QGVAR(adjusting), false, true]}
+    {(_this select 1) setVariable [QGVAR(adjusting), false, true]}
 ] call EFUNC(common,addActionEventHandler)];

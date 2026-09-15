@@ -1,4 +1,3 @@
-#define DEBUG_MODE_FULL
 #include "..\script_component.hpp"
 /*
  * Author: esteldunedain
@@ -39,10 +38,6 @@ if (_value isEqualTo -1) then {
         WARNING_2("Module For Setting [%1] is saved as (-1), switching to (0) - missionVersion [%2]",_settingName,missionVersion);
         _value = 0;
     };
-};
-
-if ([_settingName, "mission"] call CBA_settings_fnc_isForced) then {
-    WARNING_1("Setting [%1] - Already Forced",_settingName);
 };
 
 // Set the setting as a mission setting and force it

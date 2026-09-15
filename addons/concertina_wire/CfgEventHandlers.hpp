@@ -35,7 +35,7 @@ class Extended_Killed_EventHandlers {
 class Extended_Init_EventHandlers {
     class ACE_ConcertinaWireCoil {
         class ADDON {
-            init = QUOTE(_this call DEFUNC(dragging,initObject));
+            init = QUOTE(call DEFUNC(dragging,initObject));
         };
     };
     class ACE_ConcertinaWire {

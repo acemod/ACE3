@@ -35,3 +35,5 @@ if !(toLowerANSI (_filename select [count _filename - 4]) in [".wav", ".ogg", ".
 };
 
 playSound3D [_filename, objNull, false, _position, _volume, _soundPitch, _distance];
+
+nil // return

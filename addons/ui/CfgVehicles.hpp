@@ -228,4 +228,58 @@ class CfgVehicles {
             description = CSTRING(ModuleDescription);
         };
     };
+
+// neither syntax of currentZeroing works with FFV seats, always returns 0 or [0, -1] depending on the syntax used
+// also currentZeroing for laser rangefinder is borked, just shows the last manually selected range, biki says it will work with the alt syntax in v2.20
+#define CHECKZERO_ACTIONS \
+class ACE_SelfActions { \
+    class GVAR(checkWeaponZeroing) { \
+        displayName = CSTRING(checkWeaponZeroing); \
+        icon = ""; \
+        condition = QUOTE(!GVAR(gunnerZeroing) && {currentMuzzle _player != ''}); \
+        statement = QUOTE([_player] call FUNC(checkWeaponZeroing)); \
+    }; \
+}
+
+    class LandVehicle;
+    class Car: LandVehicle {
+        CHECKZERO_ACTIONS;
+    };
+    class Motorcycle: LandVehicle {
+        CHECKZERO_ACTIONS;
+    };
+    class StaticWeapon: LandVehicle {
+        CHECKZERO_ACTIONS;
+    };
+    class Tank: LandVehicle {
+        CHECKZERO_ACTIONS;
+    };
+    class Air;
+    class Helicopter: Air {
+        CHECKZERO_ACTIONS;
+    };
+    class Plane: Air {
+        CHECKZERO_ACTIONS;
+    };
+    class Ship;
+    class Ship_F: Ship {
+        CHECKZERO_ACTIONS;
+    };
+
+    class Man;
+    class CAManBase: Man {
+        class ACE_SelfActions {
+            class ACE_Equipment {
+                class GVAR(checkWeaponZeroing) {
+                    displayName = CSTRING(checkWeaponZeroing);
+                    condition = QUOTE(!GVAR(zeroing) && {isNull objectParent player} && {currentMuzzle _player != ''});
+                    // don't show action if in vehicle because the return is always either [0, -1] or it returns the zero of the vehicle weapon depending on the syntax used
+                    exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
+                    statement = QUOTE([_player] call FUNC(checkWeaponZeroing));
+                    showDisabled = 0;
+                    icon = "";
+                };
+            };
+        };
+    };
 };

@@ -6,7 +6,7 @@
  * Arguments:
  * 0: module logic <OBJECT>
  * 1: list of affected units <ARRAY<OBJECT>>
- * 2: isActivated <BOOLEAN>
+ * 2: isActivated <BOOL>
  *
  * Return Value:
  * None

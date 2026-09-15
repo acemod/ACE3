@@ -4,8 +4,8 @@ class CfgVehicles {
     class ACE_TargetWall: Sign_F {
         author = ECSTRING(common,ACETeam);
         scope = 0;
-        class Eventhandlers {
-            init = QUOTE(_this call COMPILE_FILE(scripts\initTargetWall));
+        class EventHandlers {
+            init = QUOTE(call COMPILE_FILE(scripts\initTargetWall));
             //hitPart = "systemChat str _this";
         };
     };

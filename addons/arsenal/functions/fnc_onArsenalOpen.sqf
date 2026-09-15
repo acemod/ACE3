@@ -54,7 +54,7 @@ if (isNil QGVAR(virtualItems)) then {
 
     _virtualItems = createHashMapFromArray _virtualItems;
 
-    for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
+    for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_GOGGLES do {
         _virtualItems set [_index, createHashMap];
     };
 
@@ -104,7 +104,7 @@ _mouseBlockCtrl ctrlEnable false;
     _x ctrlCommit 0;
 } forEach [
     IDC_blockRightFrame,
-    IDC_blockRighttBackground,
+    IDC_blockRightBackground,
     IDC_loadIndicator,
     IDC_rightTabContent,
     IDC_rightTabContentListnBox,
@@ -121,7 +121,7 @@ _mouseBlockCtrl ctrlEnable false;
 private _statsBoxCtrl = _display displayCtrl IDC_statsBox;
 _statsBoxCtrl ctrlSetPosition [
     (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-    safezoneY + 1.8 * GRID_H,
+    safeZoneY + 1.8 * GRID_H,
     47 * GRID_W,
     11 * GRID_H
 ];
@@ -132,19 +132,11 @@ _statsBoxCtrl ctrlCommit 0;
 private _actionsBoxCtrl = _display displayCtrl IDC_actionsBox;
 _actionsBoxCtrl ctrlSetPosition [
     (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-    safezoneY + 58.6 * GRID_H,
+    safeZoneY + 58.6 * GRID_H,
     47 * GRID_W,
     11 * GRID_H
 ];
 _actionsBoxCtrl ctrlCommit 0;
-
-// Disable import in MP
-if (isMultiplayer) then {
-    private _importButtonCtrl = _display displayCtrl IDC_buttonImport;
-    _importButtonCtrl ctrlEnable false;
-    _importButtonCtrl ctrlSetFade 0.6;
-    _importButtonCtrl ctrlCommit 0;
-};
 
 //--------------- Camera prep
 cutText ["", "PLAIN"];

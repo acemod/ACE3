@@ -20,7 +20,7 @@ private _configItems = [
 
 _configItems = createHashMapFromArray _configItems;
 
-for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
+for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_GOGGLES do {
     _configItems set [_index, createHashMap];
 };
 
@@ -30,7 +30,7 @@ private _toolList = createHashMap;
 // https://community.bistudio.com/wiki/Arma_3:_Characters_And_Gear_Encoding_Guide#Character_configuration
 // https://github.com/acemod/ACE3/pull/9040#issuecomment-1597748331
 private _filterFunction = toString {
-    isClass _x && {if (isNumber (_x >> "scopeArsenal")) then {getNumber (_x >> "scopeArsenal") == 2 && {getNumber (_x >> "scope") > 0}} else {getNumber (_x >> "scope") == 2}} && {getNumber (_x >> QGVAR(hide)) != 1}
+    (if (isNumber (_x >> "scopeArsenal")) then {getNumber (_x >> "scopeArsenal") == 2 && {getNumber (_x >> "scope") > 0}} else {getNumber (_x >> "scope") == 2}) && {getNumber (_x >> QGVAR(hide)) != 1}
 };
 
 private _cfgWeapons = configFile >> "CfgWeapons";
@@ -40,7 +40,7 @@ private _simulationType = "";
 private _configItemInfo = "";
 private _hasItemInfo = false;
 private _itemInfoType = 0;
-private _isMiscItem = false;
+private _isMiscItem = 0;
 private _isTool = false;
 
 // Get weapons and other various items
@@ -50,14 +50,19 @@ private _isTool = false;
     _configItemInfo = _x >> "ItemInfo";
     _hasItemInfo = isClass (_configItemInfo);
     _itemInfoType = if (_hasItemInfo) then {getNumber (_configItemInfo >> "type")} else {0};
-    _isMiscItem = _className isKindOf ["CBA_MiscItem", _cfgWeapons];
+    _isMiscItem = [_className, _x, false, true] call FUNC(isMiscItem);
     _isTool = getNumber (_x >> "ACE_isTool") isEqualTo 1;
 
     switch (true) do {
+        // Forced items with ACE_asItem = 2
+        case (_isMiscItem == 2): {
+            (_configItems get IDX_VIRT_MISC_ITEMS) set [_className, nil];
+            if (_isTool) then {_toolList set [_className, nil]};
+        };
         // Weapon attachments
         case (
             _hasItemInfo &&
-            {!_isMiscItem} &&
+            {_isMiscItem == 0} &&
             {_itemInfoType in [TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_MUZZLE, TYPE_BIPOD]}
         ): {
             // Convert type to array index
@@ -127,18 +132,12 @@ private _isTool = false;
             };
         };
         // Misc. items
-        case (
-            _hasItemInfo &&
-            {_isMiscItem &&
-            {_itemInfoType in [TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_MUZZLE, TYPE_BIPOD]}} ||
-            {_itemInfoType in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
-            {_simulationType == "ItemMineDetector"}
-        ): {
+        case (_hasItemInfo && _isMiscItem == 1): {
             (_configItems get IDX_VIRT_MISC_ITEMS) set [_className, nil];
             if (_isTool) then {_toolList set [_className, nil]};
         };
     };
-} forEach configProperties [_cfgWeapons, _filterFunction, true];
+} forEach (_filterFunction configClasses _cfgWeapons);
 
 // Get all grenades
 // Explicitly don't look at scope for these, we want hidden items to be sorted as grenades/explosives properly
@@ -160,7 +159,11 @@ private _magazineMiscItems = createHashMap;
 
 {
     _magazineMiscItems set [configName _x, nil];
-} forEach ((toString {getNumber (_x >> "ACE_isUnique") == 1 || getNumber (_x >> "ACE_asItem") == 1}) configClasses _cfgMagazines);
+} forEach ((toString {
+    with uiNamespace do { // configClasses runs in missionNamespace even if we're in preStart apparently
+        ([configName _x, _x, true, true] call FUNC(isMiscItem)) > 0
+    };
+}) configClasses _cfgMagazines);
 
 // Remove invalid/non-existent entries
 _grenadeList deleteAt "";
@@ -193,19 +196,24 @@ _magazineMiscItems deleteAt "";
             (_configItems get IDX_VIRT_ITEMS_ALL) set [_className, nil];
         };
     };
-} forEach configProperties [_cfgMagazines, _filterFunction, true];
+} forEach (_filterFunction configClasses _cfgMagazines);
 
 // Get all backpacks
 {
     if (getNumber (_x >> "isBackpack") == 1) then {
         (_configItems get IDX_VIRT_BACKPACK) set [configName _x, nil];
     };
-} forEach configProperties [configFile >> "CfgVehicles", _filterFunction, true];
+} forEach (_filterFunction configClasses (configFile >> "CfgVehicles"));
 
 // Get all facewear
 {
-    (_configItems get IDX_VIRT_GOGGLES) set [configName _x, nil];
-} forEach configProperties [configFile >> "CfgGlasses", _filterFunction, true];
+    private _configName = configName _x;
+    if (([_configName, _x] call FUNC(isMiscItem) > 0)) then {
+        (_configItems get IDX_VIRT_MISC_GOGGLES) set [_configName, nil];
+    } else {
+        (_configItems get IDX_VIRT_GOGGLES) set [_configName, nil];
+    };
+} forEach (_filterFunction configClasses (configFile >> "CfgGlasses"));
 
 // Get all faces
 private _faceCache = createHashMap;
@@ -228,10 +236,10 @@ private _faceCategory = "";
             _faceCache set [configName _x, [getText (_x >> "displayName"), _modPicture, _faceCategory]];
         };
     } forEach ("true" configClasses _x);
-} forEach ("true" configClasses (configfile >> "CfgFaces"));
+} forEach ("true" configClasses (configFile >> "CfgFaces"));
 
 // Get all voices
-private _voiceCache = (configProperties [configFile >> "CfgVoice", "isClass _x && {getNumber (_x >> 'scope') == 2}", true]) - [configfile >> "CfgVoice" >> "NoVoice"];
+private _voiceCache = ("getNumber (_x >> 'scope') == 2" configClasses (configFile >> "CfgVoice")) - [configFile >> "CfgVoice" >> "NoVoice"];
 _voiceCache = _voiceCache apply {configName _x};
 
 // Get all insignia
@@ -257,7 +265,7 @@ private _configItemsFlat = +_configItems;
 private _weapons = _configItemsFlat deleteAt IDX_VIRT_WEAPONS;
 private _attachments = _configItemsFlat deleteAt IDX_VIRT_ATTACHMENTS;
 
-for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
+for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_GOGGLES do {
     _configItemsFlat merge [_configItemsFlat deleteAt _index, true];
 };
 

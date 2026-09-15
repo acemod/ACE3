@@ -4,7 +4,7 @@
  * Checks if the item can be unloaded from another object.
  *
  * Arguments:
- * 0: Item to be unloaded <STRING> or <OBJECT>
+ * 0: Item to be unloaded <STRING or OBJECT>
  * 1: Holder object (vehicle) <OBJECT>
  * 2: Unit doing the unloading <OBJECT> (default: objNull)
  * 3: Ignore interaction distance and stability checks <BOOL> (default: false)
@@ -32,7 +32,7 @@ if (_isViv && {_vehicle != isVehicleCargo _item}) exitWith {false};
 if !(_isViv || {_item in (_vehicle getVariable [QGVAR(loaded), []])}) exitWith {false};
 
 private _validItem = if (_item isEqualType objNull) then {
-    alive _item
+    alive _item && isNull (isVehicleCargo _item);
 } else {
     true
 };

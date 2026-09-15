@@ -69,7 +69,7 @@ if (_restingPlaceClass != "") then {
 
 // Server will handle hiding and deleting the body
 // Keep event name as body bag only to avoid breaking things for others
-["ace_placedInBodyBag", [_patient, _restingPlace, _isGrave]] call CBA_fnc_globalEvent;
+["ace_placedInBodyBag", [_patient, _restingPlace, _isGrave, _medic]] call CBA_fnc_globalEvent;
 if (_isGrave) then {
-    ["ace_placedInGrave", [_patient, _restingPlace]] call CBA_fnc_globalEvent;
+    ["ace_placedInGrave", [_patient, _restingPlace, _medic]] call CBA_fnc_globalEvent;
 };

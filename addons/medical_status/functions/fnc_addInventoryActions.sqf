@@ -15,6 +15,9 @@
  * Public: No
  */
 
+#define GEAR_ACTION_ENUM 111
+#define OPENBAG_ACTION_ENUM 120
+
 if (!hasInterface) exitWith {};
 
 params ["_unit"];
@@ -26,7 +29,8 @@ private _id = _unit addAction ["", {
     _caller action ["Gear", _target];
 }, nil, 5.1, true, true, "gear", toString {
     (_target isNotEqualTo ACE_player) &&
-    {(lifeState _target) isEqualTo "INCAPACITATED"}
+    {(lifeState _target) isEqualTo "INCAPACITATED"} &&
+    {(hiddenActions [GEAR_ACTION_ENUM]) isEqualTo []}
 }, 2];
 
 _unit setUserActionText [_id, localize "STR_ACTION_GEAR", "<img image='\A3\ui_f\data\igui\cfg\actions\gear_ca.paa' size='2.5' shadow=2 />"];
@@ -42,9 +46,11 @@ _unit addAction ["OpenBag", {
 
     (_target isNotEqualTo ACE_player) &&
     {!((lifeState _target) in ["HEALTHY", "INJURED", "INCAPACITATED"])} &&
+    {(hiddenActions [OPENBAG_ACTION_ENUM]) isEqualTo []} &&
     {!isNull _backpackContainer} &&
     {!lockedInventory _backpackContainer} &&
     {maxLoad _backpackContainer > 0} &&
     {getNumber (_backpackConfig >> "disableInventory") != 1} &&
+    {!(_target isKindOf QEGVAR(dragging,clone))} &&
     {_target setUserActionText [_actionId, format [localize "STR_ACTION_OPEN_BAG", getText (_backpackConfig >> "displayName")]]; true}
 }, 2];

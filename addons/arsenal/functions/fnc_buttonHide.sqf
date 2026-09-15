@@ -26,7 +26,7 @@ private _ctrl = controlNull;
     IDC_blockLeftFrame,
     IDC_blockLeftBackground,
     IDC_blockRightFrame,
-    IDC_blockRighttBackground,
+    IDC_blockRightBackground,
     IDC_loadIndicator,
     IDC_totalWeight,
     IDC_menuBar,
@@ -61,6 +61,8 @@ private _ctrl = controlNull;
     IDC_actionsNextPage,
     IDC_actionsCurrentPage
 ];
+
+[QGVAR(showToggle), [_display, _showToggle]] call CBA_fnc_localEvent;
 
 if (!_showToggle) exitWith {};
 

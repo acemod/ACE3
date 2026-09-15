@@ -20,7 +20,7 @@
             }];
         };
         GVAR(firedEHs) = [];
-        { 
+        {
             GVAR(firedEHs) pushBack [_x, [_x, _firedEH] call CBA_fnc_addEventHandler];
         } forEach ["ace_firedNonPlayer", "ace_firedPlayer"];
         TRACE_1("added EHs",GVAR(firedEHs));

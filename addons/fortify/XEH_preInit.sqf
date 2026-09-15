@@ -13,6 +13,8 @@ GVAR(locations) = [];
 // Custom deploy handlers
 GVAR(deployHandlers) = [];
 
+GVAR(fortifyTools) = keys (uiNamespace getVariable QGVAR(fortifyTools));
+
 #include "initSettings.inc.sqf"
 
 ADDON = true;

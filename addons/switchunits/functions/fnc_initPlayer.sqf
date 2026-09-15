@@ -5,20 +5,19 @@
  *
  * Arguments:
  * 0: player <OBJECT>
- * 1: sides <ARRAY<OBJECT>>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, [west]] call ace_switchunits_fnc_initPlayer
+ * [player] call ace_switchunits_fnc_initPlayer
  *
  * Public: No
  */
 
 params ["_playerUnit"];
 
-if (vehicle _playerUnit == _playerUnit) then {
+if (isNull objectParent _playerUnit) then {
     [GVAR(switchableSides)] call FUNC(markAiOnMap);
 
     _playerUnit setVariable [QGVAR(IsPlayerUnit), true, true];
@@ -36,7 +35,7 @@ if (vehicle _playerUnit == _playerUnit) then {
     removeAllContainers _playerUnit;
     _playerUnit linkItem  "ItemMap";
 
-    [_playerUnit, "forceWalk", "ACE_SwitchUnits", true] call EFUNC(common,statusEffect_set);
+    [_playerUnit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
     [] call FUNC(addMapFunction);
 };

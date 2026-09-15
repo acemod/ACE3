@@ -23,8 +23,8 @@
 #define END_PFH \
     _unit setVariable [QGVAR(hint), nil]; \
     call EFUNC(interaction,hideMouseHint); \
-    [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set); \
-    [_unit, "blockThrow", "ACE_refuel", false] call EFUNC(common,statusEffect_set); \
+    [_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set); \
+    [_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set); \
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 
 params ["_unit", "_nozzle"];
@@ -69,7 +69,7 @@ TRACE_2("start",_unit,_nozzle);
         END_PFH
     };
 
-    if (_unit == vehicle _unit && {_unit isNotEqualTo ACE_player}) exitWith {
+    if (isNull objectParent _unit && {_unit isNotEqualTo ACE_player}) exitWith {
         TRACE_2("stop vehicle/player",_unit,vehicle _unit);
         DROP_NOZZLE
         UNHOLSTER_WEAPON
@@ -89,7 +89,7 @@ TRACE_2("start",_unit,_nozzle);
     };
 
     private _hintLMB = "";
-    private _hintRMB = localize ELSTRING(dragging,Drop);
+    private _hintRMB = LELSTRING(common,Drop);
 
     getCursorObjectParams params ["_cursorObject", "", "_distance"];
     if (!isNull _cursorObject && {_distance < REFUEL_NOZZLE_ACTION_DISTANCE}) then {

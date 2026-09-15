@@ -10,9 +10,7 @@ class CfgWeapons {
         displayName = CSTRING(red);
         descriptionUse = CSTRING(useLaser);
 
-        class ItemInfo: InventoryFlashLightItem_Base_F {
-            class Pointer;
-        };
+        class ItemInfo: InventoryFlashLightItem_Base_F {};
     };
 
     class ACE_acc_pointer_green_IR: acc_pointer_IR {

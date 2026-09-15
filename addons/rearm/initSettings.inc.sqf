@@ -33,3 +33,13 @@ private _category = [ELSTRING(main,Category_Logistics), LLSTRING(DisplayName)];
     [10, 50, 20, 0],
     true // isGlobal
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(usePylonPosition), "CHECKBOX",
+    [LSTRING(RearmSettings_usePylonPosition_DisplayName), LSTRING(RearmSettings_usePylonPosition_Description)],
+    _category,
+    false,
+    true,
+    {[QGVAR(usePylonPosition), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    false // Needs mission restart
+] call CBA_fnc_addSetting;

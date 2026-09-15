@@ -23,8 +23,8 @@ params ["_interactionType"];
 // If player somehow gets a wirecutter during keyDown, they will just have to reopen menu
 if (
     _interactionType != 0
-    || {vehicle ACE_player != ACE_player}
-    || {!HAS_WIRECUTTER(ACE_player)}
+    || {!isNull objectParent ACE_player}
+    || {! (ACE_player call FUNC(hasWirecutter)) }
 ) exitWith {};
 
 TRACE_1("Starting wirecuter interact PFH",_interactionType);
@@ -35,7 +35,7 @@ TRACE_1("Starting wirecuter interact PFH",_interactionType);
     _args params ["_setPosition", "_addedHelpers", "_fencesHelped"];
 
     if (!EGVAR(interact_menu,keyDown)) then {
-        {deleteVehicle _x} forEach _addedHelpers;
+        deleteVehicle _addedHelpers;
         [_pfhID] call CBA_fnc_removePerFrameHandler;
     } else {
         // Prevent rare error when ending mission with interact key down
@@ -53,7 +53,7 @@ TRACE_1("Starting wirecuter interact PFH",_interactionType);
 
                 !isNull _attachedFence
                 && {damage _attachedFence < 1}
-                && {HAS_WIRECUTTER(_player)}
+                && {_player call FUNC(hasWirecutter)}
                 && {[_player, _attachedFence, ["isNotSwimming"]] call EFUNC(common,canInteractWith)}
                 && {
                     // Custom LOS check for fence

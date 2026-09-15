@@ -42,7 +42,7 @@ if (!CBA_events_control) then {
 
     // Uses this method of selecting position because setPosATL did not have immediate effect
     private _positionChange = _position vectorDiff (getPosASL _carriedItem);
-    private _selectionPosition = _unit worldToModel (ASLtoAGL getPosWorld _carriedItem);
+    private _selectionPosition = _unit worldToModel (ASLToAGL getPosWorld _carriedItem);
     _selectionPosition = _selectionPosition vectorAdd _positionChange;
     _carriedItem attachTo [_unit, _selectionPosition];
 

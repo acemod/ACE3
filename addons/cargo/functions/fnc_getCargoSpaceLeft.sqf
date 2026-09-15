@@ -12,9 +12,9 @@
  * Example:
  * cursorObject call ace_cargo_fnc_getCargoSpaceLeft
  *
- * Public: No
+ * Public: Yes
  */
 
-params ["_vehicle"];
+params [["_vehicle", objNull, [objNull]]];
 
-_vehicle getVariable [QGVAR(space), getNumber (configOf _vehicle >> QGVAR(space))]
+_vehicle getVariable [QGVAR(space), getNumber (configOf _vehicle >> QGVAR(space))] // return

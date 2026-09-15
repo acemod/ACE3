@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [Boats, Jose] call ace_interaction_fnc_push
+ * [cursorObject, player] call ace_interaction_fnc_push
  *
  * Public: No
  */
@@ -22,4 +22,4 @@ private _newVelocity = vectorDir _unit;
 _newVelocity set [2, 0.25];
 _newVelocity = _newVelocity vectorMultiply 2;
 
-[QEGVAR(common,setVelocity), [_boat, _newVelocity], [_boat]] call CBA_fnc_targetEvent;
+[QEGVAR(common,setVelocity), [_boat, _newVelocity], _boat] call CBA_fnc_targetEvent;

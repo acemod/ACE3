@@ -5,11 +5,11 @@
  *
  * Arguments:
  * 0: Name <STRING>
- * 1: defaultValue <ANY>
- * 2: publicFlag <BOOL>
- * 3: category <STRING>
- * 4: type (default: 0) <NUMBER>
- * 5: persistentFlag (default: false) <BOOL>
+ * 1: Default value <ANY>
+ * 2: Public flag <BOOL>
+ * 3: Category <STRING>
+ * 4: Type <NUMBER> (default: 0)
+ * 5: Persistent flag <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -24,7 +24,7 @@ params ["_name", "_value", "_defaultGlobal", "_category", ["_code", 0], ["_persi
 
 if (isNil "_defaultGlobal") exitWith {};
 
-if !(_name isEqualType "") exitwith {
+if !(_name isEqualType "") exitWith {
     [format ["Tried to the deinfe a variable with an invalid name: %1 Arguments: %2", _name, _this]] call FUNC(debug);
 };
 

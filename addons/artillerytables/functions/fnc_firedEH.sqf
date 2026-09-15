@@ -25,7 +25,7 @@
 params ["_vehicle", "", "", "", "", "_magazine", "_projectile", "_gunner"];
 TRACE_4("firedEH",_vehicle,_magazine,_projectile,_gunner);
 
-if !([_gunner] call EFUNC(common,isPlayer)) exitWith {}; // AI don't know how to use (this does give them more range than a player)
+if (!(_gunner call EFUNC(common,isPlayer)) && { !(_gunner getVariable [QEGVAR(csw,autofire_isProxy), false]) }) exitWith {}; // AI don't know how to use (this does give them more range than a player)
 if ((gunner _vehicle) != _gunner) exitWith {}; // check if primaryGunner
 
 
@@ -61,6 +61,9 @@ if (_newMuzzleVelocityCoefficent != 1) then {
 };
 
 if (_airFriction > 0) exitWith {}; // positive value indicates it has vanilla airFriction, so we can just exit
+
+// For compatiblity with other addons
+_projectile setVariable [QGVAR(kFactor), _kFactor];
 
 [{
     params ["_projectile", "_kFactor", "_time"];

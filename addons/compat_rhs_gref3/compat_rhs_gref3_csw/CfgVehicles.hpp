@@ -1,7 +1,7 @@
 class CfgVehicles {
     class StaticMGWeapon;
     class rhs_DSHKM_base: StaticMGWeapon {
-        class ACE_CSW {
+        class ace_csw {
             enabled = 1;
             proxyWeapon = QGVAR(rhs_weap_DSHKM);
             magazineLocation = "_target selectionPosition 'otocvez'";
@@ -13,7 +13,7 @@ class CfgVehicles {
         };
     };
     class rhs_DSHkM_Mini_TriPod_base: rhs_DSHKM_base {
-        class ACE_CSW: ACE_CSW {
+        class ace_csw: ace_csw {
             enabled = 1;
             disassembleTurret = QEGVAR(csw,kordTripodLow);
         };

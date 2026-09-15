@@ -1,37 +1,37 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Knock out vehicle from battle. Destroy all internal hitpoints.
+ * Knock out a vehicle from battle by destroying all internal hitpoints.
  *
  * Arguments:
- * 0: The vehicle <OBJECT>
+ * 0: Vehicle <OBJECT>
+ * 1: Source of damage <OBJECT>
+ * 2: Person who caused damage <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [vehicle player] call ace_vehicle_damage_fnc_knockOut
+ * [cursorObject, player, player] call ace_vehicle_damage_fnc_knockOut
  *
  * Public: No
  */
 
-params ["_vehicle"];
-private _hash = _vehicle getVariable [QGVAR(hitpointHash), nil];
-if (isNil "_hash") exitWith {};
+params ["_vehicle", "_source", "_instigator"];
+TRACE_3("knockOut",_vehicle,_source,_instigator);
 
-[_hash, {
-    private _hitpointAlias = _value#0;
-    if (_hitpointAlias isEqualTo "hull") then {
-        [_vehicle, -1, _key, 0.89] call FUNC(addDamage);
+{
+    private _hitArea = _y select 0;
+
+    if (_hitArea == "hull") then {
+        [_vehicle, _x, -1, 0.89, _source, _instigator] call FUNC(setDamage);
     } else {
-        if (_hitpointAlias in ["fuel", "turret", "gun", "engine"]) then {
-            if ((0.3 > random 1) || { _hitpointAlias isEqualTo "engine" }) then {
-                [_vehicle, -1, _key, 1] call FUNC(addDamage);
+        if (_hitArea in ["fuel", "turret", "gun", "engine"]) then {
+            if ((0.3 > random 1) || {_hitArea == "engine"}) then {
+                [_vehicle, _x, -1, 1, _source, _instigator] call FUNC(setDamage);
             } else {
-                private _currentDamage = _vehicle getHitpointDamage _key;
-                [_vehicle, -1, _key, (_currentDamage + (0.3 max random 1)) min 1] call FUNC(addDamage);
+                [_vehicle, _x, -1, ((_vehicle getHitPointDamage _x) + (0.3 max random 1)) min 1, _source, _instigator] call FUNC(setDamage);
             };
         };
     };
-}] call CBA_fnc_hashEachPair;
-
+} forEach (GVAR(vehicleClassesHitPointHash) getOrDefault [typeOf _vehicle, createHashMap]);

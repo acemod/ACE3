@@ -30,7 +30,7 @@ if (isNull (ACE_controlledUAV param [0, objNull])) then {
         _currentWeapon = currentWeapon ACE_player;
     } else {
         _currentShooter = vehicle ACE_player;
-        private _turretPath = if (ACE_player == (driver _currentShooter)) then {[-1]} else {ACE_player call CBA_fnc_turretPath};
+        private _turretPath = _currentShooter unitTurret ACE_player;
         _currentWeapon = _currentShooter currentWeaponTurret _turretPath;
     };
 } else {
@@ -42,9 +42,9 @@ if (isNull (ACE_controlledUAV param [0, objNull])) then {
 TRACE_2("",_currentShooter,_currentWeapon);
 private _currentWeaponCfg = configFile >> "CfgWeapons" >> _currentWeapon;
 if (
-    (getNumber (_currentWeaponCfg  >> "laser") == 0) && 
-    { 
-        !(_currentShooter getVariable [QGVAR(hasLaserSpotTracker), false])  && 
+    (getNumber (_currentWeaponCfg  >> "laser") == 0) &&
+    {
+        !(_currentShooter getVariable [QGVAR(hasLaserSpotTracker), false])  &&
         {(getNumber (_currentWeaponCfg >> QGVAR(canSelect))) == 0}
     }
 ) exitWith {false};

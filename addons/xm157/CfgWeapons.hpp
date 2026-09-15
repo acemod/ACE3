@@ -11,7 +11,7 @@ class CfgWeapons {
         model = "\A3\weapons_f\acc\acco_tws_F";
         inertia = 0.3;
         ACE_ScopeHeightAboveRail = 5.52874;
-        
+
         class CBA_ScriptedOptic {
             bodyTexture = QPATHTOF(data\ace_vector_body_co.paa);
             // bodyTextureNight = ".paa"; // optional
@@ -46,4 +46,16 @@ class CfgWeapons {
             };
         };
     };
+#ifdef CREATE_MOCK_PLATFORMS
+    class arifle_MX_Black_F;
+    class GVAR(mock_gl): arifle_MX_Black_F {
+        scope = 1;
+        scopeArsenal = 1;
+        magazineWell[] = {};
+        magazines[] = { QGVAR(mock_airburst_mag) };
+        modes[] = {"Single"};
+        discreteDistance[] = {100};
+        discreteDistanceInitIndex = 0;
+    };
+#endif
 };

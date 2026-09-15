@@ -13,8 +13,8 @@ class ACE_Interaction_Button_Base {
     style = 2;
     x = 0;
     y = 0;
-    w = "2.0 / 16 * safezoneW";
-    h = "0.3 / 9 * safezoneH";
+    w = "2.0 / 16 * safeZoneW";
+    h = "0.3 / 9 * safeZoneH";
 
     offsetX = 0.003;
     offsetY = 0.003;
@@ -37,97 +37,10 @@ class ACE_Interaction_Button_Base {
     soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1};
 };
 
-class IGUIBack;
-class RscListBox;
 class RscText;
+class RscStructuredText;
 class RscPicture;
 class RscControlsGroupNoScrollbars;
-
-#define X_OFFSET 0.2
-
-class RscACE_SelectAnItem {
-    idd = 8854;
-    movingEnable = 0;
-
-    class controls {
-        class back: IGUIBack {
-            x = X_OFFSET;
-            y = 0;
-            w = 0.6;
-            h = 0.71;
-            colorBackground[] = {0, 0, 0, 0.2};
-        };
-        class header: RscText {
-            idc = 8870;
-            x = QUOTE(X_OFFSET + 0.005);
-            y = 0.005;
-            w = 0.59;
-            h = 0.05;
-            style = 0x02;
-            text = "";
-        };
-        class itemList: RscListBox {
-            onMouseButtonDblClick = QUOTE(_this call DFUNC(onSelectMenuDblClick));
-            idc = 8866;
-            x = QUOTE(X_OFFSET + 0.005);
-            w = 0.59;
-            h = 0.54;
-            y = 0.06;
-        };
-
-        class cancelBtnBackground: ACE_Interaction_Button_Base {
-            type = 0;
-            style = 2;
-            idc = -1;
-            colorBackground[] = {0,0,0,0.5};
-            colorBackgroundDisabled[] = {0,0,0,0.5};
-            x = QUOTE(X_OFFSET + 0.005);
-            w = 0.15;
-            h = 0.1;
-            y = 0.605;
-        };
-        class approveBtnBackground: ACE_Interaction_Button_Base {
-            type = 0;
-            style = 2;
-            idc = -1;
-            colorBackground[] = {0,0,0,0.5};
-            colorBackgroundDisabled[] = {0,0,0,0.5};
-            x = QUOTE(X_OFFSET + 0.445);
-            y = 0.605;
-            h = 0.1;
-            w = 0.15;
-        };
-
-        class cancelBtn: ACE_Interaction_Button_Base {
-            idc = 8855;
-            x = QUOTE(X_OFFSET + 0.005);
-            w = 0.15;
-            h = 0.1;
-            y = 0.605;
-            style = 2;
-            text = CSTRING(Back);
-            action = QUOTE(call DFUNC(hideMenu));   //'Default' call DFUNC(openMenu);    'Default' call DFUNC(openMenuSelf);
-            colorBackground[] = {0,0,0,0};
-            colorBackgroundDisabled[] = {0,0,0,0};
-            colorBackgroundActive[] = {1,1,1,0.2};
-            colorFocused[] = {0,0,0,0};
-        };
-        class approveBtn: ACE_Interaction_Button_Base {
-            idc = 8860;
-            x = QUOTE(X_OFFSET + 0.445);
-            y = 0.605;
-            h = 0.1;
-            w = 0.15;
-            style = 2;
-            text = CSTRING(MakeSelection);
-            action = QUOTE(call DFUNC(hideMenu));
-            colorBackground[] = {0,0,0,0};
-            colorBackgroundDisabled[] = {0,0,0,0};
-            colorBackgroundActive[] = {1,1,1,0.2};
-            colorFocused[] = {0,0,0,0};
-        };
-    };
-};
 
 class RscTitles {
     class GVAR(RscMouseHint) {
@@ -184,7 +97,7 @@ class GVAR(RscExtraKey): RscControlsGroupNoScrollbars {
     w = QUOTE(40 * GUI_GRID_W);
     h = QUOTE(GUI_GRID_H);
     class controls {
-        class Name: RscText {
+        class Name: RscStructuredText {
             idc = IDC_MOUSEHINT_EXTRA_NAME;
             style = 1;
             x = 0;
@@ -192,7 +105,16 @@ class GVAR(RscExtraKey): RscControlsGroupNoScrollbars {
             w = QUOTE(21.5 * GUI_GRID_W + GUI_GRID_CENTER_X);
             h = QUOTE(GUI_GRID_H);
             sizeEx = QUOTE(GUI_GRID_H);
-            font = "EtelkaMonospaceProBold";
+            size = QUOTE(GUI_GRID_H);
+            class Attributes {
+                font = "EtelkaMonospaceProBold";
+                color = "#ffffff";
+                align = "right";
+                valign = "middle";
+                shadow = 1;
+                shadowColor = "#000000";
+                size = 1;
+            };
         };
         class Text: RscText {
             idc = IDC_MOUSEHINT_EXTRA_TEXT;

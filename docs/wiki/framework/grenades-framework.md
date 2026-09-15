@@ -74,7 +74,7 @@ The average amount of time in seconds, after `explosionTime` has passed, between
 
 The amount of randomness in the fuse time.
 
-### 2.1.5 ace_grenades_flashbangExplodeSound
+#### 2.1.5 ace_grenades_flashbangExplodeSound
 
 The sounds that can be used when the flashbang detonates. It randomly selects an entry from this array (equal chances, there are no weights involved).
 If not defined, `[format ["A3\Sounds_F\arsenal\explosives\grenades\Explosion_HE_grenade_0%1.wss", floor (random 4) + 1], 5, 1.2, 400]` is used as a default instead (4 sounds total).
@@ -108,7 +108,7 @@ class CfgAmmo {
 
 If set to zero or left undefined, the grenade is not treated as a flare. If it is set to 1, the grenade will be treated as a flare with the associated effects.
 
-#### 2.3.1 ace_grenades_color
+#### 2.3.2 ace_grenades_color
 
 Sets the color of the emitted light. The first 3 values of the array of the color, the last is the light intensity.
 

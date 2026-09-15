@@ -8,13 +8,13 @@
  * 0: Tabs to add action to <ARRAY>
  * 1: Action class (unique string for each action) <STRING>
  * 2: Title <STRING>
- * 3: Actions <ARRAY of ARRAYS>
+ * 3: Actions <ARRAY of ARRAYs>
  * 4: Condition <CODE> (default: {true})
  * 5: Scope editor <NUMBER> (default: 2)
  * 6: Update when cargo content changes <BOOL> (default: false)
  *
  * Return Value:
- * 0: Array of IDs <ARRAY of STRINGS>
+ * 0: Array of IDs <ARRAY of STRINGs>
  *
  * Example:
  *  [[0, 5], "TAG_myActions", "My Actions", [

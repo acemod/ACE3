@@ -1,4 +1,4 @@
-#define FONT_H (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)
+#define FONT_H (((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 1)
 #define FONT_W (FONT_H / pixelH * pixelW)
 #define GAP_W (pixelW * 2)
 #define GAP_H (pixelH * 2)
@@ -60,7 +60,7 @@ class GVAR(groupNameDisplay) {
             w = QUOTE(FONT_W * 6);
             h = QUOTE(ELEMENT_HEIGHT - FONT_W);
             sizeEx = QUOTE(FONT_H);
-            text = CSTRING(CancelSelection);
+            text = ECSTRING(common,Cancel);
         };
     };
 };

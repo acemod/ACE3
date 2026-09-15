@@ -1,9 +1,5 @@
 class CfgVehicles {
-    class Air;
-    class Helicopter: Air {};
-    class Helicopter_Base_F: Helicopter {
-        class Eventhandlers;
-    };
+    class Helicopter_Base_F;
     class Heli_light_03_base_F: Helicopter_Base_F {};
     class RHS_UH1_Base: Heli_light_03_base_F {};
     class RHS_UH1Y_base: RHS_UH1_Base {
@@ -21,9 +17,6 @@ class CfgVehicles {
         EGVAR(fastroping,ropeOrigins)[] = {"ropeOriginLeft", "ropeOriginRight"};
 
         class UserActions;
-        class EventHandlers: EventHandlers {
-            class RHSUSF_EventHandlers;
-        };
     };
     class RHS_UH1Y_FFAR: RHS_UH1Y {
         class UserActions: UserActions {
@@ -37,9 +30,7 @@ class CfgVehicles {
         };
     };
 
-    class Helicopter_Base_H: Helicopter_Base_F {
-        class Eventhandlers;
-    };
+    class Helicopter_Base_H: Helicopter_Base_F {};
     class Heli_Transport_01_base_F: Helicopter_Base_H {};
 
     class RHS_MELB_base: Helicopter_Base_H {};

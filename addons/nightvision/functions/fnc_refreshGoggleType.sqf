@@ -30,11 +30,10 @@ private _blurRadius = -1;
 private _preset = getArray (configFile >> "CfgWeapons" >> "NVGoggles" >> QGVAR(colorPreset));
 
 if ((alive ACE_player) && {isNull (ACE_controlledUAV select 0)}) then {
-    if (((vehicle ACE_player) == ACE_player) || {
+    if ((isNull objectParent ACE_player) || {
         // Test if we are using player's nvg or if sourced from vehicle:
 
         private _currentVehicle = vehicle ACE_player;
-        private _vehConfig = configOf _currentVehicle;
 
         if (cameraView != "GUNNER") exitWith {true};  // asume hmd usage outside of gunner view
         if ([ACE_player] call CBA_fnc_canUseWeapon) exitWith {true}; // FFV
@@ -106,7 +105,7 @@ if (_borderImage == "") then {
     _borderImageCtrl ctrlSetFade ([.15, 0] select _eyeCups);
 
     #define BORDER_SIZE 3
-    GVAR(defaultPositionBorder) = [safezoneX - (((BORDER_SIZE * 0.75) * safezoneH) - safezoneW) / 2, safezoneY - ((BORDER_SIZE - 1) / 2) * safezoneH, (BORDER_SIZE * 0.75) * safezoneH, BORDER_SIZE * safezoneH];
+    GVAR(defaultPositionBorder) = [safeZoneX - (((BORDER_SIZE * 0.75) * safeZoneH) - safeZoneW) / 2, safeZoneY - ((BORDER_SIZE - 1) / 2) * safeZoneH, (BORDER_SIZE * 0.75) * safeZoneH, BORDER_SIZE * safeZoneH];
     [_borderImageCtrl, GVAR(defaultPositionBorder), _scale] call FUNC(scaleCtrl);
 };
 
@@ -119,7 +118,7 @@ if (_hideHex) then {
     _hexCtrl ctrlSetText QPATHTOF(data\nvg_mask_hexes_thin.paa);
 
     #define HEX_SIZE 1.5
-    GVAR(defaultPositionHex) = [safezoneX - (((HEX_SIZE * 0.75) * safezoneH) - safezoneW) / 2, safezoneY - ((HEX_SIZE - 1) / 2) * safezoneH, (HEX_SIZE * 0.75) * safezoneH, HEX_SIZE * safezoneH];
+    GVAR(defaultPositionHex) = [safeZoneX - (((HEX_SIZE * 0.75) * safeZoneH) - safeZoneW) / 2, safeZoneY - ((HEX_SIZE - 1) / 2) * safeZoneH, (HEX_SIZE * 0.75) * safeZoneH, HEX_SIZE * safeZoneH];
     [_hexCtrl, GVAR(defaultPositionHex), _scale] call FUNC(scaleCtrl);
 };
 

@@ -14,13 +14,6 @@ class CfgPatches {
     };
 };
 
-class ACE_Extensions {
-    class ace_artillerytables {
-        windows = 1;
-        client = 1;
-    };
-};
-
 #include "CfgEventHandlers.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
@@ -32,11 +25,9 @@ class RscText;
 class RscListBox;
 class RscListNBox;
 class RscPicture;
-class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
 class ScrollBar;
 class RscActiveText;
-class RscStructuredText;
 class ctrlButton;
 
 #include "RscTitles.hpp"

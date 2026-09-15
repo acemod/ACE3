@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Modifies interaction for deploying weapon
+ * Modifies interaction for deploying weapon.
  *
  * Arguments:
  * 0: Target <OBJECT>
@@ -20,9 +20,14 @@
 
 params ["_target", "_player", "", "_actionData"];
 
-private _carryWeaponClassname = secondaryWeapon _player;
-private _assembleTo = (getText(configFile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON) >> "assembleTo" >> (typeOf _target)));
-private _icon = getText (configFile >> "CfgVehicles" >> _assembleTo >> "picture");
-TRACE_2("",_assembleTo,_icon);
+private _tripodClassname = typeOf _target;
+private _assembledClassname = getText (configFile >> "CfgWeapons" >> secondaryWeapon _player >> QUOTE(ADDON) >> "assembleTo" >> _tripodClassname);
+
+if (_assembledClassname == "") then {
+    _assembledClassname = getText (configFile >> "CfgWeapons" >> primaryWeapon _player >> QUOTE(ADDON) >> "assembleTo" >> _tripodClassname);
+};
+
+private _icon = getText (configFile >> "CfgVehicles" >> _assembledClassname >> "picture");
+TRACE_2("",_assembledClassname,_icon);
 
 _actionData set [2, _icon];

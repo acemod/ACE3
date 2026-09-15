@@ -19,13 +19,26 @@ PREP_RECOMPILE_END;
             [QGVAR(updateVolume), true, _unit] call CBA_fnc_targetEvent;
         };
     };
+
+    if (_extendedInfo getOrDefault ["ace_ehp", false]) then {
+        _unit setVariable ["ACE_hasEHP", true, true];
+
+        // Only force update volume if unit is a player (including remote controlled)
+        if (_unit call EFUNC(common,isPlayer)) then {
+            [QGVAR(updateVolume), true, _unit] call CBA_fnc_targetEvent;
+        };
+    };
 }] call CBA_fnc_addEventHandler;
 
 ["CBA_loadoutGet", {
     params ["_unit", "_loadout", "_extendedInfo"];
 
-    if (_unit getVariable ["ACE_hasEarPlugsin", false]) then {
+    if (_unit getVariable ["ACE_hasEarPlugsIn", false]) then {
         _extendedInfo set ["ace_earplugs", true]
+    };
+
+    if (_unit getVariable ["ACE_hasEHP", false]) then {
+        _extendedInfo set ["ace_ehp", true]
     };
 }] call CBA_fnc_addEventHandler;
 

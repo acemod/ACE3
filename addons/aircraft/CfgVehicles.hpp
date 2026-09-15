@@ -1,15 +1,5 @@
 class CfgVehicles {
-    class All {
-        class Turrets;
-    };
-
-    class AllVehicles: All {
-        class NewTurret {
-            class Turrets;
-        };
-    };
-
-    class Air: AllVehicles {};
+    class Air;
     class Helicopter: Air {
         class Turrets {
             class MainTurret;
@@ -17,15 +7,11 @@ class CfgVehicles {
     };
 
     class Plane: Air {};
-    class ParachuteBase: Helicopter {
-        class Turrets;
-    };
+    class ParachuteBase: Helicopter {};
 
     class UAV: Plane {};
     class Helicopter_Base_F: Helicopter {
-        class Turrets: Turrets {
-            class CopilotTurret;
-        };
+        class Turrets: Turrets {};
         class AnimationSources;
     };
 
@@ -59,11 +45,7 @@ class CfgVehicles {
         };
     };
 
-    class Plane_Base_F: Plane {
-        class Turrets {
-            class CopilotTurret;
-        };
-    };
+    class Plane_Base_F: Plane {};
 
     #include "Heli_Attack_01_base_F.hpp"
 

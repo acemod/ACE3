@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [hemmt, 3.2] call ace_vehicles_fnc_setVehicleStartDelay
+ * [hemtt, 3.2] call ace_vehicles_fnc_setVehicleStartDelay
  *
  * Public: Yes
  */

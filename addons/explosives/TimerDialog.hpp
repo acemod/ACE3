@@ -77,7 +77,7 @@ class GVAR(timerUI) {
         };
         class CancelButton: RscButton {
             idc = -1;
-            text = CSTRING(Cancel);
+            text = ECSTRING(common,Cancel);
             onButtonClick = QUOTE(closeDialog 0);
             x = QUOTE(13.5 * GUI_GRID_W + GUI_GRID_CENTER_X);
             y = QUOTE(12.7 * GUI_GRID_H + GUI_GRID_CENTER_Y);

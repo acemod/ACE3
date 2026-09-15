@@ -4,14 +4,13 @@
  * Handles wind deflection for projectiles.
  *
  * Arguments:
- * 0: bullet - Object the event handler is assigned to <OBJECT>
- * 1: airFriction - air friction of the bullet <NUMBER>
+ * None
  *
  * Return Value:
  * None
  *
  * Example:
- * [bullet, 2] call ace_winddeflection_fnc_updateTrajectoryPFH
+ * [] call ace_winddeflection_fnc_updateTrajectoryPFH
  *
  * Public: No
  */
@@ -25,7 +24,6 @@
     _args set [0, CBA_missionTime];
     private _isWind = (vectorMagnitude wind > 0);
 
-    private _deleted = false;
     {
         _x params ["_bullet", "_airFriction"];
 
@@ -33,8 +31,7 @@
         private _bulletSpeedSqr = vectorMagnitudeSqr _bulletVelocity;
 
         if ((!alive _bullet) || {(_bullet isKindOf "BulletBase") && {_bulletSpeedSqr < 10000}}) then {
-            GVAR(trackedBullets) set [_forEachIndex, objNull];
-            _deleted = true;
+            GVAR(trackedBullets) deleteAt _forEachIndex;
         } else {
             if (_isWind) then {
                 private _trueVelocity = _bulletVelocity vectorDiff wind;
@@ -50,11 +47,7 @@
             };
             _bullet setVelocity _bulletVelocity;
         };
-    } forEach GVAR(trackedBullets);
-
-    if (_deleted) then {
-        GVAR(trackedBullets) = GVAR(trackedBullets) - [objNull];
-    };
+    } forEachReversed GVAR(trackedBullets);
 
     // END_COUNTER(pfeh);
 }, GVAR(simulationInterval), [CBA_missionTime]] call CBA_fnc_addPerFrameHandler;

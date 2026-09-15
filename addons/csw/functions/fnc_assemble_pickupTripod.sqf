@@ -1,11 +1,11 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Picks up the tripod and adds it to the player launcher slot
+ * Picks up the tripod and adds it to the player launcher slot.
  *
  * Arguments:
  * 0: Tripod <OBJECT>
- * 1: Unit <OBJECT>
+ * 1: Player <OBJECT>
  *
  * Return Value:
  * None
@@ -56,7 +56,7 @@
         if (isNull _weaponHolder || {_tripodPos distance _weaponHolder > 2}) then {
             _weaponHolder = createVehicle ["GroundWeaponHolder", [0, 0, 0], [], 0, "CAN_COLLIDE"];
             _weaponHolder setDir random [0, 180, 360];
-            _weaponHolder setVehiclePosition [_tripodPos, [], 0, "CAN_COLLIDE"]; // places object on surface below
+            _weaponHolder setVehiclePosition [_tripodPos, [], 0, "CAN_COLLIDE"]; // Places object on surface below
         };
 
         _weaponHolder addWeaponCargoGlobal [_tripodClassname, 1];

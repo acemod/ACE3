@@ -1,17 +1,17 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- * Calculate light intensity object 1 recieves from object 2
+ * Calculate light intensity object 1 receives from object 2
  *
  * Arguments:
- * 0: Object that recieves light <OBJECT>
+ * 0: Object that receives light <OBJECT>
  * 1: Object that emits light <OBJECT>
  *
  * Return Value:
  * Brightest light level <NUMBER>
  *
  * Example:
- * [reciever, giver] call ace_common_fnc_lightIntensityFromObject
+ * [receiver, giver] call ace_common_fnc_lightIntensityFromObject
  *
  * Public: Yes
  */

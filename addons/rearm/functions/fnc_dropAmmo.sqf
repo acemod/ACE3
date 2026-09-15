@@ -1,12 +1,12 @@
 #include "..\script_component.hpp"
 /*
  * Author: GitHawk
- * Drops a magazine, optionally deletes it and optionally unholsters the wepaon.
+ * Drops a magazine, optionally deletes it and optionally unholsters the weapon.
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Delete dummy object <BOOL>(optional)
- * 2: Unholster Weapon <BOOL>(optional)
+ * 1: Delete dummy object <BOOL> (default: false)
+ * 2: Unholster Weapon <BOOL> (default: true)
  *
  * Return Value:
  * None
@@ -38,8 +38,8 @@ if (_actionID != -1) then {
     _unit removeAction _actionID;
     _unit setVariable [QGVAR(ReleaseActionID), nil];
 };
-[_unit, "forceWalk", "ACE_rearm", false] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", "ACE_rearm", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 if (_unholster) then {
     REARM_UNHOLSTER_WEAPON

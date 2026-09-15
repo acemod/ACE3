@@ -4,12 +4,12 @@
  * Mark a component as deprecated and switches it to a new component if that is available
  *
  * Arguments:
- * 0: Component <Array>
- * 1: New component <Array>
- * 2: Version when the compent will be removed <String>
+ * 0: Component <ARRAY>
+ * 1: New component <ARRAY>
+ * 2: Version when the component will be removed <STRING>
  *
  * Return Value:
- * Replaced by new component <Boolean>
+ * Replaced by new component <BOOL>
  *
  * Public: No
  *
@@ -23,8 +23,8 @@ _oldComponent params ["_oldComponentName", "_oldSettingName"];
 _newComponent params ["_newComponentName", "_newSettingName"];
 
 private _isReplacementAvailable = [_newComponentName] call FUNC(isModLoaded);
-private _isDeprecatedLoaded = missionNamespace getvariable [_oldSettingName, false];
-private _isReplacementLoaded = missionNamespace getvariable [_newSettingName, false];
+private _isDeprecatedLoaded = missionNamespace getVariable [_oldSettingName, false];
+private _isReplacementLoaded = missionNamespace getVariable [_newSettingName, false];
 
 if (_isDeprecatedLoaded && {_isReplacementAvailable} && {!_isReplacementLoaded}) then {
     [_newSettingName, true, true, true] call FUNC(setSetting);
@@ -38,7 +38,7 @@ if (_isDeprecatedLoaded && {!_isReplacementLoaded}) then {
     switch (true) do {
         case (_componentMajor >= _major && {_componentMinor >= _minor} && {_componentPatch >= _patch}): { // Removed from this version
             private _message = format[
-                "Component %1 is deprecated. It has been replaced by %2. The component %1 is no longer usable on this version. ", _oldComponentName, _newComponentName, _version];
+                "Component %1 is deprecated. It has been replaced by %2. The component %1 is no longer usable on this version %3. ", _oldComponentName, _newComponentName, _version];
             systemChat format["ACE [ERROR] - %1", _message];
             ERROR(_message);
         };

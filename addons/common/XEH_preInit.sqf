@@ -12,6 +12,8 @@ GVAR(showHudHash) = createHashMap;
 GVAR(vehicleIconCache) = createHashMap; // for getVehicleIcon
 GVAR(wheelSelections) = createHashMap;
 
+GVAR(InteractionConditions) = createHashMap;
+
 GVAR(blockItemReplacement) = false;
 
 // Cache for FUNC(isModLoaded)
@@ -31,11 +33,9 @@ ACE_COUNTERS = [];
 // Load ace_settings into CBA Settings
 [] call FUNC(cbaSettings);
 
-GVAR(statusEffect_Names) = [];
-GVAR(statusEffect_isGlobal) = [];
-GVAR(statusEffect_sendJIP) = [];
+GVAR(statusEffects) = createHashMap;
 
-GVAR(setHearingCapabilityMap) = [];
+GVAR(setHearingCapabilityMap) = createHashMap;
 
 [] call FUNC(setupLocalUnitsHandler); // Add local units event handlers (ace_common_localUnits)
 
@@ -73,7 +73,7 @@ GVAR(canDigSurfaces) = createHashMapFromArray [
     ["wavymetal_exp",false],["int_metal",false],["asphalt_exp",false],["pavement_exp",false],["gridmetal_exp",false],
     ["rooftiles_exp",false],["rock",false],["int_mat_exp",false],["wood_int",false],["concrete_int",false],["tarmac",false],["wood",false],
     ["roof_tin",false],["lino_exp",false],["concrete",false],["int_softwood_exp",false], ["concrete_exp",false],["stones_exp",false],
-    ["forest_exp",true],["snow",true],["grasstall_exp",true],["grass",true]
+    ["forest_exp",true],["snow",true],["grasstall_exp",true],["grass",true],["forest",true],["drygrass",true]
 ];
 
 isHC = !hasInterface && !isDedicated; // deprecated because no tag

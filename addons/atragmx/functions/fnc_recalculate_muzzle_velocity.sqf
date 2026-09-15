@@ -45,7 +45,7 @@ for "_index" from 1 to (_lookupTableSize - 1) do {
 (_lookupTable select _lowerIndex) params ["_lowerDistance", "_lowerMuzzleVelocity"];
 (_lookupTable select _upperIndex) params ["_upperDistance", "_upperMuzzleVelocity"];
 
-_muzzleVelocity = 100 max (linearConversion [_lowerDistance, _upperDistance, GVAR(temperature), _lowerMuzzleVelocity, _upperMuzzleVelocity]) min 1400;
+private _muzzleVelocity = 100 max (linearConversion [_lowerDistance, _upperDistance, GVAR(temperature), _lowerMuzzleVelocity, _upperMuzzleVelocity]) min 1400;
 
 if (_muzzleVelocity != GVAR(workingMemory) select 1) then {
     GVAR(workingMemory) set [1, _muzzleVelocity];

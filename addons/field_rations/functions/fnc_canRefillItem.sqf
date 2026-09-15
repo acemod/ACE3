@@ -26,8 +26,8 @@ _itemData params ["_item", "_itemConfig", "_isMagazine"];
 alive _source
 && {XGVAR(waterSourceActions) != 0}
 && {
-    (_isMagazine && {_item in magazines _player})
-    || {_item in (_player call EFUNC(common,uniqueItems))}
+    (_isMagazine && {_item in ([_player, 2] call EFUNC(common,uniqueItems))})
+    || {!_isMagazine && {_item in (_player call EFUNC(common,uniqueItems))}}
 }
 && {
     private _water = _source call FUNC(getRemainingWater);

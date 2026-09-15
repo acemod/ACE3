@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: not used
- * 1: item config path (CONFIG)
+ * 1: item config path <CONFIG>
  *
  * Return Value:
  * String to display

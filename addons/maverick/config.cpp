@@ -30,9 +30,6 @@ class CfgPatches {
     };
 };
 
-
-class SensorTemplateLaser;
-
 #include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"

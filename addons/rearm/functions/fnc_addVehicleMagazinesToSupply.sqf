@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Ammo Truck <OBJECT>
- * 1: Vehicle object or Vehicle class <OBJECT><STRING>
+ * 1: Vehicle object or Vehicle class <OBJECT or STRING>
  *
  * Return Value:
  * None

@@ -1,4 +1,3 @@
-
 PREP(calculateAmmoTemperatureVelocityShift);
 PREP(calculateAtmosphericCorrection);
 PREP(calculateBarrelLengthVelocityShift);

@@ -16,7 +16,7 @@
  */
 
 if (isNil QGVAR(drawHandler) && {GVAR(showPlayerNames) != 0}) then {
-    GVAR(drawHandler) = addMissionEventHandler ["Draw3D", {_this call FUNC(onDraw3d);}];
+    GVAR(drawHandler) = addMissionEventHandler ["Draw3D", {call FUNC(onDraw3d);}];
 } else {
     if (!isNil QGVAR(drawHandler) && {GVAR(showPlayerNames) == 0}) then {
         removeMissionEventHandler ["Draw3D", GVAR(drawHandler)];

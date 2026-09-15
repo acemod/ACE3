@@ -35,7 +35,7 @@ private _cargoSpace = _space;
 } forEach _loaded;
 
 // If the new value is the same as the old, do nothing
-if (_cargoSpace == (_vehicle call FUNC(getCargoSpaceLeft))) exitwith {};
+if (_cargoSpace == (_vehicle call FUNC(getCargoSpaceLeft))) exitWith {};
 
 // Apply new space globally
 // Necessary to update value, even if no space, as API could be used again

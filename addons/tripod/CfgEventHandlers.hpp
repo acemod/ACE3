@@ -20,7 +20,7 @@ class Extended_PostInit_EventHandlers {
 class Extended_Init_EventHandlers {
     class ACE_TripodObject {
         class ADDON {
-            init = QUOTE(_this call DEFUNC(dragging,initObject));
+            init = QUOTE(call DEFUNC(dragging,initObject));
         };
     };
 };
@@ -28,13 +28,13 @@ class Extended_Init_EventHandlers {
 class Extended_Killed_EventHandlers {
     class CAManBase {
         class ADDON {
-            killed = QUOTE(_this call FUNC(handleKilled));
+            killed = QUOTE(call FUNC(handleKilled));
         };
     };
 };
 
 class Extended_DisplayLoad_EventHandlers {
     class RscDisplayMission {
-        ADDON = QUOTE(_this call COMPILE_FILE(XEH_missionDisplayLoad));
+        ADDON = QUOTE(call COMPILE_FILE(XEH_missionDisplayLoad));
     };
 };

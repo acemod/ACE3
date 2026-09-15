@@ -1,0 +1,10 @@
+// Sleeves up/down
+UNIFORM_SLEEVES(U_C_FirefighterFatigues_RF,U_C_FirefighterFatigues_RolledUp_RF);
+UNIFORM_SLEEVES(U_BG_Guerrilla_6_1,U_BG_Guerrilla_RF);
+
+// Pilot Jackets
+UNIFORM_JACKET(variantJacketOpen,variantJacketClosed);
+
+UNIFORM_JACKET(U_C_PilotJacket_open_black_RF,U_C_PilotJacket_black_RF);
+UNIFORM_JACKET(U_C_PilotJacket_open_brown_RF,U_C_PilotJacket_brown_RF);
+UNIFORM_JACKET(U_C_PilotJacket_open_lbrown_RF,U_C_PilotJacket_lbrown_RF);

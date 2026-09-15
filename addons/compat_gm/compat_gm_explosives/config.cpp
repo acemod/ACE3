@@ -8,6 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "gm_core",
+            "gm_weapons_put",
             "ace_explosives"
         };
         skipWhenMissingDependencies = 1;

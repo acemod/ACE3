@@ -73,7 +73,7 @@ Default: 0
 
 Whether or not this vehicle can spawn a `jet` effect (Boolean value: 0 or 1)
 
-Default: 0
+Default: 1
 
 #### 1.1.10 `ace_vehicle_damage_slatHitpoints`
 
@@ -89,9 +89,9 @@ Default: {}
 
 #### 1.1.12 `ace_vehicle_damage_turret`
 
-String for turret classname to spawn when catastrophically destroyed. Turret will pop-off and this is the class spawned
+String for turret classname to spawn when catastrophically destroyed, followed by offset the object should spawn with. Turret will pop-off and this is the class spawned
 
-Default: ""
+Default: {}
 
 ### 1.2 Defined Hitpoints
 

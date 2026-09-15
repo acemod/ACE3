@@ -21,7 +21,7 @@ class Extended_PostInit_EventHandlers {
 class Extended_Killed_EventHandlers {
     class CAManBase {
         class ADDON {
-            killed = QUOTE(_this call FUNC(handleKilled));
+            killed = QUOTE(call FUNC(handleKilled));
         };
     };
 };
@@ -29,7 +29,7 @@ class Extended_Killed_EventHandlers {
 class Extended_Respawn_EventHandlers {
     class CAManBase {
         class ADDON {
-            respawn = QUOTE(_this call FUNC(handleRespawn));
+            respawn = QUOTE(call FUNC(handleRespawn));
         };
     };
 };
@@ -76,7 +76,7 @@ class Extended_InitPost_EventHandlers {
     // auto assign rallypoint leader
     class CAManBase {
         class ADDON {
-            serverInit = QUOTE(_this call FUNC(handleInitPostServer));
+            serverInit = QUOTE(call FUNC(handleInitPostServer));
         };
     };
 };

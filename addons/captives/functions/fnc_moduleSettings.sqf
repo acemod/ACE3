@@ -7,7 +7,7 @@
  * 0: The module logic <OBJECT>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Example:
  * [LOGIC] call ace_captives_fnc_moduleSettings

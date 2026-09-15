@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Animation <STRING>
- * 2: Priority of the animation. (default: 0) <NUMBER>
+ * 2: Priority of the animation. <NUMBER> (default: 0)
  *     0 = PlayMove
  *     1 = PlayMoveNow
  *     2 = SwitchMove (no transitional animation, doesn't overwrite priority 1)
@@ -33,7 +33,7 @@ if (_animation == "") then {
 TRACE_2("",local _unit,vehicle _unit);
 switch (_priority) do {
     case 0: {
-        if (_unit == vehicle _unit) then {
+        if (isNull objectParent _unit) then {
             [QGVAR(playMove), [_unit, _animation], _unit] call CBA_fnc_targetEvent;
         } else {
             // Execute on all machines. PlayMove and PlayMoveNow are bugged: They have local effects when executed on remote machines inside vehicles.
@@ -41,7 +41,7 @@ switch (_priority) do {
         };
     };
     case 1: {
-        if (_unit == vehicle _unit) then {
+        if (isNull objectParent _unit) then {
             [QGVAR(playMoveNow), [_unit, _animation], _unit] call CBA_fnc_targetEvent;
         } else {
             // Execute on all machines. PlayMove and PlayMoveNow are bugged: They have local effects when executed on remote machines inside vehicles.
@@ -50,7 +50,7 @@ switch (_priority) do {
     };
     case 2: {
         // try playMoveNow first
-        if (_unit == vehicle _unit) then {
+        if (isNull objectParent _unit) then {
             [QGVAR(playMoveNow), [_unit, _animation], _unit] call CBA_fnc_targetEvent;
         } else {
             // Execute on all machines. PlayMove and PlayMoveNow are bugged: They have local effects when executed on remote machines inside vehicles.

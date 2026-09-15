@@ -65,7 +65,7 @@ private _fnc_onSelection = {
     params [["_activeCtrl", controlNull, [controlNull]]];
 
     private _display = ctrlParent _activeCtrl;
-    if (isNUll _display) exitWith {};
+    if (isNull _display) exitWith {};
 
     // Update button colours and scales
     {

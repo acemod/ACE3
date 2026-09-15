@@ -59,7 +59,7 @@ if ([_unit] call EFUNC(common,isPlayer)) exitWith {
         } forEach getArtilleryAmmo [_vehicle];
         TRACE_1("getArtilleryAmmo",_artilleryMag);
         if (_artilleryMag == "") exitWith {_targetASL = [];};
-        private _eta = _vehicle getArtilleryETA [ASLtoAGL _targetASL, _artilleryMag];
+        private _eta = _vehicle getArtilleryETA [ASLToAGL _targetASL, _artilleryMag];
         TRACE_1("getArtilleryETA",_eta);
         if (_eta < 0) exitWith {
             [ELSTRING(Interaction,NotInRange)] call FUNC(showMessage);

@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Radius to check for helicopter (default: 15) <NUMBER>
+ * 1: Radius to check for helicopter <NUMBER> (default: 15)
  *
  * Return Value:
  * Array <ARRAY>:

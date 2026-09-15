@@ -38,7 +38,7 @@ GVAR(bloodTickCounter) = 0;
     if (_unit != ACE_player) exitWith {};
     TRACE_1("player unconscious eh",_unconscious);
 
-    if (_unconscious && {cameraView == "GUNNER"} && {(vehicle _unit) != _unit} &&  {cameraOn == vehicle _unit}) then {
+    if (_unconscious && {cameraView == "GUNNER"} && {!isNull objectParent _unit} &&  {cameraOn == vehicle _unit}) then {
         TRACE_2("exiting gunner view",cameraOn,cameraView);
         ACE_player switchCamera "INTERNAL";
     };
@@ -124,11 +124,11 @@ GVAR(bloodTickCounter) = 0;
 #ifdef DISABLE_VANILLA_DAMAGE_EFFECTS
 TRACE_1("disabling vanilla bleeding feedback effects",_this);
 [{
-    {isNil _x} count [
+    [
         "BIS_fnc_feedback_damageCC",
         "BIS_fnc_feedback_damageRadialBlur",
         "BIS_fnc_feedback_damageBlur"
-    ] == 0
+    ] findIf {isNil _x} == -1 
 }, {
     {
         ppEffectDestroy _x;

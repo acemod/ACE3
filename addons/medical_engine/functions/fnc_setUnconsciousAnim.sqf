@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Is unconscious (optional, default: true) <BOOLEAN>
+ * 1: Is unconscious <BOOL> (default: true)
  *
  * Return Value:
  * None

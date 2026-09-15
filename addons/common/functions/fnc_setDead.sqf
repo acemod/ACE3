@@ -4,10 +4,10 @@
  * Kills a unit without changing visual appearance.
  *
  * Arguments:
- * 0: Unit <ARRAY>
+ * 0: Unit <OBJECT>
  * 1: Reason for death (only used if ace_medical is loaded) <STRING> (default: "")
- * 2: Killer (vehicle that killed unit) <ARRAY> (default: objNull)
- * 3: Instigator (unit who pulled trigger) <ARRAY> (default: objNull)
+ * 2: Killer (vehicle that killed unit) <OBJECT> (default: objNull)
+ * 3: Instigator (unit who pulled trigger) <OBJECT> (default: objNull)
  *
  * Return Value:
  * None

@@ -17,7 +17,7 @@
 
 params ["_config"];
 
-!(_this call FUNC(filterMedical)) &&
-{!(_this call FUNC(filterBackpacks))} &&
-{!(_this call FUNC(filterHeadgear))} &&
+!(call FUNC(filterMedical)) &&
+{!(call FUNC(filterBackpacks))} &&
+{!(call FUNC(filterHeadgear))} &&
 {!(getNumber (_config >> "ItemInfo" >> "type") in [TYPE_UNIFORM, TYPE_VEST])}

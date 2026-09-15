@@ -22,7 +22,7 @@
  * 1: Vision modes to remove <ARRAY>
  *
  * Return Value:
- * Available vision modes <ARRAY>
+ * Available vision modes <ARRAY> or <NIL> if called before settings are initialized
  *
  * Example:
  * [[0], [1,2]] call ace_spectator_fnc_updateVisionModes
@@ -32,6 +32,7 @@
 
 if !(EGVAR(common,settingsInitFinished)) exitWith {
     EGVAR(common,runAtSettingsInitialized) pushBack [DFUNC(updateVisionModes),_this];
+    nil
 };
 
 params [["_addModes",[],[[]]], ["_removeModes",[],[[]]]];

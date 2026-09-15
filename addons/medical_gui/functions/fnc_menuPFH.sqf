@@ -23,7 +23,13 @@ if !(
     closeDialog 0;
     // Show hint if distance condition failed
     if ((ACE_player distance GVAR(target) > GVAR(maxDistance)) && {vehicle ACE_player != vehicle GVAR(target)}) then {
+        if (((getPosATL GVAR(target)) # 2) < -9) exitWith {}; // handle dragging corpse/clone
+
         [[ELSTRING(medical,DistanceToFar), GVAR(target) call EFUNC(common,getName)], 2] call EFUNC(common,displayTextStructured);
+    };
+
+    if (EGVAR(medical,blockInputOnUiEvent) > 0) then {
+        [EGVAR(medical,blockInputOnUiEvent)] call EFUNC(common,temporaryBlockFire); // prevent firing from sudden menu closure
     };
 };
 

@@ -5,9 +5,9 @@
  *
  * Arguments:
  * 0: Message <STRING>
- * 1: Play a clicking sound (default: false) <BOOL>
- * 2: How long before hiding the message in seconds (default: 2) <NUMBER>
- * 3: Priority, higher priority messages will override lesser important ones (default: 0) <NUMBER>
+ * 1: Play a clicking sound <BOOL> (default: false)
+ * 2: How long before hiding the message in seconds <NUMBER> (default: 2)
+ * 3: Priority, higher priority messages will override lesser important ones <NUMBER> (default: 0)
  *
  * Return Value:
  * None

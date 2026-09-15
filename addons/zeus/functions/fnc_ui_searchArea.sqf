@@ -67,9 +67,9 @@ private _fnc_onConfirm = {
     private _position = getPos _logic;
     private _marker = QGVAR(ModuleSearchArea) + str _unit;
 
-    createMarker [_marker, _position];
-    _marker setMarkerAlpha 0;
-    _marker setMarkerShape "ELLIPSE";
+    createMarkerLocal [_marker, _position];
+    _marker setMarkerAlphaLocal 0;
+    _marker setMarkerShapeLocal "ELLIPSE";
     _marker setMarkerSize [_radius, _radius];
 
     [QGVAR(moduleSearchArea), [_unit, _marker], _unit] call CBA_fnc_targetEvent;

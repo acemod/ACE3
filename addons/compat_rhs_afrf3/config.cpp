@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-#include "\z\ace\addons\hearing\script_macros_hearingProtection.hpp"
 
 class CfgPatches {
     class ADDON {
@@ -7,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"rhs_main_loadorder"};
+        requiredAddons[] = {"ace_common", "rhs_main_loadorder"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"Ruthberg", "GitHawk", "BaerMitUmlaut", "commy2", "Skengman2"};
         url = ECSTRING(main,URL);

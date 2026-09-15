@@ -15,7 +15,7 @@
  * Public: No
  */
 
-private _playerDir = getDir ACE_player;
+private _playerDir = (ACE_player call CBA_fnc_headDir) select 0;
 private _windSpeed = vectorMagnitude wind;
 private _windDir = (wind select 0) atan2 (wind select 1);
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {

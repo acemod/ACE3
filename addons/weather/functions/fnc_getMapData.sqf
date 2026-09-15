@@ -47,11 +47,21 @@ GVAR(currentTemperature) = 15;
 GVAR(currentHumidity) = 0;
 GVAR(currentOvercast) = 0;
 
-// Get all non inherited arrays to filter maps that inherit from Stratis/Altis/Tanoa
 private _cfgPath = configFile >> "CfgWorlds" >> _worldName;
-private _nonInheritedArrays = configProperties [_cfgPath, "isArray _x", false];
-// And check if any custom non-inherited weather is defined through config and use that if so
-if ((_cfgPath >> "ACE_TempDay") in _nonInheritedArrays) exitWith {
+
+// Check if values are set in mission since CfgWorlds is valid in description.ext
+// In description.ext CfgWorlds "Any" can be used rather than a world name to apply the values to any map.
+private _missionCfgPathAny = missionConfigFile >> "CfgWorlds" >> "Any";
+if !(isNull (_missionCfgPathAny >> "ACE_TempDay")) then {
+    _cfgPath = _missionCfgPathAny;
+};
+private _missionCfgPath = missionConfigFile >> "CfgWorlds" >> _worldName;
+if !(isNull (_missionCfgPath  >> "ACE_TempDay")) then {
+    _cfgPath = _missionCfgPath;
+};
+
+// Check if any custom non-inherited weather from Stratis/Altis/Tanoa is defined through config and use that if so
+if (_cfgPath == inheritsFrom (_cfgPath >> "ACE_TempDay")) exitWith {
     if (isArray (_cfgPath >> "ACE_TempDay")) then {
         GVAR(TempDay) = getArray (_cfgPath >> "ACE_TempDay");
     };
@@ -246,7 +256,7 @@ if (_worldName in ["kunduz"]) exitWith {
 // Values are not based on any RL reference since the snow terrain textures persists regardless the date
 _cfgPath = _cfgPath >> "RainParticles";
 if (
-    "winter" in _worldName || 
+    "winter" in _worldName ||
     {"snow" in getText (_cfgPath >> "rainDropTexture")} ||
     {getNumber (_cfgPath >> "snow") != 0}
 ) exitWith {

@@ -6,7 +6,7 @@ class CfgVehicles {
                 displayName = CSTRING(RepackMagazines);
                 condition = QUOTE(true);
                 exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
-                insertChildren = QUOTE(_this call FUNC(getMagazineChildren));
+                insertChildren = QUOTE(call FUNC(getMagazineChildren));
                 icon = QPATHTOEF(common,UI\repack_ca.paa);
             };
         };

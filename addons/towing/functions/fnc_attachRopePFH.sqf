@@ -21,7 +21,7 @@ private _viewDirection = getCameraViewDirection _unit;
 GVAR(attachHelper) setPosASL (_unit modelToWorldVisualWorld [0, 1, 1.5]);
 
 private _hintLMB = "";
-private _hintRMB = localize ELSTRING(dragging,Drop);
+private _hintRMB = LELSTRING(common,Drop);
 
 private _startPos = eyePos _unit;
 private _endPos = _startPos vectorAdd (_viewDirection vectorMultiply TOW_ACTION_DISTANCE);

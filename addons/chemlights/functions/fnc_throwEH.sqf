@@ -30,7 +30,7 @@ if (local _unit) then {
         if ((ACE_player getVariable [QEGVAR(advanced_throwing,activeThrowable), objNull]) == _projectile) then {
             [_projectile, _ammo, true] call FUNC(throwIR); // direct call if we are priming with adv throw
         } else {
-            [{_this call FUNC(throwIR)}, [_projectile, _ammo]] call CBA_fnc_execNextFrame;
+            [{call FUNC(throwIR)}, [_projectile, _ammo]] call CBA_fnc_execNextFrame;
         };
     };
 };

@@ -390,12 +390,6 @@ class CfgMagazines {
     class DemoCharge_Remote_Mag: SatchelCharge_Remote_Mag {
         displayName = CSTRING(DemoCharge_Name);
     };
-    class ACE_SatchelCharge_Remote_Mag_Throwable: CA_Magazine {
-        displayName = CSTRING(SatchelChargeThrowable_Name);
-    };
-    class ACE_DemoCharge_Remote_Mag_Throwable: ACE_SatchelCharge_Remote_Mag_Throwable {
-        displayName = CSTRING(DemoChargeThrowable_Name);
-    };
 
     // hand grenades
     class HandGrenade: CA_Magazine {

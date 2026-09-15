@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: unit to be checked <OBJECT>
- * 1: exclude remote controlled units <BOOL>
+ * 1: exclude remote controlled units <BOOL> (default: false)
  *
  * Return Value:
  * Is unit a player? <BOOL>

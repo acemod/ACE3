@@ -24,7 +24,7 @@ if (isNull _display) exitWith {ERROR("No Display");};
 private _daylight = [] call EFUNC(common,ambientBrightness);
 (_display displayCtrl IDC_MICRODAGRSHELL) ctrlSetTextColor [_daylight, _daylight, _daylight, 1];
 
-(_display displayCtrl IDC_CLOCKTEXT) ctrlSetText ([daytime, "HH:MM"] call bis_fnc_timeToString);
+(_display displayCtrl IDC_CLOCKTEXT) ctrlSetText ([dayTime, "HH:MM"] call bis_fnc_timeToString);
 
 private _waypoints = [] call FUNC(deviceGetWaypoints);
 
@@ -44,15 +44,17 @@ case (APP_MODE_INFODISPLAY): {
         (_display displayCtrl IDC_MODEDISPLAY_ELEVATIONNUM) ctrlSetText _aboveSeaLevelText;
 
         //Heading:
+        private _headDir = ([ACE_player] call CBA_fnc_headDir) select 0;
+        if (GVAR(settingShowMagneticNorth)) then { _headDir = _headDir call EFUNC(common,getMagneticBearing); };
         private _compassAngleText = if (GVAR(settingUseMils)) then {
-            [(floor ((6400 / 360) * (([ACE_player] call CBA_fnc_headDir) select 0))), 4, 0] call CBA_fnc_formatNumber;
+            [(floor ((6400 / 360) * _headDir)), 4, 0] call CBA_fnc_formatNumber;
         } else {
-            ([([ACE_player] call CBA_fnc_headDir) select 0, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
+            ([_headDir, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
         };
         (_display displayCtrl IDC_MODEDISPLAY_HEADINGNUM) ctrlSetText _compassAngleText;
 
         //Speed:
-        (_display displayCtrl IDC_MODEDISPLAY_SPEEDNUM) ctrlSetText format ["%1kph", (round (speed (vehicle ACE_player)))];;
+        (_display displayCtrl IDC_MODEDISPLAY_SPEEDNUM) ctrlSetText format ["%1kph", (round (speed (vehicle ACE_player)))];
 
 
         if (GVAR(currentWaypoint) == -1) then {
@@ -61,7 +63,7 @@ case (APP_MODE_INFODISPLAY): {
             private _dayString = if ((date select 2) < 10) then {"0" + str (date select 2)} else {str (date select 2)};
 
             (_display displayCtrl IDC_MODEDISPLAY_TIMEDISPLAYGREEN1) ctrlSetText format ["%1-%2-%3", _yearString, _monthSring, _dayString]; //"18-Feb-2010";
-            (_display displayCtrl IDC_MODEDISPLAY_TIMEDISPLAYGREEN2) ctrlSetText ([daytime, "HH:MM:SS"] call bis_fnc_timeToString);
+            (_display displayCtrl IDC_MODEDISPLAY_TIMEDISPLAYGREEN2) ctrlSetText ([dayTime, "HH:MM:SS"] call bis_fnc_timeToString);
         } else {
             private _targetPosName = "";
             private _targetPosLocationASL = [];
@@ -103,15 +105,17 @@ case (APP_MODE_INFODISPLAY): {
     };
 case (APP_MODE_COMPASS): {
         //Heading:
+        private _headDir = ([ACE_player] call CBA_fnc_headDir) select 0;
+        if (GVAR(settingShowMagneticNorth)) then { _headDir = _headDir call EFUNC(common,getMagneticBearing); };
         private _compassAngleText = if (GVAR(settingUseMils)) then {
-            [(floor ((6400 / 360) * (([ACE_player] call CBA_fnc_headDir) select 0))), 4, 0] call CBA_fnc_formatNumber;
+            [(floor ((6400 / 360) * _headDir)), 4, 0] call CBA_fnc_formatNumber;
         } else {
-            ([([ACE_player] call CBA_fnc_headDir) select 0, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
+            ([_headDir, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
         };
         (_display displayCtrl IDC_MODECOMPASS_HEADING) ctrlSetText _compassAngleText;
 
         //Speed:
-        private _SpeedText = format ["%1kph", (round (speed (vehicle ACE_player)))];;
+        private _SpeedText = format ["%1kph", (round (speed (vehicle ACE_player)))];
         (_display displayCtrl IDC_MODECOMPASS_SPEED) ctrlSetText _SpeedText;
 
         if (GVAR(currentWaypoint) == -1) then {
@@ -166,13 +170,20 @@ case (APP_MODE_WAYPOINTS): {
             _wpListBox lbSetTextRight [_forEachIndex, (format ["%1km", _2dDistanceKm toFixed GVAR(waypointPrecision)])];
         } forEach _waypoints;
 
-        _currentIndex = (_currentIndex max 0) min (count _waypoints);
+        // Select last created waypoint
+        private _currWaypointsCount = count _waypoints;
+        if (_currWaypointsCount > (GVAR(prevWaypointsCount))) then {
+            _currentIndex = _currWaypointsCount - 1;
+        } else {
+            _currentIndex = (_currentIndex max 0) min (_currWaypointsCount - 1);
+        };
         if ((lbCurSel _wpListBox) != _currentIndex) then {
             _wpListBox lbSetCurSel _currentIndex;
         };
 
         //Reset focus to a dummy ctrl (top button), otherwise HOME/POS1 key goes to top of listBox and has keybind blocked
         ctrlSetFocus (_display displayCtrl IDC_TOPMENUBUTTON);
+        GVAR(prevWaypointsCount) = _currWaypointsCount;
     };
 
 case (APP_MODE_SETUP): {
@@ -191,6 +202,13 @@ case (APP_MODE_SETUP): {
             _settingListBox lbSetTextRight [1, (localize LSTRING(settingOn))];
         } else {
             _settingListBox lbSetTextRight [1, (localize LSTRING(settingOff))];
+        };
+
+        _settingListBox lbAdd (localize LSTRING(settingShowMagneticNorth));
+        if (GVAR(settingShowMagneticNorth)) then {
+            _settingListBox lbSetTextRight [2, (localize LSTRING(settingOn))];
+        } else {
+            _settingListBox lbSetTextRight [2, (localize LSTRING(settingOff))];
         };
 
         //Reset focus to a dummy ctrl (top button), otherwise HOME/POS1 key goes to top of listBox and has keybind blocked

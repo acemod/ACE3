@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Key <NUMBER>
+ * 1: Key (1 for left mouse button) <NUMBER> (default: 1)
  *
  * Return Value:
  * None
@@ -16,13 +16,13 @@
  * Public: No
  */
 
-params ["_unit", "_key"];
+params ["_unit", ["_key", 1]];
 
 if (_key != 1 || {GVAR(digPFH) == -1}) exitWith {};
 
 // enable running again
-[_unit, "forceWalk", "ACE_Trenches", false] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", "ACE_Trenches", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 // delete placement dummy
 deleteVehicle GVAR(trench);

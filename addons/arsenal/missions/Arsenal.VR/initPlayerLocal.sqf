@@ -101,7 +101,7 @@ if (!isNil "_massDestructionAchieved" && {_massDestructionAchieved isEqualTo 1})
             private _allDisabled = true;
 
             {
-                _hitAlive = _x getVariable ["BIS_fnc_VRHitParts_hitalive", []];
+                private _hitAlive = _x getVariable ["BIS_fnc_VRHitParts_hitalive", []];
                 _allDisabled = _allDisabled && ({!_x} count _hitAlive >= 2);
 
                 sleep 0.1;
@@ -137,7 +137,7 @@ for "_i" from 5 to 11 do {
 private _square = createVehicle ["VR_Area_01_square_1x1_grey_F", position _unit, [], 0, "NONE"];
 _square setPosASL getPosASL _unit;
 
-private _marker = createMarker [QGVAR(start), getPosWorld _unit];
+private _marker = createMarkerLocal [QGVAR(start), getPosWorld _unit];
 _marker setMarkerType "mil_start";
 
 // Init Arsenal
@@ -165,8 +165,8 @@ _unit addEventHandler ["AnimChanged", {
 private _markers = [];
 
 {
-    private _marker = createMarker [vehicleVarName _x, position _x];
-    _marker setMarkerType "mil_dot";
+    private _marker = createMarkerLocal [vehicleVarName _x, position _x];
+    _marker setMarkerTypeLocal "mil_dot";
     _marker setMarkerColor "ColorOrange";
 
     _markers pushBack _marker;

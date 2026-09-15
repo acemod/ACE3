@@ -18,15 +18,16 @@ params ["_firedEH", "", "", "_seekerParams", "_stateParams"];
 _firedEH params ["_shooter","_weapon","","","","","_projectile", "_gunner"];
 _stateParams params ["", "", "_attackProfileStateParams"];
 _seekerParams params ["", "", "_seekerMaxRange", "_seekerMinRange"];
+if (_seekerMaxRange < 1) then { WARNING_2("Ammo %1 has very short max range %2",typeOf _projectile,_seekerMaxRange) };
 
-private _config = configOf _projectile >> "ace_missileguidance";
+private _config = configOf _projectile >> QUOTE(ADDON);
 private _maxCorrectableDistance = [_config >> "correctionDistance", "NUMBER", DEFAULT_CORRECTION_DISTANCE] call CBA_fnc_getConfigEntry;
 private _distanceAheadOfMissile = [_config >> "missileLeadDistance", "NUMBER", DEFAULT_LEAD_DISTANCE] call CBA_fnc_getConfigEntry;
 private _maxDistanceSqr = _seekerMaxRange * _seekerMaxRange;
 private _minDistanceSqr = _seekerMinRange * _seekerMinRange;
 
-// AI don't know how to use the crosshair offset becauze they dum dum
-private _crosshairOffset = if ((_gunner != ACE_PLAYER) && {_gunner != (ACE_controlledUAV select 1)}) then {
+// AI doesn't know how to use the crosshair offset
+private _crosshairOffset = if ((_gunner != ACE_player) && {_gunner != (ACE_controlledUAV select 1)}) then {
     [0, 0, 0];
 } else {
     [_config >> "offsetFromCrosshair", "ARRAY", [0, 0, 0]] call CBA_fnc_getConfigEntry
@@ -45,4 +46,3 @@ _attackProfileStateParams set [4, _maxDistanceSqr]; // max distance squared used
 _attackProfileStateParams set [5, _minDistanceSqr];
 _attackProfileStateParams set [6, _wireCutSource];
 _attackProfileStateParams set [7, _distanceAheadOfMissile];
-

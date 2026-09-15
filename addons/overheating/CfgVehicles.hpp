@@ -30,19 +30,19 @@ class CfgVehicles {
                 };
                 class GVAR(CheckTemperatureSpareBarrels) {
                     displayName = CSTRING(CheckTemperatureSpareBarrelsShort);
-                    condition = QUOTE((_player) call FUNC(canCheckSpareBarrelsTemperatures));
+                    condition = QUOTE(_player call FUNC(canCheckSpareBarrelsTemperatures));
                     exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
-                    statement = QUOTE([_player] call FUNC(checkSpareBarrelsTemperatures));
+                    statement = QUOTE(_player call FUNC(checkSpareBarrelsTemperatures));
                     showDisabled = 0;
                     icon = QUOTE(PATHTOF(UI\temp_ca.paa));
                 };
                 class GVAR(CoolWeaponWithItem) {
                     displayName = CSTRING(CoolWeaponWithItem);
                     condition = QUOTE(call FUNC(canCoolWeaponWithItem));
-                    exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
+                    exceptions[] = {"isNotInside", "isNotSitting"};
                     statement = "true";
                     showDisabled = 0;
-                    insertChildren = QUOTE(_player call FUNC(getConsumableChildren));
+                    insertChildren = QUOTE([ARR_2(_player,_target)] call FUNC(getConsumableChildren));
                     icon = QPATHTOF(UI\pour_water_ca.paa);
                 };
             };
@@ -67,10 +67,10 @@ class CfgVehicles {
                 class GVAR(CoolWeaponWithItem) {
                     displayName = CSTRING(CoolWeaponWithItem);
                     condition = QUOTE(call FUNC(canCoolWeaponWithItem));
-                    exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
+                    exceptions[] = {"isNotInside", "isNotSitting"};
                     statement = "true";
                     showDisabled = 0;
-                    insertChildren = QUOTE(_player call FUNC(getConsumableChildren));
+                    insertChildren = QUOTE([ARR_2(_player,_target)] call FUNC(getConsumableChildren));
                     icon = QPATHTOF(UI\pour_water_ca.paa);
                 };
             };

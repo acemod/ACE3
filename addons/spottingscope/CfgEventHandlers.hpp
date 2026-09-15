@@ -14,7 +14,7 @@ class Extended_PreInit_EventHandlers {
 class Extended_Init_EventHandlers {
     class ACE_SpottingScopeObject {
         class ADDON {
-            init = QUOTE(_this call DEFUNC(dragging,initObject));
+            init = QUOTE(call DEFUNC(dragging,initObject));
         };
     };
 };

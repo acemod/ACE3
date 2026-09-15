@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Viewports
+component: viewports
 description: Allows crew to look through periscopes.
 group: feature
 category: interaction

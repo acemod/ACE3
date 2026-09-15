@@ -97,17 +97,19 @@ class CfgWeapons {
         GVAR(closedBolt) = 1;
         GVAR(jamTypesAllowed)[] = {"Fire", "Dud"};
     };
+
     class ACE_ItemCore;
     class CBA_MiscItem_ItemInfo;
 
-    // Deprecated, 3.16.0 Arsenal supports showing magazines as misc items
+    // Deprecated, 3.16.0 Arsenal supports showing magazines as misc. items
+    // However, since base game doesn't support misc. items, it's still needed to filling inventories in the editor
     class ACE_SpareBarrel_Item: ACE_ItemCore {
         displayName = CSTRING(SpareBarrelName);
         author = ECSTRING(common,ACETeam);
-        scope = 1;
+        scope = 2;
         scopeArsenal = 0;
-        descriptionshort = CSTRING(SpareBarrelDescription);
-        picture = QUOTE(PATHTOF(UI\spare_barrel_ca.paa));
+        descriptionShort = CSTRING(SpareBarrelDescription);
+        picture = QPATHTOF(UI\spare_barrel_ca.paa);
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 25;
         };

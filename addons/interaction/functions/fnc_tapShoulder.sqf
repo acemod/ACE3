@@ -25,4 +25,4 @@ if (_unit == ACE_player) then {
 
 [_unit, "gesturePoint"] call EFUNC(common,doGesture);
 
-[QGVAR(tapShoulder), [_target, _shoulderNum], [_target]] call CBA_fnc_targetEvent;
+[QGVAR(tapShoulder), [_target, _shoulderNum, _unit], [_target]] call CBA_fnc_targetEvent;

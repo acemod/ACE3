@@ -48,7 +48,7 @@ Die Mod ist **modular aufgebaut**. Beinahe jede PBO kann entfernt werden, sodass
 - Tragen und Ziehen
 - Waffen und Fahrzeuge tragen die Namen ihrer Vorbilder aus der echten Welt
 - Ein Feuerleitsystem (FLS) für Hubschrauber und Panzer
-- Viele Funktionen werden in C/C++ Erweiterungen berechnet
+- Viele Funktionen werden in Rust Erweiterungen berechnet
 - Rückstrahlzonen- und Überdrucksimulation
 - Einwegwaffen
 - Realistische G-Kräfte

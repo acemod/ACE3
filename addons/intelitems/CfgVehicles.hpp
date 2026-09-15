@@ -19,11 +19,21 @@ class CfgVehicles {
         icon = "iconObject_2x3";
         mapSize = 0.3;
         simulation = "House"; // Needed because the objects don't have good collision physx
-        destrType = "DesturctNo";
+        destrType = "DestructNo";
         curatorInfoTypeEmpty = QGVAR(RscSetData);
         editorSubcategory = QUOTE(XADDON);
         GVAR(magazine) = "";
         class Attributes {
+            class GVAR(header) {
+                displayName = CSTRING(Header);
+                tooltip = CSTRING(Header_Tooltip);
+                property = QGVAR(header);
+                control = "Edit";
+                expression = QUOTE([ARR_2(FUNC(setObjectHeader),[ARR_2(_this,_value)])] call CBA_fnc_execNextFrame;);
+                defaultValue = "''";
+                validate = "STRING";
+                typeName = "STRING";
+            };
             class GVAR(data) {
                 displayName = CSTRING(Text);
                 property = QGVAR(data);
@@ -39,8 +49,8 @@ class CfgVehicles {
                 displayName = CSTRING(Pickup);
                 icon = "\a3\ui_f\data\igui\cfg\actions\take_ca.paa";
                 distance = 2;
-                condition = QUOTE(_this call FUNC(canPickup));
-                statement = QUOTE(_this call FUNC(pickup));
+                condition = QUOTE(call FUNC(canPickup));
+                statement = QUOTE(call FUNC(pickup));
             };
         };
     };
@@ -74,9 +84,10 @@ class CfgVehicles {
         scopeCurator = 2;
         GVAR(magazine) = QXGVAR(photo);
         class Attributes: Attributes {
+            class GVAR(header): GVAR(header) {};
             class GVAR(data): GVAR(data) {
                 displayName = CSTRING(Photo_Filename);
-                control = "Edit";
+                control = "edit";
             };
         };
     };

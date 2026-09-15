@@ -5,6 +5,10 @@ on:
     branches:
     - master
 
+permissions:
+  contents: write
+  pull-requests: read
+
 jobs:
   draft:
     runs-on: ubuntu-latest

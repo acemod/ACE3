@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2, kymckay
- * Transforms a number to an array of the correspondending digits.
+ * Transforms a number to an array of the corresponding digits.
  *
  * Arguments:
  * 0: Number to 'digitize' <NUMBER>

@@ -20,8 +20,8 @@ params ["_lastTarget", "_maxRange"];
 
 scopeName "main";
 
-private _viewASL = AGLtoASL positionCameraToWorld [0,0,0];
-private _viewDir = _viewASL vectorFromTo (AGLtoASL positionCameraToWorld [0,0,1]);
+private _viewASL = AGLToASL positionCameraToWorld [0,0,0];
+private _viewDir = _viewASL vectorFromTo (AGLToASL positionCameraToWorld [0,0,1]);
 
 // Attempt to lock onto current target if it is still valid
 if (!isNull _lastTarget) then {
@@ -65,7 +65,7 @@ if ((cursorTarget isKindOf "AllVehicles") && {(cursorObject distance ace_player)
 // Attempt to scan using multiple rayscasts - This is expensive (n^2) and care should be given to balance accuracy vs speed
 for "_xOffset" from -14 to 14 step 2 do {
     for "_yOffset" from -12 to 12 step 4 do {
-        private _testPosASL = AGLtoASL (positionCameraToWorld [_xOffset, _yOffset, _maxRange]);
+        private _testPosASL = AGLToASL (positionCameraToWorld [_xOffset, _yOffset, _maxRange]);
         private _intersectionsToCursorTarget = lineIntersectsSurfaces [_viewASL, _testPosASL, ace_player, vehicle ace_player, true, 1];
         // drawIcon3D ["\A3\ui_f\data\map\markers\military\dot_CA.paa", [[0,1,0,1], [1,0,0,1]] select (count _intersectionsToCursorTarget), (ASLtoAGL _testPosASL), 0.25, 0.25, 0, "", 0.5, 0.025, "TahomaB"];
         if (_intersectionsToCursorTarget isNotEqualTo []) then {

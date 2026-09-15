@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: mharis001
- * Updates the category buttons based currently avaiable treatments.
+ * Updates the category buttons based currently available treatments.
  *
  * Arguments:
  * 0: Medical Menu display <DISPLAY>
@@ -25,6 +25,19 @@ params ["_display"];
         GVAR(actions) findIf {_category == _x select 1 && {call (_x select 2)}} > -1
     };
     _ctrl ctrlEnable _enable;
+
+    if (!_enable
+    && {isNull findDisplay 312}
+    && {!(
+        EGVAR(medical_treatment,holsterRequired) == 0
+        || {!isNull objectParent ACE_player} // medic is in a vehicle, so weapon is considered holstered
+        || {!isNull objectParent GVAR(target)} // patient is in a vehicle, ^
+        || {(EGVAR(medical_treatment,holsterRequired) in [2,4]) && {_category == "examine"}} // if examine bypass is on
+        || {currentWeapon ACE_player isEqualTo ""} // weapon is holstered
+        || {(EGVAR(medical_treatment,holsterRequired) <= 2) && {weaponLowered ACE_player}} // if just lowered is allowed
+    )}) then {
+        _ctrl ctrlSetTooltip LLSTRING(needToHolster);
+    };
 
     private _selectedColor = [
         profileNamespace getVariable ["GUI_BCG_RGB_R", 0.13],

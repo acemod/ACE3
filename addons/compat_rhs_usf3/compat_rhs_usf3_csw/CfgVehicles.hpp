@@ -14,7 +14,7 @@ class CfgVehicles {
             };
         };
 
-        class ACE_CSW {
+        class ace_csw {
             enabled = 1;
             magazineLocation = "";
             proxyWeapon = QGVAR(rhs_mortar_81mm);
@@ -23,12 +23,13 @@ class CfgVehicles {
             desiredAmmo = 1;
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
+            allowFireOnLoad = 2;
         };
     };
 
     class StaticMGWeapon;
     class rhs_m2staticmg_base: StaticMGWeapon {
-        class ACE_CSW {
+        class ace_csw {
             enabled = 1;
             proxyWeapon = QGVAR(rhs_M2);
             magazineLocation = "_target selectionPosition 'magazine'";
@@ -41,7 +42,7 @@ class CfgVehicles {
     };
 
     class RHS_M2StaticMG_MiniTripod_base: rhs_m2staticmg_base {
-        class ACE_CSW: ACE_CSW {
+        class ace_csw: ace_csw {
             enabled = 1;
             disassembleTurret = QEGVAR(csw,m3TripodLow);
         };
@@ -49,7 +50,7 @@ class CfgVehicles {
 
     class StaticGrenadeLauncher;
     class RHS_MK19_TriPod_base: StaticGrenadeLauncher {
-        class ACE_CSW {
+        class ace_csw {
             enabled = 1;
             proxyWeapon = QGVAR(rhs_MK19);
             magazineLocation = "_target selectionPosition 'magazine'";
@@ -63,7 +64,7 @@ class CfgVehicles {
 
     class StaticATWeapon;
     class RHS_TOW_TriPod_base: StaticATWeapon {
-        class ACE_CSW {
+        class ace_csw {
             enabled = 1;
             proxyWeapon = QGVAR(rhs_weap_TOW_Launcher_static);
             magazineLocation = "_target selectionPosition 'tube'";

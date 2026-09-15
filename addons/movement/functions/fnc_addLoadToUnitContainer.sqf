@@ -9,7 +9,7 @@
  * 2: The Virtual Load <NUMBER>
  *
  * Return Value:
- * Success? <BOOLEAN>
+ * Success? <BOOL>
  *
  * Example:
  * [bob, box, 5] call ace_movement_fnc_addLoadToUnitContainer

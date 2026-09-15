@@ -126,7 +126,7 @@ if !(GVAR(uiMapVisible)) then {
                 private _grenadeVelocityMagnitude = vectorMagnitude velocity _x;
 
                 // Draw grenade (rotate icon to represent spinning)
-                drawIcon3D [ICON_GRENADE, [1,0,0,1], getPosVisual _x, 0.6, 0.6, if (_grenadeVelocityMagnitude > 0) then { time * 100 * _grenadeVelocityMagnitude } else { 0 }, "", 0, 0.05, "TahomaB"];
+                drawIcon3D [ICON_GRENADE, [1,0,0,1], ASLToAGL getPosASLVisual _x, 0.6, 0.6, if (_grenadeVelocityMagnitude > 0) then { time * 100 * _grenadeVelocityMagnitude } else { 0 }, "", 0, 0.05, "TahomaB"];
 
                 // Store grenade for next frame
                 _grenadesNew pushBack _x;

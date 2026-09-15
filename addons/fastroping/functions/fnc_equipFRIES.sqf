@@ -19,7 +19,7 @@
     params ["_vehicle"];
 
     if (!alive _vehicle) exitWith { WARNING_1("bad vehicle %1",_this); };
-    if (alive (_vehicle getVariable [QGVAR(FRIES),objNull])) exitWith { WARNING_1("already equiped %1",_this); };
+    if (alive (_vehicle getVariable [QGVAR(FRIES), objNull])) exitWith { WARNING_1("already equipped %1",_this); };
 
     private _config = configOf _vehicle;
     if !(isNumber (_config >> QGVAR(enabled))) then {
@@ -29,6 +29,12 @@
             private _fries = (getText (_config >> QGVAR(friesType))) createVehicle [0, 0, 0];
             _fries attachTo [_vehicle, getArray (_config >> QGVAR(friesAttachmentPoint))];
             _vehicle setVariable [QGVAR(FRIES), _fries, true];
+
+            // The Vanilla respawn module copies all variables from old object to new one
+            // Use that to move variable from wreck to new vehicle
+            _vehicle setVariable [QGVAR(addFRIESOnRespawn), true, true];
         };
     };
 }, _this] call CBA_fnc_execNextFrame;
+
+nil

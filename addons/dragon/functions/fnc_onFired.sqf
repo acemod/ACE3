@@ -15,6 +15,8 @@
  *
  * Public: No
  */
+#define DEFAULT_CORRECTION_DISTANCE 2
+
 params ["_firedEH", "", "", "_seekerParams", "_stateParams"];
 _firedEH params ["_shooter","_weapon","","","","","_projectile"];
 _stateParams params ["", "", "_attackProfileStateParams"];

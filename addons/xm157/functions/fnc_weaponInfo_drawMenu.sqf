@@ -63,7 +63,7 @@ if (isNil QGVAR(menu)) then {
 
 private _index = GVAR(data) getOrDefault ["menu_index", 0];
 (GVAR(menu) # _index) params ["_title", "_var", "_thing"];
-if ((!_needsUpdate) && {_thing isEqualType []}) exitWith {}; 
+if ((!_needsUpdate) && {_thing isEqualType []}) exitWith {};
 
 private _ctrlMenuText = _display displayCtrl IDC_SCREEN_MENU_TEXT;
 private _text = "";

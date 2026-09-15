@@ -14,5 +14,6 @@ class CfgVehicles {
         GVAR(turretFireProb) = 0.7;
         GVAR(engineFireProb) = 0.7;
         GVAR(detonationDuringFireProb) = 0.5;
+        EGVAR(overpressure,noReflection) = 1;
     };
 };

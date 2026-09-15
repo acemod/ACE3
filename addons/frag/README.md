@@ -1,4 +1,4 @@
 ace_frag
 ========
 
-Shrapnel system for explosives.
+Explosive fragmentation, round spalling, and explosive reflection

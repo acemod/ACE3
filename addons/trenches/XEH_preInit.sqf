@@ -8,6 +8,6 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
-GVAR(entrenchingTools) = call (uiNamespace getVariable QGVAR(entrenchingTools));
+GVAR(entrenchingTools) = keys (uiNamespace getVariable QGVAR(entrenchingTools));
 
 ADDON = true;

@@ -10,7 +10,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if (ACE_player != (vehicle ACE_player)) exitWith {false};
+    if (!isNull objectParent ACE_player) exitWith {false};
 
     // Statement
     [ACE_player] call FUNC(climb);

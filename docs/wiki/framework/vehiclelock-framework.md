@@ -31,8 +31,8 @@ Sync the module with vehicles and players. Custom keys will be handed to players
 
 `ace_vehiclelock_fnc_addKeyForVehicle`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Unit | Object | Required |
 | 1  | Vehicle | Object | Required |
 | 2  | Use Custom Key | Boolean | Optional (default: `false`, `false` for side key, `true` for custom key) |

@@ -20,10 +20,10 @@ if (ctrlVisible 7000) then {
     true call FUNC(show_main_page);
 
     if (_this == 1) then {
-        ctrlSetText [320, Str(parseNumber(ctrlText 7012))];
-        ctrlSetText [140040, Str(parseNumber(ctrlText 7012))];
-        ctrlSetText [340, Str(parseNumber(ctrlText 7013))];
-        ctrlSetText [140060, Str(parseNumber(ctrlText 7013))];
+        ctrlSetText [320, str(parseNumber(ctrlText 7012))];
+        ctrlSetText [140040, str(parseNumber(ctrlText 7012))];
+        ctrlSetText [340, str(parseNumber(ctrlText 7013))];
+        ctrlSetText [140060, str(parseNumber(ctrlText 7013))];
         [] call FUNC(calculate_target_solution);
     };
 } else {

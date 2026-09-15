@@ -26,10 +26,10 @@ class RscTitles {
                 colorBackground[] = { 1, 1, 1, 1 };
                 shadow = 1;
 
-                x = "(0.5 - 0.4 / 2) * safezoneW + safezoneX";
-                y = "0 * safezoneH + safezoneY";
-                w = "0.4 * safezoneW";
-                h = "0.3 * safezoneH";
+                x = "(0.5 - 0.4 / 2) * safeZoneW + safeZoneX";
+                y = "0 * safeZoneH + safeZoneY";
+                w = "0.4 * safeZoneW";
+                h = "0.3 * safeZoneH";
             };
             class ACE_Scopes_Zeroing_Vertical: RscText {
                 idc = 12;
@@ -43,10 +43,10 @@ class RscTitles {
                 colorBackground[] = { 1, 0, 0, 0 };
                 shadow = 0;
 
-                x = "(0.5 - 0.4 / 2 + 0.45*0.4) * safezoneW + safezoneX";
-                y = "(0 + 0.19*0.3) * safezoneH + safezoneY";
-                w = "0.04 * safezoneW";
-                h = "0.025 * safezoneH";
+                x = "(0.5 - 0.4 / 2 + 0.45*0.4) * safeZoneW + safeZoneX";
+                y = "(0 + 0.19*0.3) * safeZoneH + safeZoneY";
+                w = "0.04 * safeZoneW";
+                h = "0.025 * safeZoneH";
             };
             class ACE_Scopes_Zeroing_Horizontal: RscText {
                 idc = 13;
@@ -60,10 +60,10 @@ class RscTitles {
                 colorBackground[] = { 1, 0, 0, 0 };
                 shadow = 0;
 
-                x = "(0.5 - 0.4 / 2 + 0.6*0.4) * safezoneW + safezoneX";
-                y = "(0 + 0.47*0.3) * safezoneH + safezoneY";
-                w = "0.019 * safezoneW";
-                h = "0.025 * safezoneH";
+                x = "(0.5 - 0.4 / 2 + 0.6*0.4) * safeZoneW + safeZoneX";
+                y = "(0 + 0.47*0.3) * safeZoneH + safeZoneY";
+                w = "0.019 * safeZoneW";
+                h = "0.025 * safeZoneH";
             };
         };
     };

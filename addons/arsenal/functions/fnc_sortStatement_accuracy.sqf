@@ -14,20 +14,20 @@
 
 params ["_config"];
 
-private _dispersion = [];
+private _dispersion = 1e40;
 
 {
-    if (getNumber (_config >> _x >> "showToPlayer") != 0) then {
-        private _n = log getNumber (_config >> _x >> "dispersion");
+    private _weaponConfig = if (_x == "this") then {
+        _config
+    } else {
+        _config >> _x
+    };
 
-        if (!finite _n) then {
-            _n = 0;
-        };
-
-        _dispersion pushBackUnique _n;
+    if (getNumber (_weaponConfig >> "showToPlayer") != 0) then {
+        _dispersion = _dispersion min (getNumber (_weaponConfig >> "dispersion"));
     };
 } forEach (getArray (_config >> "modes"));
 
-_dispersion sort true;
+if (!finite _dispersion || {_dispersion <= 0}) exitWith {10000000};
 
-10000000 - round ((_dispersion param [0, 0]) * 100000)
+10000000 - round ((log _dispersion) * 100000)

@@ -22,7 +22,7 @@ TRACE_2("deployConfirm",_unit,_object);
 private _side = side group _unit;
 private _typeOf = typeOf _object;
 private _cost = [_side, _typeOf] call FUNC(getCost);
-[_side, -_cost] call FUNC(updateBudget);
+private _tokensUsed = [_side, -_cost] call FUNC(updateBudget);
 
 private _posASL = getPosASL _object;
 private _vectorUp = vectorUp _object;
@@ -49,7 +49,7 @@ private _perframeCheck = {
 
 [
     _totalTime,
-    [_unit, _side, _typeOf, _posASL, _vectorDir, _vectorUp, _cost],
+    [_unit, _side, _typeOf, _posASL, _vectorDir, _vectorUp, _cost, _tokensUsed],
     QGVAR(deployFinished),
     QGVAR(deployCanceled),
     LLSTRING(progressBarTitle),

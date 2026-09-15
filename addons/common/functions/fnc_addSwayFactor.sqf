@@ -9,7 +9,7 @@
  * 2: Factor ID, unique to type <STRING>
  *
  * Return Value:
- * Factor added <BOOLEAN>
+ * Factor added <BOOL>
  *
  * Example:
  * ["baseline", {1}, "ace_common"] call ace_common_fnc_addSwayFactor

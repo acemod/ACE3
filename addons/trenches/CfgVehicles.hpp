@@ -106,4 +106,44 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_EntrenchingTool,50);
         };
     };
+
+    class Wheeled_APC_F;
+    class APC_Wheeled_02_base_F: Wheeled_APC_F {
+        class EGVAR(interaction,anims);
+    };
+    class APC_Wheeled_02_base_v2_F: APC_Wheeled_02_base_F {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class showTools {
+                phase = 0;
+                positions[] = {{-1.108, -1.47, -0.769}};
+                items[] = {"ACE_EntrenchingTool"};
+                name = CSTRING(EntrenchingToolName);
+                text = CSTRING(EntrenchingToolName);
+            };
+        };
+    };
+    class APC_Wheeled_03_base_F: Wheeled_APC_F {
+        class EGVAR(interaction,anims) {
+            class showTools {
+                phase = 0;
+                positions[] = {{-0.9, -3, -0.5}};
+                items[] = {"ACE_EntrenchingTool"};
+                name = CSTRING(EntrenchingToolName);
+                text = CSTRING(EntrenchingToolName);
+            };
+        };
+    };
+
+    class Tank_F;
+    class LT_01_base_F: Tank_F {
+        class EGVAR(interaction,anims) {
+            class showTools {
+                phase = 0;
+                positions[] = {{0.6, 0, -0.3}};
+                items[] = {"ACE_EntrenchingTool"};
+                name = CSTRING(EntrenchingToolName);
+                text = CSTRING(EntrenchingToolName);
+            };
+        };
+    };
 };

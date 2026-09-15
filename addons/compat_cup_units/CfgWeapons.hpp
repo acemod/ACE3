@@ -67,6 +67,7 @@ class CfgWeapons {
     HEARING(CUP_H_PMC_Cap_EP_Grey);
     HEARING(CUP_H_PMC_Cap_EP_Tan);
     HEARING(CUP_H_PMC_EP_Headset);
+    HEARING(CUP_H_RUS_K6_3);
     HEARING(CUP_H_USArmy_HelmetMICH_earpro);
     HEARING(CUP_H_USArmy_HelmetMICH_earpro_DCU);
     HEARING(CUP_H_USArmy_HelmetMICH_earpro_ess);
@@ -84,4 +85,82 @@ class CfgWeapons {
     HEARING(CUP_H_USMC_MICH2000_DEF_ESS_DES);
     HEARING(CUP_H_USMC_MICH2000_DEF_ESS_WDL);
     HEARING(CUP_H_USMC_MICH2000_DEF_WDL);
+
+    class CUP_Vest_Camo_Base;
+    class CUP_V_O_SLA_Flak_Vest01: CUP_Vest_Camo_Base {
+         EGVAR(trenches,entrenchingTool) = 1;
+    };
+    class CUP_V_O_SLA_Carrier_Belt: CUP_Vest_Camo_Base {
+         EGVAR(trenches,entrenchingTool) = 1;
+    };
+
+    //Fire Protection
+    //Pilot and Tanker Coveralls
+    class CUP_U_B_CZ_Pilot_WDL: ItemCore {
+        ace_fire_protection = 0.5;
+    };
+    class CUP_U_B_GER_Fleck_Overalls_Pilot: ItemCore {
+        ace_fire_protection = 0.5;
+    };
+    class CUP_U_B_GER_Fleck_Overalls_Tank: ItemCore {
+        ace_fire_protection = 0.5;
+    };
+    class CUP_U_B_GER_Overalls_Tank: ItemCore {
+        ace_fire_protection = 0.5;
+    };
+    class CUP_U_B_USArmy_PilotOverall: ItemCore {
+        ace_fire_protection = 0.5;
+    };
+    class CUP_U_B_USMC_PilotOverall: ItemCore {
+        ace_fire_protection = 0.5;
+    };
+    class CUP_U_I_RACS_PilotOverall: ItemCore {
+        ace_fire_protection = 0.5;
+    };
+    class CUP_U_O_SLA_Overalls_Pilot: ItemCore {
+        ace_fire_protection = 0.5;
+    };
+    class CUP_U_O_SLA_Overalls_Tank: ItemCore {
+        ace_fire_protection = 0.5;
+    };
+
+    //USMC FROG https://en.wikipedia.org/wiki/Flame_Resistant_Organizational_Gear
+    class CUP_U_B_USMC_FROG1_DMARPAT: ItemCore {
+        ace_fire_protection = 0.2;
+    };
+    class CUP_U_B_USMC_FROG1_WMARPAT: ItemCore {
+        ace_fire_protection = 0.2;
+    };
+    class CUP_U_B_USMC_FROG2_DMARPAT: ItemCore {
+        ace_fire_protection = 0.2;
+    };
+    class CUP_U_B_USMC_FROG2_WMARPAT: ItemCore {
+        ace_fire_protection = 0.2;
+    };
+    class CUP_U_B_USMC_FROG3_DMARPAT: ItemCore {
+        ace_fire_protection = 0.2;
+    };
+    class CUP_U_B_USMC_FROG3_WMARPAT: ItemCore {
+        ace_fire_protection = 0.2;
+    };
+    class CUP_U_B_USMC_FROG4_DMARPAT: ItemCore {
+        ace_fire_protection = 0.2;
+    };
+    class CUP_U_B_USMC_FROG4_WMARPAT: ItemCore {
+        ace_fire_protection = 0.2;
+    };
+
+    //Civilian Clothes
+    class CUP_U_C_Fireman_01: ItemCore {
+        ace_fire_protection = 0.7;
+    };
+    class CUP_U_C_AirMedic_orange_01: ItemCore {
+        ace_fire_protection = 0.5;
+    };
+    class CUP_U_C_AirMedic_red_01: ItemCore {
+        ace_fire_protection = 0.5;
+    };
+    class CUP_U_C_AirMedic_yellow_01: ItemCore {
+        ace_fire_protection = 0.5;
+    };
 };

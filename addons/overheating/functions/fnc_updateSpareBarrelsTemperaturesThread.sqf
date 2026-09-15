@@ -21,7 +21,7 @@ TRACE_1("updateSpareBarrelsTemperaturesThread1",GVAR(storedSpareBarrels));
 
     // Calculate cooling
     private _finalTemp = [_initialTemp, _barrelMass, CBA_missionTime - _initialTime, 0] call FUNC(calculateCooling); //the zero is to indicate an open bolt gun. Barrel is outside of a gun here, so always open.
-    TRACE_4("updateSpareBarrelsTemperaturesThread2",_barrelMagazineID,_initialTemp,_finalTemp,_barrelMass);
+    TRACE_4("updateSpareBarrelsTemperaturesThread2",_x,_initialTemp,_finalTemp,_barrelMass);
     if (_finalTemp <= (ambientTemperature select 0)) then {
         // The barrel is cool enough to finish calculating. Remove it from the hash
         GVAR(storedSpareBarrels) deleteAt _x;

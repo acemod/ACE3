@@ -23,7 +23,7 @@ params ["_player"];
 
 // Spawn a progress bar
 [
-    5.0,
+    5,
     [_player],
     {
         params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];
@@ -32,7 +32,7 @@ params ["_player"];
         [QGVAR(sendSpareBarrelTemperatureHint), [_player, _player]] call CBA_fnc_serverEvent;
     },
     {},
-    (localize LSTRING(CheckingSpareBarrelsTemperatures)),
+    LLSTRING(CheckingSpareBarrelsTemperatures),
     {true},
     ["isNotInside", "isNotSitting", "isNotSwimming"]
 ] call EFUNC(common,progressBar);

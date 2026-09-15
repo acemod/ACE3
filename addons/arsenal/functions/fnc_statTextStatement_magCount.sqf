@@ -4,7 +4,7 @@
  * Text statement for the magazine capacity stat.
  *
  * Arguments:
- * 0: Stats Array <ARRAY> (not used)
+ * 0: Stats array (not used) <ARRAY>
  * 1: Item config path <CONFIG>
  *
  * Return Value:

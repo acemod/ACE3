@@ -34,7 +34,7 @@ private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
     //Only delete the hook first so the rope falls down.
     //Note: ropeDetach was used here before, but the command seems a bit broken.
     deleteVehicle _hook;
-    [{{deleteVehicle _x} forEach _this}, [_ropeTop, _ropeBottom, _dummy], 60] call CBA_fnc_waitAndExecute;
+    [{deleteVehicle _this}, [_ropeTop, _ropeBottom, _dummy], 60] call CBA_fnc_waitAndExecute;
 } forEach _deployedRopes;
 
 _vehicle setVariable [QGVAR(deployedRopes), [], true];

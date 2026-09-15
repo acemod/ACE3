@@ -4,7 +4,7 @@
  * Initializes the Interaction module.
  *
  * Arguments:
- * 0: Logic <NUMBER>
+ * 0: Logic <OBJECT>
  * 1: Units <ARRAY>
  * 2: Activation State <BOOL>
  *
@@ -19,9 +19,9 @@
 
 params ["_logic", "", "_activated"];
 
-if !(_activated) exitWith {};
+if (!_activated) exitWith {};
 
-[_logic, QGVAR(EnableTeamManagement), "EnableTeamManagement"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(enableTeamManagement), "EnableTeamManagement"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(disableNegativeRating), "DisableNegativeRating"] call EFUNC(common,readSettingFromModule);
 
 INFO("Interaction Module Initialized.");

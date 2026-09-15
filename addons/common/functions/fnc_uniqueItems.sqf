@@ -5,8 +5,8 @@
  *
  * Arguments:
  * 0: Target <OBJECT>
- * 1: Include magazines <NUMBER>
- *   0: No (default)
+ * 1: Include magazines <NUMBER> (default: 0)
+ *   0: No
  *   1: Yes
  *   2: Only magazines
  *

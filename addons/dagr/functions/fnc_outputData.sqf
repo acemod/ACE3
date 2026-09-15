@@ -17,7 +17,7 @@
 
 135471 cutRsc ["DAGR_DISPLAY", "plain down"];
 
-#define __display (uiNameSpace getVariable "DAGR_DISPLAY")
+#define __display (uiNamespace getVariable "DAGR_DISPLAY")
 
 #define __gridControl (__display displayCtrl 266851)
 #define __speedControl (__display displayCtrl 266852)
@@ -47,7 +47,7 @@ GVAR(outputPFH) = [{
     private _speed = speed (vehicle ACE_player);
     _speed = floor (_speed * 10) / 10;
     _speed = abs(_speed);
-    _dagrspeed = str _speed + "kph";
+    private _dagrspeed = str _speed + "kph";
 
     // Elevation
     private _elevation = getPosASL ACE_player;
@@ -62,7 +62,7 @@ GVAR(outputPFH) = [{
     };
 
     // Time
-    private _dagrTime = [daytime, "HH:MM"] call bis_fnc_timeToString;
+    private _dagrTime = [dayTime, "HH:MM"] call bis_fnc_timeToString;
 
     // Output
     __gridControl ctrlSetText _dagrGrid;

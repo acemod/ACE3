@@ -10,7 +10,7 @@
  * 3: Treatment <STRING>
  * 4: Item User <OBJECT>
  * 5: Used Item <STRING>
- * 6: Create litter <BOOLEAN>
+ * 6: Create litter <BOOL>
  * 7: Bandage effectiveness coefficient <NUMBER> (default: 1)
  *
  * Return Value:

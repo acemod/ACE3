@@ -1,4 +1,5 @@
 PREP(applyAnimAfterRagdoll);
+PREP(checkForMedicalActivity);
 PREP(damageBodyPart);
 PREP(disableThirdParty);
 PREP(getHitpointArmor);

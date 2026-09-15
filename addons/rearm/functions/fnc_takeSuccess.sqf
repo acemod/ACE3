@@ -36,13 +36,13 @@ if (_vehicle == _unit) exitWith {
     [_unit, _magazineClass, _rounds] call EFUNC(csw,reload_handleReturnAmmo);
 };
 
-[_unit, "forceWalk", "ACE_rearm", true] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", "ACE_rearm", true] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 private _dummy = [_unit, _magazineClass] call FUNC(createDummy);
 [_dummy, _unit] call FUNC(pickUpAmmo);
 
 private _actionID = _unit addAction [
-    format ["<t color='#FF0000'>%1</t>", localize ELSTRING(dragging,Drop)],
+    format ["<t color='#FF0000'>%1</t>", LELSTRING(common,Drop)],
     '(_this select 0) call FUNC(dropAmmo)',
     nil,
     20,

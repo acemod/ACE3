@@ -26,6 +26,6 @@ private _chance = [0.5, 0.8] select (weapons _unit isNotEqualTo []);
 
 {
     if (weapons _x isEqualTo [] && {random 1 < _chance}) then {
-        [QGVAR(getDown), [_x], [_x]] call CBA_fnc_targetEvent;
+        [QGVAR(getDown), _x, _x] call CBA_fnc_targetEvent;
     };
 } forEach (_target nearEntities ["Civilian", SEND_RADIUS]);

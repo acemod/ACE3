@@ -1,4 +1,3 @@
-
 // Completely disable BI's camshake on fire.
 #define ACE_CAMSHAKEFIRE_BASE 0
 #define ACE_CAMSHAKEFIRE_LESS 0

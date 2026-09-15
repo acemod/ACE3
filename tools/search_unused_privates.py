@@ -3,8 +3,6 @@
 import fnmatch
 import os
 import re
-import ntpath
-import sys
 import argparse
 
 def get_private_declare(content):
@@ -19,7 +17,7 @@ def get_private_declare(content):
     srch = re.compile('(?<![_a-zA-Z0-9])(_[a-zA-Z]*?)[ ,\}\]\)";]')
     priv_split = srch.findall(priv_dec_str)
     priv_split = sorted(set(priv_split))
-    priv_declared += priv_split;
+    priv_declared += priv_split
 
     srch = re.compile('params \[.*\]|PARAMS_[0-9].*|EXPLODE_[0-9]_PVT.*|DEFAULT_PARAM.*|KEY_PARAM.*|IGNORE_PRIVATE_WARNING.*')
     priv_srch_declared = srch.findall(content)
@@ -31,19 +29,13 @@ def get_private_declare(content):
     priv_split = srch.findall(priv_dec_str)
     priv_split = sorted(set(priv_split))
 
-    priv_declared += priv_split;
+    priv_declared += priv_split
 
 
     return priv_declared
 
 def check_privates(filepath):
     bad_count_file = 0
-    def pushClosing(t):
-        closingStack.append(closing.expr)
-        closing << Literal( closingFor[t[0]] )
-
-    def popClosing():
-        closing << closingStack.pop()
 
     with open(filepath, 'r') as file:
         content = file.read()
@@ -81,7 +73,7 @@ def check_privates(filepath):
         if len(unused) > 0:
             print (filepath)
 
-            private_output = 'private[';
+            private_output = 'private['
             first = True
             for bad_priv in unused:
                 if first:
@@ -90,7 +82,7 @@ def check_privates(filepath):
                 else:
                     private_output = private_output + '", "' + bad_priv
 
-            private_output = private_output + '"];';
+            private_output = private_output + '"];'
             print (private_output)
 
             for bad_priv in unused:
@@ -115,8 +107,8 @@ def main():
     args = parser.parse_args()
 
     for root, dirnames, filenames in os.walk('../addons' + '/' + args.module):
-      for filename in fnmatch.filter(filenames, '*.sqf'):
-        sqf_list.append(os.path.join(root, filename))
+        for filename in fnmatch.filter(filenames, '*.sqf'):
+            sqf_list.append(os.path.join(root, filename))
 
     for filename in sqf_list:
         bad_count = bad_count + check_privates(filename)

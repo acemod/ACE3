@@ -34,7 +34,7 @@ params [
 
 _distances params [["_min", 1], ["_max", 10], ["_step", 1]];
 
-if (isNil "_center") exitwith {};
+if (isNil "_center") exitWith {};
 
 _max = _max max _min;
 private _nSteps = 0 max ceil ((_max - _min) / _step);

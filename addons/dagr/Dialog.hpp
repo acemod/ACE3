@@ -73,7 +73,6 @@
 #define LB_MULTI 0x20
 #define FontM "RobotoCondensed"
 
-class RscText;
 
 class DAGR_Button {
     idc = -1;

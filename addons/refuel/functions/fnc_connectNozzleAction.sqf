@@ -24,9 +24,6 @@ params [["_unit", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_startin
 
 private _bestPosASL = [];
 private _bestPosDistance = 1e38;
-private _viewPos = _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0,0,1])) vectorMultiply 3);
-private _modelVector = _startingPosASL vectorFromTo (_sink modelToWorldWorld [0,0,0]);
-private _modelVectorLow = _startingPosASL vectorFromTo (_sink modelToWorldWorld [0,0,-1]);
 
 {
     private _endPosASL = _x;
@@ -62,7 +59,7 @@ if (_bestPosASL isEqualTo []) exitWith {
 //Move it out slightly, for visibility sake (better to look a little funny than be embedded//sunk in the hull and be useless)
 _bestPosASL = _bestPosASL vectorAdd ((_bestPosASL vectorFromTo _startingPosASL) vectorMultiply 0.05);
 
-private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
+private _attachPosModel = _sink worldToModel (ASLToAGL _bestPosASL);
 
 [
     GVAR(progressDuration),

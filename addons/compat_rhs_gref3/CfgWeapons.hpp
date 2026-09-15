@@ -116,10 +116,7 @@ class CfgWeapons {
         EGVAR(overheating,jamTypesAllowed)[] = {"Fire", "Dud"};
     };
 
-    class Launcher;
-    class Launcher_Base_F: Launcher {
-        class WeaponSlotsInfo;
-    };
+    class Launcher_Base_F;
 
     class rhs_weap_panzerfaust60: Launcher_Base_F {
         EGVAR(overpressure,range) = 6;

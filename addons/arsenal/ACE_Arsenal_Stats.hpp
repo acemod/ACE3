@@ -24,29 +24,29 @@ class GVAR(stats) {
         priority = 1.5;
         displayName = "$STR_a3_rscdisplayarsenal_stat_weight";
         showText = 1;
-        textStatement = QUOTE([ARR_2(_this select 0,_this select 1)] call FUNC(statTextStatement_mass));
+        textStatement = QUOTE(call FUNC(statTextStatement_mass));
         tabs[] = {{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14}, {0,1,2,3,4,5,6,7}};
     };
     class ACE_rateOfFire: statBase {
         scope = 2;
         priority = 5;
-        stats[] = {"reloadTime"};
         displayName = "$STR_a3_rscdisplayarsenal_stat_rof";
         showBar = 1;
         showText = 1;
-        barStatement = QUOTE([ARR_3((_this select 0) select 0,_this select 1,[ARR_2([ARR_2(-1.4,0.31)],[ARR_2(1,0.01)])])] call FUNC(statBarStatement_rateOfFIre));
-        textStatement = QUOTE([ARR_3((_this select 0) select 0,_this select 1,[ARR_2([ARR_2(-1.4,0.31)],false)])] call FUNC(statTextStatement_rateOfFire));
+        barStatement = QUOTE([ARR_2(_this select 1,[ARR_2([ARR_2(-1.4,0.31)],[ARR_2(1,0.01)])])] call FUNC(statBarStatement_rateOfFire));
+        textStatement = QUOTE(call FUNC(statTextStatement_rateOfFire));
+        condition = QUOTE(call FUNC(statCondition_isWeapon));
         tabs[] = {{0,1}, {}};
     };
     class ACE_accuracy: statBase {
         scope = 2;
         priority = 4;
-        stats[] = {"dispersion"};
         displayName = "$STR_a3_rscdisplayarsenal_stat_dispersion";
         showBar = 1;
         showText = 1;
-        barStatement = QUOTE([ARR_3((_this select 0) select 0,_this select 1,[ARR_3([ARR_2(-4,-1.7)],[ARR_2(1,0.01)],true)])] call FUNC(statBarStatement_accuracy));
-        textStatement = QUOTE([ARR_3((_this select 0) select 0,_this select 1,[ARR_2([ARR_2(-4,-1.7)],false)])] call FUNC(statTextStatement_accuracy));
+        barStatement = QUOTE([ARR_2(_this select 1,[ARR_2([ARR_2(-4,-1.7)],[ARR_2(1,0.01)])])] call FUNC(statBarStatement_accuracy));
+        textStatement = QUOTE(call FUNC(statTextStatement_accuracy));
+        condition = QUOTE(call FUNC(statCondition_isWeapon));
         tabs[] = {{0,1}, {}};
     };
     class ACE_maxZeroing: statBase {
@@ -56,6 +56,7 @@ class GVAR(stats) {
         displayName = "$STR_a3_rscdisplayarsenal_stat_range";
         showBar = 1;
         barStatement = QUOTE([ARR_3((_this select 0) select 0,_this select 1,[ARR_3([ARR_2(0,2500)],[ARR_2(0.01,1)],false)])] call FUNC(statBarStatement_default));
+        condition = QUOTE(call FUNC(statCondition_isWeapon));
         tabs[] = {{0,1,2}, {}};
     };
     class ACE_impact: statBase {
@@ -65,6 +66,7 @@ class GVAR(stats) {
         displayName = "$STR_a3_rscdisplayarsenal_stat_impact";
         showBar = 1;
         barStatement = QUOTE([ARR_3(_this select 0,_this select 1,[ARR_2([ARR_2(0,3.2)],[ARR_2(-1,1100)])])] call FUNC(statBarStatement_impact));
+        condition = QUOTE(call FUNC(statCondition_isWeapon));
         tabs[] = {{0,1,2}, {}};
     };
     class ACE_scopeMagnification: statBase {
@@ -131,7 +133,6 @@ class GVAR(stats) {
     class ACE_smokeChemTTL: statBase {
         scope =  2;
         priority = 3;
-        stats[] = {"ammo"};
         displayName = CSTRING(statTTL);
         showText = 1;
         textStatement = QUOTE(call FUNC(statTextStatement_smokeChemTTL));

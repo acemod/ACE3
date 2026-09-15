@@ -14,7 +14,7 @@
  *
  * Public: No
  */
- 
+
 params ["_vehicle"];
 private _turret = [0];
 TRACE_2("droneGetTurretTargetPos",_vehicle,_turret);

@@ -1,45 +1,41 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- * Handles when a unit gets in to a vehicle.  Release escorted captive when entering a vehicle
+ * Handles when a unit gets in to a vehicle. Releases escorted captive when entering a vehicle.
  *
  * Arguments:
- * 0: _vehicle <OBJECT>
- * 1: dunno <OBJECT>
- * 2: _unit <OBJECT>
+ * 0: Vehicle (not used) <OBJECT>
+ * 1: Role (not used) <STRING>
+ * 2: Unit <OBJECT>
+ * 3: Turret <ARRAY>
  *
  * Return Value:
- * The return value <BOOL>
+ * None
  *
  * Example:
- * [car2, x, player] call ACE_captives_fnc_handleGetIn
+ * [cursorObject, "driver", player, []] call ace_captives_fnc_handleGetIn
  *
  * Public: No
  */
 
-params ["_vehicle", "","_unit"];
-TRACE_2("params",_vehicle,_unit);
+params ["", "", "_unit", "_turretPath"];
+TRACE_1("params",_this);
 
-if (local _unit) then {
-    if (_unit getVariable [QGVAR(isEscorting), false]) then {
-        _unit setVariable [QGVAR(isEscorting), false, true];
-    };
+if (!local _unit) exitWith {};
 
-    if (_unit getVariable [QGVAR(isSurrendering), false]) then {
-        [_unit, false] call FUNC(setSurrendered);
-    };
-
-    if (_unit getVariable [QGVAR(isHandcuffed), false]) then {
-        //Need to force animation for FFV turrets
-        private _turretPath = [];
-        {
-            _x params ["_xUnit", "", "", "_xTurretPath"];
-            if (_unit == _xUnit) exitWith {_turretPath = _xTurretPath};
-        } forEach (fullCrew (vehicle _unit));
-        if (_turretPath isNotEqualTo []) then {
-            TRACE_1("Setting FFV Handcuffed Animation",_turretPath);
-            [_unit, "ACE_HandcuffedFFV", 2] call EFUNC(common,doAnimation);
-            [_unit, "ACE_HandcuffedFFV", 1] call EFUNC(common,doAnimation);
-        };
-    };
+if (_unit getVariable [QGVAR(isEscorting), false]) then {
+    _unit setVariable [QGVAR(isEscorting), false, true];
 };
+
+if (_unit getVariable [QGVAR(isSurrendering), false]) then {
+    [_unit, false] call FUNC(setSurrendered);
+};
+
+if !(_unit getVariable [QGVAR(isHandcuffed), false]) exitWith {};
+
+// Need to force animation for FFV turrets
+if (_turretPath isEqualTo []) exitWith {};
+
+TRACE_1("Setting FFV Handcuffed Animation",_turretPath);
+[_unit, "ACE_HandcuffedFFV", 2] call EFUNC(common,doAnimation);
+[_unit, "ACE_HandcuffedFFV", 1] call EFUNC(common,doAnimation);

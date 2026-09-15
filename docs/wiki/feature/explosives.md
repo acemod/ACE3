@@ -24,6 +24,9 @@ Offers different trigger types, like clackers and dead man switches.
 ### 1.3 Attach explosives to vehicles
 Enables attaching explosives to vehicles.
 
+### 1.4 Explosive with Scripted Damage
+APERS/VS-50 `(Toe-Popper)` variant will only do damage to a unit's legs (if ace medical is enabled).
+
 ## 2. Usage
 
 ### 2.1 Placing explosives

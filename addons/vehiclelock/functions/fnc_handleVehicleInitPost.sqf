@@ -20,6 +20,7 @@ params ["_vehicle"];
 TRACE_1("handleVehicleInitPost",_vehicle);
 
 if (alive _vehicle) then {
+    if (unitIsUAV _vehicle) exitWith {}; // ignore UAVs
     //set lock state (eliminates the ambigious 1-"Default" and 3-"Locked for Player" states)
     private _lock = switch (GVAR(VehicleStartingLockState)) do {
         case 0: {locked _vehicle in [2, 3]};

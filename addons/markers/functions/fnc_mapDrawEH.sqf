@@ -4,7 +4,7 @@
  * Draws the current temp marker.  Allows rotation and scale.
  *
  * Arguments:
- * 0: TheMap <Control>
+ * 0: TheMap <CONTROL>
  *
  * Return Value:
  * None

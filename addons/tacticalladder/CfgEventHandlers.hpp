@@ -20,13 +20,13 @@ class Extended_PostInit_EventHandlers {
 class Extended_Killed_EventHandlers {
     class CAManBase {
         class ADDON {
-            killed = QUOTE(_this call FUNC(handleKilled));
+            killed = QUOTE(call FUNC(handleKilled));
         };
     };
 };
 
 class Extended_DisplayLoad_EventHandlers {
     class RscDisplayMission {
-        ADDON = QUOTE(_this call COMPILE_SCRIPT(XEH_missionDisplayLoad));
+        ADDON = QUOTE(call COMPILE_SCRIPT(XEH_missionDisplayLoad));
     };
 };

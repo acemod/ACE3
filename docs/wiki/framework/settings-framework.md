@@ -21,7 +21,6 @@ ACE3 contains an extensive settings framework that allows you to tweak the modif
 
 Part of this settings framework are global settings and client settings. Both use the same underlaying framework, with the difference that client settings can be adjusted by clients, where global settings can not.
 
-
 ## 1. How do they work
 
 Settings are entries in the config that get translated to `missionNamespace` global variables. An example settings entry looks like this:
@@ -52,7 +51,6 @@ Settings are defined from the mod's config but can be adjusted through the follo
 - Mission Parameters
 - Mission modules
 
-
 ## 2. Load order
 
 The load order for the settings are:
@@ -64,7 +62,6 @@ The load order for the settings are:
 5. Placed Mission Modules
 
 What this means is that at any the 4 points after the Mod Config it is possible to insert your adjusted settings and force those (optionally). This is a powerful tool for server admins; it will ensure that everyone is using uniform settings across the board on their server. And it provides mission makers the ability to easily set settings for their mission, without creating a large dependency on ACE3; you do not have to place down mission modules.
-
 
 ## 3. How do I use them?
 
@@ -115,13 +112,11 @@ class ACE_Settings {
 };
 ```
 
-
 ### 3.2 Loading up the server config
 
 As stated before, the server config gets loaded through the optional `ace_server.pbo`. This PBO is only required (and should only be used) on the server - clients do not need to have this! It is for this reason we have not signed this PBO.
 
 Load the `ace_server.pbo` like any other addon on your server. It is advised to create an `@aceServer` mod folder with an `addons` sub folder where you would paste the `ace_server.pbo` and load that through `-serverMod=@aceServer`.
-
 
 ### 3.3 Changing ACE_settings dynamically with Mission Parameters
 
@@ -129,7 +124,8 @@ It is possible to change `ACE3 settings` via [Mission Parameters](https://commun
 This can allow a single mission to be played with different realism settings.
 They are read after all other configs but before modules. Mission Parameters are forced so they will override any module setting.
 
-#### Basic Setup:
+#### Basic Setup
+
 1. Add a Mission Parameter with the same name as an ace_setting
 2. Add the `ACE_setting = 1;` flag
 3. Add `values[]` and optionally `texts[]` to match the setting
@@ -139,7 +135,8 @@ They are read after all other configs but before modules. Mission Parameters are
     <p>For now only <code>BOOL</code> or <code>SCALAR</code> settings are supported.</p>
 </div>
 
-#### Example **description.ext**:
+#### Example **description.ext**
+
 ```cpp
 class Params {
     class ace_medical_level { //This needs to match an ace_setting, this one is a "SCALAR"(number)
@@ -149,7 +146,7 @@ class Params {
         texts[] =  {"Basic", "Advanced"}; //Text names to show for values (Basic will set level to 1, Advanced will set level to 2)
         default = 2; //Default value used - Value should be in the values[] list
     };
-    class ace_repair_addSpareParts { //This ia a "BOOL"
+    class ace_repair_addSpareParts { //This is a "BOOL"
         title = "$STR_ACE_Repair_addSpareParts_name"; //You can use ACE's stringtables
         ACE_setting = 1;
         values[] = {0, 1}; //setting is a BOOL, but values still need to be numbers, so 0 is false, 1 is true

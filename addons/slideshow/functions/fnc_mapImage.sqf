@@ -12,7 +12,7 @@
  * - 1: Text <STRING> (default: "")
  * - 2: Marker Type or Icon Name <STRING> (default: "mil_dot")
  * - 3: Color <ARRAY> (default: [1, 0, 0, 1])
- * 3: Map Type (0: Normal, 1: Topographic, 2: Satellite) or any custom class (even mission config) <NUMBER, STRING> (default: 0)
+ * 3: Map Type (0: Normal, 1: Topographic, 2: Satellite) or any custom class (even mission config) <NUMBER or STRING> (default: 0)
  * 4: Code to run on init (will be passed [_map, _display, _displayID]) <CODE> (default: {})
  * 5: Resolution <NUMBER> (default: 4096)
  *

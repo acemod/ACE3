@@ -43,4 +43,5 @@ private _newDamages = [];
 } forEach (keys _damageMap); // micro-optimization again, two 'get's is still faster than iterating over a hashmap
 
 TRACE_1("Vehicle explosion handled, passing damage",_newDamages);
-[_unit, _newDamages, _typeOfDamage] //return
+_this set [1, _newDamages];
+_this

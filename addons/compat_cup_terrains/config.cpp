@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-#include "\z\ace\addons\refuel\defines.hpp"
 
 class CfgPatches {
     class ADDON {
@@ -8,12 +7,12 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "CABuildings",
-            "CAStructuresHouse_A_FuelStation",
-            "CAStructures_E_Ind_Ind_FuelStation",
-            "CAStructures_PMC_FuelStation",
-            "CUP_Buildings_Config",
-            "ace_refuel" // not a sub-component because it's all this compat does
+            "CUP_CAStructures_E_Misc_Misc_Interier",
+            "CUP_CAStructures_E_Misc_Misc_Market",
+            "CUP_Editor_Buildings_Config",
+            "CUP_Editor_Structures_Config",
+            "CUP_Misc3_Config",
+            "ace_common"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);

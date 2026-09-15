@@ -28,7 +28,7 @@ redirect_from:
     <div class="large-12 columns">
         <nav>
             <ul class="columns">
-                {% assign pages_list = site.pages | sort: "title" %}
+                {% assign pages_list = site.pages | sort_natural: "title" %}
                 {% assign group = 'framework' %}
                 {% include pages_list %}
             </ul>

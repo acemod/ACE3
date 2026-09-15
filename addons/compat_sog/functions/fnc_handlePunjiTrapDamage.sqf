@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Punji trap <OBJECT>
- * 1: Affected units <ARRAY of OBJECT>
+ * 1: Affected units <ARRAY of OBJECTs>
  *
  * Return Value:
  * None

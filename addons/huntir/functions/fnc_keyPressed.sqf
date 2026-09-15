@@ -8,7 +8,7 @@
  * 1: keycode <NUMBER>
  *
  * Return Value:
- * handled? <BOOLEAN>
+ * handled? <BOOL>
  *
  * Example:
  * [] call ace_huntir_fnc_keyPressed

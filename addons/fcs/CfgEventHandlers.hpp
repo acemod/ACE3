@@ -20,32 +20,32 @@ class Extended_PostInit_EventHandlers {
 class Extended_InitPost_EventHandlers {
     class Tank {
         class ADDON {
-            serverInit = QUOTE(_this call FUNC(vehicleInit));
+            serverInit = QUOTE(call FUNC(vehicleInit));
         };
     };
     class Car {
         class ADDON {
-            serverInit = QUOTE(_this call FUNC(vehicleInit));
+            serverInit = QUOTE(call FUNC(vehicleInit));
         };
     };
     class Helicopter {
         class ADDON {
-            serverInit = QUOTE(_this call FUNC(vehicleInit));
+            serverInit = QUOTE(call FUNC(vehicleInit));
         };
     };
     class Plane {
         class ADDON {
-            serverInit = QUOTE(_this call FUNC(vehicleInit));
+            serverInit = QUOTE(call FUNC(vehicleInit));
         };
     };
     class Ship_F {
         class ADDON {
-            serverInit = QUOTE(_this call FUNC(vehicleInit));
+            serverInit = QUOTE(call FUNC(vehicleInit));
         };
     };
     class StaticWeapon {
         class ADDON {
-            serverInit = QUOTE(_this call FUNC(vehicleInit));
+            serverInit = QUOTE(call FUNC(vehicleInit));
         };
     };
 };
@@ -53,32 +53,32 @@ class Extended_InitPost_EventHandlers {
 class Extended_Respawn_EventHandlers {
     class Tank {
         class ADDON {
-            respawn = QUOTE(_this call FUNC(vehicleInit));
+            respawn = QUOTE(call FUNC(vehicleInit));
         };
     };
     class Car {
         class ADDON {
-            respawn = QUOTE(_this call FUNC(vehicleInit));
+            respawn = QUOTE(call FUNC(vehicleInit));
         };
     };
     class Helicopter {
         class ADDON {
-            respawn = QUOTE(_this call FUNC(vehicleInit));
+            respawn = QUOTE(call FUNC(vehicleInit));
         };
     };
     class Plane {
         class ADDON {
-            respawn = QUOTE(_this call FUNC(vehicleInit));
+            respawn = QUOTE(call FUNC(vehicleInit));
         };
     };
     class Ship_F {
         class ADDON {
-            respawn = QUOTE(_this call FUNC(vehicleInit));
+            respawn = QUOTE(call FUNC(vehicleInit));
         };
     };
     class StaticWeapon {
         class ADDON {
-            respawn = QUOTE(_this call FUNC(vehicleInit));
+            respawn = QUOTE(call FUNC(vehicleInit));
         };
     };
 };
