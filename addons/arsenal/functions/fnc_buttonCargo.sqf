@@ -28,10 +28,17 @@ if (_add && {_isUnique}) exitWith {};
 private _containerItems = [];
 private _item = _ctrlList lnbData [_lnbCurSel, 0];
 
+// Requesting 5 doesn't guarantee 5 actually move (the container might not fit 5,
+// or might hold fewer than 5 to remove), so the real delta gets measured after
+// rather than assumed from the request - see the end of this switch and below it.
+private _beforeCount = 0;
+
 // Update item count and currentItems array & get relevant container
 private _container = switch (GVAR(currentLeftPanel)) do {
     // Uniform
     case IDC_buttonUniform: {
+        _beforeCount = {_item == _x} count uniformItems GVAR(center);
+
         if (_add) then {
             for "_i" from 1 to ([1, 5] select GVAR(shiftState)) do {
                 GVAR(center) addItemToUniform _item;
@@ -60,6 +67,8 @@ private _container = switch (GVAR(currentLeftPanel)) do {
     };
     // Vest
     case IDC_buttonVest: {
+        _beforeCount = {_item == _x} count vestItems GVAR(center);
+
         if (_add) then {
             for "_i" from 1 to ([1, 5] select GVAR(shiftState)) do {
                 GVAR(center) addItemToVest _item;
@@ -88,6 +97,8 @@ private _container = switch (GVAR(currentLeftPanel)) do {
     };
     // Backpack
     case IDC_buttonBackpack: {
+        _beforeCount = {_item == _x} count backpackItems GVAR(center);
+
         if (_add) then {
             for "_i" from 1 to ([1, 5] select GVAR(shiftState)) do {
                 GVAR(center) addItemToBackpack _item;
@@ -117,9 +128,17 @@ private _container = switch (GVAR(currentLeftPanel)) do {
 };
 
 // Find out how many items of that type there are and update the number displayed
-_ctrlList lnbSetText [[_lnbCurSel, 2], str ({_item == _x} count _containerItems)];
+private _afterCount = {_item == _x} count _containerItems;
+_ctrlList lnbSetText [[_lnbCurSel, 2], str _afterCount];
 
 [QGVAR(cargoChanged), [_display, _item, _addOrRemove, GVAR(shiftState)]] call CBA_fnc_localEvent;
+
+private _oldCounts = createHashMap;
+_oldCounts set [_item, _beforeCount];
+private _newCounts = createHashMap;
+_newCounts set [_item, _afterCount];
+
+[_display, GVAR(currentLeftPanel), _oldCounts, _newCounts] call FUNC(fireItemsChangedEvent);
 
 // Refresh availibility of items based on space remaining in container
 [_ctrlList, _container, _containerItems isNotEqualTo []] call FUNC(updateRightPanel);
