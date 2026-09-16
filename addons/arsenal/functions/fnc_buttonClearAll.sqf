@@ -15,6 +15,8 @@
 
 params ["_display"];
 
+private _oldItemCounts = call FUNC(getLoadoutItemCounts);
+
 // Clear chosen container, reset currentItems for that container and get relevant container
 private _container = switch (GVAR(currentLeftPanel)) do {
     // Uniform
@@ -68,3 +70,5 @@ for "_lbIndex" from 0 to (lbSize _ctrlList) - 1 do {
 
 // Refresh availibility of items based on space remaining in container
 [_ctrlList, _container, false] call FUNC(updateRightPanel);
+
+[_display, GVAR(currentLeftPanel), _oldItemCounts, call FUNC(getLoadoutItemCounts)] call FUNC(fireItemsChangedEvent);
