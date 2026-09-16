@@ -213,7 +213,6 @@ GVAR(deployPFH) = -1;
 GVAR(deployDistance) = -1;
 GVAR(deployDirection) = 0;
 GVAR(deployHeight) = 0;
-GVAR(canDeploy) = false;
 
 if (!hasInterface) exitWith {};
 

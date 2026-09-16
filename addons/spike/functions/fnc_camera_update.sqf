@@ -211,12 +211,6 @@ if (_surfaceIntersections isNotEqualTo []) then {
     _pointPos = (_surfaceIntersections select 0) select 0;
 };
 
-if (_movingCameraX) then {
-    _cameraNamespace setVariable [QGVAR(lastMovedGroundPosX), _groundPos];
-};
-if (_movingCameraY) then {
-    _cameraNamespace setVariable [QGVAR(lastMovedGroundPosY), _groundPos];
-};
 if (_movingCameraX || _movingCameraY) then {
     _cameraNamespace setVariable [QGVAR(lastMovedGroundPos), _groundPos];
 };
