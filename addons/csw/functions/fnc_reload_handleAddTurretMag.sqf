@@ -7,23 +7,21 @@
  * Arguments:
  * 0: CSW <OBJECT>
  * 1: Turret Path <ARRAY>
- * 2: Source of magazine <OBJECT>
- * 3: Vehicle Magazine <STRING>
- * 4: Ammo in magazine <NUMBER>
- * 5: Unit or object to return ammo to <OBJECT> (default: Source of magazine)
+ * 2: Vehicle Magazine <STRING>
+ * 3: Ammo in magazine <NUMBER>
+ * 4: Unit or object to return leftover ammo to <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [cursorTarget, [0], player, "200Rnd_127x99_mag_Tracer_Red", 70] call ace_csw_fnc_reload_handleAddTurretMag
+ * [cursorTarget, [0], "200Rnd_127x99_mag_Tracer_Red", 70, player] call ace_csw_fnc_reload_handleAddTurretMag
  *
  * Public: No
  */
 
-params ["_vehicle", "_turret", "_magSource", "_carryMag", "_ammoReceived"];
-private _returnTo = param [5, _magSource];
-TRACE_6("reload_handleAddTurretMag",_vehicle,_turret,_magSource,_carryMag,_ammoReceived,_returnTo);
+params ["_vehicle", "_turret", "_carryMag", "_ammoReceived", "_returnTo"];
+TRACE_5("reload_handleAddTurretMag",_vehicle,_turret,_carryMag,_ammoReceived,_returnTo);
 
 TRACE_2("",local _vehicle,_vehicle turretLocal _turret);
 if !(_vehicle turretLocal _turret) exitWith {};
