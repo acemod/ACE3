@@ -81,8 +81,8 @@ class CfgAmmo {
                 alwaysDesignate = 0;            // always designate
                 canStopDesignating = 0;
                 
-                enabledThermalTypes[] = { "white_hot_black_cold", "black_hot_white_cold" };
-                initialThermalType = "white_hot_black_cold";
+                enabledThermalTypes[] = { "normal", "white_hot_black_cold", "black_hot_white_cold" };
+                initialThermalType = "normal";
                 
                 class reticle {
                     titleRsc = "ACE_guidance_spike";

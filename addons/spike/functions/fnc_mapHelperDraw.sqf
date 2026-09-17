@@ -45,6 +45,17 @@ if (isNil QGVAR(arguments)) then {
 if (cameraView isEqualTo "GUNNER") then {
     GVAR(arguments) set [0, diag_frameNo];
 
+    private _visionMode = currentVisionMode ace_player;
+    // If the current mode is normal, but thermal was cached, recover to normal. This happens when selecting a thermal mode, dropping and picking the launcher back up.
+    if (GVAR(visionMode) != "normal" && _visionMode == 0) then { GVAR(visionMode) = "normal"; };
+
+    // Toggle Black&White effect depending on vision mode
+    if (_visionMode == 0) then {
+        GVAR(ppEffectBW) ppEffectEnable true;
+    } else {
+        GVAR(ppEffectBW) ppEffectEnable false;
+    };
+
     __SPIKE_RETICLE ctrlShow true;
     GVAR(arguments) params ["", "_targetPosition"];
 
@@ -94,6 +105,7 @@ if (cameraView isEqualTo "GUNNER") then {
 
     __SPIKE_RETICLE ctrlCommit 0;
 } else {
+    GVAR(ppEffectBW) ppEffectEnable false;
     __SPIKE_RETICLE ctrlShow false;
     (__SPIKE_DISPLAY displayCtrl 241000) ctrlShow false;
 };
