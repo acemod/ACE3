@@ -4,6 +4,7 @@ PREP(damageBodyPart);
 PREP(disableThirdParty);
 PREP(getHitpointArmor);
 PREP(getItemArmor);
+PREP(getItemPlate);
 PREP(handleDamage);
 PREP(lockUnconsciousSeat);
 PREP(setStructuralDamage);

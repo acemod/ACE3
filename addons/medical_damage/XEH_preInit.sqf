@@ -13,6 +13,9 @@ call FUNC(parseConfigForInjuries);
 // Used for armor penetration calculation
 GVAR(ammoCache) = createHashMap;
 
+// Resolved armor thickness/passThrough per uniform+vest+headgear+hitpoint combination
+GVAR(armorLayerCache) = createHashMap;
+
 /*
 addMissionEventHandler ["Loaded",{
     INFO("Mission Loaded - Reloading medical configs for extension");
