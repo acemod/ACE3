@@ -21,6 +21,15 @@ class CfgVehicles {
         };
     };*/
 
+    class Animal_Base_F;
+    // createVehicleLocal CAManBase units spams to RPT:
+    // "Tried to create local-only container with backpacks, that does not work in multiplayer"
+    // animals have clean RPT
+    class GVAR(seatHolder): Animal_Base_F {
+        scope = 1;
+        model = "\A3\Animals_F\mosquito.p3d";
+    };
+
     // += needs a non inherited entry in that class, otherwise it simply overwrites
     //#include <DefaultItems.hpp>
     class Logic;
