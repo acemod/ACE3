@@ -179,3 +179,9 @@ class G_WirelessEarpiece_F: EGVAR(wardrobe,base) {
     };
     components[] = { "G_WirelessEarpiece_F" };
 };
+
+// Contact DLC CBRN Masks
+RESPIRATOR_PAIR(G_AirPurifyingRespirator_01_F,G_AirPurifyingRespirator_01_nofilter_F);
+RESPIRATOR_PAIR(G_AirPurifyingRespirator_02_black_F,G_AirPurifyingRespirator_02_black_nofilter_F);
+RESPIRATOR_PAIR(G_AirPurifyingRespirator_02_olive_F,G_AirPurifyingRespirator_02_olive_nofilter_F);
+RESPIRATOR_PAIR(G_AirPurifyingRespirator_02_sand_F,G_AirPurifyingRespirator_02_sand_nofilter_F);

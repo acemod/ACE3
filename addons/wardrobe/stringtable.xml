@@ -138,6 +138,14 @@
             <Russian>Растегнуть куртку</Russian>
             <Japanese>ジャケットを開く</Japanese>
         </Key>
+        <Key ID="STR_ACE_Wardrobe_filterRemove">
+            <English>Remove Filter</English>
+            <German>Atemschutzfilter entfernen</German>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_filterAdd">
+            <English>Add Filter</English>
+            <German>Atemschutzfilter anbringen</German>
+        </Key>
         <Key ID="STR_ACE_Wardrobe_maskOff">
             <English>Take mask off</English>
             <French>Enlevez votre masque</French>
