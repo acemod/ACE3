@@ -219,3 +219,9 @@ Enabling this will also set the explosive owner, if required by custom Event Han
 ```sqf
 ace_explosives_setShotParents = true;
 ```
+
+### 5.5 Listenable Events
+
+| Event Key | Parameters | Locality | Type | Description |
+|----------|---------|---------|---------|---------|
+|`ace_explosives_timerStarted` | [_explosive, _delay, _trigger, _unit] | Global | Listen | After a time bomb's timer set |
