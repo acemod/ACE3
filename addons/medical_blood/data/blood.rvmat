@@ -1,5 +1,5 @@
 class StageTI {
-	texture = "z\ace\addons\medical_blood\data\blood_ti_ca.paa";
+    texture = "z\ace\addons\medical_blood\data\blood_ti_ca.paa";
 };
 
 ambient[] = {1.0,1.0,1.0,1.0};
