@@ -67,7 +67,7 @@ class Stage6 {
     };
 };
 class Stage7 {
-    texture="a3\data_f\env_land_co.paa";
+    texture = "a3\data_f\env_land_co.paa";
     uvSource = "tex";
     class uvTransform {
         aside[] = {1.0,0.0,0.0};

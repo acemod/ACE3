@@ -74,5 +74,5 @@ class Stage6 {
 class Stage7 {
     useWorldEnvMap = "true";
     texture = "a3\data_f\env_land_ca.paa";
-    uvSource="none";
+    uvSource = "none";
 };
