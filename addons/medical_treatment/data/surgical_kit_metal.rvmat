@@ -10,7 +10,7 @@ renderFlags[] = {
 PixelShaderID = "Glass";
 VertexShaderID = "Glass";
 class Stage1 {
-    texture = "#(argb, 8, 8, 3)color(1, 1, 1, 0.9)";
+    texture = "#(argb,8,8,3)color(1,1,1,0.9)";
     uvSource = "none";
 };
 class Stage2 {

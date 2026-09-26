@@ -27,7 +27,7 @@ class Stage2 {
     };
 };
 class Stage3 {
-    texture = "#(argb, 8, 8, 3)color(0, 0, 0, 0, MC)";
+    texture = "#(argb,8,8,3)color(0,0,0,0,MC)";
     uvSource = "tex";
     class uvTransform {
         aside[] = {1.000000, 0.000000, 0.000000};
@@ -57,7 +57,7 @@ class Stage5 {
     };
 };
 class Stage6 {
-    texture = "#(ai, 32, 128, 1)fresnel(3.38, 5.33)";
+    texture = "#(ai,32,128,1)fresnel(3.38,5.33)";
     uvSource = "tex";
     class uvTransform {
         aside[] = {1.000000, 0.000000, 0.000000};
