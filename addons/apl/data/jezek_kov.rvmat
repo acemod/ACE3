@@ -39,8 +39,7 @@ class Stage3 {
 class Stage4 {
     texture="#(argb,8,8,3)color(1,1,1,1,AS)";
     uvSource="tex";
-    class uvTransform
-    {
+    class uvTransform {
         aside[]={1.000000,0.000000,0.000000};
         up[]={0.000000,1.000000,0.000000};
         dir[]={0.000000,0.000000,0.000000};

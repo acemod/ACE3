@@ -5,24 +5,20 @@ emmisive[]={0,0,0,1};
 specular[]={0,0,0,0};
 PixelShaderID="NormalMapSpecularDIMap";
 VertexShaderID="NormalMap";
-class Stage1
-{
+class Stage1 {
     texture="z\ace\addons\medical_treatment\data\littergeneric_packingbandage_nohq.paa";
     uvSource="tex";
-    class uvTransform
-    {
+    class uvTransform {
         aside[]={1,0,0};
         up[]={0,1,0};
         dir[]={0,0,1};
         pos[]={0,0,0};
     };
 };
-class Stage2
-{
+class Stage2 {
     texture= "#(argb,8,8,3)color(0,0,0,1,SMDI)";
     uvSource="tex";
-    class uvTransform
-    {
+    class uvTransform {
         aside[]={0,0,0};
         up[]={0,0,0};
         dir[]={0,0,0};
