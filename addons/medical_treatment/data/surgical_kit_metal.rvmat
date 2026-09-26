@@ -1,8 +1,8 @@
-ambient[] = {1,1,1,0};
-diffuse[] = {1,1,1,0};
-forcedDiffuse[] = {0,0,0,0};
-emmisive[] = {0,0,0,0};
-specular[] = {0.5,0.5,0.5,0};
+ambient[] = {1, 1, 1, 0};
+diffuse[] = {1, 1, 1, 0};
+forcedDiffuse[] = {0, 0, 0, 0};
+emmisive[] = {0, 0, 0, 0};
+specular[] = {0.5, 0.5, 0.5, 0};
 specularPower = 11.6;
 renderFlags[] = {
     "NoAlphaWrite"
@@ -10,7 +10,7 @@ renderFlags[] = {
 PixelShaderID = "Glass";
 VertexShaderID = "Glass";
 class Stage1 {
-    texture = "#(argb,8,8,3)color(1,1,1,0.9)";
+    texture = "#(argb, 8, 8, 3)color(1, 1, 1, 0.9)";
     uvSource = "none";
 };
 class Stage2 {
