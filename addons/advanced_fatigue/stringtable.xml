@@ -132,7 +132,23 @@
             <Ukrainian>Фактор навантаження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_LoadFactor_Description">
-            <English>Increases or decreases how much weight influences the players performance. Zero means equipment weight has no performance influence.</English>
+            <English>Increases or decreases how much weight influences the performance of all players with no custom factor. Zero means equipment weight has no performance influence.</English>
+            <Czech>Zvyšuje nebo snižuje, jak velká váha ovlivňuje výkon hráče. Nulová hodnota znamená, že hmotnost zařízení nemá žádný vliv na výkon.</Czech>
+            <French>Augmente ou diminue l'influence du poids sur les performances du joueur.\nUne valeur nulle indique que le poids de l'équipement n'a aucun impact sur les performances.</French>
+            <Spanish>Aumenta o disminuye cuanto influye el peso en el rendimiento del jugador. Cero significa que el peso no influye en el rendimiento</Spanish>
+            <Italian>Determina quanto il peso trasportato influenza le prestazioni dei giocatori. Zero significa che il peso dell'equipaggiamento non influisce sulle prestazioni.</Italian>
+            <Polish>Zmniejsza lub zwiększa wpływ ciężaru ekwipunku na wydolność gracza. Zero oznacza kompletny brak wpływu na wydolność.</Polish>
+            <Portuguese>Aumenta ou diminui o quanto o peso influencia a performance do jogador. Zero significa que o peso não tem impacto algum na performance.</Portuguese>
+            <Russian>Увеличивает или уменьшает вес, влияющий на производительность игроков. Ноль означает, что вес снаряжения не влияет на производительность</Russian>
+            <German>Erhöht oder verringert, wie viel Einfluss das Ausrüstungsgewicht auf die Leistung hat. Null heißt, dass es keinen Einfluss hat.</German>
+            <Korean>플레이어가 무게에 따라 얼마나 영향받는지를 증가시키거나 감소시킵니다. 0의 경우 플레이어가 장비 무게에 영향받지 않습니다.</Korean>
+            <Japanese>装備重量がプレイヤーのパフォーマンスにもたらす影響を増減させます。 値をゼロに設定した場合、装備重量はパフォーマンスに影響を与えません。</Japanese>
+            <Chinese>增加或降低玩家所能承受的負重量. 如設定值為0, 代表裝備的重量將不會影響到玩家的體力表現</Chinese>
+            <Chinesesimp>增加或降低玩家所能承受的负重量。如设定值为0，代表装备的重量将不会影响到玩家的体力表现</Chinesesimp>
+            <Ukrainian>Збільшує або зменшує вагу, що впливає на продуктивність гравців. Нуль означає, що вага спорядження не впливає на продуктивність</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_LoadFactor_EdenDescription">
+            <English>Increases or decreases how much weight influences the unit's performance. Zero means equipment weight has no performance influence.</English>
             <Czech>Zvyšuje nebo snižuje, jak velká váha ovlivňuje výkon hráče. Nulová hodnota znamená, že hmotnost zařízení nemá žádný vliv na výkon.</Czech>
             <French>Augmente ou diminue l'influence du poids sur les performances du joueur.\nUne valeur nulle indique que le poids de l'équipement n'a aucun impact sur les performances.</French>
             <Spanish>Aumenta o disminuye cuanto influye el peso en el rendimiento del jugador. Cero significa que el peso no influye en el rendimiento</Spanish>
@@ -214,7 +230,23 @@
             <Ukrainian>Фактор відновлення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_RecoveryFactor_Description">
-            <English>Changes how fast the player recovers when resting. Higher is faster.</English>
+            <English>Changes how fast the player recovers when resting, for all players with no custom factor. Higher is faster.</English>
+            <Czech>Mění, jak rychle se hráč zotaví, když odpočívá. Vyšší je rychlejší.</Czech>
+            <French>Modifie la vitesse à laquelle le joueur récupère lorsqu'il se repose.\nPlus la valeur est élevée, plus la récupération est rapide.</French>
+            <Spanish>Modifica cómo de rápido se recupera el jugador cuando descansa. Más alto significa mejor</Spanish>
+            <Italian>Determina quanto velocemente il giocatore recupera le energie quando si ferma. Maggiore significa migliore.</Italian>
+            <Polish>Wpływa na czas regeneracji podczas postoju. Więcej znaczy szybciej.</Polish>
+            <Portuguese>Altera o quão rápido um jogador recupera quando descansando. Quanto maior, mais rápido.</Portuguese>
+            <Russian>Изменяет скорость восстановления игрока во время отдыха. Чем выше, тем быстрее.</Russian>
+            <German>Ändert, wie schnell ein Spieler Ausdauer regeneriert. Ein höherer Wert bedeutet eine schnellere Regeneration.</German>
+            <Korean>얼마나 빨리 회복하는지를 바꿉니다. 값이 클수록 더 나은 성능을 발휘합니다</Korean>
+            <Japanese>プレイヤーが休憩をとる際に、どのくらいの速度でスタミナ回復するかを設定します。 値が高ければ高いほど、早くなります。</Japanese>
+            <Chinese>決定玩家休息多久就能回復體力，值越高恢復越快</Chinese>
+            <Chinesesimp>决定玩家休息多久就能恢复体力，值越高恢复越快</Chinesesimp>
+            <Ukrainian>Змінює швидкість відновлення гравця під час відпочинку. Що вища, то швидше.</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_RecoveryFactor_EdenDescription">
+            <English>Changes how fast the unit recovers when resting. Higher is faster.</English>
             <Czech>Mění, jak rychle se hráč zotaví, když odpočívá. Vyšší je rychlejší.</Czech>
             <French>Modifie la vitesse à laquelle le joueur récupère lorsqu'il se repose.\nPlus la valeur est élevée, plus la récupération est rapide.</French>
             <Spanish>Modifica cómo de rápido se recupera el jugador cuando descansa. Más alto significa mejor</Spanish>
@@ -246,6 +278,22 @@
             <Ukrainian>Фактор місцевості</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_TerrainGradientFactor_Description">
+            <English>Sets how much steep terrain increases stamina loss, for all players with no custom factor. Higher means higher stamina loss.</English>
+            <Czech>Nastavuje, o kolik strmý terén zvyšuje ztrátu výdrže. Vyšší znamená vyšší ztrátu výdrže.</Czech>
+            <French>Définit à quel point un terrain escarpé réduit l'endurance du joueur.\nPlus la valeur est élevée, moins le joueur est endurant.</French>
+            <Spanish>Modifica cuanto afecta la inclinación al cansansio. Más alto significa más cansancio</Spanish>
+            <Italian>Determina quanto la pendenza del terreno incrementa la perdita della stamina. Maggiore significa più stamina persa.</Italian>
+            <Polish>Wpływa na to w jakim stopniu stromy teren wpływa na utratę wytrzymałości. Więcej oznacza szybszą utratę wytrzymałości.</Polish>
+            <Portuguese>Define o quanto que um terreno íngrime aumenta na perda de estamina. Quanto maior, maior a perda de estamina.</Portuguese>
+            <Russian>Устанавливает, насколько крутая местность увеличивает потерю выносливости. Чем выше, тем быстрее теряется выносливость.</Russian>
+            <German>Beeinflusst, wie stark Steigungen den Ausdauerverbrauch erhöhen. Ein höherer Wert erhöht den Ausdauerverbrauch.</German>
+            <Korean>경사도에 따라 얼마나 피로해지는지를 정합니다.  값이 클수록 더 많은 피로를 유발합니다.</Korean>
+            <Japanese>急勾配の地形がどれだけスタミナ消費を増大させるかを設定します。 値が高ければ高いほど、スタミナ消費が大きくなります。</Japanese>
+            <Chinese>設定陡峭的地形將會影響多少體力的流失，值越高代表體力流失越快</Chinese>
+            <Chinesesimp>设定陡峭的地形将会影响多少体力的流失速度，值越高代表体力流失越快</Chinesesimp>
+            <Ukrainian>Встановлює, наскільки крута місцевість збільшує втрату витривалості. Що вище, то швидше втрачається витривалість.</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_TerrainGradientFactor_EdenDescription">
             <English>Sets how much steep terrain increases stamina loss. Higher means higher stamina loss.</English>
             <Czech>Nastavuje, o kolik strmý terén zvyšuje ztrátu výdrže. Vyšší znamená vyšší ztrátu výdrže.</Czech>
             <French>Définit à quel point un terrain escarpé réduit l'endurance du joueur.\nPlus la valeur est élevée, moins le joueur est endurant.</French>
