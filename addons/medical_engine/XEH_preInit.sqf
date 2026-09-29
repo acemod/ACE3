@@ -36,6 +36,12 @@ if (isNil QUOTE(FATAL_SUM_DAMAGE_WEIBULL_K) || isNil QUOTE(FATAL_SUM_DAMAGE_WEIB
 // Cache for armor values of equipped items (vests etc)
 GVAR(armorCache) = createHashMap;
 
+// Cache for armor plate level/passThrough of equipped items, used for armor penetration
+GVAR(plateCache) = createHashMap;
+
+// Cache for hitpoint sphere radii per unit type, used to resolve overlapping hitpoints on a hit
+GVAR(hitpointRadiusCache) = createHashMap;
+
 // Hack for #3168 (units in static weapons do not take any damage):
 // Doing a manual pre-load with a small distance seems to fix the LOD problems
 // with handle damage not returning full results.
