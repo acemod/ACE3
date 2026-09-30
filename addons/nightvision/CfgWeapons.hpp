@@ -33,6 +33,18 @@ class CfgWeapons {
         modelOptics = "";
         displayName = CSTRING(NVG_Gen3_black);
     };
+	class Integrated_NVG_F: NVGoggles {
+		GVAR(border) = "";
+		GVAR(generation) = -1;
+	};
+	class Integrated_NVG_TI_0_F: NVGoggles {
+		GVAR(border) = "";
+		GVAR(generation) = -1;
+	};
+	class Integrated_NVG_TI_1_F: NVGoggles {
+		GVAR(border) = "";
+		GVAR(generation) = -1;
+	};
     class ACE_NVGoggles_OPFOR_WP: NVGoggles_OPFOR {
         displayName = CSTRING(NVG_Gen3_black_WP);
         descriptionShort = CSTRING(NVG_WP_desc);
@@ -140,6 +152,44 @@ class CfgWeapons {
         descriptionShort = CSTRING(NVG_WP_desc);
         NVG_WHITE_PRESET;
     };
+
+
+	class ACE_Integrated_NVG_WP : Integrated_NVG_F {
+		NVG_WHITE_PRESET;
+	};
+	class ACE_Integrated_NVG_TI_0_WP : Integrated_NVG_TI_0_F {
+		NVG_WHITE_PRESET;
+	};
+	class ACE_Integrated_NVG_TI_1_WP : Integrated_NVG_TI_1_F {
+		NVG_WHITE_PRESET;
+	};
+
+	class H_PilotHelmetFighter_B;
+	class H_PilotHelmetFighter_I;
+	class H_PilotHelmetFighter_O;
+	class ACE_H_PilotHelmetFighter_B_WP : H_PilotHelmetFighter_B {
+		displayName = CSTRING(H_PilotHelmetFighter_B_WP);
+		subItems[] = {"ACE_Integrated_NVG_WP"};
+	};
+	class ACE_H_PilotHelmetFighter_I_WP : H_PilotHelmetFighter_I {
+		displayName = CSTRING(H_PilotHelmetFighter_I_WP);
+		subItems[] = {"ACE_Integrated_NVG_WP"};
+	};
+	class ACE_H_PilotHelmetFighter_O_WP : H_PilotHelmetFighter_O {
+		displayName = CSTRING(H_PilotHelmetFighter_O_WP);
+		subItems[] = {"ACE_Integrated_NVG_WP"};
+	};
+
+	class H_HelmetO_ViperSP_hex_F;
+	class H_HelmetO_ViperSP_ghex_F;
+	class ACE_H_HelmetO_ViperSP_hex_WP : H_HelmetO_ViperSP_hex_F {
+		displayName = CSTRING(H_HelmetO_ViperSP_hex_WP);
+		subItems[] = {"ACE_Integrated_NVG_TI_1_WP"};
+	};
+	class ACE_H_HelmetO_ViperSP_ghex_WP : H_HelmetO_ViperSP_ghex_F {
+		displayName = CSTRING(H_HelmetO_ViperSP_ghex_WP);
+		subItems[] = {"ACE_Integrated_NVG_TI_1_WP"};
+	};
 
 
     // Examples of different goggle effect types (scope=1)

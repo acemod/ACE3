@@ -66,14 +66,16 @@ if (IS_MAGNIFIED isNotEqualTo GVAR(isUsingMagnification)) then {
 };
 
 if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
-    // Update radial blur as it depends on zoom level, so should be changed each frame like the border/hex
-    if (GVAR(ppeffectRadialBlur) != -1) then {
-        GVAR(ppeffectRadialBlur) ppEffectAdjust [.005, .005, _scale * GVAR(nvgBlurRadius), _scale * .16];
-        GVAR(ppeffectRadialBlur) ppEffectCommit 0;
-    };
-    // Need to rapidly update fog or it will try to resync from the server
-    if (GVAR(fogScaling) > 0) then {
-        0 setFog GVAR(nvgFog);
+    if (GVAR(nvgGeneration) > -1) then {
+        // Update radial blur as it depends on zoom level, so should be changed each frame like the border/hex
+        if (GVAR(ppeffectRadialBlur) != -1) then {
+            GVAR(ppeffectRadialBlur) ppEffectAdjust [.005, .005, _scale * GVAR(nvgBlurRadius), _scale * .16];
+            GVAR(ppeffectRadialBlur) ppEffectCommit 0;
+        };
+        // Need to rapidly update fog or it will try to resync from the server
+        if (GVAR(fogScaling) > 0) then {
+            0 setFog GVAR(nvgFog);
+        };
     };
 } else {
     // Redo full effects less often
@@ -120,24 +122,54 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     // Setup all effects
     // This is hacky but... works. This prevents the effects from being cancelled by various things - alt-tabbing, resizing, going into AT sights, etc. A nicer method would be welcome but I don't have time to spend on it. TODO.
 
-    // FilmGrain - Electronic Noise
-    // Params: [intensity(0..1), sharpness(0..20), grainsize(1..8), intensityX0, intensityX1, monochromatic(bool)]
-    GVAR(ppeffectGrain) = ppEffectCreate ["FilmGrain", 200];
-    GVAR(ppeffectGrain) ppEffectAdjust [_grainIntensityFinal, _noiseSharpnessFinal, _grainFinal, 0.3, 0.3];
-    // OldNVG:  [0.25, 2.5, 2.5, _grainSetting, _grainSetting, false]
-    GVAR(ppeffectGrain) ppEffectCommit 0;
-    GVAR(ppeffectGrain) ppEffectForceInNVG true;
-    GVAR(ppeffectGrain) ppEffectEnable true;
 
-    // RadialBlur - Blurs closer to the edge nvg border (radius based on GVAR(bluRadius) config; e.g. larger for quadtube)
-    // Note: "Will not do anything if RADIAL BLUR is disabled in Video Options." - So should try to keep this effect to a minimum to prevent balance issues
-    // Params: [powerX, powerY, offsetX, offsetY]
-    if (GVAR(nvgBlurRadius) != -1) then {
-        GVAR(ppeffectRadialBlur) = ppEffectCreate ["RadialBlur", 451];
-        GVAR(ppeffectRadialBlur) ppEffectAdjust [_radialBlurPower, _radialBlurPower, _scale * GVAR(nvgBlurRadius), _scale * .16];
-        GVAR(ppeffectRadialBlur) ppEffectCommit 0;
-        GVAR(ppeffectRadialBlur) ppEffectForceInNVG true;
-        GVAR(ppeffectRadialBlur) ppEffectEnable true;
+    if (GVAR(nvgGeneration) > -1) then {
+        // FilmGrain - Electronic Noise
+        // Params: [intensity(0..1), sharpness(0..20), grainsize(1..8), intensityX0, intensityX1, monochromatic(bool)]
+        GVAR(ppeffectGrain) = ppEffectCreate ["FilmGrain", 200];
+        GVAR(ppeffectGrain) ppEffectAdjust [_grainIntensityFinal, _noiseSharpnessFinal, _grainFinal, 0.3, 0.3];
+        // OldNVG:  [0.25, 2.5, 2.5, _grainSetting, _grainSetting, false]
+        GVAR(ppeffectGrain) ppEffectCommit 0;
+        GVAR(ppeffectGrain) ppEffectForceInNVG true;
+        GVAR(ppeffectGrain) ppEffectEnable true;
+
+        // RadialBlur - Blurs closer to the edge nvg border (radius based on GVAR(bluRadius) config; e.g. larger for quadtube)
+        // Note: "Will not do anything if RADIAL BLUR is disabled in Video Options." - So should try to keep this effect to a minimum to prevent balance issues
+        // Params: [powerX, powerY, offsetX, offsetY]
+        if (GVAR(nvgBlurRadius) != -1) then {
+            GVAR(ppeffectRadialBlur) = ppEffectCreate ["RadialBlur", 451];
+            GVAR(ppeffectRadialBlur) ppEffectAdjust [_radialBlurPower, _radialBlurPower, _scale * GVAR(nvgBlurRadius), _scale * .16];
+            GVAR(ppeffectRadialBlur) ppEffectCommit 0;
+            GVAR(ppeffectRadialBlur) ppEffectForceInNVG true;
+            GVAR(ppeffectRadialBlur) ppEffectEnable true;
+        };
+
+        // DynamicBlur - Increases overall screen blur when aiming down sights (which would be hard/impossible with NVG)
+        // Params: [value(0..inf)]
+        GVAR(ppeffectBlur) = ppEffectCreate ["DynamicBlur", 190];
+        GVAR(ppeffectBlur) ppEffectAdjust [_blurFinal];
+        GVAR(ppeffectBlur) ppEffectCommit 0;
+        GVAR(ppeffectBlur) ppEffectForceInNVG true;
+        GVAR(ppeffectBlur) ppEffectEnable true;
+
+
+        // Modify local fog:
+        if (GVAR(fogScaling) > 0) then {
+            private _vehicle = vehicle _unit;
+
+            if (_vehicle != _unit && {_vehicle isKindOf "Air"}) then {  // For flying in particular, can refine nicer later.
+                _fogApply = _fogApply * ST_NVG_AIR_FOG_MULTIPLIER;
+            };
+
+            _fogApply = linearConversion [0, 1, GVAR(priorFog) select 0, (GVAR(fogScaling) * _fogApply), 1]; // mix in old fog if present
+            GVAR(nvgFog) = fogParams;
+            GVAR(nvgFog) set [0, _fogApply];
+
+            0 setFog GVAR(nvgFog)
+        };
+    } else {
+        _brightFinal = ST_NVG_BRIGHT_MAX + (_playerBrightSetting / 20);
+        _contrastFinal = 1;
     };
 
     // ColorCorrections - Changes brightness, contrast and "green" color of nvg
@@ -147,30 +179,6 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     GVAR(ppeffectColorCorrect) ppEffectCommit 0;
     GVAR(ppeffectColorCorrect) ppEffectForceInNVG true;
     GVAR(ppeffectColorCorrect) ppEffectEnable true;
-
-    // DynamicBlur - Increases overall screen blur when aiming down sights (which would be hard/impossible with NVG)
-    // Params: [value(0..inf)]
-    GVAR(ppeffectBlur) = ppEffectCreate ["DynamicBlur", 190];
-    GVAR(ppeffectBlur) ppEffectAdjust [_blurFinal];
-    GVAR(ppeffectBlur) ppEffectCommit 0;
-    GVAR(ppeffectBlur) ppEffectForceInNVG true;
-    GVAR(ppeffectBlur) ppEffectEnable true;
-
-
-    // Modify local fog:
-    if (GVAR(fogScaling) > 0) then {
-        private _vehicle = vehicle _unit;
-
-        if (_vehicle != _unit && {_vehicle isKindOf "Air"}) then {  // For flying in particular, can refine nicer later.
-            _fogApply = _fogApply * ST_NVG_AIR_FOG_MULTIPLIER;
-        };
-
-        _fogApply = linearConversion [0, 1, GVAR(priorFog) select 0, (GVAR(fogScaling) * _fogApply), 1]; // mix in old fog if present
-        GVAR(nvgFog) = fogParams;
-        GVAR(nvgFog) set [0, _fogApply];
-
-        0 setFog GVAR(nvgFog)
-    };
 
     #ifdef DEBUG_MODE_FULL
     private _aceAmbient = [] call EFUNC(common,ambientBrightness);
