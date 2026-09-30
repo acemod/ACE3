@@ -20,6 +20,7 @@ if (_curSel < 0) exitWith {};
 
 private _display = ctrlParent _control;
 private _item = _control lbData _curSel;
+private _oldItemCounts = call FUNC(getLoadoutItemCounts);
 private _currentItemsIndex = IDX_CURR_PRIMARY_WEAPON_ITEMS + ([IDC_buttonPrimaryWeapon, IDC_buttonSecondaryWeapon, IDC_buttonHandgun, IDC_buttonBinoculars] find GVAR(currentLeftPanel));
 private _itemIndex = [IDC_buttonMuzzle, IDC_buttonItemAcc, IDC_buttonOptic, IDC_buttonBipod, IDC_buttonCurrentMag, IDC_buttonCurrentMag2] find GVAR(currentRightPanel);
 
@@ -207,3 +208,5 @@ switch (_currentItemsIndex) do {
 
 // Update weight display
 (_display displayCtrl IDC_totalWeightText) ctrlSetText (format ["%1 (%2)", GVAR(center) call EFUNC(common,getWeight), [GVAR(center), 1] call EFUNC(common,getWeight)]);
+
+[_display, GVAR(currentRightPanel), _oldItemCounts, call FUNC(getLoadoutItemCounts)] call FUNC(fireItemsChangedEvent);
