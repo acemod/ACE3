@@ -4,8 +4,7 @@
  * Runs when Dragon is fired
  *
  * Arguments:
- * 0: None
- * 1: The weapon that was fired <OBJECT>
+ * Complex Guidance Arg Array <ARRAY>
  *
  * Return Value:
  * None
