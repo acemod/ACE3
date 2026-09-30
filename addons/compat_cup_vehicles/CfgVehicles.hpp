@@ -155,7 +155,7 @@ class CfgVehicles {
         EGVAR(vehicle_damage,turretDetonationProb) = 0;
         EGVAR(vehicle_damage,turretFireProb) = 0;
         EGVAR(vehicle_damage,canHaveFireRing) = 0;
-        EGVAR(vehicle_damage,canHaveFireJet) = 0;
+        EGVAR(cookoff,canHaveFireJet) = 0;
     };
     class CUP_GAZ_Vodnik_Unarmed_base: CUP_GAZ_Vodnik_Base {
         EGVAR(vehicle_damage,hullDetonationProb) = 0;
@@ -163,7 +163,7 @@ class CfgVehicles {
         EGVAR(vehicle_damage,turretDetonationProb) = 0;
         EGVAR(vehicle_damage,turretFireProb) = 0;
         EGVAR(vehicle_damage,canHaveFireRing) = 0;
-        EGVAR(vehicle_damage,canHaveFireJet) = 0;
+        EGVAR(cookoff,canHaveFireJet) = 0;
     };
     class CUP_GAZ_Vodnik_MedEvac_Base: CUP_GAZ_Vodnik_Base {
         EGVAR(vehicle_damage,hullDetonationProb) = 0;
@@ -171,7 +171,7 @@ class CfgVehicles {
         EGVAR(vehicle_damage,turretDetonationProb) = 0;
         EGVAR(vehicle_damage,turretFireProb) = 0;
         EGVAR(vehicle_damage,canHaveFireRing) = 0;
-        EGVAR(vehicle_damage,canHaveFireJet) = 0;
+        EGVAR(cookoff,canHaveFireJet) = 0;
     };
     class CUP_O_GAZ_Vodnik_PK_RU: CUP_GAZ_Vodnik_Base {
         EGVAR(vehicle_damage,hullDetonationProb) = 0;
@@ -179,7 +179,7 @@ class CfgVehicles {
         EGVAR(vehicle_damage,turretDetonationProb) = 0;
         EGVAR(vehicle_damage,turretFireProb) = 0;
         EGVAR(vehicle_damage,canHaveFireRing) = 0;
-        EGVAR(vehicle_damage,canHaveFireJet) = 0;
+        EGVAR(cookoff,canHaveFireJet) = 0;
     };
 
     class CUP_LAV25_Base: Wheeled_APC_F {

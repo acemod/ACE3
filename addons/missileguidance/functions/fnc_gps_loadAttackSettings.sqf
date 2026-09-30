@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call ace_missileguidance_fnc_gps_saveAttackSettings
+ * [] call ace_missileguidance_fnc_gps_loadAttackSettings
  *
  * Public: No
  */
