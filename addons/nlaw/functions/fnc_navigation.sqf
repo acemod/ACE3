@@ -10,7 +10,7 @@
  * Commanded acceleration normal to LOS in world space <ARRAY>
  *
  * Example:
- * [] call ace_missileguidance_fnc_navigationType_line
+ * [] call ace_nlaw_fnc_navigation
  *
  * Public: No
  */

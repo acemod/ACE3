@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: All Gear based on return value of ace_common_fnc_getAllGear <ARRAY>
+ * 1: All Gear based on return value of CBA_fnc_getLoadout<ARRAY>
  * 2: All weapon info needed for restoring previous weapon status <ARRAY>
  *
  * Return Value:

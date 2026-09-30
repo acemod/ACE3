@@ -54,7 +54,7 @@ GVAR(pphandle) ppEffectAdjust [1, 1, 0, [0.01, 0.02, 0.04, 0.01], [0.87, 1.08, 1
 GVAR(pphandle) ppEffectCommit 0;
 GVAR(pphandle) ppEffectEnable true;
 
-GVAR(stop) = false; // Var also used in ace_common_fnc_isFeatureCameraActive
+GVAR(stop) = false; // Var also used in CBA_fnc_registerFeatureCamera handler
 call FUNC(huntirCompass);
 
 GVAR(no_cams) = ACE_player nearEntities ["ACE_HuntIR", HUNTIR_MAX_TRANSMISSION_RANGE];
