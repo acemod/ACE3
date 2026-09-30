@@ -24,7 +24,7 @@ private _displayName = if (_item isEqualType "") then {
     getText (configOf _item >> "displayName")
 };
 
-if (_addCustomName && {_item isEqualType objNull}) then {
+if (_addCustomName && _item isEqualType objNull) then {
     private _customName = _item getVariable [QGVAR(customName), ""];
 
     if (_customName isNotEqualTo "") then {
