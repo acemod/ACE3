@@ -7,8 +7,8 @@
  *
  * Arguments:
  * 0: Arsenal display <DISPLAY>
- * 1: Current panel control <CONTROL> (OPTIONAL)
- * 2: Current panel selection <NUMBER> (OPTIONAL)
+ * 1: Current panel control <CONTROL> (optional)
+ * 2: Current panel selection <NUMBER> (optional)
  * 3: Item config entry <CONFIG>
  *
  * Return Value:
