@@ -135,6 +135,19 @@ if (_init) then {
             [QGVAR(addToGrenadeTracking), [_this select 6]] call CBA_fnc_localEvent;
         }
     ] call CBA_fnc_addEventHandler;
+
+    // register timed-explosion EH
+    GVAR(timedExplosives) = [];
+    GVAR(timedExplosivesDrawHash) = createHashMapFromArray [
+        ["@dynamic", true],
+        ["@fade", [50, 200]]
+    ];
+    GVAR(timedExplosivesEH) = [QEGVAR(explosives,timerStarted), {
+        params ["_explosive", "_delay"]; // bombs will either explode or be defused (either way becoming null)
+        if (isNil "_explosive" || {isNull _explosive}) exitWith {};
+        GVAR(timedExplosives) pushBack [_explosive, CBA_missionTime + _delay];
+    }] call CBA_fnc_addEventHandler;
+
 } else {
     // Stop updating the list and focus widget
     [GVAR(uiPFH)] call CBA_fnc_removePerFrameHandler;
@@ -160,6 +173,10 @@ if (_init) then {
     [QGVAR(addToGrenadeTracking), GVAR(grenadeTrackingEH)] call CBA_fnc_removeEventHandler;
     GVAR(grenadeTrackingEH) = nil;
 
+    // remove timed-explosion EH
+    [QEGVAR(explosives,timerStarted), GVAR(timedExplosivesEH)] call CBA_fnc_removeEventHandler;
+    GVAR(timedExplosivesEH) = nil;
+
     // Destroy the display
     SPEC_DISPLAY closeDisplay 1;
 
@@ -180,6 +197,7 @@ if (_init) then {
     GVAR(grenadesToDraw)    = nil;
     GVAR(iconsToDraw)       = nil;
     GVAR(projectilesToDraw) = nil;
+    GVAR(timedExplosives)   = nil;
 
     // Reset view distance
     setViewDistance GVAR(oldViewDistance);

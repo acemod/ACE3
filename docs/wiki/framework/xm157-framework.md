@@ -60,7 +60,7 @@ Shells can be set to airburst based on lased distance
 
 ```cpp
 class myAmmo: G_40mm_HE {
-    class Eventhandlers {
+    class EventHandlers {
         fired = QUOTE(call ace_xm157_fnc_airburst_ammoFired);
     };
 };
