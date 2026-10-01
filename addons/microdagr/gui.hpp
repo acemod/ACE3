@@ -59,10 +59,10 @@ class GVAR(TheDialog) {
 
 
 //Redfine Scaling for the RscTitle
-#define PROFILE_X (profilenamespace getVariable ['IGUI_grid_ACE_microDagr_X', 0])
-#define PROFILE_Y (profilenamespace getVariable ['IGUI_grid_ACE_microDagr_Y', 0])
-#define PROFILE_W (profilenamespace getVariable ['IGUI_grid_ACE_microDagr_W', 1])
-#define PROFILE_H ((16/9) * (profilenamespace getVariable ['IGUI_grid_ACE_microDagr_W', 1]))
+#define PROFILE_X (profileNamespace getVariable ['IGUI_grid_ACE_microDagr_X', 0])
+#define PROFILE_Y (profileNamespace getVariable ['IGUI_grid_ACE_microDagr_Y', 0])
+#define PROFILE_W (profileNamespace getVariable ['IGUI_grid_ACE_microDagr_W', 1])
+#define PROFILE_H ((16/9) * (profileNamespace getVariable ['IGUI_grid_ACE_microDagr_W', 1]))
 
 //Need undef's for pboProject
 #undef X_PART

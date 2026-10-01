@@ -222,7 +222,7 @@ class Kestrel4500_Display {
 class RscTitles {
     class RscKestrel4500 {
         idd=-1;
-        onLoad="with uiNameSpace do { RscKestrel4500 = _this select 0 };";
+        onLoad="with uiNamespace do { RscKestrel4500 = _this select 0 };";
         movingEnable=0;
         duration=60;
         fadeIn="false";

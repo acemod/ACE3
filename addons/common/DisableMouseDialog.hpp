@@ -1,7 +1,7 @@
 class GVAR(DisableMouse_Dialog) {
     idd = -1;
     movingEnable = 0;
-    onLoad = QUOTE(with uiNameSpace do { GVAR(dlgDisableMouse) = _this # 0; };);
+    onLoad = QUOTE(with uiNamespace do { GVAR(dlgDisableMouse) = _this # 0; };);
     objects[] = {};
     class controlsBackground {
         // Transparent map allows setting custom cursor

@@ -1,7 +1,7 @@
 class RscTitles {
     class RscWindIntuitive {
         idd=-1;
-        onLoad="with uiNameSpace do { RscWindIntuitive = _this select 0 };";
+        onLoad="with uiNamespace do { RscWindIntuitive = _this select 0 };";
         movingEnable=0;
         duration=60;
         fadeIn="false";

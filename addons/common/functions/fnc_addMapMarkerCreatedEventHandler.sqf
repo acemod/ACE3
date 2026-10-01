@@ -15,6 +15,8 @@
  * Public: Yes
  */
 
+ACE_DEPRECATED("ace_common_fnc_addMapMarkerCreatedEventHandler","3.25","Use https://community.bistudio.com/wiki/Arma_3:_Mission_Event_Handlers#MarkerCreated");
+
 params ["_statement"];
 
 if (_statement isEqualType "") then {
