@@ -1,15 +1,16 @@
 #include "..\script_component.hpp"
 /*
- * Author: PabstMirror
+ * Author: PabstMirror, LinkIsGrim
  * Gets nearby magazines that can be loaded into the CSW.
  *
  * Arguments:
  * 0: CSW <OBJECT>
  * 1: Unit <OBJECT>
+ * 2: AI reloading, only check the unit's own turret <BOOL> (default: false)
  *
  * Return Value:
  * Mags <ARRAY>
- *   [Carry Magazine <STRING>, Turret Path <ARRAY>, Load Info <ARRAY>, Magazine Source <OBJECT>]
+ *   [Carry Magazine <STRING>, Turret Path <ARRAY>, Load Info <ARRAY>, Magazine Source <OBJECT>, Magazine Ammo <NUMBER>]
  *
  * Example:
  * [cursorObject, player] call ace_csw_fnc_reload_getLoadableMagazines
@@ -17,62 +18,60 @@
  * Public: No
  */
 
-params ["_vehicle", "_player"];
+params ["_vehicle", "_unit", ["_aiReload", false]];
 
-private _magGroupsConfig = configFile >> QGVAR(groups); // so we don't solve in loop every time
-private _availableMagazines = createHashMap; // slower than array, still needed for setting source of magazine
+// Hashmap rather than an array, the source each magazine came from has to be carried along
+private _availableMagazines = createHashMap;
 
-// filter enemy & player units while allowing pulling from friendly AI, crates, etc
-private _nearSupplies = ((_vehicle nearSupplies 10) select {
-    isNull (group _x) ||
-    {!([_x] call EFUNC(common,isPlayer)) && {[side group _player, side group _x] call BIS_fnc_sideIsFriendly}}
-});
-
-// backpacks/uniforms/etc need to be added manually.
-// array can't be modified while iterating, use copy
-{
-    {
-        _x params ["_classname", "_container"];
-        _nearSupplies pushBack _container;
-    } forEach (everyContainer _x);
-} forEach ((+_nearSupplies) select {(everyContainer _x) isNotEqualTo []});
-
-// add caller to list of sources
-_nearSupplies = [_player] + _nearSupplies;
+// Once for the CSW rather than once per source
+private _compatibleMagazines = _vehicle call FUNC(compatibleMagazines);
 
 {
     private _xSource = _x;
-    private _mags = magazineCargo _xSource;
+    private _handledSourceMags = [];
 
     {
-        _availableMagazines set [_x, _xSource];
-    } forEach (_mags select {isClass (_magGroupsConfig >> _x)});
-} forEach _nearSupplies;
+        _x params ["_classname", "_ammo"];
 
-if (_availableMagazines isEqualTo createHashMap) exitWith { [] }; // fast exit if no available mags
+        // Sources come back grouped by classname with the fullest first, so only the first counts
+        if (_classname in _handledSourceMags) then {continue};
+        _handledSourceMags pushBack _classname;
 
-private _loadInfo = [];
+        // Across sources, take whichever holds the fullest magazine of this type
+        if (_ammo > ((_availableMagazines getOrDefault [_classname, [objNull, 0]]) select 1)) then {
+            _availableMagazines set [_classname, [_xSource, _ammo]];
+        };
+    } forEach ([_xSource, _vehicle, _compatibleMagazines] call FUNC(getSourceCompatibleMagazines));
+} forEach (_unit call FUNC(getNearbySources));
+
+if (_availableMagazines isEqualTo createHashMap) exitWith {[]}; // fast exit if no available mags
+
+// AI only ever reloads the turret it is sitting in, no reason to walk the rest.
+// unitTurret gives [] when nobody is in a turret and [-1] when the gunner is also the driver
+private _allTurrets = allTurrets _vehicle;
+private _turrets = _allTurrets;
+
+if (_aiReload) then {
+    private _turretPath = _vehicle unitTurret _unit;
+    _turrets = [[0], _turretPath] select (_turretPath in _allTurrets);
+    _turrets = [_turrets];
+};
+
 private _return = [];
-// Go through turrets and find weapons that we could reload
+
 {
     private _turretPath = _x;
     {
-        private _weapon = _x;
-        {
-            private _carryMag = _x;
-            private _magSource = _y;
-            private _carryGroup = _magGroupsConfig >> _carryMag;
-            {
-                if (
-                    ((getNumber (_carryGroup >> _x)) == 1) &&
-                    {_loadInfo = [_vehicle, _turretPath, _carryMag, _magSource] call FUNC(reload_canLoadMagazine); _loadInfo select 0}
-                ) exitWith {
-                    _return pushBack [_carryMag, _turretPath, _loadInfo, _magSource];
-                };
-            } forEach (compatibleMagazines _weapon);
-        } forEach _availableMagazines;
-    } forEach (_vehicle weaponsTurret _turretPath);
-} forEach (allTurrets _vehicle);
-// Note: these nested forEach's looks terrible, but most only have one element
+        //IGNORE_PRIVATE_WARNING ["_x", "_y"];
+        private _carryMag = _x;
+        _y params ["_magSource", "_ammo"];
+
+        // No source passed, the source was picked above and is known to hold the magazine
+        private _loadInfo = [_vehicle, _turretPath, _carryMag] call FUNC(reload_canLoadMagazine);
+        if (_loadInfo select 0) then {
+            _return pushBack [_carryMag, _turretPath, _loadInfo, _magSource, _ammo];
+        };
+    } forEach _availableMagazines;
+} forEach _turrets;
 
 _return
