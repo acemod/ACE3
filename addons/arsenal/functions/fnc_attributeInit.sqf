@@ -26,7 +26,7 @@ if (_mode > 0) then {
 
     // Wait until all items have been added, so that the blacklisted items can be removed
     [{
-        !isNil {(_this select 0) getVariable QGVAR(virtualItems)}
+        !((_this select 0) isNil QGVAR(virtualItems))
     }, {
         [_this select 0, _this select 1, true] call FUNC(removeVirtualItems);
     }, [_object, _items], 20] call CBA_fnc_waitUntilAndExecute; // 20s timeout in case of failure

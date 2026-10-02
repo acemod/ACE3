@@ -15,7 +15,7 @@ if (!hasInterface) exitWith {};
     } forEach keys (uiNamespace getVariable [QGVAR(seats), []]);
 
     // Add interaction menu exception
-    ["isNotSitting", {isNil {(_this select 0) getVariable QGVAR(sittingStatus)}}] call EFUNC(common,addCanInteractWithCondition);
+    ["isNotSitting", {((_this select 0) isNil QGVAR(sittingStatus))}] call EFUNC(common,addCanInteractWithCondition);
 
     // Handle interruptions
     ["ace_unconscious", LINKFUNC(handleInterrupt)] call CBA_fnc_addEventHandler;

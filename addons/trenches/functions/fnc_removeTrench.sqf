@@ -28,7 +28,7 @@ _trench setVariable [QGVAR(digging), true, true];
 private _removeTime = missionNamespace getVariable [getText (configOf _trench >> QGVAR(removalDuration)), 12];
 private _removeTimeLeft = _removeTime * _actualProgress;
 
-if (isNil {_trench getVariable QGVAR(placeData)}) then {
+if ((_trench isNil QGVAR(placeData))) then {
     _trench setVariable [QGVAR(placeData), [getPosASL _trench, [vectorDir _trench, vectorUp _trench]], true];
 };
 private _placeData = _trench getVariable [QGVAR(placeData), [[], []]];
