@@ -70,3 +70,13 @@ private _checkPos5end = _checkPos5beg vectorAdd (_dir vectorMultiply 1.3);
 && {!(lineIntersects [_checkPos3beg, _checkPos3end])}
 && {!(lineIntersects [_checkPos4beg, _checkPos4end])}
 && {!(lineIntersects [_checkPos5beg, _checkPos5end])}
+&& {
+    // glass in some house windows is detected only in FIRE LOD
+    lineIntersectsSurfaces [[
+        [_checkPos1beg, _checkPos1end, _unit, objNull, true, 1, "FIRE"],
+        [_checkPos2beg, _checkPos2end, _unit, objNull, true, 1, "FIRE"],
+        [_checkPos3beg, _checkPos3end, _unit, objNull, true, 1, "FIRE"],
+        [_checkPos4beg, _checkPos4end, _unit, objNull, true, 1, "FIRE"],
+        [_checkPos5beg, _checkPos5end, _unit, objNull, true, 1, "FIRE"]
+    ]] isEqualTo [[], [], [], [], []]
+}
