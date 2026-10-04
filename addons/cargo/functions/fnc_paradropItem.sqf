@@ -41,6 +41,14 @@ if (_itemSize < 0) exitWith {
     false // return
 };
 
+// Unload item from cargo
+_loaded deleteAt (_loaded find _item);
+_vehicle setVariable [QGVAR(loaded), _loaded, true];
+
+// Update cargo space remaining
+private _cargoSpace = _vehicle call FUNC(getCargoSpaceLeft);
+_vehicle setVariable [QGVAR(space), _cargoSpace + _itemSize, true];
+
 (boundingBoxReal _vehicle) params ["_bb1", "_bb2"];
 private _distBehind = ((_bb1 select 1) min (_bb2 select 1)) - 4; // 4 meters behind max bounding box
 private _posBehindVehicleAGL = _vehicle modelToWorld [0, _distBehind, -2];
