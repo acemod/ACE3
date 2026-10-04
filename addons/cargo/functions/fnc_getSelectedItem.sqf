@@ -4,13 +4,13 @@
  * Get selected item from cargo menu.
  *
  * Arguments:
- * None
+ * 0: Is ViV menu active? <BOOL> (default: false)
  *
  * Return Value:
  * Classname of selected item or selected object <STRING or OBJECT or NIL> (default: nil)
  *
  * Example:
- * call ace_cargo_fnc_getSelectedItem
+ * [false] call ace_cargo_fnc_getSelectedItem
  *
  * Public: No
  */

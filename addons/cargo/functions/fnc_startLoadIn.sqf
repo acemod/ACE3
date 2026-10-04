@@ -26,7 +26,7 @@ if (isNull _vehicle) then {
         if ([_item, _x, false, _isViv] call FUNC(canLoadItemIn)) exitWith {
             _vehicle = _x;
         };
-    } forEach (nearestObjects [_loader, GVAR(cargoHolderTypes), MAX_LOAD_DISTANCE + 10]);
+    } forEach (nearestObjects [_loader, GVAR(cargoHolderTypes), ([MAX_LOAD_DISTANCE, GVAR(vivMaxLoadDistance)] select _isViv) + 10]);
 };
 
 if (isNull _vehicle) exitWith {
@@ -37,7 +37,7 @@ if (isNull _vehicle) exitWith {
 
 // Start progress bar
 if ([_item, _vehicle, false, _isViv] call FUNC(canLoadItemIn)) then {
-    private _duration = [_item, false] call FUNC(getDelayItem);
+    private _duration = [_item, false, _isViv] call FUNC(getDelayItem);
 
     // If load time is 0, don't show a progress bar
     if (_duration <= 0) exitWith {

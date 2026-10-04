@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: marc_book, commy2, CAA-Picard
+ * Author: marc_book, commy2, CAA-Picard, Cathode88
  * Unloads and paradrops an object from a plane or helicopter.
  *
  * Arguments:
@@ -25,10 +25,13 @@ if (_item isEqualType "") then {
     _item = _item call EFUNC(common,getConfigName);
 };
 
+// ViV cargo is not tracked in ace_cargo_loaded, the engine unloads it and opens the parachute
+private _isViv = (_item isEqualType objNull) && {(isVehicleCargo _item) isEqualTo _vehicle};
+
 // Check if item is actually part of cargo
 private _loaded = _vehicle getVariable [QGVAR(loaded), []];
 
-if !(_item in _loaded) exitWith {
+if !(_isViv || {_item in _loaded}) exitWith {
     ERROR_3("Tried to paradrop item [%1] not in vehicle[%2] cargo[%3]",_item,_vehicle,_loaded);
 
     false // return
@@ -37,17 +40,19 @@ if !(_item in _loaded) exitWith {
 // Check if item can be unloaded
 private _itemSize = _item call FUNC(getSizeItem);
 
-if (_itemSize < 0) exitWith {
+if (!_isViv && {_itemSize < 0}) exitWith {
     false // return
 };
 
 // Unload item from cargo
-_loaded deleteAt (_loaded find _item);
-_vehicle setVariable [QGVAR(loaded), _loaded, true];
+if (!_isViv) then {
+    _loaded deleteAt (_loaded find _item);
+    _vehicle setVariable [QGVAR(loaded), _loaded, true];
 
-// Update cargo space remaining
-private _cargoSpace = _vehicle call FUNC(getCargoSpaceLeft);
-_vehicle setVariable [QGVAR(space), _cargoSpace + _itemSize, true];
+    // Update cargo space remaining
+    private _cargoSpace = _vehicle call FUNC(getCargoSpaceLeft);
+    _vehicle setVariable [QGVAR(space), _cargoSpace + _itemSize, true];
+};
 
 (boundingBoxReal _vehicle) params ["_bb1", "_bb2"];
 private _distBehind = ((_bb1 select 1) min (_bb2 select 1)) - 4; // 4 meters behind max bounding box
@@ -58,17 +63,24 @@ TRACE_1("",_distBehind);
 private _object = _item;
 
 if (_item isEqualType objNull) then {
-    detach _object;
+    if (_isViv) then {
+        // The engine decides the position and opens its own parachute
+        objNull setVehicleCargo _object;
+    } else {
+        detach _object;
 
-    // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
-    // Do both on server to ensure they are executed in the correct order
-    [QGVAR(serverUnload), [_object, _posBehindVehicleAGL]] call CBA_fnc_serverEvent;
+        // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
+        // Do both on server to ensure they are executed in the correct order
+        [QGVAR(serverUnload), [_object, _posBehindVehicleAGL]] call CBA_fnc_serverEvent;
+    };
 } else {
     _object = createVehicle [_item, _posBehindVehicleAGL, [], 0, "NONE"];
     _object setPosASL (AGLToASL _posBehindVehicleAGL);
 };
 
-[QEGVAR(common,setVelocity), [_object, (velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply -5)], _object] call CBA_fnc_targetEvent;
+if (!_isViv) then {
+    [QEGVAR(common,setVelocity), [_object, (velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply -5)], _object] call CBA_fnc_targetEvent;
+};
 
 // Open parachute and IR light effect
 [{

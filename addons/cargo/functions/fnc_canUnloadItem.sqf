@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Glowbal, ViperMaul
+ * Author: Glowbal, ViperMaul, Cathode88
  * Checks if the item can be unloaded from another object.
  *
  * Arguments:
@@ -32,7 +32,7 @@ if (_isViv && {_vehicle != isVehicleCargo _item}) exitWith {false};
 if !(_isViv || {_item in (_vehicle getVariable [QGVAR(loaded), []])}) exitWith {false};
 
 private _validItem = if (_item isEqualType objNull) then {
-    alive _item && isNull (isVehicleCargo _item);
+    alive _item && {_isViv || {isNull (isVehicleCargo _item)}}
 } else {
     true
 };
@@ -41,6 +41,6 @@ _validItem &&
 {alive _vehicle} &&
 {locked _vehicle < 2} &&
 {_isViv || {_vehicle getVariable [QGVAR(hasCargo), getNumber (configOf _vehicle >> QGVAR(hasCargo)) == 1]}} &&
-{_item call FUNC(getSizeItem) >= 0} &&
-{_ignoreInteraction || {([_unloader, _vehicle] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}} &&
+{_isViv || {_item call FUNC(getSizeItem) >= 0}} &&
+{_ignoreInteraction || {([_unloader, _vehicle] call EFUNC(interaction,getInteractionDistance)) < ([MAX_LOAD_DISTANCE, GVAR(vivMaxLoadDistance)] select _isViv)}} &&
 {_ignoreFindPosition || {([_vehicle, _item, _unloader, MAX_LOAD_DISTANCE, !_ignoreInteraction] call EFUNC(common,findUnloadPosition)) isNotEqualTo []}}

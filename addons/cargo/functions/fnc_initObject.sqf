@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Glowbal, kymckay
+ * Author: Glowbal, kymckay, Cathode88
  * Initializes variables for loadable objects. Called from init EH.
  *
  * Arguments:
@@ -49,6 +49,10 @@ if (_canLoadConfig) then {
     {
         [_type, 0, ["ACE_MainActions"], _x] call EFUNC(interact_menu,addActionToClass);
     } forEach GVAR(objectActions);
+    // Skip if the expanded ViV registration (see XEH_postInit.sqf) already covers this class
+    if !(GVAR(expandedVivObjectSupport) && {_type isKindOf "ThingX" || {_type isKindOf "StaticWeapon"}}) then {
+        [_type, 0, ["ACE_MainActions"], GVAR(loadVivAction)] call EFUNC(interact_menu,addActionToClass);
+    };
 } else {
     _item setVariable [QGVAR(initObject), true];
 
@@ -57,4 +61,8 @@ if (_canLoadConfig) then {
     {
         [_item, 0, ["ACE_MainActions"], _x] call EFUNC(interact_menu,addActionToObject);
     } forEach GVAR(objectActions);
+    // Skip if the expanded ViV registration (see XEH_postInit.sqf) already covers this object
+    if !(GVAR(expandedVivObjectSupport) && {_item isKindOf "ThingX" || {_item isKindOf "StaticWeapon"}}) then {
+        [_item, 0, ["ACE_MainActions"], GVAR(loadVivAction)] call EFUNC(interact_menu,addActionToObject);
+    };
 };

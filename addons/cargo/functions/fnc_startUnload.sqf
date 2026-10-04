@@ -26,7 +26,7 @@ if (GVAR(interactionParadrop)) exitWith {
     // Close the cargo menu
     closeDialog 0;
 
-    private _duration = [_item, true] call FUNC(getDelayItem);
+    private _duration = [_item, true, GVAR(isViv)] call FUNC(getDelayItem);
 
     // If drop time is 0, don't show a progress bar
     if (_duration <= 0) exitWith {
@@ -87,7 +87,7 @@ if ([_item, GVAR(interactionVehicle), _unit, false, GVAR(isViv), GVAR(isViv)] ca
     // Close the cargo menu
     closeDialog 0;
 
-    private _duration = [_item, false] call FUNC(getDelayItem);
+    private _duration = [_item, false, GVAR(isViv)] call FUNC(getDelayItem);
 
     // If unload time is 0, don't show a progress bar
     if (_duration <= 0) exitWith {

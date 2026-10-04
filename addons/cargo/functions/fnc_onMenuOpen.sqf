@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Glowbal
+ * Author: Glowbal, Cathode88
  * Handles the UI data display.
  *
  * Arguments:
@@ -27,7 +27,7 @@ if (GVAR(interactionParadrop)) then {
 
 // https://feedback.bistudio.com/T182949
 private _config = configOf GVAR(interactionVehicle);
-private _isVivCapable = isClass (_config >> "VehicleTransport" >> "Carrier");
+private _isVivCapable = GVAR(enableViv) && {isClass (_config >> "VehicleTransport" >> "Carrier")};
 
 // Make sure that correct menu is displayed at start, if there are limitations
 if !(GVAR(interactionVehicle) getVariable [QGVAR(hasCargo), getNumber (_config >> QGVAR(hasCargo)) == 1]) then {
@@ -113,15 +113,19 @@ if !(GVAR(interactionVehicle) getVariable [QGVAR(hasCargo), getNumber (_config >
         private _damage = if (_x isEqualType "") then {0} else {damage _x};
         private _damageStr = ((_damage * 100) toFixed 0) + "%";
 
-        if (_itemSize >= 0) then {
+        if (GVAR(isViv) || {_itemSize >= 0}) then {
             //IGNORE_PRIVATE_WARNING ["ace_cargo_interactionParadrop"];
-            _index = if (GVAR(interactionParadrop)) then {
-                _ctrl lbAdd format ["%1. %2 (%3s)", _forEachIndex + 1, _displayName, GVAR(paradropTimeCoefficent) * _itemSize]
+            private _index = if (GVAR(interactionParadrop)) then {
+                _ctrl lbAdd format ["%1. %2 (%3s)", _forEachIndex + 1, _displayName, [GVAR(paradropTimeCoefficent) * _itemSize, [_x, true, true] call FUNC(getDelayItem)] select GVAR(isViv)]
             } else {
                 _ctrl lbAdd format ["%1. %2", _forEachIndex + 1, _displayName]
             };
 
-            private _tooltip = format ["%1\n%2", format [LLSTRING(sizeMenu), _itemSize], format ["%1: %2", localize "str_a3_normaldamage1", _damageStr]];
+            private _tooltip = if (GVAR(isViv)) then {
+                format ["%1\n%2", format [LLSTRING(massMenu), getMass _x], format ["%1: %2", localize "str_a3_normaldamage1", _damageStr]];
+            } else {
+                format ["%1\n%2", format [LLSTRING(sizeMenu), _itemSize], format ["%1: %2", localize "str_a3_normaldamage1", _damageStr]];
+            };
             _ctrl lbSetTooltip [_index, _tooltip];
         } else {
             // If item has a size < 0, it means it's not loadable
@@ -138,7 +142,7 @@ if !(GVAR(interactionVehicle) getVariable [QGVAR(hasCargo), getNumber (_config >
     } forEach _loaded;
 
     if (GVAR(isViv)) then {
-        _label ctrlSetText format [LLSTRING(labelSpace), _maxMass max 0];
+        _label ctrlSetText format [LLSTRING(vivLabelSpace), _maxMass max 0];
     } else {
         _label ctrlSetText format [LLSTRING(labelSpace), (_vehicle call FUNC(getCargoSpaceLeft)) max 0];
     };

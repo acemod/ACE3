@@ -90,6 +90,7 @@
 
 // Private events to handle adding actions globally via public functions
 [QGVAR(initObject), LINKFUNC(initObject)] call CBA_fnc_addEventHandler;
+[QGVAR(initObjectViv), LINKFUNC(initObjectViv)] call CBA_fnc_addEventHandler;
 [QGVAR(initVehicle), LINKFUNC(initVehicle)] call CBA_fnc_addEventHandler;
 
 GVAR(vehicleAction) = [
@@ -107,12 +108,39 @@ GVAR(vehicleAction) = [
             private _config = configOf _target;
 
             // https://feedback.bistudio.com/T182949
-            (vehicleCargoEnabled _target && {isClass (_config >> "VehicleTransport" >> "Carrier")}) ||
+            (GVAR(enableViv) && {vehicleCargoEnabled _target} && {isClass (_config >> "VehicleTransport" >> "Carrier")}) ||
             {_target getVariable [QGVAR(hasCargo), getNumber (_config >> QGVAR(hasCargo)) == 1]}
         } &&
         {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
         {[_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew)} &&
         {([_player, _target] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
+    }
+] call EFUNC(interact_menu,createAction);
+
+// Paradrop self interaction for planes and helicopters, added in fnc_initVehicle
+GVAR(paradropAction) = [
+    QGVAR(openMenu), LLSTRING(openMenu), "",
+    {
+        GVAR(interactionVehicle) = _target;
+        GVAR(interactionParadrop) = true;
+        createDialog QGVAR(menu);
+    },
+    {
+        GVAR(enable) &&
+        {[_player, _target, []] call EFUNC(common,canInteractWith)} &&
+        {
+            private _config = configOf _target;
+
+            // Same cargo requirement as the open menu action above
+            (GVAR(enableViv) && {vehicleCargoEnabled _target} && {isClass (_config >> "VehicleTransport" >> "Carrier")}) ||
+            {_target getVariable [QGVAR(hasCargo), getNumber (_config >> QGVAR(hasCargo)) == 1]}
+        } && {
+            private _turretPath = _target unitTurret _player;
+
+            (_player == currentPilot _target) || // Pilot/Co-pilot
+            {(getNumber ([_target, _turretPath] call CBA_fnc_getTurret >> "isCopilot")) == 1} || // Co-pilot
+            {_turretPath in (getArray (configOf _target >> QGVAR(loadmasterTurrets)))}
+        }
     }
 ] call EFUNC(interact_menu,createAction);
 
@@ -154,7 +182,6 @@ GVAR(objectActions) = [
             {alive _target} &&
             {isNull isVehicleCargo _target} &&
             {locked _target < 2} &&
-            {isNull isVehicleCargo _target} &&
             {_target getVariable [QGVAR(canLoad), getNumber (configOf _target >> QGVAR(canLoad)) == 1]} &&
             {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
             {[_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew)} &&
@@ -167,32 +194,33 @@ GVAR(objectActions) = [
             }) != -1}
         },
         {_target call FUNC(addCargoVehiclesActions)}
-    ] call EFUNC(interact_menu,createAction),
-    [QGVAR(loadViv), LLSTRING(loadObjectViv), "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa",
-        {
-            //IGNORE_PRIVATE_WARNING ["_target", "_player"];
-            [_player, _target, objNull, true] call FUNC(startLoadIn);
-        },
-        {
-            //IGNORE_PRIVATE_WARNING ["_target", "_player"];
-            GVAR(enable) &&
-            {alive _target} &&
-            {locked _target < 2} &&
-            {isNull isVehicleCargo _target} &&
-            {_target getVariable [QGVAR(canLoad), getNumber (configOf _target >> QGVAR(canLoad)) == 1]} &&
-            {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
-            {[_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew)} &&
-            {((nearestObjects [_target, GVAR(cargoHolderTypes), MAX_LOAD_DISTANCE + 10]) findIf {
-                _x != _target &&
-                {alive _x} &&
-                {locked _x < 2} &&
-                {(_x canVehicleCargo _target) select 0} &&
-                {([_target, _x] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
-            }) != -1}
-        },
-        {[_target, true] call FUNC(addCargoVehiclesActions)}
     ] call EFUNC(interact_menu,createAction)
 ];
+
+GVAR(loadVivAction) = [QGVAR(loadViv), LLSTRING(loadObjectViv), "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa",
+    {
+        [_player, _target, objNull, true] call FUNC(startLoadIn);
+    },
+    {
+        GVAR(enable) &&
+        {GVAR(enableViv)} &&
+        {alive _target} &&
+        {locked _target < 2} &&
+        {isNull isVehicleCargo _target} &&
+        {_target getVariable [QGVAR(canLoadViv), true]} &&
+        {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
+        {[_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew)} &&
+        {((nearestObjects [_target, GVAR(cargoHolderTypes), GVAR(vivMaxLoadDistance) + 10]) findIf {
+            _x != _target &&
+            {alive _x} &&
+            {locked _x < 2} &&
+            {!(_x getVariable [QGVAR(disableVivCarrier), false])} &&
+            {(_x canVehicleCargo _target) select 1} &&
+            {([_target, _x] call EFUNC(interaction,getInteractionDistance)) < GVAR(vivMaxLoadDistance)}
+        }) != -1}
+    },
+    {[_target, true] call FUNC(addCargoVehiclesActions)}
+] call EFUNC(interact_menu,createAction);
 
 // Find all remaining configured classes and init them, see XEH_preStart.sqf
 private _vehicleClassesAddAction = call (uiNamespace getVariable [QGVAR(initializedVehicleClasses), {[]}]);
@@ -226,6 +254,14 @@ private _objectClassesAddClassEH = call (uiNamespace getVariable [QGVAR(objectCl
 {
     [_x, "initPost", DFUNC(initObject), nil, nil, true] call CBA_fnc_addClassEventHandler;
 } forEach _objectClassesAddClassEH;
+
+if (GVAR(expandedVivObjectSupport)) then {
+    private _objectClassesAddClassEHViv = call (uiNamespace getVariable [QGVAR(objectClasses_classEHViv), {[]}]);
+
+    {
+        [_x, 0, ["ACE_MainActions"], GVAR(loadVivAction)] call EFUNC(interact_menu,addActionToClass);
+    } forEach (_objectClassesAddClassEHViv);
+};
 
 if (isServer) then {
     ["ace_placedInBodyBag", {

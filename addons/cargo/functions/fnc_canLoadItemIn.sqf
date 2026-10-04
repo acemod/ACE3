@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Glowbal
+ * Author: Glowbal, Cathode88
  * Checks if the item can be loaded into another object.
  *
  * Arguments:
@@ -43,8 +43,8 @@ private _validItem = if (_item isEqualType "") then {
     {getNumber (_config >> QGVAR(canLoad)) == 1}
 } else {
     alive _item &&
-    {_item getVariable [QGVAR(canLoad), getNumber (configOf _item >> QGVAR(canLoad)) == 1]} &&
-    {_ignoreInteraction || {([_item, _vehicle] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}} &&
+    {_isViv || {_item getVariable [QGVAR(canLoad), getNumber (configOf _item >> QGVAR(canLoad)) == 1]}} &&
+    {_ignoreInteraction || {([_item, _vehicle] call EFUNC(interaction,getInteractionDistance)) < ([MAX_LOAD_DISTANCE, GVAR(vivMaxLoadDistance)] select _isViv)}} &&
     {!(_item getVariable [QEGVAR(cookoff,isCookingOff), false])} && // do not load items that are cooking off
     {isNull (_item getVariable [QEGVAR(refuel,nozzle), objNull])} && // objects which have a refueling nozzle connected to them cannot be loaded
     {isNull (_item getVariable [QEGVAR(refuel,ownedNozzle), objNull])} // fuel sources which have their nozzle out cannot be loaded
@@ -55,10 +55,12 @@ _validItem &&
 {locked _vehicle < 2} &&
 {
     if (_isViv) then {
-        (_vehicle canVehicleCargo _item) select 0
+        !(_vehicle getVariable [QGVAR(disableVivCarrier), false]) &&
+        {_item getVariable [QGVAR(canLoadViv), true]} &&
+        {(_vehicle canVehicleCargo _item) select 0}
     } else {
         _vehicle getVariable [QGVAR(hasCargo), getNumber (configOf _vehicle >> QGVAR(hasCargo)) == 1]
     }
 } &&
-{_itemSize >= 0} &&
+{_isViv || {_itemSize >= 0}} &&
 {_isViv || {_itemSize <= (_vehicle call FUNC(getCargoSpaceLeft)) max 0}}

@@ -24,7 +24,7 @@ if (!isNull GVAR(itemPreviewObject) && {[GVAR(selectedItem), GVAR(interactionVeh
     // Position is AGL for unloading event
     private _position = ASLToAGL getPosASL GVAR(itemPreviewObject);
     private _direction = getDir GVAR(itemPreviewObject);
-    private _duration = [GVAR(selectedItem), false] call FUNC(getDelayItem);
+    private _duration = [GVAR(selectedItem), false, GVAR(isViv)] call FUNC(getDelayItem);
 
     // If unload time is 0, don't show a progress bar
     if (_duration <= 0) exitWith {
@@ -52,7 +52,7 @@ if (!isNull GVAR(itemPreviewObject) && {[GVAR(selectedItem), GVAR(interactionVeh
                 objNull setVehicleCargo _item;
 
                 _item setDir (_posAndDir select 1);
-                _item setPosASL (AGLtoASL (_posAndDir select 0));
+                _item setPosASL (AGLToASL (_posAndDir select 0));
             } else {
                 ["ace_unloadCargo", _this select 0] call CBA_fnc_localEvent;
             };

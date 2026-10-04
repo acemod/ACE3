@@ -28,6 +28,53 @@ private _category = [ELSTRING(main,Category_Logistics), LSTRING(openMenu)];
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(enableViv),
+    "CHECKBOX",
+    [LSTRING(enableViv), LSTRING(enableViv_description)],
+    _category,
+    true,
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(expandedVivObjectSupport),
+    "CHECKBOX",
+    [LSTRING(expandedVivObjectSupport), LSTRING(expandedVivObjectSupport_description)],
+    _category,
+    false,
+    1,
+    {[QGVAR(expandedVivObjectSupport), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(vivMaxLoadDistance),
+    "SLIDER",
+    [LSTRING(vivMaxLoadDistance), LSTRING(vivMaxLoadDistance_description)],
+    _category,
+    [1, 50, 20, 1],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(vivLoadTime),
+    "SLIDER",
+    [LSTRING(vivLoadTime), LSTRING(vivLoadTime_description)],
+    _category,
+    [0, 300, 30, 1],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(vivParadropTime),
+    "SLIDER",
+    [LSTRING(vivParadropTime), LSTRING(vivParadropTime_description)],
+    _category,
+    [0, 300, 10, 1],
+    1
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(unloadOnKilled),
     "SLIDER",
     [LSTRING(unloadOnKilled), LSTRING(unloadOnKilled_description)],
