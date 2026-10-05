@@ -41,8 +41,8 @@ private _weaponEnabledConfig = _weaponConfig >> QGVAR(enabled);
 private _ammoConfig = [];
 
 // Only consider weapons with explicit enable configs (inheritance not allowed)
+private _ammoType = getText (configFile >> "CfgMagazines" >> _currentMagazine >> "ammo");
 if (_weaponConfig == inheritsFrom _weaponEnabledConfig) then {
-    private _ammoType = getText (configFile >> "CfgMagazines" >> _currentMagazine >> "ammo");
     _ammoConfig = "configName _x == 'ace_missileguidance'" configClasses (configFile >> "CfgAmmo" >> _ammoType);
 } else {
     // If weapon enable is inherited, mark as invalid
@@ -52,7 +52,8 @@ if (_weaponConfig == inheritsFrom _weaponEnabledConfig) then {
 // Check if loaded and javelin enabled for wepaon and missile guidance enabled for loaded ammo
 if ((_ammoCount == 0) || // No ammo loaded
         {(getNumber _weaponEnabledConfig) != 1} || // Not enabled for weapon
-        {_ammoConfig isEqualTo []} || {(getNumber ((_ammoConfig select 0) >> "enabled")) != 1} // Not enabled for ammo
+        {_ammoConfig isEqualTo []} || {(getNumber ((_ammoConfig select 0) >> "enabled")) != 1} || // Not enabled for ammo
+        { getNumber (configFile >> "CfgAmmo" >> _ammoType >> QEGVAR(missileguidance,allowDumbFire)) == 1 } // Allows firing without lock
         ) exitWith {
 
     __JavelinIGUITargeting ctrlShow false;
