@@ -1,4 +1,4 @@
-#include "../script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: OverlordZorn
  * Getter Function for the Icon of a change - checks for directional property, cfgWardrobe property or falls back to target inventory Image.

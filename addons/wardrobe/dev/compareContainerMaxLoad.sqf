@@ -1,4 +1,4 @@
-#include "../script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: OverlordZorn
  * Compare the maxLoad of all modifiable items with its modifiableTo variants and log to RPT.
