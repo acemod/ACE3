@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [player, [[0.5, "Body", 1]], "bullet"] call ace_medical_damage_fnc_woundsHandlerBase
+ * [player, [[0.5, "Body", 1, "HitChest"]], "bullet"] call ace_medical_damage_fnc_woundsHandlerBase
  *
  * Public: No
  */
@@ -92,14 +92,17 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
         _bodyPartDamage set [_bodyPartNToAdd, (_bodyPartDamage select _bodyPartNToAdd) + _woundDamage];
         _bodyPartVisParams set [[1,2,3,3,4,4] select _bodyPartNToAdd, true]; // Mark the body part index needs updating
 
-        // Anything above this value is guaranteed worst wound possible
-        private _worstDamage = 2;
+        // Anything above this value is guaranteed worst wound possible, anything below is the smallest
+        // Bounds are tight because damage already scales with the round's "hit" value - widening them
+        // saturates the clamp and makes a 9mm and a .50 BMG produce the same size wound
+        private _worstDamage = 1.71;
+        private _leastDamage = 0.415;
 
         #define LARGE_WOUND_THRESHOLD 0.5
 
         // Config specifies bleeding and pain for worst possible wound
         // Worse wound correlates to higher damage, damage is not capped at 1
-        private _woundSize = linearConversion [0.1, _worstDamage, _woundDamage * _sizeMultiplier, LARGE_WOUND_THRESHOLD^3, 1, true];
+        private _woundSize = linearConversion [_leastDamage, _worstDamage, _woundDamage * _sizeMultiplier, LARGE_WOUND_THRESHOLD^3, 1, true];
 
         private _pain = _woundSize * _painMultiplier * _injuryPain;
         _painLevel = _painLevel + _pain;

@@ -21,7 +21,7 @@ TRACE_3("woundsHandlerVehicleCrash",_unit,_allDamages,_typeOfDamage);
 
 // randomise all hit selections
 private _newDamages = _allDamages apply {
-    [_x select 0, selectRandom ALL_BODY_PARTS, _x select 2];
+    [_x select 0, selectRandom ALL_BODY_PARTS, _x select 2, ""];
 };
 
 TRACE_1("Vehicle crash handled, passing damage",_newDamages);
