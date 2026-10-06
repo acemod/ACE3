@@ -19,5 +19,21 @@ class CfgWeapons {
     class launch_Titan_base: Launcher_Base_F {
         magazines[] = {QGVAR(stinger_man)};
     };
+
+    #ifdef CREATE_MOCK_PLATFORMS
+    class launch_RPG7_F;
+    class GVAR(mockStinger): launch_RPG7_F {
+        displayName = "Test Stinger";
+        canLock = 0;
+        magazineWell[] = {};
+        magazines[] = {QGVAR(stinger_man)};
+        GVAR(enabled) = 1;
+        GVAR(lockAngle) = 3;
+        GVAR(lockingTimeMin) = 2;
+        GVAR(lockingTimeMax) = 4;
+        GVAR(lockingSound) = QGVAR(stinger_locking);
+        GVAR(lockedSound) = QGVAR(stinger_locked);
+    };
+    #endif
 };
 
