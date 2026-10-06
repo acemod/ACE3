@@ -18,3 +18,4 @@
 params ["_unit"];
 
 lifeState _unit in ["HEALTHY", "INJURED"]
+&& {isAwake _unit}
