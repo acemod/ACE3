@@ -25,6 +25,15 @@ if (!alive ACE_player) exitWith {
 };
 
 private _velocity = velocity ACE_player;
+
+// Standing on a moving object is not exertion. The unit's world velocity is the
+// object's, so without this stamina drains while standing still on a truck or a deck.
+private _anchor = missionNamespace getVariable [QEGVAR(wmo,anchor), objNull];
+
+if (!isNull _anchor) then {
+    _velocity = _velocity vectorDiff (velocity _anchor);
+};
+
 private _normal = surfaceNormal (getPosWorld ACE_player);
 private _movementVector = vectorNormalized _velocity;
 private _fwdAngle = asin (_movementVector select 2);
