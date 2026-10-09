@@ -36,6 +36,28 @@
 
     if (!isServer) exitWith {};
 
+    addMissionEventHandler ["BuildingChanged", {
+        params ["_pump", "_ruin", "_isRuin"];
+        if (
+            !_isRuin // partial destruction
+            || {!isNull _ruin} // pump with ruin has endless effects
+            || {getNumber (configOf _pump >> "transportFuel") == 0} // getFuelCargo returns 0 for any dead object
+        ) exitWith {};
+
+        // while pump going down under terrain, effect can be up to 3m away
+        private _hasEffectsCode = {_this nearObjects ["#destructioneffects", 3] isNotEqualTo []};
+        TRACE_2("BuildingChanged",_pump,_pump call _hasEffectsCode);
+
+        [QGVAR(addFireSource), [
+            getPosASL _pump, // pump goes under terrain when destroyed, use position
+            4 max (boundingBoxReal [_pump, "FireGeometry"] select 2),
+            8,
+            QGVAR(wreck) + hashValue _pump,
+            _hasEffectsCode,
+            _pump
+        ]] call CBA_fnc_localEvent;
+    }];
+
     GVAR(fireSources) = createHashMap;
 
     [QGVAR(addFireSource), {
