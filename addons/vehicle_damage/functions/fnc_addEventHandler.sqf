@@ -48,6 +48,7 @@ private _typeOf = typeOf _vehicle;
 if (_typeOf in GVAR(vehicleClassesHitPointHash)) exitWith {};
 
 private _hitPointHash = createHashMap;
+private _ambiguousHitpoints = [];
 private _vehicleConfig = configOf _vehicle;
 private _hitPointsConfig = _vehicleConfig >> "HitPoints";
 
@@ -62,7 +63,7 @@ private _hitPointsConfig = _vehicleConfig >> "HitPoints";
 
 // Gun and turret hitpoints aren't hardcoded anymore - dig through config to find correct names
 private _fnc_iterateThroughConfig = {
-    params ["_config"];
+    params ["_config", ["_turretPath", false, [[], false]]];
     TRACE_1("checking config",_config);
 
     private _configName = toLowerANSI configName _config;
@@ -95,7 +96,19 @@ private _fnc_iterateThroughConfig = {
             _hitPointHash set [_configName, ["gun", abs getNumber (_config >> "minimalHit")]];
         };
         if (_isTurret) then {
-            _hitPointHash set [_configName, ["turret", abs getNumber (_config >> "minimalHit")]];
+            private _hitPointData = ["turret", abs getNumber (_config >> "minimalHit")];
+
+            if (_turretPath isEqualType [] && {!(_configName in _ambiguousHitpoints)}) then {
+                private _existingTurretPath = (_hitPointHash getOrDefault [_configName, []]) param [2, false, [[], false]];
+
+                if (_existingTurretPath isEqualType [] && {_existingTurretPath isNotEqualTo _turretPath}) then {
+                    _ambiguousHitpoints pushBack _configName;
+                } else {
+                    _hitPointData pushBack _turretPath;
+                };
+            };
+
+            _hitPointHash set [_configName, _hitPointData];
         };
         if (_isEra) then {
             _hitPointHash set [_configName, ["era", abs getNumber (_config >> "minimalHit")]];
@@ -107,12 +120,11 @@ private _fnc_iterateThroughConfig = {
         TRACE_6("found gun/turret/era/slat/misc",_isGun,_isTurret,_isEra,_isSlat,_isMisc,_hitPointHash);
     } else {
         {
-            _x call _fnc_iterateThroughConfig;
+            [_x, _turretPath] call _fnc_iterateThroughConfig;
         } forEach configProperties [_config, "isClass _x", true];
     };
 };
 
-private _turretConfig = _vehicleConfig >> "Turrets";
 private _eraHitpoints = (getArray (_vehicleConfig >> QGVAR(eraHitpoints))) apply {toLowerANSI _x};
 private _slatHitpoints = (getArray (_vehicleConfig >> QGVAR(slatHitpoints))) apply {toLowerANSI _x};
 
@@ -132,7 +144,11 @@ private _hitPointAliases = (getArray (_vehicleConfig >> QGVAR(hitpointAlias))) c
 TRACE_1("hitpoint alias",_hitPointAliases);
 
 _hitPointsConfig call _fnc_iterateThroughConfig;
-_turretConfig call _fnc_iterateThroughConfig;
+
+{
+    private _turretConfig = [_vehicleConfig, _x] call EFUNC(common,getTurretConfigPath);
+    [_turretConfig >> "HitPoints", _x] call _fnc_iterateThroughConfig;
+} forEach allTurrets [_vehicle, true];
 
 GVAR(vehicleClassesHitPointHash) set [_typeOf, _hitPointHash];
 
