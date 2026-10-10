@@ -1,12 +1,13 @@
 #include "..\script_component.hpp"
 /*
- * Author: Glowbal
+ * Author: Glowbal, Cathode88
  * Checks if the item can be loaded into another object.
  *
  * Arguments:
  * 0: Item to be loaded <STRING or OBJECT>
  * 1: Holder object (vehicle) <OBJECT>
  * 2: Ignore interaction distance and stability checks <BOOL> (default: false)
+ * 3: Is item to be loaded as ViV? <BOOL> (default: false)
  *
  * Return Value:
  * Can be loaded <BOOL>
@@ -17,7 +18,7 @@
  * Public: No
  */
 
-params ["_item", "_vehicle", ["_ignoreInteraction", false]];
+params ["_item", "_vehicle", ["_ignoreInteraction", false], ["_isViv", false]];
 
 // Check if vehicle is stable
 if (!_ignoreInteraction && {speed _vehicle > 1 || {((getPos _vehicle) select 2) > 3}}) exitWith {
@@ -42,8 +43,8 @@ private _validItem = if (_item isEqualType "") then {
     {getNumber (_config >> QGVAR(canLoad)) == 1}
 } else {
     alive _item &&
-    {_item getVariable [QGVAR(canLoad), getNumber (configOf _item >> QGVAR(canLoad)) == 1]} &&
-    {_ignoreInteraction || {([_item, _vehicle] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}} &&
+    {_isViv || {_item getVariable [QGVAR(canLoad), getNumber (configOf _item >> QGVAR(canLoad)) == 1]}} &&
+    {_ignoreInteraction || {([_item, _vehicle] call EFUNC(interaction,getInteractionDistance)) < ([MAX_LOAD_DISTANCE, GVAR(vivMaxLoadDistance)] select _isViv)}} &&
     {!(_item getVariable [QEGVAR(cookoff,isCookingOff), false])} && // do not load items that are cooking off
     {isNull (_item getVariable [QEGVAR(refuel,nozzle), objNull])} && // objects which have a refueling nozzle connected to them cannot be loaded
     {isNull (_item getVariable [QEGVAR(refuel,ownedNozzle), objNull])} // fuel sources which have their nozzle out cannot be loaded
@@ -52,6 +53,14 @@ private _validItem = if (_item isEqualType "") then {
 _validItem &&
 {alive _vehicle} &&
 {locked _vehicle < 2} &&
-{_vehicle getVariable [QGVAR(hasCargo), getNumber (configOf _vehicle >> QGVAR(hasCargo)) == 1]} &&
-{_itemSize >= 0} &&
-{_itemSize <= (_vehicle call FUNC(getCargoSpaceLeft)) max 0}
+{
+    if (_isViv) then {
+        !(_vehicle getVariable [QGVAR(disableVivCarrier), false]) &&
+        {_item getVariable [QGVAR(canLoadViv), true]} &&
+        {(_vehicle canVehicleCargo _item) select 0}
+    } else {
+        _vehicle getVariable [QGVAR(hasCargo), getNumber (configOf _vehicle >> QGVAR(hasCargo)) == 1]
+    }
+} &&
+{_isViv || {_itemSize >= 0}} &&
+{_isViv || {_itemSize <= (_vehicle call FUNC(getCargoSpaceLeft)) max 0}}

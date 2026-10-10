@@ -692,5 +692,47 @@
             <Russian>Вероятность того, что каждый загруженный в транспортное средство груз будет выгружен, если транспортное средство будет уничтожено.\nПрименяется только к предметам.</Russian>
             <Japanese>車両が破壊された際、積載されている貨物が降ろされる確率。\nオブジェクトにのみ適用されます。</Japanese>
         </Key>
+        <Key ID="STR_ACE_Cargo_loadObjectViv">
+            <English>Load to ViV</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_vehicleInVehicle">
+            <English>ViV</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_vivLabelSpace">
+            <English>Cargo mass left: %1</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_massMenu">
+            <English>Mass: %1 kg</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_enableViv">
+            <English>Enable ViV Cargo</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_enableViv_description">
+            <English>Enable the "Load to ViV" cargo module</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_expandedVivObjectSupport">
+            <English>Expanded ViV object support</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_expandedVivObjectSupport_description">
+            <English>Expand the possible ViV objects beyond those already configured for ACE cargo.</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_vivLoadTime">
+            <English>ViV Load/Unload Time</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_vivLoadTime_description">
+            <English>Time it takes, in seconds, to load/unload items.</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_vivParadropTime">
+            <English>ViV Paradrop Time</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_vivParadropTime_description">
+            <English>Time it takes, in seconds, to paradrop a ViV item.</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_vivMaxLoadDistance">
+            <English>ViV Load/Unload Distance</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_vivMaxLoadDistance_description">
+            <English>Distance you can (un)load from.</English>
+        </Key>
     </Package>
 </Project>

@@ -46,6 +46,7 @@ _vehicle setVariable [QGVAR(space), _cargoSpace - _itemSize, true];
 // Attach object 100m below vehicle
 if (_item isEqualType objNull) then {
     detach _item;
+
     _item attachTo [_vehicle, [0, 0, -100]];
     [QEGVAR(common,hideObjectGlobal), [_item, true]] call CBA_fnc_serverEvent;
 

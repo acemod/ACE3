@@ -4,16 +4,18 @@
  * Get selected item from cargo menu.
  *
  * Arguments:
- * None
+ * 0: Is ViV menu active? <BOOL> (default: false)
  *
  * Return Value:
  * Classname of selected item or selected object <STRING or OBJECT or NIL> (default: nil)
  *
  * Example:
- * call ace_cargo_fnc_getSelectedItem
+ * [false] call ace_cargo_fnc_getSelectedItem
  *
  * Public: No
  */
+
+params [["_isViv", false]];
 
 disableSerialization;
 
@@ -21,7 +23,11 @@ private _display = uiNamespace getVariable QGVAR(menuDisplay);
 
 if (isNil "_display") exitWith {};
 
-private _loaded = GVAR(interactionVehicle) getVariable [QGVAR(loaded), []];
+private _loaded = if (_isViv) then {
+    getVehicleCargo GVAR(interactionVehicle)
+} else {
+    GVAR(interactionVehicle) getVariable [QGVAR(loaded), []]
+};
 
 if (_loaded isEqualTo []) exitWith {};
 
