@@ -725,8 +725,6 @@ class CfgVehicles {
         EGVAR(fastroping,enabled) = 1;
         EGVAR(fastroping,ropeOrigins)[] = {{-1.34,0.695,-0.0757732},{1.34,0.695,-0.0973468}};
         EGVAR(fastroping,onCut) = QFUNC(onCut);
-        EGVAR(fastroping,onCutRopes) = QFUNC(onCutRopes);
-        EGVAR(fastroping,onDeployRopes) = QFUNC(onDeployRopes);
         EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
     };
 

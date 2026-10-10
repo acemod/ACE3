@@ -31,7 +31,7 @@ GVAR(gps_currentSettings) = [
 GVAR(gps_pbMode) = 0;
 GVAR(gps_settings) = createHashMap;
 for "_i" from 0 to MAX_PB_MODES do {
-    GVAR(gps_settings) set [_i, GVAR(currentSettings)];
+    GVAR(gps_settings) set [_i, GVAR(gps_currentSettings)];
 };
 
 GVAR(gps_mode) = "pb";

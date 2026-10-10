@@ -1,5 +1,5 @@
 #define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
-#define DEFAULT_WATER_SUPPLY GET_NUMBER(configFile >> 'CfgVehicles' >> typeOf _this >> QQXGVAR(waterSupply),REFILL_WATER_DISABLED)
+#define DEFAULT_WATER_SUPPLY GET_NUMBER(configOf _this >> QQXGVAR(waterSupply),REFILL_WATER_DISABLED)
 
 class Cfg3DEN {
     class Object {

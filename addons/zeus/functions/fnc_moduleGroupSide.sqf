@@ -30,33 +30,18 @@ if ((allGroups findIf {side _x isEqualTo _newSide && {(groupId _oldGroup) isEqua
     _newGroup setGroupIdGlobal [groupId _oldGroup];
 };
 
-// Pretty hacky, will replace units return group with this new group if unconcious
-if (GETVAR(_unit,ACE_isUnconscious,false) && {GETMVAR(EGVAR(medical,moveUnitsFromGroupOnUnconscious),false)}) then {
-    private _previousGroupsList = _unit getVariable [QEGVAR(common,previousGroupSwitchTo), []];
+private _units = units _unit;
 
-    {
-        if ("ACE_isUnconscious" == (_x select 2)) exitWith {
-            _x set [0,_newGroup];
-            _x set [1,_newSide];
-            _previousGroupsList set [_forEachIndex, _x];
-        };
-    } forEach _previousGroupsList;
-
-    _unit setVariable [QEGVAR(common,previousGroupSwitchTo), _previousGroupsList, true];
-} else {
-    private _units = units _unit;
-
-    // Preserve assignedTeam for each unit
-    // Teams need to be gotten before removing units from group
-    private _teams = _units apply {
-        private _team = assignedTeam _x;
-        [_team, "MAIN"] select (_team == "")
-    };
-
-    {
-        [_x] joinSilent _newGroup;
-        _x assignTeam (_teams select _forEachIndex);
-    } forEach _units;
-
-    deleteGroup _oldGroup;
+// Preserve assignedTeam for each unit
+// Teams need to be gotten before removing units from group
+private _teams = _units apply {
+    private _team = assignedTeam _x;
+    [_team, "MAIN"] select (_team == "")
 };
+
+{
+    [_x] joinSilent _newGroup;
+    _x assignTeam (_teams select _forEachIndex);
+} forEach _units;
+
+deleteGroup _oldGroup;

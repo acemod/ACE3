@@ -38,7 +38,6 @@ private _closeCode = {
 [QEGVAR(vector,rangefinderData), LINKFUNC(recieveRangefinderData)] call CBA_fnc_addEventHandler;
 
 //Global Variables to default:
-GVAR(gpsPositionASL) = [0,0,0];
 GVAR(mapAutoTrackPosition) = true;
 GVAR(mapShowTexture) = false;
 GVAR(mapPosition) = [-999, -999];

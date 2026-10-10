@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Loadout <ARRAY> (CBA Extended Loadout or getUnitLoadout format)
- * 1: Whether to attempt to recover invalid containers <BOOL>
+ * 1: Whether to attempt to recover invalid containers <BOOL> (default: false)
  *
  * Return Value:
  * Verified loadout and missing / unavailable items list and count <ARRAY>

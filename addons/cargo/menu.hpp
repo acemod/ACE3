@@ -20,8 +20,8 @@ class GVAR(menu) {
             y = "2.1 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) + (safeZoneY + (safeZoneH - (((safeZoneW / safeZoneH) min 1.2) / 1.2))/2)";
             h = "14.2 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
             text = "#(argb,8,8,3)color(0,0,0,0.8)";
-            colorText[] = {0, 0, 0, "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
-            colorBackground[] = {0, 0, 0, "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
+            colorText[] = {0, 0, 0, "(profileNamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
+            colorBackground[] = {0, 0, 0, "(profileNamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
         };
     };
 
@@ -37,7 +37,7 @@ class GVAR(menu) {
             font = "RobotoCondensed";
             SizeEx = "(((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 1)";
             colorText[] = {0.95, 0.95, 0.95, 0.75};
-            colorBackground[] = {"(profilenamespace getVariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getVariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getVariable ['GUI_BCG_RGB_B',0.5])", "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
+            colorBackground[] = {"(profileNamespace getVariable ['GUI_BCG_RGB_R',0.69])","(profileNamespace getVariable ['GUI_BCG_RGB_G',0.75])","(profileNamespace getVariable ['GUI_BCG_RGB_B',0.5])", "(profileNamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
             text = CSTRING(cargoMenu);
         };
         class SubHeader: HeaderName {

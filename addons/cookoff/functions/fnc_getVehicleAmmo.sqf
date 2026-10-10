@@ -38,7 +38,7 @@ private _ammo = "";
     if (_count > 0 && {!(_magazine call FUNC(isMagazineFlare))}) then {
         _ammo = getText (_cfgMagazines >> _magazine >> "ammo");
 
-        if (getText (_cfgAmmo >> _ammo >> "model") == "\A3\weapons_f\empty") then {
+        if ((getText (_cfgAmmo >> _ammo >> "model") select [0, 19]) == "\A3\weapons_f\empty") then {
             TRACE_2("skipping",_magazine,_ammo);
 
             continue;

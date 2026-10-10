@@ -1,3 +1,4 @@
+// #pragma hemtt ignore_variables ["_patient", "_bodyPart"]
 class GVAR(actions) {
     // - Bandages -------------------------------------------------------------
     class BasicBandage {

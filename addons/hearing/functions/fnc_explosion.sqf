@@ -46,7 +46,7 @@ if (_distance > _maxDistance) exitWith {
 private _explosive = getNumber (_ammoConfig >> "explosive");
 private _hearingDamageFactor = [_ammoConfig >> QGVAR(hearingDamageFactor), "NUMBER", 1] call CBA_fnc_getConfigEntry;
 
-private _vehAttenuation = [GVAR(playerVehAttenuation), 1] select (isNull objectParent ACE_player || {isTurnedOut ACE_player});
+private _vehAttenuation = [EGVAR(common,playerVehAttenuation), 1] select (isNull objectParent ACE_player || {isTurnedOut ACE_player});
 
 TRACE_5("",typeOf _projectile,_distance,_explosive,_hearingDamageFactor,_vehAttenuation);
 

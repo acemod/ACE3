@@ -277,6 +277,9 @@ if (isServer) then {
 GVAR(selectedItem) = objNull;
 GVAR(itemPreviewObject) = objNull;
 GVAR(deployPFH) = -1;
+GVAR(deployDistance) = -1;
+GVAR(deployDirection) = 0;
+GVAR(deployHeight) = 0;
 GVAR(isViv) = false;
 
 if (!hasInterface) exitWith {};

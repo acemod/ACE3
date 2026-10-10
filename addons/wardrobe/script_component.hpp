@@ -6,12 +6,12 @@
 // #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
-#ifdef DEBUG_ENABLED_VOLUME
+#ifdef DEBUG_ENABLED_WARDROBE
     #define DEBUG_MODE_FULL
 #endif
 
-#ifdef DEBUG_SETTINGS_VOLUME
-    #define DEBUG_SETTINGS DEBUG_SETTINGS_VOLUME
+#ifdef DEBUG_SETTINGS_WARDROBE
+    #define DEBUG_SETTINGS DEBUG_SETTINGS_WARDROBE
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"

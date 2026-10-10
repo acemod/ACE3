@@ -20,8 +20,8 @@ class RscTitles {
         fadein = 0;
         fadeout = 0;
         name = "ACE_RscYardage450";
-        onLoad = "with uiNameSpace do { ACE_RscYardage450 = _this select 0; };";
-        onUnload = "with uiNameSpace do { ACE_RscYardage450 = displayNull; };";
+        onLoad = "with uiNamespace do { ACE_RscYardage450 = _this select 0; };";
+        onUnload = "with uiNamespace do { ACE_RscYardage450 = displayNull; };";
 
         class Controls {
             class ACE_Yardage450_RscTarget: ACE_Yardage450_RscText {
