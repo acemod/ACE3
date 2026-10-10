@@ -12,7 +12,7 @@
             <Korean>생명</Korean>
             <Japanese>バイタル</Japanese>
             <Chinesesimp>生命体征</Chinesesimp>
-            <Ukrainian>Життєво-важливі органи</Ukrainian>
+            <Ukrainian>Життєві показники</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Vitals_simulateSpO2_Description">
             <English>Enables oxygen saturation simulation, providing variable heart rate and oxygen demand based on physical activity and altitude. Required for Airway Management.</English>

@@ -54,7 +54,7 @@
             <German>FAB-250M-54 [ACE]</German>
             <Korean>FAB-250M-54 [ACE]</Korean>
             <Japanese>FAB-250M-54 [ACE]</Japanese>
-            <Ukrainian>ФАБ-250M-54 [ACE]</Ukrainian>
+            <Ukrainian>ФАБ-250М-54 [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_GBU_fab250_1x">
             <English>1x FAB-250M-54 [ACE]</English>
@@ -65,7 +65,7 @@
             <German>1x FAB-250M-54 [ACE]</German>
             <Korean>1x FAB-250M-54 [ACE]</Korean>
             <Japanese>1x FAB-250M-54 [ACE]</Japanese>
-            <Ukrainian>1x ФАБ-250M-54 [ACE]</Ukrainian>
+            <Ukrainian>1x ФАБ-250М-54 [ACE]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_GBU_fab250_2x">
             <English>2x FAB-250M-54 [ACE]</English>
@@ -76,7 +76,7 @@
             <German>2x FAB-250M-54 [ACE]</German>
             <Korean>2x FAB-250M-54 [ACE]</Korean>
             <Japanese>2x FAB-250M-54 [ACE]</Japanese>
-            <Ukrainian>2x ФАБ-250M-54 [ACE]</Ukrainian>
+            <Ukrainian>2x ФАБ-250М-54 [ACE]</Ukrainian>
         </Key>
     </Package>
 </Project>

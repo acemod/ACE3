@@ -13,7 +13,7 @@
             <Korean>야간에는 야투경을 소지품에 장착하고 주간에는 장착을 해제합니다.\n주의! 소지품에 야투경을 추가하는 것이 아닙니다!</Korean>
             <Japanese>インベントリ内の暗視装置を夜間に装備し、日中は解除し収納します。\nこれはNVGをインベントリに追加しません。</Japanese>
             <Chinesesimp>在夜晚自动佩戴夜视仪, 在白天自动摘下来\n不会将夜视仪添加进物品栏中!</Chinesesimp>
-            <Ukrainian>Екіпірує ПНБ у нічний час і відключає його в денний час.\nНе додає ПНБ в інвентар!</Ukrainian>
+            <Ukrainian>Вдягає ПНБ з інвентаря вночі та знімає їх удень.\nНе додає ПНБ в інвентар!</Ukrainian>
         </Key>
         <Key ID="STR_ACE_AI_AssignNVG_DisplayName">
             <English>Auto-Equip NVGs</English>

@@ -35,7 +35,7 @@
             <Chinesesimp>无人机电池</Chinesesimp>
             <Turkish>UAV Batarya</Turkish>
             <Hungarian>UAV akkumulátor</Hungarian>
-            <Ukrainian>Аккумулятор БПЛА</Ukrainian>
+            <Ukrainian>Акумулятор БПЛА</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Recharge">
             <English>Recharging...</English>

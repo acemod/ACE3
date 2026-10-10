@@ -6,6 +6,7 @@
             <French>Pointeur laser infrarouge et télémètre</French>
             <Russian>ИК-лазерная указка и дальномер</Russian>
             <Japanese>赤外線レーザー照準器と距離計</Japanese>
+            <Ukrainian>ІЧ лазерний цілевказівник і далекомір</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MILR_meter">
             <English>m</English>
@@ -22,6 +23,7 @@
             <Chinese>公尺</Chinese>
             <Chinesesimp>米</Chinesesimp>
             <Turkish>m</Turkish>
+            <Ukrainian>м</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MILR_milrRangeDisplay">
             <English>Range:</English>
@@ -44,6 +46,7 @@
             <English>Show range hint</English>
             <Russian>Показать подсказку о диапазоне</Russian>
             <Japanese>距離のヒントを表示</Japanese>
+            <Ukrainian>Підказка дальності</Ukrainian>
         </Key>
     </Package>
 </Project>

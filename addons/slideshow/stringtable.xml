@@ -190,7 +190,7 @@
             <Chinese>互動鍵名稱</Chinese>
             <Chinesesimp>互动键名称</Chinesesimp>
             <Hungarian>Interakciós nevek</Hungarian>
-            <Ukrainian>Інтерактивні імена</Ukrainian>
+            <Ukrainian>Назви для взаємодії</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_Description">
             <English>Object names (can also be synchronized objects) slide-show will be displayed on, separated by commas if multiple.</English>
@@ -269,7 +269,7 @@
             <Japanese>メイン インタラクション エントリで使われる名前を設定します。(複数のスライドショーを区別するため)。 デフォルト: "Slides"</Japanese>
             <Chinese>設定該幻燈片的標題名稱 (用來區分多個不同標題的幻燈片) 預設名稱: "幻燈片"</Chinese>
             <Chinesesimp>设定该幻灯片的标题名称（用来区分多个不同标题的幻灯片）预设名称："幻灯片"</Chinesesimp>
-            <Ukrainian>Ім'я, яке буде використовуватися для основних взаємодій (для розрізнення кількох слайдів). За замовчуванням: "Slides"</Ukrainian>
+            <Ukrainian>Ім'я, яке буде використовуватися для основних взаємодій (для розрізнення кількох слайд-шоу). За замовчуванням: "Slides"</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Slideshow_SetName_DisplayName">
             <English>Set Name</English>

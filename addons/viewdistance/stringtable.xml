@@ -142,7 +142,7 @@
             <Chinesesimp>该选项是无效的！ 限制是</Chinesesimp>
             <Turkish>Bu seçenek geçersiz! Limit</Turkish>
             <Hungarian>Ez a beállítás érvénytelen! A maximum mennyiség</Hungarian>
-            <Ukrainian>Налаштування не вірне! Поточна межа</Ukrainian>
+            <Ukrainian>Неприпустиме значення! Межа:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_landVehicle_Description">
             <English>Changes in game view distance when the player is in a land vehicle.</English>
@@ -214,7 +214,7 @@
             <Chinesesimp>视距限制</Chinesesimp>
             <Turkish>Görüş Uzaklığı Limiti</Turkish>
             <Hungarian>Látótáv-korlát</Hungarian>
-            <Ukrainian>Дальність видимості</Ukrainian>
+            <Ukrainian>Межа дальності видимості</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_limit_setting">
             <English>Limit for client's view distance set here and can overridden by module</English>
@@ -248,7 +248,7 @@
             <Chinese>設定物件可被觀察的距離，透過視野距離或是視野角度來決定。</Chinese>
             <Chinesesimp>设定物体可被观察的距离，透过视距或是视野角度来决定。</Chinesesimp>
             <Hungarian>Beállítja az objektum-látótávot a megadott látótáv koefficienseként.</Hungarian>
-            <Ukrainian>Встановлює дальність відтворення об'єктів як коефіцієнт від загальної дальності видимості.</Ukrainian>
+            <Ukrainian>Встановлює дальність відтворення об'єктів як коефіцієнт від загальної дальності видимості або залежно від поля зору. Для режиму "Залежить від поля зору" найменшим і найбільшим є значення, встановлене під час увімкнення цієї опції.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_DisplayName">
             <English>Dynamic Object View Distance</English>
@@ -281,7 +281,7 @@
             <Japanese>視野角を元にする</Japanese>
             <Chinese>由視野角度決定</Chinese>
             <Chinesesimp>由视野角度决定</Chinesesimp>
-            <Ukrainian>Залежить від збільшення</Ukrainian>
+            <Ukrainian>Залежить від поля зору</Ukrainian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_high">
             <English>High</English>

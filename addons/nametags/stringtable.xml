@@ -365,7 +365,7 @@
             <Chinesesimp>显示 AI 单位名字</Chinesesimp>
             <Turkish>AI birimleri için ad etiketlerini göster</Turkish>
             <Hungarian>Névcímkék mutatása MI-egységeknél</Hungarian>
-            <Ukrainian>Показувати імена ботів</Ukrainian>
+            <Ukrainian>Показувати імена ШІ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowNamesForAI_Desc">
             <English>Show the name and rank tags for friendly AI units? Default: Do not force</English>
@@ -383,7 +383,7 @@
             <Chinesesimp>显示友军 AI 的名字和军阶？ 预设：不显示</Chinesesimp>
             <Turkish>Dost AI birimleri için ad ve rütbe etiketleri gösterilsin mi? Varsayılan: Zorlama</Turkish>
             <Hungarian>Mutassa-e a szövetséges AI egységek nevét és rangját? Alapértelmezett: Nincs felülbírálás</Hungarian>
-            <Ukrainian>Показувати імена та звання дружніх ботів? За замовчуванням: Не примушувати</Ukrainian>
+            <Ukrainian>Показувати імена та звання дружніх юнітів ШІ? За замовчуванням: Не примушувати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNames">
             <English>Show player names</English>

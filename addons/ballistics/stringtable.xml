@@ -17,7 +17,7 @@
             <Chinesesimp>口径：6.5 mm 100发 红外曳光&lt;br /&gt;发数：100&lt;br /&gt;使用于：MX LSW</Chinesesimp>
             <Turkish>6.5 mm 100Rnd Tracer IR-DIM Mag&lt;br /&gt;Mermi: 100&lt;br /&gt;Kullanıyor: MX LSW</Turkish>
             <Hungarian>6.5 mm 100-lövedékes infravörös nyomkövető tár&lt;br /&gt;Lövedékek: 100&lt;br /&gt;Használható: MX LSW</Hungarian>
-            <Ukrainian>Магазин зі 100 6,5 мм ІЧ-трасуючих 6,5 мм</Ukrainian>
+            <Ukrainian>Магазин зі 100 6,5 мм ІЧ-трасуючих&lt;br /&gt;Набоїв: 100&lt;br /&gt;Використовуються з: MX LSW</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_100Rnd_65x39_caseless_mag_Tracer_DimName">
             <English>6.5 mm 100Rnd Tracer IR-DIM Mag</English>
@@ -35,7 +35,7 @@
             <Chinesesimp>6.5 mm 100发 弹匣（红外曳光）</Chinesesimp>
             <Turkish>6.5 mm 100Rnd Tracer IR-DIM Mag</Turkish>
             <Hungarian>6,5 mm 100-lövedékes infravörös nyomkövető tár</Hungarian>
-            <Ukrainian>Магазин зі 100 6,5 мм ІЧ-трасуючих 6,5 мм</Ukrainian>
+            <Ukrainian>Магазин зі 100 6,5 мм ІЧ-трасуючих</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_100Rnd_65x39_caseless_mag_Tracer_DimNameShort">
             <English>6.5 mm IR-DIM</English>
@@ -179,7 +179,7 @@
             <Chinesesimp>口径：8.6x70 mm（300gr Lapua Scenar）&lt;br /&gt;发数：10</Chinesesimp>
             <Turkish>Kalibre: 8.6x70mm (300gr Lapua Scenar)&lt;br /&gt;Mermi: 10</Turkish>
             <Hungarian>Kaliber: 8,6x70mm (300gr Lapua Scenar)&lt;br /&gt;Lövedékek: 10</Hungarian>
-            <Ukrainian>Калібр: 8.6x70мм (300gr Lapua Scenar)&lt;br /&gt;Набоїв: 10</Ukrainian>
+            <Ukrainian>Калібр: 8,6x70 мм (300gr Lapua Scenar)&lt;br /&gt;Набоїв: 10</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_300gr_HPBT_Mag_Name">
             <English>.338 LM 10Rnd Mag (300gr Lapua Scenar)</English>
@@ -755,7 +755,7 @@
             <Chinesesimp>曳光</Chinesesimp>
             <Turkish>Tracer</Turkish>
             <Hungarian>nyomkövető</Hungarian>
-            <Ukrainian>трасуючих</Ukrainian>
+            <Ukrainian>Трасуючі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x67_Berger_Hybrid_OTM_Mag_Description">
             <English>Caliber: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Rounds: 10</English>
@@ -1061,7 +1061,7 @@
             <Chinesesimp>12.7 mm 穿燃</Chinesesimp>
             <Turkish>12.7 mm API</Turkish>
             <Hungarian>12,7 mm páncéltörő-gyújtó</Hungarian>
-            <Ukrainian>12.7 мм бронебійно-запальні</Ukrainian>
+            <Ukrainian>12,7 мм бронебійно-запальні</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_127x99_Mag_NameShort">
             <English>12.7 mm</English>
@@ -1425,7 +1425,7 @@
             <Chinesesimp>.338 NM 曳光</Chinesesimp>
             <Turkish>.338 NM İzli</Turkish>
             <Hungarian>.338 NM nyomkövető</Hungarian>
-            <Ukrainian>.338 NM трасуючі NM</Ukrainian>
+            <Ukrainian>.338 NM трасуючі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_130Rnd_338_Mag_Tracer_DimDescription">
             <English>Caliber: .338 Norma Magnum Tracer IR-DIM&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
@@ -1730,7 +1730,7 @@
             <Chinesesimp>口径：6.5 mm 200发 红外曳光&lt;br /&gt;发数：200&lt;br /&gt;使用于：Stoner 99 LMG</Chinesesimp>
             <Turkish>6.5 mm 200Rnd Belt Tracer (IR-DIM)&lt;br /&gt;Mermi: 200&lt;br /&gt;Kullanıyor: Stoner 99 LMG</Turkish>
             <Hungarian>6.5 mm 200-lövedékes infravörös nyomkövető heveder&lt;br /&gt;Lövedékek: 200&lt;br /&gt;Használható: Stoner 99 LMG</Hungarian>
-            <Ukrainian>Магазин із 200-т 6,5 мм ІЧ-трасуючих</Ukrainian>
+            <Ukrainian>Стрічка з 200 6,5 мм ІЧ-трасуючих&lt;br /&gt;Набоїв: 200&lt;br /&gt;Використовуються з: Stoner 99 LMG</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_200Rnd_65x39_cased_Box_Tracer_DimName">
             <English>6.5 mm 200Rnd Belt Tracer (IR-DIM)</English>
@@ -1748,7 +1748,7 @@
             <Chinesesimp>6.5 mm 200发 弹链（红外曳光）</Chinesesimp>
             <Turkish>6.5 mm 200Rnd Belt Tracer (IR-DIM)</Turkish>
             <Hungarian>6,5 mm 200-lövedékes infravörös nyomkövető heveder</Hungarian>
-            <Ukrainian>Магазин із 200-т 6,5 мм ІЧ-трасуючих</Ukrainian>
+            <Ukrainian>Стрічка з 200 6,5 мм ІЧ-трасуючих</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_200Rnd_65x39_cased_Box_Tracer_DimNameShort">
             <English>6.5 mm IR-DIM</English>
@@ -2551,7 +2551,7 @@
             <Chinesesimp>12 Gauge 2Rnd Slug 300gr</Chinesesimp>
             <Turkish>12 Gauge 2Rnd Slug 300gr</Turkish>
             <Hungarian>12 Gauge 2Rnd Slug 300gr</Hungarian>
-            <Ukrainian>12 Gauge 2Rnd Slug 300gr</Ukrainian>
+            <Ukrainian>12 Калібр 2 патр. Куля 300gr</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Slug_NameShort">
             <English>Slug 300gr</English>
@@ -2569,7 +2569,7 @@
             <Chinesesimp>Slug 300gr</Chinesesimp>
             <Turkish>Slug 300gr</Turkish>
             <Hungarian>Slug 300gr</Hungarian>
-            <Ukrainian>Slug 300gr</Ukrainian>
+            <Ukrainian>Куля 300gr</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_M995_AP_mag_Description">
             <English>Caliber: 5.56x45 mm NATO (M995 AP)&lt;br /&gt;Rounds: 30</English>
@@ -2605,7 +2605,7 @@
             <Chinesesimp>5.56 mm 30发 弹匣（M995 穿甲）</Chinesesimp>
             <Turkish>5.56 mm 30Rnd Mag (M995 AP)</Turkish>
             <Hungarian>5,56 mm 30-lövedékes tár (M995 páncéltörő)</Hungarian>
-            <Ukrainian>Магазин із 30-ти 5.56 мм (M995 бронебійні)</Ukrainian>
+            <Ukrainian>Магазин із 30-ти 5,56 мм (M995 бронебійні)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_M995_AP_mag_NameShort">
             <English>5.56 mm AP</English>
@@ -2623,7 +2623,7 @@
             <Chinesesimp>5.56 mm 穿甲</Chinesesimp>
             <Turkish>5.56 mm AP</Turkish>
             <Hungarian>5,56 mm páncéltörő</Hungarian>
-            <Ukrainian>5.56 мм бронебійні</Ukrainian>
+            <Ukrainian>5,56 мм бронебійні</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_Mk262_mag_Description">
             <English>Caliber: 5.56x45 mm NATO (Mk262)&lt;br /&gt;Rounds: 30</English>
@@ -2731,7 +2731,7 @@
             <Chinesesimp>5.56 mm Mk318</Chinesesimp>
             <Turkish>5.56 mm Mk318</Turkish>
             <Hungarian>5,56 mm Mk318</Hungarian>
-            <Ukrainian>5.56 мм Mk318</Ukrainian>
+            <Ukrainian>5,56 мм Mk318</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_mag_Tracer_DimDescription">
             <English>Caliber: 5.56x45 mm Tracer IR-DIM&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</English>
@@ -2799,7 +2799,7 @@
             <Korean>6.5mm 크리드무어 30발 들이 탄창/검정</Korean>
             <Japanese>6.5mm 30Rnd クリードモア（黒）マガジン</Japanese>
             <Chinesesimp>6.5 mm 30发 黑色弹匣（Creedmoor）</Chinesesimp>
-            <Ukrainian>Магазин із 30-ти 6.5 мм Creedmoor Чорний</Ukrainian>
+            <Ukrainian>Магазин із 30-ти 6,5 мм Creedmoor Чорний</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_khaki_mag_Name">
             <English>6.5 mm Creedmoor 30Rnd Khaki Mag</English>
@@ -2813,7 +2813,7 @@
             <Korean>6.5mm 크리드무어 30발 들이 탄창/카키</Korean>
             <Japanese>6.5mm 30Rnd クリードモア（カーキ）マガジン</Japanese>
             <Chinesesimp>6.5 mm 30发 卡其色弹匣（Creedmoor）</Chinesesimp>
-            <Ukrainian>Магазин з 30-ти 6,5 мм Creedmoor Khaki</Ukrainian>
+            <Ukrainian>Магазин з 30-ти 6,5 мм Creedmoor Хакі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_mag_Description">
             <English>Caliber: 6.5x48 mm Creedmoor&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MXM</English>
@@ -2845,7 +2845,7 @@
             <Korean>6.5mm 크리드무어 30발 들이 탄창/사막</Korean>
             <Japanese>6.5mm 30Rnd クリードモア（砂色）マガジン</Japanese>
             <Chinesesimp>6.5 mm 30发 沙色弹匣（Creedmoor）</Chinesesimp>
-            <Ukrainian>Магазин із 30-ти 6.5 мм Creedmoor Пісочний</Ukrainian>
+            <Ukrainian>Магазин із 30-ти 6,5 мм Creedmoor Пісочний</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_mag_NameShort">
             <English>6.5 mm CM</English>
@@ -2895,7 +2895,7 @@
             <Korean>6.5mm 크리드무어 30발 들이 탄창/프로멧용</Korean>
             <Japanese>6.5 mm 30Rnd Promet クリードモア・マガジン</Japanese>
             <Chinesesimp>6.5 mm 30发 Promet 弹匣（Creedmoor）</Chinesesimp>
-            <Ukrainian>Магазин із 30-ти 6.5 мм Creedmoor Promet</Ukrainian>
+            <Ukrainian>Магазин із 30-ти 6,5 мм Creedmoor Promet</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_green_mag_APDescription">
             <English>Caliber: 6.5x39 mm AP&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba</English>
@@ -3233,7 +3233,7 @@
             <Korean>6.5x47mm 30발 들이 탄창/검정 (Scenar제 HPBT)</Korean>
             <Japanese>6.5x47mm 30Rnd（黒）マガジン (HPBT Scenar)</Japanese>
             <Chinesesimp>6.5x47 mm 30发 黑色弹匣（HPBT Scenar）</Chinesesimp>
-            <Ukrainian>Магазин з 30-ти 6.5x47 мм Чорний (HPBT Scenar)</Ukrainian>
+            <Ukrainian>Магазин з 30-ти 6,5x47 мм Чорний (HPBT Scenar)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_khaki_mag_Name">
             <English>6.5x47 mm 30Rnd Khaki Mag (HPBT Scenar)</English>
@@ -3279,7 +3279,7 @@
             <Korean>6.5x47mm 30발 들이 탄창/모래 (HPBT Scenar)</Korean>
             <Japanese>6.5x47mm 30Rnd（砂色）マガジン (HPBT Scenar)</Japanese>
             <Chinesesimp>6.5x47 mm 30发 沙色弹匣（HPBT Scenar）</Chinesesimp>
-            <Ukrainian>Магазин з 30-ти 6.5x47 мм Пісочний (HPBT Scenar)</Ukrainian>
+            <Ukrainian>Магазин з 30-ти 6,5x47 мм Пісочний (HPBT Scenar)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_mag_NameShort">
             <English>6.5 mm Lapua</English>
@@ -3628,7 +3628,7 @@
             <Chinesesimp>12 Gauge 6Rnd Slug 300gr</Chinesesimp>
             <Turkish>12 Gauge 6Rnd Slug 300gr</Turkish>
             <Hungarian>12 Gauge 6Rnd Slug 300gr</Hungarian>
-            <Ukrainian>12 Gauge 6Rnd Slug 300gr</Ukrainian>
+            <Ukrainian>12 Калібр 6 патр. Куля 300gr</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Slug_NameShort">
             <English>Slug 300gr</English>
@@ -3646,7 +3646,7 @@
             <Chinesesimp>Slug 300gr</Chinesesimp>
             <Turkish>Slug 300gr</Turkish>
             <Hungarian>Slug 300gr</Hungarian>
-            <Ukrainian>Slug 300gr</Ukrainian>
+            <Ukrainian>Куля 300gr</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Ballistics_7Rnd_408_305gr_Mag_Description">
             <English>Caliber: .408 CheyTac (305gr)&lt;br /&gt;Rounds: 7</English>

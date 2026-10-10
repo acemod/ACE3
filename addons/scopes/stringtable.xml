@@ -101,7 +101,7 @@
             <Chinese>向右微調</Chinese>
             <Chinesesimp>向右微调</Chinesesimp>
             <Hungarian>Enyhe állítás jobbra</Hungarian>
-            <Ukrainian>Невелика поправка ВПРАВО</Ukrainian>
+            <Ukrainian>Мала поправка ВПРАВО</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMajor">
             <English>Major adjustment up</English>
@@ -135,7 +135,7 @@
             <Chinese>向上微調</Chinese>
             <Chinesesimp>向上微调</Chinesesimp>
             <Hungarian>Enyhe állítás fel</Hungarian>
-            <Ukrainian>Малая поправка ВВЕРХ</Ukrainian>
+            <Ukrainian>Мала поправка ВВЕРХ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustZero">
             <English>Set zero adjustment</English>
@@ -424,7 +424,7 @@
             <Korean>스코프에 조절 UI 보이기</Korean>
             <Japanese>調整UIをスコープ内に表示</Japanese>
             <Chinesesimp>开镜时显示调节面板</Chinesesimp>
-            <Ukrainian>Показати інтерфейс налаштування в області видимості.</Ukrainian>
+            <Ukrainian>Показувати інтерфейс поправок у прицілі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_overwriteZeroRange_Description">
             <English>Uses the 'defaultZeroRange' setting to overwrite the zero range of high power scopes</English>
@@ -472,7 +472,7 @@
             <Japanese>バニラ(ゲーム標準)のライフルスコープ用ゼロイン調整システムを再現します。</Japanese>
             <Chinese>使用原版的歸零系統來取代ACE複雜的歸零模擬。</Chinese>
             <Chinesesimp>使用原版的归零系统来取代 ACE 复杂的归零模拟。</Chinesesimp>
-            <Ukrainian>Використовує ванільну систему прицілювання для прицілів</Ukrainian>
+            <Ukrainian>Використовує ванільну систему пристрілки для прицілів.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_simplifiedZeroing_displayName">
             <English>Simplified zeroing</English>
@@ -536,7 +536,7 @@
             <Japanese>ウィンデージとエレベーションを符号付き数字で表示します</Japanese>
             <Chinese>使用帶著標籤的數字顯示歸零遠近與風偏程度</Chinese>
             <Chinesesimp>使用带着标签的数字显示归零远近与风偏程度</Chinesesimp>
-            <Ukrainian>Відображає горизонтальні та вертикальні поправки з підписаними числами</Ukrainian>
+            <Ukrainian>Відображає вертикальні та горизонтальні поправки числами зі знаком</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Scopes_useLegacyUI_displayName">
             <English>Use legacy UI</English>

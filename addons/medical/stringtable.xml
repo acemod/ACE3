@@ -53,7 +53,7 @@
             <Chinesesimp>医疗设定</Chinesesimp>
             <Turkish>Medikal</Turkish>
             <Hungarian>Orvosi</Hungarian>
-            <Ukrainian>Медик</Ukrainian>
+            <Ukrainian>Медицина</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_DistanceToFar">
             <English>Distance to %1 has become too far for treatment</English>
@@ -400,11 +400,13 @@
             <English>Prevent accidental firing after medical menu unexpectedly closes or waking up</English>
             <Russian>Предотвратите случайную стрельбу после неожиданного закрытия медицинского меню или пробуждения</Russian>
             <Japanese>予期せず医療メニューが閉じた場合の意図しない発砲を防ぎます。</Japanese>
+            <Ukrainian>Запобігає випадковим пострілам після раптового закриття медичного меню чи приходу до тями</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_blockInputOnUiEvent_DisplayName">
             <English>Block mouse input after unexpected UI change</English>
             <Russian>Блокирует ввод данных с помощью мыши после неожиданного изменения пользовательского интерфейса</Russian>
             <Japanese>UIの予期せぬ変更後にマウス入力をブロック</Japanese>
+            <Ukrainian>Блокувати мишу після раптової зміни інтерфейсу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_closeLid">
             <English>Close lid</English>
@@ -456,7 +458,7 @@
             <Chinesesimp>只限玩家</Chinesesimp>
             <Turkish>Sadece oyuncular</Turkish>
             <Hungarian>Csak játékosok</Hungarian>
-            <Ukrainian>Гравців</Ukrainian>
+            <Ukrainian>Тільки гравців</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_playersandai">
             <English>Players and AI</English>
@@ -474,7 +476,7 @@
             <Chinesesimp>玩家与 AI</Chinesesimp>
             <Turkish>Oyuncular ve AI</Turkish>
             <Hungarian>Játékosok és AI</Hungarian>
-            <Ukrainian>Гравців і ботів</Ukrainian>
+            <Ukrainian>Гравців і ШІ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
             <English>When an unconscious patient has Epinephrine in their system, the time between spontaneous wake up checks is divided by this value.</English>
@@ -491,7 +493,7 @@
             <Chinese>增加因病患的循環系統裡面的腎上腺素自我甦醒的機率。</Chinese>
             <Chinesesimp>增加因病患的循环系统里面的肾上腺素自我苏醒的机率。</Chinesesimp>
             <Turkish>Hastanın sisteminde Epinefrin olduğunda rasgele uyanma kontrollerinin ne sıklıkla gerçekleştiğini artırır.</Turkish>
-            <Ukrainian>Збільшує частоту перевірок на спонтанне пробудження, коли пацієнт під дією адреналіну.</Ukrainian>
+            <Ukrainian>Коли непритомний пацієнт під дією адреналіну, інтервал між перевірками на спонтанне пробудження ділиться на це значення.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_DisplayName">
             <English>Epinephrine Wake Up Chance Boost</English>

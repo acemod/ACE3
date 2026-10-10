@@ -77,7 +77,7 @@
             <German>[CSW] AGS30 Gurt</German>
             <Korean>[CSW] AGS-30 벨트</Korean>
             <Japanese>[CSW] AGS30 ベルト</Japanese>
-            <Ukrainian>[CSW] Лента AGS 30</Ukrainian>
+            <Ukrainian>[CSW] Стрічка АГС-30</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_M1HE_displayName">
             <English>[CSW] M1 HE</English>
@@ -99,7 +99,7 @@
             <German>[CSW] M314 Beleuchtung</German>
             <Korean>[CSW] M314 조명탄</Korean>
             <Japanese>[CSW] M314 照明弾</Japanese>
-            <Ukrainian>[CSW] M314 Осветлювальна</Ukrainian>
+            <Ukrainian>[CSW] M314 Освітлювальна</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_M60A2_displayName">
             <English>[CSW] M60A2 WP</English>
@@ -145,7 +145,7 @@
             <German>[CSW] MK19 Gurt</German>
             <Korean>[CSW] Mk.19 벨트</Korean>
             <Japanese>[CSW] Mk19 ベルト</Japanese>
-            <Ukrainian>[CSW] Лента Mk19</Ukrainian>
+            <Ukrainian>[CSW] Стрічка Mk19</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_OG9_displayName">
             <English>[CSW] OG-9 Round</English>
@@ -157,7 +157,7 @@
             <German>[CSW] OG-9 Rakete</German>
             <Korean>[CSW] OG-9 고폭파편탄</Korean>
             <Japanese>[CSW] OG-9 砲弾</Japanese>
-            <Ukrainian>[CSW] Снаряд OГ-9</Ukrainian>
+            <Ukrainian>[CSW] Снаряд ОГ-9</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_PG9_displayName">
             <English>[CSW] PG-9 Round</English>
@@ -181,7 +181,7 @@
             <German>[CSW] TOW2 Rohr</German>
             <Korean>[CSW] TOW2 튜브</Korean>
             <Japanese>[CSW] TOW2 チューブ</Japanese>
-            <Ukrainian>[CSW] Туба TOW-2</Ukrainian>
+            <Ukrainian>[CSW] Труба TOW-2</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_TOW_displayName">
             <English>[CSW] TOW Tube</English>
@@ -193,7 +193,7 @@
             <German>[CSW] TOW Rohr</German>
             <Korean>[CSW] TOW 튜브</Korean>
             <Japanese>[CSW] TOW チューブ</Japanese>
-            <Ukrainian>[CSW] Туба TOW</Ukrainian>
+            <Ukrainian>[CSW] Труба TOW</Ukrainian>
         </Key>
     </Package>
 </Project>

@@ -13,7 +13,7 @@
             <Korean>땅파기</Korean>
             <Japanese>掘る</Japanese>
             <Chinesesimp>挖掘</Chinesesimp>
-            <Ukrainian>Закопати</Ukrainian>
+            <Ukrainian>Окопатися</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Action_DigSpiderhole">
             <English>Dig Spiderhole</English>
@@ -335,7 +335,7 @@
             <Korean>[CSW] PK 총가방</Korean>
             <Japanese>[CSW] PK ガン バッグ</Japanese>
             <Chinesesimp>[班组] PK 枪袋</Chinesesimp>
-            <Ukrainian>[CSW] Сумка з ПK</Ukrainian>
+            <Ukrainian>[CSW] Сумка з ПК</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_RPD">
             <English>[CSW] RPD Gun Bag</English>

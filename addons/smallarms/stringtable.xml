@@ -115,7 +115,7 @@
             <Japanese>.45 ACP 25Rnd トレーサー (緑) マガジン</Japanese>
             <Chinesesimp>.45 ACP 25发 弹匣（曳光，绿）</Chinesesimp>
             <Turkish>.45 ACP 25 Merm. İzli (Yeşil) Şarjör</Turkish>
-            <Ukrainian>Магазин, 25 набоїв .45 ACP (зелені трассери)</Ukrainian>
+            <Ukrainian>Магазин, 25 набоїв .45 ACP (зелені трасери)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Red_Name">
             <English>.45 ACP 25Rnd Tracers (Red) Mag</English>
@@ -131,7 +131,7 @@
             <Japanese>.45 ACP 25Rnd トレーサー (赤) マガジン</Japanese>
             <Chinesesimp>.45 ACP 25发 弹匣（曳光，红）</Chinesesimp>
             <Turkish>.45 ACP 25 Merm. İzli (Kırmızı) Şarjör</Turkish>
-            <Ukrainian>Магазин, 25 набоїв .45 ACP (червоні трассери)</Ukrainian>
+            <Ukrainian>Магазин, 25 набоїв .45 ACP (червоні трасери)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Yellow_Name">
             <English>.45 ACP 25Rnd Tracers (Yellow) Mag</English>

@@ -50,7 +50,7 @@
             <Japanese>スコープで狙いを付けると、暗視装置を無効化します。</Japanese>
             <Chinese>此功能開啟後，當要使用瞄準鏡時，為避免夜視鏡鏡頭碰撞到瞄準鏡，會先拿開夜視鏡後再進行瞄準鏡瞄準</Chinese>
             <Chinesesimp>此功能开启后，当要使用瞄准镜时，为避免夜视仪镜头碰撞到瞄准镜，会先拿开夜视仪后再进行瞄准镜瞄准。</Chinesesimp>
-            <Ukrainian>Блокує використання головного ПНБ під час прицілювання</Ukrainian>
+            <Ukrainian>Блокує використання ПНБ під час прицілювання.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_NightVision_DisableNVGsWithSights_DisplayName">
             <English>Disable NVGs in scope</English>
@@ -547,7 +547,7 @@
             <Japanese>照準時のぼかし効果</Japanese>
             <Chinese>瞄準具模糊程度</Chinese>
             <Chinesesimp>瞄准具模糊程度</Chinesesimp>
-            <Ukrainian>Розмиття при опущеному прицілі</Ukrainian>
+            <Ukrainian>Розмиття під час прицілювання</Ukrainian>
         </Key>
         <Key ID="STR_ACE_NightVision_effectScaling_Description">
             <English>Blur and brightness effects [Setting to 0 will disable ALL nightvision effects]</English>
@@ -611,7 +611,7 @@
             <Japanese>暗視装置フォグ強度</Japanese>
             <Chinese>夜視鏡霧氣程度</Chinese>
             <Chinesesimp>夜视仪雾气程度</Chinesesimp>
-            <Ukrainian>Ступінь розмиття ПНБ</Ukrainian>
+            <Ukrainian>Ступінь туману ПНБ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_NightVision_noiseScaling_Description">
             <English>Image noise intensity when wearing NVGs</English>

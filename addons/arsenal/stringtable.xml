@@ -178,7 +178,7 @@
             <Japanese>様々な武器と装備を試して、あなただけの装備を作成してください。</Japanese>
             <Chinese>嘗試不同的武器與裝備來組合你個人的裝備配置</Chinese>
             <Chinesesimp>尝试不同的武器与装备来组合你个人的负载配置。</Chinesesimp>
-            <Ukrainian>Випробуйте зброю та спорядження, створюйте власні комплекти екіпіровки.</Ukrainian>
+            <Ukrainian>Випробуйте зброю й екіпірування та створюйте власне спорядження.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_Mission_tooltip">
             <English>Use ACE Arsenal to try out different weapons and equipment.</English>
@@ -311,7 +311,7 @@
             <Chinesesimp>白名单</Chinesesimp>
             <Turkish>Beyaz Liste</Turkish>
             <Hungarian>Fehérlista</Hungarian>
-            <Ukrainian>Вайтлист</Ukrainian>
+            <Ukrainian>Білий список</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_allowDefaultLoadoutsSetting">
             <English>Allow default loadouts</English>
@@ -328,7 +328,7 @@
             <Chinese>允許預設裝備</Chinese>
             <Chinesesimp>允许默认负载</Chinesesimp>
             <Turkish>Varsayılan kıyafetlere izin ver</Turkish>
-            <Ukrainian>Дозволити комплекти за замовчуванням</Ukrainian>
+            <Ukrainian>Дозволити спорядження за замовчуванням</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_allowSharingSetting">
             <English>Allow loadout sharing</English>
@@ -345,7 +345,7 @@
             <Chinese>允許分享裝備</Chinese>
             <Chinesesimp>允许分享负载</Chinesesimp>
             <Turkish>Kıyafet paylaşmaya izin ver</Turkish>
-            <Ukrainian>Дозволити публікацію комплектів</Ukrainian>
+            <Ukrainian>Дозволити публікацію спорядження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonClearContainerTooltip">
             <English>Empty the selected container</English>
@@ -446,7 +446,7 @@
             <Chinese>刪除當前選擇的裝備</Chinese>
             <Chinesesimp>删除当前选择的负载</Chinesesimp>
             <Turkish>Seçili kıyafetleri sil</Turkish>
-            <Ukrainian>Видалити обраний комплект екіпіровки</Ukrainian>
+            <Ukrainian>Видалити обране спорядження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonExportText">
             <English>Export</English>
@@ -479,7 +479,7 @@
             <Japanese>現在/標準装備をエクスポートします</Japanese>
             <Chinese>匯出當前/預設的裝備</Chinese>
             <Chinesesimp>导出当前/预设的装备</Chinesesimp>
-            <Ukrainian>Експорт комплектів екіпіровки</Ukrainian>
+            <Ukrainian>Експорт спорядження: поточне / за замовчуванням</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonFavoritesTooltip">
             <English>Switch between displaying all items or your favorites.\nDouble click while holding Shift to add or remove an item.</English>
@@ -560,7 +560,7 @@
             <Japanese>現在/標準装備をインポートします</Japanese>
             <Chinese>匯入當前/預設的裝備</Chinese>
             <Chinesesimp>导入当前/预设的负载</Chinesesimp>
-            <Ukrainian>Імпорт комплектів екіпіровки</Ukrainian>
+            <Ukrainian>Імпорт спорядження: поточне / за замовчуванням</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadText">
             <English>Load</English>
@@ -594,7 +594,7 @@
             <Chinese>載入當前選擇的裝備</Chinese>
             <Chinesesimp>载入当前选择的负载</Chinesesimp>
             <Turkish>Seçili kıyafetleri yükle</Turkish>
-            <Ukrainian>Завантажити обраний комплект екіпіровки</Ukrainian>
+            <Ukrainian>Завантажити обране спорядження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadoutsText">
             <English>Loadouts</English>
@@ -611,7 +611,7 @@
             <Chinese>裝備</Chinese>
             <Chinesesimp>负载</Chinesesimp>
             <Turkish>Kıyafetler</Turkish>
-            <Ukrainian>Комплекти</Ukrainian>
+            <Ukrainian>Спорядження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadoutsTooltip">
             <English>Open the loadouts screen</English>
@@ -628,7 +628,7 @@
             <Chinese>開啟裝備選單</Chinese>
             <Chinesesimp>开启负载菜单</Chinesesimp>
             <Turkish>Kıyafetler ekranını aç</Turkish>
-            <Ukrainian>Відкрити вікно комплектів екіпіровки</Ukrainian>
+            <Ukrainian>Відкрити вікно спорядження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonRenameTooltip">
             <English>Rename the selected loadout</English>
@@ -645,7 +645,7 @@
             <Chinese>重新命名當前選擇的裝備</Chinese>
             <Chinesesimp>重命名当前选择的负载</Chinesesimp>
             <Turkish>Seçili kıyafetleri yeniden adlandır</Turkish>
-            <Ukrainian>Перейменувати обраний комплект екіпіровки</Ukrainian>
+            <Ukrainian>Перейменувати обране спорядження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSaveText">
             <English>Save</English>
@@ -679,7 +679,7 @@
             <Chinese>保存當前的裝備</Chinese>
             <Chinesesimp>保存当前的负载</Chinesesimp>
             <Turkish>Geçerli kıyafetleri kaydet</Turkish>
-            <Ukrainian>Зберегти поточний комплект екіпіровки</Ukrainian>
+            <Ukrainian>Зберегти поточне спорядження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSaveTooltip_shiftClick">
             <English>[Shift+Click to save to mission defaults]</English>
@@ -708,7 +708,7 @@
             <Korean>검색\nCtrl + 클릭으로 실시간 검색 결과를 활성화</Korean>
             <Japanese>検索\nCTRL + クリックで検索結果の即時表示を有効化</Japanese>
             <Chinesesimp>CTRL+左键启用即时显示搜索结果</Chinesesimp>
-            <Ukrainian>Пошук\nCtrl + Click для ввімкнення результатів у реальному часі</Ukrainian>
+            <Ukrainian>Пошук\nCtrl + клік — результати в реальному часі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSharePrivateText">
             <English>Private</English>
@@ -759,7 +759,7 @@
             <Chinese>開始/停止分享當前選擇的裝備</Chinese>
             <Chinesesimp>开始/停止分享当前选择的负载</Chinesesimp>
             <Turkish>Seçili kıyafeti paylaş ya da paylaşmayı durdur.</Turkish>
-            <Ukrainian>Відкрити або закрити загальний доступ до комплекту екіпіровки</Ukrainian>
+            <Ukrainian>Відкрити або закрити загальний доступ до спорядження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultLoadoutsTooltip">
             <English>Allow the use of the default loadouts tab</English>
@@ -776,7 +776,7 @@
             <Chinese>允許使用預設的裝備</Chinese>
             <Chinesesimp>允许使用默认的负载</Chinesesimp>
             <Turkish>Varsayılan Kıyafetler sekmesinin kullanımına izin ver</Turkish>
-            <Ukrainian>Дозволити використання вкладки комплектів екіпіровки за замовчуванням</Ukrainian>
+            <Ukrainian>Дозволити вкладку спорядження за замовчуванням</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesSetting">
             <English>Default to Favorites</English>
@@ -838,7 +838,7 @@
             <Chinese>當前的裝備已匯出到剪貼簿中</Chinese>
             <Chinesesimp>当前负载已导出到剪贴板</Chinesesimp>
             <Turkish>Geçerli kıyafeti panoya dışa aktar</Turkish>
-            <Ukrainian>Поточний список комплекту екіпіровки експортовано в буфер</Ukrainian>
+            <Ukrainian>Поточне спорядження експортовано в буфер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_exportDefault">
             <English>Default loadouts list exported to clipboard</English>
@@ -855,7 +855,7 @@
             <Chinese>預設的裝備清單已匯出到剪貼簿中</Chinese>
             <Chinesesimp>默认负载清单已导出到剪贴板</Chinesesimp>
             <Turkish>Varsayılan kıyafetler listesi panoya dışa aktar</Turkish>
-            <Ukrainian>Список комплекту екіпіровки за замовчуванням експортований у буфер</Ukrainian>
+            <Ukrainian>Список спорядження за замовчуванням експортовано в буфер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_exportDefaultError">
             <English>The default loadouts list is empty!</English>
@@ -872,7 +872,7 @@
             <Chinese>沒有預設的裝備清單!</Chinese>
             <Chinesesimp>没有默认负载清单！</Chinesesimp>
             <Turkish>Varsayılan kıyafetler listesi boş !</Turkish>
-            <Ukrainian>Список комплекту екіпірування порожній!</Ukrainian>
+            <Ukrainian>Список спорядження за замовчуванням порожній!</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_exportedClassnameText">
             <English>Exported class name to clipboard</English>
@@ -888,7 +888,7 @@
             <Japanese>クリップボードへクラスネームをエクスポート</Japanese>
             <Chinese>輸出 class name 到剪貼簿上</Chinese>
             <Chinesesimp>将类名复制到剪贴板</Chinesesimp>
-            <Ukrainian>Ім'я класу, експортованого в буфер</Ukrainian>
+            <Ukrainian>Ім'я класу експортовано в буфер</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_favoritesColorSetting">
             <English>Favorites Color</English>
@@ -902,7 +902,7 @@
             <Korean>즐겨찾기 색상</Korean>
             <Japanese>お気に入りの色</Japanese>
             <Chinesesimp>收藏物品颜色</Chinesesimp>
-            <Ukrainian>Обраний колір</Ukrainian>
+            <Ukrainian>Колір вибраного</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_favoritesColorTooltip">
             <English>Highlight color for favorited items.</English>
@@ -916,7 +916,7 @@
             <Korean>즐겨찾기한 아이템을 색상으로 강조합니다.</Korean>
             <Japanese>お気に入りアイテムのハイライト色。</Japanese>
             <Chinesesimp>高亮收藏物品的颜色</Chinesesimp>
-            <Ukrainian>Виділіть кольором улюблені предмети.</Ukrainian>
+            <Ukrainian>Колір виділення вибраних предметів.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_fontHeightSetting">
             <English>Panel font height</English>
@@ -984,7 +984,7 @@
             <Chinese>裝備已從剪貼簿中匯入</Chinese>
             <Chinesesimp>负载已从剪贴板中导入</Chinesesimp>
             <Turkish>Kıyafetleri içe aktar</Turkish>
-            <Ukrainian>Список комплекту екіпіровки імпортовано з буфера</Ukrainian>
+            <Ukrainian>Спорядження імпортовано з буфера</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_importedDefault">
             <English>Default loadouts list imported from clipboard</English>
@@ -1001,7 +1001,7 @@
             <Chinese>預設的裝備清單已從剪貼簿中匯入</Chinese>
             <Chinesesimp>默认负载已从剪贴板导入</Chinesesimp>
             <Turkish>Varsayılan kıyafetler listesini içe aktar</Turkish>
-            <Ukrainian>Список комплекту екіпіровки за замовчуванням імпортований з буфера</Ukrainian>
+            <Ukrainian>Список спорядження за замовчуванням імпортовано з буфера</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_invertCameraSetting">
             <English>Invert camera controls</English>
@@ -1035,7 +1035,7 @@
             <Chinese>以下的裝備已被刪除:</Chinese>
             <Chinesesimp>以下的负载已被删除：</Chinesesimp>
             <Turkish>Bu kıyafet silindi:</Turkish>
-            <Ukrainian>Вилучено комплект екіпірування:</Ukrainian>
+            <Ukrainian>Видалено спорядження:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutLoaded">
             <English>The following loadout was loaded:</English>
@@ -1052,7 +1052,7 @@
             <Chinese>以下的裝備已被載入:</Chinese>
             <Chinesesimp>以下的负载已被载入：</Chinesesimp>
             <Turkish>Bu kıyafet yüklendi:</Turkish>
-            <Ukrainian>Завантажено комплект екіпірування:</Ukrainian>
+            <Ukrainian>Завантажено спорядження:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutRenamed">
             <English>was renamed to</English>
@@ -1086,7 +1086,7 @@
             <Chinese>以下的裝備已被保存:</Chinese>
             <Chinesesimp>以下的负载已被保存：</Chinesesimp>
             <Turkish>Bu kıyafet kaydedildi:</Turkish>
-            <Ukrainian>Збережено комплект екіпірування:</Ukrainian>
+            <Ukrainian>Збережено спорядження:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutSubcategory">
             <English>Loadouts</English>
@@ -1103,7 +1103,7 @@
             <Chinese>裝備</Chinese>
             <Chinesesimp>负载</Chinesesimp>
             <Turkish>Kıyafetler</Turkish>
-            <Ukrainian>Комплекти</Ukrainian>
+            <Ukrainian>Спорядження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutUnshared">
             <English>The following loadout is not public anymore:</English>
@@ -1120,7 +1120,7 @@
             <Chinese>以下的裝備已不再被分享:</Chinese>
             <Chinesesimp>以下的负载已不再被分享：</Chinesesimp>
             <Turkish>Bu kıyafet artık herkese açık değil :</Turkish>
-            <Ukrainian>Цей комплект екіпірування більше не є публічним:</Ukrainian>
+            <Ukrainian>Це спорядження більше не публічне:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveFaceSetting">
             <English>Save Face</English>
@@ -1225,7 +1225,7 @@
             <Chinese>沒有可用的虛擬物品</Chinese>
             <Chinesesimp>没有可用的虚拟物品</Chinesesimp>
             <Turkish>Kullanılabilir sanal öğe yok</Turkish>
-            <Ukrainian>Віртуальний предмет недоступний</Ukrainian>
+            <Ukrainian>Немає доступних віртуальних предметів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_page">
             <English>Page</English>
@@ -1259,7 +1259,7 @@
             <Chinese>沒有裝備被匯入</Chinese>
             <Chinesesimp>没有负载被导入。</Chinesesimp>
             <Turkish>Hiç bir kıyafet içe aktarılmadı.</Turkish>
-            <Ukrainian>Немає комплектів для імпорту</Ukrainian>
+            <Ukrainian>Немає спорядження для імпорту.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_portLoadoutsPlayerError">
             <English>No player unit available! Place a unit and mark it as "Player".</English>
@@ -1291,7 +1291,7 @@
             <Japanese>BI 武器庫の装備を ACE 武器庫へインポート</Japanese>
             <Chinese>匯入BI原廠虛擬軍火庫的裝備到ACE虛擬軍火庫中</Chinese>
             <Chinesesimp>导入 BI 原版虚拟军火库的负载到 ACE 虚拟军火库中</Chinesesimp>
-            <Ukrainian>Імпорт комплектів з Арсеналу BI в Арсенал ACE</Ukrainian>
+            <Ukrainian>Імпорт спорядження з Арсеналу BI в Арсенал ACE</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_printToRPTSetting">
             <English>Log missing / unavailable items</English>
@@ -1342,7 +1342,7 @@
             <Chinese>已有相同名稱的裝備!</Chinese>
             <Chinesesimp>已有相同名称的负载！</Chinesesimp>
             <Turkish>Aynı isim de başka kıyafetler var!</Turkish>
-            <Ukrainian>Комплект із таким ім'ям вже існує!</Ukrainian>
+            <Ukrainian>Спорядження з такою назвою вже існує!</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_saveAuthorError">
             <English>You are the author of this loadout</English>
@@ -1359,7 +1359,7 @@
             <Chinese>你是這個裝備的作者</Chinese>
             <Chinesesimp>你是这个负载的作者</Chinesesimp>
             <Turkish>Bu kıyafetin sahibi sensin</Turkish>
-            <Ukrainian>Ви автор цього комплекту екіпірування</Ukrainian>
+            <Ukrainian>Ви автор цього спорядження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_saveEmptyNameBox">
             <English>The name field is empty!</English>
@@ -1393,7 +1393,7 @@
             <Chinese>已有相同名稱的裝備在公用分享區</Chinese>
             <Chinesesimp>已有相同名称的负载在公用分享区</Chinesesimp>
             <Turkish>Bu kıyafetler zaten aynı isim de paylaşılmış.</Turkish>
-            <Ukrainian>Ваш комплект екіпірування з таким самим ім'ям є публічним</Ukrainian>
+            <Ukrainian>Ваше спорядження з такою назвою є публічним</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_settingCategory">
             <English>ACE Arsenal</English>
@@ -1808,7 +1808,7 @@
             <Chinese>任務作者提供的預設裝備</Chinese>
             <Chinesesimp>任务作者提供的负载</Chinesesimp>
             <Turkish>Görevi hazırlayan kişi tarafından kullanıma sunulan teçhizatlar</Turkish>
-            <Ukrainian>Комплекти екіпірування, що надаються творцем місії</Ukrainian>
+            <Ukrainian>Спорядження, надане творцем місії</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabMyLoadoutsText">
             <English>My loadouts</English>
@@ -1825,7 +1825,7 @@
             <Chinese>我的裝備</Chinese>
             <Chinesesimp>我的负载</Chinesesimp>
             <Turkish>Benim kıyafetlerim</Turkish>
-            <Ukrainian>Мої комплекти</Ukrainian>
+            <Ukrainian>Моє спорядження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabMyLoadoutsTooltip">
             <English>Loadouts saved in your profile</English>
@@ -1842,7 +1842,7 @@
             <Chinese>裝備已保存到你的設定檔中</Chinese>
             <Chinesesimp>负载已保存到你的档案中</Chinesesimp>
             <Turkish>Profiline kaydedilmiş kıyafetlerin</Turkish>
-            <Ukrainian>Комплекти екіпірування, збережені у вашому профілі</Ukrainian>
+            <Ukrainian>Спорядження, збережене у вашому профілі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabSharedLoadoutsText">
             <English>Public loadouts</English>
@@ -1859,7 +1859,7 @@
             <Chinese>公用裝備</Chinese>
             <Chinesesimp>公用负载</Chinesesimp>
             <Turkish>Herkese Açık Kıyafetler</Turkish>
-            <Ukrainian>Публічні комплекти</Ukrainian>
+            <Ukrainian>Публічне спорядження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabSharedLoadoutsTooltip">
             <English>Loadouts shared by you and other players</English>
@@ -1876,7 +1876,7 @@
             <Chinese>由你與其他玩家分享的裝備配置</Chinese>
             <Chinesesimp>你和其他玩家分享的负载配置</Chinesesimp>
             <Turkish>Senin veya diğer kişiler tarafından paylaşılan kıyafetler</Turkish>
-            <Ukrainian>Комплекти екіпірування, опубліковані вами та іншими гравцями</Ukrainian>
+            <Ukrainian>Спорядження, опубліковане вами та іншими гравцями</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Arsenal_toolsTab">
             <English>Tools</English>
@@ -1929,7 +1929,7 @@
             <Korean>로드아웃 위에 마우스 커서를 올리면 누락되거나 사용할 수 없는 아이템을 표시합니다.</Korean>
             <Japanese>装備にカーソルを重ねた時に存在しない/利用できないアイテムを表示します</Japanese>
             <Chinesesimp>鼠标悬停在负载上时显示缺失/不可用物品</Chinesesimp>
-            <Ukrainian>Показати відсутні / недоступні предмети при наведенні курсору миші на комплект</Ukrainian>
+            <Ukrainian>Показувати відсутні / недоступні предмети при наведенні курсору на спорядження</Ukrainian>
         </Key>
     </Package>
 </Project>

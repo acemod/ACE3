@@ -150,7 +150,7 @@
             <Chinese>隱藏'AI小隊'的蹤跡?</Chinese>
             <Chinesesimp>隐藏'AI 小队'的追踪？</Chinesesimp>
             <Hungarian>Jelölők elrejtése "csak AI" csoportoknál?</Hungarian>
-            <Ukrainian>Приховати маркери груп, які складаються повністю з ботів?</Ukrainian>
+            <Ukrainian>Приховати маркери груп, які складаються лише з ШІ?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_BFT_HideAiGroups_DisplayName">
             <English>Hide AI groups</English>
@@ -167,7 +167,7 @@
             <Chinese>隱藏AI小隊</Chinese>
             <Chinesesimp>隐藏 AI 小队</Chinesesimp>
             <Hungarian>AI csoportok elrejtése</Hungarian>
-            <Ukrainian>Приховати групи ботів</Ukrainian>
+            <Ukrainian>Приховати групи ШІ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Interval_Description">
             <English>How often the markers should be refreshed (in seconds)</English>

@@ -64,7 +64,7 @@
             <Japanese>観戦者システムが標準でどのように動作するか設定できます。</Japanese>
             <Chinese>設定旁觀者系統相關配置</Chinese>
             <Chinesesimp>设定旁观者系统相关配置</Chinesesimp>
-            <Ukrainian>Визначають, як система глядача функціонуватиме за замовчуванням.</Ukrainian>
+            <Ukrainian>Визначає, як система глядача функціонуватиме за замовчуванням.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>ACE Spectator</English>
@@ -283,7 +283,7 @@
             <Chinese>第一人稱與第三人稱</Chinese>
             <Chinesesimp>第一人称与第三人称</Chinesesimp>
             <Turkish>1PP ve 3PP</Turkish>
-            <Ukrainian>першого а також третього</Ukrainian>
+            <Ukrainian>1-ша і 3-тя особа</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
             <English>Next Unit</English>
@@ -368,7 +368,7 @@
             <Chinese>顯示彈道</Chinese>
             <Chinesesimp>显示弹道</Chinesesimp>
             <Turkish>Mermiler</Turkish>
-            <Ukrainian>Уламки</Ukrainian>
+            <Ukrainian>Снаряди</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_Description">
             <English>Vision modes that can be used</English>

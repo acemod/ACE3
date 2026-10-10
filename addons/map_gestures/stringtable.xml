@@ -84,7 +84,7 @@
             <Korean>비활성화</Korean>
             <Japanese>無効化</Japanese>
             <Chinesesimp>禁用</Chinesesimp>
-            <Ukrainian>Вимкнути</Ukrainian>
+            <Ukrainian>Вимкнено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_Group">
             <English>Group</English>
@@ -238,7 +238,7 @@
             <Japanese>グループ設定がない場合に部隊長へ設定される色の値を設定します。[モジュール:空の場合はクライアントへ強制しません]</Japanese>
             <Chinese>當沒有設定小隊顏色時，此功能會定義隊長的指示器顏色。[模塊: 此欄留空來保持預設顏色]</Chinese>
             <Chinesesimp>当没有设定小队颜色时，此功能会定义队长的指示颜色。[模块：此栏留空来保持预设颜色]</Chinesesimp>
-            <Ukrainian>Значення кольору для лідерів груп.</Ukrainian>
+            <Ukrainian>Резервне значення кольору для лідерів груп, коли немає групового налаштування. [Модуль: залиште порожнім, щоб не нав'язувати його клієнтам]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_defaultLeadColor_displayName">
             <English>Lead Default Color</English>
@@ -254,7 +254,7 @@
             <Japanese>部隊長用の標準色</Japanese>
             <Chinese>隊長預設顏色</Chinese>
             <Chinesesimp>队长预设颜色</Chinesesimp>
-            <Ukrainian>Колір за замовчуванням</Ukrainian>
+            <Ukrainian>Колір лідера за замовчуванням</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_enabled_description">
             <English>Enables the Map Gestures.</English>
@@ -271,7 +271,7 @@
             <Chinese>啟用地圖指示器</Chinese>
             <Chinesesimp>启用地图指示</Chinesesimp>
             <Turkish>Harita hareketlerini etkinleştir.</Turkish>
-            <Ukrainian>Вмикає вказівки на мапі.</Ukrainian>
+            <Ukrainian>Вмикає жести на мапі.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_enabled_displayName">
             <English>Enabled</English>
@@ -354,7 +354,7 @@
             <Japanese>部隊長用の色</Japanese>
             <Chinese>隊長顏色</Chinese>
             <Chinesesimp>队长颜色</Chinesesimp>
-            <Ukrainian>Лід. колір</Ukrainian>
+            <Ukrainian>Колір лідера</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_mapGestures_category">
             <English>ACE Map Gestures</English>
@@ -498,7 +498,7 @@
             <Chinese>名稱文字顏色</Chinese>
             <Chinesesimp>名称文字颜色</Chinesesimp>
             <Turkish>Isim Metin Rengi</Turkish>
-            <Ukrainian>Колір тексту назви</Ukrainian>
+            <Ukrainian>Колір тексту імені</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_onlyShowFriendlys_description">
             <English>Shows only Gestures from Units that are from the same side or a Friendly side.</English>

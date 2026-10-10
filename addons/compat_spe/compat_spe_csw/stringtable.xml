@@ -19,7 +19,7 @@
             <German>7.92x57 mm 100 Patronen Gurt (L.S./Leuchtspur)</German>
             <Korean>7.92x57mm 100발 들이 벨트 (L.S. 훈련용/예광탄)</Korean>
             <Japanese>7.92x57 100Rnd Belt (L.S./Tracer)</Japanese>
-            <Ukrainian>7.92x57 стрічка на 100 набоїв (L.S./трасери)</Ukrainian>
+            <Ukrainian>7,92x57 стрічка на 100 набоїв (L.S./трасери)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SPE_CSW_50Rnd_762x63_Tracer">
             <English>.30-06 50Rnd Belt (M2/Tracer)</English>
@@ -39,7 +39,7 @@
             <German>7.92x57 mm 50 Patronen Gurt (L.S./Leuchtspur)</German>
             <Korean>7.92x57mm 50발 들이 벨트 (L.S. 훈련용/예광탄)</Korean>
             <Japanese>7.92x57 50Rnd Gurttrommel (L.S./Tracer)</Japanese>
-            <Ukrainian>7.92x57 Gurttrommel на 50 набоїв (L.S./трасери)</Ukrainian>
+            <Ukrainian>7,92x57 Gurttrommel на 50 набоїв (L.S./трасери)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_SPE_CSW_alteringHeight">
             <English>Altering Height...</English>

@@ -13,7 +13,7 @@
             <Korean>레이저 스팟 추적기: 끔</Korean>
             <Japanese>レーザー スポット トラッカー: オフ</Japanese>
             <Chinesesimp>激光点跟踪器: 关</Chinesesimp>
-            <Ukrainian>Лазерний точковий трекер: вимкнений</Ukrainian>
+            <Ukrainian>Лазерний точковий трекер: вимкнено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Laser_LSTOn">
             <English>Laser Spot Tracker: Enable</English>
@@ -98,7 +98,7 @@
             <Chinesesimp>激光—循环切换激光码 下</Chinesesimp>
             <Turkish>Lazer - Çevrim Kodu aşağı</Turkish>
             <Hungarian>Lézer - kódciklus csökkentése</Hungarian>
-            <Ukrainian>Лазер - зменшити частоту</Ukrainian>
+            <Ukrainian>Лазер - код вниз</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Laser_laserCodeUpHundreds">
             <English>Laser - Cycle Code Up - X#XX</English>
@@ -116,7 +116,7 @@
             <Chinesesimp>激光—循环切换激光码 上 - X#XX</Chinesesimp>
             <Turkish>Lazer - Çevrim Kodu Yukarı - X#XX</Turkish>
             <Hungarian>Lézer - kódciklus növelése - X#XX</Hungarian>
-            <Ukrainian>Лазер - збільшити частоту - X#XX</Ukrainian>
+            <Ukrainian>Лазер - код вгору - X#XX</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Laser_laserCodeUpOnes">
             <English>Laser - Cycle Code Up - XXX#</English>
@@ -134,7 +134,7 @@
             <Chinesesimp>激光—循环切换激光码 上 - XXX#</Chinesesimp>
             <Turkish>Lazer - Çevrim Kodu Yukarı - XXX#</Turkish>
             <Hungarian>Lézer - kódciklus növelése - XXX#</Hungarian>
-            <Ukrainian>Лазер - збільшити частоту - XXX#</Ukrainian>
+            <Ukrainian>Лазер - код вгору - XXX#</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Laser_laserCodeUpTens">
             <English>Laser - Cycle Code Up - XX#X</English>
@@ -152,7 +152,7 @@
             <Chinesesimp>激光—循环切换激光码 上 - XX#X</Chinesesimp>
             <Turkish>Lazer - Çevrim Kodu Yukarı - XX#X</Turkish>
             <Hungarian>Lézer - kódciklus növelése - XX#X</Hungarian>
-            <Ukrainian>Лазер - збільшити частоту - XX#X</Ukrainian>
+            <Ukrainian>Лазер - код вгору - XX#X</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Laser_showLaserOnMap">
             <English>Draw Laser on Map</English>

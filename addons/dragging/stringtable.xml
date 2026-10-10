@@ -178,7 +178,7 @@
             <German>Erlauben Sie dem Spieler, zu rennen, wenn er leichte Gegenstände trägt.</German>
             <Korean>가벼운 개체를 들고 다닐 때 플레이어가 뛸 수 있도록 허용합니다.</Korean>
             <Japanese>プレイヤーが軽量オブジェクトを持ち運んでいるときに走れるようにする。</Japanese>
-            <Ukrainian>Дозвольте гравцеві бігати під час перенесення легких предметів.</Ukrainian>
+            <Ukrainian>Дозволяє гравцеві бігати під час перенесення легких предметів.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragging_allowRunWithLightweight_DisplayName">
             <English>Allow Running with Lightweight Objects</English>
@@ -191,7 +191,7 @@
             <German>Erlauben das Sprinten mit leichten Gegenständen</German>
             <Korean>가벼운 개체 들고 달리기 허용</Korean>
             <Japanese>軽量物を持って走れるようにする</Japanese>
-            <Ukrainian>Дає змогу працювати з легкими об'єктами</Ukrainian>
+            <Ukrainian>Біг із легкими об'єктами</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Dragging_skipContainerWeight_Description">
             <English>Determines whether object's weight is added onto weight calculations.</English>
@@ -241,7 +241,7 @@
             <German>Maximaler Gewichtskoeffizient</German>
             <Korean>최대 무게 계수</Korean>
             <Japanese>最大重量係数</Japanese>
-            <Ukrainian>Максимальний коефіцієнт ваги</Ukrainian>
+            <Ukrainian>Коефіцієнт макс. ваги</Ukrainian>
         </Key>
     </Package>
 </Project>

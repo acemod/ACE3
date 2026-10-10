@@ -248,7 +248,7 @@
             <Chinesesimp>选择非破片手榴弹</Chinesesimp>
             <Turkish>El Bombası Dışındakileri Seç</Turkish>
             <Hungarian>Nem-robbanó Gránát Kiválasztása</Hungarian>
-            <Ukrainian>Вибрати гранату</Ukrainian>
+            <Ukrainian>Вибрати неосколкову гранату</Ukrainian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectLauncher">
             <English>Select Launcher</English>

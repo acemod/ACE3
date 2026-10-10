@@ -224,16 +224,19 @@
             <English>Show Seat Actions</English>
             <Russian>Показать действия с сиденьем</Russian>
             <Japanese>座席アクションを表示</Japanese>
+            <Ukrainian>Показувати дії посадки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_QuickMount_enable3d_Description">
             <English>Show get-in action for every seat in 3d interaction</English>
             <Russian>Показывает, как можно получить доступ к каждому месту в 3d-интерактиве</Russian>
             <Japanese>3Dインタラクションで各座席に着席アクションを表示します。</Japanese>
+            <Ukrainian>Показувати дію посадки для кожного місця у 3D-взаємодії</Ukrainian>
         </Key>
         <Key ID="STR_ACE_QuickMount_enable3d_shiftKey">
             <English>When holding SHIFT</English>
             <Russian>При удержании нажатой клавиши SHIFT</Russian>
             <Japanese>SHIFTキー押下時</Japanese>
+            <Ukrainian>При утриманні SHIFT</Ukrainian>
         </Key>
     </Package>
 </Project>

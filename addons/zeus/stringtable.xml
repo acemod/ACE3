@@ -242,7 +242,7 @@
             <Chinese>增加完整的虛擬軍火庫到物件上</Chinese>
             <Chinesesimp>增加完整的虚拟军火库到物体上</Chinesesimp>
             <Turkish>Arsenal Ekle</Turkish>
-            <Ukrainian>Додати увесь Арсенал</Ukrainian>
+            <Ukrainian>Додати повний Арсенал BI</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddOrRemoveFRIES_DisplayName">
             <English>Add/Remove FRIES</English>
@@ -633,7 +633,7 @@
             <Chinese>AI技巧設定</Chinese>
             <Chinesesimp>AI 技巧设定</Chinesesimp>
             <Turkish>Genel AI Yetenekleri</Turkish>
-            <Ukrainian>Майстерність ботів</Ukrainian>
+            <Ukrainian>Майстерність ШІ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy">
             <English>Accuracy</English>
@@ -697,7 +697,7 @@
             <Japanese>AIは自動的に戦闘状態へ切り替えます</Japanese>
             <Chinese>決定AI是否會自動與敵人交戰</Chinese>
             <Chinesesimp>决定 AI 是否会自动与敌人交战</Chinesesimp>
-            <Ukrainian>Чи повинні боти автоматично переходити в режим бою</Ukrainian>
+            <Ukrainian>Чи повинен ШІ автоматично переходити в режим бою</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover">
             <English>Seek Cover</English>
@@ -729,7 +729,7 @@
             <Japanese>AIは遮蔽を取るようになります</Japanese>
             <Chinese>決定AI是否會尋找掩護</Chinese>
             <Chinesesimp>决定 AI 是否会寻找掩护</Chinesesimp>
-            <Ukrainian>Чи повинні боти шукати укриття</Ukrainian>
+            <Ukrainian>Чи повинен ШІ шукати укриття</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general">
             <English>General Skill</English>
@@ -887,7 +887,7 @@
             <Korean>+ Shift 키로 강제하기 (동서남북 방향으로만 깔 수 있음)</Korean>
             <Japanese>+SHIFTキー で強制的に敷設 (北/南または東/西方向にのみ配置可能)</Japanese>
             <Chinesesimp>+SHIFT 来强制铺设(只能在南北和东西朝向铺设)</Chinesesimp>
-            <Ukrainian>+SHIFT на примусове (може укладатися тільки на Північ/Південь або Схід/Захід)</Ukrainian>
+            <Ukrainian>+SHIFT — примусово (лише Пн/Пд або Сх/Зх)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLoadIntoCargo_DisplayName">
             <English>Load into Cargo</English>
@@ -971,7 +971,7 @@
             <Chinese>移除物件上的虛擬軍火庫</Chinese>
             <Chinesesimp>移除物体上的虚拟军火库</Chinesesimp>
             <Turkish>Arsenali Kaldır</Turkish>
-            <Ukrainian>Прибрати Арсенал</Ukrainian>
+            <Ukrainian>Прибрати Арсенал BI</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSearchArea_DisplayName">
             <English>Search Area</English>
@@ -1072,7 +1072,7 @@
             <Japanese>医療施設に割り当て</Japanese>
             <Chinese>指定醫療設施</Chinese>
             <Chinesesimp>指定医疗设施</Chinesesimp>
-            <Ukrainian>Назанчити медичною спорудою</Ukrainian>
+            <Ukrainian>Призначити медичною спорудою</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalVehicle_DisplayName">
             <English>Assign Medical Vehicle</English>
@@ -1153,7 +1153,7 @@
             <Korean>흑색 열원</Korean>
             <Japanese>黒=熱源</Japanese>
             <Chinesesimp>黑热模式</Chinesesimp>
-            <Ukrainian>Чорний</Ukrainian>
+            <Ukrainian>Чорний-гарячий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_ForceInterface_Tooltip">
             <English>Forces the spectator interface preventing the player from closing it with the Escape key</English>
@@ -1165,7 +1165,7 @@
             <Korean>플레이어가 Esc 키로 관전자 인터페이스를 닫지 못하도록 강제로 관전자 인터페이스를 설정합니다.</Korean>
             <Japanese>観戦インターフェイスを強制し、ユーザがEscキーでも閉じられないようにします。</Japanese>
             <Chinesesimp>禁止使用ESC关闭观察者界面</Chinesesimp>
-            <Ukrainian>Активує інтерфейс spectator, не дозволяючи гравцеві закрити його за допомогою клавіші Escape.</Ukrainian>
+            <Ukrainian>Примусово вмикає інтерфейс глядача, не дозволяючи гравцеві закрити його клавішею Escape.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_HidePlayer">
             <English>Hide player</English>
@@ -1201,7 +1201,7 @@
             <Korean>관전 가능한 진영을 설정합니다.</Korean>
             <Japanese>指定の陣営を観戦可能に設定します</Japanese>
             <Chinesesimp>设置可以观察的阵营</Chinesesimp>
-            <Ukrainian>Встановлює сторони, доступні для режиму spectator</Ukrainian>
+            <Ukrainian>Встановлює сторони, доступні для режиму глядача</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_WhiteHot">
             <English>White Hot</English>
@@ -1213,7 +1213,7 @@
             <Korean>백색 열원</Korean>
             <Japanese>白=熱源</Japanese>
             <Chinesesimp>白热</Chinesesimp>
-            <Ukrainian>Білий</Ukrainian>
+            <Ukrainian>Білий-гарячий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_ActivationRadius">
             <English>Activation Radius</English>
@@ -1267,7 +1267,7 @@
             <Chinesesimp>这个单位已经是自杀炸弹手了</Chinesesimp>
             <Turkish>Kişi zaten bir intihar bombacısı</Turkish>
             <Hungarian>Az egység már öngyilkos bombázó</Hungarian>
-            <Ukrainian>Одиниця вже є терористом-смертником</Ukrainian>
+            <Ukrainian>Юніт уже є смертником</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_AutoSeek">
             <English>Auto Seek</English>
@@ -1302,7 +1302,7 @@
             <Chinese>單位將主動嘗試尋找並移動到附近的激活方單位。自動搜索的範圍是基於單位的距離技能，最少100米</Chinese>
             <Chinesesimp>单位将主动尝试寻找并移动到附近的激活方单位。自动搜索的范围是基于单位的距离技能，最少100米。</Chinesesimp>
             <Hungarian>Az egység aktívan megpróbálja megtalálni és elmozdulni az aktivációs oldal közeli egységei felé.Az automatikus keresési tartomány az egység helyszíni szakértelmén alapul, legalább 100 méterrel.</Hungarian>
-            <Ukrainian>Юніт активно намагатиметься знайти та наблизитися до найближчих підрозділів сторони активації. Радіус автоматичного пошуку залежить від навички виявлення цілі, але не менше ніж 100 метрів.</Ukrainian>
+            <Ukrainian>Юніт активно намагатиметься знайти та наблизитися до найближчих юнітів сторони активації. Радіус автоматичного пошуку залежить від навички виявлення цілі, але не менше ніж 100 метрів.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_DisplayName">
             <English>Suicide Bomber</English>
@@ -1637,7 +1637,7 @@
             <Chinese>無</Chinese>
             <Chinesesimp>无</Chinesesimp>
             <Turkish>Hiçbiri</Turkish>
-            <Ukrainian>Ні</Ukrainian>
+            <Ukrainian>Немає</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_NotFastRopeCompatible">
             <English>%1 is not fastrope compatible.</English>
@@ -1671,7 +1671,7 @@
             <Chinesesimp>放置在一个单位上</Chinesesimp>
             <Turkish>Bir birim yerleştir</Turkish>
             <Hungarian>Semmi sincs az egér alatt</Hungarian>
-            <Ukrainian>Нічого не виділено</Ukrainian>
+            <Ukrainian>Розмістіть на юніті</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
             <English>Unit must be alive</English>
@@ -1952,7 +1952,7 @@
             <Korean>전부 토글</Korean>
             <Japanese>全てを切り替え</Japanese>
             <Chinesesimp>切换所有</Chinesesimp>
-            <Ukrainian>Вимкнути все</Ukrainian>
+            <Ukrainian>Перемкнути все</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget">
             <English>Toggle Target</English>

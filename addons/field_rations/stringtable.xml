@@ -317,7 +317,7 @@
             <Japanese>水源から飲んでいます・・・</Japanese>
             <Chinesesimp>从水源处喝水中...</Chinesesimp>
             <Turkish>Mataradan Içiliyor...</Turkish>
-            <Ukrainian>Випивання з джерела...</Ukrainian>
+            <Ukrainian>Пиття з джерела...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_DrinkingFromX">
             <English>Drinking from %1...</English>
@@ -333,7 +333,7 @@
             <Chinese>飲用%1的水中...</Chinese>
             <Chinesesimp>从%1饮用中...</Chinesesimp>
             <Turkish>%1 den içiliyor...</Turkish>
-            <Ukrainian>Випивання з %1...</Ukrainian>
+            <Ukrainian>Пиття (%1)...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_DrinkingX">
             <English>Drinking %1...</English>
@@ -349,7 +349,7 @@
             <Chinese>飲用自 %1...</Chinese>
             <Chinesesimp>饮用 %1...</Chinesesimp>
             <Turkish>%1 Içiliyor...</Turkish>
-            <Ukrainian>Випивання %1...</Ukrainian>
+            <Ukrainian>Пиття: %1...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Dynamic">
             <English>Dynamic</English>
@@ -398,7 +398,7 @@
             <Chinese>食用 %1...</Chinese>
             <Chinesesimp>食用 %1...</Chinesesimp>
             <Turkish>%1 Yeniyor...</Turkish>
-            <Ukrainian>Поїдання %1...</Ukrainian>
+            <Ukrainian>Вживання: %1...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Enabled_Description">
             <English>Enable/Disable Field Rations</English>
@@ -734,7 +734,7 @@
             <Chinesesimp>军粮鸡蒂卡 Masala</Chinesesimp>
             <Turkish>MRE Tikka Masala Soslu Tavuk</Turkish>
             <Hungarian>MRE csirke Tikka Masala</Hungarian>
-            <Ukrainian>IPХ Курка Тикка Масала</Ukrainian>
+            <Ukrainian>ІРХ Курка Тікка Масала</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_MRE_CreamChickenSoup_Description">
             <English>An MRE containing Chicken Soup. Mix with water and heat for best effect</English>

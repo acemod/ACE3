@@ -45,7 +45,7 @@
             <Korean>플로팅 보드 숨기기</Korean>
             <Japanese>標定盤を 隠す</Japanese>
             <Chinesesimp>隐藏绘图板</Chinesesimp>
-            <Ukrainian>Приховати міліметрову дошку.</Ukrainian>
+            <Ukrainian>Приховати міліметрову дошку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_MapGpsHide">
             <English>Hide GPS on Map</English>
@@ -273,7 +273,7 @@
             <Korean>플로팅 보드는 단거리 간접 사격을 지시하는 데 사용하도록 설계된 독도용 도구입니다.</Korean>
             <Japanese>標定盤(プロッティング・ボード)は、短距離の間接射撃の指示に使用するために設計されたマップツールです。</Japanese>
             <Chinesesimp>绘图板是一种用于指引短程间瞄火力的地图工具</Chinesesimp>
-            <Ukrainian>Графічна дошка - це картографічний інструмент, призначений для використання під час ведення непрямого вогню з малої дистанції.</Ukrainian>
+            <Ukrainian>Міліметрова дошка - це картографічний інструмент, призначений для використання під час ведення непрямого вогню з малої дистанції.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoard_Name">
             <English>Plotting Board</English>
@@ -285,7 +285,7 @@
             <Korean>플로팅 보드</Korean>
             <Japanese>標定盤</Japanese>
             <Chinesesimp>绘图板</Chinesesimp>
-            <Ukrainian>Графічна дошка</Ukrainian>
+            <Ukrainian>Міліметрова дошка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_ShowPlottingBoard">
             <English>Show Plotting Board</English>
@@ -413,7 +413,7 @@
             <Korean>플로팅 보드에 있는 모든 마커 지우기</Korean>
             <Japanese>標定盤の 全マーカーを 拭き消す</Japanese>
             <Chinesesimp>移除所有绘图板标记</Chinesesimp>
-            <Ukrainian>Зітріть усі маркери з міліметрової дошки</Ukrainian>
+            <Ukrainian>Стерти всі маркери з міліметрової дошки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_allowChannelDrawing_description">
             <English>Channels in which plotting board drawing is enabled.</English>
@@ -437,7 +437,7 @@
             <Korean>플로팅 보드 그리기 채널 허용</Korean>
             <Japanese>標定盤への書き込みを許可するチャンネル</Japanese>
             <Chinesesimp>允许使用绘图板绘制的频道</Chinesesimp>
-            <Ukrainian>Дозволити створення каналів на міліметровій дошці</Ukrainian>
+            <Ukrainian>Канали для малювання на міліметровій дошці</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MapTools_allowDirectCommsOnly">
             <English>Allow Direct Comms Only (Polylines Only)</English>

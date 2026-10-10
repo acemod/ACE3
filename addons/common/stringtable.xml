@@ -277,7 +277,7 @@
             <Chinesesimp>取消</Chinesesimp>
             <Turkish>Iptal</Turkish>
             <Hungarian>Mégse</Hungarian>
-            <Ukrainian>Скасування</Ukrainian>
+            <Ukrainian>Скасувати</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_Description">
             <English>What to do with people who do not have the right PBOs?</English>
@@ -415,7 +415,7 @@
             <Japanese>サーバーとのアドオンの整合性をチェックし、不備があった場合は選択したアクションを実行します。</Japanese>
             <Chinese>檢查客戶端與伺服器端的模組清單是否一致且完整，並提供訊息表示遺失的模組</Chinese>
             <Chinesesimp>检查客户端与服务器端的模组清单是否一致且完整，并提供信息表示遗失的模组。</Chinesesimp>
-            <Ukrainian>Виконує перевірку версій аддонів ACE у гравців, що підключаються</Ukrainian>
+            <Ukrainian>Перевіряє відповідність аддонів серверу і виконує вибрану дію, якщо аддона бракує.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_DisplayName">
             <English>Check PBOs</English>
@@ -467,7 +467,7 @@
             <Chinesesimp>白名单</Chinesesimp>
             <Turkish>Beyaz Liste</Turkish>
             <Hungarian>Fehérlista</Hungarian>
-            <Ukrainian>Вайтлист дод. аддонів</Ukrainian>
+            <Ukrainian>Білий список</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsAction">
             <English>Check PBO Action</English>
@@ -592,7 +592,7 @@
             <Korean>디버그</Korean>
             <Japanese>デバッグ</Japanese>
             <Chinesesimp>开发者模式</Chinesesimp>
-            <Ukrainian>Відладка</Ukrainian>
+            <Ukrainian>Налагодження</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_DeployedSwayFactor">
             <English>Deployed sway factor</English>
@@ -1160,7 +1160,7 @@
             <Chinese>無</Chinese>
             <Chinesesimp>无</Chinesesimp>
             <Turkish>Yok</Turkish>
-            <Ukrainian>Ні</Ukrainian>
+            <Ukrainian>Немає</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_Normal">
             <English>Normal</English>
@@ -1498,7 +1498,7 @@
             <Chinese>設定進度欄在畫面中的位置</Chinese>
             <Chinesesimp>设定进度栏在画面中的位置</Chinesesimp>
             <Hungarian>Itt beállítható az állapotjelző sáv képernyődön lévő helyzete.</Hungarian>
-            <Ukrainian>Встановіть бажане положення рядка стану на екрані.</Ukrainian>
+            <Ukrainian>Встановіть бажане положення індикатора процесу на екрані.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_SettingProgressbarLocationName">
             <English>Progress bar location</English>
@@ -1740,7 +1740,7 @@
             <Chinesesimp>西北偏西</Chinesesimp>
             <Turkish>BKB</Turkish>
             <Hungarian>NyÉNy</Hungarian>
-            <Ukrainian>ЗхПдЗх</Ukrainian>
+            <Ukrainian>ЗхПнЗх</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_WSW">
             <English>WSW</English>
@@ -1913,7 +1913,7 @@
             <Korean>클라이언트의 추가</Korean>
             <Japanese>クライアント追加</Japanese>
             <Chinesesimp>客户端多余</Chinesesimp>
-            <Ukrainian>додатковий клієнт</Ukrainian>
+            <Ukrainian>зайві у клієнта</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_clientMissing">
             <English>client missing</English>
@@ -1923,7 +1923,7 @@
             <Korean>클라이언트의 누락</Korean>
             <Japanese>クライアント不足</Japanese>
             <Chinesesimp>客户端缺少</Chinesesimp>
-            <Ukrainian>Клієнт відсутній</Ukrainian>
+            <Ukrainian>відсутні у клієнта</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_closeHandheldDevice">
             <English>Close Handheld Device</English>
@@ -1977,7 +1977,7 @@
             <Korean>[ACE] %1: %2 애드온(들)에 오류:</Korean>
             <Japanese>[ACE] %1: エラー %2 アドオン:</Japanese>
             <Chinesesimp>[ACE] %1: 错误 %2模组:</Chinesesimp>
-            <Ukrainian>[ACE] %1: ПОМИЛКА %2 аддон(ів):</Ukrainian>
+            <Ukrainian>[ACE] %1: ПОМИЛКА, аддони (%2):</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_loadObject">
             <English>Load</English>
@@ -2028,7 +2028,7 @@
             <Korean>클라이언트에게서 누락된 애드온이 감지되었습니다:&lt;br/&gt;</Korean>
             <Japanese>クライアントにアドオンの不足を検出しました&lt;br/&gt;</Japanese>
             <Chinesesimp>检测到客户端缺少模组&lt;br/&gt;</Chinesesimp>
-            <Ukrainian>Виявлено відсутній аддон на клієнті &lt;br/&gt;</Ukrainian>
+            <Ukrainian>Виявлено відсутній аддон на клієнті&lt;br/&gt;</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_newerClient">
             <English>newer client</English>
@@ -2038,7 +2038,7 @@
             <Korean>새 버전의 클라이언트</Korean>
             <Japanese>新しいクライアント</Japanese>
             <Chinesesimp>客户端过新</Chinesesimp>
-            <Ukrainian>новий клієнт</Ukrainian>
+            <Ukrainian>новіші у клієнта</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_newerVersionClient">
             <English>Detected newer client version&lt;br/&gt;</English>
@@ -2048,7 +2048,7 @@
             <Korean>클라이언트에게서 새 버전의 애드온이 감지되었습니다:&lt;br/&gt;</Korean>
             <Japanese>クライアントに新しいバージョンを検出しました&lt;br/&gt;</Japanese>
             <Chinesesimp>检测到客户端过新模组&lt;br/&gt;</Chinesesimp>
-            <Ukrainian>Виявлена більш нова версія клієнту &lt;br/&gt;</Ukrainian>
+            <Ukrainian>Виявлено новішу версію клієнта&lt;br/&gt;</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_olderClient">
             <English>older client</English>
@@ -2058,7 +2058,7 @@
             <Korean>구버전의 클라이언트</Korean>
             <Japanese>古いクライアント</Japanese>
             <Chinesesimp>客户端过旧</Chinesesimp>
-            <Ukrainian>старий клієнт</Ukrainian>
+            <Ukrainian>старіші у клієнта</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_olderVersionClient">
             <English>Detected older client version&lt;br/&gt;</English>
@@ -2068,7 +2068,7 @@
             <Korean>클라이언트에게서 구버전의 애드온이 감지되었습니다:&lt;br/&gt;</Korean>
             <Japanese>クライアントに古いバージョンを検出しました&lt;br/&gt;</Japanese>
             <Chinesesimp>检测到客户端过旧模组&lt;br/&gt;</Chinesesimp>
-            <Ukrainian>Виявлена більш стара версія клієнта &lt;br/&gt;</Ukrainian>
+            <Ukrainian>Виявлено старішу версію клієнта&lt;br/&gt;</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_playerOnly">
             <English>Players only</English>
@@ -2086,7 +2086,7 @@
             <Chinesesimp>只限玩家</Chinesesimp>
             <Turkish>Sadece oyuncular</Turkish>
             <Hungarian>Csak játékosok</Hungarian>
-            <Ukrainian>Гравців</Ukrainian>
+            <Ukrainian>Тільки гравців</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_playersAndAI">
             <English>Players and AI</English>
@@ -2104,7 +2104,7 @@
             <Chinesesimp>玩家与 AI</Chinesesimp>
             <Turkish>Oyuncular ve AI</Turkish>
             <Hungarian>Játékosok és AI</Hungarian>
-            <Ukrainian>Гравців і ботів</Ukrainian>
+            <Ukrainian>Гравців і ШІ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoDesc">
             <English>Controls extra information shown in progress bar.</English>
@@ -2221,7 +2221,7 @@
             <Chinese>切換手持裝備</Chinese>
             <Chinesesimp>切换手持装备</Chinesesimp>
             <Hungarian>Kézi eszköz kapcsolása</Hungarian>
-            <Ukrainian>Увімкнути портативний пристрій</Ukrainian>
+            <Ukrainian>Перемкнути портативний пристрій</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Common_unloadWeapon">
             <English>Unload Weapon</English>

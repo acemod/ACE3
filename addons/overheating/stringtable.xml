@@ -304,7 +304,7 @@
             <Korean>탄피가 약실에 낌.</Korean>
             <Japanese>排莢に失敗しました。</Japanese>
             <Chinesesimp>抛壳失败。</Chinesesimp>
-            <Ukrainian>Не вдалося дістати.</Ukrainian>
+            <Ukrainian>Невідбиття гільзи.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToExtract">
             <English>Failure to extract.</English>
@@ -317,7 +317,7 @@
             <Korean>탄피가 배출되지 않음.</Korean>
             <Japanese>排出に失敗しました。</Japanese>
             <Chinesesimp>抽壳失败。</Chinesesimp>
-            <Ukrainian>Не вдалося витягти.</Ukrainian>
+            <Ukrainian>Невитяг гільзи.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToFeed">
             <English>Failure to feed.</English>
@@ -330,7 +330,7 @@
             <Korean>탄이 장전 중 걸림.</Korean>
             <Japanese>給弾に失敗しました。</Japanese>
             <Chinesesimp>供弹失败。</Chinesesimp>
-            <Ukrainian>Не вдалося подати.</Ukrainian>
+            <Ukrainian>Неподача набою.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToFire">
             <English>Failure to fire.</English>
@@ -343,7 +343,7 @@
             <Korean>발사가 되지 않음.</Korean>
             <Japanese>撃発に失敗しました。</Japanese>
             <Chinesesimp>未能开火。</Chinesesimp>
-            <Ukrainian>Не вдалося вистрілити.</Ukrainian>
+            <Ukrainian>Осічка.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelDescription">
             <English>Use to swap barrel.</English>
@@ -538,7 +538,7 @@
             <Korean>쿡오프가 되기 위해 얼마나 과열되는가를 결정합니다. \n높을 수록 쿡오프 되기위해 더 뜨거운 열을 필요로 합니다.\n 0으로 설정하면 쿡오프 현상이 없어집니다.</Korean>
             <Japanese>過熱によって暴発(コックオフ)が発生する確率の係数を設定します。\n高い値では暴発までに必要な過熱量が増加し、0 で暴発が無効化されます。</Japanese>
             <Chinesesimp>发生热诱发的过热系数。\n数值越高，热诱发所需要的过热值越高。\n设置为0禁用热诱发。</Chinesesimp>
-            <Ukrainian>Коефіцієнт нагріву, за якого виникає загоряння.</Ukrainian>
+            <Ukrainian>Коефіцієнт нагріву, потрібного для самовільного пострілу.\nБільші значення потребують сильнішого нагріву.\nЗначення 0 вимикає самовільні постріли.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Overheating_cookoffCoef_displayName">
             <English>Overheating Cookoff Coefficient</English>
@@ -551,7 +551,7 @@
             <Korean>과열 쿡오프 계수</Korean>
             <Japanese>過熱暴発係数</Japanese>
             <Chinesesimp>过热诱发系数</Chinesesimp>
-            <Ukrainian>Коеф. загоряння в разі перегрівання</Ukrainian>
+            <Ukrainian>Коеф. самовільного пострілу від перегріву</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Overheating_coolingCoef_description">
             <English>Coefficient for how quickly a weapon cools down.\nHigher value increases cooling speed.</English>
@@ -867,7 +867,7 @@
             <Korean>노리쇠 방식</Korean>
             <Japanese>遊底(ボルト)形式</Japanese>
             <Chinesesimp>枪机类型</Chinesesimp>
-            <Ukrainian>Тип болта</Ukrainian>
+            <Ukrainian>Тип затвора</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Overheating_statBoltType_closedBolt">
             <English>Closed Bolt</English>
@@ -879,7 +879,7 @@
             <Korean>클로즈드 볼트</Korean>
             <Japanese>クローズドボルト</Japanese>
             <Chinesesimp>闭膛</Chinesesimp>
-            <Ukrainian>Закрити болт</Ukrainian>
+            <Ukrainian>Закритий затвор</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Overheating_statBoltType_openBolt">
             <English>Open Bolt</English>
@@ -891,7 +891,7 @@
             <Korean>오픈 볼트</Korean>
             <Japanese>オープンボルト</Japanese>
             <Chinesesimp>开膛</Chinesesimp>
-            <Ukrainian>Відкрити болт</Ukrainian>
+            <Ukrainian>Відкритий затвор</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Overheating_suppressorCoef_description">
             <English>Coefficient for how much additional heat is added from having a suppressor attached.\nHigher value increases heat, 0 means no additional heat from the suppressor.</English>

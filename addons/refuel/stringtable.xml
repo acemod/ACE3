@@ -446,7 +446,7 @@
             <Korean>화물 주유량</Korean>
             <Japanese>貨物流量</Japanese>
             <Chinesesimp>燃料罐油料流量</Chinesesimp>
-            <Ukrainian>Швидкість заповнення вантажу</Ukrainian>
+            <Ukrainian>Швидкість заповнення цистерни</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_speed_Description">
             <English>How fast should a vehicle be refueled?</English>
