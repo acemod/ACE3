@@ -38,13 +38,35 @@ private _actionID = _player addAction [
 
 // Read config
 private _configFile = configOf _seat;
-private _sitDirection = (getDir _seat) + (_seat getVariable [QXGVAR(sitDirection), getNumber (_configFile >> QXGVAR(sitDirection))]);
-private _sitPositionAll = _seat getVariable [QXGVAR(sitPosition), getArray (_configFile >> QXGVAR(sitPosition))];
-private _multiSitting = (_sitPositionAll select 0) isEqualType [];
+private _sitDirectionAll = _seat getVariable QXGVAR(sitDirection);
 
-private _sitPosition = _sitPositionAll;
-if (_multiSitting) then {
-    _sitPosition = _sitPosition select _seatPos;
+if (isNil "_sitDirectionAll") then {
+    private _config = _configFile >> QXGVAR(sitDirection);
+
+    _sitDirectionAll = if (isArray _config) then {
+        (getArray _config)
+    } else {
+        getNumber _config
+    };
+};
+
+// In case variable was set, this code also takes that source into account
+private _sitDirection = if (_sitDirectionAll isEqualType []) then {
+    _sitDirectionAll select _seatPos
+} else {
+    _sitDirectionAll
+};
+
+private _seatDirOrig = getDir _seat;
+
+_sitDirection = _sitDirection + _seatDirOrig;
+
+private _sitPositionAll = _seat getVariable [QXGVAR(sitPosition), getArray (_configFile >> QXGVAR(sitPosition))];
+
+private _sitPosition = if ((_sitPositionAll select 0) isEqualType []) then {
+    _sitPositionAll select _seatPos
+} else {
+    _sitPositionAll
 };
 
 // Get random animation and perform it (before moving player to ensure correct placement)
@@ -80,7 +102,7 @@ private _seatPosOrig = getPosASL _seat;
 private _seatDistOrig = (getPosASL _player) distance _seat;
 [{
     params ["_args", "_pfhId"];
-    _args params ["_player", "_seat", "_seatPos", "_seatPosOrig", "_seatDistOrig"];
+    _args params ["_player", "_seat", "_seatPos", "_seatPosOrig", "_seatDistOrig", "_seatDirOrig"];
 
     // Remove PFH if not sitting any more
     if (isNil {_player getVariable QGVAR(sittingStatus)}) exitWith {
@@ -108,11 +130,12 @@ private _seatDistOrig = (getPosASL _player) distance _seat;
     // Stand up if chair gets deleted or moved
     if (!alive _seat ||
         {getPosASL _player distance _seatPosOrig > _seatDistOrig + 0.5} ||
-        {((getPosASL _seat) vectorDistance _seatPosOrig) > 0.01}
+        {((getPosASL _seat) vectorDistance _seatPosOrig) > 0.01} ||
+        {abs (getDir _seat - _seatDirOrig) > 1}
     ) exitWith {
         _player call FUNC(stand);
-        TRACE_2("Chair moved",getPosASL _seat,_seatPosOrig);
+        TRACE_3("Chair moved",getPosASL _seat,_seatPosOrig,_seatDirOrig);
     };
-}, 0, [_player, _seat, _seatPos, _seatPosOrig, _seatDistOrig]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_player, _seat, _seatPos, _seatPosOrig, _seatDistOrig, _seatDirOrig]] call CBA_fnc_addPerFrameHandler;
 
 ["ace_satDown", [_player, _seat, _seatPos]] call CBA_fnc_localEvent;
