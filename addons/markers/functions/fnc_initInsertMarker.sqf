@@ -123,7 +123,7 @@
     if (GVAR(timestampEnabled)) then {
         _pos set [3,9 * _posH + 9 * BORDER];
     } else {
-        _pos set [3,10 * _posH + 10 * BORDER];
+        _pos set [3,8 * _posH + 8 * BORDER];
     };
     _description ctrlEnable false;
     _description ctrlSetPosition _pos;
