@@ -89,7 +89,8 @@ if (_secondaryWeaponMagazines isNotEqualTo []) then {
         } else {
             // Find a suitable container to place items in if necessary
             if (isNull _container) then {
-                _container = (nearestObjects [_vehicle, ["GroundWeaponHolder"], 10]) param [0, objNull];
+                // Same radius the loading side searches, or ammo lands somewhere it can't be loaded back from
+                _container = (nearestObjects [_vehicle, ["GroundWeaponHolder"], DISTANCE_SEARCH_RADIUS]) param [0, objNull];
 
                 // Create ammo storage container
                 if (isNull _container) then {

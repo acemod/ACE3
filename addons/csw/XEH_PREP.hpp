@@ -27,9 +27,13 @@ PREP(assemble_pickupWeapon);
 PREP(assemble_startDeployTripod);
 
 PREP(canGetIn);
+PREP(compatibleMagazines);
 PREP(deployCancel);
 PREP(deployConfirm);
 PREP(getCarryMagazine);
+PREP(getMagazineGroup);
+PREP(getNearbySources);
+PREP(getSourceCompatibleMagazines);
 PREP(handleScrollWheel);
 PREP(proxyWeapon);
 
@@ -37,6 +41,7 @@ PREP(getLoadActions);
 PREP(getUnloadActions);
 PREP(reload_canLoadMagazine);
 PREP(reload_canUnloadMagazine);
+PREP(reload_canUseSource);
 PREP(reload_getLoadableMagazines);
 PREP(reload_getVehicleMagazine);
 PREP(reload_handleAddTurretMag);
