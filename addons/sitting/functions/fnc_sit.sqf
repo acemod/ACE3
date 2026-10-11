@@ -44,7 +44,7 @@ if (isNil "_sitDirectionAll") then {
     private _config = _configFile >> QXGVAR(sitDirection);
 
     _sitDirectionAll = if (isArray _config) then {
-        (getArray _config)
+        getArray _config
     } else {
         getNumber _config
     };
