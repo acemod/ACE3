@@ -19,5 +19,8 @@
         params ["_unit", "", "_magazine"];
 
         [_unit, _unit, _magazine] call FUNC(startRepackingMagazine);
-    }
+    },
+    false,
+    [],
+    QGVAR(contextMenuRepackAction)
 ] call CBA_fnc_addItemContextMenuOption;
