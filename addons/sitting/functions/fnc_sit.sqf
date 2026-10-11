@@ -52,7 +52,7 @@ if (isNil "_sitDirectionAll") then {
 
 // In case variable was set, this code also takes that source into account
 private _sitDirection = if (_sitDirectionAll isEqualType []) then {
-    _sitDirectionAll select _seatPos
+    _sitDirectionAll param [_seatPos, 0]
 } else {
     _sitDirectionAll
 };
