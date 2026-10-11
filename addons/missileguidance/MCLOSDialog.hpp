@@ -2,7 +2,7 @@ class GVAR(mouseInputDialog) {
     idd = -1;
     movingEnable = 0;
     enableSimulation = 1;
-    onLoad = QUOTE(with uiNameSpace do { GVAR(mouseInputDialog) = _this select 0 };);
+    onLoad = QUOTE(with uiNamespace do { GVAR(mouseInputDialog) = _this select 0 };);
     class controlsBackground {
         class Background: RscText {
             idc = 1000;

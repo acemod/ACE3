@@ -36,3 +36,6 @@ if (!isServer) exitWith {
 
     [_unit, -1, [_explosive, 0], _trigger] call FUNC(detonateExplosive);
 }, [_explosive, _trigger, _unit], _delay] call CBA_fnc_waitAndExecute;
+
+// global event for timer started (named so it does not conflict with the server only event)
+[QGVAR(timerStarted), [_explosive, _delay, _trigger, _unit]] call CBA_fnc_globalEvent;

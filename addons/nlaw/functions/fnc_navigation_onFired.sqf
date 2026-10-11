@@ -10,7 +10,7 @@
  * Navigation Parameters <ARRAY>
  *
  * Example:
- * [] call ace_nlaw_fnc_onFired
+ * [] call ace_nlaw_fnc_navigation_onFired
  *
  * Public: No
  */

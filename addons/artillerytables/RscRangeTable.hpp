@@ -1,7 +1,7 @@
 class GVAR(rangeTableDialog) {
     idd = -1;
     movingEnable = 1;
-    onLoad = QUOTE(with uiNameSpace do { GVAR(rangeTableDialog) = _this select 0 };);
+    onLoad = QUOTE(with uiNamespace do { GVAR(rangeTableDialog) = _this select 0 };);
     objects[] = {};
 
     class ControlsBackground {

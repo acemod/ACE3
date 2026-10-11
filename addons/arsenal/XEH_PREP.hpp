@@ -41,6 +41,8 @@ PREP(fillLeftPanel);
 PREP(fillLoadoutsList);
 PREP(fillRightPanel);
 PREP(fillSort);
+PREP(fireItemsChangedEvent);
+PREP(getLoadoutItemCounts);
 PREP(getVirtualItems);
 PREP(handleActions);
 PREP(handleLoadoutsSearchbar);

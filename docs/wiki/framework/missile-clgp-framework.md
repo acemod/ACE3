@@ -25,7 +25,7 @@ class CfgAmmo {
         ace_missile_clgp_deployCondition = "your_fnc"; // function that returns true when it should be triggered
         ace_missile_clgp_artilleryDrag = 1;
         submunitionAmmo = "x_missile";
-        class Eventhandlers {
+        class EventHandlers {
             fired = "call ace_missile_clgp_fnc_submunition_ammoFired"; // need to add the EH yourself to all ammos
         };
     };

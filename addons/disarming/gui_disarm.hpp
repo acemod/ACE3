@@ -32,13 +32,13 @@ class GVAR(remoteInventory) {
     fadeout = 0;
 
     class Colors {
-        dragValidBgr[] = {"(profilenamespace getVariable ['IGUI_TEXT_RGB_R',0])","(profilenamespace getVariable ['IGUI_TEXT_RGB_G',1])","(profilenamespace getVariable ['IGUI_TEXT_RGB_B',1])",0.5};
-        dragInvalidBgr[] = {"(profilenamespace getVariable ['IGUI_ERROR_RGB_R',0.8])","(profilenamespace getVariable ['IGUI_ERROR_RGB_G',0.0])","(profilenamespace getVariable ['IGUI_ERROR_RGB_B',0.0])",0.5};
-        dragValidBar[] = {"(profilenamespace getVariable ['IGUI_WARNING_RGB_R',0.8])","(profilenamespace getVariable ['IGUI_WARNING_RGB_G',0.5])","(profilenamespace getVariable ['IGUI_WARNING_RGB_B',0.0])",0.5};
-        dragInvalidBar[] = {"(profilenamespace getVariable ['IGUI_ERROR_RGB_R',0.8])","(profilenamespace getVariable ['IGUI_ERROR_RGB_G',0.0])","(profilenamespace getVariable ['IGUI_ERROR_RGB_B',0.0])",0.5};
-        progressBar[] = {"(profilenamespace getVariable ['IGUI_TEXT_RGB_R',0])","(profilenamespace getVariable ['IGUI_TEXT_RGB_G',1])","(profilenamespace getVariable ['IGUI_TEXT_RGB_B',1])",1};
-        progressBarBgr[] = {"(profilenamespace getVariable ['IGUI_BCG_RGB_R',0])","(profilenamespace getVariable ['IGUI_BCG_RGB_G',1])","(profilenamespace getVariable ['IGUI_BCG_RGB_B',1])",0.75};
-        highlight[] = {"(profilenamespace getVariable ['IGUI_TEXT_RGB_R',0])","(profilenamespace getVariable ['IGUI_TEXT_RGB_G',1])","(profilenamespace getVariable ['IGUI_TEXT_RGB_B',1])",0.5};
+        dragValidBgr[] = {"(profileNamespace getVariable ['IGUI_TEXT_RGB_R',0])","(profileNamespace getVariable ['IGUI_TEXT_RGB_G',1])","(profileNamespace getVariable ['IGUI_TEXT_RGB_B',1])",0.5};
+        dragInvalidBgr[] = {"(profileNamespace getVariable ['IGUI_ERROR_RGB_R',0.8])","(profileNamespace getVariable ['IGUI_ERROR_RGB_G',0.0])","(profileNamespace getVariable ['IGUI_ERROR_RGB_B',0.0])",0.5};
+        dragValidBar[] = {"(profileNamespace getVariable ['IGUI_WARNING_RGB_R',0.8])","(profileNamespace getVariable ['IGUI_WARNING_RGB_G',0.5])","(profileNamespace getVariable ['IGUI_WARNING_RGB_B',0.0])",0.5};
+        dragInvalidBar[] = {"(profileNamespace getVariable ['IGUI_ERROR_RGB_R',0.8])","(profileNamespace getVariable ['IGUI_ERROR_RGB_G',0.0])","(profileNamespace getVariable ['IGUI_ERROR_RGB_B',0.0])",0.5};
+        progressBar[] = {"(profileNamespace getVariable ['IGUI_TEXT_RGB_R',0])","(profileNamespace getVariable ['IGUI_TEXT_RGB_G',1])","(profileNamespace getVariable ['IGUI_TEXT_RGB_B',1])",1};
+        progressBarBgr[] = {"(profileNamespace getVariable ['IGUI_BCG_RGB_R',0])","(profileNamespace getVariable ['IGUI_BCG_RGB_G',1])","(profileNamespace getVariable ['IGUI_BCG_RGB_B',1])",0.75};
+        highlight[] = {"(profileNamespace getVariable ['IGUI_TEXT_RGB_R',0])","(profileNamespace getVariable ['IGUI_TEXT_RGB_G',1])","(profileNamespace getVariable ['IGUI_TEXT_RGB_B',1])",0.5};
     };
 
     class controlsBackground {};

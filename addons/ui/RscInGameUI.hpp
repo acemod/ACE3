@@ -4,8 +4,8 @@
 
 #undef IGUI_GRID_STANCE_X
 #undef IGUI_GRID_STANCE_Y
-#define ace_IGUI_GRID_STANCE_X (profilenamespace getvariable ['IGUI_GRID_STANCE_X',IGUI_GRID_STANCE_XDef])
-#define ace_IGUI_GRID_STANCE_Y (profilenamespace getvariable ['IGUI_GRID_STANCE_Y',IGUI_GRID_STANCE_YDef])
+#define ace_IGUI_GRID_STANCE_X (profileNamespace getVariable ['IGUI_GRID_STANCE_X',IGUI_GRID_STANCE_XDef])
+#define ace_IGUI_GRID_STANCE_Y (profileNamespace getVariable ['IGUI_GRID_STANCE_Y',IGUI_GRID_STANCE_YDef])
 
 class RscPictureKeepAspect;
 class RscInGameUI {

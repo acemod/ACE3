@@ -41,7 +41,7 @@ call FUNC(compileStats);
     // Only update actions if necessary, this can get performance-intensive using the arrow keys
     if (!GVAR(updateActionsOnCargoChange)) exitWith {};
     private _actionInfo = [_display];
-    _actionInfo append GVAR(actionInfo);
+    _actionInfo append GVAR(actionsInfo);
     [QGVAR(displayActions), _actionInfo] call CBA_fnc_localEvent;
 }] call CBA_fnc_addEventHandler;
 

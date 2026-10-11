@@ -41,7 +41,7 @@ class RscDisplayMain: RscStandardDisplay {
                     y = 0;
                     w = "(10 - 1.25 * 2) * (pixelW * pixelGrid * 2)";
                     h = "1 * (pixelH * pixelGrid * 2)";
-                    onLoad = "(_this select 0) ctrlenable false;";
+                    onLoad = "(_this select 0) ctrlEnable false;";
                 };
                 class HTTPVersionInfo: RscHTML {
                     idc = IDC_MAIN_INFO_NEWEST_VERSION_INFO;
@@ -64,7 +64,7 @@ class RscDisplayMain: RscStandardDisplay {
                     y = "1 * (pixelH * pixelGrid * 2)";
                     w = "(10 - 1.25 * 2) * (pixelW * pixelGrid * 2)";
                     h = "1 * (pixelH * pixelGrid * 2)";
-                    onLoad = "(_this select 0) ctrlenable false;";
+                    onLoad = "(_this select 0) ctrlEnable false;";
                 };
                 class Button: Button {
                     tooltip = "Download latest and report issues:";

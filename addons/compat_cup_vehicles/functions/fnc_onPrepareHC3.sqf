@@ -10,7 +10,7 @@
  * Amount of time to wait before deploying ropes <NUMBER>
  *
  * Example:
- * [_vehicle] call ace_compat_cup_vehicles_fnc_onPrepareUH1Y
+ * [_vehicle] call ace_compat_cup_vehicles_fnc_onPrepareHC3
  *
  * Public: No
  */

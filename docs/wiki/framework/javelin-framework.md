@@ -26,3 +26,13 @@ class CfgWeapons {
     };
 };
 ```
+
+  ## 2. Mission Vars
+
+  ### ace_javelin_ignorevisionmode
+
+  Allows Javelin-style locking without requiring thermal vision.
+
+  ```sqf
+  missionNamespace setVariable ["ace_javelin_ignorevisionmode", true];
+  ```

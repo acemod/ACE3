@@ -3,7 +3,6 @@
 
 GVAR(currentBox) = objNull;
 
-GVAR(EH_ID) = 0;
 GVAR(lastSearchTextLeft) = "";
 GVAR(lastSearchTextRight) = "";
 GVAR(lastSearchTextLoadouts) = "";

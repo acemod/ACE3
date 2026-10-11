@@ -1,7 +1,7 @@
 class RscTitles {
     class GVAR(infoDisplay) {
         idd = -1;
-        onLoad = QUOTE(with uiNameSpace do { GVAR(display) = _this select 0 };);
+        onLoad = QUOTE(with uiNamespace do { GVAR(display) = _this select 0 };);
         movingEnable = 0;
         duration = 60;
         fadeIn = "false";
@@ -10,8 +10,8 @@ class RscTitles {
         class controlPrefabs {
             class line: RscControlsGroupNoScrollbars {
                 idc = -1;
-                x = "3.8 * (((safeZoneW / safeZoneH) min 1.2) / 40) + (profilenamespace getvariable ['IGUI_GRID_WEAPON_X',((safeZoneX + safeZoneW) - (10 * (((safeZoneW / safeZoneH) min 1.2) / 40)) - 4.3 * (((safeZoneW / safeZoneH) min 1.2) / 40))])";
-                y = "2.5 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) + (profilenamespace getVariable ['IGUI_GRID_WEAPON_Y', (safeZoneY + 0.5 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25))])";
+                x = "3.8 * (((safeZoneW / safeZoneH) min 1.2) / 40) + (profileNamespace getVariable ['IGUI_GRID_WEAPON_X',((safeZoneX + safeZoneW) - (10 * (((safeZoneW / safeZoneH) min 1.2) / 40)) - 4.3 * (((safeZoneW / safeZoneH) min 1.2) / 40))])";
+                y = "2.5 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) + (profileNamespace getVariable ['IGUI_GRID_WEAPON_Y', (safeZoneY + 0.5 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25))])";
                 w = "10 * (((safeZoneW / safeZoneH) min 1.2) / 40)";
                 h = "1 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
             };

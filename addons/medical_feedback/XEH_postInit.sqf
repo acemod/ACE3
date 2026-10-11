@@ -25,7 +25,6 @@ if (!hasInterface) exitWith {};
 
 GVAR(nextFadeIn) = 0;
 GVAR(heartBeatEffectRunning) = false;
-GVAR(lastHeartBeatSound) = 0;
 GVAR(bloodTickCounter) = 0;
 
 [false] call FUNC(initEffects);
