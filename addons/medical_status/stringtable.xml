@@ -80,7 +80,7 @@
             <Chinese>控制從點滴輸入人體的液體流量多快。點滴的體積更改是以\n時間間隔（單位秒）乘上點滴每秒速度（4.1667毫升/秒）乘上流量（該係數）。</Chinese>
             <Chinesesimp>控制从点滴输入人体的液体流量多快。静脉输液袋容积变化的计算方法是：\n时间间隔（秒）x点滴每秒速度（4.1667毫升/秒）x流量（该系数）。</Chinesesimp>
             <Turkish>IV Torbalardan sıvının ne kadar hızlı aktığını kontrol eder. IV Torba hacim değişikliği şu şekilde hesaplanır: zaman aralıkları iv saniye başına değişim (4.1667 mL / s) akış hızı (bu katsayı).</Turkish>
-            <Ukrainian>Визначає, наскільки швидко подіють ефекти внутрішньовенного переливання як:\часовий інтервал (s) * зміна внутрішньовенного вливання за секунду (4,1667 мл/с) * швидкість потоку (цей коефіцієнт).</Ukrainian>
+            <Ukrainian>Визначає, наскільки швидко рідина витікає з пакетів для в/в вливання. Зміна об'єму пакета обчислюється як:\nчасовий інтервал (с) * зміна за секунду (4,1667 мл/с) * швидкість потоку (цей коефіцієнт).</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Status_IvFlowRate_DisplayName">
             <English>IV Transfusion Flow Rate</English>

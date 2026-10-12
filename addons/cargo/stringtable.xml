@@ -201,7 +201,7 @@
             <Chinese>從&lt;br/&gt;%2卸載&lt;br/&gt;%1</Chinese>
             <Chinesesimp>从&lt;br/&gt;%2卸载&lt;br/&gt;%1</Chinesesimp>
             <Hungarian>1%&lt;br/&gt;kirakodva ebből:&lt;br/&gt;%2</Hungarian>
-            <Ukrainian>%1&lt;br/&gt; Вивантажено з&lt;br/&gt;%2</Ukrainian>
+            <Ukrainian>Вивантажено&lt;br/&gt;%1 з&lt;br/&gt;%2</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingFailed">
             <English>%1&lt;br/&gt;could not be unloaded</English>
@@ -454,7 +454,7 @@
             <Japanese>貨物の積み込み/積み下ろしに掛かる時間を変更します。\n時間 (秒単位) は、貨物の大きさにこの値を掛けたものです。</Japanese>
             <Chinese>修改要花多長時間來裝載/卸載物品。\n時間，以秒為單位，而物品的大小數值與這個係數成比。</Chinese>
             <Chinesesimp>修改装载/卸载物体所需的时间。\n时间，单位：秒，物体的大小乘以该系数值。</Chinesesimp>
-            <Ukrainian>Змінює час для завантаження/вивантаження предметів. \пЧас (сек) - це розмір предмета, помножений на це значення.</Ukrainian>
+            <Ukrainian>Змінює час завантаження/вивантаження предметів.\nЧас (сек) — це розмір предмета, помножений на це значення.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_openAfterUnload">
             <English>Reopen Cargo Menu</English>
@@ -659,7 +659,7 @@
             <Japanese>機体が水平ではありません</Japanese>
             <Chinese>此架飛機並無保持水平飛行</Chinese>
             <Chinesesimp>此架飞机并无保持水平飞行</Chinesesimp>
-            <Ukrainian>Невідповідне положення</Ukrainian>
+            <Ukrainian>Нерівний політ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_unloadObject">
             <English>Unload</English>
@@ -684,6 +684,7 @@
             <Spanish>Descargar Carga si el vehículo es destruído</Spanish>
             <Russian>Выгрузить груз из уничтоженной машины</Russian>
             <Japanese>車両破壊時に貨物を降ろす</Japanese>
+            <Ukrainian>Вивантажувати при знищенні</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Cargo_unloadOnKilled_description">
             <English>The chance for each cargo loaded into a vehicle to be unloaded if the vehicle is killed.\nApplies to objects only.</English>
@@ -691,6 +692,7 @@
             <Spanish>La probabilidad de que la carga de un vehiculo sea descargada si el vehículo es destruido.\nAplica sólo a objetos.</Spanish>
             <Russian>Вероятность того, что каждый загруженный в транспортное средство груз будет выгружен, если транспортное средство будет уничтожено.\nПрименяется только к предметам.</Russian>
             <Japanese>車両が破壊された際、積載されている貨物が降ろされる確率。\nオブジェクトにのみ適用されます。</Japanese>
+            <Ukrainian>Імовірність, що кожен вантаж у техніці буде вивантажено, якщо техніку знищено.\nЗастосовується лише до об'єктів.</Ukrainian>
         </Key>
     </Package>
 </Project>

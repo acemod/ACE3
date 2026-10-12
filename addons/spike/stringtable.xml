@@ -8,7 +8,7 @@
             <Russian>Циклический режим обзора камеры</Russian>
             <Korean>카메라 시야 모드 순환</Korean>
             <Japanese>カメラの映像モードを切り替え</Japanese>
-            <Ukrainian>Циклічний режим огляду камери</Ukrainian>
+            <Ukrainian>Перемкнути режим бачення камери</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SPIKE_LR">
             <English>Spike LR</English>
@@ -35,7 +35,7 @@
             <Russian>Spike LR (олива)</Russian>
             <Korean>스파이크 LR (올리브)</Korean>
             <Japanese>スパイク LR (オリーブ)</Japanese>
-            <Ukrainian>Spike LR (олива)</Ukrainian>
+            <Ukrainian>Spike LR (оливковий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SPIKE_LeaveCamera">
             <English>Leave Camera</English>
@@ -44,7 +44,7 @@
             <Russian>Оставить камеру</Russian>
             <Korean>카메라 보는 걸 그만두기</Korean>
             <Japanese>カメラから離れる</Japanese>
-            <Ukrainian>Залишити камеру</Ukrainian>
+            <Ukrainian>Вийти з камери</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SPIKE_Manual">
             <English>MANUAL</English>
@@ -53,7 +53,7 @@
             <Russian>ИНСТРУКЦИЯ</Russian>
             <Korean>메뉴얼</Korean>
             <Japanese>マニュアル</Japanese>
-            <Ukrainian>ІНСТРУКЦІЯ</Ukrainian>
+            <Ukrainian>РУЧНИЙ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_SPIKE_PanDown">
             <English>Pan Camera Down</English>
@@ -116,7 +116,7 @@
             <Russian>Назначить</Russian>
             <Korean>목표 지정</Korean>
             <Japanese>目標を指定</Japanese>
-            <Ukrainian>Призначити</Ukrainian>
+            <Ukrainian>Позначити</Ukrainian>
         </Key>
     </Package>
 </Project>

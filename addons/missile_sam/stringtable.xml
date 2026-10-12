@@ -32,7 +32,7 @@
             <German>Mk-29 Bediener</German>
             <Korean>마크 29 조작병</Korean>
             <Japanese>Mk-29 操作員</Japanese>
-            <Ukrainian>Mk-29 Operator</Ukrainian>
+            <Ukrainian>Оператор Mk-29</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_SAM_patriot">
             <English>MIM-104 Patriot</English>
@@ -54,7 +54,7 @@
             <German>Patriot Rakete</German>
             <Korean>패트리어트 미사일</Korean>
             <Japanese>ペトリオット ミサイル</Japanese>
-            <Ukrainian>Patriot Missile</Ukrainian>
+            <Ukrainian>Ракета Patriot</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_SAM_patriot_operator">
             <English>MIM-104 Operator</English>
@@ -65,7 +65,7 @@
             <German>MIM-104 Bediener</German>
             <Korean>MIM-104 패트리어트 조작병</Korean>
             <Japanese>MIM-104 操作員</Japanese>
-            <Ukrainian>MIM-104 Operator</Ukrainian>
+            <Ukrainian>Оператор MIM-104</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_SAM_s400">
             <English>S-400</English>
@@ -87,7 +87,7 @@
             <German>S-400 Rakete</German>
             <Korean>S-400 트리움프 미사일</Korean>
             <Japanese>S-400 ミサイル</Japanese>
-            <Ukrainian>S-400 Missile</Ukrainian>
+            <Ukrainian>Ракета S-400</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MISSILE_SAM_s400_operator">
             <English>S-400 Operator</English>
@@ -98,7 +98,7 @@
             <German>S-400 Bediener</German>
             <Korean>S-400 트리움프 조작병</Korean>
             <Japanese>S-400 操作員</Japanese>
-            <Ukrainian>S-400 Operator</Ukrainian>
+            <Ukrainian>Оператор S-400</Ukrainian>
         </Key>
     </Package>
 </Project>

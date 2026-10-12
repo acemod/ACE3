@@ -15,7 +15,7 @@
             <Japanese>AIが無意識状態に陥るまでに受けられるダメージ量を設定します。\n("外傷の合計"が有効な場合は死亡するまでに受けられるダメージ量)</Japanese>
             <Chinese>設定AI在無意識之前能承受多少傷害</Chinese>
             <Chinesesimp>设置 AI 在昏迷前可以承受的伤害量（如果启用了“创伤总和”，则会死亡）。</Chinesesimp>
-            <Ukrainian>Встановлює кількість шкоди, яку може отримати ШІ, перш ніж знепритомніє (або помирає, коли ввімкнена функція "Сума травм")...</Ukrainian>
+            <Ukrainian>Встановлює кількість шкоди, яку може отримати ШІ, перш ніж знепритомніти (або померти, якщо ввімкнено "Сукупність травми").</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_DisplayName">
             <English>AI Critical Damage Threshold</English>
@@ -49,7 +49,7 @@
             <Chinesesimp>擦伤</Chinesesimp>
             <Turkish>Sıyrık</Turkish>
             <Hungarian>Horzsolás</Hungarian>
-            <Ukrainian>Садна</Ukrainian>
+            <Ukrainian>Садно</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Abrasion_Large">
             <English>Large Scrape</English>
@@ -67,7 +67,7 @@
             <Chinesesimp>重度擦伤</Chinesesimp>
             <Turkish>Büyük Sıyrık</Turkish>
             <Hungarian>Nagy horzsolás</Hungarian>
-            <Ukrainian>Велика садна</Ukrainian>
+            <Ukrainian>Велике садно</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Abrasion_Medium">
             <English>Medium Scrape</English>
@@ -85,7 +85,7 @@
             <Chinesesimp>中度擦伤</Chinesesimp>
             <Turkish>Orta Sıyrık</Turkish>
             <Hungarian>Közepes horzsolás</Hungarian>
-            <Ukrainian>Середня садна</Ukrainian>
+            <Ukrainian>Середнє садно</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Abrasion_Minor">
             <English>Minor Scrape</English>
@@ -103,7 +103,7 @@
             <Chinesesimp>轻度擦伤</Chinesesimp>
             <Turkish>Küçük Sıyrık</Turkish>
             <Hungarian>Kis horzsolás</Hungarian>
-            <Ukrainian>Мала садна</Ukrainian>
+            <Ukrainian>Мале садно</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AlternateArmorPenetration_Description">
             <English>Controls whether ammo material penetration is taken into account for damage handling.</English>
@@ -614,7 +614,7 @@
             <Chinese>設定玩家在無意識前能承受多少傷害。</Chinese>
             <Chinesesimp>设置玩家在昏迷前可以承受的伤害量（如果启用了“创伤总和”，则会死亡）。</Chinesesimp>
             <Turkish>Bir oyuncunun bayılmadan önce alabileceği hasar miktarını belirler.</Turkish>
-            <Ukrainian>Встановлює кількість шкоди, яку може отримати гравець, перш ніж знепритомніє (і вмирає, якщо ввімкнено функцію "Сума травм").</Ukrainian>
+            <Ukrainian>Встановлює кількість шкоди, яку може отримати гравець, перш ніж знепритомніти (і померти, якщо ввімкнено "Сукупність травми").</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_DisplayName">
             <English>Player Critical Damage Threshold</English>
@@ -926,7 +926,7 @@
             <Korean>치명적인 상태가 되어 죽음에 이르기 전까지 사지에 받는 피해량을 설정합니다. 효과가 생기려면 값이 0보다 커야 합니다.\n"사지 피해 사용" 설정을 활성화하고 "치명상의 원인"을 "외상 중첩" 또는 "둘 다"로 설정해야 합니다.\n전체 유닛 피해량 임계값과 곱해져서 누적됩니다. 골절/절뚝거림과는 전혀 상관 없습니다.</Korean>
             <Japanese>致命的状態となり死亡する前に手足が受けられるダメージの量を設定します。\n効果の発動には0より大きい数字に設定する必要があります。\n"手足のダメージを使用" 設定を有効化した上で "致命ダメージの原因" を "外傷の合計" または "どちらか" に設定する必要があります。\nユニット全体のダメージしきい値に対して乗算的に上乗せされます。 骨折や足の引きずり(跛行)とは無関係です。</Japanese>
             <Chinesesimp>设置四肢可以承受的伤害, 超过时将导致致命伤. 必须大于0才能产生效果\n需要启用"四肢伤害计入创伤总和", 并且"致命伤来源"设置为"创伤总和"或"二者之一"\n与临界伤害阈值乘法叠加. 和骨折/跛脚无关</Chinesesimp>
-            <Ukrainian>Встановлює величину шкоди, яку можуть отримати кінцівки, перш ніж шкода стане критичною, що призведе до смерті. Для будь-якого ефекту має бути більше 0. Потрібно, щоб налаштування "Використовувати шкоду кінцівкам" було ввімкнене, а "Причина смертельної шкоди" була встановлена на "Сукупність травми" або "Обидва".\nПомножується із загальним порогом ушкодження. Ніяк не взаємодіє з переломами або кульгавістю.</Ukrainian>
+            <Ukrainian>Встановлює величину шкоди, яку можуть отримати кінцівки, перш ніж шкода стане критичною, що призведе до смерті. Для будь-якого ефекту має бути більше 0.\nПотрібно, щоб налаштування "Використовувати шкоду кінцівкам" було ввімкнене, а "Причина смертельної шкоди" була встановлена на "Сукупність травми" або "Обидва".\nПомножується із загальним порогом ушкодження. Ніяк не взаємодіє з переломами або кульгавістю.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_limbDamageThreshold_DisplayName">
             <English>Limb Damage Threshold</English>

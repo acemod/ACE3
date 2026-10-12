@@ -22,11 +22,13 @@
             <English>Boost Radius</English>
             <Russian>Увеличение радиуса</Russian>
             <Japanese>ブースト範囲(半径)</Japanese>
+            <Ukrainian>Збільшення радіуса</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MineDetector_BoostRadius_Desc">
             <English>Adds the value in meters to boost the radius of each individual mine detector.</English>
             <Russian>Увеличивает радиус действия каждого отдельного миноискателя на указанное значение в метрах.</Russian>
             <Japanese>各地雷探知機の探知範囲を拡大します。 値はメートル単位でを加算されます。</Japanese>
+            <Ukrainian>Додає вказане значення в метрах до радіуса кожного міношукача.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MineDetector_Category">
             <English>Mine Detector</English>
@@ -43,6 +45,7 @@
             <Chinese>地雷偵測器</Chinese>
             <Chinesesimp>探雷器</Chinesesimp>
             <Turkish>Mayın Dedektörü</Turkish>
+            <Ukrainian>Міношукач</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MineDetector_ConnectHeadphones">
             <English>Connect Headphones</English>
@@ -167,6 +170,7 @@
             <English>Mine detection radius</English>
             <Russian>Радиус обнаружения мин</Russian>
             <Japanese>地雷探知範囲(半径)</Japanese>
+            <Ukrainian>Радіус виявлення мін</Ukrainian>
         </Key>
     </Package>
 </Project>

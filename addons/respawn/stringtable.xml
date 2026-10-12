@@ -33,7 +33,7 @@
             <Chinese>5秒後完成佈署...</Chinese>
             <Chinesesimp>5秒后完成部署...</Chinesesimp>
             <Hungarian>Kihelyezés 5 másodperc múlva...</Hungarian>
-            <Ukrainian>Відродження через 5 секунд...</Ukrainian>
+            <Ukrainian>Встановлення через 5 секунд...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_Deployed">
             <English>Rallypoint deployed</English>
@@ -101,7 +101,7 @@
             <Japanese>ミッションでこのモジュールを使用すると、誤射による友軍キルがチャット上のメッセージとして表示されるようになります。</Japanese>
             <Chinese>擺放此模塊後，當有發生友軍誤擊致死的事件，會顯示提示訊息在聊天視窗中</Chinese>
             <Chinesesimp>摆放此模块后，当有发生友军误击致死的事件，会显示提示信息在聊天视窗中。</Chinesesimp>
-            <Ukrainian>Відображає повідомлення в чаті, у разі, коли вбивають союзних гравців. У доповіді вказується, хто стріляв, у кого. Хто кого вбив.</Ukrainian>
+            <Ukrainian>Якщо використати цей модуль у місії, усі вбивства союзників відображатимуться повідомленням у чаті.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_FriendlyFire_Module_DisplayName">
             <English>Friendly Fire Messages</English>
@@ -118,7 +118,7 @@
             <Chinese>友軍誤擊訊息</Chinese>
             <Chinesesimp>友军误击信息</Chinesesimp>
             <Hungarian>Baráti tűz üzenetek</Hungarian>
-            <Ukrainian>Повідомлення про вогонь по своїм</Ukrainian>
+            <Ukrainian>Повідомлення про вогонь по своїх</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_Description">
             <English>This module enables you to configure ACE functionality specific to respawns.</English>
@@ -303,7 +303,7 @@
             <Chinese>移動集合點</Chinese>
             <Chinesesimp>移动集合点</Chinesesimp>
             <Hungarian>Gyülekezőpont mozgatása</Hungarian>
-            <Ukrainian>Перемістити точку сбору</Ukrainian>
+            <Ukrainian>Перемістити точку збору</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_Description">
             <English>Remove player bodies after disconnect?</English>
@@ -320,7 +320,7 @@
             <Chinese>要刪除已離線的玩家屍體嗎?</Chinese>
             <Chinesesimp>要删除已离线的玩家尸体吗？</Chinesesimp>
             <Hungarian>Játékosi testek eltávolítása távozás után?</Hungarian>
-            <Ukrainian>Видаляти трупи гравців після дисконекту?</Ukrainian>
+            <Ukrainian>Видаляти трупи гравців після від'єднання?</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_DisplayName">
             <English>Remove bodies?</English>
@@ -408,7 +408,7 @@
             <Chinese>傳送至集合點</Chinese>
             <Chinesesimp>传送至集合点</Chinesesimp>
             <Hungarian>Gyülekezőpontra teleportálás</Hungarian>
-            <Ukrainian>Телепортуватися на точку сбору</Ukrainian>
+            <Ukrainian>Телепортуватися на точку збору</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportedToBase">
             <English>Teleported to Base</English>

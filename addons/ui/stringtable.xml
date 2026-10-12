@@ -193,7 +193,7 @@
             <Chinese>小隊狀態欄</Chinese>
             <Chinesesimp>小队状态栏</Chinesesimp>
             <Turkish>Grup Göstergesi</Turkish>
-            <Ukrainian>Панель командира</Ukrainian>
+            <Ukrainian>Панель групи</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_GunnerAmmoCount">
             <English>Gunner Ammo Count</English>
@@ -260,7 +260,7 @@
             <Japanese>射手用ランチャーの弾数</Japanese>
             <Chinese>砲手發射物數量</Chinese>
             <Chinesesimp>炮手发射物数量</Chinesesimp>
-            <Ukrainian>Кількість снарядів ПУ навідника</Ukrainian>
+            <Ukrainian>Кількість ракет навідника</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_GunnerLaunchableName">
             <English>Gunner Launchable Type</English>
@@ -276,7 +276,7 @@
             <Japanese>射手用ランチャーの種類</Japanese>
             <Chinese>砲手發射物類型</Chinese>
             <Chinesesimp>炮手发射物类型</Chinesesimp>
-            <Ukrainian>Тип пускової установки навідника</Ukrainian>
+            <Ukrainian>Тип ракет навідника</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_GunnerMagCount">
             <English>Gunner Magazine Count</English>
@@ -358,7 +358,7 @@
             <Japanese>射手用ゼロイン</Japanese>
             <Chinese>砲手歸零距離</Chinese>
             <Chinesesimp>炮手归零距离</Chinesesimp>
-            <Ukrainian>Дальність стрільби навідника</Ukrainian>
+            <Ukrainian>Дальність пристрілки навідника</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_HideDefaultActionIcon">
             <English>Hide Default Action Icon</English>
@@ -753,7 +753,7 @@
             <Chinese>歸零距離</Chinese>
             <Chinesesimp>归零距离</Chinesesimp>
             <Turkish>Sıfırlama</Turkish>
-            <Ukrainian>Дальність стрільби</Ukrainian>
+            <Ukrainian>Дальність пристрілки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_UI_checkWeaponZeroing">
             <English>Check Weapon Zeroing</English>
@@ -806,7 +806,7 @@
             <Russian>Значение нуля равно:</Russian>
             <Korean>영점 설정값:</Korean>
             <Japanese>ゼロインの設定値:</Japanese>
-            <Ukrainian>Значення нуля дорівнює:</Ukrainian>
+            <Ukrainian>Пристрілка встановлена на:</Ukrainian>
         </Key>
     </Package>
 </Project>

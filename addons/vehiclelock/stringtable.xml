@@ -174,7 +174,7 @@
             <Chinese>一組解鎖鑰匙 (可解鎖大部份紅方載具)</Chinese>
             <Chinesesimp>一组解锁钥匙（可解锁大部份红方载具）</Chinesesimp>
             <Hungarian>Egy kulcs, ami a KELET egységeinek legtöbb járművét ki tudja nyitni.</Hungarian>
-            <Ukrainian>Ключ для відкриття більшості машин Синіх.</Ukrainian>
+            <Ukrainian>Ключ для відкриття більшості машин Червоних.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Item_Indp_Description">
             <English>A key that should open most INDEP vehicle.</English>
@@ -242,7 +242,7 @@
             <Chinese>一組解鎖鑰匙 (可解鎖大部份藍方載具)</Chinese>
             <Chinesesimp>一组解锁钥匙（可解锁大部份蓝方载具）</Chinesesimp>
             <Hungarian>Egy kulcs, ami a NYUGAT egységeinek legtöbb járművét ki tudja nyitni.</Hungarian>
-            <Ukrainian>Ключ для відкриття більшості машин Червоних.</Ukrainian>
+            <Ukrainian>Ключ для відкриття більшості машин Синіх.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_LockVehicleInventory_Description">
             <English>Locks the inventory of locked vehicles</English>

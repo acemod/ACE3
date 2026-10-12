@@ -77,7 +77,7 @@
             <Korean>소지품에 필요한 아이템이 있을 경우에만 인공지능이 치료를 진행합니다.</Korean>
             <Japanese>AIのインベントリに必要なアイテムがある場合にのみ治療を実行します。</Japanese>
             <Chinesesimp>仅当AI物品栏中有所需物品时才会进行医疗</Chinesesimp>
-            <Ukrainian>Штучний інтелект надаватиме медичну допомогу тільки в тому разі, якщо в його інвентарі є необхідні предмети.</Ukrainian>
+            <Ukrainian>ШІ надаватиме медичну допомогу лише за наявності потрібних предметів в інвентарі.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_AI_requireItems_title">
             <English>Require Items</English>

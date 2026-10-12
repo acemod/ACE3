@@ -309,7 +309,7 @@
             <Chinese>裝載煙霧彈</Chinese>
             <Chinesesimp>装载烟雾弹</Chinesesimp>
             <Turkish>Sis Yükle</Turkish>
-            <Ukrainian>Зарядити димову</Ukrainian>
+            <Ukrainian>Зарядити димовий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMortar">
             <English>Load Mortar</English>
@@ -444,7 +444,7 @@
             <Japanese>Mk6 迫撃砲 で使用</Japanese>
             <Chinese>用於Mk6迫擊砲</Chinese>
             <Chinesesimp>用于 Mk6 迫击炮</Chinesesimp>
-            <Ukrainian>Використовувався в мінометі Mk6</Ukrainian>
+            <Ukrainian>Використовується в мінометі Mk6</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_action">
             <English>Open 82mm Rangetable</English>
@@ -480,7 +480,7 @@
             <Chinesesimp>装药</Chinesesimp>
             <Turkish>Yükle</Turkish>
             <Hungarian>Töltés</Hungarian>
-            <Ukrainian>Зарядити</Ukrainian>
+            <Ukrainian>Заряд</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_description">
             <English>Range Table for the Mk6 82mm Mortar</English>
@@ -498,7 +498,7 @@
             <Chinesesimp>MK6 82 mm 迫击炮射表</Chinesesimp>
             <Turkish>Mk6 82mm için Menzil Tablosu</Turkish>
             <Hungarian>Hatótáv-tábla a Mk6 82mm-es mozsárhoz</Hungarian>
-            <Ukrainian>Таблиця дальностей і прицілів для Mk6 82 мм мортири</Ukrainian>
+            <Ukrainian>Таблиця дальностей і прицілів для 82 мм міномета Mk6</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_name">
             <English>82mm Rangetable</English>

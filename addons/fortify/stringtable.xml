@@ -78,6 +78,7 @@
             <German>Token des Bauwerkzeugs</German>
             <Korean>요새화 토큰</Korean>
             <Japanese>築城トークン</Japanese>
+            <Ukrainian>Жетон фортифікації</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fortify_addToolItem">
             <English>Auto add fortify item</English>
@@ -168,7 +169,7 @@
             <Korean>지도에 마커 생성</Korean>
             <Japanese>マップマーカーを生成する</Japanese>
             <Chinesesimp>创建地图标记</Chinesesimp>
-            <Ukrainian>Створювати маркера на мапі</Ukrainian>
+            <Ukrainian>Створювати маркери на мапі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapDesc">
             <English>Create map markers that look like terrain buildings when static fortifications are placed</English>
@@ -182,7 +183,7 @@
             <Korean>건축물을 건설하고 나서 지도에 마커를 생성합니다</Korean>
             <Japanese>静的な構築物が配置されたときに地形の建物のように見えるマップマーカーを生成します</Japanese>
             <Chinesesimp>在放置静态防御工事时，创建看起来像地形建筑的地图标记</Chinesesimp>
-            <Ukrainian>Створювати маркера від статичних фортифікацій як від будівель на мапі</Ukrainian>
+            <Ukrainian>Створювати на мапі маркери, схожі на будівлі, коли розміщено статичні укріплення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMapEveryone">
             <English>For everyone</English>
@@ -275,7 +276,7 @@
             <Japanese>野戦築城システムを初期設定に戻します。&lt;br/&gt;プリセットは configfile と missionConfigFile から参照されます。詳細は wiki を参照してください。</Japanese>
             <Chinesesimp>使用一些基本参数初始化设防系统。&lt;br/&gt;预设从 configFile 和 missionConfigFile 中提取，参见 wiki 的格式。</Chinesesimp>
             <Turkish>Inşa etme sistemini bazı temel parametrelerle başlatır. &lt;br/&gt; Ön ayarlar configFile ve missionConfigFile'dan alınır, format için wiki'ye bakın.</Turkish>
-            <Ukrainian>Ініціалізує систему фортифікації з деякими базовими параметрами.&lt;br/&gt;Предустановки взяті з configFile і missionConfigFile, формат дивись на wiki.</Ukrainian>
+            <Ukrainian>Ініціалізує систему фортифікації з деякими базовими параметрами.&lt;br/&gt;Пресети беруться з configFile і missionConfigFile, формат дивись на wiki.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fortify_progressBarTitle">
             <English>Building</English>

@@ -12,7 +12,7 @@
             <Korean>과중압력</Korean>
             <Japanese>超過圧力</Japanese>
             <Chinesesimp>超压</Chinesesimp>
-            <Ukrainian>Перевантаження</Ukrainian>
+            <Ukrainian>Надлишковий тиск</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Overpressure_backblastDistanceCoefficient_displayName">
             <English>Backblast Distance Coefficient</English>
@@ -24,7 +24,7 @@
             <Korean>후폭풍 거리 계수</Korean>
             <Japanese>後方噴射の距離係数</Japanese>
             <Chinesesimp>筒子尾焰距离系数</Chinesesimp>
-            <Ukrainian>Коефіцієнт відстані рекативного струменя</Ukrainian>
+            <Ukrainian>Коеф. відстані реактивного струменя</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Overpressure_backblastDistanceCoefficient_toolTip">
             <English>Scales the backblast effect</English>

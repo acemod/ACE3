@@ -31,7 +31,7 @@
             <Korean>오른쪽 클릭으로 재설정</Korean>
             <Japanese>右クリックでリセット</Japanese>
             <Chinesesimp>点击鼠标右键重置</Chinesesimp>
-            <Ukrainian>Натисни ПКМ щоб скинути</Ukrainian>
+            <Ukrainian>Натисніть ПКМ, щоб скинути</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_MarkerScale">
             <English>Scale: %1</English>
@@ -281,7 +281,7 @@
             <Korean>"HH" - 시</Korean>
             <Japanese>"HH" - 時</Japanese>
             <Chinesesimp>"HH"—时</Chinesesimp>
-            <Ukrainian>"ГГ" - година</Ukrainian>
+            <Ukrainian>"HH" - година</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription2">
             <English>"MM" - Minute</English>
@@ -295,7 +295,7 @@
             <Korean>"MM" - 분</Korean>
             <Japanese>"MM" - 分</Japanese>
             <Chinesesimp>"MM"—分</Chinesesimp>
-            <Ukrainian>"ХХ" - Хвилина</Ukrainian>
+            <Ukrainian>"MM" - хвилина</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription3">
             <English>"SS" - Seconds</English>
@@ -309,7 +309,7 @@
             <Korean>"SS" - 초</Korean>
             <Japanese>"SS" - 秒</Japanese>
             <Chinesesimp>"SS"—秒</Chinesesimp>
-            <Ukrainian>"СС" - Секунди</Ukrainian>
+            <Ukrainian>"SS" - секунди</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription4">
             <English>"MM" - Milliseconds (from 0 to 59)</English>
@@ -322,7 +322,7 @@
             <Korean>"MS" - 밀리초 (0부터 59까지)</Korean>
             <Japanese>"MM" - ミリ秒 (0から59)</Japanese>
             <Chinesesimp>"MM" - 毫秒(0到59)</Chinesesimp>
-            <Ukrainian>"ММ" - мілісекунди (від 0 до 59)</Ukrainian>
+            <Ukrainian>"MM" - мілісекунди (від 0 до 59)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription5">
             <English>"mmm" - Milliseconds (from 0 to 999)</English>
@@ -335,7 +335,7 @@
             <Korean>"mmm" - 밀리초 (0부터 999까지)</Korean>
             <Japanese>"mmm" - ミリ秒 (0から599)</Japanese>
             <Chinesesimp>"mmm" - 毫秒(0到999)</Chinesesimp>
-            <Ukrainian>"ммм" - мілісекунди (від 0 до 999)</Ukrainian>
+            <Ukrainian>"mmm" - мілісекунди (від 0 до 999)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat">
             <English>Timestamp Hour Format</English>
@@ -349,7 +349,7 @@
             <Korean>시간 표기 시간 포맷</Korean>
             <Japanese>タイムスタンプ時刻形式</Japanese>
             <Chinesesimp>时间戳小时格式</Chinesesimp>
-            <Ukrainian>Формат часових позначок</Ukrainian>
+            <Ukrainian>Формат годин</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat12">
             <English>12-Hour Clock</English>
@@ -363,7 +363,7 @@
             <Korean>12시간제</Korean>
             <Japanese>12時間表記</Japanese>
             <Chinesesimp>12小时制</Chinesesimp>
-            <Ukrainian>12 годинний формат</Ukrainian>
+            <Ukrainian>12-годинний формат</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat24">
             <English>24-Hour Clock</English>
@@ -377,7 +377,7 @@
             <Korean>24시간제</Korean>
             <Japanese>24時間表記</Japanese>
             <Chinesesimp>24小时制</Chinesesimp>
-            <Ukrainian>24 годинний формат</Ukrainian>
+            <Ukrainian>24-годинний формат</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormatDescription">
             <English>Changes timestamp to use either 24-hour or 12-hour clock format</English>
@@ -530,6 +530,7 @@
             <Spanish>Marcas Rápidas Numéricas</Spanish>
             <Russian>Быстрые числовые метки</Russian>
             <Japanese>クイック番号マーク</Japanese>
+            <Ukrainian>Швидкі номерні маркери</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_quickNumberMarksDescription">
             <English>Allows easy placement of numbered markers by holding ALT when placing a marker</English>
@@ -537,6 +538,7 @@
             <Spanish>Permite colocar fácilmente marcadores numerados manteniendo pulsado ALT al colocar un marcador</Spanish>
             <Russian>Позволяет легко размещать пронумерованные маркеры, удерживая клавишу ALT при размещении маркера</Russian>
             <Japanese>ALTキーを押しながらマーカーを配置することで、 番号付きマーカーを簡単に配置出来るようにします。</Japanese>
+            <Ukrainian>Дозволяє легко ставити нумеровані маркери, утримуючи ALT під час розміщення маркера</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Markers_quickNumberMarksSideSync">
             <English>Side-Synchronized</English>
@@ -544,6 +546,7 @@
             <Spanish>Sincronizado en Bando</Spanish>
             <Russian>Синхронизация по бокам</Russian>
             <Japanese>陣営内で同期</Japanese>
+            <Ukrainian>Спільно для сторони</Ukrainian>
         </Key>
     </Package>
 </Project>

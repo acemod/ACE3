@@ -134,7 +134,7 @@
             <Japanese>ウェイポイント距離の表示精度を制御します。</Japanese>
             <Chinese>控制顯示的導航點精確度為多少</Chinese>
             <Chinesesimp>控制显示航点距离的精确程度。</Chinesesimp>
-            <Ukrainian>Керує точністю відображення відстаней маршрутних точок</Ukrainian>
+            <Ukrainian>Керує точністю відображення відстаней до точок маршруту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_DisplayName">
             <English>MicroDAGR - Waypoint Precision</English>
@@ -150,7 +150,7 @@
             <Japanese>MicroDAGR - ウェイポイントの精度</Japanese>
             <Chinese>微型軍用GPS接收器 - 導航精確度</Chinese>
             <Chinesesimp>微型军用 GPS 接收器—航点精度</Chinesesimp>
-            <Ukrainian>MicroDAGR - Точність маршрутних точок</Ukrainian>
+            <Ukrainian>MicroDAGR - Точність точок маршруту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_close">
             <English>10m</English>
@@ -235,7 +235,7 @@
             <Chinese>指北針方位</Chinese>
             <Chinesesimp>指南针方位</Chinesesimp>
             <Hungarian>Irányszög</Hungarian>
-            <Ukrainian>Азімут</Ukrainian>
+            <Ukrainian>Азимут</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_configure">
             <English>Configure MicroDAGR</English>
@@ -406,7 +406,7 @@
             <Chinese>路徑點</Chinese>
             <Chinesesimp>路径点</Chinesesimp>
             <Hungarian>Útvonalpontok</Hungarian>
-            <Ukrainian>Машрутні точки</Ukrainian>
+            <Ukrainian>Точки маршруту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_nextMode">
             <English>MicroDAGR - Next Mode</English>
@@ -521,6 +521,7 @@
             <Chinese>顯示磁北:</Chinese>
             <Chinesesimp>显示磁北:</Chinesesimp>
             <Hungarian>Magnetikus északi irány mutatása:</Hungarian>
+            <Ukrainian>Показувати магнітну північ:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_settingShowWP">
             <English>Show Waypoints On Map:</English>
@@ -537,7 +538,7 @@
             <Chinese>顯示路徑點在地圖上:</Chinese>
             <Chinesesimp>显示路径点在地图上：</Chinesesimp>
             <Hungarian>Útvonalpontok mutatása a térképen:</Hungarian>
-            <Ukrainian>Показувати маршрутні точки на мапі:</Ukrainian>
+            <Ukrainian>Показувати точки маршруту на мапі:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_settingUseMils">
             <English>Angular Unit:</English>
@@ -639,7 +640,7 @@
             <Chinese>設置路徑點</Chinese>
             <Chinesesimp>设置路径点</Chinesesimp>
             <Hungarian>UP Beállítása</Hungarian>
-            <Ukrainian>Встановити МТ</Ukrainian>
+            <Ukrainian>Встан. ТМ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_wpEnterCords">
             <English>Enter Grid Cords:</English>

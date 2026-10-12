@@ -33,7 +33,7 @@
             <Chinese>M992 紅外線照明彈</Chinese>
             <Chinesesimp>M992 红外照明弹</Chinesesimp>
             <Turkish>M992 Aydınlatma Fişeği (IR)</Turkish>
-            <Ukrainian>M992 Освітлювальна ракета (IЧ)</Ukrainian>
+            <Ukrainian>M992 Освітлювальна ракета (ІЧ)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_red">
             <English>M662 Illumination Flare (Red)</English>
@@ -116,7 +116,7 @@
             <Korean>단축 신관으로 바꾸기</Korean>
             <Japanese>信管を導火線に変える</Japanese>
             <Chinesesimp>切换为短引信</Chinesesimp>
-            <Ukrainian>Застосувати гніт</Ukrainian>
+            <Ukrainian>Встановити короткий запал</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_LibText">
             <English>An explosive charge that is throwable. 7 second fixed fuse</English>
@@ -465,7 +465,7 @@
             <Chinesesimp>也被称为闪光弹，会造成暂时性失明，耳聋，耳鸣等效果。</Chinesesimp>
             <Turkish>Flashbang olarak da bilinir. Ani flaş körlüğü, sağırlık, kulak çınlaması ve iç kulak rahatsızlığına neden olur.</Turkish>
             <Hungarian>Villanógránát néven is ismert. Azonnali villanási vakságot, süketséget, fülzúgást, és belső füli zavart okoz.</Hungarian>
-            <Ukrainian>XM84 (M84) - граната нелетальної дії, призначена для відволікання і тимчасового виведення з ладу, або дезорієнтації противника. Основне використання знайшла під час звільнення заручників, захоплення злочинців і терористів, а також проведення диверсійних місій.</Ukrainian>
+            <Ukrainian>Також відома як флешбенг. Спричиняє миттєве засліплення, глухоту, дзвін у вухах і порушення роботи внутрішнього вуха.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_M84_Name">
             <English>M84 Stun Grenade</English>
@@ -483,7 +483,7 @@
             <Chinesesimp>M84 震撼弹</Chinesesimp>
             <Turkish>M84 Sersemletici El Bombası</Turkish>
             <Hungarian>M84 Kábítógránát</Hungarian>
-            <Ukrainian>M84 світлозвукова граната</Ukrainian>
+            <Ukrainian>M84 світлошумова граната</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_M84_NameShort">
             <English>M84</English>
@@ -551,7 +551,7 @@
             <Korean>단축 신관 제거하기</Korean>
             <Japanese>導火線を外す</Japanese>
             <Chinesesimp>去除短引信</Chinesesimp>
-            <Ukrainian>Прибрати гніт</Ukrainian>
+            <Ukrainian>Зняти короткий запал</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_RollGrenade">
             <English>Roll Grenade</English>
@@ -580,7 +580,7 @@
             <German>Granate kann nicht rollen, zu %1 gewechselt</German>
             <Korean>이 수류탄은 굴릴 수 없습니다. %1(으)로 전환되었습니다.</Korean>
             <Japanese>この手榴弾は転がせません、 %1 に切り替えます</Japanese>
-            <Ukrainian>Цю гранату не можна кинути, переключіться на %1</Ukrainian>
+            <Ukrainian>Цю гранату не можна котити, перемкнено на: %1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_Description">
             <English>Type: Charge&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Things that need to die</English>
@@ -594,7 +594,7 @@
             <Korean>종류: 장약&lt;br /&gt;갯수: 1&lt;br /&gt;사용처: 죽여야 할 곳에</Korean>
             <Japanese>種類: 爆薬&lt;br /&gt;弾数: 1&lt;br /&gt;次で使用: 破壊すべき全てのものに</Japanese>
             <Chinesesimp>类型：炸药&lt;br /&gt;数量：1&lt;br /&gt;用于：需要死亡的事物</Chinesesimp>
-            <Ukrainian>Тип: Вибухівка&lt;br /&gt;Боєприпаси 1&lt;br /&gt;Застосування: На предметах, які мають бути знищені</Ukrainian>
+            <Ukrainian>Тип: Вибухівка&lt;br /&gt;Кількість: 1&lt;br /&gt;Застосування: на всьому, що має бути знищено</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_LibText">
             <English>An explosive satchel that is throwable. 7 second fixed fuse</English>
@@ -685,7 +685,7 @@
             <Korean>폭발물 변환 가능여부</Korean>
             <Japanese>爆発物の変換を許可</Japanese>
             <Chinesesimp>允许转换炸药</Chinesesimp>
-            <Ukrainian>Дозволити гніти</Ukrainian>
+            <Ukrainian>Дозволити перетворення вибухівки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Grenades_parachute_flare_description">
             <English>Type: Star Parachute Flare</English>

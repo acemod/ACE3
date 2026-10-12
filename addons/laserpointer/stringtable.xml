@@ -35,7 +35,7 @@
             <Chinesesimp>激光指示器</Chinesesimp>
             <Turkish>Lazer Işaretleyici</Turkish>
             <Hungarian>Lézer-pointer</Hungarian>
-            <Ukrainian>Лазерний приціл</Ukrainian>
+            <Ukrainian>Лазерний цілевказівник</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Laserpointer_IRLaser">
             <English>IR Laser</English>
@@ -89,7 +89,7 @@
             <Chinesesimp>激光指示器（绿色）</Chinesesimp>
             <Turkish>Lazer Işaretleyici (Yeşil)</Turkish>
             <Hungarian>Lézer-pointer (zöld)</Hungarian>
-            <Ukrainian>Лазерний приціл (зелений)</Ukrainian>
+            <Ukrainian>Лазерний цілевказівник (зелений)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Laserpointer_red">
             <English>Laser Pointer (red)</English>
@@ -107,7 +107,7 @@
             <Chinesesimp>激光指示器（红色）</Chinesesimp>
             <Turkish>Lazer Işaretleyici (Kırmızı)</Turkish>
             <Hungarian>Lézer-pointer (piros)</Hungarian>
-            <Ukrainian>Лазерний приціл (червоний)</Ukrainian>
+            <Ukrainian>Лазерний цілевказівник (червоний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Laserpointer_switchLaserLight">
             <English>Switch Laser / IR Laser</English>

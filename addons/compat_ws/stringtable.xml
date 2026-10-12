@@ -17,7 +17,7 @@
             <Chinesesimp>12 Gauge 20Rnd Slug 300gr Snake Mag</Chinesesimp>
             <Turkish>12 Gauge 20Rnd Slug 300gr Snake Mag</Turkish>
             <Hungarian>12 Gauge 20Rnd Slug 300gr Snake Mag</Hungarian>
-            <Ukrainian>12 Gauge 20Rnd Slug 300gr Snake Mag</Ukrainian>
+            <Ukrainian>Магазин 12 Калібр 20 патр. Куля 300gr (Змія)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_20Rnd_12Gauge_AA40_Slug_Tan_lxWS_Name">
             <English>12 Gauge 20Rnd Slug 300gr Tan Mag</English>
@@ -35,7 +35,7 @@
             <Chinesesimp>12 Gauge 20Rnd Slug 300gr Tan Mag</Chinesesimp>
             <Turkish>12 Gauge 20Rnd Slug 300gr Tan Mag</Turkish>
             <Hungarian>12 Gauge 20Rnd Slug 300gr Tan Mag</Hungarian>
-            <Ukrainian>12 Gauge 20Rnd Slug 300gr Tan Mag</Ukrainian>
+            <Ukrainian>Магазин 12 Калібр 20 патр. Куля 300gr (Пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_20Rnd_12Gauge_AA40_Slug_lxWS_Name">
             <English>12 Gauge 20Rnd Slug 300gr Mag</English>
@@ -53,7 +53,7 @@
             <Chinesesimp>12 Gauge 20Rnd Slug 300gr Mag</Chinesesimp>
             <Turkish>12 Gauge 20Rnd Slug 300gr Mag</Turkish>
             <Hungarian>12 Gauge 20Rnd Slug 300gr Mag</Hungarian>
-            <Ukrainian>12 Gauge 20Rnd Slug 300gr Mag</Ukrainian>
+            <Ukrainian>Магазин 12 Калібр 20 патр. Куля 300gr</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_20Rnd_12Gauge_Slug_NameShort">
             <English>Slug 300gr</English>
@@ -71,7 +71,7 @@
             <Chinesesimp>Slug 300gr</Chinesesimp>
             <Turkish>Slug 300gr</Turkish>
             <Hungarian>Slug 300gr</Hungarian>
-            <Ukrainian>Slug 300gr</Ukrainian>
+            <Ukrainian>Куля 300gr</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_8Rnd_12Gauge_AA40_Slug_Snake_lxWS_Name">
             <English>12 Gauge 8Rnd Slug 300gr Snake Mag</English>
@@ -89,7 +89,7 @@
             <Chinesesimp>12 Gauge 8Rnd Slug 300gr Snake Mag</Chinesesimp>
             <Turkish>12 Gauge 8Rnd Slug 300gr Snake Mag</Turkish>
             <Hungarian>12 Gauge 8Rnd Slug 300gr Snake Mag</Hungarian>
-            <Ukrainian>12 Gauge 8Rnd Slug 300gr Snake Mag</Ukrainian>
+            <Ukrainian>Магазин 12 Калібр 8 патр. Куля 300gr (Змія)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_8Rnd_12Gauge_AA40_Slug_Tan_lxWS_Name">
             <English>12 Gauge 8Rnd Slug 300gr Tan Mag</English>
@@ -107,7 +107,7 @@
             <Chinesesimp>12 Gauge 8Rnd Slug 300gr Tan Mag</Chinesesimp>
             <Turkish>12 Gauge 8Rnd Slug 300gr Tan Mag</Turkish>
             <Hungarian>12 Gauge 8Rnd Slug 300gr Tan Mag</Hungarian>
-            <Ukrainian>12 Gauge 8Rnd Slug 300gr Tan Mag</Ukrainian>
+            <Ukrainian>Магазин 12 Калібр 8 патр. Куля 300gr (Пісочний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_8Rnd_12Gauge_AA40_Slug_lxWS_Name">
             <English>12 Gauge 8Rnd Slug 300gr Mag</English>
@@ -125,7 +125,7 @@
             <Chinesesimp>12 Gauge 8Rnd Slug 300gr Mag</Chinesesimp>
             <Turkish>12 Gauge 8Rnd Slug 300gr Mag</Turkish>
             <Hungarian>12 Gauge 8Rnd Slug 300gr Mag</Hungarian>
-            <Ukrainian>12 Gauge 8Rnd Slug 300gr Mag</Ukrainian>
+            <Ukrainian>Магазин 12 Калібр 8 патр. Куля 300gr</Ukrainian>
         </Key>
     </Package>
 </Project>

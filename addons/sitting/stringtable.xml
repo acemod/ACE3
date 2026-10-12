@@ -35,7 +35,7 @@
             <Chinesesimp>此模块可以让你开关在椅子上坐下的能力。</Chinesesimp>
             <Turkish>Bu modül, sandalyelere oturma özelliğini devre dışı bırakmanıza izin verir.</Turkish>
             <Hungarian>Ez a modul lehetővé teszi a székekre és toalettekre való leülés letiltását.</Hungarian>
-            <Ukrainian>Цей модуль дає змогу вам заборонити можливість сідати на стільці та туалети.</Ukrainian>
+            <Ukrainian>Цей модуль дає змогу заборонити сідати на стільці.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Sitting_ModuleDisplayName">
             <English>Sitting</English>

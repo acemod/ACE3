@@ -69,11 +69,13 @@
             <English>Munition is not aligned with pylon. Angle: %1</English>
             <Russian>Боеприпас не выровнен с пилоном. Угол наклона: %1</Russian>
             <Japanese>兵装がパイロンと異なる角度です。角度: %1</Japanese>
+            <Ukrainian>Боєприпас не вирівняно з пілоном. Кут: %1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_MunitionDistance">
             <English>Munition is too far from pylon. Distance: %1 m</English>
             <Russian>Боеприпас находится слишком далеко от пилона. Расстояние: % 1 мБоеприпас находится слишком далеко от опоры. Расстояние: %1 м</Russian>
             <Japanese>兵装がパイロンから離れています。距離: %1 m</Japanese>
+            <Ukrainian>Боєприпас задалеко від пілона. Відстань: %1 м</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RearmedTriple">
             <English>Rearmed %1 rounds of %2 on %3</English>
@@ -172,7 +174,7 @@
             <Chinese>S-8 高爆彈</Chinese>
             <Chinesesimp>S-8 高爆弹</Chinesesimp>
             <Turkish>S-8 HE</Turkish>
-            <Ukrainian>C-8 ОФ</Ukrainian>
+            <Ukrainian>С-8 ОФ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_2Rnd_Bomb_03_F">
             <English>FAB-250M-54</English>
@@ -223,7 +225,7 @@
             <Chinese>AIM-9 響尾蛇</Chinese>
             <Chinesesimp>AIM-9 响尾蛇</Chinesesimp>
             <Turkish>AIM-9 Sidewinder</Turkish>
-            <Ukrainian>АІМ-9 Sidewinder</Ukrainian>
+            <Ukrainian>AIM-9 Sidewinder</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_4Rnd_Bomb_04_F">
             <English>GBU-12</English>
@@ -655,11 +657,13 @@
             <English>When rearming a pylon, the munition must be held aligned at the pylon. Only applies if Rearm Amount is not Entire Vehicle.</English>
             <Russian>При перевооружении пилона, боеприпас должен быть закреплен ровно на пилоне. Применяется только в том случае, если перевооружение производится не на весь автомобиль.</Russian>
             <Japanese>パイロンを再武装する際は、弾薬をパイロンに正しく位置合わせする必要があります。これは、再武装される弾薬量が車両全体ではない場合にのみ適用されます。</Japanese>
+            <Ukrainian>Під час переозброєння пілона боєприпас треба тримати вирівняним біля пілона. Діє, лише якщо "Ступінь переозброєння" не "Техніка повністю".</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_usePylonPosition_DisplayName">
             <English>Use Pylon Position</English>
             <Russian>Использовать положение пилона</Russian>
             <Japanese>パイロンの位置を使用</Japanese>
+            <Ukrainian>Враховувати положення пілона</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_vehicle">
             <English>Entire Vehicle</English>
@@ -691,7 +695,7 @@
             <Japanese>弾薬をしまう</Japanese>
             <Chinese>儲存彈藥</Chinese>
             <Chinesesimp>储存弹药</Chinesesimp>
-            <Ukrainian>Зберегти боєкомплект</Ukrainian>
+            <Ukrainian>Покласти боєкомплект</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Rearm_StoreAmmoAction">
             <English>Storing %1 in %2...</English>
@@ -756,7 +760,7 @@
             <Japanese>再武装に使用する資源の積載量 (-1 で補給無効)</Japanese>
             <Chinese>貨物可以提高多少次整裝（-1為停用）</Chinese>
             <Chinesesimp>重新武装的货物（-1禁用）</Chinesesimp>
-            <Ukrainian>Обсяг боєприпасів для переозброєння (-1 для скасування)</Ukrainian>
+            <Ukrainian>Обсяг боєприпасів для переозброєння (-1 — вимкнено)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Rearm_rearmCargo_edenName">
             <English>Rearm Cargo</English>

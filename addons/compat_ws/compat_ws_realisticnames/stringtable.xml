@@ -175,7 +175,7 @@
             <German>Vektor SS-77 Compact (Schlange)</German>
             <Korean>벡터 SS-77 단축형 (뱀 위장)</Korean>
             <Japanese>ヴェクター SS-77 コンパクト (ヘビ柄迷彩)</Japanese>
-            <Ukrainian>Vektor SS-77 Compact (змея)</Ukrainian>
+            <Ukrainian>Vektor SS-77 Compact (Змія)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Desert_Name">
             <English>Vektor SS-77 (Desert)</English>
@@ -263,7 +263,7 @@
             <German>FN FAL 50.00 GL (Holz)</German>
             <Korean>FN FAL 50.00 GL (목재)</Korean>
             <Japanese>FN FAL 50.00 GL (木製)</Japanese>
-            <Ukrainian>FN FAL 50.00 GL (лесной)</Ukrainian>
+            <Ukrainian>FN FAL 50.00 GL (Лісовий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Name">
             <English>FN FAL 50.00</English>
@@ -305,7 +305,7 @@
             <German>FN FAL 50.00 (Holz)</German>
             <Korean>FN FAL 50.00 (목재)</Korean>
             <Japanese>FN FAL 50.00 (木製)</Japanese>
-            <Ukrainian>FN FAL 50.00 (лісний)</Ukrainian>
+            <Ukrainian>FN FAL 50.00 (Лісовий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_UBS_lxWS_Name">
             <English>SIX-12</English>
@@ -959,7 +959,7 @@
             <German>KamAZ (Zu-23-2)</German>
             <Korean>카마즈 (ZU-23-2)</Korean>
             <Japanese>KamAZ (Zu-23-2)</Japanese>
-            <Ukrainian>KamAZ (Зу-23-2)</Ukrainian>
+            <Ukrainian>KamAZ (ЗУ-23-2)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_ammo_Name">
             <English>KamAZ Ammo</English>

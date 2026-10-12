@@ -65,7 +65,7 @@
             <Chinese>部屬繩索</Chinese>
             <Chinesesimp>部属绳索</Chinesesimp>
             <Turkish>Halatları sal</Turkish>
-            <Ukrainian>Зачепити троси</Ukrainian>
+            <Ukrainian>Випустити троси</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes12">
             <English>Deploy 12m ropes</English>
@@ -313,7 +313,7 @@
             <German>FRIES automatisch Helikoptern hinzufügen, die es unterstützen</German>
             <Korean>로프를 지원하는 헬기에 자동으로 패스트로프를 추가합니다.</Korean>
             <Japanese>FRIESをサポートするヘリコプターに自動的にFRIESを追加します。</Japanese>
-            <Ukrainian>Автоматично додавайте троси у вертольоти, які їх підтримують.</Ukrainian>
+            <Ukrainian>Автоматично додає FRIES на вертольоти, що їх підтримують.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_autoAddFRIES_displayName">
             <English>Auto-Equip FRIES</English>

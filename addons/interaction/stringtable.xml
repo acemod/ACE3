@@ -177,7 +177,7 @@
             <Japanese>プレイヤーはネガティブな評価を受けるべきですか? これを有効化すると、プレイヤーはポジティブな評価のみ受けるようになり、仮に味方の兵器を破壊したり、友軍兵士を殺害したとしても、友軍AI兵がプレイヤーに対して発砲するのを防ぐことができます。</Japanese>
             <Chinese>玩家是否會收到負面評價? 當本功能開啟時玩家只會接收到正面評價，所以當玩家做出擊殺友軍AI、毀壞友軍裝備或殺害小隊夥伴都不會收到負面評價</Chinese>
             <Chinesesimp>玩家是否会收到负面评价？ 当本功能开启时玩家只会接收到正面评价，所以当玩家做出击杀友军 AI、毁坏友军装备或杀害小队伙伴都不会收到负面评价。</Chinesesimp>
-            <Ukrainian>Чи повинні гравці отримувати від'ємний рейтинг?\nКоли ввімкнено, гравці отримують тільки позитивний рейтинг, що запобігає дружньому вогню від ШІ під час знищення дружнього обладнання або вбивства членів команди.</Ukrainian>
+            <Ukrainian>Чи повинні гравці отримувати від'ємний рейтинг? Коли ввімкнено, гравці отримують тільки позитивний рейтинг, що запобігає дружньому вогню від ШІ під час знищення дружнього обладнання або вбивства членів команди.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_DisableNegativeRating_DisplayName">
             <English>Disable negative rating</English>
@@ -691,7 +691,7 @@
             <Chinesesimp>编辑按键</Chinesesimp>
             <Turkish>Modifiye Tuşu</Turkish>
             <Hungarian>Módosító billentyű</Hungarian>
-            <Ukrainian>Ключ-модифікатор</Ukrainian>
+            <Ukrainian>Клавіша-модифікатор</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_Description">
             <English>Team management allows color allocation for team members, taking team command and joining/leaving teams.</English>
@@ -893,7 +893,7 @@
             <Korean>수류탄 건네주기</Korean>
             <Japanese>手榴弾を渡す</Japanese>
             <Chinesesimp>给予投掷物</Chinesesimp>
-            <Ukrainian>Передати гранати</Ukrainian>
+            <Ukrainian>Передати гранату</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_PassThrowableHint">
             <English>%1 passed you %2.</English>
@@ -1012,7 +1012,7 @@
             <Korean>새 그룹 명칭:</Korean>
             <Japanese>新しいグループ名:</Japanese>
             <Chinesesimp>新的小队名：</Chinesesimp>
-            <Ukrainian>НОВЕ ІМ'Я ГРУПИ</Ukrainian>
+            <Ukrainian>НОВА НАЗВА ГРУПИ:</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_ScrollHint">
             <English>Scroll</English>
@@ -1030,7 +1030,7 @@
             <Chinesesimp>滚动</Chinesesimp>
             <Turkish>Kaydırma</Turkish>
             <Hungarian>Görgetés</Hungarian>
-            <Ukrainian>Перегорнути</Ukrainian>
+            <Ukrainian>Скрол</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_SendAway">
             <English>Go Away!</English>
@@ -1421,7 +1421,7 @@
             <Korean>적 진영이 탑승한 차량과의 일부 상호작용을 제한합니다.</Korean>
             <Japanese>敵性力の乗員が乗っている車両へのインタラクションを一部制限します。</Japanese>
             <Chinesesimp>对敌军载具或固定武器乘员使用互动</Chinesesimp>
-            <Ukrainian>Обмежте деякі взаємодії на транспортних засобах, керованих ворожою стороною.</Ukrainian>
+            <Ukrainian>Обмежує деякі взаємодії з технікою, екіпаж якої належить ворожій стороні.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_DisplayName">
             <English>Interact With Enemy Crew</English>
@@ -1445,7 +1445,7 @@
             <Korean>고정화기 허용</Korean>
             <Japanese>固定火器での許可</Japanese>
             <Chinesesimp>允许固定式武器</Chinesesimp>
-            <Ukrainian>Дозволити використання статичної зброї</Ukrainian>
+            <Ukrainian>Дозволити для статичної зброї</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithTerrainObjects_Description">
             <English>Warning: can cause some objects to collide with others.</English>
@@ -1471,7 +1471,7 @@
             <Korean>플레이어 분대의 모든 유닛을 삭제하고 팀 색상 변경하는 것을 허용합니다.</Korean>
             <Japanese>プレイヤー分隊内の任意のユニットにチームからの脱退と色の変更を許可します</Japanese>
             <Chinesesimp>允许小队长更改队内玩家的火力组颜色</Chinesesimp>
-            <Ukrainian>Дозволяє скидати і змінювати командні кольори будь-якого підрозділу в загоні гравця</Ukrainian>
+            <Ukrainian>Дозволяє скидати і змінювати командні кольори будь-якого юніта в загоні гравця</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Interaction_remoteTeamManagement_DisplayName">
             <English>Remote Squad Management</English>

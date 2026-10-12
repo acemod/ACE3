@@ -208,7 +208,7 @@
             <Japanese>%1 の兵装</Japanese>
             <Chinese>%1用的武裝配置</Chinese>
             <Chinesesimp>%1用的武器配置</Chinesesimp>
-            <Ukrainian>Оснащення %1</Ukrainian>
+            <Ukrainian>Спорядження: %1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Pylons_RearmNewPylons">
             <English>Rearm New Pylons</English>
@@ -256,7 +256,7 @@
             <Japanese>%2 個中 %1 番目のパイロンを交換しています・・・</Japanese>
             <Chinese>共有%2個派龍架，正在整補%1號派龍架中...</Chinese>
             <Chinesesimp>共有%2个发射架，正在整装%1号挂架...</Chinesesimp>
-            <Ukrainian>Заміна пілона %1 на %2...</Ukrainian>
+            <Ukrainian>Заміна пілона %1 з %2...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Pylons_RequireEngineer">
             <English>Require Engineer</English>

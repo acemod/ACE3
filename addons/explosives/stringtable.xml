@@ -76,7 +76,7 @@
             <Korean>격발기 활성 전환</Korean>
             <Japanese>点火装置を切り替え</Japanese>
             <Chinesesimp>切换引爆装置</Chinesesimp>
-            <Ukrainian>Цикл активного детонатора</Ukrainian>
+            <Ukrainian>Перемкнути активний детонатор</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Explosives_DeadManSwitch_description">
             <English>Used to remotely trigger explosives when released.</English>
@@ -94,7 +94,7 @@
             <Chinesesimp>当放开按钮时，将会引爆炸弹。</Chinesesimp>
             <Turkish>Patlayıcıları serbest bırakıldığında uzaktan tetiklemek için kullanılır.</Turkish>
             <Hungarian>Robbanóanyagok távoli robbantásához</Hungarian>
-            <Ukrainian>Використовується для дистанційного підриву, після смерті оператора.</Ukrainian>
+            <Ukrainian>Підриває вибухівку, коли кнопку відпущено.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Explosives_DeadManSwitch_displayName">
             <English>Dead Man's Switch</English>
@@ -421,7 +421,7 @@
             <Chinesesimp>用于远程引爆炸药. (5km)</Chinesesimp>
             <Turkish>Patlayıcıları uzaktan tetiklemek için kullanılır. (5km)</Turkish>
             <Hungarian>Robbanóanyagok távoli robbantásához. (5km)</Hungarian>
-            <Ukrainian>Використовується для віддаленої детонації зарядів. (5km)</Ukrainian>
+            <Ukrainian>Використовується для дистанційного підриву зарядів.&lt;br/&gt;Дальність дії — близько 5 км.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Explosives_M152_Clacker_displayName">
             <English>M152 Firing Device</English>
@@ -696,7 +696,7 @@
             <Chinesesimp>下</Chinesesimp>
             <Turkish>Aşağı</Turkish>
             <Hungarian>Le</Hungarian>
-            <Ukrainian>Скидання</Ukrainian>
+            <Ukrainian>Вниз</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Explosives_Phone_Up">
             <English>Up</English>
@@ -714,7 +714,7 @@
             <Chinesesimp>上</Chinesesimp>
             <Turkish>Yukarı</Turkish>
             <Hungarian>Fel</Hungarian>
-            <Ukrainian>Виклик</Ukrainian>
+            <Ukrainian>Вгору</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Explosives_Pickup">
             <English>Pick up</English>
@@ -786,7 +786,7 @@
             <Chinesesimp>放置菜单</Chinesesimp>
             <Turkish>Yerleştirme Menüsü</Turkish>
             <Hungarian>Elhelyezési menü</Hungarian>
-            <Ukrainian>Меню втановлення</Ukrainian>
+            <Ukrainian>Меню встановлення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Explosives_PressurePlate">
             <English>Pressure Plate</English>
@@ -821,7 +821,7 @@
             <Chinese>增加非專業人員相關操作的時間? 預設: 是</Chinese>
             <Chinesesimp>增加非专业人员相关操作的时间？ 预设：是</Chinesesimp>
             <Hungarian>Nem-specialisták esetén több ideig tartson a cselekvés befejezése? Alapértelmezett: Igen</Hungarian>
-            <Ukrainian>Збільшувати час завершення дій для не-фахівців? За замовчуванням: Ні</Ukrainian>
+            <Ukrainian>Збільшувати час завершення дій для не-фахівців? За замовчуванням: Так</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Explosives_PunishNonSpecialists_DisplayName">
             <English>Punish non-specialists?</English>
@@ -1016,7 +1016,7 @@
             <Korean>초 단위로, 폭발 타이머의 최대 시간을 정합니다</Korean>
             <Japanese>時限信管の最長時間 (秒単位) を設定します。</Japanese>
             <Chinesesimp>定时爆炸的最长时间（单位：秒）</Chinesesimp>
-            <Ukrainian>Макисмальний час до вибуху в секундах</Ukrainian>
+            <Ukrainian>Максимальний час до вибуху в секундах</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_DisplayName">
             <English>Maximum Time</English>
@@ -1048,7 +1048,7 @@
             <Chinesesimp>时间：%1分%2秒</Chinesesimp>
             <Turkish>Süre: %1m %2s</Turkish>
             <Hungarian>Idő: %1m %2s</Hungarian>
-            <Ukrainian>Час: %1хв %2c</Ukrainian>
+            <Ukrainian>Час: %1хв %2с</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_Description">
             <English>Minimum time value (in seconds) for the explosive timer.</English>
@@ -1189,7 +1189,7 @@
             <Korean>대인지뢰 (발목지뢰형)</Korean>
             <Japanese>対人地雷 (トウポッパー)</Japanese>
             <Chinesesimp>反人员地雷 (脚尖毁灭者)</Chinesesimp>
-            <Ukrainian>APERS міна (Toe-Topper)</Ukrainian>
+            <Ukrainian>APERS міна (Toe-Popper)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Explosives_cellphone_description">
             <English>Used to remotely trigger explosives</English>
@@ -1243,7 +1243,7 @@
             <Chinesesimp>用于远程引爆炸药. (250m)</Chinesesimp>
             <Turkish>Patlayıcıları uzaktan tetiklemek için kullanılır. (250m)</Turkish>
             <Hungarian>Robbanóanyagok távoli robbantásához. (250m)</Hungarian>
-            <Ukrainian>Використовується для віддаленої детонації зарядів. (250m)</Ukrainian>
+            <Ukrainian>Використовується для дистанційного підриву зарядів.&lt;br/&gt;Дальність дії — близько 250 м.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Explosives_clacker_displayName">
             <English>M57 Firing Device</English>

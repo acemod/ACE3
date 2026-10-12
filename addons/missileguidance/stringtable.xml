@@ -121,7 +121,7 @@
             <German>PRE-PLANNED</German>
             <Korean>사전 설정됨</Korean>
             <Japanese>計画目標 (PP)</Japanese>
-            <Ukrainian>ЗАЗДАЛЕГІДЬ СПЛАНОВАНИЙ</Ukrainian>
+            <Ukrainian>ЗАПЛАНОВАНА</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp_short">
             <English>PP</English>
@@ -140,6 +140,7 @@
             <Spanish>La munición será guiada a las coordenadas de cuadrícula de 10 dígitos proporcionadas.</Spanish>
             <Russian>Боеприпас будет ориентироваться на предоставленные 10-значные координаты в сетке</Russian>
             <Japanese>兵装は指定された10桁のグリッド座標に誘導されます</Japanese>
+            <Ukrainian>Боєприпас наводиться на введені 10-значні координати сітки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_too">
             <English>TARGET OF OPPORTUNITY</English>
@@ -158,6 +159,7 @@
             <Spanish>La munición será guiada hacia la ubicación a la que apunta la cámara de apuntado</Spanish>
             <Russian>Боеприпас будет направлен в то место, на которое смотрит камера наведения</Russian>
             <Japanese>兵装はターゲティングカメラで見ている場所へ誘導されます</Japanese>
+            <Ukrainian>Боєприпас наводиться на точку, куди дивиться камера наведення</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K">
             <English>Hellfire II AGM-114K Missile</English>
@@ -334,7 +336,7 @@
             <Chinesesimp>玩家和 AI</Chinesesimp>
             <Turkish>Oyuncular ve AI</Turkish>
             <Hungarian>Játékosok és AI</Hungarian>
-            <Ukrainian>Гравець і боти</Ukrainian>
+            <Ukrainian>Гравець і ШІ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_PlayerOnly">
             <English>Player Only</English>
@@ -406,7 +408,7 @@
             <Russian>Коэф. угловой селекции ЛТЦ</Russian>
             <Korean>플레어 각도 계수</Korean>
             <Japanese>フレアの角度係数</Japanese>
-            <Ukrainian>Коеф. кутової селекції ЛТЦ</Ukrainian>
+            <Ukrainian>Коеф. кутової селекції ХТЦ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_flareEffectivenessCoef_Description">
             <English>Adjust the chance that a flare defeats an IR missile. Higher gives more effective flares.</English>
@@ -424,7 +426,7 @@
             <Russian>Коэф. эффективности ЛТЦ</Russian>
             <Korean>플레어 효과 계수</Korean>
             <Japanese>フレアの効果係数</Japanese>
-            <Ukrainian>Коеф. ефективності ЛТЦ</Ukrainian>
+            <Ukrainian>Коеф. ефективності ХТЦ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_keybind_down">
             <English>Missile - Down</English>

@@ -29,7 +29,7 @@
             <Korean>따라가는 거리</Korean>
             <Japanese>追跡距離</Japanese>
             <Chinesesimp>跟随距离</Chinesesimp>
-            <Ukrainian>Відстань відстеження</Ukrainian>
+            <Ukrainian>Дистанція слідування</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Aircraft_DroneFollowHint">
             <English>Following unit within %1m</English>
@@ -41,7 +41,7 @@
             <Korean>%1m 이내로 유닛을 따라갑니다</Korean>
             <Japanese>%1m 間隔で 目標を追跡します</Japanese>
             <Chinesesimp>在%1m内跟随单位</Chinesesimp>
-            <Ukrainian>Відстеження в межах %1m</Ukrainian>
+            <Ukrainian>Слідування за юнітом у межах %1 м</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionAP">
             <English>30mm DU Armor Piercing</English>
@@ -141,7 +141,7 @@
             <Chinese>30毫米 穿高混合 4:1</Chinese>
             <Chinesesimp>30mm 穿爆混合 4:1</Chinesesimp>
             <Turkish>30mm CM 4:1</Turkish>
-            <Ukrainian>30мм БС 4:1</Ukrainian>
+            <Ukrainian>30мм зміш. 4:1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortCM51">
             <English>30mm CM 5:1</English>
@@ -157,7 +157,7 @@
             <Chinese>30毫米 穿高混合 5:1</Chinese>
             <Chinesesimp>30mm 穿爆混合 5:1</Chinesesimp>
             <Turkish>30mm CM 5:1</Turkish>
-            <Ukrainian>30мм БС 5:1</Ukrainian>
+            <Ukrainian>30мм зміш. 5:1</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortHEI">
             <English>30mm HEI</English>

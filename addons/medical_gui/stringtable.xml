@@ -214,7 +214,7 @@
             <Korean>좌</Korean>
             <Japanese>左</Japanese>
             <Chinesesimp>L</Chinesesimp>
-            <Ukrainian>Ліво</Ukrainian>
+            <Ukrainian>Л</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BodyLabelRight">
             <English>R</English>
@@ -228,7 +228,7 @@
             <Korean>우</Korean>
             <Japanese>右</Japanese>
             <Chinesesimp>R</Chinesesimp>
-            <Ukrainian>Право</Ukrainian>
+            <Ukrainian>П</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DIFFICULT_BREATHING">
             <English>Difficult breathing</English>
@@ -756,7 +756,7 @@
             <Chinesesimp>医疗</Chinesesimp>
             <Turkish>Medikal</Turkish>
             <Hungarian>Orvosi</Hungarian>
-            <Ukrainian>Медик</Ukrainian>
+            <Ukrainian>Медицина</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_MedicalMenu">
             <English>Medical Menu</English>
@@ -1058,7 +1058,7 @@
             <Korean>맞을 시 의료 정보 보기</Korean>
             <Japanese>被弾時の医療情報一時表示</Japanese>
             <Chinesesimp>点击查看医疗信息</Chinesesimp>
-            <Ukrainian>Показати медичну інформацію о влучаннях</Ukrainian>
+            <Ukrainian>Показувати медичну інформацію при влученні</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_QUICK_VIEW">
             <English>QUICK VIEW</English>
@@ -1243,7 +1243,7 @@
             <Chinese>鼻咽管</Chinese>
             <Chinesesimp>鼻咽管</Chinesesimp>
             <Turkish>Nazofarengeal Tüp [NPA]</Turkish>
-            <Ukrainian>Назотрахеальна трубка</Ukrainian>
+            <Ukrainian>Назофарингеальна трубка [NPA]</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_PAIN">
             <English>in Pain</English>
@@ -1397,7 +1397,7 @@
             <Chinesesimp>选择（3D）</Chinesesimp>
             <Turkish>Seçimler (3D)</Turkish>
             <Hungarian>Választékok (3D)</Hungarian>
-            <Ukrainian>Стандартний (3D)</Ukrainian>
+            <Ukrainian>Частини тіла (3D)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ShowBleeding_Rate">
             <English>Show Bleeding Rate</English>
@@ -1410,7 +1410,7 @@
             <Korean>출혈 속도 표시</Korean>
             <Japanese>出血速度の表示</Japanese>
             <Chinesesimp>显示流血速度</Chinesesimp>
-            <Ukrainian>Показати частоту кровотечі</Ukrainian>
+            <Ukrainian>Показувати інтенсивність кровотечі</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ShowBloodlossEntry_Description">
             <English>Show qualitative blood loss in the injury list.</English>
@@ -1590,7 +1590,7 @@
             <Korean>지혈 경고 표시</Korean>
             <Japanese>止血帯の警告を表示</Japanese>
             <Chinesesimp>显示止血带警告</Chinesesimp>
-            <Ukrainian>Показати попередження про накладення турнікету</Ukrainian>
+            <Ukrainian>Показувати попередження про турнікет</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Medic">
             <English>in your inventory</English>
@@ -1667,7 +1667,7 @@
             <Chinese>查看診斷卡</Chinese>
             <Chinesesimp>查看分诊卡</Chinesesimp>
             <Turkish>Triyaj Kartını Görüntüle</Turkish>
-            <Ukrainian>Дивитися первинну картку</Ukrainian>
+            <Ukrainian>Переглянути медкарту</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_bodyPartOutlineColor_Description">
             <English>Color of outline around selected body part.</English>
@@ -1701,42 +1701,50 @@
             <English>If enabled, patients will have a customizable message displayed when a player opens their medical menu.</English>
             <Russian>Если эта функция включена, при открытии медицинского меню у пациентов будет отображаться настраиваемое сообщение.</Russian>
             <Japanese>有効化すると、プレイヤーが医療メニューを開いた際に、患者にカスタマイズ可能なメッセージが表示されます。</Japanese>
+            <Ukrainian>Якщо увімкнено, пацієнт бачить налаштовуване повідомлення, коли гравець відкриває його медичне меню.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_medicalHintEnabled_DisplayName">
             <English>Medical Menu Message Enabled</English>
             <Russian>Включено сообщение медицинского меню</Russian>
             <Japanese>医療メニューメッセージ有効化</Japanese>
+            <Ukrainian>Увімк. повідомлення мед. меню</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_medicalHintEnabled_justSound">
             <English>Sound Effect instead of hint</English>
             <Russian>Звуковой эффект вместо подсказки</Russian>
             <Japanese>ヒント表示の代わりに効果音を使用</Japanese>
+            <Ukrainian>Звук замість підказки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_medicalHintMedicIcon_Description">
             <English>Image path to display in the medical hint if the player is a medic.</English>
             <Russian>Путь к изображению, которое будет отображаться в медицинской подсказке, если игрок — медик.</Russian>
             <Japanese>プレイヤーがメディックの場合、医療ヒントに表示される画像ファイルのパスを設定します。</Japanese>
+            <Ukrainian>Шлях до зображення в медичній підказці, якщо гравець — медик.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_medicalHintMedicIcon_DisplayName">
             <English>Medical Menu Medic Icon</English>
             <Russian>Значок медика в медицинском меню</Russian>
             <Japanese>医療メニューのメディックアイコン</Japanese>
+            <Ukrainian>Значок медика в мед. меню</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_medicalHintMessage_Description">
             <English>Custom message to display to patients when opening their medical menu.\n%1 will be your name.</English>
             <Russian>Пользовательское сообщение, которое отображается для пациентов при открытии медицинского меню. \n%1 — это ваше имя.</Russian>
             <Japanese>患者が医療メニューを開いた際に表示されるカスタムメッセージ。\n%1は治療者の名前です。</Japanese>
+            <Ukrainian>Власне повідомлення, яке бачить пацієнт, коли відкривають його медичне меню.\n%1 — ваше ім'я.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_medicalHintMessage_DisplayName">
             <English>Medical Menu Message</English>
             <Russian>Сообщение медицинского меню</Russian>
             <Japanese>医療メニューメッセージ</Japanese>
+            <Ukrainian>Повідомлення мед. меню</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_medicalHintMessage_defaultMessage">
             <!-- %1 = medic's name -->
             <English>%1 is treating you</English>
             <Russian>%1 лечит вас</Russian>
             <Japanese>%1 が治療中です</Japanese>
+            <Ukrainian>%1 лікує вас</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_needToHolster">
             <English>You must holster your weapon first!</English>
@@ -1761,7 +1769,7 @@
             <Korean>환자가 출혈 중인지 여부를 표시합니다(선택적으로 출혈 속도 포함)</Korean>
             <Japanese>患者が出血しているかどうかを表示します。オプションで出血速度も表示します</Japanese>
             <Chinesesimp>显示是否正在流血, 还可以显示流血速度</Chinesesimp>
-            <Ukrainian>Показує, чи є у пацієнта кровотеча, опціонально із зазначенням частоти</Ukrainian>
+            <Ukrainian>Показує, чи є у пацієнта кровотеча, за бажанням із зазначенням інтенсивності</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_showBleeding_DisplayName">
             <English>Show Bleeding State</English>

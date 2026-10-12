@@ -8,6 +8,7 @@
             <Russian>Мел (Черный)</Russian>
             <German>Kreide (Schwarz)</German>
             <Japanese>チョーク (黒)</Japanese>
+            <Ukrainian>Чорна крейда</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkBlue">
             <English>Chalk (Blue)</English>
@@ -16,6 +17,7 @@
             <Russian>Мел (Синий)</Russian>
             <German>Kreide (Blau)</German>
             <Japanese>チョーク (青)</Japanese>
+            <Ukrainian>Синя крейда</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkGreen">
             <English>Chalk (Green)</English>
@@ -24,6 +26,7 @@
             <Russian>Мел (Зеленый)</Russian>
             <German>Kreide (Grün)</German>
             <Japanese>チョーク (緑)</Japanese>
+            <Ukrainian>Зелена крейда</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkRed">
             <English>Chalk (Red)</English>
@@ -32,6 +35,7 @@
             <Russian>Мел (Красный)</Russian>
             <German>Kreide (Rot)</German>
             <Japanese>チョーク (赤)</Japanese>
+            <Ukrainian>Червона крейда</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkWhite">
             <English>Chalk (White)</English>
@@ -40,6 +44,7 @@
             <Russian>Мел (Белый)</Russian>
             <German>Kreide (Weiß)</German>
             <Japanese>チョーク (白)</Japanese>
+            <Ukrainian>Біла крейда</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_ChalkYellow">
             <English>Chalk (Yellow)</English>
@@ -48,6 +53,7 @@
             <Russian>Мел (Желтый)</Russian>
             <German>Kreide (Gelb)</German>
             <Japanese>チョーク (黄)</Japanese>
+            <Ukrainian>Жовта крейда</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_LastUsed">
             <English>Last Used</English>
@@ -361,7 +367,7 @@
             <Korean>십자</Korean>
             <Japanese>十字</Japanese>
             <Chinesesimp>十字</Chinesesimp>
-            <Ukrainian>Перехрестя</Ukrainian>
+            <Ukrainian>Хрест</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_descChalk">
             <English>A chalk marker for tagging walls.</English>
@@ -370,6 +376,7 @@
             <Russian>Меловой маркер для разметки стен.</Russian>
             <German>Ein Kreidestift um Wände zu markieren.</German>
             <Japanese>壁に目印を描くためのチョークマーカー。</Japanese>
+            <Ukrainian>Шматок крейди для маркування стін.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_descSpraypaint">
             <English>A can of spray paint for tagging walls.</English>
@@ -398,7 +405,7 @@
             <Korean>마름모</Korean>
             <Japanese>菱形</Japanese>
             <Chinesesimp>菱形</Chinesesimp>
-            <Ukrainian>Діамант</Ukrainian>
+            <Ukrainian>Ромб</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_square">
             <English>Square</English>
@@ -424,7 +431,7 @@
             <Korean>채워진 사각형</Korean>
             <Japanese>四角 (塗りつぶし)</Japanese>
             <Chinesesimp>实心方形</Chinesesimp>
-            <Ukrainian>Заповнений Квадрат</Ukrainian>
+            <Ukrainian>Заповнений квадрат</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tagging_stencilVehicle">
             <English>Vehicle ID Marking</English>

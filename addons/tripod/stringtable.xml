@@ -35,7 +35,7 @@
             <Chinesesimp>狙击手专用三脚架</Chinesesimp>
             <Turkish>SSWT Kiti</Turkish>
             <Hungarian>SSWT Készlet</Hungarian>
-            <Ukrainian>Снайперский штатив</Ukrainian>
+            <Ukrainian>Снайперський штатив</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Tripod_Done">
             <English>Done</English>
@@ -107,7 +107,7 @@
             <Chinesesimp>调整</Chinesesimp>
             <Turkish>Ayarlamak</Turkish>
             <Hungarian>szabályzás</Hungarian>
-            <Ukrainian>підстроювання</Ukrainian>
+            <Ukrainian>регулювати</Ukrainian>
         </Key>
     </Package>
 </Project>

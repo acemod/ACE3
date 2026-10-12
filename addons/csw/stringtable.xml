@@ -16,7 +16,7 @@
             <Chinese>[CSW]12.7x108毫米 重機槍彈鏈</Chinese>
             <Chinesesimp>[班组] 12.7x108 mm 重机枪弹链</Chinesesimp>
             <Turkish>[CSW] 12.7x108mm HMG Belt</Turkish>
-            <Ukrainian>[CSW] 12.7x108 мм кулеметна стрічка</Ukrainian>
+            <Ukrainian>[CSW] 12,7x108 мм кулеметна стрічка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_displayName">
             <English>[CSW] 12.7x99mm HMG Belt</English>
@@ -33,7 +33,7 @@
             <Chinese>[CSW]12.7x99毫米 重機槍彈鏈</Chinese>
             <Chinesesimp>[班组] 12.7x99 mm 重机枪弹链</Chinesesimp>
             <Turkish>[CSW] 12.7x99mm HMG Belt</Turkish>
-            <Ukrainian>[CSW] 12.7x99 мм кулеметна стрічка</Ukrainian>
+            <Ukrainian>[CSW] 12,7x99 мм кулеметна стрічка</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_green_displayName">
             <English>[CSW] 12.7x99mm Tracer HMG Belt (Green)</English>
@@ -50,7 +50,7 @@
             <Chinese>[CSW] 12.7x99毫米 重機槍曳光彈鏈（綠色）</Chinese>
             <Chinesesimp>[班组] 12.7x99 mm 重机枪弹链（曳光，绿）</Chinesesimp>
             <Turkish>[CSW] 12.7x99mm Tracer HMG Belt (Green)</Turkish>
-            <Ukrainian>[CSW] 12.7x99 мм трас. кулеметна стрічка (зелені)</Ukrainian>
+            <Ukrainian>[CSW] 12,7x99 мм трас. кулеметна стрічка (зелені)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_red_displayName">
             <English>[CSW] 12.7x99mm Tracer HMG Belt (Red)</English>
@@ -67,7 +67,7 @@
             <Chinese>[CSW] 12.7x99毫米 重機槍曳光彈鏈（紅色）</Chinese>
             <Chinesesimp>[班组] 12.7x99 mm 重机枪弹链（曳光，红）</Chinesesimp>
             <Turkish>[CSW] 12.7x99mm Tracer HMG Belt (Red)</Turkish>
-            <Ukrainian>[CSW] 12.7x99 мм трас. кулеметна стрічка (червоні)</Ukrainian>
+            <Ukrainian>[CSW] 12,7x99 мм трас. кулеметна стрічка (червоні)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_yellow_displayName">
             <English>[CSW] 12.7x99mm Tracer HMG Belt (Yellow)</English>
@@ -84,7 +84,7 @@
             <Chinese>[CSW] 12.7x99毫米 重機槍曳光彈鏈（黃色）</Chinese>
             <Chinesesimp>[班组] 12.7x99 mm 重机枪弹链（曳光，黄）</Chinesesimp>
             <Turkish>[CSW] 12.7x99mm Tracer HMG Belt (Yellow)</Turkish>
-            <Ukrainian>[CSW] 12.7x99 мм трас. кулеметна стрічка (жовті)</Ukrainian>
+            <Ukrainian>[CSW] 12,7x99 мм трас. кулеметна стрічка (жовті)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_2b14_tube">
             <English>[CSW] 2B14 Tube Bag</English>
@@ -109,6 +109,7 @@
             <Spanish>CSW</Spanish>
             <Russian>CSW</Russian>
             <Japanese>CSW</Japanese>
+            <Ukrainian>CSW</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_AssembleCSW_progressBar">
             <English>Assembling Gun...</English>
@@ -149,6 +150,7 @@
             <Spanish>Deshabilitar disparo en carga</Spanish>
             <Russian>Выключить огонь при загрузке</Russian>
             <Japanese>装填時に発射を無効化</Japanese>
+            <Ukrainian>Не стріляти при заряджанні</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_DisassembleCSW_displayName">
             <English>Disassemble</English>
@@ -189,6 +191,7 @@
             <Spanish>Habilitar disparo en carga</Spanish>
             <Russian>Включить огонь при загрузке</Russian>
             <Japanese>装填時に発射を有効化</Japanese>
+            <Ukrainian>Стріляти при заряджанні</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_GMGBelt_descriptionShort">
             <English>Caliber: 20 mm&lt;br/&gt;Rounds: 20&lt;br /&gt;Used in: Grenade Launcher</English>
@@ -466,6 +469,7 @@
             <Russian>[CSW] Станковый M2 без навесного оборудования</Russian>
             <German>[CSW] Statisches M2 ohne Schild</German>
             <Japanese>[CSW] 設置型 M2 付属品無し</Japanese>
+            <Ukrainian>[CSW] Станковий M2 без обвісу</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_StaticM2ShieldBag_displayName">
             <English>[CSW] Static M2 w/ Shield</English>
@@ -490,6 +494,7 @@
             <Russian>[CSW] Станковый M2 со щитом и прицелом</Russian>
             <German>[CSW] Statisches M2 mit Schild und Optik</German>
             <Japanese>[CSW] 設置型 M2 照準・防盾付き</Japanese>
+            <Ukrainian>[CSW] Станковий M2 зі щитом і прицілом</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_StaticM2SightBag_displayName">
             <English>[CSW] Static M2 w/ Sight</English>
@@ -499,6 +504,7 @@
             <Russian>[CSW] Станковый M2 с прицелом</Russian>
             <German>[CSW] Statisches M2 mit Optik</German>
             <Japanese>[CSW] 設置型 M2 照準付き</Japanese>
+            <Ukrainian>[CSW] Станковий M2 з прицілом</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_actionLink">
             <English>Link %1</English>
@@ -753,7 +759,7 @@
             <Korean>여분의 탄약을 지면 또는 탄약 상자에 넣을 지 결정합니다.</Korean>
             <Japanese>追加の弾倉を地面に直接配置するか、弾薬箱内に保管するかを設定します。</Japanese>
             <Chinesesimp>设置多余的弹夹是存放在地面上还是弹药箱内</Chinesesimp>
-            <Ukrainian>Визначає чи будуть додаткові магазини лежати на землі або всередині сховища</Ukrainian>
+            <Ukrainian>Визначає, чи будуть додаткові магазини лежати на землі чи в ящику з боєприпасами</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazinesType_displayName">
             <English>Ammo Storage</English>
@@ -830,7 +836,7 @@
             <Chinese>[CSW] 6P57 部署型（低位）</Chinese>
             <Chinesesimp>[班组] 6P57 部署型（低）</Chinesesimp>
             <Turkish>[CSW] 6P57 Deployable Tripod (Low)</Turkish>
-            <Ukrainian>[CSW] 6P67 Розкладна тринога (низька)</Ukrainian>
+            <Ukrainian>[CSW] 6P57 Розкладна тринога (низька)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_kordTripodFolded_displayName">
             <English>[CSW] 6P57 Deployable Tripod</English>
@@ -847,7 +853,7 @@
             <Chinese>[CSW] 6P57 部署型三腳架</Chinese>
             <Chinesesimp>[班组] 6P57 部署型三脚架</Chinesesimp>
             <Turkish>[CSW] 6P57 Deployable Tripod</Turkish>
-            <Ukrainian>[CSW] 6P67 Розкладна тринога</Ukrainian>
+            <Ukrainian>[CSW] 6P57 Розкладна тринога</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_kordTripod_displayName">
             <English>6P57 Tripod</English>
@@ -864,7 +870,7 @@
             <Chinese>6P57 三腳架</Chinese>
             <Chinesesimp>6P57 三脚架</Chinesesimp>
             <Turkish>6P57 Tripod</Turkish>
-            <Ukrainian>6P67 Тринога</Ukrainian>
+            <Ukrainian>6P57 Тринога</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_kord_gun">
             <English>[CSW] KORD Gun Bag</English>
@@ -1137,7 +1143,7 @@
             <Chinese>[CSW] NSV 槍械袋</Chinese>
             <Chinesesimp>[班组] NSV 枪械包</Chinesesimp>
             <Turkish>[CSW] NSV Gun Bag</Turkish>
-            <Ukrainian>[CSW] Сумка з NSW</Ukrainian>
+            <Ukrainian>[CSW] Сумка з НСВ</Ukrainian>
         </Key>
         <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_description">
             <English>Scales time required to assemble and reload static weapons</English>

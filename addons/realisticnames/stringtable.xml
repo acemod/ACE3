@@ -179,7 +179,7 @@
             <Chinesesimp>M26 反人员跳雷</Chinesesimp>
             <Turkish>M26 Anti Personel Mayını</Turkish>
             <Hungarian>M26 gyalogsági ugróakna</Hungarian>
-            <Ukrainian>M26 протипіхотна міна</Ukrainian>
+            <Ukrainian>M26 протипіхотна вистрибувальна міна</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APERSMine_Name">
             <English>VS-50 Anti-Personnel Mine</English>
@@ -227,7 +227,7 @@
             <Chinesesimp>PMR-3 反人员绊雷</Chinesesimp>
             <Turkish>PMR-3 Telli Anti Personel Mayını</Turkish>
             <Hungarian>PMR-3 botlódrótos gyalogsági akna</Hungarian>
-            <Ukrainian>PMR-3 протипіхотна міна</Ukrainian>
+            <Ukrainian>PMR-3 протипіхотна міна (розтяжка)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_ATMine_Name">
             <English>M15 Anti-Tank Mine</English>
@@ -726,7 +726,7 @@
             <Chinesesimp>Ka-60 "虎鲸"（无武装）</Chinesesimp>
             <Turkish>Ka-60 Kasatka (Silahsız)</Turkish>
             <Hungarian>Ka-60 Kasatka (fegyvertelen)</Hungarian>
-            <Ukrainian>Ka-60 Касатка (неозброєний)</Ukrainian>
+            <Ukrainian>Ка-60 Касатка (неозброєний)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_02_v2_Name">
             <English>Ka-60 Kasatka (Black &amp; White)</English>
@@ -743,7 +743,7 @@
             <Chinese>Ka-60 "逆戟鯨"直升機 (黑&amp;白)</Chinese>
             <Chinesesimp>Ka-60 "虎鲸"（黑白）</Chinesesimp>
             <Turkish>Ka-60 Kasatka (Siyah &amp; Beyaz)</Turkish>
-            <Ukrainian>Ka-60 Касатка (чорно-білий)</Ukrainian>
+            <Ukrainian>Ка-60 Касатка (чорно-білий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Transport_02_Name">
             <English>AW101 Merlin</English>
@@ -1834,7 +1834,7 @@
             <Chinesesimp>L-159 ALCA（空对空）</Chinesesimp>
             <Turkish>L-159 ALCA (AA)</Turkish>
             <Hungarian>L-159 ALCA (Repülő-elhárító)</Hungarian>
-            <Ukrainian>L-159 ALCA (ВВ)</Ukrainian>
+            <Ukrainian>L-159 ALCA (ПП)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_Fighter_03_CAS_Name">
             <English>L-159 ALCA (CAS)</English>
@@ -2570,6 +2570,7 @@
             <Spanish>XQ-47B</Spanish>
             <Russian>XQ-47B</Russian>
             <Japanese>XQ-47B</Japanese>
+            <Ukrainian>XQ-47B</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_afv_wheeled_01">
             <English>Rooikat 120</English>
@@ -2657,7 +2658,7 @@
             <Chinesesimp>AK-15K（干旱）</Chinesesimp>
             <Turkish>AK-15K (Kurak)</Turkish>
             <Hungarian>AK-15K (sivatag)</Hungarian>
-            <Ukrainian>AK-15K (суха місцевість)</Ukrainian>
+            <Ukrainian>АК-15К (суха місцевість)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AK12U_lush">
             <English>AK-15K (Lush)</English>
@@ -2675,7 +2676,7 @@
             <Chinesesimp>AK-15K（繁茂）</Chinesesimp>
             <Turkish>AK-15K (Gür)</Turkish>
             <Hungarian>AK-15K (esőerdő)</Hungarian>
-            <Ukrainian>AK-15K (рясна рослинність)</Ukrainian>
+            <Ukrainian>АК-15К (рясна рослинність)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AK12_GL">
             <English>AK-15 GL</English>
@@ -2693,7 +2694,7 @@
             <Chinesesimp>AK-15 GP-34</Chinesesimp>
             <Turkish>AK-15 GL</Turkish>
             <Hungarian>AK-15 GL</Hungarian>
-            <Ukrainian>AK-15 GL</Ukrainian>
+            <Ukrainian>АК-15 GL</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AK12_GL_arid">
             <English>AK-15 GL (Arid)</English>
@@ -2711,7 +2712,7 @@
             <Chinesesimp>AK-15 GP-34（干旱）</Chinesesimp>
             <Turkish>AK-15AK-15 GL (Kurak)</Turkish>
             <Hungarian>AK-15 GL (sivatag)</Hungarian>
-            <Ukrainian>AK-15 GL (суха місцевість)</Ukrainian>
+            <Ukrainian>АК-15 GL (суха місцевість)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AK12_GL_lush">
             <English>AK-15 GL (Lush)</English>
@@ -2729,7 +2730,7 @@
             <Chinesesimp>AK-15 GP-34（繁茂）</Chinesesimp>
             <Turkish>AK-15 GL (Gür)</Turkish>
             <Hungarian>AK-15 GL (esőerdő)</Hungarian>
-            <Ukrainian>AK-15 GL (рясна рослинність)</Ukrainian>
+            <Ukrainian>АК-15 GL (рясна рослинність)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AK12_arid">
             <English>AK-15 (Arid)</English>
@@ -2747,7 +2748,7 @@
             <Chinesesimp>AK-15（干旱）</Chinesesimp>
             <Turkish>AK-15 (Kurak)</Turkish>
             <Hungarian>AK-15 (sivatag)</Hungarian>
-            <Ukrainian>AK-15 (суха місцевість)</Ukrainian>
+            <Ukrainian>АК-15 (суха місцевість)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AK12_lush">
             <English>AK-15 (Lush)</English>
@@ -2765,7 +2766,7 @@
             <Chinesesimp>AK-15（繁茂）</Chinesesimp>
             <Turkish>AK-15 (Gür)</Turkish>
             <Hungarian>AK-15 (esőerdő)</Hungarian>
-            <Ukrainian>AK-15 (рясна рослинність)</Ukrainian>
+            <Ukrainian>АК-15 (рясна рослинність)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AKM">
             <English>AKM</English>
@@ -3097,6 +3098,7 @@
             <Spanish>GPBO-40</Spanish>
             <Russian>GPBO-40</Russian>
             <Japanese>GPBO-40</Japanese>
+            <Ukrainian>GPBO-40</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL_sand">
             <English>MSBS Grot GL (Sand)</English>
@@ -3248,6 +3250,7 @@
             <Spanish>SIX-12</Spanish>
             <Russian>SIX-12</Russian>
             <Japanese>SIX-12</Japanese>
+            <Ukrainian>SIX-12</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS_sand">
             <English>MSBS Grot SG (Sand)</English>
@@ -3908,7 +3911,7 @@
             <Chinesesimp>HK416A5 14.5英寸（卡其色）</Chinesesimp>
             <Turkish>HK416A5 14.5 " (Haki)</Turkish>
             <Hungarian>HK416A5 14.5 " (Khaki)</Hungarian>
-            <Ukrainian>HK416A5 14.5 " (хаки)</Ukrainian>
+            <Ukrainian>HK416A5 14.5" (хакі)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_02_snd">
             <English>HK416A5 14.5 " (Sand)</English>
@@ -4374,7 +4377,7 @@
             <Chinesesimp>"迷你长钉"（防空）</Chinesesimp>
             <Turkish>Mini-Spike (AA)</Turkish>
             <Hungarian>Mini-Spike (Repülő-elhárító)</Hungarian>
-            <Ukrainian>Mini-Spike (SAM)</Ukrainian>
+            <Ukrainian>Mini-Spike (ЗРК)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Titan_short_Name">
             <English>Mini-Spike (AT)</English>
@@ -4528,7 +4531,7 @@
             <Chinese>輕型突擊車2式 ("麥士蒂索人"-M型反坦克導彈)</Chinese>
             <Chinesesimp>轻型突击车二型（"麦士蒂索"-M）</Chinesesimp>
             <Turkish>LSV Mk. II (Metis-M)</Turkish>
-            <Ukrainian>LSV Mk. II (Метис-M)</Ukrainian>
+            <Ukrainian>LSV Mk. II (Метис-М)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_unarmed">
             <English>LSV Mk. II</English>
@@ -5420,7 +5423,7 @@
             <Korean>CZ 581 (소드오프)</Korean>
             <Japanese>CZ 581 (ソードオフ)</Japanese>
             <Chinesesimp>CZ 581 (截短)</Chinesesimp>
-            <Ukrainian>CZ 581 (Sawed-Off)</Ukrainian>
+            <Ukrainian>CZ 581 (обріз)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_01_Name">
             <English>VS-121</English>
@@ -5582,7 +5585,7 @@
             <Chinesesimp>SIG 556（森林迷彩）</Chinesesimp>
             <Turkish>SIG 556 (Orman)</Turkish>
             <Hungarian>SIG 556 (Erdőmintás)</Hungarian>
-            <Ukrainian>SIG 556 (Ліс)</Ukrainian>
+            <Ukrainian>SIG 556 (лісовий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_04">
             <English>ASP-1 Kir (Black)</English>
@@ -5726,7 +5729,7 @@
             <Chinesesimp>M14（橄榄色）</Chinesesimp>
             <Turkish>M14 (Zeytin Yeşili)</Turkish>
             <Hungarian>M14 (Olíva)</Hungarian>
-            <Ukrainian>M14 (олива)</Ukrainian>
+            <Ukrainian>M14 (оливковий)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_07_blk">
             <English>QBU-88 (Black)</English>

@@ -71,7 +71,7 @@
             <Chinesesimp>心肺复苏（CPR）</Chinesesimp>
             <Turkish>CPR</Turkish>
             <Hungarian>Újraélesztés</Hungarian>
-            <Ukrainian>Серцево-легенева реанімація</Ukrainian>
+            <Ukrainian>СЛР</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_CheckBloodPressure">
             <English>Check Blood Pressure</English>
@@ -161,7 +161,7 @@
             <Chinesesimp>绷带（弹性型）</Chinesesimp>
             <Turkish>Elastik Bandaj</Turkish>
             <Hungarian>Rögzitő kötszer</Hungarian>
-            <Ukrainian>Давляча пов'язка</Ukrainian>
+            <Ukrainian>Еластичний бинт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_FieldDressing">
             <English>Field Dressing</English>
@@ -214,7 +214,7 @@
             <Chinesesimp>正在进行心肺复苏...</Chinesesimp>
             <Turkish>CPR Yapılıyor...</Turkish>
             <Hungarian>Újraélesztés folyamatban...</Hungarian>
-            <Ukrainian>Серцево-легенева реанімація...</Ukrainian>
+            <Ukrainian>Виконання СЛР...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Plasma4_1000">
             <English>Give Plasma IV (1000ml)</English>
@@ -285,7 +285,7 @@
             <Chinese>止血粉</Chinese>
             <Chinesesimp>绷带（止血型）</Chinesesimp>
             <Hungarian>QuikClot</Hungarian>
-            <Ukrainian>Бинт гемостатичний QuikClot</Ukrainian>
+            <Ukrainian>QuikClot</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_RemoveTourniquet">
             <English>Remove Tourniquet</English>
@@ -391,7 +391,7 @@
             <Japanese>%1 が心肺蘇生(CPR)を実施</Japanese>
             <Chinese>%1 已執行心肺復甦術</Chinese>
             <Chinesesimp>%1 已进行心肺复苏</Chinesesimp>
-            <Ukrainian>%1 провів серцево-легеневу реанімацію</Ukrainian>
+            <Ukrainian>%1 провів СЛР</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_appliedSplint">
             <English>%1 applied a splint</English>
@@ -408,7 +408,7 @@
             <Chinese>%1 已套用固定板</Chinese>
             <Chinesesimp>%1 已安装夹板</Chinesesimp>
             <Turkish>% 1 splint uyguladı</Turkish>
-            <Ukrainian>%1 наклав Шину</Ukrainian>
+            <Ukrainian>%1 наклав шину</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_appliedTourniquet">
             <English>%1 applied a tourniquet</English>
@@ -586,7 +586,7 @@
             <Chinese>啟用不同繃帶的可用行為而非一般包紮動作。</Chinese>
             <Chinesesimp>启用不同绷带类型的治疗操作，而不是通用的绷带操作。\n此外，也可以启用包扎伤口开裂。</Chinesesimp>
             <Turkish>Genel Bandaj eylemi yerine farklı bandaj türleri için tedavi eylemlerini etkinleştirir. \ Ek olarak, bandajlı yaraların yeniden açılması da etkinleştirilebilir.</Turkish>
-            <Ukrainian>Включає дії для різних типів пов'язок, замість загальної дії "Перев'язка".</Ukrainian>
+            <Ukrainian>Включає дії для різних типів пов'язок, замість загальної дії "Перев'язка".\nКрім того, можна ввімкнути повторне відкриття перев'язаних ран.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_DisplayName">
             <English>Advanced Bandages</English>
@@ -636,7 +636,7 @@
             <Chinese>啟用檢查脈搏、血壓以及病患反應的動作而非一般的診斷動作。\n當停用時，CPR只會在需要時出現。\n當這個選項啟用時必須診斷病患是否無意識或者心搏停止。</Chinese>
             <Chinesesimp>启用后，可以检查脉搏、血压和反应治疗，而不是通用诊断。\n禁用时，心肺复苏操作将仅在适当时显示。\n此设置操作启用后必须需要先确定一个人是失去知觉还是心脏骤停。</Chinesesimp>
             <Turkish>Genel Teşhis eylemi yerine Nabzı Kontrol Et, Kan Basıncını Kontrol Et ve Yanıtı Kontrol Et tedavi eylemlerini etkinleştirir. \ Devre dışı bırakıldığında, CPR eylemi yalnızca CPR gerçekleştirilmesi uygun olduğunda gösterilecektir.</Turkish>
-            <Ukrainian>Включає дії "Перевірити пульс", "Перевірити тиск" і "Перевірити реакцію" замість загальної дії "Діагностика".</Ukrainian>
+            <Ukrainian>Включає дії "Перевірити пульс", "Перевірити тиск" і "Перевірити реакцію" замість загальної дії "Діагностика".\nЯкщо вимкнено, дія СЛР показуватиметься лише тоді, коли її доречно виконати.\nДії, які вмикає цей параметр, потрібні, щоб визначити, чи людина без свідомості, чи в неї зупинка серця.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DiagnoseCardiacArrest">
             <English>Enabled &amp; Can Diagnose Death/Cardiac Arrest</English>
@@ -695,7 +695,7 @@
             <Japanese>有効化するともっと多くの多様な機能を持つ医薬品を使えます。また、アデノシンが利用可能になります。</Japanese>
             <Chinese>是否擴展藥物管控使其更深度化。並且，啟用腺苷以及阿托品的使用次數</Chinese>
             <Chinesesimp>可以扩展、更深入地使用药物。同时，能够使用腺苷以及阿托品。</Chinesesimp>
-            <Ukrainian>Встановлює розширене використання ліків</Ukrainian>
+            <Ukrainian>Вмикає розширену, детальнішу обробку ліків. Також дозволяє використовувати аденозин.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
@@ -748,7 +748,7 @@
             <Chinesesimp>个人急救包可用于战地缝合手术或进阶伤口系统使用</Chinesesimp>
             <Turkish>Alan dikişi veya gelişmiş tedavi için Kişisel Yardım Kiti</Turkish>
             <Hungarian>Elsősegélycsomag, terepen való sebvarráshoz és haladó ellátáshoz</Hungarian>
-            <Ukrainian>Польова аптчека для розширеного лікування і зашивання ран</Ukrainian>
+            <Ukrainian>Польова аптечка для розширеного лікування і зашивання ран</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Aid_Kit_Display">
             <English>Personal Aid Kit</English>
@@ -965,7 +965,7 @@
             <Chinese>啟用個人急救包能對自己使用。</Chinese>
             <Chinesesimp>启用自身能使用个人急救包。</Chinesesimp>
             <Turkish>Kendini iyileştirmek için PAK'ların kullanılmasını sağlar.</Turkish>
-            <Ukrainian>Дають змогу використовувати аптечку на собі поодинці.</Ukrainian>
+            <Ukrainian>Дозволяє використовувати аптечку на собі.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_DisplayName">
             <English>Self PAK Usage</English>
@@ -1164,7 +1164,7 @@
             <Chinese>套上固定板</Chinese>
             <Chinesesimp>安装夹板</Chinesesimp>
             <Turkish>Atel Uygula</Turkish>
-            <Ukrainian>Накласти Шину</Ukrainian>
+            <Ukrainian>Накласти шину</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Apply_Tourniquet">
             <English>Apply Tourniquet</English>
@@ -1199,7 +1199,7 @@
             <Chinese>套用固定板中...</Chinese>
             <Chinesesimp>正在安装夹板...</Chinesesimp>
             <Turkish>Atel Uygulanıyor...</Turkish>
-            <Ukrainian>Накладається Шина...</Ukrainian>
+            <Ukrainian>Накладання шини...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Applying_Tourniquet">
             <English>Applying Tourniquet...</English>
@@ -1324,7 +1324,7 @@
             <Chinesesimp>无</Chinesesimp>
             <Turkish>Hiçbiri</Turkish>
             <Hungarian>Nincs</Hungarian>
-            <Ukrainian>Ні</Ukrainian>
+            <Ukrainian>Немає</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AssignMedicVehicle_enabled_DisplayName">
             <English>Is Medical Vehicle</English>
@@ -1552,7 +1552,7 @@
             <Chinesesimp>绷带（弹性型）</Chinesesimp>
             <Turkish>Bandaj kiti, Elastik</Turkish>
             <Hungarian>Rugalmas kötszercsomag, "rögzítő"</Hungarian>
-            <Ukrainian>Давляча пов'язка</Ukrainian>
+            <Ukrainian>Еластичний бинт</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandage_Elastic_Desc_Use">
             <English>Allows an even compression and extra support to the injured area.</English>
@@ -1570,7 +1570,7 @@
             <Chinesesimp>可对伤口持续压迫并固定以防止伤口情况变严重</Chinesesimp>
             <Turkish>Yaralı bölgeye eşit bir sıkıştırma ve ekstra destek sağlar.</Turkish>
             <Hungarian>Egyenletes nyomást és támogatást biztosít a sebesült felületnek.</Hungarian>
-            <Ukrainian>Пов'язка, що давить, забезпечує рівномірне стиснення і додаткову підтримку пошкодженої ділянки</Ukrainian>
+            <Ukrainian>Еластична пов'язка забезпечує рівномірне стиснення і додаткову підтримку пошкодженої ділянки</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandage_Elastic_Display">
             <English>Bandage (Elastic)</English>
@@ -1588,7 +1588,7 @@
             <Chinesesimp>绷带（弹性型）</Chinesesimp>
             <Turkish>Bandaj (Elastik)</Turkish>
             <Hungarian>Rögzító kötszer</Hungarian>
-            <Ukrainian>Пов'язка (давить)</Ukrainian>
+            <Ukrainian>Пов'язка (еластична)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandage_HitBody">
             <English>Bandage Torso</English>
@@ -1889,7 +1889,7 @@
             <Korean>심폐소생술 시 제일 높은 성공 가능성을 결정합니다.\n이 가능성은 환자가 최소 "혈액을 조금 잃음"일 때 사용됩니다.</Korean>
             <Japanese>心肺蘇生(CPR)を行うことで脈拍が回復する最高成功確率を設定します。\nこの値は患者が"いくらか失血している"時以上の場合に使用されます。\n患者の血液量が最低値と最大値の間だった場合は、補完確率が適用されます。</Japanese>
             <Chinesesimp>实施心肺复苏恢复心律的最大可能性。\n当伤员最多“失血一些”时，就取该最大值。\n当伤员的血量介于最小和最大阈值之间时，将使用插值概率。</Chinesesimp>
-            <Ukrainian>Максимальна ймовірність того, що виконання штучного дихання відновить серцевий ритм.\nЦе максимальне значення використовується, коли пацієнт принаймні отримав статус "Фатальна крововтрата".\n Інтерпольована ймовірність використовується, коли об'єм крові пацієнта перебуває між мінімальним і максимальним порогами.</Ukrainian>
+            <Ukrainian>Максимальна ймовірність того, що СЛР відновить серцевий ритм.\nЦе максимальне значення використовується, коли пацієнт має щонайбільше статус "Невелика крововтрата".\nІнтерпольована ймовірність використовується, коли об'єм крові пацієнта перебуває між мінімальним і максимальним порогами.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMax_DisplayName">
             <English>CPR Success Chance Maximum</English>
@@ -1917,7 +1917,7 @@
             <Korean>심폐소생술 시 제일 낮은 성공 가능성을 결정합니다.\n이 가능성은 환자가 최소 "심각한 양의 혈액을 잃음"일 때 사용됩니다.</Korean>
             <Japanese>心肺蘇生(CPR)を行うことで脈拍が回復する最低成功確率を設定します。\nこの値は患者が"致命的な程失血している"時に使用されます。\n患者の血液量が最低値と最大値の間だった場合は、補完確率が適用されます。</Japanese>
             <Chinesesimp>实施心肺复苏恢复心律的最小可能性。\n当伤员至少有"致命失血量"时，就取该最小值。\n当伤员的血量介于最小和最大阈值之间时，将使用插值概率。</Chinesesimp>
-            <Ukrainian>Мінімальна вірогідність того, що виконання штучного дихання відновить серцевий ритм.\nЦе мінімальне значення використовується, коли пацієнт принаймні отримав статус "Фатальна крововтрата".\n Інтерпольована вірогідність використовується, коли об'єм крові пацієнта перебуває між мінімальним і максимальним порогами.</Ukrainian>
+            <Ukrainian>Мінімальна ймовірність того, що СЛР відновить серцевий ритм.\nЦе мінімальне значення використовується, коли пацієнт має щонайменше статус "Фатальна крововтрата".\nІнтерпольована ймовірність використовується, коли об'єм крові пацієнта перебуває між мінімальним і максимальним порогами.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMin_DisplayName">
             <English>CPR Success Chance Minimum</English>
@@ -2073,7 +2073,7 @@
             <Chinesesimp>高</Chinesesimp>
             <Turkish>Yüksek</Turkish>
             <Hungarian>Magas</Hungarian>
-            <Ukrainian>Високе</Ukrainian>
+            <Ukrainian>Високий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Log">
             <English>%1 checked Blood Pressure: %2</English>
@@ -2108,7 +2108,7 @@
             <Chinesesimp>低</Chinesesimp>
             <Turkish>Düşük</Turkish>
             <Hungarian>Alacsony</Hungarian>
-            <Ukrainian>Низьке</Ukrainian>
+            <Ukrainian>Низький</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_NoBloodpressure">
             <English>No Blood Pressure</English>
@@ -2144,7 +2144,7 @@
             <Chinesesimp>正常</Chinesesimp>
             <Turkish>Normal</Turkish>
             <Hungarian>Normális</Hungarian>
-            <Ukrainian>Нормальне</Ukrainian>
+            <Ukrainian>Нормальний</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Output_1">
             <English>You find a blood pressure of %2/%3</English>
@@ -2340,7 +2340,7 @@
             <Chinesesimp>无</Chinesesimp>
             <Turkish>Yok</Turkish>
             <Hungarian>Nincs</Hungarian>
-            <Ukrainian>Ні</Ukrainian>
+            <Ukrainian>Немає</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Normal">
             <English>Normal</English>
@@ -2411,7 +2411,7 @@
             <Chinesesimp>心率过快</Chinesesimp>
             <Turkish>Yüksek nabız ölçtün</Turkish>
             <Hungarian>A szívverés-szám magas</Hungarian>
-            <Ukrainian>Пульс прискорений</Ukrainian>
+            <Ukrainian>Пульс сильний</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Output_4">
             <English>You find a normal Heart Rate</English>
@@ -2691,7 +2691,7 @@
             <Korean>상처 제거</Korean>
             <Japanese>外傷を取り除く</Japanese>
             <Chinesesimp>清理创伤</Chinesesimp>
-            <Ukrainian>Очистити рану</Ukrainian>
+            <Ukrainian>Зцілення травм</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_Description">
             <English>Controls whether a PAK should be consumed after use.</English>
@@ -4221,7 +4221,7 @@
             <Chinese>繃帶 (止血粉)</Chinese>
             <Chinesesimp>绷带（止血型）</Chinesesimp>
             <Hungarian>Általános zárókötszer (QuikClot)</Hungarian>
-            <Ukrainian>Первинний перев'язувальний пакет (QuikClot)</Ukrainian>
+            <Ukrainian>Пов'язка (QuikClot)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Release">
             <English>Release</English>
@@ -4913,7 +4913,7 @@
             <Korean>제우스일 때 모든 치료 시간에 이 계수를 곱합니다.</Korean>
             <Japanese>Zeus操作中は、すべての治療時間にこの係数を掛けます。</Japanese>
             <Chinesesimp>宙斯的医疗时间乘数</Chinesesimp>
-            <Ukrainian>Помножте весь час лікування на цей коефіцієнт, коли ви перебуваєте в Zeus.</Ukrainian>
+            <Ukrainian>Множить весь час лікування на цей коефіцієнт у Zeus.</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCoeffZeus_DisplayName">
             <English>Zeus Treatment Time Coefficient</English>
@@ -5059,7 +5059,7 @@
             <German>Autoinjektor-Behandlungszeit für Überqualifizierte</German>
             <Korean>숙련도에 따른 자동주사기 투여 시간</Korean>
             <Japanese>熟練者の自動注射器の所要時間</Japanese>
-            <Ukrainian>Кваліфікований час обробки автоін'єктора</Ukrainian>
+            <Ukrainian>Час автоін'єктора (фахівець)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedIV_Description">
             <English>Time, in seconds, required for a unit exceeding required training level to administer an IV bag.</English>
@@ -5081,7 +5081,7 @@
             <German>Infusion-Behandlungszeit für Überqualifizierte</German>
             <Korean>숙련도에 따른 수액용기 투여 시간</Korean>
             <Japanese>熟練者の点滴の所要時間</Japanese>
-            <Ukrainian>Кваліфікований час обробки пакета для внутрішньовенного вливання</Ukrainian>
+            <Ukrainian>Час в/в вливання (фахівець)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedSplint_Description">
             <English>Time, in seconds, required for a unit exceeding required training level to apply a splint.</English>
@@ -5103,7 +5103,7 @@
             <German>Schienenbehandlungszeit für Überqualifizierte</German>
             <Korean>숙련도에 따른 부목 적용 시간</Korean>
             <Japanese>熟練者の添え木の所要時間</Japanese>
-            <Ukrainian>Кваліфікований час накладення шини</Ukrainian>
+            <Ukrainian>Час накладення шини (фахівець)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedTourniquet_Description">
             <English>Time, in seconds, required for a unit exceeding required training level to apply or remove a tourniquet.</English>
@@ -5125,7 +5125,7 @@
             <German>Tourniquet-Behandlungszeit für Überqualifizierte</German>
             <Korean>숙련도에 따른 지혈대 적용 시간</Korean>
             <Japanese>熟練者の止血帯の所要時間</Japanese>
-            <Ukrainian>Кваліфікований час накладення турнікета</Ukrainian>
+            <Ukrainian>Час турнікета (фахівець)</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TriageCard_NoEntry">
             <English>No entries on this triage card.</English>
@@ -5179,7 +5179,7 @@
             <Chinesesimp>延后</Chinesesimp>
             <Turkish>Ertelenmiş</Turkish>
             <Hungarian>Késleltetett</Hungarian>
-            <Ukrainian>Термінова допомога</Ukrainian>
+            <Ukrainian>Відкладена допомога</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Triage_Status_Immediate">
             <English>Immediate</English>
@@ -5214,7 +5214,7 @@
             <Chinese>輕微</Chinese>
             <Chinesesimp>轻微</Chinesesimp>
             <Turkish>Düşük</Turkish>
-            <Ukrainian>Мінімально</Ukrainian>
+            <Ukrainian>Мінімальна допомога</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Triage_Status_None">
             <English>None</English>
@@ -5267,7 +5267,7 @@
             <Chinese>從&lt;br/&gt;%2卸載&lt;br/&gt;%1</Chinese>
             <Chinesesimp>从&lt;br/&gt;%2卸载&lt;br/&gt;%1</Chinesesimp>
             <Hungarian>1%&lt;br/&gt;kirakodva ebből:&lt;br/&gt;%2</Hungarian>
-            <Ukrainian>%1&lt;br/&gt; Вивантажено з&lt;br/&gt;%2</Ukrainian>
+            <Ukrainian>Вивантажено&lt;br/&gt;%1 з&lt;br/&gt;%2</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Use_Aid_Kit">
             <English>Use Personal Aid Kit</English>

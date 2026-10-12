@@ -7,6 +7,7 @@
             <Spanish>Ocupado...</Spanish>
             <Russian>Занято...</Russian>
             <Japanese>作業中...</Japanese>
+            <Ukrainian>Зачекайте...</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_action_title">
             <English>Wardrobe</English>
@@ -15,6 +16,7 @@
             <Russian>Гардероб</Russian>
             <German>Garderobe</German>
             <Japanese>ワードローブ</Japanese>
+            <Ukrainian>Гардероб</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_bandannaAdd">
             <English>Add Bandanna</English>
@@ -22,6 +24,7 @@
             <Spanish>Añadir Bandana</Spanish>
             <Russian>Надеть бандану</Russian>
             <Japanese>バンダナを着ける</Japanese>
+            <Ukrainian>Надіти бандану</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_bandannaRemove">
             <English>Remove Bandanna</English>
@@ -29,6 +32,7 @@
             <Spanish>Quitar Bandana</Spanish>
             <Russian>Снять бандану</Russian>
             <Japanese>バンダナを外す</Japanese>
+            <Ukrainian>Зняти бандану</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_collarClose">
             <English>Close collar</English>
@@ -36,6 +40,7 @@
             <Spanish>Cerrar Cuello</Spanish>
             <Russian>Застегнуть воротник</Russian>
             <Japanese>襟をしめる</Japanese>
+            <Ukrainian>Застібнути комір</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_collarOpen">
             <English>Open collar</English>
@@ -43,6 +48,7 @@
             <Spanish>Abrir Cuello</Spanish>
             <Russian>Расстегнуть воротник</Russian>
             <Japanese>襟をあける</Japanese>
+            <Ukrainian>Розстібнути комір</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_enable_action">
             <English>ACE Interaction</English>
@@ -51,6 +57,7 @@
             <Russian>ACE взаимодействие</Russian>
             <German>Aktivieren ACE Interaction</German>
             <Japanese>ACE インタラクション</Japanese>
+            <Ukrainian>ACE Взаємодія</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_foliageAdd">
             <English>Add scrim/foliage</English>
@@ -58,6 +65,7 @@
             <Spanish>Añadir malla de camuflaje/vegetación</Spanish>
             <Russian>Добавить сетку/листву</Russian>
             <Japanese>スクリム/偽装を付ける</Japanese>
+            <Ukrainian>Додати сітку/листя</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_foliageRemove">
             <English>Remove scrim/foliage</English>
@@ -65,6 +73,7 @@
             <Spanish>Quitar malla de camuflaje/vegetación</Spanish>
             <Russian>Снять сетку/листву</Russian>
             <Japanese>スクリム/偽装を外す</Japanese>
+            <Ukrainian>Зняти сітку/листя</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glassesOff">
             <English>Take glasses off</English>
@@ -72,6 +81,7 @@
             <Spanish>Quitarse Gafas</Spanish>
             <Russian>Снять очки</Russian>
             <Japanese>眼鏡を外す</Japanese>
+            <Ukrainian>Зняти окуляри</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glassesOn">
             <English>Put glasses on</English>
@@ -79,6 +89,7 @@
             <Spanish>Ponerse Gafas</Spanish>
             <Russian>Надеть очки</Russian>
             <Japanese>眼鏡を着ける</Japanese>
+            <Ukrainian>Надіти окуляри</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glovesOff">
             <English>Take gloves off</English>
@@ -86,6 +97,7 @@
             <Spanish>Quitarse guantes</Spanish>
             <Russian>Снять перчатки</Russian>
             <Japanese>グローブを外す</Japanese>
+            <Ukrainian>Зняти рукавички</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glovesOn">
             <English>Wear gloves</English>
@@ -93,6 +105,7 @@
             <Spanish>Ponerse guantes</Spanish>
             <Russian>Надеть перчатки</Russian>
             <Japanese>グローブを着ける</Japanese>
+            <Ukrainian>Надіти рукавички</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_gogglesOff">
             <English>Take goggles off</English>
@@ -100,6 +113,7 @@
             <Spanish>Quitarse Gafas de Protección</Spanish>
             <Russian>Снять очки</Russian>
             <Japanese>ゴーグルを外す</Japanese>
+            <Ukrainian>Зняти окуляри</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_gogglesOn">
             <English>Put goggles on</English>
@@ -107,6 +121,7 @@
             <Spanish>Ponerse Gafas de Protección</Spanish>
             <Russian>Надеть очки</Russian>
             <Japanese>ゴーグルを着ける</Japanese>
+            <Ukrainian>Надіти окуляри</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_hoodLower">
             <English>Lower hood</English>
@@ -115,6 +130,7 @@
             <Russian>Снять капюшон</Russian>
             <German>Kapuze absetzen</German>
             <Japanese>フードを下ろす</Japanese>
+            <Ukrainian>Зняти каптур</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_hoodRaise">
             <English>Raise hood</English>
@@ -123,6 +139,7 @@
             <Russian>Надеть капюшон</Russian>
             <German>Kapuze aufsetzen</German>
             <Japanese>フードを上げる</Japanese>
+            <Ukrainian>Накинути каптур</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_jacketClose">
             <English>Close jacket</English>
@@ -130,6 +147,7 @@
             <Spanish>Cerrar chaqueta</Spanish>
             <Russian>Застегнуть куртку</Russian>
             <Japanese>ジャケットを閉じる</Japanese>
+            <Ukrainian>Застібнути куртку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_jacketOpen">
             <English>Open jacket</English>
@@ -137,6 +155,7 @@
             <Spanish>Abrir chaqueta</Spanish>
             <Russian>Растегнуть куртку</Russian>
             <Japanese>ジャケットを開く</Japanese>
+            <Ukrainian>Розстібнути куртку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_maskOff">
             <English>Take mask off</English>
@@ -144,6 +163,7 @@
             <Spanish>Quitarse máscara</Spanish>
             <Russian>Снять маску</Russian>
             <Japanese>マスクを外す</Japanese>
+            <Ukrainian>Зняти маску</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_maskOn">
             <English>Put mask on</English>
@@ -151,6 +171,7 @@
             <Spanish>Ponerse máscara</Spanish>
             <Russian>Надеть маску</Russian>
             <Japanese>マスクを着ける</Japanese>
+            <Ukrainian>Надіти маску</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_missingComponents">
             <English>Cannot switch to&lt;br/&gt;%1&lt;br/&gt;due to missing components</English>
@@ -158,6 +179,7 @@
             <Spanish>No se puede cambiar a&lt;br/&gt;%1&lt;br/&gt;debido a la falta de componentes</Spanish>
             <Russian>Не удается переключиться на&lt;br/&gt;%1&lt;br/&gt;из-за отсутствия компонентов</Russian>
             <Japanese>コンポーネントが不足しているため&lt;br/&gt;%1&lt;br/&gt;変更が出来ません</Japanese>
+            <Ukrainian>Не вдається змінити на:&lt;br/&gt;%1&lt;br/&gt;бракує компонентів</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_setting_category_main">
             <English>ACE Wardrobe</English>
@@ -166,6 +188,7 @@
             <Russian>ACE Гардероб</Russian>
             <German>ACE Garderobe</German>
             <Japanese>ACE ワードローブ</Japanese>
+            <Ukrainian>ACE Гардероб</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_sleevesDown">
             <English>Roll sleeves down</English>
@@ -173,6 +196,7 @@
             <Spanish>Bajarse las mangas</Spanish>
             <Russian>Раскатать рукава</Russian>
             <Japanese>そでを下げ伸ばす</Japanese>
+            <Ukrainian>Опустити рукава</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_sleevesUp">
             <English>Roll sleeves up</English>
@@ -180,11 +204,13 @@
             <Spanish>Subirse las mangas</Spanish>
             <Russian>Закатать рукава</Russian>
             <Japanese>そでを巻き上げる</Japanese>
+            <Ukrainian>Закотити рукава</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_slotOccupied">
             <English>Your %1 slot is already occupied</English>
             <Russian>Ваш слот %1 уже занят</Russian>
             <Japanese>%1番目のスロットは占有済</Japanese>
+            <Ukrainian>Слот "%1" уже зайнятий</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_tieOff">
             <English>Remove tie</English>
@@ -192,6 +218,7 @@
             <Spanish>Quitar Corbata</Spanish>
             <Russian>Снять галстук</Russian>
             <Japanese>ネクタイを外す</Japanese>
+            <Ukrainian>Зняти краватку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_tieOn">
             <English>Wear tie</English>
@@ -199,6 +226,7 @@
             <Spanish>Poner Corbata</Spanish>
             <Russian>Надеть галстук</Russian>
             <Japanese>ネクタイを着ける</Japanese>
+            <Ukrainian>Надіти краватку</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_visorDown">
             <English>Visor down</English>
@@ -206,6 +234,7 @@
             <Spanish>Visor abajo</Spanish>
             <Russian>Опустить забрало</Russian>
             <Japanese>バイザーを下ろす</Japanese>
+            <Ukrainian>Опустити візор</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_visorUp">
             <English>Visor up</English>
@@ -213,6 +242,7 @@
             <Spanish>Visor arriba</Spanish>
             <Russian>Поднять забрало</Russian>
             <Japanese>バイザーを上げる</Japanese>
+            <Ukrainian>Підняти візор</Ukrainian>
         </Key>
         <Key ID="STR_ACE_Wardrobe_wardrobeModifiable">
             <English>Wardrobe Modifiable</English>
@@ -220,6 +250,7 @@
             <Spanish>Ropero Modificable</Spanish>
             <Russian>Гардероб может быть изменен</Russian>
             <Japanese>ワードローブ改変対応</Japanese>
+            <Ukrainian>Змінюється в гардеробі</Ukrainian>
         </Key>
     </Package>
 </Project>
