@@ -29,34 +29,14 @@ if (_currentPylon == count _pylonsToConfigure) exitWith {};
         private _pylonIndex = _pylonsToConfigure select _currentPylon;
         TRACE_2("",_currentPylon,_pylonIndex);
 
-        // Check for unused weapons on each turret after applying the new loadout
-        private _currentPylonMagazine = (getPylonMagazines GVAR(currentAircraft)) select _pylonIndex;
-        private _weaponToRemove = getText (configFile >> "CfgMagazines" >> _currentPylonMagazine >> "pylonWeapon");
-
         private _combo = GVAR(comboBoxes) select _pylonIndex select 0;
         private _pylonMagazine = _combo lbData (lbCurSel _combo);
         private _turret = (GVAR(comboBoxes) select _pylonIndex select 2) getVariable [QGVAR(turret), []];
         if (_turret isEqualTo [-1]) then {_turret = [];};
 
-        // Preserve ammunition when only changing the assigned turret
-        private _count = if (_pylonMagazine == _currentPylonMagazine) then {
-            GVAR(currentAircraft) ammoOnPylon (_pylonIndex + 1)
-        } else {
-            if (GVAR(rearmNewPylons) || {GVAR(isCurator)}) then {
-                getNumber (configFile >> "CfgMagazines" >> _pylonMagazine >> "count")
-            } else {
-                0
-            }
-        };
-
         [
             QGVAR(setPylonLoadOutEvent),
-            [GVAR(currentAircraft), _pylonIndex + 1, _pylonMagazine, _turret, _weaponToRemove]
-        ] call CBA_fnc_globalEvent;
-
-        [
-            QGVAR(setAmmoOnPylonEvent),
-            [GVAR(currentAircraft), _pylonIndex + 1, _count],
+            [GVAR(currentAircraft), _pylonIndex + 1, _pylonMagazine, _turret, GVAR(rearmNewPylons) || {GVAR(isCurator)}],
             GVAR(currentAircraft)
         ] call CBA_fnc_targetEvent;
 
