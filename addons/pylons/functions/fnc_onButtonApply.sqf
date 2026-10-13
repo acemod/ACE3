@@ -30,8 +30,14 @@ if (ctrlShown _checkbox && {(cbChecked _checkbox) isNotEqualTo (_checkbox getVar
 
 private _pylonsToConfigure = [];
 {
-    // Pick combo boxes where current selection doesn't match original selection
-    if ((lbCurSel (_x select 0)) != (_x select 3)) then {
+    _x params ["_combo", "", "_button", "_originalIndex"];
+    private _currentTurret = [GVAR(currentAircraft), _forEachIndex] call EFUNC(common,getPylonTurret);
+    private _turret = _button getVariable [QGVAR(turret), _currentTurret];
+    if (_currentTurret isEqualTo [-1]) then {_currentTurret = [];};
+    if (_turret isEqualTo [-1]) then {_turret = [];};
+
+    // Configure pylons when either the magazine or its assigned turret changes
+    if ((lbCurSel _combo) != _originalIndex || {_turret isNotEqualTo _currentTurret}) then {
         _pylonsToConfigure pushBack _forEachIndex;
     };
 } forEach GVAR(comboBoxes);

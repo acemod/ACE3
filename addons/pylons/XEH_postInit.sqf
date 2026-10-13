@@ -38,8 +38,17 @@ GVAR(loadoutAction) = [ // create action
     TRACE_5("setPylonLoadOutEvent",_aircraft,_pylonIndex,_pylon,_turret,_weaponToRemove);
     _aircraft setPylonLoadout [_pylonIndex, _pylon, false, _turret];
     if (_weaponToRemove != "") then {
+        private _pylons = getAllPylonsInfo _aircraft;
         {
-            if (_aircraft turretLocal _x) then {
+            private _turretPath = _x;
+            private _weaponInUse = _pylons findIf {
+                _x params ["", "", "_pylonTurret", "_magazine"];
+                if (_pylonTurret isEqualTo []) then {_pylonTurret = [-1];};
+                _pylonTurret isEqualTo _turretPath && {
+                    getText (configFile >> "CfgMagazines" >> _magazine >> "pylonWeapon") == _weaponToRemove
+                }
+            };
+            if (_weaponInUse == -1 && {_aircraft turretLocal _turretPath}) then {
                 TRACE_3("removing",_aircraft,_x,_weaponToRemove);
                 _aircraft removeWeaponTurret [_weaponToRemove, _x];
             };
