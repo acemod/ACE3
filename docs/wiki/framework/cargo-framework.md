@@ -83,6 +83,8 @@ In the 3D mission editor attributes for "Cargo Size" and "Cargo Space" are avail
 
 If you wish to enable loading for an object/vehicle which does not have these editor attributes, see the `ace_cargo_fnc_setSize` and `ace_cargo_fnc_setSpace` functions.
 
+For ViV loading, a "Load to ViV" attribute (Default, Force on, Force off) is available on objects, and a "Disable ViV Carrier" checkbox on vehicles. See section 4.9.
+
 ## 4. Scripting
 
 ### 4.1 Disabling cargo for a mission object
@@ -234,6 +236,7 @@ The `Expanded ViV object support` setting additionally enables it on all `ThingX
  * Example:
  * [cursorObject, true] call ace_cargo_fnc_setCanLoadViv
 ```
+This is also available in the editor as the "Load to ViV" attribute.
 
 #### 4.9.3 Disabling ViV loading into a specific vehicle
 
@@ -242,3 +245,4 @@ vehicle setVariable ["ace_cargo_disableVivCarrier", true, true];
 ```
 
 The variable is not synchronized automatically. The third argument (`true`) makes it public and is required, otherwise the veto only applies on the machine that set it.
+In the editor, use the "Disable ViV Carrier" attribute. It sets the variable public for you.

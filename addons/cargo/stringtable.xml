@@ -734,5 +734,26 @@
         <Key ID="STR_ACE_Cargo_vivMaxLoadDistance_description">
             <English>Distance you can (un)load from.</English>
         </Key>
+        <Key ID="STR_ACE_Cargo_canLoadViv_edenName">
+            <English>Load to ViV</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_canLoadViv_edenDesc">
+            <English>Whether this object offers "Load to ViV" for Vehicle-in-Vehicle carriers. Default follows the cargo settings.</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_canLoadViv_default">
+            <English>Default</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_canLoadViv_forceOn">
+            <English>Force on</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_canLoadViv_forceOff">
+            <English>Force off</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_disableVivCarrier_edenName">
+            <English>Disable ViV Carrier</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_disableVivCarrier_edenDesc">
+            <English>Prevents this vehicle from being used as a Vehicle-in-Vehicle carrier.</English>
+        </Key>
     </Package>
 </Project>
