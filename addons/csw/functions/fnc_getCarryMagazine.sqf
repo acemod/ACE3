@@ -15,14 +15,15 @@
  * Public: No
  */
 
-params ["_vehicleMag"];
+params [["_vehicleMag", "", [""]]];
 
-private _carryMag = GVAR(vehicleMagCache) get _vehicleMag;
-if (isNil "_carryMag") then {
+if (_vehicleMag == "") exitWith {""};
+
+// A magazine with no carry equivalent caches "" on purpose, so the miss costs nothing to look up again
+GVAR(vehicleMagCache) getOrDefaultCall [_vehicleMag, {
     private _groups = "getNumber (_x >> _vehicleMag) == 1 && {isClass (configFile >> 'CfgMagazines' >> configName _x)}" configClasses (configFile >> QGVAR(groups));
-    _carryMag = configName (_groups param [0, configNull]);
-    GVAR(vehicleMagCache) set [_vehicleMag, _carryMag];
+    private _carryMag = configName (_groups param [0, configNull]);
     TRACE_2("setting cache",_vehicleMag,_carryMag);
-};
 
-_carryMag
+    _carryMag
+}, true] // return
