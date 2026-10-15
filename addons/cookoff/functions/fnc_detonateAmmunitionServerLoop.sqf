@@ -97,9 +97,11 @@ if (_removeAmmoDuringCookoff) then {
             // The chosen magazine is not guaranteed to the be one selected by setMagazineTurretAmmo, so get the current ammo count first
             _newAmmoCount = ((_object magazineTurretAmmo [_magazineClassname, _magazineInfo]) - _removed) max 0;
 
-            // Remove loaded magazine
+            // Remove loaded magazine to force next magazine
             if (_newAmmoCount <= 0) then {
                 [QEGVAR(common,removeMagazineTurret), [_object, _magazineClassname, _magazineInfo], _object, _magazineInfo] call CBA_fnc_turretEvent;
+                // Re-add empty magazines as to not break rearm scriptedLoadout 
+                [QEGVAR(common,addMagazineTurret), [_object, [_magazineClassname, _magazineInfo, 0]], _object, _magazineInfo] call CBA_fnc_turretEvent;
             } else {
                 [QEGVAR(common,setMagazineTurretAmmo), [_object, _magazineClassname, _newAmmoCount, _magazineInfo], _object, _magazineInfo] call CBA_fnc_turretEvent;
             };
