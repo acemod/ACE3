@@ -29,20 +29,6 @@ if (_currentPylon == count _pylonsToConfigure) exitWith {};
         private _pylonIndex = _pylonsToConfigure select _currentPylon;
         TRACE_2("",_currentPylon,_pylonIndex);
 
-        // Remove the weapon of current pylon from aircraft IF weapon is only on this pylon
-        private _weaponToRemove = "";
-        private _currentPylonMagazine = (getPylonMagazines GVAR(currentAircraft)) select _pylonIndex;
-        if (_currentPylonMagazine != "") then {
-            private _allPylonWeapons = (getPylonMagazines GVAR(currentAircraft)) apply {
-                getText (configFile >> "CfgMagazines" >> _x >> "pylonWeapon")
-            };
-            private _pylonWeapon = _allPylonWeapons select _pylonIndex;
-            if (({_x == _pylonWeapon} count _allPylonWeapons) == 1) then {
-                TRACE_2("Removing unused weapon",_pylonWeapon,_allPylonWeapons);
-                _weaponToRemove = _pylonWeapon;
-            };
-        };
-
         private _combo = GVAR(comboBoxes) select _pylonIndex select 0;
         private _pylonMagazine = _combo lbData (lbCurSel _combo);
         private _turret = (GVAR(comboBoxes) select _pylonIndex select 2) getVariable [QGVAR(turret), []];
@@ -50,18 +36,7 @@ if (_currentPylon == count _pylonsToConfigure) exitWith {};
 
         [
             QGVAR(setPylonLoadOutEvent),
-            [GVAR(currentAircraft), _pylonIndex + 1, _pylonMagazine, _turret, _weaponToRemove]
-        ] call CBA_fnc_globalEvent;
-
-        private _count = if (GVAR(rearmNewPylons) || {GVAR(isCurator)}) then {
-            getNumber (configFile >> "CfgMagazines" >> _pylonMagazine >> "count")
-        } else {
-            0
-        };
-
-        [
-            QGVAR(setAmmoOnPylonEvent),
-            [GVAR(currentAircraft), _pylonIndex + 1, _count],
+            [GVAR(currentAircraft), _pylonIndex + 1, _pylonMagazine, _turret, GVAR(rearmNewPylons) || {GVAR(isCurator)}],
             GVAR(currentAircraft)
         ] call CBA_fnc_targetEvent;
 
