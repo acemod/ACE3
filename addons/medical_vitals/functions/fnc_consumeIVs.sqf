@@ -38,9 +38,7 @@ private _consumedIVs = [];
     _bagVolumeRemaining = _bagVolumeRemaining - _bagChange;
     _consumedIVs pushBack [_type, _treatment, _bagChange, _item];
 
-    if (_type in ["Blood", "Plasma", "Saline"]) then {
-        _bloodVolumeChange = _bloodVolumeChange + (_bagChange / 1000);
-    };
+    _bloodVolumeChange = _bloodVolumeChange + (_bagChange / 1000);
 
     if (_bagVolumeRemaining >= 0.01) then {
         _x set [0, _bagVolumeRemaining];
