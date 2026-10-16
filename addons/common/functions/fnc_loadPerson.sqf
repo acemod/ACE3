@@ -31,7 +31,9 @@ if (isNull _vehicle) then {
     _vehicle = ([_unit] call FUNC(nearestVehiclesFreeSeat)) param [0, objNull];
 };
 
-if (!isNull _vehicle) then {
+if (isNull _vehicle) exitWith {objNull};
+
+if (alive _unit) then {
     switch (true) do {
         case ((crew _vehicle isEqualTo []) && {side group _caller != side group _unit}): {
             [_unit, true, GROUP_SWITCH_ID, side group _caller] call FUNC(switchToGroupSide);
@@ -43,6 +45,10 @@ if (!isNull _vehicle) then {
 
     TRACE_5("sending ace_loadPersonEvent",_unit,_vehicle,_caller,_preferredSeats,_reverseFill);
     ["ace_loadPersonEvent", [_unit, _vehicle, _caller, _preferredSeats, _reverseFill], _unit] call CBA_fnc_targetEvent;
+} else {
+    // vehicle must be local
+    TRACE_2("sending loadDeadPerson event",_unit,_vehicle);
+    [QGVAR(loadDeadPerson), [_unit, _vehicle], _vehicle] call CBA_fnc_targetEvent;
 };
 
 _vehicle
