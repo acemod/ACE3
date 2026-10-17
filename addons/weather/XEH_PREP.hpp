@@ -16,6 +16,7 @@ PREP(getApproximateAirTemp);
 PREP(getMapData);
 PREP(initModuleSettings);
 PREP(initWind);
+PREP(setTemperatureShift);
 PREP(updateHumidity);
 PREP(updateTemperature);
 PREP(updateWeather);
