@@ -53,7 +53,7 @@ if (_weaponConfig == inheritsFrom _weaponEnabledConfig) then {
 if ((_ammoCount == 0) || // No ammo loaded
         {(getNumber _weaponEnabledConfig) != 1} || // Not enabled for weapon
         {_ammoConfig isEqualTo []} || {(getNumber ((_ammoConfig select 0) >> "enabled")) != 1} || // Not enabled for ammo
-        { getNumber (configFile >> "CfgAmmo" >> _ammoType >> QEGVAR(missileguidance,allowDumbFire)) == 1 } // Allows firing without lock
+        {(getNumber ((_ammoConfig select 0) >> "allowDumbFire")) == 1} // Allows firing without lock
         ) exitWith {
 
     __JavelinIGUITargeting ctrlShow false;
