@@ -31,7 +31,7 @@ if (_pylon > 0) exitWith {
         // Fill magazine completely
         if (_turretPath isEqualTo [-1]) then {_turretPath = [];}; // Convert back to pylon turret format
         TRACE_3("",_pylon,_magazineClass,_rounds);
-        _vehicle setPylonLoadOut [_pylon, _magazineClass, true, _turretPath];
+        _vehicle setPylonLoadout [_pylon, _magazineClass, true, _turretPath];
         [QEGVAR(common,displayTextStructured), [[LSTRING(Hint_RearmedTriple), _rounds,
             getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
             getText(configOf _vehicle >> "displayName")], 3, _unit], [_unit]] call CBA_fnc_targetEvent;
@@ -41,7 +41,7 @@ if (_pylon > 0) exitWith {
         private _currentCount = _vehicle ammoOnPylon _pylon;
         private _newCount = ((_currentCount max 0) + _numRounds) min _rounds;
         TRACE_3("",_pylon,_magazineClass,_newCount);
-        _vehicle setPylonLoadOut [_pylon, _magazineClass, true, _turretPath];
+        _vehicle setPylonLoadout [_pylon, _magazineClass, true, _turretPath];
         _vehicle setAmmoOnPylon [_pylon, _newCount];
         [QEGVAR(common,displayTextStructured), [[LSTRING(Hint_RearmedTriple), _numRounds,
             getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
@@ -49,7 +49,6 @@ if (_pylon > 0) exitWith {
     };
 };
 
-private _currentRounds = 0;
 private _maxMagazines = [_vehicle, _turretPath, _magazineClass] call FUNC(getMaxMagazines);
 private _ammoCounts = [_vehicle, _turretPath, _magazineClass] call FUNC(getTurretMagazineAmmo);
 TRACE_3("start",_magazineClass,_maxMagazines,_ammoCounts);

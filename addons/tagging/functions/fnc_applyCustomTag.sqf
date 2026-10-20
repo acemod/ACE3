@@ -36,5 +36,5 @@ _requiredItem = configName (configFile >> "CfgWeapons" >> _requiredItem); // Con
 _this set [2, _requiredItem];
 
 GVAR(cachedTags) pushBack _this;
-_this call FUNC(compileTagAction);
+call FUNC(compileTagAction);
 TRACE_1("Added custom script tag",_this);

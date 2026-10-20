@@ -29,8 +29,8 @@
 
 #define PATIENT_INFO_IGUI_BASE_X (safeZoneX + POS_W(2))
 #define PATIENT_INFO_IGUI_BASE_Y (safeZoneY + POS_H(1))
-#define PATIENT_INFO_IGUI_X (profilenamespace getVariable ['TRIPLES(IGUI,GVAR(patientInfo),X)', 0])
-#define PATIENT_INFO_IGUI_Y (profilenamespace getVariable ['TRIPLES(IGUI,GVAR(patientInfo),Y)', 0])
+#define PATIENT_INFO_IGUI_X (profileNamespace getVariable ['TRIPLES(IGUI,GVAR(patientInfo),X)', 0])
+#define PATIENT_INFO_IGUI_Y (profileNamespace getVariable ['TRIPLES(IGUI,GVAR(patientInfo),Y)', 0])
 #define PATIENT_INFO_IGUI_OFFSET_X (PATIENT_INFO_IGUI_X - PATIENT_INFO_IGUI_BASE_X)
 #define PATIENT_INFO_IGUI_OFFSET_Y (PATIENT_INFO_IGUI_Y - PATIENT_INFO_IGUI_BASE_Y)
 

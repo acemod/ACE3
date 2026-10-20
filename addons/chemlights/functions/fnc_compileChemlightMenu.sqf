@@ -30,7 +30,7 @@ private _chemlights = [_player] call FUNC(getShieldComponents);
     private _displayName = getText (configFile >> "CfgWeapons" >> _shieldClass >> "displayName");
 
     _displayName = format [localize LSTRING(Action_Prepare), _displayName];
-    private _statement = {_this call FUNC(prepShield)};
+    private _statement = {call FUNC(prepShield)};
 
     private _action = [_x, _displayName, _icon, _statement, {true}, {}, [_x, _shieldClass]] call EFUNC(interact_menu,createAction);
     _actions pushBack [_action, [], _player];

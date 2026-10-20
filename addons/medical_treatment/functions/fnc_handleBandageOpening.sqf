@@ -98,7 +98,7 @@ if (random 1 <= _reopeningChance * GVAR(woundReopenChance)) then {
         _injury params ["_classID"];
 
         private _selectedInjury = _woundsOnPart select _injuryIndex;
-        _selectedInjury params ["_selClassID", "_selAmmount"];
+        _selectedInjury params ["_selClassID", "_selAmount", "", "_selDamage"];
         if (_selClassID == _classID) then { // matching the IDs
             private _bandagedWounds = GET_BANDAGED_WOUNDS(_target);
             private _exist = false;
@@ -113,7 +113,7 @@ if (random 1 <= _reopeningChance * GVAR(woundReopenChance)) then {
 
             if (_exist) then {
                 TRACE_2("Reopening Wound",_bandagedWounds,_openWounds);
-                _selectedInjury set [1, _selAmmount + _impact];
+                _selectedInjury set [1, _selAmount + _impact];
                 _target setVariable [VAR_BANDAGED_WOUNDS, _bandagedWounds, true];
                 _target setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
 
@@ -123,20 +123,7 @@ if (random 1 <= _reopeningChance * GVAR(woundReopenChance)) then {
 
                 // Re-add trauma and damage visuals
                 if (GVAR(clearTrauma) == 2) then {
-                    private _injuryDamage = (_selectedInjury select 4) * _impact;
-                    private _bodyPartDamage = _target getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
-                    private _newDam = (_bodyPartDamage select _partIndex) + _injuryDamage;
-                    _bodyPartDamage set [_partIndex, _newDam];
-
-                    _target setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
-
-                    switch (_partIndex) do {
-                        case 0: { [_target, true, false, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
-                        case 1: { [_target, false, true, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
-                        case 2;
-                        case 3: { [_target, false, false, true, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
-                        default { [_target, false, false, false, true] call EFUNC(medical_engine,updateBodyPartVisuals); };
-                    };
+                    [_target, _part, _selDamage * _impact] call FUNC(addTrauma);
                 };
 
                 // Check if we gained limping from this wound re-opening

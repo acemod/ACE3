@@ -43,11 +43,9 @@ if (!alive _target || {_unit distance _target > 10}) exitWith {
 // Timeout: Drop target. CBA_missionTime, because anim length is linked to ingame time
 if (CBA_missionTime > _timeOut) exitWith {
     TRACE_4("timeout",_unit,_target,_timeOut,CBA_missionTime);
-    _idPFH call CBA_fnc_removePerFrameHandler;
+    [_unit, _target] call FUNC(dropObject);
 
-    // Drop if in timeout
-    private _draggedObject = _unit getVariable [QGVAR(draggedObject), objNull];
-    [_unit, _draggedObject] call FUNC(dropObject);
+    _idPFH call CBA_fnc_removePerFrameHandler;
 };
 
 // Unit is ready to start dragging

@@ -18,6 +18,6 @@
 params ["_unit", "_parachute"];
 TRACE_2("cutParachute",_unit,_parachute);
 
-playSound3d ["A3\Sounds_F\characters\parachute\parachute_landing.wss", _unit];
+playSound3D ["A3\Sounds_F\characters\parachute\parachute_landing.wss", _unit];
 _unit action ["GetOut", _parachute];
 deleteVehicle _parachute;

@@ -4,6 +4,7 @@ PREP(cookOffLocal);
 PREP(cookOffServer);
 PREP(detonateAmmunitionServer);
 PREP(detonateAmmunitionServerLoop);
+PREP(disableCookoff);
 PREP(engineFireLocal);
 PREP(engineFireServer);
 PREP(getVehicleAmmo);

@@ -33,16 +33,12 @@ if (GVAR(correctZeroing) || GVAR(simplifiedZeroing)) then {
     private _boreHeight = (_unit getVariable [QGVAR(boreHeight), [0,0,0]]) select _weaponIndex;
     private _oldZeroRange = currentZeroing _unit;
     private _newZeroRange = [_unit] call FUNC(getCurrentZeroRange);
-    private _zeroCorrection = missionNamespace getVariable format[QGVAR(%1_%2_%3_%4_%5_%6_%7), _oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics];
-    if (isNil "_zeroCorrection") then {
-         _zeroCorrection = [_oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics] call FUNC(calculateZeroAngleCorrection);
-         TRACE_7("new calc",_oldZeroRange,_newZeroRange,_boreHeight,_weapon,_ammo,_magazine,_advancedBallistics);
-         TRACE_1("",_zeroCorrection);
-    };
-    if (GVAR(simplifiedZeroing)) then {
-        _zeroing = [0, 0, _zeroCorrection - _baseAngle];
+    private _zeroCorrection = [_oldZeroRange, _newZeroRange, _boreHeight, _weapon, _muzzle, _ammo, _magazine, _advancedBallistics] call FUNC(calculateZeroAngleCorrection);
+
+    _zeroing = if (GVAR(simplifiedZeroing)) then {
+        [0, 0, _zeroCorrection - _baseAngle]
     } else {
-        _zeroing = _zeroing vectorAdd [0, 0, _zeroCorrection - _baseAngle];
+        _zeroing vectorAdd [0, 0, _zeroCorrection - _baseAngle]
     };
 #ifdef DISABLE_DISPERSION
     _projectile setVelocity (_unit weaponDirection currentWeapon _unit) vectorMultiply (vectorMagnitude (velocity _projectile));

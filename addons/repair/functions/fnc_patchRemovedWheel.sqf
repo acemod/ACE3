@@ -23,7 +23,7 @@ params ["_unit", "_target"];
 private _wheelDamage = (damage _target) - GVAR(patchWheelMaximumRepair);
 
 [ceil (_wheelDamage / 0.05) * GVAR(patchWheelTime), [_target], {}, {}, LLSTRING(PatchingWheel), {
-    params ["_args"];
+    params ["_args", "_elapsedTime", "_totalTime"];
     _args params ["_target"];
     private _damage = damage _target;
 
@@ -35,5 +35,4 @@ private _wheelDamage = (damage _target) - GVAR(patchWheelMaximumRepair);
     _target setDamage _damage;
 
     _damage > GVAR(patchWheelMaximumRepair)
-}] call ace_common_fnc_progressBar;
-
+}] call EFUNC(common,progressBar);

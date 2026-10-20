@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+GVAR(flareHash) = createHashMap;
+
 [QGVAR(cookOffBoxLocal), LINKFUNC(cookOffBoxLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(cookOffLocal), LINKFUNC(cookOffLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(engineFireLocal), LINKFUNC(engineFireLocal)] call CBA_fnc_addEventHandler;
@@ -14,24 +16,18 @@ if (isServer) then {
 
 // Handle cleaning up effects when objects are deleted mid cook-off
 ["AllVehicles", "Deleted", {
-    {
-        deleteVehicle _x;
-    } forEach ((_this select 0) getVariable [QGVAR(effects), []]);
-}, true, ["CAManBase", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler;
+    deleteVehicle ((_this select 0) getVariable [QGVAR(effects), []]);
+}, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler; // Use "Man" to exclude animals as well
 
 ["ReammoBox_F", "Deleted", {
-    {
-        deleteVehicle _x;
-    } forEach ((_this select 0) getVariable [QGVAR(effects), []]);
+    deleteVehicle ((_this select 0) getVariable [QGVAR(effects), []]);
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
 // Raised when the flames have subsided or after the ammo of a box has finished cooking off
 [QGVAR(cleanupEffects), {
     params ["_object"];
 
-    {
-        deleteVehicle _x;
-    } forEach (_object getVariable [QGVAR(effects), []]);
+    deleteVehicle (_object getVariable [QGVAR(effects), []]);
 
     _object setVariable [QGVAR(effects), nil];
 }] call CBA_fnc_addEventHandler;
@@ -39,7 +35,7 @@ if (isServer) then {
 // Ammo box damage handling
 ["ReammoBox_F", "init", {
     // Calling this function inside curly brackets allows the usage of "exitWith", which would be broken with "HandleDamage" otherwise
-    (_this select 0) addEventHandler ["HandleDamage", {_this call FUNC(handleDamageBox)}];
+    (_this select 0) addEventHandler ["HandleDamage", {call FUNC(handleDamageBox)}];
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
 // Vehicle ammo cook-off (secondary explosions)
@@ -58,7 +54,7 @@ if (isServer) then {
             random [MIN_AMMO_DETONATION_START_DELAY, (MIN_AMMO_DETONATION_START_DELAY + MAX_AMMO_DETONATION_START_DELAY) / 2, MAX_AMMO_DETONATION_START_DELAY]
         ]] call CBA_fnc_serverEvent;
     };
-}, true, ["CAManBase", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler;
+}, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler; // Use "Man" to exclude animals as well
 
 if (hasInterface) then {
     // Plays a sound locally, so that different sounds can be used for various distances

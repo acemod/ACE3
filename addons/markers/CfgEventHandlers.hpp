@@ -19,6 +19,6 @@ class Extended_PostInit_EventHandlers {
 
 class Extended_DisplayLoad_EventHandlers {
     class RscDiary {
-        ADDON = QUOTE(_this call FUNC(mapDisplayInitEH));
+        ADDON = QUOTE(call FUNC(mapDisplayInitEH));
     };
 };

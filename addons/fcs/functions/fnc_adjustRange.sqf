@@ -6,7 +6,7 @@
  * Arguments:
  * 0: The vehicle in question <OBJECT>
  * 1: The Turrets that the Vehicle has <ARRAY>
- * 2: The amount to add to the distance (can be negative) <NUMMBER>
+ * 2: The amount to add to the distance (can be negative) <NUMBER>
  *
  * Return Value:
  * None

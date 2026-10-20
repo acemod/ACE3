@@ -27,12 +27,11 @@ private _isRuler = if (GVAR(plottingBoard_Shown) == 2) then {
     if (_dist <= PLOTTINGBOARD_RULERCENTER) exitWith {true};
 
     private _rulerVector = [sin GVAR(plottingBoard_rulerAngle), cos GVAR(plottingBoard_rulerAngle)];
-    private _dirRightVector = [_dirVector select 1, -(_dirVector select 0)];
     private _rulerAng = acos (_rulerVector vectorCos _relPos);
 
     if (cos _rulerAng > 0 && {(tan _rulerAng) * _dist < PLOTTINGBOARD_RULERHALFWIDTH}) exitWith {true};
 
-    _dist > PLOTTINGBOARD_RULERINNERCIRCLE && {_dist < PLOTTINGBOARD_RULEROUTERCIRCLE && {abs (_rulerAng * DEGTOMILS) < PLOTTINGBOAR_RULEROUTERHALFANGLE}}
+    _dist > PLOTTINGBOARD_RULERINNERCIRCLE && {_dist < PLOTTINGBOARD_RULEROUTERCIRCLE && {abs (_rulerAng * DEGTOMILS) < PLOTTINGBOARD_RULEROUTERHALFANGLE}}
 } else {
     false
 };

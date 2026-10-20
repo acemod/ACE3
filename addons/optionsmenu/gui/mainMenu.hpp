@@ -14,16 +14,15 @@ class RscDisplayMain: RscStandardDisplay {
                 class Background;
                 class BackgroundIcon;
                 class Icon;
-                class News;
-                class Notification;
                 class Button;
             };
         };
 
         class ACE_news_apex: InfoNews {
             idc = IDC_MAIN_INFO;
-            y = "safezoneY + safezoneH - (3 * 2 + 1) * (pixelH * pixelGrid * 2) - 4 * (4 * pixelH)";
-
+            onLoad = "params ['_ctrl', '_config']; if (productVersion # 8 != '') then {_ctrl ctrlSetPositionY (getNumber (_config >> 'yAlt')); _ctrl ctrlCommit 0}";
+            y = "safeZoneY + safeZoneH - (3 * 2 + 1) * (pixelH * pixelGrid * 2) - 4 * (4 * pixelH)";
+            yAlt = "safeZoneY + safeZoneH - (4 * 2 + 1) * (pixelH * pixelGrid * 2) - 4 * (4 * pixelH)";
             class Controls: Controls {
                 class Background: Background {};
                 class BackgroundIcon: BackgroundIcon {};
@@ -42,7 +41,7 @@ class RscDisplayMain: RscStandardDisplay {
                     y = 0;
                     w = "(10 - 1.25 * 2) * (pixelW * pixelGrid * 2)";
                     h = "1 * (pixelH * pixelGrid * 2)";
-                    onLoad = "(_this select 0) ctrlenable false;";
+                    onLoad = "(_this select 0) ctrlEnable false;";
                 };
                 class HTTPVersionInfo: RscHTML {
                     idc = IDC_MAIN_INFO_NEWEST_VERSION_INFO;
@@ -65,7 +64,7 @@ class RscDisplayMain: RscStandardDisplay {
                     y = "1 * (pixelH * pixelGrid * 2)";
                     w = "(10 - 1.25 * 2) * (pixelW * pixelGrid * 2)";
                     h = "1 * (pixelH * pixelGrid * 2)";
-                    onLoad = "(_this select 0) ctrlenable false;";
+                    onLoad = "(_this select 0) ctrlEnable false;";
                 };
                 class Button: Button {
                     tooltip = "Download latest and report issues:";

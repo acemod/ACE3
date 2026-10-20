@@ -22,10 +22,10 @@ private _unit = ACE_player;
 if ([_unit] call FUNC(isGogglesVisible)) exitWith {
     GVAR(GogglesEffectsLayer) cutRsc ["RscACE_GogglesEffects", "PLAIN", 2, false, false];
 
-    ((GETUVAR(GVAR(DisplayEffects),displayNull)) displayCtrl 10662) ctrlSetText format [getText (configFile >> "CfgGlasses" >> goggles _unit >> "ACE_DustPath"), GETDUSTT(DAMOUNT) + 1];
+    ((GETUVAR(GVAR(DisplayEffects),displayNull)) displayCtrl IDC_GOGGLESEFFECTS_DUST) ctrlSetText format [getText (configFile >> "CfgGlasses" >> goggles _unit >> "ACE_DustPath"), GETDUSTT(DAMOUNT) + 1];
 
     private _effectBrightness = linearConversion [0,1,([] call EFUNC(common,ambientBrightness)),0.25,1];
-    ((GETUVAR(GVAR(DisplayEffects),displayNull)) displayCtrl 10662) ctrlSetTextColor [_effectBrightness, _effectBrightness, _effectBrightness, 1];
+    ((GETUVAR(GVAR(DisplayEffects),displayNull)) displayCtrl IDC_GOGGLESEFFECTS_DUST) ctrlSetTextColor [_effectBrightness, _effectBrightness, _effectBrightness, 1];
     TRACE_1("dust",_effectBrightness);
 
     SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT) + 1,0,1));
@@ -57,7 +57,7 @@ GVAR(DustHandler) = [{
 
         private _amount = 1 - (GETDUSTT(DAMOUNT) * 0.125);
 
-        if !(_unit getVariable ["ACE_EyesDamaged", false]) then {
+        if !(ACE_player getVariable ["ACE_EyesDamaged", false]) then {
             GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [_amount, _amount, _amount, _amount], [1, 1, 1, 0]];
             GVAR(PostProcessEyes) ppEffectCommit 0.5;
         };
@@ -68,6 +68,7 @@ GVAR(DustHandler) = [{
 
             GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [1, 1, 1, 1], [1, 1, 1, 0]];
             GVAR(PostProcessEyes) ppEffectCommit 2;
+            [QGVAR(effect), [ACE_player, "dust"]] call CBA_fnc_localEvent;
 
             [{
                 if (GVAR(DustHandler) == -1) then {

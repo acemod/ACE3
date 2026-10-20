@@ -73,8 +73,8 @@ if (_unit getHitPointDamage "HitLegs" >= 0.5) exitWith {
     _idPFH call CBA_fnc_removePerFrameHandler;
 };
 
-// Drop static if crew is in it (UAV crew deletion may take a few frames)
-if (_target isKindOf "StaticWeapon" && {!(_target getVariable [QGVAR(isUAV), false])} && {(crew _target) isNotEqualTo []}) exitWith {
+// Drop static if either non-UAV crew or new UAV crew is in it (ignore saved UAV crew)
+if (_target isKindOf "StaticWeapon" && {((crew _target) - (_target getVariable [QGVAR(isUAV), []])) isNotEqualTo []}) exitWith {
     TRACE_2("static weapon crewed",_unit,_target);
 
     [_unit, _target] call FUNC(dropObject_carry);
@@ -91,7 +91,7 @@ private _previousHint = _unit getVariable [QGVAR(hint), []];
 if (_previousHint isEqualType "") exitWith {};
 
 // Mouse hint
-private _hintLMB = LLSTRING(Drop);
+private _hintLMB = LELSTRING(common,Drop);
 private _cursorObject = cursorObject;
 
 if (

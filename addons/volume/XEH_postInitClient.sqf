@@ -23,10 +23,10 @@ if (!hasInterface) exitWith {};
 
     if (!XGVAR(lowerInVehicles)) exitWith {};
 
-    if (!isNull objectParent _unit) then {
-        call FUNC(lowerVolume);
-    } else {
+    if (isNull objectParent _unit) then {
         call FUNC(restoreVolume);
+    } else {
+        call FUNC(lowerVolume);
     };
 }] call CBA_fnc_addPlayerEventHandler;
 

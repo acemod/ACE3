@@ -29,7 +29,7 @@ class GVAR(mapTopo): GVAR(mapNormal) {
 };
 class GVAR(mapSat): GVAR(mapNormal) {
     // ref https://feedback.bistudio.com/T170918 - may have problems loading sat textures
-    maxSatelliteAlpha = 0.95;       
+    maxSatelliteAlpha = 0.95;
     colorForest[] = {0, 1, 0, 0};
     colorForestBorder[] = {0, 1, 0, 0};
 };

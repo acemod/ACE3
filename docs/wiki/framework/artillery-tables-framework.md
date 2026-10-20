@@ -17,7 +17,7 @@ version:
 class CfgMagazines {
     class yourMag {
         ace_artillerytables_airFriction = -0.00006; // default value
-        // drag coefficent (when Air Resistance setting is enabled)
+        // drag coefficient (when Air Resistance setting is enabled)
         // can set to 0 to disable all muzzle effects and airFriction
         // can set to +1 to use the ammo's native airFriction (not common, as most artillery ammo will have none)
 ```

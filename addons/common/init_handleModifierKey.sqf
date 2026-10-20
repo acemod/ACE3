@@ -20,8 +20,8 @@ _this spawn {//
 
     params ["_display"];
 
-    _display displayAddEventHandler ["KeyDown", {_this call FUNC(handleModifierKey)}];
-    _display displayAddEventHandler ["KeyUp", {_this call FUNC(handleModifierKeyUp)}];
+    _display displayAddEventHandler ["KeyDown", {call FUNC(handleModifierKey)}];
+    _display displayAddEventHandler ["KeyUp", {call FUNC(handleModifierKeyUp)}];
 };//
 
 //@todo, remove all lines with comments after CBA update, events rewrite branch

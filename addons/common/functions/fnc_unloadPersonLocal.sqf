@@ -9,7 +9,7 @@
  * 2: Unloader (player) <OBJECT> (default: objNull)
  *
  * Return Value:
- * Succesfully unloaded person <BOOL>
+ * Successfully unloaded person <BOOL>
  *
  * Example:
  * [bob, car, bob] call ace_common_fnc_unloadPersonLocal
@@ -34,7 +34,7 @@ if (_emptyPos isEqualTo []) then {
     };
 };
 
-if (count _emptyPos != 3) exitwith {
+if (count _emptyPos != 3) exitWith {
     WARNING_4("Could not find unload pos %1-ASL: %2 isTouchingGround: %3 Speed: %4",_vehicle,getPosASL _vehicle,isTouchingGround _vehicle,speed _vehicle);
     if ((!isNull _unloader) && {[_unloader] call FUNC(isPlayer)}) then {
         //display text saying there are no safe places to exit the vehicle

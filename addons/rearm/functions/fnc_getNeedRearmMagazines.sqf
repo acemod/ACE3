@@ -12,7 +12,7 @@
  * Child arrays:
  *   0: Magazine class <STRING>
  *   1: Turret path <ARRAY>
- *   2: Is pylon magazine <BOOLEAN>
+ *   2: Is pylon magazine <BOOL>
  *   3: Pylon index (-1 if not pylon) <NUMBER>
  *   4: Max magazines <NUMBER>
  *   5: Current magazines <NUMBER>
@@ -32,8 +32,6 @@ private _magazineInfo = [];
 // 1.70 pylons
 private _pylonConfigs = configProperties [configOf _vehicle >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"];
 {
-    private _pylonConfig = _x;
-
     // Strangely, a 1-based index.
     private _pylonIndex = _forEachIndex + 1;
 
@@ -85,7 +83,7 @@ private _turrets = [_vehicle] call FUNC(getAllRearmTurrets);
 
         /* If there is space for new magazines or if some magazines are not full, add the magazine
          * type to _magazineInfo. */
-        if ((_currentMagazines < _maxMagazines) || {({_x < _maxRoundsPerMag} count _currentRounds) > 0}) then {
+        if ((_currentMagazines < _maxMagazines) || {_currentRounds findIf {_x < _maxRoundsPerMag} != -1}) then {
             if (_magazineClass == "FakeWeapon") exitWith {};
             _magazineInfo pushBack [_magazineClass, _turretPath, false, -1, _maxMagazines, _currentMagazines, _maxRoundsPerMag, _currentRounds];
         };

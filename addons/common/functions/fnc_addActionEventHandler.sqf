@@ -6,8 +6,8 @@
  * Arguments:
  * 0: Unit the action should be assigned to <OBJECT>
  * 1: Name of the action, e.g. "DefaultAction" <STRING>
- * 2: Condition <CODE, STRING>
- * 3: Code to execute <CODE, STRING>
+ * 2: Condition <CODE or STRING>
+ * 3: Code to execute <CODE or STRING>
  *
  * Return Value:
  * ID of the action (used to remove it later) <NUMBER>
@@ -54,7 +54,7 @@ if (_actionID == -1) then {
             false,
             true,
             '%1',
-            ""if (_this != ACE_player || {vehicle _this != _target}) exitWith {false}; _actions = (_this getVariable '%2') select 1 select 2; _count = count _actions; _index = 0; _return = false; while {_index < _count && {!_return}} do {_return = [_target, _this] call ((_actions select _index) select 0); _index = _index + 1}; _return""
+            ""if (_this != ACE_player) exitWith {false}; _actions = (_this getVariable '%2') select 1 select 2; _count = count _actions; _index = 0; _return = false; while {_index < _count && {!_return}} do {_return = [_target, _this] call ((_actions select _index) select 0); _index = _index + 1}; _return""
         ]",
         _action,
         _name

@@ -16,7 +16,13 @@
 params ["_display"];
 
 // Can be either a singular loadout or an array of loadouts
-private _extendedLoadout = call compile copyFromClipboard;
+private _extendedLoadout = if (isMultiplayer) then {
+    ("ace" callExtension ["clipboard:loadout", []]) params ["_loadout", "_code"];
+    if (_code != 0) exitWith { nil };
+    parseSimpleArray _loadout
+} else {
+    call compile copyFromClipboard
+};
 
 // If error, exit
 if (isNil "_extendedLoadout" || {!(_extendedLoadout isEqualType [])}) exitWith {
@@ -48,7 +54,14 @@ if (GVAR(shiftState) && {is3DEN}) then {
 
     // Check if CBA extended loadout array
     if ((count _extendedLoadout) == 2) then {
+        // Verify the loadout and attempt to recover any invalid containers
+        _extendedLoadout = [_extendedLoadout, true] call FUNC(verifyLoadout);
+        // Since verification nests the extended loadout array, undo that after container recovery
+        _extendedLoadout = ([GVAR(center), _extendedLoadout] call FUNC(recoverInvalidContainers)) select 0;
+
+        private _oldItemCounts = call FUNC(getLoadoutItemCounts);
         [GVAR(center), _extendedLoadout] call CBA_fnc_setLoadout;
+        [_display, -1, _oldItemCounts, call FUNC(getLoadoutItemCounts)] call FUNC(fireItemsChangedEvent);
 
         // Update current item list and unique items
         [true] call FUNC(refresh);

@@ -26,10 +26,11 @@ _unitLight params ["_flashlight", ""];
 
 //add all carried flashlight menus and on/off submenu actions
 {
-    private _cfg = (configFile >> "CfgWeapons" >> _x);
+    private _cfg = _x call CBA_fnc_getItemConfig;
     private _displayName = getText (_cfg >> "displayName");
     private _icon = getText (_cfg >> "picture");
 
+    //IGNORE_PRIVATE_WARNING ["_player"];
     private _statement = if (_flashlight == _x) then {
         _displayName = format [localize LSTRING(turnLightOff), _displayName];
         {[_player, ""] call FUNC(switchFlashlight)}

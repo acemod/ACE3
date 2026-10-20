@@ -20,9 +20,9 @@ params ["_targetObject", "_vehicle"];
 TRACE_2("params",_targetObject,_vehicle);
 
 // Get the designator variables, or use defaults
-private _waveLength = _vehicle getVariable [QEGVAR(laser,waveLength), ACE_DEFAULT_LASER_WAVELENGTH];
-private _laserCode = _vehicle getVariable [QEGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
-private _beamSpread = _vehicle getVariable [QEGVAR(laser,beamSpread), ACE_DEFAULT_LASER_BEAMSPREAD];
+private _waveLength = _vehicle getVariable [QGVAR(waveLength), ACE_DEFAULT_LASER_WAVELENGTH];
+private _laserCode = _vehicle getVariable [QGVAR(code), ACE_DEFAULT_LASER_CODE];
+private _beamSpread = _vehicle getVariable [QGVAR(beamSpread), ACE_DEFAULT_LASER_BEAMSPREAD];
 TRACE_3("codes",_waveLength,_laserCode,_beamSpread);
 
 // Laser method is the method ACE_Laser will use to determine from where to where it should project the designator cone
@@ -43,6 +43,10 @@ if (_vehicle isKindOf "CAManBase") then {
             };
         } forEach (_vehicle weaponsTurret _turretPath);
     } forEach (allTurrets [_vehicle, true]);
+    if ((_vehicleSourceSelection == "") && hasPilotCamera _vehicle) then {
+        // must not be a turret, assume it is from the aircraft's PilotCamera
+        _vehicleSourceSelection = getText (configOf _vehicle >> "memoryPointDriverOptics");
+    };
 };
 
 private _methodArgs = [_vehicleSourceSelection];

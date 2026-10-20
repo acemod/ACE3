@@ -2,9 +2,16 @@
 #include "\z\ace\addons\arsenal\defines.hpp"
 /*
  * Author: commy2
+ * Handle VR pause menu (onPauseScript)
+ *
+ * Arguments:
+ * 0: Game Pause <DISPLAY>
+ *
+ * Return Value:
+ * None
  *
  * Public: No
-*/
+ */
 
 params ["_display"];
 

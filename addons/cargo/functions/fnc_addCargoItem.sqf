@@ -4,7 +4,7 @@
  * Adds a cargo item to the vehicle.
  *
  * Arguments:
- * 0: Item to be loaded <STRING> or <OBJECT>
+ * 0: Item to be loaded <STRING or OBJECT>
  * 1: Holder object (vehicle) <OBJECT>
  * 2: Amount <NUMBER> (default: 1)
  * 3: Ignore interaction distance and stability checks <BOOL> (default: false)

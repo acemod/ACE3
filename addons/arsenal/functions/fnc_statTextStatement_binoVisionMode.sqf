@@ -4,7 +4,7 @@
  * Text statement for the binocular/NVG vision mode stat.
  *
  * Arguments:
- * 0: Not used
+ * 0: Stats array (not used) <ARRAY>
  * 1: Item config path <CONFIG>
  *
  * Return Value:
@@ -23,5 +23,7 @@ private _visionModes = getArray (_config >> "visionMode") apply {toLowerANSI _x}
         _text pushBack (localize ([LSTRING(VisionNormal), LSTRING(VisionNight), LSTRING(VisionThermal)] select _forEachIndex));
     };
 } forEach ["normal", "nvg", "ti"];
+
+_text sort true;
 
 _text joinString ", "

@@ -12,7 +12,7 @@ class Cfg3DEN {
                         property = QGVAR(fuelCargo);
                         control = "EditShort";
                         expression = QUOTE(if (_value != (_this call FUNC(getFuelCargo))) then {[ARR_2(_this,_value)] call FUNC(makeSource)});
-                        defaultValue = QUOTE(_this call FUNC(getFuelCargo));
+                        defaultValue = QUOTE(call FUNC(getFuelCargo));
                         validate = "number";
                         condition = "(1-objectBrain)*(1-objectAgent)";
                         typeName = "NUMBER";

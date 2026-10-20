@@ -17,14 +17,14 @@ version:
 
 ### 1.1 Guidance
 
-The M47 Dragon is a wire-guided SACLOS missile with a unique manuever system. It has a series of charges along the missile that fire every third of a second to adjust the missile on course
+The M47 Dragon is a wire-guided SACLOS missile with a unique maneuver system. It has a series of charges along the missile that fire every third of a second to adjust the missile on course.
 
 ### 1.2 Attack profiles
 
 The missile requires line of sight to the target at all times. Keep your crosshair on the target as the missile cruises toward it until impact.
 If you lose line of sight the missile will stop tracking toward your crosshair and will fly on its current trajectory. You can regain control if the missile re-enters line of sight.
 If the missile exceeds its maximum range the wire will snap and it will fly off in a random direction.
-The missiles manuever system causes inaccuracy that cannot be corrected for by the gunner. This means that the risk of missing increases as range goes up
+The missile's maneuver system causes inaccuracy that cannot be corrected for by the gunner. This means that the risk of missing increases as range goes up.
 
 ## 2. Usage
 
@@ -40,10 +40,10 @@ The missiles manuever system causes inaccuracy that cannot be corrected for by t
 - Fire
 
 ### 2.2 Tear Down
+
 - Interact with the missile <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Interaction Key`)
-- Select 'Disassemble'
-- Look to the right of the launcher and pick up the sighting unit
-- Move on
+- Select 'Detach Sight'
+- Move on (the launcher can't be disassembled any further)
 
 ## 3. Sight Ranging
 

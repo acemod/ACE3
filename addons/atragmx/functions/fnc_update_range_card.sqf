@@ -59,16 +59,16 @@ private _speedOfSound = GVAR(temperature) call EFUNC(weather,calculateSpeedOfSou
             private _clickNumber = GVAR(workingMemory) select 8;
             private _clickInterval = _clickSize / _clickNumber;
 
-            _elevation = Round(_elevation / _clickInterval);
-            _windage1 = Round(_windage1 / _clickInterval);
-            _windage2 = Round(_windage2 / _clickInterval);
+            _elevation = round(_elevation / _clickInterval);
+            _windage1 = round(_windage1 / _clickInterval);
+            _windage2 = round(_windage2 / _clickInterval);
         };
     };
 
-    private _elevationOutput = Str(Round(_elevation * 100) / 100);
-    private _windageOutput = Str(Round(_windage1 * 100) / 100);
+    private _elevationOutput = str(round(_elevation * 100) / 100);
+    private _windageOutput = str(round(_windage1 * 100) / 100);
 
-    private _rangeOutput = Str(_range);
+    private _rangeOutput = str(_range);
     if (_velocity < _speedOfSound) then {
         _rangeOutput = _rangeOutput + "*";
     };
@@ -80,19 +80,19 @@ private _speedOfSound = GVAR(temperature) call EFUNC(weather,calculateSpeedOfSou
     switch (GVAR(rangeCardCurrentColumn)) do {
         case 0: {
             if (GVAR(showWind2)) then {
-                _lastColumnOutput = Str(Round(_windage2 * 100) / 100);
+                _lastColumnOutput = str(round(_windage2 * 100) / 100);
             } else {
-                _lastColumnOutput = Str(Round(_lead * 100) / 100);
+                _lastColumnOutput = str(round(_lead * 100) / 100);
             };
         };
         case 1: {
-            _lastColumnOutput = Str(Round(_velocity));
+            _lastColumnOutput = str(round(_velocity));
         };
         case 2: {
-            _lastColumnOutput = Str(Round(_kineticEnergy));
+            _lastColumnOutput = str(round(_kineticEnergy));
         };
         case 3: {
-            _lastColumnOutput = Str(Round(_TOF * 100) / 100);
+            _lastColumnOutput = str(round(_TOF * 100) / 100);
         }
     };
 

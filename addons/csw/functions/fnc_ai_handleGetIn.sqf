@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
- * Author: Grim
- * Handles AI GetIn on an empty weapon
+ * Author: LinkIsGrim
+ * Handles AI GetIn on an empty CSW.
  *
  * Arguments:
  * GetIn EH
@@ -11,6 +11,8 @@
  *
  * Public: No
  */
+
+if (GVAR(ammoHandling) != 2) exitWith {};
 
 params ["_vehicle", "", "_gunner"];
 TRACE_2("getInEH:",_vehicle,_gunner);

@@ -4,7 +4,7 @@
  * Updates marker position and texts.
  *
  * Arguments:
- * 0: Marker <STRING>
+ * 0: Rallypoint <OBJECT>
  * 1: Side <SIDE>
  * 2: Position <ARRAY>
  *
@@ -18,7 +18,7 @@
  */
 
 params ["_rallypoint", "_side"];
-private _position = param [2, getpos _rallypoint];
+private _position = param [2, getPos _rallypoint];
 
 if (!hasInterface) exitWith {};
 

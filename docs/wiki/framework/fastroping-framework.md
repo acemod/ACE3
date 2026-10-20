@@ -87,8 +87,8 @@ ACE3 provides two functions that are compatible with most helicopters and all AC
 
 `ace_fastroping_fnc_equipFRIES`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Helicopter | Object | Required |
 | **R** | None | None | Return value |
 
@@ -96,7 +96,7 @@ ACE3 provides two functions that are compatible with most helicopters and all AC
 
 `ace_fastroping_fnc_unequipFRIES`
 
-|   | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Helicopter | Object | Required |
 | **R** | None | None | Return value |

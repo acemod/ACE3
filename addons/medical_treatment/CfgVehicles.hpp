@@ -32,7 +32,7 @@ class CfgVehicles {
                 class GVAR(buryBodyBag) {
                     displayName = CSTRING(DigGrave);
                     condition = QUOTE([ARR_2(_this#1,_this#0)] call FUNC(canDigGrave));
-                    statement = QUOTE(_this call FUNC(placeBodyBagInGrave));
+                    statement = QUOTE(call FUNC(placeBodyBagInGrave));
                     icon = QPATHTOEF(medical_gui,ui\grave.paa);
                 };
             };
@@ -396,5 +396,19 @@ class CfgVehicles {
     class Heli_Transport_04_base_F;
     class O_Heli_Transport_04_medevac_F: Heli_Transport_04_base_F {
         GVAR(patientSeats)[] = {0,1,2};
+    };
+
+    class LSV_01_base_F;
+    class LSV_01_armed_base_F: LSV_01_base_F {
+        GVAR(patientReverseFill) = 0;
+    };
+    class LSV_01_unarmed_base_F: LSV_01_base_F {
+        GVAR(patientReverseFill) = 0;
+    };
+    class LSV_01_light_base_F: LSV_01_base_F {
+        GVAR(patientReverseFill) = 0;
+    };
+    class LSV_01_AT_base_F: LSV_01_base_F {
+        GVAR(patientReverseFill) = 0;
     };
 };

@@ -11,7 +11,7 @@ import os
 import sys
 import traceback
 import subprocess as sp
-from github import Github
+from github import Github, Auth
 
 
 TRANSLATIONISSUE = 367
@@ -38,7 +38,8 @@ def main():
     print("Obtaining token ...")
     try:
         token = os.environ["GH_TOKEN"]
-        repo = Github(token).get_repo(REPOPATH)
+        auth = Auth.Token(token)
+        repo = Github(auth=auth).get_repo(REPOPATH)
     except:
         print("Could not obtain token.")
         print(traceback.format_exc())

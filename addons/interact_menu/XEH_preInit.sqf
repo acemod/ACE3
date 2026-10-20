@@ -71,10 +71,24 @@ GVAR(collectedActionPoints) = [];
 GVAR(foundActions) = [];
 GVAR(lastTimeSearchedActions) = -1000;
 
+// Selector positioning
+GVAR(SELECTOR_LIST_X) = 0.014;
+GVAR(SELECTOR_LIST_Y) = 0.014;
+GVAR(SELECTOR_LIST_W) = 0.05;
+GVAR(SELECTOR_LIST_H) = 0.035;
+GVAR(SELECTOR_RADIAL_X) = 0.0505;
+GVAR(SELECTOR_RADIAL_Y) = 0.0125;
+GVAR(SELECTOR_RADIAL_W) = 0.1;
+GVAR(SELECTOR_RADIAL_H) = 0.035;
+if (str (getResolution select 4) == "3.55556") then { // 32:9
+    GVAR(SELECTOR_LIST_X) = 0.012;
+    GVAR(SELECTOR_LIST_Y) = 0.0125;
+};
+
 // Init zeus menu
 [] call FUNC(compileMenuZeus);
 
-// Handle addActionToClass with Inheritance flag set (CAManBase actions are seperated for speed)
+// Handle addActionToClass with Inheritance flag set (CAManBase actions are separated for speed)
 GVAR(inheritedActionsAll) = [];
 GVAR(inheritedClassesAll) = [];
 GVAR(inheritedActionsMan) = [];
@@ -88,8 +102,8 @@ GVAR(inheritedClassesMan) = [];
     if (GVAR(inheritedClassesAll) pushBackUnique _type == -1) exitWith { END_COUNTER(InitPost); };
 
     {
-        _x params ["_objectType", "_typeNum", "_parentPath", "_action"];
-        if (_object isKindOf _objectType) then {
+        _x params ["_objectType", "_typeNum", "_parentPath", "_action", "_excludedClasses"];
+        if (_type isKindOf _objectType && {_excludedClasses findIf {_type isKindOf _x} == -1}) then {
             [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
         };
     } forEach GVAR(inheritedActionsAll);
@@ -102,8 +116,10 @@ GVAR(inheritedClassesMan) = [];
 
     if (GVAR(inheritedClassesMan) pushBackUnique _type == -1) exitWith { END_COUNTER(InitPost); };
     {
-        _x params ["_typeNum", "_parentPath", "_action"];
-        [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
+        _x params ["_typeNum", "_parentPath", "_action", "_excludedClasses"];
+        if (_excludedClasses findIf {_type isKindOf _x} == -1) then { // skip excluded classes and children
+            [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
+        };
     } forEach GVAR(inheritedActionsMan);
     END_COUNTER(InitPost);
 }, true, ["VirtualMan_F"]] call CBA_fnc_addClassEventHandler;

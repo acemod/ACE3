@@ -1,19 +1,20 @@
 #include "..\script_component.hpp"
 /*
  * Author: esteldunedain
- * Check if headphones can be connected to the mine detector
+ * Checks if headphones can be connected to the mine detector.
  *
  * Arguments:
- * None
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * Can be connected <BOOL>
  *
  * Example:
- * [] call ace_minedetector_fnc_canConnectHeadphones
+ * player call ace_minedetector_fnc_canConnectHeadphones
  *
  * Public: No
  */
 
-!(ACE_player getVariable [QGVAR(isUsingHeadphones), false]) &&
-{[ACE_player] call FUNC(hasDetector)};
+params ["_unit"];
+
+!(_unit getVariable [QGVAR(isUsingHeadphones), false]) && {_unit call FUNC(hasDetector)} // return

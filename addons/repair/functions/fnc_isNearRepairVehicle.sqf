@@ -21,7 +21,7 @@ params ["_unit"];
 TRACE_1("params",_unit);
 
 private _fnc_check = {
-    private _nearObjects = nearestObjects [_unit, ["Air", "LandVehicle", "Slingload_base_F"], 20];
+    private _nearObjects = nearestObjects [_unit, ["Air", "LandVehicle", "Ship", "ThingX"], 20];
     CHECK_OBJECTS(_nearObjects)
 };
 

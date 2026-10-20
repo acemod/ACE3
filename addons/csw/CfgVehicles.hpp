@@ -2,11 +2,15 @@ class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {
-            class GVAR(deploy) {
-                displayName = CSTRING(PlaceTripod_displayName);
-                condition = QUOTE(call FUNC(canDeployTripod));
-                statement = QUOTE(call FUNC(assemble_deployTripod));
-                exceptions[] = {};
+            class ADDON {
+                displayName = CSTRING(AddonName_Short);
+                condition = QUOTE(call FUNC(isModEnabled));
+                class GVAR(placeTripod) {
+                    displayName = CSTRING(PlaceTripod_displayName);
+                    condition = QUOTE(call FUNC(canDeployTripod));
+                    statement = QUOTE(call FUNC(assemble_startDeployTripod));
+                    exceptions[] = {};
+                };
             };
         };
     };
@@ -30,20 +34,31 @@ class CfgVehicles {
 
         class ACE_Actions {
             class ACE_MainActions {
-                displayName = CSTRING(genericTripod_displayName);
                 selection = "";
                 distance = 2.5;
                 condition = "true";
-                class GVAR(pickUp) {
-                    displayName = CSTRING(Pickup_displayName);
-                    condition = QUOTE(call FUNC(canPickupTripod));
-                    statement = QUOTE(call FUNC(assemble_pickupTripod));
-                };
-                class GVAR(mountWeapon) {
-                    displayName = CSTRING(MountWeapon_displayName);
-                    condition = QUOTE(call FUNC(assemble_canDeployWeapon));
-                    statement = QUOTE(call FUNC(assemble_deployWeapon));
-                    modifierFunction = QUOTE(call FUNC(assemble_deployWeaponModifier));
+                class ADDON {
+                    displayName = CSTRING(AddonName_Short);
+                    condition = QUOTE(call FUNC(isModEnabled));
+                    selection = "";
+                    distance = 5;
+                    class GVAR(tripod) {
+                        displayName = CSTRING(genericTripod_displayName);
+                        selection = "";
+                        distance = 2.5;
+                        condition = "true";
+                        class GVAR(pickUp) {
+                            displayName = CSTRING(Pickup_displayName);
+                            condition = QUOTE(call FUNC(canPickupTripod));
+                            statement = QUOTE(call FUNC(assemble_pickupTripod));
+                        };
+                        class GVAR(mountWeapon) {
+                            displayName = CSTRING(MountWeapon_displayName);
+                            condition = QUOTE(call FUNC(assemble_canDeployWeapon));
+                            statement = QUOTE(call FUNC(assemble_deployWeapon));
+                            modifierFunction = QUOTE(call FUNC(assemble_deployWeaponModifier));
+                        };
+                    };
                 };
             };
         };
@@ -125,6 +140,11 @@ class CfgVehicles {
     class StaticWeapon: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions {
+                class ADDON {
+                    displayName = CSTRING(AddonName_Short);
+                    condition = QUOTE(call FUNC(isModEnabled));
+                    selection = "";
+                };
                 // Workaround for static weapons' Get In memory point being at the front of the gun
                 class GVAR(getIn) {
                     displayName = CSTRING(GetIn_displayName);
@@ -180,20 +200,39 @@ class CfgVehicles {
             ammoLoadTime = 7;
             ammoUnloadTime = 5;
         };
+        class AnimationSources;
     };
     class HMG_02_high_base_F: HMG_02_base_F {
-        class ADDON {
-            enabled = 1;
-            proxyWeapon = QGVAR(HMG_M2_Mounted);
-            magazineLocation = "_target selectionPosition 'magazine'";
-            disassembleWeapon = QGVAR(staticM2ShieldCarry); // carry weapon [CfgWeapons]
+        class ADDON: ADDON {
             disassembleTurret = QGVAR(m3Tripod); // turret [CfgVehicles]
-            desiredAmmo = 100;
-            ammoLoadTime = 7;
-            ammoUnloadTime = 5;
         };
     };
 
+    class B_HMG_02_F: HMG_02_base_F {
+        class AnimationSources: AnimationSources {
+            class Hide_Rail;
+            class Hide_Shield;
+        };
+    };
+    class B_HMG_02_high_F: HMG_02_high_base_F {
+        class AnimationSources: AnimationSources {
+            class Hide_Rail;
+            class Hide_Shield;
+        };
+    };
+
+    // HMG_02 Subvariants with different configured attachments
+    class GVAR(HMG_02_shield): B_HMG_02_F { M2_VARIANT_SHIELD; };
+    class GVAR(HMG_02_shield_high): B_HMG_02_high_F { M2_VARIANT_SHIELD; };
+
+    class GVAR(HMG_02_sight): B_HMG_02_F { M2_VARIANT_SIGHT; };
+    class GVAR(HMG_02_sight_high): B_HMG_02_high_F { M2_VARIANT_SIGHT; };
+
+    class GVAR(HMG_02_shield_sight): B_HMG_02_F { M2_VARIANT_SHIELD_AND_SIGHT; };
+    class GVAR(HMG_02_shield_sight_high): B_HMG_02_high_F { M2_VARIANT_SHIELD_AND_SIGHT; };
+
+    class GVAR(HMG_02_bare): B_HMG_02_F { M2_VARIANT_BARE; };
+    class GVAR(HMG_02_bare_high): B_HMG_02_high_F { M2_VARIANT_BARE; };
 
     class GMG_TriPod;
     class GMG_01_base_F: GMG_TriPod {
@@ -266,6 +305,7 @@ class CfgVehicles {
             desiredAmmo = 1;
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
+            allowFireOnLoad = 1;
         };
     };
     // Ammo holder for returning ammo

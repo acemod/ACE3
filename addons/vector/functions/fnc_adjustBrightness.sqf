@@ -4,13 +4,13 @@
  *
  *
  * Arguments:
- * 0: Number <NUMBER>
+ * 0: Illuminate <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [5] call ace_vector_fnc_adjustBrightness
+ * [true] call ace_vector_fnc_adjustBrightness
  *
  * Public: No
  */
@@ -39,4 +39,4 @@ private _color = [[1,0,0,0.5], [1,0,0,1]] select (_this select 0);
 
 GVAR(illuminate) = _this select 0;
 
-_this call FUNC(illuminate);
+call FUNC(illuminate);

@@ -4,19 +4,18 @@
  * Returns all detonators the given unit has.
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: Unit <OBJECT> (default: objNull)
  *
  * Return Value:
  * Config names of detonators <ARRAY>
  *
  * Example:
- * [_player] call ace_explosives_fnc_getDetonators
+ * player call ace_explosives_fnc_getDetonators
  *
  * Public: Yes
  */
 
-params ["_unit"];
-TRACE_1("Getting detonators",_unit);
+params [["_unit", objNull, [objNull]]];
+TRACE_1("getting detonators",_unit);
 
-private _cfgWeapons = configFile >> "CfgWeapons";
-(_unit call EFUNC(common,uniqueItems)) select {getNumber (_cfgWeapons >> _x >> QGVAR(Detonator)) == 1};
+GVAR(detonators) arrayIntersect ((_unit call EFUNC(common,uniqueItems)) + weapons _unit) // return

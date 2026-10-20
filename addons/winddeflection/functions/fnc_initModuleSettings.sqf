@@ -9,7 +9,7 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Example:
  * [LOGIC, [bob, kevin], true] call ace_winddeflection_fnc_initModuleSettings

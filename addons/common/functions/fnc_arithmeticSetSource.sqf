@@ -4,7 +4,7 @@
  * Adds or removes a source to an arithmetic set.
  *
  * Arguments:
- * 0: Namespace <OBJECT|LOCATION|NAMESPACE>
+ * 0: Namespace <OBJECT or LOCATION or NAMESPACE>
  * 1: Number Set ID <STRING>
  * 2: Source <STRING>
  * 3: Code that returns a number (can access var _namespace) [use {} to remove] <CODE>
@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [missionNameSpace, "ace_hearing", "myMission", {0.5}] call ace_common_fnc_arithmeticSetSource
+ * [missionNamespace, "ace_hearing", "myMission", {0.5}] call ace_common_fnc_arithmeticSetSource
  * [ace_player, "ace_aimCoefficents", "ace_medical", {linearConversion [0,1,(_namespace getVariable "ace_medical_pain",1,0.2,true]}] call ace_common_fnc_arithmeticSetSource
  *
  * Public: Yes

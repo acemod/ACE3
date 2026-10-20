@@ -5,8 +5,8 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Distance <NUMBER><OPTIONAL>
- * 2: Restriceted to cargo only <BOOL><OPTIONAL>
+ * 1: Distance <NUMBER> (default: 10)
+ * 2: Restricted to cargo only <BOOL> (default: false)
  *
  * Return Value:
  * Nearest vehicles with a free seat <ARRAY>

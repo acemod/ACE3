@@ -76,36 +76,19 @@ if (GVAR(showBloodlossEntry)) then {
     };
 };
 // Show receiving IV volume remaining
-private _totalIvVolume = 0;
-private _saline = 0;
-private _blood = 0;
-private _plasma = 0;
+private _fluidVolumes = createHashMap;
+private _ivCfg = configFile >> "ace_medical_treatment" >> "IV";
 {
     _x params ["_volumeRemaining", "_type"];
-    switch (_type) do {
-        case "Saline": {
-            _saline = _saline + _volumeRemaining;
-        };
-        case "Blood": {
-            _blood = _blood + _volumeRemaining;
-        };
-        case "Plasma": {
-            _plasma = _plasma + _volumeRemaining;
-        };
-    };
-    _totalIvVolume = _totalIvVolume + _volumeRemaining;
+    private _guiMessage = GET_STRING(_ivCfg >> (_type + "IV") >> "gui_message",getText (_ivCfg >> "gui_message"));
+    private _currentVolume = _fluidVolumes getOrDefault [_guiMessage, 0];
+    _fluidVolumes set [_guiMessage, _currentVolume + _volumeRemaining];
 } forEach (_target getVariable [QEGVAR(medical,ivBags), []]);
 
-if (_totalIvVolume > 0) then {
-    if (_saline > 0) then {
-        _entries pushBack [format [localize ELSTRING(medical_treatment,receivingSalineIvVolume), floor _saline], [1, 1, 1, 1]];
-    };
-    if (_blood > 0) then {
-        _entries pushBack [format [localize ELSTRING(medical_treatment,receivingBloodIvVolume), floor _blood], [1, 1, 1, 1]];
-    };
-    if (_plasma > 0) then {
-        _entries pushBack [format [localize ELSTRING(medical_treatment,receivingPlasmaIvVolume), floor _plasma], [1, 1, 1, 1]];
-    };
+if (_fluidVolumes isNotEqualTo createHashMap) then {
+    {
+        _entries pushBack [format [_x, floor _y], [1, 1, 1, 1]];
+    } forEach _fluidVolumes;
 } else {
     _entries pushBack [localize ELSTRING(medical_treatment,Status_NoIv), _nonissueColor];
 };
@@ -163,15 +146,23 @@ _entries pushBack [localize _bodyPartName, [1, 1, 1, 1]];
 
 // Damage taken tooltip
 if (GVAR(showDamageEntry)) then {
-    private _bodyPartDamage = (_target getVariable [QEGVAR(medical,bodyPartDamage), [0, 0, 0, 0, 0, 0]]) select _selectionN;
+    private _bodyPartDamage = GET_BODYPART_DAMAGE(_target) select _selectionN;
     if (_bodyPartDamage > 0) then {
         private _damageThreshold = GET_DAMAGE_THRESHOLD(_target);
         switch (true) do {
             case (_selectionN > 3): { // legs: index 4 & 5
-                _damageThreshold = LIMPING_DAMAGE_THRESHOLD * 4;
+                if (EGVAR(medical,limbDamageThreshold) != 0 && {[false, !isPlayer _target, true] select EGVAR(medical,useLimbDamage)}) then { // Just indicate how close to the limping threshold we are
+                    _damageThreshold = _damageThreshold * EGVAR(medical,limbDamageThreshold);
+                } else {
+                    _damageThreshold = FRACTURE_DAMAGE_THRESHOLD * 4;
+                };
             };
             case (_selectionN > 1): { // arms: index 2 & 3
-                _damageThreshold = FRACTURE_DAMAGE_THRESHOLD * 4;
+                if (EGVAR(medical,limbDamageThreshold) != 0 && {[false, !isPlayer _target, true] select EGVAR(medical,useLimbDamage)}) then { // Just indicate how close to the fracture threshold we are
+                    _damageThreshold = _damageThreshold * EGVAR(medical,limbDamageThreshold);
+                } else {
+                    _damageThreshold = FRACTURE_DAMAGE_THRESHOLD * 4;
+                };
             };
             case (_selectionN == 0): { // head: index 0
                 _damageThreshold = _damageThreshold * 1.25;
@@ -180,7 +171,8 @@ if (GVAR(showDamageEntry)) then {
                 _damageThreshold = _damageThreshold * 1.5;
             };
         };
-        _bodyPartDamage = (_bodyPartDamage / _damageThreshold) min 1;
+        // _bodyPartDamage here should indicate how close unit is to guaranteed death via sum of trauma, so use the same multipliers used in medical_damage/functions/fnc_determineIfFatal.sqf
+        _bodyPartDamage = (_bodyPartDamage / (_damageThreshold max 0.01)) min 1;
         switch (true) do {
             case (_bodyPartDamage isEqualTo 1): {
                 _entries pushBack [localize LSTRING(traumaSustained4), [_bodyPartDamage] call FUNC(damageToRGBA)];

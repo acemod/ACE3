@@ -9,7 +9,7 @@
  * 2: Door name <STRING>
  *
  * Return Value:
- * 0: Door Name <STRING>
+ * 0: Door Name <STRING or NIL>
  *
  * Example:
  * [player, target] call ace_interaction_fnc_getGlassDoor
@@ -61,6 +61,6 @@ private _lowestDistance = 0;
 } forEach _doorPos;
 
 // Check if we have a door or if it is the glass part
-if ((isNil "_door") || ((_door find "glass") != -1)) exitWith {};
+if ((isNil "_door") || ((_door find "glass") != -1)) exitWith {}; // line has never worked?
 
 _door

@@ -1,7 +1,14 @@
+[QGVAR(enabled), "CHECKBOX",
+    [LELSTRING(common,Enabled), LLSTRING(setting_enabled_description)],
+    [ELSTRING(main,Category_Logistics), LSTRING(displayName)],
+    true,
+    true
+] call CBA_fnc_addSetting;
+
 [
     QGVAR(addRopeToVehicleInventory), "CHECKBOX",
     LSTRING(Setting_addRopeToVehicleInventory_DisplayName),
-    ELSTRING(main,Category_Logistics),
+    [ELSTRING(main,Category_Logistics), LSTRING(displayName)],
     true,
     true,
     {

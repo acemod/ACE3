@@ -73,13 +73,16 @@ class ACE_Medical_Injuries {
         // each entry should be a SQF expression that returns a function
         // this can also be overridden for each damage type
         class woundHandlers {
-            ADDON = QFUNC(woundsHandlerBase);
+            GVAR(woundsHandlerBase) = QFUNC(woundsHandlerBase);
         };
 
         class bullet {
             // bullets only create multiple wounds when the damage is very high
             thresholds[] = {{20, 10}, {4.5, 2}, {3, 1}, {0, 1}};
             selectionSpecific = 1;
+            class woundHandlers: woundHandlers {
+                GVAR(armorPenetration) = QFUNC(woundsHandlerArmorPenetration);
+            };
 
             class Avulsion {
                 // at damage, weight. between points, weight is interpolated then wound is chosen by weighted random.
@@ -171,14 +174,14 @@ class ACE_Medical_Injuries {
             // vehicle explosions are usually caused by explosive damage and should behave similarly
             thresholds[] = {{6, 3}, {4.5, 2}, {2, 2}, {0.8, 1}, {0.2, 1}, {0, 0}};
             class woundHandlers: woundHandlers {
-                GVAR(vehiclehit) = QFUNC(woundsHandlerVehiclehit);
+                GVAR(woundsHandlerVehiclehit) = QFUNC(woundsHandlerVehiclehit);
             };
         };
         class vehiclecrash {
             thresholds[] = {{1.5, 3}, {1.5, 2}, {1, 2}, {1, 1}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
             selectionSpecific = 0;
             class woundHandlers: woundHandlers {
-                GVAR(vehiclecrash) = QFUNC(woundsHandlerVehiclecrash);
+                GVAR(woundsHandlerVehiclecrash) = QFUNC(woundsHandlerVehiclecrash);
             };
             class Abrasion {
                 weighting[] = {{0.30, 0}, {0.30, 1}};
@@ -291,7 +294,7 @@ class ACE_Medical_Injuries {
             // custom handling for environmental fire sources
             // passes damage to "burn" so doesn't need its own wound stats
             class woundHandlers {
-                ADDON = QFUNC(woundsHandlerBurning);
+                GVAR(woundsHandlerBurning) = QFUNC(woundsHandlerBurning);
             };
         };
         class burn {

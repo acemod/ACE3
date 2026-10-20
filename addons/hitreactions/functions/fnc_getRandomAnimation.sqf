@@ -25,6 +25,7 @@ if (_weapon == "") exitWith {
 
 if (_weapon == primaryWeapon _unit) exitWith {
     if (_unit call EFUNC(common,isPlayer)) then {
+        //IGNORE_PRIVATE_WARNING ["_velocity"]; // from upper scope
         private _isRunning = _velocity > 4;
 
         [

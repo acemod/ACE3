@@ -48,7 +48,7 @@ GVAR(deployPFH) = [{
     private _anim = 0 max (1 - (_range / 12));
 
     if (!(alive _unit) || _range >= 12 || (_unit getVariable [QGVAR(wireDeployed), false])) exitWith {
-        private _wire = "ACE_ConcertinaWire" createvehicle [0, 0, 0];
+        private _wire = "ACE_ConcertinaWire" createVehicle [0, 0, 0];
         {
             _wire animate [_x, _anim];
         } forEach WIRE_FAST;

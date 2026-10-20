@@ -19,6 +19,9 @@
 
 params ["_ctrl", "_switch", "_turret"];
 
+// Config presets use an empty path for the pilot
+if (_turret isEqualTo []) then {_turret = [-1];};
+
 if (_switch) then {
     _turret = [[0], [-1]] select ((_ctrl getVariable QGVAR(turret)) isEqualTo [0]);
 

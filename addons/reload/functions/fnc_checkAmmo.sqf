@@ -23,7 +23,7 @@ if (_unit == _target) then {
         _target = vehicle _target;
     };
 
-    [_unit, "Gear", 1] call EFUNC(common,doGesture);
+    [_unit, "reloadMagazine", 0] call EFUNC(common,doGesture);
 };
 
 [FUNC(displayAmmo), _target, 1] call CBA_fnc_waitAndExecute;

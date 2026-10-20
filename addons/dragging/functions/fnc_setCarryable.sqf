@@ -5,21 +5,52 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: True to enable carrying, false to disable <BOOL>
+ * 1: True to enable carrying, false to disable <BOOL> (default: false)
  * 2: Position offset for attachTo command <ARRAY> (default: [0, 1, 1])
  * 3: Direction in degrees to rotate the object after attachTo <NUMBER> (default: 0)
  * 4: Override weight limit <BOOL> (default: false)
+ * 5: Apply globally <BOOL> (default: false)
  *
  * Return Value:
  * None
  *
  * Example:
- * [cursorTarget, true, [0, 1, 1], 0, false] call ace_dragging_fnc_setCarryable;
+ * [cursorTarget, true, [0, 1, 1], 0, false] call ace_dragging_fnc_setCarryable
  *
  * Public: Yes
  */
 
-params ["_object", "_enableCarry", "_position", "_direction", ["_ignoreWeightCarry", false, [false]]];
+params [
+    ["_object", objNull, [objNull]],
+    ["_enableCarry", false, [false]],
+    "_position",
+    "_direction",
+    ["_ignoreWeightCarry", false, [false]],
+    ["_global", false, [false]]
+];
+
+if (isNull _object) exitWith {};
+
+if (!isNil "_position" && {!(_position isEqualType []) || {!(_position isEqualTypeArray [0, 0, 0])}}) exitWith {
+    ERROR_2("setCarryable: Bad position parameter [%1] for [%2], should be a 3D position or nil",_position,_object);
+};
+
+if (!isNil "_direction" && {!(_direction isEqualType 0)}) exitWith {
+    ERROR_2("setCarryable: Bad direction parameter [%1] for [%2], should be a number or nil",_direction,_object);
+};
+
+// Handle global here
+if (_global) exitWith {
+    private _jipID = format [QGVAR(carrying_%1), hashValue _object];
+    [QGVAR(setCarryable), [_object, _enableCarry, _position, _direction, _ignoreWeightCarry], _jipID] call CBA_fnc_globalEventJIP;
+
+    // Remove from JIP queue if object is deleted
+    if !(_object getVariable [QGVAR(setCarryableRemoveJip), false]) then {
+        [_jipID, _object] call CBA_fnc_removeGlobalEventJIP;
+
+        _object setVariable [QGVAR(setCarryableRemoveJip), true, true];
+    };
+};
 
 if (isNil "_position") then {
     _position = _object getVariable [QGVAR(carryPosition), [0, 1, 1]];
@@ -68,7 +99,7 @@ private _carryAction = [
 
 private _dropAction = [
     QGVAR(drop_carry),
-    LLSTRING(Drop),
+    LELSTRING(common,Drop),
     "",
     {
         [_player, _target] call FUNC(dropObject_carry)
@@ -78,3 +109,5 @@ private _dropAction = [
 
 [_type, 0, ["ACE_MainActions"], _carryAction] call EFUNC(interact_menu,addActionToClass);
 [_type, 0, [], _dropAction] call EFUNC(interact_menu,addActionToClass);
+
+nil // return

@@ -126,7 +126,7 @@ if !(GVAR(uiMapVisible)) then {
                 private _grenadeVelocityMagnitude = vectorMagnitude velocity _x;
 
                 // Draw grenade (rotate icon to represent spinning)
-                drawIcon3D [ICON_GRENADE, [1,0,0,1], getPosVisual _x, 0.6, 0.6, if (_grenadeVelocityMagnitude > 0) then { time * 100 * _grenadeVelocityMagnitude } else { 0 }, "", 0, 0.05, "TahomaB"];
+                drawIcon3D [ICON_GRENADE, [1,0,0,1], ASLToAGL getPosASLVisual _x, 0.6, 0.6, if (_grenadeVelocityMagnitude > 0) then { time * 100 * _grenadeVelocityMagnitude } else { 0 }, "", 0, 0.05, "TahomaB"];
 
                 // Store grenade for next frame
                 _grenadesNew pushBack _x;
@@ -134,6 +134,17 @@ if !(GVAR(uiMapVisible)) then {
         } forEach GVAR(grenadesToDraw);
 
         GVAR(grenadesToDraw) = _grenadesNew;
+
+        GVAR(timedExplosives) = GVAR(timedExplosives) select {
+            _x params ["_explosive", "_detTime"];
+            if (isNull _explosive) then { false } else {
+                private _timeStr = (_detTime - CBA_missionTime) toFixed 1;
+                private _hash = ["@position", "@texts"] createHashMapFromArray [[_explosive, 0.1], [[_timeStr]]];
+                _hash merge GVAR(timedExplosivesDrawHash);
+                drawIcon3D _hash;
+                true
+            };
+        };
         END_COUNTER(drawTracers);
     };
 };

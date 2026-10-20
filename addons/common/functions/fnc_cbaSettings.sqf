@@ -58,7 +58,7 @@ GVAR(settingsMovedToSQF) = [];
     if !(SLX_XEH_MACHINE select 8) then {WARNING("PostInit not finished");};
     INFO("Settings initialized.");
 
-    //Event that settings are safe to use:
+    //Event that settings are safe to use, kept for BWC
     ["ace_settingsInitialized", []] call CBA_fnc_localEvent;
 
     //Set init finished and run all delayed functions:
@@ -88,7 +88,7 @@ for "_index" from 0 to (_countOptions - 1) do {
         if (isNil (configName _optionEntry)) then {
             [_optionEntry] call FUNC(cbaSettings_loadFromConfig);
         } else {
-            WARNING_1("Setting [%1] - Already defined from somewhere else??",_varName);
+            WARNING_1("Setting [%1] - Already defined from somewhere else??",configName _optionEntry);
         };
         #ifdef DEBUG_MODE_FULL
     } else {
@@ -104,7 +104,7 @@ for "_index" from 0 to (_countOptions - 1) do {
     private _optionEntry = _missionSettingsConfig select _index;
     private _settingName = configName _optionEntry;
     if ((toLowerANSI _settingName) in GVAR(cbaSettings_forcedSettings)) then {
-        WARNING_1("Setting [%1] - Already Forced - ignoring missionConfig",_varName);
+        WARNING_1("Setting [%1] - Already Forced - ignoring missionConfig",configName _optionEntry);
     } else {
         if ((isNil _settingName) && {(getNumber (_settingsConfig >> _settingName >> "movedToSQF")) == 0}) then {
             // New setting, that was first defined in missionConfigFile

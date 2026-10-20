@@ -13,6 +13,6 @@ class Extended_PreInit_EventHandlers {
 
 class Extended_DisplayLoad_EventHandlers {
     class RscDisplayMain {
-        GVAR(loadMainMenuBox) = QUOTE(_this call COMPILE_SCRIPT(init_loadMainMenuBox));
+        GVAR(loadMainMenuBox) = QUOTE(call COMPILE_SCRIPT(init_loadMainMenuBox));
     };
 };

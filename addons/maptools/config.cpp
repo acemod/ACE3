@@ -4,7 +4,7 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {};
-        weapons[] = {"ACE_MapTools"};
+        weapons[] = {"ACE_MapTools", "ACE_PlottingBoard"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
         author = ECSTRING(common,ACETeam);
@@ -14,16 +14,9 @@ class CfgPatches {
     };
 };
 
-class RscControlsGroup;
-class RscActiveText;
 class RscPicture;
 class RscText;
 class RscObject;
-class RscButton;
-class RscButtonMenuOK;
-class RscButtonMenuCancel;
-class RscButtonMenu;
-class RscEdit;
 
 #include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"

@@ -34,22 +34,59 @@ GVAR(loadoutAction) = [ // create action
 
 
 [QGVAR(setPylonLoadOutEvent), {
-    params ["_aircraft", "_pylonIndex", "_pylon", "_turret", "_weaponToRemove"];
-    TRACE_5("setPylonLoadOutEvent",_aircraft,_pylonIndex,_pylon,_turret,_weaponToRemove);
-    _aircraft setPylonLoadOut [_pylonIndex, _pylon, false, _turret];
+    params ["_aircraft", "_pylonIndex", "_pylon", "_turret", "_rearm"];
+    TRACE_5("setPylonLoadOutEvent",_aircraft,_pylonIndex,_pylon,_turret,_rearm);
+
+    // Read and update the loadout and ammunition together on the aircraft owner
+    (getAllPylonsInfo _aircraft select (_pylonIndex - 1)) params ["", "", "_currentTurret", "_currentMagazine", "_currentAmmo"];
+    if (_currentTurret isEqualTo [-1]) then {_currentTurret = [];};
+    private _weaponToRemove = getText (configFile >> "CfgMagazines" >> _currentMagazine >> "pylonWeapon");
+    private _count = if (_pylon == _currentMagazine) then {
+        _currentAmmo max 0
+    } else {
+        [0, getNumber (configFile >> "CfgMagazines" >> _pylon >> "count")] select _rearm
+    };
+
+    // Recreate the magazine when moving it between seats, keeping its ammunition
+    private _reassign = _pylon != "" && {_pylon == _currentMagazine} && {_turret isNotEqualTo _currentTurret};
+    if (_reassign) then {
+        _aircraft setPylonLoadout [_pylonIndex, "", false, _currentTurret];
+    };
+    if !(_aircraft setPylonLoadout [_pylonIndex, _pylon, false, _turret]) exitWith {
+        if (_reassign) then {
+            _aircraft setPylonLoadout [_pylonIndex, _currentMagazine, true, _currentTurret];
+            _aircraft setAmmoOnPylon [_pylonIndex, _currentAmmo max 0];
+        };
+    };
+    _aircraft setAmmoOnPylon [_pylonIndex, _count];
+
     if (_weaponToRemove != "") then {
+        private _pylons = getAllPylonsInfo _aircraft;
         {
-            if (_aircraft turretLocal _x) then {
-                TRACE_3("removing",_aircraft,_x,_weaponToRemove);
-                _aircraft removeWeaponTurret [_weaponToRemove, _x];
+            private _turretPath = _x;
+            private _weaponInUse = _pylons findIf {
+                _x params ["", "", "_pylonTurret", "_magazine"];
+                if (_pylonTurret isEqualTo []) then {_pylonTurret = [-1];};
+                _pylonTurret isEqualTo _turretPath && {
+                    getText (configFile >> "CfgMagazines" >> _magazine >> "pylonWeapon") == _weaponToRemove
+                }
+            };
+            if (_weaponInUse == -1) then {
+                [
+                    QGVAR(removeWeaponTurretEvent),
+                    [_aircraft, _weaponToRemove, _turretPath],
+                    _aircraft,
+                    _turretPath
+                ] call CBA_fnc_turretEvent;
             };
         } forEach [[-1], [0]];
     };
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(setAmmoOnPylonEvent), {
-    params ["_aircraft", "_pylonIndex", "_count"];
-    _aircraft setAmmoOnPylon [_pylonIndex, _count];
+[QGVAR(removeWeaponTurretEvent), {
+    params ["_aircraft", "_weapon", "_turretPath"];
+    TRACE_3("removing",_aircraft,_turretPath,_weapon);
+    _aircraft removeWeaponTurret [_weapon, _turretPath];
 }] call CBA_fnc_addEventHandler;
 
 if (isServer) then {

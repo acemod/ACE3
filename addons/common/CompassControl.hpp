@@ -10,7 +10,7 @@
 #define POINTER_WIDTH_FACTOR (1/128)
 
 #define LEFT (0.5 - 8 * GUI_GRID_W)
-#define TOP (safezoneY + 1.6 * GUI_GRID_H)
+#define TOP (safeZoneY + 1.6 * GUI_GRID_H)
 #define WIDTH (16 * GUI_GRID_W)
 #define HEIGHT (0.5 * GUI_GRID_H)
 

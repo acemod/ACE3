@@ -1,10 +1,10 @@
 #include "..\script_component.hpp"
 /*
  * Author: Ruthberg
- * Evalutes input from the option menu
+ * Evaluates input from the option menu
  *
  * Arguments:
- * option menu id <number>
+ * 0: Option menu id <NUMBER>
  *
  * Return Value:
  * None

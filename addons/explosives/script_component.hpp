@@ -34,3 +34,7 @@
 #define PLACE_WAITING -1
 #define PLACE_CANCEL 0
 #define PLACE_APPROVE 1
+
+#define MINE_PITCH_UP 90
+
+#define CELLPHONE_MAX_COUNT 10000

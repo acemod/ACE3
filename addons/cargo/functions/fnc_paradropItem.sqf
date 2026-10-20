@@ -4,7 +4,7 @@
  * Unloads and paradrops an object from a plane or helicopter.
  *
  * Arguments:
- * 0: Item <STRING> or <OBJECT>
+ * 0: Item <STRING or OBJECT>
  * 1: Holder object (vehicle) <OBJECT>
  * 2: Show Hint <BOOL> (default: true)
  *
@@ -35,9 +35,7 @@ if !(_item in _loaded) exitWith {
 };
 
 // Check if item can be unloaded
-private _itemSize = _item call FUNC(getSizeItem);
-
-if (_itemSize < 0) exitWith {
+if ((_item call FUNC(getSizeItem)) < 0) exitWith {
     false // return
 };
 
@@ -89,14 +87,26 @@ private _object = [_item, _vehicle, _posBehindVehicleAGL, false] call FUNC(unloa
 
 // Create smoke effect when crate landed
 [{
-    (_this select 0) params ["_object"];
+    params ["_object", "_pfhID"];
 
     if (isNull _object) exitWith {
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
+        _pfhID call CBA_fnc_removePerFrameHandler;
     };
 
     if (getPos _object select 2 < 1) exitWith {
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
+        _pfhID call CBA_fnc_removePerFrameHandler;
+
+        // Reenable UAV crew
+        private _UAVCrew = _object getVariable [QGVAR(isUAV), []];
+
+        if (_UAVCrew isNotEqualTo []) then {
+            // Reenable AI
+            {
+                [_x, false] call EFUNC(common,disableAiUAV);
+            } forEach _UAVCrew;
+
+            _object setVariable [QGVAR(isUAV), nil, true];
+        };
 
         if ((GVAR(disableParadropEffectsClasstypes) findIf {_object isKindOf _x}) == -1) then {
             private _smoke = "SmokeshellYellow" createVehicle [0, 0, 0];

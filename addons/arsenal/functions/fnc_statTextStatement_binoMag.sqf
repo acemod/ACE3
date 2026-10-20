@@ -4,7 +4,7 @@
  * Text statement for the binocular magnification stat.
  *
  * Arguments:
- * 0: Not used
+ * 0: Stats array (not used) <ARRAY>
  * 1: Item config path <CONFIG>
  *
  * Return Value:
@@ -22,10 +22,7 @@ private _maxZoom = getNumber (_config >> "opticsZoomMax");
 if (_minZoom == 0) exitWith {"?"};
 
 private _maxMagnification = (0.25 / _minZoom) toFixed 1;
-private _minMagnification = (0.25 / _maxZoom);
-if (_minMagnification < 1) then {
-    _minMagnification = 1;
-};
+private _minMagnification = (0.25 / _maxZoom) max 1;
 _minMagnification = _minMagnification toFixed 1;
 
 if (_minMagnification == _maxMagnification) exitWith {

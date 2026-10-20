@@ -119,9 +119,9 @@ class CfgVehicles {
                     initAngleY = 0;
                     minAngleY = -100;
                     maxAngleY = 100;
-                    minFov = "0.25/35"; // real one is 15x-45x, but max mag in game is 37x
-                    maxFov = "0.25/5";
-                    initFov= "0.25/5";
+                    minFov = 0.25/35; // real one is 15x-45x, but max mag in game is 37x
+                    maxFov = 0.25/5;
+                    initFov= 0.25/5;
                 };
 
                 weapons[] = {};

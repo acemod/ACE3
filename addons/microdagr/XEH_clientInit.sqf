@@ -38,7 +38,6 @@ private _closeCode = {
 [QEGVAR(vector,rangefinderData), LINKFUNC(recieveRangefinderData)] call CBA_fnc_addEventHandler;
 
 //Global Variables to default:
-GVAR(gpsPositionASL) = [0,0,0];
 GVAR(mapAutoTrackPosition) = true;
 GVAR(mapShowTexture) = false;
 GVAR(mapPosition) = [-999, -999];
@@ -49,9 +48,11 @@ GVAR(currentShowMode) = DISPLAY_MODE_CLOSED;
 //User Settings
 GVAR(settingUseMils) = false;
 GVAR(settingShowAllWaypointsOnMap) = true;
+GVAR(settingShowMagneticNorth) = false;
 
 GVAR(newWaypointPosition) = [];
 GVAR(currentWaypoint) = -1;
 GVAR(rangeFinderPositionASL) = [];
+GVAR(prevWaypointsCount) = 0;
 
 GVAR(mgrsGridZoneDesignator) = format ["%1 %2",EGVAR(common,MGRS_data) select 0, EGVAR(common,MGRS_data) select 1];

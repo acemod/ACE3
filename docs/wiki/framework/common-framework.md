@@ -24,3 +24,12 @@ class CfgWeapons {
     };
 };
 ```
+
+## 2. Variables
+
+### 2.1 Scripted `ace_name`
+
+Unit's name (`"ACE_Name"`/ `"ACE_NameRaw"`) can be manualy scritped and locked by setting
+```cpp
+unit setVariable ["ace_setCustomName", true]
+```

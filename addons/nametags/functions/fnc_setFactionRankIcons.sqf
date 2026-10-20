@@ -8,7 +8,7 @@
  * 1: Rank Icons <ARRAY>
  *
  * Return Value:
- * Successful? <BOOLEAN>
+ * Successful? <BOOL>
  *
  * Example:
  * ["BLU_F", [

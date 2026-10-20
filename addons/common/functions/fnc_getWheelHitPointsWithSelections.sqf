@@ -19,7 +19,6 @@
 params ["_vehicle"];
 TRACE_1("params",_vehicle);
 
-// TODO: Fix for GM vehicles
 GVAR(wheelSelections) getOrDefaultCall [typeOf _vehicle, {
     // Get the vehicles wheel config
     private _wheels = configOf _vehicle >> "Wheels";
@@ -33,6 +32,7 @@ GVAR(wheelSelections) getOrDefaultCall [typeOf _vehicle, {
 
         private _wheelHitPoints = [];
         private _wheelHitPointSelections = [];
+        private _isGM = 1 == getNumber (configOf _vehicle >> "isgmContent");
 
         {
             private _wheelName = configName _x;
@@ -54,6 +54,20 @@ GVAR(wheelSelections) getOrDefaultCall [typeOf _vehicle, {
                 };
             } forEach _hitPointSelections;
 
+            if (_isGM) then {
+                _wheelHitPointSelection = _wheelBone + "_axis";
+                { // modified Commy's method, they tag "hitpoint_" onto their hitpoints when they have them
+                    if ((_wheelBoneNameResized != "") && {_x find _wheelBoneNameResized == 9}) exitWith {  // same as above. Requirement for physx.
+                        _wheelHitPoint = _hitPoints select _forEachIndex;
+                        TRACE_3("wheel found [GM]",_wheelName,_wheelHitPoint,_wheelHitPointSelection);
+                    };
+                } forEach _hitPointSelections;
+                if (_wheelHitPoint == "" && _vehicle isKindOf "Car") then { // takes longer but a guarantee to find the hitpoint name
+                    private _class = format ["""%1"" in getText (_x >> ""visual"")",_wheelName] configClasses (configOf _vehicle >> "Hitpoints");
+                    _wheelHitPoint = toLowerANSI configName (_class#0);
+                        TRACE_3("wheel found [GM Config)]",_wheelName,_wheelHitPoint,_wheelHitPointSelection);
+                };
+            };
 
             if (_vehicle isKindOf "Car") then {
                 // Backup method, search for the closest hitpoint to the wheel's center selection pos.

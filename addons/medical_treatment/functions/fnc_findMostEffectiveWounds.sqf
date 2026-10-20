@@ -11,7 +11,7 @@
  * 4: Wounds found from prior runs of the function <HASHMAP> (default: Empty Hashmap)
  *
  * Return Value:
- * [Wound, [Effectiveness, Index, Impact]] <HASHMAP> of <ARRAY>:<NUMBER, NUMBER, NUMBER>
+ * [Wound, [Effectiveness, Index, Impact]] <HASHMAP<<ARRAY>:<ARRAY<NUMBER, NUMBER, NUMBER>>>
  *
  * Example:
  * [cursorObject, "FieldDressing", "rightleg"] call ace_medical_treatment_fnc_findMostEffectiveWounds

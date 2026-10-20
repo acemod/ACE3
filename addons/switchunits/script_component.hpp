@@ -11,7 +11,7 @@
 #endif
 
 #ifdef DEBUG_SETTINGS_SWITCHUNITS
-    #define DEBUG_SETTINGS DEBUG_SETTINGS_SwitchUnits
+    #define DEBUG_SETTINGS DEBUG_SETTINGS_SWITCHUNITS
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"

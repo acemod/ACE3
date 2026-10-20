@@ -32,13 +32,13 @@ params [
     "",
     ["_overrideInvuln", true, [true]]
 ];
-TRACE_7("addDamageToUnit",_unit,_damageToAdd,_bodyPart,_typeOfDamage,_instigator,_damageSelectionArray,_overrideInvuln);
+TRACE_7("addDamageToUnit",_unit,_damageToAdd,_bodyPart,_typeOfDamage,_instigator,nil,_overrideInvuln);
 
 _bodyPart = toLowerANSI _bodyPart;
 private _bodyPartIndex = ALL_BODY_PARTS find _bodyPart;
 if (_bodyPartIndex < 0) then { _bodyPartIndex = ALL_SELECTIONS find _bodyPart; }; // 2nd attempt with selection names ("hand_l", "hand_r", "leg_l", "leg_r")
 if (_bodyPartIndex < 0) exitWith {ERROR_1("addDamageToUnit - bad selection %1",_this); false};
-if (isNull _unit || {!local _unit} || {!alive _unit}) exitWith {ERROR_2("addDamageToUnit - badUnit %1 [local %2]",_this,local _unit); false};
+if (isNull _unit || {!local _unit}) exitWith {ERROR_2("addDamageToUnit - badUnit %1 [local %2]",_this,local _unit); false};
 if (_damageToAdd < 0) exitWith {ERROR_1("addDamageToUnit - bad damage %1",_this); false};
 
 if (!_overrideInvuln && {!((isDamageAllowed _unit) && {_unit getVariable [QEGVAR(medical,allowDamage), true]})}) exitWith {
@@ -54,14 +54,14 @@ if (!isNull _instigator) then {
 };
 
 #ifdef DEBUG_TESTRESULTS
-private _startDmg = +(_unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]]);
+private _startDmg = +GET_BODYPART_DAMAGE(_unit);
 private _startPain = GET_PAIN(_unit);
 #endif
 
 [QEGVAR(medical,woundReceived), [_unit, [[_damageToAdd, _bodyPart, _damageToAdd]], _instigator, _typeOfDamage]] call CBA_fnc_localEvent;
 
 #ifdef DEBUG_TESTRESULTS
-private _endDmg = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
+private _endDmg = GET_BODYPART_DAMAGE(_unit);
 private _endPain = GET_PAIN(_unit);
 private _typeOfDamageAdj = _typeOfDamage call EFUNC(medical_damage,getTypeOfDamage);
 private _config = configFile >> "ACE_Medical_Injuries" >> "damageTypes" >> _typeOfDamageAdj;

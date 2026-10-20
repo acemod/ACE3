@@ -44,4 +44,4 @@ if (GVAR(currentUnit) != 2) then {
     _estSpeed = _estSpeed * 2.23693629;
 };
 
-ctrlSetText [8007, Str(Round(_estSpeed * 10) / 10)];
+ctrlSetText [8007, str(round(_estSpeed * 10) / 10)];

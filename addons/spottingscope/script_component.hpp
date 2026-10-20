@@ -16,8 +16,8 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define POS_X_BASE(size) safezoneX + 0.5 * safezoneW - 0.5 * (size) / (getResolution select 5)
-#define POS_Y_BASE(size) safezoneY + 0.5 * safezoneH - 0.5 * (size) / (getResolution select 5) * 4/3
+#define POS_X_BASE(size) safeZoneX + 0.5 * safeZoneW - 0.5 * (size) / (getResolution select 5)
+#define POS_Y_BASE(size) safeZoneY + 0.5 * safeZoneH - 0.5 * (size) / (getResolution select 5) * 4/3
 #define POS_W_BASE(size) (size) / (getResolution select 5)
 #define POS_H_BASE(size) (size) / (getResolution select 5) * 4/3
 

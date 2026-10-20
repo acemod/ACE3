@@ -68,7 +68,7 @@ switch (_this) do {
             };
         };
 
-        ctrlSetText [7010, Str(Round(_targetSize * 100) / 100)];
+        ctrlSetText [7010, str(round(_targetSize * 100) / 100)];
     };
     case 1: {
         if (_estRange > 0) then {
@@ -87,13 +87,13 @@ switch (_this) do {
             };
         };
 
-        ctrlSetText [7011, Str(Round(_imageSize * 100) / 100)];
+        ctrlSetText [7011, str(round(_imageSize * 100) / 100)];
     };
     case 2: {
         if (tan(_imageSize) != 0) then {
             _estRange = _targetSize / tan(_imageSize);
         };
 
-        ctrlSetText [7013, Str(Round(_estRange))];
+        ctrlSetText [7013, str(round(_estRange))];
     };
 };

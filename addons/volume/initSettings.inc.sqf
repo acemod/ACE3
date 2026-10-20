@@ -9,7 +9,15 @@
 [
     QXGVAR(reduction),
     "LIST",
-    [LSTRING(Reduction), LSTRING(ReductionDescription)],
+    [LSTRING(ReductionSound), LSTRING(ReductionDescriptionSound)],
+    format ["ACE %1", LLSTRING(Name)],
+    [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], ["0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"], 5]
+] call CBA_fnc_addSetting;
+
+[
+    QXGVAR(reductionMusic),
+    "LIST",
+    [LSTRING(ReductionMusic), LSTRING(ReductionDescriptionMusic)],
     format ["ACE %1", LLSTRING(Name)],
     [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], ["0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"], 5]
 ] call CBA_fnc_addSetting;

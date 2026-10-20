@@ -40,7 +40,7 @@ private _cfgMagazines = configFile >> "CfgMagazines";
     } forEach _items;
 } forEach [
     [_cfgWeapons, _player call EFUNC(common,uniqueItems)],
-    [_cfgMagazines, [magazines _player] call EFUNC(common,uniqueElements)]
+    [_cfgMagazines, [_player, 2] call EFUNC(common,uniqueItems)]
 ];
 
 _actions

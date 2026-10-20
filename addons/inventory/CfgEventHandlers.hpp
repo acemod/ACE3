@@ -18,8 +18,8 @@ class Extended_PostInit_EventHandlers {
 
 class Extended_DisplayLoad_EventHandlers {
     class RscDisplayInventory {
-        ADDON = QUOTE(_this call FUNC(inventoryDisplayLoad));
-        GVAR(displayNameWeight) = QUOTE(_this call FUNC(displayNameWeight)); // separate to allow other mods to disable them individually
+        ADDON = QUOTE(call FUNC(inventoryDisplayLoad));
+        GVAR(displayNameWeight) = QUOTE(call FUNC(displayNameWeight)); // separate to allow other mods to disable them individually
     };
 };
 

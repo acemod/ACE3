@@ -101,7 +101,7 @@ class Cfg3DEN {
                     idc = IDC_ATTRIBUTE_LIST;
                     idcLeft = IDC_ATTRIBUTE_LIST_LEFT;
                     idcRight = IDC_ATTRIBUTE_LIST_RIGHT;
-                    onLBDblClick = QUOTE(_this call FUNC(attributeDblClick));
+                    onLBDblClick = QUOTE(call FUNC(attributeDblClick));
                     onSetFocus = QUOTE(SETUVAR(QGVAR(attributeFocus),ctrlParentControlsGroup (_this select 0)));
                     onKillFocus = QUOTE(SETUVAR(QGVAR(attributeFocus),nil));
                     x = QUOTE(5 * ATTRIBUTE_W);
@@ -117,8 +117,8 @@ class Cfg3DEN {
                     onButtonClick = QUOTE([ARR_2(ctrlParentControlsGroup (_this select 0),false)] call FUNC(attributeSelect));
                     text = SYMBOL_ITEM_NONE;
                     font = "RobotoCondensedBold";
-                    x = QUOTE(-1);
-                    y = QUOTE(-1);
+                    x = -1;
+                    y = -1;
                     w = QUOTE(5 * ATTRIBUTE_W);
                     H = QUOTE(5 * ATTRIBUTE_H);
                 };

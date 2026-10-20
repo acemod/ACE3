@@ -18,8 +18,8 @@ version:
 
 `ace_laser_fnc_getLaserCode`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Unit/Vehicle | Object | Required |
 | **R** | Laser code | Number | Return value |
 
@@ -27,8 +27,8 @@ version:
 
 `ace_laser_fnc_setLaserCode`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Unit/Vehicle | Object | Required |
 | 1  | Laser code | Number | Required |
 | **R** | None | None | Return value |

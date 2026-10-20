@@ -29,6 +29,6 @@ private _chance = [0.5, 0.8] select (weapons _unit isNotEqualTo []);
         private _position = getPosASL _unit vectorAdd (eyeDirection _unit vectorMultiply SEND_DISTANCE);
         _position set [2, 0];
 
-        [QGVAR(sendAway), [_x, _position], [_x]] call CBA_fnc_targetEvent;
+        [QGVAR(sendAway), [_x, _position], _x] call CBA_fnc_targetEvent;
     };
 } forEach (_unit nearEntities ["Civilian", SEND_RADIUS]);

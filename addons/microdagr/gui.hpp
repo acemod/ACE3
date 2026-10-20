@@ -40,8 +40,8 @@ class GVAR(RscText): RscText {
 };
 
 //Redfine Scaling for the Dialog
-#define X_PART(num) QUOTE((((60 - 25)/2) + (num)) * (safeZoneH / 64) + (safezoneX + (safezoneW - safeZoneH)/2))
-#define Y_PART(num) QUOTE((0 + (num)) * (safeZoneH / 36) + (safezoneY + (safezoneH - (safeZoneH / 1.2))/2))
+#define X_PART(num) QUOTE((((60 - 25)/2) + (num)) * (safeZoneH / 64) + (safeZoneX + (safeZoneW - safeZoneH)/2))
+#define Y_PART(num) QUOTE((0 + (num)) * (safeZoneH / 36) + (safeZoneY + (safeZoneH - (safeZoneH / 1.2))/2))
 #define W_PART(num) QUOTE((num) * (safeZoneH / 64))
 #define H_PART(num) QUOTE((num) * (safeZoneH / 36))
 
@@ -59,10 +59,10 @@ class GVAR(TheDialog) {
 
 
 //Redfine Scaling for the RscTitle
-#define PROFILE_X (profilenamespace getVariable ['IGUI_grid_ACE_microDagr_X', 0])
-#define PROFILE_Y (profilenamespace getVariable ['IGUI_grid_ACE_microDagr_Y', 0])
-#define PROFILE_W (profilenamespace getVariable ['IGUI_grid_ACE_microDagr_W', 1])
-#define PROFILE_H ((16/9) * (profilenamespace getVariable ['IGUI_grid_ACE_microDagr_W', 1]))
+#define PROFILE_X (profileNamespace getVariable ['IGUI_grid_ACE_microDagr_X', 0])
+#define PROFILE_Y (profileNamespace getVariable ['IGUI_grid_ACE_microDagr_Y', 0])
+#define PROFILE_W (profileNamespace getVariable ['IGUI_grid_ACE_microDagr_W', 1])
+#define PROFILE_H ((16/9) * (profileNamespace getVariable ['IGUI_grid_ACE_microDagr_W', 1]))
 
 //Need undef's for pboProject
 #undef X_PART

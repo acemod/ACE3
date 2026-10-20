@@ -1,6 +1,6 @@
 // by commy2
 
-["ACE3 Weapons", QGVAR(lockTarget), localize LSTRING(LockTarget),
+["lock",
 {
     if (GETGVAR(isLockKeyDown,false)) exitWith {false};
 
@@ -16,5 +16,4 @@
     TRACE_1("lock key up",GVAR(isLockKeyDown));
 
     false
-},
-[15, [false, false, false]], false] call CBA_fnc_addKeybind;  //Tab Key
+}] call EFUNC(missileguidance,keybind_add);

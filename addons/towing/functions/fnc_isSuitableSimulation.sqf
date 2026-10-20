@@ -5,10 +5,9 @@
  *
  * Arguments:
  * 0: Vehicle to tow from <OBJECT>
- * 1: Check type - Parent or Child <NUMBER>
  *
  * Return Value:
- * Whether or not this vehicle can tow <BOOLEAN>
+ * Whether or not this vehicle can tow <BOOL>
  *
  * Example:
  * [cursorObject] call ace_towing_fnc_isSuitableSimulation

@@ -42,7 +42,7 @@ GVAR(ParsedTextCached) = [];
         };
     }] call CBA_fnc_addEventHandler;
     // Install the render EH on the main display
-    addMissionEventHandler ["Draw3D", {call FUNC(render)}];
+    addMissionEventHandler ["Draw2D", {call FUNC(render)}];
 }] call CBA_fnc_addEventHandler;
 
 //Add Actions to Houses:

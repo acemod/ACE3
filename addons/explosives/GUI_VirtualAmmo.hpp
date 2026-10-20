@@ -11,7 +11,7 @@ class RscTitles {
             class TheObject {
                 idc = 800851;
                 type = 82;
-                model = "\a3\weapons_f\Ammo\Handgrenade.p3d"; //dummy value, cannot be "" !!!
+                model = "\a3\weapons_f\Ammo\Handgrenade.p3d"; // dummy value, cannot be "" !!!
                 scale = 1;
                 direction[] = {0, 0, 1};
                 up[] = {0, 1, 0};

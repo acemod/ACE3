@@ -3,8 +3,6 @@
 import fnmatch
 import os
 import re
-import ntpath
-import sys
 import argparse
 
 # handle x64 python clipboard, ref https://forums.autodesk.com/t5/maya-programming/ctypes-bug-cannot-copy-data-to-clipboard-via-python/m-p/9197068/highlight/true#M10992
@@ -125,12 +123,12 @@ def main():
 
     addon_base_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
     for root, dirnames, filenames in os.walk(addon_base_path +"/" + 'addons' + '/' + args.module):
-      for filename in fnmatch.filter(filenames, '*.sqf'):
-        sqf_list.append(os.path.join(root, filename))
-      for filename in fnmatch.filter(filenames, '*.cpp'):
-        sqf_list.append(os.path.join(root, filename))
-      for filename in fnmatch.filter(filenames, '*.hpp'):
-        sqf_list.append(os.path.join(root, filename))
+        for filename in fnmatch.filter(filenames, '*.sqf'):
+            sqf_list.append(os.path.join(root, filename))
+        for filename in fnmatch.filter(filenames, '*.cpp'):
+            sqf_list.append(os.path.join(root, filename))
+        for filename in fnmatch.filter(filenames, '*.hpp'):
+            sqf_list.append(os.path.join(root, filename))
 
     for filename in sqf_list:
         allFunctions = allFunctions + getFunctions(filename)

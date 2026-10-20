@@ -2,6 +2,7 @@
 // use "J" key to replace terrain cursorObject and add dragging actions to it
 
 #include "..\script_component.hpp"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
 DFUNC(replaceTerrainModelsAdd) = {
     params ["_model", ["_class", ""]];
@@ -39,20 +40,19 @@ DFUNC(replaceTerrainModelsAdd) = {
     true
 };
 
-// DIK_J
-[0x24, [false, false, false], {
+[DIK_J, [false, false, false], {
     if (
         cursorObject call FUNC(replaceTerrainModelsAdd)
         && {["ace_dragging"] call EFUNC(common,isModLoaded)}
     ) then {
         // wait while server replaces object, then init dragging on all clients
         [{
-            if (typeOf cursorObject == "") exitwith {};
-            [cursorObject, {
-                if !hasInterface exitWith {};
-                [_this, true] call EFUNC(dragging,setDraggable);
-                [_this, true] call EFUNC(dragging,setCarryable);
-            }] remoteExec ["call", 0];
+            private _object = cursorObject;
+
+            if (isNull _object) exitWith {};
+
+            [_object, true, nil, nil, nil, true] call EFUNC(dragging,setCarryable);
+            [_object, true, nil, nil, nil, true] call EFUNC(dragging,setDraggable);
         }, [], 1] call CBA_fnc_waitAndExecute;
     };
     true

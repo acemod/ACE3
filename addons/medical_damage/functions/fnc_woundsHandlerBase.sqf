@@ -22,7 +22,7 @@ TRACE_3("woundsHandlerBase",_unit,_allDamages,_typeOfDamage);
 
 
 if !(_typeOfDamage in GVAR(damageTypeDetails)) then {
-    WARNING_1("damage type not found",_typeOfDamage);
+    WARNING_1("damage type %1 not found",_typeOfDamage);
     _typeOfDamage = "unknown";
 };
 
@@ -35,7 +35,7 @@ private _createdWounds = false;
 private _updateDamageEffects = false;
 private _painLevel = 0;
 private _criticalDamage = false;
-private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
+private _bodyPartDamage = GET_BODYPART_DAMAGE(_unit);
 private _bodyPartVisParams = [_unit, false, false, false, false]; // params array for EFUNC(medical_engine,updateBodyPartVisuals);
 
 // process wounds separately for each body part hit
@@ -80,7 +80,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
         // Select the injury we are going to add
         selectRandomWeighted _weightedWoundTypes params ["_woundTypeToAdd", "", "_dmgMultiplier", "_bleedMultiplier", "_sizeMultiplier", "_painMultiplier", "_fractureMultiplier"];
         if (isNil "_woundTypeToAdd") then {
-            WARNING_4("No valid wound types",_damage,_dmgPerWound,_typeOfDamage,_bodyPart);
+            WARNING_4("No valid wound types %1-%2-%3-%4",_damage,_dmgPerWound,_typeOfDamage,_bodyPart);
             continue
         };
         GVAR(woundDetails) get _woundTypeToAdd params ["","_injuryBleedingRate","_injuryPain","_causeLimping","_causeFracture"];
@@ -197,9 +197,7 @@ if (_updateDamageEffects) then {
 
 if (_createdWounds) then {
     _unit setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
-    _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
-
-    [_unit] call EFUNC(medical_status,updateWoundBloodLoss);
+    _unit setVariable [VAR_BODYPART_DAMAGE, _bodyPartDamage, true];
 
     _bodyPartVisParams call EFUNC(medical_engine,updateBodyPartVisuals);
 

@@ -27,6 +27,7 @@ params [
 
 if (_source == "" || {_element == ""}) exitWith {
     WARNING("Source or Element may not be empty strings!");
+    false
 };
 
 _element = toLowerANSI _element;
@@ -34,6 +35,7 @@ _element = toLowerANSI _element;
 // Verify element is bound
 if !(_element in GVAR(configCache)) exitWith {
     WARNING_2("Element '%1' does not exist - modification by '%2' failed.",_element,_source);
+    false
 };
 
 private _setElement = GVAR(elementsSet) get _element;

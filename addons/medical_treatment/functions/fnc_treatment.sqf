@@ -10,7 +10,7 @@
  * 3: Treatment <STRING>
  *
  * Return Value:
- * Treatment Started <BOOL>
+ * Treatment Started <BOOL> or <NIL> if cursor menu is open
  *
  * Example:
  * [player, cursorObject, "Head", "BasicBandage"] call ace_medical_treatment_fnc_treatment
@@ -23,15 +23,18 @@ params ["_medic", "_patient", "_bodyPart", "_classname"];
 // Delay by a frame if cursor menu is open to prevent progress bar failing
 if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened), false]) exitWith {
     [FUNC(treatment), _this] call CBA_fnc_execNextFrame;
+    nil
 };
 
-if !(_this call FUNC(canTreat)) exitWith {false};
+if !(call FUNC(canTreat)) exitWith {false};
 
 private _config = configFile >> QGVAR(actions) >> _classname;
 
 // Get treatment time from config, exit if treatment time is zero
-private _treatmentTime = if (isText (_config >> "treatmentTime")) then {
-    GET_FUNCTION(_treatmentTime,_config >> "treatmentTime");
+private _medicRequiredLevel = GET_NUMBER_ENTRY(_config >> "medicRequired");
+private _treatmentTimeConfig = ["treatmentTime", "treatmentTimeTrained"] select (([_medic, (_medicRequiredLevel + 1)] call FUNC(isMedic)) && {!isNull (_config >> "treatmentTimeTrained")});
+private _treatmentTime = if (isText (_config >> _treatmentTimeConfig)) then {
+    GET_FUNCTION(_treatmentTime,_config >> _treatmentTimeConfig);
 
     if (_treatmentTime isEqualType {}) then {
         _treatmentTime = call _treatmentTime;
@@ -39,7 +42,7 @@ private _treatmentTime = if (isText (_config >> "treatmentTime")) then {
 
     _treatmentTime
 } else {
-    getNumber (_config >> "treatmentTime");
+    getNumber (_config >> _treatmentTimeConfig);
 };
 
 if (_treatmentTime == 0) exitWith {false};
@@ -49,7 +52,7 @@ if (_treatmentTime == 0) exitWith {false};
 private _userAndItem = if (GET_NUMBER_ENTRY(_config >> "consumeItem") == 1) then {
     [_medic, _patient, getArray (_config >> "items")] call FUNC(useItem);
 } else {
-    [objNull, ""]; // Treatment does not require items to be consumed
+    [objNull, "", false]; // Treatment does not require items to be consumed
 };
 
 _userAndItem params ["_itemUser", "_usedItem", "_createLitter"];
@@ -78,7 +81,7 @@ if (_medic isNotEqualTo player || {!_isInZeus}) then {
     // Determine the animation length
     private _animDuration = GVAR(animDurations) get toLowerANSI _medicAnim;
     if (isNil "_animDuration") then {
-        WARNING_2("animation [%1] for [%2] has no duration defined",_medicAnim,_classname);
+        if (_medicAnim != "") then { WARNING_2("animation [%1] for [%2] has no duration defined",_medicAnim,_classname); };
         _animDuration = 10;
     };
 
@@ -97,7 +100,7 @@ if (_medic isNotEqualTo player || {!_isInZeus}) then {
     };
 
     // Play treatment animation for medic and determine the ending animation
-    if (vehicle _medic == _medic && {_medicAnim != ""}) then {
+    if (isNull objectParent _medic && {_medicAnim != ""}) then {
         // Speed up animation based on treatment time (but cap max to prevent odd animiations/cam shake)
         private _animRatio = _animDuration / _treatmentTime;
         TRACE_3("setAnimSpeedCoef",_animRatio,_animDuration,_treatmentTime);

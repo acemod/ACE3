@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * ["Hill 55", [41,324, 12]] call ace_microdagr_fnc_deviceDeleteWaypoint
+ * [0] call ace_microdagr_fnc_deviceDeleteWaypoint
  *
  * Public: No
  */

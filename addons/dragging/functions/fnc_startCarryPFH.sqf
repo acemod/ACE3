@@ -53,10 +53,9 @@ if (_target isKindOf "CAManBase") then {
     // Timeout: Drop target. CBA_missionTime, because anim length is linked to ingame time
     if (CBA_missionTime > _timeOut) exitWith {
         TRACE_4("timeout",_unit,_target,_timeOut,CBA_missionTime);
-        _idPFH call CBA_fnc_removePerFrameHandler;
+        [_unit, _target] call FUNC(dropObject_carry);
 
-        private _carriedObject = _unit getVariable [QGVAR(carriedObject), objNull];
-        [_unit, _carriedObject] call FUNC(dropObject_carry);
+        _idPFH call CBA_fnc_removePerFrameHandler;
     };
 
     // Wait for the unit to stand up

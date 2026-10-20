@@ -17,24 +17,26 @@
  * Public: No
  */
 
-params ["_litterClass", "_position", "_direction"];
+params ["_litterClass", "_position", "_direction", "_surfaceNormal"];
 
 if (isNil QGVAR(litterObjects)) then {
     GVAR(litterObjects) = [];
     GVAR(litterCleanup) = false;
 };
 
-private _model = getText (configFile >> "CfgVehicles" >> _litterClass >> "model");
-if (_model == "") exitWith {};
-
-// createSimpleObject expects a path without the leading slash
-if (_model select [0, 1] == "\") then {
-    _model = _model select [1];
+private _config = configFile >> "CfgVehicles" >> _litterClass;
+private _modelOrClass = if (getNumber (_config >> QGVAR(useClass)) == 1) then {
+    _litterClass
+} else {
+    getText (_config >> "model");
 };
 
-private _object = createSimpleObject [_model, [0, 0, 0]];
+if (_modelOrClass == "") exitWith {};
+
+private _object = createSimpleObject [_modelOrClass, [0, 0, 0]];
 _object setPosASL _position;
 _object setDir _direction;
+_object setVectorUp _surfaceNormal;
 
 // Set the litter object's position next frame to correct HORRIBLE spacing (fixes #1112)
 [{

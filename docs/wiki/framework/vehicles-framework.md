@@ -38,8 +38,8 @@ class CfgVehicles {
 `ace_vehicles_fnc_setVehicleStartDelay`
 Has global effects.
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Vehicle | Object | Required |
 | 1  | Delay (in seconds) | Number | Required |
 | **R** | None | None | Return value |

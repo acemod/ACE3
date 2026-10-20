@@ -36,6 +36,9 @@ class CfgWeapons {
     class hgun_DEagle_gold_RF: hgun_DEagle_RF {
         displayName = SUBCSTRING(deagle_gold_Name);
     };
+    class hgun_DEagle_camo_RF: hgun_DEagle_RF {
+        displayName = SUBCSTRING(deagle_camo_Name);
+    };
 
     class srifle_h6_base_rf;
     class srifle_h6_tan_rf: srifle_h6_base_rf {

@@ -7,7 +7,7 @@
  * 0: Object the variable should be assigned to <OBJECT>
  * 1: Name of the variable <STRING>
  * 2: Value of the variable <ANY>
- * 3: Embargo delay <NUMBER> (Optional. Default: 1)
+ * 3: Embargo delay <NUMBER> (default: 1)
  *
  * Return Value:
  * None
@@ -48,6 +48,6 @@ TRACE_2("Starting Embargo",_varName,_delay);
     //If value at start of embargo doesn't equal current, then broadcast and start new embargo
     if (_value isNotEqualTo _curValue) then {
         _this set [2, _curValue];
-        _this call FUNC(setVariablePublic);
+        call FUNC(setVariablePublic);
     };
 }, _this, _delay] call CBA_fnc_waitAndExecute;

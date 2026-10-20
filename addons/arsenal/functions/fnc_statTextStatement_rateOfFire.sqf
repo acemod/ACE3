@@ -4,7 +4,7 @@
  * Rate of fire text statement.
  *
  * Arguments:
- * 0: Not used
+ * 0: Stats array (not used) <ARRAY>
  * 1: Item config path <CONFIG>
  *
  * Return Value:
@@ -16,15 +16,24 @@
 params ["", "_config"];
 TRACE_1("statTextStatement_rateOfFire",_config);
 
-private _fireRate = [];
+private _modes = getArray (_config >> "modes");
+
+if (_modes isEqualTo []) exitWith {"PEWPEWPEW"};
+
+private _fireRate = 1e40;
 
 {
-    _fireRate pushBackUnique (getNumber (_config >> _x >> "reloadTime"));
-} forEach (getArray (_config >> "modes"));
+    private _weaponConfig = if (_x == "this") then {
+        _config
+    } else {
+        _config >> _x
+    };
 
-_fireRate sort true;
-_fireRate = _fireRate param [0, 0];
+    if (getNumber (_weaponConfig >> "showToPlayer") != 0) then {
+        _fireRate = _fireRate min (getNumber (_weaponConfig >> "reloadTime"));
+    };
+} forEach _modes;
 
-if (_fireRate == 0) exitWith {"PEWPEWPEW"};
+if (!finite _fireRate || {_fireRate <= 0}) exitWith {"PEWPEWPEW"};
 
 format ["%1 rpm", round (60 / _fireRate)]

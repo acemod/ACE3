@@ -5,21 +5,52 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: True to enable dragging, false to disable <BOOL>
- * 2: Position offset for attachTo command (optional; default: [0, 1.5, 0]) <ARRAY>
- * 3: Direction in degrees to rotate the object after attachTo (optional; default: 0) <NUMBER>
+ * 1: True to enable dragging, false to disable <BOOL> (default: false)
+ * 2: Position offset for attachTo command <ARRAY> (default: [0, 1.5, 0])
+ * 3: Direction in degrees to rotate the object after attachTo <NUMBER> (default: 0)
  * 4: Override weight limit <BOOL> (default: false)
+ * 5: Apply globally <BOOL> (default: false)
  *
  * Return Value:
  * None
  *
  * Example:
- * [cursorTarget, true, [0, 0, 0], 0, false] call ace_dragging_fnc_setDraggable;
+ * [cursorTarget, true, [0, 0, 0], 0, false] call ace_dragging_fnc_setDraggable
  *
  * Public: Yes
  */
 
-params ["_object", "_enableDrag", "_position", "_direction", ["_ignoreWeightDrag", false, [false]]];
+params [
+    ["_object", objNull, [objNull]],
+    ["_enableDrag", false, [false]],
+    "_position",
+    "_direction",
+    ["_ignoreWeightDrag", false, [false]],
+    ["_global", false, [false]]
+];
+
+if (isNull _object) exitWith {};
+
+if (!isNil "_position" && {!(_position isEqualType []) || {!(_position isEqualTypeArray [0, 0, 0])}}) exitWith {
+    ERROR_2("setDraggable: Bad position parameter [%1] for [%2], should be a 3D position or nil",_position,_object);
+};
+
+if (!isNil "_direction" && {!(_direction isEqualType 0)}) exitWith {
+    ERROR_2("setDraggable: Bad direction parameter [%1] for [%2], should be a number or nil",_direction,_object);
+};
+
+// Handle global here
+if (_global) exitWith {
+    private _jipID = format [QGVAR(dragging_%1), hashValue _object];
+    [QGVAR(setDraggable), [_object, _enableDrag, _position, _direction, _ignoreWeightDrag], _jipID] call CBA_fnc_globalEventJIP;
+
+    // Remove from JIP queue if object is deleted
+    if !(_object getVariable [QGVAR(setDraggableRemoveJip), false]) then {
+        [_jipID, _object] call CBA_fnc_removeGlobalEventJIP;
+
+        _object setVariable [QGVAR(setDraggableRemoveJip), true, true];
+    };
+};
 
 if (isNil "_position") then {
     _position = _object getVariable [QGVAR(dragPosition), [0, 1.5, 0]];
@@ -68,7 +99,7 @@ private _dragAction = [
 
 private _dropAction = [
     QGVAR(drop),
-    LLSTRING(Drop),
+    LELSTRING(common,Drop),
     "",
     {
         [_player, _target] call FUNC(dropObject);
@@ -78,3 +109,5 @@ private _dropAction = [
 
 [_type, 0, ["ACE_MainActions"], _dragAction] call EFUNC(interact_menu,addActionToClass);
 [_type, 0, [], _dropAction] call EFUNC(interact_menu,addActionToClass);
+
+nil // return

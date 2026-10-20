@@ -23,7 +23,7 @@ private _anim = animationState _unit;
 [QGVAR(headbugFixUsed), [profileName, _anim]] call CBA_fnc_serverEvent;
 [QGVAR(headbugFixUsed), [profileName, _anim]] call CBA_fnc_localEvent;
 
-if (_unit != vehicle _unit  || {!([_unit, objNull, ["isNotSitting"]] call FUNC(canInteractWith))}) exitWith {false};
+if (!isNull objectParent _unit  || {!([_unit, objNull, ["isNotSitting"]] call FUNC(canInteractWith))}) exitWith {false};
 
 ["ace_headBugFix", true] call FUNC(setDisableUserInputStatus);
 

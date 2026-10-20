@@ -1,6 +1,8 @@
 private _category = format ["ACE %1", LLSTRING(DisplayName)];
 private _categoryColors = [_category, LSTRING(subcategory_colors)];
-private _categorySway = [_category, LSTRING(subcategory_sway)];
+private _categoryEquipment = LLSTRING(ACEKeybindCategoryEquipment);
+private _categoryWeapons = LSTRING(ACEKeybindCategoryWeapons);
+private _categorySway = [_categoryWeapons, LSTRING(subcategory_sway)];
 
 [
     QGVAR(checkPBOsAction),
@@ -26,6 +28,15 @@ private _categorySway = [_category, LSTRING(subcategory_sway)];
     [LSTRING(CheckPBOsWhitelist), LSTRING(CheckPBOsWhiteListDesc)],
     _category,
     "[]",
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(checkExtensions),
+    "CHECKBOX",
+    [LSTRING(checkExtensions_DisplayName)],
+    _category,
+    false,
     1
 ] call CBA_fnc_addSetting;
 
@@ -69,7 +80,7 @@ private _categorySway = [_category, LSTRING(subcategory_sway)];
     QGVAR(persistentLaserEnabled),
     "CHECKBOX",
     [LSTRING(SettingPersistentLaserName), LSTRING(SettingPersistentLaserDesc)],
-    LSTRING(ACEKeybindCategoryWeapons),
+    _categoryWeapons,
     false,
     false,
     LINKFUNC(switchPersistentLaser)
@@ -100,6 +111,16 @@ private _categorySway = [_category, LSTRING(subcategory_sway)];
     _category,
     [[0, 1, 2], [LSTRING(None), LSTRING(progressBarInfoPercentage), LSTRING(progressBarInfoTime)], 2],
     0
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(magneticDeclination),
+    "CHECKBOX",
+    [LSTRING(magneticDeclination), LSTRING(magneticDeclinationooltip)],
+    _categoryEquipment,
+    false,
+    1,
+    {call FUNC(getMagneticBearingOffset)}
 ] call CBA_fnc_addSetting;
 
 [

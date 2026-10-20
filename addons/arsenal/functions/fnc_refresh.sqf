@@ -22,7 +22,7 @@ TRACE_2("",_updateItems,_updateVirtualItems);
 
 // Don't execute in scheduled environment
 if (canSuspend) exitWith {
-    [{_this call FUNC(refresh)}, _this] call CBA_fnc_directCall;
+    [{call FUNC(refresh)}, _this] call CBA_fnc_directCall;
 };
 
 private _display = findDisplay IDD_ace_arsenal;

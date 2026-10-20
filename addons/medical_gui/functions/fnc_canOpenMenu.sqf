@@ -28,4 +28,4 @@ if (!isNull findDisplay 312) exitWith {
 _player call EFUNC(common,isAwake) &&
 {!isNull _target} &&
 {_player distance _target < GVAR(maxDistance) || {vehicle _player == vehicle _target}} &&
-{GVAR(enableMedicalMenu) == 1 || {GVAR(enableMedicalMenu) == 2 && {vehicle _player != _player || {vehicle _target != _target}}}}
+{GVAR(enableMedicalMenu) == 1 || {GVAR(enableMedicalMenu) == 2 && {!isNull objectParent _player || {!isNull objectParent _target}}}}

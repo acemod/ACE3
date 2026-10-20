@@ -41,8 +41,6 @@ if (_searchString != "") then {
     _searchString = toLower _searchString;
 
     private _loadoutName = "";
-    private _loadout = [];
-    private _currentTab = str GVAR(currentLoadoutsTab);
 
     // Go through all items in panel and see if they need to be deleted or not
     for "_lbIndex" from (lnbSize _contentPanelCtrl select 0) - 1 to 0 step -1 do {

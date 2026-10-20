@@ -32,13 +32,13 @@ if (GVAR(openedMenuType) >= 0) then {
         [[0.5,0.5], "\a3\ui_f\data\IGUI\Cfg\Cursors\selected_ca.paa"] call FUNC(renderSelector);
     };
 
-    private _cursorScreenPos = [worldToScreen _cursorPos2, GVAR(cursorPos)] select (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]);
+    private _cursorScreenPos = [worldToScreen _cursorPos2, GVAR(cursorPos)] select (true isEqualTo (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]));
 
     private _closestDistance = 1000000;
     private _closestSelection = -1;
     {
         _x params ["", "_sPos"];
-        private _distanceFromCursor = _cursorScreenPos distance2d _sPos;
+        private _distanceFromCursor = _cursorScreenPos distance2D _sPos;
         if ((_distanceFromCursor < 0.1118) && {_distanceFromCursor < _closestDistance}) then {
             _closestDistance = _distanceFromCursor;
             _closestSelection = _forEachIndex;
@@ -103,9 +103,10 @@ if (GVAR(openedMenuType) >= 0) then {
 
                 // Check the action conditions
                 private _actionData = GVAR(selectedAction) select 0;
-                if ([_target, _player, _actionData select 6] call (_actionData select 4)) then {
+                private _actionParams = _actionData select 6; // Define _actionParams so its accessible within the statement/condition
+                if ([_target, _player, _actionParams] call (_actionData select 4)) then {
                     // Call the statement
-                    [_target, _player, _actionData select 6] call (_actionData select 3);
+                    [_target, _player, _actionParams] call (_actionData select 3);
 
                     // Clear the conditions caches again if the action was performed
                     [QGVAR(clearConditionCaches), []] call CBA_fnc_localEvent;

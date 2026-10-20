@@ -1,4 +1,4 @@
-private _category = [LELSTRING(common,categoryUncategorized), localize "str_a3_gear1"];
+private _category = [format ["ACE %1", LELSTRING(ui,Category)], localize "str_a3_gear1"];
 
 [
     QGVAR(inventoryDisplaySize), "LIST",

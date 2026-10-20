@@ -19,7 +19,40 @@ class Extended_PostInit_EventHandlers {
 class Extended_Respawn_EventHandlers {
     class CAManBase {
         class ADDON {
-            respawn = QUOTE(_this call FUNC(handleRespawn));
+            respawn = QUOTE(call FUNC(handleRespawn));
+        };
+    };
+};
+
+class Extended_Killed_EventHandlers {
+    class Car {
+        class ADDON {
+            killed = QUOTE(call FUNC(handleVehicleKilled));
+        };
+    };
+    class Tank {
+        class ADDON {
+            killed = QUOTE(call FUNC(handleVehicleKilled));
+        };
+    };
+    class Motorcycle {
+        class ADDON {
+            killed = QUOTE(call FUNC(handleVehicleKilled));
+        };
+    };
+    class Helicopter {
+        class ADDON {
+            killed = QUOTE(call FUNC(handleVehicleKilled));
+        };
+    };
+    class Plane {
+        class ADDON {
+            killed = QUOTE(call FUNC(handleVehicleKilled));
+        };
+    };
+    class Ship_F {
+        class ADDON {
+            killed = QUOTE(call FUNC(handleVehicleKilled));
         };
     };
 };

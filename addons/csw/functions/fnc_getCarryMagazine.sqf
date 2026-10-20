@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror, Dystopian
- * Gets magazine that the player can carry, suitable to vehicle magazine
+ * Gets magazine that the player can carry, suitable to vehicle magazine.
  *
  * Arguments:
  * 0: Vehicle Magazine <STRING>

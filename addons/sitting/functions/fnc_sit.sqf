@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Jonpas, vabene1111
- * Sits down the player.
+ * Makes the player sit down.
  *
  * Arguments:
  * 0: Seat <OBJECT>
@@ -33,22 +33,44 @@ private _actionID = _player addAction [
     false,
     true,
     "GetOut",
-    QUOTE(_this call FUNC(canStand))
+    QUOTE(call FUNC(canStand))
 ];
 
 // Read config
 private _configFile = configOf _seat;
-private _sitDirection = (getDir _seat) + (_seat getVariable [QXGVAR(sitDirection), getNumber (_configFile >> QXGVAR(sitDirection))]);
-private _sitPositionAll = _seat getVariable [QXGVAR(sitPosition), getArray (_configFile >> QXGVAR(sitPosition))];
-private _multiSitting = (_sitPositionAll select 0) isEqualType [];
+private _sitDirectionAll = _seat getVariable QXGVAR(sitDirection);
 
-private _sitPosition = _sitPositionAll;
-if (_multiSitting) then {
-    _sitPosition = _sitPosition select _seatPos;
+if (isNil "_sitDirectionAll") then {
+    private _config = _configFile >> QXGVAR(sitDirection);
+
+    _sitDirectionAll = if (isArray _config) then {
+        getArray _config
+    } else {
+        getNumber _config
+    };
+};
+
+// In case variable was set, this code also takes that source into account
+private _sitDirection = if (_sitDirectionAll isEqualType []) then {
+    _sitDirectionAll param [_seatPos, 0]
+} else {
+    _sitDirectionAll
+};
+
+private _seatDirOrig = getDir _seat;
+
+_sitDirection = _sitDirection + _seatDirOrig;
+
+private _sitPositionAll = _seat getVariable [QXGVAR(sitPosition), getArray (_configFile >> QXGVAR(sitPosition))];
+
+private _sitPosition = if ((_sitPositionAll select 0) isEqualType []) then {
+    _sitPositionAll select _seatPos
+} else {
+    _sitPositionAll
 };
 
 // Get random animation and perform it (before moving player to ensure correct placement)
-[_player, call FUNC(getRandomAnimation), 2] call EFUNC(common,doAnimation); // Correctly places when using non-transitional animations
+[_player, [_seat] call FUNC(getRandomAnimation), 2] call EFUNC(common,doAnimation); // Correctly places when using non-transitional animations
 [_player, "", 1] call EFUNC(common,doAnimation); // Correctly applies animation's config values (such as disallow throwing of grenades, intercept keybinds... etc).
 
 TRACE_2("Sit pos and dir",_sitPosition,_sitDirection);
@@ -56,7 +78,7 @@ TRACE_2("Sit pos and dir",_sitPosition,_sitDirection);
 // Set direction and position
 _player setDir _sitDirection;
 //modelToWorld returns AGL
-_player setPosASL (AGLtoASL (_seat modelToWorld _sitPosition));
+_player setPosASL (AGLToASL (_seat modelToWorld _sitPosition));
 
 // Set variables, save seat object on player
 _player setVariable [QGVAR(sittingStatus), [_seat, _actionID, _seatPos]];
@@ -65,16 +87,9 @@ _player setVariable [QGVAR(sittingStatus), [_seat, _actionID, _seatPos]];
 private _seatsClaimed = _seat getVariable [QGVAR(seatsClaimed), []];
 // Initialize claimed seats if first time sitting on it
 if (_seatsClaimed isEqualTo []) then {
-    if (_multiSitting) then {
-        for "_i" from 0 to ((count _sitPositionAll) - 1) do {
-            _seatsClaimed pushBack (_i == _seatPos);
-        };
-    } else {
-        _seatsClaimed = [true];
-    };
-} else {
-    _seatsClaimed set [_seatPos, true];
+    _seatsClaimed resize [count _sitPositionAll, objNull];
 };
+_seatsClaimed set [_seatPos, _player];
 _seat setVariable [QGVAR(seatsClaimed), _seatsClaimed, true];
 
 // Also prevent dragging/carrying
@@ -82,27 +97,45 @@ if !([_seat] call EFUNC(common,owned)) then {
     [_player, _seat] call EFUNC(common,claim);
 };
 
-// Add automatical stand PFH in case of interruptions
+// Automatically stand up if interrupted
 private _seatPosOrig = getPosASL _seat;
 private _seatDistOrig = (getPosASL _player) distance _seat;
 [{
     params ["_args", "_pfhId"];
-    _args params ["_player", "_seat", "_seatPosOrig", "_seatDistOrig"];
+    _args params ["_player", "_seat", "_seatPos", "_seatPosOrig", "_seatDistOrig", "_seatDirOrig"];
 
     // Remove PFH if not sitting any more
     if (isNil {_player getVariable QGVAR(sittingStatus)}) exitWith {
         [_pfhId] call CBA_fnc_removePerFrameHandler;
         TRACE_1("Remove PFH",_player getVariable [ARR_2(QGVAR(sittingStatus),false)]);
+
+        if (!alive _seat) exitWith {};
+
+        // Allow sitting on this seat again
+        private _seatsClaimed = _seat getVariable [QGVAR(seatsClaimed), []];
+        _seatsClaimed set [_seatPos, objNull];
+        _seat setVariable [QGVAR(seatsClaimed), _seatsClaimed, true];
+
+        // Unclaim...
+        [objNull, _seat] call EFUNC(common,claim);
+
+        // ...but have a remaining unit reclaim ownership immediately
+        private _index = _seatsClaimed findIf {!isNull _x};
+
+        if (_index == -1) exitWith {};
+
+        [_seatsClaimed select _index, _seat] call EFUNC(common,claim);
     };
 
-    //  Stand up if chair gets deleted or moved
-    if (isNull _seat ||
+    // Stand up if chair gets deleted or moved
+    if (!alive _seat ||
         {getPosASL _player distance _seatPosOrig > _seatDistOrig + 0.5} ||
-        {((getPosASL _seat) vectorDistance _seatPosOrig) > 0.01}
+        {((getPosASL _seat) vectorDistance _seatPosOrig) > 0.01} ||
+        {abs (getDir _seat - _seatDirOrig) > 1}
     ) exitWith {
         _player call FUNC(stand);
-        TRACE_2("Chair moved",getPosASL _seat,_seatPosOrig);
+        TRACE_3("Chair moved",getPosASL _seat,_seatPosOrig,_seatDirOrig);
     };
-}, 0, [_player, _seat, _seatPosOrig, _seatDistOrig]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_player, _seat, _seatPos, _seatPosOrig, _seatDistOrig, _seatDirOrig]] call CBA_fnc_addPerFrameHandler;
 
 ["ace_satDown", [_player, _seat, _seatPos]] call CBA_fnc_localEvent;

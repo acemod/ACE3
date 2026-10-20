@@ -19,7 +19,7 @@
 params ["_truck", "_unit"];
 
 private _attachedDummy = _unit getVariable [QGVAR(dummy), objNull];
-if (isNull _attachedDummy) exitwith {};
+if (isNull _attachedDummy) exitWith {};
 
 private _magazineClass = _attachedDummy getVariable [QGVAR(magazineClass), "#noVar"];
 

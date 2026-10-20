@@ -33,11 +33,11 @@ if (_state) then { // Blindfold target
     // Remove target's goggles if it is wearing any and move them to unit's or target's inventory (if they can hold them)
     _previousGoggles = goggles _target;
     if (_previousGoggles != "") then {
-        if ([_unit, _previousGoggles] call CBA_fnc_canAddItem) exitWith {
+        if (_unit canAdd [_previousGoggles, 1, true]) exitWith {
             removeGoggles _target;
             _unit addItem _previousGoggles;
         };
-        if ([_target, _previousGoggles] call CBA_fnc_canAddItem) exitWith {
+        if (_target canAdd [_previousGoggles, 1, true]) exitWith {
             removeGoggles _target;
             _target addItem _previousGoggles;
         };
@@ -52,11 +52,11 @@ if (_state) then { // Blindfold target
     // Abort if already not wearing a blindfold
     if !(_previousGoggles in GVAR(blindfolds)) exitWith { ERROR("no blindfold"); };
 
-    if ([_unit, _previousGoggles] call CBA_fnc_canAddItem) exitWith {
+    if (_unit canAdd [_previousGoggles, 1, true]) exitWith {
         removeGoggles _target;
         _unit addItem _previousGoggles;
     };
-    if ([_target, _previousGoggles] call CBA_fnc_canAddItem) exitWith {
+    if (_target canAdd [_previousGoggles, 1, true]) exitWith {
         removeGoggles _target;
         _target addItem _previousGoggles;
     };

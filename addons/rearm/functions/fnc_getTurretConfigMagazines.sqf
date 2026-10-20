@@ -4,7 +4,7 @@
  * Returns all magazines a turret of a vehicle object can hold according to config.
  *
  * Arguments:
- * 0: Vehicle object or typeOf <OBJECT><STRING>
+ * 0: Vehicle object or typeOf <OBJECT or STRING>
  * 1: Turret Path <ARRAY>
  *
  * Return Value:
@@ -16,4 +16,4 @@
  * Public: No
  */
 
-getArray ((_this call CBA_fnc_getTurret) >> "magazines")
+getArray ((call CBA_fnc_getTurret) >> "magazines")

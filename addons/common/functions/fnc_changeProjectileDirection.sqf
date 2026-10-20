@@ -7,7 +7,7 @@
  * 0: Projectile <OBJECT>
  * 1: Adjust azimuth this much. <NUMBER>
  * 2: Adjust inclination this much. <NUMBER>
- * 3: Adjust projectile speed this much. In m/s. (optional: 0) <NUMBER>
+ * 3: Adjust projectile speed this much. In m/s. <NUMBER> (default: 0)
  *
  * Return Value:
  * None

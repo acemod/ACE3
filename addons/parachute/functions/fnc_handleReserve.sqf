@@ -4,10 +4,10 @@
  * Cache reserve parachute on player unit when their inventory changes and add it when they open their parachute
  *
  * Arguments:
- * None
+ * 0: Unit <OBJECT>
  *
  * Return Value:
- * 0: Unit <OBJECT>
+ * None
  *
  * Example:
  * [player] call ace_parachute_fnc_handleReserve

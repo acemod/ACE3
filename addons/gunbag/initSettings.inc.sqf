@@ -1,4 +1,4 @@
-private _category = [LELSTRING(common,categoryUncategorized), LLSTRING(DisplayName_Settings)];
+private _category = [LELSTRING(common,ACEKeybindCategoryEquipment), LLSTRING(DisplayName_Settings)];
 
 [
     QGVAR(swapGunbagEnabled), "CHECKBOX",

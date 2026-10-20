@@ -15,4 +15,4 @@
  * Public: No
  */
 
-!(_this call FUNC(filterBackpacks))
+!(call FUNC(filterBackpacks))

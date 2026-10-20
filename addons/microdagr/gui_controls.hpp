@@ -51,9 +51,9 @@ class controlsBackground {
         y = Y_PART(2);
         w = W_PART(25);
         h = H_PART(19);
-        onDraw = QUOTE(_this call FUNC(mapOnDrawEH));
-        onMouseButtonDblClick = QUOTE(_this call FUNC(mapDoubleTapEH));
-        onMouseButtonDown = QUOTE(_this call FUNC(mapButtonDownEH));
+        onDraw = QUOTE(call FUNC(mapOnDrawEH));
+        onMouseButtonDblClick = QUOTE(call FUNC(mapDoubleTapEH));
+        onMouseButtonDown = QUOTE(call FUNC(mapButtonDownEH));
 
         scaleMin = 0.005;
         scaleMax = 10;  //Lets the mini display zoom out far enough
@@ -106,9 +106,9 @@ class controlsBackground {
         y = Y_PART(2);
         w = W_PART(25);
         h = H_PART(19);
-        onDraw = QUOTE(_this call FUNC(mapOnDrawEH));
-        onMouseButtonDblClick = QUOTE(_this call FUNC(mapDoubleTapEH));
-        onMouseButtonDown = QUOTE(_this call FUNC(mapButtonDownEH));
+        onDraw = QUOTE(call FUNC(mapOnDrawEH));
+        onMouseButtonDblClick = QUOTE(call FUNC(mapDoubleTapEH));
+        onMouseButtonDown = QUOTE(call FUNC(mapButtonDownEH));
 
         ptsPerSquareObj = 9;
 
@@ -130,7 +130,7 @@ class controlsBackground {
         y = Y_PART(2);
         w = W_PART(25);
         h = H_PART(19);
-        onDraw = QUOTE(_this call FUNC(mapOnDrawEH));
+        onDraw = QUOTE(call FUNC(mapOnDrawEH));
 
         showMarkers = 0;
         colorBackground[] = {0,0,0,1};
@@ -492,7 +492,7 @@ class controls {
                 text = QUOTE(PATHTOF(images\icon_menuLaser.paa));
                 x = W_PART(3);
                 y = H_PART(10.5);
-                onbuttonclick = QUOTE(_this call FUNC(appMenuButtonConnectRangefinder));
+                onbuttonclick = QUOTE(call FUNC(appMenuButtonConnectRangefinder));
             };
             class ButtonBR: ButtonTL {
                 text = QPATHTOF(images\icon_menuSettings.paa);
@@ -680,7 +680,7 @@ class controls {
                 colorBackgroundDisabled[] = {0.3,0.3,0.3,1};
                 colorBackgroundActive[] = {0.3,0.3,0.3,1};
                 colorFocused[] = {0.3,0.3,0.3,1};
-                onbuttonclick = QUOTE(_this call FUNC(appWaypointsButtonSetWP));
+                onbuttonclick = QUOTE(call FUNC(appWaypointsButtonSetWP));
             };
             class ButtonAdd: ButtonSetWP {
                 text = CSTRING(waypointsAdd);
@@ -690,7 +690,7 @@ class controls {
             class ButtonDelete: ButtonSetWP {
                 text = CSTRING(waypointsDelete);
                 x = W_PART(17);
-                onbuttonclick = QUOTE(_this call FUNC(appWaypointsButtonDeleteWP));
+                onbuttonclick = QUOTE(call FUNC(appWaypointsButtonDeleteWP));
             };
         };
     };
@@ -701,8 +701,8 @@ class controls {
         y = Y_PART(2);
         w = W_PART(24.6);
         h = H_PART(19);
-        // onLBDblClick = QUOTE(_this call FUNC(appSettingsLBClick));
-        onLBSelChanged = QUOTE(_this call FUNC(appSettingsLBClick));
+        // onLBDblClick = QUOTE(call FUNC(appSettingsLBClick));
+        onLBSelChanged = QUOTE(call FUNC(appSettingsLBClick));
         sizeEx = H_PART(1.5);
         sizeEx2 = H_PART(1.5);
         rowHeight = H_PART(1.75);

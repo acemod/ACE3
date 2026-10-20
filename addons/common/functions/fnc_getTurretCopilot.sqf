@@ -7,7 +7,7 @@
  * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * Vehicle Copilot Turret indecies <ARRAY>
+ * Vehicle Copilot Turret indices <ARRAY>
  *
  * Example:
  * [car] call ace_common_fnc_getTurretCopilot

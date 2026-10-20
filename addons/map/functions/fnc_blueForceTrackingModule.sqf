@@ -22,4 +22,4 @@ params ["_logic"];
 [_logic, QGVAR(BFT_HideAiGroups), "HideAiGroups"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(BFT_ShowPlayerNames), "ShowPlayerNames"] call EFUNC(common,readSettingFromModule);
 
-INFO_3("Blue Force Tracking Module Initialized:",GVAR(BFT_Enabled),GVAR(BFT_Interval),GVAR(BFT_HideAiGroups));
+INFO_3("Blue Force Tracking Module Initialized:%1-%2-%3",GVAR(BFT_Enabled),GVAR(BFT_Interval),GVAR(BFT_HideAiGroups));

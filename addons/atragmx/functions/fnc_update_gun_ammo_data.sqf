@@ -18,39 +18,39 @@
 ctrlSetFocus ((uiNamespace getVariable "ATragMX_Display") displayCtrl 12008);
 
 if (GVAR(currentUnit) != 2) then {
-    ctrlSetText [120000, Str(Round((GVAR(workingMemory) select 5) / 2.54 * 100) / 100)];
+    ctrlSetText [120000, str(round((GVAR(workingMemory) select 5) / 2.54 * 100) / 100)];
 } else {
-    ctrlSetText [120000, Str(Round((GVAR(workingMemory) select 5) * 100) / 100)];
+    ctrlSetText [120000, str(round((GVAR(workingMemory) select 5) * 100) / 100)];
 };
 if (GVAR(currentUnit) != 2) then {
-    ctrlSetText [120010, Str(Round((GVAR(workingMemory) select 12) * 15.4323584))];
+    ctrlSetText [120010, str(round((GVAR(workingMemory) select 12) * 15.4323584))];
 } else {
-    ctrlSetText [120010, Str(Round((GVAR(workingMemory) select 12) * 10) / 10)];
+    ctrlSetText [120010, str(round((GVAR(workingMemory) select 12) * 10) / 10)];
 };
 if (GVAR(currentUnit) != 2) then {
-    ctrlSetText [120020, Str(Round((GVAR(workingMemory) select 13) / 10 / 2.54 * 1000) / 1000)];
+    ctrlSetText [120020, str(round((GVAR(workingMemory) select 13) / 10 / 2.54 * 1000) / 1000)];
 } else {
-    ctrlSetText [120020, Str(Round((GVAR(workingMemory) select 13) / 10 * 1000) / 1000)];
+    ctrlSetText [120020, str(round((GVAR(workingMemory) select 13) / 10 * 1000) / 1000)];
 };
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
-    ctrlSetText [120030, Str(Round((GVAR(workingMemory) select 15) * 1000) / 1000)];
+    ctrlSetText [120030, str(round((GVAR(workingMemory) select 15) * 1000) / 1000)];
 } else {
-    ctrlSetText [120030, Str(Round((GVAR(workingMemory) select 4) * -1000 * 1000) / 1000)];
+    ctrlSetText [120030, str(round((GVAR(workingMemory) select 4) * -1000 * 1000) / 1000)];
 };
 if (GVAR(currentUnit) != 2) then {
-    ctrlSetText [120040, Str(Round((GVAR(workingMemory) select 14) / 2.54 * 10) / 10)];
+    ctrlSetText [120040, str(round((GVAR(workingMemory) select 14) / 2.54 * 10) / 10)];
 } else {
-    ctrlSetText [120040, Str(Round((GVAR(workingMemory) select 14) * 100) / 100)];
+    ctrlSetText [120040, str(round((GVAR(workingMemory) select 14) * 100) / 100)];
 };
 if (GVAR(currentUnit) != 2) then {
-    ctrlSetText [120050, Str(Round((GVAR(workingMemory) select 1) * 3.2808399))];
+    ctrlSetText [120050, str(round((GVAR(workingMemory) select 1) * 3.2808399))];
 } else {
-    ctrlSetText [120050, Str(Round(GVAR(workingMemory) select 1))];
+    ctrlSetText [120050, str(round(GVAR(workingMemory) select 1))];
 };
 if (GVAR(currentUnit) == 1) then {
-    ctrlSetText [120060, Str(Round((GVAR(workingMemory) select 2) * 1.0936133))];
+    ctrlSetText [120060, str(round((GVAR(workingMemory) select 2) * 1.0936133))];
 } else {
-    ctrlSetText [120060, Str(Round(GVAR(workingMemory) select 2))];
+    ctrlSetText [120060, str(round(GVAR(workingMemory) select 2))];
 };
 if (GVAR(currentUnit) == 0) then {
     ctrlSetText [120061, "*"];

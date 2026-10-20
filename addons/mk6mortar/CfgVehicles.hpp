@@ -5,8 +5,8 @@ class CfgVehicles {
             class ACE_Equipment {
                 class GVAR(rangetable) {
                     displayName = CSTRING(rangetable_action);
-                    condition = QUOTE(_this call FUNC(rangeTableCanUse));
-                    statement = QUOTE(_this call FUNC(rangeTableOpen));
+                    condition = QUOTE(call FUNC(rangeTableCanUse));
+                    statement = QUOTE(call FUNC(rangeTableOpen));
                     icon = QPATHTOF(UI\icon_rangeTable.paa);
                     exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                 };
@@ -16,6 +16,7 @@ class CfgVehicles {
 
     class LandVehicle;
     class StaticWeapon: LandVehicle {
+        class ACE_SelfActions;
         class Turrets {
             class MainTurret;
         };
@@ -37,11 +38,11 @@ class CfgVehicles {
                 discreteDistanceInitIndex = 0;
             };
         };
-        class ACE_SelfActions {
+        class ACE_SelfActions: ACE_SelfActions {
             class GVAR(toggleMils) {
                 displayName = "Toggle MILS";
                 condition = QUOTE(true);
-                statement = QUOTE(_this call FUNC(toggleMils));
+                statement = QUOTE(call FUNC(toggleMils));
                 exceptions[] = {};
             };
         };

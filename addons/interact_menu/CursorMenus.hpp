@@ -28,10 +28,10 @@ class RscTitles {
                 size = 1;
                 colorBackground[] = {0, 0, 0, 0.65};
                 colorText[] = {0, 0, 0, 0};
-                x = "safezoneX";
-                y = "safezoneY";
-                w = "safezoneW";
-                h = "safezoneH";
+                x = "safeZoneX";
+                y = "safeZoneY";
+                w = "safeZoneW";
+                h = "safeZoneH";
             };
         };
     };

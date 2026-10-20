@@ -40,7 +40,7 @@ _newUnit enableStamina false;
 // Don't add a new EH if the unit respawned
 if (_newUnit getVariable [QGVAR(animHandler), -1] == -1) then {
     private _animHandler = _newUnit addEventHandler ["AnimChanged", {
-        GVAR(animDuty) = _this call FUNC(getAnimDuty);
+        GVAR(animDuty) = call FUNC(getAnimDuty);
     }];
 
     TRACE_1("add new",_animHandler);

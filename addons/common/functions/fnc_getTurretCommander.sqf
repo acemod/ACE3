@@ -7,7 +7,7 @@
  * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * Vehicle commander turrent indecies <ARRAY>
+ * Vehicle commander turret indices <ARRAY>
  *
  * Example:
  * [car] call ace_common_fnc_getTurretCommander

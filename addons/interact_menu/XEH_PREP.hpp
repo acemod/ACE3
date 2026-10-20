@@ -18,6 +18,7 @@ PREP(keyDown);
 PREP(keyUp);
 PREP(removeActionFromClass);
 PREP(removeActionFromObject);
+PREP(removeActionFromZeus);
 PREP(render);
 PREP(renderActionPoints);
 PREP(renderBaseMenu);

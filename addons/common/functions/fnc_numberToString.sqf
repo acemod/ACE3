@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- * Converts a number to a string without losing as much precission as str or format.
+ * Converts a number to a string without losing as much precision as str or format.
  *
  * Arguments:
  * 0: A number <NUMBER>

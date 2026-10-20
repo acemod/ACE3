@@ -8,8 +8,8 @@
  * Arguments:
  * 0: Unit that claims another object. ObjNull to remove claim. <OBJECT>
  * 1: The object that gets claimed. <OBJECT>
- * 2: Lock the claimed object aswell? (optional: false) <BOOL>
- * 3: Target event to trigger for calling machine (called where _unit is local) <STRING>
+ * 2: Lock the claimed object as well? <BOOL> (default: false)
+ * 3: Target event to trigger for calling machine (called where _unit is local) <STRING> (default: No event)
  *
  * Return Value:
  * None

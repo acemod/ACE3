@@ -29,10 +29,10 @@ if !(_newVision in _visions) then {
 if (GVAR(camMode) != MODE_FPS) then {
     // 0+ are all thermal vision types
     if (_newVision < 0) then {
-        false setCamUseTi 0;
+        false setCamUseTI 0;
         camUseNVG (_newVision >= VISION_NVG);
     } else {
-        true setCamUseTi _newVision;
+        true setCamUseTI _newVision;
     };
 
     // Give user feedback that vision mode changed

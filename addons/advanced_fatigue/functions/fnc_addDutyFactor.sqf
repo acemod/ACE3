@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Factor ID <STRING>
- * 1: Factor <NUMBER> or <CODE>
+ * 1: Factor <NUMBER or CODE>
  *
  * Return Value:
  * None

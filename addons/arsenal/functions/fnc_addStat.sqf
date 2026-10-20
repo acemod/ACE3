@@ -4,13 +4,13 @@
  * Adds a stat to ACE Arsenal.
  *
  * Arguments:
- * 0: Tabs to add the stat to <ARRAY of ARRAYS>
- * - 0: Left tab indexes <ARRAY of NUMBERS>
- * - 1: Right tab indexes <ARRAY of NUMBERS>
+ * 0: Tabs to add the stat to <ARRAY of ARRAYs>
+ * - 0: Left tab indexes <ARRAY of NUMBERs>
+ * - 1: Right tab indexes <ARRAY of NUMBERs>
  * 1: Stat class (unique string for each stat) <STRING>
- * 2: Config entries to pass <ARRAY of STRINGS>
+ * 2: Config entries to pass <ARRAY of STRINGs>
  * 3: Title <STRING>
- * 4: Show bar / show text bools <ARRAY of BOOLS>
+ * 4: Show bar / show text bools <ARRAY of BOOLs>
  * - 0: Show bar <BOOL> (default: false)
  * - 1: Show text <BOOL> (default: false)
  * 5: Array of statements <ARRAY of CODE>
@@ -20,7 +20,7 @@
  * 6: Priority <NUMBER> (default: 0)
  *
  * Return Value:
- * 0: Array of IDs <ARRAY of STRINGS>
+ * 0: Array of IDs <ARRAY of STRINGs>
  *
  * Example:
  * [[[0, 1, 2], [7]], "scopeStat", ["scope"], "Scope", [false, true], [{}, {

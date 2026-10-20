@@ -10,15 +10,18 @@
  * Has explosives <BOOL>
  *
  * Example:
- * [player] call ace_explosives_fnc_hasExplosives
+ * player call ace_explosives_fnc_hasExplosives
  *
  * Public: Yes
  */
 
-params ["_unit"];
+params [["_unit", objNull, [objNull]]];
 TRACE_1("params",_unit);
 
-private _cfgMagazines = configFile >> "CfgMagazines";
-private _magazines = magazines _unit;
+if (isNull _unit) exitWith {
+    false // return
+};
 
-((_magazines arrayIntersect _magazines) findIf {getNumber (_cfgMagazines >> _x >> QGVAR(Placeable)) == 1}) > -1
+private _cfgMagazines = configFile >> "CfgMagazines";
+
+(([_unit, 2] call EFUNC(common,uniqueItems)) findIf {getNumber (_cfgMagazines >> _x >> QGVAR(placeable)) == 1}) != -1 // return

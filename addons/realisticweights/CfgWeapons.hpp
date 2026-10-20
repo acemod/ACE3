@@ -6,9 +6,7 @@ class CfgWeapons {
     class Rifle_Long_Base_F: Rifle_Base_F {
         class WeaponSlotsInfo;
     };
-    class Rifle_Short_Base_F: Rifle_Base_F {
-        class WeaponSlotsInfo;
-    };
+    class Rifle_Short_Base_F: Rifle_Base_F {};
     class Launcher;
     class Launcher_Base_F: Launcher {
         class WeaponSlotsInfo;

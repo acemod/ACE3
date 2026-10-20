@@ -5,10 +5,10 @@
  *
  * Arguments:
  * 0: Text <ANY>
- * 1: Color <ARRAY, STRING>
+ * 1: Color <ARRAY or STRING>
  *
  * Return Value:
- * Text <STRING>
+ * Text <STRUCTUREDTEXT>
  *
  * Example:
  * ["text", [0, 1, 2]] call ace_common_fnc_stringToColoredText

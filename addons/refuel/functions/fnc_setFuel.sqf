@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Fuel Source <OBJECT>
- * 1: Amount (in liters)<NUMBER>
+ * 1: Amount (in liters) <NUMBER>
  *
  * Return Value:
  * None

@@ -18,6 +18,9 @@
 
 params ["_unit", "_magazine"];
 
+// Exit if repack is disabled for this magazine.
+if (getNumber (configFile >> "CfgMagazines" >> _magazine >> "ace_disableRepacking") == 1) exitWith {false};
+
 private _maxAmmoCount = getNumber (configFile >> "CfgMagazines" >> _magazine >> "count");
 
 {
@@ -25,5 +28,5 @@ private _maxAmmoCount = getNumber (configFile >> "CfgMagazines" >> _magazine >> 
 
     _magazineType == _magazine // Magazine is of given type
     && {_ammoCount > 0 && {_ammoCount < _maxAmmoCount}} // Is a partial magazine
-    && {!_isLoaded || {GVAR(repackLoadedMagazines) && {[_unit, _magazineType] call CBA_fnc_canAddItem}}} // In inventory or can be moved into it
+    && {!_isLoaded || {GVAR(repackLoadedMagazines) && {_unit canAdd [_magazineType, 1, true]}}} // In inventory or can be moved into it
 } count magazinesAmmoFull _unit > 1

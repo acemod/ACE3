@@ -6,8 +6,8 @@
  * Arguments:
  * 0: Map control <CONTROL>
  * 1: Mouse button pressed <NUMBER>
- * 2: x screen coordinate clicked <BOOL>
- * 3: y screen coordinate clicked <BOOL>
+ * 2: x screen coordinate clicked <NUMBER>
+ * 3: y screen coordinate clicked <NUMBER>
  *
  * Return Value:
  * None

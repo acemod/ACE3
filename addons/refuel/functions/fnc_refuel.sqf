@@ -31,10 +31,13 @@ private _rate = if (isNumber (_config >> QGVAR(flowRate))) then {
 // How much fuel is in a vehicle's fuel tank
 private _maxFuelTank = getNumber (_config >> QGVAR(fuelCapacity));
 // Fall back to vanilla fuelCapacity value (only air and sea vehicles don't have this defined by default by us)
-// Air and sea vehicles have that value properly defined in liters, unlike ground vehicles which is is formula of (range * tested factor) - different fuel consumption system than ground vehicles
+// Air and sea vehicles have that value properly defined in liters, unlike ground vehicles where it is a formula of (range * tested factor) due to a different fuel consumption system
 if (_maxFuelTank == 0) then {
     _maxFuelTank = getNumber (_config >> "fuelCapacity");
 };
+
+// Wipe refuel amount, so that nozzle doesn't carry over information from previous refuelling
+_nozzle setVariable [QGVAR(tempFuel), nil];
 
 [{
     params ["_args", "_pfID"];
@@ -64,11 +67,11 @@ if (_maxFuelTank == 0) then {
     private _fueling = _nozzle getVariable [QGVAR(isRefueling), false];
     if (_fueling) then {
         private _refuelContainer = _nozzle getVariable [QGVAR(refuelContainer), false];
-        
+
         // Use special cargo refuel rate when refueling containers
         // TODO: Add flow dedicated input/output flow rates for every container and use the lower of the two instead
         if (_refuelContainer) then {_rate = GVAR(cargoRate)};
-    
+
         // Calculate rate using mission time to take time acceleration and pause into account
         private _addedFuel = _rate * (CBA_missionTime - (_nozzle getVariable [QGVAR(lastTickMissionTime), CBA_missionTime]));
         _nozzle setVariable [QGVAR(lastTickMissionTime), CBA_missionTime];
@@ -85,14 +88,14 @@ if (_maxFuelTank == 0) then {
                 _fuelInSource = _fuelInSource - _addedFuel;
             };
         };
-        
+
         private _fuelInSink = (if (_refuelContainer) then {
             [_sink] call FUNC(getFuel)
         } else {
             // How full the gas tank is. We keep our own record, since `fuel _sink` doesn't update quick enough
             (_nozzle getVariable [QGVAR(tempFuel), fuel _sink]) * _maxFuelTank
         }) + _addedFuel;
-        
+
         // Add fuel to target while being sure not to put too much into sink
         private _maxFuelContainer = [_sink] call FUNC(getCapacity);
         private _maxFuel = [_maxFuelTank, _maxFuelContainer] select _refuelContainer;
@@ -105,7 +108,7 @@ if (_maxFuelTank == 0) then {
             _finished = true;
             [LSTRING(Hint_Completed), 2, _unit] call EFUNC(common,displayTextStructured);
         };
-        
+
         if (_refuelContainer) then {
             [_sink, _fuelInSink] call FUNC(setFuel);
         } else {
@@ -113,11 +116,11 @@ if (_maxFuelTank == 0) then {
             [QEGVAR(common,setFuel), [_sink, _fillRatio], _sink] call CBA_fnc_targetEvent;
             _nozzle setVariable [QGVAR(tempFuel), _fillRatio];
         };
-        
+
         // Increment fuel counter
         _source setVariable [QGVAR(fuelCounter), (_source getVariable [QGVAR(fuelCounter), 0]) + _addedFuel, true];
 
-        [QGVAR(tick), [_source, _sink, _addedFuel, _refuelContainer]] call CBA_fnc_localEvent;
+        [QGVAR(tick), [_source, _sink, _addedFuel, _refuelContainer, _nozzle]] call CBA_fnc_localEvent;
 
         [_source, _fuelInSource] call FUNC(setFuel);
     } else {
@@ -126,9 +129,10 @@ if (_maxFuelTank == 0) then {
 
     // Reset variables when done
     if (_finished) then {
-        [QGVAR(stopped), [_source, _sink]] call CBA_fnc_localEvent;
+        [QGVAR(stopped), [_source, _sink, _nozzle]] call CBA_fnc_localEvent;
         _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
         _nozzle setVariable [QGVAR(isRefueling), false, true];
+        [_nozzle, QGVAR(nozzle_stop), nil, true, true, true] call CBA_fnc_globalSay3D;
     };
 }, 1, [
     _nozzle getVariable QGVAR(source),

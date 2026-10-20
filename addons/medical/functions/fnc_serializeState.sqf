@@ -44,13 +44,13 @@ private _state = [] call CBA_fnc_createNamespace;
     [QEGVAR(medical,ivBags), nil],
     [QEGVAR(medical,triageLevel), 0],
     [QEGVAR(medical,triageCard), []],
-    [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]]
+    [VAR_BODYPART_DAMAGE, DEFAULT_BODYPART_DAMAGE_VALUES]
     // Time needs to be converted
     // [VAR_MEDICATIONS, []]
 ];
 
 // Convert medications time to offset
-private _medications = _unit getVariable [VAR_MEDICATIONS, []];
+private _medications = +(_unit getVariable [VAR_MEDICATIONS, []]);
 {
     _x set [1, _x#1 - CBA_missionTime];
 } forEach _medications;
@@ -59,6 +59,8 @@ _state setVariable [VAR_MEDICATIONS, _medications];
 // Medical statemachine state
 private _currentState = [_unit, GVAR(STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
 _state setVariable [QGVAR(statemachineState), _currentState];
+
+[QGVAR(serialize), [_unit, _state]] call CBA_fnc_localEvent;
 
 // Serialize & return
 private _json = [_state] call CBA_fnc_encodeJSON;

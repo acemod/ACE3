@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 0: Is Unconsisisiouses <BOOL>
+ * 1: Is Unconscious <BOOL>
  *
  * Return Value:
  * None

@@ -5,8 +5,6 @@ class CfgWeapons {
     };
 
     class launch_NLAW_F: Launcher_Base_F {
-        scope = 2;
-        scopeArsenal = 2;
         baseWeapon = "launch_NLAW_F";
 
         magazineWell[] = {}; // remove magwell, so only the fakeMag can be loaded (inherited by used)
@@ -29,7 +27,7 @@ class CfgWeapons {
         magazineWell[] = {"NLAW"}; // restore magwell
 
         class EventHandlers {
-            fired = "_this call CBA_fnc_firedDisposable"; // this weapon eventhandler is required!
+            fired = "call CBA_fnc_firedDisposable"; // this weapon eventhandler is required!
         };
 
         class WeaponSlotsInfo: WeaponSlotsInfo {

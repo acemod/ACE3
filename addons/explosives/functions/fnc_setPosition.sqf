@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
- * Sets the Dir and pitch of passed object
+ * Sets the direction and pitch of passed object.
  *
  * Arguments:
  * 0: Explosive <OBJECT>
@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [_explosive, 150, 90] call ACE_Explosives_fnc_setPosition;
+ * [cursorObject, 150, 90] call ace_explosives_fnc_setPosition
  *
  * Public: No
  */
@@ -22,10 +22,11 @@ TRACE_3("params",_explosive,_direction,_pitch);
 
 if (isNull (attachedTo _explosive)) then {
     _explosive setDir _direction;
+
     if (_pitch != 0) then {
         [_explosive, _pitch, 0] call CALLSTACK(BIS_fnc_setPitchBank);
     };
 } else {
-    //Attaching to a vehicle (dirAndUp based on vehicle)
-    _explosive setVectorDirAndUp [[0,0,1],[(sin _direction),(cos _direction),0]];
+    // Attaching to a vehicle (dirAndUp based on vehicle)
+    _explosive setVectorDirAndUp [[0, 0, 1], [sin _direction, cos _direction, 0]];
 };

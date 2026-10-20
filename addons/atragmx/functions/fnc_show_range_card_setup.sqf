@@ -22,7 +22,7 @@ GVAR(showRangeCardSetup) = _this;
 if (_this) then {
     ctrlSetFocus ((uiNamespace getVariable "ATragMX_Display") displayCtrl 10006);
 
-    ctrlSetText [10003, Str(Round(GVAR(rangeCardStartRange)))];
-    ctrlSetText [10004, Str(Round(GVAR(rangeCardEndRange)))];
-    ctrlSetText [10005, Str(Round(GVAR(rangeCardIncrement)))];
+    ctrlSetText [10003, str(round(GVAR(rangeCardStartRange)))];
+    ctrlSetText [10004, str(round(GVAR(rangeCardEndRange)))];
+    ctrlSetText [10005, str(round(GVAR(rangeCardIncrement)))];
 };

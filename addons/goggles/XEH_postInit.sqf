@@ -90,8 +90,8 @@ if (!hasInterface) exitWith {};
         // Register fire event handler
         ["ace_firedPlayer", LINKFUNC(handleFired)] call CBA_fnc_addEventHandler;
 
-        //Add Explosion XEH
-        ["CAManBase", "explosion", LINKFUNC(handleExplosion)] call CBA_fnc_addClassEventHandler;
+        // Add Explosion EH
+        [QGVAR(explosion), "Explosion", LINKFUNC(handleExplosion)] call CBA_fnc_addBISPlayerEventHandler;
 
         GVAR(PostProcessEyes) = ppEffectCreate ["ColorCorrections", 1992];
         GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 1], [1, 1, 1, 0]];

@@ -1,12 +1,12 @@
 #include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
- * Auomatically deploy a helicopter filled with AI units.
+ * Automatically deploy a helicopter filled with AI units.
  *
  * Arguments:
  * 0: The helicopter <OBJECT>
- * 1: Deploy special roles (gunners, copilot) (default: false) <BOOL>
- * 2: Create deployment group (default: true) <BOOL>
+ * 1: Deploy special roles (gunners, copilot) <BOOL> (default: false)
+ * 2: Create deployment group <BOOL> (default: true)
  *
  * Return Value:
  * None
@@ -18,7 +18,7 @@
  */
 params [["_vehicle", objNull, [objNull]], ["_deploySpecial", false, [true]], ["_createDeploymentGroup", true, [true]]];
 
-if (isNull _vehicle || {!(_vehicle isKindOf "Helicopter")}) exitWith {
+if (isNull _vehicle || {!(_vehicle isKindOf "Air")}) exitWith {
     if (hasInterface) then {
         // Note: BIS_fnc_guiMessage causes a CTD with call, so spawn is used instead.
         ["deployAI was called with an invalid or non-existant vehicle.", QFUNC(deployAI)] spawn BIS_fnc_guiMessage;
@@ -80,13 +80,13 @@ DFUNC(deployAIRecursive) = {
             [{
                 params ["_vehicle"];
                 private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
-                ({!(_x select 5)} count (_deployedRopes)) > 0
+                (_deployedRopes findIf {!(_x select 5)}) != -1
             }, FUNC(deployAIRecursive), _this] call CBA_fnc_waitUntilAndExecute;
         }, [_vehicle, _unitsToDeploy], 1] call CBA_fnc_waitAndExecute;
     } else {
         [{
             private _deployedRopes = _this getVariable [QGVAR(deployedRopes), []];
-            ({_x select 5} count (_deployedRopes)) == 0
+            _deployedRopes findIf {_x select 5} == -1
         }, {
             [_this] call FUNC(cutRopes);
             driver _this enableAI "MOVE";

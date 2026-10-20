@@ -3,7 +3,7 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {"ACE_Item_Tripod"};
+        units[] = {"ACE_Item_Tripod", "ACE_TripodObject"};
         weapons[] = {"ACE_Tripod"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};

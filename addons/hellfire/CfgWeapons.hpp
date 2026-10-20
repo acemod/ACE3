@@ -1,6 +1,5 @@
 class CfgWeapons {
     class RocketPods;
-    class MissileLauncher;
     class GVAR(launcher): RocketPods {
         displayName = "AGM-114K Hellfire II";
         GVAR(enabled) = 1; // handle adding interactions and adding Laser Designator

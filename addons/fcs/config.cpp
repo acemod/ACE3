@@ -27,13 +27,6 @@ class CfgPatches {
 
 #include "CfgOptics.hpp"
 
-class ACE_Extensions {
-    class ace_fcs {
-        windows = 1;
-        client = 1;
-    };
-};
-
 class ACE_Tests {
     fcs = QPATHTOF(dev\test_debugConfigs.sqf);
 };

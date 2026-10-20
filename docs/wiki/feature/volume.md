@@ -21,7 +21,7 @@ Adds the possibility of setting a keybind to toggle volume of game and music. It
 ## 2. Features
 
 - Automatically lower volume when inside vehicles (restores when exiting vehicles)
-- Change reduction percentage and fade delay
+- Change reduction percentage of both sound effects and music as well as fade delay
 - Option to show/hide notification
 - Option to remind you every minute if your volume is lowered
 

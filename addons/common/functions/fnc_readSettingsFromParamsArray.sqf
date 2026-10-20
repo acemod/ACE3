@@ -17,7 +17,7 @@
  */
 
 //paramsArray is a normal variable not a command
-private _paramsArray = missionnamespace getVariable ["paramsArray", []];
+private _paramsArray = missionNamespace getVariable ["paramsArray", []];
 
 TRACE_1("Reading missionConfigFile params",_paramsArray);
 
@@ -53,10 +53,6 @@ TRACE_1("Reading missionConfigFile params",_paramsArray);
 
         if (!_validValue) exitWith {
             WARNING_3("readSettingsFromParamsArray - param [%1] type not valid [%2] - expected type [%3]",_settingName,_settingValue,_settingType);
-        };
-
-        if ([_settingName, "mission"] call CBA_settings_fnc_isForced) then {
-            WARNING_1("Setting [%1] - Already Forced",_settingName);
         };
 
         // Set the setting as a mission setting and force it

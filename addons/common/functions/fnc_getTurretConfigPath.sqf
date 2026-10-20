@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Vehicle Config <CONFIG>
- * 1: Turret indecies <ARRAY>
+ * 1: Turret indices <ARRAY>
  *
  * Return Value:
  * Turret config <CONFIG>

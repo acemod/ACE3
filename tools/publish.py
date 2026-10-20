@@ -4,6 +4,7 @@
 
 # Uploads ace relases to workshop
 # Will slice up compats to their own folders
+# to use: unzip a ace-latest.zip so that you have a \releases\@ace\addons
 
 import sys
 
@@ -64,7 +65,8 @@ def publishFolder(folder,modID,changeNotes):
 
 
 #GLOBALS
-release_dir = "P:\\z\\ace\\release"
+project_base_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+release_dir = os.path.join(project_base_path,"releases")
 project = "@ace"
 publisherTool_path = find_bi_tools()
 changelog_path = os.path.join(release_dir,"changelog.txt")

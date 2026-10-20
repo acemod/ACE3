@@ -33,7 +33,7 @@ if !(isNull _object) then {
     if (_dblClick) then {
         // Place camera within ~10m of the object and above ground level
         private _pos = getPosASLVisual _object;
-        GVAR(camera) setPosASL (AGLtoASL (_pos getPos [1 + random 10, random 360]) vectorAdd [0,0,2 + random 10]);
+        GVAR(camera) setPosASL (AGLToASL (_pos getPos [1 + random 10, random 360]) vectorAdd [0,0,2 + random 10]);
 
         // Reset the focus
         [objNull] call FUNC(setFocus);

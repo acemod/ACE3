@@ -43,7 +43,7 @@ Modyfikacja ta jest **budowana modułowo**, dzięki temu prawie każdy dostarczo
 - Przeciąganie i przenoszenie
 - Realistyczne nazwy pojazdów i broni
 - System kontroli ognia (SKO) dla pojazdów opancerzonych oraz śmigłowców
-- Realistyczna balistyka/SKO obliczana w rozszerzeniach C/C++
+- Realistyczna balistyka/SKO obliczana w rozszerzeniach Rust
 - Symulacja strefy backblastu i podciśnienia
 - Jednorazowe wyrzutnie
 - Realistyczne siły G

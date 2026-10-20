@@ -1,0 +1,12 @@
+BASE_PAIR(rhsgref_hat_m43cap_heer,rhsgref_hat_m43cap_heer1_tilted);//same Hat, just slightly tiltet
+
+BASE_PAIR(rhsgref_helmet_m1942_winter,rhsgref_helmet_m1942_winter_alt1);
+BASE_PAIR(rhsgref_helmet_m1942_camo01,rhsgref_helmet_m1942_camo01_alt1);
+BASE_PAIR(rhsgref_helmet_m1942,rhsgref_helmet_m1942_alt1);
+
+BASE_PAIR(rhsgref_helmet_M1_bare,rhsgref_helmet_M1_bare_alt01);
+BASE_PAIR(rhsgref_helmet_M1_painted,rhsgref_helmet_M1_painted_alt01);
+
+BASE_PAIR(rhsgref_helmet_m1940,rhsgref_helmet_m1940_alt1);
+BASE_PAIR(rhsgref_helmet_m1940_camo01,rhsgref_helmet_m1940_camo01_alt1);
+BASE_PAIR(rhsgref_helmet_m1940_winter,rhsgref_helmet_m1940_winter_alt1);

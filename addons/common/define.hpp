@@ -100,14 +100,14 @@ class ACE_gui_editBase {
     w = 0.2;
     colorBackground[] = {0, 0, 0, 1};
     colorText[] = {0.95, 0.95, 0.95, 1};
-    colorSelection[] = {"(profilenamespace getVariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getVariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getVariable ['GUI_BCG_RGB_B',0.8862])", 1};
+    colorSelection[] = {"(profileNamespace getVariable ['GUI_BCG_RGB_R',0.3843])", "(profileNamespace getVariable ['GUI_BCG_RGB_G',0.7019])", "(profileNamespace getVariable ['GUI_BCG_RGB_B',0.8862])", 1};
     autocomplete = "";
     text = "";
     size = 0.2;
     style = "0x00 + 0x40";
     font = "RobotoCondensed";
     shadow = 2;
-    sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+    sizeEx = "(((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 1)";
     colorDisabled[] = {1, 1, 1, 0.25};
 };
 
@@ -187,10 +187,10 @@ class ACE_gui_RscProgress {
     colorFrame[] = {1, 1, 1, 0.7};
     colorBar[] = {1, 1, 1, 0.7};
     texture = "#(argb,8,8,3)color(1,1,1,0.7)";
-    x = "1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-    y = "10 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-    w = "38 * (((safezoneW / safezoneH) min 1.2) / 40)";
-    h = "0.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+    x = "1 * (((safeZoneW / safeZoneH) min 1.2) / 40) + (safeZoneX + (safeZoneW - ((safeZoneW / safeZoneH) min 1.2))/2)";
+    y = "10 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) + (safeZoneY + (safeZoneH - (((safeZoneW / safeZoneH) min 1.2) / 1.2))/2)";
+    w = "38 * (((safeZoneW / safeZoneH) min 1.2) / 40)";
+    h = "0.5 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
 };
 
 class ACE_gui_staticBase {
@@ -221,7 +221,7 @@ class ACE_gui_listBoxBase: RscListBox {
     colorSelect2[] = {0.95, 0.95, 0.95, 1};
     colorSelectBackground[] = {0, 0, 0, 1};
     colorSelectBackground2[] = {0.543, 0.5742, 0.4102, 1};
-    colorDisabled[] = {"(profilenamespace getVariable ['GUI_BCG_RGB_R',0.69])", "(profilenamespace getVariable ['GUI_BCG_RGB_G',0.75])", "(profilenamespace getVariable ['GUI_BCG_RGB_B',0.5])", 0.25};
+    colorDisabled[] = {"(profileNamespace getVariable ['GUI_BCG_RGB_R',0.69])", "(profileNamespace getVariable ['GUI_BCG_RGB_G',0.75])", "(profileNamespace getVariable ['GUI_BCG_RGB_B',0.5])", 0.25};
     period = 1.2;
     rowHeight = 0.03;
     colorBackground[] = {0, 0, 0, 1};
@@ -384,9 +384,9 @@ class ACE_gui_comboBoxBase: RscCombo {
 class ACE_gui_mapBase {
     moveOnEdges = 1;
     x = "SafeZoneXAbs";
-    y = "SafeZoneY + 1.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+    y = "SafeZoneY + 1.5 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
     w = "SafeZoneWAbs";
-    h = "SafeZoneH - 1.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+    h = "SafeZoneH - 1.5 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
     type = 100; // Use 100 to hide markers
     style = 48;
     shadow = 0;
@@ -440,15 +440,15 @@ class ACE_gui_mapBase {
     onMouseButtonDblClick = "";
 
     fontLabel = "RobotoCondensed";
-    sizeExLabel = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
+    sizeExLabel = "(((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 0.8)";
     fontGrid = "TahomaB";
     sizeExGrid = 0.02;
     fontUnits = "TahomaB";
-    sizeExUnits = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
+    sizeExUnits = "(((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 0.8)";
     fontNames = "RobotoCondensed";
-    sizeExNames = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8) * 2";
+    sizeExNames = "(((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 0.8) * 2";
     fontInfo = "RobotoCondensed";
-    sizeExInfo = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
+    sizeExInfo = "(((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 0.8)";
     fontLevel = "TahomaB";
     sizeExLevel = 0.02;
     text = "#(argb,8,8,3)color(1,1,1,1)";
@@ -458,12 +458,12 @@ class ACE_gui_mapBase {
         size = 50;
     };
     class Legend {
-        x = "SafeZoneX + (((safezoneW / safezoneH) min 1.2) / 40)";
-        y = "SafeZoneY + safezoneH - 4.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-        w = "10 * (((safezoneW / safezoneH) min 1.2) / 40)";
-        h = "3.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+        x = "SafeZoneX + (((safeZoneW / safeZoneH) min 1.2) / 40)";
+        y = "SafeZoneY + safeZoneH - 4.5 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
+        w = "10 * (((safeZoneW / safeZoneH) min 1.2) / 40)";
+        h = "3.5 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
         font = "RobotoCondensed";
-        sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
+        sizeEx = "(((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 0.8)";
         colorBackground[] = {1, 1, 1, 0.5};
         color[] = {0, 0, 0, 1};
     };
@@ -473,7 +473,7 @@ class ACE_gui_mapBase {
         iconCanceled = "\A3\ui_f\data\map\mapcontrol\taskIconCanceled_CA.paa";
         iconDone = "\A3\ui_f\data\map\mapcontrol\taskIconDone_CA.paa";
         iconFailed = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_CA.paa";
-        color[] = {"(profilenamespace getVariable ['IGUI_TEXT_RGB_R',0])", "(profilenamespace getVariable ['IGUI_TEXT_RGB_G',1])", "(profilenamespace getVariable ['IGUI_TEXT_RGB_B',1])", "(profilenamespace getVariable ['IGUI_TEXT_RGB_A',0.8])"};
+        color[] = {"(profileNamespace getVariable ['IGUI_TEXT_RGB_R',0])", "(profileNamespace getVariable ['IGUI_TEXT_RGB_G',1])", "(profileNamespace getVariable ['IGUI_TEXT_RGB_B',1])", "(profileNamespace getVariable ['IGUI_TEXT_RGB_A',0.8])"};
         colorCreated[] = {1, 1, 1, 1};
         colorCanceled[] = {0.7, 0.7, 0.7, 1};
         colorDone[] = {0.7, 1, 0.3, 1};
@@ -487,7 +487,7 @@ class ACE_gui_mapBase {
         icon = "\A3\ui_f\data\map\mapcontrol\waypoint_ca.paa";
         color[] = {0, 0, 0, 1};
         size = 20;
-        importance = "1.2 * 16 * 0.05";
+        importance = 1.2 * 16 * 0.05;
         coefMin = 0.9;
         coefMax = 4;
     };
@@ -495,7 +495,7 @@ class ACE_gui_mapBase {
         icon = "\A3\ui_f\data\map\mapcontrol\waypointCompleted_ca.paa";
         color[] = {0, 0, 0, 1};
         size = 20;
-        importance = "1.2 * 16 * 0.05";
+        importance = 1.2 * 16 * 0.05;
         coefMin = 0.9;
         coefMax = 4;
     };
@@ -518,8 +518,8 @@ class ACE_gui_mapBase {
     class Bush {
         icon = "\A3\ui_f\data\map\mapcontrol\bush_ca.paa";
         color[] = {0.45, 0.64, 0.33, 0.4};
-        size = "14/2";
-        importance = "0.2 * 14 * 0.05 * 0.05";
+        size = 14/2;
+        importance = 0.2 * 14 * 0.05 * 0.05;
         coefMin = 0.25;
         coefMax = 4;
     };
@@ -527,7 +527,7 @@ class ACE_gui_mapBase {
         icon = "\A3\ui_f\data\map\mapcontrol\rock_ca.paa";
         color[] = {0.1, 0.1, 0.1, 0.8};
         size = 12;
-        importance = "0.5 * 12 * 0.05";
+        importance = 0.5 * 12 * 0.05;
         coefMin = 0.25;
         coefMax = 4;
     };
@@ -535,7 +535,7 @@ class ACE_gui_mapBase {
         icon = "\A3\ui_f\data\map\mapcontrol\bush_ca.paa";
         color[] = {0.45, 0.64, 0.33, 0.4};
         size = 12;
-        importance = "0.6 * 12 * 0.05";
+        importance = 0.6 * 12 * 0.05;
         coefMin = 0.25;
         coefMax = 4;
     };
@@ -543,7 +543,7 @@ class ACE_gui_mapBase {
         icon = "\A3\ui_f\data\map\mapcontrol\bush_ca.paa";
         color[] = {0.45, 0.64, 0.33, 0.4};
         size = 12;
-        importance = "0.9 * 16 * 0.05";
+        importance = 0.9 * 16 * 0.05;
         coefMin = 0.25;
         coefMax = 4;
     };
@@ -671,7 +671,7 @@ class ACE_gui_mapBase {
         icon = "\A3\ui_f\data\map\mapcontrol\bunker_ca.paa";
         color[] = {0, 0, 0, 1};
         size = 14;
-        importance = "1.5 * 14 * 0.05";
+        importance = 1.5 * 14 * 0.05;
         coefMin = 0.25;
         coefMax = 4;
     };
@@ -679,7 +679,7 @@ class ACE_gui_mapBase {
         icon = "\A3\ui_f\data\map\mapcontrol\bunker_ca.paa";
         color[] = {0, 0, 0, 1};
         size = 16;
-        importance = "2 * 16 * 0.05";
+        importance = 2 * 16 * 0.05;
         coefMin = 0.25;
         coefMax = 4;
     };
@@ -687,7 +687,7 @@ class ACE_gui_mapBase {
         icon = "\A3\ui_f\data\map\mapcontrol\fountain_ca.paa";
         color[] = {0, 0, 0, 1};
         size = 11;
-        importance = "1 * 12 * 0.05";
+        importance = 1 * 12 * 0.05;
         coefMin = 0.25;
         coefMax = 4;
     };
@@ -695,7 +695,7 @@ class ACE_gui_mapBase {
         icon = "\A3\ui_f\data\map\mapcontrol\ruin_ca.paa";
         color[] = {0, 0, 0, 1};
         size = 16;
-        importance = "1.2 * 16 * 0.05";
+        importance = 1.2 * 16 * 0.05;
         coefMin = 1;
         coefMax = 4;
     };
@@ -703,7 +703,7 @@ class ACE_gui_mapBase {
         icon = "\A3\ui_f\data\map\mapcontrol\stack_ca.paa";
         color[] = {0, 0, 0, 1};
         size = 20;
-        importance = "2 * 16 * 0.05";
+        importance = 2 * 16 * 0.05;
         coefMin = 0.9;
         coefMax = 4;
     };
@@ -711,7 +711,7 @@ class ACE_gui_mapBase {
         icon = "\A3\ui_f\data\map\mapcontrol\tourism_ca.paa";
         color[] = {0, 0, 0, 1};
         size = 16;
-        importance = "1 * 16 * 0.05";
+        importance = 1 * 16 * 0.05;
         coefMin = 0.7;
         coefMax = 4;
     };
@@ -719,7 +719,7 @@ class ACE_gui_mapBase {
         icon = "\A3\ui_f\data\map\mapcontrol\viewtower_ca.paa";
         color[] = {0, 0, 0, 1};
         size = 16;
-        importance = "2.5 * 16 * 0.05";
+        importance = 2.5 * 16 * 0.05;
         coefMin = 0.5;
         coefMax = 4;
     };

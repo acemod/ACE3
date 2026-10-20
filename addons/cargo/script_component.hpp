@@ -19,3 +19,6 @@
 #define MAX_LOAD_DISTANCE 5
 
 #define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
+
+#define CARGO_TUMBLE_RANDOM_MUL 8
+#define CARGO_TUMBLE_TORQUE 500

@@ -51,6 +51,7 @@ TRACE_3("killer info",_killer,_instigator,_causeOfDeath);
 if (_unit == player) then {
     // Enable user input before respawn, in case mission is using respawnTemplates
     ["unconscious", false] call EFUNC(common,setDisableUserInputStatus);
+    EGVAR(medical,windowOnWakeUp) call EFUNC(common,focusWindow);
 };
 
 // Remove status effects before respawn, in case mission is using spectator

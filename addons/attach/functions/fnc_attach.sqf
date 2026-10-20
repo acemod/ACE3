@@ -22,7 +22,7 @@ _args params [["_itemClassname","", [""]]];
 TRACE_4("params",_attachToVehicle,_unit,_itemClassname,_silentScripted);
 
 //Sanity Check (_unit has item in inventory, not over attach limit)
-if ((_itemClassname == "") || {(!_silentScripted) && {!(_this call FUNC(canAttach))}}) exitWith {ERROR("Tried to attach, but check failed");};
+if ((_itemClassname == "") || {(!_silentScripted) && {!(call FUNC(canAttach))}}) exitWith {ERROR("Tried to attach, but check failed");};
 
 private _itemVehClass = getText (configFile >> "CfgWeapons" >> _itemClassname >> "ACE_Attachable");
 private _onAttachText = getText (configFile >> "CfgWeapons" >> _itemClassname >> "displayName");
@@ -50,13 +50,13 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
 } else {
     GVAR(placeAction) = PLACE_WAITING;
 
-    [_unit, "forceWalk", "ACE_Attach", true] call EFUNC(common,statusEffect_set);
-    [_unit, "blockThrow", "ACE_Attach", true] call EFUNC(common,statusEffect_set);
+    [_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+    [_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
     [{[localize LSTRING(PlaceAction), ""] call EFUNC(interaction,showMouseHint)}, []] call CBA_fnc_execNextFrame;
     _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
 
-    private _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(CancelAction)], {GVAR(placeAction) = PLACE_CANCEL}];
+    private _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", LELSTRING(common,Cancel)], {GVAR(placeAction) = PLACE_CANCEL}];
 
     //Display to show virtual object:
     private _model = getText (configFile >> "CfgAmmo" >> _itemVehClass >> "model");
@@ -88,8 +88,8 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
                 {!([_attachToVehicle, _unit, _itemClassname] call FUNC(canAttach))}) then {
 
             [_idPFH] call CBA_fnc_removePerFrameHandler;
-            [_unit, "forceWalk", "ACE_Attach", false] call EFUNC(common,statusEffect_set);
-            [_unit, "blockThrow", "ACE_Attach", false] call EFUNC(common,statusEffect_set);
+            [_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+            [_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
             [] call EFUNC(interaction,hideMouseHint);
             [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call EFUNC(common,removeActionEventHandler);
             _unit removeAction _actionID;

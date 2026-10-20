@@ -16,7 +16,7 @@
  */
 
 // Only run once
-if (missionNameSpace getVariable [QGVAR(checkFiles_diagnoseACE), false]) exitWith {
+if (missionNamespace getVariable [QGVAR(checkFiles_diagnoseACE), false]) exitWith {
     createHashMap // return
 };
 

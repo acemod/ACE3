@@ -23,7 +23,7 @@ class CfgVehicles {
     };
     class ACE_Module: Module_F {
         class EventHandlers {
-            init = QUOTE(_this call DFUNC(moduleInit));
+            init = QUOTE(call DFUNC(moduleInit));
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
     };

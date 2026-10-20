@@ -4,16 +4,16 @@
         class ACE_MainActions { \
             class GVAR(AttachVehicle) { \
                 displayName = CSTRING(AttachDetach); \
-                condition = QUOTE(_this call FUNC(canAttach)); \
-                insertChildren = QUOTE(_this call FUNC(getChildrenActions)); \
+                condition = QUOTE(call FUNC(canAttach)); \
+                insertChildren = QUOTE(call FUNC(getChildrenActions)); \
                 exceptions[] = {"isNotSwimming"}; \
                 showDisabled = 0; \
                 icon = QPATHTOF(UI\attach_ca.paa); \
             }; \
             class GVAR(DetachVehicle) { \
                 displayName = CSTRING(Detach); \
-                condition = QUOTE(_this call FUNC(canDetach)); \
-                statement = QUOTE(_this call FUNC(detach)); \
+                condition = QUOTE(call FUNC(canDetach)); \
+                statement = QUOTE(call FUNC(detach)); \
                 exceptions[] = {"isNotSwimming"}; \
                 showDisabled = 0; \
                 icon = QPATHTOF(UI\detach_ca.paa); \
@@ -51,16 +51,16 @@ class CfgVehicles {
             class ACE_Equipment {
                 class GVAR(Attach) {
                     displayName = CSTRING(AttachDetach);
-                    condition = QUOTE(_this call FUNC(canAttach));
-                    insertChildren = QUOTE(_this call FUNC(getChildrenActions));
+                    condition = QUOTE(call FUNC(canAttach));
+                    insertChildren = QUOTE(call FUNC(getChildrenActions));
                     exceptions[] = {"isNotDragging", "isNotSwimming"};
                     showDisabled = 0;
                     icon = QPATHTOF(UI\attach_ca.paa);
                 };
                 class GVAR(Detach) {
                     displayName = CSTRING(Detach);
-                    condition = QUOTE(_this call FUNC(canDetach));
-                    statement = QUOTE(_this call FUNC(detach));
+                    condition = QUOTE(call FUNC(canDetach));
+                    statement = QUOTE(call FUNC(detach));
                     exceptions[] = {"isNotDragging", "isNotSwimming"};
                     showDisabled = 0;
                     icon = QPATHTOF(UI\detach_ca.paa);
@@ -86,7 +86,7 @@ class CfgVehicles {
             dayLight = 0;
             onlyInNvg = 1;
             useFlare = 0;
-            maxLifetime = "8 * 60 * 60";
+            maxLifetime = 8 * 60 * 60;
             blinkingPattern[] = {0.1, 1.1}; // 0.1 s on, 1.1 s off
             blinkingStartsOn = 1;
             blinkingPatternGuarantee = 1;
@@ -108,7 +108,7 @@ class CfgVehicles {
 
     class NVG_TargetBase: All {
         class NVGMarker {
-            maxLifetime = "8 * 60 * 60";
+            maxLifetime = 8 * 60 * 60;
         };
     };
 

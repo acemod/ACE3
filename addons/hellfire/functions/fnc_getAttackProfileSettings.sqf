@@ -27,6 +27,8 @@ private _attackConfig = configFile >> QEGVAR(missileguidance,AttackProfiles) >> 
 // Launch (clearing terrain mask for LO/HI):
 private _configLaunchHeightClear = getNumber (_attackConfig >> QGVAR(launchHeightClear));
 
+private _projectilePos = getPosASL _projectile;
+
 // Get starting stage
 private _startingStage = if (_configLaunchHeightClear > 0) then {
     STAGE_LAUNCH; // LOAL-HI / LO
@@ -40,5 +42,9 @@ private _startingStage = if (_configLaunchHeightClear > 0) then {
 // Set data in param array
 _attackProfileStateParams set [0, _startingStage];
 _attackProfileStateParams set [1, _configLaunchHeightClear];
+_attackProfileStateParams set [2, [
+    _projectilePos select 2,
+    _seekerTargetPos distance2D _projectilePos
+]];
 
 TRACE_1("new shot settings",_attackProfileStateParams);

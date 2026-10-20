@@ -17,7 +17,7 @@
 
 params ["_scroll"];
 
-if !(GVAR(isOpeningDoor)) exitWith {false};
+if (!GVAR(isOpeningDoor)) exitWith {false};
 
 GVAR(doorTargetPhase) = ((GVAR(doorTargetPhase) + (_scroll / (1.2 * 12))) max 0) min 1;
 

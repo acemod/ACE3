@@ -19,7 +19,7 @@ class Extended_PostInit_EventHandlers {
 class Extended_Take_EventHandlers {
     class CAManBase {
         class ACE_AmmoIndicatorReload {
-            clientTake = QUOTE(_this call FUNC(onTake));
+            clientTake = QUOTE(call FUNC(onTake));
         };
     };
 };

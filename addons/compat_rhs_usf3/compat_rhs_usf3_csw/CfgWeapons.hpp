@@ -11,7 +11,7 @@ class CfgWeapons {
 
     class GVAR(m252_carry): Launcher_Base_F {
         dlc = "ace";
-        class ACE_CSW {
+        class ace_csw {
             type = "weapon";
             deployTime = 20;
             pickupTime = 25;
@@ -37,13 +37,14 @@ class CfgWeapons {
 
     class GVAR(m2_carry): Launcher_Base_F {
         dlc = "ace";
-        class ACE_CSW {
+        class ace_csw {
             type = "weapon";
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
                 EGVAR(csw,m3Tripod) = "RHS_M2StaticMG_WD";
                 EGVAR(csw,m3TripodLow) = "RHS_M2StaticMG_MiniTripod_WD";
+                EGVAR(compat_spe,m3Tripod) = "RHS_M2StaticMG_MiniTripod_WD";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
@@ -62,7 +63,7 @@ class CfgWeapons {
 
     class GVAR(mk19_carry): Launcher_Base_F {
         dlc = "ace";
-        class ACE_CSW {
+        class ace_csw {
             type = "weapon";
             deployTime = 4;
             pickupTime = 4;
@@ -86,7 +87,7 @@ class CfgWeapons {
 
     class GVAR(tow_carry): Launcher_Base_F {
         dlc = "ace";
-        class ACE_CSW {
+        class ace_csw {
             type = "weapon";
             deployTime = 4;
             pickupTime = 4;

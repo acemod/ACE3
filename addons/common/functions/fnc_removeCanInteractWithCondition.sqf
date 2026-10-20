@@ -18,16 +18,4 @@
 params ["_conditionName"];
 
 _conditionName = toLowerANSI _conditionName;
-
-private _conditions = missionNamespace getVariable [QGVAR(InteractionConditions), [[],[]]];
-
-_conditions params ["_conditionNames", "_conditionFuncs"];
-
-private _index = _conditionNames find _conditionName;
-
-if (_index == -1) exitWith {};
-
-_conditionNames deleteAt _index;
-_conditionFuncs deleteAt _index;
-
-GVAR(InteractionConditions) = _conditions;
+GVAR(InteractionConditions) deleteAt _conditionName;

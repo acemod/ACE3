@@ -4,7 +4,7 @@
  * Get the vehicle codriver positions.
  *
  * Arguments:
- * 0: Vehicle type <STRING>
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
  * Vehicle codriver positions <ARRAY>

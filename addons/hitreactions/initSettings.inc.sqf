@@ -3,7 +3,7 @@ private _category = [LELSTRING(common,categoryUncategorized), QUOTE(COMPONENT_BE
 [
     QGVAR(minDamageToTrigger),
     "SLIDER",
-    LSTRING(minDamageToTrigger_displayName),
+    [LSTRING(minDamageToTrigger_displayName), LSTRING(minDamageToTrigger_Description)],
     _category,
     [-1, 1, 0.1, 1],
     1

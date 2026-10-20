@@ -24,7 +24,7 @@ if (_typeName == "") then {
     WARNING_1("Setting [%1] Has no typeName",_varName);
     _typeName = "SCALAR";
 };
-TRACE_3("loadFromConfig",_var,_typeName,_config);
+TRACE_3("loadFromConfig",_varName,_typeName,_config);
 
 private _isClientSettable = (getNumber (_config >> "isClientSettable")) > 0;
 private _localizedName = getText (_config >> "displayName");

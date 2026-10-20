@@ -20,13 +20,17 @@ params [["_optic", "", [""]]];
 // PIP
 private _baseClasses = configProperties [configFile >> "CBA_PIPItems", "getText _x == _optic"];
 
+if (_baseClasses isNotEqualTo []) exitWith {
+    configName (_baseClasses select 0) // return
+};
+
 // Carry Handle
 {
     _baseClasses append (configProperties [_x, "getText _x == _optic"]);
-} forEach configProperties [configFile >> "CBA_CarryHandleTypes"];
+} forEach ("true" configClasses (configFile >> "CBA_CarryHandleTypes")); // CBA_CarryHandleTypes doesn't inherit, so use faster command
 
-if (_baseClasses isNotEqualTo []) then {
-    _optic = configName (_baseClasses select 0);
+if (_baseClasses isNotEqualTo []) exitWith {
+    configName (_baseClasses select 0) // return
 };
 
-_optic
+_optic // return

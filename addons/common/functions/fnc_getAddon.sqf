@@ -22,7 +22,7 @@ params ["_config"];
 
     // Return first addon
     if (_addons isNotEqualTo []) then {
-        (configSourceModList (configfile >> "CfgPatches" >> _addons select 0)) param [0, ""]
+        (configSourceModList (configFile >> "CfgPatches" >> _addons select 0)) param [0, ""]
     } else {
         // If nothing found at all, return ""
         ""

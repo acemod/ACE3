@@ -17,13 +17,8 @@ GVAR(stateMachine) = [{call EFUNC(common,getLocalUnits)}, true] call CBA_statema
     #endif
 }, {}, {}, "Safe"] call CBA_statemachine_fnc_addState;
 
-[GVAR(stateMachine), LINKFUNC(healSelf), {}, {
-    _this setVariable [QGVAR(treatmentOverAt), nil];
-}, "HealSelf"] call CBA_statemachine_fnc_addState;
-
-[GVAR(stateMachine), LINKFUNC(healUnit), {}, {
-    _this setVariable [QGVAR(treatmentOverAt), nil];
-}, "HealUnit"] call CBA_statemachine_fnc_addState;
+[GVAR(stateMachine), LINKFUNC(healSelf), {}, {}, "HealSelf"] call CBA_statemachine_fnc_addState;
+[GVAR(stateMachine), LINKFUNC(healUnit), {}, {}, "HealUnit"] call CBA_statemachine_fnc_addState;
 
 // Add Transistions [statemachine, originalState, targetState, condition, onTransition, name]
 [GVAR(stateMachine), "Initial", "Injured", LINKFUNC(isInjured), {}, "Injured"] call CBA_statemachine_fnc_addTransition;

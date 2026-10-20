@@ -10,7 +10,7 @@ class GVAR(text): RscText {
 };
 class GVAR(textMenu): GVAR(text) {
     SizeEx = 0.09;
-    style = "2+16";
+    style = 2+16;
 };
 
 class RscInGameUI {
@@ -40,7 +40,7 @@ class RscInGameUI {
                                 x = 0;
                                 y = 0;
                                 w = 1;
-                                h = "4/3";
+                                h = 4/3;
                             };
                         };
                     };
@@ -68,7 +68,7 @@ class RscInGameUI {
                                 x = 0;
                                 y = 0;
                                 w = 1;
-                                h = "4/3";
+                                h = 4/3;
                             };
                         };
                     };

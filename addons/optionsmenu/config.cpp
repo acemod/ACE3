@@ -29,15 +29,9 @@ class CfgAddons {
 #include "gui\mainMenu.hpp"
 #include "gui\pauseMenu.hpp"
 
-class ACE_Extensions {
-    class ace_clipboard {
-        windows = 1;
-        client = 1;
-    };
-};
-
 class CfgCommands {
     allowedHTMLLoadURIs[] += {
-        "https://ace3.acemod.org/version.html"
+        "https://ace3.acemod.org/version.html",
+        "https://github.com/acemod/ACE3/releases"
     };
 };

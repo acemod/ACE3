@@ -28,7 +28,11 @@ if (!isNull _glow) then {
 };
 
 if (_flashlightType isNotEqualTo "") then {
-    private _color = getText (configFile >> "CfgWeapons" >> _flashlightType >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Colour");
+    private _config = _flashlightType call CBA_fnc_getItemConfig;
+    if (isClass (_config >> "ItemInfo")) then {
+        _config = _config >> "ItemInfo";
+    };
+    private _color = getText (_config >> "FlashLight" >> "ACE_Flashlight_Colour");
     if !(_color in ["white", "red", "green", "blue", "yellow", "orange"]) then {_color = "white"};
     private _class = format ["ACE_FlashlightProxy_%1", _color];
 

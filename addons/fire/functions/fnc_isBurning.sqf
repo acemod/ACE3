@@ -7,7 +7,7 @@
  * 0: Object <OBJECT>
  *
  * Return Value:
- * None
+ * Is Burning <BOOL>
  *
  * Example:
  * player call ace_fire_fnc_isBurning

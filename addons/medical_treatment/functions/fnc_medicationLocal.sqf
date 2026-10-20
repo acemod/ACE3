@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Glowbal, mharis001
+ * Author: Glowbal, mharis001, Cplhardcore
  * Local callback for administering medication to a patient.
  *
  * Arguments:
@@ -21,7 +21,7 @@
 #define MORPHINE_PAIN_SUPPRESSION 0.6
 // 0.2625 = 0.6/0.8 * 0.35
 // 0.6 = basic medication morph. pain suppr., 0.8 = adv. medication morph. pain suppr., 0.35 = adv. medication painkillers. pain suppr.
-#define PAINKILLERS_PAIN_SUPPRESSION 0.2625 
+#define PAINKILLERS_PAIN_SUPPRESSION 0.2625
 
 params ["_patient", "_bodyPart", "_classname"];
 TRACE_3("medicationLocal",_patient,_bodyPart,_classname);
@@ -49,10 +49,10 @@ TRACE_1("Running treatmentMedicationLocal with Advanced configuration for",_pati
 
 
 // Handle tourniquet on body part blocking blood flow at injection site
-private _partIndex = ALL_BODY_PARTS find tolowerANSI _bodyPart;
+private _partIndex = ALL_BODY_PARTS find toLowerANSI _bodyPart;
 
 if (HAS_TOURNIQUET_APPLIED_ON(_patient,_partIndex)) exitWith {
-    TRACE_1("unit has tourniquets blocking blood flow on injection site",_tourniquets);
+    TRACE_1("unit has tourniquets blocking blood flow on injection site",GET_TOURNIQUETS(_patient));
     private _occludedMedications = _patient getVariable [QEGVAR(medical,occludedMedications), []];
     _occludedMedications pushBack [_partIndex, _classname];
     _patient setVariable [QEGVAR(medical,occludedMedications), _occludedMedications, true];
@@ -65,13 +65,12 @@ private _medicationConfig = _defaultConfig >> _classname;
 private _painReduce             = GET_NUMBER(_medicationConfig >> "painReduce",getNumber (_defaultConfig >> "painReduce"));
 private _timeInSystem           = GET_NUMBER(_medicationConfig >> "timeInSystem",getNumber (_defaultConfig >> "timeInSystem"));
 private _timeTillMaxEffect      = GET_NUMBER(_medicationConfig >> "timeTillMaxEffect",getNumber (_defaultConfig >> "timeTillMaxEffect"));
-private _maxDose                = GET_NUMBER(_medicationConfig >> "maxDose",getNumber (_defaultConfig >> "maxDose"));
-private _maxDoseDeviation       = GET_NUMBER(_medicationConfig >> "maxDoseDeviation",getNumber (_defaultConfig >> "maxDoseDeviation"));
 private _viscosityChange        = GET_NUMBER(_medicationConfig >> "viscosityChange",getNumber (_defaultConfig >> "viscosityChange"));
 private _hrIncreaseLow          = GET_ARRAY(_medicationConfig >> "hrIncreaseLow",getArray (_defaultConfig >> "hrIncreaseLow"));
 private _hrIncreaseNormal       = GET_ARRAY(_medicationConfig >> "hrIncreaseNormal",getArray (_defaultConfig >> "hrIncreaseNormal"));
 private _hrIncreaseHigh         = GET_ARRAY(_medicationConfig >> "hrIncreaseHigh",getArray (_defaultConfig >> "hrIncreaseHigh"));
 private _incompatibleMedication = GET_ARRAY(_medicationConfig >> "incompatibleMedication",getArray (_defaultConfig >> "incompatibleMedication"));
+private _dose                   = GET_NUMBER(_medicationConfig >> "dose",getNumber (_defaultConfig >> "dose"));
 
 private _heartRate = GET_HEART_RATE(_patient);
 private _hrIncrease = [_hrIncreaseLow, _hrIncreaseNormal, _hrIncreaseHigh] select (floor ((0 max _heartRate min 110) / 55));
@@ -80,7 +79,7 @@ private _heartRateChange = _minIncrease + random (_maxIncrease - _minIncrease);
 
 // Adjust the medication effects and add the medication to the list
 TRACE_3("adjustments",_heartRateChange,_painReduce,_viscosityChange);
-[_patient, _className, _timeTillMaxEffect, _timeInSystem, _heartRateChange, _painReduce, _viscosityChange] call EFUNC(medical_status,addMedicationAdjustment);
+[_patient, _className, _timeTillMaxEffect, _timeInSystem, _heartRateChange, _painReduce, _viscosityChange, _dose] call EFUNC(medical_status,addMedicationAdjustment);
 
 // Check for medication compatiblity
-[_patient, _className, _maxDose, _maxDoseDeviation, _incompatibleMedication] call FUNC(onMedicationUsage);
+[_patient, _className, _incompatibleMedication] call FUNC(onMedicationUsage);

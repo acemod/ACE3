@@ -89,6 +89,9 @@ def main():
                             data += get_dependencies(line)
                             continue
 
+            # Sort addons alphabetically
+            data.sort(key=str.casefold)
+
             data = "`, `".join(data)
             data = "`{}`".format(data)
 

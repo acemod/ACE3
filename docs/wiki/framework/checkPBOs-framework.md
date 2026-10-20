@@ -32,6 +32,8 @@ copyToClipboard str ("true" configClasses (configFile >> "CfgPatches") apply {co
 
 in the editor while those mods are enabled.
 
+It is also possible to list [Regex patterns](https://community.bistudio.com/wiki/Arma_3:_Regular_Expressions) that match the `CfgPatches` classes (addons). Example: You want to whitelist JSRS 2025 and all its compat addons. In the case of JSRS 2025, all addons begin with the prefix `jsrs_soundmod_2025_`. Instead of listing each addon, you can now write the Regex pattern `jsrs_soundmod_2025_.+` to match all JSRS 2025 addons.
+
 #### 1.1.1 Example 1
 
 Mods: `@cyp_pushtohear_a3`
@@ -50,3 +52,9 @@ Whitelist: `["blastcore_sun", "blastcore_smokecs", "warfxpe", "blastcore_vep"]`
 Mods: `@cyp_pushtohear_a3`, `@BC-Phoenix`
 
 Whitelist: `["cyp_pushtohear_a3", "blastcore_sun", "blastcore_smokecs", "warfxpe", "blastcore_vep"]`
+
+#### 1.1.4 Example 4
+
+Mods: `@JSRS SOUNDMOD 2025 Beta - RC2.1`, `@JSRS SOUNDMOD 2025 Beta - AiO Compat Files RC2.1`
+
+Whitelist (using Regex pattern): `["jsrs_soundmod_2025_.+"]`

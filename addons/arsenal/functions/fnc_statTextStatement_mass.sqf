@@ -4,7 +4,7 @@
  * Text statement for the mass stat.
  *
  * Arguments:
- * 0: Not used
+ * 0: Stats array (not used) <ARRAY>
  * 1: Item config path <CONFIG>
  *
  * Return Value:

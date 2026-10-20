@@ -7,7 +7,7 @@
  * 0: Flare <OBJECT>
  * 1: Color of flare <ARRAY>
  * 2: Intensity of flare <NUMBER>
- * 3: Flare lifetime <OBJECT>
+ * 3: Flare lifetime <NUMBER>
  *
  * Return Value:
  * None

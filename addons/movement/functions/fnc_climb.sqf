@@ -25,14 +25,14 @@ if !(_unit getVariable [QGVAR(isClimbInit), false]) then {
     _unit addEventHandler ["AnimChanged", {
         if (local (_this select 0) && {_this select 1 == "ACE_Climb"}) then {
             // abort climb animation
-            if !(_this call FUNC(canClimb)) then {
+            if !(call FUNC(canClimb)) then {
                 [_this select 0, "AmovPercMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
             };
         };
     }];
 
     _unit addEventHandler ["AnimDone", {
-        if (local (_this select 0) && {_this select 1 == "ACE_Climb"}) then {_this call FUNC(handleClimb)};
+        if (local (_this select 0) && {_this select 1 == "ACE_Climb"}) then {call FUNC(handleClimb)};
     }];
 
     _unit setVariable [QGVAR(isClimbInit), true];

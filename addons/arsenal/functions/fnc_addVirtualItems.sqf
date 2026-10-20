@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Target <OBJECT>
- * 1: Items <ARRAY of STRINGS> <BOOL>
+ * 1: Items <BOOL or ARRAY of STRINGs>
  * 2: Add globally <BOOL> (default: false)
  *
  * Return Value:
@@ -33,12 +33,12 @@ if (isNil "_cargo") then {
 
     _cargo = createHashMapFromArray _cargo;
 
-    for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
+    for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_GOGGLES do {
         _cargo set [_index, createHashMap];
     };
 };
 
-// If passed arguement is "true", add all items
+// If passed argument is "true", add all items
 if (_items isEqualType true) then {
     if (_items) then {
         private _weapons = _cargo get IDX_VIRT_WEAPONS;
@@ -60,7 +60,7 @@ if (_items isEqualType true) then {
         ];
 
         // Add onto existing items, in case some items that were already added aren't available by default in the arsenal
-        for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
+        for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_GOGGLES do {
             (_cargo get _index) merge [_configItems get _index, true];
             _cargo set [_index, _cargo get _index];
         };
@@ -112,7 +112,7 @@ if (_items isEqualType true) then {
 
             // Other
             default {
-                for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
+                for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_GOGGLES do {
                     if (_x in (_configItems get _index)) exitWith {
                         (_cargo get _index) set [_x, nil];
                     };

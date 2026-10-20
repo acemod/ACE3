@@ -59,7 +59,7 @@ class CfgVehicles {
             class GVAR(pickUp) {
                 displayName = CSTRING(PickUp);
                 condition = QUOTE([ARR_2(_player,true)] call FUNC(canPrepare));
-                statement = QUOTE(_this call FUNC(pickUp));
+                statement = QUOTE(call FUNC(pickUp));
                 exceptions[] = {"isNotSwimming"};
                 distance = 1.8; // Requires >1.7 to work when standing with weapon on back
                 icon = "\a3\ui_f\data\igui\cfg\actions\obsolete\ui_action_takemine_ca.paa";

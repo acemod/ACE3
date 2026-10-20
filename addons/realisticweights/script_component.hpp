@@ -1,4 +1,5 @@
 #define COMPONENT realisticweights
+#define COMPONENT_BEAUTIFIED Realistic Weights
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

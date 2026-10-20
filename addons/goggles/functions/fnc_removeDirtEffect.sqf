@@ -16,5 +16,5 @@
  */
 
 if (!isNull (GETUVAR(GVAR(DisplayEffects),displayNull))) then {
-    (GETUVAR(GVAR(DisplayEffects),displayNull) displayCtrl 10660) ctrlSetText "";
+    (GETUVAR(GVAR(DisplayEffects),displayNull) displayCtrl IDC_GOGGLESEFFECTS_DIRT) ctrlSetText "";
 };

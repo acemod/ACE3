@@ -33,9 +33,9 @@ if (GVAR(BFT_Enabled) and {(!isNil "ACE_player") and {alive ACE_player}}) then {
 
     if (GVAR(BFT_HideAiGroups)) then {
         _groupsToDrawMarkers = _groupsToDrawMarkers select {
-            {
+            (units _x) findIf {
                 _x call EFUNC(common,isPlayer);
-            } count units _x > 0;
+            } != -1;
         };
     };
 
@@ -55,9 +55,9 @@ if (GVAR(BFT_Enabled) and {(!isNil "ACE_player") and {alive ACE_player}}) then {
         } forEach _playersToDrawMarkers;
 
         _groupsToDrawMarkers = _groupsToDrawMarkers select {
-            {
+            (units _x) findIf {
                 !(_x call EFUNC(common,isPlayer));
-            } count units _x > 0;
+            } != -1;
         };
     };
 

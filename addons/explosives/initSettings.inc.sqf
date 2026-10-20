@@ -6,7 +6,7 @@ private _categoryStr = format ["ACE %1", LLSTRING(Menu)];
     [LLSTRING(RequireSpecialist_DisplayName),LLSTRING(RequireSpecialist_Description)],
     _categoryStr,
     false,
-    true
+    1
 ] call CBA_fnc_addSetting;
 
 [
@@ -15,7 +15,7 @@ private _categoryStr = format ["ACE %1", LLSTRING(Menu)];
     [LLSTRING(PunishNonSpecialists_DisplayName),LLSTRING(PunishNonSpecialists_Description)],
     _categoryStr,
     true,
-    true
+    1
 ] call CBA_fnc_addSetting;
 
 [
@@ -24,7 +24,7 @@ private _categoryStr = format ["ACE %1", LLSTRING(Menu)];
     [LLSTRING(ExplodeOnDefuse_DisplayName),LLSTRING(ExplodeOnDefuse_Description)],
     _categoryStr,
     true,
-    true
+    1
 ] call CBA_fnc_addSetting;
 
 // Variable names to preserve https://github.com/acemod/ACE3/pull/6882
@@ -34,7 +34,7 @@ private _categoryStr = format ["ACE %1", LLSTRING(Menu)];
     [LLSTRING(TimerMin_DisplayName), LLSTRING(TimerMin_Description)],
     [_categoryStr, LLSTRING(ExplosiveTimer)],
     [0, 5999, TIMER_VALUE_MIN],
-    true
+    1
 ] call CBA_fnc_addSetting;
 
 [
@@ -43,7 +43,7 @@ private _categoryStr = format ["ACE %1", LLSTRING(Menu)];
     [LLSTRING(TimerMax_DisplayName), LLSTRING(TimerMax_Description)],
     [_categoryStr, LLSTRING(ExplosiveTimer)],
     [0, 5999, TIMER_VALUE_MAX],
-    true
+    1
 ] call CBA_fnc_addSetting;
 
 [
@@ -51,6 +51,5 @@ private _categoryStr = format ["ACE %1", LLSTRING(Menu)];
     "TIME",
     [LLSTRING(TimerDefault_DisplayName), LLSTRING(TimerDefault_Description)],
     [_categoryStr, LLSTRING(ExplosiveTimer)],
-    [0, 5999, TIMER_VALUE_DEFAULT],
-    false
+    [0, 5999, TIMER_VALUE_DEFAULT]
 ] call CBA_fnc_addSetting;

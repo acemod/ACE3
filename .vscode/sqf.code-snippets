@@ -1,0 +1,40 @@
+{
+    "SQF Function Header": {
+        "description": "SQF function header",
+        "prefix": "header",
+        "body": [
+            "#include \"..\\script_component.hpp\"",
+            "/*",
+            " * Author: ${1:Author}",
+            " * ${2:Description}",
+            " *",
+            " * Arguments:",
+            " * ${8:0: ${9:Description} <${10|OBJECT,NUMBER,STRING,BOOL,ARRAY,CONTROL,DISPLAY,CONFIG,CODE,ANY,LOGIC,SIDE,GROUP,HASHMAP,NAMESPACE,LOCATION,TEXT|}>}$0",
+            " *",
+            " * Return Value:",
+            " * ${4:${5:Description} <${6|OBJECT,NUMBER,STRING,BOOL,ARRAY,CONTROL,DISPLAY,CONFIG,CODE,ANY,LOGIC,SIDE,GROUP,HASHMAP,NAMESPACE,LOCATION,TEXT|}>}",
+            " *",
+            " * Example:",
+            " * [$7] call ace_${TM_DIRECTORY/(.*)addons\\\\(.*)\\\\functions(.*)/$2/}_${TM_FILENAME_BASE}",
+            " *",
+            " * Public: ${3|No,Yes|}",
+            " */",
+            "",
+            ""
+        ],
+    },
+    "SQF Function Header Argument": {
+        "description": "SQF function header argument",
+        "prefix": "header_argument",
+        "body": [
+            "* ${1:1}: ${2:Description} <${3|OBJECT,NUMBER,STRING,BOOL,ARRAY,CONTROL,DISPLAY,CONFIG,CODE,ANY,LOGIC,SIDE,GROUP,HASHMAP,NAMESPACE,LOCATION,TEXT|}>",
+        ],
+    },
+    "SQF Function Header Return Value": {
+        "description": "SQF function header return value",
+        "prefix": "header_return",
+        "body": [
+            "* ${1:Description} <${2|OBJECT,NUMBER,STRING,BOOL,ARRAY,CONTROL,DISPLAY,CONFIG,CODE,ANY,LOGIC,SIDE,GROUP,HASHMAP,NAMESPACE,LOCATION,TEXT|}>",
+        ],
+    },
+}

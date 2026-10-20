@@ -4,7 +4,7 @@
  * Returns the arithmetic result of performing the given operation on a set.
  *
  * Arguments:
- * 0: Namespace <OBJECT|LOCATION|NAMESPACE>
+ * 0: Namespace <OBJECT or LOCATION or NAMESPACE>
  * 1: Number Set ID <STRING>
  * 2: Operation (max, min, sum, product, avg) (Case Sensitive) <STRING>
  *
@@ -13,7 +13,7 @@
  *
  * Example:
  * [ace_player, "ace_aimCoefficents", "product"] call ace_common_fnc_arithmeticGetResult
- * [missionNameSpace, "ace_hearing", "min"] call ace_common_fnc_arithmeticGetResult
+ * [missionNamespace, "ace_hearing", "min"] call ace_common_fnc_arithmeticGetResult
  *
  * Public: Yes
  */

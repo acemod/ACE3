@@ -53,7 +53,7 @@ if (["acre_sys_radio"] call EFUNC(common,isModLoaded)) then {[_set] call acre_ap
 if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {[player, _set] call TFAR_fnc_forceSpectator};
 
 if (_set) then {
-    // Initalize the camera
+    // Initialize the camera
     [true] call FUNC(cam);
 
     // Create the display when main display is ready

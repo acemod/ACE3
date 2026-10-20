@@ -4,10 +4,11 @@
  *
  *
  * Argument:
- * None
+ * 0: Map parameters <ARRAY>
+ * 1: Rotation angle theta <NUMBER>
  *
  * Return Value:
- * None
+ * <ARRAY>
  *
  * Example:
  * call ace_laser_fnc_rotateVectLine

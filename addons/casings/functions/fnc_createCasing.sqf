@@ -5,19 +5,21 @@
  *
  * Arguments:
  * 0: unit - Object the event handler is assigned to <OBJECT>
- * 1: ammo - Ammo used <STRING>
+ * 4: ammo - Ammo used <STRING>
+ * 7: vehicle - vehicle, if weapon is vehicle weapon, otherwise objNull <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, "", "","", "B_556x45_Ball"] call ace_casings_fnc_createCasing
+ * [player, "", "","", "B_556x45_Ball", "", "", objNull] call ace_casings_fnc_createCasing
  *
  * Public: No
  */
 
-params ["_unit", "", "", "", "_ammo"];
+params ["_unit", "", "", "", "_ammo", "", "", "_vehicle"];
 
+if (!isNull _vehicle) exitWith {};
 if (!isNull objectParent _unit) exitWith {};
 
 
@@ -35,7 +37,7 @@ private _modelPath = GVAR(cachedCasings) getOrDefaultCall [_ammo, {
         // use casing's default model
         private _model = getText (_cartridgeConfig >> "model");
         if ("a3\weapons_f\empty" in toLowerANSI _model) exitWith { "" };
-        
+
         // Add file extension if missing (fileExists needs file extension)
         if ((_model select [count _model - 4]) != ".p3d") then {
             _model = _model + ".p3d";
@@ -47,7 +49,7 @@ private _modelPath = GVAR(cachedCasings) getOrDefaultCall [_ammo, {
 
 if (_modelPath isEqualTo "") exitWith {};
 
-private _unitPos = getposASL _unit;
+private _unitPos = getPosASL _unit;
 // Distant shooters don't produce as many cases
 if ((AGLToASL positionCameraToWorld [0,0,0]) vectorDistance _unitPos > 100 && {random 1 < 0.9}) exitWith {};
 

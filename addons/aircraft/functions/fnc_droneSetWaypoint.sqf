@@ -62,6 +62,8 @@ if (_type == "FOLLOW" && {["CAManBase", "LandVehicle", "Ship"] findIf {_target i
             _waypoint setWaypointPosition [getPosASL _target, -1];
         };
     }, 3, [_vehicle, _group, _waypoint, _target]] call CBA_fnc_addPerFrameHandler;
+} else {
+    _waypoint setWaypointType _type;
 };
 
 TRACE_3("",_currentHeight,_currentLoiterRadius,_currentLoiterType);

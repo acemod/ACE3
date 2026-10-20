@@ -34,7 +34,7 @@
     "SLIDER",
     [LSTRING(SpontaneousWakeUpChance_DisplayName), LSTRING(SpontaneousWakeUpChance_Description)],
     LSTRING(Category),
-    [0, 1, 0.05, 2, true],
+    [0, 1, 0.1, 2, true],
     true
 ] call CBA_fnc_addSetting;
 
@@ -43,6 +43,15 @@
     "SLIDER",
     [LSTRING(spontaneousWakeUpEpinephrineBoost_DisplayName), LSTRING(spontaneousWakeUpEpinephrineBoost_Description)],
     LSTRING(Category),
-    [1, 30, 1, 1],
+    [1, 30, 1.5, 1],
     true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(blockInputOnUiEvent),
+    "SLIDER",
+    [LSTRING(blockInputOnUiEvent_DisplayName), LSTRING(blockInputOnUiEvent_Description)],
+    [ELSTRING(medical,Interface_Category), "str_a3_mdl_category_misc"],
+    [0, 3, 1, 1],
+    0
 ] call CBA_fnc_addSetting;

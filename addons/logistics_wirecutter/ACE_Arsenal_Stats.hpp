@@ -1,5 +1,5 @@
 class EGVAR(arsenal,stats) {
-    class statBase;
+    class statBase {};
     class GVAR(wireCutter): statBase {
         scope = 2;
         priority = -1;

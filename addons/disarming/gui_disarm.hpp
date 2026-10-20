@@ -1,26 +1,25 @@
-//The disarming dialog
-//Meant to mimic the real BIS inventory (so people understand how to use it)
-
+// The disarming dialog
+// Meant to mimic the real BIS inventory (so people understand how to use it)
 class RscText;
 class RscPicture;
 class RscActiveText;
 class RscListBox;
 
-//Use the definese from
-#define X_BIS(num) (num * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2))
-#define Y_BIS(num) (num * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2))
-#define W_BIS(num) (num * (((safezoneW / safezoneH) min 1.2) / 40))
-#define H_BIS(num) (num * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))
+// Use the definitions from
+#define X_BIS(num) (num * (((safeZoneW / safeZoneH) min 1.2) / 40) + (safeZoneX + (safeZoneW - ((safeZoneW / safeZoneH) min 1.2))/2))
+#define Y_BIS(num) (num * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) + (safeZoneY + (safeZoneH - (((safeZoneW / safeZoneH) min 1.2) / 1.2))/2))
+#define W_BIS(num) (num * (((safeZoneW / safeZoneH) min 1.2) / 40))
+#define H_BIS(num) (num * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25))
 
-#define X_MAKEITBIGGA(num) (num * (safeZoneH / 40) + (safezoneX + (safezoneW - safeZoneH)/2))
-#define Y_MAKEITBIGGA(num) (num * (safeZoneH / 30) + (safezoneY + (safezoneH - (safeZoneH / 1.2))/2))
+#define X_MAKEITBIGGA(num) (num * (safeZoneH / 40) + (safeZoneX + (safeZoneW - safeZoneH)/2))
+#define Y_MAKEITBIGGA(num) (num * (safeZoneH / 30) + (safeZoneY + (safeZoneH - (safeZoneH / 1.2))/2))
 #define W_MAKEITBIGGA(num) (num * (safeZoneH / 40))
 #define H_MAKEITBIGGA(num) (num * (safeZoneH / 30))
 
-#define X_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QUOTE(QEGVAR(inventory,inventoryDisplaySize)),0)]),X_BIS(num),X_MAKEITBIGGA(num))])
-#define Y_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QUOTE(QEGVAR(inventory,inventoryDisplaySize)),0)]),Y_BIS(num),Y_MAKEITBIGGA(num))])
-#define W_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QUOTE(QEGVAR(inventory,inventoryDisplaySize)),0)]),W_BIS(num),W_MAKEITBIGGA(num))])
-#define H_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QUOTE(QEGVAR(inventory,inventoryDisplaySize)),0)]),H_BIS(num),H_MAKEITBIGGA(num))])
+#define X_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QQEGVAR(inventory,inventoryDisplaySize),0)]),X_BIS(num),X_MAKEITBIGGA(num))])
+#define Y_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QQEGVAR(inventory,inventoryDisplaySize),0)]),Y_BIS(num),Y_MAKEITBIGGA(num))])
+#define W_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QQEGVAR(inventory,inventoryDisplaySize),0)]),W_BIS(num),W_MAKEITBIGGA(num))])
+#define H_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QQEGVAR(inventory,inventoryDisplaySize),0)]),H_BIS(num),H_MAKEITBIGGA(num))])
 
 class GVAR(remoteInventory) {
     idd = -1;
@@ -33,13 +32,13 @@ class GVAR(remoteInventory) {
     fadeout = 0;
 
     class Colors {
-        dragValidBgr[] = {"(profilenamespace getVariable ['IGUI_TEXT_RGB_R',0])","(profilenamespace getVariable ['IGUI_TEXT_RGB_G',1])","(profilenamespace getVariable ['IGUI_TEXT_RGB_B',1])",0.5};
-        dragInvalidBgr[] = {"(profilenamespace getVariable ['IGUI_ERROR_RGB_R',0.8])","(profilenamespace getVariable ['IGUI_ERROR_RGB_G',0.0])","(profilenamespace getVariable ['IGUI_ERROR_RGB_B',0.0])",0.5};
-        dragValidBar[] = {"(profilenamespace getVariable ['IGUI_WARNING_RGB_R',0.8])","(profilenamespace getVariable ['IGUI_WARNING_RGB_G',0.5])","(profilenamespace getVariable ['IGUI_WARNING_RGB_B',0.0])",0.5};
-        dragInvalidBar[] = {"(profilenamespace getVariable ['IGUI_ERROR_RGB_R',0.8])","(profilenamespace getVariable ['IGUI_ERROR_RGB_G',0.0])","(profilenamespace getVariable ['IGUI_ERROR_RGB_B',0.0])",0.5};
-        progressBar[] = {"(profilenamespace getVariable ['IGUI_TEXT_RGB_R',0])","(profilenamespace getVariable ['IGUI_TEXT_RGB_G',1])","(profilenamespace getVariable ['IGUI_TEXT_RGB_B',1])",1};
-        progressBarBgr[] = {"(profilenamespace getVariable ['IGUI_BCG_RGB_R',0])","(profilenamespace getVariable ['IGUI_BCG_RGB_G',1])","(profilenamespace getVariable ['IGUI_BCG_RGB_B',1])",0.75};
-        highlight[] = {"(profilenamespace getVariable ['IGUI_TEXT_RGB_R',0])","(profilenamespace getVariable ['IGUI_TEXT_RGB_G',1])","(profilenamespace getVariable ['IGUI_TEXT_RGB_B',1])",0.5};
+        dragValidBgr[] = {"(profileNamespace getVariable ['IGUI_TEXT_RGB_R',0])","(profileNamespace getVariable ['IGUI_TEXT_RGB_G',1])","(profileNamespace getVariable ['IGUI_TEXT_RGB_B',1])",0.5};
+        dragInvalidBgr[] = {"(profileNamespace getVariable ['IGUI_ERROR_RGB_R',0.8])","(profileNamespace getVariable ['IGUI_ERROR_RGB_G',0.0])","(profileNamespace getVariable ['IGUI_ERROR_RGB_B',0.0])",0.5};
+        dragValidBar[] = {"(profileNamespace getVariable ['IGUI_WARNING_RGB_R',0.8])","(profileNamespace getVariable ['IGUI_WARNING_RGB_G',0.5])","(profileNamespace getVariable ['IGUI_WARNING_RGB_B',0.0])",0.5};
+        dragInvalidBar[] = {"(profileNamespace getVariable ['IGUI_ERROR_RGB_R',0.8])","(profileNamespace getVariable ['IGUI_ERROR_RGB_G',0.0])","(profileNamespace getVariable ['IGUI_ERROR_RGB_B',0.0])",0.5};
+        progressBar[] = {"(profileNamespace getVariable ['IGUI_TEXT_RGB_R',0])","(profileNamespace getVariable ['IGUI_TEXT_RGB_G',1])","(profileNamespace getVariable ['IGUI_TEXT_RGB_B',1])",1};
+        progressBarBgr[] = {"(profileNamespace getVariable ['IGUI_BCG_RGB_R',0])","(profileNamespace getVariable ['IGUI_BCG_RGB_G',1])","(profileNamespace getVariable ['IGUI_BCG_RGB_B',1])",0.75};
+        highlight[] = {"(profileNamespace getVariable ['IGUI_TEXT_RGB_R',0])","(profileNamespace getVariable ['IGUI_TEXT_RGB_G',1])","(profileNamespace getVariable ['IGUI_TEXT_RGB_B',1])",0.5};
     };
 
     class controlsBackground {};
@@ -140,9 +139,9 @@ class GVAR(remoteInventory) {
         };
         class GroundContainer: RscListBox {
             idc = 632;
-            sizeEx = "0.8 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-            sizeEx2 = "0.8 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-            rowHeight = "1.75 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            sizeEx = "0.8 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
+            sizeEx2 = "0.8 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
+            rowHeight = "1.75 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
             canDrag = 0;
             colorText[] = {1,1,1,1};
             colorBackground[] = {0,0,0,0};

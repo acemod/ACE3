@@ -149,7 +149,7 @@ class EXPLOSIVES_PLACE(punji_03): EGVAR(explosives,Place) {
 
     class EventHandlers: EventHandlers {
         class ADDON {
-            init = QUOTE(_this call FUNC(handlePunjiTrapPlace));
+            init = QUOTE(call FUNC(handlePunjiTrapPlace));
         };
     };
 };
@@ -179,7 +179,7 @@ class EXPLOSIVES_PLACE(bike): EGVAR(explosives,Place) {
 
     class EventHandlers: EventHandlers {
         class ADDON {
-            init = QUOTE(_this call FUNC(handleBikeMinePlace));
+            init = QUOTE(call FUNC(handleBikeMinePlace));
         };
     };
 };

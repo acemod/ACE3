@@ -1,7 +1,6 @@
 class CfgMagazines {
     class CA_Magazine;
     class rhsusf_m112_mag: CA_Magazine {
-        EGVAR(explosives,delayTime) = 1;
         EGVAR(explosives,placeable) = 1;
         EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhsusf_explosive_m112);
         useAction = 0;

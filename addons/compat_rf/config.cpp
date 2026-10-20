@@ -9,10 +9,12 @@ class CfgPatches {
         requiredAddons[] = {"RF_Data_Loadorder"};
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Mike"};
+        authors[] = {"Mike", "OverlordZorn[CVO]"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
+#include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgVehicles.hpp"
