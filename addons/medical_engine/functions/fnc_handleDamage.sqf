@@ -60,13 +60,6 @@ if (_context != 2 && {_context == 4 || _newDamage == 0}) exitWith {
     _oldDamage
 };
 
-// Get armor value of hitpoint and calculate damage before armor
-// We scale using passThrough to handle explosive-resistant armor properly (#9063)
-// We need realDamage to determine which limb was hit correctly
-private _armor = [_unit, _hitpoint] call FUNC(getHitpointArmor);
-private _realDamage = _newDamage * _armor;
-TRACE_6("Received hit",_hitpoint,_ammo,_newDamage,_realDamage,_directHit,_context);
-
 // Drowning doesn't fire the EH for each hitpoint and never triggers _context=2 (LastHitPoint)
 // Damage occurs in consistent increments
 if (
@@ -118,6 +111,16 @@ if (
 
     0
 };
+
+// Only the per-hitpoint path needs damage before armor. Drowning and vehicle
+// damage above use _newDamage directly, so avoid equipment lookups for those.
+// A zero-damage final hitpoint must still flush the event, but needs no armor lookup.
+private _realDamage = 0;
+if (_newDamage != 0) then {
+    // Scale using passThrough to handle explosive-resistant armor properly (#9063).
+    _realDamage = _newDamage * ([_unit, _hitpoint] call FUNC(getHitpointArmor));
+};
+TRACE_6("Received hit",_hitpoint,_ammo,_newDamage,_realDamage,_directHit,_context);
 
 // Damages are stored for last iteration of the HandleDamage event (_context == 2)
 _unit setVariable [format [QGVAR($%1), _hitPoint], [_realDamage, _newDamage]];
