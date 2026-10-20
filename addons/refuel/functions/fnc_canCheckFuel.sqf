@@ -11,16 +11,14 @@
  * Can Check Fuel <BOOL>
  *
  * Example:
- * [player, truck] call ace_refuel_fnc_canCheckFuel
+ * [player, cursorObject] call ace_refuel_fnc_canCheckFuel
  *
  * Public: No
  */
 
-params [["_unit", objNull, [objNull]], ["_source", objNull, [objNull]]];
+params ["_unit", "_source"];
 
-!(isNull _unit ||
-    {!(_unit isKindOf "CAManBase")} ||
-    {!local _unit} ||
-    {!alive _source} ||
-    {([_unit, _source] call EFUNC(interaction,getInteractionDistance)) > REFUEL_ACTION_DISTANCE} ||
-    {(_source call FUNC(getCapacity)) in [REFUEL_INFINITE_FUEL, REFUEL_DISABLED_FUEL]})
+alive _unit &&
+{_unit isKindOf "CAManBase"} &&
+{alive _source} &&
+{!((_source call FUNC(getCapacity)) in [REFUEL_INFINITE_FUEL, REFUEL_DISABLED_FUEL])} // return

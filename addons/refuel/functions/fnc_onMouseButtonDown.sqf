@@ -38,15 +38,15 @@ if (_button == 1) exitWith {
 
 // LMB
 // code from attach, don't know what it is
-private _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.6]) vectorDiff (positionCameraToWorld [0,0,0]);
+private _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0, 0, 0.6]) vectorDiff (positionCameraToWorld [0, 0, 0]);
+
 if (cameraView == "EXTERNAL") then {
-    _virtualPosASL = _virtualPosASL vectorAdd ((positionCameraToWorld [0.3,0,0]) vectorDiff (positionCameraToWorld [0,0,0]));
+    _virtualPosASL = _virtualPosASL vectorAdd ((positionCameraToWorld [0.3, 0, 0]) vectorDiff (positionCameraToWorld [0, 0, 0]));
 };
 
 if (
-    !isNull _cursorObject
-    && {_distance < REFUEL_NOZZLE_ACTION_DISTANCE}
-    && {[_cursorObject] call FUNC(canConnectNozzle)}
+    _distance < REFUEL_NOZZLE_ACTION_DISTANCE
+    && {_cursorObject call FUNC(canConnectNozzle)}
     && {isNull (_cursorObject getVariable [QGVAR(nozzle), objNull])}
     && {!lineIntersects [eyePos _unit, _virtualPosASL, _unit]}
 ) then {

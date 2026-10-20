@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: GitHawk
- * Check if a unit can disconnect a fuel nozzle
+ * Checks if a unit can disconnect a fuel nozzle.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -11,19 +11,17 @@
  * Can disconnect <BOOL>
  *
  * Example:
- * [player, nozzle] call ace_refuel_fnc_canDisconnect
+ * [player, cursorObject] call ace_refuel_fnc_canDisconnect
  *
  * Public: No
  */
 
-params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
+params ["_unit", "_nozzle"];
 
-if (isNull _unit ||
-    {isNull _nozzle} ||
-    {!(_unit isKindOf "CAManBase")} ||
-    {!local _unit} ||
-    {!isNull (_unit getVariable [QGVAR(nozzle), objNull])} ||
-    {(_nozzle distance _unit) > REFUEL_ACTION_DISTANCE}) exitWith {false};
-
-private _sink = _nozzle getVariable [QGVAR(sink), objNull];
-!((isNull _sink) || {_nozzle getVariable [QGVAR(isRefueling), false]})
+!isNull _unit &&
+{_unit isKindOf "CAManBase"} &&
+{!isNull _nozzle} &&
+{isNull (_unit getVariable [QGVAR(nozzle), objNull])} && // unit already has another nozzle
+{(_nozzle distance _unit) <= REFUEL_ACTION_DISTANCE} &&
+{!isNull (_nozzle getVariable [QGVAR(sink), objNull])} && // already disconnected
+{!(_nozzle getVariable [QGVAR(isRefueling), false])} // return

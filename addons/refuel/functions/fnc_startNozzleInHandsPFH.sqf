@@ -11,27 +11,26 @@
  * None
  *
  * Example:
- * [player, nozzle] call ace_refuel_fnc_startNozzleInHandsPFH
+ * [player, cursorObject] call ace_refuel_fnc_startNozzleInHandsPFH
  *
  * Public: No
  */
 
-#define DROP_NOZZLE [_unit, _nozzle] call FUNC(dropNozzle);
 #define UNHOLSTER_WEAPON \
     _unit selectWeapon (_unit getVariable QGVAR(selectedWeaponOnRefuel)); \
-    _unit setVariable [QGVAR(selectedWeaponOnRefuel), nil];
+    _unit setVariable [QGVAR(selectedWeaponOnRefuel), nil]
 #define END_PFH \
     _unit setVariable [QGVAR(hint), nil]; \
     call EFUNC(interaction,hideMouseHint); \
     [_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set); \
     [_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set); \
-    [_idPFH] call CBA_fnc_removePerFrameHandler;
+    _pfhID call CBA_fnc_removePerFrameHandler
 
 params ["_unit", "_nozzle"];
 TRACE_2("start",_unit,_nozzle);
 
 [{
-    params ["_args", "_idPFH"];
+    params ["_args", "_pfhID"];
     _args params ["_unit", "_nozzle", "_isNozzle"];
 
     if !(
@@ -40,55 +39,44 @@ TRACE_2("start",_unit,_nozzle);
         && {[_unit, objNull, [INTERACT_EXCEPTIONS, "notOnMap"]] call EFUNC(common,canInteractWith)}
     ) exitWith {
         TRACE_3("stop dead/weapon/interact/uncon",_unit,alive _unit,currentWeapon _unit);
-        DROP_NOZZLE
+        [_unit, _nozzle] call FUNC(dropNozzle);
         _unit setVariable [QGVAR(selectedWeaponOnRefuel), nil];
-        END_PFH
+        END_PFH;
     };
 
-    // check drop from external events
+    // Check drop from external events
     if (isNull (_unit getVariable [QGVAR(nozzle), objNull])) exitWith {
         TRACE_2("stop drop",_unit,_nozzle);
-        UNHOLSTER_WEAPON
-        END_PFH
+        UNHOLSTER_WEAPON;
+        END_PFH;
     };
 
     if (isNull objectParent _unit && {_unit isNotEqualTo ACE_player}) exitWith {
         TRACE_2("stop vehicle/player",_unit,vehicle _unit);
-        DROP_NOZZLE
-        UNHOLSTER_WEAPON
-        END_PFH
-    };
-
-    private _source = _nozzle getVariable [QGVAR(source), objNull];
-
-    // check hoseLength < distance
-    if (
-        _isNozzle
-        && {(_source getVariable [QGVAR(hoseLength), GVAR(hoseLength)]) < _unit distance (_source modelToWorld (_nozzle getVariable QGVAR(attachPos)))}
-    ) exitWith {
-        TRACE_1("stop length",_unit);
-        DROP_NOZZLE
-        UNHOLSTER_WEAPON
-        END_PFH
-        [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
+        [_unit, _nozzle] call FUNC(dropNozzle);
+        UNHOLSTER_WEAPON;
+        END_PFH;
     };
 
     private _hintLMB = "";
     private _hintRMB = LELSTRING(common,Drop);
 
     getCursorObjectParams params ["_cursorObject", "", "_distance"];
-    if (!isNull _cursorObject && {_distance < REFUEL_NOZZLE_ACTION_DISTANCE}) then {
-        if ([_cursorObject] call FUNC(canConnectNozzle)) then {
-            _hintLMB = localize ([LSTRING(Connect), LSTRING(ConnectFuelCanister)] select (_nozzle getVariable [QGVAR(jerryCan), false]));
+
+    if (alive _cursorObject && {_distance < REFUEL_NOZZLE_ACTION_DISTANCE}) then {
+        if (_cursorObject call FUNC(canConnectNozzle)) then {
+            _hintLMB = localize ([LSTRING(connect), LSTRING(connectFuelCanister)] select (_nozzle getVariable [QGVAR(jerryCan), false]));
         };
+
         if ([_unit, _cursorObject] call FUNC(canReturnNozzle)) then {
-            _hintRMB = localize LSTRING(Return);
+            _hintRMB = LLSTRING(return);
         };
     };
 
     private _hint = [_hintLMB, _hintRMB];
+
     if (_hint isNotEqualTo (_unit getVariable [QGVAR(hint), []])) then {
         _unit setVariable [QGVAR(hint), _hint];
         _hint call EFUNC(interaction,showMouseHint);
     };
-}, 0, [_unit, _nozzle, !(_nozzle getVariable [QGVAR(jerryCan), false])]] call cba_fnc_addPerFrameHandler;
+}, 0, [_unit, _nozzle, !(_nozzle getVariable [QGVAR(jerryCan), false])]] call CBA_fnc_addPerFrameHandler;

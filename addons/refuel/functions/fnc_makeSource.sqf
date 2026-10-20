@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Fuel Source <OBJECT>
  * 1: Fuel amount (in liters) <NUMBER> (default: 0)
- * 2: Hooks positions <ARRAY> (default: [[0,0,0]])
+ * 2: Hooks positions <ARRAY> (default: [[0, 0, 0]])
  *
  * Return Value:
  * None
@@ -44,7 +44,7 @@ if (
 
 // We might be removing fuel from an object that in config doesn't have fuel, but was given fuel via this function prior
 if (_fuelCargo == REFUEL_DISABLED_FUEL && {_fuelCargoConfig == REFUEL_DISABLED_FUEL}) exitWith {
-    if (isNil {_source getVariable QGVAR(currentFuelCargo)}) exitWith {};
+    if (_source isNil QGVAR(currentFuelCargo)) exitWith {};
 
     _source setVariable [QGVAR(currentFuelCargo), nil, true];
     _source setVariable [QGVAR(capacity), REFUEL_DISABLED_FUEL, true];
@@ -69,15 +69,15 @@ if (_fuelCargo == REFUEL_DISABLED_FUEL) exitWith {};
 if (
     !isNil "_hooks"
     && {_hooks isEqualTypeAll []}
-    && {_hooks findIf {!(_x isEqualTypeParams [0,0,0]) || {3 < count _x}} == -1}
+    && {_hooks findIf {!(_x isEqualTypeParams [0, 0, 0]) || {3 < count _x}} == -1}
 ) then {
     _source setVariable [QGVAR(hooks), _hooks, true];
 };
 
-// only add if menu doesn't already exist
-if (_fuelCargoConfig != REFUEL_DISABLED_FUEL || {!isNil {_source getVariable QGVAR(initSource_jipID)}}) exitWith {};
+// Only add if menu doesn't already exist
+if (_fuelCargoConfig != REFUEL_DISABLED_FUEL || {!(_source isNil QGVAR(initSource_jipID))}) exitWith {};
 
-private _jipID = [QGVAR(initSource), [_source]] call CBA_fnc_globalEventJIP;
+private _jipID = [QGVAR(initSource), _source] call CBA_fnc_globalEventJIP;
 [_jipID, _source] call CBA_fnc_removeGlobalEventJIP;
 _source setVariable [QGVAR(initSource_jipID), _jipID];
 

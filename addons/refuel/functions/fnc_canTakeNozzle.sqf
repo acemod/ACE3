@@ -11,28 +11,41 @@
  * Can connect <BOOL>
  *
  * Example:
- * [player, nozzle] call ace_refuel_fnc_canTakeNozzle
+ * [player, cursorObject] call ace_refuel_fnc_canTakeNozzle
  *
  * Public: No
  */
 
-params [["_unit", objNull, [objNull]], ["_object", objNull, [objNull]]];
+params ["_unit", "_object"];
 
-if (!alive _unit ||
-    {!(_unit isKindOf "CAManBase")} ||
-    {!local _unit} ||
-    {!alive _object} ||
-    {!isNull (_unit getVariable [QGVAR(nozzle), objNull])} || // Not already carrying a nozzle
+(alive _unit) &&
+{_unit isKindOf "CAManBase"} &&
+{alive _object} &&
+{isNull (_unit getVariable [QGVAR(nozzle), objNull])} && // Not already carrying a nozzle
+{[_unit, _object, [INTERACT_EXCEPTIONS]] call EFUNC(common,canInteractWith)} && // Not carried by someone else
+{!(_object getVariable [QGVAR(isConnected), false])} &&
+{!(_unit getVariable [QGVAR(isRefueling), false])} &&
+{typeOf _object isEqualTo QGVAR(fuelNozzle) ||
     {
         if (_object getVariable [QGVAR(jerryCan), false]) then {
             // Prevent jerry cans from being picked up if they have a nozzle connected
-            !isNull (_object getVariable [QGVAR(nozzle), objNull])
+            isNull (_object getVariable [QGVAR(nozzle), objNull])
         } else {
             // Make sure fuel source is close enough
-            private _source = _object getVariable [QGVAR(source), objNull];
-        	(_source getVariable [QGVAR(hoseLength), GVAR(hoseLength)]) < _unit distance (_source modelToWorld (_object getVariable QGVAR(attachPos)))
-        }
-    } ||
-    {!([_unit, _object, [INTERACT_EXCEPTIONS]] call EFUNC(common,canInteractWith))}) exitWith {false}; // Not carried by someone else
+            private _attachPos = _object getVariable [QGVAR(hooks), getArray (configOf _object >> QGVAR(hooks))];
 
-!(_object getVariable [QGVAR(isConnected), false]) && {!(_unit getVariable [QGVAR(isRefueling), false])}
+            if (_attachPos isEqualTo []) then {
+                _attachPos = [[0, 0, 0]];
+            };
+
+            private _distance = if (count _attachPos == 1) then {
+                _unit distance (_object modelToWorld (_attachPos select 0))
+            } else {
+                // Select closest hook
+                selectMin (_attachPos apply {_unit distance (_object modelToWorld _x)})
+            };
+
+        	(_object getVariable [QGVAR(hoseLength), GVAR(hoseLength)]) >= _distance
+        }
+    }
+} // return

@@ -6,19 +6,19 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Nozzle <OBJECT>
- * 2: Make unit take nozzle <BOOL> (default: true)
- * 3: Ground position to drop to (default: nozzle's current position)
+ * 2: Drop nozzle on ground <BOOL> (default: true)
+ * 3: Ground position to drop to <ARRAY of NUMBERs or NIL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, nozzle] call ace_refuel_fnc_disconnect
+ * [player, cursorObject] call ace_refuel_fnc_disconnect
  *
  * Public: No
  */
 
-params ["_unit", "_nozzle", ["_takeNozzle", true], "_groundPosition"];
+params ["_unit", "_nozzle", ["_drop", true], "_newNozzlePosition"];
 
 private _sink = _nozzle getVariable [QGVAR(sink), objNull];
 
@@ -31,11 +31,13 @@ if (_nozzle getVariable [QGVAR(isRefueling), false] && {!(_nozzle getVariable [Q
     [_nozzle, QGVAR(nozzle_stop), nil, true, true, true] call CBA_fnc_globalSay3D;
 };
 
-if (_nozzle isKindOf "Land_CanisterFuel_F") then { _nozzle setVariable [QEGVAR(cargo,canLoad), true, true]; };
+if (_nozzle isKindOf "Land_CanisterFuel_F") then {
+    _nozzle setVariable [QEGVAR(cargo,canLoad), true, true];
+};
+
 _nozzle setVariable [QGVAR(sink), nil, true];
 _nozzle setVariable [QGVAR(isConnected), false, true];
-[_unit, _nozzle, _takeNozzle, _groundPosition] call FUNC(dropNozzle);
 
-if (_takeNozzle && {!isNull _unit}) then {
-    [_unit, _nozzle] call FUNC(takeNozzle);
+if (_drop) then {
+    [_unit, _nozzle, _newNozzlePosition] call FUNC(dropNozzle);
 };

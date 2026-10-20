@@ -40,9 +40,11 @@ if !(_unit isKindOf "CAManBase") then {
     _unit = objNull;
 };
 
-[_unit, _nozzle, false, _ropeEndPosition] call FUNC(disconnect);
+[_unit, _nozzle, true, _ropeEndPosition] call FUNC(disconnect);
+
+// Reattach nozzle to fuel hose
 [_nozzle, [0, -0.20, 0.12]] ropeAttachTo _rope;
 
 if (isNull _unit) exitWith {};
 
-[LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
+[QEGVAR(common,displayTextStructured), [LSTRING(hint_TooFar), 2, _unit], _unit] call CBA_fnc_targetEvent;

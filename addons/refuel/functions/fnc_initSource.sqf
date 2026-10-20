@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [cursorObject] call ace_refuel_fnc_initSource
+ * cursorObject call ace_refuel_fnc_initSource
  *
  * Public: No
  */
@@ -22,5 +22,5 @@ TRACE_2("init",_source,typeOf _source);
 
 [_source, 0, ["ACE_MainActions"], GVAR(mainAction)] call EFUNC(interact_menu,addActionToObject);
 {
-    [_source, 0, ["ACE_MainActions", QGVAR(Refuel)], _x] call EFUNC(interact_menu,addActionToObject);
+    [_source, 0, ["ACE_MainActions", QGVAR(refuel)], _x] call EFUNC(interact_menu,addActionToObject);
 } forEach GVAR(actions);
