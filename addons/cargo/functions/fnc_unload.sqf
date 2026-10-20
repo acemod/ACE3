@@ -9,6 +9,7 @@
  * 2: Unloading position <ARRAY>
  * 3: If the object was deployed <BOOL>
  * 4: Object's direction, used when deployed <NUMBER>
+ * 5: If the object was paradropped <BOOL>
  *
  * Return Value:
  * Object that was unloaded <OBJECT>
@@ -19,7 +20,7 @@
  * Public: No
  */
 
-params ["_item", "_vehicle", "_posAGL", "_deployed", "_direction"];
+params ["_item", "_vehicle", "_posAGL", "_deployed", "_direction", ["_paradrop", false]];
 
 // Unload item from cargo
 private _loaded = _vehicle getVariable [QGVAR(loaded), []];
@@ -49,6 +50,20 @@ if (_object isEqualType objNull) then {
         if (_objectCurators isEqualTo []) exitWith {};
 
         [QEGVAR(zeus,addObjects), [[_object], _objectCurators]] call CBA_fnc_serverEvent;
+    };
+
+    if (_paradrop) exitWith {};
+
+    // Reenable UAV crew
+    private _UAVCrew = _object getVariable [QGVAR(isUAV), []];
+
+    if (_UAVCrew isNotEqualTo []) then {
+        // Reenable AI
+        {
+            [_x, false] call EFUNC(common,disableAiUAV);
+        } forEach _UAVCrew;
+
+        _object setVariable [QGVAR(isUAV), nil, true];
     };
 } else {
     _object = createVehicle [_item, _posAGL, [], 0, "NONE"];
