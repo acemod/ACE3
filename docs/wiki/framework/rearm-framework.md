@@ -53,9 +53,9 @@ class CfgVehicles {
 
 `ace_rearm_scriptedLoadout`
 
-Normally ACE Rearm evaluates what magazines a vehicle can carry by looking at the turret configs of the vehicle. This means that if a vehicle has a scripted loadout, for example using `addMagazineTurret` to give it different magazines than standard, those scripted magazines cannot be loaded with Rearm and the vehicle may be overloaded by rearming the magazines from the turret configs.
+Normally ACE Rearm evaluates what magazines a vehicle can carry by looking at the turret configs of the vehicle. This means that if a vehicle has a scripted loadout, for example using `addMagazineTurret` to give it different magazines than standard, those scripted magazines cannot be rearmed, and rearming adds the standard magazines from the turret configs, undoing the scripted loadout.
 
-If a scripted loadout is used, this variable can be set to true to switch the magazines that can be rearmed from the turret configs to any empty magazine in the vehicle.
+If a scripted loadout is used, this variable can be set to true to switch the magazines that can be rearmed from the turret configs to the magazines currently in the vehicle. Rearm will then only refill those magazines (including empty ones), and will not add magazines beyond what the vehicle currently has.
 
 ```cpp
 VEHICLE addMagazineTurret ["SmokeLauncherMag",[0,0]];
