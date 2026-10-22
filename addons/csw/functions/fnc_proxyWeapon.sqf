@@ -46,6 +46,18 @@ if (!_needed) exitWith { TRACE_2("not needed",_needed,_proxyWeapon); };
 _vehicle setVariable [QEGVAR(rearm,scriptedLoadout), true, true];
 
 TRACE_2("swapping to proxy weapon",_currentWeapon,_proxyWeapon);
+
+// Read before the swap, afterwards there is no telling what the engine left selected
+private _wasSelected = (_vehicle currentWeaponTurret _turret) isEqualTo _currentWeapon;
+
 _vehicle removeWeaponTurret [_currentWeapon, _turret];
 _vehicle addWeaponTurret [_proxyWeapon, _turret];
 _vehicle setVariable [format [QGVAR(proxyHandled_%1), _turret], true, true];
+
+// A gunner who had the weapon we just took is left pointing at nothing, and AI in particular will
+// not pick the replacement up on their own. Anything else they had selected was deliberate.
+// selectWeaponTurret is turret local, which this already is
+if (_wasSelected) then {
+    TRACE_3("selecting proxy weapon",_vehicle,_turret,_proxyWeapon);
+    _vehicle selectWeaponTurret [_proxyWeapon, _turret];
+};
