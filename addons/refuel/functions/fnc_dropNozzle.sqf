@@ -31,8 +31,17 @@ if (_disconnectOnly) exitWith {};
 _nozzle setVelocity [0, 0, 0];
 
 private _groundPosition = getPosASL _nozzle;
-private _posA = (getPosASL _nozzle) vectorAdd [0,0,0.05];
-private _posB = (getPosASL _nozzle) vectorAdd [0,0,- GVAR(hoseLength)];
+private _posA = _groundPosition vectorAdd [0,0,0.05];
+private _posB = _groundPosition vectorAdd [0,0,- GVAR(hoseLength)];
+
+// if near hose limit, try to drop closer to the source
+private _source = _nozzle getVariable [QGVAR(source), objNull];
+if (alive _source && {(_nozzle distance _source) > (0.5*GVAR(hoseLength))}) then {
+    private _closeIn = (_groundPosition vectorFromTo (getPosASL _source)) vectorMultiply 1.1;
+    _posA = _posA vectorAdd _closeIn;
+    _posB = _posB vectorAdd _closeIn;
+};
+
 private _intersections = lineIntersectsSurfaces [_posA, _posB, _unit, _nozzle, true, 1, "GEOM"];
 TRACE_1("",_intersections);
 if (_intersections isEqualTo []) then {
