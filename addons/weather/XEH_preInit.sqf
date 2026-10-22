@@ -9,6 +9,8 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
+GVAR(temperatureShiftAPI) = 0;
+
 // Make sure this data is read before client/server postInit
 call FUNC(getMapData);
 
