@@ -134,7 +134,7 @@ _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
     [QGVAR(stopped), [_source, _sink, _nozzle]] call CBA_fnc_localEvent;
 
     _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
-    _nozzle setVariable [QGVAR(isRefueling), false, true];
+    _nozzle setVariable [QGVAR(isRefueling), nil, true];
 
     // Only play start/stop sounds for nozzles
     if (_nozzle getVariable [QGVAR(jerryCan), false]) exitWith {};
