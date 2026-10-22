@@ -244,6 +244,21 @@
             <Chinesesimp>正在将%1从%2中卸载</Chinesesimp>
             <Ukrainian>Вивантажуємо %1 з %2...</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Cargo_canLoadViv_default">
+            <English>Default</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_canLoadViv_edenDesc">
+            <English>Whether this object offers "Load to ViV" for Vehicle-in-Vehicle carriers. Default follows the cargo settings.</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_canLoadViv_edenName">
+            <English>Load to ViV</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_canLoadViv_forceOff">
+            <English>Force off</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_canLoadViv_forceOn">
+            <English>Force on</English>
+        </Key>
         <Key ID="STR_ACE_Cargo_cargoMenu">
             <English>Cargo Menu</English>
             <Czech>Menu nákladu</Czech>
@@ -366,6 +381,12 @@
             <Chinesesimp>部署</Chinesesimp>
             <Ukrainian>Розмістити</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Cargo_disableVivCarrier_edenDesc">
+            <English>Prevents this vehicle from being used as a Vehicle-in-Vehicle carrier.</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_disableVivCarrier_edenName">
+            <English>Disable ViV Carrier</English>
+        </Key>
         <Key ID="STR_ACE_Cargo_enableDeploy">
             <English>Enable deploy</English>
             <French>Permettre le placement</French>
@@ -389,6 +410,18 @@
             <Japanese>配置機能を介して貨物アイテムを降ろすことが出来るかどうかを制御します。</Japanese>
             <Chinesesimp>是否允许使用部署选项卸载货物</Chinesesimp>
             <Ukrainian>Визначає, чи можна вивантажувати вантажі за допомогою методу розміщення.</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Cargo_enableViv">
+            <English>Enable ViV Cargo</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_enableViv_description">
+            <English>Enable the "Load to ViV" cargo module</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_expandedVivObjectSupport">
+            <English>Expanded ViV object support</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_expandedVivObjectSupport_description">
+            <English>Expand the possible ViV objects beyond those already configured for ACE cargo.</English>
         </Key>
         <Key ID="STR_ACE_Cargo_labelSpace">
             <English>Cargo space left: %1</English>
@@ -424,6 +457,9 @@
             <Turkish>Yükle</Turkish>
             <Ukrainian>Завантажити</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Cargo_loadObjectViv">
+            <English>Load to ViV</English>
+        </Key>
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient">
             <English>Load Time Coefficient</English>
             <Czech>Koeficient času nákládání</Czech>
@@ -455,6 +491,9 @@
             <Chinese>修改要花多長時間來裝載/卸載物品。\n時間，以秒為單位，而物品的大小數值與這個係數成比。</Chinese>
             <Chinesesimp>修改装载/卸载物体所需的时间。\n时间，单位：秒，物体的大小乘以该系数值。</Chinesesimp>
             <Ukrainian>Змінює час завантаження/вивантаження предметів.\nЧас (сек) — це розмір предмета, помножений на це значення.</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Cargo_massMenu">
+            <English>Mass: %1 kg</English>
         </Key>
         <Key ID="STR_ACE_Cargo_openAfterUnload">
             <English>Reopen Cargo Menu</English>
@@ -693,6 +732,30 @@
             <Russian>Вероятность того, что каждый загруженный в транспортное средство груз будет выгружен, если транспортное средство будет уничтожено.\nПрименяется только к предметам.</Russian>
             <Japanese>車両が破壊された際、積載されている貨物が降ろされる確率。\nオブジェクトにのみ適用されます。</Japanese>
             <Ukrainian>Імовірність, що кожен вантаж у техніці буде вивантажено, якщо техніку знищено.\nЗастосовується лише до об'єктів.</Ukrainian>
+        </Key>
+        <Key ID="STR_ACE_Cargo_vehicleInVehicle">
+            <English>ViV</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_vivLabelSpace">
+            <English>Cargo mass left: %1</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_vivLoadTime">
+            <English>ViV Load/Unload Time</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_vivLoadTime_description">
+            <English>Time it takes, in seconds, to load/unload items.</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_vivMaxLoadDistance">
+            <English>ViV Load/Unload Distance</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_vivMaxLoadDistance_description">
+            <English>Distance you can (un)load from.</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_vivParadropTime">
+            <English>ViV Paradrop Time</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_vivParadropTime_description">
+            <English>Time it takes, in seconds, to paradrop a ViV item.</English>
         </Key>
     </Package>
 </Project>
