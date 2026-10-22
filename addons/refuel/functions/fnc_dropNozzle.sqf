@@ -22,14 +22,14 @@ TRACE_1("dropNozzle",_this);
 
 detach _nozzle;
 
-_nozzle setVariable [QGVAR(isRefueling), false, true];
+_nozzle setVariable [QGVAR(isRefueling), nil, true];
 
 // Remove claim on nozzle
 [objNull, _nozzle] call EFUNC(common,claim);
 
 if (!isNull _unit) then {
-    _unit setVariable [QGVAR(isRefueling), false];
-    _unit setVariable [QGVAR(nozzle), objNull, true];
+    _unit setVariable [QGVAR(isRefueling), nil, true];
+    _unit setVariable [QGVAR(nozzle), nil, true];
 };
 
 _nozzle setVelocity [0, 0, 0];
