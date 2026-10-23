@@ -1,11 +1,16 @@
 PREP(applyAnimAfterRagdoll);
+PREP(broadcastDeadUnitVariables);
 PREP(checkForMedicalActivity);
 PREP(damageBodyPart);
 PREP(disableThirdParty);
+PREP(getAllHitpointArmor);
 PREP(getHitpointArmor);
 PREP(getItemArmor);
 PREP(handleDamage);
 PREP(lockUnconsciousSeat);
+PREP(processDeadUnitDamage);
+PREP(queueDeadUnitDamage);
+PREP(setDeadUnitVariable);
 PREP(setStructuralDamage);
 PREP(setUnconsciousAnim);
 PREP(unlockUnconsciousSeat);
