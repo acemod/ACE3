@@ -10,17 +10,18 @@
  * None
  *
  * Example:
- * [player] call ace_refuel_fnc_handleDisconnect
+ * player call ace_refuel_fnc_handleDisconnect
  *
  * Public: No
  */
 
-params [["_unit", objNull, [objNull]]];
+params ["_unit"];
 TRACE_1("disconnect",_unit);
 
 if (isNull _unit) exitWith {};
 
 private _nozzle = _unit getVariable [QGVAR(nozzle), objNull];
+
 if (isNull _nozzle) exitWith {};
 
 [_unit, _nozzle] call FUNC(dropNozzle);

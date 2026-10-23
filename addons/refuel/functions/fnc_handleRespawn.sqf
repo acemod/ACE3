@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [player] call ace_refuel_fnc_handleRespawn
+ * player call ace_refuel_fnc_handleRespawn
  *
  * Public: No
  */
@@ -21,6 +21,6 @@ TRACE_1("respawn",_unit);
 if (isNull (_unit getVariable [QGVAR(nozzle), objNull])) exitWith {};
 
 _unit setVariable [QGVAR(selectedWeaponOnRefuel), nil];
-_unit setVariable [QGVAR(isRefueling), false];
+_unit setVariable [QGVAR(isRefueling), nil, true];
 _unit setVariable [QGVAR(nozzle), nil, true];
 _unit setVariable [QGVAR(hint), nil];

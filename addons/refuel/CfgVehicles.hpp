@@ -59,44 +59,44 @@ class CfgVehicles {
             class ACE_MainActions {
                 displayName = CSTRING(Refuel);
                 distance = REFUEL_ACTION_DISTANCE;
-                position = "[0,-0.025,0.125]";
+                position = "[0, -0.025, 0.125]";
                 condition = "true";
                 statement = "";
                 exceptions[] = {INTERACT_EXCEPTIONS};
                 showDisabled = 0;
                 icon = QPATHTOF(ui\icon_refuel_interact.paa);
-                class GVAR(PickUpNozzle) {
-                    displayName = CSTRING(TakeNozzle);
+                class GVAR(pickUpNozzle) {
+                    displayName = CSTRING(takeNozzle);
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeNozzle));
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(takeNozzle));
                     exceptions[] = {INTERACT_EXCEPTIONS_REFUELING};
                     icon = QPATHTOF(ui\icon_refuel_interact.paa);
                 };
-                class GVAR(TurnOn) {
-                    displayName = CSTRING(TurnOn);
+                class GVAR(turnOn) {
+                    displayName = CSTRING(turnOn);
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOn));
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(turnOn));
                     exceptions[] = {INTERACT_EXCEPTIONS};
                     icon = QPATHTOF(ui\icon_refuel_interact.paa);
                 };
-                class GVAR(TurnOn_Container) {
-                    displayName = CSTRING(TurnOn_Container);
+                class GVAR(turnOn_Container) {
+                    displayName = CSTRING(turnOn_Container);
                     condition = QUOTE([ARR_3(_player,_target,true)] call FUNC(canTurnOn));
                     statement = QUOTE([ARR_3(_player,_target,true)] call FUNC(turnOn));
                     exceptions[] = {INTERACT_EXCEPTIONS};
                     icon = QPATHTOF(ui\icon_refuel_interact.paa);
                 };
-                class GVAR(TurnOff) {
-                    displayName = CSTRING(TurnOff);
+                class GVAR(turnOff) {
+                    displayName = CSTRING(turnOff);
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOff));
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(turnOff));
                     exceptions[] = {INTERACT_EXCEPTIONS};
                     icon = QPATHTOF(ui\icon_refuel_interact.paa);
                 };
-                class GVAR(Disconnect) {
-                    displayName = CSTRING(Disconnect);
+                class GVAR(disconnect) {
+                    displayName = CSTRING(disconnect);
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDisconnect));
-                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(disconnect));
+                    statement = QUOTE([ARR_3(_player,_target,false)] call FUNC(disconnect); [ARR_2(_player,_target)] call FUNC(takeNozzle));
                     exceptions[] = {INTERACT_EXCEPTIONS_REFUELING};
                     icon = QPATHTOF(ui\icon_refuel_interact.paa);
                 };
@@ -110,6 +110,8 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {"#(argb,8,8,3)color(0.009,0.009,0.009,1.0,co)"};
         segmentType = QGVAR(fuelHoseSegment);
         model = QPATHTOF(data\hose.p3d);
+        maxRelLenght = 1;
+        maxExtraLenght = 2;
     };
 
     class All;

@@ -11,13 +11,13 @@
  * None
  *
  * Example:
- * [player, fuelTruck] call ace_refuel_fnc_readFuelCounter
+ * [player, cursorObject] call ace_refuel_fnc_readFuelCounter
  *
  * Public: No
  */
 
-params [["_unit", objNull, [objNull]], ["_source", objNull, [objNull]]];
+params ["_unit", "_source"];
 
 private _fuelCounter = _source getVariable [QGVAR(fuelCounter), 0];
 _fuelCounter = 0.01 * round (100 * _fuelCounter);
-[[LSTRING(Hint_FuelCounter), _fuelCounter], 1.5, _unit] call EFUNC(common,displayTextStructured);
+[[LSTRING(hint_FuelCounter), _fuelCounter], 1.5, _unit] call EFUNC(common,displayTextStructured);
