@@ -35,6 +35,27 @@ if (isNil QUOTE(FATAL_SUM_DAMAGE_WEIBULL_K) || isNil QUOTE(FATAL_SUM_DAMAGE_WEIB
 
 // Cache for armor values of equipped items (vests etc)
 GVAR(armorCache) = createHashMap;
+// Combined equipment armor is also identical for units wearing the same gear.
+GVAR(gearArmorCache) = createHashMap;
+
+// Slots in handleDamage's per-event buffer. Use names because hitpoint indices depend on the unit's config.
+// Placeholder hitpoints (HitBody, HitHands, HitLegs) do not contribute to wound selection.
+GVAR(hitPointIndexes) = createHashMapFromArray [
+    ["hitface", 0], ["hitneck", 1], ["hithead", 2],
+    ["hitpelvis", 3], ["hitabdomen", 4], ["hitdiaphragm", 5], ["hitchest", 6],
+    ["hitleftarm", 7], ["hitrightarm", 8], ["hitleftleg", 9], ["hitrightleg", 10],
+    ["#structural", 11]
+];
+
+// Dead units with wound events waiting to be raised, see FUNC(queueDeadUnitDamage)
+GVAR(deadUnitQueue) = [];
+GVAR(deadUnitQueuePFH) = -1;
+// Bodies handled recently, and when further hits on them can be handled
+GVAR(deadUnitIntervals) = [];
+
+// Dead units waiting to broadcast variables that changed, see FUNC(setDeadUnitVariable)
+GVAR(deadUnitBroadcastQueue) = [];
+GVAR(deadUnitBroadcastPFH) = -1;
 
 // Hack for #3168 (units in static weapons do not take any damage):
 // Doing a manual pre-load with a small distance seems to fix the LOD problems

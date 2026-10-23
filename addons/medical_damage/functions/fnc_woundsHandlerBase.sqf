@@ -37,7 +37,6 @@ private _painLevel = 0;
 private _criticalDamage = false;
 private _bodyPartDamage = GET_BODYPART_DAMAGE(_unit);
 private _bodyPartVisParams = [_unit, false, false, false, false]; // params array for EFUNC(medical_engine,updateBodyPartVisuals);
-private _woundWeightsCache = createHashMap;
 
 // process wounds separately for each body part hit
 {   // forEach _allDamages
@@ -62,33 +61,19 @@ private _woundWeightsCache = createHashMap;
     };
     private _dmgPerWound = _damage/_nWounds;
 
-    // Explosions often apply the same damage to several limbs. Reuse the pure
-    // weighting calculation for identical damage per wound within this hit.
-    // Wound counts and random wound selection are still evaluated independently.
-    if (isNil "_woundWeightsCache") then {
-        _woundWeightsCache = createHashMap;
-    };
-    private _weightedWoundTypes = _woundWeightsCache get _dmgPerWound;
-    if (isNil "_weightedWoundTypes") then {
-        _weightedWoundTypes = [];
-        {
-            private _weighting = _x select 1;
-            private _woundWeight = [_dmgPerWound, _weighting] call FUNC(interpolatePoints);
-            _weightedWoundTypes pushBack _x;
-            _weightedWoundTypes pushBack _woundWeight;
-        } forEach _damageWoundDetails;
-        _woundWeightsCache set [_dmgPerWound, _weightedWoundTypes];
-    };
+    // find the available injuries for this damage type and damage amount
+    private _weightedWoundTypes = [];
+    {
+        private _weighting = _x select 1;
+        private _woundWeight = [_dmgPerWound, _weighting] call FUNC(interpolatePoints);
+        _weightedWoundTypes pushBack _x;
+        _weightedWoundTypes pushBack _woundWeight;
+    } forEach _damageWoundDetails;
 
     if (_weightedWoundTypes isEqualTo []) then {
         TRACE_2("No valid wounds",_damage,_typeOfDamage);
         continue
     };
-
-    // Multiple wounds from one hit repeatedly search the same body part's wounds.
-    // Build a temporary index by class when needed; never retain it across hits/treatment.
-    private _woundsByClass = nil;
-    private _indexWounds = _nWounds > 1;
 
     for "_i" from 1 to _nWounds do {
 
@@ -99,10 +84,6 @@ private _woundWeightsCache = createHashMap;
             continue
         };
         GVAR(woundDetails) get _woundTypeToAdd params ["","_injuryBleedingRate","_injuryPain","_causeLimping","_causeFracture","_woundClassIDToAdd"];
-        // Support custom handlers that supply the previous metadata format.
-        if (isNil "_woundClassIDToAdd") then {
-            _woundClassIDToAdd = GVAR(woundClassNames) find _woundTypeToAdd;
-        };
 
         // Add a bit of random variance to wounds
         private _woundDamage = _dmgPerWound * _dmgMultiplier * random [0.9, 1, 1.1];
@@ -134,14 +115,11 @@ private _woundWeightsCache = createHashMap;
         if (_bodyPart isEqualTo "head" || {_bodyPart isEqualTo "body" && {_woundDamage > PENETRATION_THRESHOLD}}) then {
             _criticalDamage = true;
         };
-        if ([_unit, _bodyPartNToAdd, _bodyPartDamage, _woundDamage] call FUNC(determineIfFatal)) then {
+        // A fatal wound kills AI instantly, the rest of the hit's wounds can't change that
+        if (alive _unit && {[_unit, _bodyPartNToAdd, _bodyPartDamage, _woundDamage] call FUNC(determineIfFatal)}) then {
             if (!isPlayer _unit || {random 1 < EGVAR(medical,deathChance)}) then {
                 TRACE_1("determineIfFatal returned true",_woundDamage);
                 [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
-                // Event handlers may change wounds, including through nested damage.
-                // Fall back to searching live rows for the rest of this body part.
-                _indexWounds = false;
-                _woundWeightsCache = nil;
             };
         };
 
@@ -159,11 +137,13 @@ private _woundWeightsCache = createHashMap;
             ): {
                 private _fractures = GET_FRACTURES(_unit);
                 _fractures set [_bodyPartNToAdd, 1];
-                _unit setVariable [VAR_FRACTURES, _fractures, true];
+                if (alive _unit) then {
+                    _unit setVariable [VAR_FRACTURES, _fractures, true];
+                } else {
+                    [_unit, VAR_FRACTURES, _fractures] call EFUNC(medical_engine,setDeadUnitVariable);
+                };
 
                 [QEGVAR(medical,fracture), [_unit, _bodyPartNToAdd]] call CBA_fnc_localEvent;
-                _indexWounds = false;
-                _woundWeightsCache = nil;
                 TRACE_1("Limb fracture",_bodyPartNToAdd);
 
                 _updateDamageEffects = true;
@@ -180,25 +160,14 @@ private _woundWeightsCache = createHashMap;
 
         // if possible merge into existing wounds
         private _existingWounds = _openWounds getOrDefault [_bodyPart, [], true];
-        private _candidates = _existingWounds;
-        if (_indexWounds) then {
-            if (isNil "_woundsByClass") then {
-                _woundsByClass = createHashMap;
-                {
-                    private _classWounds = _woundsByClass getOrDefault [_x select 0, [], true];
-                    _classWounds pushBack _x;
-                } forEach _existingWounds;
-            };
-            _candidates = _woundsByClass getOrDefault [_classComplex, [], true];
-        };
-        private _existingIndex = _candidates findIf {
+        private _existingIndex = _existingWounds findIf {
             (_classComplex == _x select 0) &&
             {(_bodyPart isNotEqualTo "body") || {(_woundDamage < PENETRATION_THRESHOLD) isEqualTo ((_x select 3) < PENETRATION_THRESHOLD)}} && // penetrating body damage is handled differently
             {(_bodyPartNToAdd > 3) || {!_causeLimping} || {(_woundDamage <= LIMPING_DAMAGE_THRESHOLD) isEqualTo ((_x select 3) <= LIMPING_DAMAGE_THRESHOLD)}} // ensure limping damage is stacked correctly
         };
 
         if (_existingIndex != -1) then {
-            private _existingWound = _candidates select _existingIndex;
+            private _existingWound = _existingWounds select _existingIndex;
             _existingWound params ["", "_oldAmountOf", "_oldBleeding", "_oldDamage"];
             TRACE_2("merging with existing wound",_classComplex,_existingWound);
             private _newAmountOf = _oldAmountOf + 1;
@@ -213,9 +182,6 @@ private _woundWeightsCache = createHashMap;
             private _injury = [_classComplex, 1, _bleeding, _woundDamage];
             TRACE_1("adding new wound",_injury);
             _existingWounds pushBack _injury;
-            if (_indexWounds) then {
-                _candidates pushBack _injury;
-            };
         };
         _createdWounds = true;
     };
@@ -231,14 +197,20 @@ if (_updateDamageEffects) then {
 };
 
 if (_createdWounds) then {
-    _unit setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
-    _unit setVariable [VAR_BODYPART_DAMAGE, _bodyPartDamage, true];
+    // Bodies can be hit again and again (e.g. by every explosion near them), don't broadcast every change
+    if (alive _unit) then {
+        _unit setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
+        _unit setVariable [VAR_BODYPART_DAMAGE, _bodyPartDamage, true];
+    } else {
+        [_unit, VAR_OPEN_WOUNDS, _openWounds] call EFUNC(medical_engine,setDeadUnitVariable);
+        [_unit, VAR_BODYPART_DAMAGE, _bodyPartDamage] call EFUNC(medical_engine,setDeadUnitVariable);
+    };
 
     _bodyPartVisParams call EFUNC(medical_engine,updateBodyPartVisuals);
 
     [QEGVAR(medical,injured), [_unit, _painLevel]] call CBA_fnc_localEvent;
 
-    if (_criticalDamage || {_painLevel > PAIN_UNCONSCIOUS}) then {
+    if ((_criticalDamage || {_painLevel > PAIN_UNCONSCIOUS}) && {alive _unit}) then {
         [_unit] call FUNC(handleIncapacitation);
     };
 

@@ -38,5 +38,19 @@
 #define DAMAGED_MIN_THRESHOLD 0.45
 #define LIMPING_MIN_DAMAGE 0.5
 
+// Handling of damage to dead units, see QEGVAR(medical,deadUnitDamage)
+#define DEAD_UNIT_DAMAGE_IMMEDIATELY 0
+#define DEAD_UNIT_DAMAGE_SPREAD 1
+#define DEAD_UNIT_DAMAGE_IGNORE 2
+
+// Queued hits on dead units are handled over about this many frames, with at least this many units per frame
+#define DEAD_UNIT_QUEUE_FRAMES 30
+#define DEAD_UNIT_QUEUE_MIN_UNITS 8
+// Hits on a body within this many seconds of it being handled wait for that time to be over
+#define DEAD_UNIT_QUEUE_INTERVAL 1
+
+// Dead units broadcast changes made within this many seconds of a broadcast together afterwards
+#define DEAD_UNIT_BROADCAST_DELAY 1
+
 #define UNCON_ANIM(var1) DOUBLES(GVAR(uncon_anim),var1)
 #define QUNCON_ANIM(var1) QUOTE(UNCON_ANIM(var1))
