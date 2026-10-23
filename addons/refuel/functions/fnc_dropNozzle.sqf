@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit <OBJECT> (default: objNull)
  * 1: Nozzle <OBJECT>
- * 2: Ground position to drop to (default: nozzle's current position)
+ * 2: Ground position to drop to <ARRAY> (default: nozzle's current position)
  *
  * Return Value:
  * None

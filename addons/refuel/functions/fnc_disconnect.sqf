@@ -7,7 +7,7 @@
  * 0: Unit <OBJECT>
  * 1: Nozzle <OBJECT>
  * 2: Drop nozzle on ground <BOOL> (default: true)
- * 3: Ground position to drop to <ARRAY of NUMBERs or NIL>
+ * 3: Ground position to drop to <ARRAY of NUMBERs or NIL> (default: nil)
  *
  * Return Value:
  * None
