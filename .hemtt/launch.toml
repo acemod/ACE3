@@ -3,6 +3,18 @@ workshop = [
     "450814997", # CBA_A3
 ]
 
+[zen]
+extends = "default"
+workshop = [
+    "1779063631", # Zeus Enhanced
+]
+
+[adt]
+extends = "default"
+workshop = [
+    "3499977893", # ADT
+]
+
 [rhs]
 extends = "default"
 workshop = [
@@ -26,11 +38,14 @@ workshop = [
     "1369691841", # Community Factions Project
 ]
 
-[wardrobe]
+[missile_defense]
 extends = "default"
+mission = "missileDefense.Stratis"
+
+[wardrobe]
+extends = "adt"
 mission = "Wardrobe.VR"
 workshop = [
-    "3499977893", # Advanced Developer Tools
     "1779063631", # ZEN
 #   "751965892",  # ACRE
 #   "623475643",  # eden enhanced
