@@ -519,6 +519,21 @@
             <Chinesesimp>夜视仪（宽，绿色, 白磷）</Chinesesimp>
             <Ukrainian>ПНБ (Широкий, Зелений, БФ)</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_NightVision_H_PilotHelmetFighter_B_WP">
+            <English>Pilot Helmet [NATO, WP]</English>
+        </Key>
+        <Key ID="STR_ACE_NightVision_H_PilotHelmetFighter_I_WP">
+            <English>Pilot Helmet [AAF, WP]</English>
+        </Key>
+        <Key ID="STR_ACE_NightVision_H_PilotHelmetFighter_O_WP">
+            <English>Pilot Helmet [CSAT, WP]</English>
+        </Key>
+        <Key ID="STR_ACE_NightVision_H_HelmetO_ViperSP_hex_WP">
+            <English>Special Purpose Helmet (Hex, WP)</English>
+        </Key>
+        <Key ID="STR_ACE_NightVision_H_HelmetO_ViperSP_ghex_WP">
+            <English>Special Purpose Helmet (Green Hex, WP)</English>
+        </Key>
         <Key ID="STR_ACE_NightVision_NVGeneration">
             <English>Night Vision Generation</English>
             <French>Génération de jumelles de vision nocturne</French>
