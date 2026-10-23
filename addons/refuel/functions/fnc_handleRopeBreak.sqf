@@ -22,6 +22,15 @@ TRACE_3("rope broken",_object,_rope,_attachedObject);
 
 if (!local _object) exitWith {};
 
+// From a static map pump
+if (_object isKindOf QGVAR(helper)) then {
+    private _helper = _attachedObject getVariable [QGVAR(helper), objNull];
+    if (_helper != _object) exitWith { ERROR_1("Helper does not match attached - %1",_this); };
+    private _source = _attachedObject getVariable [QGVAR(source), objNull];
+    if (isNull _source) exitWith { ERROR_1("Source not found - %1",_this); };
+    _object = _source;
+};
+
 private _nozzle = _object getVariable [QGVAR(ownedNozzle), objNull];
 
 if (_attachedObject != _nozzle) exitWith {};
