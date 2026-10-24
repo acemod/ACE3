@@ -22,7 +22,6 @@ class CfgPatches {
             QGVAR(moduleSuppressiveFire),
             QGVAR(AddFullArsenal),
             QGVAR(RemoveFullArsenal),
-            QGVAR(moduleTeleportPlayers),
             QGVAR(moduleHeal),
             QGVAR(moduleSuicideBomber),
             QGVAR(AddFullAceArsenal),
