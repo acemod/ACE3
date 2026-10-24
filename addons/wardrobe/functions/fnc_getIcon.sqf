@@ -1,4 +1,4 @@
-#include "../script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: OverlordZorn
  * Getter Function for the Icon of a change - checks for directional property, cfgWardrobe property or falls back to target inventory Image.
@@ -23,7 +23,7 @@ private _classOrigin = configName _cfgOrigin;
 private _classTarget = configName _cfgTarget;
 
 switch (true) do {
-   
+
     // check directional
     case (
         isText  (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "icon")

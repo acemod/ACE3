@@ -1,4 +1,4 @@
-#include "../script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: OverlordZorn
  * Function to replace a units wearable container while maintaining the content of the container.

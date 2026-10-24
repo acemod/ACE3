@@ -1,4 +1,4 @@
-#include "../script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: OverlordZorn
  * Removes the modifiable item and replaces it with the target item.

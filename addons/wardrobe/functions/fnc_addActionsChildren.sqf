@@ -1,4 +1,4 @@
-#include "../script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: OverlordZorn
  * Function to create the action children, one for each possible variant of the current item.

@@ -1,13 +1,13 @@
-#include "../script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: OverlordZorn
  * Function to check ace_wardrobe configs for legacy properties
  *
  * Arguments:
- * - 
+ * -
  *
  * Return Value:
- * 
+ *
  *
  * Example:
  * "" call ace_wardrobe_fnc_checkForLegacy
@@ -36,7 +36,7 @@ private _checkFour = {
     if (_depricatedSubClasses isNotEqualTo []) then {
 
         { WARNING_2("depricated property 'directionalActionName'. use 'displayName' instead: '%1' >> 'modifiableTo' >> '%2'",configName _this,configName _x); } forEach _depricatedSubClasses;
-        
+
     };
 
 };

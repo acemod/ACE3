@@ -1,4 +1,4 @@
-#include "../script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: OverlordZorn
  * Getter Function for the sound timing of the sound effect - checks for directional property, if not, get from target.
@@ -23,7 +23,7 @@ private _classTarget = configName _cfgTarget;
 
 
 private _return = switch (true) do {
-    
+
     // check directional
     case (
         isNumber  (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "soundTiming")

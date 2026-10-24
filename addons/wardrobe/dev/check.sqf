@@ -1,4 +1,4 @@
-#include "../script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * call compile preprocessFileLineNumbers "z\ace\addons\wardrobe\dev\check.sqf";
