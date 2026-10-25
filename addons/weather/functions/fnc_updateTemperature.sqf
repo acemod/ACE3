@@ -20,9 +20,17 @@ private _timeRatio = abs(dayTime - 12) / 12;
 
 // API
 if (!isNil QGVAR(temperatureShiftAPIinProgress)) then {
-    GVAR(temperatureShiftAPIinProgress) params ["_startTime", "_endTime", "_startShift", "_endShift"];
-    GVAR(temperatureShiftAPI) = linearConversion [_startTime, _endTime, CBA_missionTime, _startShift, _endShift, true];
-    if (CBA_missionTime > _endTime) then { GVAR(temperatureShiftAPIinProgress) = nil; };
+    GVAR(temperatureShiftAPI) = 0;
+    {
+        GVAR(temperatureShiftAPI) = GVAR(temperatureShiftAPI) + 
+        (if (_y isEqualTo 0) then {
+            _y
+        } else {
+            _y params ["_startTime", "_endTime", "_startShift", "_endShift"];
+            if (CBA_missionTime > _endTime) then { GVAR(temperatureShiftAPIinProgress) set [_x, _endShift] };
+            linearConversion [_startTime, _endTime, CBA_missionTime, _startShift, _endShift, true]
+        });
+    } forEach GVAR(temperatureShiftAPIinProgress);
 };
 
 GVAR(currentTemperature) = (GVAR(TempDay) select (_month - 1)) * (1 - _timeRatio) + (GVAR(TempNight) select (_month - 1)) * _timeRatio;

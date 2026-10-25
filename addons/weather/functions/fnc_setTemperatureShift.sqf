@@ -9,9 +9,10 @@
  * Arguments:
  * 0: Temperature shift in degrees Celsius <NUMBER> (default: 0)
  * 1: Transition duration in seconds, less than 1 is instant <NUMBER> (default: 0)
+ * 2: Unique identifier <STRING> (default: "")
  *
  * Return Value:
- * None
+ * UID <STRING>
  *
  * Example:
  * [-5, 600] call ace_weather_fnc_setTemperatureShift
@@ -21,19 +22,26 @@
 
 if (!isServer) exitWith {};
 
-params [["_target", 0, [0]], ["_duration", 0, [0]]];
+params [["_target", 0, [0]], ["_duration", 0, [0]], ["_uid", "", [""]]];
 
-if (_duration < 1) exitWith {
-    GVAR(temperatureShiftAPI) = _target;
-    GVAR(temperatureShiftAPIinProgress) = nil;
+if (isNil QGVAR(temperatureShiftAPIinProgress)) then {
+    GVAR(temperatureShiftAPIinProgress) = createHashMap;
+};
+if (_uid == "") then {
+    _uid = format ["#%1", count GVAR(temperatureShiftAPIinProgress)];
 };
 
-// GVAR(temperatureShiftAPI) is only updated with each weather update, so interpolate an ongoing transition to get the actual current shift
-private _currentShift = if (isNil QGVAR(temperatureShiftAPIinProgress)) then {
-    GVAR(temperatureShiftAPI)
+if (_duration < 1) then {
+    GVAR(temperatureShiftAPIinProgress) set [_uid, _target];
 } else {
-    GVAR(temperatureShiftAPIinProgress) params ["_startTime", "_endTime", "_startShift", "_endShift"];
-    linearConversion [_startTime, _endTime, CBA_missionTime, _startShift, _endShift, true]
+    private _existing = GVAR(temperatureShiftAPIinProgress) get _uid;
+    private _currentShift = if (isNil "_existing") then {
+        0
+    } else {
+        _existing params ["_startTime", "_endTime", "_startShift", "_endShift"];
+        linearConversion [_startTime, _endTime, CBA_missionTime, _startShift, _endShift, true]
+    };
+    GVAR(temperatureShiftAPIinProgress) set [_uid, [CBA_missionTime, CBA_missionTime + _duration, _currentShift, _target]];
 };
 
-GVAR(temperatureShiftAPIinProgress) = [CBA_missionTime, CBA_missionTime + _duration, _currentShift, _target];
+_uid
