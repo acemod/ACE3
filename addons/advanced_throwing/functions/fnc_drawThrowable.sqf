@@ -129,7 +129,7 @@ private _pitch = linearConversion [THROW_MODIFER_MIN, THROW_MODIFER_MAX, _throwM
 [_activeThrowable, _pitch, 0] call BIS_fnc_setPitchBank;
 
 // Force drop mode if underwater
-if (underwater player) then {
+if (underwater ACE_player) then {
     ACE_player setVariable [QGVAR(dropMode), true];
 };
 
