@@ -15,12 +15,12 @@
  * Result of the function <ANY>
  *
  * Example:
- * [[array]], {dothings}, NAMESPACE, "UID", 5, "clear"] call ace_common_fnc_cachedCall
+ * [[array], {dothings}, NAMESPACE, "UID", 5, "clear"] call ace_common_fnc_cachedCall
  *
  * Public: No
  */
 
-params ["_params", "_function", "_namespace", "_uid", "_duration", ["_events", []]];
+params ["_params", "_function", "_namespace", "_uid", "_duration", "_events"];
 
 // What it was listed on is kept with the cache, so an expiry does not lose it but the erase that
 // empties the lists does
