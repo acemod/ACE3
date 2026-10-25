@@ -48,6 +48,7 @@ An additional temperature shift in °C can be applied on top of the simulated te
 ---| --------- | ---- | ------------------------
 0  | Temperature shift in °C | Number | Optional (default: `0`)
 1  | Transition duration in seconds, less than 1 is instant | Number | Optional (default: `0`)
+2  | Unique ID | Optional (default: `""`)
 **R** | None | None | Return value
 
 Alternatively, the shift can be set instantly via `ace_weather_temperatureShiftAPI = -5`. Note that an ongoing transition started by `ace_weather_fnc_setTemperatureShift` will overwrite this value.
