@@ -22,18 +22,13 @@
 
 params ["_params", "_function", "_namespace", "_uid", "_duration", "_events"];
 
-// What it was listed on is kept with the cache, so an expiry does not lose it but the erase that
-// empties the lists does
-(_namespace getVariable [_uid, [-99999]]) params ["_expiry", "", ["_listedOn", []]];
-
-if (_expiry < diag_tickTime) then {
-    if (_events isEqualType "") then {
-        _events = [_events];
-    };
-
-    // Does the cache need clearing on an event? Only listed once, not again on every recompute.
-    // No events leaves both of these empty, so nothing is listed
-    if (_listedOn isNotEqualTo _events) then {
+if ((_namespace getVariable [_uid, [-99999]]) select 0 < diag_tickTime) then {
+    if (!isNil "_events" && {
+        if (_events isEqualType "") then { _events = [_events]; };
+        // Does the cache need clearing on an event? Only listed once, not again on every recompute.
+        // No events leaves both of these empty, so nothing is listed
+        ((_namespace getVariable [_uid, []]) param [2, []]) isNotEqualTo _events
+    }) then {
         {
             private _event = _x;
             private _varName = format [QGVAR(clearCache_%1), _event];
