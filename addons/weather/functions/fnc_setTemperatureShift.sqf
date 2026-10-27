@@ -20,7 +20,7 @@
  * Public: Yes
  */
 
-if (!isServer) exitWith {};
+if (!isServer) exitWith { "Only the server can call this function" };
 
 params [["_target", 0, [0]], ["_duration", 0, [0]], ["_uid", "", [""]]];
 
