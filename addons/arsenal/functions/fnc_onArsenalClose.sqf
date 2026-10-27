@@ -17,7 +17,7 @@
 
 (_this select 1) params ["", "_exitCode"];
 
-[QGVAR(displayClosed), []] call CBA_fnc_localEvent;
+[QGVAR(displayClosed), [_exitCode]] call CBA_fnc_localEvent;
 removeMissionEventHandler ["Draw3D", GVAR(camPosUpdateHandle)];
 
 if (is3DEN) then {
