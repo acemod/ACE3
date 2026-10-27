@@ -22,7 +22,8 @@ params ["", "_pfhID"];
 
 private _queue = GVAR(deadUnitQueue);
 
-// Every body waits for the same time, so the intervals are in order
+// Intervals are in the order they started. A body can wait behind one that waits longer,
+// but never longer than DEAD_UNIT_QUEUE_INTERVAL + DEAD_UNIT_QUEUE_JITTER after it was handled.
 private _intervals = GVAR(deadUnitIntervals);
 private _over = _intervals findIf {(_x select 0) > CBA_missionTime};
 if (_over == -1) then {
@@ -39,8 +40,9 @@ if (_over == -1) then {
             _unit setVariable [QGVAR(waitingDamage), nil];
 
             // Further hits wait again
-            _unit setVariable [QGVAR(queueWaitUntil), CBA_missionTime + DEAD_UNIT_QUEUE_INTERVAL];
-            _intervals pushBack [CBA_missionTime + DEAD_UNIT_QUEUE_INTERVAL, _unit];
+            private _waitUntil = CBA_missionTime + DEAD_UNIT_QUEUE_INTERVAL + random DEAD_UNIT_QUEUE_JITTER;
+            _unit setVariable [QGVAR(queueWaitUntil), _waitUntil];
+            _intervals pushBack [_waitUntil, _unit];
             _queue append _waiting;
         };
     };

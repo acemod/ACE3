@@ -2,8 +2,8 @@
 /*
  * Author: Yethe Samartaka
  * Queues a wound event for a dead unit, to be raised over the next frames.
- * Hits that wound every damaged body part (e.g. explosives) on a body handled less than DEAD_UNIT_QUEUE_INTERVAL seconds ago
- * wait for that time to be over, and are combined with its other waiting hits with the same ammo.
+ * Hits that wound every damaged body part (e.g. explosives) on a body handled less than DEAD_UNIT_QUEUE_INTERVAL seconds
+ * (plus up to DEAD_UNIT_QUEUE_JITTER) ago wait for that time to be over, and are combined with its other waiting hits with the same ammo.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -37,8 +37,9 @@ if ((EGVAR(medical_damage,damageTypeDetails) getOrDefault [_typeOfDamage, [[], 1
 // Bodies can be hit again and again (e.g. by every explosion near them), so further hits wait and are combined
 private _waiting = _unit getVariable QGVAR(waitingDamage);
 if (isNil "_waiting" && {CBA_missionTime >= _unit getVariable [QGVAR(queueWaitUntil), -1]}) exitWith {
-    _unit setVariable [QGVAR(queueWaitUntil), CBA_missionTime + DEAD_UNIT_QUEUE_INTERVAL];
-    GVAR(deadUnitIntervals) pushBack [CBA_missionTime + DEAD_UNIT_QUEUE_INTERVAL, _unit];
+    private _waitUntil = CBA_missionTime + DEAD_UNIT_QUEUE_INTERVAL + random DEAD_UNIT_QUEUE_JITTER;
+    _unit setVariable [QGVAR(queueWaitUntil), _waitUntil];
+    GVAR(deadUnitIntervals) pushBack [_waitUntil, _unit];
     GVAR(deadUnitQueue) pushBack [_unit, _allDamages, _shooter, _ammo];
 };
 

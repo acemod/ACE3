@@ -23,4 +23,4 @@
 
 // Blood drops of spurts are created over about this many frames, with at least this many per frame
 #define DROP_QUEUE_FRAMES 10
-#define DROP_QUEUE_MIN_DROPS 4
+#define DROP_QUEUE_MIN_DROPS 2
