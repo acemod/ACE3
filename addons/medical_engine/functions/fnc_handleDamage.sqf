@@ -32,13 +32,11 @@ if (_structuralDamage) then {
     _oldDamage = _unit getHitIndex _hitPointIndex;
 };
 
-// HD keeps firing for dead units, e.g. for every hitpoint of every body near an explosion
-// Optionally leave them as they were when they died, see QEGVAR(medical,deadUnitDamage)
-private _alive = alive _unit;
-if (!_alive && {EGVAR(medical,deadUnitDamage) == DEAD_UNIT_DAMAGE_IGNORE}) exitWith {_oldDamage};
-
 // Damage can be disabled with old variable or via sqf command allowDamage
 if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {_oldDamage};
+
+// HD keeps firing for dead units, e.g. for every hitpoint of every body near an explosion
+private _alive = alive _unit;
 
 // Killing units via End key is an edge case (#10375)
 // This didn't matter pre-Arma 3 2.18 but now this goes through the event handler
@@ -115,34 +113,16 @@ if (_damageIndex == -1 && {_context != 2}) exitWith {
     [0, _oldDamage] select (_hitPoint in ["hithead", "hitbody", "hithands", "hitlegs"])
 };
 
+// Damages are stored for last iteration of the HandleDamage event (_context == 2)
 // Store all hitpoints in one array instead of formatting and updating a separate object variable for each.
 private _hitPointDamages = _unit getVariable [QGVAR(hitPointDamages), []];
 if (_damageIndex != -1) then {
     if (_hitPointDamages isEqualTo []) then {
         _unit setVariable [QGVAR(hitPointDamages), _hitPointDamages];
     };
+    TRACE_5("Received hit",_hitpoint,_ammo,_newDamage,_directHit,_context);
 
-    // Evaluate armor at arrival: another damage EH can change equipment between hitpoints.
-    // A zero-damage final hitpoint still overwrites its slot, but needs no armor lookup.
-    private _realDamage = 0;
-    if (_newDamage != 0) then {
-        // Scale using passThrough to handle explosive-resistant armor properly (#9063).
-        if (_alive) then {
-            _realDamage = _newDamage * ([_unit, _hitpoint] call FUNC(getHitpointArmor));
-        } else {
-            // Dead units can't change equipment during a hit, so look up their armor once per hit
-            // Kept after the hitpoint slots, so it goes with the buffer when the hit is done
-            private _armor = _hitPointDamages param [12];
-            if (isNil "_armor") then {
-                _armor = _unit call FUNC(getAllHitpointArmor);
-                _hitPointDamages set [12, _armor];
-            };
-            _realDamage = _newDamage * (_armor get (toLowerANSI _hitPoint));
-        };
-    };
-    TRACE_6("Received hit",_hitpoint,_ammo,_newDamage,_realDamage,_directHit,_context);
-
-    _hitPointDamages set [_damageIndex, [_realDamage, _newDamage]];
+    _hitPointDamages set [_damageIndex, _newDamage];
 };
 
 // Ref https://community.bistudio.com/wiki/Arma_3:_Event_Handlers#HandleDamage
@@ -155,33 +135,43 @@ if (_context == 2) then {
     _unit setVariable [QEGVAR(medical,lastDamageSource), _shooter];
     _unit setVariable [QEGVAR(medical,lastInstigator), _instigator];
 
-    private _damageStructural = _hitPointDamages param [11, [0,0]];
+    // Get armor value of every hitpoint at once and calculate damage before armor
+    // We scale using passThrough to handle explosive-resistant armor properly (#9063)
+    // We need realDamage to determine which limb was hit correctly
+    private _armor = _unit call FUNC(getAllHitpointArmor);
+    private _damages = [];
+    {
+        private _hitPointDamage = _hitPointDamages param [_forEachIndex, 0];
+        _damages pushBack [_hitPointDamage * _x, _hitPointDamage];
+    } forEach _armor;
+
+    private _damageStructural = _damages select 11;
 
     // --- Head
     private _damageHead = [
-        _hitPointDamages param [0, [0,0]],
-        _hitPointDamages param [1, [0,0]],
-        _hitPointDamages param [2, [0,0]]
+        _damages select 0,
+        _damages select 1,
+        _damages select 2
     ];
     _damageHead sort false;
     _damageHead = _damageHead select 0;
 
     // --- Body
     private _damageBody = [
-        _hitPointDamages param [3, [0,0]],
-        _hitPointDamages param [4, [0,0]],
-        _hitPointDamages param [5, [0,0]],
-        _hitPointDamages param [6, [0,0]]
+        _damages select 3,
+        _damages select 4,
+        _damages select 5,
+        _damages select 6
         // HitBody removed as it's a placeholder hitpoint and the high armor value (1000) throws the calculations off
     ];
     _damageBody sort false;
     _damageBody = _damageBody select 0;
 
     // --- Arms and Legs
-    private _damageLeftArm = _hitPointDamages param [7, [0,0]];
-    private _damageRightArm = _hitPointDamages param [8, [0,0]];
-    private _damageLeftLeg = _hitPointDamages param [9, [0,0]];
-    private _damageRightLeg = _hitPointDamages param [10, [0,0]];
+    private _damageLeftArm = _damages select 7;
+    private _damageRightArm = _damages select 8;
+    private _damageLeftLeg = _damages select 9;
+    private _damageRightLeg = _damages select 10;
 
     // Find hit point that received the maximum damage
     // Priority used for sorting if incoming damage is equal
@@ -231,10 +221,10 @@ if (_context == 2) then {
     // TODO check if this needs to be changed for burning damage (occurs as lots of small events that we add together)
     if ((_allDamages select 0 select 0) > 1E-3) then {
         TRACE_1("received",_allDamages);
-        if (_alive || {EGVAR(medical,deadUnitDamage) == DEAD_UNIT_DAMAGE_IMMEDIATELY}) then {
+        if (_alive) then {
             [QEGVAR(medical,woundReceived), [_unit, _allDamages, _shooter, _ammo]] call CBA_fnc_localEvent;
         } else {
-            // A burst of hits on many bodies is handled over the next frames instead of all at once
+            // Dead units don't need their wounds handled in the same frame, see FUNC(queueDeadUnitDamage)
             [_unit, _allDamages, _shooter, _ammo] call FUNC(queueDeadUnitDamage);
         };
     };

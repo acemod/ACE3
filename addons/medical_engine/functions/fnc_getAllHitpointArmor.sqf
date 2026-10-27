@@ -1,14 +1,14 @@
 #include "..\script_component.hpp"
 /*
  * Author: Yethe Samartaka
- * Returns the armor of every hitpoint used for wounds (see GVAR(hitPointIndexes)) for the unit's current equipment.
- * Dead units can't change equipment during a hit, so handleDamage looks this up once per hit for them.
+ * Returns the total armor of every hitpoint used for wounds (see GVAR(hitPointNames)) for a unit's current equipment.
+ * Armor only depends on the equipment, so it is calculated once for each combination of uniform, vest and headgear.
  *
  * Arguments:
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Armor of each hitpoint, by lowercase hitpoint name <HASHMAP>
+ * Armor of each hitpoint in the order of GVAR(hitPointNames), may be scaled <ARRAY of NUMBERs>
  *
  * Example:
  * cursorObject call ace_medical_engine_fnc_getAllHitpointArmor
@@ -24,16 +24,22 @@ if (_uniform isEqualTo "") then {
     _uniform = getText (configOf _unit >> "nakedUniform");
 };
 
-private _rags = [_uniform, vest _unit, headgear _unit] joinString "$";
-_unit getVariable [QGVAR(allHitpointArmor), [""]] params ["_prevRags", "_armor"];
+private _gear = [
+    _uniform,
+    vest _unit,
+    headgear _unit
+];
 
-if (_rags != _prevRags) then {
-    _armor = createHashMap;
-    {
-        _armor set [_x, [_unit, _x] call FUNC(getHitpointArmor)];
-    } forEach keys GVAR(hitPointIndexes);
+GVAR(allHitpointArmorCache) getOrDefaultCall [_gear joinString "$", {
+    GVAR(hitPointNames) apply {
+        private _hitpoint = _x;
+        private _armor = 0;
 
-    _unit setVariable [QGVAR(allHitpointArmor), [_rags, _armor]];
-};
+        {
+            _armor = _armor + ([_x, _hitpoint] call FUNC(getItemArmor));
+        } forEach _gear;
 
-_armor // return
+        // Armor should be at least 1 to prevent dividing by 0
+        _armor max 1
+    }
+}, true] // return

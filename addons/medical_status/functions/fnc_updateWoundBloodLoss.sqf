@@ -34,12 +34,7 @@ private _bodyPartBleeding = [0,0,0,0,0,0];
 
 if (selectMax _bodyPartBleeding == 0) exitWith {
     TRACE_1("updateWoundBloodLoss-none",_unit);
-    // Bodies can be hit again and again (e.g. by every explosion near them), don't broadcast every change
-    if (alive _unit) then {
-        _unit setVariable [VAR_WOUND_BLEEDING, 0, true];
-    } else {
-        [_unit, VAR_WOUND_BLEEDING, 0] call EFUNC(medical_engine,setDeadUnitVariable);
-    };
+    _unit setVariable [VAR_WOUND_BLEEDING, 0, true];
 };
 
 _bodyPartBleeding params ["_headBleeding", "_bodyBleeding", "_leftArmBleeding", "_rightArmBleeding", "_leftLegBleeding", "_rightLegBleeding"];
@@ -50,8 +45,4 @@ private _limbBleedingRate = ((_leftArmBleeding min 0.3) + (_rightArmBleeding min
 _limbBleedingRate = _limbBleedingRate * (1 - _bodyBleedingRate);
 
 TRACE_3("updateWoundBloodLoss-bleeding",_unit,_bodyBleedingRate,_limbBleedingRate);
-if (alive _unit) then {
-    _unit setVariable [VAR_WOUND_BLEEDING, _bodyBleedingRate + _limbBleedingRate, true];
-} else {
-    [_unit, VAR_WOUND_BLEEDING, _bodyBleedingRate + _limbBleedingRate] call EFUNC(medical_engine,setDeadUnitVariable);
-};
+_unit setVariable [VAR_WOUND_BLEEDING, _bodyBleedingRate + _limbBleedingRate, true];

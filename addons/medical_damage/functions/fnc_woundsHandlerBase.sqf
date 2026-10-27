@@ -137,11 +137,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
             ): {
                 private _fractures = GET_FRACTURES(_unit);
                 _fractures set [_bodyPartNToAdd, 1];
-                if (alive _unit) then {
-                    _unit setVariable [VAR_FRACTURES, _fractures, true];
-                } else {
-                    [_unit, VAR_FRACTURES, _fractures] call EFUNC(medical_engine,setDeadUnitVariable);
-                };
+                _unit setVariable [VAR_FRACTURES, _fractures, true];
 
                 [QEGVAR(medical,fracture), [_unit, _bodyPartNToAdd]] call CBA_fnc_localEvent;
                 TRACE_1("Limb fracture",_bodyPartNToAdd);
@@ -197,14 +193,8 @@ if (_updateDamageEffects) then {
 };
 
 if (_createdWounds) then {
-    // Bodies can be hit again and again (e.g. by every explosion near them), don't broadcast every change
-    if (alive _unit) then {
-        _unit setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
-        _unit setVariable [VAR_BODYPART_DAMAGE, _bodyPartDamage, true];
-    } else {
-        [_unit, VAR_OPEN_WOUNDS, _openWounds] call EFUNC(medical_engine,setDeadUnitVariable);
-        [_unit, VAR_BODYPART_DAMAGE, _bodyPartDamage] call EFUNC(medical_engine,setDeadUnitVariable);
-    };
+    _unit setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
+    _unit setVariable [VAR_BODYPART_DAMAGE, _bodyPartDamage, true];
 
     _bodyPartVisParams call EFUNC(medical_engine,updateBodyPartVisuals);
 

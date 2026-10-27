@@ -31,22 +31,18 @@ private _gear = [
 ];
 
 private _rags = _gear joinString "$";
-private _var = QGVAR(armorCache$) + _hitpoint;
+private _var = format [QGVAR(armorCache$%1), _hitpoint];
 _unit getVariable [_var, ["", 0]] params ["_prevRags", "_armor"];
 
 if (_rags != _prevRags) then {
-    // A unit's first hit (or equipment change) can reuse a total already calculated for another unit.
-    // Keep the per-unit cache above so repeated hits don't need another global cache lookup.
-    _armor = GVAR(gearArmorCache) getOrDefaultCall [toLowerANSI (_rags + "$" + _hitpoint), {
-        private _armor = 0;
+    _armor = 0;
 
-        {
-            _armor = _armor + ([_x, _hitpoint] call FUNC(getItemArmor));
-        } forEach _gear;
+    {
+        _armor = _armor + ([_x, _hitpoint] call FUNC(getItemArmor));
+    } forEach _gear;
 
-        // Armor should be at least 1 to prevent dividing by 0
-        _armor max 1
-    }, true];
+    // Armor should be at least 1 to prevent dividing by 0
+    _armor = _armor max 1;
 
     _unit setVariable [_var, [_rags, _armor]];
 };

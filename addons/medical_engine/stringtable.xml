@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical_Engine">
-        <Key ID="STR_ACE_Medical_Engine_DeadUnitDamage_Description">
-            <English>Controls how damage to dead units is handled. Dead units keep taking damage, e.g. from every explosion near them, which can cause lag when shooting at many bodies.\nImmediately: Wounds and blood are added right away.\nSpread Out: Wounds and blood are added over the next frames. A body hit again within a second of that waits until the second is over, and its explosive hits are combined.\nIgnore: Dead units are left as they were when they died.</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Engine_DeadUnitDamage_DisplayName">
-            <English>Damage to Dead Units</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Engine_DeadUnitDamage_Ignore">
-            <English>Ignore</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Engine_DeadUnitDamage_Immediately">
-            <English>Immediately</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Engine_DeadUnitDamage_Spread">
-            <English>Spread Out</English>
-        </Key>
         <Key ID="STR_ACE_Medical_Engine_EnableVehicleCrashes_Description">
             <English>Controls whether crew receives damage from vehicle collisions.</English>
             <French>Définit si les passagers à bord des véhicules peuvent être blessés en cas d'accident.</French>

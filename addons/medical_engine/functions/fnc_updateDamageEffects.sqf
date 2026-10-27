@@ -74,12 +74,7 @@ if (!_isLimping && {EGVAR(medical,limping) > 0}) then {
         };
     } forEach _legWounds;
 };
-// Bodies can be hit again and again (e.g. by every explosion near them), don't broadcast every change
-if (alive _unit) then {
-    _unit setVariable [QEGVAR(medical,isLimping), _isLimping, true];
-} else {
-    [_unit, QEGVAR(medical,isLimping), _isLimping] call FUNC(setDeadUnitVariable);
-};
+_unit setVariable [QEGVAR(medical,isLimping), _isLimping, true];
 
 // refresh
 private _isDamaged = _unit getHitPointDamage "HitLegs" >= DAMAGED_MIN_THRESHOLD && {_unit getHitPointDamage "HitLegs" != LIMPING_MIN_DAMAGE};

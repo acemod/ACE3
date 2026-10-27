@@ -1,5 +1,4 @@
 PREP(applyAnimAfterRagdoll);
-PREP(broadcastDeadUnitVariables);
 PREP(checkForMedicalActivity);
 PREP(damageBodyPart);
 PREP(disableThirdParty);
@@ -10,7 +9,6 @@ PREP(handleDamage);
 PREP(lockUnconsciousSeat);
 PREP(processDeadUnitDamage);
 PREP(queueDeadUnitDamage);
-PREP(setDeadUnitVariable);
 PREP(setStructuralDamage);
 PREP(setUnconsciousAnim);
 PREP(unlockUnconsciousSeat);
