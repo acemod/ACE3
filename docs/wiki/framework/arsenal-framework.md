@@ -495,7 +495,7 @@ All are local.
 | `ace_arsenal_boxInitialized` | Arsenal box (OBJECT), items (BOOL or ARRAY) |
 | `ace_arsenal_boxRemoved` | Arsenal box (OBJECT) |
 | `ace_arsenal_displayOpened` | Arsenal display (DISPLAY) |
-| `ace_arsenal_displayClosed` | None |
+| `ace_arsenal_displayClosed` | Exit Code (NUMBER) |
 | `ace_arsenal_leftPanelFilled` | Arsenal display (DISPLAY), current left panel IDC (NUMBER), current right panel IDC (NUMBER) |
 | `ace_arsenal_rightPanelFilled` | Arsenal display (DISPLAY), current left panel IDC (NUMBER), current right panel IDC (NUMBER) |
 | `ace_arsenal_onLoadoutSave` | Loadout index (NUMBER), [loadout name (STRING), loadout data (ARRAY)] |
