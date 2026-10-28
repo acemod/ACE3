@@ -23,13 +23,39 @@ Cloud cover, rain and fog can still be set via the mission settings.
 
 ## 2. Wind Simulation
 
-## 2.1 Temporarily Pause Wind Simulation
+### 2.1 Temporarily Pause Wind Simulation
 
 When Wind Simulation is enabled at mission start, it can be temporarily disabled by setting `ace_weather_disableWindSimulation = true`. To reenable wind simulation, the variable must either be set to `false` or `nil`.
 
-## 3. Config Values
+## 3. Temperature
 
-### 3.1 Adding ACE weather to maps via config
+### 3.1 Temperature Shift
+
+An additional temperature shift in °C can be applied on top of the simulated temperature. The shift is applied with the next weather update (see `ace_weather_updateInterval` setting) and must be set on the server.
+
+```sqf
+// Instantly shift the temperature by -5 °C
+[-5] call ace_weather_fnc_setTemperatureShift;
+
+// Linearly transition to a shift of +10 °C over 10 minutes
+[10, 600] call ace_weather_fnc_setTemperatureShift;
+
+// Reset the shift
+[0] call ace_weather_fnc_setTemperatureShift;
+```
+
+| Arguments | Type | Optional (default value)
+---| --------- | ---- | ------------------------
+0  | Temperature shift in °C | Number | Optional (default: `0`)
+1  | Transition duration in seconds, less than 1 is instant | Number | Optional (default: `0`)
+2  | Unique ID | Optional (default: `""`)
+**R** | None | None | Return value
+
+Alternatively, the shift can be set instantly via `ace_weather_temperatureShiftAPI = -5`. Note that an ongoing transition started by `ace_weather_fnc_setTemperatureShift` will overwrite this value.
+
+## 4. Config Values
+
+### 4.1 Adding ACE weather to maps via config
 
 {% raw %}
 ```cpp
@@ -77,7 +103,7 @@ class CfgWorlds {
 ```
 {% endraw %}
 
-### 3.2 Adding ACE weather to maps via mission config
+### 4.2 Adding ACE weather to maps via mission config
 
 You can define/overwrite ACE weather configs via `description.ext`
 
