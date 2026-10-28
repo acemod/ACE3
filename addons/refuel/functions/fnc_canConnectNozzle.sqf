@@ -10,21 +10,24 @@
  * Can nozzle be connected <BOOL>
  *
  * Example:
- * [myVehicle] call ace_refuel_fnc_canConnectNozzle;
- * [myJerryCan] call ace_refuel_fnc_canConnectNozzle;
+ * cursorObject call ace_refuel_fnc_canConnectNozzle
  *
  * Public: No
  */
 
-params [["_object", objNull, [objNull]]];
+params ["_object"];
 
 // Make sure object doesn't already have a nozzle connected
-if (isNull _object || {!isNull (_object getVariable [QGVAR(nozzle), objNull])} ) exitWith {false};
+if (!alive _object || {!isNull (_object getVariable [QGVAR(nozzle), objNull])}) exitWith {
+    false // return
+};
 
 // Can't fuel a jerry can that is connected to another object
-if (_object getVariable [QGVAR(jerryCan), false]) exitWith {!(_object getVariable [QGVAR(isConnected), false])};
+if (_object getVariable [QGVAR(jerryCan), false]) exitWith {
+    !(_object getVariable [QGVAR(isConnected), false]) // return
+};
 
 // We need to check "canReceive" before we check if the tank can be filled
-// This handles the edge case where a fuel truck has an infintite supply (i.e. the truck can be refueled, but the tank cannot)
+// This handles the edge case where a fuel truck has an infinite supply (i.e. the truck can be refueled, but the tank cannot)
 (getNumber ((configOf _object) >> QGVAR(canReceive)) == 1) ||
-    {!(([_object] call FUNC(getCapacity)) in [REFUEL_INFINITE_FUEL, REFUEL_DISABLED_FUEL])}
+{!((_object call FUNC(getCapacity)) in [REFUEL_INFINITE_FUEL, REFUEL_DISABLED_FUEL])} // return

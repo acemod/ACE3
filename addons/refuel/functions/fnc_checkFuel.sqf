@@ -11,30 +11,32 @@
  * None
  *
  * Example:
- * [player, fuelTruck] call ace_refuel_fnc_checkFuel
+ * [player, cursorObject] call ace_refuel_fnc_checkFuel
  *
  * Public: No
  */
 
-params [["_unit", objNull, [objNull]], ["_source", objNull, [objNull]]];
+params ["_unit", "_source"];
 
-private _fuel = [_source] call FUNC(getFuel);
+private _fuel = _source call FUNC(getFuel);
 
 [
     GVAR(progressDuration) * 2,
     [_unit, _source, _fuel],
     {
-        params ["_args"];
-        _args params [["_unit", objNull, [objNull]], ["_source", objNull, [objNull]], ["_fuel", 0, [0]]];
-        if (_fuel > 0 ) then {
-            [QEGVAR(common,displayTextStructured), [[LSTRING(Hint_RemainingFuel), _fuel], 2, _unit], _unit] call CBA_fnc_targetEvent;
+        (_this select 0) params ["_unit", "", "_fuel"];
+
+        if (_fuel > 0) then {
+            [[LSTRING(hint_RemainingFuel), _fuel], 2, _unit] call EFUNC(common,displayTextStructured);
         } else {
-            [QEGVAR(common,displayTextStructured), [LSTRING(Hint_Empty), 2, _unit], _unit] call CBA_fnc_targetEvent;
+            [LSTRING(hint_Empty), 2, _unit] call EFUNC(common,displayTextStructured);
         };
-        true
     },
-    {true},
-    localize LSTRING(CheckFuelAction),
-    {true},
+    {},
+    LLSTRING(checkFuelAction),
+    {
+        ((_this select 0) call EFUNC(interaction,getInteractionDistance)) <= REFUEL_ACTION_DISTANCE &&
+        {(_this select 0) call FUNC(canCheckFuel)}
+    },
     [INTERACT_EXCEPTIONS]
 ] call EFUNC(common,progressBar);

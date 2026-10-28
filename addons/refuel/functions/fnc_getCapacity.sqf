@@ -10,14 +10,14 @@
  * Fuel capacity <NUMBER> (-10 means infinite fuel, -1 means not a fuel source, >0 is a capacity in liters)
  *
  * Example:
- * [fuelTruck] call ace_refuel_fnc_getCapacity
+ * cursorObject call ace_refuel_fnc_getCapacity
  *
  * Public: Yes
  */
 
 params [["_source", objNull, [objNull]]];
 
-if (isNull _source) exitWith {REFUEL_DISABLED_FUEL};
+if (!alive _source) exitWith {REFUEL_DISABLED_FUEL};
 
 private _capacity = _source getVariable QGVAR(capacity);
 
@@ -28,8 +28,8 @@ if (isNil "_capacity") then {
     // Set capacity even if this isn't a fuel source to save on config lookup time in the event this function is used in a loop
     _source setVariable [QGVAR(capacity), _capacity, true];
     // handle weird edge case when trying to run on "camera"/CfgNonAIVehicles which won't support setVariable and will inf-loop
-    if (isNil {_source getVariable QGVAR(capacity)}) exitWith { WARNING_1("trying to getCapacity from non-CfgVehicle %1",_this); };
+    if (_source isNil QGVAR(capacity)) exitWith { WARNING_1("trying to getCapacity from non-CfgVehicle %1",_this); };
     [_source, _capacity] call FUNC(setFuel);
 };
 
-_capacity;
+_capacity // return

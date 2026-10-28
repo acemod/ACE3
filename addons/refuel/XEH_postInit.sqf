@@ -3,50 +3,50 @@
 // Menus and initSource EH need to be defined before the server raises the EH on the client, otherwise it won't add the actions
 if (hasInterface) then {
     GVAR(mainAction) = [
-        QGVAR(Refuel),
-        localize LSTRING(Refuel),
+        QGVAR(refuel),
+        LLSTRING(refuel),
         QPATHTOF(ui\icon_refuel_interact.paa),
         {},
         {
             alive _target
             && {[_player, _target, [INTERACT_EXCEPTIONS]] call EFUNC(common,canInteractWith)}
-            && {REFUEL_DISABLED_FUEL != ([_target] call FUNC(getCapacity))}
+            && {REFUEL_DISABLED_FUEL != (_target call FUNC(getCapacity))}
         },
-        {}, [], [0,0,0],
+        {}, [], [0, 0, 0],
         REFUEL_ACTION_DISTANCE
     ] call EFUNC(interact_menu,createAction);
 
     GVAR(actions) = [
-        [QGVAR(TakeNozzle),
-            localize LSTRING(TakeNozzle),
+        [QGVAR(takeNozzle),
+            LLSTRING(takeNozzle),
             QPATHTOF(ui\icon_refuel_interact.paa),
-            {[_player, _target] call FUNC(TakeNozzle)},
+            {[_player, _target] call FUNC(takeNozzle)},
             {[_player, _target] call FUNC(canTakeNozzle)},
-            {}, [], [0,0,0],
+            {}, [], [0, 0, 0],
             REFUEL_ACTION_DISTANCE
         ] call EFUNC(interact_menu,createAction),
-        [QGVAR(CheckFuelCounter),
-            localize LSTRING(CheckFuelCounter),
+        [QGVAR(checkFuelCounter),
+            LLSTRING(checkFuelCounter),
             QPATHTOF(ui\icon_refuel_interact.paa),
             {[_player, _target] call FUNC(readFuelCounter)},
             {true},
-            {}, [], [0,0,0],
+            {}, [], [0, 0, 0],
             REFUEL_ACTION_DISTANCE
         ] call EFUNC(interact_menu,createAction),
-        [QGVAR(CheckFuel),
-            localize LSTRING(CheckFuel),
+        [QGVAR(checkFuel),
+            LLSTRING(checkFuel),
             QPATHTOF(ui\icon_refuel_interact.paa),
             {[_player, _target] call FUNC(checkFuel)},
             {[_player, _target] call FUNC(canCheckFuel)},
-            {}, [], [0,0,0],
+            {}, [], [0, 0, 0],
             REFUEL_ACTION_DISTANCE
         ] call EFUNC(interact_menu,createAction),
-        [QGVAR(Return),
-            localize LSTRING(Return),
+        [QGVAR(return),
+            LLSTRING(return),
             QPATHTOF(ui\icon_refuel_interact.paa),
             {[_player, _target] call FUNC(returnNozzle)},
             {[_player, _target] call FUNC(canReturnNozzle)},
-            {}, [], [0,0,0],
+            {}, [], [0, 0, 0],
             REFUEL_ACTION_DISTANCE
         ] call EFUNC(interact_menu,createAction)
     ];
@@ -61,21 +61,39 @@ if (hasInterface) then {
     };
 
     {
-        // inheritance is not needed because all classes are listed
+        // Inheritance is not needed because all classes are listed
         [_x, "InitPost", LINKFUNC(initObject), false, [], true] call CBA_fnc_addClassEventHandler;
+        [_x, "Killed", LINKFUNC(handleDestroyed), false, [], true] call CBA_fnc_addClassEventHandler;
+
+        if (isServer) then {
+            [_x, "Deleted", LINKFUNC(handleDestroyed), false, [], true] call CBA_fnc_addClassEventHandler;
+        };
+
+        if (_x isKindOf "AllVehicles") then {
+            [_x, "RopeBreak", LINKFUNC(handleRopeBreak), false, [], true] call CBA_fnc_addClassEventHandler;
+        };
     } forEach (uiNamespace getVariable QGVAR(cacheRefuelCargo));
+
+    [QGVAR(helper), "RopeBreak", LINKFUNC(handleRopeBreak), false, [], true] call CBA_fnc_addClassEventHandler;
 
     if (isServer) then {
         addMissionEventHandler ["HandleDisconnect", {call FUNC(handleDisconnect)}];
+
+        [QGVAR(refuel), LINKFUNC(refuel)] call CBA_fnc_addEventHandler;
     };
 
     private _staticClasses = keys (uiNamespace getVariable QGVAR(cacheRefuelClassesStatic));
     private _staticFound = [];
     {
-        // terrain and editor pumps
+        // Terrain and editor pumps
         private _objects = _x allObjects 0;
-        if (_objects isEqualTo []) then {continue};
+
+        if (_objects isEqualTo []) then {
+            continue;
+        };
+
         _staticFound pushBack [_x, count _objects];
+
         {
             [_x, true] call FUNC(initObject);
         } forEach _objects;
@@ -94,22 +112,24 @@ if (hasInterface) then {
 
     ["MouseButtonDown", LINKFUNC(onMouseButtonDown)] call CBA_fnc_addDisplayHandler;
 
-    private _baseDynamicClasses = keys (uiNamespace getVariable QGVAR(cacheRefuelClassesBaseDynamic));
-
     // init menu for config refuel vehicles
     {
         private _className = _x;
         [_className, 0, ["ACE_MainActions"], GVAR(mainAction)] call EFUNC(interact_menu,addActionToClass);
+
         {
-            [_className, 0, ["ACE_MainActions", QGVAR(Refuel)], _x] call EFUNC(interact_menu,addActionToClass);
+            [_className, 0, ["ACE_MainActions", QGVAR(refuel)], _x] call EFUNC(interact_menu,addActionToClass);
         } forEach GVAR(actions);
     } forEach _staticClasses;
+
+    private _baseDynamicClasses = keys (uiNamespace getVariable QGVAR(cacheRefuelClassesBaseDynamic));
 
     {
         private _className = _x;
         [_className, 0, ["ACE_MainActions"], GVAR(mainAction), true] call EFUNC(interact_menu,addActionToClass);
+
         {
-            [_className, 0, ["ACE_MainActions", QGVAR(Refuel)], _x, true] call EFUNC(interact_menu,addActionToClass);
+            [_className, 0, ["ACE_MainActions", QGVAR(refuel)], _x, true] call EFUNC(interact_menu,addActionToClass);
         } forEach GVAR(actions);
     } forEach _baseDynamicClasses;
 

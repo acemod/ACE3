@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: GitHawk
- * Set the remaining fuel amount.
+ * Sets the remaining fuel amount.
  *
  * Arguments:
  * 0: Fuel Source <OBJECT>
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [fuelTruck, 42] call ace_refuel_fnc_setFuel
+ * [cursorObject, 42] call ace_refuel_fnc_setFuel
  *
  * Public: Yes
  */
@@ -19,10 +19,11 @@
 params [["_source", objNull, [objNull]], ["_fuel", nil, [0]]];
 
 // Ensure valid fuel quantity
-if (isNull _source || {isNil "_fuel"}) exitWith {};
+if (!alive _source || {isNil "_fuel"}) exitWith {};
 
 // Make sure this is actually a finite fuel source
-private _capacity = [_source] call FUNC(getCapacity);
+private _capacity = _source call FUNC(getCapacity);
+
 if (_capacity in [REFUEL_INFINITE_FUEL, REFUEL_DISABLED_FUEL]) exitWith {};
 
 // Don't overfill or underfill tank
