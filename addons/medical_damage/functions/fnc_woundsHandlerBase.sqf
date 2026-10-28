@@ -83,8 +83,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
             WARNING_4("No valid wound types %1-%2-%3-%4",_damage,_dmgPerWound,_typeOfDamage,_bodyPart);
             continue
         };
-        GVAR(woundDetails) get _woundTypeToAdd params ["","_injuryBleedingRate","_injuryPain","_causeLimping","_causeFracture"];
-        private _woundClassIDToAdd = GVAR(woundClassNames) find _woundTypeToAdd;
+        GVAR(woundDetails) get _woundTypeToAdd params ["","_injuryBleedingRate","_injuryPain","_causeLimping","_causeFracture","_woundClassIDToAdd"];
 
         // Add a bit of random variance to wounds
         private _woundDamage = _dmgPerWound * _dmgMultiplier * random [0.9, 1, 1.1];
@@ -113,13 +112,11 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
 
         private _classComplex = 10 * _woundClassIDToAdd + _category;
 
-        // Create a new injury. Format [0:classComplex, 1:amountOf, 2:bleedingRate, 3:woundDamage]
-        private _injury = [_classComplex, 1, _bleeding, _woundDamage];
-
         if (_bodyPart isEqualTo "head" || {_bodyPart isEqualTo "body" && {_woundDamage > PENETRATION_THRESHOLD}}) then {
             _criticalDamage = true;
         };
-        if ([_unit, _bodyPartNToAdd, _bodyPartDamage, _woundDamage] call FUNC(determineIfFatal)) then {
+        // A fatal wound kills AI instantly, the rest of the hit's wounds can't change that
+        if (alive _unit && {[_unit, _bodyPartNToAdd, _bodyPartDamage, _woundDamage] call FUNC(determineIfFatal)}) then {
             if (!isPlayer _unit || {random 1 < EGVAR(medical,deathChance)}) then {
                 TRACE_1("determineIfFatal returned true",_woundDamage);
                 [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
@@ -158,27 +155,27 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
         };
 
         // if possible merge into existing wounds
-        private _createNewWound = true;
         private _existingWounds = _openWounds getOrDefault [_bodyPart, [], true];
-        {
-            _x params ["_classID", "_oldAmountOf", "_oldBleeding", "_oldDamage"];
-            if (
-                    (_classComplex == _classID) &&
-                    {(_bodyPart isNotEqualTo "body") || {(_woundDamage < PENETRATION_THRESHOLD) isEqualTo (_oldDamage < PENETRATION_THRESHOLD)}} && // penetrating body damage is handled differently
-                    {(_bodyPartNToAdd > 3) || {!_causeLimping} || {(_woundDamage <= LIMPING_DAMAGE_THRESHOLD) isEqualTo (_oldDamage <= LIMPING_DAMAGE_THRESHOLD)}} // ensure limping damage is stacked correctly
-                    ) exitWith {
-                TRACE_2("merging with existing wound",_injury,_x);
-                private _newAmountOf = _oldAmountOf + 1;
-                _x set [1, _newAmountOf];
-                private _newBleeding = (_oldAmountOf * _oldBleeding + _bleeding) / _newAmountOf;
-                _x set [2, _newBleeding];
-                private _newDamage = (_oldAmountOf * _oldDamage + _woundDamage) / _newAmountOf;
-                _x set [3, _newDamage];
-                _createNewWound = false;
-            };
-        } forEach _existingWounds;
+        private _existingIndex = _existingWounds findIf {
+            (_classComplex == _x select 0) &&
+            {(_bodyPart isNotEqualTo "body") || {(_woundDamage < PENETRATION_THRESHOLD) isEqualTo ((_x select 3) < PENETRATION_THRESHOLD)}} && // penetrating body damage is handled differently
+            {(_bodyPartNToAdd > 3) || {!_causeLimping} || {(_woundDamage <= LIMPING_DAMAGE_THRESHOLD) isEqualTo ((_x select 3) <= LIMPING_DAMAGE_THRESHOLD)}} // ensure limping damage is stacked correctly
+        };
 
-        if (_createNewWound) then {
+        if (_existingIndex != -1) then {
+            private _existingWound = _existingWounds select _existingIndex;
+            _existingWound params ["", "_oldAmountOf", "_oldBleeding", "_oldDamage"];
+            TRACE_2("merging with existing wound",_classComplex,_existingWound);
+            private _newAmountOf = _oldAmountOf + 1;
+            _existingWound set [1, _newAmountOf];
+            private _newBleeding = (_oldAmountOf * _oldBleeding + _bleeding) / _newAmountOf;
+            _existingWound set [2, _newBleeding];
+            private _newDamage = (_oldAmountOf * _oldDamage + _woundDamage) / _newAmountOf;
+            _existingWound set [3, _newDamage];
+        } else {
+            // Format [classComplex, amountOf, bleedingRate, woundDamage].
+            // Most wounds merge, so only allocate a row when adding a new one.
+            private _injury = [_classComplex, 1, _bleeding, _woundDamage];
             TRACE_1("adding new wound",_injury);
             _existingWounds pushBack _injury;
         };
@@ -203,7 +200,7 @@ if (_createdWounds) then {
 
     [QEGVAR(medical,injured), [_unit, _painLevel]] call CBA_fnc_localEvent;
 
-    if (_criticalDamage || {_painLevel > PAIN_UNCONSCIOUS}) then {
+    if ((_criticalDamage || {_painLevel > PAIN_UNCONSCIOUS}) && {alive _unit}) then {
         [_unit] call FUNC(handleIncapacitation);
     };
 

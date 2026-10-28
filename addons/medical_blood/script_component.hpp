@@ -20,3 +20,7 @@
 #define BLOOD_DISABLED     0
 #define BLOOD_ONLY_PLAYERS 1
 #define BLOOD_ENABLED      2
+
+// Blood drops of spurts are created over about this many frames, with at least this many per frame
+#define DROP_QUEUE_FRAMES 10
+#define DROP_QUEUE_MIN_DROPS 2

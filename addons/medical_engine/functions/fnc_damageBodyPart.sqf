@@ -28,17 +28,19 @@ TRACE_3("damageBodyPart",_unit,_selection,_damage);
 
 _damage = [0, DAMAGED_MIN_THRESHOLD] select _damage;
 
-switch (toLowerANSI _selection) do {
-    case ("head"): {
-        _unit setHitPointDamage ["HitHead", _damage];
-    };
-    case ("body"): {
-        _unit setHitPointDamage ["HitBody", _damage];
-    };
-    case ("arms"): {
-        _unit setHitPointDamage ["HitHands", _damage];
-    };
+private _hitPoint = switch (toLowerANSI _selection) do {
+    case ("head"): {"HitHead"};
+    case ("body"): {"HitBody"};
+    case ("arms"): {"HitHands"};
     case ("legs"): {
-        _unit setHitPointDamage ["HitLegs", _damage + ([0, LIMPING_MIN_DAMAGE] select (_unit getVariable [QEGVAR(medical,isLimping), false]))];
+        _damage = _damage + ([0, LIMPING_MIN_DAMAGE] select (_unit getVariable [QEGVAR(medical,isLimping), false]));
+        "HitLegs"
     };
+    default {""};
+};
+
+// Every wound refreshes these, but they rarely change (e.g. bodies hit again and again)
+// Skip setting (and broadcasting) the same value again
+if (_hitPoint != "" && {_unit getHitPointDamage _hitPoint != _damage}) then {
+    _unit setHitPointDamage [_hitPoint, _damage];
 };
