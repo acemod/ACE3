@@ -16,8 +16,9 @@
  */
 
 visibleMap &&
-{alive ACE_player} &&
+{(alive ACE_player) &&
 {!GVAR(mapTool_isDragging)} &&
 {!GVAR(mapTool_isRotating)} &&
 {ACE_player getSlotItemName TYPE_MAP != ""} &&
 {[ACE_player, "ACE_MapTools"] call EFUNC(common,hasItem)}
+}

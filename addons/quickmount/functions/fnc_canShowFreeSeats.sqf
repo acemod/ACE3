@@ -32,7 +32,7 @@ private _isInVehicle = _unit in _vehicle;
 TRACE_6("canShowFreeSeats",_vehicle,typeOf _vehicle,_unit,_isInVehicle,_menu,_useCache);
 
 GVAR(enabled)
-&& {
+&& {(
     if (_menu) then {
         // add 3d interactions for vehicles now
         GVAR(initializedVehicleClasses) getOrDefaultCall [typeOf _vehicle, {
@@ -49,7 +49,7 @@ GVAR(enabled)
             default {false};
         }
     }
-}
+)
 && {alive _vehicle}
 && {locked _vehicle < 2}
 && {isNull getConnectedUAVUnit _unit}
@@ -58,4 +58,4 @@ GVAR(enabled)
 && {
     vectorUp _vehicle select 2 > 0.3 // moveIn* and GetIn* don't work for flipped vehicles
     || {_vehicle isKindOf "Air"} // except Air
-}
+}}
