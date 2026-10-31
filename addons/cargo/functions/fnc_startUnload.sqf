@@ -15,18 +15,18 @@
  * Public: No
  */
 
+params ["_unit"];
+
 // This can be an object or a classname string
-private _item = call FUNC(getSelectedItem);
+private _item = GVAR(isViv) call FUNC(getSelectedItem);
 
 if (isNil "_item") exitWith {};
-
-params ["_unit"];
 
 if (GVAR(interactionParadrop)) exitWith {
     // Close the cargo menu
     closeDialog 0;
 
-    private _duration = [_item, true] call FUNC(getDelayItem);
+    private _duration = [_item, true, GVAR(isViv)] call FUNC(getDelayItem);
 
     // If drop time is 0, don't show a progress bar
     if (_duration <= 0) exitWith {
@@ -66,44 +66,60 @@ if (GVAR(interactionParadrop)) exitWith {
 // If in zeus
 if (!isNull curatorCamera) exitWith {
     // Do not check distance to unit, but do check for valid position
-    if !([_item, GVAR(interactionVehicle), objNull, true] call FUNC(canUnloadItem)) exitWith {
+    // If ViV, ignore position, as engine will find one
+    if !([_item, GVAR(interactionVehicle), objNull, true, GVAR(isViv), GVAR(isViv)] call FUNC(canUnloadItem)) exitWith {
         [[LSTRING(unloadingFailed), [_item, true] call FUNC(getNameItem)], 3] call EFUNC(common,displayTextStructured);
     };
 
     // Close the cargo menu
     closeDialog 1;
 
-    ["ace_unloadCargo", [_item, GVAR(interactionVehicle)]] call CBA_fnc_localEvent;
+    if (GVAR(isViv)) then {
+        objNull setVehicleCargo _item;
+    } else {
+        ["ace_unloadCargo", [_item, GVAR(interactionVehicle)]] call CBA_fnc_localEvent;
+    };
 };
 
 // Start progress bar - normal ground unload
-if ([_item, GVAR(interactionVehicle), _unit] call FUNC(canUnloadItem)) then {
+// If ViV, ignore position, as engine will find one
+if ([_item, GVAR(interactionVehicle), _unit, false, GVAR(isViv), GVAR(isViv)] call FUNC(canUnloadItem)) then {
     // Close the cargo menu
     closeDialog 0;
 
-    private _duration = [_item, false] call FUNC(getDelayItem);
+    private _duration = [_item, false, GVAR(isViv)] call FUNC(getDelayItem);
 
     // If unload time is 0, don't show a progress bar
     if (_duration <= 0) exitWith {
-        ["ace_unloadCargo", [_item, GVAR(interactionVehicle), _unit]] call CBA_fnc_localEvent;
+        if (GVAR(isViv)) then {
+            objNull setVehicleCargo _item;
+        } else {
+            ["ace_unloadCargo", [_item, GVAR(interactionVehicle), _unit]] call CBA_fnc_localEvent;
+        };
     };
 
     [
         _duration,
-        [_item, GVAR(interactionVehicle), _unit],
+        [_item, GVAR(interactionVehicle), _unit, GVAR(isViv)],
         {
             TRACE_1("unload finish",_this);
 
-            ["ace_unloadCargo", _this select 0] call CBA_fnc_localEvent;
+            // Is ViV
+            // Don't want to pass the isViv parameter to the ace_unloadCargo EH
+            if ((_this select 0) deleteAt 3) then {
+                objNull setVehicleCargo (_this select 0 select 0);
+            } else {
+                ["ace_unloadCargo", _this select 0] call CBA_fnc_localEvent;
+            };
         },
         {
             TRACE_1("unload fail",_this);
         },
         format [LLSTRING(unloadingItem), [_item, true] call FUNC(getNameItem), getText (configOf GVAR(interactionVehicle) >> "displayName")],
         {
-            (_this select 0) params ["_item", "_vehicle", "_unit"];
+            (_this select 0) params ["_item", "_vehicle", "_unit", "_isViv"];
 
-            [_item, _vehicle, _unit, false, true] call FUNC(canUnloadItem) // don't check for a suitable unloading position every frame
+            [_item, _vehicle, _unit, false, true, _isViv] call FUNC(canUnloadItem) // Don't check for a suitable unloading position every frame
         },
         ["isNotSwimming"]
     ] call EFUNC(common,progressBar);

@@ -42,6 +42,47 @@ class Cfg3DEN {
                         condition = "1-objectBrain";
                         typeName = "NUMBER";
                     };
+                    class GVAR(canLoadViv) {
+                        displayName = CSTRING(canLoadViv_edenName);
+                        tooltip = CSTRING(canLoadViv_edenDesc);
+                        property = QGVAR(canLoadViv);
+                        control = "Combo";
+
+                        // 0 = default (do nothing), 1 = force on, 2 = force off
+                        expression = QUOTE(if (_value != 0) then {[ARR_2(_this,_value == 1)] call DFUNC(setCanLoadViv)});
+                        defaultValue = "0";
+
+                        class Values {
+                            class Default {
+                                name = CSTRING(canLoadViv_default);
+                                value = 0;
+                            };
+                            class ForceOn {
+                                name = CSTRING(canLoadViv_forceOn);
+                                value = 1;
+                            };
+                            class ForceOff {
+                                name = CSTRING(canLoadViv_forceOff);
+                                value = 2;
+                            };
+                        };
+
+                        condition = "1-objectBrain";
+                        typeName = "NUMBER";
+                    };
+                    class GVAR(disableVivCarrier) {
+                        displayName = CSTRING(disableVivCarrier_edenName);
+                        tooltip = CSTRING(disableVivCarrier_edenDesc);
+                        property = QGVAR(disableVivCarrier);
+                        control = "Checkbox";
+
+                        // Only set when enabled, so the default stays "no variable"
+                        expression = QUOTE(if (_value) then {_this setVariable [ARR_3(QQGVAR(disableVivCarrier),true,true)]});
+                        defaultValue = "false";
+
+                        condition = "objectVehicle";
+                        typeName = "BOOL";
+                    };
                 };
             };
         };
