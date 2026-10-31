@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="WeaponOnBack">
+        <Key ID="STR_ACE_WeaponOnBack_FakeWeaponDisplayName">
+            <English>Weapon on back</English>
+            <German>Waffe auf dem Rücken</German>
+        </Key>
+        <Key ID="STR_ACE_WeaponOnBack_RenderLimit">
+            <English>Render limit</English>
+            <German>Renderlimit</German>
+        </Key>
+        <Key ID="STR_ACE_WeaponOnBack_RenderLimitDescription">
+            <English>Limit the amount of weapons on backs to be rendered (-1 for no limit).</English>
+            <German>Limitiert die Anzahl der Waffen auf dem Rücken die gerendert werden (-1 bedeutet kein Limit).</German>
+        </Key>
+        <Key ID="STR_ACE_WeaponOnBack_CouldNotFit">
+            <English>Could not fit %1 into %2.</English>
+            <German>%1 passt nicht in %2.</German>
+        </Key>
+    </Package>
+</Project>
