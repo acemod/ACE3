@@ -13,7 +13,8 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             aiming = "aimingNo";
             aimingBody = "aimingUpNo";
             head = "headNo";
-
+            collisionShape = "A3\anims_f\Data\Geom\Sdr\geom_empty.p3d"; //Allows for units to walk through/step over the body
+            collisionShapeSafe = "A3\anims_f\Data\Geom\Sdr\geom_empty.p3d";
             file = QPATHTO_T(data\ace_unconscious_1.rtm);
         };
 
@@ -79,10 +80,16 @@ class CfgMovesMaleSdr: CfgMovesBasic {
 
         /* added for the "ace_unc" part */
         class KIA_passenger_boat_holdleft;
-        class UNCON_ANIM(9): KIA_passenger_boat_holdleft {};
+        class UNCON_ANIM(9): KIA_passenger_boat_holdleft {
+          collisionShape = "A3\anims_f\Data\Geom\Sdr\geom_empty.p3d";
+          collisionShapeSafe = "A3\anims_f\Data\Geom\Sdr\geom_empty.p3d";
+        };
 
         class KIA_driver_boat01;
-        class UNCON_ANIM(10): KIA_driver_boat01 {};
+        class UNCON_ANIM(10): KIA_driver_boat01 {
+          collisionShape = "A3\anims_f\Data\Geom\Sdr\geom_empty.p3d";
+          collisionShapeSafe = "A3\anims_f\Data\Geom\Sdr\geom_empty.p3d";
+        };
 
         class Unconscious;
         class UNCON_ANIM(faceDown): Unconscious {};
