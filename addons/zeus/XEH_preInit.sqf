@@ -12,7 +12,8 @@ if (isServer) then {
     // Only add an InitPost EH if setting is enabled (and apply retroactively)
     ["CBA_settingsInitialized", {
         if (GVAR(autoAddObjects)) then {
-            ["AllVehicles", "InitPost", LINKFUNC(addObjectToCurator), true, [], true] call CBA_fnc_addClassEventHandler;
+            private _exclude = [QEGVAR(fastroping,helper), "ACE_friesBase", QEGVAR(refuel,helper), QEGVAR(towing,helper)];
+            ["AllVehicles", "InitPost", LINKFUNC(addObjectToCurator), true, _exclude, true] call CBA_fnc_addClassEventHandler;
         };
     }] call CBA_fnc_addEventHandler;
 };
