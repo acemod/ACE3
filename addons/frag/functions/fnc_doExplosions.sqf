@@ -18,7 +18,7 @@
 params ["_args", "_pfhID"];
 _args params ["_explosions", "_index"];
 
-private _lastIndex = (_index + 2) min ((count _explosions) - 1);
+private _lastIndex = (_index + 1) min ((count _explosions) - 1);
 
 for "_i" from _index to _lastIndex do {
     private _exp = _explosions select _i;
