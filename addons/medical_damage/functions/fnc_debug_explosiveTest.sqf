@@ -13,7 +13,7 @@
  * 2: Unit class to spawn <STRING> (default: "B_Soldier_F")
  * 3: Ammo class to spawn, "" or nil to skip <STRING> (default: "")
  * 4: Delay between unit placement and ammo spawning in seconds <NUMBER> (default: 1)
- * 5: Function to run on each unit that is spawned, nil to skip; params [_unit, _center, _ammoClass] <CODE or NIL>
+ * 5: Function to run on each unit that is spawned, params [_unit, _center, _ammoClass] <CODE> (optional)
  *
  * Return Value:
  * None
