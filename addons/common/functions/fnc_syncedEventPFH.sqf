@@ -4,8 +4,7 @@
  * Server PFH that removes expired entries from the synced event logs.
  *
  * Arguments:
- * 0: PFH arguments (not used) <ARRAY>
- * 1: PFH handle (not used) <NUMBER>
+ * None
  *
  * Return Value:
  * None

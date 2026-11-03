@@ -6,14 +6,13 @@
  * Arguments:
  * 0: PositionASL <ARRAY>
  * 1: PositionASL <ARRAY>
- * 2: Accuracy (not used) <NUMBER>
  *
  * Return Value:
  * 0: Intersects <BOOL>
  * 1: Intersection Position ASL <ARRAY>
  *
  * Example:
- * [[1,2,3], [0,0,5], 5] call ace_common_fnc_getFirstObjectIntersection
+ * [[1,2,3], [0,0,5]] call ace_common_fnc_getFirstObjectIntersection
  *
  * Public: Yes
  */
