@@ -8,8 +8,6 @@
  * 1: Timestep <NUMBER>
  * 2: Seeker Target PosASL (not used) <ARRAY>
  * 3: Profile Adjusted Target PosASL <ARRAY>
- * 4: Target Data (not used) <ARRAY>
- * 5: Navigation Parameters (not used) <ARRAY>
  *
  * Return Value:
  * Commanded acceleration normal to LOS in world space <ARRAY>

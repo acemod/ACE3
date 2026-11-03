@@ -5,7 +5,6 @@
  *
  * Arguments:
  * 0: Guidance Arg Array <ARRAY>
- * 1: Timestep (not used) <NUMBER>
  *
  * Return Value:
  * Transition to next navigation state <BOOL>

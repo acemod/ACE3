@@ -9,8 +9,6 @@
  * 2: Flight Parameters (not used) <ARRAY>
  * 3: Seeker Parameters <ARRAY>
  * 4: State Parameters <ARRAY>
- * 5: Target Data (not used) <ARRAY>
- * 6: Navigation State Parameters (not used) <ARRAY>
  *
  * Return Value:
  * None
