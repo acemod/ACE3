@@ -4,7 +4,7 @@
  * Handles clicking the setWP button from the waypoint application
  *
  * Arguments:
- * The "SetWP" button <CONTROL>
+ * 0: The "SetWP" button <CONTROL>
  *
  * Return Value:
  * None

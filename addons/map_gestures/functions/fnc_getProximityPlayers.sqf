@@ -4,11 +4,12 @@
  * Returns all players in a given range and in the units vehicle.
  *
  * Arguments:
- * 0: Positions (objects or posAGLs) <ARRAY>
- * 1: Range <NUMBER>
+ * Positions with render range, or briefing mode (0: All, 1: Group, 2: Side, 3: Proximity, 4: Disabled) <ARRAY of ARRAYs or NUMBER>
+ * - 0: Object or position AGL <OBJECT or ARRAY>
+ * - 1: Range <NUMBER> (default: ace_map_gestures_maxRange)
  *
  * Return Value:
- * All units in proximity with Distances to render from <ARRAY<ARRAY<OBJECT, NUMBER>>>
+ * Players in proximity <ARRAY of OBJECTs>
  *
  * Example:
  * [[[player, 6]]] call ace_map_gestures_fnc_getProximityPlayers

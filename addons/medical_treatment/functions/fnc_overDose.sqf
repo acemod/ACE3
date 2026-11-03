@@ -8,7 +8,7 @@
  * 1: Medication classname <STRING>
  * 2: Medication dosage <NUMBER>
  * 3: Overdose threshold <NUMBER>
- * 4: Incompatible medication that caused overdose (can be the medication itself) <STRING> (default: "")
+ * 4: Incompatible medication that caused overdose (can be the medication itself) <STRING>
  *
  * Return Value:
  * None

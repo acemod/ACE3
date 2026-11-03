@@ -7,14 +7,14 @@
  * Arguments:
  * 0: Arsenal display <DISPLAY>
  * 1: Panel the change originated from (an IDC_button* constant) <NUMBER>
- * 2: Item counts before the change, classname -> count <HASHMAP>
- * 3: Item counts after the change, classname -> count <HASHMAP>
+ * 2: Item counts before the change (classname: count) <HASHMAP>
+ * 3: Item counts after the change (classname: count) <HASHMAP>
  *
  * Return Value:
  * None
  *
  * Public: No
-*/
+ */
 
 params ["_display", "_panel", "_oldCounts", "_newCounts"];
 

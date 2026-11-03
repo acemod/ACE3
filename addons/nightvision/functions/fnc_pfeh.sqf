@@ -5,7 +5,8 @@
  * Updates UI scale on every frame, effects are updated less often.
  *
  * Arguments:
- * 1: PFEH ID <NUMBER>
+ * 0: PFEH Args (not used) <ARRAY>
+ * 1: PFEH ID (not used) <NUMBER>
  *
  * Return Value:
  * None

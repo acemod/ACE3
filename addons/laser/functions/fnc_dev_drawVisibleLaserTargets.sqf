@@ -2,9 +2,9 @@
 
 /*
  * Author: ACE-Team
+ * Dev debug: draws laser targets, rays and seeker locks in 3D (Draw3D handler).
  *
- *
- * Argument:
+ * Arguments:
  * None
  *
  * Return Value:

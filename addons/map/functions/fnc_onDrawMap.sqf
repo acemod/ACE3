@@ -1,16 +1,16 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- *
+ * Updates map display elements on draw: shows/hides the cursor coordinates and the clock.
  *
  * Arguments:
- * Something
+ * 0: Map display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * call ACE_map_fnc_onDrawMap
+ * [findDisplay 12] call ace_map_fnc_onDrawMap
  *
  * Public: No
  */

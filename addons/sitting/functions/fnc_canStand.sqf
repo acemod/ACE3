@@ -4,7 +4,7 @@
  * Check if the player can stand up (is in sitting position).
  *
  * Arguments:
- * Player <OBJECT>
+ * 0: Player <OBJECT>
  *
  * Return Value:
  * Can Stand Up <BOOL>

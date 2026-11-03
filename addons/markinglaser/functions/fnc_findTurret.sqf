@@ -7,7 +7,7 @@
  * 0: Aircraft config <CONFIG>
  *
  * Return Value:
- * <ARRAY>
+ * Turret path and turret config, or empty array if none found <ARRAY>
  *
  * Example:
  * [configOf _plane] call ace_markinglaser_fnc_findTurret

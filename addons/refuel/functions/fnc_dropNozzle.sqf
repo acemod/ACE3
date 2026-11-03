@@ -4,9 +4,9 @@
  * Detaches the fuel nozzle, drops it and removes player variables.
  *
  * Arguments:
- * 0: Unit <OBJECT> (default: objNull)
+ * 0: Unit <OBJECT>
  * 1: Nozzle <OBJECT>
- * 2: Ground position to drop to <ARRAY> (default: nozzle's current position)
+ * 2: Position ASL to drop from <ARRAY> (default: nozzle's current position)
  *
  * Return Value:
  * None

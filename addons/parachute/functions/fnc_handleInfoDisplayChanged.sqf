@@ -4,13 +4,14 @@
  * Hides the height and velocity display while freefalling or parachuting on higher difficulties.
  *
  * Arguments:
- * Stuff from infoDisplayChanged eventhandler. <UNKNOWN>
+ * 0: Info display <DISPLAY>
+ * 1: Info display type <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [?] call ACE_parachute_fnc_handleInfoDisplayChanged
+ * [_display, "Soldier"] call ace_parachute_fnc_handleInfoDisplayChanged
  *
  * Public: No
  */

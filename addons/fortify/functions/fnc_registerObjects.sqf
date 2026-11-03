@@ -8,7 +8,10 @@
  * Arguments:
  * 0: Side <SIDE>
  * 1: Budget <NUMBER>
- * 2: Object classnames in format [classname, cost, category (optional)] <ARRAY<STRING, NUMBER, STRING>>
+ * 2: Objects <ARRAY of ARRAYs>
+ *     0: Classname <STRING>
+ *     1: Cost <NUMBER>
+ *     2: Category <STRING> (default: "")
  *
  * Return Value:
  * None

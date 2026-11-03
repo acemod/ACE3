@@ -4,7 +4,9 @@
  * Initialises the explosives module
  *
  * Arguments:
- * Module things.
+ * 0: Logic <OBJECT>
+ * 1: Synchronized Units (not used) <ARRAY>
+ * 2: Module Activated (not used) <BOOL>
  *
  * Return Value:
  * None

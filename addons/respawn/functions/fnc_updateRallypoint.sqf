@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Rallypoint <OBJECT>
  * 1: Side <SIDE>
- * 2: Position <ARRAY>
+ * 2: Position <ARRAY> (default: getPos Rallypoint)
  *
  * Return Value:
  * None

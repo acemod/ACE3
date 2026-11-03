@@ -4,7 +4,7 @@
  * Handles visual changes of the speed indicator.
  *
  * Arguments:
- * Current animation state <STRING>
+ * 0: Current animation state <STRING>
  *
  * Return Value:
  * None

@@ -4,7 +4,7 @@
  * Bind all required EventHandlers to Player map.
  *
  * Arguments:
- * None
+ * 0: Diary map control <CONTROL>
  *
  * Return Value:
  * None

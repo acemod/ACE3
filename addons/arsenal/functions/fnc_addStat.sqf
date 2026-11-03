@@ -13,14 +13,14 @@
  * 4: Show bar / show text bools <ARRAY of BOOLs>
  * - 0: Show bar <BOOL> (default: false)
  * - 1: Show text <BOOL> (default: false)
- * 5: Array of statements <ARRAY of CODE>
+ * 5: Array of statements <ARRAY of CODEs>
  * - 0: Bar code <CODE> (default: {})
  * - 1: Text code <CODE> (default: {})
  * - 2: Condition code <CODE> (default: {true})
  * 6: Priority <NUMBER> (default: 0)
  *
  * Return Value:
- * 0: Array of IDs <ARRAY of STRINGs>
+ * Array of IDs <ARRAY of STRINGs>
  *
  * Example:
  * [[[0, 1, 2], [7]], "scopeStat", ["scope"], "Scope", [false, true], [{}, {

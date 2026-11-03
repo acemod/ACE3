@@ -4,7 +4,7 @@
  * Adds an object to curator upon spawn
  *
  * Arguments:
- * Object <OBJECT>
+ * 0: Object <OBJECT>
  *
  * Return Value:
  * None

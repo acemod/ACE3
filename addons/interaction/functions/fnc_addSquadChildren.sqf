@@ -4,7 +4,9 @@
  * Gets the squad child actions
  *
  * Arguments:
+ * 0: Target (not used) <OBJECT>
  * 1: Player <OBJECT>
+ * 2: Action parameters (not used) <ARRAY>
  *
  * Return Value:
  * Children actions <ARRAY>

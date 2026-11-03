@@ -7,7 +7,7 @@
  * None (uses local variable _target)
  *
  * Return Value:
- * Children actions <ARRAY>
+ * Action position in model space <ARRAY>
  *
  * Example:
  * call ace_interaction_fnc_getWeaponPos

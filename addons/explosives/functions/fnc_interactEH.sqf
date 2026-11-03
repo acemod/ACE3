@@ -5,13 +5,13 @@
  * Called by the "ace_interactMenuOpened" event.
  *
  * Arguments:
- * Interact Menu Type (0 - World, 1 - Self) <NUMBER>
+ * 0: Interact Menu Type (0 - World, 1 - Self) <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * 0 call ace_explosives_fnc_interactEH
+ * [0] call ace_explosives_fnc_interactEH
  *
  * Public: No
  */

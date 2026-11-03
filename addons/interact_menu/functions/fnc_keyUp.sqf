@@ -5,12 +5,13 @@
  *
  * Arguments:
  * 0: Type of key: 0 interaction / 1 self interaction <NUMBER>
+ * 1: Called by clicking <BOOL>
  *
  * Return Value:
  * true <BOOL>
  *
  * Example:
- * [1] call ACE_interact_menu_fnc_keyUp
+ * [1, false] call ACE_interact_menu_fnc_keyUp
  *
  * Public: No
  */

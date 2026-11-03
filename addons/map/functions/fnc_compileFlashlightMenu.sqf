@@ -4,9 +4,9 @@
  * Compile list of flashlight classnames and add to the "Flashlight" parent menu.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: Target (not used) <OBJECT>
  * 1: Player <OBJECT>
- * 3: Parameters <ARRAY>
+ * 2: Action parameters (not used) <ARRAY>
  *
  * Return Value:
  * None

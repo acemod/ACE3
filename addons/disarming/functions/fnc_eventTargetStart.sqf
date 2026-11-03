@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Caller <OBJECT>
  * 1: Target <OBJECT>
- * 2: Item to remove (even if it's 1 item, array is kept for BWC) <ARRAY of STRING>
+ * 2: Items to remove (even if it's 1 item, array is kept for BWC) <ARRAY of STRINGs>
  * 3: Amount of item to remove (not used) <NUMBER>
  *
  * Return Value:

@@ -4,9 +4,14 @@
  * Produces a casing matching the fired weapons caliber on the ground around the unit
  *
  * Arguments:
- * 0: unit - Object the event handler is assigned to <OBJECT>
- * 4: ammo - Ammo used <STRING>
- * 7: vehicle - vehicle, if weapon is vehicle weapon, otherwise objNull <OBJECT>
+ * 0: Unit <OBJECT>
+ * 1: Weapon (not used) <STRING>
+ * 2: Muzzle (not used) <STRING>
+ * 3: Mode (not used) <STRING>
+ * 4: Ammo <STRING>
+ * 5: Magazine (not used) <STRING>
+ * 6: Projectile (not used) <OBJECT>
+ * 7: Vehicle, if weapon is vehicle weapon, otherwise objNull <OBJECT>
  *
  * Return Value:
  * None

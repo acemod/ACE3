@@ -7,7 +7,7 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * True if unit can put on electronic hearing protection, otherwise false.
+ * Can put on electronic hearing protection <BOOL>
  *
  * Example:
  * [player] call ace_hearing_fnc_canPutOnEHP

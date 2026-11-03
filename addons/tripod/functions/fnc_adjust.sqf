@@ -4,7 +4,8 @@
  * Adjust tripod height
  *
  * Arguments:
- * 0: tripod <OBJECT>
+ * 0: Unit <OBJECT>
+ * 1: Tripod <OBJECT>
  *
  * Return Value:
  * None

@@ -4,7 +4,9 @@
  * Equips synched helicopters with a FRIES.
  *
  * Arguments:
- * 0: Module <LOGIC>
+ * 0: Module logic <OBJECT>
+ * 1: Units <ARRAY> (unused)
+ * 2: Activated <BOOL> (unused)
  *
  * Return Value:
  * None

@@ -4,7 +4,12 @@
  * Handler function for finding position and direction of a vanilla laser.
  *
  * Arguments:
- * 0: Vehicle (shooter of laser) <OBJECT>
+ * 0: Emitter (vehicle that is the laser source) <OBJECT>
+ * 1: Owner (not used) <OBJECT>
+ * 2: Method (not used) <STRING>
+ * 3: Wavelength (not used) <NUMBER>
+ * 4: Laser code (not used) <NUMBER>
+ * 5: Beam divergence (not used) <NUMBER>
  * 6: Method Args <ARRAY>
  * - 0: Laser Source selection on Vehicle <STRING>
  *

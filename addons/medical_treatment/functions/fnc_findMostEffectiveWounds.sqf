@@ -8,10 +8,12 @@
  * 1: Treatment classname <STRING>
  * 2: Body part <STRING>
  * 3: Amount of bandage remaining <NUMBER> (default: 1)
- * 4: Wounds found from prior runs of the function <HASHMAP> (default: Empty Hashmap)
+ * 4: Wounds found by earlier runs of the function, same format as the return value <HASHMAP> (default: createHashMap)
  *
  * Return Value:
- * [Wound, [Effectiveness, Index, Impact]] <HASHMAP<<ARRAY>:<ARRAY<NUMBER, NUMBER, NUMBER>>>
+ * Wounds to treat <HASHMAP>
+ * - key: Wound [class ID, amount, bleeding, damage] <ARRAY>
+ * - value: [effectiveness, wound index, impact] <ARRAY of NUMBERs>
  *
  * Example:
  * [cursorObject, "FieldDressing", "rightleg"] call ace_medical_treatment_fnc_findMostEffectiveWounds

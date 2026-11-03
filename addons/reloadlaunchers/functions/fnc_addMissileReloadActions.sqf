@@ -14,7 +14,6 @@
  * [cursorTarget, player] call ace_reloadlaunchers_fnc_addMissileReloadActions
  *
  * Public: No
- *
  */
 
 params ["_target", "_unit"];

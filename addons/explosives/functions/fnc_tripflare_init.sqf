@@ -4,16 +4,15 @@
  * Spawns a flare on the ground for tripflare trigger.
  *
  * Arguments:
- * 0: Ammo <OBJECT>
- * 1: Position ASL (not used) <ARRAY>
+ * 0: Tripflare <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [cursorObject, [0, 0, 0]] call ace_explosives_fnc_tripflare_init
+ * [cursorObject] call ace_explosives_fnc_tripflare_init
  *
- * Public: no
+ * Public: No
  */
 
 params ["_mine"];

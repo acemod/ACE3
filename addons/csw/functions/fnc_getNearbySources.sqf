@@ -8,7 +8,7 @@
  * 0: Unit or vehicle attempting to load <OBJECT>
  *
  * Return Value:
- * Ammo sources <ARRAY of OBJECT>
+ * Ammo sources <ARRAY of OBJECTs>
  *
  * Example:
  * [player] call ace_csw_fnc_getNearbySources

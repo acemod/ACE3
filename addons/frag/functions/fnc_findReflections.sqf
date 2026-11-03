@@ -1,16 +1,17 @@
 #include "..\script_component.hpp"
 /*
  * Author: ACE-Team
- *
+ * PFH that searches for blast reflection positions around an explosion and queues reflected explosions.
  *
  * Arguments:
- * None
+ * 0: PFH Args <ARRAY>
+ * 1: PFH ID <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * call ace_frag_fnc_findReflections
+ * [ace_frag_fnc_findReflections, 0, [_posASL, [_indirectHitRange, _indirectHit], [], [], -4, 1, 0]] call CBA_fnc_addPerFrameHandler
  *
  * Public: No
  */

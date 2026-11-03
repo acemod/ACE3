@@ -7,12 +7,13 @@
  * 0: Litter Class <STRING>
  * 1: Position ASL <ARRAY>
  * 2: Direction <NUMBER>
+ * 3: Surface normal <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * ["Litter_1", [100, 100, 0], 90] call ace_medical_treatment_fnc_createLitterServer
+ * ["Litter_1", [100, 100, 0], 90, [0, 0, 1]] call ace_medical_treatment_fnc_createLitterServer
  *
  * Public: No
  */

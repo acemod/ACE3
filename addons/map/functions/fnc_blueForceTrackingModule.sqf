@@ -4,13 +4,15 @@
  * Initializes the blue force tracking module.
  *
  * Arguments:
- * Whatever the module provides. (I dunno.) <UNKNOWN>
+ * 0: Logic <OBJECT>
+ * 1: Synchronized Units (not used) <ARRAY>
+ * 2: Module Activated (not used) <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * call ACE_map_fnc_blueForceTrackingModule
+ * [LOGIC, [bob, kevin], true] call ace_map_fnc_blueForceTrackingModule
  *
  * Public: No
  */

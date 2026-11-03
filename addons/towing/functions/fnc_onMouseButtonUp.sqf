@@ -4,13 +4,14 @@
  * Handles mouse interaction for attaching rope
  *
  * Arguments:
- * None
+ * 0: Display (not used) <DISPLAY>
+ * 1: Mouse button <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call ace_towing_fnc_onMouseButtonUp
+ * [findDisplay 46, 0] call ace_towing_fnc_onMouseButtonUp
  *
  * Public: No
  */

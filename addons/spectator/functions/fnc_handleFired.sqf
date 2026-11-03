@@ -4,7 +4,13 @@
  * Function used to add projectiles to be drawn when a unit fires
  *
  * Arguments:
- * Fired EH arguments
+ * 0: Unit or vehicle <OBJECT>
+ * 1: Weapon <STRING>
+ * 2: Muzzle (not used) <STRING>
+ * 3: Mode (not used) <STRING>
+ * 4: Ammo <STRING>
+ * 5: Magazine (not used) <STRING>
+ * 6: Projectile <OBJECT>
  *
  * Return Value:
  * None

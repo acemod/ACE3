@@ -5,12 +5,14 @@
  * Handles keyboard inputs in medical menu.
  *
  * Arguments:
+ * 0: Event name (not used) <STRING>
  * 1: Args <ARRAY>
  * - 0: Menu display <DISPLAY>
  * - 1: Key being pressed <NUMBER>
  * - 2: Shift state <BOOL>
  * - 3: Ctrl state <BOOL>
  * - 4: Alt state <BOOL>
+ * 2: Display variable name (not used) <STRING>
  *
  * Return Value:
  * None
@@ -19,7 +21,7 @@
  * ["", [displayNull, 5, false, false, false]] call ace_medical_gui_fnc_onKeyDown
  *
  * Public: No
-*/
+ */
 // TODO: Is the airway category ever visible? Can the dynamic category stuff be removed?
 
 #define NUMBER_KEYS [DIK_1, DIK_2, DIK_3, DIK_4, DIK_5, DIK_6, DIK_7, DIK_8, DIK_9, DIK_0]

@@ -11,7 +11,7 @@
  * 4: Dry Run - Just test if possible (can run on clients) <BOOL> (default: false)
  *
  * Return Value:
- * <ARRAY>
+ * Result <ARRAY>
  * 0: Success <BOOL>
  * 1: Failure reason <STRING>
  * 2: Extra info <ANY>

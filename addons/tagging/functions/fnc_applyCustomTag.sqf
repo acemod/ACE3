@@ -11,6 +11,7 @@
  * 4: Icon Path <STRING> (default: "")
  * 5: Material Paths <ARRAY>
  * 6: Tag Model <STRING> (optional)
+ * 7: Condition <CODE> (default: {true})
  *
  * Return Value:
  * None

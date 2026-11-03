@@ -8,7 +8,7 @@
  * 1: Key Name <STRING>
  *
  * Return Value:
- * <STRING>
+ * Keybind name <STRING>
  *
  * Example:
  * ["ACE3 Common", "ace_interact_menu_selfInteractKey"] call ace_fieldmanual_fnc_getKeybindName

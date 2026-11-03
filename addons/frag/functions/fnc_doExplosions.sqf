@@ -1,16 +1,19 @@
 #include "..\script_component.hpp"
 /*
  * Author: ACE-Team
- *
+ * PFH that creates the queued reflection explosions, a few per frame.
  *
  * Arguments:
- * None
+ * 0: PFH Args <ARRAY>
+ * - 0: Explosions to create <ARRAY>
+ * - 1: Index of next explosion <NUMBER>
+ * 1: PFH ID <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * call ace_frag_fnc_doExplosions
+ * [ace_frag_fnc_doExplosions, 0, [_explosions, 0]] call CBA_fnc_addPerFrameHandler
  *
  * Public: No
  */

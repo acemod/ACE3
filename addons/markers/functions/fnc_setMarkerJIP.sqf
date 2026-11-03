@@ -6,13 +6,12 @@
  * Arguments:
  * 0: Array of map marker names <ARRAY>
  * 1: Array of map marker data <ARRAY>
- * 2: Logic <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [[],[],dummyLogic] call ace_markers_fnc_setMarkerJIP;
+ * [[], []] call ace_markers_fnc_setMarkerJIP;
  *
  * Public: No
  */

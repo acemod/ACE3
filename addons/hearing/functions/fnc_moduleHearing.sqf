@@ -4,13 +4,15 @@
  * Initializes the Hearing module.
  *
  * Arguments:
- * Whatever the module provides. (I dunno.) <UNKNOWN>
+ * 0: Logic <OBJECT>
+ * 1: Synchronized Units (not used) <ARRAY>
+ * 2: Module Activated (not used) <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * player call ace_hearing_fnc_moduleHearing
+ * [LOGIC, [bob, kevin], true] call ace_hearing_fnc_moduleHearing
  *
  * Public: No
  */

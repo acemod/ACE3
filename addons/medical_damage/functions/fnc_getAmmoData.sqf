@@ -7,7 +7,10 @@
  * 0: Ammo <STRING>
  *
  * Return Value:
- * Base damage value, penetration factor, muzzle velocity <ARRAY of NUMBER>
+ * Ammo data <ARRAY of NUMBERs>
+ * - 0: Base damage (hit) <NUMBER>
+ * - 1: Penetration factor <NUMBER>
+ * - 2: Typical speed <NUMBER>
  *
  * Example:
  * "B_556x45_Ball" call ace_medical_damage_fnc_getAmmoData

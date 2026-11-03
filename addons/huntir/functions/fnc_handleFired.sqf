@@ -2,16 +2,22 @@
 /*
  * Author: Norrin, Rocko, Ruthberg
  *
- * Handles HuntIR projectiles. Called from the unified fired EH for the local player.
+ * Handles HuntIR projectiles. Called from the F_HuntIR ammo "fired" config event handler; only acts for the local player.
  *
  * Arguments:
- * None. Parameters inherited from EFUNC(common,firedEH)
+ * 0: Unit <OBJECT>
+ * 1: Weapon (not used) <STRING>
+ * 2: Muzzle (not used) <STRING>
+ * 3: Mode (not used) <STRING>
+ * 4: Ammo (not used) <STRING>
+ * 5: Magazine (not used) <STRING>
+ * 6: Projectile <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * call ACE_huntir_fnc_handleFired
+ * [player, "", "", "", "F_HuntIR", "", _projectile] call ace_huntir_fnc_handleFired
  *
  * Public: No
  */

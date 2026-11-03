@@ -7,7 +7,11 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * ARRAY
+ * Seat info, empty array if not in a vehicle <ARRAY>
+ * - 0: Role <STRING>
+ * - 1: Cargo index <NUMBER>
+ * - 2: Turret path <ARRAY>
+ * - 3: Compartment <STRING>
  *
  * Example:
  * [player] call ace_viewports_fnc_getSeatInfo

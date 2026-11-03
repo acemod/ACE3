@@ -4,7 +4,9 @@
  * Handles AI GetIn on an empty CSW.
  *
  * Arguments:
- * GetIn EH
+ * 0: CSW <OBJECT>
+ * 1: Role (not used) <STRING>
+ * 2: Unit that got in <OBJECT>
  *
  * Return Value:
  * None

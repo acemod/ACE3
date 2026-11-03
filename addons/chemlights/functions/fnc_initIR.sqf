@@ -4,7 +4,7 @@
  * Spawn IR marker for dummy IR physX object.
  *
  * Arguments:
- * 1: Dummy IR physX <OBJECT>
+ * 0: Dummy IR physX <OBJECT>
  *
  * Return Value:
  * None

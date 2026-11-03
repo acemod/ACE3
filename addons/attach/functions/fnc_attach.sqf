@@ -6,7 +6,8 @@
  * Arguments:
  * 0: vehicle that it will be attached to (player or vehicle) <OBJECT>
  * 1: unit doing the attach (player) <OBJECT>
- * 2: Array containing a string of the attachable item <ARRAY>
+ * 2: Classname of the attachable item (or array containing it) <STRING or ARRAY>
+ * 3: Silent scripted attach, skips checks and hint <BOOL> (default: false)
  *
  * Return Value:
  * None

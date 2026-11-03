@@ -6,12 +6,13 @@
  * Arguments:
  * 0: Source Unit (can be self) <OBJECT>
  * 1: Position being pointed at (ASL) <ARRAY>
+ * 2: Distance from source to pointed position <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [bob, [1,2,3]] call ace_finger_fnc_incomingFinger;
+ * [bob, [1,2,3], 10] call ace_finger_fnc_incomingFinger;
  *
  * Public: No
  */

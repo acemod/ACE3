@@ -4,13 +4,13 @@
  * Function to check ace_wardrobe configs for legacy properties
  *
  * Arguments:
- * - 
+ * None
  *
  * Return Value:
- * 
+ * None
  *
  * Example:
- * "" call ace_wardrobe_fnc_checkForLegacy
+ * call ace_wardrobe_fnc_checkForLegacy
  *
  * Public: No
  */

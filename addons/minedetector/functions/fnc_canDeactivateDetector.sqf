@@ -11,7 +11,7 @@
  * Can be deactivated <BOOL>
  *
  * Example:
- * call ace_minedetector_fnc_canDeactivateDetector
+ * [player] call ace_minedetector_fnc_canDeactivateDetector
  *
  * Public: No
  */
