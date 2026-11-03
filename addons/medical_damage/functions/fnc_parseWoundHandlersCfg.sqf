@@ -7,7 +7,7 @@
  * 0: The config class containing the entries <CONFIG>
  *
  * Return Value:
- * None
+ * Wound Handlers <ARRAY>
  *
  * Example:
  * [configFile >> "ace_medical_injuries" >> "damageTypes" >> "woundHandlers"] call ace_medical_damage_fnc_parseWoundHandlersCfg

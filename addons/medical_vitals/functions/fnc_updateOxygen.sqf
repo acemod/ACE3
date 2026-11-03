@@ -9,7 +9,7 @@
  * 2: Sync value? <BOOL>
  *
  * Return Value:
- * Current SPO2 <NUMBER>
+ * None
  *
  * Example:
  * [player, 1, false] call ace_medical_vitals_fnc_updateOxygen
