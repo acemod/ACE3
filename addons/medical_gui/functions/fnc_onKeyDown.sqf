@@ -12,7 +12,6 @@
  * - 2: Shift state <BOOL>
  * - 3: Ctrl state <BOOL>
  * - 4: Alt state <BOOL>
- * 2: Display variable name (not used) <STRING>
  *
  * Return Value:
  * None

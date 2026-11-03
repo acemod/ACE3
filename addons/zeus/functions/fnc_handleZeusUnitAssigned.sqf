@@ -10,13 +10,12 @@
  *
  * Arguments:
  * 0: The zeus (curator) logic <OBJECT>
- * 1: The zeus player <OBJECT> (unused)
  *
  * Return Value:
  * None
  *
  * Example:
- * [myCurator, bob] call ace_zeus_fnc_handleZeusUnitAssigned
+ * [myCurator] call ace_zeus_fnc_handleZeusUnitAssigned
  *
  * Public: No
  */

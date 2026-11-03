@@ -6,15 +6,12 @@
  * Arguments:
  * 0: Display <DISPLAY>
  * 1: Key code (DIK) <NUMBER>
- * 2: Shift <BOOL> (unused)
- * 3: Ctrl <BOOL> (unused)
- * 4: Alt <BOOL> (unused)
  *
  * Return Value:
  * Handled <BOOL>
  *
  * Example:
- * [findDisplay 46, 30, false, false, false] call ace_huntir_fnc_keyPressed
+ * [findDisplay 46, 30] call ace_huntir_fnc_keyPressed
  *
  * Public: No
  */

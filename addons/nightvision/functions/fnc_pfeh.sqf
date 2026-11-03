@@ -5,14 +5,13 @@
  * Updates UI scale on every frame, effects are updated less often.
  *
  * Arguments:
- * 0: PFEH Args (not used) <ARRAY>
- * 1: PFEH ID (not used) <NUMBER>
+ * None
  *
  * Return Value:
  * None
  *
  * Example:
- * [[], 1] call ace_nightvision_fnc_pfeh
+ * call ace_nightvision_fnc_pfeh
  *
  * Public: No
  */
