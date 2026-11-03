@@ -4,7 +4,13 @@
  * Copperhead: Missile Guidance's On fired - set attack profile settings
  *
  * Arguments:
- * Guidance Args <ARRAY>
+ * 0: Fired EH arguments <ARRAY>
+ * 1: Launch Parameters <ARRAY>
+ * 2: Flight Parameters (not used) <ARRAY>
+ * 3: Seeker Parameters (not used) <ARRAY>
+ * 4: State Parameters <ARRAY>
+ * 5: Target Data (not used) <ARRAY>
+ * 6: Navigation State Parameters (not used) <ARRAY>
  *
  * Return Value:
  * None

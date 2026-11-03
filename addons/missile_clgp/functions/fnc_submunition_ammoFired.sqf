@@ -4,10 +4,17 @@
  * Generic handler for firing a clgp submuntion ammo. Called from the ammo's fired EH.
  *
  * Arguments:
- * FiredEH
+ * 0: Unit <OBJECT>
+ * 1: Weapon <STRING>
+ * 2: Muzzle <STRING>
+ * 3: Mode <STRING>
+ * 4: Ammo <STRING>
+ * 5: Magazine <STRING>
+ * 6: Projectile <OBJECT>
+ * 7: Gunner <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [] call ace_missile_clgp_fnc_submunition_ammoFired

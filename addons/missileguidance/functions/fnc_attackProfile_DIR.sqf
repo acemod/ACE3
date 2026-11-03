@@ -6,8 +6,9 @@
  *
  * Arguments:
  * 0: Seeker Target PosASL <ARRAY>
- * 1: Guidance Arg Array <ARRAY>
- * 2: Seeker State <ARRAY>
+ * 1: Guidance Arg Array (not used) <ARRAY>
+ * 2: Attack Profile State (not used) <ARRAY>
+ * 3: Timestep (not used) <NUMBER>
  *
  * Return Value:
  * Missile Aim PosASL <ARRAY>

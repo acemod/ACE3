@@ -1,13 +1,13 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Switches away from the currently controlled camera
+ * Checks if the user is viewing through the given camera (or any camera if none is given)
  *
  * Arguments:
  * 0: Camera <OBJECT> (default: objNull)
  *
  * Return Value:
- * <BOOL>
+ * User is in camera <BOOL>
  *
  * Example:
  * [cam] call ace_spike_fnc_camera_userInCamera

@@ -4,7 +4,7 @@
  * Saves all textboxes to whatever settings say for PB mode
  *
  * Arguments:
- * Current PB mode <NUMBER>
+ * 0: Current PB mode <NUMBER>
  *
  * Return Value:
  * None

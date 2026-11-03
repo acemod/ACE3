@@ -4,10 +4,10 @@
  * Register default HUD for most missiles.
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [] call ace_missile_hud_fnc_registerDefaultHud

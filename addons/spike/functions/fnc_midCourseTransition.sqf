@@ -5,9 +5,10 @@
  *
  * Arguments:
  * 0: Guidance Arg Array <ARRAY>
+ * 1: Timestep (not used) <NUMBER>
  *
  * Return Value:
- * None
+ * Transition to next navigation state <BOOL>
  *
  * Example:
  * [] call ace_spike_fnc_midCourseTransition

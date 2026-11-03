@@ -4,7 +4,7 @@
  * Confirm GPS weapon settings and serialize to variables
  *
  * Arguments:
- * Guidance Arg Array <ARRAY>
+ * None
  *
  * Return Value:
  * None

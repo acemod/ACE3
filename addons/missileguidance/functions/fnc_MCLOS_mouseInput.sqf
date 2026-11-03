@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * Handled
+ * Input handled <BOOL>
  *
  * Example:
  * [] call ace_missileguidance_fnc_MCLOS_mouseInput

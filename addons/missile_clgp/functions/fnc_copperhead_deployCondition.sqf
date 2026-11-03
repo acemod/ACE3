@@ -7,7 +7,7 @@
  * 0: Projectile <OBJECT>
  *
  * Return Value:
- * <BOOL>
+ * Shell should deploy wings and become a missile <BOOL>
  *
  * Example:
  * [shell] call ace_missile_clgp_fnc_copperhead_deployCondition

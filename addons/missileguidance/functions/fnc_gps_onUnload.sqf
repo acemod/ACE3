@@ -4,7 +4,8 @@
  * Called on unload of GPS UI
  *
  * Arguments:
- * Display <NUMBER>
+ * 0: Display (not used) <DISPLAY>
+ * 1: Exit code (not used) <NUMBER>
  *
  * Return Value:
  * None

@@ -8,12 +8,12 @@
  * 1: Weapon <STRING>
  * 2: Muzzle (not used) <STRING>
  * 3: Mode <STRING>
- * 4: Ammo (in the future) <STRING>
+ * 4: Ammo <STRING>
  * 5: Magazine (not used) <STRING>
  * 6: Projectile <OBJECT>
  *
  * Return Value:
- * <ARRAY>
+ * Guidance Arg Array <ARRAY>
  *
  * Example:
  * [player, "", "", "", "ACE_Javelin_FGM148", "", theMissile] call ace_missileguidance_fnc_onFiredGetArgs

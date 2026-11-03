@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * <ARRAY>
+ * Copy of current attack settings [position, impact angle, attack heading] <ARRAY>
  *
  * Example:
  * [] call ace_missileguidance_fnc_gps_getAttackData

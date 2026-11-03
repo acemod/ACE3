@@ -5,7 +5,8 @@
  * Select either TOO or PB mode. Disable anything that shouldnt be touched in TOO and renable in PB
  *
  * Arguments:
- * Mode to switch to <NUMBER>
+ * 0: Mode to switch to (GPS_UI_TOO or GPS_UI_PB IDC) <NUMBER>
+ * 1: Called from onLoad <BOOL> (default: false)
  *
  * Return Value:
  * None

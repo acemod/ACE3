@@ -5,8 +5,11 @@
  * Handles a nil/bad return and will attempt to use last known position if enabled on ammo
  *
  * Arguments:
+ * 0: Seeker Target PosASL, always [0, 0, 0] <ARRAY>
  * 1: Guidance Arg Array <ARRAY>
+ * 2: Seeker State <ARRAY>
  * 3: Last known pos state array <ARRAY>
+ * 4: Timestep <NUMBER>
  *
  * Return Value:
  * Missile Aim PosASL <ARRAY>

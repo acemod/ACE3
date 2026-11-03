@@ -4,7 +4,7 @@
  * Cycle pre-briefed mission mode
  *
  * Arguments:
- * Direction <NUMBER>
+ * 0: Direction (-1: previous, 1: next) <NUMBER>
  *
  * Return Value:
  * None

@@ -7,9 +7,10 @@
  * 0: Seeker Target PosASL <ARRAY>
  * 1: Guidance Arg Array <ARRAY>
  * 2: Attack Profile State <ARRAY>
+ * 3: Timestep (not used) <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [[], [], []] call ace_hellfire_fnc_getAttackProfileSettings;

@@ -4,7 +4,13 @@
  * Sets up wireGuided state arrays (called from missileGuidance's onFired).
  *
  * Arguments:
- * Guidance Arg Array <ARRAY>
+ * 0: Fired EH arguments <ARRAY>
+ * 1: Launch Parameters (not used) <ARRAY>
+ * 2: Flight Parameters (not used) <ARRAY>
+ * 3: Seeker Parameters <ARRAY>
+ * 4: State Parameters <ARRAY>
+ * 5: Target Data (not used) <ARRAY>
+ * 6: Navigation State Parameters (not used) <ARRAY>
  *
  * Return Value:
  * None

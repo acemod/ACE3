@@ -4,7 +4,12 @@
  * Sets up a top-attack profile. If we don't have a target: coast
  *
  * Arguments:
- * Guidance Arg Array <ARRAY>
+ * 0: Guidance Arg Array <ARRAY>
+ * 1: Timestep <NUMBER>
+ * 2: Seeker Target PosASL (not used) <ARRAY>
+ * 3: Profile Adjusted Target PosASL <ARRAY>
+ * 4: Target Data (not used) <ARRAY>
+ * 5: Navigation Parameters <ARRAY>
  *
  * Return Value:
  * Commanded acceleration normal to LOS in world space <ARRAY>

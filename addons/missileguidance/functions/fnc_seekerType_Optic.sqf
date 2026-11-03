@@ -4,8 +4,11 @@
  * Seeker Type: Optic
  *
  * Arguments:
+ * 0: Seeker Target PosASL, always [0, 0, 0] (not used) <ARRAY>
  * 1: Guidance Arg Array <ARRAY>
- * 2: Seeker State <ARRAY>
+ * 2: Seeker State (not used) <ARRAY>
+ * 3: Last Known Pos State (not used) <ARRAY>
+ * 4: Timestep (not used) <NUMBER>
  *
  * Return Value:
  * Missile Aim PosASL <ARRAY>

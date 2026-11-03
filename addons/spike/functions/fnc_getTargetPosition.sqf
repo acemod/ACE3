@@ -4,9 +4,12 @@
  * Return the position of a potential EO target via a "edge detection" algorithm. Compares object bounding boxes to see what we are most likely hitting
  *
  * Arguments:
- * 1: Origin <ARRAY>
- * 2: Direction <ARRAY>
- * 3: If we are designating <NUMBER>
+ * 0: Origin PosASL <ARRAY>
+ * 1: Direction <ARRAY>
+ * 2: If we are designating (0 or 1) <NUMBER>
+ * 3: Current Seeker Target PosASL <ARRAY>
+ * 4: Seeker (not used) <OBJECT>
+ * 5: Object to ignore in intersections <OBJECT> (default: objNull)
  *
  * Return Value:
  * Missile Aim PosASL <ARRAY>
