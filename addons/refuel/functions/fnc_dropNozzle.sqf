@@ -56,7 +56,7 @@ if (_groundPosition isEqualTo []) then {
     if (!isNull _unit) then {
         _groundPosition = getPosASL _unit; // place at unit's feet
     } else {
-        _groundPosition set [2, (getTerrainHeightASL _nozzlePosition) + 0.005];
+        _groundPosition = [_nozzlePosition select 0, _nozzlePosition select 1, (getTerrainHeightASL _nozzlePosition) + 0.005];
     };
 };
 
