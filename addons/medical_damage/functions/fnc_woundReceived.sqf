@@ -27,6 +27,7 @@ if !(_typeOfDamage in GVAR(damageTypeDetails)) exitWith {};
 (GVAR(damageTypeDetails) get _typeOfDamage) params ["", "", "_woundHandlers"];
 if (_woundHandlers isEqualTo []) exitWith {};
 
+private _oldBodyPartDamage = +GET_BODYPART_DAMAGE(_unit);
 private _damageData = [_unit, _allDamages, _typeOfDamage, _ammo];
 private _originalCount = count _damageData;
 private _lastHandlerName = _woundHandlers select -1 select 0; // will usually be ace_medical_damage_woundsHandlerBase
@@ -53,3 +54,12 @@ private _lastHandlerName = _woundHandlers select -1 select 0; // will usually be
         break;
     };
 } forEach _woundHandlers;
+
+private _damage = 0;
+{
+    _damage = _damage max (_x - (_oldBodyPartDamage select _forEachIndex));
+} forEach GET_BODYPART_DAMAGE(_unit);
+
+if (_damage > 0) then {
+    [QEGVAR(medical,woundProcessed), [_unit, _damage, _shooter, _typeOfDamage]] call CBA_fnc_localEvent;
+};

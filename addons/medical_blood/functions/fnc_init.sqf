@@ -18,6 +18,11 @@
 
 params ["_mode"];
 
+private _woundEvent = [
+    QEGVAR(medical,woundReceived),
+    QEGVAR(medical,woundProcessed)
+] select isClass (configFile >> "CfgPatches" >> "ace_medical_damage");
+
 // Exit if setting is refreshed to the same value
 if (!isNil QGVAR(currentSetup) && {_mode == GVAR(currentSetup)}) exitWith {
     TRACE_2("Setting refreshed to current setup",GVAR(currentSetup),_mode);
@@ -34,7 +39,7 @@ if (!isNil QGVAR(stateMachine)) then {
 
 // Remove wound received if it was previously added
 if (!isNil QGVAR(woundReceivedEH)) then {
-    [QEGVAR(medical,woundReceived), GVAR(woundReceivedEH)] call CBA_fnc_removeEventHandler;
+    [_woundEvent, GVAR(woundReceivedEH)] call CBA_fnc_removeEventHandler;
     GVAR(woundReceivedEH) = nil;
 };
 
@@ -60,6 +65,6 @@ private _listCode = if (_mode == BLOOD_ONLY_PLAYERS) then {
 GVAR(stateMachine) = [_listCode, true] call CBA_statemachine_fnc_create;
 [GVAR(stateMachine), LINKFUNC(onBleeding), {}, {}, "Bleeding"] call CBA_statemachine_fnc_addState;
 
-GVAR(woundReceivedEH) = [QEGVAR(medical,woundReceived), LINKFUNC(handleWoundReceived)] call CBA_fnc_addEventHandler;
+GVAR(woundReceivedEH) = [_woundEvent, LINKFUNC(handleWoundReceived)] call CBA_fnc_addEventHandler;
 
 TRACE_3("Set up state machine and wounds event",_mode,GVAR(stateMachine),GVAR(woundReceivedEH));
