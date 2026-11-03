@@ -4,7 +4,7 @@
  * Handles the Kestrel 4500 dialog button actions
  *
  * Arguments:
- * button ID <NUMBER>
+ * Button ID (0: Enter, 1: Top, 2: Bottom, 3: Left, 4: Right, 5: Memory, 6: Backlight, 7: Exit) <NUMBER>
  *
  * Return Value:
  * None

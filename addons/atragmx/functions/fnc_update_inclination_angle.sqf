@@ -4,7 +4,7 @@
  * Updates the inclination angle input fields
  *
  * Arguments:
- * Reference input field ID <NUMBER>
+ * Reference input field (0: cosine, 1: degrees) <NUMBER>
  *
  * Return Value:
  * None

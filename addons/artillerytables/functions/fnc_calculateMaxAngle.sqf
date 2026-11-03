@@ -7,9 +7,9 @@
  * 0: Initial Muzzle Velocity; meters/second <NUMBER>
  * 1: Air Friction; meters^-1 (m/s^2)/(m^2/s^2) <NUMBER>
  *
- * Return Values: <ARRAY>
- * 1: Best Angle; Milliradians <NUMBER>
- * 2: Furthest Distance; Meters <NUMBER>
+ * Return Value:
+ * 0: Best Angle; Milliradians <NUMBER>
+ * 1: Furthest Distance; Meters <NUMBER>
  *
  * Example:
  * [200, -0.00006] call ace_artilleryTables_fnc_calculateMaxAngle

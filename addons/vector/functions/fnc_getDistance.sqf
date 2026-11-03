@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- *
+ * Returns the measured distance read from the Vector display, or -1000 if there is no valid measurement.
  *
  * Arguments:
  * None

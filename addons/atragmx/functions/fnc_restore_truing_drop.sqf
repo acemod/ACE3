@@ -4,13 +4,13 @@
  * Restores the truing drop defaults
  *
  * Arguments:
- * update display <BOOL>
+ * Update display <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * call ace_atragmx_fnc_restore_truing_drop
+ * false call ace_atragmx_fnc_restore_truing_drop
  *
  * Public: No
  */

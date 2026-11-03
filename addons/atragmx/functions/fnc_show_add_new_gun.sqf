@@ -4,7 +4,7 @@
  * Shows/Hides add new gun controls
  *
  * Arguments:
- * visible - <BOOL>
+ * Visible <BOOL>
  *
  * Return Value:
  * None

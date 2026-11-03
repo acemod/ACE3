@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- *
+ * Switches the Vector display textures between their illuminated and normal versions.
  *
  * Arguments:
  * 0: Enable illumination <BOOL>

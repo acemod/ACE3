@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Weapon <STRING>
- * 1: Muzzle <STRING> (optional)
+ * 1: Muzzle <STRING> (default: Weapon)
  *
  * Return Value:
  * 0: Barrel twist <NUMBER>

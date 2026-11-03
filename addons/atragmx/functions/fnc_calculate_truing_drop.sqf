@@ -4,13 +4,13 @@
  * Calculates the truing drop and updates the output fields
  *
  * Arguments:
- * parse input <BOOL>
+ * Parse input <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * call ace_atragmx_fnc_calculate_truing_drop
+ * true call ace_atragmx_fnc_calculate_truing_drop
  *
  * Public: No
  */

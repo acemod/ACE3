@@ -4,7 +4,7 @@
  * Cycles through the num ticks units
  *
  * Arguments:
- * step <NUMBER>
+ * None
  *
  * Return Value:
  * None

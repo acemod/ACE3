@@ -4,7 +4,7 @@
  * Shows/Hides the range card setup controls
  *
  * Arguments:
- * visible - <BOOL>
+ * Visible <BOOL>
  *
  * Return Value:
  * None

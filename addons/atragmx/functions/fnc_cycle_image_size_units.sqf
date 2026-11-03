@@ -4,7 +4,7 @@
  * Cycles through the image size units
  *
  * Arguments:
- * step <NUMBER>
+ * None
  *
  * Return Value:
  * None

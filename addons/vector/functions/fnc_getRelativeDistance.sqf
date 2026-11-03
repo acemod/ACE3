@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- *
+ * Returns the slope distance between the stored first point and the current measurement.
  *
  * Arguments:
  * None

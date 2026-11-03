@@ -7,13 +7,13 @@
  * 0: Vehicle <OBJECT>
  * 1: Turret <ARRAY>
  * 2: Target distance <NUMBER>
- * 3: Azimuth offset <UNKNOWN>
+ * 3: Elevation angle to target (degrees) <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [car, [turret], 5, ?] call ace_fcs_fnc_calculateSolution
+ * [car, [0], 1200, 2.5] call ace_fcs_fnc_calculateSolution
  *
  * Public: No
  */

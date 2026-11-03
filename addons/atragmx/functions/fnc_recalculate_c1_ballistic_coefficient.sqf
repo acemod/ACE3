@@ -4,14 +4,14 @@
  * Recalculates the c1 ballistic coefficient based on the current target range
  *
  * Arguments:
- * parse input <BOOL>
- * update display <BOOL>
+ * 0: Parse input <BOOL>
+ * 1: Update display <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * call ace_atragmx_fnc_recalculate_c1_ballistic_coefficient
+ * [false, false] call ace_atragmx_fnc_recalculate_c1_ballistic_coefficient
  *
  * Public: No
  */

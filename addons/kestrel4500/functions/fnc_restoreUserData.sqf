@@ -4,7 +4,7 @@
  * Reads user data from profileNamespace
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
  * None

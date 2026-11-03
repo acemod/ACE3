@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- *
+ * Sets the brightness of the Vector display readout and updates the illumination.
  *
  * Arguments:
  * 0: Illuminate <BOOL>

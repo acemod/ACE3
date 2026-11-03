@@ -4,7 +4,7 @@
  * Toggles the target range assist screen on/off
  *
  * Arguments:
- * update range? <NUMBER>
+ * Update target range (1: update, 0: discard) <NUMBER>
  *
  * Return Value:
  * None

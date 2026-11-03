@@ -4,7 +4,7 @@
  * Toggles the gun list screen on/off
  *
  * Arguments:
- * change gun? <BOOL>
+ * Change gun <BOOL>
  *
  * Return Value:
  * None

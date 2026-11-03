@@ -4,7 +4,7 @@
  * Shows/Hides the gun ammo data controls
  *
  * Arguments:
- * visible - <BOOL>
+ * Visible <BOOL>
  *
  * Return Value:
  * None

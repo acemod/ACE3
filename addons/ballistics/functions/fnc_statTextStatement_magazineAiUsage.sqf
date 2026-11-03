@@ -4,11 +4,11 @@
  * Text statement for the magazine's AI Usage.
  *
  * Arguments:
- * 0: not used
- * 1: item config path <CONFIG>
+ * 0: Stats array (not used) <ARRAY>
+ * 1: Item config path <CONFIG>
  *
  * Return Value:
- * String to display
+ * String to display <STRING>
  *
  * Public: No
  */

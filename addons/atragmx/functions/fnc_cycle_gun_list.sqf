@@ -4,13 +4,13 @@
  * Cycles through the gun list
  *
  * Arguments:
- * step <NUMBER>
+ * Step (-1 or 1) <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * call ace_atragmx_fnc_cycle_gun_list
+ * 1 call ace_atragmx_fnc_cycle_gun_list
  *
  * Public: No
  */

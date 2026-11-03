@@ -4,14 +4,14 @@
  * Recalculates the muzzle velocity based on the muzzle velocity vs. temperature interpolation input
  *
  * Arguments:
- * parse input <BOOL>
- * update display <BOOL>
+ * 0: Parse input <BOOL>
+ * 1: Update display <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * call ace_atragmx_fnc_recalculate_muzzle_velocity
+ * [false, false] call ace_atragmx_fnc_recalculate_muzzle_velocity
  *
  * Public: No
  */

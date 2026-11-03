@@ -4,7 +4,7 @@
  * Toggles the target speed assist screen on/off
  *
  * Arguments:
- * update speed? <NUMBER>
+ * Update target speed (1: update, 0: discard) <NUMBER>
  *
  * Return Value:
  * None

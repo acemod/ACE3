@@ -4,7 +4,7 @@
  * Selects a target slot (A, B, C or D)
  *
  * Arguments:
- * target <NUMBER>
+ * Target slot (0-3) <NUMBER>
  *
  * Return Value:
  * None

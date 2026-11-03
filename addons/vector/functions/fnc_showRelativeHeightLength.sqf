@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- *
+ * Shows the height difference and horizontal distance between two measured points on the Vector display.
  *
  * Arguments:
  * None

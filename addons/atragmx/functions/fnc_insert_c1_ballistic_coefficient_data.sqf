@@ -4,15 +4,15 @@
  * Inserts entry in the c1 ballistic coefficient vs. distance interpolation table
  *
  * Arguments:
- * transonic range - <NUMBER>
- * subsonic range - <NUMBER>
- * c1 ballistic coefficient - <NUMBER>
+ * 0: Transonic range <NUMBER>
+ * 1: Subsonic range <NUMBER>
+ * 2: C1 ballistic coefficient <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [800, 0.485] call ace_atragmx_fnc_insert_c1_ballistic_coefficient_data
+ * [800, 1200, 0.485] call ace_atragmx_fnc_insert_c1_ballistic_coefficient_data
  *
  * Public: No
  */

@@ -6,6 +6,9 @@
  * Arguments:
  * 0: Vehicle <OBJECT>
  * 1: Turret <ARRAY>
+ * 2: Distance to target <NUMBER> (default: measured with laser rangefinder)
+ * 3: Show hint <BOOL> (default: false)
+ * 4: Play sound <BOOL> (default: true)
  *
  * Return Value:
  * None

@@ -4,7 +4,7 @@
  * Toggles the target data screen on/off
  *
  * Arguments:
- * Apply new data? <NUMBER>
+ * Apply new data (1: apply, 0: discard) <NUMBER>
  *
  * Return Value:
  * None

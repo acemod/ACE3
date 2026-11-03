@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- *
+ * Returns the azimuth and the horizontal distance from the stored first point to the current measurement.
  *
  * Arguments:
  * None

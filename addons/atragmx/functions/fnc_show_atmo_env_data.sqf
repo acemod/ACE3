@@ -4,7 +4,7 @@
  * Shows/Hides the atmosphere and environmental data controls
  *
  * Arguments:
- * visible - <BOOL>
+ * Visible <BOOL>
  *
  * Return Value:
  * None

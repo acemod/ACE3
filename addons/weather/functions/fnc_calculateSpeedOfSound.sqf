@@ -4,7 +4,7 @@
  * Calculates the speed of sound for a given temperature
  *
  * Arguments:
- * temperature - degrees celsius <NUMBER>
+ * Temperature - degrees celsius <NUMBER>
  *
  * Return Value:
  * speed of sound - m/s <NUMBER>
