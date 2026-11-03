@@ -8,7 +8,7 @@
  * 1: Turret <ARRAY>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player, [0]] call ace_artillerytables_fnc_turretChanged

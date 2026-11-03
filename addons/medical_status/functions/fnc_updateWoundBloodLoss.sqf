@@ -8,7 +8,7 @@
  * 0: The Unit <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player] call ace_medical_status_fnc_updateWoundBloodLoss

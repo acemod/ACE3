@@ -11,7 +11,7 @@
  * None
  *
  * Public: No
-*/
+ */
 
 GVAR(currentLoadoutsTab) = nil;
 GVAR(loadoutsSearchbarFocus) = nil;

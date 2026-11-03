@@ -14,7 +14,7 @@
  * [_newPlayer, _oldPlayer] call ace_dragging_fnc_handlePlayerChanged;
  *
  * Public: No
-*/
+ */
 
 params ["_newPlayer", "_oldPlayer"];
 TRACE_2("params",_newPlayer,_oldPlayer);

@@ -11,7 +11,7 @@
  * Stat Text <STRING>
  *
  * Public: No
-*/
+ */
 
 params ["", "_config"];
 TRACE_1("statCondition_isWeapon",_config);

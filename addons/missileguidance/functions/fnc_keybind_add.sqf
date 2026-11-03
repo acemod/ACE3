@@ -8,7 +8,7 @@
  * 1: Down handler code <CODE>
  * 2: Up handler code <CODE>
  *
- * Returns:
+ * Return Value:
  * None
  *
  * Example:

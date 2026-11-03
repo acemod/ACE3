@@ -13,7 +13,7 @@
  * [CONTROL] call ace_zeus_fnc_ui_garrison
  *
  * Public: No
-*/
+ */
 
 params ["_control"];
 

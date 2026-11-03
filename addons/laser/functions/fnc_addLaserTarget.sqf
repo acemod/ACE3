@@ -3,7 +3,7 @@
  * Author: esteldunedain
  * Adds a vanilla laser target to the tracker PFH and globaly turns it on
  *
- * Argument:
+ * Arguments:
  * 0: TargetObject (vanilla laser) <OBJECT>
  * 1: Vehicle <OBJECT>
  *

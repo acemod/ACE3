@@ -11,7 +11,7 @@
  * Stat Text <STRING>
  *
  * Public: No
-*/
+ */
 
 params ["", "_config"];
 TRACE_1("statTextStatement_boltType",_config);

@@ -6,7 +6,7 @@
  * Arguments:
  * 0: The config class containing the entries <CONFIG>
  *
- * ReturnValue:
+ * Return Value:
  * None
  *
  * Example:

@@ -10,7 +10,7 @@
  * None
  *
  * Public: No
-*/
+ */
 
 if (!isNil QGVAR(sortListLeftPanel)) exitWith {};
 

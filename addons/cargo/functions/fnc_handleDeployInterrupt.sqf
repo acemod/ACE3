@@ -14,7 +14,7 @@
  * player call ace_cargo_fnc_handleDeployInterrupt
  *
  * Public: No
-*/
+ */
 
 params ["_newPlayer", ["_oldPlayer", objNull]];
 TRACE_2("params",_newPlayer,_oldPlayer);

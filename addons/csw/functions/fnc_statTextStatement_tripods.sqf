@@ -10,7 +10,7 @@
  * Stat Text <ARRAY of STRINGs>
  *
  * Public: No
-*/
+ */
 
 params ["_config"];
 

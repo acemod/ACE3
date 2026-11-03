@@ -11,7 +11,7 @@
  * Display text <STRING>
  *
  * Public: No
-*/
+ */
 
 params ["_stats", "_configMagazine"];
 

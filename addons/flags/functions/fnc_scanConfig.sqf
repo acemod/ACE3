@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_flags_fnc_scanConfig

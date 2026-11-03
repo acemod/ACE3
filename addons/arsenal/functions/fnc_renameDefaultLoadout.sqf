@@ -14,7 +14,7 @@
  * ["Squad Leader", "Team Leader"] call ace_arsenal_fnc_renameDefaultLoadout
  *
  * Public: Yes
-*/
+ */
 params [["_currentName", "", [""]], ["_newName", "", [""]]];
 
 if (_currentName isEqualTo _newName) exitWith {};

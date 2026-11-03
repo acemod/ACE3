@@ -12,7 +12,7 @@
  * Example:
  * ["x happened"] call ace_common_fnc_serverLog;
  *
- * Public: no
+ * Public: No
  */
 
 params [["_msg", "", [""]]];

@@ -13,7 +13,7 @@
  * [["TAG_myActions~text~0", "TAG_myActions~statement~0", "TAG_myActions~button~0"]] call ace_arsenal_fnc_removeAction
  *
  * Public: Yes
-*/
+ */
 
 params ["_IDList"];
 

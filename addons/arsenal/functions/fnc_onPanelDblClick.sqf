@@ -13,7 +13,7 @@
  * None
  *
  * Public: No
-*/
+ */
 params ["_control", "_curSel"];
 
 if !(GVAR(shiftState)) exitWith {};

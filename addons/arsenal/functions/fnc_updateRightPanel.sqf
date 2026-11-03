@@ -13,7 +13,7 @@
  * None
  *
  * Public: No
-*/
+ */
 
 params ["_control", "_container", "_hasItems"];
 

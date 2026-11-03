@@ -16,7 +16,7 @@
  * call ace_arsenal_fnc_refresh
  *
  * Public: Yes
-*/
+ */
 params [["_updateItems", true, [true]], ["_updateVirtualItems", false, [false]], ["_animate", false, [false]]];
 TRACE_2("",_updateItems,_updateVirtualItems);
 

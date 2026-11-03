@@ -19,7 +19,7 @@
  * [player, "arifle_MX_GL_F", true, [["30Rnd_65x39_caseless_mag", 30], ["1Rnd_HE_Grenade_shell", 1]]] call ace_common_fnc_addWeapon
  *
  * Public: Yes
-*/
+ */
 
 params [
     ["_unit", objNull, [objNull]],

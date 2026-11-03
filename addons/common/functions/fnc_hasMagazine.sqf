@@ -13,7 +13,7 @@
  * Example:
  * [player, "30Rnd_65x39_caseless_mag"] call ace_common_fnc_hasMagazine
  *
- * Public: yes
+ * Public: Yes
  */
 
 params [["_unit", objNull, [objNull]], ["_magazine", "", [""]]];

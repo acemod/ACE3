@@ -14,7 +14,7 @@
  * cursorObject call ace_arsenal_fnc_getVirtualItems
  *
  * Public: Yes
-*/
+ */
 params [["_object", objNull, [objNull]]];
 
 private _virtualItems = _object getVariable QGVAR(virtualItems);

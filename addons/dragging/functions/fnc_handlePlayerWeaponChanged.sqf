@@ -14,7 +14,7 @@
  * [player, primaryWeapon player] call ace_dragging_fnc_handlePlayerWeaponChanged;
  *
  * Public: No
-*/
+ */
 
 params ["_unit", "_weapon"];
 TRACE_2("params",_unit,_weapon);

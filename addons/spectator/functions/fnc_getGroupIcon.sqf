@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Group to get the icon of <GROUP>
- * 1: Return icons for draw3D use <BOOL> (Default: false)
+ * 1: Return icons for draw3D use <BOOL> (default: false)
  *
  * Return Value:
  * Icon of group <STRING>

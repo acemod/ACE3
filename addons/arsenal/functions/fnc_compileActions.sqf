@@ -11,7 +11,7 @@
  * None
  *
  * Public: No
-*/
+ */
 
 if (!isNil QGVAR(actionList)) exitWith {};
 

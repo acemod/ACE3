@@ -13,7 +13,7 @@
  * None
  *
  * Public: No
-*/
+ */
 
 (_this select 1) params ["", "_exitCode"];
 

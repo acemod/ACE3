@@ -12,7 +12,7 @@
  * Display text <STRING>
  *
  * Public: No
-*/
+ */
 
 params ["", "_configWeapon", ["_configMagazine", configNull]];
 

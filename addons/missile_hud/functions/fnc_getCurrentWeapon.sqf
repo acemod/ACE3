@@ -2,7 +2,7 @@
 /*
  * Author: tcvm
  * Get the current weapon of the unit.
- * 
+ *
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Vehicle <OBJECT>

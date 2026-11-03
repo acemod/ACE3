@@ -11,7 +11,7 @@
  * Stat Text <STRING>
  *
  * Public: No
-*/
+ */
 
 params ["_stats", "_config"];
 TRACE_2("statTextStatement_load",_stats,_config);

@@ -16,7 +16,7 @@
  * ["Squad Leader", getUnitLoadout sql1] call ace_arsenal_fnc_addDefaultLoadout
  *
  * Public: Yes
-*/
+ */
 
 params [["_name", "", [""]], ["_loadout", [], [[]]], ["_global", false, [false]]];
 

@@ -14,7 +14,7 @@
  * Example:
  * [{systemChat "boom"}] call ace_common_fnc_addExplosionEventHandler
  *
- * Public: No (maybe after 2.18)
+ * Public: No
  */
 
 params [["_code", {}, [{}]]];

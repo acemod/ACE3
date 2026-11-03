@@ -13,7 +13,7 @@
  * call ace_arsenal_fnc_portVALoadouts
  *
  * Public: Yes
-*/
+ */
 
 private _unit = player;
 

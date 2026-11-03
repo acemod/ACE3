@@ -16,7 +16,7 @@
  * None
  *
  * Public: No
-*/
+ */
 
 // Can just be modified directly, no further setup needed
 #define LOADOUTS_PER_FRAME 10

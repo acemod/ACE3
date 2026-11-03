@@ -13,7 +13,7 @@
  * [bob] call ace_tripod_fnc_handleInteractMenuOpened
  *
  * Public: No
-*/
+ */
 
 params ["_unit"];
 

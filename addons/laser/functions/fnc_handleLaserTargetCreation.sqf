@@ -3,7 +3,7 @@
  * Author: esteldunedain
  * Associates a newly created laser target to it's owner
  *
- * Argument:
+ * Arguments:
  * 0: Vanilla Laser (base type LaserTarget) <OBJECT>
  *
  * Return Value:

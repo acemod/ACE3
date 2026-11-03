@@ -13,7 +13,7 @@
  * ["arifle_AK12_F"] call ace_common_fnc_getConfigName
  *
  * Public: Yes
-*/
+ */
 
 params ["_className"];
 

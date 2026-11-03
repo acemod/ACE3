@@ -14,7 +14,7 @@
  * [bob, "weapon"] call ace_trenches_fnc_handlePlayerInventoryChanged
  *
  * Public: No
-*/
+ */
 
 params ["_unit"];
 

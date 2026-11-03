@@ -14,7 +14,7 @@
  * [player, "amovpercmstpsnonwnondnon"] call ace_dragging_fnc_handleAnimChanged;
  *
  * Public: No
-*/
+ */
 
 params ["_unit", "_anim"];
 //IGNORE_PRIVATE_WARNING ["_thisArgs", "_thisID"];

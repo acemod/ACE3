@@ -7,7 +7,7 @@
  * 0: Flag pole <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [_this] call ace_flags_fnc_setFlagTexture

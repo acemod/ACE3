@@ -16,7 +16,7 @@
  * None
  *
  * Public: No
-*/
+ */
 
 params ["", "_args"];
 _args params ["_display", "_keyPressed", "_shiftState", "_ctrlState", "_altState"];

@@ -17,7 +17,7 @@
  * [_box, true, false] call ace_arsenal_fnc_addVirtualItems
  *
  * Public: Yes
-*/
+ */
 
 params [["_object", objNull, [objNull]], ["_items", [], [true, []]], ["_global", false, [false]]];
 

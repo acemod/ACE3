@@ -8,7 +8,7 @@
  * 1: Time since last update <NUMBER>
  * 2: Sync value? <BOOL>
  *
- * ReturnValue:
+ * Return Value:
  * Current SPO2 <NUMBER>
  *
  * Example:

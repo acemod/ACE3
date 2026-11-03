@@ -10,7 +10,7 @@
  * 3: Velocity <ARRAY>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [a, b, [], [1,0,-1]] call ace_missile_clgp_fnc_submunition_submunitionCreated

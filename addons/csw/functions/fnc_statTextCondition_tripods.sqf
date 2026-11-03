@@ -10,7 +10,7 @@
  * Whether to display stat or not <BOOL>
  *
  * Public: No
-*/
+ */
 
 params ["_config"];
 

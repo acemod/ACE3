@@ -12,7 +12,7 @@
  * None
  *
  * Public: No
-*/
+ */
 
 params ["_display", "_addOrRemove"];
 

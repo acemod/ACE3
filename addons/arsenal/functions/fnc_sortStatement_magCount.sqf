@@ -10,7 +10,7 @@
  * Sorting Value <NUMBER>
  *
  * Public: No
-*/
+ */
 
 params ["_config"];
 

@@ -7,7 +7,7 @@
  * 0: Unit <OBJECT>
  * 1: Weapon <STRING>
  *
- * Return Values:
+ * Return Value:
  * None
  *
  * Example:

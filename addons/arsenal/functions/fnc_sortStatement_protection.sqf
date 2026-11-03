@@ -12,7 +12,7 @@
  * Sorting Value <NUMBER>
  *
  * Public: No
-*/
+ */
 
 params ["_itemInfo", "_ballisticCo", "_explosiveCo"];
 _itemInfo params ["_config"];

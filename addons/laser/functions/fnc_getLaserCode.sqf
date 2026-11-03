@@ -3,7 +3,7 @@
  * Author: johnb43
  * Gets the laser code of a laser source.
  *
- * Argument:
+ * Arguments:
  * 0: Laser source <OBJECT>
  *
  * Return Value:

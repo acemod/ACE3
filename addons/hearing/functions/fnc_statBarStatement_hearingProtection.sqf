@@ -11,7 +11,7 @@
  * Bar statement <NUMBER>
  *
  * Public: No
-*/
+ */
 
 params ["_stats", "_config", "_args"];
 

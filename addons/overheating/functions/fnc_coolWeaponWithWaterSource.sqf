@@ -14,7 +14,7 @@
  * [ACE_player, WaterTank] call ace_overheating_fnc_coolWeaponWithWaterSource
  *
  * Public: No
-*/
+ */
 
 params ["_player", "_target"];
 

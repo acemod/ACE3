@@ -5,7 +5,7 @@
  * Edited to use ACE arsenal when present, moved isPlayer check
  *
  * Arguments:
- * 0: The module logic <LOGIC>
+ * 0: The module logic <OBJECT>
  * 1: Not used
  * 2: activated <BOOL>
  *
@@ -16,7 +16,7 @@
  * [LOGIC, nil, true] call ace_zeus_fnc_bi_moduleArsenal
  *
  * Public: No
-*/
+ */
 
 params ["_logic", "", "_activated"];
 // IGNORE_PRIVATE_WARNING["_error", "_unit"];

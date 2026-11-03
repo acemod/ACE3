@@ -7,7 +7,7 @@
  * 0: PFEH Args <ARRAY>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [[...]] call ace_artillerytables_fnc_turretPFEH

@@ -6,13 +6,13 @@
  * Arguments:
  * 0: The unit <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * The animtaion <STRING>
  *
  * Example:
  * player call ace_common_fnc_getAwakeAnim
  *
- * Public: no
+ * Public: No
  */
 
 params ["_unit"];

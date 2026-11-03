@@ -14,7 +14,7 @@
  * [getUnitLoadout player] call ace_arsenal_fnc_replaceUniqueItemsLoadout
  *
  * Public: Yes
-*/
+ */
 
 params [["_loadout", [], [[]]]];
 

@@ -14,7 +14,7 @@
  * [bob] call ace_tripod_fnc_handlePlayerChanged
  *
  * Public: No
-*/
+ */
 
 params ["_newPlayer", "_oldPlayer"];
 
