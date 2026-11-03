@@ -2,6 +2,7 @@
 /*
  * Author: Glowbal
  * Sets the volume of the game, including third party radio modifications such as TFAR and ACRE.
+ * Note: Uses player
  *
  * Arguments:
  * 0: setVolume <BOOL> (default: false)
@@ -13,8 +14,6 @@
  * [true] call ace_common_fnc_setVolume
  *
  * Public: Yes
- *
- * Note: Uses player
  */
 
 #define MUTED_LEVEL  0.2

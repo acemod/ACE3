@@ -4,7 +4,8 @@
  * Resets all effect numbers to 0 when an object respawns (but does not apply the effect event).
  *
  * Arguments:
- * 0: Vehicle that it will be attached to (player or vehicle) <OBJECT>
+ * 0: Object <OBJECT>
+ * 1: Set object reference <BOOL> (default: false)
  *
  * Return Value:
  * None

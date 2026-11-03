@@ -1,12 +1,12 @@
 #include "..\script_component.hpp"
 /*
  * Author: Ruthberg
- * Returns the first intersection with terrain between two positions.
+ * Returns the first intersection with an object between two positions.
  *
  * Arguments:
  * 0: PositionASL <ARRAY>
- * 1: PositionATL <ARRAY>
- * 2: Accuracy <NUMBER>
+ * 1: PositionASL <ARRAY>
+ * 2: Accuracy (not used) <NUMBER>
  *
  * Return Value:
  * 0: Intersects <BOOL>

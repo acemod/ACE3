@@ -11,10 +11,10 @@
  * Return Value:
  * Replaced by new component <BOOL>
  *
- * Public: No
- *
  * Example:
  * [["ace_sitting", "ace_sitting_enabled"], ["acex_sitting", "acex_sitting_enabled"], "3.7.0"] call ace_common_fnc_deprecateComponent;
+ *
+ * Public: No
  */
 
 params ["_oldComponent", "_newComponent", "_version"];

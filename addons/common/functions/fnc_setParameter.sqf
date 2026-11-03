@@ -2,6 +2,7 @@
 /*
  * Author: esteldunedain
  * Sets the value of an ACE_Parameter and makes it public.
+ * Deprecated
  *
  * Arguments:
  * 0: Parameter name <STRING>
@@ -14,8 +15,6 @@
  * ["Name", 5] call ace_common_fnc_setParameter
  *
  * Public: Yes
- *
- * Deprecated
  */
 
 params ["_name", "_value"];

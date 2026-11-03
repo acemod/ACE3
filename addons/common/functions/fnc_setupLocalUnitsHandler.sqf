@@ -5,10 +5,10 @@
  * Access with function `ace_common_fnc_getLocalUnits` or array `ace_common_localUnits`
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [] call ace_common_fnc_setupLocalUnitsHandler

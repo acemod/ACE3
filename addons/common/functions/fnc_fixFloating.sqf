@@ -5,7 +5,7 @@
  * Handles the "fixFloating" event
  *
  * Arguments:
- * PhysX object <OBJECT>
+ * 0: PhysX object <OBJECT>
  *
  * Return Value:
  * None

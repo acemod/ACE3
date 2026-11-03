@@ -2,6 +2,7 @@
 /*
  * Author: rocko
  * Fixes animation issues that may get you stuck
+ * Note: Has to be spawned not called
  *
  * Arguments:
  * None
@@ -13,8 +14,6 @@
  * [] call ace_common_fnc_headBugFix
  *
  * Public: Yes
- *
- * Note: Has to be spawned not called
  */
 
 private _unit = ACE_player;

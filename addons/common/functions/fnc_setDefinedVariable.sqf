@@ -7,6 +7,7 @@
  * 0: Unit <OBJECT>
  * 1: variableName <STRING>
  * 2: value <ANY>
+ * 3: Global <BOOL> (default: public flag registered via defineVariable, else false)
  *
  * Return Value:
  * None

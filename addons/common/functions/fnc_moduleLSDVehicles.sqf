@@ -4,13 +4,15 @@
  * Nothing to see here, move along.
  *
  * Arguments:
- * Whatever the module provides. (I dunno.)
+ * 0: Logic <OBJECT>
+ * 1: Synchronized Units <ARRAY>
+ * 2: Module Activated <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [bob, target, []] call ace_common_fnc_moduleLSDVehicles
+ * [_logic, [car], true] call ace_common_fnc_moduleLSDVehicles
  *
  * Public: No
  */

@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [bob] call ace_common_fnc_fixCollision
+ * bob call ace_common_fnc_fixCollision
  *
  * Public: No
  */

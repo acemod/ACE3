@@ -6,6 +6,7 @@
  * Arguments:
  * 0: unit <OBJECT>
  * 1: item <STRING>
+ * 2: Vehicle usage (not implemented, returns false) <BOOL> (default: false)
  *
  * Return Value:
  * if item has been used. <BOOL>

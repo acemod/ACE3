@@ -2,6 +2,7 @@
 /*
  * Author: commy2
  * Get display classnames from config with given idd.
+ * Note: Really slow due to iteration through whole config. Meant for debugging.
  *
  * Arguments:
  * 0: Display ID (idd) <NUMBER>
@@ -13,8 +14,6 @@
  * [5] call ace_common_fnc_getDisplayConfigName
  *
  * Public: Yes
- *
- * Note: Really slow due to iteration through whole config. Meant for debugging.
  */
 
 params ["_idd"];

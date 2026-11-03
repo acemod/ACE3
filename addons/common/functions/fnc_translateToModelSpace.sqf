@@ -1,16 +1,21 @@
 #include "..\script_component.hpp"
 /*
  * Author: ACE-Team
- * ?
+ * Translates an offset given in an object-relative basis into a world position (ASL).
  *
  * Arguments:
- * <UNKNOWN>
+ * 0: Object, its position is used as origin <OBJECT>
+ * 1: Basis vectors <ARRAY>
+ *     0: X axis vector <ARRAY>
+ *     1: Y axis vector <ARRAY>
+ *     2: Z axis vector <ARRAY>
+ * 2: Offset in the basis [x, y, z] <ARRAY>
  *
  * Return Value:
- * Something <UNKNOWN>
+ * Position ASL <ARRAY>
  *
  * Example:
- * [UNKNOWN] call ace_common_fnc_translateToModelSpace
+ * [player, [[1,0,0], [0,1,0], [0,0,1]], [0, 1, 0]] call ace_common_fnc_translateToModelSpace
  *
  * Public: No
  */

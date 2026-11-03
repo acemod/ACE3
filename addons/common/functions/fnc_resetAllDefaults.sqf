@@ -7,7 +7,7 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * ? <UNKNOWN>
+ * None
  *
  * Example:
  * [bob] call ace_common_fnc_resetAllDefaults
