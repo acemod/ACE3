@@ -6,13 +6,12 @@
  * Arguments:
  * 0: Target (not used) <OBJECT>
  * 1: Player <OBJECT>
- * 2: Action parameters (not used) <ARRAY>
  *
  * Return Value:
- * None
+ * Children actions <ARRAY>
  *
  * Example:
- * [_player, _player, []] call ace_map_fnc_compileFlashlightMenu;
+ * [_player, _player] call ace_map_fnc_compileFlashlightMenu;
  *
  * Public: No
  */
