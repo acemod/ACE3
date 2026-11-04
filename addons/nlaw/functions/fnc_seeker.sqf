@@ -5,8 +5,11 @@
  * Has a very short range (IR/Magnetic?) seeker that will trigger the shaped charge midair above the target.
  *
  * Arguments:
+ * 0: Seeker Target PosASL, always [0, 0, 0] (not used) <ARRAY>
  * 1: Guidance Arg Array <ARRAY>
  * 2: Seeker State <ARRAY>
+ * 3: Last Known Pos State (not used) <ARRAY>
+ * 4: Timestep (not used) <NUMBER>
  *
  * Return Value:
  * Seeker Pos <ARRAY>

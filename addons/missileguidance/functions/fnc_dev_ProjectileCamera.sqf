@@ -4,7 +4,7 @@
  * tracks a projectile until it explodes
  *
  * Arguments:
- * None
+ * 0: Projectile <OBJECT>
  *
  * Return Value:
  * None

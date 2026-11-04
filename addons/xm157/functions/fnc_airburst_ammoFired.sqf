@@ -4,10 +4,17 @@
  * Handles ammo fired event for airburst ammo. Called from the ammo's fired EH.
  *
  * Arguments:
- * FiredEH
+ * 0: Unit (not used) <OBJECT>
+ * 1: Weapon (not used) <STRING>
+ * 2: Muzzle (not used) <STRING>
+ * 3: Mode (not used) <STRING>
+ * 4: Ammo <STRING>
+ * 5: Magazine (not used) <STRING>
+ * 6: Projectile <OBJECT>
+ * 7: Gunner <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [] call ace_xm157_fnc_airburst_ammoFired

@@ -4,10 +4,10 @@
  * Sets up proportional navigation state arrays (called from missileGuidance's onFired).
  *
  * Arguments:
- * Guidance Arg Array <ARRAY>
+ * 0: Fired EH arguments <ARRAY>
  *
  * Return Value:
- * None
+ * Navigation Parameters <ARRAY>
  *
  * Example:
  * [] call ace_missileguidance_fnc_proNav_onFired

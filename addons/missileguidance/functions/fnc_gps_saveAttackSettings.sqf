@@ -4,10 +4,10 @@
  * Saves all textboxes to whatever settings say for PB mode
  *
  * Arguments:
- * Current PB mode. If -1 no mode is used <NUMBER>
+ * 0: PB mode to save to, -1 to not save <NUMBER>
  *
  * Return Value:
- * current settings
+ * Attack settings [position, impact angle, attack heading] <ARRAY>
  *
  * Example:
  * [-1] call ace_missileguidance_fnc_gps_saveAttackSettings

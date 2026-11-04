@@ -8,7 +8,7 @@
  * 1: Unit <OBJECT>
  *
  * Return Value:
- * If the button is pressed with an MCLOS context
+ * Input handled (MCLOS missiles are being controlled) <BOOL>
  *
  * Example:
  * [[0, 0, 1], player] call ace_missileguidance_fnc_MCLOS_buttonPressed

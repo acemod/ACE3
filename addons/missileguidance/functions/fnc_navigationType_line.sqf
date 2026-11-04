@@ -4,7 +4,12 @@
  * Assumes targetDir is pointing toward line we want to stay on
  *
  * Arguments:
- * Guidance Arg Array <ARRAY>
+ * 0: Guidance Arg Array <ARRAY>
+ * 1: Timestep (not used) <NUMBER>
+ * 2: Seeker Target PosASL (not used) <ARRAY>
+ * 3: Profile Adjusted Target PosASL (not used) <ARRAY>
+ * 4: Target Data <ARRAY>
+ * 5: Navigation Parameters <ARRAY>
  *
  * Return Value:
  * Commanded acceleration normal to LOS in world space <ARRAY>

@@ -4,7 +4,8 @@
  * Shows copperhead dialog
  *
  * Arguments:
- * Args
+ * 0: Vehicle <OBJECT>
+ * 1: Player <OBJECT>
  *
  * Return Value:
  * None

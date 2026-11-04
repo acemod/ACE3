@@ -4,13 +4,13 @@
  * Called on load of GPS UI
  *
  * Arguments:
- * Display <NUMBER>
+ * 0: Display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [1] call ace_missileguidance_fnc_gps_onLoad
+ * [theDisplay] call ace_missileguidance_fnc_gps_onLoad
  *
  * Public: No
  */

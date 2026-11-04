@@ -9,7 +9,7 @@
  * 2: Attack Profile State <ARRAY>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [[], [], []] call ace_hellfire_fnc_getAttackProfileSettings;

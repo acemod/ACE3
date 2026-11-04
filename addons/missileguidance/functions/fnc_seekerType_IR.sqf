@@ -4,6 +4,7 @@
  * Infrared seeker. Checks if flares are popped
  *
  * Arguments:
+ * 0: Seeker Target PosASL, always [0, 0, 0] (not used) <ARRAY>
  * 1: Guidance Arg Array <ARRAY>
  * 2: Seeker State <ARRAY>
  *

@@ -7,7 +7,7 @@
  * 0: Guidance Arg Array <ARRAY>
  *
  * Return Value:
- * None
+ * Transition to next navigation state <BOOL>
  *
  * Example:
  * [] call ace_spike_fnc_midCourseTransition

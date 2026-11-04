@@ -4,7 +4,10 @@
  * Accelerates toward LOS
  *
  * Arguments:
- * Guidance Arg Array <ARRAY>
+ * 0: Guidance Arg Array <ARRAY>
+ * 1: Timestep <NUMBER>
+ * 2: Seeker Target PosASL <ARRAY>
+ * 3: Profile Adjusted Target PosASL (not used) <ARRAY>
  *
  * Return Value:
  * Commanded acceleration normal to LOS in world space <ARRAY>

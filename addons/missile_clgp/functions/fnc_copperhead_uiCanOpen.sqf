@@ -4,10 +4,11 @@
  * Condition for showing copperhead interface, used in both interaction menu and inside dialog loop
  *
  * Arguments:
- * Args
+ * 0: Vehicle <OBJECT>
+ * 1: Player <OBJECT>
  *
  * Return Value:
- * <BOOL>
+ * Can open interface <BOOL>
  *
  * Example:
  * [vehicle, player] call ace_missile_clgp_fnc_copperhead_uiCanOpen
