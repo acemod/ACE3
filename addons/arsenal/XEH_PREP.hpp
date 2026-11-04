@@ -17,6 +17,7 @@ PREP(attributeLoad);
 PREP(attributeMode);
 PREP(attributeSelect);
 PREP(baseAttachment);
+PREP(baseBackpack);
 PREP(baseOptic);
 PREP(baseWeapon);
 PREP(buttonActionsPage);
