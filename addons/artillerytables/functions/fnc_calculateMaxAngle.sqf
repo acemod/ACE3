@@ -7,7 +7,7 @@
  * 0: Initial Muzzle Velocity; meters/second <NUMBER>
  * 1: Air Friction; meters^-1 (m/s^2)/(m^2/s^2) <NUMBER>
  *
- * Return Value:
+ * Return Value: <ARRAY>
  * 0: Best Angle; Milliradians <NUMBER>
  * 1: Furthest Distance; Meters <NUMBER>
  *
