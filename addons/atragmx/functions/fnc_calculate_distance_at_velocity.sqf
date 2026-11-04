@@ -4,7 +4,7 @@
  * Calculates distance at which the bullet velocity drops below the threshold velocity
  *
  * Arguments:
- * theshold velocity <NUMBER>
+ * Threshold velocity (m/s) <NUMBER>
  *
  * Return Value:
  * distance <NUMBER>

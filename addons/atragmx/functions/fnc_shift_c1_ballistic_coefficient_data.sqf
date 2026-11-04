@@ -4,7 +4,7 @@
  * Shifts all c1 ballistic coefficient entries in the c1 ballistic coefficient vs. distance interpolation table
  *
  * Arguments:
- * ballistic coefficient - <NUMBER>
+ * C1 ballistic coefficient shift <NUMBER>
  *
  * Return Value:
  * None

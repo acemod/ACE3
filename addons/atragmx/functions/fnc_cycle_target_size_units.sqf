@@ -4,7 +4,7 @@
  * Cycles through the target size units
  *
  * Arguments:
- * step <NUMBER>
+ * None
  *
  * Return Value:
  * None

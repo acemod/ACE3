@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- *
+ * Cycles to the next option of the given Vector settings or config menu and shows it.
  *
  * Arguments:
  * 0: Name of mode ("settings", "config") <STRING>

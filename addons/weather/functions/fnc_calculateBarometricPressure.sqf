@@ -4,7 +4,7 @@
  * Calculates the barometric pressure based on altitude and weather
  *
  * Arguments:
- * altitude - meters <NUMBER>
+ * Altitude - meters <NUMBER>
  *
  * Return Value:
  * barometric pressure - hPA <NUMBER>

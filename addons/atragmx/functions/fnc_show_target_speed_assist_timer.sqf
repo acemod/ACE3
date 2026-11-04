@@ -4,7 +4,7 @@
  * Shows/Hides the target speed assist timer controls
  *
  * Arguments:
- * visible - <BOOL>
+ * Visible <BOOL>
  *
  * Return Value:
  * None

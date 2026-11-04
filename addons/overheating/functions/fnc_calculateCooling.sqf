@@ -6,14 +6,14 @@
  * Arguments:
  * 0: Initial temperature <NUMBER>
  * 1: Barrel mass <NUMBER>
- * 2: Time interval  <NUMBER>
- * 3: Bolt type  <NUMBER>
+ * 2: Time interval <NUMBER>
+ * 3: Bolt type <NUMBER>
  *
  * Return Value:
  * Final temperature <NUMBER>
  *
  * Example:
- * [_temperature, _barrelMass, _totalTime] call ace_overheating_fnc_calculateCooling
+ * [_temperature, _barrelMass, _totalTime, _boltType] call ace_overheating_fnc_calculateCooling
  *
  * Public: No
  */

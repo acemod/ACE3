@@ -4,8 +4,8 @@
  * Inserts entry in the muzzle velocity vs. temperature interpolation table
  *
  * Arguments:
- * temperature - <NUMBER>
- * muzzle velocity - <NUMBER>
+ * 0: Temperature (°C) <NUMBER>
+ * 1: Muzzle velocity (m/s) <NUMBER>
  *
  * Return Value:
  * None

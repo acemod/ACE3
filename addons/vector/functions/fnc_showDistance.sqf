@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- *
+ * Shows the measured distance on the Vector display.
  *
  * Arguments:
  * None

@@ -4,13 +4,13 @@
  * Lookup the correct C1 ballistic coefficient in the c1 ballistic coefficient vs. distance interpolation table
  *
  * Arguments:
- * Target Range <NUMBER>
+ * 0: Target range <NUMBER>
  *
  * Return Value:
- * C1 ballistic coefficient <NUMBER
+ * C1 ballistic coefficient <NUMBER>
  *
  * Example:
- * call ace_atragmx_fnc_lookup_c1_ballistic_coefficient
+ * [1000] call ace_atragmx_fnc_lookup_c1_ballistic_coefficient
  *
  * Public: No
  */

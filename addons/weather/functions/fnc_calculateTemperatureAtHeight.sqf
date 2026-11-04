@@ -4,7 +4,7 @@
  * Calculates the temperature based on altitude and weather
  *
  * Arguments:
- * height - meters <NUMBER>
+ * Height - meters <NUMBER>
  *
  * Return Value:
  * temperature - degrees celsius <NUMBER>

@@ -4,7 +4,7 @@
  * Shows/Hides the solution setup controls
  *
  * Arguments:
- * visible - <BOOL>
+ * Visible <BOOL>
  *
  * Return Value:
  * None

@@ -4,7 +4,7 @@
  * Handles visual changes of the stamina bar.
  *
  * Arguments:
- * Percent of stamina remaining <NUMBER>
+ * 0: Fraction of stamina remaining (0..1) <NUMBER>
  *
  * Return Value:
  * None

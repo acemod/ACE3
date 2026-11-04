@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- *
+ * Returns the height and the horizontal distance to the measured target.
  *
  * Arguments:
  * None

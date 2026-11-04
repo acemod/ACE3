@@ -4,7 +4,7 @@
  * Adds a new (default) gun profile to the profileNamespace
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
  * None

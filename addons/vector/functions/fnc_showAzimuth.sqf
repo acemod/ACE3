@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- *
+ * Shows the azimuth on the Vector display.
  *
  * Arguments:
  * None

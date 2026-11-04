@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- *
+ * Calculates the fall of shot (abscissa, ordinate, applicate) of the current measurement relative to the stored first point.
  *
  * Arguments:
  * None

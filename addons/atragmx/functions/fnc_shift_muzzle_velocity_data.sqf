@@ -4,7 +4,7 @@
  * Shifts all muzzle velocity entries in the muzzle velocity vs. temperature interpolation table
  *
  * Arguments:
- * velocity - <NUMBER>
+ * Muzzle velocity shift (m/s) <NUMBER>
  *
  * Return Value:
  * None

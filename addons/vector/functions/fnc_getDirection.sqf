@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- *
+ * Returns the magnetic azimuth and the inclination of the view direction (inclination -1000 when out of range).
  *
  * Arguments:
  * None

@@ -1,16 +1,16 @@
 #include "..\script_component.hpp"
 /*
  * Author: ACE-Team
- *
+ * Forces an FCS update (range measurement and solution) for the unit's current turret.
  *
  * Arguments:
- * Nothing
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * call ace_fcs_fnc_onForceUpdate
+ * [player] call ace_fcs_fnc_onForceUpdate
  *
  * Public: No
  */

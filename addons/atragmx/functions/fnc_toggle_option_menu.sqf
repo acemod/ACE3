@@ -4,13 +4,13 @@
  * Toggles the option menu on/off
  *
  * Arguments:
- * open menu item <BOOL>
+ * Open selected menu item <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * 1 call ace_atragmx_fnc_toggle_option_menu
+ * true call ace_atragmx_fnc_toggle_option_menu
  *
  * Public: No
  */

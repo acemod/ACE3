@@ -4,7 +4,7 @@
  * Shows/Hides the gun list controls
  *
  * Arguments:
- * visible - <BOOL>
+ * Visible <BOOL>
  *
  * Return Value:
  * None

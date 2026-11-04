@@ -1,16 +1,16 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- *
+ * Shows fall of shot data on the Vector display.
  *
  * Arguments:
- * 0: Unknown <UNKNOWN>
+ * 0: Show applicate (height) instead of ordinate/abscissa <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [?] call ace_vector_fnc_showFallOfShot
+ * [false] call ace_vector_fnc_showFallOfShot
  *
  * Public: No
  */

@@ -4,7 +4,7 @@
  * Shows/Hides the c1 ballistic coefficient data controls
  *
  * Arguments:
- * visible - <BOOL>
+ * Visible <BOOL>
  *
  * Return Value:
  * None

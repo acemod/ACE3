@@ -4,7 +4,7 @@
  * Shows/Hides the target range assist controls
  *
  * Arguments:
- * visible - <BOOL>
+ * Visible <BOOL>
  *
  * Return Value:
  * None

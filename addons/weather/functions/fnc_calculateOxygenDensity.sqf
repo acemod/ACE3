@@ -12,7 +12,7 @@
  * Density of oxygen - kg * m^(-3) <NUMBER>
  *
  * Example:
- * [0, 1020] call ace_weather_fnc_calculateOxygenDensity
+ * [0, 1020, 0.5] call ace_weather_fnc_calculateOxygenDensity
  *
  * Public: No
  */

@@ -25,6 +25,7 @@
  * 18: Stability factor <NUMBER>
  * 19: Twist Direction <NUMBER>
  * 20: Latitude <NUMBER>
+ * 21: Direction of fire (degrees) <NUMBER>
  *
  * Return Value:
  * 0: Elevation (MOA) <NUMBER>

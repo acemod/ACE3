@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- *
+ * Shows the height and the horizontal distance on the Vector display.
  *
  * Arguments:
  * None

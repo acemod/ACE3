@@ -6,7 +6,8 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Weapon <STRING>
- * 3: Muzzle <STRING>
+ * 2: Muzzle <STRING>
+ * 3: Mode <STRING>
  * 4: Ammo <STRING>
  * 5: Magazine <STRING>
  * 6: Projectile <OBJECT>
@@ -15,7 +16,7 @@
  * None
  *
  * Example:
- * [bob, "weapon", "muzzle", "ammo", "magazine", bullet] call ace_overheating_fnc_overheat
+ * [bob, "weapon", "muzzle", "mode", "ammo", "magazine", bullet] call ace_overheating_fnc_overheat
  *
  * Public: No
  */

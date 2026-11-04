@@ -4,7 +4,7 @@
  * Calculates density altitude for a given air density
  *
  * Arguments:
- * density of air - kg * m^(-3) <NUMBER>
+ * Density of air - kg * m^(-3) <NUMBER>
  *
  * Return Value:
  * density altitude - m <NUMBER>

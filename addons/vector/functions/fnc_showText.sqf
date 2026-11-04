@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- *
+ * Shows a predefined text (e.g. config or unit labels) on the Vector display.
  *
  * Arguments:
  * 0: String <STRING>

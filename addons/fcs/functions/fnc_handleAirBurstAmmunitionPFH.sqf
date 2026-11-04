@@ -4,7 +4,11 @@
  * Handle Air burst ammunition. Called from per frame handler.
  *
  * Arguments:
- * -
+ * 0: Arguments <ARRAY>
+ *   0: Vehicle <OBJECT>
+ *   1: Projectile <OBJECT>
+ *   2: Zeroing distance <NUMBER>
+ * 1: PFH handle <NUMBER>
  *
  * Return Value:
  * None

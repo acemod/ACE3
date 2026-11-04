@@ -4,7 +4,7 @@
  * Toggles the range card setup screen on/off
  *
  * Arguments:
- * Apply new range card settings <NUMBER>
+ * Apply new range card settings (1: apply, 0: discard) <NUMBER>
  *
  * Return Value:
  * None
