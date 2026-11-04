@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [1] call ace_missileguidance_fnc_gps_onLoad
+ * [theDisplay] call ace_missileguidance_fnc_gps_onLoad
  *
  * Public: No
  */
