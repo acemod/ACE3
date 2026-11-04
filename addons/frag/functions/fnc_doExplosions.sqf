@@ -21,7 +21,9 @@
 params ["_args", "_pfhID"];
 _args params ["_explosions", "_index"];
 
-for "_i" from _index to ((_index + 2) min (count _explosions)) do {
+private _lastIndex = (_index + 1) min ((count _explosions) - 1);
+
+for "_i" from _index to _lastIndex do {
     private _exp = _explosions select _i;
     _exp params ["_refExp", "_bpos", "_hit", "_distance", "_indirectHitRange", "_depth"];
     _refExp createVehicle (ASLToATL _bpos);
@@ -30,7 +32,7 @@ for "_i" from _index to ((_index + 2) min (count _explosions)) do {
     // };
 };
 
-ADD(_index,2);
+_index = _lastIndex + 1;
 
 if (_index >= count _explosions) then {
     [_pfhID] call CBA_fnc_removePerFrameHandler;
