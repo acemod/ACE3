@@ -397,3 +397,20 @@ class FaceMaskGoggles2: ACEWARDROBE(base) {\
     };\
     components[] = {QUOTE(FaceMaskBase),QUOTE(Goggles2)};\
 }
+
+// Contact DLC Respirators - Remove/Add Filter
+#define RESPIRATOR_PAIR(RespiratorWithFilter,RespiratorWithoutFilter)\
+class RespiratorWithFilter: ACEWARDROBE(base) {\
+    class modifiableTo {\
+        class RespiratorWithoutFilter {\
+            displayName = ACEWARDROBE_CSTRING(filterRemove);\
+        };\
+    };\
+};\
+class RespiratorWithoutFilter: ACEWARDROBE(base) {\
+    class modifiableTo {\
+        class RespiratorWithFilter {\
+            displayName = ACEWARDROBE_CSTRING(filterAdd);\
+        };\
+    };\
+}

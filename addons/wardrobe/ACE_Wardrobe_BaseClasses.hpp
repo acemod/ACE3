@@ -5,6 +5,8 @@ class GVAR(base) {
     // Subclasses can contain optional directional properties, see documentation for details.
     class modifiableTo { };
 
+    class modifiableToSpecial { };
+
     // Components the current variant contains within itself
     components[] = { };
 
