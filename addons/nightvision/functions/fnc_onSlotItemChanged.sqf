@@ -21,7 +21,22 @@
 params ["_unit", "_item", "_slot", "_assign"];
 TRACE_4("onSlotItemChanged",_unit,_item,_slot,_assign);
 
-if (_slot != TYPE_HMD) exitWith {};
+if (_slot != TYPE_HMD) exitWith {
+    if (_slot != TYPE_HEADGEAR && {(hmd _unit) isEqualTo ""}) exitWith {};
+    if (!_assign) exitWith {
+        if ((hmd _unit) isEqualTo "") exitWith {
+            GVAR(playerHMD) = "";
+        };
+    };
+    private _subItems = getArray (configFile >> "CfgWeapons" >> _item >> "subItems");
+    if (_subItems isEqualTo []) exitWith {};
+    private _nvg = _subItems findIf { "nvg" in (toLower _x) };
+    if (_nvg isEqualTo -1) exitWith {};
+    [{
+        GVAR(playerHMD) = (_this select 0);
+        [] call FUNC(refreshGoggleType);
+    },[(_subItems select _nvg)]] call CBA_fnc_execNextFrame;
+};
 
 if (!_assign) exitWith {
     GVAR(playerHMD) = "";
