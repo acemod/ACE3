@@ -31,7 +31,7 @@
 #endif
 
 TRACE_1("params",_this);
-params ["_unit", "", "", "", "_autoSeek"];
+params ["_unit", "", "", "", ["_autoSeek", false]];
 
 if (isNull _unit) exitWith {};
 
