@@ -7,15 +7,15 @@
  * Arguments:
  * 0: Stats array <ARRAY>
  * 1: Item config path <CONFIG>
- * 2: Args for configExtreme <ARRAY>
- * - 0: Stats limits <ARRAY of BOOLs>
- * - 1: Bar limits <ARRAY of NUMBERs>
+ * 2: Stat limits <ARRAY>
+ * - 0: Hit min/max <ARRAY of NUMBERs>
+ * - 1: Initial speed min/max <ARRAY of NUMBERs>
  *
  * Return Value:
  * Number
  *
  * Public: No
-*/
+ */
 
 params ["_stats", "_config", "_args"];
 _args params ["_hitMinMax", "_initSpeedMinMax"];

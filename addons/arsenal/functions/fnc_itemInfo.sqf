@@ -7,15 +7,15 @@
  *
  * Arguments:
  * 0: Arsenal display <DISPLAY>
- * 1: Current panel control <CONTROL> (optional)
- * 2: Current panel selection <NUMBER> (optional)
+ * 1: Current panel control (nil if item config is null) <CONTROL or NIL>
+ * 2: Current panel selection (nil if item config is null) <NUMBER or NIL>
  * 3: Item config entry <CONFIG>
  *
  * Return Value:
  * None
  *
  * Public: No
-*/
+ */
 
 params ["_display", "_control", "_curSel", "_itemCfg"];
 

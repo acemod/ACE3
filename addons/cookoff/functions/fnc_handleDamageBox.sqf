@@ -4,7 +4,16 @@
  * Handles all incoming damage for boxes.
  *
  * Arguments:
- * HandleDamage EH <ARRAY>
+ * 0: Ammo box <OBJECT>
+ * 1: Selection <STRING>
+ * 2: New level of damage <NUMBER>
+ * 3: Source of damage <OBJECT>
+ * 4: Projectile that caused damage <STRING>
+ * 5: Hit index <NUMBER>
+ * 6: Person who caused damage <OBJECT>
+ * 7: Hit point <STRING>
+ * 8: Direct hit (not used) <BOOL>
+ * 9: Context <NUMBER>
  *
  * Return Value:
  * Damage to be inflicted (can be nil) <NUMBER or NIL>

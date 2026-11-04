@@ -8,12 +8,13 @@
  * 0: Arsenal display <DISPLAY>
  * 1: Tab control <CONTROL>
  * 2: Sort control <CONTROL>
+ * 3: Sort direction control <CONTROL>
  *
  * Return Value:
  * None
  *
  * Public: No
-*/
+ */
 
 params ["_display", "_control", "_sortCtrl", "_sortDirectionCtrl"];
 

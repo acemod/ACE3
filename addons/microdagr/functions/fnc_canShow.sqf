@@ -4,10 +4,10 @@
  * Tests if the dagr can be shown in a mode
  *
  * Arguments:
- * The display mode to test showing <NUMBER>
+ * 0: The display mode to test showing <NUMBER>
  *
  * Return Value:
- * <BOOL>
+ * Can show <BOOL>
  *
  * Example:
  * [1] call ace_microdagr_fnc_canShow

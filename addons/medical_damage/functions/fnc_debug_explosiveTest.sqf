@@ -7,16 +7,16 @@
  * Arguments:
  * 0: Center position, format PositionAGL <ARRAY>
  * 1: Distance to spawn units <ARRAY>
- *    0: Min (default: 1)
- *    1: Max (default: 10)
- *    2: Step (default: 1)
+ *    0: Min <NUMBER> (default: 1)
+ *    1: Max <NUMBER> (default: 10)
+ *    2: Step <NUMBER> (default: 1)
  * 2: Unit class to spawn <STRING> (default: "B_Soldier_F")
- * 3: Ammo class to spawn, "" or nil to skip  <STRING> (default: "")
+ * 3: Ammo class to spawn, "" or nil to skip <STRING> (default: "")
  * 4: Delay between unit placement and ammo spawning in seconds <NUMBER> (default: 1)
- * 5: Function to run on each unit that is spawned (optional) <CODE> params [_unit, _center, _ammoClass]
+ * 5: Function to run on each unit that is spawned, params [_unit, _center, _ammoClass] <CODE> (optional)
  *
- * ReturnValue:
- * Nothing
+ * Return Value:
+ * None
  *
  * Example:
  * [position player, [20, 80, 5]] call ace_medical_damage_fnc_debug_explosiveTest

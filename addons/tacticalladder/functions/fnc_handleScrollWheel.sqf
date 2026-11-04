@@ -4,7 +4,7 @@
  * Handles lengthening and tilting of the ladder
  *
  * Arguments:
- * Amount scrolled <NUMBER>
+ * 0: Amount scrolled <NUMBER>
  *
  * Return Value:
  * Handled <BOOL>

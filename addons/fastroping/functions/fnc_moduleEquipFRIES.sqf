@@ -4,7 +4,7 @@
  * Equips synched helicopters with a FRIES.
  *
  * Arguments:
- * 0: Module <LOGIC>
+ * 0: Module logic <OBJECT>
  *
  * Return Value:
  * None

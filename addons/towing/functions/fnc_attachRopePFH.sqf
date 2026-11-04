@@ -1,17 +1,21 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * PFH which allows the user to attach a rope to the given target vehicle
+ * Called every frame by towStateMachinePFH; allows the user to attach a rope to the given target vehicle
  *
  * Arguments:
  * 0: Unit wanting to attach rope <OBJECT>
- * 1: Vehicle to attach rope <OBJECT>
+ * 1: Vehicle to attach rope to (objNull for any vehicle) <OBJECT>
+ * 2: Parent vehicle to ignore <OBJECT>
+ * 3: Rope to ignore <OBJECT>
+ * 4: Rope source position ASL ([0, 0, 0] to disable range limit) <ARRAY>
+ * 5: Maximum range from source <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, cursorObject] call ace_towing_fnc_attachRopePFH
+ * [player, cursorObject, objNull, objNull, [0, 0, 0], 10] call ace_towing_fnc_attachRopePFH
  *
  * Public: No
  */

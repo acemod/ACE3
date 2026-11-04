@@ -8,7 +8,7 @@
  * 1: Damage <ARRAY>
  *
  * Return Value:
- * <ARRAY>
+ * Arguments with damage filtered to legs <ARRAY>
  *
  * Example:
  * [player, []] call ace_explosives_fnc_woundsHandlerToePopper

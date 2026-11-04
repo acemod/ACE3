@@ -12,12 +12,14 @@
  * 5: Hit index <NUMBER>
  * 6: Person who caused damage <OBJECT>
  * 7: Hit point <STRING>
+ * 8: Direct hit (not used) <BOOL>
+ * 9: Context <NUMBER>
  *
  * Return Value:
- * Current or maximum damage of part (nil if not local) <NUMBER or NIL> 
+ * Current or maximum damage of part (nil if not local) <NUMBER or NIL>
  *
  * Example:
- * [cursorObject, "hit_engine_point", 0.5, player, projectile, 1, player, "HitEngine"] call ace_vehicle_damage_fnc_handleDamage
+ * [cursorObject, "hit_engine_point", 0.5, player, projectile, 1, player, "HitEngine", true, 1] call ace_vehicle_damage_fnc_handleDamage
  *
  * Public: No
  */

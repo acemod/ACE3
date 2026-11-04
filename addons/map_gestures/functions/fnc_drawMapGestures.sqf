@@ -5,7 +5,9 @@
  *
  * Arguments:
  * 0: Map Handle <CONTROL>
- * 1: Positions (objects or posAGLs) with render distance <ARRAY<ARRAY<OBJECT, NUMBER>>>
+ * 1: Positions with render range, or briefing mode (0: All, 1: Group, 2: Side, 3: Proximity, 4: Disabled) <ARRAY of ARRAYs or NUMBER>
+ *     0: Object or position AGL <OBJECT or ARRAY>
+ *     1: Render range <NUMBER> (default: ace_map_gestures_maxRange)
  *
  * Return Value:
  * None

@@ -9,7 +9,7 @@
  * 1: Classname (must be in config case) <STRING>
  * 2: Panel control <CONTROL>
  * 3: Name of the picture entry in that Cfg class <STRING> (default: "picture")
- * 4: Config root <NUMBER> (default: 0 -> configFile)
+ * 4: Config root (0: configFile, 1: campaignConfigFile, 2: missionConfigFile) <NUMBER> (default: 0)
  *
  * Return Value:
  * None

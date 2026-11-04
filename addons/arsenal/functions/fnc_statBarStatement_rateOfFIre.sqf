@@ -10,10 +10,10 @@
  * - 1: Bar limits <ARRAY of NUMBERs>
  *
  * Return Value:
- * Number
+ * Bar position <NUMBER>
  *
  * Public: No
-*/
+ */
 
 params ["_config", "_args"];
 _args params ["_statMinMax", "_barLimits"];

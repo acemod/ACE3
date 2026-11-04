@@ -5,7 +5,11 @@
  * Should be called from HandleDamage EH.
  *
  * Arguments:
- * HandleDamage EH <ARRAY>
+ * 0: Vehicle <OBJECT>
+ * 1: Selection (not used) <STRING>
+ * 2: New level of damage (not used) <NUMBER>
+ * 3: Source of damage (not used) <OBJECT>
+ * 4: Projectile that caused damage <STRING>
  *
  * Return Value:
  * None

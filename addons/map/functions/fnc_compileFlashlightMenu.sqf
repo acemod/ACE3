@@ -4,15 +4,14 @@
  * Compile list of flashlight classnames and add to the "Flashlight" parent menu.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: Target (not used) <OBJECT>
  * 1: Player <OBJECT>
- * 3: Parameters <ARRAY>
  *
  * Return Value:
- * None
+ * Children actions <ARRAY>
  *
  * Example:
- * [_player, _player, []] call ace_map_fnc_compileFlashlightMenu;
+ * [_player, _player] call ace_map_fnc_compileFlashlightMenu;
  *
  * Public: No
  */

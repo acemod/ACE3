@@ -4,6 +4,7 @@
  * Gets the squad child actions
  *
  * Arguments:
+ * 0: Target (not used) <OBJECT>
  * 1: Player <OBJECT>
  *
  * Return Value:

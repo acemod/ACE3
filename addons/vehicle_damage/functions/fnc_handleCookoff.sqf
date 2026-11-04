@@ -10,7 +10,7 @@
  * 3: Source of damage <OBJECT>
  * 4: Person who caused damage <OBJECT>
  * 5: Part of vehicle which got hit <STRING> (default: "")
- * 6: Whether or not the vehicle can spawn ring-fire effect <BOOL> (default: false)
+ * 6: Whether or not the vehicle can spawn ring-fire effect <BOOL> (default: true)
  * 7: Whether or not the vehicle can spawn jet-fire effect <BOOL> (default: true)
  *
  * Return Value:

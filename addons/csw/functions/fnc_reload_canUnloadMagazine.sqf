@@ -11,7 +11,7 @@
  * 4: Vehicle Magazine <STRING>
  *
  * Return Value:
- * <BOOL>
+ * Can unload magazine <BOOL>
  *
  * Example:
  * [cursorTarget, [0], player, "ACE_csw_100Rnd_127x99_mag_red", "200Rnd_127x99_mag_Tracer_Red"] call ace_csw_fnc_reload_canUnloadMagazine

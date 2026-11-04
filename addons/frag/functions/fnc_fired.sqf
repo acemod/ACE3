@@ -5,10 +5,10 @@
  * and a "HitPart" eventhandler if it will produce spall.
  *
  * Arguments:
- * Parameters inherited from EFUNC(common,firedEH)
+ * None. Parameters inherited from EFUNC(common,firedEH)
  *
  * Return Value:
- * Nothing Useful
+ * None
  *
  * Example:
  * [clientFiredBIS-XEH] call ace_frag_fnc_fired

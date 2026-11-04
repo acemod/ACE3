@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * PabstMirror
+ * Author: PabstMirror
  * Dig trenchline
  *
  * Arguments:

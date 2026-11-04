@@ -4,13 +4,13 @@
  * Update distance when rangefinder laser is on
  *
  * Arguments:
- * None
+ * 0: Lasercode helper control <CONTROL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call ace_laser_fnc_onLaserDesignatorDraw
+ * [_ctrl] call ace_laser_fnc_onLaserDesignatorDraw
  *
  * Public: No
  */

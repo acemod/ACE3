@@ -5,13 +5,14 @@
  *
  * Arguments:
  * 0: CSW <OBJECT>
- * 1: Muzzle to shoot <STRING>
+ * 1: Weapon <STRING>
+ * 2: Muzzle to shoot <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [csw, "Main"] call ace_csw_fnc_autofire_fire
+ * [csw, "weapon", "muzzle"] call ace_csw_fnc_autofire_fire
  *
  * Public: No
  */

@@ -14,13 +14,15 @@
  * None
  *
  * Return Value:
- * Classname -> count <HASHMAP>
+ * Item counts <HASHMAP>
+ * - key: Item classname <STRING>
+ * - value: Count <NUMBER>
  *
  * Example:
  * call ace_arsenal_fnc_getLoadoutItemCounts
  *
  * Public: No
-*/
+ */
 
 private _counts = createHashMap;
 

@@ -4,13 +4,15 @@
  * Initializes the name tags module.
  *
  * Arguments:
- * Whatever the module provides.
+ * 0: Logic <OBJECT>
+ * 1: Synchronized Units (not used) <ARRAY>
+ * 2: Module Activated <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call ace_nametags_fnc_moduleNameTags
+ * [LOGIC, [bob, kevin], true] call ace_nametags_fnc_moduleNameTags
  *
  * Public: No
  */

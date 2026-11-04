@@ -6,8 +6,8 @@
  * Arguments:
  * 0: Arguments <ARRAY>
  *   0: Unit that does the repairing <OBJECT>
- *   1: Vehicle to repair <OBJECT
- *   2: Selected hitpoint or hitpointIndex <STRING>or<NUMBER>
+ *   1: Vehicle to repair <OBJECT>
+ *   2: Selected hitpoint or hitpointIndex <STRING or NUMBER>
  *   3: Repair Action Classname <STRING>
  *   4: Items <ARRAY>
  *   5: User of Items <ARRAY>

@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: veteran29
- * Custom wound handler for SOG: PF explosive incendiary ammunition.
+ * Custom wound handler for Spearhead 1944 explosive incendiary ammunition.
  * Determines if the unit should be ignited and passes the damage to other wound handlers.
  *
  * Arguments:

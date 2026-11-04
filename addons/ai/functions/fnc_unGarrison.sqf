@@ -13,8 +13,7 @@
  * [unit1, unit2, unit3] call ace_ai_fnc_unGarrison
  *
  * Public: Yes
- *
-*/
+ */
 
 params [["_units", [], [[]]]];
 

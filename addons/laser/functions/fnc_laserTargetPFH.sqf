@@ -3,14 +3,15 @@
  * Author: esteldunedain
  * Maintains the tracked lasers, deleting any laser that is turned off
  *
- * Argument:
- * PFEH Args
+ * Arguments:
+ * 0: PFH arguments (not used) <ARRAY>
+ * 1: PFH handle <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [[], 1]] call ace_laser_fnc_laserTargetPFH;
+ * [[], 1] call ace_laser_fnc_laserTargetPFH;
  *
  * Public: No
  */

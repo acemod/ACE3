@@ -4,8 +4,8 @@
  * Checks if unit can pull target body out of vehicle.
  *
  * Arguments:
- * 1: Body <OBJECT>
- * 2: Unit <OBJECT>
+ * 0: Body <OBJECT>
+ * 1: Unit <OBJECT>
  *
  * Return Value:
  * Able to pull out target body <BOOL>

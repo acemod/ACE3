@@ -1,14 +1,14 @@
 #include "..\script_component.hpp"
 /*
  * Author: ACE-Team
+ * Rotates a point around a line by the given angle, using a map from rotateVectLineGetMap.
  *
- *
- * Argument:
+ * Arguments:
  * 0: Map parameters <ARRAY>
  * 1: Rotation angle theta <NUMBER>
  *
  * Return Value:
- * <ARRAY>
+ * Rotated point <ARRAY>
  *
  * Example:
  * call ace_laser_fnc_rotateVectLine

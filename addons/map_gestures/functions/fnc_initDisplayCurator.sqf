@@ -4,7 +4,7 @@
  * Binds Draw EventHandlers to Zeus map.
  *
  * Arguments:
- * None
+ * 0: Curator map control <CONTROL>
  *
  * Return Value:
  * None

@@ -7,7 +7,7 @@
  * 0: Classname <STRING>
  *
  * Return Value:
- * <STRING>
+ * Display name <STRING>
  *
  * Example:
  * "ACE_Banana" call ace_fieldmanual_fnc_getItemName

@@ -1,6 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: kymckay, joko
+ * Starts Zeus remote control of the first selected non-player unit.
  *
  * Arguments:
  * None

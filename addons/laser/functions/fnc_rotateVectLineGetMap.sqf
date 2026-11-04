@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: ACE-Team
- *
+ * Precomputes the map used by rotateVectLine to rotate a point around the line through two points.
  *
  * Arguments:
  * 0: Point to rotate around <ARRAY>
@@ -9,7 +9,7 @@
  * 2: Second point defining the line <ARRAY>
  *
  * Return Value:
- * <ARRAY>
+ * Map parameters for rotateVectLine <ARRAY>
  *
  * Example:
  * call ace_laser_fnc_rotateVectLineGetMap

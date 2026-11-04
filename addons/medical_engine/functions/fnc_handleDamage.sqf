@@ -6,7 +6,16 @@
  * We store these incoming damages and compare them on last iteration of the event (_context == 2).
  *
  * Arguments:
- * Handle damage EH
+ * 0: Unit <OBJECT>
+ * 1: Selection <STRING>
+ * 2: New level of damage <NUMBER>
+ * 3: Source of damage <OBJECT>
+ * 4: Projectile that caused damage <STRING>
+ * 5: Hit point index <NUMBER>
+ * 6: Person who caused damage <OBJECT>
+ * 7: Hit point <STRING>
+ * 8: Direct hit <BOOL>
+ * 9: Context <NUMBER>
  *
  * Return Value:
  * Damage to be inflicted (nil if not local) <NUMBER or NIL>

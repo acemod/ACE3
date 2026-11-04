@@ -10,6 +10,7 @@
  *   2: Viewport configuration <ARRAY>
  *   3: Viewport index shown (-1 for none) <NUMBER>
  *   4: Last visionmode <NUMBER>
+ * 1: PFEH ID <NUMBER>
  *
  * Return Value:
  * None

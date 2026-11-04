@@ -9,15 +9,16 @@
  * 2: Radius of the task <NUMBER>
  * 3: Filling mode of the garrison function <NUMBER>
  * 4: Enable or not top down filling <BOOL>
+ * 5: Teleport units <BOOL> (default: false)
  *
  * Return Value:
  * None
  *
  * Example:
- * [LOGIC, [2203.64, 2281.47, 1], 20, 2, true] call ace_zeus_fnc_moduleGarrison
+ * [LOGIC, [2203.64, 2281.47, 1], 20, 2, true, false] call ace_zeus_fnc_moduleGarrison
  *
  * Public: No
-*/
+ */
 
 params ["_logic", "_pos", "_radius" ,"_mode" , "_topDownMode", "_teleport"];
 

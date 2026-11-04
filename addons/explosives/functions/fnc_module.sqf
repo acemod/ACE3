@@ -4,7 +4,7 @@
  * Initialises the explosives module
  *
  * Arguments:
- * Module things.
+ * 0: Logic <OBJECT>
  *
  * Return Value:
  * None

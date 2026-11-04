@@ -4,13 +4,14 @@
  * Mouse scroll wheel changed event.
  *
  * Arguments:
- * None
+ * 0: Display (not used) <DISPLAY>
+ * 1: Scroll amount <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call ace_advanced_throwing_fnc_onMouseScroll
+ * [findDisplay 46, 1] call ace_advanced_throwing_fnc_onMouseScroll
  *
  * Public: No
  */

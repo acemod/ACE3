@@ -6,19 +6,18 @@
  * Arguments:
  * 0: The projectile that may generate spalling <OBJECT>
  * 1: The object the projectile hit <OBJECT>
- * 2: The position (ASL) of the projectile hit<ARRAY>
+ * 2: The position (ASL) of the projectile hit <ARRAY>
  * 3: The velocity of the projectile before it hit the surface <ARRAY>
  * 4: The surface normal of the surface hit <ARRAY>
  * 5: The name of the config name or path to bisurf of the surface hit <STRING>
- * 6: The projectiles ammo config  <STRING>
- * 7: The projectiles shot parent <ARRAY>
- * 8: The "up" vector of the projectile when it hit the object <ARRAY>
+ * 6: The projectile's ammo classname <STRING>
+ * 7: The "up" vector of the projectile when it hit the object <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [BIS_HITPART_EH_ARGS] call ace_frag_fnc_doSpallHitPart;
+ * [_projectile, _objectHit, _posASL, _velocity, _surfNorm, _surfType, _ammo, _vectorUp] call ace_frag_fnc_doSpallHitPart;
  *
  * Public: No
  */

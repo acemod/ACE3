@@ -9,7 +9,7 @@
  * 2: Mine detector config <ARRAY>
  *
  * Return Value:
- * <ARRAY>
+ * Detection result <ARRAY>
  * 0: If mine was detected <BOOL>
  * 1: Detected mine <OBJECT>
  * 2: Distance to mine <NUMBER>

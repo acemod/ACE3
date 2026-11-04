@@ -1,16 +1,18 @@
 #include "..\script_component.hpp"
 /*
  * Author: ACE-Team
- * Dev things
+ * Starts a PFH that finds blast reflections for an explosion.
  *
  * Arguments:
- * None
+ * 0: Position ASL <ARRAY>
+ * 1: Ammo classname <STRING>
+ * 2: Depth <NUMBER> (default: 1)
  *
  * Return Value:
  * None
  *
  * Example:
- * call ace_frag_fnc_doReflections
+ * [getPosASL player, "R_80mm_HE"] call ace_frag_fnc_doReflections
  *
  * Public: No
  */

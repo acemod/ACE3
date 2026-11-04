@@ -4,14 +4,14 @@
  * Handles the HuntIR monitor key interaction
  *
  * Arguments:
- * 0: ? <UNKNOWN>
- * 1: keycode <NUMBER>
+ * 0: Display <DISPLAY>
+ * 1: Key code (DIK) <NUMBER>
  *
  * Return Value:
- * handled? <BOOL>
+ * Handled <BOOL>
  *
  * Example:
- * [] call ace_huntir_fnc_keyPressed
+ * [findDisplay 46, 30] call ace_huntir_fnc_keyPressed
  *
  * Public: No
  */

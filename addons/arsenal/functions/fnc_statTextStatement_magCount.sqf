@@ -8,10 +8,10 @@
  * 1: Item config path <CONFIG>
  *
  * Return Value:
- * String to display
+ * Magazine capacity <NUMBER>
  *
  * Public: No
-*/
+ */
 
 params ["", "_config"];
 TRACE_1("statTextStatement_magCount",_config);

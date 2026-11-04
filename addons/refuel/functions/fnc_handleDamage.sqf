@@ -4,10 +4,12 @@
  * Restores vanilla fuel cargo when refuel vehicle is destroyed.
  *
  * Arguments:
- * HandleDamage EH <ARRAY>
+ * 0: Fuel source <OBJECT>
+ * 1: Selection <STRING>
+ * 2: New level of damage <NUMBER>
  *
  * Return Value:
- * nil
+ * Nothing, so the engine applies its default damage <NIL>
  *
  * Example:
  * call ace_refuel_fnc_handleDamage
