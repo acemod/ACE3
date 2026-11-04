@@ -157,5 +157,8 @@
             <Chinesesimp>协助装填</Chinesesimp>
             <Ukrainian>Перезарядка помічником</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_ReloadLaunchers_passLauncher">
+            <English>Pass Launcher</English>
+        </Key>
     </Package>
 </Project>
