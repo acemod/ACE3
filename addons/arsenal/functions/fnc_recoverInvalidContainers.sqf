@@ -13,7 +13,7 @@
  * Copy of the passed loadout, with recovered containers <ARRAY>
  *
  * Public: No
-*/
+ */
 
 params ["_unit", "_loadout"];
 

@@ -15,7 +15,7 @@
  * [_box, true] call ace_arsenal_fnc_removeBox
  *
  * Public: Yes
-*/
+ */
 
 params [["_object", objNull, [objNull]], ["_global", true, [true]]];
 

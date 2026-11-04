@@ -13,7 +13,7 @@
  * [player] call ace_dragging_fnc_handleUnconscious;
  *
  * Public: No
-*/
+ */
 
 params ["_unit"];
 

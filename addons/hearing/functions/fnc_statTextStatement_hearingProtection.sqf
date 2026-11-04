@@ -10,7 +10,7 @@
  * Stat Text <STRING>
  *
  * Public: No
-*/
+ */
 
 params ["_config"];
 

@@ -9,7 +9,7 @@
  * 2: Shooter <OBJECT>
  * 3: Ammo classname or damage type <STRING>
  *
- * ReturnValue:
+ * Return Value:
  * None
  *
  * Example:

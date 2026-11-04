@@ -14,7 +14,7 @@
  * [bob, kevin] call ace_trenches_fnc_handlePlayerChanged
  *
  * Public: No
-*/
+ */
 
 params ["_newPlayer", "_oldPlayer"];
 

@@ -4,7 +4,7 @@
  * Initializes the module.
  *
  * Arguments:
- * 0: The module logic <LOGIC>
+ * 0: The module logic <OBJECT>
  * 1: Units <ARRAY>
  * 2: Activated <BOOL>
  *

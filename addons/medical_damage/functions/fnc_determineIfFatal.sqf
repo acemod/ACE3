@@ -9,7 +9,7 @@
  * 2: Damage Array - QEGVAR(medical,bodyPartDamage) <ARRAY>
  * 3: New Damage <NUMBER>
  *
- * ReturnValue:
+ * Return Value:
  * Was Fatal <BOOL>
  *
  * Example:

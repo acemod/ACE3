@@ -15,7 +15,7 @@
  * ["baseline", {1}, "ace_common"] call ace_common_fnc_addSwayFactor
  *
  * Public: Yes
-*/
+ */
 params ["_type", "_code", "_id"];
 
 _type = toLowerANSI _type;

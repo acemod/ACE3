@@ -13,7 +13,7 @@
  * [LOGIC] call ace_zeus_fnc_moduleUnGarrison
  *
  * Public: No
-*/
+ */
 
 params ["_logic"];
 

@@ -7,7 +7,7 @@
  * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [vehicle player] call ace_laser_fnc_toggleLST

@@ -14,7 +14,7 @@
  * [bob, kevin] call ace_tacticalladder_fnc_handlePlayerChanged
  *
  * Public: No
-*/
+ */
 
 if (isNull GETGVAR(ladder,objNull)) exitWith {};
 

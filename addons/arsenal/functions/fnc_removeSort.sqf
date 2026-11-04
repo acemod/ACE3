@@ -13,7 +13,7 @@
  * [["scopeSortL00", "scopeSortL01", "scopeSortL02", "scopeSortR07"]] call ace_arsenal_fnc_removeSort;
  *
  * Public: Yes
-*/
+ */
 
 params ["_IDList"];
 

@@ -13,7 +13,7 @@
  * None
  *
  * Public: No
-*/
+ */
 
 GVAR(virtualItems) set [IDX_VIRT_UNIQUE_MISC_ITEMS, createHashMap];
 GVAR(virtualItems) set [IDX_VIRT_UNIQUE_VIRT_ITEMS_ALL, createHashMap];

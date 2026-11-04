@@ -10,7 +10,7 @@
  * None
  *
  * Public: No
-*/
+ */
 
 params ["_logic"];
 if (!local _logic) exitWith {};

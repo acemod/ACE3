@@ -8,7 +8,7 @@
  * 1: Flag item <STRING>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player, "ace_flags_white"] call ace_flags_fnc_carryFlag

@@ -13,7 +13,7 @@
  * None
  *
  * Public: No
-*/
+ */
 
 params ["_display", "_control", "_buttonPressed"];
 

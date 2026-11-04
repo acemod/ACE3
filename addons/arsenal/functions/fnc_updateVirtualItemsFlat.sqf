@@ -11,7 +11,7 @@
  * None
  *
  * Public: No
-*/
+ */
 
 private _virtualItemsFlat = +GVAR(virtualItems);
 private _weapons = _virtualItemsFlat deleteAt IDX_VIRT_WEAPONS;

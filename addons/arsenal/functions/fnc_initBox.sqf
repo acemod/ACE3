@@ -16,7 +16,7 @@
  * [_box, true] call ace_arsenal_fnc_initBox
  *
  * Public: Yes
-*/
+ */
 
 params [["_object", objNull, [objNull]], ["_items", true, [[], true]], ["_global", true, [true]]];
 

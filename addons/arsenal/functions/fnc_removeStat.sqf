@@ -13,7 +13,7 @@
  * [["scopeStatL00", "scopeStatL01", "scopeStatL02", "scopeStatR07"]] call ace_arsenal_fnc_removeStat;
  *
  * Public: Yes
-*/
+ */
 
 params ["_IDList"];
 

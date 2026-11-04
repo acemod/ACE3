@@ -12,7 +12,7 @@
  * Verified loadout and missing / unavailable items list and count <ARRAY>
  *
  * Public: No
-*/
+ */
 
 #define NOT_IN_ARSENAL !(_name in GVAR(virtualItemsFlat))
 

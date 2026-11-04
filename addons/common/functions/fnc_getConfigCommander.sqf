@@ -8,7 +8,7 @@
  *
  * Return Value:
  * Commander config <CONFIG>
-
+ *
  * Example:
  * [car] call ace_common_fnc_getConfigCommander
  *

@@ -12,7 +12,7 @@
  * Sorting Value <NUMBER>
  *
  * Public: No
-*/
+ */
 
 params ["", "", "_quantity"];
 

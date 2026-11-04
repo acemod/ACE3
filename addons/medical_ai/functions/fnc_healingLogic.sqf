@@ -10,7 +10,7 @@
  * 1: Target <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [cursorObject, cursorObject] call ace_medical_ai_fnc_healingLogic

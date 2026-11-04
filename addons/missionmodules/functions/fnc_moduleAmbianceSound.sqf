@@ -4,7 +4,7 @@
  * Plays synchronized ambiance sounds while the module is alive.
  *
  * Arguments:
- * 0: Logic <LOGIC>
+ * 0: Logic <OBJECT>
  * 1: Units <ARRAY>
  * 2: Activated <BOOL>
  *

@@ -10,7 +10,7 @@
  * Mod Name to Sort By <STRING>
  *
  * Public: No
-*/
+ */
 
 params ["_config"];
 

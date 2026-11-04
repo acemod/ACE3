@@ -13,7 +13,7 @@
  * [bob] call ace_tacticalladder_fnc_handleKilled
  *
  * Public: No
-*/
+ */
 
 params ["_unit"];
 

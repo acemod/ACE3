@@ -9,13 +9,13 @@
  *    1: Position the unit need to be placed at <ARRAY>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [ [unit1, [10, 10, 10]], [unit2, [30, 30, 30]], [unitN, getPos player] ] call ace_ai_fnc_garrisonMove
  *
  * Public: No
-*/
+ */
 
 params [ ["_unitMoveList", nil, [[]]] ];
 

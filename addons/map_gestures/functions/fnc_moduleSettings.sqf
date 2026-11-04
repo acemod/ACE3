@@ -4,7 +4,7 @@
  * Initializes Settings for the module and transcodes settings to a useable format.
  *
  * Arguments:
- * 0: Logic <LOGIC>
+ * 0: Logic <OBJECT>
  * 1: Units <ARRAY>
  * 2: Activated <BOOL>
  *

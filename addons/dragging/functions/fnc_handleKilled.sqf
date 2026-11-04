@@ -13,7 +13,7 @@
  * [player] call ace_dragging_fnc_handleKilled;
  *
  * Public: No
-*/
+ */
 
 params ["_unit"];
 TRACE_1("params",_unit);

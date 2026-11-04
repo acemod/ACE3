@@ -13,7 +13,7 @@
  * Accuracy <NUMBER>
  *
  * Public: No
-*/
+ */
 
 params ["_config", "_args"];
 _args params ["_statMinMax", "_barLimits"];

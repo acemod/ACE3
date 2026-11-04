@@ -14,7 +14,7 @@
  * None
  *
  * Public: No
-*/
+ */
 params ["_display", "_control", "_curSel", "_itemCfg"];
 
 GVAR(actionsInfo) = [_control, _curSel, _itemCfg];

@@ -13,7 +13,7 @@
  * [configFile >> "CfgWeapons" >> "arifle_AK12_F"] call ace_common_fnc_getAddon
  *
  * Public: Yes
-*/
+ */
 
 params ["_config"];
 

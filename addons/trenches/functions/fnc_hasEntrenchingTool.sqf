@@ -13,7 +13,7 @@
  * [bob] call ace_trenches_fnc_hasEntrenchingTool
  *
  * Public: Yes
-*/
+ */
 
 params [
     ["_unit", objNull, [objNull]]

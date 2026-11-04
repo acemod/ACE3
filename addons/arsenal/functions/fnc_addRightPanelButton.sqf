@@ -19,7 +19,7 @@
  * [["ACE_bloodIV_500", "ACE_Banana"], "MedicalStuff", "\z\ace\addons\arsenal\data\iconCustom.paa", 5, false] call ace_arsenal_fnc_addRightPanelButton
  *
  * Public: Yes
-*/
+ */
 
 params [["_items", [], [[]]], ["_tooltip", "", [""]], ["_picture", QPATHTOF(data\iconCustom.paa), [""]], ["_override", -1, [0]], ["_moveOnOverwrite", false, [false]]];
 

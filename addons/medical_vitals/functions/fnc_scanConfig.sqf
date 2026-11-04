@@ -10,7 +10,7 @@
  * None
  *
  * Public: No
-*/
+ */
 
 private _filter = toString {getText (_x >> QGVAR(oxygenSupply)) != ""};
 

@@ -12,7 +12,7 @@
  * None
  *
  * Public: No
-*/
+ */
 
 params ["_ctrl", "_newText"];
 

@@ -13,7 +13,7 @@
  * [bob] call ace_trenches_fnc_handleUnconscious
  *
  * Public: No
-*/
+ */
 
 params ["_unit"];
 

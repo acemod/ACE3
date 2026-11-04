@@ -9,7 +9,7 @@
  * 1: Function points, must be in descending order by X (input) value <ARRAY>
  * 2: Whether to force integer <BOOL> (default: false)
  *
- * ReturnValue:
+ * Return Value:
  * Interpolated result <NUMBER>
  *
  * Example:

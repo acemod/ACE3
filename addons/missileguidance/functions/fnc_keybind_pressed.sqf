@@ -7,7 +7,7 @@
  * 0: Type of keybind <STRING>
  * 1: Action ("down" or "up") <STRING>
  *
- * Returns:
+ * Return Value:
  * Block Input <BOOL>
  *
  * Example:

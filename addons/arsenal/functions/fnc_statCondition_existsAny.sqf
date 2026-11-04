@@ -14,7 +14,7 @@
  * ["ACE_maxZeroing", _config] call ace_arsenal_fnc_statCondition_existsAny
  *
  * Public: Yes
-*/
+ */
 
 params ["_stats", "_config"];
 TRACE_2("statCondition_existsAny",_stats,_config);

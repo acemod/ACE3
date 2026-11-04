@@ -16,7 +16,7 @@
  * "ACE_CableTie" call ace_arsenal_fnc_isMiscItem
  *
  * Public: No
-*/
+ */
 
 params ["_item", "_config", ["_isMag", false], ["_skipFalseKeys", false]];
 TRACE_4("",_item,_config,_isMag,_skipFalseKeys);

@@ -16,7 +16,7 @@
  * None
  *
  * Public: No
-*/
+ */
 
 params ["_ctrl", "_mouseButton", "", "", "", "_keyCtrl"];
 

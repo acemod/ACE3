@@ -3,7 +3,7 @@
  * Author: johnb43
  * Sets the laser code on a laser source.
  *
- * Argument:
+ * Arguments:
  * 0: Laser source <OBJECT>
  * 1: Laser code <NUMBER>
  *

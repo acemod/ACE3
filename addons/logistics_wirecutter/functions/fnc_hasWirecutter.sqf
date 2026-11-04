@@ -12,7 +12,7 @@
  * Example:
  * [cursorObject] call ace_logistics_wirecutter_fnc_hasWirecutter
  *
- * Public: yes
+ * Public: Yes
  */
 
 params ["_unit"];

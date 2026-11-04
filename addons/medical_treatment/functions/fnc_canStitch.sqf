@@ -8,7 +8,7 @@
  * 1: Patient <OBJECT>
  * 2: Body Part <STRING>
  *
- * ReturnValue:
+ * Return Value:
  * Can Stitch <BOOL>
  *
  * Example:

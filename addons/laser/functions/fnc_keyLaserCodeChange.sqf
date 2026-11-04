@@ -3,12 +3,12 @@
  * Author: PabstMirror
  * Change the laser key code (both seeker and transmitter)
  *
- * Argument:
+ * Arguments:
  * 0: Change in code <NUMBER>
  *
  * Return Value:
  * Key Handled <BOOL>
-
+ *
  * Example:
  * [1] call ace_laser_fnc_keyLaserCodeChange;
  *

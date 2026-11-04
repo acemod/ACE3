@@ -6,7 +6,7 @@
  * Added "zeusUnitAssigned" event call
  *
  * Arguments:
- * 0: The module logic <LOGIC>
+ * 0: The module logic <OBJECT>
  * 1: units <ARRAY>
  * 2: activated <BOOL>
  *

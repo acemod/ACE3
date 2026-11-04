@@ -14,7 +14,7 @@
  * ["Squad Leader", true] call ace_arsenal_fnc_removeDefaultLoadout
  *
  * Public: Yes
-*/
+ */
 params [["_name", "", [""]], ["_global", false, [false]]];
 
 if (_global) exitWith {

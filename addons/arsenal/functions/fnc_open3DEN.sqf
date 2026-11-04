@@ -10,7 +10,7 @@
  * None
  *
  * Public: No
-*/
+ */
 
 private _entity = (uiNamespace getVariable ["BIS_fnc_3DENEntityMenu_data", []]) param [1, objNull];
 [_entity, _entity, true] call FUNC(openBox);

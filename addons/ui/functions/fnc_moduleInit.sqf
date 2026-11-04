@@ -4,7 +4,7 @@
  * Initializes the UI module.
  *
  * Arguments:
- * 0: Module Logic <LOGIC>
+ * 0: Module Logic <OBJECT>
  * 1: Units <ARRAY>
  * 2: Activated <BOOL>
  *

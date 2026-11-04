@@ -16,7 +16,7 @@
  * [_box, player] call ace_arsenal_fnc_openBox
  *
  * Public: Yes
-*/
+ */
 
 params [["_object", objNull, [objNull]], ["_center", objNull, [objNull]], ["_mode", false, [false]]];
 

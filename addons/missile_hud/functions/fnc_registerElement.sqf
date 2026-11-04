@@ -2,7 +2,7 @@
 /*
  * Author: tcvm
  * Register an element which will be drawn when the HUD is displayed.
- * 
+ *
  * Setup and condition function are called every time the HUD appears
  * Arguments to condition and setup function are `[player, vehicle, weapon]`
  * Arguments to generator function are `[player, vehicle, weapon, additional]` where `additional` is whatever was returned from the setup function

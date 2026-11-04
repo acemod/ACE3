@@ -9,7 +9,7 @@
  * 2: Body Part <STRING>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player, cursorObject, "LeftLeg"] call ace_medical_treatment_fnc_splintLocal

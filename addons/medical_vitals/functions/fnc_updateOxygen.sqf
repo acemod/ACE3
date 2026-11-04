@@ -8,8 +8,8 @@
  * 1: Time since last update <NUMBER>
  * 2: Sync value? <BOOL>
  *
- * ReturnValue:
- * Current SPO2 <NUMBER>
+ * Return Value:
+ * None
  *
  * Example:
  * [player, 1, false] call ace_medical_vitals_fnc_updateOxygen

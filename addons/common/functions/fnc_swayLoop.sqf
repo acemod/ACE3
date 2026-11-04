@@ -13,7 +13,7 @@
  * call ace_common_fnc_swayLoop
  *
  * Public: No
-*/
+ */
 
 private _baseline = 1;
 if (GVAR(swayFactorsBaseline) isNotEqualTo []) then {

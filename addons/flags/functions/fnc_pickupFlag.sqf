@@ -9,7 +9,7 @@
  * 2: Flag pole (gets deleted later) <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player, "ace_flags_white", my_flag] call ace_flags_fnc_pickupFlag

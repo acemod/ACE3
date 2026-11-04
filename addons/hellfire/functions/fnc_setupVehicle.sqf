@@ -8,7 +8,7 @@
  * 0: Player <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player] call ace_hellfire_fnc_setupVehicle
