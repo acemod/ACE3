@@ -1,19 +1,18 @@
 #include "..\script_component.hpp"
 /*
  * Author: Ruthberg
- * Returns the first intersection with terrain between two positions.
+ * Returns the first intersection with an object between two positions.
  *
  * Arguments:
  * 0: PositionASL <ARRAY>
- * 1: PositionATL <ARRAY>
- * 2: Accuracy <NUMBER>
+ * 1: PositionASL <ARRAY>
  *
  * Return Value:
  * 0: Intersects <BOOL>
  * 1: Intersection Position ASL <ARRAY>
  *
  * Example:
- * [[1,2,3], [0,0,5], 5] call ace_common_fnc_getFirstObjectIntersection
+ * [[1,2,3], [0,0,5]] call ace_common_fnc_getFirstObjectIntersection
  *
  * Public: Yes
  */

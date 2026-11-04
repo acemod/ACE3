@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Object <OBJECT>
  * 1: Use effective commander name when used on vehicles <BOOL> (default: false)
- * 2: Get Raw Name (Don't sanitize HTML tags `</>`) <BOOL> (default: false)
+ * 2: Get Raw Name (Don't sanitize HTML tags) <BOOL> (default: false)
  *
  * Return Value:
  * Object Name <STRING>

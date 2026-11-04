@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Force set name (optional, default: false) <BOOL>
+ * 1: Force set name <BOOL> (default: false)
  *
  * Return Value:
  * None

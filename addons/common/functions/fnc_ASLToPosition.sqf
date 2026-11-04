@@ -9,7 +9,7 @@
  * 2: position z <NUMBER>
  *
  * Return Value:
- * <ARRAY>
+ * Position (ASL over water, ATL over land) <ARRAY>
  *
  * Example:
  * [1, 2, 3] call ace_common_fnc_ASLToPosition

@@ -1,16 +1,21 @@
 #include "..\script_component.hpp"
 /*
  * Author: ACE-Team
- * ?
+ * Translates a world position (ASL) into coordinates relative to an object in the given basis.
  *
  * Arguments:
- * <UNKOWN>
+ * 0: Object, its position is used as origin <OBJECT>
+ * 1: Basis vectors <ARRAY>
+ *     0: X axis vector <ARRAY>
+ *     1: Y axis vector <ARRAY>
+ *     2: Z axis vector <ARRAY>
+ * 2: Position ASL <ARRAY>
  *
  * Return Value:
- * Unknown <UNKNOWN>
+ * Coordinates in the basis [x, y, z] <ARRAY>
  *
  * Example:
- * [UNKOWN] call ace_common_fnc_translateToWeaponSpace
+ * [player, [[1,0,0], [0,1,0], [0,0,1]], getPosASL car] call ace_common_fnc_translateToWeaponSpace
  *
  * Public: No
  */

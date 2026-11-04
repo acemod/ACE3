@@ -4,13 +4,14 @@
  * Obtain children of a config entry
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: Parent class name <STRING>
+ * 1: Root config class name (e.g. "CfgVehicles") <STRING>
  *
  * Return Value:
- * Parent Entry Class Children <ARRAY>
-
+ * Names of direct child classes <ARRAY of STRINGs>
+ *
  * Example:
- * [bob] call ace_common_fnc_getChildren
+ * ["Car", "CfgVehicles"] call ace_common_fnc_getChildren
  *
  * Public: Yes
  */

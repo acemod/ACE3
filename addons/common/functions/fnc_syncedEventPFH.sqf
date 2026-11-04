@@ -1,17 +1,16 @@
 #include "..\script_component.hpp"
 /*
  * Author: ACE-Team
- *
- * ?
+ * Server PFH that removes expired entries from the synced event logs.
  *
  * Arguments:
- * ?
+ * None
  *
  * Return Value:
  * None
  *
  * Example:
- * [?] call ace_common_fnc_syncedEventPFH
+ * [ace_common_fnc_syncedEventPFH, 0.5, []] call CBA_fnc_addPerFrameHandler
  *
  * Public: No
  */

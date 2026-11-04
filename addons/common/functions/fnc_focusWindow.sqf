@@ -5,8 +5,8 @@
  *
  * Arguments:
  * 0: Mode <NUMBER>
- *   - 1: Focus window
- *   - 2: Flash window
+ *   1 = Focus window
+ *   2 = Flash window
  *
  * Return Value:
  * None
@@ -15,7 +15,7 @@
  * 1 call ace_common_fnc_focusWindow
  *
  * Public: Yes
-*/
+ */
 
 params [["_mode", 1, [1]]];
 

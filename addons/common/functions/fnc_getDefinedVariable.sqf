@@ -6,6 +6,7 @@
  * Arguments:
  * 0: unit <OBJECT>
  * 1: Variable Name <STRING>
+ * 2: Default value if the variable is undefined <ANY> (default: value registered via defineVariable, else 0)
  *
  * Return Value:
  * Value of variable or default value, if the variable is undefined <ANY>

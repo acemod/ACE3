@@ -3,13 +3,9 @@
  * Author: jaynus
  * Receives either requests for synchronization from clients, or the synchronization data from the server.
  *
- * Arguments [Client]:
+ * Arguments:
  * 0: eventName <STRING>
- * 1: eventLog <ARRAY>
- *
- * Arguments [Server]:
- * 0: eventName <STRING>
- * 1: client <OBJECT>
+ * 1: client (on server) or eventLog (on client) <OBJECT or ARRAY>
  *
  * Return Value:
  * Event is successed <BOOL>

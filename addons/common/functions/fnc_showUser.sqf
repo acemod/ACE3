@@ -4,13 +4,13 @@
  * hint the Variable ACE_isUsedBy from the input Object every frame
  *
  * Arguments:
- * <OBJECT>
+ * Object <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [bob] call ace_common_fnc_showUser
+ * bob call ace_common_fnc_showUser
  *
  * Public: No
  */

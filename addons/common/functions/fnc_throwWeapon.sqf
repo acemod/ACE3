@@ -8,7 +8,7 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Weapon Holder
+ * Weapon holder, objNull if nothing was thrown <OBJECT>
  *
  * Example:
  * player call ace_common_fnc_throwWeapon

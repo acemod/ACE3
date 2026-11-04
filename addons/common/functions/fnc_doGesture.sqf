@@ -6,6 +6,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Animation <STRING>
+ * 2: Priority, >0 plays even while reloading <NUMBER> (default: 0)
  *
  * Return Value:
  * None
