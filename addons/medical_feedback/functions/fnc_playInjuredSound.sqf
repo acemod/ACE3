@@ -30,6 +30,9 @@ if (!local _unit) exitWith { ERROR_2("playInjuredSound: Unit not local or null [
 
 if (!_allowUnconscious && {!(_unit call EFUNC(common,isAwake))}) exitWith {};
 
+// Repeated hits during the cooldown cannot play a sound, so skip finding listeners.
+if (_unit getVariable [QGVAR(soundTimeout) + _type, -1] > CBA_missionTime) exitWith {};
+
 // Limit network traffic by only sending the event to players who can potentially hear it
 private _distance = if (_type == "hit") then {
     _hitDistances select _severity
@@ -39,8 +42,7 @@ private _distance = if (_type == "hit") then {
 private _targets = allPlayers inAreaArray [ASLToAGL getPosASL _unit, _distance, _distance, 0, false, _distance];
 if (_targets isEqualTo []) exitWith {};
 
-// Handle timeout
-if (_unit getVariable [QGVAR(soundTimeout) + _type, -1] > CBA_missionTime) exitWith {};
+// Start the cooldown only when there are potential listeners.
 private _timeOut = if (_type == "moan") then { TIME_OUT_MOAN # _severity } else { TIME_OUT_HIT };
 _unit setVariable [QGVAR(soundTimeout) + _type, CBA_missionTime + _timeOut];
 
