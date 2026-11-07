@@ -159,6 +159,7 @@
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_passLauncher">
             <English>Pass Launcher</English>
+            <Ukrainian>Передати гранатомет</Ukrainian>
         </Key>
     </Package>
 </Project>
