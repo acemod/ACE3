@@ -55,7 +55,7 @@ if (_target isKindOf "CAManBase") then {
     if (_target call EFUNC(common,isAwake)) then {
         [_target, "amovppnemstpsnonwnondnon", 2] call EFUNC(common,doAnimation);
     } else {
-        if (["ace_nomedical"] call EFUNC(common,isModLoaded)) then {
+        if !(GETEGVAR(medical,enabled,false)) then {
             [_target, "unconsciousfaceup", 2] call EFUNC(common,doAnimation);
         } else {
             [_target, "unconscious", 2] call EFUNC(common,doAnimation);
