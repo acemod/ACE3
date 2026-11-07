@@ -24,3 +24,4 @@
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(reloadLauncher), LINKFUNC(reloadLauncher)] call CBA_fnc_addEventHandler;
+[QGVAR(passLauncher), LINKFUNC(passLauncherReceive)] call CBA_fnc_addEventHandler;
