@@ -23,6 +23,8 @@ jobs:
       uses: actions/checkout@v6
     - name: Setup HEMTT
       uses: arma-actions/hemtt@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Authenticated API requests to avoid rate limits
     - name: Checkout pull request
       uses: actions/checkout@v6
       if: ${{ github.event_name == 'pull_request_target' }}
