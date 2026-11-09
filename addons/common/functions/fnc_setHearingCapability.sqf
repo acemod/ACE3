@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Glowbal, BaerMitUmlaut
+ * Author: Glowbal, BaerMitUmlaut, Jouklik
  * Handle set volume calls. Will use the lowest available volume setting.
  *
  * Arguments:
@@ -8,6 +8,8 @@
  * 1: Settings <NUMBER>
  * 2: Add (true) or remove (false) <BOOL> (default: true)
  * 3: Volume fade duration <NUMBER> (default: 0)
+ * 4: ID Headphones <STRING> (default: ID)
+ * 5: Settings Headphones <NUMBER> (default: Settings)
  *
  * Return Value:
  * None
@@ -19,30 +21,38 @@
  */
 
 params ["_id", "_setting", ["_add", true], ["_fadeDuration", 0]];
+params ["", "", "", "", ["_idHeadphones", _id], ["_settingHeadphones", _setting]];
 
-_id = toLowerANSI _id;
+private _fnc_lowestVolume = {
+    params ["_id", "_setting", "_capabilityMap"];
 
-// Save setting
-if (_add) then {
-    GVAR(setHearingCapabilityMap) set [_id, _setting];
-} else {
-    GVAR(setHearingCapabilityMap) deleteAt _id;
+    _id = toLowerANSI _id;
+
+    // Save setting
+    if (_add) then {
+        _capabilityMap set [_id, _setting];
+    } else {
+        _capabilityMap deleteAt _id;
+    };
+
+    private _volumes = values _capabilityMap;
+
+    // If no deafening volumes are left, put it back to default
+    if (_volumes isEqualTo []) then {
+        1
+    } else {
+        selectMin _volumes
+    }
 };
 
-private _volumes = values GVAR(setHearingCapabilityMap);
-
-// If no deafening volumes are left, put it back to default
-private _lowestVolume = if (_volumes isEqualTo []) then {
-    1
-} else {
-    selectMin _volumes
-};
+private _lowestVolume  = [_id, _setting, GVAR(setHearingCapabilityMap)] call _fnc_lowestVolume;
+private _lowestVolumeHeadphones = [_idHeadphones, _settingHeadphones, GVAR(setHearingCapabilityMapHeadphones)] call _fnc_lowestVolume;
 
 // In-game sounds
 _fadeDuration fadeSound _lowestVolume;
-_fadeDuration fadeRadio _lowestVolume;
+_fadeDuration fadeRadio _lowestVolumeHeadphones;
 if (GVAR(allowFadeMusic)) then {
-    _fadeDuration fadeMusic _lowestVolume;
+    _fadeDuration fadeMusic _lowestVolumeHeadphones;
 };
 
 // Set radio mod variables

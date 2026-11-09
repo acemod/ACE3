@@ -30,7 +30,7 @@ if (
     && {ACE_player getVariable ["ACE_hasEHP", false] || {ACE_player getVariable ["ACE_hasBuiltInEHP", false]}}
 ) then {
     if (GVAR(ehpTimeout) == -1) then {
-        [QGVAR(ehp), EHP_REDUCTION * GVAR(volumeAttenuation), true] call EFUNC(common,setHearingCapability);
+        [QGVAR(ehp), EHP_REDUCTION * GVAR(volumeAttenuation), true, 0, QGVAR(ehp), 1] call EFUNC(common,setHearingCapability);
 
         [{
             CBA_missionTime >= GVAR(ehpTimeout)
