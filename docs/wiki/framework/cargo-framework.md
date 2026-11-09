@@ -83,6 +83,8 @@ In the 3D mission editor attributes for "Cargo Size" and "Cargo Space" are avail
 
 If you wish to enable loading for an object/vehicle which does not have these editor attributes, see the `ace_cargo_fnc_setSize` and `ace_cargo_fnc_setSpace` functions.
 
+For ViV loading, a "Load to ViV" attribute (Default, Force on, Force off) is available on objects, and a "Disable ViV Carrier" checkbox on vehicles. See section 4.9.
+
 ## 4. Scripting
 
 ### 4.1 Disabling cargo for a mission object
@@ -205,3 +207,42 @@ Note first argument can be a in-game object or a classname of an object type.
 ```sqf
 cargoBox setVariable ["ace_cargo_noRename", true, _disableGlobally]
 ```
+### 4.9 Vehicle-in-Vehicle (ViV)
+
+ACE can offer the base game's Vehicle-in-Vehicle loading through the same interaction menu as regular cargo. The base game still decides whether an object fits in a carrier.
+
+#### 4.9.1 Which objects get the `Load to ViV` option
+
+By default an object gets the option if it is registered for ACE cargo, for example through `ace_cargo_canLoad = 1` in config (see 1.2). Setting its size to `-1` through the editor attribute or `ace_cargo_fnc_setSize` disables regular ACE cargo only, it does not remove `Load to ViV`.
+
+The `Expanded ViV object support` setting additionally enables it on all `ThingX` objects and static weapons. This setting requires a mission restart.
+
+#### 4.9.2 Forcing or vetoing ViV loading on an object
+
+`ace_cargo_fnc_setCanLoadViv`
+
+```sqf
+ * Sets whether an object can be loaded as ViV (BI Vehicle-in-Vehicle) cargo using ACE Cargo framework. DOES NOT BLOCK OTHER METHODS. Has global effect.
+ * true: Forces the "Load to ViV" action onto the object, even if it isn't otherwise eligible.
+ * false: Hides the "Load to ViV" action for the object, even if it is otherwise eligible.
+ *
+ * Arguments:
+ * 0: Object <OBJECT> (default: objNull)
+ * 1: Can be loaded as ViV <BOOL> (default: nil)
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [cursorObject, true] call ace_cargo_fnc_setCanLoadViv
+```
+This is also available in the editor as the "Load to ViV" attribute.
+
+#### 4.9.3 Disabling ViV loading into a specific vehicle
+
+```sqf
+vehicle setVariable ["ace_cargo_disableVivCarrier", true, true];
+```
+
+The variable is not synchronized automatically. The third argument (`true`) makes it public and is required, otherwise the veto only applies on the machine that set it.
+In the editor, use the "Disable ViV Carrier" attribute. It sets the variable public for you.
