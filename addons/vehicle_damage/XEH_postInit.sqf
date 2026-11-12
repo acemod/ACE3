@@ -15,6 +15,12 @@
     }, true, [], true] call CBA_fnc_addClassEventHandler;
 } forEach EJECT_IF_DESTROYED_VEHICLES;
 
+["StaticWeapon", "Init", {
+    params ["_vehicle"];
+    if (getNumber (configOf _vehicle >> "ejectDeadCargo") == 0) exitWith {}; // Pod_Heli_Transport_04_crewed_base_F
+    _vehicle addEventHandler ["HandleDamage", {call FUNC(handleDamageEjectIfDestroyed)}];
+}, true, [], true] call CBA_fnc_addClassEventHandler;
+
 ["CBA_settingsInitialized", {
     TRACE_1("settings init",GVAR(enabled));
 
