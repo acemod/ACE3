@@ -32,10 +32,6 @@ if (_patient call EFUNC(common,isBeingDragged)) then {
     [_medic, _patient] call EFUNC(dragging,dropObject);
 };
 
-if (!alive _patient) exitWith {
-    [[LSTRING(CanNotLoadDead), _patient call EFUNC(common,getName)]] call EFUNC(common,displayTextStructured);
-};
-
 private _vehicle = [
     _medic,
     _patient,
@@ -48,7 +44,7 @@ if (isNull _vehicle) exitWith { TRACE_1("no vehicle found",_vehicle); };
 
 [{
     params ["_unit", "_vehicle"];
-    (alive _unit) && {alive _vehicle} && {(vehicle _unit) == _vehicle}
+    alive _vehicle && {(objectParent _unit) == _vehicle} // objectParent instead of vehicle is for dead units
 }, {
     params ["_unit", "_vehicle"];
     TRACE_2("success",_unit,_vehicle);
