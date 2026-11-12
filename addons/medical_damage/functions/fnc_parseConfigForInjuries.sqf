@@ -35,7 +35,8 @@ private _classID = 0;
     private _causeLimping = GET_NUMBER(_entry >> "causeLimping",0) == 1;
     private _causeFracture = GET_NUMBER(_entry >> "causeFracture",0) == 1;
 
-    private _details = [_selections, _bleeding, _pain, _causeLimping, _causeFracture];
+    // Keep the class ID with its metadata to avoid a name-array search for every wound.
+    private _details = [_selections, _bleeding, _pain, _causeLimping, _causeFracture, _classID];
     GVAR(woundDetails) set [_className, _details];
     GVAR(woundDetails) set [_classID, _details];
 

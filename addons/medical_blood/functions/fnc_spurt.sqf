@@ -27,7 +27,8 @@ private _distanceBetweenDrops = DISTANCE_BETWEEN_DROPS * _damage;
 private _offset = OFFSET + _distanceBetweenDrops;
 private _position = _unit getPos [_offset, _direction];
 
-["blooddrop_2", _position, _unit] call FUNC(createBlood);
+// Blood is only visual, so a burst of spurts (e.g. an explosion hitting a group) is created over the next frames
+GVAR(dropQueue) pushBack ["blooddrop_2", _position, _unit];
 
 private _dropAmount = ceil (MAXIMUM_DROPS * _damage);
 TRACE_2("Spurting blood",_dropAmount,_damage);
@@ -35,6 +36,10 @@ TRACE_2("Spurting blood",_dropAmount,_damage);
 if (_dropAmount > 1) then {
     for "_i" from 2 to _dropAmount do {
         _position = _position getPos [_distanceBetweenDrops, _direction];
-        ["blooddrop_1", _position, _unit] call FUNC(createBlood);
+        GVAR(dropQueue) pushBack ["blooddrop_1", _position, _unit];
     };
+};
+
+if (GVAR(dropQueuePFH) == -1) then {
+    GVAR(dropQueuePFH) = [LINKFUNC(createQueuedBlood), 0] call CBA_fnc_addPerFrameHandler;
 };
