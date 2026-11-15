@@ -2,6 +2,9 @@ class ACE_Settings {
     class GVAR(enabled) {
         movedToSQF = 1;
     };
+    class GVAR(showPrompt) {
+        movedToSQF = 1;
+    };
     class GVAR(viewDistanceOnFoot) {
         movedToSQF = 1;
     };

@@ -9,6 +9,14 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(showPrompt), "CHECKBOX",
+    ["Show View Distance Prompt", "Enable or disable the view distance notification."],
+    _category,
+    true,
+    0
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(viewDistanceOnFoot), "SLIDER",
     [LSTRING(onFoot_DisplayName), format ["%1\n%2", LLSTRING(onFoot_Description), LLSTRING(sliderExtraDescription)]],
     _category,
