@@ -222,7 +222,7 @@ class GVAR(type_Fleyta) {
     seekerAccuracy = 1;         // seeker accuracy multiplier
 
     seekerMinRange = 0;
-    seekerMaxRange = 3000;      // Range from the missile which the seeker can visually search
+    seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
 
     correctionDistance = 0; // distance from center of crosshair where missile slows down
     offsetFromCrosshair[] = { 0, 0, 0 }; // where the missile wants to stay in relation to the center of the crosshair.
