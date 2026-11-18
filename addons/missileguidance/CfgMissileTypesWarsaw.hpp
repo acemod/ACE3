@@ -167,8 +167,8 @@ class GVAR(type_Falanga) {
     showTrail = 1;
 
     // Guidance type for munitions
-    defaultSeekerType = "MCLOS";
-    seekerTypes[] = { "MCLOS" };
+    defaultSeekerType = "SACLOS";
+    seekerTypes[] = { "SACLOS" };
 
     defaultSeekerLockMode = "LOAL";
     seekerLockModes[] = { "LOAL" };
@@ -184,14 +184,14 @@ class GVAR(type_Falanga) {
     seekerAccuracy = 1;         // seeker accuracy multiplier
 
     seekerMinRange = 0;
-    seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
+    seekerMaxRange = 4000;      // Range from the missile which the seeker can visually search
 
     correctionDistance = 0; // distance from center of crosshair where missile slows down
     offsetFromCrosshair[] = { 0, 0, 0 }; // where the missile wants to stay in relation to the center of the crosshair.
 
     // Attack profile type selection
-    defaultAttackProfile = "WIRE";
-    attackProfiles[] = {"WIRE"};
+    defaultAttackProfile = "BEAM";
+    attackProfiles[] = {"BEAM"};
 };
 
 class GVAR(type_Fleyta) {
