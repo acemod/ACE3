@@ -108,6 +108,28 @@ private _fnc_renderSelfActions = {
         private _action = _x;
         [_target, _action, _pos] call FUNC(renderBaseMenu);
     } forEach _classActions;
+    
+};
+
+private _fnc_renderVehicleSelfActions = {
+    private _target = _this;
+
+    // Iterate through object actions, find base level actions and render them if appropiate
+    GVAR(objectActionList) = _target getVariable [QGVAR(selfActions), []];
+    {
+        // Only render them directly if they are base level actions
+        if (_x select 1 isNotEqualTo []) then {continue};
+        private _action = _x;
+        [_target, _action] call FUNC(renderBaseMenu);
+    } forEach GVAR(objectActionList);
+
+
+    // Iterate through class actions
+    private _classActions = GVAR(ActSelfNamespace) getVariable [typeOf _target, []];
+    {
+        private _action = _x;
+        [_target, _action, [0.5,0.5]] call FUNC(renderBaseMenu);
+    } forEach _classActions;
 };
 
 private _fnc_renderZeusActions = {
@@ -134,7 +156,7 @@ if (GVAR(openedMenuType) == 0) then {
                 };
             } else {
                 // Render vehicle self actions when in vehicle
-                (vehicle ACE_player) call _fnc_renderSelfActions;
+                (vehicle ACE_player) call _fnc_renderVehicleSelfActions;
             };
         } else {
             // Render UAV self actions when in control of UAV AI
