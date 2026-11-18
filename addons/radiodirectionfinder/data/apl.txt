@@ -1,0 +1,1 @@
+part of backpack and textures from ca\weapons_e\AmmoBoxes
