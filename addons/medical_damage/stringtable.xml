@@ -940,6 +940,12 @@
             <Chinesesimp>四肢伤害阈值</Chinesesimp>
             <Ukrainian>Поріг пошкодження кінцівок</Ukrainian>
         </Key>
+        <Key ID="STR_ACE_Medical_Damage_partDamageCap_Description">
+            <English>Sets the amount of damage a body part can receive before preventing more wounds from occurring.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_partDamageCap_DisplayName">
+            <English>Body Part Damage Cap</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Damage_uselimbDamage_Description">
             <English>Controls whether limb damage is taken into account for sum of trauma calculations.</English>
             <French>Contrôle si les dommages aux membres sont pris en compte dans les calculs de la somme des traumatismes.</French>
