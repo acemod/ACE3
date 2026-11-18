@@ -5,7 +5,7 @@ pub fn break_line(line: String) -> String {
     for word in words {
         if buffer.len() + word.len() > 14 {
             out.push(buffer.trim_end().to_string());
-            buffer = String::new();
+            buffer.clear();
         }
         buffer.push_str(word);
         buffer.push(' ');
