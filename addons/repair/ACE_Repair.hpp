@@ -87,7 +87,7 @@ class ACE_Repair {
             requiredEngineer = QGVAR(engineerSetting_fullRepair);
             repairLocations[] = {QGVAR(fullRepairLocation)};
             repairingTime = QFUNC(getFullRepairTime);
-            condition = "((getAllHitPointsDamage _target) select 2) findIf {_x > 0} != -1";
+            condition = QFUNC(canFullRepair);
             callbackSuccess = QFUNC(doFullRepair);
             callbackProgress = QFUNC(fullRepairProgress);
             items = QGVAR(fullRepairRequiredItems);
