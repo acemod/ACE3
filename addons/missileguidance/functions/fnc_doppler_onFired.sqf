@@ -49,6 +49,10 @@ private _lockTypes = [_config >> "lockableTypes", "ARRAY", ["Air", "LandVehicle"
 private _minimumFilterSpeed = [_config >> "minimumSpeedFilter", "NUMBER", 30] call CBA_fnc_getConfigEntry;
 private _minimumFilterTime = [_config >> "minimumTimeFilter", "NUMBER", 1e-4] call CBA_fnc_getConfigEntry;
 private _maxTerrainCheck = [_config >> "maxTerrainCheck", "NUMBER", 16000] call CBA_fnc_getConfigEntry;
+private _chaffEffectiveness = [_config >> "chaffEffectiveness", "NUMBER", 0.5] call CBA_fnc_getConfigEntry;
+private _multipathError = [_config >> "multipathError", "NUMBER", 20] call CBA_fnc_getConfigEntry;
+private _multipathMaxSpeed = [_config >> "multipathMaxSpeed", "NUMBER", 50] call CBA_fnc_getConfigEntry;
+private _multipathMaxHeight = [_config >> "multipathMaxHeight", "NUMBER", 300] call CBA_fnc_getConfigEntry;
 
 private _velocityAtImpact = _projectileThrust * _projectileThrustTime;
 private _timeToActive = 0;
@@ -83,4 +87,12 @@ _seekerStateParams set [10, _lockTypes];
 _seekerStateParams set [11, _minimumFilterSpeed];
 _seekerStateParams set [12, _minimumFilterTime];
 _seekerStateParams set [13, _maxTerrainCheck];
+_seekerStateParams set [14, -1]; // when a chaff seduction ends
+_seekerStateParams set [15, false]; // the launcher's radar has lost the target in clutter
+_seekerStateParams set [16, objNull]; // the target a chaff seduction took the radar off
+_seekerStateParams set [17, _chaffEffectiveness];
+_seekerStateParams set [18, _multipathError];
+_seekerStateParams set [19, _multipathMaxSpeed];
+_seekerStateParams set [20, _multipathMaxHeight];
+_seekerStateParams set [21, random 360]; // multipath phase
 

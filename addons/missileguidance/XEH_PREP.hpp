@@ -22,6 +22,7 @@ PREP(doHandoff);
 PREP(handleHandoff);
 
 PREP(shouldFilterRadarHit);
+PREP(checkChaff);
 
 PREP(MCLOS_buttonPressed);
 PREP(MCLOS_mouseInput);

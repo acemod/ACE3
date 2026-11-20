@@ -38,6 +38,7 @@ GVAR(gps_mode) = "pb";
 GVAR(gps_weapons) = createHashMap;
 
 GVAR(mclos_weapons) = createHashMap;
+GVAR(chaffTypes) = createHashMap;
 
 GVAR(debug_enableMissileCamera) = false;
 GVAR(debug_drawGuidanceInfo) = false;

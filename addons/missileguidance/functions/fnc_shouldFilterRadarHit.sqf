@@ -1,122 +1,67 @@
 #include "..\script_component.hpp"
 /*
- * Author: tcvm
- * Whether or not we should filter out this target due to masking. Useful for only Doppler radar types
+ * Author: tcvm, Snow(Dryden)
+ * Whether a Doppler radar loses this target in ground clutter: slower along the line of sight than the Doppler filter,
+ * and either the lower half of the beam reaches the ground around it or there is ground close behind it.
+ * A running helicopter's rotor still gives a return now and then.
+ * Chaff is checked by ace_missileguidance_fnc_checkChaff. Useful for only Doppler radar types.
  *
  * Arguments:
  * 0: Target <OBJECT>
- * 1: Projectile <OBJECT>
+ * 1: Radar: the projectile, or the launcher guiding it <OBJECT>
  * 2: Minimum speed for Doppler return to filter out <NUMBER>
  * 3: Minimum time for Doppler return to filter out <NUMBER>
  * 4: Maximum distance to check for terrain <NUMBER>
- * 5: Radar seeker angle <NUMBER>
+ * 5: Radar seeker angle (not used) <NUMBER>
  *
  * Return Value:
  * Whether or not to filter out this target <BOOL>
  *
  * Example:
- * [] call ace_missileguidance_fnc_shouldFilterRadarHit;
+ * [cursorTarget, _projectile, 5, 0.000001, 16000] call ace_missileguidance_fnc_shouldFilterRadarHit;
  *
  * Public: Yes
  */
 // as defined by lineIntersectsSurfaces
 #define MAX_LINE_DISTANCE 5000
 
-params ["_target", "_projectile", "_minimumSpeed", "_minimumTime", "_maximumTerrainCheck", "_seekerAngle"];
-TRACE_5("should filter target",_projectile,_target,_minimumSpeed,_minimumTime,_maximumTerrainCheck);
+params ["_target", "_radar", "_minimumSpeed", "_minimumTime", "_maximumTerrainCheck"];
+TRACE_5("should filter target",_radar,_target,_minimumSpeed,_minimumTime,_maximumTerrainCheck);
 // Theory developed from doppler radar visuals at https://www.mudspike.com/dcs-f-15c-combat-guide-for-beginners/
 
-// helicopter blades will always produce a doppler shift due to their nature. Don't filter
-if (_target isKindOf "Helicopter" && isEngineOn _target) exitWith {
-    TRACE_1("dont filter helicopters",_target);
+if (isNull _target || {isNull _radar}) exitWith {false};
+
+private _radarPos = getPosASLVisual _radar;
+private _targetPos = getPosASLVisual _target;
+private _lineOfSight = _radarPos vectorFromTo _targetPos;
+
+// if relative target velocity is greater than threshold, we can easily see it. Don't filter
+if (abs ((velocity _target) vectorDotProduct _lineOfSight) > _minimumSpeed) exitWith {
+    TRACE_1("dont filter fast objects approaching",_minimumSpeed);
     false
 };
 
-private _lineOfSight = (getPosASLVisual _projectile) vectorFromTo (getPosASLVisual _target);
-private _realTargetVelocity = velocity _target;
-private _closingVelocity = _lineOfSight vectorMultiply (_realTargetVelocity vectorDotProduct _lineOfSight);
-private _closingSpeed = vectorMagnitude _closingVelocity;
+// the lower half of the beam reaches the ground around the target
+private _inClutter = (ASLToAGL _targetPos) # 2 < (_radarPos vectorDistance _targetPos) * tan RADAR_BEAM_HALF_ANGLE;
 
-// if relative target velocity is greather than threshold, we can easily see it. Don't filter
-if (_closingSpeed > _minimumSpeed) exitWith {
-    TRACE_2("dont filter fast objects approaching",_closingSpeed,_minimumSpeed);
-    false
-};
-
-private _projectilePos = getPosASLVisual _projectile;
-
-private _stepDistance = _lineOfSight vectorMultiply (MAX_LINE_DISTANCE min _maximumTerrainCheck);
-
-private _checkPos = _projectilePos;
-private _maskedByGround = false;
-
-// Check for all surfaces until we reach our max range
-for "_i" from 0 to _maximumTerrainCheck step MAX_LINE_DISTANCE do {
-    // determine if target is masked by ground
-    private _endPos = _checkPos vectorAdd _stepDistance;
-    private _groundHit = lineIntersectsSurfaces [_checkPos, _endPos, _projectile, _target];
-
-    _maskedByGround = _groundHit isNotEqualTo [];
-
-    _checkPos = _endPos;
-
-    if (_maskedByGround || (_checkPos select 2) <= 0) then {
-        // for ease assume that we can't check underwater
-        if ((_checkPos select 2) < 0) then {
-            _checkPos set [2, 0];
-        };
-        break
+// otherwise ground close enough behind the target, as the radar sees it
+if (!_inClutter) then {
+    private _gateDistance = _maximumTerrainCheck min (_minimumTime * 3e8);
+    private _checkPos = _targetPos;
+    private _checkedDistance = 0;
+    while {_checkedDistance < _gateDistance && {!_inClutter}} do {
+        private _step = MAX_LINE_DISTANCE min (_gateDistance - _checkedDistance);
+        private _endPos = _checkPos vectorAdd (_lineOfSight vectorMultiply _step);
+        _inClutter = (lineIntersectsSurfaces [_checkPos, _endPos, _target, _radar]) isNotEqualTo [];
+        _checkPos = _endPos;
+        _checkedDistance = _checkedDistance + _step;
     };
 };
 
-// looking at sky, target is clear as day. Check for chaff before filtering
-if !(_maskedByGround) exitWith {
-    TRACE_1("dont filter stuff in the sky",_maskedByGround);
-
-    // If there is chaff nearby, check if they will confuse missile
-    private _nearby = _target nearObjects 50;
-    _nearby = _nearby select {
-        // 8 = radar blocking
-        (([getNumber (configOf _x >> "weaponLockSystem"), 4] call EFUNC(common,binarizeNumber)) select 3) && // Check if chaff can break radar lock
-        {[_projectile, getPosASLVisual _x, _seekerAngle] call FUNC(checkSeekerAngle)} && // Check if within view
-        {[_projectile, _x, false] call FUNC(checkLos)} // Check if can be seen
-    };
-
-    private _foundDecoy = false;
-    {
-        private _considering = false;
-        if !(_foundDecoy) then {
-            _considering = true;
-            if (0.95 <= (random 1 * GVAR(chaffEffectivenessCoef))) then {
-                _foundDecoy = true;
-            };
-        };
-
-        if (GVAR(debug_drawGuidanceInfo)) then {
-            private _chaffPos = ASLToAGL getPosASLVisual _x;
-            private _colour = [1, 0, 0, 1];
-            if (_considering) then {
-                _colour = [0, 1, 0, 1];
-            };
-            if (_foundDecoy) then {
-                _colour = [0, 0, 1, 1];
-            };
-            drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", _colour, _chaffPos, 0.75, 0.75, 0, "C", 1, 0.025, "TahomaB"];
-        };
-    } forEach _nearby;
-
-    _foundDecoy
-};
-
-private _distanceToTerrain = _checkPos vectorDistance _projectilePos;
-private _checkTime = _distanceToTerrain / 3e8;
-
-// Time to ground is large enough to know if we are looking at a target, don't filter
-if (_checkTime > _minimumTime) exitWith {
-    TRACE_2("dont filter targets that we can see in ground clutter",_checkTime,_minimumTime);
+if (!_inClutter) exitWith {
+    TRACE_1("dont filter targets that we can see clear of clutter",_inClutter);
     false
 };
 
-// filter out the target since we can't reasonably see it
-true
-
+// helicopter blades still give a doppler return now and then
+!(_target isKindOf "Helicopter" && {isEngineOn _target} && {random 1 < RADAR_ROTOR_RETURN_CHANCE})

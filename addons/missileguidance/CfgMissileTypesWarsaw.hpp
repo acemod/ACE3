@@ -665,6 +665,10 @@ class GVAR(type_R77) {
     minimumSpeedFilter = 15;    // filter out targets that have a closing velocity less than this
     minimumTimeFilter = 0.00005; // filter out targets that are this close to the ground (speed of light)
     maxTerrainCheck = 16000;    // How far we should check for terrain
+    chaffEffectiveness = 0.2;   // How well chaff decoys this seeker, 0 is immune
+    multipathError = 25;        // How far below a low target its ground reflection can pull the aim
+    multipathMaxSpeed = 60;     // No multipath error from this closing velocity
+    multipathMaxHeight = 300;   // No multipath error from this height above the ground
 
     defaultSeekerLockMode = "LOAL";
     seekerLockModes[] = { "LOAL", "LOBL" };
@@ -738,9 +742,13 @@ class GVAR(type_S400) {
     seekerTypes[] = { "DopplerRadar" };
     lockableTypes[] = {"Air"};
 
-    minimumSpeedFilter = 5;    // filter out targets that have a closing velocity less than this
+    minimumSpeedFilter = 12.5;  // filter out targets that have a closing velocity less than this
     minimumTimeFilter = 0.000001; // filter out targets that are this close to the ground (speed of light)
     maxTerrainCheck = 16000;    // How far we should check for terrain
+    chaffEffectiveness = 0.5;   // How well chaff decoys this seeker, 0 is immune
+    multipathError = 15;        // How far below a low target its ground reflection can pull the aim
+    multipathMaxSpeed = 50;     // No multipath error from this closing velocity
+    multipathMaxHeight = 300;   // No multipath error from this height above the ground
 
     defaultSeekerLockMode = "LOAL";
     seekerLockModes[] = { "LOAL", "LOBL" };
