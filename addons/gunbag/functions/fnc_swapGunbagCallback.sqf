@@ -27,8 +27,6 @@ _currentItems deleteRange [4, 2];
 
 private _currentWeapon = _currentItems deleteAt 0;
 
-private _currentMass = [_currentWeapon, _currentItems, _currentMagazines apply {_x select 0}] call FUNC(calculateMass);
-
 // Set up weapon in gunbag
 private _newState = _gunbag getVariable [QGVAR(gunbagWeapon), []];
 
@@ -50,10 +48,9 @@ _unit removeWeapon _currentWeapon;
 
 _unit selectWeapon _newWeapon;
 
-private _newMass = [_newWeapon, _newItems, _newMagazines apply {_x select 0}] call FUNC(calculateMass);
+// Replace weapon in gunbag
+private _state = [_currentWeapon, _currentItems, _currentMagazines];
+_gunbag setVariable [QGVAR(gunbagWeapon), _state, true];
 
 // Update virtual load
-[_target, _gunbag, _currentMass - _newMass] call EFUNC(movement,addLoadToUnitContainer);
-
-// Replace weapon in gunbag
-_gunbag setVariable [QGVAR(gunbagWeapon), [_currentWeapon, _currentItems, _currentMagazines], true];
+[_target, _state] call FUNC(updateMass);

@@ -19,6 +19,9 @@ params ["_unit"];
 
 if (!isNil QGVAR(arsenalCache)) then {
     backpackContainer _unit setVariable [QGVAR(gunbagWeapon), GVAR(arsenalCache), true];
+
+    // The backpack may have been replaced, which loses its virtual load
+    [_unit, GVAR(arsenalCache)] call FUNC(updateMass);
 };
 
 GVAR(arsenalCache) = nil;

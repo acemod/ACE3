@@ -22,6 +22,7 @@ GVAR(replaceHashmap) = createHashMapFromArray [
 // Handle Variables on containers (key is varName, values is global-broadcast)
 GVAR(containerVarsToTransfer) = createHashMapFromArray [
     [toLower QEGVAR(gunbag,gunbagWeapon), true],
+    [toLower QEGVAR(gunbag,gunbagMass), true],
     [toLower QEGVAR(movement,vload), true],
     [toLower "radio_settings", true] // From TFAR
 ];

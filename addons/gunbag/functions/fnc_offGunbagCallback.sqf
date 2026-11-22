@@ -37,12 +37,10 @@ _state params ["_weapon", "_items", "_magazines"];
 
 _unit selectWeapon _weapon;
 
-private _mass = [_weapon, _items, _magazines apply {_x select 0}] call FUNC(calculateMass);
+_gunbag setVariable [QGVAR(gunbagWeapon), [], true];
 
 // Remove virtual load
-[_target, _gunbag, -_mass] call EFUNC(movement,addLoadToUnitContainer);
-
-_gunbag setVariable [QGVAR(gunbagWeapon), [], true];
+[_target, []] call FUNC(updateMass);
 
 // Play sound
 if (["ace_backpacks"] call EFUNC(common,isModLoaded)) then {

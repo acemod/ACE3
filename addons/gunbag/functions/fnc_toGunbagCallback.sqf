@@ -27,14 +27,13 @@ _items deleteRange [4, 2];
 
 private _weapon = _items deleteAt 0;
 
-private _mass = [_weapon, _items, _magazines apply {_x select 0}] call FUNC(calculateMass);
-
 _unit removeWeapon _weapon;
 
-// Add virtual load
-[_target, _gunbag, _mass] call EFUNC(movement,addLoadToUnitContainer);
+private _state = [_weapon, _items, _magazines];
+_gunbag setVariable [QGVAR(gunbagWeapon), _state, true];
 
-_gunbag setVariable [QGVAR(gunbagWeapon), [_weapon, _items, _magazines], true];
+// Add virtual load
+[_target, _state] call FUNC(updateMass);
 
 // Play sound
 if (["ace_backpacks"] call EFUNC(common,isModLoaded)) then {
