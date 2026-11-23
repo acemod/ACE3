@@ -22,9 +22,14 @@ PREP_RECOMPILE_END;
 
         if (_state isNotEqualTo []) then {
             _newBackpack setVariable [QGVAR(gunbagWeapon), _state, true];
+
+            // The new backpack has no virtual load yet
+            [_unit, _state] call FUNC(updateMass);
         };
     }, _this] call CBA_fnc_execNextFrame;
 }] call CBA_fnc_addClassEventHandler;
+
+[QGVAR(updateMass), LINKFUNC(updateMass)] call CBA_fnc_addEventHandler;
 
 [QEGVAR(arsenal,loadoutVerified), {
     params ["_loadout", "_extendedInfo", "", "", "_missingExtendedInfo"];
@@ -62,6 +67,9 @@ PREP_RECOMPILE_END;
     private _gunbagWeapon = _extendedInfo getOrDefault [QGVAR(gunbagWeapon), []];
     if (_gunbagWeapon isNotEqualTo []) then {
         (backpackContainer _unit) setVariable [QGVAR(gunbagWeapon), _gunbagWeapon, true];
+
+        // The backpack is new, with no virtual load yet
+        [_unit, _gunbagWeapon] call FUNC(updateMass);
     };
 }] call CBA_fnc_addEventHandler;
 
