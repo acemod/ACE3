@@ -12,16 +12,19 @@ mod break_line;
 mod clipboard;
 mod common;
 mod fcs;
+#[cfg(windows)]
 mod window;
 
 #[arma]
 fn init() -> Extension {
-    Extension::build()
+    let extension = Extension::build()
         .version(env!("GIT_HASH").to_string())
         .group("artillery", artillery::group())
         .group("ballistics", ballistics::group())
-        .group("clipboard", clipboard::group())
-        .group("window", window::group())
+        .group("clipboard", clipboard::group());
+    #[cfg(windows)]
+    let extension = extension.group("window", window::group());
+    extension
         .command("break_line", break_line::break_line)
         .command("fcs", fcs::get_solution)
         .command("version", || env!("GIT_HASH"))

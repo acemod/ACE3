@@ -22,10 +22,13 @@ jobs:
         rustup toolchain update stable --no-self-update
         rustup default stable
         rustup component add clippy rustfmt
+        rustup target add x86_64-pc-windows-msvc i686-pc-windows-msvc
     - name: Run rustfmt
       run: cargo fmt -- --check
     - name: Run clippy
       run: cargo clippy --all -- -Dwarnings
+    - name: Run clippy (Windows targets)
+      run: cargo clippy --all --target x86_64-pc-windows-msvc --target i686-pc-windows-msvc -- -Dwarnings
 
   test:
     runs-on: ubuntu-latest

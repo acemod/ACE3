@@ -19,6 +19,7 @@ rayon = "1.10.0"
 # Clipboard
 arboard = { version = "3.4.0" }
 
+[target.'cfg(windows)'.dependencies]
 # Window
 windows = { version = "0.62.2", features = [
     "Win32_Foundation",
