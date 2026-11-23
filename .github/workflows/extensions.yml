@@ -16,19 +16,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the source code
-      uses: actions/checkout@master
+      uses: actions/checkout@v7
     - name: Install dependencies
       run: |
         rustup toolchain update stable --no-self-update
         rustup default stable
         rustup component add clippy rustfmt
-        rustup target add x86_64-pc-windows-msvc i686-pc-windows-msvc
+        rustup target add x86_64-pc-windows-msvc
     - name: Run rustfmt
       run: cargo fmt -- --check
     - name: Run clippy
       run: cargo clippy --all -- -Dwarnings
     - name: Run clippy (Windows targets)
-      run: cargo clippy --all --target x86_64-pc-windows-msvc --target i686-pc-windows-msvc -- -Dwarnings
+      run: cargo clippy --all --target x86_64-pc-windows-msvc -- -Dwarnings
 
   test:
     runs-on: ubuntu-latest
@@ -37,25 +37,19 @@ jobs:
       options: --security-opt seccomp=unconfined
     steps:
     - name: Checkout the source code
-      uses: actions/checkout@master
+      uses: actions/checkout@v7
     - name: Test & Coverage
       run: cargo tarpaulin --verbose --no-default-features --workspace --timeout 240
 
   build:
-    strategy:
-      matrix:
-        arrays: [
-          os: { tag: "windows-latest", target: "i686-pc-windows-msvc" },
-          os: { tag: "windows-latest", target: "x86_64-pc-windows-msvc" },
-        ]
-    runs-on: ${{ matrix.arrays.os.tag }}
+    runs-on: "windows-latest"
     steps:
     - name: Checkout the source code
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
     - name: Install stable Rust
       uses: actions-rs/toolchain@v1
       with:
-        target: ${{ matrix.arrays.os.target }}
+        target: "x86_64-pc-windows-msvc"
         toolchain: stable
         default: true
     - name: Rust Cache
@@ -63,9 +57,9 @@ jobs:
     - name: Build
       run: cargo build --verbose
     - name: Upload
-      uses: actions/upload-artifact@v6
+      uses: actions/upload-artifact@v7
       with:
-        name: ${{ matrix.arrays.os.target }}
+        target: "x86_64-pc-windows-msvc"
         path: target/debug/ace.dll
         if-no-files-found: error
         retention-days: 30
