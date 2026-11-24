@@ -1,28 +1,32 @@
 #include "..\script_component.hpp"
 /*
  * Author: Glowbal, commy2
- * Handles the wounds received event by triggering any needed blood creation.
+ * Handles the woundsHandled event by triggering any needed blood creation.
  *
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Damage done to each body part <ARRAY>
  * 2: Shooter <OBJECT>
  * 3: Ammo classname or damage type <STRING>
+ * 4: Whether a blood spurt is wanted for the created wounds <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, "Body", 0.5, badGuy] call ace_medical_blood_fnc_handleWoundReceived
+ * [player, [[0.5, "Body", 0.5]], badGuy, "bullet", true] call ace_medical_blood_fnc_handleWoundsHandled
  *
  * Public: No
  */
 
-params ["_unit", "_allDamages", "_shooter", "_damageType"];
+params ["_unit", "_allDamages", "_shooter", "_damageType", "_spurtBlood"];
 (_allDamages select 0) params ["_damage"];
 
 // Don't bleed if damage type does not cause bleeding
 if (_damageType in (uiNamespace getVariable QGVAR(noBloodDamageTypes))) exitWith {};
+
+// Don't bleed if the wounds created by this hit do not cause bleeding
+if (!_spurtBlood) exitWith {};
 
 // Don't bleed when players only and a non-player unit is wounded
 if (GVAR(enabledFor) == BLOOD_ONLY_PLAYERS && {!isPlayer _unit && {_unit != ACE_player}}) exitWith {};

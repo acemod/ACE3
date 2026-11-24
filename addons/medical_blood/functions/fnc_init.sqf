@@ -33,9 +33,9 @@ if (!isNil QGVAR(stateMachine)) then {
 };
 
 // Remove wound received if it was previously added
-if (!isNil QGVAR(woundReceivedEH)) then {
-    [QEGVAR(medical,woundReceived), GVAR(woundReceivedEH)] call CBA_fnc_removeEventHandler;
-    GVAR(woundReceivedEH) = nil;
+if (!isNil QGVAR(woundsHandledEH)) then {
+    [QEGVAR(medical,woundsHandled), GVAR(woundsHandledEH)] call CBA_fnc_removeEventHandler;
+    GVAR(woundsHandledEH) = nil;
 };
 
 // Don't need to set up anything if blood is disabled or players only on a non-player machine
@@ -60,6 +60,6 @@ private _listCode = if (_mode == BLOOD_ONLY_PLAYERS) then {
 GVAR(stateMachine) = [_listCode, true] call CBA_statemachine_fnc_create;
 [GVAR(stateMachine), LINKFUNC(onBleeding), {}, {}, "Bleeding"] call CBA_statemachine_fnc_addState;
 
-GVAR(woundReceivedEH) = [QEGVAR(medical,woundReceived), LINKFUNC(handleWoundReceived)] call CBA_fnc_addEventHandler;
+GVAR(woundsHandledEH) = [QEGVAR(medical,woundsHandled), LINKFUNC(handleWoundsHandled)] call CBA_fnc_addEventHandler;
 
-TRACE_3("Set up state machine and wounds event",_mode,GVAR(stateMachine),GVAR(woundReceivedEH));
+TRACE_3("Set up state machine and wounds event",_mode,GVAR(stateMachine),GVAR(woundsHandledEH));
