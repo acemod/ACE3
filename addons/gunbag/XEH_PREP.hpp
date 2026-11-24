@@ -8,6 +8,7 @@ PREP(offGunbagCallback);
 PREP(status);
 PREP(canInteract);
 PREP(calculateMass);
+PREP(updateMass);
 PREP(hasGunbag);
 PREP(isMachineGun);
 PREP(BIArsenalClose);
