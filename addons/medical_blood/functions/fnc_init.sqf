@@ -21,7 +21,7 @@ params ["_mode"];
 private _woundEvent = [
     QEGVAR(medical,woundReceived),
     QEGVAR(medical,woundProcessed)
-] select isClass (configFile >> "CfgPatches" >> "ace_medical_damage");
+] select (missionNamespace getVariable [QEGVAR(medical,enabled), false]);
 
 // Exit if setting is refreshed to the same value
 if (!isNil QGVAR(currentSetup) && {_mode == GVAR(currentSetup)}) exitWith {
