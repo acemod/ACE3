@@ -2,6 +2,7 @@
 /*
  * Author: AmsteadRayle
  * Counts how many of the given items are present between the medic and patient.
+ * Magazines are counted by their rounds.
  * If medic or patient are in a vehicle then vehicle's inventory will also be checked.
  *
  * Arguments:
@@ -22,16 +23,38 @@ private _medicCount = 0;
 private _patientCount = nil;
 private _vehicleCount = nil;
 
+// Magazines (e.g. painkiller bottles) are counted by their rounds, not by the number of magazines
+private _countRounds = {
+    params ["_containers", "_magazine"];
+    private _rounds = 0;
+    {
+        {
+            if (_x select 0 == _magazine) then {
+                _rounds = _rounds + (_x select 1);
+            };
+        } forEach (magazinesAmmoCargo _x);
+    } forEach _containers;
+    _rounds
+};
+
+private _countItem = {
+    params ["_unit", "_item"];
+    if (isClass (configFile >> "CfgMagazines" >> _item)) exitWith {
+        [[uniformContainer _unit, vestContainer _unit, backpackContainer _unit], _item] call _countRounds
+    };
+    [_unit, _item] call EFUNC(common,getCountOfItem)
+};
+
 // Medic
 {
-    _medicCount = _medicCount + ([ACE_player, _x] call EFUNC(common,getCountOfItem));
+    _medicCount = _medicCount + ([ACE_player, _x] call _countItem);
 } forEach _items;
 
 // Patient
 if (ACE_player != GVAR(target)) then {
     _patientCount = 0;
     {
-        _patientCount = _patientCount + ([GVAR(target), _x] call EFUNC(common,getCountOfItem));
+        _patientCount = _patientCount + ([GVAR(target), _x] call _countItem);
     } forEach _items;
 };
 
@@ -51,12 +74,9 @@ if (!isNull _vehicle) then {
             _itemItems pushBack _x;
         };
     } forEach _items;
-    if (_magazineItems isNotEqualTo []) then {
-        (getMagazineCargo _vehicle) params ["_itemTypes", "_itemCounts"];
-        {
-            _vehicleCount = _vehicleCount + (_itemCounts param [_itemTypes find _x, 0]);
-        } forEach _magazineItems;
-    };
+    {
+        _vehicleCount = _vehicleCount + ([[_vehicle], _x] call _countRounds);
+    } forEach _magazineItems;
     if (_itemItems isNotEqualTo []) then {
         (getItemCargo _vehicle) params ["_itemTypes", "_itemCounts"];
         {
