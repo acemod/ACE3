@@ -7,34 +7,30 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Container <OBJECT>
- * 2: Secondary container <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, cursorObject, objNull] call ace_dragging_fnc_handleInventoryOpened
+ * [player, cursorObject] call ace_dragging_fnc_handleInventoryOpened
  *
  * Public: No
  */
 
-params ["_unit", "_container", ["_secondaryContainer", objNull]];
+params ["_unit", "_target"];
 
 if (_unit != ACE_player) exitWith {};
 
-// Find the first container that can be dragged or carried and is affected by weight
-private _index = [_container, _secondaryContainer] findIf {
-    !isNull _x &&
-    {!(_x isKindOf "CAManBase")} &&
-    {
-        (_x getVariable [QGVAR(canDrag), false] && {!(_x getVariable [QGVAR(ignoreWeightDrag), false])}) ||
-        {_x getVariable [QGVAR(canCarry), false] && {!(_x getVariable [QGVAR(ignoreWeightCarry), false])}}
-    }
-};
+// Only check the opened container, the secondary container is usually the ground next to it
+if (
+    isNull _target ||
+    {_target isKindOf "CAManBase"} ||
+    {!(
+        (_target getVariable [QGVAR(canDrag), false] && {!(_target getVariable [QGVAR(ignoreWeightDrag), false])}) ||
+        {_target getVariable [QGVAR(canCarry), false] && {!(_target getVariable [QGVAR(ignoreWeightCarry), false])}}
+    )}
+) exitWith {};
 
-if (_index == -1) exitWith {};
-
-private _target = [_container, _secondaryContainer] select _index;
 TRACE_1("inventory opened on movable container",_target);
 
 // The inventory display is not created yet when the event fires
