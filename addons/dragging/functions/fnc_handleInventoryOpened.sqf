@@ -21,6 +21,7 @@ params ["_unit", "_target"];
 
 if (_unit != ACE_player) exitWith {};
 
+if (missionNamespace getVariable [QGVAR(skipInventory), false]) exitWith {};
 // Only check the opened container, the secondary container is usually the ground next to it
 if (
     isNull _target ||
