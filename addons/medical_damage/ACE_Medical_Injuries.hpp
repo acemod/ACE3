@@ -1,5 +1,6 @@
 // bleeding - maximum possible percentage of cardiac output bled for a given wound type (0 .. 1)
 // pain - maximum possible pain level for a given wound type (0 .. 1)
+// noBlood - 1 if this wound type does not cause a blood spurt by itself (0 or 1)
 
 class ACE_Medical_Injuries {
     // Defines all the possible injury types
@@ -20,6 +21,7 @@ class ACE_Medical_Injuries {
         class Contusion {
             bleeding = 0;
             pain = 0.3;
+            noBlood = 1;
         };
         // Occur when a heavy object falls onto a person, splitting the skin and shattering or tearing underlying structures.
         class Crush {
@@ -56,6 +58,7 @@ class ACE_Medical_Injuries {
             bleeding = 0;
             pain = 0.7;
             minDamage = 0;
+            noBlood = 1;
         };
     };
 

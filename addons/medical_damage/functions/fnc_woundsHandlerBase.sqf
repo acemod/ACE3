@@ -7,17 +7,19 @@
  * 0: Unit That Was Hit <OBJECT>
  * 1: Damage done to each body part <ARRAY>
  * 2: Type of the damage done <STRING>
+ * 3: Ammo classname or damage type <STRING>
+ * 4: Shooter <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, [[0.5, "Body", 1]], "bullet"] call ace_medical_damage_fnc_woundsHandlerBase
+ * [player, [[0.5, "Body", 1]], "bullet", "B_65x39_Caseless", player] call ace_medical_damage_fnc_woundsHandlerBase
  *
  * Public: No
  */
 
-params ["_unit", "_allDamages", "_typeOfDamage"];
+params ["_unit", "_allDamages", "_typeOfDamage", "", "_shooter"];
 TRACE_3("woundsHandlerBase",_unit,_allDamages,_typeOfDamage);
 
 

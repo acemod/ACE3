@@ -1,6 +1,6 @@
 PREP(cleanupLoop);
 PREP(createBlood);
-PREP(handleWoundReceived);
+PREP(handleWoundsHandled);
 PREP(init);
 PREP(isBleeding);
 PREP(onBleeding);

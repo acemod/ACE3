@@ -13,6 +13,9 @@ call FUNC(parseConfigForInjuries);
 // Used for armor penetration calculation
 GVAR(ammoCache) = createHashMap;
 
+// Open wound counts at the start of each woundReceived call in progress, keyed by unit, see woundReceived
+GVAR(woundContexts) = [];
+
 /*
 addMissionEventHandler ["Loaded",{
     INFO("Mission Loaded - Reloading medical configs for extension");
