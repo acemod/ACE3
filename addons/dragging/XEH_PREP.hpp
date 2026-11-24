@@ -13,6 +13,7 @@ PREP(dropObject);
 PREP(dropObject_carry);
 PREP(getWeight);
 PREP(handleAnimChanged);
+PREP(handleInventoryOpened);
 PREP(handleKilled);
 PREP(handlePlayerChanged);
 PREP(handlePlayerWeaponChanged);

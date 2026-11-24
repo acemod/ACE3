@@ -78,6 +78,9 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
     _x call FUNC(initPerson);
 } forEach allDeadMen;
 
+// Show if opened containers can still be dragged or carried
+["CAManBase", "InventoryOpened", LINKFUNC(handleInventoryOpened)] call CBA_fnc_addClassEventHandler;
+
 ["isNotDragging", {!((_this select 0) getVariable [QGVAR(isDragging), false])}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotCarrying", {!((_this select 0) getVariable [QGVAR(isCarrying), false])}] call EFUNC(common,addCanInteractWithCondition);
 
