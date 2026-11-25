@@ -37,10 +37,12 @@ _unit setVariable [QGVAR(totalLoad), (loadAbs _unit + _virtualLoad)];
 private _absLoad = getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");
 
 // try to preserve other changes to the "LoadCoef" unitTrait
+private _currentLoadCoef = _unit getUnitTrait "loadCoef";
 private _loadCoef = _unit getVariable QGVAR(loadCoef);
 
-if (isNil "_loadCoef") then {
-    _loadCoef = _unit getUnitTrait "loadCoef";
+// If something else changed the trait since it was last set here, use that as the new base value
+if (isNil "_loadCoef" || {(_unit getVariable [QGVAR(lastLoadCoef), _currentLoadCoef]) != _currentLoadCoef}) then {
+    _loadCoef = _currentLoadCoef;
     _unit setVariable [QGVAR(loadCoef), _loadCoef, true];
 };
 
@@ -48,3 +50,4 @@ if (isNil "_loadCoef") then {
 private _virtualLoadCoef = (1 + _virtualLoad / _absLoad) * _loadCoef;
 
 _unit setUnitTrait ["loadCoef", _virtualLoadCoef];
+_unit setVariable [QGVAR(lastLoadCoef), _unit getUnitTrait "loadCoef"];
