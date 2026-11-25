@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Item to be loaded <STRING or OBJECT>
  * 1: Holder object (vehicle) <OBJECT>
- * 2: Ignore interaction distance and stability checks <BOOL> (default: false)
+ * 2: Ignore interaction distance, stability and vehicle lock checks <BOOL> (default: false)
  *
  * Return Value:
  * Can be loaded <BOOL>
@@ -51,7 +51,7 @@ private _validItem = if (_item isEqualType "") then {
 
 _validItem &&
 {alive _vehicle} &&
-{locked _vehicle < 2} &&
+{_ignoreInteraction || {locked _vehicle < 2}} &&
 {_vehicle getVariable [QGVAR(hasCargo), getNumber (configOf _vehicle >> QGVAR(hasCargo)) == 1]} &&
 {_itemSize >= 0} &&
 {_itemSize <= (_vehicle call FUNC(getCargoSpaceLeft)) max 0}

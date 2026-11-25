@@ -32,7 +32,7 @@ if (!EGVAR(common,settingsInitFinished)) exitWith {
 // Exit if not forced and add spare parts is disabled (after settings initted to make sure it really is)
 if (!_force && !GVAR(addSpareParts)) exitWith {};
 
-// Load
+// Load, ignoring vehicle lock (vehiclelock can lock a newly created vehicle before this runs)
 [{
     ["ace_addCargo", _this] call CBA_fnc_localEvent;
-}, [_part, _vehicle, _amount]] call CBA_fnc_execNextFrame;
+}, [_part, _vehicle, _amount, true]] call CBA_fnc_execNextFrame;
