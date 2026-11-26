@@ -39,3 +39,15 @@ Adds the ability to load and unload cargo from vehicles. Unloading can happen vi
 - Use the mouse to fine tune the placement of the object.
 - When ready to place, press left click to start deploying the object.
 - Wait for the progress bar to finish. To cancel deploying, press <kbd>Escape</kbd>.
+
+### 2.5 Loading an object into a vehicle via Vehicle-in-Vehicle (ViV)
+Vehicles that support the base game's Vehicle-in-Vehicle transport can carry objects physically attached to them, visible on the vehicle. ACE provides its own interaction, load time and unloading for this.
+- Interact with the object to be loaded <kbd>⊞ win</kbd>.
+- Select the `Load to ViV` option.
+- Select which vehicle you want to load the object in.
+- Wait for the progress bar to finish. To cancel loading, press <kbd>Escape</kbd>.
+
+### 2.6 Unloading, deploying and paradropping ViV cargo
+- Open the vehicle's cargo menu (see "Checking a vehicle's cargo"). ViV cargo is listed there.
+- Press `Unload` or `Deploy` and follow the same steps as for regular cargo (see 2.3 and 2.4).
+- On aircraft, loadmasters (and pilots, by default) can paradrop ViV cargo through the vehicle's self-interaction menu, the same way as regular cargo. The object is released and opens its own parachute.

@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Glowbal
+ * Author: Glowbal, Cathode88
  * Initializes vehicle, adds open cargo menu action if available.
  *
  * Arguments:
@@ -30,6 +30,21 @@ if (_hasCargoPublicDefined && {!(_hasCargoPublic isEqualType false)}) then {
 };
 
 private _hasCargoConfig = getNumber (_config >> QGVAR(hasCargo)) == 1;
+
+private _isVivCarrier = isClass (_config >> "VehicleTransport" >> "Carrier");
+
+// ViV cargo is accessed through the same menu, so ViV carriers always get the open menu action on their class
+// regardless of ACE cargo space, the action's own condition decides per vehicle
+if (hasInterface && {_isVivCarrier} && {!(_type in GVAR(initializedVivVehicleClasses))}) then {
+    GVAR(initializedVivVehicleClasses) pushBack _type;
+
+    [_type, 0, ["ACE_MainActions"], GVAR(vehicleAction)] call EFUNC(interact_menu,addActionToClass);
+
+    // Paradrop self interaction for planes and helicopters
+    if (_vehicle isKindOf "Air") then {
+        [_type, 1, ["ACE_SelfActions"], GVAR(paradropAction)] call EFUNC(interact_menu,addActionToClass);
+    };
+};
 
 // Nothing to do here if vehicle has no cargo space
 if !((_hasCargoPublicDefined && {_hasCargoPublic in [true, 1]}) || {!_hasCargoPublicDefined && {_hasCargoConfig}}) exitWith {};
@@ -83,43 +98,26 @@ if (_hasCargoConfig) then {
 
     TRACE_1("Adding unload cargo action to class",_type);
 
-    [_type, 0, ["ACE_MainActions"], GVAR(vehicleAction)] call EFUNC(interact_menu,addActionToClass);
+    if (!_isVivCarrier) then {
+        [_type, 0, ["ACE_MainActions"], GVAR(vehicleAction)] call EFUNC(interact_menu,addActionToClass);
+    };
 } else {
     _vehicle setVariable [QGVAR(initVehicle), true];
 
     TRACE_1("Adding unload cargo action to object",_vehicle);
 
-    [_vehicle, 0, ["ACE_MainActions"], GVAR(vehicleAction)] call EFUNC(interact_menu,addActionToObject);
+    if (!_isVivCarrier) then {
+        [_vehicle, 0, ["ACE_MainActions"], GVAR(vehicleAction)] call EFUNC(interact_menu,addActionToObject);
+    };
 };
 
 // Add the paradrop self interaction for planes and helicopters
-if (_vehicle isKindOf "Air") then {
-    private _condition = {
-        GVAR(enable) &&
-        {[_player, _target, []] call EFUNC(common,canInteractWith)} && {
-            private _turretPath = _target unitTurret _player;
-
-            (_player == currentPilot _target) || // Pilot/Co-pilot
-            {(getNumber ([_target, _turretPath] call CBA_fnc_getTurret >> "isCopilot")) == 1} || // Co-pilot
-            {_turretPath in (getArray (configOf _target >> QGVAR(loadmasterTurrets)))}
-        }
-    };
-
-    private _statement = {
-        GVAR(interactionVehicle) = _target;
-        GVAR(interactionParadrop) = true;
-        createDialog QGVAR(menu);
-    };
-
-    private _text = LLSTRING(openMenu);
-    private _icon = "";
-
-    private _action = [QGVAR(openMenu), _text, _icon, _statement, _condition] call EFUNC(interact_menu,createAction);
-
+// ViV carriers already have it on their class, see above
+if (_vehicle isKindOf "Air" && {!_isVivCarrier}) then {
     // Self action on the vehicle
     if (_hasCargoConfig) then {
-        [_type, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToClass);
+        [_type, 1, ["ACE_SelfActions"], GVAR(paradropAction)] call EFUNC(interact_menu,addActionToClass);
     } else {
-        [_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToObject);
+        [_vehicle, 1, ["ACE_SelfActions"], GVAR(paradropAction)] call EFUNC(interact_menu,addActionToObject);
     };
 };
