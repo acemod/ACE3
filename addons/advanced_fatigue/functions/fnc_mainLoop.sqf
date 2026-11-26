@@ -120,7 +120,12 @@ GVAR(anFatigue) = 0 max (GVAR(anFatigue) - _aeSurplus * GVAR(maxPowerFatigueRati
 GVAR(respiratoryRate) = GVAR(respiratoryRate) * GVAR(respiratoryBufferDivisor);
 
 // Respiratory rate increase
-private _aePowerRatio = (GVAR(aePathwayPower) / _aePathwayPowerFatigued) min 2;
+// Ratio is capped at 2, which also covers having no aerobic power at all (e.g. no oxygen)
+private _aePowerRatio = if (_aePathwayPowerFatigued > 0) then {
+    (GVAR(aePathwayPower) / _aePathwayPowerFatigued) min 2
+} else {
+    2
+};
 private _respiratorySampleDivisor = 1 / (RESPIRATORY_BUFFER * 4.72 * GVAR(VO2Max));
 GVAR(respiratoryRate) = (GVAR(respiratoryRate) + _currentWork * _respiratorySampleDivisor * _aePowerRatio) min 1;
 
