@@ -132,8 +132,13 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
         private _forceYaw = _stabilityCoefficient * _velocityAngleYaw + _clampedYaw;
         private _forcePitch = _stabilityCoefficient * _velocityAnglePitch + _clampedPitch;
 
-        _pitch = _pitch + _forcePitch * _timestep;
-        _yaw = _yaw + _forceYaw * _timestep;
+        private _right = [cos _yaw, -sin _yaw, 0];
+        private _direction = [(sin _yaw) * cos _pitch, (cos _yaw) * cos _pitch, sin _pitch];
+        private _upVector = _right vectorCrossProduct _direction;
+        _direction = (_direction vectorMultiply cos (_forceYaw * _timestep)) vectorAdd (_right vectorMultiply sin (_forceYaw * _timestep));
+        _direction = (_direction vectorMultiply cos (_forcePitch * _timestep)) vectorAdd (_upVector vectorMultiply sin (_forcePitch * _timestep));
+        _yaw = (_direction#0) atan2 (_direction#1);
+        _pitch = (_direction#2) atan2 vectorMagnitude [_direction#0, _direction#1, 0];
 
         TRACE_3("new pitch/yaw/roll",_pitch,_yaw,_roll);
 
