@@ -56,8 +56,15 @@ private _fnc_addContainerSlot = {
     _slot params [["_container", ""], ["_items", []]];
     [_container] call _fnc_add;
     {
-        _x params ["_itemClass", ["_itemAmount", 1]];
-        [_itemClass, _itemAmount] call _fnc_add;
+        _x params ["_itemX", ["_itemAmount", 1]];
+        if (_itemX isEqualType "") then {
+            if (_itemAmount isEqualType false) then {
+                _itemAmount = 1; // container, just set count to 1
+            };
+            [_itemX, _itemAmount] call _fnc_add;
+        } else {
+            [_itemX] call _fnc_addWeaponSlot; // weapon including attachments
+        };
     } forEach _items;
 };
 
