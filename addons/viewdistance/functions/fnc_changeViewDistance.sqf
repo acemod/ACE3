@@ -45,7 +45,7 @@ if (_objectViewDistanceCoeff isEqualType 0) then {
     };
 };
 
-if (_showPrompt) then {
+if (_showPrompt && GVAR(showPrompt)) then {
     if (GVAR(objectViewDistanceCoeff) > 0) then {
         private _text = "";
         // FoV Based or %
