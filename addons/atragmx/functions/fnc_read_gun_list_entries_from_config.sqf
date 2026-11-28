@@ -59,7 +59,8 @@ private _validate_preset = {
         ERROR(_errorMsg);
         _valid = false;
     };
-    if (_this select 14 < 1 || _this select 14 > 75) then {
+    // Negative values are left-hand twist
+    if (abs (_this select 14) < 1 || abs (_this select 14) > 75) then {
         private _errorMsg = format ["Invalid rifle twist: %1", _this select 14];
         ERROR(_errorMsg);
         _valid = false;
