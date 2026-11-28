@@ -58,14 +58,14 @@ if (!_updateVolumeOnly) then {
 
 if (missionNamespace getVariable [QGVAR(disableVolumeUpdate), false]) exitWith {};
 
-private _volume = GVAR(volume);
-
 // Earplugs and headgear can attenuate hearing
-_volume = _volume min GVAR(volumeAttenuation);
+private _volume = GVAR(volume) min GVAR(volumeAttenuation);
+private _volumeHeadphones = GVAR(volume) min GVAR(volumeAttenuationHeadphones);
 
 // Reduce volume if player is unconscious
 if (lifeState ACE_player == "INCAPACITATED") then {
     _volume = _volume min GVAR(unconsciousnessVolume);
+    _volumeHeadphones = _volume;
 };
 
-[QUOTE(ADDON), _volume, true] call EFUNC(common,setHearingCapability);
+[QUOTE(ADDON), _volume, true, 0, QUOTE(ADDON), _volumeHeadphones] call EFUNC(common,setHearingCapability);

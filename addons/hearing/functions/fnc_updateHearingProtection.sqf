@@ -20,6 +20,7 @@ LOG("updateHearingProtection");
 if (isNull ACE_player) exitWith {
     GVAR(damageCoefficent) = 0;
     GVAR(volumeAttenuation) = 1;
+    GVAR(volumeAttenuationHeadphones) = 1;
 };
 
 params ["_slot"];
@@ -31,6 +32,7 @@ if !(_slot in [UPDATE_HEARING, TYPE_GOGGLE, TYPE_HEADGEAR]) exitWith {};
 private _hasEarPlugsIn = ACE_player getVariable ["ACE_hasEarPlugsIn", false];
 GVAR(damageCoefficent) = [1, 0.25] select _hasEarPlugsIn;
 GVAR(volumeAttenuation) = [1, GVAR(earplugsVolume)] select _hasEarPlugsIn;
+GVAR(volumeAttenuationHeadphones) = GVAR(volumeAttenuation);
 
 private _hasEHPOn = ACE_player getVariable ["ACE_hasEHP", false];
 private _hasBuiltInEHP = false;

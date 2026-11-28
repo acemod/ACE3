@@ -51,6 +51,7 @@ GVAR(volume) = 1;
 GVAR(time3) = 0;
 GVAR(damageCoefficent) = 1;
 GVAR(volumeAttenuation) = 1;
+GVAR(volumeAttenuationHeadphones) = 1;
 GVAR(lastPlayerVehicle) = objNull;
 GVAR(ehpTimeout) = -1;
 

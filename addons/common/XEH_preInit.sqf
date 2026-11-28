@@ -36,6 +36,7 @@ ACE_COUNTERS = [];
 GVAR(statusEffects) = createHashMap;
 
 GVAR(setHearingCapabilityMap) = createHashMap;
+GVAR(setHearingCapabilityMapHeadphones) = createHashMap;
 
 [] call FUNC(setupLocalUnitsHandler); // Add local units event handlers (ace_common_localUnits)
 
