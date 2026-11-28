@@ -14,6 +14,10 @@ class GVAR(type_AMRAAM) {
     minimumSpeedFilter = 25;    // filter out targets that have a closing velocity less than this
     minimumTimeFilter = 0.0001; // filter out targets that are this close to the ground (speed of light)
     maxTerrainCheck = 16000;    // How far we should check for terrain
+    chaffEffectiveness = 0.1;   // How well chaff decoys this seeker, 0 is immune
+    multipathError = 20;        // How far below a low target its ground reflection can pull the aim
+    multipathMaxSpeed = 50;     // No multipath error from this closing velocity
+    multipathMaxHeight = 300;   // No multipath error from this height above the ground
 
     defaultSeekerLockMode = "LOAL";
     seekerLockModes[] = { "LOAL", "LOBL" };
@@ -150,6 +154,10 @@ class GVAR(type_ESSM) {
     minimumSpeedFilter = 20;    // filter out targets that have a closing velocity less than this
     minimumTimeFilter = 0.00001; // filter out targets that are this close to the ground (speed of light)
     maxTerrainCheck = 16000;    // How far we should check for terrain
+    chaffEffectiveness = 0.5;   // How well chaff decoys this seeker, 0 is immune
+    multipathError = 15;        // How far below a low target its ground reflection can pull the aim
+    multipathMaxSpeed = 50;     // No multipath error from this closing velocity
+    multipathMaxHeight = 300;   // No multipath error from this height above the ground
 
     defaultSeekerLockMode = "LOAL";
     seekerLockModes[] = { "LOAL", "LOBL" };
@@ -451,6 +459,10 @@ class GVAR(type_Patriot) {
     minimumSpeedFilter = 10;    // filter out targets that have a closing velocity less than this
     minimumTimeFilter = 0.00001; // filter out targets that are this close to the ground (speed of light)
     maxTerrainCheck = 16000;    // How far we should check for terrain
+    chaffEffectiveness = 0.5;   // How well chaff decoys this seeker, 0 is immune
+    multipathError = 15;        // How far below a low target its ground reflection can pull the aim
+    multipathMaxSpeed = 50;     // No multipath error from this closing velocity
+    multipathMaxHeight = 300;   // No multipath error from this height above the ground
 
     defaultSeekerLockMode = "LOAL";
     seekerLockModes[] = { "LOAL", "LOBL" };
