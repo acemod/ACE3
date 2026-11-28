@@ -38,5 +38,13 @@
 #define DAMAGED_MIN_THRESHOLD 0.45
 #define LIMPING_MIN_DAMAGE 0.5
 
+// Wound events queued for dead units are raised over about this many frames, with at least this many per frame
+#define DEAD_UNIT_QUEUE_FRAMES 60
+#define DEAD_UNIT_QUEUE_MIN_EVENTS 1
+// Hits on a body within this many seconds of it being handled wait for that time to be over, if they can be combined
+#define DEAD_UNIT_QUEUE_INTERVAL 1
+// Each body waits up to this many seconds longer, so bodies hit together aren't handled again together
+#define DEAD_UNIT_QUEUE_JITTER 0.5
+
 #define UNCON_ANIM(var1) DOUBLES(GVAR(uncon_anim),var1)
 #define QUNCON_ANIM(var1) QUOTE(UNCON_ANIM(var1))

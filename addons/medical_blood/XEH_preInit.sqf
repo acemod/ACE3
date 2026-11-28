@@ -17,4 +17,8 @@ GVAR(models) = createHashMapFromArray [
     ["blooddrop_4", QPATHTOF(data\ace_drop_4.p3d)]
 ];
 
+// Blood drops waiting to be created, see FUNC(spurt)
+GVAR(dropQueue) = [];
+GVAR(dropQueuePFH) = -1;
+
 ADDON = true;
