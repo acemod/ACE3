@@ -24,7 +24,7 @@ class GVAR(copperhead_dialog) {
     idd = -1;
     enableSimulation = 1;
     onLoad = QUOTE(with uiNamespace do {GVAR(copperhead_dialog) = _this select 0});
-    duration = 1e99;
+    duration = 1e38;
     class ControlsBackground {};
     class Controls {};
     class Objects {
