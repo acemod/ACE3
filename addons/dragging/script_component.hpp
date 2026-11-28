@@ -22,3 +22,7 @@
 #define CARRY_ANIMATIONS ["acinpercmstpsnonwnondnon", "acinpknlmstpsnonwnondnon_acinpercmrunsnonwnondnon"]
 
 #define MAX_DRAGGED_ITEMS 3
+
+#define IDD_INVENTORY 602
+#define IDC_GROUND_LOAD 6307
+#define IDC_GROUND_FILTER 6554
