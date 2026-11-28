@@ -16,6 +16,9 @@ GVAR(elementsSet) = createHashMap;
     // Initial settings
     [false] call FUNC(setElements);
 
+    // On entering/exiting optics
+    ["cameraView", {[false] call FUNC(setElements)}] call CBA_fnc_addPlayerEventHandler;
+
     // On load and entering/exiting a vehicle
     ["ace_infoDisplayChanged", {
         // Selective UI Advanced

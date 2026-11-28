@@ -23,9 +23,11 @@ if (isArray (missionConfigFile >> "showHUD")) exitWith {
     };
 };
 
+private _binocularView = cameraView == "GUNNER" && {binocular ACE_player != ""} && {currentWeapon ACE_player == binocular ACE_player};
+
 ["ui", [
     true,
-    GVAR(soldierVehicleWeaponInfo),
+    GVAR(soldierVehicleWeaponInfo) || _binocularView,
     GVAR(vehicleRadar),
     GVAR(vehicleCompass),
     true,
