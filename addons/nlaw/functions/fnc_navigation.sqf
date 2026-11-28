@@ -19,6 +19,8 @@
  *
  * Public: No
  */
+#define LOOKAHEAD_TIME 0.3
+
 params ["_args", "_timestep", "_seekerTargetPos", "_profileAdjustedTargetPos", "_targetData", "_navigationParams"];
 _args params ["_firedEH", "_launchParams", "_flightParams"];
 _firedEH params ["","","","","","","_projectile"];
@@ -27,11 +29,11 @@ _launchParams params ["","_targetLaunchParams"];
 _targetLaunchParams params ["", "", "_launchPos"];
 
 _navigationParams params ["_pid_pitch", "_pid_yaw", "_launchTime", "_pitchChange", "_yawChange", "_initialPitch", "_initialYaw"];
-private _elapsedTime = CBA_missionTime - _launchTime;
+private _elapsedTime = CBA_missionTime - _launchTime + LOOKAHEAD_TIME;
 private _expectedPitch = _initialPitch + _elapsedTime * _pitchChange;
 private _expectedYaw = _initialYaw + _elapsedTime * _yawChange;
 
-private _position = getPosASLVisual _projectile vectorDiff _launchPos;
+private _position = (getPosASLVisual _projectile vectorAdd (velocity _projectile vectorMultiply LOOKAHEAD_TIME)) vectorDiff _launchPos;
 
 private _distance = 0.01 max vectorMagnitude _position;
 
